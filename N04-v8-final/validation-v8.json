@@ -1,0 +1,278 @@
+{
+  "document": "N04",
+  "version": "v8-final",
+  "status": "PASS",
+  "source_sha256": "4e86351bcd6865c81bbdb8a5e72352e55042b5d9e16f71949737c610e6d13320",
+  "pdf_sha256": "36df2b286078a91dc254244eb0ff4ced1cd74ac9de0ccda1d26b9954620afaf4",
+  "pdf_bytes": 27486499,
+  "pdf_modified": 1788457160.3297307,
+  "pages": 32,
+  "checks": [
+    {
+      "check": "canonical_source_is_byte_identical",
+      "status": "PASS",
+      "detail": "4e86351bcd6865c81bbdb8a5e72352e55042b5d9e16f71949737c610e6d13320"
+    },
+    {
+      "check": "canonical_structure",
+      "status": "PASS",
+      "detail": [
+        "Pregunta profesional",
+        "El doce por ciento que parecía hablar solo",
+        "Tesis",
+        "De N03 a N04: del mapa a la justificación",
+        "Movimiento 1 · Desarmar una afirmación sin perder su historia",
+        "Movimiento 2 · Contrastar explicaciones sin borrar incertidumbre",
+        "Movimiento 3 · Decidir y dejar abierta la revisión",
+        "Síntesis",
+        "Cinco píldoras para recordar",
+        "Glosario esencial",
+        "Preguntas de preparación",
+        "Referencias base"
+      ]
+    },
+    {
+      "check": "three_movement_architecture",
+      "status": "PASS",
+      "detail": "three movements present"
+    },
+    {
+      "check": "canonical_handoffs_present",
+      "status": "PASS",
+      "detail": "N03 input, HH-04 conductor and N05 output are present"
+    },
+    {
+      "check": "source_blocks_render_once",
+      "status": "PASS",
+      "detail": {
+        "status": "PASS",
+        "source_block_count": 437,
+        "rendered_source_id_count": 437,
+        "missing_source_ids": [],
+        "unexpected_source_ids": [],
+        "duplicate_rendered_ids": []
+      }
+    },
+    {
+      "check": "content_audit_remains_closed",
+      "status": "PASS",
+      "detail": {
+        "total": 10108,
+        "substantive_from_thesis_through_synthesis": 8695
+      }
+    },
+    {
+      "check": "pdf_is_new_finalized_artifact",
+      "status": "PASS",
+      "detail": {
+        "raw": "d326b3883ae3b2001077510730221ce45d1f394d3b927facd6673246748d53d3",
+        "final": "36df2b286078a91dc254244eb0ff4ced1cd74ac9de0ccda1d26b9954620afaf4"
+      }
+    },
+    {
+      "check": "pdf_page_count_and_size",
+      "status": "PASS",
+      "detail": {
+        "pages": 32,
+        "a4": 32
+      }
+    },
+    {
+      "check": "all_headings_in_pdf",
+      "status": "PASS",
+      "detail": 12
+    },
+    {
+      "check": "no_orphan_headings",
+      "status": "PASS",
+      "detail": {
+        "count": 79,
+        "failures": {}
+      }
+    },
+    {
+      "check": "route_is_monotonic",
+      "status": "PASS",
+      "detail": {
+        "actual": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ],
+        "expected": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ]
+      }
+    },
+    {
+      "check": "contents_is_complete_and_ordered",
+      "status": "PASS",
+      "detail": "01 to 11, two SIN NUM. entries and complete note"
+    },
+    {
+      "check": "all_references_anchored",
+      "status": "PASS",
+      "detail": {
+        "Toulmin (2003)": true,
+        "Peirce (1998)": true,
+        "Pearl y Mackenzie (2018)": true,
+        "ISO/IEC 25012:2008": true,
+        "Wang y Strong (1996)": true,
+        "Schön (1983)": true,
+        "NIST AI 100-1 (2023)": true,
+        "NIST AI 600-1 (2024)": true,
+        "NIST AI 100-4 (2024)": true,
+        "C2PA 2.4 (2026)": true
+      }
+    },
+    {
+      "check": "all_urls_preserved_and_linked",
+      "status": "PASS",
+      "detail": {
+        "source": [
+          "https://doi.org/10.1017/CBO9780511840005",
+          "https://doi.org/10.1080/07421222.1996.11518099",
+          "https://doi.org/10.6028/NIST.AI.100-1",
+          "https://doi.org/10.6028/NIST.AI.100-4",
+          "https://doi.org/10.6028/NIST.AI.600-1",
+          "https://iupress.org/9780253211903/the-essential-peirce-volume-2/",
+          "https://spec.c2pa.org/specifications/specifications/2.4/specs/C2PA_Specification.html",
+          "https://www.iso.org/standard/35736.html"
+        ],
+        "annotations": [
+          "https://doi.org/10.1017/CBO9780511840005",
+          "https://doi.org/10.1080/07421222.1996.11518099",
+          "https://doi.org/10.6028/NIST.AI.100-1",
+          "https://doi.org/10.6028/NIST.AI.100-4",
+          "https://doi.org/10.6028/NIST.AI.600-1",
+          "https://iupress.org/9780253211903/the-essential-peirce-volume-2/",
+          "https://spec.c2pa.org/specifications/specifications/2.4/specs/C2PA_Specification.html",
+          "https://www.iso.org/standard/35736.html"
+        ]
+      }
+    },
+    {
+      "check": "hyphenated_urls_intact",
+      "status": "PASS",
+      "detail": "locked hyphenated URL tokens extract intact"
+    },
+    {
+      "check": "ordinary_pages_are_at_least_half_full",
+      "status": "PASS",
+      "detail": {
+        "minimum": 0.5026,
+        "underfilled": {}
+      }
+    },
+    {
+      "check": "no_automatic_sparse_fills",
+      "status": "PASS",
+      "detail": {
+        "sparse": [],
+        "removed": []
+      }
+    },
+    {
+      "check": "two_internal_full_bleed_pauses",
+      "status": "PASS",
+      "detail": "question page 4, first pause page 5, second pause page 22"
+    },
+    {
+      "check": "cover_accessible_and_complete",
+      "status": "PASS",
+      "detail": "METSILECTURA PREVIA\nEDICIÓN 2026\nN04\nFCE · UBA\nMETODOLOGÍA DE SISTEMAS DE INFORMACIÓN\nHechos, síntomas,relatos, hipótesisy decisiones\nN04\nIntervenir exige conservar la\nhistoria de cada aﬁrmación:\nqué se observó, cómo se\ntransformó y qué decisión\nsostiene.\n01\nDiego Carralbal, 2026  ·  linkedin.com/in/carralbal\n"
+    },
+    {
+      "check": "premium_cover_contract",
+      "status": "PASS",
+      "detail": "cinematic original photography, Argentine representation and dedicated alt text"
+    },
+    {
+      "check": "cover_pauses_and_closing_are_full_bleed",
+      "status": "PASS",
+      "detail": {
+        "1": 1.0224,
+        "5": 1.0081,
+        "22": 1.0081,
+        "32": 1.0151
+      }
+    },
+    {
+      "check": "referents_and_hotel_voices",
+      "status": "PASS",
+      "detail": "six referents and four distinct equal Hotel Horizonte portraits"
+    },
+    {
+      "check": "counts_close",
+      "status": "PASS",
+      "detail": {
+        "pills": 5,
+        "glossary": 16,
+        "questions": 6,
+        "references": 10
+      }
+    },
+    {
+      "check": "impersonal_register",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "dash_rule",
+      "status": "PASS",
+      "detail": "dashes occur only inside official reference titles"
+    },
+    {
+      "check": "no_placeholders_or_stray_initials",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "tagging_language_and_alt",
+      "status": "PASS",
+      "detail": {
+        "language": "es-AR",
+        "alt_count": 3
+      }
+    },
+    {
+      "check": "footer_and_structured_closing",
+      "status": "PASS",
+      "detail": {
+        "linkedin_pages": 32,
+        "closing_folio_present": true,
+        "closing_caption_present": true,
+        "closing_quote_absent": true,
+        "closing_alt_present": true
+      }
+    },
+    {
+      "check": "qa_pipeline_passed",
+      "status": "PASS",
+      "detail": "PASS"
+    },
+    {
+      "check": "n04_layout_contract",
+      "status": "PASS",
+      "detail": "N04 cover, reading, glossary, question and reference rules are explicit"
+    }
+  ]
+}

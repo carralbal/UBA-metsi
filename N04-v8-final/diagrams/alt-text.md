@@ -1,0 +1,1 @@
+Cadena de seis transformaciones en lectura serpenteante: fuente, registro y dato en la fila superior; interpretación, hipótesis y decisión en la inferior. Las flechas nombran captura, codificación, interpretación, contraste y compromiso. Una banda transversal indica que procedencia, definición, incertidumbre, autoridad y revisión deben conservarse durante toda la cadena.

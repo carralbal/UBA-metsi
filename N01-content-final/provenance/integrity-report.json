@@ -1,0 +1,168 @@
+{
+  "document": "N01",
+  "stage": "content-final",
+  "source": "source/N01_metodologia_sin_recetas-content-final.md",
+  "sha256": "831af339cc5400bf95edb04b5b70bbacbc0857e12a2001bd77bd67bb27bd09c4",
+  "bytes": 56094,
+  "word_counts": {
+    "total": 7912,
+    "substantive_from_thesis_through_synthesis": 6426
+  },
+  "references": {
+    "entries": 15,
+    "urls": [
+      "https://doi.org/10.1287/orsc.2.1.71",
+      "https://doi.org/10.1017/CBO9780511625510",
+      "https://www.iso.org/standard/84709.html",
+      "https://www.pmi.org/standards/pmbok",
+      "https://doi.org/10.6028/NIST.AI.100-1",
+      "https://doi.org/10.6028/NIST.AI.600-1",
+      "https://www.computer.org/education/bodies-of-knowledge/software-engineering",
+      "https://www.iso.org/standard/81702.html",
+      "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+      "https://dora.dev/research/2025/dora-report/",
+      "https://is2020.hosting2.acm.org/wp-content/uploads/2021/06/is2020.pdf"
+    ],
+    "anchors": {
+      "Checkland y Poulter": true,
+      "Schön": true,
+      "Argyris y Schön": true,
+      "March": true,
+      "Suchman": true,
+      "Senge": true,
+      "ISO/IEC/IEEE 24748-1:2024": true,
+      "PMBOK 2025": true,
+      "NIST AI RMF 1.0": true,
+      "NIST AI 600-1": true,
+      "SWEBOK V4.0a": true,
+      "ISO/IEC/IEEE 15288:2023": true,
+      "Reglamento UE 2024/1689": true,
+      "DORA 2025": true,
+      "IS2020": true
+    }
+  },
+  "results": [
+    {
+      "check": "canonical_heading_order",
+      "result": "pass",
+      "evidence": [
+        "Pregunta profesional",
+        "El mapa perfecto de la montaña equivocada",
+        "Tesis",
+        "Cómo leer este mapa: N01 abre el recorrido N02 a N10",
+        "Aplicación a Hotel Horizonte: construir HH-01",
+        "Caso de transferencia: turnos en un centro de salud",
+        "Consecuencias para la práctica profesional",
+        "Límites y tensiones",
+        "Síntesis",
+        "Cinco píldoras para recordar",
+        "Glosario esencial",
+        "Preguntas de preparación",
+        "Referencias base"
+      ]
+    },
+    {
+      "check": "substantive_word_floor",
+      "result": "pass",
+      "evidence": 6426
+    },
+    {
+      "check": "total_word_count",
+      "result": "pass",
+      "evidence": 7912
+    },
+    {
+      "check": "hh01_present",
+      "result": "pass",
+      "evidence": 4
+    },
+    {
+      "check": "hh01_fields",
+      "result": "pass",
+      "evidence": [
+        "pedido",
+        "propósito",
+        "incertidumbre",
+        "evidencia",
+        "acción autorizada",
+        "decisión todavía no autorizada",
+        "condición de revisión"
+      ]
+    },
+    {
+      "check": "n02_handoff",
+      "result": "pass",
+      "evidence": "declared"
+    },
+    {
+      "check": "reference_count",
+      "result": "pass",
+      "evidence": 15
+    },
+    {
+      "check": "all_references_anchored",
+      "result": "pass",
+      "evidence": {
+        "Checkland y Poulter": true,
+        "Schön": true,
+        "Argyris y Schön": true,
+        "March": true,
+        "Suchman": true,
+        "Senge": true,
+        "ISO/IEC/IEEE 24748-1:2024": true,
+        "PMBOK 2025": true,
+        "NIST AI RMF 1.0": true,
+        "NIST AI 600-1": true,
+        "SWEBOK V4.0a": true,
+        "ISO/IEC/IEEE 15288:2023": true,
+        "Reglamento UE 2024/1689": true,
+        "DORA 2025": true,
+        "IS2020": true
+      }
+    },
+    {
+      "check": "five_pills",
+      "result": "pass",
+      "evidence": 5
+    },
+    {
+      "check": "seven_questions",
+      "result": "pass",
+      "evidence": 7
+    },
+    {
+      "check": "hh01_preparation",
+      "result": "pass",
+      "evidence": "present"
+    },
+    {
+      "check": "no_placeholders",
+      "result": "pass",
+      "evidence": {
+        "TBD": 0,
+        "lorem": 0,
+        "XXX": 0,
+        "[TODO]": 0
+      }
+    },
+    {
+      "check": "no_prose_dashes",
+      "result": "pass",
+      "evidence": "none"
+    },
+    {
+      "check": "urls_unique",
+      "result": "pass",
+      "evidence": {
+        "count": 11,
+        "unique": 11
+      }
+    },
+    {
+      "check": "content_only",
+      "result": "pass",
+      "evidence": "source only"
+    }
+  ],
+  "overall": "pass"
+}

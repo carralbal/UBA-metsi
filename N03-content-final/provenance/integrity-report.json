@@ -1,0 +1,154 @@
+{
+  "document": "N03",
+  "stage": "content-final",
+  "source": "source/N03_fronteras_retroalimentacion_y_efectos-content-final.md",
+  "sha256": "6930c5a6cf7c98ad2f60ebf662334a7f491827260e460c939c51b7c9acef6854",
+  "bytes": 64389,
+  "word_counts": {
+    "total": 9034,
+    "substantive_from_thesis_through_synthesis": 7631
+  },
+  "references": {
+    "entries": 11,
+    "urls": [
+      "https://doi.org/10.1007/978-1-4615-4201-8",
+      "https://doi.org/10.7551/mitpress/8179.001.0001",
+      "https://doi.org/10.6028/NIST.AI.600-1",
+      "https://doi.org/10.6028/NIST.AI.700-2",
+      "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+      "https://doi.org/10.1002/sys.21664",
+      "https://www.iso.org/standard/81702.html"
+    ],
+    "anchors": {
+      "Churchman (1968)": true,
+      "Midgley (2000)": true,
+      "Meadows (2008)": true,
+      "Senge (2006)": true,
+      "Sterman (2000)": true,
+      "Leveson (2012)": true,
+      "NIST AI 600-1 (2024)": true,
+      "NIST AI 700-2 (2025)": true,
+      "Reglamento UE 2024/1689": true,
+      "Polojärvi (2023)": true,
+      "ISO/IEC/IEEE 15288:2023": true
+    }
+  },
+  "results": [
+    {
+      "check": "canonical_heading_order",
+      "result": "pass",
+      "evidence": [
+        "Pregunta profesional",
+        "La mejora que volvió por la puerta de atrás",
+        "Tesis",
+        "De N02 a N03: del mapa a sus consecuencias",
+        "Movimiento 1 · Delimitar sin naturalizar el recorte",
+        "Movimiento 2 · Observar cómo regresan los efectos",
+        "Movimiento 3 · Decidir y revisar la frontera",
+        "Síntesis",
+        "Cinco píldoras para recordar",
+        "Glosario esencial",
+        "Preguntas de preparación",
+        "Referencias base"
+      ]
+    },
+    {
+      "check": "three_movement_architecture",
+      "result": "pass",
+      "evidence": [
+        5,
+        16,
+        27
+      ]
+    },
+    {
+      "check": "substantive_word_floor",
+      "result": "pass",
+      "evidence": 7631
+    },
+    {
+      "check": "total_word_count",
+      "result": "pass",
+      "evidence": 9034
+    },
+    {
+      "check": "hotel_horizonte_conductor",
+      "result": "pass",
+      "evidence": {
+        "HH-03": 8,
+        "Hotel Horizonte": 7
+      }
+    },
+    {
+      "check": "reference_count",
+      "result": "pass",
+      "evidence": 11
+    },
+    {
+      "check": "all_references_anchored",
+      "result": "pass",
+      "evidence": {
+        "Churchman (1968)": true,
+        "Midgley (2000)": true,
+        "Meadows (2008)": true,
+        "Senge (2006)": true,
+        "Sterman (2000)": true,
+        "Leveson (2012)": true,
+        "NIST AI 600-1 (2024)": true,
+        "NIST AI 700-2 (2025)": true,
+        "Reglamento UE 2024/1689": true,
+        "Polojärvi (2023)": true,
+        "ISO/IEC/IEEE 15288:2023": true
+      }
+    },
+    {
+      "check": "five_pills",
+      "result": "pass",
+      "evidence": 5
+    },
+    {
+      "check": "six_questions",
+      "result": "pass",
+      "evidence": 6
+    },
+    {
+      "check": "preparation_instruction",
+      "result": "pass",
+      "evidence": "present"
+    },
+    {
+      "check": "no_placeholders",
+      "result": "pass",
+      "evidence": {
+        "TBD": 0,
+        "lorem": 0,
+        "XXX": 0,
+        "[TODO]": 0
+      }
+    },
+    {
+      "check": "no_prose_dashes",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "impersonal_register",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "urls_unique",
+      "result": "pass",
+      "evidence": {
+        "count": 7,
+        "unique": 7
+      }
+    },
+    {
+      "check": "content_only_package",
+      "result": "pass",
+      "evidence": "no layout or image artifact references"
+    }
+  ],
+  "overall": "pass"
+}

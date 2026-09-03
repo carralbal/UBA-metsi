@@ -1,0 +1,3 @@
+# Texto alternativo
+
+Cinco fronteras anidadas muestran distintos significados de “sistema”. La aplicación contiene código, interfaz, reglas y datos. El sistema técnico agrega integraciones, dispositivos y redes. El sistema de información agrega personas que producen e interpretan información. El sistema de trabajo agrega actividades, recursos y el servicio entregado. La situación problemática agrega tensiones, perspectivas, restricciones e historia. Una banda inferior indica que la frontera debe elegirse según la decisión: verificar una función puede requerir la aplicación; explicar si se sostiene una promesa exige incluir el sistema de trabajo y su contexto.

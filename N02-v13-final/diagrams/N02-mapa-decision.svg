@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 760" role="img" aria-labelledby="title desc">
+  <title id="title">Cinco fronteras posibles para mirar un sistema</title>
+  <desc id="desc">Diagrama de fronteras anidadas. Desde la aplicación hasta la situación problemática, cada nivel incorpora relaciones adicionales. Una banda inferior recuerda que la frontera se elige según la decisión profesional.</desc>
+  <rect width="1600" height="760" fill="#FAFAF8"/>
+  <g id="header">
+  <text x="64" y="70" font-family="Avenir" font-size="26" font-weight="700" letter-spacing="4" fill="#242524">N02 · FRONTERAS DE ANÁLISIS</text>
+  <text x="64" y="126" font-family="Didot" font-size="50" fill="#171817">Cinco objetos que no conviene confundir</text>
+  <line x1="64" y1="155" x2="1536" y2="155" stroke="#252625" stroke-width="3"/>
+  </g>
+
+  <g id="situation-boundary">
+  <rect x="64" y="190" width="1472" height="418" fill="#ECEEED" stroke="#686A68" stroke-width="2"/>
+  <text x="90" y="226" font-family="Avenir" font-size="23" font-weight="700" fill="#222322">SITUACIÓN PROBLEMÁTICA</text>
+  <text x="90" y="256" font-family="Avenir" font-size="18" fill="#555754">tensiones · perspectivas · restricciones · historia</text>
+  </g>
+
+  <g id="work-boundary">
+  <rect x="256" y="242" width="1230" height="326" fill="#F5F4F0" stroke="#777874" stroke-width="2"/>
+  <text x="282" y="278" font-family="Avenir" font-size="23" font-weight="700" fill="#222322">SISTEMA DE TRABAJO</text>
+  <text x="282" y="308" font-family="Avenir" font-size="18" fill="#555754">participantes · actividades · información · tecnología · recursos · servicio</text>
+  </g>
+
+  <g id="information-boundary">
+  <rect x="450" y="296" width="986" height="232" fill="#E2E7E8" stroke="#707270" stroke-width="2"/>
+  <text x="476" y="332" font-family="Avenir" font-size="23" font-weight="700" fill="#222322">SISTEMA DE INFORMACIÓN</text>
+  <text x="476" y="362" font-family="Avenir" font-size="18" fill="#555754">personas y tecnologías producen, interpretan y usan información</text>
+  </g>
+
+  <g id="technical-boundary">
+  <rect x="648" y="350" width="738" height="138" fill="#F7F6F2" stroke="#686A68" stroke-width="2"/>
+  <text x="674" y="386" font-family="Avenir" font-size="23" font-weight="700" fill="#222322">SISTEMA TÉCNICO</text>
+  <text x="674" y="416" font-family="Avenir" font-size="18" fill="#555754">aplicaciones · integraciones · dispositivos · redes</text>
+  </g>
+
+  <g id="application-boundary">
+  <rect x="1042" y="396" width="294" height="58" fill="#252625" stroke="#252625" stroke-width="2"/>
+  <text x="1189" y="433" text-anchor="middle" font-family="Avenir" font-size="23" font-weight="700" fill="#FFFFFF">APLICACIÓN</text>
+  </g>
+
+  <g id="decision-rail">
+  <circle cx="90" cy="639" r="8" fill="#CFFF00" stroke="#262726" stroke-width="2"/>
+  <line x1="104" y1="639" x2="1498" y2="639" stroke="#777874" stroke-width="2"/>
+  <text x="64" y="689" font-family="Avenir" font-size="22" font-weight="700" fill="#202120">LA FRONTERA SE ELIGE SEGÚN LA DECISIÓN</text>
+  <text x="616" y="689" font-family="Avenir" font-size="18" fill="#555754">¿Ejecuta la función?</text>
+  <line x1="783" y1="683" x2="853" y2="683" stroke="#777874" stroke-width="2"/>
+  <text x="872" y="689" font-family="Avenir" font-size="18" fill="#555754">¿Coordinan los componentes?</text>
+  <line x1="1128" y1="683" x2="1198" y2="683" stroke="#777874" stroke-width="2"/>
+  <text x="1217" y="689" font-family="Avenir" font-size="18" font-weight="700" fill="#202120">¿Se sostiene la promesa?</text>
+  </g>
+  <g id="boundary-relation">
+  <path d="M1188 454 C1188 512 1115 558 1028 592" fill="none" stroke="#777874" stroke-width="2" stroke-dasharray="5 8"/>
+  <circle cx="1188" cy="454" r="6" fill="#FAFAF8" stroke="#777874" stroke-width="2"/>
+  <circle cx="1028" cy="592" r="6" fill="#CFFF00" stroke="#262726" stroke-width="2"/>
+  <circle cx="450" cy="296" r="6" fill="#FAFAF8" stroke="#777874" stroke-width="2"/>
+  </g>
+</svg>

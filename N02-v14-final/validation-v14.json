@@ -1,0 +1,504 @@
+{
+  "document": "N02",
+  "version": "v14-final",
+  "status": "PASS",
+  "source_sha256": "6f6bfde594de374a8873fe212ac3c326b50b1186d61268a540a9303a77b1f138",
+  "pdf_sha256": "fbe7afb20087cabac599f28f8bae3f51cee90e21933960476b874854e4f61052",
+  "pdf_bytes": 28030274,
+  "pages": 29,
+  "checks": [
+    {
+      "check": "canonical_source_is_byte_identical",
+      "status": "PASS",
+      "detail": {
+        "sha256": "6f6bfde594de374a8873fe212ac3c326b50b1186d61268a540a9303a77b1f138",
+        "expected": "6f6bfde594de374a8873fe212ac3c326b50b1186d61268a540a9303a77b1f138"
+      }
+    },
+    {
+      "check": "canonical_structure",
+      "status": "PASS",
+      "detail": [
+        "Pregunta profesional",
+        "La valija que el sistema había embarcado",
+        "Primera aplicación de HH-02: una reserva confirmada que no alcanza",
+        "Tesis",
+        "De HH-01 a HH-02: del pedido revisable al sistema relevante",
+        "Lo que Ingeniería de Software ya nos dio y lo que ahora falta",
+        "Cinco objetos que no conviene llamar simplemente “el sistema”",
+        "El error de buscar el sistema dentro del software",
+        "Del inventario de componentes a una explicación",
+        "Elegir la frontera por la promesa, no por el organigrama",
+        "El sistema efectivo incluye trabajo que no figura en arquitectura",
+        "Cómo emerge un resultado que ningún componente controla",
+        "Optimización local y desplazamiento del problema",
+        "2026: cuando la aplicación también propone y actúa",
+        "Segunda aplicación de HH-02: una autopsia del episodio",
+        "Método de construcción: una frontera móvil en seis movimientos",
+        "Objeciones y límites: ampliar la frontera también cuesta",
+        "Comprobación: ¿el mapa permite decidir algo distinto?",
+        "Caso de transferencia: medicación hospitalaria",
+        "De HH-02 a N03: un mapa con consecuencias abiertas",
+        "Síntesis",
+        "Cinco píldoras para recordar",
+        "Glosario esencial",
+        "Preguntas de preparación",
+        "Referencias base"
+      ]
+    },
+    {
+      "check": "canonical_handoffs_present",
+      "status": "PASS",
+      "detail": "HH-01 input, third HH-02 application and N03 output are present"
+    },
+    {
+      "check": "source_blocks_render_once",
+      "status": "PASS",
+      "detail": {
+        "status": "PASS",
+        "source_block_count": 255,
+        "rendered_source_id_count": 255,
+        "missing_source_ids": [],
+        "unexpected_source_ids": [],
+        "duplicate_rendered_ids": []
+      }
+    },
+    {
+      "check": "pdf_page_count_and_size",
+      "status": "PASS",
+      "detail": {
+        "pages": 29,
+        "a4": 29
+      }
+    },
+    {
+      "check": "all_headings_in_pdf",
+      "status": "PASS",
+      "detail": {
+        "headings": 25
+      }
+    },
+    {
+      "check": "section_titles_have_body_on_same_page",
+      "status": "PASS",
+      "detail": {
+        "01": {
+          "same_page": true,
+          "pages": [
+            4
+          ]
+        },
+        "02": {
+          "same_page": true,
+          "pages": [
+            6
+          ]
+        },
+        "03": {
+          "same_page": true,
+          "pages": [
+            7
+          ]
+        },
+        "04": {
+          "same_page": true,
+          "pages": [
+            8
+          ]
+        },
+        "05": {
+          "same_page": true,
+          "pages": [
+            9
+          ]
+        },
+        "06": {
+          "same_page": true,
+          "pages": [
+            9
+          ]
+        },
+        "07": {
+          "same_page": true,
+          "pages": [
+            10
+          ]
+        },
+        "08": {
+          "same_page": true,
+          "pages": [
+            11
+          ]
+        },
+        "09": {
+          "same_page": true,
+          "pages": [
+            13
+          ]
+        },
+        "10": {
+          "same_page": true,
+          "pages": [
+            14
+          ]
+        },
+        "11": {
+          "same_page": true,
+          "pages": [
+            15
+          ]
+        },
+        "12": {
+          "same_page": true,
+          "pages": [
+            16
+          ]
+        },
+        "13": {
+          "same_page": true,
+          "pages": [
+            18
+          ]
+        },
+        "14": {
+          "same_page": true,
+          "pages": [
+            18
+          ]
+        },
+        "15": {
+          "same_page": true,
+          "pages": [
+            2,
+            20
+          ]
+        },
+        "16": {
+          "same_page": true,
+          "pages": [
+            21
+          ]
+        },
+        "17": {
+          "same_page": true,
+          "pages": [
+            23
+          ]
+        },
+        "18": {
+          "same_page": true,
+          "pages": [
+            23
+          ]
+        },
+        "19": {
+          "same_page": true,
+          "pages": [
+            24
+          ]
+        },
+        "20": {
+          "same_page": true,
+          "pages": [
+            25
+          ]
+        },
+        "21": {
+          "same_page": true,
+          "pages": [
+            2,
+            25
+          ]
+        },
+        "22": {
+          "same_page": true,
+          "pages": [
+            26
+          ]
+        },
+        "23": {
+          "same_page": true,
+          "pages": [
+            26
+          ]
+        },
+        "24": {
+          "same_page": true,
+          "pages": [
+            27
+          ]
+        }
+      }
+    },
+    {
+      "check": "route_is_monotonic",
+      "status": "PASS",
+      "detail": {
+        "actual": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ],
+        "expected": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ]
+      }
+    },
+    {
+      "check": "contents_is_complete_and_ordered",
+      "status": "PASS",
+      "detail": "01 to 24 plus Referentes and Referencias base as SIN NUM."
+    },
+    {
+      "check": "all_references_anchored",
+      "status": "PASS",
+      "detail": {
+        "Alter 2002": true,
+        "Checkland y Poulter 2007": true,
+        "Clegg 2000": true,
+        "Mumford 2003": true,
+        "Trist y Bamforth 1951": true,
+        "Baxter y Sommerville 2011": true,
+        "ACM/AIS 2020": true,
+        "Tabassi 2023": true,
+        "DORA 2025": true,
+        "DORA 2026": true,
+        "Alter 2024": true,
+        "Polojärvi 2023": true,
+        "ISO 15288": true,
+        "Autio 2024": true,
+        "Hofmann 2024": true,
+        "Nguyen y Elbanna 2025": true,
+        "NIST 2026": true
+      }
+    },
+    {
+      "check": "all_urls_preserved_and_linked",
+      "status": "PASS",
+      "detail": {
+        "source": [
+          "https://doi.org/10.1002/sys.21664",
+          "https://doi.org/10.1007/s10796-025-10591-5",
+          "https://doi.org/10.1007/s12525-024-00734-y",
+          "https://doi.org/10.1016/S0003-6870(00)00009-0",
+          "https://doi.org/10.1016/j.intcom.2010.07.003",
+          "https://doi.org/10.1177/001872675100400101",
+          "https://doi.org/10.17705/1CAIS.00906",
+          "https://doi.org/10.17705/1CAIS.05446",
+          "https://doi.org/10.6028/NIST.AI.100-1",
+          "https://doi.org/10.6028/NIST.AI.600-1",
+          "https://dora.dev/insights/balancing-ai-tensions/",
+          "https://dora.dev/research/2025/dora-report/",
+          "https://is2020.hosting2.acm.org/wp-content/uploads/2021/06/is2020.pdf",
+          "https://www.iso.org/standard/81702.html",
+          "https://www.nist.gov/programs-projects/concept-note-ai-rmf-profile-trustworthy-ai-critical-infrastructure"
+        ],
+        "annotations": [
+          "https://doi.org/10.1002/sys.21664",
+          "https://doi.org/10.1007/s10796-025-10591-5",
+          "https://doi.org/10.1007/s12525-024-00734-y",
+          "https://doi.org/10.1016/S0003-6870(00)00009-0",
+          "https://doi.org/10.1016/j.intcom.2010.07.003",
+          "https://doi.org/10.1177/001872675100400101",
+          "https://doi.org/10.17705/1CAIS.00906",
+          "https://doi.org/10.17705/1CAIS.05446",
+          "https://doi.org/10.6028/NIST.AI.100-1",
+          "https://doi.org/10.6028/NIST.AI.600-1",
+          "https://dora.dev/insights/balancing-ai-tensions/",
+          "https://dora.dev/research/2025/dora-report/",
+          "https://is2020.hosting2.acm.org/wp-content/uploads/2021/06/is2020.pdf",
+          "https://www.iso.org/standard/81702.html",
+          "https://www.nist.gov/programs-projects/concept-note-ai-rmf-profile-trustworthy-ai-critical-infrastructure"
+        ]
+      }
+    },
+    {
+      "check": "hyphenated_urls_intact",
+      "status": "PASS",
+      "detail": "all locked hyphenated URL tokens extract intact"
+    },
+    {
+      "check": "checkland_record_intact",
+      "status": "PASS",
+      "detail": "John Poulter, Wiley 2007, ISBN preserved, no Wiley URL"
+    },
+    {
+      "check": "ordinary_pages_are_at_least_sixty_percent_full",
+      "status": "PASS",
+      "detail": {
+        "minimum": 0.6154,
+        "underfilled": {},
+        "pages": {
+          "6": 0.977,
+          "7": 0.7204,
+          "8": 0.8341,
+          "9": 0.9322,
+          "10": 0.7322,
+          "11": 0.9525,
+          "12": 0.9925,
+          "13": 0.8802,
+          "14": 0.9605,
+          "15": 0.9385,
+          "16": 0.7907,
+          "18": 0.8263,
+          "19": 0.63,
+          "20": 0.9048,
+          "21": 0.9525,
+          "22": 0.8408,
+          "23": 0.9603,
+          "24": 0.7526,
+          "25": 0.7697,
+          "26": 0.9254,
+          "27": 0.7415,
+          "28": 0.6154
+        }
+      }
+    },
+    {
+      "check": "no_automatic_sparse_fills",
+      "status": "PASS",
+      "detail": {
+        "sparse": [],
+        "removed": []
+      }
+    },
+    {
+      "check": "two_internal_full_bleed_pauses",
+      "status": "PASS",
+      "detail": "two pauses, first immediately after page 4, second after emergence"
+    },
+    {
+      "check": "cover_accessible_and_complete",
+      "status": "PASS",
+      "detail": "METSILECTURA PREVIA\nEDICIÓN 2026\nN02\nFCE · UBA\nMETODOLOGÍA DE SISTEMAS DE INFORMACIÓN\nEl sistema deinformación nocabe en unaaplicación\nN02\nUn sistema deinformación\norganizacional no es unprograma ni una suma\nde aplicaciones.\n01\nDiego Carralbal, 2026 "
+    },
+    {
+      "check": "cover_and_pauses_are_full_bleed",
+      "status": "PASS",
+      "detail": {
+        "1": 1.0093,
+        "5": 1.0081,
+        "17": 1.0081,
+        "29": 1.016
+      }
+    },
+    {
+      "check": "referents_and_hotel_voices",
+      "status": "PASS",
+      "detail": "six referents and four distinct Hotel Horizonte voices"
+    },
+    {
+      "check": "counts_close",
+      "status": "PASS",
+      "detail": {
+        "pills": 5,
+        "glossary": 19,
+        "questions": 6,
+        "references": 17
+      }
+    },
+    {
+      "check": "impersonal_register",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "dash_rule",
+      "status": "PASS",
+      "detail": "only the official ISO title retains an em dash"
+    },
+    {
+      "check": "no_placeholders_or_isolated_initials",
+      "status": "PASS",
+      "detail": {
+        "isolated_initials": []
+      }
+    },
+    {
+      "check": "tagging_language_and_alt",
+      "status": "PASS",
+      "detail": {
+        "language": "es-AR",
+        "alts": [
+          "Cinco fronteras posibles para elegir qué sistema analizar La palabra sistema cambia de significado según la decisión: cada frontera incluye relaciones distintas.",
+          "Caso de aplicación Hotel Horizonte",
+          "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza."
+        ]
+      }
+    },
+    {
+      "check": "footer_and_closing",
+      "status": "PASS",
+      "detail": {
+        "linkedin_pages": 29,
+        "closing_folio_present": true,
+        "closing_caption_present": true,
+        "closing_quote_absent": true,
+        "closing_alt_present": true
+      }
+    },
+    {
+      "check": "approved_assets_preserved",
+      "status": "PASS",
+      "detail": "all inherited N02 v13 assets are byte-identical"
+    },
+    {
+      "check": "qa_pipeline_passed",
+      "status": "PASS",
+      "detail": {
+        "status": "PASS",
+        "missing_headings": [],
+        "forbidden_fonts": []
+      }
+    },
+    {
+      "check": "css_preserves_body_scale",
+      "status": "PASS",
+      "detail": "canonical typography retained; only image height and column composition were adjusted"
+    }
+  ]
+}

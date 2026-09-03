@@ -1,0 +1,320 @@
+{
+  "document": "N03",
+  "version": "v9-final",
+  "status": "PASS",
+  "source_sha256": "6930c5a6cf7c98ad2f60ebf662334a7f491827260e460c939c51b7c9acef6854",
+  "pdf_sha256": "5b0d2f0efb950f7d95f19b2bbb50c697b5f33901623c8a56ab6b768f8dfa9a15",
+  "pdf_bytes": 14050020,
+  "pdf_modified": 1788455218.7628562,
+  "pages": 30,
+  "checks": [
+    {
+      "check": "canonical_source_is_byte_identical",
+      "status": "PASS",
+      "detail": {
+        "sha256": "6930c5a6cf7c98ad2f60ebf662334a7f491827260e460c939c51b7c9acef6854",
+        "expected": "6930c5a6cf7c98ad2f60ebf662334a7f491827260e460c939c51b7c9acef6854"
+      }
+    },
+    {
+      "check": "canonical_structure",
+      "status": "PASS",
+      "detail": [
+        "Pregunta profesional",
+        "La mejora que volvió por la puerta de atrás",
+        "Tesis",
+        "De N02 a N03: del mapa a sus consecuencias",
+        "Movimiento 1 · Delimitar sin naturalizar el recorte",
+        "Movimiento 2 · Observar cómo regresan los efectos",
+        "Movimiento 3 · Decidir y revisar la frontera",
+        "Síntesis",
+        "Cinco píldoras para recordar",
+        "Glosario esencial",
+        "Preguntas de preparación",
+        "Referencias base"
+      ]
+    },
+    {
+      "check": "three_movement_architecture",
+      "status": "PASS",
+      "detail": "three movements present"
+    },
+    {
+      "check": "canonical_handoffs_present",
+      "status": "PASS",
+      "detail": "N02 input, HH-03 conductor and N04 output are present"
+    },
+    {
+      "check": "source_blocks_render_once",
+      "status": "PASS",
+      "detail": {
+        "status": "PASS",
+        "source_block_count": 320,
+        "rendered_source_id_count": 320,
+        "missing_source_ids": [],
+        "unexpected_source_ids": [],
+        "duplicate_rendered_ids": []
+      }
+    },
+    {
+      "check": "content_audit_remains_closed",
+      "status": "PASS",
+      "detail": {
+        "total": 9034,
+        "substantive_from_thesis_through_synthesis": 7631
+      }
+    },
+    {
+      "check": "pdf_is_new_finalized_artifact",
+      "status": "PASS",
+      "detail": {
+        "raw_sha256": "c4742cede0ed1ee30013b8f1fa4b848c40bea35ebad2cdad77f87088e7e2e69d",
+        "final_sha256": "5b0d2f0efb950f7d95f19b2bbb50c697b5f33901623c8a56ab6b768f8dfa9a15"
+      }
+    },
+    {
+      "check": "pdf_page_count_and_size",
+      "status": "PASS",
+      "detail": {
+        "pages": 30,
+        "a4": 30
+      }
+    },
+    {
+      "check": "all_headings_in_pdf",
+      "status": "PASS",
+      "detail": {
+        "headings": 12
+      }
+    },
+    {
+      "check": "no_orphan_headings",
+      "status": "PASS",
+      "detail": {
+        "count": 64,
+        "failures": {}
+      }
+    },
+    {
+      "check": "route_is_monotonic",
+      "status": "PASS",
+      "detail": {
+        "actual": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ],
+        "expected": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ]
+      }
+    },
+    {
+      "check": "contents_is_complete_and_ordered",
+      "status": "PASS",
+      "detail": "01 to 11 plus Referentes and Referencias base as SIN NUM."
+    },
+    {
+      "check": "all_references_anchored",
+      "status": "PASS",
+      "detail": {
+        "Churchman (1968)": true,
+        "Midgley (2000)": true,
+        "Meadows (2008)": true,
+        "Senge (2006)": true,
+        "Sterman (2000)": true,
+        "Leveson (2012)": true,
+        "NIST AI 600-1 (2024)": true,
+        "NIST AI 700-2 (2025)": true,
+        "Reglamento UE 2024/1689": true,
+        "Polojärvi (2023)": true,
+        "ISO/IEC/IEEE 15288:2023": true
+      }
+    },
+    {
+      "check": "all_urls_preserved_and_linked",
+      "status": "PASS",
+      "detail": {
+        "source": [
+          "https://doi.org/10.1002/sys.21664",
+          "https://doi.org/10.1007/978-1-4615-4201-8",
+          "https://doi.org/10.6028/NIST.AI.600-1",
+          "https://doi.org/10.6028/NIST.AI.700-2",
+          "https://doi.org/10.7551/mitpress/8179.001.0001",
+          "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+          "https://www.iso.org/standard/81702.html"
+        ],
+        "annotations": [
+          "https://doi.org/10.1002/sys.21664",
+          "https://doi.org/10.1007/978-1-4615-4201-8",
+          "https://doi.org/10.6028/NIST.AI.600-1",
+          "https://doi.org/10.6028/NIST.AI.700-2",
+          "https://doi.org/10.7551/mitpress/8179.001.0001",
+          "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+          "https://www.iso.org/standard/81702.html"
+        ]
+      }
+    },
+    {
+      "check": "hyphenated_urls_intact",
+      "status": "PASS",
+      "detail": "locked hyphenated URL tokens extract intact"
+    },
+    {
+      "check": "ordinary_pages_are_at_least_half_full",
+      "status": "PASS",
+      "detail": {
+        "minimum": 0.5165,
+        "underfilled": {},
+        "pages": {
+          "6": 0.9784,
+          "7": 0.883,
+          "8": 0.7782,
+          "9": 0.9914,
+          "10": 0.9367,
+          "11": 0.6828,
+          "12": 0.9154,
+          "13": 0.956,
+          "14": 0.996,
+          "15": 0.8654,
+          "16": 0.9905,
+          "17": 0.9367,
+          "18": 0.8654,
+          "20": 0.9302,
+          "21": 0.9645,
+          "22": 0.9404,
+          "23": 0.9691,
+          "24": 0.9569,
+          "25": 0.9942,
+          "26": 0.9738,
+          "27": 0.6346,
+          "28": 0.5166,
+          "29": 0.5165
+        }
+      }
+    },
+    {
+      "check": "no_automatic_sparse_fills",
+      "status": "PASS",
+      "detail": {
+        "sparse": [],
+        "removed": []
+      }
+    },
+    {
+      "check": "two_internal_full_bleed_pauses",
+      "status": "PASS",
+      "detail": "question page 4, first pause page 5, second pause page 19"
+    },
+    {
+      "check": "cover_accessible_and_complete",
+      "status": "PASS",
+      "detail": "METSILECTURA PREVIA\nEDICIÓN 2026\nN03\nFCE · UBA\nMETODOLOGÍA DE SISTEMAS DE INFORMACIÓN\nFronteras,retroalimentación yefectos nointencionales\nN03\nToda frontera es una\ndecisión analítica,\noperativa y política.\n01\nDiego Carralbal, 2026  ·  linkedin.com/in/carralbal\n"
+    },
+    {
+      "check": "premium_cover_contract",
+      "status": "PASS",
+      "detail": "cinematic magazine photograph, Argentine representation, dedicated alt text and stable source asset"
+    },
+    {
+      "check": "cover_pauses_and_closing_are_full_bleed",
+      "status": "PASS",
+      "detail": {
+        "1": 1.0222,
+        "5": 1.0081,
+        "19": 1.0081,
+        "30": 1.0151
+      }
+    },
+    {
+      "check": "referents_and_hotel_voices",
+      "status": "PASS",
+      "detail": "six referents and four distinct equal Hotel Horizonte portraits"
+    },
+    {
+      "check": "counts_close",
+      "status": "PASS",
+      "detail": {
+        "pills": 5,
+        "glossary": 13,
+        "questions": 6,
+        "references": 11
+      }
+    },
+    {
+      "check": "impersonal_register",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "dash_rule",
+      "status": "PASS",
+      "detail": "only the official ISO title retains an em dash"
+    },
+    {
+      "check": "no_placeholders_or_stray_initials",
+      "status": "PASS",
+      "detail": {
+        "isolated_initials": [
+          {
+            "page": 12,
+            "value": "R"
+          }
+        ],
+        "note": "R is the visible reinforcing-loop marker in the diagram"
+      }
+    },
+    {
+      "check": "tagging_language_and_alt",
+      "status": "PASS",
+      "detail": {
+        "language": "es-AR",
+        "alt_count": 3,
+        "closing_alt": true
+      }
+    },
+    {
+      "check": "footer_and_structured_closing",
+      "status": "PASS",
+      "detail": {
+        "linkedin_pages": 30,
+        "closing_folio_present": true,
+        "closing_caption_present": true,
+        "closing_quote_absent": true,
+        "closing_alt_present": true
+      }
+    },
+    {
+      "check": "qa_pipeline_passed",
+      "status": "PASS",
+      "detail": {
+        "status": "PASS",
+        "missing_headings": [],
+        "forbidden_fonts": []
+      }
+    },
+    {
+      "check": "n03_layout_contract",
+      "status": "PASS",
+      "detail": "N03 cover, reading, question and reference rules are explicit"
+    }
+  ]
+}

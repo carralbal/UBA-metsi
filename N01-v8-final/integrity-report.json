@@ -1,0 +1,177 @@
+{
+  "document": "N01",
+  "candidate": "/Users/diegocarralbal/.codex/.chatgpt-projects/g-p-689403cb2e2c8191b5f7da28a0a310be/work/METSI-N02-v8/N01-v8-final/output/N01-METSI-lectura-previa-v8-final.pdf",
+  "pdf_sha256": "5a89af1cc696ae8502c05b7fd828ef5f561fce18af94457c06cdd997c30bef8c",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "source_minimum_depth",
+      "status": "PASS",
+      "detail": {
+        "words": 7696,
+        "minimum": 7500
+      }
+    },
+    {
+      "check": "source_sections",
+      "status": "PASS",
+      "detail": {
+        "sections": 29
+      }
+    },
+    {
+      "check": "references_complete",
+      "status": "PASS",
+      "detail": {
+        "entries": 15
+      }
+    },
+    {
+      "check": "references_anchored",
+      "status": "PASS",
+      "detail": {
+        "Checkland y Poulter": true,
+        "Schön": true,
+        "Argyris y Schön": true,
+        "March": true,
+        "Suchman": true,
+        "Senge": true,
+        "ISO 24748": true,
+        "PMBOK 8": true,
+        "NIST AI RMF": true,
+        "NIST GenAI": true,
+        "SWEBOK V4.0a": true,
+        "ISO 15288": true,
+        "EU AI Act": true,
+        "DORA 2025": true,
+        "IS2020": true
+      }
+    },
+    {
+      "check": "no_em_dash",
+      "status": "PASS",
+      "detail": {
+        "count": 0
+      }
+    },
+    {
+      "check": "two_full_page_quotes",
+      "status": "PASS",
+      "detail": {
+        "count": 2
+      }
+    },
+    {
+      "check": "six_hotel_voices",
+      "status": "PASS",
+      "detail": {
+        "count": 6
+      }
+    },
+    {
+      "check": "six_distinct_hotel_portraits",
+      "status": "PASS",
+      "detail": {
+        "files": [
+          "hotel-camila-duarte-v2.png",
+          "hotel-elena.jpg",
+          "hotel-federico.jpg",
+          "hotel-lucia.jpg",
+          "hotel-mariela-benitez-v1.png",
+          "hotel-ricardo.jpg"
+        ]
+      }
+    },
+    {
+      "check": "six_distinct_referents",
+      "status": "PASS",
+      "detail": {
+        "files": [
+          "referent-chris-argyris.jpg",
+          "referent-donald-schon.jpg",
+          "referent-james-march.jpg",
+          "referent-lucy-suchman.jpg",
+          "referent-peter-checkland.jpg",
+          "referent-peter-senge.jpg"
+        ]
+      }
+    },
+    {
+      "check": "minimal_references_layout",
+      "status": "PASS",
+      "detail": {
+        "image_plate": false,
+        "apparatus": true
+      }
+    },
+    {
+      "check": "contents_complete",
+      "status": "PASS",
+      "detail": {
+        "numbered": 28,
+        "sin_num_mentions": 3
+      }
+    },
+    {
+      "check": "image_manifest",
+      "status": "PASS",
+      "detail": {
+        "assets": 8,
+        "hashes_unique": true,
+        "source_ids_unique": true,
+        "files_valid": true
+      }
+    },
+    {
+      "check": "images_unique_across_n00_n10",
+      "status": "PASS",
+      "detail": {
+        "duplicate_hashes": []
+      }
+    },
+    {
+      "check": "pdf_a4",
+      "status": "PASS",
+      "detail": {
+        "pages": 30
+      }
+    },
+    {
+      "check": "pdf_qa",
+      "status": "PASS",
+      "detail": "PASS"
+    },
+    {
+      "check": "folios_and_footer_links",
+      "status": "PASS",
+      "detail": {
+        "pages_with_footer_link": 30,
+        "pages": 30
+      }
+    },
+    {
+      "check": "closing_structure",
+      "status": "PASS",
+      "detail": {
+        "closing_caption_present": true,
+        "closing_folio_present": true,
+        "closing_alt_present": true,
+        "closing_quote_absent": true
+      }
+    },
+    {
+      "check": "pdf_text_complete",
+      "status": "PASS",
+      "detail": {
+        "required_titles": 4
+      }
+    },
+    {
+      "check": "approved_baseline_preserved",
+      "status": "PASS",
+      "detail": {
+        "path": "N01/output/N01-METSI-lectura-previa-final.pdf"
+      }
+    }
+  ]
+}

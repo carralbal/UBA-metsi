@@ -1,0 +1,688 @@
+{
+  "document": "N01",
+  "version": "v16",
+  "candidate": "/Users/diegocarralbal/.codex/.chatgpt-projects/g-p-689403cb2e2c8191b5f7da28a0a310be/work/METSI-N02-v8/N01-v16-final/output/N01-METSI-lectura-previa-v16-final.pdf",
+  "pdf_sha256": "c7f0508bb9f7f152a2637412c7b8e3f164f367b88aae1c81f484d02756d44855",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "v8_through_v14_baselines_frozen",
+      "status": "PASS",
+      "detail": [
+        "N01-v8-final",
+        "N01/source/N01_metodologia_sin_recetas-v8.md",
+        "N01-v9-final",
+        "N01/source/N01_metodologia_sin_recetas-v9.md",
+        "N01-v10-final",
+        "N01/source/N01_metodologia_sin_recetas-v10.md",
+        "N01-v11-final",
+        "N01/source/N01_metodologia_sin_recetas-v11.md",
+        "N01-v12-final",
+        "N01/source/N01_metodologia_sin_recetas-v12.md",
+        "N01-v13-final",
+        "N01-v14-final",
+        "N01-v15-final"
+      ]
+    },
+    {
+      "check": "source_text_byte_identical_to_v11",
+      "status": "PASS",
+      "detail": "3ab896743a52cdac2cdbcfdd007d1104955ef9ed696babbfa0c4486660b87a03"
+    },
+    {
+      "check": "source_depth_stable",
+      "status": "PASS",
+      "detail": {
+        "words": 7694
+      }
+    },
+    {
+      "check": "section_count_and_order",
+      "status": "PASS",
+      "detail": {
+        "sections": 29,
+        "opening": [
+          "Pregunta profesional",
+          "El mapa perfecto de la montaña equivocada",
+          "Tesis",
+          "Cómo leer este mapa: N01 abre el recorrido N02 a N10",
+          "La tranquilidad de empezar por una solución"
+        ]
+      }
+    },
+    {
+      "check": "route_visible_all_sections",
+      "status": "PASS",
+      "detail": {
+        "count": 28,
+        "labels": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "PRUEBA",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "TRANSFERENCIA",
+          "TRANSFERENCIA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ]
+      }
+    },
+    {
+      "check": "no_orphan_section_headings",
+      "status": "PASS",
+      "detail": {
+        "Pregunta profesional": {
+          "physical_page": 4,
+          "first_body_words_present": true
+        },
+        "El mapa perfecto de la montaña equivocada": {
+          "physical_page": 6,
+          "first_body_words_present": true
+        },
+        "Tesis": {
+          "physical_page": 7,
+          "first_body_words_present": true
+        },
+        "Cómo leer este mapa: N01 abre el recorrido N02 a N10": {
+          "physical_page": 7,
+          "first_body_words_present": true
+        },
+        "La tranquilidad de empezar por una solución": {
+          "physical_page": 8,
+          "first_body_words_present": true
+        },
+        "Lo que Ingeniería de Software ya nos dio y lo que ahora falta": {
+          "physical_page": 9,
+          "first_body_words_present": true
+        },
+        "Método, metodología, marco, práctica, técnica y herramienta": {
+          "physical_page": 10,
+          "first_body_words_present": true
+        },
+        "La metodología como sistema de preguntas": {
+          "physical_page": 11,
+          "first_body_words_present": true
+        },
+        "Planificar no es predecir": {
+          "physical_page": 13,
+          "first_body_words_present": true
+        },
+        "Rigor sin rigidez": {
+          "physical_page": 13,
+          "first_body_words_present": true
+        },
+        "La metodología también distribuye poder": {
+          "physical_page": 14,
+          "first_body_words_present": true
+        },
+        "Metodología como diseño de un sistema de aprendizaje": {
+          "physical_page": 15,
+          "first_body_words_present": true
+        },
+        "Incertidumbre epistemológica, de acción y de coordinación": {
+          "physical_page": 17,
+          "first_body_words_present": true
+        },
+        "Evidencia suficiente no significa evidencia perfecta": {
+          "physical_page": 17,
+          "first_body_words_present": true
+        },
+        "Hitos de producción e hitos de decisión": {
+          "physical_page": 18,
+          "first_body_words_present": true
+        },
+        "Tailoring: adaptar sin perder la lógica": {
+          "physical_page": 19,
+          "first_body_words_present": true
+        },
+        "El costo de no intervenir y el costo de aprender": {
+          "physical_page": 20,
+          "first_body_words_present": true
+        },
+        "Una prueba breve de calidad metodológica": {
+          "physical_page": 20,
+          "first_body_words_present": true
+        },
+        "Tres usos defectuosos de la metodología": {
+          "physical_page": 21,
+          "first_body_words_present": true
+        },
+        "2026: cuando el método también debe gobernar agentes": {
+          "physical_page": 22,
+          "first_body_words_present": true
+        },
+        "Aplicación a Hotel Horizonte": {
+          "physical_page": 24,
+          "first_body_words_present": true
+        },
+        "Caso de transferencia: turnos en un centro de salud": {
+          "physical_page": 25,
+          "first_body_words_present": true
+        },
+        "Consecuencias para la práctica profesional": {
+          "physical_page": 25,
+          "first_body_words_present": true
+        },
+        "Límites y tensiones": {
+          "physical_page": 26,
+          "first_body_words_present": true
+        },
+        "Síntesis": {
+          "physical_page": 26,
+          "first_body_words_present": true
+        },
+        "Cinco píldoras para recordar": {
+          "physical_page": 27,
+          "first_body_words_present": true
+        },
+        "Glosario esencial": {
+          "physical_page": 27,
+          "first_body_words_present": true
+        },
+        "Preguntas de preparación": {
+          "physical_page": 28,
+          "first_body_words_present": true
+        }
+      }
+    },
+    {
+      "check": "statement_pages_preserved",
+      "status": "PASS",
+      "detail": {
+        "black_quote_pages": 2,
+        "opening_statement": true
+      }
+    },
+    {
+      "check": "cover_exact_three_lines",
+      "status": "PASS",
+      "detail": "three explicit lines"
+    },
+    {
+      "check": "page24_caption_and_reading_order",
+      "status": "PASS",
+      "detail": {
+        "title": 10,
+        "caption": 35,
+        "body": 136
+      }
+    },
+    {
+      "check": "method_diagram_readable_and_complete",
+      "status": "PASS",
+      "detail": {
+        "width_rule": true
+      }
+    },
+    {
+      "check": "pill_ornament_removed",
+      "status": "PASS",
+      "detail": "no decorative 01–05 icon"
+    },
+    {
+      "check": "references_complete_and_anchored",
+      "status": "PASS",
+      "detail": {
+        "entries": 15,
+        "anchors": {
+          "Checkland y Poulter": true,
+          "Schön": true,
+          "Argyris y Schön": true,
+          "March": true,
+          "Suchman": true,
+          "Senge": true,
+          "ISO 24748": true,
+          "PMBOK 8": true,
+          "NIST AI RMF": true,
+          "NIST GenAI": true,
+          "SWEBOK V4.0a": true,
+          "ISO 15288": true,
+          "EU AI Act": true,
+          "DORA 2025": true,
+          "IS2020": true
+        }
+      }
+    },
+    {
+      "check": "all_eleven_reference_links",
+      "status": "PASS",
+      "detail": [
+        "https://doi.org/10.1017/CBO9780511625510",
+        "https://doi.org/10.1287/orsc.2.1.71",
+        "https://doi.org/10.6028/NIST.AI.100-1",
+        "https://doi.org/10.6028/NIST.AI.600-1",
+        "https://dora.dev/research/2025/dora-report/",
+        "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+        "https://is2020.hosting2.acm.org/wp-content/uploads/2021/06/is2020.pdf",
+        "https://www.computer.org/education/bodies-of-knowledge/software-engineering",
+        "https://www.iso.org/standard/81702.html",
+        "https://www.iso.org/standard/84709.html",
+        "https://www.pmi.org/standards/pmbok"
+      ]
+    },
+    {
+      "check": "url_copy_layer_preserves_hyphens",
+      "status": "PASS",
+      "detail": {
+        "checked": 11
+      }
+    },
+    {
+      "check": "cover_eyebrow_one_ordered_text_node",
+      "status": "PASS",
+      "detail": [
+        "METSI",
+        "LECTURA PREVIA",
+        "EDICIÓN 2026",
+        "N01",
+        "FCE · UBA",
+        "METODOLOGÍA DE SISTEMAS DE INFORMACIÓN",
+        "Metodología sin recetas:intervenir cuando el problematodavía no está claro",
+        "N01"
+      ]
+    },
+    {
+      "check": "cover_eyebrow_two_real_pdf_runs",
+      "status": "PASS",
+      "detail": [
+        {
+          "y": 76.0,
+          "tj_count": 1,
+          "td_count": 0,
+          "tc_count": 2,
+          "byte_lengths": [
+            28
+          ]
+        },
+        {
+          "y": 87.0,
+          "tj_count": 1,
+          "td_count": 0,
+          "tc_count": 2,
+          "byte_lengths": [
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "check": "cover_patterns_extend_to_trim",
+      "status": "PASS",
+      "detail": [
+        {
+          "matrix": [
+            1.10549987,
+            0.0,
+            0.0,
+            -0.99999994,
+            0.0,
+            842.0
+          ],
+          "bbox": [
+            0.0,
+            0.0,
+            540.00006,
+            842.00012
+          ],
+          "ystep": 844.00012,
+          "image_heights": {
+            "/X6": 842,
+            "/X9": 842,
+            "/X11": 1
+          }
+        },
+        {
+          "matrix": [
+            1.10549987,
+            0.0,
+            0.0,
+            -0.99999994,
+            0.0,
+            842.0
+          ],
+          "bbox": [
+            0.0,
+            0.0,
+            540.00006,
+            842.00012
+          ],
+          "ystep": 844.00012,
+          "image_heights": {
+            "/X14": 842,
+            "/X17": 842,
+            "/X19": 1
+          }
+        }
+      ]
+    },
+    {
+      "check": "cover_eyebrow_contrast_at_least_4_5",
+      "status": "PASS",
+      "detail": {
+        "v15": {
+          "median_gray": 137.0,
+          "white_contrast_ratio": 3.498
+        },
+        "v16": {
+          "median_gray": 106.0,
+          "white_contrast_ratio": 5.409
+        }
+      }
+    },
+    {
+      "check": "cover_right_seam_removed",
+      "status": "PASS",
+      "detail": {
+        "column": 1357,
+        "mean_rgb_step": 4.548,
+        "width": 1488
+      }
+    },
+    {
+      "check": "cover_text_geometry_unchanged",
+      "status": "PASS",
+      "detail": {
+        "runs": 15
+      }
+    },
+    {
+      "check": "all_page_boundary_widows_removed",
+      "status": "PASS",
+      "detail": {
+        "reviewed_non_body": [
+          {
+            "transition": "01->02",
+            "last_line": "todavía no está claro",
+            "classification": "non-body apparatus boundary"
+          },
+          {
+            "transition": "28->29",
+            "last_line": "https://www.pmi.org/standards/pmbok",
+            "classification": "non-body apparatus boundary"
+          }
+        ],
+        "unresolved": []
+      }
+    },
+    {
+      "check": "targeted_widow_paragraphs_move_as_units",
+      "status": "PASS",
+      "detail": {
+        "pages": [
+          8,
+          18,
+          23
+        ]
+      }
+    },
+    {
+      "check": "dropcap_stream_order_and_complete_words",
+      "status": "PASS",
+      "detail": {
+        "p10": "En",
+        "p17": "No",
+        "p26": "La"
+      }
+    },
+    {
+      "check": "page27_pills_reading_order",
+      "status": "PASS",
+      "detail": {
+        "title": 10,
+        "first_item": 36
+      }
+    },
+    {
+      "check": "page10_ghost_label_removed",
+      "status": "PASS",
+      "detail": "residual connector label absent from SVG and PDF text layer"
+    },
+    {
+      "check": "expected_repagination_preserves_source",
+      "status": "PASS",
+      "detail": {
+        "changed_visual_pages": [
+          1,
+          6,
+          7,
+          8,
+          10,
+          11,
+          12,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          25,
+          26,
+          27
+        ],
+        "source_sha256": "3ab896743a52cdac2cdbcfdd007d1104955ef9ed696babbfa0c4486660b87a03"
+      }
+    },
+    {
+      "check": "checkland_isbn_no_wiley_url",
+      "status": "PASS",
+      "detail": "ISBN 978-0-470-02554-3"
+    },
+    {
+      "check": "referents_match_references",
+      "status": "PASS",
+      "detail": {
+        "Learning for Action": true,
+        "The Reflective Practitioner": true,
+        "Organizational Learning II": true,
+        "Exploration and Exploitation in Organizational Learning": true,
+        "Human-Machine Reconfigurations: Plans and Situated Actions": true,
+        "The Fifth Discipline": true
+      }
+    },
+    {
+      "check": "pmbok8_precision",
+      "status": "PASS",
+      "detail": "6 principles, 7 domains, Focus Areas, 40 processes"
+    },
+    {
+      "check": "revisability_named_six_times_and_defined_twice",
+      "status": "PASS",
+      "detail": {
+        "named": 6,
+        "definitions": 2
+      }
+    },
+    {
+      "check": "voice_caption_updated",
+      "status": "PASS",
+      "detail": "caption with por sí"
+    },
+    {
+      "check": "sections_23_25_two_columns",
+      "status": "PASS",
+      "detail": "sections 23, 24 and 25"
+    },
+    {
+      "check": "six_conflicting_hotel_voices",
+      "status": "PASS",
+      "detail": {
+        "voices": 6
+      }
+    },
+    {
+      "check": "six_distinct_hotel_portraits",
+      "status": "PASS",
+      "detail": [
+        "hotel-camila-duarte-v2.png",
+        "hotel-elena.jpg",
+        "hotel-federico.jpg",
+        "hotel-lucia.jpg",
+        "hotel-mariela-benitez-v1.png",
+        "hotel-ricardo.jpg"
+      ]
+    },
+    {
+      "check": "six_distinct_referent_portraits",
+      "status": "PASS",
+      "detail": [
+        "referent-chris-argyris.jpg",
+        "referent-donald-schon.jpg",
+        "referent-james-march.jpg",
+        "referent-lucy-suchman.jpg",
+        "referent-peter-checkland.jpg",
+        "referent-peter-senge.jpg"
+      ]
+    },
+    {
+      "check": "questions_and_delivery",
+      "status": "PASS",
+      "detail": "Q3 impersonal, Q7 health case, written delivery"
+    },
+    {
+      "check": "impersonal_register",
+      "status": "PASS",
+      "detail": "no usted or distinguiría"
+    },
+    {
+      "check": "section09_complete_on_page13",
+      "status": "PASS",
+      "detail": "section 09 title and body on physical page 13"
+    },
+    {
+      "check": "subsection_heading_not_orphaned",
+      "status": "PASS",
+      "detail": "subheading and first paragraph together on physical page 21"
+    },
+    {
+      "check": "synthesis_complete_on_page26",
+      "status": "PASS",
+      "detail": "both synthesis paragraphs complete on physical page 26"
+    },
+    {
+      "check": "glossary_three_columns_complete_and_legible",
+      "status": "PASS",
+      "detail": {
+        "physical_page": 27,
+        "terms": 15
+      }
+    },
+    {
+      "check": "glossary_bullets_clear_vertical_rules",
+      "status": "PASS",
+      "detail": {
+        "bullets": 15,
+        "rules": [
+          216.49,
+          369.36
+        ],
+        "clearances_points": [
+          7.47,
+          7.47
+        ],
+        "minimum_points": 7.47
+      }
+    },
+    {
+      "check": "no_placeholder_markers",
+      "status": "PASS",
+      "detail": "no uppercase production placeholder markers"
+    },
+    {
+      "check": "assets_preserved",
+      "status": "PASS",
+      "detail": {
+        "assets": 8,
+        "hashes_valid": true
+      }
+    },
+    {
+      "check": "pdf_a4_exactly_29_pages",
+      "status": "PASS",
+      "detail": {
+        "pages": 29
+      }
+    },
+    {
+      "check": "no_page_less_than_half_filled",
+      "status": "PASS",
+      "detail": {
+        "minimum": 0.529,
+        "page": 29,
+        "occupancies": [
+          0.896,
+          0.825,
+          0.687,
+          0.896,
+          0.896,
+          0.871,
+          0.877,
+          0.769,
+          0.662,
+          0.871,
+          0.85,
+          0.732,
+          0.877,
+          0.873,
+          0.662,
+          0.896,
+          0.803,
+          0.653,
+          0.725,
+          0.839,
+          0.791,
+          0.852,
+          0.818,
+          0.734,
+          0.877,
+          0.867,
+          0.602,
+          0.761,
+          0.529
+        ]
+      }
+    },
+    {
+      "check": "pdf_qa_pass",
+      "status": "PASS",
+      "detail": "PASS"
+    },
+    {
+      "check": "folios_and_footer_links",
+      "status": "PASS",
+      "detail": {
+        "pages": 29
+      }
+    },
+    {
+      "check": "closing_page_unchanged_structure",
+      "status": "PASS",
+      "detail": {
+        "closing_caption_present": true,
+        "closing_folio_present": true,
+        "closing_alt_present": true,
+        "closing_quote_absent": true
+      }
+    }
+  ]
+}

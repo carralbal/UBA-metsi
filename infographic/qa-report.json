@@ -1,0 +1,16 @@
+{
+  "asset": "N02-cinco-objetos.svg",
+  "status": "PASS",
+  "validator": "metsi-build-reference-grade-infographics/validate_infographic.py",
+  "semantic_review": {
+    "purpose": "Distinguir cinco fronteras analíticas anidadas que suelen confundirse bajo la palabra sistema.",
+    "structure": "Cinco niveles anidados y una guía inferior para elegir la frontera según la decisión.",
+    "source_faithfulness": "PASS",
+    "text_overflow": "PASS",
+    "overlap": "PASS",
+    "legibility_in_pdf": "PASS"
+  },
+  "warnings": [
+    "El validador detecta un único elemento path; la observación no bloquea porque esta composición se apoya deliberadamente en rectángulos anidados y líneas rectas, no en conectores curvos."
+  ]
+}

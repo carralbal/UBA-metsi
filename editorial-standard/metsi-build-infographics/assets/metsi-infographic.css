@@ -1,0 +1,16 @@
+:root {
+  --metsi-ink: #272525;
+  --metsi-secondary: #4d4d4d;
+  --metsi-paper: #ffffff;
+  --metsi-tile: #e6e6e6;
+  --metsi-border: #cccccc;
+  --metsi-radius: 6.3px;
+  --metsi-gap: 18px;
+}
+.metsi-infographic { color: var(--metsi-ink); font-family: Inter, Arial, sans-serif; }
+.metsi-infographic-grid { display: grid; gap: var(--metsi-gap); }
+.metsi-infographic-node { border-radius: var(--metsi-radius); padding: 18px; }
+.metsi-infographic-node--filled { background: var(--metsi-tile); border: 1px solid var(--metsi-border); }
+.metsi-infographic-node--outline { background: var(--metsi-paper); border: 2px solid var(--metsi-border); }
+.metsi-infographic-node h3 { font-size: 22.5px; line-height: 1.25; margin: 0 0 9px; }
+.metsi-infographic-node p { font-size: 18px; line-height: 1.6; margin: 0; }

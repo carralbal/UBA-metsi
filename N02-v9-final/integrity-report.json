@@ -1,0 +1,420 @@
+{
+  "document": "N02",
+  "version": "v9 review candidate",
+  "candidate": "/Users/diegocarralbal/.codex/.chatgpt-projects/g-p-689403cb2e2c8191b5f7da28a0a310be/work/METSI-N02-v8/N02-v9-final/output/N02-METSI-lectura-previa-v9-final.pdf",
+  "pdf_sha256": "fd6e4c556dac35149f4b9496feb262a5c96f1652b38abf4690f084d936319ee5",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "baseline_v8_frozen",
+      "status": "PASS",
+      "detail": {
+        "pdf": "8b9300ae2f7cbac11fa3ce4b122b0750567f410ad581eabb585507b1e7582313",
+        "source": "00a8899601af4a1aade38645479c6f5f2dab63dfdcaa914e0982aca20bdb529b",
+        "cover": "17783b97f051f402b4724c2f34e088e86bde85f7bb9290be07138756f5d82e4b",
+        "matches": "06318b951ef619692a236027ed07ec7a4a1bb9b66cc875a916c40f060e47ecde"
+      }
+    },
+    {
+      "check": "source_is_minimal_v9_revision",
+      "status": "PASS",
+      "detail": {
+        "v8_words": 7576,
+        "v9_words": 7632,
+        "expected_changes": [
+          "## Cinco píldoras para recordar",
+          "Dibujá dos fronteras distintas",
+          "Identificá una optimización local razonable",
+          "Explicá el mecanismo",
+          "Transferí el criterio a un dominio que conozcas",
+          "IS2020 de ACM y AIS",
+          "Clegg (2000), y Baxter y Sommerville (2011)",
+          "Autio y colaboradores, 2024",
+          "DORA (2026)",
+          "NIST (2026)"
+        ]
+      }
+    },
+    {
+      "check": "section_count_and_order",
+      "status": "PASS",
+      "detail": [
+        "Pregunta profesional",
+        "La valija que el sistema había embarcado",
+        "Una reserva confirmada que no alcanza",
+        "Tesis",
+        "Lo que Ingeniería de Software ya nos dio —y lo que ahora falta",
+        "Cinco objetos que no conviene llamar simplemente “el sistema”",
+        "El error de buscar el sistema dentro del software",
+        "Del inventario de componentes a una explicación",
+        "Elegir la frontera por la promesa, no por el organigrama",
+        "El sistema efectivo incluye trabajo que no figura en arquitectura",
+        "Cómo emerge un resultado que ningún componente controla",
+        "Optimización local y desplazamiento del problema",
+        "2026: cuando la aplicación también propone y actúa",
+        "Una autopsia del episodio HH-02",
+        "Método de construcción: una frontera móvil en seis movimientos",
+        "Objeciones y límites: ampliar la frontera también cuesta",
+        "Caso de transferencia: medicación hospitalaria",
+        "Comprobación: ¿el mapa permite decidir algo distinto?",
+        "Síntesis",
+        "Cinco píldoras para recordar",
+        "Glosario esencial",
+        "Preguntas de preparación",
+        "Referencias base"
+      ]
+    },
+    {
+      "check": "contents_matches_real_order",
+      "status": "PASS",
+      "detail": [
+        "Referentes",
+        "Pregunta profesional",
+        "La valija que el sistema había embarcado",
+        "Una reserva confirmada que no alcanza",
+        "Tesis",
+        "Lo que Ingeniería de Software ya nos dio —y lo que ahora falta",
+        "Cinco objetos que no conviene llamar simplemente “el sistema”",
+        "El error de buscar el sistema dentro del software",
+        "Del inventario de componentes a una explicación",
+        "Elegir la frontera por la promesa, no por el organigrama",
+        "El sistema efectivo incluye trabajo que no figura en arquitectura",
+        "Cómo emerge un resultado que ningún componente controla",
+        "Optimización local y desplazamiento del problema",
+        "2026: cuando la aplicación también propone y actúa",
+        "Una autopsia del episodio HH-02",
+        "Método de construcción: una frontera móvil en seis movimientos",
+        "Objeciones y límites: ampliar la frontera también cuesta",
+        "Caso de transferencia: medicación hospitalaria",
+        "Comprobación: ¿el mapa permite decidir algo distinto?",
+        "Síntesis",
+        "Cinco píldoras para recordar",
+        "Glosario esencial",
+        "Preguntas de preparación",
+        "Referencias base"
+      ]
+    },
+    {
+      "check": "all_routes_present",
+      "status": "PASS",
+      "detail": [
+        "PROBLEMA",
+        "PROBLEMA",
+        "PROBLEMA",
+        "PROBLEMA",
+        "DISTINCIONES",
+        "DISTINCIONES",
+        "DISTINCIONES",
+        "DISTINCIONES",
+        "DISTINCIONES",
+        "DISTINCIONES",
+        "DECISIONES",
+        "DECISIONES",
+        "DECISIONES",
+        "DECISIONES",
+        "DECISIONES",
+        "PRUEBA",
+        "TRANSFERENCIA",
+        "TRANSFERENCIA",
+        "PREPARACIÓN",
+        "PREPARACIÓN",
+        "PREPARACIÓN",
+        "PREPARACIÓN"
+      ]
+    },
+    {
+      "check": "no_orphan_section_titles",
+      "status": "PASS",
+      "detail": {
+        "Pregunta profesional": {
+          "page": 4,
+          "body_present": true
+        },
+        "La valija que el sistema había embarcado": {
+          "page": 6,
+          "body_present": true
+        },
+        "Una reserva confirmada que no alcanza": {
+          "page": 7,
+          "body_present": true
+        },
+        "Tesis": {
+          "page": 7,
+          "body_present": true
+        },
+        "Lo que Ingeniería de Software ya nos dio —y lo que ahora falta": {
+          "page": 8,
+          "body_present": true
+        },
+        "Cinco objetos que no conviene llamar simplemente “el sistema”": {
+          "page": 9,
+          "body_present": true
+        },
+        "El error de buscar el sistema dentro del software": {
+          "page": 10,
+          "body_present": true
+        },
+        "Del inventario de componentes a una explicación": {
+          "page": 11,
+          "body_present": true
+        },
+        "Elegir la frontera por la promesa, no por el organigrama": {
+          "page": 12,
+          "body_present": true
+        },
+        "El sistema efectivo incluye trabajo que no figura en arquitectura": {
+          "page": 13,
+          "body_present": true
+        },
+        "Cómo emerge un resultado que ningún componente controla": {
+          "page": 14,
+          "body_present": true
+        },
+        "Optimización local y desplazamiento del problema": {
+          "page": 17,
+          "body_present": true
+        },
+        "2026: cuando la aplicación también propone y actúa": {
+          "page": 17,
+          "body_present": true
+        },
+        "Una autopsia del episodio HH-02": {
+          "page": 19,
+          "body_present": true
+        },
+        "Método de construcción: una frontera móvil en seis movimientos": {
+          "page": 21,
+          "body_present": true
+        },
+        "Objeciones y límites: ampliar la frontera también cuesta": {
+          "page": 21,
+          "body_present": true
+        },
+        "Caso de transferencia: medicación hospitalaria": {
+          "page": 22,
+          "body_present": true
+        },
+        "Comprobación: ¿el mapa permite decidir algo distinto?": {
+          "page": 23,
+          "body_present": true
+        },
+        "Síntesis": {
+          "page": 23,
+          "body_present": true
+        },
+        "Cinco píldoras para recordar": {
+          "page": 24,
+          "body_present": true
+        },
+        "Glosario esencial": {
+          "page": 24,
+          "body_present": true
+        },
+        "Preguntas de preparación": {
+          "page": 25,
+          "body_present": true
+        },
+        "Referencias base": {
+          "page": 26,
+          "body_present": true
+        }
+      }
+    },
+    {
+      "check": "exactly_two_internal_full_page_pauses",
+      "status": "PASS",
+      "detail": {
+        "count": 2
+      }
+    },
+    {
+      "check": "full_bleed_pages_reach_all_edges",
+      "status": "PASS",
+      "detail": {
+        "1": {
+          "top": 8.51,
+          "bottom": 7.71,
+          "left": 67.0,
+          "right": 66.77
+        },
+        "4": {
+          "top": 25.38,
+          "bottom": 25.59,
+          "left": 25.0,
+          "right": 84.99
+        },
+        "5": {
+          "top": 81.06,
+          "bottom": 28.31,
+          "left": 78.78,
+          "right": 86.34
+        },
+        "16": {
+          "top": 170.19,
+          "bottom": 43.67,
+          "left": 133.91,
+          "right": 86.17
+        }
+      }
+    },
+    {
+      "check": "references_are_minimal_unnumbered_apparatus",
+      "status": "PASS",
+      "detail": "SIN NUM., two columns, no bibliography image"
+    },
+    {
+      "check": "all_seventeen_references_anchored",
+      "status": "PASS",
+      "detail": {
+        "Alter 2002": true,
+        "Checkland 1988": true,
+        "Clegg 2000": true,
+        "Mumford 2003": true,
+        "Trist y Bamforth 1951": true,
+        "Baxter y Sommerville 2011": true,
+        "ACM/AIS 2020": true,
+        "NIST AI RMF": true,
+        "DORA 2025": true,
+        "DORA 2026": true,
+        "Alter 2024": true,
+        "Polojärvi 2023": true,
+        "ISO 15288": true,
+        "NIST AI 600-1": true,
+        "Hofmann 2024": true,
+        "Nguyen y Elbanna 2025": true,
+        "NIST 2026": true
+      }
+    },
+    {
+      "check": "all_reference_urls_linked_and_copyable",
+      "status": "PASS",
+      "detail": {
+        "url_entries": 16,
+        "unique": 15,
+        "linked": 15
+      }
+    },
+    {
+      "check": "six_distinct_referent_images",
+      "status": "PASS",
+      "detail": [
+        "referent-steven-alter.jpg",
+        "referent-peter-checkland.jpg",
+        "referent-enid-mumford.jpg",
+        "referent-eric-trist.jpg",
+        "referent-ian-sommerville.jpg",
+        "referent-nist.jpg"
+      ]
+    },
+    {
+      "check": "four_distinct_hotel_portraits",
+      "status": "PASS",
+      "detail": [
+        "hotel-elena.jpg",
+        "hotel-lucia.jpg",
+        "hotel-ricardo.jpg",
+        "hotel-federico.jpg"
+      ]
+    },
+    {
+      "check": "editorial_photographs_not_repeated",
+      "status": "PASS",
+      "detail": [
+        "editorial-01.jpg",
+        "editorial-03.jpg",
+        "editorial-06.jpg",
+        "editorial-04.jpg",
+        "editorial-05.jpg",
+        "sparse-fill-01.jpg"
+      ]
+    },
+    {
+      "check": "one_compact_infographic",
+      "status": "PASS",
+      "detail": "N02-mapa-decision.svg"
+    },
+    {
+      "check": "approved_visual_assets_preserved",
+      "status": "PASS",
+      "detail": {
+        "cover": "17783b97f051f402b4724c2f34e088e86bde85f7bb9290be07138756f5d82e4b",
+        "matches": "06318b951ef619692a236027ed07ec7a4a1bb9b66cc875a916c40f060e47ecde",
+        "editorial-03": "bb8a3a914ec2c02d787ce0db586f3b46555e6b459a065f9ccba0b6385cb87ad8",
+        "editorial-04": "00a7bf82432a1c5351d7b64109cc40aa37d29b5b60df819020dc70fc1b05b6e5"
+      }
+    },
+    {
+      "check": "all_images_have_specific_alt_text",
+      "status": "PASS",
+      "detail": {
+        "count": 20,
+        "alts": [
+          "Fotografía editorial de portada para El sistema de información no cabe en una aplicación",
+          "Vista cenital de personas que circulan en distintas direcciones por un espacio público.",
+          "Retrato o fotografía documental de Steven Alter",
+          "Retrato o fotografía documental de Peter Checkland",
+          "Retrato o fotografía documental de Enid Mumford",
+          "Retrato o fotografía documental de Eric Trist",
+          "Retrato o fotografía documental de Ian Sommerville",
+          "Retrato o fotografía documental de National Institute of Standards and Technology",
+          "Trazos de agua sobre una superficie oscura forman una trama irregular semejante a un sistema.",
+          "Plano técnico con circuitos y recorridos superpuestos sobre una retícula.",
+          "Cinco fronteras posibles para elegir qué sistema analizar",
+          "Entramado de barras estructurales y reflejos que se cruzan en múltiples direcciones.",
+          "Letras y signos dispersos alrededor de una gran letra impresa, vistos en diagonal y fuera de foco.",
+          "Cartel de hotel iluminado contra un cielo oscuro.",
+          "Retrato editorial de Elena Acosta",
+          "Retrato editorial de Lucía Ferreyra",
+          "Retrato editorial de Ricardo Sosa",
+          "Retrato editorial de Federico Müller",
+          "Persona sentada frente a una obra compuesta por recorridos lineales densos.",
+          "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza."
+        ]
+      }
+    },
+    {
+      "check": "a4_27_pages_no_blank_pages",
+      "status": "PASS",
+      "detail": {
+        "pages": 27
+      }
+    },
+    {
+      "check": "folio_and_footer_link_on_every_page",
+      "status": "PASS",
+      "detail": {
+        "pages": 27
+      }
+    },
+    {
+      "check": "closing_matches_structure",
+      "status": "PASS",
+      "detail": {
+        "closing_caption_present": true,
+        "closing_folio_present": true,
+        "closing_alt_present": true,
+        "closing_quote_absent": true
+      }
+    },
+    {
+      "check": "rioplatense_direct_instructions",
+      "status": "PASS",
+      "detail": "voseo in preparation prompts"
+    },
+    {
+      "check": "source_id_integrity",
+      "status": "PASS",
+      "detail": "all source blocks rendered once"
+    },
+    {
+      "check": "pdf_qa_pass",
+      "status": "PASS",
+      "detail": "PASS"
+    },
+    {
+      "check": "no_placeholders",
+      "status": "PASS",
+      "detail": "none"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "document": "N02",
+  "baseline": "v8",
+  "baseline_pdf_sha256": "8b9300ae2f7cbac11fa3ce4b122b0750567f410ad581eabb585507b1e7582313",
+  "baseline_source_sha256": "00a8899601af4a1aade38645479c6f5f2dab63dfdcaa914e0982aca20bdb529b",
+  "revision_base": "v11",
+  "revision_base_pdf_sha256": "4fd477899af5cf26f6ce901467d5610164a1c3cde3c50c4d7f2fad64ebea9b43",
+  "revision_base_source_sha256": "2c8454c34ffa0472febac4b89e15ccf570ab67a0583cd511f3b049f3a6841577",
+  "v11_source_sha256": "2c8454c34ffa0472febac4b89e15ccf570ab67a0583cd511f3b049f3a6841577",
+  "allowed_v11_changes": [
+    "remove three inaccessible drop caps",
+    "repaginate paragraphs to enforce four-line continuations",
+    "rewrite preparation questions 3, 4 and 6 impersonally",
+    "add the delivery instruction",
+    "split the cover eyebrow into two text lines",
+    "decide the labels of route sections 16 to 18",
+    "use the canonical IS2020 URL already locked in N01"
+  ],
+  "v12_source_sha256": "71ff4a73dd4dc64c7e27b2c0a4410cba0926cf1588e63d588663ea087d9141a6",
+  "allowed_v12_changes": [
+    "move the complete Comprobación section before the complete transfer case and renumber both",
+    "make the N02 route labels monotonic without changing the declared route",
+    "keep pill, glossary and preparation-question list blocks intact across page boundaries",
+    "replace the fixed three-row question grid with content-driven two-column flow"
+  ],
+  "preserved_assets": {
+    "cover.jpg": "17783b97f051f402b4724c2f34e088e86bde85f7bb9290be07138756f5d82e4b",
+    "hotel-horizonte.png": "5c64ee5c70863636e0aca589cb6fe201dd641751da303d0864f97100e17da224",
+    "matches-close.png": "06318b951ef619692a236027ed07ec7a4a1bb9b66cc875a916c40f060e47ecde"
+  },
+  "structural_rules": {
+    "numbered_sections": 22,
+    "referents": 6,
+    "hotel_voices": 4,
+    "infographics": 1,
+    "internal_full_page_pauses": 2,
+    "first_pause_after_physical_page": 4,
+    "references": 17,
+    "reference_url_entries": 15,
+    "closing_page": "canonical matches with folio, footer, caption and alt text"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "title": "Cinco fronteras posibles para mirar un sistema",
+  "claim": "Cada ampliación de la frontera incorpora relaciones que la anterior no puede explicar; la frontera correcta depende de la decisión profesional.",
+  "source_sections": [
+    {
+      "id": "n02-s06",
+      "heading": "Cinco objetos que no conviene llamar simplemente ‘el sistema’",
+      "summary": "Distingue aplicación, sistema técnico, sistema de información, sistema de trabajo y situación problemática."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "application",
+      "label": "Aplicación",
+      "role": "system",
+      "source": ["n02-s06"],
+      "purpose": "Delimita código, interfaz, reglas implementadas y datos administrados por un producto."
+    },
+    {
+      "id": "technical",
+      "label": "Sistema técnico",
+      "role": "system",
+      "source": ["n02-s06"],
+      "purpose": "Añade aplicaciones, integraciones, dispositivos, redes e infraestructura."
+    },
+    {
+      "id": "information",
+      "label": "Sistema de información",
+      "role": "system",
+      "source": ["n02-s06"],
+      "purpose": "Añade personas y tecnologías que producen, interpretan y usan información."
+    },
+    {
+      "id": "work",
+      "label": "Sistema de trabajo",
+      "role": "process",
+      "source": ["n02-s06"],
+      "purpose": "Añade participantes, actividades, información, tecnologías y recursos que producen un servicio."
+    },
+    {
+      "id": "situation",
+      "label": "Situación problemática",
+      "role": "boundary",
+      "source": ["n02-s06"],
+      "purpose": "Añade tensiones, perspectivas, restricciones e historias que vuelven necesaria la intervención."
+    },
+    {
+      "id": "decision",
+      "label": "Decisión profesional",
+      "role": "decision",
+      "source": ["n02-s06"],
+      "purpose": "Determina qué frontera resulta suficiente para explicar y decidir."
+    }
+  ],
+  "edges": [
+    {"id": "e1", "from": "application", "to": "technical", "relation": "boundary", "source": ["n02-s06"], "meaning": "El sistema técnico contiene y conecta aplicaciones."},
+    {"id": "e2", "from": "technical", "to": "information", "relation": "boundary", "source": ["n02-s06"], "meaning": "El sistema de información añade interpretación y uso humano."},
+    {"id": "e3", "from": "information", "to": "work", "relation": "boundary", "source": ["n02-s06"], "meaning": "El sistema de trabajo añade actividades, recursos y resultado de servicio."},
+    {"id": "e4", "from": "work", "to": "situation", "relation": "boundary", "source": ["n02-s06"], "meaning": "La situación problemática añade perspectivas, tensiones y restricciones."},
+    {"id": "e5", "from": "decision", "to": "application", "relation": "authority", "source": ["n02-s06"], "meaning": "La pregunta por la ejecución puede justificarse con la frontera de aplicación."},
+    {"id": "e6", "from": "decision", "to": "work", "relation": "authority", "source": ["n02-s06"], "meaning": "La pregunta por el servicio exige una frontera que incluya el sistema de trabajo."}
+  ]
+}

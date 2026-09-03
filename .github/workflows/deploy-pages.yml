@@ -1,0 +1,46 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          lfs: true
+      - name: Assemble publication
+        run: |
+          mkdir -p public/pdf public/skills
+          cp site/index.html site/metsi.css public/
+          cp N00/output/N00-METSI-lectura-previa-final.pdf public/pdf/
+          cp N01-v18-final/output/N01-METSI-lectura-previa-v18-final.pdf public/pdf/
+          cp N02-v14-final/output/N02-METSI-lectura-previa-v14-final.pdf public/pdf/
+          cp N03-v9-final/output/N03-METSI-lectura-previa-v9-final.pdf public/pdf/
+          cp N04-v9-final/output/N04-METSI-lectura-previa-v9-final.pdf public/pdf/
+          cp -R editorial-standard/. public/skills/
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: public
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

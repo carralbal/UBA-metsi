@@ -1,0 +1,560 @@
+{
+  "document": "N02",
+  "version": "v13 review candidate",
+  "candidate": "/Users/diegocarralbal/.codex/.chatgpt-projects/g-p-689403cb2e2c8191b5f7da28a0a310be/work/METSI-N02-v8/N02-v13-final/output/N02-METSI-lectura-previa-v13-final.pdf",
+  "pdf_sha256": "9c2698a1bd611cd7e51447f67c172ae5983f24ea0b3b40efcf9882bb4494386a",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "source_sections_and_order",
+      "status": "PASS",
+      "detail": [
+        "Pregunta profesional",
+        "La valija que el sistema había embarcado",
+        "Una reserva confirmada que no alcanza",
+        "Tesis",
+        "Lo que Ingeniería de Software ya nos dio y lo que ahora falta",
+        "Cinco objetos que no conviene llamar simplemente “el sistema”",
+        "El error de buscar el sistema dentro del software",
+        "Del inventario de componentes a una explicación",
+        "Elegir la frontera por la promesa, no por el organigrama",
+        "El sistema efectivo incluye trabajo que no figura en arquitectura",
+        "Cómo emerge un resultado que ningún componente controla",
+        "Optimización local y desplazamiento del problema",
+        "2026: cuando la aplicación también propone y actúa",
+        "Una autopsia del episodio HH-02",
+        "Método de construcción: una frontera móvil en seis movimientos",
+        "Objeciones y límites: ampliar la frontera también cuesta",
+        "Comprobación: ¿el mapa permite decidir algo distinto?",
+        "Caso de transferencia: medicación hospitalaria",
+        "Síntesis",
+        "Cinco píldoras para recordar",
+        "Glosario esencial",
+        "Preguntas de preparación",
+        "Referencias base"
+      ]
+    },
+    {
+      "check": "human_referents_only",
+      "status": "PASS",
+      "detail": "Elham Tabassi replaces the institutional card"
+    },
+    {
+      "check": "checkland_record_correct",
+      "status": "PASS",
+      "detail": "John Poulter, Wiley 2007, ISBN preserved"
+    },
+    {
+      "check": "all_seventeen_references_anchored",
+      "status": "PASS",
+      "detail": {
+        "Alter 2002": true,
+        "Checkland y Poulter 2007": true,
+        "Clegg 2000": true,
+        "Mumford 2003": true,
+        "Trist y Bamforth 1951": true,
+        "Baxter y Sommerville 2011": true,
+        "ACM/AIS 2020": true,
+        "Tabassi 2023": true,
+        "DORA 2025": true,
+        "DORA 2026": true,
+        "Alter 2024": true,
+        "Polojärvi 2023": true,
+        "ISO 15288": true,
+        "Autio 2024": true,
+        "Hofmann 2024": true,
+        "Nguyen y Elbanna 2025": true,
+        "NIST 2026": true
+      }
+    },
+    {
+      "check": "fifteen_distinct_reference_urls_linked",
+      "status": "PASS",
+      "detail": {
+        "source": 15,
+        "linked": 15
+      }
+    },
+    {
+      "check": "body_has_no_em_or_en_dash_punctuation",
+      "status": "PASS",
+      "detail": "technical hyphens and bibliographic punctuation excluded"
+    },
+    {
+      "check": "impersonal_register",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "questions_and_delivery_instruction",
+      "status": "PASS",
+      "detail": "six questions plus delivery instruction"
+    },
+    {
+      "check": "accessible_dropcaps_removed",
+      "status": "PASS",
+      "detail": {
+        "order": {
+          "p10": true,
+          "p17": true,
+          "p23": true
+        },
+        "isolated_initials": []
+      }
+    },
+    {
+      "check": "cover_eyebrow_two_clean_lines",
+      "status": "PASS",
+      "detail": "METSILECTURA PREVIA\nEDICIÓN 2026\nN02\nFCE · UBA\nMETODOLOGÍA DE SISTEMAS DE INFORMACIÓN\nEl sistema deinformación nocabe en unaaplicación\nN02\nUn sistema deinformación\norganizacional n"
+    },
+    {
+      "check": "route_is_monotonic_and_matches_contents",
+      "status": "PASS",
+      "detail": {
+        "labels": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ],
+        "expected": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ]
+      }
+    },
+    {
+      "check": "contents_has_complete_renumbered_order",
+      "status": "PASS",
+      "detail": "01 to 22 plus both SIN NUM. entries"
+    },
+    {
+      "check": "v12_to_v13_source_is_byte_identical",
+      "status": "PASS",
+      "detail": {
+        "byte_identical": true,
+        "v12_sha256": "71ff4a73dd4dc64c7e27b2c0a4410cba0926cf1588e63d588663ea087d9141a6",
+        "v13_sha256": "71ff4a73dd4dc64c7e27b2c0a4410cba0926cf1588e63d588663ea087d9141a6",
+        "v12_tokens": 7701,
+        "v13_tokens": 7701
+      }
+    },
+    {
+      "check": "page_break_paragraph_control",
+      "status": "PASS",
+      "detail": {
+        "minimum_continuation_lines": 4,
+        "results": {
+          "p6_to_p7": true,
+          "p21_to_p22_closed": true,
+          "p23_to_p24_no_longer_splits": true
+        }
+      }
+    },
+    {
+      "check": "paragraph_spans_controlled",
+      "status": "PASS",
+      "detail": {
+        "spans": [
+          {
+            "source_id": "N02-s02-b008",
+            "start_page": 6,
+            "end_page": 7
+          }
+        ],
+        "missing": []
+      }
+    },
+    {
+      "check": "list_structure_preserved",
+      "status": "PASS",
+      "detail": {
+        "v11": 104,
+        "v12": 104,
+        "locked_visible_bullets": 53
+      }
+    },
+    {
+      "check": "glossary_split_by_complete_column",
+      "status": "PASS",
+      "detail": {
+        "24": 256,
+        "25": 131
+      }
+    },
+    {
+      "check": "list_blocks_do_not_split",
+      "status": "PASS",
+      "detail": "pills, complete glossary entries and questions protected"
+    },
+    {
+      "check": "question_spacing_is_uniform_and_in_range",
+      "status": "PASS",
+      "detail": {
+        "gaps_points": [
+          38.14,
+          37.46,
+          38.14,
+          37.46
+        ],
+        "spread": 0.68
+      }
+    },
+    {
+      "check": "three_column_legible_glossary",
+      "status": "PASS",
+      "detail": "approved 8.8 pt rendered size; six complete continuation entries in three columns"
+    },
+    {
+      "check": "page_24_and_25_fill_targets",
+      "status": "PASS",
+      "detail": {
+        "page_24": {
+          "top": 63.22,
+          "bottom": 751.71,
+          "fill": 0.9254
+        },
+        "page_25": {
+          "top": 46.53,
+          "bottom": 598.23,
+          "fill": 0.7415
+        }
+      }
+    },
+    {
+      "check": "question_panel_tracks_content",
+      "status": "PASS",
+      "detail": {
+        "last_content_y": 598.23,
+        "panel_bottom_y": 610.95,
+        "tail_points": 12.72
+      }
+    },
+    {
+      "check": "reading_order_regressions_closed",
+      "status": "PASS",
+      "detail": {
+        "p19_heading_before_caption": true,
+        "p20_table_before_voices": true,
+        "p24_pills_heading_before_first_item": true
+      }
+    },
+    {
+      "check": "all_section_titles_share_page_with_body",
+      "status": "PASS",
+      "detail": {
+        "01": {
+          "same_page": true,
+          "pages": [
+            4
+          ]
+        },
+        "02": {
+          "same_page": true,
+          "pages": [
+            6
+          ]
+        },
+        "03": {
+          "same_page": true,
+          "pages": [
+            7
+          ]
+        },
+        "04": {
+          "same_page": true,
+          "pages": [
+            7,
+            8
+          ]
+        },
+        "05": {
+          "same_page": true,
+          "pages": [
+            8
+          ]
+        },
+        "06": {
+          "same_page": true,
+          "pages": [
+            9
+          ]
+        },
+        "07": {
+          "same_page": true,
+          "pages": [
+            10
+          ]
+        },
+        "08": {
+          "same_page": true,
+          "pages": [
+            11
+          ]
+        },
+        "09": {
+          "same_page": true,
+          "pages": [
+            12
+          ]
+        },
+        "10": {
+          "same_page": true,
+          "pages": [
+            13
+          ]
+        },
+        "11": {
+          "same_page": true,
+          "pages": [
+            14
+          ]
+        },
+        "12": {
+          "same_page": true,
+          "pages": [
+            17
+          ]
+        },
+        "13": {
+          "same_page": true,
+          "pages": [
+            17
+          ]
+        },
+        "14": {
+          "same_page": true,
+          "pages": [
+            19
+          ]
+        },
+        "15": {
+          "same_page": true,
+          "pages": [
+            21
+          ]
+        },
+        "16": {
+          "same_page": true,
+          "pages": [
+            21
+          ]
+        },
+        "17": {
+          "same_page": true,
+          "pages": [
+            22
+          ]
+        },
+        "18": {
+          "same_page": true,
+          "pages": [
+            23
+          ]
+        },
+        "19": {
+          "same_page": true,
+          "pages": [
+            2,
+            23
+          ]
+        },
+        "20": {
+          "same_page": true,
+          "pages": [
+            24
+          ]
+        },
+        "21": {
+          "same_page": true,
+          "pages": [
+            24
+          ]
+        },
+        "22": {
+          "same_page": true,
+          "pages": [
+            25
+          ]
+        }
+      }
+    },
+    {
+      "check": "no_sparse_ordinary_page",
+      "status": "PASS",
+      "detail": {
+        "word_counts": {
+          "6": 663,
+          "7": 446,
+          "8": 332,
+          "9": 378,
+          "10": 541,
+          "11": 519,
+          "12": 396,
+          "13": 476,
+          "14": 347,
+          "15": 328,
+          "17": 400,
+          "18": 426,
+          "19": 311,
+          "20": 391,
+          "21": 339,
+          "22": 376,
+          "23": 449,
+          "24": 387,
+          "25": 306,
+          "26": 354
+        },
+        "occupancies": [
+          0.896,
+          0.825,
+          0.687,
+          0.896,
+          0.896,
+          0.871,
+          0.875,
+          0.769,
+          0.843,
+          0.869,
+          0.837,
+          0.812,
+          0.875,
+          0.795,
+          0.545,
+          0.896,
+          0.748,
+          0.558,
+          0.877,
+          0.858,
+          0.877,
+          0.869,
+          0.854,
+          0.839,
+          0.672,
+          0.573,
+          0.529
+        ],
+        "minimum": 0.529
+      }
+    },
+    {
+      "check": "expected_visual_change_scope",
+      "status": "PASS",
+      "detail": {
+        "changed_pages": [
+          24,
+          25
+        ],
+        "cover_unchanged": true
+      }
+    },
+    {
+      "check": "all_approved_assets_preserved",
+      "status": "PASS",
+      "detail": {
+        "assets": 21,
+        "identical": true
+      }
+    },
+    {
+      "check": "a4_27_pages",
+      "status": "PASS",
+      "detail": 27
+    },
+    {
+      "check": "tagged_pdf_in_argentine_spanish",
+      "status": "PASS",
+      "detail": {
+        "struct_tree": true,
+        "marked": true,
+        "lang": "es-AR"
+      }
+    },
+    {
+      "check": "specific_image_descriptions",
+      "status": "PASS",
+      "detail": {
+        "count": 21
+      }
+    },
+    {
+      "check": "closing_alt_is_structural",
+      "status": "PASS",
+      "detail": [
+        "Cinco fronteras posibles para elegir qué sistema analizar La palabra sistema cambia de significado según la decisión: cada frontera incluye relaciones distintas.",
+        "Caso de aplicación Hotel Horizonte",
+        "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza."
+      ]
+    },
+    {
+      "check": "two_internal_pauses_and_canonical_closing",
+      "status": "PASS",
+      "detail": "2 pauses plus matches closing"
+    },
+    {
+      "check": "folio_and_footer_link_every_page",
+      "status": "PASS",
+      "detail": "27/27"
+    },
+    {
+      "check": "url_copy_layer_preserves_all_hyphens",
+      "status": "PASS",
+      "detail": {
+        "urls": 15
+      }
+    },
+    {
+      "check": "only_official_iso_dash_remains",
+      "status": "PASS",
+      "detail": "one bibliographic dash, zero body dashes"
+    },
+    {
+      "check": "generator_qa_pass",
+      "status": "PASS",
+      "detail": "PASS"
+    },
+    {
+      "check": "no_placeholders",
+      "status": "PASS",
+      "detail": "none"
+    }
+  ]
+}
