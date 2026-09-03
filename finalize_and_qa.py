@@ -96,6 +96,58 @@ def set_image_alt(page, value: str) -> int:
     return count
 
 
+def set_structure_figure_alt(writer: PdfWriter, page_number: int, alt_text: str) -> int:
+    """Set /Alt on Figure structure elements associated with one output page."""
+    if not alt_text or not (1 <= page_number <= len(writer.pages)):
+        return 0
+    root = writer.root_object.get("/StructTreeRoot")
+    target_ref = writer.pages[page_number - 1].indirect_reference
+    target_id = target_ref.idnum if target_ref is not None else None
+    if not root or target_id is None:
+        return 0
+    seen: set[tuple[str, int, int] | tuple[str, int]] = set()
+    adjusted = 0
+
+    def reference_id(value) -> int | None:
+        if value is None:
+            return None
+        if hasattr(value, "idnum"):
+            return int(value.idnum)
+        ref = getattr(value, "indirect_reference", None)
+        return int(ref.idnum) if ref is not None else None
+
+    def walk(node, inherited_page=None) -> None:
+        nonlocal adjusted
+        if node is None:
+            return
+        if hasattr(node, "idnum"):
+            identity = ("ref", int(node.idnum), int(getattr(node, "generation", 0)))
+            if identity in seen:
+                return
+            seen.add(identity)
+        try:
+            item = node.get_object()
+        except Exception:
+            item = node
+        if isinstance(item, dict):
+            identity = ("obj", id(item))
+            if identity in seen:
+                return
+            seen.add(identity)
+            page_ref = item.get("/Pg") or inherited_page
+            if str(item.get("/S")) == "/Figure" and reference_id(page_ref) == target_id:
+                item[NameObject("/Alt")] = TextStringObject(alt_text)
+                adjusted += 1
+            if item.get("/K") is not None:
+                walk(item.get("/K"), page_ref)
+        elif isinstance(item, (list, tuple, ArrayObject)):
+            for child in item:
+                walk(child, inherited_page)
+
+    walk(root)
+    return adjusted
+
+
 def visible_text_floor(page) -> float:
     """Return the lowest visible baseline in page coordinates."""
     values: list[float] = []
@@ -360,6 +412,88 @@ def extend_n01_cover_pattern_to_trim(page) -> int:
     return adjusted
 
 
+def extend_n06_cover_pattern_to_trim(page, scale: float) -> int:
+    """Extend N06's rasterized cover scrim to the four trim edges.
+
+    Chromium emits the full-height gradient as a 548 × 775 image inside a
+    tiling pattern. Scaling the page content enlarges the photograph but the
+    pattern matrix remains in device coordinates, leaving a visible horizontal
+    seam near the bottom. Scale the pattern horizontally and extend its final
+    gradient row vertically so the tonal treatment reaches the trim box.
+    """
+    resources = page.get("/Resources")
+    if not resources:
+        return 0
+    patterns = resources.get_object().get("/Pattern")
+    if not patterns:
+        return 0
+    target_height = int(round(float(page.mediabox.height)))
+    adjusted = 0
+    for reference in patterns.get_object().values():
+        pattern = reference.get_object()
+        bbox = pattern.get("/BBox")
+        matrix = pattern.get("/Matrix")
+        if not bbox or len(bbox) != 4 or not matrix or len(matrix) != 6:
+            continue
+        old_height = int(round(float(bbox[3]) - float(bbox[1])))
+        width = int(round(float(bbox[2]) - float(bbox[0])))
+        if not (546 <= width <= 550 and 773 <= old_height <= 777 and target_height > old_height):
+            continue
+        values = [FloatObject(float(value)) for value in matrix]
+        values[0] = FloatObject(float(values[0]) * scale)
+        pattern[NameObject("/Matrix")] = ArrayObject(values)
+        xobjects = pattern.get("/Resources").get_object().get("/XObject").get_object()
+        full_height_images = []
+        for name, image_reference in xobjects.items():
+            image = image_reference.get_object()
+            if (
+                image.get("/Subtype") == "/Image"
+                and image.get("/ColorSpace") == "/DeviceRGB"
+                and int(image.get("/Width", 0)) == width
+                and int(image.get("/Height", 0)) == old_height
+            ):
+                full_height_images.append((name, image))
+        if len(full_height_images) != 1:
+            raise RuntimeError(
+                f"Se esperaba una imagen de gradiente completa en la tapa N06 y se hallaron {len(full_height_images)}"
+            )
+        name, image = full_height_images[0]
+        row_stride = width * 3
+        image_data = image.get_data()
+        if len(image_data) != row_stride * old_height:
+            raise RuntimeError(f"Datos RGB inesperados en {name} del patrón de tapa N06")
+        image._data = zlib.compress(
+            image_data + image_data[-row_stride:] * (target_height - old_height)
+        )
+        image[NameObject("/Height")] = NumberObject(target_height)
+        soft_mask = image.get("/SMask")
+        if soft_mask is None:
+            raise RuntimeError(f"Falta máscara alfa en {name} del patrón de tapa N06")
+        soft_mask = soft_mask.get_object()
+        mask_data = soft_mask.get_data()
+        if len(mask_data) != width * old_height:
+            raise RuntimeError(f"Máscara alfa inesperada en {name} del patrón de tapa N06")
+        soft_mask._data = zlib.compress(
+            mask_data + mask_data[-width:] * (target_height - old_height)
+        )
+        soft_mask[NameObject("/Height")] = NumberObject(target_height)
+        pattern[NameObject("/BBox")] = ArrayObject([
+            FloatObject(0), FloatObject(0), FloatObject(float(bbox[2])), FloatObject(target_height + .00012)
+        ])
+        pattern[NameObject("/YStep")] = FloatObject(target_height + 2.00012)
+        stream = pattern.get_data().decode("ascii")
+        pattern._data = re.sub(
+            rf"(?<![0-9]){old_height}(?=\b|\.)",
+            str(target_height),
+            stream,
+        ).encode("ascii")
+        pattern.pop(NameObject("/Filter"), None)
+        adjusted += 1
+    if adjusted != 1:
+        raise RuntimeError(f"Se esperaba extender un patrón de tapa N06 y se extendieron {adjusted}")
+    return adjusted
+
+
 def cid_width(font, cid: int) -> float:
     descendant = font.get("/DescendantFonts")[0].get_object()
     default = float(descendant.get("/DW", 1000))
@@ -458,15 +592,15 @@ def consolidate_n01_cover_eyebrow(page, reader: PdfReader) -> int:
 
 def finalize(number: int) -> dict:
     code = f"N{number:02d}"
-    root = HERE / ("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else "N05-v9-final" if number == 5 else code)
-    raw_name = "N01-METSI-lectura-previa-v18.pdf" if number == 1 else "N02-METSI-lectura-previa-v14.pdf" if number == 2 else "N03-METSI-lectura-previa-v9.pdf" if number == 3 else "N04-METSI-lectura-previa-v9.pdf" if number == 4 else "N05-METSI-lectura-previa-v9.pdf" if number == 5 else f"{code}-METSI-lectura-previa.pdf"
-    final_name = "N01-METSI-lectura-previa-v18-final.pdf" if number == 1 else "N02-METSI-lectura-previa-v14-final.pdf" if number == 2 else "N03-METSI-lectura-previa-v9-final.pdf" if number == 3 else "N04-METSI-lectura-previa-v9-final.pdf" if number == 4 else "N05-METSI-lectura-previa-v9-final.pdf" if number == 5 else f"{code}-METSI-lectura-previa-final.pdf"
+    root = HERE / ("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else "N05-v9-final" if number == 5 else "N06-v9-final" if number == 6 else code)
+    raw_name = "N01-METSI-lectura-previa-v18.pdf" if number == 1 else "N02-METSI-lectura-previa-v14.pdf" if number == 2 else "N03-METSI-lectura-previa-v9.pdf" if number == 3 else "N04-METSI-lectura-previa-v9.pdf" if number == 4 else "N05-METSI-lectura-previa-v9.pdf" if number == 5 else "N06-METSI-lectura-previa-v9.pdf" if number == 6 else f"{code}-METSI-lectura-previa.pdf"
+    final_name = "N01-METSI-lectura-previa-v18-final.pdf" if number == 1 else "N02-METSI-lectura-previa-v14-final.pdf" if number == 2 else "N03-METSI-lectura-previa-v9-final.pdf" if number == 3 else "N04-METSI-lectura-previa-v9-final.pdf" if number == 4 else "N05-METSI-lectura-previa-v9-final.pdf" if number == 5 else "N06-METSI-lectura-previa-v9-final.pdf" if number == 6 else f"{code}-METSI-lectura-previa-final.pdf"
     raw = root / "output" / raw_name
     final = root / "output" / final_name
     manifest = json.loads((root / "manifest.json").read_text(encoding="utf-8"))
     reader = PdfReader(str(raw))
     writer = PdfWriter()
-    preserve_tagged_structure = number in {2, 3, 4, 5}
+    preserve_tagged_structure = number in {2, 3, 4, 5, 6}
     if preserve_tagged_structure:
         # Chromium ya produce un PDF etiquetado a partir del HTML semántico.
         # Clonar el documento completo conserva StructTreeRoot, Lang y MarkInfo;
@@ -496,7 +630,7 @@ def finalize(number: int) -> dict:
         source_word_count = len(re.findall(r"\b[\wÁÉÍÓÚÜÑáéíóúüñ'-]+\b", page_text, flags=re.UNICODE))
         text_floor = visible_text_floor(page)
         if (
-            number not in {0, 1, 3, 4, 5}
+            number not in {0, 1, 3, 4, 5, 6}
             and
             4 <= source_page_number < len(reader.pages)
             and image_count == 0
@@ -530,7 +664,7 @@ def finalize(number: int) -> dict:
         kept_page_number += 1
         is_n00_part_divider = number == 0 and bool(re.search(r"\bPARTE\s+(?:I|II|III)\b", page_text))
         normalized = normalize(page_text)
-        is_opening_question_page = number in {1, 2, 3, 4, 5} and "preguntaprofesional" in normalized and source_word_count < 80
+        is_opening_question_page = number in {1, 2, 3, 4, 5, 6} and "preguntaprofesional" in normalized and source_word_count < 80
         if is_opening_question_page:
             background = PdfReader(BytesIO(solid_background(
                 float(page.mediabox.width),
@@ -562,7 +696,7 @@ def finalize(number: int) -> dict:
                 .098,
             ))).pages[0]
             page.merge_page(left_band)
-        if (number in {0, 1, 2, 3, 4, 5} and source_page_number == 1) or is_n00_part_divider:
+        if (number in {0, 1, 2, 3, 4, 5, 6} and source_page_number == 1) or is_n00_part_divider:
             # Chromium reduce todo el lienzo cuando detecta otras páginas a
             # sangre con desborde editorial. Compensar la portada y todas las
             # portadillas oscuras de N00 devuelve cada fondo a los cuatro
@@ -577,6 +711,8 @@ def finalize(number: int) -> dict:
             if number == 1 and source_page_number == 1:
                 scale_cover_pattern_matrices(page, scale)
                 extend_n01_cover_pattern_to_trim(page)
+            if number == 6 and source_page_number == 1:
+                extend_n06_cover_pattern_to_trim(page, scale)
         is_closing_page = source_page_number == len(reader.pages)
         light = source_page_number == 1 or is_n00_part_divider or is_opening_question_page or any(q and q in normalized for q in quotes)
         overlay = PdfReader(BytesIO(footer(float(page.mediabox.width), float(page.mediabox.height), kept_page_number, light))).pages[0]
@@ -589,8 +725,14 @@ def finalize(number: int) -> dict:
         # Clean the page only after it belongs to the writer.  pypdf 7 removes
         # support for replacing content on detached reader pages.
         strip_empty_helvetica(target_page, reader)
+        if number == 6 and source_page_number == 1:
+            set_image_alt(target_page, manifest.get("cover", {}).get("alt", ""))
+        if number == 6 and source_page_number == 2:
+            set_image_alt(target_page, "Imagen editorial asociada al contenido de N06")
         if is_closing_page:
             set_image_alt(target_page, manifest.get("closing", {}).get("alt", ""))
+    if number == 6:
+        set_structure_figure_alt(writer, 2, "Imagen editorial asociada al contenido de N06")
     writer.add_metadata({
         "/Title": manifest["title"],
         "/Author": "Diego Carralbal",
@@ -603,7 +745,9 @@ def finalize(number: int) -> dict:
     check = PdfReader(str(final))
     texts = [page.extract_text() or "" for page in check.pages]
     all_text = "\n".join(texts)
-    source = Path(manifest["source"]).read_text(encoding="utf-8")
+    declared_source = Path(manifest["source"])
+    source_path = declared_source if declared_source.is_absolute() else root / declared_source
+    source = source_path.read_text(encoding="utf-8")
     headings = [line.lstrip("#").strip() for line in source.splitlines() if line.startswith("## ")]
     normalized_pdf = normalize(all_text)
     missing = [heading for heading in headings if normalize(heading) not in normalized_pdf]
@@ -651,7 +795,7 @@ def finalize(number: int) -> dict:
     document_language = str(catalog.get("/Lang", ""))
     result = {
         "number": number,
-        "pdf": str(final),
+        "pdf": f"output/{final.name}" if number == 6 else str(final),
         "pages": len(check.pages),
         "a4_pages": a4,
         "source_words": len(source.split()),
@@ -687,9 +831,9 @@ def finalize(number: int) -> dict:
         and closing_folio_present
         and closing_quote_absent
         and closing_alt_present
-        and (number not in {2, 3, 4, 5} or struct_tree_present)
-        and (number not in {2, 3, 4, 5} or marked_pdf)
-        and (number not in {2, 3, 4, 5} or document_language == "es-AR")
+        and (number not in {2, 3, 4, 5, 6} or struct_tree_present)
+        and (number not in {2, 3, 4, 5, 6} or marked_pdf)
+        and (number not in {2, 3, 4, 5, 6} or document_language == "es-AR")
         and links_ok
     ) else "FAIL"
     (root / "qa-report.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")

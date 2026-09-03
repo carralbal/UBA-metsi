@@ -1,0 +1,108 @@
+{
+  "title": "La evidencia vale por la decisión que puede cambiar",
+  "claim": "Investigar tiene valor cuando una evidencia oportuna y discriminante puede modificar un compromiso antes de que su costo sea irreversible.",
+  "source_sections": [
+    {
+      "id": "s1",
+      "heading": "Conectar pregunta y decisión",
+      "role": "decision question"
+    },
+    {
+      "id": "s2",
+      "heading": "Diseñar una cartera de evidencia",
+      "role": "evidence portfolio"
+    },
+    {
+      "id": "s3",
+      "heading": "Cuándo detener provisionalmente",
+      "role": "stopping rule"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "question",
+      "label": "PREGUNTA DECISORIA",
+      "note": "Qué decisión podría cambiar",
+      "type": "decision-stage",
+      "source": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "id": "hypotheses",
+      "label": "HIPÓTESIS RIVALES",
+      "note": "Qué explicaciones debemos distinguir",
+      "type": "decision-stage",
+      "source": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "id": "portfolio",
+      "label": "CARTERA DE EVIDENCIA",
+      "note": "Qué combinación reduce la incertidumbre",
+      "type": "decision-stage",
+      "source": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "id": "signal",
+      "label": "SEÑAL SUFICIENTE",
+      "note": "Qué resultado permite dejar de investigar",
+      "type": "decision-stage",
+      "source": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "id": "milestone",
+      "label": "HITO DE DECISIÓN",
+      "note": "Qué compromiso resulta razonable ahora",
+      "type": "decision-stage",
+      "source": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "question",
+      "to": "hypotheses",
+      "relation": "frames",
+      "meaning": "La decisión en juego determina qué explicaciones conviene distinguir."
+    },
+    {
+      "id": "e2",
+      "from": "hypotheses",
+      "to": "portfolio",
+      "relation": "selects",
+      "meaning": "Las hipótesis rivales orientan una combinación de evidencias."
+    },
+    {
+      "id": "e3",
+      "from": "portfolio",
+      "to": "signal",
+      "relation": "produces",
+      "meaning": "La cartera busca una señal suficiente y oportuna, no información ilimitada."
+    },
+    {
+      "id": "e4",
+      "from": "signal",
+      "to": "milestone",
+      "relation": "enables",
+      "meaning": "La señal habilita revisar el compromiso en un hito explícito."
+    }
+  ]
+}

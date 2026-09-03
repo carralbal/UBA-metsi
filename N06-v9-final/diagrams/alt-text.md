@@ -1,0 +1,1 @@
+Secuencia de cinco etapas: pregunta decisoria, hipótesis rivales, cartera de evidencia, señal suficiente e hito de decisión. Una banda inferior indica que el valor de la investigación depende de relevancia, poder de discriminación, oportunidad y costo. El hito admite cuatro salidas: continuar, modificar, detener o investigar más.
