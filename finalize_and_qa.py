@@ -458,15 +458,15 @@ def consolidate_n01_cover_eyebrow(page, reader: PdfReader) -> int:
 
 def finalize(number: int) -> dict:
     code = f"N{number:02d}"
-    root = HERE / ("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else code)
-    raw_name = "N01-METSI-lectura-previa-v18.pdf" if number == 1 else "N02-METSI-lectura-previa-v14.pdf" if number == 2 else "N03-METSI-lectura-previa-v9.pdf" if number == 3 else "N04-METSI-lectura-previa-v9.pdf" if number == 4 else f"{code}-METSI-lectura-previa.pdf"
-    final_name = "N01-METSI-lectura-previa-v18-final.pdf" if number == 1 else "N02-METSI-lectura-previa-v14-final.pdf" if number == 2 else "N03-METSI-lectura-previa-v9-final.pdf" if number == 3 else "N04-METSI-lectura-previa-v9-final.pdf" if number == 4 else f"{code}-METSI-lectura-previa-final.pdf"
+    root = HERE / ("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else "N05-v9-final" if number == 5 else code)
+    raw_name = "N01-METSI-lectura-previa-v18.pdf" if number == 1 else "N02-METSI-lectura-previa-v14.pdf" if number == 2 else "N03-METSI-lectura-previa-v9.pdf" if number == 3 else "N04-METSI-lectura-previa-v9.pdf" if number == 4 else "N05-METSI-lectura-previa-v9.pdf" if number == 5 else f"{code}-METSI-lectura-previa.pdf"
+    final_name = "N01-METSI-lectura-previa-v18-final.pdf" if number == 1 else "N02-METSI-lectura-previa-v14-final.pdf" if number == 2 else "N03-METSI-lectura-previa-v9-final.pdf" if number == 3 else "N04-METSI-lectura-previa-v9-final.pdf" if number == 4 else "N05-METSI-lectura-previa-v9-final.pdf" if number == 5 else f"{code}-METSI-lectura-previa-final.pdf"
     raw = root / "output" / raw_name
     final = root / "output" / final_name
     manifest = json.loads((root / "manifest.json").read_text(encoding="utf-8"))
     reader = PdfReader(str(raw))
     writer = PdfWriter()
-    preserve_tagged_structure = number in {2, 3, 4}
+    preserve_tagged_structure = number in {2, 3, 4, 5}
     if preserve_tagged_structure:
         # Chromium ya produce un PDF etiquetado a partir del HTML semántico.
         # Clonar el documento completo conserva StructTreeRoot, Lang y MarkInfo;
@@ -530,7 +530,7 @@ def finalize(number: int) -> dict:
         kept_page_number += 1
         is_n00_part_divider = number == 0 and bool(re.search(r"\bPARTE\s+(?:I|II|III)\b", page_text))
         normalized = normalize(page_text)
-        is_opening_question_page = number in {1, 2, 3, 4} and "preguntaprofesional" in normalized and source_word_count < 80
+        is_opening_question_page = number in {1, 2, 3, 4, 5} and "preguntaprofesional" in normalized and source_word_count < 80
         if is_opening_question_page:
             background = PdfReader(BytesIO(solid_background(
                 float(page.mediabox.width),
@@ -562,7 +562,7 @@ def finalize(number: int) -> dict:
                 .098,
             ))).pages[0]
             page.merge_page(left_band)
-        if (number in {0, 1, 2, 3, 4} and source_page_number == 1) or is_n00_part_divider:
+        if (number in {0, 1, 2, 3, 4, 5} and source_page_number == 1) or is_n00_part_divider:
             # Chromium reduce todo el lienzo cuando detecta otras páginas a
             # sangre con desborde editorial. Compensar la portada y todas las
             # portadillas oscuras de N00 devuelve cada fondo a los cuatro
@@ -687,9 +687,9 @@ def finalize(number: int) -> dict:
         and closing_folio_present
         and closing_quote_absent
         and closing_alt_present
-        and (number not in {2, 3, 4} or struct_tree_present)
-        and (number not in {2, 3, 4} or marked_pdf)
-        and (number not in {2, 3, 4} or document_language == "es-AR")
+        and (number not in {2, 3, 4, 5} or struct_tree_present)
+        and (number not in {2, 3, 4, 5} or marked_pdf)
+        and (number not in {2, 3, 4, 5} or document_language == "es-AR")
         and links_ok
     ) else "FAIL"
     (root / "qa-report.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")

@@ -1,0 +1,345 @@
+{
+  "document": "N05",
+  "version": "v9-final",
+  "status": "PASS",
+  "source_sha256": "46a9ecb180b96c6ff71790750e3e6d606ef7c0a1f061a0682ad29ad99dfcbf2b",
+  "pdf_sha256": "3b507eea1ddc0c7981ea90747039c1137a0149d233accb2d40ae86184b64d34f",
+  "pdf_bytes": 15201083,
+  "pdf_modified": 1788471956.0,
+  "pages": 28,
+  "minimum_ordinary_page_fill": 0.5016,
+  "checks": [
+    {
+      "check": "canonical_source_is_byte_identical",
+      "status": "PASS",
+      "detail": "46a9ecb180b96c6ff71790750e3e6d606ef7c0a1f061a0682ad29ad99dfcbf2b"
+    },
+    {
+      "check": "canonical_structure",
+      "status": "PASS",
+      "detail": [
+        "Pregunta profesional",
+        "La mesa con una silla vacía",
+        "Tesis",
+        "De N04 a N05: de la afirmación a las relaciones que la sostienen",
+        "Movimiento 1 · Pasar de interesados genéricos a relaciones de poder",
+        "Movimiento 2 · Diseñar participación capaz de cambiar una decisión",
+        "Movimiento 3 · Gobernar objeción, supervisión y reparación",
+        "Síntesis",
+        "Cinco píldoras para recordar",
+        "Glosario esencial",
+        "Preguntas de preparación",
+        "Referencias base"
+      ]
+    },
+    {
+      "check": "three_movement_architecture",
+      "status": "PASS",
+      "detail": "three movements present"
+    },
+    {
+      "check": "canonical_handoffs_present",
+      "status": "PASS",
+      "detail": "N04 input, HH-05 conductor and N06 output are present"
+    },
+    {
+      "check": "source_blocks_render_once",
+      "status": "PASS",
+      "detail": {
+        "status": "PASS",
+        "source_block_count": 279,
+        "rendered_source_id_count": 279,
+        "missing_source_ids": [],
+        "unexpected_source_ids": [],
+        "duplicate_rendered_ids": []
+      }
+    },
+    {
+      "check": "content_audit_remains_closed",
+      "status": "PASS",
+      "detail": {
+        "total": 8225,
+        "substantive_from_thesis_through_synthesis": 6793
+      }
+    },
+    {
+      "check": "pdf_is_new_finalized_artifact",
+      "status": "PASS",
+      "detail": {
+        "raw": "720fe3fd4d973a83d71d0f64b8a17be1be3d6ac360763020a573fdecb8c8472c",
+        "final": "3b507eea1ddc0c7981ea90747039c1137a0149d233accb2d40ae86184b64d34f"
+      }
+    },
+    {
+      "check": "pdf_page_count_and_size",
+      "status": "PASS",
+      "detail": {
+        "pages": 28,
+        "a4": 28
+      }
+    },
+    {
+      "check": "all_headings_in_pdf",
+      "status": "PASS",
+      "detail": 12
+    },
+    {
+      "check": "no_orphan_headings",
+      "status": "PASS",
+      "detail": {
+        "count": 52,
+        "failures": {}
+      }
+    },
+    {
+      "check": "route_is_monotonic",
+      "status": "PASS",
+      "detail": {
+        "actual": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ],
+        "expected": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ]
+      }
+    },
+    {
+      "check": "contents_is_complete_and_ordered",
+      "status": "PASS",
+      "detail": "01 to 11, two SIN NUM. entries"
+    },
+    {
+      "check": "all_references_anchored",
+      "status": "PASS",
+      "detail": {
+        "Freeman (1984)": true,
+        "Winner (1980)": true,
+        "Fricker (2007)": true,
+        "Star y Strauss (1999)": true,
+        "Arnstein (1969)": true,
+        "Mumford (2003)": true,
+        "Costanza-Chock (2020)": true,
+        "Suresh et al. (2024)": true,
+        "NIST AI 100-1 (2023)": true,
+        "Reglamento UE 2024/1689": true
+      }
+    },
+    {
+      "check": "all_urls_preserved_and_linked",
+      "status": "PASS",
+      "detail": {
+        "source": [
+          "https://doi.org/10.1023/A:1008651105359",
+          "https://doi.org/10.1080/01944366908977225",
+          "https://doi.org/10.1093/acprof:oso/9780198237907.001.0001",
+          "https://doi.org/10.1145/3630106.3658992",
+          "https://doi.org/10.6028/NIST.AI.100-1",
+          "https://doi.org/10.7551/mitpress/12255.001.0001",
+          "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+          "https://www.jstor.org/stable/20024652"
+        ],
+        "annotations": [
+          "https://doi.org/10.1023/A:1008651105359",
+          "https://doi.org/10.1080/01944366908977225",
+          "https://doi.org/10.1093/acprof:oso/9780198237907.001.0001",
+          "https://doi.org/10.1145/3630106.3658992",
+          "https://doi.org/10.6028/NIST.AI.100-1",
+          "https://doi.org/10.7551/mitpress/12255.001.0001",
+          "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+          "https://www.jstor.org/stable/20024652"
+        ]
+      }
+    },
+    {
+      "check": "hyphenated_urls_intact",
+      "status": "PASS",
+      "detail": "locked URL tokens extract intact"
+    },
+    {
+      "check": "ordinary_pages_are_at_least_half_full",
+      "status": "PASS",
+      "detail": {
+        "minimum": 0.5016,
+        "underfilled": {}
+      }
+    },
+    {
+      "check": "no_automatic_sparse_fills",
+      "status": "PASS",
+      "detail": {
+        "sparse": [],
+        "removed": []
+      }
+    },
+    {
+      "check": "two_internal_full_bleed_pauses",
+      "status": "PASS",
+      "detail": "question page 4, first pause page 5, second pause page 19"
+    },
+    {
+      "check": "cover_accessible_and_complete",
+      "status": "PASS",
+      "detail": "METSILECTURA PREVIA\nEDICIÓN 2026\nN05\nFCE · UBA\nMETODOLOGÍA DE SISTEMAS DE INFORMACIÓN\nActores, afectados,poder y perspectivas\nN05\nUna decisión profesional\ntambién se juzga por\nquién puede\ncomprenderla, objetarla y\nreparar sus\nconsecuencias.\n01\nDiego Carralbal, 2026  ·  linkedin.com/in/carralbal\n"
+    },
+    {
+      "check": "premium_cover_contract",
+      "status": "PASS",
+      "detail": "native black-and-white cover, Argentine/Latin American representation, no conversion filter"
+    },
+    {
+      "check": "cover_pauses_and_closing_are_full_bleed",
+      "status": "PASS",
+      "detail": {
+        "1": 1.023,
+        "5": 1.0081,
+        "19": 1.0081,
+        "28": 1.0151
+      }
+    },
+    {
+      "check": "referents_are_equal_and_unique",
+      "status": "PASS",
+      "detail": {
+        "visual_box": "25mm × 25mm",
+        "assets": [
+          {
+            "file": "referent-edward-freeman.jpg",
+            "size": [
+              720,
+              720
+            ],
+            "sha256": "0f866c62877b87a343561f90e06f359ada4c08bc332ee63df55a9b1a4567cd3a"
+          },
+          {
+            "file": "referent-enid-mumford.jpg",
+            "size": [
+              720,
+              720
+            ],
+            "sha256": "9beba0031328915d68ef159e74d2ea82f6282213ab6c0014eabe288ab75fff92"
+          },
+          {
+            "file": "referent-langdon-winner.jpg",
+            "size": [
+              480,
+              720
+            ],
+            "sha256": "44417f83996efeebdf2465142de2e06456245d79478a66a96584ca3f96a7d1e1"
+          },
+          {
+            "file": "referent-miranda-fricker.jpg",
+            "size": [
+              720,
+              480
+            ],
+            "sha256": "094310734204528df8c7b209bfac35f777503643edb1cbec433aa06ff0144d26"
+          },
+          {
+            "file": "referent-nist.jpg",
+            "size": [
+              720,
+              720
+            ],
+            "sha256": "4415393ba877f3e779f26f994cd99f5a7a1714a7d8dd1c7013906a10db2fc318"
+          },
+          {
+            "file": "referent-sasha-costanza-chock.jpg",
+            "size": [
+              720,
+              720
+            ],
+            "sha256": "96b5204726e54a4d5a08936dc4676a0bb52e9ff29f2b0ed5769929041dee5572"
+          }
+        ]
+      }
+    },
+    {
+      "check": "counts_close",
+      "status": "PASS",
+      "detail": {
+        "pills": 5,
+        "glossary": 17,
+        "questions": 6,
+        "references": 10
+      }
+    },
+    {
+      "check": "impersonal_register",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "dash_rule",
+      "status": "PASS",
+      "detail": "no prose dashes in body"
+    },
+    {
+      "check": "no_placeholders_or_stray_initials",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "diagram_qa_passed",
+      "status": "PASS",
+      "detail": {
+        "status": "PASS",
+        "checks": {
+          "labels_present": true,
+          "relations_visible": true,
+          "no_connector_crosses_text": true,
+          "no_truncation": true,
+          "single_semantic_claim": true
+        }
+      }
+    },
+    {
+      "check": "tagging_language_and_alt",
+      "status": "PASS",
+      "detail": {
+        "language": "es-AR",
+        "alt_count": 3
+      }
+    },
+    {
+      "check": "footer_and_structured_closing",
+      "status": "PASS",
+      "detail": {
+        "linkedin_pages": 28,
+        "closing_folio_present": true,
+        "closing_caption_present": true,
+        "closing_quote_absent": true,
+        "closing_alt_present": true
+      }
+    },
+    {
+      "check": "qa_pipeline_passed",
+      "status": "PASS",
+      "detail": "PASS"
+    },
+    {
+      "check": "n05_layout_contract",
+      "status": "PASS",
+      "detail": "N05 cover, reading, glossary, question and reference rules are explicit"
+    }
+  ]
+}

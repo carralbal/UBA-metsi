@@ -135,6 +135,14 @@ REFERENCE_WORKS = {
         "Strategic Management: A Stakeholder Approach",
         "Pitman, 1984",
     ),
+    "langdon-winner": (
+        "“Do Artifacts Have Politics?”",
+        "Daedalus, 1980",
+    ),
+    "miranda-fricker": (
+        "Epistemic Injustice: Power and the Ethics of Knowing",
+        "Oxford University Press, 2007",
+    ),
     "sasha-costanza-chock": (
         "Design Justice: Community-Led Practices to Build the Worlds We Need",
         "MIT Press, 2020",
@@ -549,6 +557,8 @@ def source_path(number: int) -> Path:
         return HERE / "N03-content-final" / "source" / "N03_fronteras_retroalimentacion_y_efectos-content-final.md"
     if number == 4:
         return HERE / "N04-content-final" / "source" / "N04_hechos_sintomas_relatos_hipotesis_y_decisiones-content-final.md"
+    if number == 5:
+        return HERE / "N05-content-final" / "source" / "N05_actores_afectados_poder_y_perspectivas-content-final.md"
     return next(SOURCES.glob(f"N{number:02d}_*.md"))
 
 
@@ -558,7 +568,8 @@ def asset_sha(path: Path) -> str:
 
 def copy_asset(source: Path, target: Path) -> str:
     target.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(source, target)
+    if source.resolve() != target.resolve():
+        shutil.copy2(source, target)
     return target.name
 
 
@@ -1136,7 +1147,7 @@ def build_diagram(number: int, title: str, sections: list[Section], output: Path
         elements = [
             f'<rect width="{view_w}" height="{view_h}" fill="#FAFAF8"/>',
             '<path d="M55 94 H1745" stroke="#202020" stroke-width="3"/>',
-            svg_text(["N05 · MAPA ACTOR–DECISIÓN–CONSECUENCIA"], 55, 60, 23, "start", weight=700),
+            svg_text(["N05 · MAPA ACTOR, DECISIÓN, CONSECUENCIA"], 55, 60, 23, "start", weight=700),
             svg_text(["Una decisión redistribuye capacidad, voz y exposición"], 55, 137, 37, "start", 43, 500),
             '<g fill="none" stroke="#666" stroke-width="2.5" stroke-dasharray="7 7">',
             '<path d="M490 300 C620 330 680 350 760 375"/>',
@@ -1162,21 +1173,21 @@ def build_diagram(number: int, title: str, sections: list[Section], output: Path
             elements.append(svg_text(wrap_svg(note, 39, 2), x+23, y+116, 17, "start", 21, 500))
             elements.append(f'<circle cx="{x+419}" cy="{y+23}" r="8" fill="#CFFF00" stroke="#333" stroke-width="1.5"/>')
             elements.append('</g>')
-        svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {view_w} {view_h}" role="img" aria-labelledby="title desc"><title id="title">Mapa Actor–Decisión–Consecuencia</title><desc id="desc">Seis posiciones actorales se relacionan con una decisión y sus consecuencias: definir, conocer, autorizar, ejecutar, experimentar, objetar y reparar. Los contrapesos incluyen trazabilidad, participación, canal de objeción y capacidad de reparación.</desc>{''.join(elements)}</svg>'''
+        svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {view_w} {view_h}" role="img" aria-labelledby="title desc"><title id="title">Mapa Actor, Decisión, Consecuencia</title><desc id="desc">Seis posiciones actorales se relacionan con una decisión y sus consecuencias: definir, conocer, autorizar, ejecutar, experimentar, objetar y reparar. Los contrapesos incluyen trazabilidad, participación, canal de objeción y capacidad de reparación.</desc>{''.join(elements)}</svg>'''
         output.write_text(svg, encoding="utf-8")
         content_manifest = {
-            "title": "Mapa Actor–Decisión–Consecuencia",
+            "title": "Mapa Actor, Decisión, Consecuencia",
             "claim": "Analizar actores exige reconstruir su relación efectiva con la decisión, el conocimiento y las consecuencias, no sólo enumerar cargos.",
             "source_sections": [
-                {"id": "s1", "heading": "Instrumento de decisión: mapa Actor–Decisión–Consecuencia", "summary": "Registra poder, conocimiento, exposición y reparación."},
+                {"id": "s1", "heading": "Instrumento de decisión: mapa Actor, Decisión, Consecuencia", "summary": "Registra poder, conocimiento, exposición y reparación."},
                 {"id": "s2", "heading": "Autoridad, responsabilidad y capacidad", "summary": "Distingue capacidades que no conviene confundir."},
             ],
             "nodes": [
-                {"id": node_id, "label": label, "purpose": note, "source": ["s1", "s2"]}
+                {"id": node_id, "label": label, "role": "actor", "purpose": note, "source": ["s1", "s2"]}
                 for node_id, _order, label, note, _x, _y in nodes
             ],
             "edges": [
-                {"id": f"e{index+1}", "from": node[0], "to": "decision", "relation": "actor-position", "meaning": node[3]}
+                {"id": f"e{index+1}", "from": node[0], "to": "decision", "relation": "authority", "source": ["s1", "s2"], "meaning": node[3]}
                 for index, node in enumerate(nodes)
             ],
         }
@@ -1204,7 +1215,7 @@ def build_diagram(number: int, title: str, sections: list[Section], output: Path
             "module": module_for(5)[1],
             "topology": "actor-decision-consequence",
             "labels": [node[2] for node in nodes],
-            "source_headings": ["Instrumento de decisión: mapa Actor–Decisión–Consecuencia", "Autoridad, responsabilidad y capacidad"],
+            "source_headings": ["Instrumento de decisión: mapa Actor, Decisión, Consecuencia", "Autoridad, responsabilidad y capacidad"],
             "file": output.name,
         }
         output.with_suffix('.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')
@@ -1505,6 +1516,16 @@ def section_classes(number: int, index: int, title: str) -> list[str]:
         classes = ["reading-section", "family-3", "two-column", "n04-movement", "n04-movement-three"]
     if number == 4 and title == "Síntesis":
         classes = ["reading-section", "family-4", "two-column", "n04-synthesis"]
+    if number == 5 and title == "De N04 a N05: de la afirmación a las relaciones que la sostienen":
+        classes = ["reading-section", "family-4", "stone-card", "n05-handoff-input"]
+    if number == 5 and title.startswith("Movimiento 1 ·"):
+        classes = ["reading-section", "family-1", "two-column", "n05-movement", "n05-movement-one"]
+    if number == 5 and title.startswith("Movimiento 2 ·"):
+        classes = ["reading-section", "family-2", "two-column", "n05-movement", "n05-movement-two"]
+    if number == 5 and title.startswith("Movimiento 3 ·"):
+        classes = ["reading-section", "family-3", "two-column", "n05-movement", "n05-movement-three"]
+    if number == 5 and title == "Síntesis":
+        classes = ["reading-section", "family-4", "two-column", "n05-synthesis"]
     if number == 0 and title == "Palabras conocidas, preguntas nuevas":
         classes.append("concept-families")
     if title.startswith("Dossier de evidencia"): classes.append("dossier")
@@ -1570,14 +1591,18 @@ def cover_html(number: int, title: str, thesis: str, file: str, title_source_id:
         cover_thesis = "Un contrato intelectual para llegar al encuentro con una posición revisable."
     if number == 4:
         cover_thesis = "Intervenir exige conservar la historia de cada afirmación: qué se observó, cómo se transformó y qué decisión sostiene."
+    if number == 5:
+        cover_thesis = "Una decisión profesional también se juzga por quién puede comprenderla, objetarla y reparar sus consecuencias."
     cover_title = esc(clean)
     if number == 1:
         cover_title = "Metodología sin recetas:<br>intervenir cuando el problema<br>todavía no está claro"
     if number == 4:
         cover_title = "Hechos, síntomas,<br>relatos, hipótesis<br>y decisiones"
+    if number == 5:
+        cover_title = "Actores, afectados,<br>poder y perspectivas"
     cover_eyebrow = (
         '<span>LECTURA PREVIA</span><span>EDICIÓN 2026</span>'
-        if number in {1, 2, 3, 4}
+        if number in {1, 2, 3, 4, 5}
         else "LECTURA PREVIA\nEDICIÓN 2026"
     )
     cover_alt = f"Fotografía editorial de portada para {clean}"
@@ -1585,6 +1610,8 @@ def cover_html(number: int, title: str, thesis: str, file: str, title_source_id:
         cover_alt = "Trabajadora hotelera argentina en un lobby nocturno, observada entre reflejos, corredores y capas de vidrio que sugieren fronteras y efectos que regresan"
     if number == 4:
         cover_alt = "Analista de sistemas argentina en un hotel de Buenos Aires, observada entre reflejos y rastros documentales que sugieren evidencia, hipótesis rivales y decisiones"
+    if number == 5:
+        cover_alt = "Silla vacía en primer plano junto a una larga mesa de reunión, con profesionales argentinos y latinoamericanos desenfocados al fondo, en una fotografía editorial concebida en blanco y negro"
     return f'''<section class="collection-cover cover-variant-{variant} cover-n{number:02d}"><img src="assets/{esc(file)}" alt="{esc(cover_alt)}"><div class="cover-shade"></div><div class="cover-meta cover-meta-left cover-meta-eyebrow">{cover_eyebrow}</div><div class="cover-meta cover-meta-right">N{number:02d}<br>FCE · UBA</div><div class="collection-masthead">METSI</div><div class="cover-title"><i></i><span>METODOLOGÍA DE SISTEMAS DE INFORMACIÓN</span><h1 data-source-id="{title_source_id}">{cover_title}</h1></div><div class="cover-thesis"><b>N{number:02d}</b><p>{esc(cover_thesis)}</p></div><div class="cover-parallelogram"></div></section>'''
 
 
@@ -1615,7 +1642,7 @@ def contents_html(number:int, title:str, sections:list[Section], hero:str) -> st
         items = ''.join(item_html)
         route_note = '<p class="contents-route"><b>Ruta priorizada: 2 h 10 min a 2 h 45 min.</b> Núcleo: 90 a 110 min; ejercicio de Martina: 15 a 20 min; nota: 25 a 35 min. Las extensiones profundizan el recorrido.</p>'
         sin_num_note = '<p class="contents-sinnum-note"><b>Nota.</b> <b>SIN NUM.</b> identifica aparatos de orientación, evidencia o referencia fuera del argumento. Incluye portada, Contenido, Referentes, portadillas de Parte, pausas visuales a página completa, láminas de evidencia, Referencias base y cierre.</p>'
-    elif number in {1, 2, 3, 4}:
+    elif number in {1, 2, 3, 4, 5}:
         counter = 0
         item_html = ['<li class="contents-unnumbered"><b>•</b><span>Referentes <small>SIN NUM.</small></span></li>']
         for section in sections:
@@ -1625,7 +1652,7 @@ def contents_html(number:int, title:str, sections:list[Section], hero:str) -> st
             counter += 1
             item_html.append(f'<li><b>{counter:02d}</b><span>{esc(section.title)}</span></li>')
         items = ''.join(item_html)
-        destination = {1: "N02", 2: "N03", 3: "N04", 4: "N05"}[number]
+        destination = {1: "N02", 2: "N03", 3: "N04", 4: "N05", 5: "N06"}[number]
         route_note = f'<p class="contents-route"><b>Ruta de lectura:</b> problema, distinciones, decisiones, prueba, transferencia y preparación para {destination}.</p>'
         sin_num_note = '<p class="contents-sinnum-note"><b>Nota.</b> <b>SIN NUM.</b> identifica los aparatos de orientación y referencia que no integran la secuencia argumental.</p>'
     else:
@@ -1663,9 +1690,6 @@ def portrait_entry(ref: str) -> tuple[str, dict]:
     if not matches:
         raise ValueError(f"Falta retrato obligatorio para la referencia: {ref}")
     _, key, entry = max(matches, key=lambda item: item[0])
-    portrait = PORTRAIT_BANK / f"{key}.jpg"
-    if not portrait.exists() or portrait.stat().st_size == 0:
-        raise ValueError(f"El retrato registrado no existe: {portrait} ({ref})")
     return key, entry
 
 
@@ -1695,7 +1719,12 @@ def reference_cards(number:int,refs:list[str],assets:Path)->str:
         if number == 4 and key == "iso":
             name = "ISO / IEC"
         filename=f"referent-{key}.jpg"
-        copy_asset(PORTRAIT_BANK / f"{key}.jpg", assets/filename)
+        packaged_portrait = assets / filename
+        registry_portrait = PORTRAIT_BANK / f"{key}.jpg"
+        portrait_source = packaged_portrait if number == 5 and packaged_portrait.exists() else registry_portrait
+        if not portrait_source.exists() or portrait_source.stat().st_size == 0:
+            raise ValueError(f"El retrato registrado no existe: {portrait_source} ({ref})")
+        copy_asset(portrait_source, packaged_portrait)
         portrait=f'<img class="contributor-portrait" src="assets/{filename}" alt="Retrato o fotografía documental de {esc(name)}">'
         work, publication = REFERENCE_WORKS.get(key, (sentence(ref, 110), "Referencia base de la lectura"))
         if number == 9 and key == "iso":
@@ -1769,10 +1798,10 @@ def split_n02_glossary_for_print(body: str) -> str:
 def build_document(number:int)->dict:
     source=source_path(number)
     title,sections=parse_source(source)
-    out=HERE/("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else f"N{number:02d}")
+    out=HERE/("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else "N05-v9-final" if number == 5 else f"N{number:02d}")
     assets=out/"assets"; diagrams=out/"diagrams"; output=out/"output"
     for folder in (assets,diagrams,output): folder.mkdir(parents=True,exist_ok=True)
-    if number in {1, 3, 4}:
+    if number in {1, 3, 4, 5}:
         packaged_source = out / "source"
         provenance = out / "provenance"
         packaged_source.mkdir(parents=True, exist_ok=True)
@@ -1792,7 +1821,7 @@ def build_document(number:int)->dict:
     elif number == 4:
         cover_source = HERE / "N04-v9-final" / "assets" / "cover-source-premium-bw-v2.png"
     elif number == 5:
-        cover_source = HERE / "N05" / "image-curation" / "selected" / "cover.jpg"
+        cover_source = HERE / "N05-v9-final" / "assets" / "cover-source-premium-bw-v1.png"
     elif number == 6:
         cover_source = HERE / "N06" / "image-curation" / "selected" / "cover.jpg"
     elif number == 7:
@@ -1807,11 +1836,12 @@ def build_document(number:int)->dict:
         cover_source=N01_ROOT/COVER_IMAGES[number-1]
     cover_file="cover"+cover_source.suffix.lower()
     copy_asset(cover_source,assets/cover_file)
-    copy_asset(MATCHES,assets/"matches-close.png")
+    closing_source = assets / "matches-close.png" if number == 5 and (assets / "matches-close.png").exists() else MATCHES
+    copy_asset(closing_source,assets/"matches-close.png")
     if number == 0:
         hotel_source = HERE / "N02" / "assets" / "hotel-horizonte.png"
     elif number == 5:
-        hotel_source = HERE / "N05" / "image-curation" / "selected" / "hotel-horizonte-n05.jpg"
+        hotel_source = HERE / "N05-v9-final" / "assets" / "hotel-horizonte.jpg"
     elif number == 6:
         hotel_source = HERE / "N02" / "assets" / "hotel-horizonte.png"
     elif number == 7:
@@ -1823,7 +1853,7 @@ def build_document(number:int)->dict:
     hotel_file = "hotel-horizonte" + hotel_source.suffix.lower()
     copy_asset(hotel_source, assets / hotel_file)
 
-    bank_files=sorted(p for p in USER_BANK.iterdir() if p.suffix.lower() in {'.jpg','.jpeg','.png'})
+    bank_files=sorted(p for p in USER_BANK.iterdir() if p.suffix.lower() in {'.jpg','.jpeg','.png'}) if USER_BANK.is_dir() else []
     selected=[]
     if number == 0:
         editorial_sources = [
@@ -1859,14 +1889,14 @@ def build_document(number:int)->dict:
         ]
     elif number == 5:
         editorial_sources = [
-            HERE / "N05" / "image-curation" / "selected" / "editorial-01.jpg",
-            HERE / "N05" / "image-curation" / "selected" / "editorial-02.jpg",
-            HERE / "N05" / "image-curation" / "selected" / "editorial-03.jpg",
-            HERE / "N05" / "image-curation" / "selected" / "editorial-04.jpg",
-            HERE / "N05" / "image-curation" / "selected" / "editorial-05.jpg",
-            HERE / "N05" / "image-curation" / "selected" / "editorial-06.jpg",
-            HERE / "N05" / "image-curation" / "selected" / "editorial-07.jpg",
-            HERE / "N05" / "image-curation" / "selected" / "editorial-08.jpg",
+            HERE / "N05-v9-final" / "assets" / "editorial-01.jpg",
+            HERE / "N05-v9-final" / "assets" / "editorial-02.jpg",
+            HERE / "N05-v9-final" / "assets" / "editorial-03.jpg",
+            HERE / "N05-v9-final" / "assets" / "editorial-04.jpg",
+            HERE / "N05-v9-final" / "assets" / "editorial-05.jpg",
+            HERE / "N05-v9-final" / "assets" / "editorial-06.jpg",
+            HERE / "N05-v9-final" / "assets" / "editorial-07.jpg",
+            HERE / "N05-v9-final" / "assets" / "editorial-08.jpg",
         ]
     elif number == 6:
         editorial_sources = [
@@ -1993,13 +2023,23 @@ def build_document(number:int)->dict:
     refs=references(sections)
     portrait_refs = []
     for raw, key, entry in principal_references(refs):
-        portrait_refs.append({
+        portrait_ref = {
             "key": key,
             "name": entry["name"],
             "source_page": entry["source_page"],
-            "rights_status": entry["rights_status"],
-            "file": f"referent-{key}.jpg",
-        })
+        }
+        rights_status = entry["rights_status"]
+        if number == 5 and key in {"edward-freeman", "enid-mumford"}:
+            portrait_ref["rights_basis"] = "Permiso confirmado por Diego Carralbal el 2026-09-03 para publicar el retrato dentro del paquete N05 en carralbal/UBA-metsi."
+            rights_status = "permission_confirmed_by_course_author"
+        if number == 5 and key == "sasha-costanza-chock":
+            rights_status = "wikimedia_commons_cc_by_sa_4_0"
+        if number == 5 and key == "nist":
+            portrait_ref["source_page"] = "https://commons.wikimedia.org/wiki/File:NIST_campus_aerial_2019.jpg"
+            rights_status = "wikimedia_commons_cc_by_sa_4_0"
+        portrait_ref["rights_status"] = rights_status
+        portrait_ref["file"] = f"referent-{key}.jpg"
+        portrait_refs.append(portrait_ref)
     source_entries=[]
     title_source_id=f"N{number:02d}-h1"
     source_block(source_entries,title_source_id,"heading-1",title.replace(f"N{number:02d} — ","").replace(f"N{number:02d} · ",""))
@@ -2131,22 +2171,17 @@ def build_document(number:int)->dict:
         ),
     }
     n05_photo_after = {
-        "El taller que parecía completo": 0,
-        "Conocimiento situado y autoridad epistémica": 1,
-        "De la consulta a la participación con propósito": 5,
+        "Movimiento 1 · Pasar de interesados genéricos a relaciones de poder": 0,
+        "Movimiento 3 · Gobernar objeción, supervisión y reparación": 5,
     }
     n05_pause_after = {
-        "Conocimiento situado y autoridad epistémica": (
+        "Pregunta profesional": (
             2,
-            "El poder no es un cargo: es la capacidad efectiva de volver posible, imposible o inevitable una decisión.",
+            "Una silla vacía no es ausencia de información. Puede ser evidencia de quién todavía no pudo intervenir en la decisión.",
         ),
-        "Instrumento de decisión: mapa Actor–Decisión–Consecuencia": (
-            3,
-            "Una silla ocupada no garantiza voz; una voz escuchada no garantiza influencia.",
-        ),
-        "2026: la IA redistribuye poder aunque parezca asistencia": (
+        "Movimiento 2 · Diseñar participación capaz de cambiar una decisión": (
             4,
-            "Cuando una persona puede revisar pero no detener, la supervisión humana es sólo una etiqueta.",
+            "Participar importa cuando una objeción puede cambiar el curso, no sólo quedar registrada.",
         ),
     }
     n06_photo_after = {
@@ -2300,16 +2335,16 @@ def build_document(number:int)->dict:
                 )
             chunks.append(part_chunk + '<article class="reading">')
             continue
-        reference_apparatus = number in {0, 1, 2, 3, 4} and section.title == "Referencias base"
+        reference_apparatus = number in {0, 1, 2, 3, 4, 5} and section.title == "Referencias base"
         if not reference_apparatus:
             display_index += 1
         idx = display_index + 1 if reference_apparatus else display_index
         classes=section_classes(number,idx,section.title)
-        if number in {1, 2, 3, 4} and section.title == "Cinco píldoras para recordar":
+        if number in {1, 2, 3, 4, 5} and section.title == "Cinco píldoras para recordar":
             body = body.replace("<ul>", "<ol>", 1).replace("</ul>", "</ol>", 1)
         marker_number = "APARATO DE REFERENCIA" if reference_apparatus else f"SECCIÓN {idx:02d}" if number == 0 else f"{idx:02d}"
         route_label = ""
-        if number in {1, 2, 3, 4} and not reference_apparatus:
+        if number in {1, 2, 3, 4, 5} and not reference_apparatus:
             if number == 1:
                 route = (
                     "PROBLEMA" if idx <= 4 else
@@ -2346,12 +2381,12 @@ def build_document(number:int)->dict:
                     "TRANSFERENCIA" if idx == 8 else
                     "PREPARACIÓN"
                 )
-            route_label = f' <em>{route}</em>' if number in {3, 4} else f'<em>{route}</em>'
+            route_label = f' <em>{route}</em>' if number in {3, 4, 5} else f'<em>{route}</em>'
         marker=f'<div class="section-marker"><span>{marker_number}</span><b>METSI · N{number:02d}{route_label}</b></div>'
         prelude=""
         extra=""
         standalone_before=""
-        if (number == 4 and section.title.startswith("Movimiento 1 ·")) or (number == 5 and section.title == "Instrumento de decisión: mapa Actor–Decisión–Consecuencia") or (number == 6 and section.title == "Instrumento de decisión: tablero mínimo de incertidumbres") or (number == 7 and section.title == "De la conversación a una afirmación defendible") or (number == 8 and section.title == "Instrumento de decisión: registro en capas") or (number == 9 and section.title == "Instrumento de decisión: mapa de recorrido accesible") or (number == 10 and section.title == "Instrumento: encuadre METSI en nueve decisiones") or (number == 1 and section.title == "Método, metodología, marco, práctica, técnica y herramienta") or (number == 2 and section.title == "Cinco objetos que no conviene llamar simplemente “el sistema”") or (number not in {0, 1, 2, 4, 5, 6, 7, 8, 9, 10} and idx in diagram_before):
+        if (number == 4 and section.title.startswith("Movimiento 1 ·")) or (number == 5 and section.title.startswith("Movimiento 2 ·")) or (number == 6 and section.title == "Instrumento de decisión: tablero mínimo de incertidumbres") or (number == 7 and section.title == "De la conversación a una afirmación defendible") or (number == 8 and section.title == "Instrumento de decisión: registro en capas") or (number == 9 and section.title == "Instrumento de decisión: mapa de recorrido accesible") or (number == 10 and section.title == "Instrumento: encuadre METSI en nueve decisiones") or (number == 1 and section.title == "Método, metodología, marco, práctica, técnica y herramienta") or (number == 2 and section.title == "Cinco objetos que no conviene llamar simplemente “el sistema”") or (number not in {0, 1, 2, 4, 5, 6, 7, 8, 9, 10} and idx in diagram_before):
             if number == 1:
                 diagram_alt = "Relación entre marco, metodología, método, práctica, técnica y herramienta"
                 diagram_caption = "Cada término cumple una función distinta: orientar, justificar, proceder, actuar, ejecutar o soportar."
@@ -2465,11 +2500,11 @@ def build_document(number:int)->dict:
             # page.  The image is document-specific and the citations remain
             # complete, searchable source text.
             image=selected[6] if number == 5 else selected[7] if number in {6, 7, 8, 9, 10} else selected[-1]
-            if number in {0, 1, 2, 3}:
+            if number in {0, 1, 2, 3, 5}:
                 # Patrón canónico fijado por N10: bibliografía sobre blanco,
                 # tipografía pequeña y sin una imagen que compita con las citas.
                 pass
-            elif number in {4, 5, 6, 7, 8, 9, 10}:
+            elif number in {4, 6, 7, 8, 9, 10}:
                 extra += visual_figure(
                     image,
                     "Las referencias abren nuevas preguntas: no sustituyen el juicio que esta lectura exige construir.",
@@ -2539,14 +2574,16 @@ def build_document(number:int)->dict:
     (out/"index.html").write_text(html_text,encoding="utf-8")
     rendered_ids=re.findall(r'data-source-id="([^"]+)"',html_text)
     source_ids=[entry["source_id"] for entry in source_entries]
+    source_label = f"source/{source.name}" if number == 5 else str(source)
     source_manifest={
         "document":f"N{number:02d}",
-        "source":str(source),
+        "source":source_label,
         "eligible_blocks":source_entries,
         "eligible_block_count":len(source_entries),
         "eligible_word_count":sum(len(entry["text"].split()) for entry in source_entries),
     }
-    (out/"source-manifest.json").write_text(json.dumps(source_manifest,ensure_ascii=False,indent=2),encoding="utf-8")
+    source_manifest_text = json.dumps(source_manifest,ensure_ascii=False,indent=2)
+    (out/"source-manifest.json").write_text(source_manifest_text + ("\n" if number == 5 else ""),encoding="utf-8")
     integrity={
         "status":"PASS" if sorted(source_ids)==sorted(rendered_ids) and len(rendered_ids)==len(set(rendered_ids)) else "FAIL",
         "source_block_count":len(source_ids),
@@ -2556,25 +2593,30 @@ def build_document(number:int)->dict:
         "duplicate_rendered_ids":sorted({value for value in rendered_ids if rendered_ids.count(value)>1}),
     }
     (out/"integrity-report.json").write_text(json.dumps(integrity,ensure_ascii=False,indent=2),encoding="utf-8")
-    base=N01_CSS.read_text(encoding="utf-8")
-    (out/"magazine.css").write_text(base+"\n"+COLLECTION_CSS,encoding="utf-8")
+    packaged_css = out / "magazine.css"
+    css_text = packaged_css.read_text(encoding="utf-8") if number == 5 and packaged_css.exists() else N01_CSS.read_text(encoding="utf-8") + "\n" + COLLECTION_CSS
+    packaged_css.write_text(css_text,encoding="utf-8")
+    if number == 5:
+        (out / "metsi.css").write_text(css_text, encoding="utf-8")
+    cover_source_label = f"assets/{cover_source.name}" if number == 5 else str(cover_source)
+    hotel_source_label = f"assets/{hotel_source.name}" if number == 5 else str(hotel_source)
     manifest={
-        "number":number,"title":title,"module":module_for(number)[1],"source":str(source),
+        "number":number,"title":title,"module":module_for(number)[1],"source":source_label,
         "source_words":len(source.read_text(encoding='utf-8').split()),
         "cover":{
             "file":cover_file,
-            "source":str(cover_source),
+            "source":cover_source_label,
             "sha256":asset_sha(cover_source),
             **({
                 "photographic_origin":"native_black_and_white",
                 "render_treatment":"no_grayscale_conversion",
                 "art_direction":"lighting, wardrobe, materials and tonal separation conceived for monochrome",
-            } if number == 4 else {}),
+            } if number in {4, 5} else {}),
         },
         "internal_images":selected,
         "sparse_fill_images":sparse_fill_images,
-        "hotel_horizonte":{"file":hotel_file,"source":str(hotel_source),"sha256":asset_sha(hotel_source)},
-        "closing":{"file":"matches-close.png","sha256":asset_sha(MATCHES),"policy":"canonical_structured_closing_without_quote","alt":closing_alt,"caption":closing_caption,"folio":True,"footer":True},
+        "hotel_horizonte":{"file":hotel_file,"source":hotel_source_label,"sha256":asset_sha(hotel_source)},
+        "closing":{"file":"matches-close.png","sha256":asset_sha(closing_source),"policy":"canonical_structured_closing_without_quote","alt":closing_alt,"caption":closing_caption,"folio":True,"footer":True},
         "diagram":diagram,"quotes":quotes,"references":refs,
         "portrait_policy":"mandatory_real_photography_no_monograms",
         "portrait_references":portrait_refs,
@@ -2597,7 +2639,10 @@ def build_document(number:int)->dict:
             },
         ] if number in {0, 1} else []),
     }
-    (out/"manifest.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding="utf-8")
+    manifest_text = json.dumps(manifest,ensure_ascii=False,indent=2) + ("\n" if number == 5 else "")
+    (out/"manifest.json").write_text(manifest_text,encoding="utf-8")
+    if number == 5:
+        (out/"document.json").write_text(manifest_text,encoding="utf-8")
     return manifest
 
 
@@ -2626,8 +2671,8 @@ COLLECTION_CSS=r'''
 .cover-title span{font-family:Avenir,sans-serif;font-size:6.7pt;letter-spacing:.14em}.cover-title h1{margin:4mm 0 0;color:#fff;font-family:Didot,"Bodoni 72",serif;font-size:31pt;line-height:.94;letter-spacing:-.022em;font-weight:400}
 .cover-thesis{position:absolute;z-index:3;right:16mm;bottom:29mm;width:53mm;text-align:right}.cover-thesis b{display:inline-grid;place-items:center;width:15mm;height:15mm;margin-bottom:4mm;border:.35mm solid #CFFF00;border-radius:50%;color:#CFFF00;font-family:Avenir,sans-serif;font-size:7pt}.cover-thesis p{margin:0;color:#CFFF00;font-family:Didot,"Bodoni 72",serif;font-size:13.5pt;line-height:1.08}.cover-parallelogram{position:absolute;z-index:3;right:18mm;top:55mm;width:15mm;height:4mm;background:#CFFF00;clip-path:polygon(10% 0,100% 0,90% 100%,0 100%);opacity:.95}
 .cover-n01 .cover-meta{letter-spacing:.035em;line-height:1.2}
-.cover-n01 .cover-meta-eyebrow,.cover-n02 .cover-meta-eyebrow,.cover-n03 .cover-meta-eyebrow,.cover-n04 .cover-meta-eyebrow{display:flex;flex-direction:column;align-items:flex-start;gap:0;white-space:normal}
-.cover-n01 .cover-meta-eyebrow span,.cover-n02 .cover-meta-eyebrow span,.cover-n03 .cover-meta-eyebrow span,.cover-n04 .cover-meta-eyebrow span{display:block;white-space:nowrap}
+.cover-n01 .cover-meta-eyebrow,.cover-n02 .cover-meta-eyebrow,.cover-n03 .cover-meta-eyebrow,.cover-n04 .cover-meta-eyebrow,.cover-n05 .cover-meta-eyebrow{display:flex;flex-direction:column;align-items:flex-start;gap:0;white-space:normal}
+.cover-n01 .cover-meta-eyebrow span,.cover-n02 .cover-meta-eyebrow span,.cover-n03 .cover-meta-eyebrow span,.cover-n04 .cover-meta-eyebrow span,.cover-n05 .cover-meta-eyebrow span{display:block;white-space:nowrap}
 .cover-n01::before{content:"";position:absolute;z-index:1;left:0;top:0;width:100%;height:52mm;pointer-events:none;background:linear-gradient(to bottom,rgba(0,0,0,.28) 0,rgba(0,0,0,.22) 44%,rgba(0,0,0,0) 100%)}
 .cover-n01 .cover-title{width:160mm}
 .cover-n01 .cover-title h1{font-size:28.5pt;line-height:.96;letter-spacing:-.02em}
@@ -2675,15 +2720,15 @@ COLLECTION_CSS=r'''
 .cover-n04 .cover-title h1{font-size:34pt;line-height:.91;letter-spacing:-.025em}
 .cover-n04 .cover-thesis{right:25mm;bottom:21mm;width:51mm}
 .cover-n04 .cover-parallelogram{right:15.5mm;top:57mm}
-.cover-n05>img{object-position:50% 48%;filter:grayscale(1) saturate(0) contrast(1.15) brightness(.73)}
+.cover-n05>img{object-position:50% 48%;filter:contrast(1.06) brightness(.82)}
 .cover-n05 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.30),rgba(10,12,10,.05) 36%,rgba(8,9,8,.89) 100%)}
 .cover-n05 .collection-masthead{top:16mm}
 .cover-n05 .cover-meta{top:29mm}
 .cover-n05 .cover-meta-left{left:15.5mm}
 .cover-n05 .cover-meta-right{right:15.5mm}
-.cover-n05 .cover-title{bottom:21mm;width:126mm}
-.cover-n05 .cover-title h1{font-size:35pt;line-height:.91;letter-spacing:-.025em}
-.cover-n05 .cover-thesis{right:25mm;bottom:21mm;width:51mm}
+.cover-n05 .cover-title{bottom:21mm;width:132mm}
+.cover-n05 .cover-title h1{font-size:38pt;line-height:.91;letter-spacing:-.025em}
+.cover-n05 .cover-thesis{right:18mm;bottom:22mm;width:56mm}
 .cover-n05 .cover-parallelogram{right:15.5mm;top:57mm}
 .cover-n06>img{object-position:50% 48%;filter:grayscale(1) saturate(0) contrast(1.15) brightness(.73)}
 .cover-n06 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.30),rgba(10,12,10,.05) 36%,rgba(8,9,8,.89) 100%)}
@@ -2911,6 +2956,60 @@ COLLECTION_CSS=r'''
 .premium-magazine.document-n05 .references{break-before:auto;page-break-before:auto}
 .premium-magazine.document-n05 .references-inline{margin-top:5mm}
 .premium-magazine.document-n05 .references-inline img{height:202mm;object-position:center 48%;filter:grayscale(1) contrast(1.08)}
+.document-n05 .contents-page{padding:14mm 16mm}
+.document-n05 .contents-page .contents-layout{grid-template-columns:1.42fr .58fr;gap:6mm;height:207mm;margin-top:4mm}
+.document-n05 .contents-page .contents-layout ol{columns:2;column-gap:5mm}
+.document-n05 .contents-page .contents-layout li{grid-template-columns:7mm 1fr;gap:1.2mm;padding:1.35mm 0;font-size:7.2pt;line-height:1.14}
+.document-n05 .contents-page .contents-layout figure img{height:190mm;filter:grayscale(1) contrast(1.06)}
+.document-n05 .contents-page .contents-sinnum-note{position:absolute;left:16mm;right:16mm;bottom:18mm;margin:0;padding-top:2mm;border-top:.2mm solid #BFC1BD;font:6.4pt/1.2 Avenir,sans-serif;color:#5B5D58}
+.premium-magazine.document-n05 .reading-section[data-section="01"]{page:fullbleed;position:relative;box-sizing:border-box;width:210mm;height:297mm;margin:0;padding:24mm;display:flex;flex-direction:column;justify-content:flex-end;background:#191919;color:#F7F6F2;border:0;break-before:page;page-break-before:always;break-after:page;page-break-after:always}
+.premium-magazine.document-n05 .reading-section[data-section="01"]::before{content:"";position:absolute;left:24mm;top:24mm;width:24mm;height:3.2mm;background:#CFFF00;clip-path:polygon(10% 0,100% 0,90% 100%,0 100%)}
+.premium-magazine.document-n05 .reading-section[data-section="01"] .section-heading{display:block;margin:0 0 12mm;padding:0;border:0}
+.premium-magazine.document-n05 .reading-section[data-section="01"] .section-marker{color:#CFFF00}
+.premium-magazine.document-n05 .reading-section[data-section="01"] .section-marker span{color:#CFFF00;border-color:#CFFF00}
+.premium-magazine.document-n05 .reading-section[data-section="01"] h2{margin:0;color:#F7F6F2;font-size:18pt}
+.premium-magazine.document-n05 .reading-section[data-section="01"] .section-body{max-width:155mm}
+.premium-magazine.document-n05 .reading-section[data-section="01"] .section-body p{margin:0;color:#F7F6F2;font:400 28pt/1.08 Didot,"Bodoni 72",serif;letter-spacing:-.018em}
+.premium-magazine.document-n05 .n05-handoff-input{break-inside:avoid-page;page-break-inside:avoid}
+.premium-magazine.document-n05 .n05-handoff-input h2{font-size:28pt;line-height:1}
+.premium-magazine.document-n05 .n05-handoff-input .section-body{columns:2;column-count:2;column-gap:8mm;column-rule:.2mm solid #c5c7c5}
+.premium-magazine.document-n05 .n05-movement{break-before:page;page-break-before:always;background:#FAFAF8!important;padding:0!important;border-left:0!important}
+.premium-magazine.document-n05 .n05-movement-one{break-before:auto!important;page-break-before:auto!important}
+.premium-magazine.document-n05 .n05-movement .section-body{columns:2;column-count:2;column-gap:8mm;column-rule:.2mm solid #c5c7c5}
+.premium-magazine.document-n05 .n05-movement .section-body h3{margin:5mm 0 2mm;padding-top:2.5mm;border-top:.3mm solid #202020;break-after:avoid-column!important;page-break-after:avoid}
+.premium-magazine.document-n05 .n05-movement .section-body h4{break-after:avoid-column!important;page-break-after:avoid}
+.premium-magazine.document-n05 [data-source-id="N05-s07-b018"],
+.premium-magazine.document-n05 [data-source-id="N05-s07-b063"]{break-before:column!important}
+.premium-magazine.document-n05 .n05-movement .section-body blockquote,
+.premium-magazine.document-n05 .n05-movement .section-body table,
+.premium-magazine.document-n05 .n05-movement .section-body ol,
+.premium-magazine.document-n05 .n05-movement .section-body ul{break-inside:avoid-page;page-break-inside:avoid}
+.premium-magazine.document-n05 .n05-movement-two .section-body p,
+.premium-magazine.document-n05 .n05-movement-two .section-body li{font-size:12.2pt;line-height:1.6}
+.premium-magazine.document-n05 .n05-movement-one .photo-band img,
+.premium-magazine.document-n05 .n05-movement-three .photo-band img{height:74mm;object-position:center 44%}
+.premium-magazine.document-n05 .n05-synthesis .section-body{columns:2;column-count:2;column-gap:8mm;column-rule:.2mm solid #c5c7c5}
+.premium-magazine.document-n05 .glossary-two-column{break-inside:avoid-page;page-break-inside:avoid}
+.premium-magazine.document-n05 .glossary-two-column .section-body{columns:auto!important;column-count:auto!important;column-rule:none!important}
+.premium-magazine.document-n05 .glossary-two-column .section-body ul{columns:3;column-count:3;column-gap:6mm;column-rule:.2mm solid #c5c7c5;margin:0;padding-left:0;font-size:9.2pt;line-height:1.25;list-style-position:inside}
+.premium-magazine.document-n05 .glossary-two-column .section-body li{margin:0 0 1.7mm;padding-left:0;break-inside:avoid-page;page-break-inside:avoid}
+.premium-magazine.document-n05 .questions{min-height:210mm;box-sizing:border-box;padding-top:7mm;padding-bottom:7mm;break-before:page!important;page-break-before:always!important;break-inside:avoid-page;page-break-inside:avoid}
+.premium-magazine.document-n05 .questions .section-body ol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,auto);grid-auto-flow:column;align-content:space-between;gap:0 12mm;min-height:110mm;margin:0;padding-left:7mm;columns:auto;column-count:auto;break-inside:avoid-page;page-break-inside:avoid}
+.premium-magazine.document-n05 .questions .section-body li{margin:0;padding-right:2mm;break-inside:avoid-page;page-break-inside:avoid}
+.premium-magazine.document-n05 .questions .section-body>p:last-child{margin:2mm 0 0;padding:2.5mm 4mm;border-top:.6mm solid #171917;border-left:1.6mm solid #CFFF00;background:#FAFAF8;font:8.8pt/1.3 Avenir,sans-serif;break-inside:avoid-page;page-break-inside:avoid}
+.premium-magazine.document-n05 .references{break-before:page!important;page-break-before:always!important;padding-left:0!important;border-left:0!important;background:#FAFAF8!important}
+.premium-magazine.document-n05 .references::after{display:none!important}
+.premium-magazine.document-n05 .references .section-heading{margin:0 0 7mm;padding-top:4mm;border-top:.25mm solid #9A9A96}
+.premium-magazine.document-n05 .references .section-marker{gap:2.2mm;margin:0 0 4mm;color:#666663;font-size:6.5pt;letter-spacing:.14em}
+.premium-magazine.document-n05 .references .section-marker span{display:inline!important;width:auto!important;height:auto!important;padding:0!important;border:0!important;font-size:inherit}
+.premium-magazine.document-n05 .references .section-marker b::before{display:none}
+.premium-magazine.document-n05 .references h2{margin:0;font-size:31pt;line-height:1}
+.premium-magazine.document-n05 .references .section-body{columns:auto!important;column-count:auto!important;column-gap:0!important;column-rule:none!important;display:block!important;font:9.8pt/1.46 Avenir,sans-serif}
+.premium-magazine.document-n05 .references .section-body ul{columns:2!important;column-count:2!important;column-gap:10mm;column-rule:none;margin:0;padding:0;max-width:none;list-style:none}
+.premium-magazine.document-n05 .references .section-body li{break-inside:avoid;overflow-wrap:normal;word-break:normal;hyphens:none;padding:0;margin:0 0 6mm}
+.premium-magazine.document-n05 .references .section-body a{overflow-wrap:normal;word-break:normal;hyphens:none}
+.premium-magazine.document-n05 .references .reference-url{white-space:normal}
+.premium-magazine.document-n05 .references .reference-url .url-segment{display:inline-block;white-space:nowrap}
 .premium-magazine.document-n06 .section-body h3{break-after:avoid-page;page-break-after:avoid}
 .premium-magazine.document-n06 section[data-section="05"] .photo-band img{height:68mm;object-position:center 46%}
 .premium-magazine.document-n06 section[data-section="12"] .photo-band img{height:66mm;object-position:center 48%}
@@ -3345,12 +3444,21 @@ def build_all(start:int,end:int)->None:
     for number in range(start,end+1):
         build_document(number)
         print(f"BUILT SOURCE N{number:02d}")
-    manifests=[]
+    collection_path = HERE / "collection-manifest.json"
+    existing = json.loads(collection_path.read_text(encoding="utf-8")) if collection_path.exists() else []
+    manifests_by_number = {entry["number"]: entry for entry in existing}
     for number in range(0,11):
-        path=HERE/("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else f"N{number:02d}")/"manifest.json"
+        path=HERE/("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else "N05-v9-final" if number == 5 else f"N{number:02d}")/"manifest.json"
         if path.exists():
-            manifests.append(json.loads(path.read_text(encoding="utf-8")))
-    (HERE/"collection-manifest.json").write_text(json.dumps(manifests,ensure_ascii=False,indent=2),encoding="utf-8")
+            manifest = json.loads(path.read_text(encoding="utf-8"))
+            if number == 5:
+                package = path.parent.name
+                manifest["source"] = f"{package}/{manifest['source']}"
+                manifest["cover"]["source"] = f"{package}/{manifest['cover']['source']}"
+                manifest["hotel_horizonte"]["source"] = f"{package}/{manifest['hotel_horizonte']['source']}"
+            manifests_by_number[number] = manifest
+    manifests = [manifests_by_number[number] for number in sorted(manifests_by_number)]
+    collection_path.write_text(json.dumps(manifests,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 
 
 def main()->None:
