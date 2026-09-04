@@ -1,0 +1,40 @@
+{
+  "document": "N07",
+  "version": "v9-final",
+  "status": "PASS",
+  "validator": "validate_n07_v9.py",
+  "checks_passed": 40,
+  "checks_failed": 0,
+  "pdf": "output/N07-METSI-lectura-previa-v9-final.pdf",
+  "pages": 31,
+  "pdf_bytes": 20824933,
+  "pdf_sha256": "6c27e0921b927f1954c9f40f520420bdb02d8ed60bcdfd39045b59d776791f9b",
+  "canonical_source": "source/N07_entrevistar_no_es_pedir_requisitos-content-final.md",
+  "canonical_source_sha256": "4e0416a028109761f0a9f498315946a62a147355c759054a733dd82902f639b6",
+  "source_block_count": 371,
+  "references": 11,
+  "external_urls": 5,
+  "referents": 6,
+  "hotel_horizonte_voices": 4,
+  "pills": 5,
+  "glossary_entries": 13,
+  "questions": 6,
+  "full_bleed_pause_pages": [5, 13],
+  "minimum_ordinary_page_fill": 0.5789,
+  "cover_title_quote_gutter_pt": 27.029,
+  "infographic_minimum_equivalent_pt": 7.56,
+  "orphan_headings": [],
+  "underfilled_ordinary_pages": {},
+  "regressions": {
+    "sondas_utiles_with_first_item": true,
+    "protocol_items_9_and_10_share_page_27": true,
+    "pills_heading_precedes_items_in_pdf_order": true,
+    "n06_pdf_sha_unchanged": true
+  },
+  "reproducibility": {
+    "html_css_manifests_identical": true,
+    "extracted_text_sha256": "812c5ca8e53b59109b26e34931982f73da3baefb6f698f63c3215d512143cbcc",
+    "links_sha256": "396dfd22eb2cfbcc62fb9ff871efa330c30702e955168d5f2853b4bb83f97b5a",
+    "all_31_page_rasters_identical": true
+  }
+}
