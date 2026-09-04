@@ -12,14 +12,15 @@ Repositorio de preservación editorial del material de lectura previa de METSI, 
 | N03 | final auditable | [`N03-METSI-lectura-previa-v9-final.pdf`](N03-v9-final/output/N03-METSI-lectura-previa-v9-final.pdf) | [`N03-v9-final/HANDOFF.md`](N03-v9-final/HANDOFF.md) |
 | N04 | final auditable | [`N04-METSI-lectura-previa-v9-final.pdf`](N04-v9-final/output/N04-METSI-lectura-previa-v9-final.pdf) | [`N04-v9-final/HANDOFF.md`](N04-v9-final/HANDOFF.md) |
 | N05 | final aprobado | [`N05-METSI-lectura-previa-v9-final.pdf`](N05-v9-final/output/N05-METSI-lectura-previa-v9-final.pdf) | [`N05-v9-final/HANDOFF.md`](N05-v9-final/HANDOFF.md) |
+| N06 | final auditable | [`N06-METSI-lectura-previa-v9-final.pdf`](N06-v9-final/output/N06-METSI-lectura-previa-v9-final.pdf) | [`N06-v9-final/HANDOFF.md`](N06-v9-final/HANDOFF.md) |
 
-N06 a N10 cuentan con contenido canónico cerrado y auditable, todavía sin una versión publicada.
+N07 a N10 cuentan con contenido canónico cerrado y auditable, todavía sin una versión publicada.
 
 ## Fuentes y reproducción
 
 El repositorio conserva las fuentes canónicas, HTML y CSS editables, activos gráficos, infografías, manifiestos, informes de integridad, validadores, planchas de contacto y scripts de exportación. Cada versión final mantiene su propio handoff y su evidencia de QA.
 
-Las etiquetas Git `n01-v18-final`, `n02-v14-final`, `n03-v9-final`, `n04-v9-final`, `n05-v9-public` y las etiquetas de contenido canónico permiten recuperar estados aprobados sin depender de nombres ambiguos.
+Las etiquetas Git `n01-v18-final`, `n02-v14-final`, `n03-v9-final`, `n04-v9-final`, `n05-v9-public`, `n06-v9-public` y las etiquetas de contenido canónico permiten recuperar estados aprobados sin depender de nombres ambiguos.
 
 ## Estándar editorial y skills
 
