@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1100" role="img" aria-labelledby="n08-title n08-desc">
+  <title id="n08-title">Del episodio a una decisión revisable</title>
+  <desc id="n08-desc">Mapa editorial de siete capas. Contexto y evento forman la base observable; interpretación e incertidumbre producen hipótesis abiertas; el contraste con participantes, rastros y otros episodios permite evaluar función y consecuencia; la decisión conduce a preservar, cambiar o probar, y nueva evidencia vuelve a abrir la observación.</desc>
+  <defs>
+    <marker id="arrow-ink" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 z" fill="#6D6C67"/>
+    </marker>
+    <marker id="arrow-volt" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 z" fill="#A7CF00"/>
+    </marker>
+    <style>
+      .sans { font-family: Avenir, "Avenir Next", sans-serif; fill: #292927; }
+      .eyebrow { font-size: 28px; font-weight: 700; letter-spacing: 5px; }
+      .title { font-family: Didot, "Bodoni 72", serif; font-size: 58px; font-weight: 400; fill: #232321; }
+      .subtitle { font-size: 28px; fill: #5A5955; }
+      .lane-title { font-size: 28px; font-weight: 750; letter-spacing: 3px; }
+      .layer-no { font-size: 28px; font-weight: 800; }
+      .layer-name { font-size: 31px; font-weight: 750; }
+      .layer-copy { font-size: 28px; fill: #4C4B47; }
+      .layer-question { font-size: 28px; font-style: italic; fill: #343431; }
+      .stage-title { font-size: 30px; font-weight: 800; letter-spacing: 1px; }
+      .stage-title-compact { font-size: 28px; font-weight: 800; letter-spacing: 0.5px; }
+      .stage-copy { font-size: 28px; }
+      .stage-copy-light { font-size: 28px; fill: #F5F3EC; }
+      .feedback-label { font-size: 28px; font-weight: 750; letter-spacing: 2px; fill: #585752; }
+      .connector { fill: none; stroke: #77756F; stroke-width: 2.4; stroke-dasharray: 5 9; marker-end: url(#arrow-ink); }
+      .assembly { fill: none; stroke: #77756F; stroke-width: 2.5; marker-end: url(#arrow-ink); }
+      .feedback { fill: none; stroke: #A7CF00; stroke-width: 3.2; stroke-dasharray: 7 10; marker-end: url(#arrow-volt); }
+      .port { stroke: #5D5C57; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="1100" fill="#F5F3ED"/>
+  <rect x="32" y="32" width="1736" height="1036" rx="24" fill="none" stroke="#B9B7AF" stroke-width="2"/>
+
+  <g id="header" class="sans">
+    <path d="M86 76 H218 L204 94 H72 Z" fill="#C8FF00"/>
+    <text x="244" y="92" class="eyebrow">N08 · INSTRUMENTO DE OBSERVACIÓN</text>
+    <text x="84" y="154" class="title">Del episodio a una decisión revisable</text>
+    <text x="86" y="198" class="subtitle">Las capas mantienen hechos, inferencias y consecuencias distinguibles antes de intervenir.</text>
+    <path d="M84 229 H1716" stroke="#A8A69F" stroke-width="2"/>
+    <text x="88" y="274" class="lane-title">REGISTRO EN SIETE CAPAS</text>
+    <text x="1215" y="274" class="lane-title">ENSAMBLE DE EVIDENCIA</text>
+  </g>
+
+  <g id="connectors" aria-label="Relaciones entre las capas y el ensamble">
+    <path class="connector" d="M1148 338 C1180 338 1180 332 1214 332"/>
+    <path class="connector" d="M1160 429 C1190 429 1182 378 1214 378"/>
+    <path class="connector" d="M1172 520 C1195 520 1190 474 1214 474"/>
+    <path class="connector" d="M1184 611 C1202 611 1194 520 1214 520"/>
+    <path class="connector" d="M1196 702 C1207 702 1201 786 1214 786"/>
+    <path class="connector" d="M1208 793 C1213 793 1209 829 1214 829"/>
+    <path class="connector" d="M1220 891 C1229 891 1206 958 1214 958"/>
+
+    <path class="assembly" d="M1450 410 C1450 438 1450 438 1450 452"/>
+    <path class="assembly" d="M1450 552 C1450 575 1450 575 1450 594"/>
+    <path class="assembly" d="M1450 722 C1450 744 1450 744 1450 764"/>
+    <path class="assembly" d="M1450 864 C1450 885 1450 885 1450 906"/>
+    <path class="feedback" d="M1510 1012 V1033 H71 V338 H84"/>
+  </g>
+
+  <g id="layer-contexto" class="sans">
+    <path d="M84 302 H1128 L1148 321 V374 H104 L84 355 Z" fill="#EBE8DF" stroke="#9D9B94" stroke-width="2"/>
+    <path d="M84 302 H103 V374 H104 L84 355 Z" fill="#C8FF00"/>
+    <text x="124" y="338" class="layer-no">01</text>
+    <text x="184" y="338" class="layer-name">CONTEXTO</text>
+    <text x="422" y="338" class="layer-copy">turno · carga · canal · restricciones</text>
+    <text x="184" y="369" class="layer-question">¿Qué condición podría cambiar el episodio?</text>
+    <circle cx="1148" cy="338" r="8" fill="#C8FF00" class="port"/>
+  </g>
+
+  <g id="layer-evento" class="sans">
+    <path d="M96 393 H1140 L1160 412 V465 H116 L96 446 Z" fill="#DDE2E2" stroke="#969997" stroke-width="2"/>
+    <path d="M96 393 H115 V465 H116 L96 446 Z" fill="#30302E"/>
+    <text x="136" y="429" class="layer-no">02</text>
+    <text x="196" y="429" class="layer-name">EVENTO</text>
+    <text x="422" y="429" class="layer-copy">acción · señal · objeto · tiempo</text>
+    <text x="196" y="460" class="layer-question">¿Qué ocurrió sin agregar explicación?</text>
+    <circle cx="1160" cy="429" r="8" fill="#DDE2E2" class="port"/>
+  </g>
+
+  <g id="layer-interpretacion" class="sans">
+    <path d="M108 484 H1152 L1172 503 V556 H128 L108 537 Z" fill="#E8E6E0" stroke="#9D9B94" stroke-width="2"/>
+    <path d="M108 484 H127 V556 H128 L108 537 Z" fill="#77756F"/>
+    <text x="148" y="520" class="layer-no">03</text>
+    <text x="208" y="520" class="layer-name">INTERPRETACIÓN</text>
+    <text x="522" y="520" class="layer-copy">significado provisional</text>
+    <text x="208" y="551" class="layer-question">¿Qué inferencia se está formulando?</text>
+    <circle cx="1172" cy="520" r="8" fill="#E8E6E0" class="port"/>
+  </g>
+
+  <g id="layer-incertidumbre" class="sans">
+    <path d="M120 575 H1164 L1184 594 V647 H140 L120 628 Z" fill="#F0EDE5" stroke="#A6A39B" stroke-width="2"/>
+    <path d="M120 575 H139 V647 H140 L120 628 Z" fill="#F5F3ED" stroke="#77756F" stroke-width="2"/>
+    <text x="160" y="611" class="layer-no">04</text>
+    <text x="220" y="611" class="layer-name">INCERTIDUMBRE</text>
+    <text x="522" y="611" class="layer-copy">duda o alternativa</text>
+    <text x="220" y="642" class="layer-question">¿Qué otra explicación sigue abierta?</text>
+    <circle cx="1184" cy="611" r="8" fill="#F5F3ED" class="port"/>
+  </g>
+
+  <g id="layer-funcion" class="sans">
+    <path d="M132 666 H1176 L1196 685 V738 H152 L132 719 Z" fill="#DFE3DD" stroke="#969994" stroke-width="2"/>
+    <path d="M132 666 H151 V738 H152 L132 719 Z" fill="#ACAAA3"/>
+    <text x="172" y="702" class="layer-no">05</text>
+    <text x="232" y="702" class="layer-name">FUNCIÓN</text>
+    <text x="522" y="702" class="layer-copy">capacidad sostenida</text>
+    <text x="232" y="733" class="layer-question">¿Qué permite detectar, decidir o reparar?</text>
+    <circle cx="1196" cy="702" r="8" fill="#DFE3DD" class="port"/>
+  </g>
+
+  <g id="layer-consecuencia" class="sans">
+    <path d="M144 757 H1188 L1208 776 V829 H164 L144 810 Z" fill="#E5E0D7" stroke="#9D9991" stroke-width="2"/>
+    <path d="M144 757 H163 V829 H164 L144 810 Z" fill="#D3C9B8"/>
+    <text x="184" y="793" class="layer-no">06</text>
+    <text x="244" y="793" class="layer-name">CONSECUENCIA</text>
+    <text x="522" y="793" class="layer-copy">resultado y trabajo posterior</text>
+    <text x="244" y="824" class="layer-question">¿Quién recibe valor, carga o daño?</text>
+    <circle cx="1208" cy="793" r="8" fill="#E5E0D7" class="port"/>
+  </g>
+
+  <g id="layer-decision" class="sans">
+    <path d="M156 848 H1200 L1220 867 V944 H176 L156 925 Z" fill="#D7DEDA" stroke="#848A86" stroke-width="2.4"/>
+    <path d="M156 848 H175 V944 H176 L156 925 Z" fill="#C8FF00"/>
+    <text x="196" y="891" class="layer-no">07</text>
+    <text x="256" y="891" class="layer-name">DECISIÓN</text>
+    <text x="522" y="891" class="layer-copy">cambio posible</text>
+    <text x="256" y="927" class="layer-question">¿Qué evidencia adicional podría modificarla?</text>
+    <circle cx="1220" cy="891" r="8" fill="#C8FF00" class="port"/>
+  </g>
+
+  <g id="stage-base" class="sans">
+    <path d="M1214 310 H1668 L1710 342 V410 H1214 Z" fill="#DDE2E2" stroke="#777B79" stroke-width="2.2"/>
+    <circle cx="1214" cy="332" r="8" fill="#C8FF00" class="port"/>
+    <circle cx="1214" cy="378" r="8" fill="#DDE2E2" class="port"/>
+    <text x="1250" y="350" class="stage-title">BASE OBSERVABLE</text>
+    <text x="1250" y="386" class="stage-copy">contexto + evento</text>
+  </g>
+
+  <g id="stage-hypotheses" class="sans">
+    <path d="M1214 452 H1710 V520 L1668 552 H1214 Z" fill="#ECEAE4" stroke="#8D8B85" stroke-width="2.2"/>
+    <circle cx="1214" cy="474" r="8" fill="#E8E6E0" class="port"/>
+    <circle cx="1214" cy="520" r="8" fill="#F5F3ED" class="port"/>
+    <text x="1250" y="492" class="stage-title">HIPÓTESIS ABIERTAS</text>
+    <text x="1250" y="528" class="stage-copy">interpretación + incertidumbre</text>
+  </g>
+
+  <g id="stage-contrast" class="sans">
+    <path d="M1214 594 H1682 L1710 622 V694 L1682 722 H1214 Z" fill="#2F2F2D" stroke="#2F2F2D" stroke-width="2.2"/>
+    <path d="M1248 615 H1360 L1347 631 H1235 Z" fill="#C8FF00"/>
+    <text x="1250" y="654" class="stage-title" fill="#F5F3ED">CONTRASTE</text>
+    <text x="1250" y="686" class="stage-copy-light">participantes · otros rastros</text>
+    <text x="1250" y="714" class="stage-copy-light">otros episodios</text>
+  </g>
+
+  <g id="stage-criterion" class="sans">
+    <path d="M1214 764 H1710 V864 H1214 L1242 814 Z" fill="#E5E0D7" stroke="#858078" stroke-width="2.2"/>
+    <circle cx="1214" cy="786" r="8" fill="#DFE3DD" class="port"/>
+    <circle cx="1214" cy="829" r="8" fill="#E5E0D7" class="port"/>
+    <text x="1260" y="805" class="stage-title-compact">CRITERIO DE INTERVENCIÓN</text>
+    <text x="1260" y="840" class="stage-copy">función + consecuencia</text>
+  </g>
+
+  <g id="stage-action" class="sans">
+    <path d="M1214 906 H1710 V984 L1684 1012 H1214 Z" fill="#D7DEDA" stroke="#68726C" stroke-width="2.4"/>
+    <path d="M1214 906 H1710 V916 H1214 Z" fill="#C8FF00"/>
+    <circle cx="1214" cy="958" r="8" fill="#C8FF00" class="port"/>
+    <text x="1250" y="951" class="stage-title">ACCIÓN PROVISIONAL</text>
+    <text x="1250" y="988" class="stage-copy">preservar · cambiar · probar</text>
+  </g>
+
+  <g id="feedback-label" class="sans">
+    <rect x="560" y="1014" width="564" height="42" fill="#F5F3ED"/>
+    <text x="581" y="1046" class="feedback-label">EVIDENCIA ADICIONAL · VOLVER A OBSERVAR</text>
+  </g>
+</svg>

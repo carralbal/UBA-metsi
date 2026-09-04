@@ -592,15 +592,15 @@ def consolidate_n01_cover_eyebrow(page, reader: PdfReader) -> int:
 
 def finalize(number: int) -> dict:
     code = f"N{number:02d}"
-    root = HERE / ("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else "N05-v9-final" if number == 5 else "N06-v9-final" if number == 6 else "N07-v9-final" if number == 7 else code)
-    raw_name = "N01-METSI-lectura-previa-v18.pdf" if number == 1 else "N02-METSI-lectura-previa-v14.pdf" if number == 2 else "N03-METSI-lectura-previa-v9.pdf" if number == 3 else "N04-METSI-lectura-previa-v9.pdf" if number == 4 else "N05-METSI-lectura-previa-v9.pdf" if number == 5 else "N06-METSI-lectura-previa-v9.pdf" if number == 6 else "N07-METSI-lectura-previa-v9.pdf" if number == 7 else f"{code}-METSI-lectura-previa.pdf"
-    final_name = "N01-METSI-lectura-previa-v18-final.pdf" if number == 1 else "N02-METSI-lectura-previa-v14-final.pdf" if number == 2 else "N03-METSI-lectura-previa-v9-final.pdf" if number == 3 else "N04-METSI-lectura-previa-v9-final.pdf" if number == 4 else "N05-METSI-lectura-previa-v9-final.pdf" if number == 5 else "N06-METSI-lectura-previa-v9-final.pdf" if number == 6 else "N07-METSI-lectura-previa-v9-final.pdf" if number == 7 else f"{code}-METSI-lectura-previa-final.pdf"
+    root = HERE / ("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else "N05-v9-final" if number == 5 else "N06-v9-final" if number == 6 else "N07-v9-final" if number == 7 else "N08-v9-final" if number == 8 else code)
+    raw_name = "N01-METSI-lectura-previa-v18.pdf" if number == 1 else "N02-METSI-lectura-previa-v14.pdf" if number == 2 else "N03-METSI-lectura-previa-v9.pdf" if number == 3 else "N04-METSI-lectura-previa-v9.pdf" if number == 4 else "N05-METSI-lectura-previa-v9.pdf" if number == 5 else "N06-METSI-lectura-previa-v9.pdf" if number == 6 else "N07-METSI-lectura-previa-v9.pdf" if number == 7 else "N08-METSI-lectura-previa-v9.pdf" if number == 8 else f"{code}-METSI-lectura-previa.pdf"
+    final_name = "N01-METSI-lectura-previa-v18-final.pdf" if number == 1 else "N02-METSI-lectura-previa-v14-final.pdf" if number == 2 else "N03-METSI-lectura-previa-v9-final.pdf" if number == 3 else "N04-METSI-lectura-previa-v9-final.pdf" if number == 4 else "N05-METSI-lectura-previa-v9-final.pdf" if number == 5 else "N06-METSI-lectura-previa-v9-final.pdf" if number == 6 else "N07-METSI-lectura-previa-v9-final.pdf" if number == 7 else "N08-METSI-lectura-previa-v9-final.pdf" if number == 8 else f"{code}-METSI-lectura-previa-final.pdf"
     raw = root / "output" / raw_name
     final = root / "output" / final_name
     manifest = json.loads((root / "manifest.json").read_text(encoding="utf-8"))
     reader = PdfReader(str(raw))
     writer = PdfWriter()
-    preserve_tagged_structure = number in {2, 3, 4, 5, 6, 7}
+    preserve_tagged_structure = number in {2, 3, 4, 5, 6, 7, 8}
     if preserve_tagged_structure:
         # Chromium ya produce un PDF etiquetado a partir del HTML semántico.
         # Clonar el documento completo conserva StructTreeRoot, Lang y MarkInfo;
@@ -630,7 +630,7 @@ def finalize(number: int) -> dict:
         source_word_count = len(re.findall(r"\b[\wÁÉÍÓÚÜÑáéíóúüñ'-]+\b", page_text, flags=re.UNICODE))
         text_floor = visible_text_floor(page)
         if (
-            number not in {0, 1, 3, 4, 5, 6, 7}
+            number not in {0, 1, 3, 4, 5, 6, 7, 8}
             and
             4 <= source_page_number < len(reader.pages)
             and image_count == 0
@@ -664,7 +664,7 @@ def finalize(number: int) -> dict:
         kept_page_number += 1
         is_n00_part_divider = number == 0 and bool(re.search(r"\bPARTE\s+(?:I|II|III)\b", page_text))
         normalized = normalize(page_text)
-        is_opening_question_page = number in {1, 2, 3, 4, 5, 6, 7} and "preguntaprofesional" in normalized and source_word_count < 80
+        is_opening_question_page = number in {1, 2, 3, 4, 5, 6, 7, 8} and "preguntaprofesional" in normalized and source_word_count < 80
         if is_opening_question_page:
             background = PdfReader(BytesIO(solid_background(
                 float(page.mediabox.width),
@@ -696,7 +696,7 @@ def finalize(number: int) -> dict:
                 .098,
             ))).pages[0]
             page.merge_page(left_band)
-        if (number in {0, 1, 2, 3, 4, 5, 6, 7} and source_page_number == 1) or is_n00_part_divider:
+        if (number in {0, 1, 2, 3, 4, 5, 6, 7, 8} and source_page_number == 1) or is_n00_part_divider:
             # Chromium reduce todo el lienzo cuando detecta otras páginas a
             # sangre con desborde editorial. Compensar la portada y todas las
             # portadillas oscuras de N00 devuelve cada fondo a los cuatro
@@ -725,7 +725,7 @@ def finalize(number: int) -> dict:
         # Clean the page only after it belongs to the writer.  pypdf 7 removes
         # support for replacing content on detached reader pages.
         strip_empty_helvetica(target_page, reader)
-        if number == 6 and source_page_number == 1:
+        if number in {6, 8} and source_page_number == 1:
             set_image_alt(target_page, manifest.get("cover", {}).get("alt", ""))
         if number == 6 and source_page_number == 2:
             set_image_alt(target_page, "Imagen editorial asociada al contenido de N06")
@@ -795,7 +795,7 @@ def finalize(number: int) -> dict:
     document_language = str(catalog.get("/Lang", ""))
     result = {
         "number": number,
-        "pdf": f"output/{final.name}" if number in {6, 7} else str(final),
+        "pdf": f"output/{final.name}" if number in {6, 7, 8} else str(final),
         "pages": len(check.pages),
         "a4_pages": a4,
         "source_words": len(source.split()),
@@ -831,9 +831,9 @@ def finalize(number: int) -> dict:
         and closing_folio_present
         and closing_quote_absent
         and closing_alt_present
-        and (number not in {2, 3, 4, 5, 6, 7} or struct_tree_present)
-        and (number not in {2, 3, 4, 5, 6, 7} or marked_pdf)
-        and (number not in {2, 3, 4, 5, 6, 7} or document_language == "es-AR")
+        and (number not in {2, 3, 4, 5, 6, 7, 8} or struct_tree_present)
+        and (number not in {2, 3, 4, 5, 6, 7, 8} or marked_pdf)
+        and (number not in {2, 3, 4, 5, 6, 7, 8} or document_language == "es-AR")
         and links_ok
     ) else "FAIL"
     (root / "qa-report.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")

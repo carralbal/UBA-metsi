@@ -40,7 +40,7 @@ La similitud secuencial palabra por palabra entre v8 y la versión final es 0,88
 
 ## 3. Profundidad y progresión
 
-El control determinista informa 7.860 palabras totales y 6.355 palabras sustantivas entre Tesis y Síntesis. El umbral de la colección es 6.000 palabras sustantivas.
+El control determinista informa 7.861 palabras totales y 6.356 palabras sustantivas entre Tesis y Síntesis. El umbral de la colección es 6.000 palabras sustantivas.
 
 La progresión cumple la secuencia didáctica requerida:
 
