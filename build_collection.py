@@ -183,6 +183,10 @@ REFERENCE_WORKS = {
         "The Reflective Practitioner",
         "Basic Books, 1983",
     ),
+    "ray-pawson": (
+        "Realistic Evaluation",
+        "SAGE, 1997 · con Nick Tilley",
+    ),
     "judea-pearl": (
         "The Book of Why: The New Science of Cause and Effect",
         "Basic Books, 2018 · con Dana Mackenzie",
@@ -336,6 +340,42 @@ N08_REFERENT_KEYS = (
 N08_REFERENT_REFERENCE_MARKERS = {
     "lucy-suchman": "Suchman, L. A.",
     "edwin-hutchins": "Hutchins, E.",
+    "reva-schwartz": "Autio, C.",
+    "elham-tabassi": "Autio, C.",
+    "kamie-roberts": "Autio, C.",
+    "martin-stanley": "Autio, C.",
+}
+
+N09_REFERENT_KEYS = (
+    "sasha-costanza-chock",
+    "lucy-suchman",
+    "reva-schwartz",
+    "elham-tabassi",
+    "kamie-roberts",
+    "martin-stanley",
+)
+
+N09_REFERENT_REFERENCE_MARKERS = {
+    "sasha-costanza-chock": "Costanza-Chock, S.",
+    "lucy-suchman": "Suchman, L. A.",
+    "reva-schwartz": "Autio, C.",
+    "elham-tabassi": "Autio, C.",
+    "kamie-roberts": "Autio, C.",
+    "martin-stanley": "Autio, C.",
+}
+
+N10_REFERENT_KEYS = (
+    "donald-schon",
+    "ray-pawson",
+    "reva-schwartz",
+    "elham-tabassi",
+    "kamie-roberts",
+    "martin-stanley",
+)
+
+N10_REFERENT_REFERENCE_MARKERS = {
+    "donald-schon": "Schön, D. A.",
+    "ray-pawson": "Pawson, R.",
     "reva-schwartz": "Autio, C.",
     "elham-tabassi": "Autio, C.",
     "kamie-roberts": "Autio, C.",
@@ -677,6 +717,10 @@ def source_path(number: int) -> Path:
         return HERE / "N07-content-final" / "source" / "N07_entrevistar_no_es_pedir_requisitos-content-final.md"
     if number == 8:
         return HERE / "N08-content-final" / "source" / "N08_observar_el_trabajo_invisible-content-final.md"
+    if number == 9:
+        return HERE / "N09-content-final" / "source" / "N09_experiencia_accesibilidad_y_adopcion-content-final.md"
+    if number == 10:
+        return HERE / "N10-content-final" / "source" / "N10_construir_el_problema_y_outcomes-content-final.md"
     return next(SOURCES.glob(f"N{number:02d}_*.md"))
 
 
@@ -1528,6 +1572,30 @@ def section_classes(number: int, index: int, title: str) -> list[str]:
         classes = ["reading-section", "family-4", "stone-card", "n08-handoff-output"]
     if number == 8 and title == "Síntesis":
         classes = ["reading-section", "family-4", "two-column", "n08-synthesis"]
+    if number == 9 and title == "De N08 a N09: del trabajo realizado al recorrido vivido":
+        classes = ["reading-section", "family-4", "stone-card", "n09-handoff-input"]
+    if number == 9 and title.startswith("Movimiento 1 ·"):
+        classes = ["reading-section", "family-1", "two-column", "n09-movement", "n09-movement-one"]
+    if number == 9 and title.startswith("Movimiento 2 ·"):
+        classes = ["reading-section", "family-2", "two-column", "n09-movement", "n09-movement-two"]
+    if number == 9 and title.startswith("Movimiento 3 ·"):
+        classes = ["reading-section", "family-3", "two-column", "n09-movement", "n09-movement-three"]
+    if number == 9 and title == "De HH-09 a N10: evidencia para construir el problema":
+        classes = ["reading-section", "family-4", "stone-card", "n09-handoff-output"]
+    if number == 9 and title == "Síntesis":
+        classes = ["reading-section", "family-4", "two-column", "n09-synthesis"]
+    if number == 10 and title == "De N09 a N10: del recorrido vivido al encuadre provisional":
+        classes = ["reading-section", "family-4", "stone-card", "n10-handoff-input"]
+    if number == 10 and title.startswith("Movimiento 1 ·"):
+        classes = ["reading-section", "family-1", "two-column", "n10-movement", "n10-movement-one"]
+    if number == 10 and title.startswith("Movimiento 2 ·"):
+        classes = ["reading-section", "family-2", "two-column", "n10-movement", "n10-movement-two"]
+    if number == 10 and title.startswith("Movimiento 3 ·"):
+        classes = ["reading-section", "family-3", "two-column", "n10-movement", "n10-movement-three"]
+    if number == 10 and title == "Cierre del Bloque 1: un encuadre listo para ser refutado":
+        classes = ["reading-section", "family-4", "stone-card", "n10-block-close"]
+    if number == 10 and title == "Síntesis":
+        classes = ["reading-section", "family-4", "two-column", "n10-synthesis"]
     if number == 0 and title == "Palabras conocidas, preguntas nuevas":
         classes.append("concept-families")
     if title.startswith("Dossier de evidencia"): classes.append("dossier")
@@ -1593,6 +1661,8 @@ def cover_alt_text(number: int, clean_title: str) -> str:
         6: "Profesional argentina observa un muro de evidencias y caminos alternativos en un estudio de Buenos Aires, en una fotografía editorial concebida en blanco y negro con una escala amplia de grises",
         7: "Dos profesionales argentinos conversan en un espacio de trabajo contemporáneo, con amplio espacio negativo y una escala luminosa de grises, en una fotografía editorial concebida en blanco y negro",
         8: "Dos trabajadoras argentinas coordinan tareas en el umbral de una habitación de hotel, mientras una pared y un corredor dejan amplio espacio visual a la izquierda.",
+        9: "Una mujer argentina cruza de manera autónoma un umbral de vidrio contemporáneo apoyada en su bastón, con amplio espacio arquitectónico a la izquierda.",
+        10: "Una profesional argentina observa desde el acceso peatonal de un puente cómo confluyen un colectivo, automóviles, ciclistas, peatones y una vía ferroviaria junto al río.",
     }
     return alternatives.get(number, f"Fotografía editorial de portada para {clean_title}")
 
@@ -1616,14 +1686,20 @@ def cover_html(number: int, title: str, thesis: str, file: str, title_source_id:
         cover_title = "Actores, afectados,<br>poder y perspectivas"
     cover_eyebrow = (
         '<span>LECTURA PREVIA</span><span>EDICIÓN 2026</span>'
-        if number in {1, 2, 3, 4, 5, 6, 7, 8}
+        if number in {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
         else "LECTURA PREVIA\nEDICIÓN 2026"
     )
     cover_alt = cover_alt_text(number, clean)
     return f'''<section class="collection-cover cover-variant-{variant} cover-n{number:02d}"><img src="assets/{esc(file)}" alt="{esc(cover_alt)}"><div class="cover-shade"></div><div class="cover-meta cover-meta-left cover-meta-eyebrow">{cover_eyebrow}</div><div class="cover-meta cover-meta-right">N{number:02d}<br>FCE · UBA</div><div class="collection-masthead">METSI</div><div class="cover-title"><i></i><span>METODOLOGÍA DE SISTEMAS DE INFORMACIÓN</span><h1 data-source-id="{title_source_id}">{cover_title}</h1></div><div class="cover-thesis"><b>N{number:02d}</b><p>{esc(cover_thesis)}</p></div><div class="cover-parallelogram"></div></section>'''
 
 
-def contents_html(number:int, title:str, sections:list[Section], hero:str) -> str:
+def contents_html(
+    number: int,
+    title: str,
+    sections: list[Section],
+    hero: str,
+    hero_alt: str = "",
+) -> str:
     visible=[s.title for s in sections if not s.title.startswith("Conexiones integradoras")]
     if number == 0:
         counter = 0
@@ -1650,7 +1726,7 @@ def contents_html(number:int, title:str, sections:list[Section], hero:str) -> st
         items = ''.join(item_html)
         route_note = '<p class="contents-route"><b>Ruta priorizada: 2 h 10 min a 2 h 45 min.</b> Núcleo: 90 a 110 min; ejercicio de Martina: 15 a 20 min; nota: 25 a 35 min. Las extensiones profundizan el recorrido.</p>'
         sin_num_note = '<p class="contents-sinnum-note"><b>Nota.</b> <b>SIN NUM.</b> identifica aparatos de orientación, evidencia o referencia fuera del argumento. Incluye portada, Contenido, Referentes, portadillas de Parte, pausas visuales a página completa, láminas de evidencia, Referencias base y cierre.</p>'
-    elif number in {1, 2, 3, 4, 5, 6, 7, 8}:
+    elif number in {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}:
         counter = 0
         item_html = ['<li class="contents-unnumbered"><b>•</b><span>Referentes <small>SIN NUM.</small></span></li>']
         for section in sections:
@@ -1658,11 +1734,27 @@ def contents_html(number:int, title:str, sections:list[Section], hero:str) -> st
                 item_html.append('<li class="contents-unnumbered"><b>•</b><span>Referencias base <small>SIN NUM.</small></span></li>')
                 continue
             counter += 1
-            item_html.append(f'<li><b>{counter:02d}</b><span>{esc(section.title)}</span></li>')
+            item_label = esc(section.title)
+            if number == 10 and section.title == "Cierre del Bloque 1: un encuadre listo para ser refutado":
+                # Fijar los mismos cortes que produce la columna evita que
+                # Chromium pegue palabras en la capa de texto del PDF.
+                item_label = (
+                    '<span style="white-space:nowrap">Cierre&#160;</span><br>'
+                    '<span style="white-space:nowrap">del Bloque 1: un encuadre&#160;</span><br>'
+                    '<span style="white-space:nowrap">listo para ser refutado</span>'
+                )
+            item_html.append(f'<li><b>{counter:02d}</b><span>{item_label}</span></li>')
         items = ''.join(item_html)
-        destination = {1: "N02", 2: "N03", 3: "N04", 4: "N05", 5: "N06", 6: "N07", 7: "N08", 8: "N09"}[number]
+        destination = {1: "N02", 2: "N03", 3: "N04", 4: "N05", 5: "N06", 6: "N07", 7: "N08", 8: "N09", 9: "N10", 10: "Bloque 2"}[number]
         route_note = f'<p class="contents-route"><b>Ruta de lectura:</b> problema, distinciones, decisiones, prueba, transferencia y preparación para {destination}.</p>'
         sin_num_note = '<p class="contents-sinnum-note"><b>Nota.</b> <b>SIN NUM.</b> identifica los aparatos de orientación y referencia que no integran la secuencia argumental.</p>'
+        if number == 10:
+            # El corte explícito coincide con la maqueta y preserva la
+            # separación entre palabras en la extracción del PDF.
+            sin_num_note = sin_num_note.replace(
+                "no integran",
+                "no&#160;<br>integran",
+            )
     else:
         selected=visible[:12]+visible[-4:] if len(visible)>16 else visible
         items=''.join(f'<li><b>{i:02d}</b><span>{esc(x)}</span></li>' for i,x in enumerate(selected,1))
@@ -1674,15 +1766,30 @@ def contents_html(number:int, title:str, sections:list[Section], hero:str) -> st
         if number == 0
         else "Una lectura previa para llegar al encuentro con preguntas, no con respuestas memorizadas."
     )
-    if number == 2:
+    if hero_alt:
+        contents_alt = hero_alt
+    elif number == 2:
         contents_alt = "Vista cenital de personas que circulan en distintas direcciones por un espacio público."
     elif number == 7:
         contents_alt = "Escena editorial en blanco y negro sobre preguntas, recorridos y decisiones posibles durante una investigación profesional."
     elif number == 8:
         contents_alt = "Varias manos organizan una libreta, una radio, una llave, una tarjeta y un plano sobre una mesa de trabajo."
+    elif number == 9:
+        contents_alt = "Mesa de trabajo donde manos argentinas ordenan un mapa de recorrido, notas de evidencia y alternativas de reparación."
+    elif number == 10:
+        contents_alt = "Equipo argentino contrasta evidencia, mecanismos rivales y outcomes sobre una mesa de trabajo."
     else:
         contents_alt = f"Imagen editorial asociada al contenido de N{number:02d}"
-    return f'''<section class="front-page contents-page"><header><span>METSI · N{number:02d}</span><h2>Contenido</h2><p>{esc(title.replace(f'N{number:02d} — ','').replace(f'N{number:02d} · ',''))}</p>{route_note}</header><div class="contents-layout"><ol>{items}</ol><figure><img src="assets/{esc(hero)}" alt="{esc(contents_alt)}"><figcaption>{esc(contents_caption)}</figcaption></figure></div>{sin_num_note}</section>'''
+    if hero:
+        contents_visual = (
+            f'<figure><img src="assets/{esc(hero)}" alt="{esc(contents_alt)}">'
+            f'<figcaption>{esc(contents_caption)}</figcaption></figure>'
+        )
+        contents_class = "front-page contents-page"
+    else:
+        contents_visual = ""
+        contents_class = "front-page contents-page contents-page-text-only"
+    return f'''<section class="{contents_class}"><header><span>METSI · N{number:02d}</span><h2>Contenido</h2><p>{esc(title.replace(f'N{number:02d} — ','').replace(f'N{number:02d} · ',''))}</p>{route_note}</header><div class="contents-layout"><ol>{items}</ol>{contents_visual}</div>{sin_num_note}</section>'''
 
 
 def portrait_entry(ref: str) -> tuple[str, dict]:
@@ -1738,6 +1845,175 @@ def n08_referent_registry() -> dict[str, dict]:
     return records
 
 
+def n09_referent_registry() -> dict[str, dict]:
+    """Build the N09 roster only from portraits already rights-audited in N07/N08."""
+    records = n08_referent_registry()
+    n07_manifest = json.loads((HERE / "N07-v9-final" / "image-rights-manifest.json").read_text(encoding="utf-8"))
+    sasha = next(
+        record for record in n07_manifest["assets"]
+        if record.get("file") == "assets/referent-sasha-costanza-chock.jpg" and record.get("approved") is True
+    )
+    records["sasha-costanza-chock"] = {
+        "name": sasha["name"],
+        "patterns": [N09_REFERENT_REFERENCE_MARKERS["sasha-costanza-chock"]],
+        "source_page": sasha["source_page"],
+        "image_url": sasha.get("download_url", ""),
+        "creator": sasha.get("creator", ""),
+        "credit_line": sasha.get("credit_line", ""),
+        "license_name": sasha.get("license_short") or sasha.get("license", ""),
+        "license_url": sasha.get("license_url", ""),
+        "rights_status": "approved_in_n07_image_rights_manifest",
+        "local_file": str(HERE / "N07-v9-final" / sasha["file"]),
+    }
+    for key in N08_REFERENT_KEYS:
+        records[key]["local_file"] = str(HERE / "N08-v9-final" / "assets" / f"referent-{key}.jpg")
+    return records
+
+
+def n10_referent_registry() -> dict[str, dict]:
+    """Build the N10 roster from exact, reusable portraits tied to cited works."""
+    inherited = n08_referent_registry()
+    records = {key: dict(inherited[key]) for key in ("reva-schwartz", "elham-tabassi", "kamie-roberts", "martin-stanley")}
+    for key in records:
+        records[key]["local_file"] = str(HERE / "N08-v9-final" / "assets" / f"referent-{key}.jpg")
+    schon = dict(PORTRAIT_REGISTRY["donald-schon"])
+    schon["local_file"] = str(HERE / "N06-v9-final" / "assets" / "referent-donald-schon.jpg")
+    schon["credit_line"] = schon.get("credit_line") or schon.get("creator", "VectorStudy")
+    records["donald-schon"] = schon
+    records["ray-pawson"] = {
+        "name": "Ray Pawson",
+        "patterns": [N10_REFERENT_REFERENCE_MARKERS["ray-pawson"]],
+        "source_page": "https://commons.wikimedia.org/wiki/File:Ray_Pawson.jpg",
+        "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ray_Pawson.jpg",
+        "creator": "Thomas Delahais",
+        "credit_line": "Thomas Delahais",
+        "license_name": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rights_status": "wikimedia_commons_cc0_1_0",
+        "local_file": str(HERE / "N10-v9-final" / "assets" / "referent-ray-pawson.jpg"),
+    }
+    return records
+
+
+def write_referent_rights_manifest(
+    number: int,
+    source: Path,
+    refs: list[str],
+    assets: Path,
+    out: Path,
+) -> None:
+    """Preserve the exact rights evidence for the six packaged referents."""
+    if number not in {9, 10}:
+        return
+
+    n08 = json.loads((HERE / "N08-v9-final" / "image-rights-manifest.json").read_text(encoding="utf-8"))
+    n08_records = {
+        Path(str(record.get("file", ""))).stem.removeprefix("referent-"): dict(record)
+        for record in n08.get("assets", [])
+    }
+    records: dict[str, dict] = {}
+    if number == 9:
+        n07 = json.loads((HERE / "N07-v9-final" / "image-rights-manifest.json").read_text(encoding="utf-8"))
+        n07_records = {
+            Path(str(record.get("file", ""))).stem.removeprefix("referent-"): dict(record)
+            for record in n07.get("assets", [])
+        }
+        records = {
+            "sasha-costanza-chock": n07_records["sasha-costanza-chock"],
+            **{key: n08_records[key] for key in ("lucy-suchman", "reva-schwartz", "elham-tabassi", "kamie-roberts", "martin-stanley")},
+        }
+        keys = N09_REFERENT_KEYS
+        markers = N09_REFERENT_REFERENCE_MARKERS
+    else:
+        n06 = json.loads((HERE / "N06-v9-final" / "image-manifest.json").read_text(encoding="utf-8"))
+        donald = next(
+            dict(record) for record in n06.get("assets", [])
+            if record.get("file") == "assets/referent-donald-schon.jpg"
+        )
+        donald.update({
+            "name": "Donald A. Schön",
+            "download_url": PORTRAIT_REGISTRY["donald-schon"]["image_url"],
+            "creator": PORTRAIT_REGISTRY["donald-schon"]["creator"],
+            "credit_line": PORTRAIT_REGISTRY["donald-schon"].get("credit_line") or PORTRAIT_REGISTRY["donald-schon"]["creator"],
+            "license_short": "Free Art License 1.3",
+            "approved": True,
+        })
+        pawson_source = Path("/private/tmp/ray-pawson-source.jpg")
+        pawson = {
+            "file": "assets/referent-ray-pawson.jpg",
+            "role": "referent-portrait",
+            "name": "Ray Pawson",
+            "source": "Wikimedia Commons",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Ray_Pawson.jpg",
+            "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ray_Pawson.jpg",
+            "creator": "Thomas Delahais",
+            "credit_line": "Thomas Delahais",
+            "license": "CC0 1.0 Universal Public Domain Dedication",
+            "license_short": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attribution_required": False,
+            "share_alike_required": False,
+            "source_width": 1013,
+            "source_height": 1013,
+            "source_sha256": asset_sha(pawson_source) if pawson_source.exists() else "23a5803cf7646de8be9d62dcc8d6b379e86928ecd721a3d702907132f8660861",
+            "crop": "none, source already square",
+            "changes": "Conversión al perfil Generic Gray; escala a 720 por 720 píxeles; JPEG calidad 94.",
+            "derivative_license": "CC0 1.0",
+            "width": 720,
+            "height": 720,
+            "pixel_format": "gray",
+            "alt": "Retrato en blanco y negro de Ray Pawson mirando a cámara.",
+            "treatment": "embedded_monochrome_derivative",
+            "approved": True,
+        }
+        records = {
+            "donald-schon": donald,
+            "ray-pawson": pawson,
+            **{key: n08_records[key] for key in ("reva-schwartz", "elham-tabassi", "kamie-roberts", "martin-stanley")},
+        }
+        keys = N10_REFERENT_KEYS
+        markers = N10_REFERENT_REFERENCE_MARKERS
+
+    assets_out: list[dict] = []
+    for key in keys:
+        record = dict(records[key])
+        filename = f"referent-{key}.jpg"
+        path = assets / filename
+        if not path.exists() or path.stat().st_size == 0:
+            raise FileNotFoundError(f"Falta el retrato auditado {path}")
+        raw_reference = next((ref for ref in refs if markers[key].casefold() in ref.casefold()), "")
+        record.update({
+            "file": f"assets/{filename}",
+            "reference_basis": raw_reference,
+            "sha256": asset_sha(path),
+            "approved": True,
+            "reuse_note": f"Derivado auditado y empaquetado para N{number:02d} sin alteración de identidad.",
+        })
+        assets_out.append(record)
+
+    rights_manifest = {
+        "document": f"N{number:02d}",
+        "edition": "v9-final",
+        "status": "approved",
+        "verified_on": "2026-09-04",
+        "manifest_scope": "Seis retratos de referentes presentes en el aparato Referentes.",
+        "policy": "Cada persona es autora o coautora de una entrada de Referencias base. La identidad, la fuente y el derecho de reutilización se verifican antes de empaquetar el derivado monocromo.",
+        "canonical_source": f"source/{source.name}",
+        "canonical_source_sha256": asset_sha(source),
+        "expected_referent_count": 6,
+        "approved_asset_count": len(assets_out),
+        "blocked_asset_count": 0,
+        "reference_entries_audited": [record["reference_basis"] for record in assets_out],
+        "identity_and_uniqueness_review": "PASS: seis identidades distintas y seis archivos derivados con huellas distintas.",
+        "publication_conditions": "Conservar este manifiesto, los créditos, las licencias indicadas y los archivos sin sustitución silenciosa.",
+        "assets": assets_out,
+    }
+    (out / "image-rights-manifest.json").write_text(
+        json.dumps(rights_manifest, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
 def principal_references(number: int, refs: list[str]) -> list[tuple[str, str, dict]]:
     if number == 6:
         selected: list[tuple[str, str, dict]] = []
@@ -1776,6 +2052,28 @@ def principal_references(number: int, refs: list[str]) -> list[tuple[str, str, d
                 raise ValueError(f"La referencia N08 no permite resolver al referente {key} mediante {marker}")
             selected.append((raw, key, entry))
         return selected
+    if number == 9:
+        selected = []
+        registry = n09_referent_registry()
+        for key in N09_REFERENT_KEYS:
+            entry = registry[key]
+            marker = N09_REFERENT_REFERENCE_MARKERS[key]
+            raw = next((ref for ref in refs if marker.casefold() in ref.casefold()), None)
+            if raw is None:
+                raise ValueError(f"La referencia N09 no permite resolver al referente {key} mediante {marker}")
+            selected.append((raw, key, entry))
+        return selected
+    if number == 10:
+        selected = []
+        registry = n10_referent_registry()
+        for key in N10_REFERENT_KEYS:
+            entry = registry[key]
+            marker = N10_REFERENT_REFERENCE_MARKERS[key]
+            raw = next((ref for ref in refs if marker.casefold() in ref.casefold()), None)
+            if raw is None:
+                raise ValueError(f"La referencia N10 no permite resolver al referente {key} mediante {marker}")
+            selected.append((raw, key, entry))
+        return selected
     selected: list[tuple[str, str, dict]] = []
     seen: set[str] = set()
     for ref in refs:
@@ -1803,7 +2101,14 @@ def reference_cards(number:int,refs:list[str],assets:Path)->str:
         filename=f"referent-{key}.jpg"
         packaged_portrait = assets / filename
         registry_portrait = PORTRAIT_BANK / f"{key}.jpg"
-        portrait_source = packaged_portrait if number in {5, 6, 7, 8} and packaged_portrait.exists() else registry_portrait
+        inherited_portrait = Path(entry["local_file"]) if entry.get("local_file") else None
+        portrait_source = (
+            packaged_portrait
+            if number in {5, 6, 7, 8, 9, 10} and packaged_portrait.exists()
+            else inherited_portrait
+            if inherited_portrait is not None
+            else registry_portrait
+        )
         if not portrait_source.exists() or portrait_source.stat().st_size == 0:
             raise ValueError(f"El retrato registrado no existe: {portrait_source} ({ref})")
         copy_asset(portrait_source, packaged_portrait)
@@ -1815,9 +2120,12 @@ def reference_cards(number:int,refs:list[str],assets:Path)->str:
         if number == 4 and key == "iso":
             work = "ISO/IEC 25012:2008 · Software engineering — SQuaRE — Data quality model"
             publication = "International Standard, 2008"
-        if number in {7, 8} and key == "elham-tabassi":
+        if number in {7, 8, 9, 10} and key == "elham-tabassi":
             work = "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile"
             publication = "NIST AI 600-1, 2024 · equipo coautor"
+        if number == 10 and key == "donald-schon":
+            work = "Frame Reflection: Toward the Resolution of Intractable Policy Controversies"
+            publication = "Basic Books, 1994 · con Martin Rein"
         work_label = "" if number == 0 else "<span>OBRA PRINCIPAL UTILIZADA</span>"
         cards.append(f'''<article class="contributor">{portrait}<b>{idx:02d}</b><h3>{esc(name)}</h3>{work_label}<cite>{esc(work)}</cite><p>{esc(publication)}</p></article>''')
     return ''.join(cards)
@@ -1852,13 +2160,16 @@ def hotel_voices_html(number: int, assets: Path) -> str:
     for index, (name, role, filename) in enumerate(characters, 1):
         editorial_portrait = EDITORIAL_CHARACTER_PORTRAITS / filename
         packaged_portrait = assets / f"hotel-{filename}"
+        n08_portrait = HERE / "N08-v9-final" / "assets" / f"hotel-{filename}"
         n07_portrait = HERE / "N07-v9-final" / "assets" / f"hotel-{filename}"
         n00_portrait = HERE / "N00" / "assets" / f"hotel-{filename}"
         if number == 7 and packaged_portrait.exists():
             portrait_source = packaged_portrait
-        elif number in {7, 8} and n07_portrait.exists():
+        elif number in {8, 9, 10} and n08_portrait.exists():
+            portrait_source = n08_portrait
+        elif number in {7, 8, 9, 10} and n07_portrait.exists():
             portrait_source = n07_portrait
-        elif number in {7, 8} and n00_portrait.exists():
+        elif number in {7, 8, 9, 10} and n00_portrait.exists():
             portrait_source = n00_portrait
         else:
             portrait_source = editorial_portrait if editorial_portrait.exists() else CHARACTER_PORTRAITS / filename
@@ -1937,10 +2248,10 @@ def keep_n08_observation_instrument_together(body: str) -> str:
 def build_document(number:int)->dict:
     source=source_path(number)
     title,sections=parse_source(source)
-    out=HERE/("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else "N05-v9-final" if number == 5 else "N06-v9-final" if number == 6 else "N07-v9-final" if number == 7 else "N08-v9-final" if number == 8 else f"N{number:02d}")
+    out=HERE/("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else "N05-v9-final" if number == 5 else "N06-v9-final" if number == 6 else "N07-v9-final" if number == 7 else "N08-v9-final" if number == 8 else "N09-v9-final" if number == 9 else "N10-v9-final" if number == 10 else f"N{number:02d}")
     assets=out/"assets"; diagrams=out/"diagrams"; output=out/"output"
     for folder in (assets,diagrams,output): folder.mkdir(parents=True,exist_ok=True)
-    if number in {1, 3, 4, 5, 6, 7, 8}:
+    if number in {1, 3, 4, 5, 6, 7, 8, 9, 10}:
         packaged_source = out / "source"
         provenance = out / "provenance"
         packaged_source.mkdir(parents=True, exist_ok=True)
@@ -1969,14 +2280,16 @@ def build_document(number:int)->dict:
         native_cover_source = HERE / "N08-v9-final" / "assets" / "cover-source-premium-bw-v1.png"
         cover_source = native_cover_source if native_cover_source.exists() else HERE / "N08-v9-final" / "assets" / "cover.png"
     elif number == 9:
-        cover_source = HERE / "N09" / "image-curation" / "selected" / "cover.jpg"
+        native_cover_source = HERE / "N09-v9-final" / "assets" / "cover-source-premium-bw-v1.png"
+        cover_source = native_cover_source if native_cover_source.exists() else HERE / "N09-v9-final" / "assets" / "cover.png"
     elif number == 10:
-        cover_source = HERE / "N10" / "image-curation" / "selected" / "cover.jpg"
+        native_cover_source = HERE / "N10-v9-final" / "assets" / "cover-source-premium-bw-v1.png"
+        cover_source = native_cover_source if native_cover_source.exists() else HERE / "N10-v9-final" / "assets" / "cover.png"
     else:
         cover_source=N01_ROOT/COVER_IMAGES[number-1]
     cover_file="cover"+cover_source.suffix.lower()
     copy_asset(cover_source,assets/cover_file)
-    closing_source = assets / "matches-close.png" if number in {5, 6, 7, 8} and (assets / "matches-close.png").exists() else MATCHES
+    closing_source = assets / "matches-close.png" if number in {5, 6, 7, 8, 9, 10} and (assets / "matches-close.png").exists() else HERE / "N08-v9-final" / "assets" / "matches-close.png" if number in {9, 10} else MATCHES
     copy_asset(closing_source,assets/"matches-close.png")
     if number == 0:
         hotel_source = HERE / "N02" / "assets" / "hotel-horizonte.png"
@@ -1984,10 +2297,8 @@ def build_document(number:int)->dict:
         hotel_source = HERE / "N05-v9-final" / "assets" / "hotel-horizonte.jpg"
     elif number == 6:
         hotel_source = None
-    elif number in {7, 8}:
+    elif number in {7, 8, 9, 10}:
         hotel_source = None
-    elif number in {9, 10}:
-        hotel_source = HERE / "N02" / "assets" / "hotel-horizonte.png"
     else:
         hotel_source = HOTEL_HORIZONTE
     hotel_file = ""
@@ -1995,7 +2306,9 @@ def build_document(number:int)->dict:
         hotel_file = "hotel-horizonte" + hotel_source.suffix.lower()
         copy_asset(hotel_source, assets / hotel_file)
 
-    bank_files=sorted(p for p in USER_BANK.iterdir() if p.suffix.lower() in {'.jpg','.jpeg','.png'}) if USER_BANK.is_dir() else []
+    bank_files = [] if number in {5, 6, 7, 8, 9, 10} else sorted(
+        p for p in USER_BANK.iterdir() if p.suffix.lower() in {'.jpg', '.jpeg', '.png'}
+    ) if USER_BANK.is_dir() else []
     selected=[]
     if number == 0:
         editorial_sources = [
@@ -2066,31 +2379,51 @@ def build_document(number:int)->dict:
         ]
     elif number == 9:
         editorial_sources = [
-            HERE / "N09" / "image-curation" / "selected" / "editorial-01.jpg",
-            HERE / "N09" / "image-curation" / "selected" / "editorial-02.jpg",
-            HERE / "N09" / "image-curation" / "selected" / "editorial-03.jpg",
-            HERE / "N09" / "image-curation" / "selected" / "editorial-04.jpg",
-            HERE / "N09" / "image-curation" / "selected" / "editorial-05.jpg",
-            HERE / "N09" / "image-curation" / "selected" / "editorial-06.jpg",
-            HERE / "N09" / "image-curation" / "selected" / "editorial-07.jpg",
-            HERE / "N09" / "image-curation" / "selected" / "editorial-08.jpg",
+            HERE / "N09-v9-final" / "assets" / "editorial-01.png",
+            HERE / "N09-v9-final" / "assets" / "editorial-02.png",
+            HERE / "N09-v9-final" / "assets" / "editorial-03.png",
+            HERE / "N09-v9-final" / "assets" / "editorial-04.png",
+            HERE / "N09-v9-final" / "assets" / "pause-01.png",
+            HERE / "N09-v9-final" / "assets" / "pause-02.png",
         ]
     elif number == 10:
         editorial_sources = [
-            HERE / "N10" / "image-curation" / "selected" / "editorial-01.jpg",
-            HERE / "N10" / "image-curation" / "selected" / "editorial-02.jpg",
-            HERE / "N10" / "image-curation" / "selected" / "editorial-03.jpg",
-            HERE / "N10" / "image-curation" / "selected" / "editorial-04.jpg",
-            HERE / "N10" / "image-curation" / "selected" / "editorial-05.jpg",
-            HERE / "N10" / "image-curation" / "selected" / "editorial-06.jpg",
-            HERE / "N10" / "image-curation" / "selected" / "editorial-07.jpg",
-            HERE / "N10" / "image-curation" / "selected" / "editorial-08.jpg",
+            HERE / "N10-v9-final" / "assets" / "editorial-01.png",
+            HERE / "N10-v9-final" / "assets" / "editorial-02.png",
+            HERE / "N10-v9-final" / "assets" / "editorial-03.png",
+            HERE / "N10-v9-final" / "assets" / "editorial-04.png",
+            HERE / "N10-v9-final" / "assets" / "editorial-05.png",
+            HERE / "N10-v9-final" / "assets" / "pause-01.png",
+            HERE / "N10-v9-final" / "assets" / "pause-02.png",
         ]
     else:
         editorial_sources = [bank_files[((number-1)*5+offset*3)%len(bank_files)] for offset in range(6)]
     for offset, src in enumerate(editorial_sources):
-        target=src.name if number in {6, 7, 8} else f"editorial-{offset+1:02d}{src.suffix.lower()}"
+        target=src.name if number in {6, 7, 8, 9, 10} else f"editorial-{offset+1:02d}{src.suffix.lower()}"
         copy_asset(src,assets/target); selected.append(target)
+    generated_image_alts: dict[str, str] = {}
+    if number in {9, 10}:
+        generated_manifest_path = assets / "image-manifest.json"
+        if not generated_manifest_path.exists():
+            raise FileNotFoundError(f"Falta el manifiesto de imágenes generado para N{number:02d}")
+        generated_manifest = json.loads(generated_manifest_path.read_text(encoding="utf-8"))
+        generated_image_alts = {
+            str(record.get("file", "")): str(record.get("alt", "")).strip()
+            for record in generated_manifest.get("assets", [])
+        }
+        required_generated = {cover_file, *selected}
+        missing_generated_alts = sorted(
+            filename for filename in required_generated if not generated_image_alts.get(filename)
+        )
+        if missing_generated_alts:
+            raise ValueError(
+                f"El manifiesto de imágenes N{number:02d} no declara alt para {missing_generated_alts}"
+            )
+    if number == 10:
+        # La banda del caso usa la toma creada específicamente para los
+        # mecanismos rivales de Hotel Horizonte. Mantener un nombre vacío
+        # aquí producía un <img src="assets/"> y un marcador transparente.
+        hotel_file = selected[1]
     sparse_fill_images=[]
     if number == 0:
         # N00 reserva cada fotografía para una única función editorial. No se
@@ -2118,25 +2451,35 @@ def build_document(number:int)->dict:
         sparse_sources = []
     elif number == 8:
         sparse_sources = []
-    elif number == 9:
-        sparse_sources = [
-            HERE / "N09" / "image-curation" / "selected" / "sparse-fill-01.jpg",
-            HERE / "N09" / "image-curation" / "selected" / "sparse-fill-02.jpg",
-            HERE / "N09" / "image-curation" / "selected" / "sparse-fill-03.jpg",
-        ]
-    elif number == 10:
-        sparse_sources = [
-            HERE / "N10" / "image-curation" / "selected" / "sparse-fill-01.jpg",
-            HERE / "N10" / "image-curation" / "selected" / "sparse-fill-02.jpg",
-            HERE / "N10" / "image-curation" / "selected" / "sparse-fill-03.jpg",
-        ]
+    elif number in {9, 10}:
+        sparse_sources = []
     else:
         sparse_sources = bank_files[-2:]
     for offset,src in enumerate(sparse_sources,1):
         target=f"sparse-fill-{offset:02d}{src.suffix.lower()}"
         copy_asset(src,assets/target); sparse_fill_images.append(target)
 
-    diagram=build_diagram(number,title,sections,diagrams/f"N{number:02d}-mapa-decision.svg")
+    diagram_path = diagrams / (
+        "N10-HH10-encuadre-puerta-decision.svg"
+        if number == 10 and (diagrams / "N10-HH10-encuadre-puerta-decision.svg").exists()
+        else f"N{number:02d}-mapa-decision.svg"
+    )
+    if number in {9, 10} and diagram_path.exists():
+        content_manifest_path = diagrams / "content-manifest.json"
+        if not content_manifest_path.exists():
+            content_manifest_path = out / "infographic-work-layer" / "content-manifest.json"
+        content_manifest = json.loads(content_manifest_path.read_text(encoding="utf-8")) if content_manifest_path.exists() else {}
+        diagram = {
+            "number": number,
+            "module": module_for(number)[1],
+            "topology": content_manifest.get("topology", "source-grounded-editorial-map"),
+            "labels": [str(node.get("label", "")) for node in content_manifest.get("nodes", []) if node.get("label")],
+            "source_headings": [str(item.get("heading", "")) for item in content_manifest.get("source_sections", []) if item.get("heading")],
+            "file": diagram_path.name,
+            "content_manifest": str(content_manifest_path.relative_to(out)) if content_manifest_path.exists() else "",
+        }
+    else:
+        diagram=build_diagram(number,title,sections,diagram_path)
     thesis_section=next((s for s in sections if s.title=="Tesis"),sections[0])
     thesis=first_paragraph(thesis_section)
     refs=references(sections)
@@ -2165,7 +2508,7 @@ def build_document(number:int)->dict:
                 "conversión a escala de grises",
                 "redimensionado a 720 × 720 píxeles",
             ]
-        if number in {7, 8}:
+        if number in {7, 8, 9, 10}:
             for field in ("image_url", "creator", "credit_line", "license_name", "license_url"):
                 if entry.get(field):
                     portrait_ref[field] = entry[field]
@@ -2177,6 +2520,9 @@ def build_document(number:int)->dict:
         portrait_ref["rights_status"] = rights_status
         portrait_ref["file"] = f"referent-{key}.jpg"
         portrait_path = assets / portrait_ref["file"]
+        inherited_portrait = Path(entry["local_file"]) if entry.get("local_file") else None
+        if inherited_portrait is not None and inherited_portrait.exists():
+            copy_asset(inherited_portrait, portrait_path)
         if portrait_path.exists():
             portrait_ref["sha256"] = asset_sha(portrait_path)
         portrait_refs.append(portrait_ref)
@@ -2379,6 +2725,26 @@ def build_document(number:int)->dict:
         "Movimiento 2 · Observar episodios sin confundir descripción e interpretación": "Investigadora argentina registra una secuencia de trabajo desde una posición lateral, sin interrumpir la operación.",
         "Movimiento 3 · Transformar lo observado sin destruir su función": "Equipo operativo argentino contrasta artefactos y registros para decidir qué capacidad conservar en un rediseño.",
     }
+    n09_photo_captions = {
+        "Tesis": "Diseñar para condiciones diversas cambia la promesa, la evidencia y las alternativas que el sistema debe sostener.",
+        "De N08 a N09: del trabajo realizado al recorrido vivido": "El recorrido vivido conecta señales visibles con trabajo de soporte, condiciones de uso y capacidad efectiva de continuar.",
+        "Movimiento 3 · Medir, recuperar y gobernar la experiencia": "Una falla puede repararse cuando la promesa, la evidencia y la autoridad permanecen conectadas.",
+    }
+    n09_photo_alts = {
+        "Tesis": "Persona argentina prueba un servicio digital con asistencia y alternativas visibles en un entorno de trabajo.",
+        "De N08 a N09: del trabajo realizado al recorrido vivido": "Equipo argentino reconstruye un recorrido de servicio con registros, señales y notas de campo.",
+        "Movimiento 3 · Medir, recuperar y gobernar la experiencia": "Trabajadora argentina coordina una reparación y verifica el estado del servicio junto a una colega.",
+    }
+    n10_photo_captions = {
+        "De N09 a N10: del recorrido vivido al encuadre provisional": "La evidencia acumulada no entrega un problema terminado: obliga a decidir qué situación importa explicar y cambiar.",
+        "Movimiento 2 · Formular outcomes, protecciones y evidencia de revisión": "Un outcome defendible declara el cambio observable y también aquello que el éxito no autoriza a dañar.",
+        "Movimiento 3 · Integrar evidencia y abrir una puerta de decisión": "El encuadre integra mecanismos rivales, límites y evidencia para aprobar, devolver, dividir o reformular.",
+    }
+    n10_photo_alts = {
+        "De N09 a N10: del recorrido vivido al encuadre provisional": "Equipo profesional argentino contrasta episodios y explicaciones rivales sobre una mesa de trabajo.",
+        "Movimiento 2 · Formular outcomes, protecciones y evidencia de revisión": "Profesionales argentinos revisan indicadores, restricciones y consecuencias antes de fijar un outcome.",
+        "Movimiento 3 · Integrar evidencia y abrir una puerta de decisión": "Equipo argentino ordena alternativas de decisión y condiciones de revisión sobre un tablero físico.",
+    }
     n08_pause_after = {
         "Pregunta profesional": (
             4,
@@ -2394,43 +2760,33 @@ def build_document(number:int)->dict:
         "Movimiento 2 · Observar episodios sin confundir descripción e interpretación": "Una recepcionista sostiene una tarjeta en blanco y pausa la confirmación mientras una trabajadora de Housekeeping prepara el servicio al fondo.",
     }
     n09_photo_after = {
-        "De N08 a N09: del trabajo real al recorrido vivido": 0,
-        "Accesibilidad como propiedad sistémica": 1,
-        "Diseñar con diversidad sin inventar un usuario promedio": 3,
-        "Personalización e IA": 4,
+        "Tesis": 3,
+        "De N08 a N09: del trabajo realizado al recorrido vivido": 1,
+        "Movimiento 3 · Medir, recuperar y gobernar la experiencia": 2,
     }
     n09_pause_after = {
-        "Usabilidad y resultado": (
-            2,
+        "Pregunta profesional": (
+            4,
             "Una experiencia sin barreras aparentes puede seguir produciendo exclusión en el resultado.",
         ),
-        "Métricas distributivas y de equilibrio": (
+        "Movimiento 2 · Diseñar con diversidad y comprender la adopción": (
             5,
             "El promedio mejora con facilidad cuando deja fuera a quienes más fricción encuentran.",
         ),
-        "2026: las interfaces conversacionales amplían acceso y crean nuevas barreras": (
-            6,
-            "Conversar con una interfaz no vuelve accesible el servicio si la persona no puede comprender, corregir o reclamar.",
-        ),
     }
     n10_photo_after = {
-        "Desde requerimientos hacia atrás": 1,
-        "Outcome: el cambio que importa, no la cosa que se entrega": 3,
-        "2026: “necesitamos IA” es un pedido, no un diagnóstico": 4,
-        "Quién formula el problema también forma parte del problema": 5,
+        "De N09 a N10: del recorrido vivido al encuadre provisional": 0,
+        "Movimiento 2 · Formular outcomes, protecciones y evidencia de revisión": 2,
+        "Movimiento 3 · Integrar evidencia y abrir una puerta de decisión": 3,
     }
     n10_pause_after = {
-        "El pedido, el síntoma y el problema cumplen funciones distintas": (
-            2,
+        "Pregunta profesional": (
+            5,
             "El pedido nombra una respuesta; el encuadre debe explicar qué situación justifica intervenir.",
         ),
-        "Evidencia que puede cambiar el encuadre": (
-            7,
-            "Un problema es revisable cuando declara qué evidencia podría volverlo falso.",
-        ),
-        "La puerta de decisión: aprobar, devolver, dividir o reformular": (
+        "Movimiento 2 · Formular outcomes, protecciones y evidencia de revisión": (
             6,
-            "La fuerza del encuadre debe crecer con el costo de perder opciones.",
+            "Un problema es revisable cuando declara qué evidencia podría volverlo falso.",
         ),
     }
     # The generated map is a whole-reading synthesis, not a reusable ornament.
@@ -2491,16 +2847,16 @@ def build_document(number:int)->dict:
                 )
             chunks.append(part_chunk + '<article class="reading">')
             continue
-        reference_apparatus = number in {0, 1, 2, 3, 4, 5, 6, 7, 8} and section.title == "Referencias base"
+        reference_apparatus = number in {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10} and section.title == "Referencias base"
         if not reference_apparatus:
             display_index += 1
         idx = display_index + 1 if reference_apparatus else display_index
         classes=section_classes(number,idx,section.title)
-        if number in {1, 2, 3, 4, 5, 6, 7, 8} and section.title == "Cinco píldoras para recordar":
+        if number in {1, 2, 3, 4, 5, 6, 7, 8, 9, 10} and section.title == "Cinco píldoras para recordar":
             body = body.replace("<ul>", "<ol>", 1).replace("</ul>", "</ol>", 1)
         marker_number = "APARATO DE REFERENCIA" if reference_apparatus else f"SECCIÓN {idx:02d}" if number == 0 else f"{idx:02d}"
         route_label = ""
-        if number in {1, 2, 3, 4, 5, 6, 7, 8} and not reference_apparatus:
+        if number in {1, 2, 3, 4, 5, 6, 7, 8, 9, 10} and not reference_apparatus:
             if number == 1:
                 route = (
                     "PROBLEMA" if idx <= 4 else
@@ -2537,6 +2893,24 @@ def build_document(number:int)->dict:
                     "TRANSFERENCIA" if idx in {8, 9} else
                     "PREPARACIÓN"
                 )
+            elif number == 9:
+                route = (
+                    "PROBLEMA" if idx <= 4 else
+                    "DISTINCIONES" if idx == 5 else
+                    "DECISIONES" if idx == 6 else
+                    "PRUEBA" if idx == 7 else
+                    "TRANSFERENCIA" if idx == 8 else
+                    "PREPARACIÓN"
+                )
+            elif number == 10:
+                route = (
+                    "PROBLEMA" if idx <= 4 else
+                    "DISTINCIONES" if idx <= 6 else
+                    "DECISIONES" if idx == 7 else
+                    "PRUEBA" if idx == 8 else
+                    "TRANSFERENCIA" if idx <= 11 else
+                    "PREPARACIÓN"
+                )
             else:
                 route = (
                     "PROBLEMA" if idx <= 4 else
@@ -2546,12 +2920,12 @@ def build_document(number:int)->dict:
                     "TRANSFERENCIA" if idx == 8 else
                     "PREPARACIÓN"
                 )
-            route_label = f' <em>{route}</em>' if number in {3, 4, 5, 6, 7, 8} else f'<em>{route}</em>'
+            route_label = f' <em>{route}</em>' if number in {3, 4, 5, 6, 7, 8, 9, 10} else f'<em>{route}</em>'
         marker=f'<div class="section-marker"><span>{marker_number}</span><b>METSI · N{number:02d}{route_label}</b></div>'
         prelude=""
         extra=""
         standalone_before=""
-        if (number == 4 and section.title.startswith("Movimiento 1 ·")) or (number == 5 and section.title.startswith("Movimiento 2 ·")) or (number == 6 and section.title == "Instrumento de decisión: tablero mínimo de incertidumbres") or (number == 7 and section.title.startswith("Movimiento 3 ·")) or (number == 8 and section.title.startswith("Movimiento 2 ·")) or (number == 9 and section.title == "Instrumento de decisión: mapa de recorrido accesible") or (number == 10 and section.title == "Instrumento: encuadre METSI en nueve decisiones") or (number == 1 and section.title == "Método, metodología, marco, práctica, técnica y herramienta") or (number == 2 and section.title == "Cinco objetos que no conviene llamar simplemente “el sistema”") or (number not in {0, 1, 2, 4, 5, 6, 7, 8, 9, 10} and idx in diagram_before):
+        if (number == 4 and section.title.startswith("Movimiento 1 ·")) or (number == 5 and section.title.startswith("Movimiento 2 ·")) or (number == 6 and section.title == "Instrumento de decisión: tablero mínimo de incertidumbres") or (number == 7 and section.title.startswith("Movimiento 3 ·")) or (number == 8 and section.title.startswith("Movimiento 2 ·")) or (number in {9, 10} and section.title.startswith("Movimiento 3 ·")) or (number == 1 and section.title == "Método, metodología, marco, práctica, técnica y herramienta") or (number == 2 and section.title == "Cinco objetos que no conviene llamar simplemente “el sistema”") or (number not in {0, 1, 2, 4, 5, 6, 7, 8, 9, 10} and idx in diagram_before):
             if number == 1:
                 diagram_alt = "Relación entre marco, metodología, método, práctica, técnica y herramienta"
                 diagram_caption = "Cada término cumple una función distinta: orientar, justificar, proceder, actuar, ejecutar o soportar."
@@ -2574,11 +2948,11 @@ def build_document(number:int)->dict:
                 diagram_alt = "Registro en siete capas que relaciona contexto, evento, interpretación, incertidumbre, función, consecuencia y decisión"
                 diagram_caption = "La cadena conserva la diferencia entre lo observado y lo inferido, y muestra qué evidencia permite convertir un episodio en una decisión revisable."
             elif number == 9:
-                diagram_alt = "Recorrido accesible en seis etapas desde la necesidad hasta la reparación"
-                diagram_caption = "La experiencia se verifica de extremo a extremo: necesidad, acceso, comprensión, acción, resultado y reparación deben sostener la misma promesa."
+                diagram_alt = "Mapa de recorrido accesible que relaciona transiciones vividas, trabajo interno, evidencia, riesgo, recuperación y distribución de carga"
+                diagram_caption = "El recorrido conecta lo que la persona puede hacer con el trabajo que sostiene la promesa, la evidencia crítica y la alternativa de reparación."
             elif number == 10:
-                diagram_alt = "Nueve decisiones conectadas para construir y revisar el encuadre de una intervención"
-                diagram_caption = "Situación, frontera, evidencia, hipótesis, outcome, guardrails, intervención, gobierno y revisión forman un circuito: la evidencia puede obligar a reconstruir el problema."
+                diagram_alt = "Instrumento de encuadre en tres bandas que conecta nueve campos de análisis con una puerta final de cuatro salidas"
+                diagram_caption = "La situación, los afectados, el outcome, los mecanismos rivales, la evidencia, la frontera, las restricciones, la protección y la reparación se revisan antes de aprobar, devolver, dividir o reformular."
             else:
                 diagram_alt = "Cinco fronteras posibles para elegir qué sistema analizar"
                 diagram_caption = "La palabra sistema cambia de significado según la decisión: cada frontera incluye relaciones distintas."
@@ -2589,7 +2963,13 @@ def build_document(number:int)->dict:
                 f'<img src="diagrams/{diagram["file"]}" alt="">'
                 f'<figcaption aria-hidden="true">{esc(diagram_caption)}</figcaption></figure>'
             )
-            prelude += diagram_figure
+            if number in {9, 10}:
+                anchor = '<h3 data-source-id="N09-s07-b035">' if number == 9 else '<h3 data-source-id="N10-s08-b001">'
+                if anchor not in body:
+                    raise RuntimeError(f"No se encontró el anclaje interno de la infografía N{number:02d}")
+                body = body.replace(anchor, diagram_figure + anchor, 1)
+            else:
+                prelude += diagram_figure
         if (number == 0 and section.title in n00_photo_after) or (number == 1 and section.title in n01_photo_after) or (number == 2 and section.title in n02_photo_after) or (number == 4 and section.title in n04_photo_after) or (number == 5 and section.title in n05_photo_after) or (number == 6 and section.title in n06_photo_after) or (number == 7 and section.title in n07_photo_after) or (number == 8 and section.title in n08_photo_after) or (number == 9 and section.title in n09_photo_after) or (number == 10 and section.title in n10_photo_after) or (number not in {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10} and idx in photo_after):
             if number == 0:
                 image = selected[n00_photo_after[section.title]]
@@ -2625,6 +3005,10 @@ def build_document(number:int)->dict:
                 if number == 7
                 else n08_photo_captions.get(section.title)
                 if number == 8
+                else n09_photo_captions.get(section.title)
+                if number == 9
+                else n10_photo_captions.get(section.title)
+                if number == 10
                 else None
             ) or sentence(first_paragraph(section), 135)
             if number == 2 and section.title == "Tesis":
@@ -2637,6 +3021,10 @@ def build_document(number:int)->dict:
                 photo_alt = n07_photo_alts[section.title]
             elif number == 8:
                 photo_alt = n08_photo_alts[section.title]
+            elif number == 9:
+                photo_alt = generated_image_alts[image]
+            elif number == 10:
+                photo_alt = generated_image_alts[image]
             else:
                 photo_alt = n00_photo_alts.get(section.title, f"Imagen conceptual vinculada con {section.title}") if number == 0 else n01_photo_alts.get(section.title, f"Imagen conceptual vinculada con {section.title}") if number == 1 else f"Imagen conceptual vinculada con {section.title}"
             photo_figure = visual_figure(image, photo_caption, photo_alt, figure_class)
@@ -2658,12 +3046,12 @@ def build_document(number:int)->dict:
             # of leaving a short citation list stranded on a mostly empty
             # page.  The image is document-specific and the citations remain
             # complete, searchable source text.
-            if number in {0, 1, 2, 3, 5, 6, 7, 8}:
+            if number in {0, 1, 2, 3, 5, 6, 7, 8, 9, 10}:
                 # Patrón canónico fijado por N10: bibliografía sobre blanco,
                 # tipografía pequeña y sin una imagen que compita con las citas.
                 pass
-            elif number in {4, 9, 10}:
-                image=selected[7] if number in {9, 10} else selected[-1]
+            elif number == 4:
+                image=selected[-1]
                 extra += visual_figure(
                     image,
                     "Las referencias abren nuevas preguntas: no sustituyen el juicio que esta lectura exige construir.",
@@ -2673,10 +3061,19 @@ def build_document(number:int)->dict:
             else:
                 references_plate=f'''</article><section class="full-bleed references-image-full"><img src="assets/{esc(image)}" alt="Imagen editorial de cierre bibliográfico para N{number:02d}"><p>Las referencias abren nuevas preguntas: no sustituyen el juicio que esta lectura exige construir.</p></section><article class="reading">'''
         if "hotel-case" in classes:
+            if not hotel_file:
+                raise RuntimeError(
+                    f"La sección {section.title!r} requiere una fotografía de caso en N{number:02d}"
+                )
+            hotel_alt = (
+                generated_image_alts[hotel_file]
+                if number in {9, 10}
+                else "Cartel de hotel iluminado contra un cielo oscuro."
+            )
             hotel_figure=visual_figure(
                 hotel_file,
                 "El software puede funcionar y la promesa fallar: el objeto de análisis es el sistema sociotécnico que produce el servicio.",
-                "Cartel de hotel iluminado contra un cielo oscuro.",
+                hotel_alt,
                 "photo-band hotel-photo",
             )
         else:
@@ -2708,6 +3105,9 @@ def build_document(number:int)->dict:
         if number == 8 and section.title.startswith("Movimiento 3 ·") and not hotel_voices_inserted:
             hotel_voices_inside = hotel_voices_html(number, assets)
             hotel_voices_inserted = True
+        if number in {9, 10} and section.title.startswith("Movimiento 3 ·") and not hotel_voices_inserted:
+            hotel_voices_inside = hotel_voices_html(number, assets)
+            hotel_voices_inserted = True
         chunks.append(f'<section class="{" ".join(classes)}" data-section="{data_section}">{heading}{hotel_figure}{prelude}<div class="section-body">{body}</div>{extra}{hotel_voices_inside}</section>')
         if "hotel-case" in classes and not hotel_voices_inserted:
             chunks.append(hotel_voices_html(number, assets))
@@ -2728,6 +3128,10 @@ def build_document(number:int)->dict:
                     pause_alt = n07_pause_alts[section.title]
                 elif number == 8:
                     pause_alt = n08_pause_alts[section.title]
+                elif number == 9:
+                    pause_alt = generated_image_alts[image]
+                elif number == 10:
+                    pause_alt = generated_image_alts[image]
                 else:
                     pause_alt = n01_pause_alts.get(section.title, f"Pausa visual vinculada con {section.title}") if number == 1 else f"Pausa visual vinculada con {section.title}"
                 chunks.append(f'''</article><section class="full-bleed full-bleed-quote"><img src="assets/{esc(image)}" alt="{esc(pause_alt)}"><p>{esc(quote)}</p></section><article class="reading">''')
@@ -2735,15 +3139,16 @@ def build_document(number:int)->dict:
     if references_plate:
         chunks.append(references_plate)
 
-    contents_image = selected[2] if number == 0 else sparse_fill_images[0] if number == 1 else selected[7] if number == 5 else selected[2] if number == 6 else selected[3] if number in {7, 8} else sparse_fill_images[1] if number in {9, 10} else selected[0]
+    contents_image = selected[2] if number == 0 else sparse_fill_images[0] if number == 1 else selected[7] if number == 5 else selected[2] if number == 6 else selected[3] if number in {7, 8} else selected[0] if number == 9 else selected[4] if number == 10 else selected[0]
+    contents_image_alt = generated_image_alts.get(contents_image, "")
     closing_alt = "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza."
     closing_caption = "La secuencia vuelve visible que toda intervención consume recursos, deja huellas y necesita un criterio de cierre."
     closing_html = f'<section class="full-bleed closing-image"><img src="assets/matches-close.png" alt="{esc(closing_alt)}"><figcaption>{esc(closing_caption)}</figcaption></section>'
-    html_text=f'''<!doctype html><html lang="es-AR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Lectura previa METSI N{number:02d}, Facultad de Ciencias Económicas, Universidad de Buenos Aires"><title>{esc(title)}</title><link rel="stylesheet" href="magazine.css"></head><body class="premium-magazine document-n{number:02d}"><main>{cover_html(number,title,thesis,cover_file,title_source_id)}{contents_html(number,title,sections,contents_image)}{authors_html(number,refs,assets)}<article class="reading">{''.join(chunks)}</article>{closing_html}</main></body></html>'''
+    html_text=f'''<!doctype html><html lang="es-AR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Lectura previa METSI N{number:02d}, Facultad de Ciencias Económicas, Universidad de Buenos Aires"><title>{esc(title)}</title><link rel="stylesheet" href="magazine.css"></head><body class="premium-magazine document-n{number:02d}"><main>{cover_html(number,title,thesis,cover_file,title_source_id)}{contents_html(number,title,sections,contents_image,contents_image_alt)}{authors_html(number,refs,assets)}<article class="reading">{''.join(chunks)}</article>{closing_html}</main></body></html>'''
     (out/"index.html").write_text(html_text,encoding="utf-8")
     rendered_ids=re.findall(r'data-source-id="([^"]+)"',html_text)
     source_ids=[entry["source_id"] for entry in source_entries]
-    source_label = f"source/{source.name}" if number in {5, 6, 7, 8} else str(source)
+    source_label = f"source/{source.name}" if number in {5, 6, 7, 8, 9, 10} else str(source)
     source_manifest={
         "document":f"N{number:02d}",
         "source":source_label,
@@ -2752,7 +3157,7 @@ def build_document(number:int)->dict:
         "eligible_word_count":sum(len(entry["text"].split()) for entry in source_entries),
     }
     source_manifest_text = json.dumps(source_manifest,ensure_ascii=False,indent=2)
-    (out/"source-manifest.json").write_text(source_manifest_text + ("\n" if number in {5, 6, 7, 8} else ""),encoding="utf-8")
+    (out/"source-manifest.json").write_text(source_manifest_text + ("\n" if number in {5, 6, 7, 8, 9, 10} else ""),encoding="utf-8")
     integrity={
         "status":"PASS" if sorted(source_ids)==sorted(rendered_ids) and len(rendered_ids)==len(set(rendered_ids)) else "FAIL",
         "source_block_count":len(source_ids),
@@ -2763,18 +3168,18 @@ def build_document(number:int)->dict:
     }
     (out/"integrity-report.json").write_text(json.dumps(integrity,ensure_ascii=False,indent=2),encoding="utf-8")
     packaged_css = out / "magazine.css"
-    if number in {7, 8}:
+    if number in {7, 8, 9, 10}:
         stable_css = (HERE / "N06-v9-final" / "magazine.css").read_text(encoding="utf-8")
         base_css = stable_css.split("/* METSI collection extensions:", 1)[0].rstrip()
         css_text = base_css + "\n\n" + COLLECTION_CSS
     else:
         css_text = packaged_css.read_text(encoding="utf-8") if number in {5, 6} and packaged_css.exists() else N01_CSS.read_text(encoding="utf-8") + "\n" + COLLECTION_CSS
     packaged_css.write_text(css_text,encoding="utf-8")
-    if number in {5, 6, 7, 8}:
+    if number in {5, 6, 7, 8, 9, 10}:
         (out / "metsi.css").write_text(css_text, encoding="utf-8")
-    cover_source_label = f"assets/{cover_source.name}" if number in {5, 6, 7, 8} else str(cover_source)
+    cover_source_label = f"assets/{cover_source.name}" if number in {5, 6, 7, 8, 9, 10} else str(cover_source)
     hotel_source_label = (
-        f"assets/{hotel_source.name}" if number in {5, 6, 7, 8} and hotel_source is not None else str(hotel_source)
+        f"assets/{hotel_source.name}" if number in {5, 6, 7, 8, 9, 10} and hotel_source is not None else str(hotel_source)
         if hotel_source is not None
         else ""
     )
@@ -2786,12 +3191,12 @@ def build_document(number:int)->dict:
             "file":cover_file,
             "source":cover_source_label,
             "sha256":asset_sha(cover_source),
-            **({"alt":cover_alt_text(number, clean_title)} if number in {6, 7, 8} else {}),
+            **({"alt":cover_alt_text(number, clean_title)} if number in {6, 7, 8, 9, 10} else {}),
             **({
                 "photographic_origin":"native_black_and_white",
                 "render_treatment":"no_grayscale_conversion",
                 "art_direction":"lighting, wardrobe, materials and tonal separation conceived for monochrome",
-            } if number in {4, 5, 6, 7, 8} else {}),
+            } if number in {4, 5, 6, 7, 8, 9, 10} else {}),
         },
         "internal_images":selected,
         "sparse_fill_images":sparse_fill_images,
@@ -2819,10 +3224,11 @@ def build_document(number:int)->dict:
             },
         ] if number in {0, 1} else []),
     }
-    manifest_text = json.dumps(manifest,ensure_ascii=False,indent=2) + ("\n" if number in {5, 6, 7, 8} else "")
+    manifest_text = json.dumps(manifest,ensure_ascii=False,indent=2) + ("\n" if number in {5, 6, 7, 8, 9, 10} else "")
     (out/"manifest.json").write_text(manifest_text,encoding="utf-8")
-    if number in {5, 6, 7, 8}:
+    if number in {5, 6, 7, 8, 9, 10}:
         (out/"document.json").write_text(manifest_text,encoding="utf-8")
+    write_referent_rights_manifest(number, source, refs, assets, out)
     if number == 6 and not (out / "image-manifest.json").exists():
         raise FileNotFoundError("N06 requiere image-manifest.json curado dentro del paquete")
     return manifest
@@ -3370,6 +3776,78 @@ COLLECTION_CSS=r'''
 .premium-magazine.document-n08 .references .section-body a{overflow-wrap:normal;word-break:normal;hyphens:none}
 .premium-magazine.document-n08 .references .reference-url{white-space:normal}
 .premium-magazine.document-n08 .references .reference-url .url-segment{display:inline-block;white-space:nowrap}
+.cover-n09 .cover-meta-eyebrow,.cover-n10 .cover-meta-eyebrow{display:flex;flex-direction:column;align-items:flex-start;gap:0;white-space:normal}
+.cover-n09 .cover-meta-eyebrow span,.cover-n10 .cover-meta-eyebrow span{display:block;white-space:nowrap}
+.cover-n09>img,.cover-n10>img{filter:none;object-position:center 48%}
+.cover-n09 .cover-shade,.cover-n10 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.08) 0,rgba(5,7,6,0) 29%,rgba(5,7,6,0) 62%,rgba(8,9,8,.55) 100%)}
+.cover-n09 .cover-title,.cover-n10 .cover-title{width:132mm}
+.cover-n09 .cover-title h1,.cover-n10 .cover-title h1{font-size:31pt;line-height:.94}
+.premium-magazine.document-n09 .section-marker b,.premium-magazine.document-n10 .section-marker b{display:inline;font-weight:500}
+.premium-magazine.document-n09 .section-marker b em,.premium-magazine.document-n10 .section-marker b em{display:inline;padding-left:2.2mm;font-style:normal;font-size:5.7pt;font-weight:600;letter-spacing:.05em;opacity:1}
+.document-n09 .contents-layout figure img,.document-n10 .contents-layout figure img{filter:none}
+.document-n10 .contents-layout figure img{object-position:72% 50%}
+.document-n10 .contents-page .contents-sinnum-note{position:absolute;left:16mm;right:auto;width:92mm;bottom:18mm;margin:0;padding-top:2mm;border-top:.2mm solid #BFC1BD;font:6.4pt/1.2 Avenir,sans-serif;color:#5B5D58}
+.document-n10 .contents-page-text-only .contents-layout{display:block}
+.document-n10 .contents-page-text-only .contents-layout ol{width:100%;columns:2;column-count:2;column-gap:10mm;column-rule:.2mm solid #c5c7c5}
+.document-n10 .contents-page-text-only .contents-layout li{break-inside:avoid;page-break-inside:avoid}
+.premium-magazine.document-n09 .reading-section[data-section="01"],.premium-magazine.document-n10 .reading-section[data-section="01"]{page:fullbleed;position:relative;box-sizing:border-box;width:210mm;height:297mm;margin:0;padding:24mm;display:flex;flex-direction:column;justify-content:flex-end;background:#191919;color:#F7F6F2;border:0;break-before:page;page-break-before:always;break-after:page;page-break-after:always}
+.premium-magazine.document-n09 .reading-section[data-section="01"]::before,.premium-magazine.document-n10 .reading-section[data-section="01"]::before{content:"";position:absolute;left:24mm;top:24mm;width:24mm;height:3.2mm;background:#CFFF00;clip-path:polygon(10% 0,100% 0,90% 100%,0 100%)}
+.premium-magazine.document-n09 .reading-section[data-section="01"] .section-heading,.premium-magazine.document-n10 .reading-section[data-section="01"] .section-heading{display:block;margin:0 0 12mm;padding:0;border:0}
+.premium-magazine.document-n09 .reading-section[data-section="01"] .section-marker,.premium-magazine.document-n10 .reading-section[data-section="01"] .section-marker{color:#CFFF00}
+.premium-magazine.document-n09 .reading-section[data-section="01"] .section-marker span,.premium-magazine.document-n10 .reading-section[data-section="01"] .section-marker span{color:#CFFF00;border-color:#CFFF00}
+.premium-magazine.document-n09 .reading-section[data-section="01"] h2,.premium-magazine.document-n10 .reading-section[data-section="01"] h2{margin:0;color:#F7F6F2;font-size:18pt}
+.premium-magazine.document-n09 .reading-section[data-section="01"] .section-body,.premium-magazine.document-n10 .reading-section[data-section="01"] .section-body{max-width:155mm}
+.premium-magazine.document-n09 .reading-section[data-section="01"] .section-body p,.premium-magazine.document-n10 .reading-section[data-section="01"] .section-body p{margin:0;color:#F7F6F2;font:400 28pt/1.08 Didot,"Bodoni 72",serif;letter-spacing:-.018em}
+.premium-magazine.document-n09 .n09-handoff-input,.premium-magazine.document-n09 .n09-handoff-output,.premium-magazine.document-n10 .n10-handoff-input,.premium-magazine.document-n10 .n10-block-close{break-inside:avoid-page;page-break-inside:avoid}
+.premium-magazine.document-n10 .hotel-case .hotel-photo figcaption{box-sizing:border-box;padding-left:18mm;padding-right:18mm}
+.premium-magazine.document-n09 .n09-movement,.premium-magazine.document-n10 .n10-movement{break-before:page;page-break-before:always;background:#FAFAF8!important;padding:0!important;border-left:0!important}
+.premium-magazine.document-n09 .n09-movement-one,.premium-magazine.document-n10 .n10-movement-one{break-before:auto!important;page-break-before:auto!important}
+.premium-magazine.document-n09 .n09-movement-two{break-before:auto!important;page-break-before:auto!important}
+.premium-magazine.document-n09 .n09-movement .section-body,.premium-magazine.document-n09 .n09-synthesis .section-body,.premium-magazine.document-n10 .n10-movement .section-body,.premium-magazine.document-n10 .n10-synthesis .section-body{columns:2;column-count:2;column-gap:8mm;column-rule:.2mm solid #c5c7c5}
+.premium-magazine.document-n09 .section-body h3,.premium-magazine.document-n10 .section-body h3{margin:5mm 0 2mm;padding-top:2.5mm;border-top:.3mm solid #202020;break-after:avoid-column!important;page-break-after:avoid}
+.premium-magazine.document-n09 .section-body h4,.premium-magazine.document-n10 .section-body h4{break-after:avoid-column!important;page-break-after:avoid}
+.premium-magazine.document-n09 .n09-movement .section-body blockquote,.premium-magazine.document-n09 .n09-movement .section-body table,.premium-magazine.document-n09 .n09-movement .section-body ol,.premium-magazine.document-n09 .n09-movement .section-body ul,.premium-magazine.document-n10 .n10-movement .section-body blockquote,.premium-magazine.document-n10 .n10-movement .section-body table,.premium-magazine.document-n10 .n10-movement .section-body ol,.premium-magazine.document-n10 .n10-movement .section-body ul{break-inside:avoid-page;page-break-inside:avoid}
+.premium-magazine.document-n09 .infographic-boundaries,.premium-magazine.document-n10 .infographic-boundaries{column-span:all;width:160mm;max-width:160mm;max-height:118mm;margin:4mm auto;break-inside:avoid-page;page-break-inside:avoid}
+.premium-magazine.document-n09 .infographic-boundaries img,.premium-magazine.document-n10 .infographic-boundaries img{display:block;width:160mm;max-width:160mm;height:auto;max-height:105mm;margin:0 auto;filter:none}
+.premium-magazine.document-n09 section[data-section="04"] .photo-band img,.premium-magazine.document-n09 section[data-section="06"] .photo-band img,.premium-magazine.document-n09 section[data-section="07"] .photo-band img,.premium-magazine.document-n10 section[data-section="05"] .photo-band img,.premium-magazine.document-n10 section[data-section="07"] .photo-band img,.premium-magazine.document-n10 section[data-section="08"] .photo-band img{height:76mm;object-position:center 48%;filter:none}
+.premium-magazine.document-n10 section[data-section="07"] .photo-band img{height:92mm}
+.premium-magazine.document-n09 .full-bleed-quote img,.premium-magazine.document-n10 .full-bleed-quote img{filter:none}
+.premium-magazine.document-n09 .full-bleed-quote::after,.premium-magazine.document-n10 .full-bleed-quote::after{background:linear-gradient(180deg,rgba(0,0,0,.01) 42%,rgba(0,0,0,.52) 100%)}
+.premium-magazine.document-n09 .hotel-voices-compact,.premium-magazine.document-n10 .hotel-voices-compact{padding-top:2.2mm;padding-bottom:2.2mm;margin-top:3mm;margin-bottom:4mm}
+.premium-magazine.document-n09 .hotel-voices-grid article,.premium-magazine.document-n10 .hotel-voices-grid article{grid-template-columns:24mm 1fr;min-height:30mm}
+.premium-magazine.document-n09 .hotel-voices-grid img,.premium-magazine.document-n10 .hotel-voices-grid img{width:24mm;height:30mm}
+.premium-magazine.document-n09 .hotel-voices-grid article div,.premium-magazine.document-n10 .hotel-voices-grid article div{padding:1.4mm 1.7mm 1.2mm}
+.premium-magazine.document-n09 .hotel-voices-grid h3,.premium-magazine.document-n10 .hotel-voices-grid h3{font-size:10pt;margin:.2mm 0 .45mm}
+.premium-magazine.document-n09 .hotel-voices-grid p,.premium-magazine.document-n10 .hotel-voices-grid p{font-size:6.8pt;line-height:1.12}
+.premium-magazine.document-n09 .glossary-two-column,.premium-magazine.document-n10 .glossary-two-column{break-inside:avoid-page;page-break-inside:avoid}
+.premium-magazine.document-n09 .glossary-two-column .section-body,.premium-magazine.document-n10 .glossary-two-column .section-body{columns:auto!important;column-count:auto!important;column-rule:none!important}
+.premium-magazine.document-n09 .glossary-two-column .section-body ul,.premium-magazine.document-n10 .glossary-two-column .section-body ul{columns:3;column-count:3;column-gap:7mm;column-rule:.2mm solid #c5c7c5;margin:0;padding-left:0;font-size:9.7pt;line-height:1.28;list-style-position:inside}
+.premium-magazine.document-n09 .glossary-two-column .section-body li,.premium-magazine.document-n10 .glossary-two-column .section-body li{margin:0 0 2mm;padding-left:0;break-inside:avoid-page;page-break-inside:avoid}
+.premium-magazine.document-n09 .questions,.premium-magazine.document-n10 .questions{padding-top:4.5mm;padding-bottom:4.5mm;break-inside:avoid-page;page-break-inside:avoid}
+.premium-magazine.document-n09 .questions .section-body,.premium-magazine.document-n10 .questions .section-body{columns:auto!important;column-count:auto!important;column-rule:none!important}
+.premium-magazine.document-n09 .questions .section-body ol,.premium-magazine.document-n10 .questions .section-body ol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,auto);grid-auto-flow:column;gap:12mm 11mm;margin:0;padding-left:7mm;columns:auto;column-count:auto}
+.premium-magazine.document-n10 .questions{min-height:204mm}
+.premium-magazine.document-n10 .questions .section-body ol{min-height:138mm;align-content:space-between}
+.premium-magazine.document-n09 .questions .section-body li,.premium-magazine.document-n10 .questions .section-body li{margin:0;padding-right:2mm;break-inside:avoid-page;page-break-inside:avoid}
+.premium-magazine.document-n09 .questions .section-body>p:last-child,.premium-magazine.document-n10 .questions .section-body>p:last-child{margin:4mm 0 0;padding:3mm 4mm;border-top:.6mm solid #171917;border-left:1.6mm solid #CFFF00;background:#FAFAF8;font:8.8pt/1.3 Avenir,sans-serif;break-inside:avoid-page;page-break-inside:avoid}
+.premium-magazine.document-n09 .pill-summary,.premium-magazine.document-n10 .pill-summary{position:relative;padding-top:3.5mm;padding-bottom:4mm}
+.premium-magazine.document-n09 .pill-summary .section-heading,.premium-magazine.document-n10 .pill-summary .section-heading{position:static}
+.premium-magazine.document-n09 .pill-summary-icon,.premium-magazine.document-n10 .pill-summary-icon{right:7mm;top:7mm}
+.premium-magazine.document-n09 .references,.premium-magazine.document-n10 .references{break-before:page!important;page-break-before:always!important;padding-left:0!important;border-left:0!important;background:#FAFAF8!important}
+.premium-magazine.document-n09 .references::after,.premium-magazine.document-n10 .references::after{display:none!important}
+.premium-magazine.document-n09 .references .section-heading,.premium-magazine.document-n10 .references .section-heading{margin:0 0 7mm;padding-top:4mm;border-top:.25mm solid #9A9A96}
+.premium-magazine.document-n09 .references .section-marker,.premium-magazine.document-n10 .references .section-marker{gap:2.2mm;margin:0 0 4mm;color:#666663;font-size:6.5pt;letter-spacing:.14em}
+.premium-magazine.document-n09 .references .section-marker span,.premium-magazine.document-n10 .references .section-marker span{display:inline!important;width:auto!important;height:auto!important;padding:0!important;border:0!important;font-size:inherit}
+.premium-magazine.document-n09 .references .section-marker b::before,.premium-magazine.document-n10 .references .section-marker b::before{display:none}
+.premium-magazine.document-n09 .references h2,.premium-magazine.document-n10 .references h2{margin:0;font-size:31pt;line-height:1}
+.premium-magazine.document-n09 .references .section-body,.premium-magazine.document-n10 .references .section-body{columns:auto!important;column-count:auto!important;column-gap:0!important;column-rule:none!important;display:block!important;font:9.3pt/1.34 Avenir,sans-serif}
+.premium-magazine.document-n10 .references .section-body{font-size:9.6pt;line-height:1.39}
+.premium-magazine.document-n09 .references .section-body ul,.premium-magazine.document-n10 .references .section-body ul{columns:2!important;column-count:2!important;column-gap:10mm;column-rule:none;margin:0;padding:0;max-width:none;list-style:none}
+.premium-magazine.document-n09 .references .section-body li,.premium-magazine.document-n10 .references .section-body li{break-inside:avoid;overflow-wrap:normal;word-break:normal;hyphens:none;padding:0;margin:0 0 3.4mm}
+.premium-magazine.document-n10 .references .section-body li{margin-bottom:4mm}
+.premium-magazine.document-n09 .references .section-body a,.premium-magazine.document-n10 .references .section-body a{overflow-wrap:normal;word-break:normal;hyphens:none}
+.premium-magazine.document-n09 .references .reference-url,.premium-magazine.document-n10 .references .reference-url{white-space:normal}
+.premium-magazine.document-n09 .references .reference-url .url-segment,.premium-magazine.document-n10 .references .reference-url .url-segment{display:inline-block;white-space:nowrap}
 .premium-magazine section[data-section="06"] .table-wrap{break-inside:auto;page-break-inside:auto}
 .premium-magazine section[data-section="06"] table{break-inside:auto;page-break-inside:auto}
 .premium-magazine section[data-section="06"] thead{display:table-header-group}
@@ -3748,10 +4226,10 @@ def build_all(start:int,end:int)->None:
     existing = json.loads(collection_path.read_text(encoding="utf-8")) if collection_path.exists() else []
     manifests_by_number = {entry["number"]: entry for entry in existing}
     for number in range(0,11):
-        path=HERE/("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else "N05-v9-final" if number == 5 else "N06-v9-final" if number == 6 else "N07-v9-final" if number == 7 else "N08-v9-final" if number == 8 else f"N{number:02d}")/"manifest.json"
+        path=HERE/("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else "N05-v9-final" if number == 5 else "N06-v9-final" if number == 6 else "N07-v9-final" if number == 7 else "N08-v9-final" if number == 8 else "N09-v9-final" if number == 9 else "N10-v9-final" if number == 10 else f"N{number:02d}")/"manifest.json"
         if path.exists():
             manifest = json.loads(path.read_text(encoding="utf-8"))
-            if number in {5, 6, 7, 8}:
+            if number in {5, 6, 7, 8, 9, 10}:
                 package = path.parent.name
                 manifest["source"] = f"{package}/{manifest['source']}"
                 manifest["cover"]["source"] = f"{package}/{manifest['cover']['source']}"

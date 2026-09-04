@@ -1,0 +1,7 @@
+# Texto alternativo · N09
+
+Blueprint de servicio y atlas de evidencia titulado “Mapa de recorrido accesible”. En la franja superior aparecen cuatro transiciones concretas: de necesitar alojamiento a poder comparar, de elegir una opción a comprender qué se promete, de llegar al hotel a recibir una habitación compatible y de una falla a la posibilidad de obtener reparación. La tercera transición está destacada en volt y se amplía debajo.
+
+La ampliación organiza ocho campos en tres planos. El plano visible registra el propósito de confirmar compatibilidad, condiciones de movilidad, teclado y conectividad, la señal “adaptada” y la acción de reservar y confirmar. El plano interno conecta el trabajo de verificar atributos y disponibilidad con evidencia sobre procedencia, vigencia y autoridad. El plano de falla y salida muestra que una etiqueta agregada puede producir una promesa falsa y exige una alternativa con verificación, plazo y respuesta trazable. Un riel inferior mide tiempo, esfuerzo, asistencia y error. Esas medidas, la evidencia y la capacidad de reparar alimentan una puerta de decisión con cinco opciones: continuar, modificar, limitar, investigar o retirar. Una ruta de revisión vuelve desde la decisión a las condiciones cuando cambia la evidencia.
+
+La relación central es que una pantalla puede funcionar y el recorrido fracasar: la accesibilidad sólo puede defenderse cuando la señal visible está sostenida por trabajo, evidencia, carga distribuida y reparación.

@@ -1,0 +1,1191 @@
+{
+  "document": "N09",
+  "version": "v9-final",
+  "validator": "validate_n09_v9.py",
+  "mode": "read-only",
+  "status": "PASS",
+  "failed_checks": [],
+  "source_sha256": "8e81a6462d515a955a1575dd36b91a12df500939f871df616934aa32bb018845",
+  "html_sha256": "12b96e1b1b6089af22f322b4ffe8b8b39d67b2ac7be23c9525e4dbcb5b5c62b6",
+  "css_sha256": "92c477dcd988574038439392f7b1510768eb287a454a1b924c269a9afdb8907c",
+  "raw_pdf_sha256": "d756455911197821d3875b1271af66db219cfbed12809b23d7dec111eb28bcec",
+  "pdf_sha256": "f8c092baf23d2dba6d62f594f5da29a83e00fc69f1761a6d6e54ab7aebb246f1",
+  "pdf_bytes": 20792745,
+  "pages": 28,
+  "minimum_ordinary_page_fill": 0.6005,
+  "checks": [
+    {
+      "check": "required_release_files_present",
+      "status": "PASS",
+      "detail": {
+        "missing": []
+      }
+    },
+    {
+      "check": "package_aliases_match_authoring_files",
+      "status": "PASS",
+      "detail": "metsi.css == magazine.css; document.json == manifest.json"
+    },
+    {
+      "check": "html_and_css_local_references_resolve",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "canonical_source_sha_and_byte_identity",
+      "status": "PASS",
+      "detail": {
+        "actual": "8e81a6462d515a955a1575dd36b91a12df500939f871df616934aa32bb018845",
+        "expected": "8e81a6462d515a955a1575dd36b91a12df500939f871df616934aa32bb018845",
+        "byte_identical": true
+      }
+    },
+    {
+      "check": "content_audit_remains_closed",
+      "status": "PASS",
+      "detail": {
+        "overall": "pass",
+        "word_counts": {
+          "total": 7912,
+          "substantive_from_thesis_through_synthesis": 6637
+        },
+        "anchors": {
+          "ISO 9241-11:2018": true,
+          "ISO 9241-210:2019": true,
+          "W3C WCAG 2.2": true,
+          "ISO/IEC 40500:2025": true,
+          "W3C Accessibility Principles": true,
+          "Costanza-Chock (2020)": true,
+          "Lazar, Goldstein y Taylor (2015)": true,
+          "Norman (2013)": true,
+          "Rogers (2003)": true,
+          "Suchman (2007)": true,
+          "Directiva UE 2019/882": true,
+          "Reglamento UE 2024/1689": true,
+          "Autio et al. (2024)": true,
+          "Gmyrek et al. (2025)": true
+        }
+      }
+    },
+    {
+      "check": "source_manifest_has_324_blocks_exactly_once",
+      "status": "PASS",
+      "detail": {
+        "manifest": 324,
+        "html": 324,
+        "integrity": {
+          "status": "PASS",
+          "source_block_count": 324,
+          "rendered_source_id_count": 324,
+          "missing_source_ids": [],
+          "unexpected_source_ids": [],
+          "duplicate_rendered_ids": []
+        }
+      }
+    },
+    {
+      "check": "all_source_blocks_have_rendered_fragments",
+      "status": "PASS",
+      "detail": {
+        "checked": 324,
+        "missing": []
+      }
+    },
+    {
+      "check": "source_id_reading_order_is_preserved_in_html",
+      "status": "PASS",
+      "detail": {
+        "ids_checked": 324
+      }
+    },
+    {
+      "check": "canonical_14_section_structure",
+      "status": "PASS",
+      "detail": [
+        "Pregunta profesional",
+        "La puerta automática que sólo era automática para algunos",
+        "Tesis",
+        "De N08 a N09: del trabajo realizado al recorrido vivido",
+        "Movimiento 1 · Seguir el recorrido completo y reconocer barreras sistémicas",
+        "Movimiento 2 · Diseñar con diversidad y comprender la adopción",
+        "Movimiento 3 · Medir, recuperar y gobernar la experiencia",
+        "Errores frecuentes",
+        "Consecuencias profesionales",
+        "Límites y tensiones",
+        "Síntesis",
+        "Cinco píldoras para recordar",
+        "Glosario esencial",
+        "Preguntas de preparación",
+        "Referencias base"
+      ]
+    },
+    {
+      "check": "content_counts_close",
+      "status": "PASS",
+      "detail": {
+        "actual": {
+          "pills": 5,
+          "glossary": 9,
+          "questions": 6,
+          "references": 14
+        },
+        "expected": {
+          "pills": 5,
+          "glossary": 9,
+          "questions": 6,
+          "references": 14
+        }
+      }
+    },
+    {
+      "check": "all_14_references_are_anchored",
+      "status": "PASS",
+      "detail": {
+        "ISO 9241-11:2018": true,
+        "ISO 9241-210:2019": true,
+        "W3C WCAG 2.2": true,
+        "ISO/IEC 40500:2025": true,
+        "W3C Accessibility Principles": true,
+        "Costanza-Chock (2020)": true,
+        "Lazar, Goldstein y Taylor (2015)": true,
+        "Norman (2013)": true,
+        "Rogers (2003)": true,
+        "Suchman (2007)": true,
+        "Directiva UE 2019/882": true,
+        "Reglamento UE 2024/1689": true,
+        "Autio et al. (2024)": true,
+        "Gmyrek et al. (2025)": true
+      }
+    },
+    {
+      "check": "pdf_is_distinct_finalized_artifact",
+      "status": "PASS",
+      "detail": {
+        "raw": "d756455911197821d3875b1271af66db219cfbed12809b23d7dec111eb28bcec",
+        "final": "f8c092baf23d2dba6d62f594f5da29a83e00fc69f1761a6d6e54ab7aebb246f1"
+      }
+    },
+    {
+      "check": "pdf_has_28_a4_pages_and_plan_matches",
+      "status": "PASS",
+      "detail": {
+        "expected": 28,
+        "planned": 28,
+        "actual": 28,
+        "sizes": [
+          {
+            "page": 1,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 2,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 3,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 4,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 5,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 6,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 7,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 8,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 9,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 10,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 11,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 12,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 13,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 14,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 15,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 16,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 17,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 18,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 19,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 20,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 21,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 22,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 23,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 24,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 25,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 26,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 27,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 28,
+            "width": 594.96,
+            "height": 841.92
+          }
+        ]
+      }
+    },
+    {
+      "check": "pdf_metadata_is_complete",
+      "status": "PASS",
+      "detail": {
+        "metadata": {
+          "/Title": "N09 · Experiencia, accesibilidad y adopción no son decoración",
+          "/Author": "Diego Carralbal",
+          "/Subject": "Metodología de Sistemas de Información · FCE · UBA"
+        },
+        "keywords": "METSI, UBA, lectura previa, Investigación y construcción del problema"
+      }
+    },
+    {
+      "check": "contents_and_section_order_are_complete",
+      "status": "PASS",
+      "detail": {
+        "contents_positions": {
+          "Pregunta profesional": 164,
+          "La puerta automática que sólo era automática para algunos": 185,
+          "Tesis": 236,
+          "De N08 a N09: del trabajo realizado al recorrido vivido": 243,
+          "Movimiento 1 · Seguir el recorrido completo y reconocer barreras sistémicas": 290,
+          "Movimiento 2 · Diseñar con diversidad y comprender la adopción": 356,
+          "Movimiento 3 · Medir, recuperar y gobernar la experiencia": 410,
+          "Errores frecuentes": 459,
+          "Consecuencias profesionales": 478,
+          "Límites y tensiones": 506,
+          "Síntesis": 525,
+          "Cinco píldoras para recordar": 535,
+          "Glosario esencial": 562,
+          "Preguntas de preparación": 580
+        },
+        "pdf_headers": [
+          [
+            1,
+            4,
+            "PROBLEMA"
+          ],
+          [
+            2,
+            6,
+            "PROBLEMA"
+          ],
+          [
+            3,
+            7,
+            "PROBLEMA"
+          ],
+          [
+            4,
+            8,
+            "PROBLEMA"
+          ],
+          [
+            5,
+            9,
+            "DISTINCIONES"
+          ],
+          [
+            6,
+            11,
+            "DECISIONES"
+          ],
+          [
+            7,
+            16,
+            "PRUEBA"
+          ],
+          [
+            8,
+            24,
+            "TRANSFERENCIA"
+          ],
+          [
+            9,
+            25,
+            "PREPARACIÓN"
+          ],
+          [
+            10,
+            25,
+            "PREPARACIÓN"
+          ],
+          [
+            11,
+            25,
+            "PREPARACIÓN"
+          ],
+          [
+            12,
+            26,
+            "PREPARACIÓN"
+          ],
+          [
+            13,
+            26,
+            "PREPARACIÓN"
+          ],
+          [
+            14,
+            26,
+            "PREPARACIÓN"
+          ]
+        ]
+      }
+    },
+    {
+      "check": "route_is_exact_in_html_and_pdf",
+      "status": "PASS",
+      "detail": {
+        "html": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ],
+        "pdf": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ],
+        "expected": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ]
+      }
+    },
+    {
+      "check": "all_source_headings_keep_following_body_on_same_page",
+      "status": "PASS",
+      "detail": {
+        "passed": true,
+        "checked": 40,
+        "failed": []
+      }
+    },
+    {
+      "check": "ordinary_pages_are_at_least_55_percent_full",
+      "status": "PASS",
+      "detail": {
+        "ordinary_pages": {
+          "6": 0.9395,
+          "7": 0.7282,
+          "8": 0.9561,
+          "9": 0.9358,
+          "10": 0.8987,
+          "11": 0.9673,
+          "12": 0.9617,
+          "13": 0.9719,
+          "14": 0.819,
+          "16": 0.9441,
+          "17": 0.9135,
+          "18": 0.7785,
+          "19": 0.9154,
+          "20": 0.882,
+          "21": 0.7949,
+          "22": 0.9154,
+          "23": 0.7188,
+          "24": 0.9582,
+          "25": 0.9803,
+          "26": 0.9224,
+          "27": 0.6005
+        },
+        "underfilled": {}
+      }
+    },
+    {
+      "check": "page_4_is_intentional_dark_full_page_opening",
+      "status": "PASS",
+      "detail": {
+        "background": {
+          "passed": true,
+          "maximum_luminance": 0.2,
+          "full_page_rectangles": [
+            {
+              "gaps_pt": {
+                "left": 0.0,
+                "right": 0.0,
+                "top": 0.0,
+                "bottom": 0.0
+              },
+              "luminance": 0.098,
+              "color": [
+                0.098,
+                0.098,
+                0.098
+              ]
+            },
+            {
+              "gaps_pt": {
+                "left": 0.0,
+                "right": 0.0,
+                "top": 0.0,
+                "bottom": 0.0
+              },
+              "luminance": 0.098,
+              "color": [
+                0.098,
+                0.098,
+                0.098
+              ]
+            },
+            {
+              "gaps_pt": {
+                "left": 0.0,
+                "right": 0.0,
+                "top": 0.0,
+                "bottom": 0.134
+              },
+              "luminance": 0.9919,
+              "color": [
+                0.9922,
+                0.9922,
+                0.9882
+              ]
+            }
+          ]
+        },
+        "fill": {
+          "top": 524.53,
+          "bottom": 713.64,
+          "fill": 0.2542
+        }
+      }
+    },
+    {
+      "check": "typography_uses_no_arial_helvetica_or_times",
+      "status": "PASS",
+      "detail": {
+        "fonts": [
+          "AAAAAA+Avenir-Book-0",
+          "AAAAAA+Didot",
+          "ABAAAA+Didot",
+          "ACAAAA+Avenir-BookOblique",
+          "BAAAAA+Avenir-Book",
+          "BBAAAA+Avenir-Heavy",
+          "CAAAAA+Avenir-Book",
+          "CBAAAA+Didot",
+          "DAAAAA+Didot",
+          "DBAAAA+Avenir-Book",
+          "EAAAAA+Avenir-Heavy",
+          "EBAAAA+Baskerville-SemiBold",
+          "FAAAAA+Didot",
+          "FBAAAA+Didot",
+          "GAAAAA+Didot",
+          "GBAAAA+Avenir-Heavy",
+          "HAAAAA+Baskerville",
+          "HBAAAA+Didot",
+          "IAAAAA+Baskerville-Bold",
+          "IBAAAA+Avenir-Book",
+          "JAAAAA+Avenir-Heavy",
+          "JBAAAA+Avenir-Heavy",
+          "KAAAAA+Avenir-Book",
+          "KBAAAA+Avenir-Heavy",
+          "LAAAAA+Avenir-Book",
+          "LBAAAA+Avenir-Medium",
+          "MAAAAA+Avenir-Book",
+          "MBAAAA+Didot",
+          "NAAAAA+Baskerville-Bold",
+          "NBAAAA+Baskerville",
+          "OAAAAA+Baskerville",
+          "OBAAAA+Avenir-Book",
+          "PAAAAA+Didot-Bold",
+          "PBAAAA+Didot",
+          "QAAAAA+Avenir-Heavy",
+          "QBAAAA+Baskerville",
+          "RAAAAA+Avenir-Heavy",
+          "RBAAAA+Didot",
+          "SAAAAA+Baskerville-Italic",
+          "SBAAAA+Avenir-Heavy",
+          "TAAAAA+Avenir-Book",
+          "TBAAAA+Didot",
+          "UAAAAA+Didot-Italic",
+          "UBAAAA+Baskerville-SemiBold",
+          "VAAAAA+Avenir-Heavy",
+          "VBAAAA+Baskerville",
+          "WAAAAA+Avenir-Medium",
+          "WBAAAA+Avenir-Book",
+          "XAAAAA+Avenir-Heavy",
+          "XBAAAA+Avenir-Heavy",
+          "YAAAAA+Avenir-Heavy",
+          "YBAAAA+Avenir-Medium",
+          "ZAAAAA+Didot",
+          "ZBAAAA+Avenir-Book"
+        ],
+        "forbidden": [],
+        "qa_forbidden": []
+      }
+    },
+    {
+      "check": "page_1_cover_reaches_all_edges",
+      "status": "PASS",
+      "detail": {
+        "passed": true,
+        "tolerance_pt": 1.0,
+        "gaps_pt": {
+          "left": 0.0,
+          "right": 0.0,
+          "top": 0.0,
+          "bottom": 0.0
+        },
+        "bbox": {
+          "x0": 0.0,
+          "x1": 605.153,
+          "top": 0.0,
+          "bottom": 855.903
+        }
+      }
+    },
+    {
+      "check": "cover_is_native_bw_with_tonal_range_and_localized_shade",
+      "status": "PASS",
+      "detail": {
+        "scan": {
+          "file": "assets/cover.png",
+          "size": [
+            1055,
+            1491
+          ],
+          "sha256": "9d6322f3e9c24890637f8c4f3ef740dfbea5907ad1dbc8c82233e9b1aae2a0f4",
+          "channel_spread_p95": 1.0,
+          "monochrome": true
+        },
+        "tone": {
+          "passed": true,
+          "channel_spread_p95": 1.0,
+          "luminance_p05": 27.0,
+          "luminance_p95": 203.07,
+          "luminance_stddev": 54.49
+        },
+        "contract": {
+          "file": "cover.png",
+          "source": "assets/cover.png",
+          "sha256": "9d6322f3e9c24890637f8c4f3ef740dfbea5907ad1dbc8c82233e9b1aae2a0f4",
+          "alt": "Una mujer argentina cruza de manera autónoma un umbral de vidrio contemporáneo apoyada en su bastón, con amplio espacio arquitectónico a la izquierda.",
+          "photographic_origin": "native_black_and_white",
+          "render_treatment": "no_grayscale_conversion",
+          "art_direction": "lighting, wardrobe, materials and tonal separation conceived for monochrome"
+        },
+        "cover_rule": "filter:none;object-position:center 48%",
+        "shade_rule": "background:linear-gradient(180deg,rgba(5,7,6,.08) 0,rgba(5,7,6,0) 29%,rgba(5,7,6,0) 62%,rgba(8,9,8,.55) 100%)"
+      }
+    },
+    {
+      "check": "cover_eyebrow_is_two_accessible_text_runs",
+      "status": "PASS",
+      "detail": "METSI\nLECTURA PREVIA\nEDICIÓN 2026\nN09\nFCE · UBA\nMETODOLOGÍA DE SISTEMAS DE INFORMACIÓN\nExperiencia, accesibilidad yadopción no sondecoración\nN09\nUna solución es\nutilizable y adoptable\ncuando personas\ndiversas pueden\ncomprender, decidir,\nactuar, corregir y\nobtener resultados bajo\ncondiciones…\n01\nDiego Carralbal, 2026  ·  linkedin.com/in/carralbal\n"
+    },
+    {
+      "check": "seven_imagegen_assets_are_unique_native_bw_tonal_and_hash_locked",
+      "status": "PASS",
+      "detail": {
+        "passed": true,
+        "assets": [
+          {
+            "file": "assets/cover.png",
+            "size": [
+              1055,
+              1491
+            ],
+            "sha256": "9d6322f3e9c24890637f8c4f3ef740dfbea5907ad1dbc8c82233e9b1aae2a0f4",
+            "channel_spread_p95": 1.0,
+            "monochrome": true,
+            "tone": {
+              "passed": true,
+              "channel_spread_p95": 1.0,
+              "luminance_p05": 27.0,
+              "luminance_p95": 203.07,
+              "luminance_stddev": 54.49
+            }
+          },
+          {
+            "file": "assets/editorial-01.png",
+            "size": [
+              1448,
+              1086
+            ],
+            "sha256": "d8cffd37d7f381edf38c7d6753912e016e538046b3548d798562d2c2ea74d9d9",
+            "channel_spread_p95": 1.0,
+            "monochrome": true,
+            "tone": {
+              "passed": false,
+              "channel_spread_p95": 1.0,
+              "luminance_p05": 5.93,
+              "luminance_p95": 198.28,
+              "luminance_stddev": 70.38
+            }
+          },
+          {
+            "file": "assets/editorial-02.png",
+            "size": [
+              1448,
+              1086
+            ],
+            "sha256": "40ac6113b6568a80d6ea74081449f108259bc7ed870178e26b9702c0ad81d6b5",
+            "channel_spread_p95": 1.0,
+            "monochrome": true,
+            "tone": {
+              "passed": true,
+              "channel_spread_p95": 1.0,
+              "luminance_p05": 11.79,
+              "luminance_p95": 230.0,
+              "luminance_stddev": 75.72
+            }
+          },
+          {
+            "file": "assets/editorial-03.png",
+            "size": [
+              1448,
+              1086
+            ],
+            "sha256": "514332e5ff7b1a41b95e651ce23f1e06070c81efa3ee36e5e6662a2c20a37c9f",
+            "channel_spread_p95": 1.0,
+            "monochrome": true,
+            "tone": {
+              "passed": true,
+              "channel_spread_p95": 1.0,
+              "luminance_p05": 11.21,
+              "luminance_p95": 215.0,
+              "luminance_stddev": 69.62
+            }
+          },
+          {
+            "file": "assets/editorial-04.png",
+            "size": [
+              1448,
+              1086
+            ],
+            "sha256": "34057664cb0f376d054333bdf25b3348c2c282f1c79c766d5232a40adbd3a484",
+            "channel_spread_p95": 1.0,
+            "monochrome": true,
+            "tone": {
+              "passed": true,
+              "channel_spread_p95": 1.0,
+              "luminance_p05": 15.21,
+              "luminance_p95": 252.0,
+              "luminance_stddev": 74.79
+            }
+          },
+          {
+            "file": "assets/pause-01.png",
+            "size": [
+              1055,
+              1491
+            ],
+            "sha256": "bd8ad15963cd4d9ba381a6812bb50544d4ab7e060e8ad6a2b950944f82d78c2c",
+            "channel_spread_p95": 1.0,
+            "monochrome": true,
+            "tone": {
+              "passed": true,
+              "channel_spread_p95": 1.0,
+              "luminance_p05": 53.0,
+              "luminance_p95": 248.07,
+              "luminance_stddev": 61.06
+            }
+          },
+          {
+            "file": "assets/pause-02.png",
+            "size": [
+              1055,
+              1491
+            ],
+            "sha256": "cfa7d485721bd5196fa1533303fbc9db81d00494e20f01e12a0a1ae966ceee04",
+            "channel_spread_p95": 1.0,
+            "monochrome": true,
+            "tone": {
+              "passed": true,
+              "channel_spread_p95": 1.0,
+              "luminance_p05": 21.0,
+              "luminance_p95": 244.0,
+              "luminance_stddev": 68.14
+            }
+          }
+        ],
+        "minimum_pairwise_dhash_distance": 19,
+        "manifest_minimum": 20,
+        "invalid": []
+      }
+    },
+    {
+      "check": "portable_image_manifest_covers_every_rendered_visual_and_its_provenance",
+      "status": "PASS",
+      "detail": {
+        "passed": true,
+        "rendered_declared": 19,
+        "rendered_actual": 19,
+        "supporting_declared": 2,
+        "supporting_actual": 2,
+        "category_counts": {
+          "imagegen": 7,
+          "referent_portrait": 6,
+          "hotel_horizonte_portrait": 4,
+          "rendered_infographic": 1,
+          "canonical_closing": 1
+        },
+        "html_images": [
+          "assets/cover.png",
+          "assets/editorial-01.png",
+          "assets/referent-sasha-costanza-chock.jpg",
+          "assets/referent-lucy-suchman.jpg",
+          "assets/referent-reva-schwartz.jpg",
+          "assets/referent-elham-tabassi.jpg",
+          "assets/referent-kamie-roberts.jpg",
+          "assets/referent-martin-stanley.jpg",
+          "assets/pause-01.png",
+          "assets/editorial-04.png",
+          "assets/editorial-02.png",
+          "assets/pause-02.png",
+          "diagrams/N09-mapa-decision.svg",
+          "assets/editorial-03.png",
+          "assets/hotel-elena.jpg",
+          "assets/hotel-lucia.jpg",
+          "assets/hotel-ricardo.jpg",
+          "assets/hotel-federico.jpg",
+          "assets/matches-close.png"
+        ],
+        "upstream_manifest_sha256": "436e2f6593ce5d7325b8d3a2f0fc803761de1305d13ec245628594e7c6d9586d",
+        "invalid": []
+      }
+    },
+    {
+      "check": "exactly_two_full_bleed_pauses_in_expected_positions",
+      "status": "PASS",
+      "detail": {
+        "html_count": 2,
+        "pages": [
+          5,
+          15
+        ],
+        "bleed": {
+          "5": {
+            "passed": true,
+            "tolerance_pt": 1.0,
+            "gaps_pt": {
+              "left": 0.0,
+              "right": 0.0,
+              "top": 0.0,
+              "bottom": 0.134
+            },
+            "bbox": {
+              "x0": 0.0,
+              "x1": 594.972,
+              "top": 0.0,
+              "bottom": 841.786
+            }
+          },
+          "15": {
+            "passed": true,
+            "tolerance_pt": 1.0,
+            "gaps_pt": {
+              "left": 0.0,
+              "right": 0.0,
+              "top": 0.0,
+              "bottom": 0.134
+            },
+            "bbox": {
+              "x0": 0.0,
+              "x1": 594.972,
+              "top": 0.0,
+              "bottom": 841.786
+            }
+          }
+        },
+        "html_order": true
+      }
+    },
+    {
+      "check": "reference_grade_infographic_is_exact_and_inserted_once",
+      "status": "PASS",
+      "detail": {
+        "page": 18,
+        "sha256": "719fc5ce84aadc321e240a6dfdf468634a5da7997e47fbe9600cd4311ff8884d",
+        "min_svg_px": 28.0,
+        "min_final_pt": 7.06,
+        "integration": {
+          "document": "N09",
+          "version": "v9-final",
+          "title": "Mapa de recorrido accesible",
+          "module": "Investigación y construcción del problema",
+          "anchor_source_id": "N09-s07-b035",
+          "anchor_heading": "Instrumento de decisión: mapa de recorrido accesible",
+          "topology": "service-blueprint-evidence-atlas",
+          "file": "N09-mapa-decision.svg",
+          "source_file": "../infographic-work-layer/n09-accessible-service-blueprint.svg",
+          "source_sha256": "719fc5ce84aadc321e240a6dfdf468634a5da7997e47fbe9600cd4311ff8884d",
+          "integration_sha256": "719fc5ce84aadc321e240a6dfdf468634a5da7997e47fbe9600cd4311ff8884d",
+          "preview_file": "../infographic-work-layer/n09-accessible-service-blueprint.png",
+          "preview_sha256": "bf9bef41c52a302d5ac03e1784283692deff777211fbc24e9fa38d716a80c4e9",
+          "content_manifest": "../infographic-work-layer/content-manifest.json",
+          "content_manifest_sha256": "7306e681430afc10c9c417e9292ad77bea6445b7fc0ecf7920c899fc97092b45",
+          "alt_text": "../infographic-work-layer/alt-text.md",
+          "canvas": {
+            "width": 1800,
+            "height": 1100,
+            "viewBox": "0 0 1800 1100"
+          },
+          "target_width_mm": 160,
+          "minimum_text_px": 28,
+          "minimum_text_pt_at_target": 7.06,
+          "canonical_field_count": 8,
+          "status": "validated_review_asset"
+        }
+      }
+    },
+    {
+      "check": "six_unique_referents_have_approved_rights_and_provenance",
+      "status": "PASS",
+      "detail": {
+        "passed": true,
+        "actual": [
+          [
+            "Sasha Costanza-Chock",
+            "assets/referent-sasha-costanza-chock.jpg"
+          ],
+          [
+            "Lucy A. Suchman",
+            "assets/referent-lucy-suchman.jpg"
+          ],
+          [
+            "Reva Schwartz",
+            "assets/referent-reva-schwartz.jpg"
+          ],
+          [
+            "Elham Tabassi",
+            "assets/referent-elham-tabassi.jpg"
+          ],
+          [
+            "Kamie Roberts",
+            "assets/referent-kamie-roberts.jpg"
+          ],
+          [
+            "Martin Stanley",
+            "assets/referent-martin-stanley.jpg"
+          ]
+        ],
+        "invalid": [],
+        "rights_status": "approved"
+      }
+    },
+    {
+      "check": "four_unique_hotel_horizonte_voices_are_present",
+      "status": "PASS",
+      "detail": {
+        "passed": true,
+        "names": [
+          "Elena Acosta",
+          "Lucía Ferreyra",
+          "Ricardo Sosa",
+          "Federico Müller"
+        ],
+        "unique_hashes": 4,
+        "invalid": []
+      }
+    },
+    {
+      "check": "references_are_image_free_two_column_penultimate_page",
+      "status": "PASS",
+      "detail": {
+        "page": 27,
+        "images": 0,
+        "columns": {
+          "passed": true,
+          "left_markers": 11,
+          "right_markers": 7,
+          "left_x": [
+            68.0,
+            112.8,
+            114.8,
+            118.1
+          ],
+          "right_x": [
+            306.5
+          ]
+        }
+      }
+    },
+    {
+      "check": "twelve_exact_urls_are_printed_and_annotated_only_on_references_page",
+      "status": "PASS",
+      "detail": {
+        "source": [
+          "https://designjustice.mitpress.mit.edu/",
+          "https://doi.org/10.1016/C2013-0-13303-2",
+          "https://doi.org/10.1017/CBO9780511808418",
+          "https://doi.org/10.54394/HETP0387",
+          "https://doi.org/10.6028/NIST.AI.600-1",
+          "https://eur-lex.europa.eu/eli/dir/2019/882/oj",
+          "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+          "https://www.iso.org/standard/63500.html",
+          "https://www.iso.org/standard/77520.html",
+          "https://www.iso.org/standard/91029.html",
+          "https://www.w3.org/TR/WCAG22/",
+          "https://www.w3.org/WAI/fundamentals/accessibility-principles/"
+        ],
+        "annotations": [
+          "https://designjustice.mitpress.mit.edu/",
+          "https://doi.org/10.1016/C2013-0-13303-2",
+          "https://doi.org/10.1017/CBO9780511808418",
+          "https://doi.org/10.54394/HETP0387",
+          "https://doi.org/10.6028/NIST.AI.600-1",
+          "https://eur-lex.europa.eu/eli/dir/2019/882/oj",
+          "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+          "https://www.iso.org/standard/63500.html",
+          "https://www.iso.org/standard/77520.html",
+          "https://www.iso.org/standard/91029.html",
+          "https://www.w3.org/TR/WCAG22/",
+          "https://www.w3.org/WAI/fundamentals/accessibility-principles/"
+        ],
+        "pages": {
+          "27": [
+            "https://designjustice.mitpress.mit.edu/",
+            "https://doi.org/10.1016/C2013-0-13303-2",
+            "https://doi.org/10.1017/CBO9780511808418",
+            "https://doi.org/10.54394/HETP0387",
+            "https://doi.org/10.6028/NIST.AI.600-1",
+            "https://eur-lex.europa.eu/eli/dir/2019/882/oj",
+            "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+            "https://www.iso.org/standard/63500.html",
+            "https://www.iso.org/standard/77520.html",
+            "https://www.iso.org/standard/91029.html",
+            "https://www.w3.org/TR/WCAG22/",
+            "https://www.w3.org/WAI/fundamentals/accessibility-principles/"
+          ]
+        }
+      }
+    },
+    {
+      "check": "last_page_is_full_bleed_structured_matches_closing",
+      "status": "PASS",
+      "detail": {
+        "bleed": {
+          "passed": true,
+          "tolerance_pt": 1.0,
+          "gaps_pt": {
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0,
+            "bottom": 0.134
+          },
+          "bbox": {
+            "x0": 0.0,
+            "x1": 594.972,
+            "top": 0.0,
+            "bottom": 841.786
+          }
+        },
+        "text": "La secuencia vuelve visible que toda intervención consume recursos, deja huellas y necesita un criterio de cierre.\n28\nDiego Carralbal, 2026  ·  linkedin.com/in/carralbal\n",
+        "xobject_alts": [
+          "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza."
+        ]
+      }
+    },
+    {
+      "check": "tagging_language_and_alt_structure_are_complete",
+      "status": "PASS",
+      "detail": {
+        "lang": "es-AR",
+        "marked": true,
+        "figures": [
+          {
+            "page": 1,
+            "alt": "Una mujer argentina cruza de manera autónoma un umbral de vidrio contemporáneo apoyada en su bastón, con amplio espacio arquitectónico a la izquierda."
+          },
+          {
+            "page": 2,
+            "alt": null
+          },
+          {
+            "page": 2,
+            "alt": "Dos profesionales argentinos organizan planos, carpetas, registros y una tableta sobre una mesa de archivo para contrastar evidencia de trabajo."
+          },
+          {
+            "page": 5,
+            "alt": "Una niña espera frente a una puerta automática de vidrio que aún no responde mientras una adulta observa a distancia."
+          },
+          {
+            "page": 15,
+            "alt": "Dos trabajadoras de hotel sostienen la continuidad del servicio con un registro en papel, una llave física y un teléfono junto a una pantalla inactiva."
+          },
+          {
+            "page": 18,
+            "alt": "Mapa de recorrido accesible que relaciona transiciones vividas, trabajo interno, evidencia, riesgo, recuperación y distribución de carga El recorrido conecta lo que la persona puede hacer con el trabajo que sostiene la promesa, la evidencia crítica y la alternativa de reparación."
+          },
+          {
+            "page": 26,
+            "alt": "Cinco ideas para recordar"
+          },
+          {
+            "page": 28,
+            "alt": "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza."
+          }
+        ]
+      }
+    },
+    {
+      "check": "all_pages_have_folio_and_linkedin_footer",
+      "status": "PASS",
+      "detail": {
+        "linkedin_annotations_per_page": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "check": "n08_final_pdf_regression_sha_is_unchanged",
+      "status": "PASS",
+      "detail": {
+        "actual": "0c1825a1effcb0b7f0c4ea2a312f0d1ef08cde461158e7b1b87bec40d599f4f3",
+        "expected": "0c1825a1effcb0b7f0c4ea2a312f0d1ef08cde461158e7b1b87bec40d599f4f3"
+      }
+    }
+  ]
+}

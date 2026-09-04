@@ -1,0 +1,1332 @@
+{
+  "document": "N10",
+  "version": "v9-final",
+  "validator": "validate_n10_v9.py",
+  "mode": "read-only",
+  "status": "PASS",
+  "passed_checks": 41,
+  "total_checks": 41,
+  "failed_checks": [],
+  "source_sha256": "f272051348f0f2bf459e384cd66d433ae2881ac1d4d1d38200664a4c0e3f29c3",
+  "raw_pdf_sha256": "e4fd00ca3b2744b8803de4f37f2acc650de378ac9666322a323bfd6aada8a8b9",
+  "pdf_sha256": "53f251c2fbff6b6964d20e453a666c41dad0d7213caff31fe164d4cb751a1bcb",
+  "pdf_bytes": 21552486,
+  "pages": 31,
+  "minimum_ordinary_page_fill": 0.57,
+  "cover_sha256": "347f75bc02c056dfed010f231564c53188c078ce9e032549ae57488c87385744",
+  "infographic_sha256": "8eae98d3624777f9b0d631852fb75584504ccf22fd550c1ef41a995f75f1c707",
+  "checks": [
+    {
+      "check": "required_release_files_present",
+      "status": "PASS",
+      "detail": {
+        "missing": []
+      }
+    },
+    {
+      "check": "page_and_spread_plan_is_complete",
+      "status": "PASS",
+      "detail": {
+        "pages": 31
+      }
+    },
+    {
+      "check": "package_aliases_match_authoring_files",
+      "status": "PASS",
+      "detail": "metsi.css == magazine.css; document.json == manifest.json"
+    },
+    {
+      "check": "html_and_css_local_references_resolve",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "all_html_image_sources_are_concrete_files",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "canonical_source_sha_and_byte_identity",
+      "status": "PASS",
+      "detail": {
+        "actual": "f272051348f0f2bf459e384cd66d433ae2881ac1d4d1d38200664a4c0e3f29c3",
+        "expected": "f272051348f0f2bf459e384cd66d433ae2881ac1d4d1d38200664a4c0e3f29c3",
+        "byte_identical": true
+      }
+    },
+    {
+      "check": "content_audit_remains_closed",
+      "status": "PASS",
+      "detail": {
+        "overall": "pass",
+        "word_counts": {
+          "total": 9110,
+          "substantive_from_thesis_through_synthesis": 7180
+        },
+        "anchors": {
+          "Dorst (2011)": true,
+          "Jackson (2001)": true,
+          "Schön y Rein (1994)": true,
+          "Toulmin (2003)": true,
+          "Pawson y Tilley (1997)": true,
+          "W. K. Kellogg Foundation (2004)": true,
+          "ISO/IEC/IEEE 29148:2018": true,
+          "World Economic Forum (2025)": true,
+          "NIST AI 600-1": true,
+          "Reglamento UE 2024/1689": true,
+          "DORA (2025)": true,
+          "SWEBOK V4": true,
+          "ISO/IEC/IEEE 15288:2023": true
+        }
+      }
+    },
+    {
+      "check": "source_manifest_has_261_blocks_exactly_once",
+      "status": "PASS",
+      "detail": {
+        "manifest": 261,
+        "html": 261,
+        "integrity": {
+          "status": "PASS",
+          "source_block_count": 261,
+          "rendered_source_id_count": 261,
+          "missing_source_ids": [],
+          "unexpected_source_ids": [],
+          "duplicate_rendered_ids": []
+        }
+      }
+    },
+    {
+      "check": "all_source_blocks_have_rendered_fragments",
+      "status": "PASS",
+      "detail": {
+        "checked": 261,
+        "missing": []
+      }
+    },
+    {
+      "check": "source_id_reading_order_is_preserved_in_html",
+      "status": "PASS",
+      "detail": {
+        "ids_checked": 261
+      }
+    },
+    {
+      "check": "canonical_15_section_structure",
+      "status": "PASS",
+      "detail": [
+        "Pregunta profesional",
+        "El puente que resolvía el problema equivocado",
+        "Hotel Horizonte: una decisión que parece estar tomada",
+        "Tesis",
+        "De N09 a N10: del recorrido vivido al encuadre provisional",
+        "Movimiento 1 · Separar pedido, síntoma, mecanismo y problema",
+        "Movimiento 2 · Formular outcomes, protecciones y evidencia de revisión",
+        "Movimiento 3 · Integrar evidencia y abrir una puerta de decisión",
+        "Errores frecuentes",
+        "Consecuencias profesionales",
+        "Cierre del Bloque 1: un encuadre listo para ser refutado",
+        "Síntesis",
+        "Cinco píldoras para recordar",
+        "Glosario esencial",
+        "Preguntas de preparación",
+        "Referencias base"
+      ]
+    },
+    {
+      "check": "content_counts_close",
+      "status": "PASS",
+      "detail": {
+        "actual": {
+          "pills": 5,
+          "glossary": 8,
+          "questions": 6,
+          "references": 13
+        },
+        "expected": {
+          "pills": 5,
+          "glossary": 8,
+          "questions": 6,
+          "references": 13
+        }
+      }
+    },
+    {
+      "check": "all_13_references_are_anchored",
+      "status": "PASS",
+      "detail": {
+        "Dorst (2011)": true,
+        "Jackson (2001)": true,
+        "Schön y Rein (1994)": true,
+        "Toulmin (2003)": true,
+        "Pawson y Tilley (1997)": true,
+        "W. K. Kellogg Foundation (2004)": true,
+        "ISO/IEC/IEEE 29148:2018": true,
+        "World Economic Forum (2025)": true,
+        "NIST AI 600-1": true,
+        "Reglamento UE 2024/1689": true,
+        "DORA (2025)": true,
+        "SWEBOK V4": true,
+        "ISO/IEC/IEEE 15288:2023": true
+      }
+    },
+    {
+      "check": "pdf_is_distinct_finalized_artifact",
+      "status": "PASS",
+      "detail": {
+        "raw": "e4fd00ca3b2744b8803de4f37f2acc650de378ac9666322a323bfd6aada8a8b9",
+        "final": "53f251c2fbff6b6964d20e453a666c41dad0d7213caff31fe164d4cb751a1bcb"
+      }
+    },
+    {
+      "check": "pdf_has_31_a4_pages",
+      "status": "PASS",
+      "detail": {
+        "actual_pages": 31,
+        "sizes": [
+          {
+            "page": 1,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 2,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 3,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 4,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 5,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 6,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 7,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 8,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 9,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 10,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 11,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 12,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 13,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 14,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 15,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 16,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 17,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 18,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 19,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 20,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 21,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 22,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 23,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 24,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 25,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 26,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 27,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 28,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 29,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 30,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 31,
+            "width": 594.96,
+            "height": 841.92
+          }
+        ]
+      }
+    },
+    {
+      "check": "pdf_metadata_is_complete",
+      "status": "PASS",
+      "detail": {
+        "/Title": "N10 · Construir el problema: de síntomas a outcomes verificables",
+        "/Author": "Diego Carralbal",
+        "/Subject": "Metodología de Sistemas de Información · FCE · UBA"
+      }
+    },
+    {
+      "check": "contents_and_section_order_are_complete",
+      "status": "PASS",
+      "detail": {
+        "contents_positions": {
+          "Pregunta profesional": 170,
+          "El puente que resolvía el problema equivocado": 191,
+          "Hotel Horizonte: una decisión que parece estar tomada": 232,
+          "Tesis": 279,
+          "De N09 a N10: del recorrido vivido al encuadre provisional": 286,
+          "Movimiento 1 · Separar pedido, síntoma, mecanismo y problema": 336,
+          "Movimiento 2 · Formular outcomes, protecciones y evidencia de revisión": 387,
+          "Movimiento 3 · Integrar evidencia y abrir una puerta de decisión": 448,
+          "Errores frecuentes": 503,
+          "Consecuencias profesionales": 522,
+          "Cierre del Bloque 1: un encuadre listo para ser refutado": 550,
+          "Síntesis": 598,
+          "Cinco píldoras para recordar": 608,
+          "Glosario esencial": 635,
+          "Preguntas de preparación": 653
+        },
+        "pdf_headers": [
+          [
+            1,
+            4,
+            "PROBLEMA"
+          ],
+          [
+            2,
+            6,
+            "PROBLEMA"
+          ],
+          [
+            3,
+            8,
+            "PROBLEMA"
+          ],
+          [
+            4,
+            9,
+            "PROBLEMA"
+          ],
+          [
+            5,
+            10,
+            "DISTINCIONES"
+          ],
+          [
+            6,
+            11,
+            "DISTINCIONES"
+          ],
+          [
+            7,
+            16,
+            "DECISIONES"
+          ],
+          [
+            8,
+            21,
+            "PRUEBA"
+          ],
+          [
+            9,
+            26,
+            "TRANSFERENCIA"
+          ],
+          [
+            10,
+            26,
+            "TRANSFERENCIA"
+          ],
+          [
+            11,
+            27,
+            "TRANSFERENCIA"
+          ],
+          [
+            12,
+            27,
+            "PREPARACIÓN"
+          ],
+          [
+            13,
+            28,
+            "PREPARACIÓN"
+          ],
+          [
+            14,
+            28,
+            "PREPARACIÓN"
+          ],
+          [
+            15,
+            29,
+            "PREPARACIÓN"
+          ]
+        ]
+      }
+    },
+    {
+      "check": "contents_note_is_complete_and_extractable",
+      "status": "PASS",
+      "detail": {
+        "page": 2,
+        "expected_note": "Nota. SIN NUM. identifica los aparatos de orientación y referencia que no integran la secuencia argumental.",
+        "expected_section_11": "Cierre del Bloque 1: un encuadre listo para ser refutado",
+        "bottom_layout": {
+          "passed": true,
+          "note_font_size": 5.8,
+          "caption_font_size": 6.52,
+          "note_bbox": {
+            "x0": 41.082890319462834,
+            "x1": 235.0161992335204,
+            "top": 704.2620227993249,
+            "bottom": 716.851433780944
+          },
+          "caption_bbox": {
+            "x0": 318.0473886230249,
+            "x1": 453.81541991479105,
+            "top": 712.6326900624007,
+            "bottom": 727.307880922697
+          },
+          "overlap_width_pt": 0.0,
+          "overlap_height_pt": 4.219
+        }
+      }
+    },
+    {
+      "check": "route_is_exact_in_html_and_pdf",
+      "status": "PASS",
+      "detail": {
+        "html": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "TRANSFERENCIA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ],
+        "pdf": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "TRANSFERENCIA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ],
+        "expected": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "TRANSFERENCIA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ]
+      }
+    },
+    {
+      "check": "all_source_headings_keep_following_body_on_same_page",
+      "status": "PASS",
+      "detail": {
+        "passed": true,
+        "checked": 37,
+        "failed": []
+      }
+    },
+    {
+      "check": "ordinary_pages_are_at_least_55_percent_full",
+      "status": "PASS",
+      "detail": {
+        "ordinary_pages": {
+          "6": 0.977,
+          "7": 0.7167,
+          "8": 0.8098,
+          "9": 0.7273,
+          "10": 0.7367,
+          "11": 0.9276,
+          "12": 0.9076,
+          "13": 0.9678,
+          "14": 0.9441,
+          "15": 0.6564,
+          "16": 0.9322,
+          "17": 0.9751,
+          "18": 0.8875,
+          "19": 0.598,
+          "21": 0.6573,
+          "22": 0.9797,
+          "23": 0.9459,
+          "24": 0.9268,
+          "25": 0.7622,
+          "26": 0.9717,
+          "27": 0.9779,
+          "28": 0.6551,
+          "29": 0.615,
+          "30": 0.57
+        },
+        "minimum": 0.57,
+        "underfilled": {},
+        "exceptions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          20,
+          31
+        ]
+      }
+    },
+    {
+      "check": "page_4_is_intentional_dark_full_page_opening",
+      "status": "PASS",
+      "detail": {
+        "background": {
+          "passed": true,
+          "maximum_luminance": 0.2,
+          "full_page_rectangles": [
+            {
+              "gaps_pt": {
+                "left": 0.0,
+                "right": 0.0,
+                "top": 0.0,
+                "bottom": 0.0
+              },
+              "luminance": 0.098,
+              "color": [
+                0.098,
+                0.098,
+                0.098
+              ]
+            },
+            {
+              "gaps_pt": {
+                "left": 0.0,
+                "right": 0.0,
+                "top": 0.0,
+                "bottom": 0.0
+              },
+              "luminance": 0.098,
+              "color": [
+                0.098,
+                0.098,
+                0.098
+              ]
+            },
+            {
+              "gaps_pt": {
+                "left": 0.0,
+                "right": 0.0,
+                "top": 0.0,
+                "bottom": 0.135
+              },
+              "luminance": 0.9919,
+              "color": [
+                0.9922,
+                0.9922,
+                0.9882
+              ]
+            }
+          ]
+        },
+        "fill": {
+          "top": 489.73,
+          "bottom": 703.27,
+          "fill": 0.287
+        }
+      }
+    },
+    {
+      "check": "cover_reaches_all_edges_and_preserves_native_bw_tonal_range",
+      "status": "PASS",
+      "detail": {
+        "bleed": {
+          "passed": true,
+          "tolerance_pt": 1.0,
+          "gaps_pt": {
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0,
+            "bottom": 0.0
+          },
+          "bbox": {
+            "x0": 0.0,
+            "x1": 596.361,
+            "top": 0.0,
+            "bottom": 843.468
+          }
+        },
+        "tone_metrics": {
+          "channel_spread_p95": 6.0,
+          "luminance_p05": 14.86,
+          "luminance_p95": 237.42,
+          "luminance_stddev": 87.43
+        },
+        "n10_tone_thresholds_passed": true,
+        "cover_rule": "filter:none;object-position:center 48%",
+        "shade_rule": "background:linear-gradient(180deg,rgba(5,7,6,.08) 0,rgba(5,7,6,0) 29%,rgba(5,7,6,0) 62%,rgba(8,9,8,.55) 100%)"
+      }
+    },
+    {
+      "check": "cover_and_pause_alts_match_image_manifest",
+      "status": "PASS",
+      "detail": {
+        "manifest_cover": "Una profesional argentina observa desde el acceso peatonal de un puente cómo confluyen un colectivo, automóviles, ciclistas, peatones y una vía ferroviaria junto al río.",
+        "pdf_cover": [
+          "Una profesional argentina observa desde el acceso peatonal de un puente cómo confluyen un colectivo, automóviles, ciclistas, peatones y una vía ferroviaria junto al río."
+        ],
+        "manifest_pauses": [
+          "Un puente nuevo domina el paisaje mientras, debajo, personas esperan un colectivo y un ciclista atraviesa un cruce junto a las vías.",
+          "Una médica y una enfermera comparan dos fichas en blanco mientras observan el flujo de una sala de espera hospitalaria."
+        ],
+        "pdf_pauses": {
+          "5": [
+            "Un puente nuevo domina el paisaje mientras, debajo, personas esperan un colectivo y un ciclista atraviesa un cruce junto a las vías."
+          ],
+          "20": [
+            "Una médica y una enfermera comparan dos fichas en blanco mientras observan el flujo de una sala de espera hospitalaria."
+          ]
+        }
+      }
+    },
+    {
+      "check": "cover_eyebrow_is_two_accessible_text_runs",
+      "status": "PASS",
+      "detail": "METSILECTURA PREVIA\nEDICIÓN 2026\nN10\nFCE · UBA\nMETODOLOGÍA DE SISTEMAS DE INFORMACIÓN\nConstruir el problema: desíntomas a outcomesverificables\nN10\nUn problemaprofesional no es un\ndato descubierto ni unafrase que resume\nsíntomas.\n01\nDiego Carralbal, 2026  ·  linkedin.com/in/carralbal\n"
+    },
+    {
+      "check": "exactly_two_full_bleed_internal_pauses",
+      "status": "PASS",
+      "detail": {
+        "pages": [
+          5,
+          20
+        ],
+        "bleed": {
+          "5": {
+            "passed": true,
+            "tolerance_pt": 1.0,
+            "gaps_pt": {
+              "left": 0.0,
+              "right": 0.0,
+              "top": 0.0,
+              "bottom": 0.135
+            },
+            "bbox": {
+              "x0": 0.0,
+              "x1": 595.16,
+              "top": 0.0,
+              "bottom": 841.785
+            }
+          },
+          "20": {
+            "passed": true,
+            "tolerance_pt": 1.0,
+            "gaps_pt": {
+              "left": 0.0,
+              "right": 0.0,
+              "top": 0.001,
+              "bottom": 0.134
+            },
+            "bbox": {
+              "x0": 0.0,
+              "x1": 595.16,
+              "top": 0.001,
+              "bottom": 841.786
+            }
+          }
+        }
+      }
+    },
+    {
+      "check": "eight_imagegen_assets_are_hash_locked_unique_native_bw_and_tonally_open",
+      "status": "PASS",
+      "detail": {
+        "passed": true,
+        "assets": [
+          {
+            "file": "cover.png",
+            "size": [
+              1055,
+              1491
+            ],
+            "sha256": "347f75bc02c056dfed010f231564c53188c078ce9e032549ae57488c87385744",
+            "tone_metrics": {
+              "channel_spread_p95": 6.0,
+              "luminance_p05": 14.86,
+              "luminance_p95": 237.42,
+              "luminance_stddev": 87.43
+            }
+          },
+          {
+            "file": "editorial-01.png",
+            "size": [
+              1448,
+              1086
+            ],
+            "sha256": "c335e48041bbd9868dbbd1b99f6bbc1b5ed522543979bf1b4bbce3f3628fa8f2",
+            "tone_metrics": {
+              "channel_spread_p95": 1.0,
+              "luminance_p05": 14.72,
+              "luminance_p95": 241.28,
+              "luminance_stddev": 75.5
+            }
+          },
+          {
+            "file": "editorial-02.png",
+            "size": [
+              1448,
+              1086
+            ],
+            "sha256": "4177c9faaa2366687aad87647ba4221bf6324c22ff631c76551e339b36b0ae2c",
+            "tone_metrics": {
+              "channel_spread_p95": 1.0,
+              "luminance_p05": 13.93,
+              "luminance_p95": 206.0,
+              "luminance_stddev": 61.73
+            }
+          },
+          {
+            "file": "editorial-03.png",
+            "size": [
+              1448,
+              1086
+            ],
+            "sha256": "f77d87c89e8e97b82a844e3f23240f62da8f8c4bfddc3abb9748f9e56035d7ae",
+            "tone_metrics": {
+              "channel_spread_p95": 1.0,
+              "luminance_p05": 2.0,
+              "luminance_p95": 218.21,
+              "luminance_stddev": 65.77
+            }
+          },
+          {
+            "file": "editorial-04.png",
+            "size": [
+              1448,
+              1086
+            ],
+            "sha256": "9bc1decbcc2f81f4e5014b210c007f4278b42e794d1fe360d13238a05de4dae8",
+            "tone_metrics": {
+              "channel_spread_p95": 1.0,
+              "luminance_p05": 29.0,
+              "luminance_p95": 203.0,
+              "luminance_stddev": 52.68
+            }
+          },
+          {
+            "file": "editorial-05.png",
+            "size": [
+              1448,
+              1086
+            ],
+            "sha256": "fe8f1724642439fd60c3bd56856e494e38227fe153cd7d3a6074726b7bece40a",
+            "tone_metrics": {
+              "channel_spread_p95": 1.0,
+              "luminance_p05": 9.0,
+              "luminance_p95": 221.07,
+              "luminance_stddev": 68.16
+            }
+          },
+          {
+            "file": "pause-01.png",
+            "size": [
+              1055,
+              1491
+            ],
+            "sha256": "9d61e2ee6be7151d19a38ab2be53e14d2b9c8eca0c94eaf95bcd74dadf58191f",
+            "tone_metrics": {
+              "channel_spread_p95": 1.0,
+              "luminance_p05": 27.0,
+              "luminance_p95": 247.0,
+              "luminance_stddev": 83.13
+            }
+          },
+          {
+            "file": "pause-02.png",
+            "size": [
+              1055,
+              1491
+            ],
+            "sha256": "2d7ba8d1995ae49408ac7bd9d4d97fc8d4e305759ce906d6fa9d4dd635584e0f",
+            "tone_metrics": {
+              "channel_spread_p95": 2.0,
+              "luminance_p05": 47.72,
+              "luminance_p95": 238.07,
+              "luminance_stddev": 54.93
+            }
+          }
+        ],
+        "invalid": [],
+        "minimum_pairwise_dhash_distance": [
+          23,
+          "editorial-01.png",
+          "editorial-02.png"
+        ]
+      }
+    },
+    {
+      "check": "image_audit_prose_matches_eight_asset_series",
+      "status": "PASS",
+      "detail": {
+        "file": "assets/cover-image-audit.md"
+      }
+    },
+    {
+      "check": "portable_hash_locked_image_manifest_is_complete",
+      "status": "PASS",
+      "detail": {
+        "passed": true,
+        "entries": 22,
+        "invalid": [],
+        "nonportable_markers": []
+      }
+    },
+    {
+      "check": "contents_and_four_sections_use_five_unique_editorials_once",
+      "status": "PASS",
+      "detail": {
+        "contents_has_editorial_05": true,
+        "positions": {
+          "editorial-01.png": 23794,
+          "editorial-02.png": 16230,
+          "editorial-03.png": 57811,
+          "editorial-04.png": 76766,
+          "editorial-05.png": 3013
+        },
+        "section_positions": {
+          "1": 6154,
+          "2": 6993,
+          "3": 15124,
+          "4": 19752,
+          "5": 21603,
+          "6": 24092,
+          "7": 43848,
+          "8": 58428,
+          "9": 77024,
+          "10": 78967,
+          "11": 80086,
+          "12": 82246,
+          "13": 83688,
+          "14": 85086,
+          "15": 86477
+        }
+      }
+    },
+    {
+      "check": "contents_editorial_alt_matches_image_manifest_and_tagged_pdf",
+      "status": "PASS",
+      "detail": {
+        "manifest": "Manos de profesionales argentinos ordenan fichas en blanco junto a una maqueta de puente sobre una mesa clara antes de elegir una solución.",
+        "pdf": [
+          null,
+          "Manos de profesionales argentinos ordenan fichas en blanco junto a una maqueta de puente sobre una mesa clara antes de elegir una solución."
+        ]
+      }
+    },
+    {
+      "check": "hotel_horizonte_photo_caption_is_complete_and_extractable",
+      "status": "PASS",
+      "detail": {
+        "page": 8,
+        "expected": "El software puede funcionar y la promesa fallar: el objeto de análisis es el sistema sociotécnico que produce el servicio."
+      }
+    },
+    {
+      "check": "four_distinct_hotel_horizonte_voices_are_present",
+      "status": "PASS",
+      "detail": {
+        "names": [
+          "Elena Acosta",
+          "Lucía Ferreyra",
+          "Ricardo Sosa",
+          "Federico Müller"
+        ],
+        "images": [
+          "assets/hotel-elena.jpg",
+          "assets/hotel-lucia.jpg",
+          "assets/hotel-ricardo.jpg",
+          "assets/hotel-federico.jpg"
+        ],
+        "hashes": [
+          "cbdc3fbb0c472ffb71b9f308a4f8ca28f48328a9fccd8c1801e18b691e5cb68f",
+          "e0f1e862fe8b8117d269d46e8b5373b874baebf8ce125d7e2cb2d7114b424ed1",
+          "52a07a9be54c05d7152bb218d240fb3ef3ea9d1b6974f5aee085486d2ae389e3",
+          "354e828c3d8f790c20baff3ecc18f24d44dd7f619a6b1e3cb768a2c216cf9b63"
+        ]
+      }
+    },
+    {
+      "check": "six_unique_referents_have_approved_rights_and_provenance",
+      "status": "PASS",
+      "detail": {
+        "passed": true,
+        "actual": [
+          [
+            "Donald A. Schön",
+            "assets/referent-donald-schon.jpg"
+          ],
+          [
+            "Ray Pawson",
+            "assets/referent-ray-pawson.jpg"
+          ],
+          [
+            "Reva Schwartz",
+            "assets/referent-reva-schwartz.jpg"
+          ],
+          [
+            "Elham Tabassi",
+            "assets/referent-elham-tabassi.jpg"
+          ],
+          [
+            "Kamie Roberts",
+            "assets/referent-kamie-roberts.jpg"
+          ],
+          [
+            "Martin Stanley",
+            "assets/referent-martin-stanley.jpg"
+          ]
+        ],
+        "rights_status": "approved",
+        "invalid": []
+      }
+    },
+    {
+      "check": "reference_grade_infographic_is_exact_once_anchored_and_font_clean",
+      "status": "PASS",
+      "detail": {
+        "sha256": "8eae98d3624777f9b0d631852fb75584504ccf22fd550c1ef41a995f75f1c707",
+        "groups": 3,
+        "nodes": 14,
+        "edges": 16,
+        "minimum_font_px": 14.0,
+        "forbidden_fonts": []
+      }
+    },
+    {
+      "check": "references_are_image_free_two_column_penultimate_page",
+      "status": "PASS",
+      "detail": {
+        "page": 30,
+        "images": 0,
+        "layout": {
+          "passed": true,
+          "left": [
+            {
+              "token": "Dorst",
+              "x0": 80.15,
+              "top": 134.59
+            },
+            {
+              "token": "Jackson",
+              "x0": 80.15,
+              "top": 180.79
+            },
+            {
+              "token": "Schön",
+              "x0": 80.15,
+              "top": 239.22
+            },
+            {
+              "token": "Toulmin",
+              "x0": 80.15,
+              "top": 286.1
+            },
+            {
+              "token": "Pawson",
+              "x0": 80.15,
+              "top": 320.07
+            },
+            {
+              "token": "Kellogg",
+              "x0": 102.87,
+              "top": 366.95
+            },
+            {
+              "token": "ISO/IEC/IEEE",
+              "x0": 80.15,
+              "top": 425.38
+            }
+          ],
+          "right": [
+            {
+              "token": "World",
+              "x0": 315.11,
+              "top": 134.59
+            },
+            {
+              "token": "Autio",
+              "x0": 315.11,
+              "top": 205.25
+            },
+            {
+              "token": "Unión",
+              "x0": 315.11,
+              "top": 263.68
+            },
+            {
+              "token": "DORA",
+              "x0": 315.11,
+              "top": 309.88
+            },
+            {
+              "token": "IEEE",
+              "x0": 315.11,
+              "top": 356.76
+            },
+            {
+              "token": "ISO/IEC/IEEE",
+              "x0": 315.11,
+              "top": 415.19
+            }
+          ]
+        },
+        "order_positions": [
+          42,
+          147,
+          295,
+          386,
+          444,
+          545,
+          662,
+          883,
+          1044,
+          1179,
+          1277,
+          1355,
+          1496
+        ]
+      }
+    },
+    {
+      "check": "eight_exact_urls_are_printed_and_annotated_on_references_page",
+      "status": "PASS",
+      "detail": {
+        "source": [
+          "https://doi.org/10.1016/j.destud.2011.07.006",
+          "https://doi.org/10.6028/NIST.AI.600-1",
+          "https://dora.dev/research/2025/dora-report/",
+          "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+          "https://www.computer.org/education/bodies-of-knowledge/software-engineering/v4",
+          "https://www.iso.org/standard/72089.html",
+          "https://www.iso.org/standard/81702.html",
+          "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+        ],
+        "annotations": [
+          "https://doi.org/10.1016/j.destud.2011.07.006",
+          "https://doi.org/10.6028/NIST.AI.600-1",
+          "https://dora.dev/research/2025/dora-report/",
+          "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+          "https://www.computer.org/education/bodies-of-knowledge/software-engineering/v4",
+          "https://www.iso.org/standard/72089.html",
+          "https://www.iso.org/standard/81702.html",
+          "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+        ],
+        "pages": {
+          "30": [
+            "https://doi.org/10.1016/j.destud.2011.07.006",
+            "https://doi.org/10.6028/NIST.AI.600-1",
+            "https://dora.dev/research/2025/dora-report/",
+            "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+            "https://www.computer.org/education/bodies-of-knowledge/software-engineering/v4",
+            "https://www.iso.org/standard/72089.html",
+            "https://www.iso.org/standard/81702.html",
+            "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+          ]
+        }
+      }
+    },
+    {
+      "check": "rendered_typography_has_no_arial_helvetica_or_times",
+      "status": "PASS",
+      "detail": {
+        "fonts": [
+          "AAAAAA+Avenir-Book-0",
+          "AAAAAA+Didot",
+          "ABAAAA+Didot",
+          "ACAAAA+Avenir-Heavy",
+          "BAAAAA+Avenir-Book",
+          "BBAAAA+Avenir-Heavy",
+          "BCAAAA+Baskerville-SemiBold",
+          "CAAAAA+Avenir-Book",
+          "CBAAAA+Baskerville",
+          "CCAAAA+Baskerville",
+          "DAAAAA+Didot",
+          "DBAAAA+Baskerville-Italic",
+          "DCAAAA+Avenir-Book",
+          "EAAAAA+Avenir-Heavy",
+          "EBAAAA+Avenir-Book",
+          "ECAAAA+Avenir-Heavy",
+          "FAAAAA+Didot",
+          "FBAAAA+Didot",
+          "FCAAAA+Avenir-Medium",
+          "GAAAAA+Didot",
+          "GBAAAA+Baskerville",
+          "GCAAAA+Avenir-Book",
+          "HAAAAA+Baskerville",
+          "HBAAAA+Avenir-Book",
+          "HCAAAA+Avenir-BookOblique",
+          "IAAAAA+Baskerville-Bold",
+          "IBAAAA+Didot",
+          "JAAAAA+Avenir-Heavy",
+          "JBAAAA+Baskerville",
+          "KAAAAA+Avenir-Book",
+          "KBAAAA+Didot",
+          "LAAAAA+Avenir-Book",
+          "LBAAAA+Baskerville-SemiBold",
+          "MAAAAA+Avenir-Book",
+          "MBAAAA+Didot",
+          "NAAAAA+Avenir-Heavy",
+          "NBAAAA+Avenir-Heavy",
+          "OAAAAA+Avenir-Book",
+          "OBAAAA+Avenir-Heavy",
+          "PAAAAA+Didot-Bold",
+          "PBAAAA+Avenir-Heavy",
+          "QAAAAA+Avenir-Heavy",
+          "QBAAAA+Avenir-Book",
+          "RAAAAA+Avenir-Heavy",
+          "RBAAAA+Avenir-Heavy",
+          "SAAAAA+Baskerville-Italic",
+          "SBAAAA+Avenir-Heavy",
+          "TAAAAA+Avenir-Book",
+          "TBAAAA+Avenir-Book",
+          "UAAAAA+Didot-Italic",
+          "UBAAAA+Avenir-Heavy",
+          "VAAAAA+Avenir-Heavy",
+          "VBAAAA+Avenir-Book",
+          "WAAAAA+Avenir-Medium",
+          "WBAAAA+Avenir-Heavy",
+          "XAAAAA+Avenir-Heavy",
+          "XBAAAA+Avenir-Book",
+          "YAAAAA+Avenir-Heavy",
+          "YBAAAA+Avenir-Heavy",
+          "ZAAAAA+Didot",
+          "ZBAAAA+Didot"
+        ],
+        "qa_forbidden": []
+      }
+    },
+    {
+      "check": "pdf_is_tagged_es_ar_with_semantic_image_alts",
+      "status": "PASS",
+      "detail": {
+        "lang": "es-AR",
+        "marked": true,
+        "figures": [
+          {
+            "page": 1,
+            "alt": "Una profesional argentina observa desde el acceso peatonal de un puente cómo confluyen un colectivo, automóviles, ciclistas, peatones y una vía ferroviaria junto al río."
+          },
+          {
+            "page": 2,
+            "alt": null
+          },
+          {
+            "page": 2,
+            "alt": "Manos de profesionales argentinos ordenan fichas en blanco junto a una maqueta de puente sobre una mesa clara antes de elegir una solución."
+          },
+          {
+            "page": 5,
+            "alt": "Un puente nuevo domina el paisaje mientras, debajo, personas esperan un colectivo y un ciclista atraviesa un cruce junto a las vías."
+          },
+          {
+            "page": 8,
+            "alt": "Caso de aplicación Hotel Horizonte"
+          },
+          {
+            "page": 20,
+            "alt": "Una médica y una enfermera comparan dos fichas en blanco mientras observan el flujo de una sala de espera hospitalaria."
+          },
+          {
+            "page": 21,
+            "alt": "Instrumento de encuadre en tres bandas que conecta nueve campos de análisis con una puerta final de cuatro salidas La situación, los afectados, el outcome, los mecanismos rivales, la evidencia, la frontera, las restricciones, la protección y la reparación se revisan antes de aprobar, devolver, dividir o reformular."
+          },
+          {
+            "page": 28,
+            "alt": "Cinco ideas para recordar"
+          },
+          {
+            "page": 31,
+            "alt": "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza."
+          }
+        ]
+      }
+    },
+    {
+      "check": "all_pages_have_folio_and_linkedin_footer",
+      "status": "PASS",
+      "detail": {
+        "linkedin_annotations_per_page": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "check": "last_page_is_full_bleed_structured_matches_closing",
+      "status": "PASS",
+      "detail": {
+        "bleed": {
+          "passed": true,
+          "tolerance_pt": 1.0,
+          "gaps_pt": {
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0,
+            "bottom": 0.135
+          },
+          "bbox": {
+            "x0": 0.0,
+            "x1": 595.161,
+            "top": 0.0,
+            "bottom": 841.785
+          }
+        },
+        "text": "La secuencia vuelve visible que toda intervención consume recursos, deja huellas y necesita un criterio de cierre.\n31\nDiego Carralbal, 2026  ·  linkedin.com/in/carralbal\n",
+        "xobject_alts": [
+          "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza."
+        ]
+      }
+    }
+  ]
+}
