@@ -2,16 +2,16 @@
 
 ## Estado
 
-N07 queda compuesto, exportado y auditado como PDF final candidato desde su contenido canónico aprobado. El contenido, los enlaces, la estructura, la accesibilidad y la compaginación quedan cerrados técnicamente. La comparación autoral de las tapas N00 a N10 permanece como una revisión visual conjunta posterior y no habilita cambios en el cuerpo.
+N07 queda compuesto, exportado y auditado como PDF final desde su contenido canónico aprobado. El contenido, los enlaces, la estructura, la accesibilidad y la compaginación quedan cerrados técnicamente. La auditoría técnica consolidada de las tapas N00 a N10 cerró con resultado `PASS` para los once documentos, 328 páginas interiores y once conjuntos de URL.
 
 ## Entregable principal
 
 `output/N07-METSI-lectura-previa-v9-final.pdf`
 
 - 31 páginas A4.
-- 20.824.933 bytes.
-- Fecha de modificación: 3 de septiembre de 2026, 22:51:33, hora de Buenos Aires.
-- SHA-256: `6c27e0921b927f1954c9f40f520420bdb02d8ed60bcdfd39045b59d776791f9b`.
+- 20.825.394 bytes.
+- Fecha de modificación: 4 de septiembre de 2026, 07:57:56, hora de Buenos Aires.
+- SHA-256: `c7b36bffcd3da4d1955f3563f7836dc9fad28d5cb0fa5ed7129bba1f2b075bd9`.
 
 ## Fuente autoritativa
 
@@ -66,4 +66,4 @@ El último comando debe terminar con código cero, `status: PASS` y 40 controles
 
 ## Incertidumbre residual
 
-No queda una incertidumbre de contenido, estructura, enlaces, accesibilidad o compaginación. Sólo queda abierta la decisión autoral comparada sobre el tono y la continuidad de las tapas N00 a N10. Hasta esa revisión, esta tapa se conserva como candidato funcional y no se modifica por separado.
+No queda incertidumbre técnica de contenido, estructura, enlaces, accesibilidad, compaginación ni pertenencia de la tapa a la familia N00 a N10. La publicación remota de N07 requiere autorización expresa.

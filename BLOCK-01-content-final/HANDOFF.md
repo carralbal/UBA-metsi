@@ -42,10 +42,10 @@ El resultado esperado es `overall: pass`. El script verifica los informes indivi
 
 Cada documento conserva además su propio `HANDOFF.md`, `CONTENT-AUDIT.md`, `source-manifest.json` e informe de integridad.
 
-## Regla para las próximas etapas
+## Relación con la composición final
 
 Toda composición debe tomar texto sólo de estas fuentes y registrar cualquier cambio textual como una nueva ronda de contenido. No corregir texto incidentalmente durante la maqueta.
 
-N01 y N02 requieren una futura recompaginación porque sus PDF aprobados anteceden a este cierre de continuidad. N03 a N10 todavía no tienen un PDF final autorizado y pueden entrar en composición usando directamente estas fuentes.
+N01 a N10 ya cuentan con PDF final auditable construido desde estas fuentes. La auditoría transversal de tapas y preservación de interiores se encuentra en `BLOCK-01-cover-final/`. Cualquier ronda visual futura debe limitarse a la página 1 y volver a demostrar igualdad píxel a píxel de todas las páginas interiores.
 
-La etapa siguiente de contenido comienza en N11, fuera del alcance de este cierre. La etapa siguiente de producción visual puede comenzar por actualizar N01 y N02 o por componer N03, pero no debe mezclar ambas tareas en una misma pasada.
+N11 queda expresamente fuera de este cierre. No debe inferirse, regenerarse ni incorporarse a partir de los materiales de N00 a N10.

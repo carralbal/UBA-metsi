@@ -1,8 +1,8 @@
 {
   "document": "N01",
-  "edition": "v8-final-candidate",
+  "edition": "v18-final-cover-audit",
   "visual_direction": "Editorial METSI minimalista y conceptual. Paisajes, infraestructura latinoamericana, arquitectura, luz y tramas materiales permiten hablar de orientación, frontera, relación, recorrido y decisión sin recurrir a escenas académicas o laborales culturalmente ambiguas.",
-  "license_policy": "Todos los activos de este manifiesto proceden de Unsplash y fueron verificados como gratuitos bajo la licencia de Unsplash el 31 de agosto de 2026. Se conservan la página fuente, la autoría, el identificador, el hash y la intención editorial.",
+  "license_policy": "La tapa es un activo original generado para METSI. Los demás activos proceden de Unsplash y fueron verificados como gratuitos bajo la licencia de Unsplash el 31 de agosto de 2026. Se conservan la procedencia, la autoría, el identificador, el hash y la intención editorial.",
   "license_page": "https://unsplash.com/license",
   "uniqueness_check": {
     "scope": "N00 a N10, excluidos los ocho candidatos de N01 v8",
@@ -12,19 +12,21 @@
   },
   "assets": [
     {
-      "file": "selected/cover.jpg",
-      "source": "https://unsplash.com/photos/z8MoZE_x9CI/download?force=true&w=2600",
-      "source_page": "https://unsplash.com/photos/misty-mountain-road-winds-through-the-landscape-z8MoZE_x9CI",
-      "source_id": "z8MoZE_x9CI",
-      "bank": "Unsplash",
-      "author": "Karwin Luo",
+      "file": "assets/cover-source-premium-bw-v1.png",
+      "source": "OpenAI image generation",
+      "source_page": null,
+      "source_id": "N01-cover-premium-bw-v1",
+      "bank": "Generated editorial asset",
+      "author": "OpenAI, bajo dirección editorial METSI",
       "role": "cover",
       "concept": "Un recorrido visible entra en la niebla: una metodología orienta sin convertir la situación en una ruta ya resuelta.",
-      "crop": "A4 vertical desde original horizontal; preservar la curva y el ingreso del camino en la niebla.",
-      "alt": "Camino de montaña sinuoso que avanza entre roca y niebla.",
-      "treatment": "grayscale(1) saturate(0) contrast(1.10) brightness(.81)",
-      "dimensions": "2600x1463",
-      "sha256": "d82e3285bef39e56e1ca225ef788423482bc2713a7c245168025c2d35d175446"
+      "crop": "A4 vertical; preservar la curva, las sierras y el ingreso del camino en la niebla.",
+      "alt": "Ruta sinuosa entre sierras argentinas y niebla, fotografiada en blanco y negro.",
+      "photographic_origin": "native_black_and_white",
+      "treatment": "Sin conversión cromática; gradiente localizado para la lectura del título.",
+      "dimensions": "1024x1536",
+      "sha256": "12a34ac7c675693add178d00f248eab710ea6154fa8ee5e4547f6e0ee6503679",
+      "rights_status": "original_course_asset"
     },
     {
       "file": "selected/contents.jpg",

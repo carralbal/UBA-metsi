@@ -2,7 +2,7 @@
 
 ## Estado
 
-N09 queda compuesto, exportado y auditado como candidato final desde la fuente canónica aprobada. El contenido, la estructura, la accesibilidad, la procedencia de imágenes, los enlaces y la compaginación quedan cerrados técnicamente. La futura revisión comparada de las tapas N00 a N10 no habilita cambios en el cuerpo.
+N09 queda compuesto, exportado y auditado como PDF final desde la fuente canónica aprobada. El contenido, la estructura, la accesibilidad, la procedencia de imágenes, los enlaces y la compaginación quedan cerrados técnicamente. La auditoría técnica consolidada de las tapas N00 a N10 cerró con resultado `PASS` para los once documentos, 328 páginas interiores y once conjuntos de URL.
 
 ## Entregable principal
 
@@ -10,8 +10,8 @@ N09 queda compuesto, exportado y auditado como candidato final desde la fuente c
 
 - 28 páginas A4.
 - 20.792.745 bytes.
-- Fecha de modificación: 4 de septiembre de 2026, 01:40:26, hora de Buenos Aires.
-- SHA-256: `f8c092baf23d2dba6d62f594f5da29a83e00fc69f1761a6d6e54ab7aebb246f1`.
+- Fecha de modificación: 4 de septiembre de 2026, 07:58:03, hora de Buenos Aires.
+- SHA-256: `3cf21741a5b0ca81f924562171e38f45377acc1e4629e069719f8126879167aa`.
 
 ## Fuente autoritativa
 
@@ -38,7 +38,7 @@ Es byte a byte idéntica a `N09-content-final`, con SHA-256 `8e81a6462d515a955a1
 - Referencias base en dos columnas minimalistas, sin fotografía ni barra ornamental;
 - cierre canónico con fósforos, folio, línea de pie, epígrafe y texto alternativo, sin frase grande;
 - PDF etiquetado y marcado en `es-AR`, con folio y pie enlazado en sus 28 páginas;
-- N08 preservado byte a byte.
+- N08 preservado con SHA-256 `8513d10b826cf9f69d9f8948a941a9013c1c57968bc9a08bfdc9686e8c788f36`.
 
 ## Archivos de control
 
@@ -68,8 +68,8 @@ python3 validate_n09_v9.py --expected-pages 28
 
 El último comando debe terminar con código cero y `status: PASS`. El validador es de sólo lectura y no fija el SHA del PDF como condición previa: comprueba las propiedades del artefacto resultante y reporta su huella.
 
-El validador tiene SHA-256 `d8dc38d9a56bcd3b6dbd5da61664054cefb3fb1b180e0b92ad5f3d253623abc3`. Su informe portable tiene SHA-256 `90d457faa1bf78f532d0ecaf334f1518324e1cab0a93bb642b3ad5519a62dd55` y no contiene rutas absolutas del entorno de construcción.
+El validador tiene SHA-256 `e1a81a4362834b5d66f64e02cfaafc3159572871dde2f36c81741c316b1e9e56`. Su informe portable tiene SHA-256 `73961ea90ee0357e773047d3ec63d9f44497b1bdef1fcaf734f2aacca5cdb8c8` y no contiene rutas absolutas del entorno de construcción.
 
 ## Incertidumbre residual
 
-No queda incertidumbre de contenido, estructura, imágenes, enlaces, accesibilidad o compaginación. La única decisión todavía abierta es la comparación autoral conjunta del tono de las tapas N00 a N10. La publicación remota de N09 requiere autorización expresa.
+No queda incertidumbre técnica de contenido, estructura, imágenes, enlaces, accesibilidad, compaginación ni pertenencia de la tapa a la familia N00 a N10. La publicación remota de N09 requiere autorización expresa.

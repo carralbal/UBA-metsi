@@ -22,4 +22,4 @@
 
 El paquete completo debe conservar `image-rights-manifest.json`, `image-manifest.json` y la carpeta `provenance/`. Allí se documentan las atribuciones y condiciones de reutilización de los retratos externos. La visibilidad pública no concede una licencia general sobre el contenido de curso.
 
-La comparación conjunta de las tapas N00 a N10 es una revisión autoral posterior e independiente. No reabre el contenido ni la compaginación interior de N10.
+La auditoría técnica consolidada de las tapas N00 a N10 cerró con resultado `PASS`. No reabre el contenido ni la compaginación interior de N10.

@@ -26,3 +26,7 @@ Texto alternativo estructural en el PDF: “Persona argentina con bastón atravi
 ## Evidencia complementaria
 
 El prompt, las métricas tonales y la auditoría de composición se conservan en `assets/image-manifest.json` y `assets/cover-image-audit.md`.
+
+## Revisión de familia
+
+La auditoría técnica consolidada de tono, encuadre y continuidad entre las tapas N00 a N10 cerró con resultado `PASS`.

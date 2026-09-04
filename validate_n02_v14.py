@@ -5,11 +5,13 @@ import hashlib
 import html as html_lib
 import json
 import re
+import statistics
 import sys
 from collections import Counter
 from pathlib import Path
 
 import pdfplumber
+from PIL import Image
 from pypdf import PdfReader
 
 
@@ -20,6 +22,8 @@ SOURCE = ROOT / "source" / "N02_el_sistema_no_cabe_en_una_aplicacion-content-fin
 PDF = ROOT / "output" / "N02-METSI-lectura-previa-v14-final.pdf"
 HTML = ROOT / "index.html"
 CSS = ROOT / "magazine.css"
+MANIFEST = ROOT / "manifest.json"
+IMAGE_MANIFEST = ROOT / "provenance" / "image-manifest.json"
 QA = ROOT / "qa-report.json"
 INTEGRITY = ROOT / "integrity-report.json"
 REPORT = ROOT / "validation-v14.json"
@@ -68,6 +72,80 @@ def strip_markup(value: str) -> str:
 
 def result(name: str, passed: bool, detail: object) -> dict[str, object]:
     return {"check": name, "status": "PASS" if passed else "FAIL", "detail": detail}
+
+
+def percentile(values: list[float], fraction: float) -> float:
+    ordered = sorted(values)
+    if not ordered:
+        return 0.0
+    position = (len(ordered) - 1) * fraction
+    lower = int(position)
+    upper = min(lower + 1, len(ordered) - 1)
+    return ordered[lower] + (ordered[upper] - ordered[lower]) * (position - lower)
+
+
+def cover_tonal_audit(path: Path) -> dict[str, object]:
+    with Image.open(path) as source:
+        image = source.convert("RGB")
+        image.thumbnail((512, 512), Image.Resampling.LANCZOS)
+        pixels = list(image.getdata())
+    luminance = [.2126 * red + .7152 * green + .0722 * blue for red, green, blue in pixels]
+    spreads = [float(max(pixel) - min(pixel)) for pixel in pixels]
+    p05 = percentile(luminance, .05)
+    p95 = percentile(luminance, .95)
+    spread_p95 = percentile(spreads, .95)
+    tonal_stddev = statistics.pstdev(luminance)
+    dark_fraction = sum(value < 32 for value in luminance) / len(luminance)
+    passed = (
+        spread_p95 <= 6.0
+        and p05 <= 70.0
+        and p95 >= 170.0
+        and p95 - p05 >= 150.0
+        and tonal_stddev >= 45.0
+        and dark_fraction <= .35
+    )
+    return {
+        "passed": passed,
+        "channel_spread_p95": round(spread_p95, 2),
+        "luminance_p05": round(p05, 2),
+        "luminance_p95": round(p95, 2),
+        "tonal_span": round(p95 - p05, 2),
+        "luminance_stddev": round(tonal_stddev, 2),
+        "fraction_below_32": round(dark_fraction, 4),
+    }
+
+
+def effective_css_rule(css: str, selector: str) -> str:
+    matches = re.findall(re.escape(selector) + r"\{([^}]*)\}", css)
+    return re.sub(r"\s+", "", matches[-1]) if matches else ""
+
+
+def rgba_alphas(rule: str) -> list[float]:
+    return [float(value) for value in re.findall(r"rgba\([^)]*,([0-9]*\.?[0-9]+)\)", rule)]
+
+
+def packaged_asset_audit(records: list[dict[str, object]], html: str, cover_source: str) -> dict[str, object]:
+    failures: list[dict[str, object]] = []
+    record_files = {str(record.get("file", "")) for record in records}
+    referenced = set(re.findall(r'<img[^>]+src="(assets/[^"]+)"', html))
+    referenced.discard("assets/cover.png")
+    referenced.add(cover_source)
+    for record in records:
+        relative = str(record.get("file", ""))
+        path = ROOT / relative
+        expected = str(record.get("sha256", ""))
+        actual = sha256(path) if path.is_file() else None
+        if actual != expected:
+            failures.append({"file": relative, "expected": expected, "actual": actual})
+    missing_records = sorted(referenced - record_files)
+    unreferenced_records = sorted(record_files - referenced)
+    return {
+        "passed": not failures and not missing_records and not unreferenced_records,
+        "records": len(records),
+        "failures": failures,
+        "missing_records": missing_records,
+        "unreferenced_records": unreferenced_records,
+    }
 
 
 def links_by_page(reader: PdfReader) -> list[list[str]]:
@@ -161,6 +239,8 @@ def main() -> int:
     canonical = CANONICAL.read_text(encoding="utf-8")
     html = HTML.read_text(encoding="utf-8")
     css = CSS.read_text(encoding="utf-8")
+    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    image_manifest = json.loads(IMAGE_MANIFEST.read_text(encoding="utf-8"))
     qa = json.loads(QA.read_text(encoding="utf-8"))
     integrity = json.loads(INTEGRITY.read_text(encoding="utf-8"))
     source_manifest = json.loads((ROOT / "source-manifest.json").read_text(encoding="utf-8"))
@@ -224,6 +304,36 @@ def main() -> int:
         "questions": len(re.findall(r"^\d+\. ", questions_block, re.M)),
         "references": len(re.findall(r"^- ", references, re.M)),
     }
+    cover_contract = manifest.get("cover", {})
+    cover_source_relative = str(cover_contract.get("source", ""))
+    cover_source = ROOT / cover_source_relative
+    cover_alias = ROOT / "assets" / str(cover_contract.get("file", ""))
+    cover_tone = cover_tonal_audit(cover_source) if cover_source.is_file() else {"passed": False, "reason": "missing cover source"}
+    cover_rule = effective_css_rule(css, ".cover-n02>img")
+    shade_rule = effective_css_rule(css, ".cover-n02 .cover-shade")
+    shade_alphas = rgba_alphas(shade_rule)
+    cover_audit = {
+        "passed": (
+            cover_source.is_file()
+            and cover_alias.is_file()
+            and sha256(cover_source) == sha256(cover_alias) == cover_contract.get("sha256")
+            and cover_contract.get("photographic_origin") == "native_black_and_white"
+            and cover_contract.get("render_treatment") == "no_grayscale_conversion"
+            and str(cover_contract.get("alt", "")) in html
+            and cover_tone.get("passed") is True
+            and "filter:none" in cover_rule
+            and bool(shade_alphas)
+            and max(shade_alphas) <= .60
+            and ".collection-cover.cover-shade{position:absolute;inset:0" in re.sub(r"\s+", "", css)
+        ),
+        "source": cover_source_relative,
+        "sha256": sha256(cover_source) if cover_source.is_file() else None,
+        "tone": cover_tone,
+        "contract": cover_contract,
+        "cover_rule": cover_rule,
+        "shade_rule": shade_rule,
+    }
+    asset_audit = packaged_asset_audit(image_manifest.get("used_assets", []), html, cover_source_relative)
     checks = [
         result("canonical_source_is_byte_identical", SOURCE.read_bytes() == CANONICAL.read_bytes() and sha256(SOURCE) == EXPECTED_SOURCE_SHA, {"sha256": sha256(SOURCE), "expected": EXPECTED_SOURCE_SHA}),
         result("canonical_structure", len(section_headings) == 24 and len(headings) == 25 and headings[-1] == "Referencias base", headings),
@@ -242,6 +352,7 @@ def main() -> int:
         result("no_automatic_sparse_fills", qa.get("sparse_visual_fill_source_pages") == [] and qa.get("removed_blank_source_pages") == [], {"sparse": qa.get("sparse_visual_fill_source_pages"), "removed": qa.get("removed_blank_source_pages")}),
         result("two_internal_full_bleed_pauses", html.count('class="full-bleed full-bleed-quote"') == 2 and "Pregunta profesional" in page_texts[3] and "Una pantalla puede decir" in page_texts[4] and "Cómo emerge un resultado" in page_texts[15] and "Decir que una propiedad" in page_texts[16], "two pauses, first immediately after page 4, second after emergence"),
         result("cover_accessible_and_complete", all(token in page_texts[0] for token in ("LECTURA PREVIA", "EDICIÓN 2026", "N02", "FCE · UBA", "El sistema deinformación")) and "L E C T U R A" not in page_texts[0], page_texts[0][:250]),
+        result("cover_is_native_bw_tonally_open_hash_locked_and_locally_shaded", cover_audit["passed"], cover_audit),
         result("cover_and_pauses_are_full_bleed", all(extents[page]["fill"] >= 1.0 for page in (1, 5, 17, 29)), {page: extents[page]["fill"] for page in (1, 5, 17, 29)}),
         result("referents_and_hotel_voices", html.count('class="contributor"') == 6 and html.count("hotel-voice hotel-voice-") == 4 and len(re.findall(r'hotel-(?:elena|lucia|ricardo|federico)\.jpg', html)) == 4, "six referents and four distinct Hotel Horizonte voices"),
         result("counts_close", counts == {"pills": 5, "glossary": 19, "questions": 6, "references": 17}, counts),
@@ -250,7 +361,7 @@ def main() -> int:
         result("no_placeholders_or_isolated_initials", not re.search(r"\b(?:TBD|lorem|XXX)\b|\[[^\]]+\]", source, re.I) and not isolated_initials, {"isolated_initials": isolated_initials}),
         result("tagging_language_and_alt", bool(reader.trailer["/Root"].get("/StructTreeRoot")) and reader.trailer["/Root"].get("/Lang") == "es-AR" and qa.get("marked_pdf") and len(structure_alts(reader)) >= 1, {"language": reader.trailer["/Root"].get("/Lang"), "alts": structure_alts(reader)}),
         result("footer_and_closing", qa.get("linkedin_pages") == 29 and qa.get("closing_folio_present") and qa.get("closing_caption_present") and qa.get("closing_quote_absent") and qa.get("closing_alt_present"), {key: qa.get(key) for key in ("linkedin_pages", "closing_folio_present", "closing_caption_present", "closing_quote_absent", "closing_alt_present")}),
-        result("approved_assets_preserved", all(sha256(path) == sha256(HERE / "N02-v13-final" / "assets" / path.name) for path in (ROOT / "assets").iterdir() if (HERE / "N02-v13-final" / "assets" / path.name).exists()), "all inherited N02 v13 assets are byte-identical"),
+        result("rendered_assets_match_the_packaged_provenance", asset_audit["passed"], asset_audit),
         result("qa_pipeline_passed", qa.get("status") == "PASS" and not qa.get("missing_headings") and not qa.get("forbidden_fonts"), {"status": qa.get("status"), "missing_headings": qa.get("missing_headings"), "forbidden_fonts": qa.get("forbidden_fonts")}),
         result("css_preserves_body_scale", "font-size:10.4pt;line-height:1.36" in css and ".document-n02 section[data-section=\"11\"] .photo-band img{height:34mm}" in css, "canonical typography retained; only image height and column composition were adjusted"),
     ]

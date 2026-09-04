@@ -13,3 +13,4 @@
 - Se preservó el cierre canónico con fósforos, folio, línea de pie, epígrafe y texto alternativo.
 - La auditoría determinista final se ejecuta contra 28 páginas A4 y un umbral ordinario mínimo de 55 %.
 - El informe de validación quedó portable: todas las rutas internas se expresan respecto de la raíz del paquete.
+- La auditoría técnica consolidada de la familia de tapas N00 a N10 cerró con resultado `PASS`.

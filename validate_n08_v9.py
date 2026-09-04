@@ -39,6 +39,7 @@ from validate_n07_v9 import (
     local_reference_issues,
     page_extents,
     page_image_alts,
+    package_relative_report_paths,
     percentile,
     result,
     sha256,
@@ -49,7 +50,7 @@ from validate_n07_v9 import (
 HERE = Path(__file__).resolve().parent
 DEFAULT_ROOT = HERE / "N08-v9-final"
 EXPECTED_SOURCE_SHA = "328d2858fbe170bee35f17ada425fdb78b0e34a395bc4992ed33fb5b2910b8b9"
-EXPECTED_N07_PDF_SHA = "6c27e0921b927f1954c9f40f520420bdb02d8ed60bcdfd39045b59d776791f9b"
+EXPECTED_N07_PDF_SHA = "c7b36bffcd3da4d1955f3563f7836dc9fad28d5cb0fa5ed7129bba1f2b075bd9"
 EXPECTED_DIAGRAM_SHA = "ec883deab6147e6f1fa85048e631be14650799177c008f71f9e030cabd4029e6"
 EXPECTED_BLOCKS = 256
 EXPECTED_A4 = (594.96, 841.92)
@@ -453,7 +454,8 @@ def main() -> int:
     ]
     missing = [str(path) for path in essential if not path.is_file()]
     if missing:
-        print(json.dumps({"document": "N08", "version": "v9-final", "status": "ERROR", "missing": missing}, ensure_ascii=False, indent=2))
+        error_report = {"document": "N08", "version": "v9-final", "status": "ERROR", "missing": missing}
+        print(json.dumps(package_relative_report_paths(error_report, root), ensure_ascii=False, indent=2))
         return 2
 
     source_text = source.read_text(encoding="utf-8")
@@ -816,7 +818,7 @@ def main() -> int:
         "minimum_ordinary_page_fill": min(ordinary_fill.values()) if ordinary_fill else None,
         "checks": checks,
     }
-    print(json.dumps(report, ensure_ascii=False, indent=2, default=str))
+    print(json.dumps(package_relative_report_paths(report, root), ensure_ascii=False, indent=2, default=str))
     return 0 if passed else 1
 
 

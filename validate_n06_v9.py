@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Deterministic, read-only release validator for METSI N06 v9.
+"""Deterministic release validator for METSI N06 v9.
 
-The validator is intentionally self-contained.  It reads the N06 package and
-prints one JSON report to stdout; it never rewrites the PDF, manifests, assets,
-or QA reports.  A clean package exits 0, a failed gate exits 1, and an execution
-error exits 2.
+The validator is intentionally self-contained. It reads the N06 package,
+refreshes only ``validation-v9.json`` and prints the same JSON report to stdout.
+It never rewrites the PDF, authoring sources, manifests, assets, or QA reports.
+A clean package exits 0, a failed gate exits 1, and an execution error exits 2.
 """
 
 from __future__ import annotations
@@ -141,6 +141,53 @@ CLEAR_RIGHTS_STATUSES = {
 
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def regression_lock_audit(root: Path, expected_paths: set[str]) -> dict[str, Any]:
+    lock_path = root / "provenance/regression-lock.json"
+    try:
+        lock = json.loads(lock_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as error:
+        return {"passed": False, "error": f"{type(error).__name__}: {error}"}
+    declared = lock.get("artifact_sha256")
+    if not isinstance(declared, dict):
+        return {"passed": False, "error": "artifact_sha256 missing or invalid"}
+    declared_paths = set(declared)
+    digest_format_ok = all(re.fullmatch(r"[0-9a-f]{64}", str(value)) for value in declared.values())
+    mismatches: dict[str, dict[str, str | None]] = {}
+    for relative_path in sorted(expected_paths):
+        expected_sha = declared.get(relative_path)
+        path = root / relative_path
+        actual_sha = sha256(path) if path.is_file() else None
+        if actual_sha != expected_sha:
+            mismatches[relative_path] = {"expected": str(expected_sha), "actual": actual_sha}
+    final_paths = sorted(path for path in declared_paths if path.startswith("output/") and path.endswith("-final.pdf"))
+    raw_paths = sorted(path for path in declared_paths if path.startswith("output/") and path.endswith(".pdf") and not path.endswith("-final.pdf"))
+    cover_path = f"assets/{lock.get('cover_asset', '')}"
+    coherence = {
+        "cover_asset": cover_path in declared and lock.get("cover_asset_sha256") == declared.get(cover_path),
+        "cover_alias": lock.get("cover_alias_sha256") == declared.get("assets/cover.png"),
+        "cover_provenance": lock.get("cover_provenance_sha256") == declared.get(str(lock.get("cover_provenance_file", ""))),
+        "final_pdf": len(final_paths) == 1 and lock.get("pdf_sha256") == declared.get(final_paths[0]),
+        "raw_pdf": len(raw_paths) == 1 and lock.get("raw_pdf_sha256") == declared.get(raw_paths[0]),
+        "pdf_bytes": len(final_paths) == 1 and (root / final_paths[0]).is_file() and (root / final_paths[0]).stat().st_size == lock.get("pdf_bytes"),
+    }
+    return {
+        "passed": (
+            lock.get("status") == "PASS"
+            and declared_paths == expected_paths
+            and digest_format_ok
+            and not mismatches
+            and all(coherence.values())
+        ),
+        "lock_sha256": sha256(lock_path),
+        "declared_paths": sorted(declared_paths),
+        "missing_declarations": sorted(expected_paths - declared_paths),
+        "unexpected_declarations": sorted(declared_paths - expected_paths),
+        "digest_format_ok": digest_format_ok,
+        "mismatches": mismatches,
+        "coherence": coherence,
+    }
 
 
 def compact(value: str) -> str:
@@ -919,6 +966,26 @@ def main() -> int:
         and (root / "assets/cover.png").exists()
         and sha256(root / "assets/cover.png") == sha256(cover_source)
     )
+    regression_lock = regression_lock_audit(
+        root,
+        {
+            "source/N06_discovery_como_reduccion_de_incertidumbre-content-final.md",
+            "assets/cover-source-premium-bw-v1.png",
+            "assets/cover.png",
+            "provenance/cover-image-premium-bw-v1.md",
+            "image-manifest.json",
+            "output/N06-METSI-lectura-previa-v9.pdf",
+            "output/N06-METSI-lectura-previa-v9-final.pdf",
+            "index.html",
+            "magazine.css",
+            "metsi.css",
+            "manifest.json",
+            "document.json",
+            "qa-report.json",
+            "integrity-report.json",
+            "source-manifest.json",
+        },
+    )
 
     media_sizes: list[dict[str, float]] = []
     a4_ok = len(reader.pages) == EXPECTED_PAGES
@@ -946,7 +1013,7 @@ def main() -> int:
     )
 
     reference_page_compact_no_space = re.sub(r"\s+", "", page_texts[26])
-    printed_urls = {url: url in reference_page_compact_no_space for url in EXPECTED_URLS}
+    printed_urls = {url: url in reference_page_compact_no_space for url in sorted(EXPECTED_URLS)}
     reference_order_tokens = ["DORA.", "Hubbard, D. W.", "International Organization", "March, J. G.", "Patton, M. Q.", "Ries, E.", "Schön, D. A.", "Tabassi, E.", "Torres, T.", "Tversky, A."]
     reference_order_positions = [page_texts[26].find(token) for token in reference_order_tokens]
 
@@ -974,6 +1041,7 @@ def main() -> int:
     metadata_ok = metadata_ok and all(token in keywords for token in ("METSI", "UBA", "Investigación"))
 
     checks = [
+        check("regression_lock_matches_current_artifacts", regression_lock["passed"], regression_lock),
         check(
             "package_contract_files_present",
             not package_missing,
@@ -1057,17 +1125,22 @@ def main() -> int:
         "document": "N06",
         "version": "v9-final",
         "validator": Path(__file__).name,
-        "mode": "read-only",
-        "root": str(root),
+        "mode": "deterministic-validation",
+        "root": ".",
         "status": "PASS" if passed else "FAIL",
         "failed_checks": failed_checks,
         "source_sha256": sha256(source),
         "pdf_sha256": sha256(pdf),
         "pdf_bytes": pdf.stat().st_size,
+        "regression_lock_sha256": regression_lock.get("lock_sha256"),
         "pages": len(reader.pages),
         "minimum_ordinary_page_fill": min(extents.get(page, {}).get("fill", 0.0) for page in ordinary_pages),
         "checks": checks,
     }
+    (root / "validation-v9.json").write_text(
+        json.dumps(report, ensure_ascii=False, indent=2, default=str) + "\n",
+        encoding="utf-8",
+    )
     print(json.dumps(report, ensure_ascii=False, indent=2, default=str))
     return 0 if passed else 1
 

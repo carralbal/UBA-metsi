@@ -2,29 +2,1128 @@
   "document": "N08",
   "version": "v9-final",
   "validator": "validate_n08_v9.py",
+  "mode": "read-only",
   "status": "PASS",
-  "checks_passed": 35,
-  "checks_failed": 0,
-  "expected_pages": 28,
-  "pages": 28,
-  "minimum_ordinary_page_fill": 0.5558,
+  "failed_checks": [],
   "source_sha256": "328d2858fbe170bee35f17ada425fdb78b0e34a395bc4992ed33fb5b2910b8b9",
-  "pdf_sha256": "0c1825a1effcb0b7f0c4ea2a312f0d1ef08cde461158e7b1b87bec40d599f4f3",
-  "pdf_bytes": 19296200,
-  "references": 12,
-  "external_urls": 6,
-  "referents": 6,
-  "hotel_horizonte_voices": 4,
-  "pills": 5,
-  "glossary_entries": 16,
-  "questions": 6,
-  "full_bleed_pause_pages": [5, 17],
-  "references_page": 27,
-  "closing_page": 28,
-  "orphan_headings": [],
-  "underfilled_ordinary_pages": {},
-  "reproducibility": {
-    "html_css_source_manifest_identical": true,
-    "all_28_page_rasters_identical": true
-  }
+  "pdf_sha256": "8513d10b826cf9f69d9f8948a941a9013c1c57968bc9a08bfdc9686e8c788f36",
+  "pdf_bytes": 19397092,
+  "pages": 28,
+  "expected_pages": 28,
+  "minimum_ordinary_page_fill": 0.5558,
+  "checks": [
+    {
+      "check": "required_release_files_present",
+      "status": "PASS",
+      "detail": {
+        "missing": []
+      }
+    },
+    {
+      "check": "package_aliases_match_authoring_files",
+      "status": "PASS",
+      "detail": "metsi.css == magazine.css; document.json == manifest.json"
+    },
+    {
+      "check": "html_and_css_local_references_resolve",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "canonical_source_sha_and_byte_identity",
+      "status": "PASS",
+      "detail": {
+        "actual": "328d2858fbe170bee35f17ada425fdb78b0e34a395bc4992ed33fb5b2910b8b9",
+        "expected": "328d2858fbe170bee35f17ada425fdb78b0e34a395bc4992ed33fb5b2910b8b9",
+        "byte_identical": true
+      }
+    },
+    {
+      "check": "content_audit_remains_closed",
+      "status": "PASS",
+      "detail": {
+        "overall": "pass",
+        "word_counts": {
+          "total": 7861,
+          "substantive_from_thesis_through_synthesis": 6356
+        },
+        "anchors": {
+          "Suchman (2007)": true,
+          "Beyer y Holtzblatt (1997)": true,
+          "Hollnagel (2017)": true,
+          "Dekker (2014)": true,
+          "Weick y Sutcliffe (2015)": true,
+          "Hutchins (1995)": true,
+          "Strauss (1988)": true,
+          "Star y Strauss (1999)": true,
+          "Trist y Bamforth (1951)": true,
+          "Autio et al. (2024)": true,
+          "Gmyrek et al. (2025)": true,
+          "Milanez, Lemmens y Ruggiu (2025)": true
+        }
+      }
+    },
+    {
+      "check": "source_manifest_has_256_blocks_exactly_once",
+      "status": "PASS",
+      "detail": {
+        "manifest": 256,
+        "html": 256,
+        "integrity": {
+          "status": "PASS",
+          "source_block_count": 256,
+          "rendered_source_id_count": 256,
+          "missing_source_ids": [],
+          "unexpected_source_ids": [],
+          "duplicate_rendered_ids": []
+        }
+      }
+    },
+    {
+      "check": "all_source_blocks_have_rendered_fragments",
+      "status": "PASS",
+      "detail": {
+        "checked": 256,
+        "missing": []
+      }
+    },
+    {
+      "check": "source_id_reading_order_is_preserved_in_html",
+      "status": "PASS",
+      "detail": {
+        "ids_checked": 256
+      }
+    },
+    {
+      "check": "canonical_14_section_structure",
+      "status": "PASS",
+      "detail": [
+        "Pregunta profesional",
+        "El puente que se sostenía gracias a gestos que nadie había diseñado",
+        "Tesis",
+        "De N07 a N08: de lo dicho a lo realizado",
+        "Movimiento 1 · Ver la diferencia entre procedimiento y trabajo realizado",
+        "Movimiento 2 · Observar episodios sin confundir descripción e interpretación",
+        "Movimiento 3 · Transformar lo observado sin destruir su función",
+        "De N08 a N09: del trabajo realizado al recorrido vivido",
+        "Errores frecuentes y consecuencias profesionales",
+        "Límites y tensiones",
+        "Síntesis",
+        "Cinco píldoras para recordar",
+        "Glosario esencial",
+        "Preguntas de preparación",
+        "Referencias base"
+      ]
+    },
+    {
+      "check": "content_counts_close",
+      "status": "PASS",
+      "detail": {
+        "actual": {
+          "pills": 5,
+          "glossary": 16,
+          "questions": 6,
+          "references": 12
+        },
+        "expected": {
+          "pills": 5,
+          "glossary": 16,
+          "questions": 6,
+          "references": 12
+        }
+      }
+    },
+    {
+      "check": "all_12_references_are_anchored",
+      "status": "PASS",
+      "detail": {
+        "Suchman (2007)": true,
+        "Beyer y Holtzblatt (1997)": true,
+        "Hollnagel (2017)": true,
+        "Dekker (2014)": true,
+        "Weick y Sutcliffe (2015)": true,
+        "Hutchins (1995)": true,
+        "Strauss (1988)": true,
+        "Star y Strauss (1999)": true,
+        "Trist y Bamforth (1951)": true,
+        "Autio et al. (2024)": true,
+        "Gmyrek et al. (2025)": true,
+        "Milanez, Lemmens y Ruggiu (2025)": true
+      }
+    },
+    {
+      "check": "pdf_is_distinct_finalized_artifact",
+      "status": "PASS",
+      "detail": {
+        "raw": "51e22ec3cd8eb5cf91bc91c48a0f0505ed8b760c103b5729316c165ed6bb6a72",
+        "final": "8513d10b826cf9f69d9f8948a941a9013c1c57968bc9a08bfdc9686e8c788f36"
+      }
+    },
+    {
+      "check": "pdf_page_count_is_locked_and_all_pages_are_a4",
+      "status": "PASS",
+      "detail": {
+        "expected_pages": 28,
+        "planned_pages": 28,
+        "actual_pages": 28,
+        "sizes": [
+          {
+            "page": 1,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 2,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 3,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 4,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 5,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 6,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 7,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 8,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 9,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 10,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 11,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 12,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 13,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 14,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 15,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 16,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 17,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 18,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 19,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 20,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 21,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 22,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 23,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 24,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 25,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 26,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 27,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 28,
+            "width": 594.96,
+            "height": 841.92
+          }
+        ]
+      }
+    },
+    {
+      "check": "pdf_metadata_is_complete",
+      "status": "PASS",
+      "detail": {
+        "metadata": {
+          "/Title": "N08 · Observar el trabajo invisible",
+          "/Author": "Diego Carralbal",
+          "/Subject": "Metodología de Sistemas de Información · FCE · UBA"
+        },
+        "keywords": "METSI, UBA, lectura previa, Investigación y construcción del problema"
+      }
+    },
+    {
+      "check": "contents_and_section_order_are_complete",
+      "status": "PASS",
+      "detail": {
+        "contents_positions": {
+          "Pregunta profesional": 142,
+          "El puente que se sostenía gracias a gestos que nadie había diseñado": 163,
+          "Tesis": 221,
+          "De N07 a N08: de lo dicho a lo realizado": 228,
+          "Movimiento 1 · Ver la diferencia entre procedimiento y trabajo realizado": 260,
+          "Movimiento 2 · Observar episodios sin confundir descripción e interpretación": 323,
+          "Movimiento 3 · Transformar lo observado sin destruir su función": 391,
+          "De N08 a N09: del trabajo realizado al recorrido vivido": 446,
+          "Errores frecuentes y consecuencias profesionales": 493,
+          "Límites y tensiones": 539,
+          "Síntesis": 558,
+          "Cinco píldoras para recordar": 568,
+          "Glosario esencial": 595,
+          "Preguntas de preparación": 613
+        },
+        "pdf_headers": [
+          [
+            1,
+            4,
+            "PROBLEMA"
+          ],
+          [
+            2,
+            6,
+            "PROBLEMA"
+          ],
+          [
+            3,
+            7,
+            "PROBLEMA"
+          ],
+          [
+            4,
+            8,
+            "PROBLEMA"
+          ],
+          [
+            5,
+            9,
+            "DISTINCIONES"
+          ],
+          [
+            6,
+            12,
+            "DECISIONES"
+          ],
+          [
+            7,
+            18,
+            "PRUEBA"
+          ],
+          [
+            8,
+            23,
+            "TRANSFERENCIA"
+          ],
+          [
+            9,
+            23,
+            "TRANSFERENCIA"
+          ],
+          [
+            10,
+            24,
+            "PREPARACIÓN"
+          ],
+          [
+            11,
+            24,
+            "PREPARACIÓN"
+          ],
+          [
+            12,
+            25,
+            "PREPARACIÓN"
+          ],
+          [
+            13,
+            25,
+            "PREPARACIÓN"
+          ],
+          [
+            14,
+            26,
+            "PREPARACIÓN"
+          ]
+        ]
+      }
+    },
+    {
+      "check": "route_is_exact_in_html_and_pdf",
+      "status": "PASS",
+      "detail": {
+        "html": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ],
+        "pdf": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ],
+        "expected": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ]
+      }
+    },
+    {
+      "check": "all_source_headings_keep_following_body_on_same_page",
+      "status": "PASS",
+      "detail": {
+        "passed": true,
+        "checked": 33,
+        "failed": []
+      }
+    },
+    {
+      "check": "ordinary_pages_are_at_least_55_percent_full",
+      "status": "PASS",
+      "detail": {
+        "ordinary_pages": {
+          "6": 0.9608,
+          "7": 0.6541,
+          "8": 0.8282,
+          "9": 0.8978,
+          "10": 0.8542,
+          "11": 0.8607,
+          "12": 0.9524,
+          "13": 0.9423,
+          "14": 0.8616,
+          "15": 0.8819,
+          "16": 0.9542,
+          "18": 0.9478,
+          "19": 0.9488,
+          "20": 0.82,
+          "21": 0.8181,
+          "22": 0.653,
+          "23": 0.9682,
+          "24": 0.9367,
+          "25": 0.5878,
+          "26": 0.5558,
+          "27": 0.5823
+        },
+        "underfilled": {}
+      }
+    },
+    {
+      "check": "page_4_is_intentional_dark_full_page_opening",
+      "status": "PASS",
+      "detail": {
+        "background": {
+          "passed": true,
+          "maximum_luminance": 0.2,
+          "full_page_rectangles": [
+            {
+              "gaps_pt": {
+                "left": 0.0,
+                "right": 0.0,
+                "top": 0.0,
+                "bottom": 0.0
+              },
+              "luminance": 0.098,
+              "color": [
+                0.098,
+                0.098,
+                0.098
+              ]
+            },
+            {
+              "gaps_pt": {
+                "left": 0.0,
+                "right": 0.0,
+                "top": 0.0,
+                "bottom": 0.0
+              },
+              "luminance": 0.098,
+              "color": [
+                0.098,
+                0.098,
+                0.098
+              ]
+            },
+            {
+              "gaps_pt": {
+                "left": 0.0,
+                "right": 0.0,
+                "top": 0.0,
+                "bottom": 0.134
+              },
+              "luminance": 0.9919,
+              "color": [
+                0.9922,
+                0.9922,
+                0.9882
+              ]
+            }
+          ]
+        },
+        "fill": {
+          "top": 441.11,
+          "bottom": 713.64,
+          "fill": 0.3663
+        }
+      }
+    },
+    {
+      "check": "rendered_pdf_contains_zero_arial",
+      "status": "PASS",
+      "detail": {
+        "fonts": [
+          "AAAAAA+Avenir-Book-0",
+          "AAAAAA+Didot",
+          "ABAAAA+Didot",
+          "ACAAAA+Avenir-BookOblique",
+          "BAAAAA+Avenir-Book",
+          "BBAAAA+Baskerville-SemiBold",
+          "CAAAAA+Avenir-Book",
+          "CBAAAA+Avenir-Book",
+          "DAAAAA+Didot",
+          "DBAAAA+Didot",
+          "EAAAAA+Didot",
+          "EBAAAA+Avenir-Heavy",
+          "FAAAAA+Baskerville",
+          "FBAAAA+Didot",
+          "GAAAAA+Baskerville-Bold",
+          "GBAAAA+Avenir-Book",
+          "HAAAAA+Avenir-Heavy",
+          "HBAAAA+Avenir-Heavy",
+          "IAAAAA+Avenir-Book",
+          "IBAAAA+Avenir-BookOblique",
+          "JAAAAA+Avenir-Book",
+          "JBAAAA+Avenir-Heavy",
+          "KAAAAA+Avenir-Book",
+          "KBAAAA+Avenir-Heavy",
+          "LAAAAA+Baskerville-Bold",
+          "LBAAAA+Avenir-Book",
+          "MAAAAA+Baskerville",
+          "MBAAAA+Didot",
+          "NAAAAA+Didot-Bold",
+          "NBAAAA+Baskerville",
+          "OAAAAA+Avenir-Heavy",
+          "OBAAAA+Avenir-Book",
+          "PAAAAA+Avenir-Heavy",
+          "PBAAAA+Didot",
+          "QAAAAA+Baskerville-Italic",
+          "QBAAAA+Baskerville",
+          "RAAAAA+Avenir-Book",
+          "RBAAAA+Didot",
+          "SAAAAA+Didot-Italic",
+          "SBAAAA+Avenir-Heavy",
+          "TAAAAA+Avenir-Heavy",
+          "TBAAAA+Baskerville-SemiBold",
+          "UAAAAA+Avenir-Medium",
+          "UBAAAA+Baskerville",
+          "VAAAAA+Avenir-Heavy",
+          "VBAAAA+Avenir-Book",
+          "WAAAAA+Avenir-Heavy",
+          "WBAAAA+Avenir-Heavy",
+          "XAAAAA+Didot",
+          "XBAAAA+Avenir-Medium",
+          "YAAAAA+Didot",
+          "YBAAAA+Didot",
+          "ZAAAAA+Avenir-Heavy",
+          "ZBAAAA+Avenir-Book"
+        ],
+        "qa_forbidden": []
+      }
+    },
+    {
+      "check": "page_1_cover_reaches_all_edges",
+      "status": "PASS",
+      "detail": {
+        "passed": true,
+        "tolerance_pt": 1.0,
+        "gaps_pt": {
+          "left": 0.0,
+          "right": 0.0,
+          "top": 0.0,
+          "bottom": 0.0
+        },
+        "bbox": {
+          "x0": 0.0,
+          "x1": 605.153,
+          "top": 0.0,
+          "bottom": 855.903
+        }
+      }
+    },
+    {
+      "check": "cover_is_native_bw_without_css_conversion_or_heavy_global_scrim",
+      "status": "PASS",
+      "detail": {
+        "tone": {
+          "passed": false,
+          "channel_spread_p95": 5.0,
+          "luminance_p05": 32.86,
+          "luminance_p95": 206.21,
+          "luminance_stddev": 45.11
+        },
+        "contract": {
+          "file": "cover.png",
+          "source": "assets/cover-source-premium-bw-v1.png",
+          "sha256": "a7bc233b929a3112f196eb6c330c4c98035b8ec51806dbd368be9398c3be1e61",
+          "alt": "Dos trabajadoras argentinas coordinan tareas en el umbral de una habitación de hotel, mientras una pared y un corredor dejan amplio espacio visual a la izquierda.",
+          "photographic_origin": "native_black_and_white",
+          "render_treatment": "no_grayscale_conversion",
+          "art_direction": "lighting, wardrobe, materials and tonal separation conceived for monochrome"
+        },
+        "cover_rule": "inset:0;width:100%;height:100%;object-position:50% 48%;filter:none",
+        "shade_rule": "inset:0;width:100%;height:100%;background:linear-gradient(180deg,rgba(5,7,6,.13) 0,rgba(5,7,6,0) 29%,rgba(5,7,6,0) 62%,rgba(5,7,6,.46) 100%)"
+      }
+    },
+    {
+      "check": "cover_eyebrow_is_two_accessible_text_runs",
+      "status": "PASS",
+      "detail": "METSILECTURA PREVIA\nEDICIÓN 2026\nN08N08\nFCE · UBAFCE · UBA\nMETODOLOGÍA DE SISTEMAS DE INFORMACIÓN\nObservar el trabajoinvisible\n01\nDiego Carralbal, 2026  ·  linkedin.com/in/carralbal\n"
+    },
+    {
+      "check": "generated_editorial_and_pause_photos_are_unique_native_bw_and_provenanced",
+      "status": "PASS",
+      "detail": {
+        "audit": {
+          "passed": true,
+          "assets": [
+            {
+              "file": "assets/editorial-01.png",
+              "size": [
+                1448,
+                1086
+              ],
+              "sha256": "ccc5a558c91f24a812775537a2620d92556dca578388f783dfa442bd90ad5e96",
+              "channel_spread_p95": 1.0,
+              "monochrome": true
+            },
+            {
+              "file": "assets/editorial-02.png",
+              "size": [
+                1448,
+                1086
+              ],
+              "sha256": "31abb90e5747dac6e68b5a6641c3ca54f1075d3c8bda69420c3809bbbf7207fe",
+              "channel_spread_p95": 1.0,
+              "monochrome": true
+            },
+            {
+              "file": "assets/editorial-03.png",
+              "size": [
+                1448,
+                1086
+              ],
+              "sha256": "bf24ab3f1901b82a65c5092974f560bcd4919c30389690e0fbdea83207f7756f",
+              "channel_spread_p95": 1.0,
+              "monochrome": true
+            },
+            {
+              "file": "assets/editorial-04.png",
+              "size": [
+                1448,
+                1086
+              ],
+              "sha256": "df2fd30a787f629d265fd13a0bb54c24a84c2d45a4e3416084d04918ac2453a2",
+              "channel_spread_p95": 1.0,
+              "monochrome": true
+            },
+            {
+              "file": "assets/pause-01.png",
+              "size": [
+                1055,
+                1491
+              ],
+              "sha256": "4504513a9b761f02b948a609114191c419d6a75a21522d561b3007a0aa05eb84",
+              "channel_spread_p95": 1.0,
+              "monochrome": true
+            },
+            {
+              "file": "assets/pause-02.png",
+              "size": [
+                1055,
+                1491
+              ],
+              "sha256": "f9100128240e3e2bcafc3961887dc059fae16564819bfcd86ee0590d632385cb",
+              "channel_spread_p95": 1.0,
+              "monochrome": true
+            }
+          ],
+          "invalid": [],
+          "roles_ok": true
+        },
+        "internal_images": [
+          "editorial-01.png",
+          "editorial-02.png",
+          "editorial-03.png",
+          "editorial-04.png",
+          "pause-01.png",
+          "pause-02.png"
+        ]
+      }
+    },
+    {
+      "check": "contents_photo_is_unique_and_not_reused",
+      "status": "PASS",
+      "detail": {
+        "html_references": 1
+      }
+    },
+    {
+      "check": "exactly_two_full_bleed_pauses_with_first_on_page_5",
+      "status": "PASS",
+      "detail": {
+        "html_count": 2,
+        "pages": [
+          5,
+          17
+        ],
+        "bleed": {
+          "5": {
+            "passed": true,
+            "tolerance_pt": 1.0,
+            "gaps_pt": {
+              "left": 0.0,
+              "right": 0.0,
+              "top": 0.0,
+              "bottom": 0.134
+            },
+            "bbox": {
+              "x0": 0.0,
+              "x1": 594.972,
+              "top": 0.0,
+              "bottom": 841.786
+            }
+          },
+          "17": {
+            "passed": true,
+            "tolerance_pt": 1.0,
+            "gaps_pt": {
+              "left": 0.0,
+              "right": 0.0,
+              "top": 0.0,
+              "bottom": 0.134
+            },
+            "bbox": {
+              "x0": 0.0,
+              "x1": 594.972,
+              "top": 0.0,
+              "bottom": 841.786
+            }
+          }
+        },
+        "html_order": true
+      }
+    },
+    {
+      "check": "reference_grade_infographic_is_anchored_to_section_06_at_160mm",
+      "status": "PASS",
+      "detail": {
+        "page": 12,
+        "min_svg_px": 28.0,
+        "min_final_pt": 7.06,
+        "manifest": {
+          "number": 8,
+          "module": "Investigación y construcción del problema",
+          "topology": "reference-grade-observation-work-layer",
+          "labels": [
+            "Contexto: turno, carga, canal y restricciones",
+            "Evento: acción, señal, objeto y tiempo",
+            "Interpretación: significado provisional",
+            "Incertidumbre: duda o alternativa",
+            "Función: capacidad sostenida",
+            "Consecuencia: resultado y trabajo posterior",
+            "Decisión: cambio posible",
+            "Base observable: contexto y evento",
+            "Hipótesis abiertas: interpretación e incertidumbre",
+            "Contraste con participantes, otros rastros y otros episodios",
+            "Criterio de intervención: función y consecuencia",
+            "Acción provisional: preservar, cambiar o probar"
+          ],
+          "source_headings": [
+            "Tesis",
+            "Observar un episodio de principio a fin",
+            "Instrumento de decisión: registro en capas",
+            "De observación a hipótesis y rediseño",
+            "Protocolo operativo de observación"
+          ],
+          "file": "N08-mapa-decision.svg",
+          "source": "infographic-work-layer/n08-work-layers.svg",
+          "source_sha256": "ec883deab6147e6f1fa85048e631be14650799177c008f71f9e030cabd4029e6"
+        }
+      }
+    },
+    {
+      "check": "references_are_image_free_two_column_penultimate_page",
+      "status": "PASS",
+      "detail": {
+        "page": 27,
+        "images": 0,
+        "columns": {
+          "passed": true,
+          "positions": {
+            "Suchman": 68.05,
+            "Star": 306.47,
+            "Strauss": 353.62,
+            "Beyer": 68.05,
+            "Trist": 306.47,
+            "Hollnagel": 68.05,
+            "Dekker": 68.05,
+            "Autio": 306.47,
+            "Weick": 68.05,
+            "Hutchins": 68.05,
+            "Gmyrek": 306.47,
+            "Milanez": 306.47
+          },
+          "left": {
+            "Suchman": 68.05,
+            "Beyer": 68.05,
+            "Hollnagel": 68.05,
+            "Dekker": 68.05,
+            "Weick": 68.05,
+            "Hutchins": 68.05
+          },
+          "right": {
+            "Star": 306.47,
+            "Strauss": 353.62,
+            "Trist": 306.47,
+            "Autio": 306.47,
+            "Gmyrek": 306.47,
+            "Milanez": 306.47
+          }
+        },
+        "order_positions": [
+          42,
+          130,
+          213,
+          287,
+          347,
+          439,
+          478,
+          613,
+          763,
+          910,
+          1093,
+          1266
+        ]
+      }
+    },
+    {
+      "check": "six_exact_urls_are_printed_and_annotated_only_on_references_page",
+      "status": "PASS",
+      "detail": {
+        "source": [
+          "https://doi.org/10.1023/A:1008651105359",
+          "https://doi.org/10.1111/j.1533-8525.1988.tb01249.x",
+          "https://doi.org/10.1177/001872675100400101",
+          "https://doi.org/10.1787/287c13c4-en",
+          "https://doi.org/10.54394/HETP0387",
+          "https://doi.org/10.6028/NIST.AI.600-1"
+        ],
+        "annotations": [
+          "https://doi.org/10.1023/A:1008651105359",
+          "https://doi.org/10.1111/j.1533-8525.1988.tb01249.x",
+          "https://doi.org/10.1177/001872675100400101",
+          "https://doi.org/10.1787/287c13c4-en",
+          "https://doi.org/10.54394/HETP0387",
+          "https://doi.org/10.6028/NIST.AI.600-1"
+        ],
+        "pages": {
+          "27": [
+            "https://doi.org/10.1023/A:1008651105359",
+            "https://doi.org/10.1111/j.1533-8525.1988.tb01249.x",
+            "https://doi.org/10.1177/001872675100400101",
+            "https://doi.org/10.1787/287c13c4-en",
+            "https://doi.org/10.54394/HETP0387",
+            "https://doi.org/10.6028/NIST.AI.600-1"
+          ]
+        }
+      }
+    },
+    {
+      "check": "last_page_is_full_bleed_structured_matches_closing",
+      "status": "PASS",
+      "detail": {
+        "bleed": {
+          "passed": true,
+          "tolerance_pt": 1.0,
+          "gaps_pt": {
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0,
+            "bottom": 0.134
+          },
+          "bbox": {
+            "x0": 0.0,
+            "x1": 594.972,
+            "top": 0.0,
+            "bottom": 841.786
+          }
+        },
+        "text": "La secuencia vuelve visible que toda intervención consume recursos, deja huellas y necesita un criterio de cierre.\n28\nDiego Carralbal, 2026  ·  linkedin.com/in/carralbal\n",
+        "xobject_alts": [
+          "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza."
+        ]
+      }
+    },
+    {
+      "check": "six_unique_referents_have_approved_rights_and_provenance",
+      "status": "PASS",
+      "detail": {
+        "passed": true,
+        "actual": [
+          [
+            "Lucy A. Suchman",
+            "assets/referent-lucy-suchman.jpg"
+          ],
+          [
+            "Edwin Hutchins",
+            "assets/referent-edwin-hutchins.jpg"
+          ],
+          [
+            "Reva Schwartz",
+            "assets/referent-reva-schwartz.jpg"
+          ],
+          [
+            "Elham Tabassi",
+            "assets/referent-elham-tabassi.jpg"
+          ],
+          [
+            "Kamie Roberts",
+            "assets/referent-kamie-roberts.jpg"
+          ],
+          [
+            "Martin Stanley",
+            "assets/referent-martin-stanley.jpg"
+          ]
+        ],
+        "expected": [
+          [
+            "Lucy A. Suchman",
+            "assets/referent-lucy-suchman.jpg"
+          ],
+          [
+            "Edwin Hutchins",
+            "assets/referent-edwin-hutchins.jpg"
+          ],
+          [
+            "Reva Schwartz",
+            "assets/referent-reva-schwartz.jpg"
+          ],
+          [
+            "Elham Tabassi",
+            "assets/referent-elham-tabassi.jpg"
+          ],
+          [
+            "Kamie Roberts",
+            "assets/referent-kamie-roberts.jpg"
+          ],
+          [
+            "Martin Stanley",
+            "assets/referent-martin-stanley.jpg"
+          ]
+        ],
+        "rights_status": "approved",
+        "blocked_candidates": 0,
+        "invalid": []
+      }
+    },
+    {
+      "check": "portable_hash_locked_image_manifest_is_complete",
+      "status": "PASS",
+      "detail": {
+        "passed": true,
+        "entries": 21,
+        "rendered": 19,
+        "supporting": 2,
+        "invalid": [],
+        "nonportable_markers": []
+      }
+    },
+    {
+      "check": "tagging_language_and_alt_structure_are_complete",
+      "status": "PASS",
+      "detail": {
+        "lang": "es-AR",
+        "marked": true,
+        "figures": [
+          {
+            "page": 1,
+            "alt": "Dos trabajadoras argentinas coordinan tareas en el umbral de una habitación de hotel, mientras una pared y un corredor dejan amplio espacio visual a la izquierda."
+          },
+          {
+            "page": 2,
+            "alt": null
+          },
+          {
+            "page": 2,
+            "alt": "Varias manos organizan una libreta, una radio, una llave, una tarjeta y un plano sobre una mesa de trabajo."
+          },
+          {
+            "page": 5,
+            "alt": "Un operador observa desde una cabina un puente con tránsito, un ciclista y una barcaza en el río."
+          },
+          {
+            "page": 12,
+            "alt": "Registro en siete capas que relaciona contexto, evento, interpretación, incertidumbre, función, consecuencia y decisión La cadena conserva la diferencia entre lo observado y lo inferido, y muestra qué evidencia permite convertir un episodio en una decisión revisable."
+          },
+          {
+            "page": 17,
+            "alt": "Una recepcionista sostiene una tarjeta en blanco y pausa la confirmación mientras una trabajadora de Housekeeping prepara el servicio al fondo."
+          },
+          {
+            "page": 25,
+            "alt": "Cinco ideas para recordar"
+          },
+          {
+            "page": 28,
+            "alt": "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza."
+          }
+        ]
+      }
+    },
+    {
+      "check": "all_pages_have_folio_and_linkedin_footer",
+      "status": "PASS",
+      "detail": {
+        "linkedin_annotations_per_page": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "check": "n07_final_pdf_regression_sha_is_unchanged",
+      "status": "PASS",
+      "detail": {
+        "actual": "c7b36bffcd3da4d1955f3563f7836dc9fad28d5cb0fa5ed7129bba1f2b075bd9",
+        "expected": "c7b36bffcd3da4d1955f3563f7836dc9fad28d5cb0fa5ed7129bba1f2b075bd9"
+      }
+    }
+  ]
 }

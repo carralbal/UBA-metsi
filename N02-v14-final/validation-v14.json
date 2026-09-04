@@ -3,8 +3,8 @@
   "version": "v14-final",
   "status": "PASS",
   "source_sha256": "6f6bfde594de374a8873fe212ac3c326b50b1186d61268a540a9303a77b1f138",
-  "pdf_sha256": "fbe7afb20087cabac599f28f8bae3f51cee90e21933960476b874854e4f61052",
-  "pdf_bytes": 28030274,
+  "pdf_sha256": "35f7d39ac0981d11be568db17b9a422737e18005b583a281b326de8e069fe6a3",
+  "pdf_bytes": 25335126,
   "pages": 29,
   "checks": [
     {
@@ -417,6 +417,35 @@
       "detail": "METSILECTURA PREVIA\nEDICIÓN 2026\nN02\nFCE · UBA\nMETODOLOGÍA DE SISTEMAS DE INFORMACIÓN\nEl sistema deinformación nocabe en unaaplicación\nN02\nUn sistema deinformación\norganizacional no es unprograma ni una suma\nde aplicaciones.\n01\nDiego Carralbal, 2026 "
     },
     {
+      "check": "cover_is_native_bw_tonally_open_hash_locked_and_locally_shaded",
+      "status": "PASS",
+      "detail": {
+        "passed": true,
+        "source": "assets/cover-source-premium-bw-v1.png",
+        "sha256": "72a08234f87ad623c3092b3c06684551619fb881f625c2829543ccf0c2b10501",
+        "tone": {
+          "passed": true,
+          "channel_spread_p95": 1.0,
+          "luminance_p05": 13.0,
+          "luminance_p95": 180.21,
+          "tonal_span": 167.21,
+          "luminance_stddev": 53.36,
+          "fraction_below_32": 0.1729
+        },
+        "contract": {
+          "file": "cover.png",
+          "source": "assets/cover-source-premium-bw-v1.png",
+          "sha256": "72a08234f87ad623c3092b3c06684551619fb881f625c2829543ccf0c2b10501",
+          "alt": "Tres profesionales de un hotel porteño trabajan en recepción, un corredor operativo y un espacio reflejado detrás de un vidrio",
+          "photographic_origin": "native_black_and_white",
+          "render_treatment": "no_grayscale_conversion",
+          "art_direction": "lighting, wardrobe, materials and tonal separation conceived for monochrome"
+        },
+        "cover_rule": "filter:none",
+        "shade_rule": "background:linear-gradient(180deg,rgba(5,7,6,.18)0,rgba(5,7,6,0)30%,rgba(5,7,6,0)61%,rgba(8,9,8,.58)100%)"
+      }
+    },
+    {
       "check": "cover_and_pauses_are_full_bleed",
       "status": "PASS",
       "detail": {
@@ -464,6 +493,7 @@
       "detail": {
         "language": "es-AR",
         "alts": [
+          "Tres profesionales de un hotel porteño trabajan en recepción, un corredor operativo y un espacio reflejado detrás de un vidrio",
           "Cinco fronteras posibles para elegir qué sistema analizar La palabra sistema cambia de significado según la decisión: cada frontera incluye relaciones distintas.",
           "Caso de aplicación Hotel Horizonte",
           "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza."
@@ -482,9 +512,15 @@
       }
     },
     {
-      "check": "approved_assets_preserved",
+      "check": "rendered_assets_match_the_packaged_provenance",
       "status": "PASS",
-      "detail": "all inherited N02 v13 assets are byte-identical"
+      "detail": {
+        "passed": true,
+        "records": 19,
+        "failures": [],
+        "missing_records": [],
+        "unreferenced_records": []
+      }
     },
     {
       "check": "qa_pipeline_passed",

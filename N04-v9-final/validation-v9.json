@@ -3,11 +3,47 @@
   "version": "v9-final",
   "status": "PASS",
   "source_sha256": "4e86351bcd6865c81bbdb8a5e72352e55042b5d9e16f71949737c610e6d13320",
-  "pdf_sha256": "b3f9d19b25589cba735adcc2d1ec611218e50af54cae5075c71294b8003a58e7",
-  "pdf_bytes": 28938926,
-  "pdf_modified": 1788457891.613373,
+  "pdf_sha256": "b6b4df7df6c92e4ed76cce15d89a0802f9c7c0b6529f16ed8cdeef1b9af23ccb",
+  "pdf_bytes": 27477637,
+  "pdf_modified": 1788524023.489252,
+  "regression_lock_sha256": "836753cf596bccd64fc165c21a98c66eeebdbf275ad4e4ff0114bac584fc636f",
   "pages": 32,
   "checks": [
+    {
+      "check": "regression_lock_matches_current_artifacts",
+      "status": "PASS",
+      "detail": {
+        "passed": true,
+        "lock_sha256": "836753cf596bccd64fc165c21a98c66eeebdbf275ad4e4ff0114bac584fc636f",
+        "declared_paths": [
+          "assets/cover-source-premium-bw-v2.png",
+          "assets/cover-source-premium-bw-v3.png",
+          "assets/cover.png",
+          "index.html",
+          "integrity-report.json",
+          "magazine.css",
+          "manifest.json",
+          "output/N04-METSI-lectura-previa-v9-final.pdf",
+          "output/N04-METSI-lectura-previa-v9.pdf",
+          "provenance/cover-image-premium-bw-v3.md",
+          "qa-report.json",
+          "source-manifest.json",
+          "source/N04_hechos_sintomas_relatos_hipotesis_y_decisiones-content-final.md"
+        ],
+        "missing_declarations": [],
+        "unexpected_declarations": [],
+        "digest_format_ok": true,
+        "mismatches": {},
+        "coherence": {
+          "cover_asset": true,
+          "cover_alias": true,
+          "cover_provenance": true,
+          "final_pdf": true,
+          "raw_pdf": true,
+          "pdf_bytes": true
+        }
+      }
+    },
     {
       "check": "canonical_source_is_byte_identical",
       "status": "PASS",
@@ -65,8 +101,8 @@
       "check": "pdf_is_new_finalized_artifact",
       "status": "PASS",
       "detail": {
-        "raw": "9cb8e927a7a112ffaff001a57b0920c0dea5de50e3d30cfb0afc25be0e9acbbe",
-        "final": "b3f9d19b25589cba735adcc2d1ec611218e50af54cae5075c71294b8003a58e7"
+        "raw": "8b882016903e8fbed22cd983656b7899a69266c6633f41802003eab77db03194",
+        "final": "b6b4df7df6c92e4ed76cce15d89a0802f9c7c0b6529f16ed8cdeef1b9af23ccb"
       }
     },
     {
@@ -201,9 +237,31 @@
       "detail": "METSILECTURA PREVIA\nEDICIÓN 2026\nN04\nFCE · UBA\nMETODOLOGÍA DE SISTEMAS DE INFORMACIÓN\nHechos, síntomas,relatos, hipótesisy decisiones\nN04\nIntervenir exige conservar la\nhistoria de cada aﬁrmación:\nqué se observó, cómo se\ntransformó y qué decisión\nsostiene.\n01\nDiego Carralbal, 2026  ·  linkedin.com/in/carralbal\n"
     },
     {
-      "check": "premium_cover_contract",
+      "check": "premium_cover_contract_and_exact_tonal_provenance",
       "status": "PASS",
-      "detail": "native black-and-white cinematic photography, Argentine representation, no desaturation filter and dedicated alt text"
+      "detail": {
+        "contract": {
+          "file": "cover.png",
+          "source": "assets/cover-source-premium-bw-v3.png",
+          "sha256": "ac947baf49208e1eba7c1d5842c88e27e5761b2d0be86a8f7660a1afd7532925",
+          "alt": "Analista de sistemas argentina en un hotel de Buenos Aires, observada entre reflejos y rastros documentales que sugieren evidencia, hipótesis rivales y decisiones",
+          "photographic_origin": "native_black_and_white",
+          "render_treatment": "no_grayscale_conversion",
+          "art_direction": "lighting, wardrobe, materials and tonal separation conceived for monochrome"
+        },
+        "source_sha256": "ac947baf49208e1eba7c1d5842c88e27e5761b2d0be86a8f7660a1afd7532925",
+        "alias_sha256": "ac947baf49208e1eba7c1d5842c88e27e5761b2d0be86a8f7660a1afd7532925",
+        "derived_from_sha256": "2e29de9395a8880f5a1168d2f379b9f58dddeee5176c6463b9916b3c57abe10b",
+        "brightness": 1.35,
+        "contrast": 1.05,
+        "order": [
+          "brightness",
+          "contrast"
+        ],
+        "pixel_exact": true,
+        "composition_changed": false,
+        "css_rule": "filter:none;opacity:1"
+      }
     },
     {
       "check": "only_cover_changed_against_v8",
@@ -263,7 +321,7 @@
       "status": "PASS",
       "detail": {
         "language": "es-AR",
-        "alt_count": 3
+        "alt_count": 4
       }
     },
     {

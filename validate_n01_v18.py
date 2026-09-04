@@ -21,10 +21,11 @@ from pypdf.generic import ContentStream
 HERE = Path(__file__).resolve().parent
 SOURCE = HERE / "N01-content-final" / "source" / "N01_metodologia_sin_recetas-content-final.md"
 OLD_SOURCE = HERE / "N01-v17-final" / "source" / "N01_metodologia_sin_recetas-v12.md"
-CURATION = HERE / "N01" / "image-curation" / "image-manifest.json"
 ROOT = HERE / "N01-v18-final"
 HTML = ROOT / "index.html"
 CSS = ROOT / "magazine.css"
+MANIFEST = ROOT / "manifest.json"
+IMAGE_MANIFEST = ROOT / "provenance" / "image-manifest.json"
 DIAGRAM = ROOT / "diagrams" / "N01-mapa-decision.svg"
 PDF = ROOT / "output" / "N01-METSI-lectura-previa-v18-final.pdf"
 BASELINE_PDF = HERE / "N01-v17-final" / "output" / "N01-METSI-lectura-previa-v17-final.pdf"
@@ -46,6 +47,73 @@ def compact(value: str) -> str:
 
 def check(name: str, passed: bool, detail: object) -> dict:
     return {"check": name, "status": "PASS" if passed else "FAIL", "detail": detail}
+
+
+def percentile(values: list[float], fraction: float) -> float:
+    ordered = sorted(values)
+    if not ordered:
+        return 0.0
+    position = (len(ordered) - 1) * fraction
+    lower = int(position)
+    upper = min(lower + 1, len(ordered) - 1)
+    return ordered[lower] + (ordered[upper] - ordered[lower]) * (position - lower)
+
+
+def cover_tonal_audit(path: Path) -> dict[str, object]:
+    with Image.open(path) as source:
+        image = source.convert("RGB")
+        image.thumbnail((512, 512), Image.Resampling.LANCZOS)
+        pixels = list(image.getdata())
+    luminance = [.2126 * red + .7152 * green + .0722 * blue for red, green, blue in pixels]
+    spreads = [float(max(pixel) - min(pixel)) for pixel in pixels]
+    p05 = percentile(luminance, .05)
+    p95 = percentile(luminance, .95)
+    spread_p95 = percentile(spreads, .95)
+    tonal_stddev = statistics.pstdev(luminance)
+    dark_fraction = sum(value < 32 for value in luminance) / len(luminance)
+    passed = (
+        spread_p95 <= 6.0
+        and p05 <= 70.0
+        and p95 >= 170.0
+        and p95 - p05 >= 150.0
+        and tonal_stddev >= 45.0
+        and dark_fraction <= .35
+    )
+    return {
+        "passed": passed,
+        "channel_spread_p95": round(spread_p95, 2),
+        "luminance_p05": round(p05, 2),
+        "luminance_p95": round(p95, 2),
+        "tonal_span": round(p95 - p05, 2),
+        "luminance_stddev": round(tonal_stddev, 2),
+        "fraction_below_32": round(dark_fraction, 4),
+    }
+
+
+def effective_css_rule(css: str, selector: str) -> str:
+    matches = re.findall(re.escape(selector) + r"\{([^}]*)\}", css)
+    return re.sub(r"\s+", "", matches[-1]) if matches else ""
+
+
+def rgba_alphas(rule: str) -> list[float]:
+    return [float(value) for value in re.findall(r"rgba\([^)]*,([0-9]*\.?[0-9]+)\)", rule)]
+
+
+def packaged_asset_audit(records: list[dict[str, object]]) -> dict[str, object]:
+    failures: list[dict[str, object]] = []
+    for record in records:
+        recorded = Path(str(record.get("file", "")))
+        if recorded.parts[:1] == ("assets",):
+            path = ROOT / recorded
+        elif recorded.name == "contents.jpg":
+            path = ROOT / "assets" / "sparse-fill-01.jpg"
+        else:
+            path = ROOT / "assets" / recorded.name
+        expected = str(record.get("sha256", ""))
+        actual = sha256(path) if path.is_file() else None
+        if actual != expected:
+            failures.append({"file": str(recorded), "resolved": str(path), "expected": expected, "actual": actual})
+    return {"passed": len(records) == 8 and not failures, "records": len(records), "failures": failures}
 
 
 def page_occupancies(pdf: Path) -> list[float]:
@@ -365,7 +433,8 @@ def main() -> None:
     css = CSS.read_text(encoding="utf-8")
     diagram = DIAGRAM.read_text(encoding="utf-8")
     qa = json.loads(QA.read_text(encoding="utf-8"))
-    curation = json.loads(CURATION.read_text(encoding="utf-8"))
+    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    image_manifest = json.loads(IMAGE_MANIFEST.read_text(encoding="utf-8"))
     reader = PdfReader(str(PDF))
     raw_page_texts = [page.extract_text() or "" for page in reader.pages]
     page_texts = [normalized(text) for text in raw_page_texts]
@@ -450,9 +519,8 @@ def main() -> None:
     p24_caption = p24_compact.find(compact("El software puede funcionar y la promesa fallar: el objeto de análisis es el sistema sociotécnico que produce el servicio."))
     p24_body = p24_compact.find(compact("El pedido inicial puede transformarse en un encargo de intervención provisional."))
 
-    assets = curation["assets"]
-    selected_paths = [HERE / "N01" / "image-curation" / entry["file"] for entry in assets]
-    assets_valid = all(path.exists() and sha256(path) == entry["sha256"] for path, entry in zip(selected_paths, assets))
+    assets = image_manifest["assets"]
+    asset_audit = packaged_asset_audit(assets)
     hotel_portraits = [path for path in sorted((ROOT / "assets").glob("hotel-*")) if path.name != "hotel-horizonte.png"]
     referent_portraits = sorted((ROOT / "assets").glob("referent-*"))
 
@@ -531,6 +599,39 @@ def main() -> None:
     eyebrow_runs = cover_eyebrow_runs(PDF)
     baseline_contrast = cover_contrast_ratio(BASELINE_PDF)
     candidate_contrast = cover_contrast_ratio(PDF)
+    cover_contract = manifest.get("cover", {})
+    cover_source = ROOT / str(cover_contract.get("source", ""))
+    cover_alias = ROOT / "assets" / str(cover_contract.get("file", ""))
+    cover_tone = cover_tonal_audit(cover_source) if cover_source.is_file() else {"passed": False, "reason": "missing cover source"}
+    cover_rule = effective_css_rule(css, ".cover-n01>img")
+    shade_rule = effective_css_rule(css, ".cover-n01 .cover-shade")
+    top_rule = effective_css_rule(css, ".cover-n01::before")
+    shade_alphas = rgba_alphas(shade_rule)
+    top_alphas = rgba_alphas(top_rule)
+    cover_audit = {
+        "passed": (
+            cover_source.is_file()
+            and cover_alias.is_file()
+            and sha256(cover_source) == sha256(cover_alias) == cover_contract.get("sha256")
+            and cover_contract.get("photographic_origin") == "native_black_and_white"
+            and cover_contract.get("render_treatment") == "no_grayscale_conversion"
+            and str(cover_contract.get("alt", "")) in html
+            and cover_tone.get("passed") is True
+            and "filter:none" in cover_rule
+            and bool(shade_alphas)
+            and max(shade_alphas) <= .60
+            and bool(top_alphas)
+            and max(top_alphas) <= .50
+            and ".collection-cover.cover-shade{position:absolute;inset:0" in re.sub(r"\s+", "", css)
+        ),
+        "source": str(cover_source.relative_to(ROOT)) if cover_source.is_file() else str(cover_source),
+        "sha256": sha256(cover_source) if cover_source.is_file() else None,
+        "tone": cover_tone,
+        "contract": cover_contract,
+        "cover_rule": cover_rule,
+        "shade_rule": shade_rule,
+        "top_rule": top_rule,
+    }
     boundary_audit = page_boundary_audit(PDF)
     glossary_clearance = glossary_rule_clearance(PDF)
     occupancies = page_occupancies(PDF)
@@ -570,7 +671,8 @@ def main() -> None:
         check("cover_eyebrow_contrast_at_least_4_5", candidate_contrast["white_contrast_ratio"] >= 4.5, {"v17": baseline_contrast, "v18": candidate_contrast}),
         check("cover_top_scrim_reaches_trim_width", any(item["width"] >= 595 for item in seam["top_scrims"]) and not any(310 <= item["width"] <= 315 for item in seam["top_scrims"]), seam["top_scrims"]),
         check("cover_internal_seam_remains_absent", seam["maximum_adjacent_step"] <= 3 and max(seam["legacy_seam_samples"].values()) <= 3, {"v17": baseline_seam, "v18": seam}),
-        check("cover_change_confined_to_top_band", cover_scope["lower_cover_pixel_identical"], cover_scope),
+        check("cover_is_native_bw_tonally_open_hash_locked_and_locally_shaded", cover_audit["passed"], cover_audit),
+        check("cover_photo_replacement_reaches_the_whole_page", not cover_scope["lower_cover_pixel_identical"] and cover_scope["full_difference_bbox"] == [0, 0, 595, 842], cover_scope),
         check("cover_text_geometry_unchanged", candidate_cover_geometry == baseline_cover_geometry, {"runs": len(candidate_cover_geometry)}),
         check("all_page_boundary_widows_removed", not boundary_audit["unresolved"], boundary_audit),
         check("no_source_paragraph_crosses_a_page_boundary", not paragraph_spans["spans"] and not paragraph_spans["missing"], paragraph_spans),
@@ -579,8 +681,8 @@ def main() -> None:
         check("dropcap_stream_order_and_complete_words", all(0 <= compact(page).find(compact(title)) < compact(page).find(compact(opening)) for page, title, opening in ((page_10, "Método, metodología, marco, práctica, técnica y herramienta", "En el lenguaje cotidiano"), (page_17, "Incertidumbre epistemológica, de acción y de coordinación", "No toda incertidumbre"), (page_26, "Síntesis", "La metodología no es"))) and "n01-dropcap-word" not in html, {"p10": "En", "p17": "No", "p26": "La"}),
         check("page27_pills_reading_order", 0 <= pills_title_at < pills_first_item_at, {"title": pills_title_at, "first_item": pills_first_item_at}),
         check("page10_ghost_label_removed", "se apoya en" not in page_10.casefold() and "se apoya en" not in diagram.casefold(), "residual connector label absent from SVG and PDF text layer"),
-        check("expected_repagination_uses_canonical_source", bool(visual_changes) and source_is_canonical and 1 not in visual_changes, {"changed_visual_pages": visual_changes, "source_sha256": sha256(SOURCE)}),
-        check("pdf_content_delta_tracks_canonical_source", abs((len(candidate_tokens) - len(baseline_tokens)) - (len(current_source_tokens) - len(old_source_tokens))) <= 10 and set(visual_changes).issubset({2, 3, 24, 28}) and not paragraph_spans["missing"], {"source_delta_words": len(current_source_tokens) - len(old_source_tokens), "pdf_delta_words": len(candidate_tokens) - len(baseline_tokens), "changed_visual_pages": visual_changes}),
+        check("expected_repagination_and_cover_audit_use_canonical_source", set(visual_changes) == {1, 2, 3, 24, 28} and source_is_canonical, {"changed_visual_pages": visual_changes, "source_sha256": sha256(SOURCE)}),
+        check("pdf_content_delta_tracks_canonical_source", abs((len(candidate_tokens) - len(baseline_tokens)) - (len(current_source_tokens) - len(old_source_tokens))) <= 10 and set(visual_changes).issubset({1, 2, 3, 24, 28}) and not paragraph_spans["missing"], {"source_delta_words": len(current_source_tokens) - len(old_source_tokens), "pdf_delta_words": len(candidate_tokens) - len(baseline_tokens), "changed_visual_pages": visual_changes}),
         check("hh01_content_present", all(compact(value) in compact(pdf_text) for value in ("Aplicación a Hotel Horizonte: construir HH-01", "Se autoriza reconstruir episodios de reserva y llegada durante dos semanas", "El memo contiene siete campos", "Entrega a N02 una situación y una obligación metodológica", "completar una ficha breve de HH-01")), "HH-01 completo y enlace N02 presentes"),
         check("page_fill_changes_documented", len(occupancies) == len(baseline_occupancies) == 29, occupancy_changes),
         check("checkland_isbn_no_wiley_url", "ISBN 978-0-470-02554-3" in source and "wiley.com" not in source.casefold(), "ISBN 978-0-470-02554-3"),
@@ -600,7 +702,7 @@ def main() -> None:
         check("glossary_three_columns_complete_and_legible", "column-count:3" in css and "font-size:9.7pt" in css and all(compact(term) in compact(glossary_page) for term in glossary_terms) and compact("Preguntas de preparación") not in compact(glossary_page), {"physical_page": glossary_page_index + 1, "terms": len(glossary_terms)}),
         check("glossary_bullets_clear_vertical_rules", glossary_clearance["bullets"] == 15 and glossary_clearance["minimum_points"] >= 3.0, glossary_clearance),
         check("no_placeholder_markers", not re.search(r"\b(?:TODO|TBD|LOREM IPSUM|PLACEHOLDER)\b", source + html), "no uppercase production placeholder markers"),
-        check("assets_preserved", len(assets) == 8 and assets_valid, {"assets": len(assets), "hashes_valid": assets_valid}),
+        check("cover_and_editorial_assets_match_the_packaged_provenance", asset_audit["passed"], asset_audit),
         check("pdf_a4_exactly_29_pages", len(reader.pages) == 29 and all(abs(float(page.mediabox.width) - 595.276) < 2 and abs(float(page.mediabox.height) - 841.89) < 2 for page in reader.pages), {"pages": len(reader.pages)}),
         check("no_page_less_than_half_filled", len(occupancies) == 29 and min(occupancies, default=0) >= .5, {"minimum": min(occupancies, default=0), "page": occupancies.index(min(occupancies)) + 1 if occupancies else None, "occupancies": occupancies}),
         check("pdf_qa_pass", qa.get("status") == "PASS", qa.get("status")),
@@ -611,7 +713,7 @@ def main() -> None:
     result = {
         "document": "N01",
         "version": "v18",
-        "candidate": str(PDF),
+        "candidate": str(PDF.relative_to(ROOT)),
         "pdf_sha256": sha256(PDF),
         "status": "PASS" if all(item["status"] == "PASS" for item in checks) else "FAIL",
         "checks": checks,

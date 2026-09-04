@@ -1,40 +1,1339 @@
 {
   "document": "N07",
   "version": "v9-final",
-  "status": "PASS",
   "validator": "validate_n07_v9.py",
-  "checks_passed": 40,
-  "checks_failed": 0,
-  "pdf": "output/N07-METSI-lectura-previa-v9-final.pdf",
+  "mode": "read-only",
+  "status": "PASS",
+  "failed_checks": [],
+  "source_sha256": "4e0416a028109761f0a9f498315946a62a147355c759054a733dd82902f639b6",
+  "pdf_sha256": "c7b36bffcd3da4d1955f3563f7836dc9fad28d5cb0fa5ed7129bba1f2b075bd9",
+  "pdf_bytes": 20825394,
   "pages": 31,
-  "pdf_bytes": 20824933,
-  "pdf_sha256": "6c27e0921b927f1954c9f40f520420bdb02d8ed60bcdfd39045b59d776791f9b",
-  "canonical_source": "source/N07_entrevistar_no_es_pedir_requisitos-content-final.md",
-  "canonical_source_sha256": "4e0416a028109761f0a9f498315946a62a147355c759054a733dd82902f639b6",
-  "source_block_count": 371,
-  "references": 11,
-  "external_urls": 5,
-  "referents": 6,
-  "hotel_horizonte_voices": 4,
-  "pills": 5,
-  "glossary_entries": 13,
-  "questions": 6,
-  "full_bleed_pause_pages": [5, 13],
   "minimum_ordinary_page_fill": 0.5789,
-  "cover_title_quote_gutter_pt": 27.029,
-  "infographic_minimum_equivalent_pt": 7.56,
-  "orphan_headings": [],
-  "underfilled_ordinary_pages": {},
-  "regressions": {
-    "sondas_utiles_with_first_item": true,
-    "protocol_items_9_and_10_share_page_27": true,
-    "pills_heading_precedes_items_in_pdf_order": true,
-    "n06_pdf_sha_unchanged": true
-  },
-  "reproducibility": {
-    "html_css_manifests_identical": true,
-    "extracted_text_sha256": "812c5ca8e53b59109b26e34931982f73da3baefb6f698f63c3215d512143cbcc",
-    "links_sha256": "396dfd22eb2cfbcc62fb9ff871efa330c30702e955168d5f2853b4bb83f97b5a",
-    "all_31_page_rasters_identical": true
-  }
+  "checks": [
+    {
+      "check": "required_release_files_present",
+      "status": "PASS",
+      "detail": {
+        "missing": []
+      }
+    },
+    {
+      "check": "consolidated_image_manifest_is_complete_portable_and_hash_locked",
+      "status": "PASS",
+      "detail": {
+        "passed": true,
+        "entries": 21,
+        "rendered_assets": 19,
+        "supporting_sources": 2,
+        "unique_files": 21,
+        "issues": [],
+        "nonportable_markers": []
+      }
+    },
+    {
+      "check": "package_aliases_match_authoring_files",
+      "status": "PASS",
+      "detail": "metsi.css == magazine.css; document.json == manifest.json"
+    },
+    {
+      "check": "html_and_css_local_references_resolve",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "canonical_source_sha_and_byte_identity",
+      "status": "PASS",
+      "detail": {
+        "actual": "4e0416a028109761f0a9f498315946a62a147355c759054a733dd82902f639b6",
+        "expected": "4e0416a028109761f0a9f498315946a62a147355c759054a733dd82902f639b6",
+        "byte_identical": true
+      }
+    },
+    {
+      "check": "content_audit_remains_closed",
+      "status": "PASS",
+      "detail": {
+        "overall": "pass",
+        "word_counts": {
+          "total": 9740,
+          "substantive_from_thesis_through_synthesis": 8474
+        },
+        "anchors": {
+          "Brinkmann y Kvale (2015)": true,
+          "Klein (1998)": true,
+          "Flanagan (1954)": true,
+          "Malterud et al. (2016)": true,
+          "Costanza-Chock (2020)": true,
+          "Beyer y Holtzblatt (1997)": true,
+          "Braun y Clarke (2021)": true,
+          "Suchman (2007)": true,
+          "NIST AI 600-1 (2024)": true,
+          "NIST AI 100-4 (2024)": true,
+          "Reglamento (UE) 2024/1689": true
+        }
+      }
+    },
+    {
+      "check": "source_manifest_has_371_blocks_exactly_once",
+      "status": "PASS",
+      "detail": {
+        "manifest": 371,
+        "unique_manifest": 371,
+        "html": 371,
+        "unique_html": 371,
+        "integrity": {
+          "status": "PASS",
+          "source_block_count": 371,
+          "rendered_source_id_count": 371,
+          "missing_source_ids": [],
+          "unexpected_source_ids": [],
+          "duplicate_rendered_ids": []
+        }
+      }
+    },
+    {
+      "check": "all_371_source_blocks_have_rendered_fragments",
+      "status": "PASS",
+      "detail": {
+        "checked": 371,
+        "missing": []
+      }
+    },
+    {
+      "check": "source_id_reading_order_is_preserved_in_html",
+      "status": "PASS",
+      "detail": {
+        "ids_checked": 371
+      }
+    },
+    {
+      "check": "canonical_13_section_structure",
+      "status": "PASS",
+      "detail": [
+        "Pregunta profesional",
+        "La pregunta que fabricó la respuesta",
+        "Tesis",
+        "De N06 a N07: de la misión de evidencia a la conversación",
+        "Movimiento 1 · Construir preguntas que no fabriquen la respuesta",
+        "Movimiento 2 · Diseñar una situación en la que resulte posible decir",
+        "Movimiento 3 · Convertir relatos en afirmaciones contrastables",
+        "2026: transcribir y resumir automáticamente exige una cadena de evidencia",
+        "De N07 a N08: de lo dicho a lo realizado",
+        "Síntesis",
+        "Cinco píldoras para recordar",
+        "Glosario esencial",
+        "Preguntas de preparación",
+        "Referencias base"
+      ]
+    },
+    {
+      "check": "content_counts_close",
+      "status": "PASS",
+      "detail": {
+        "actual": {
+          "pills": 5,
+          "glossary": 13,
+          "questions": 6,
+          "references": 11
+        },
+        "expected": {
+          "pills": 5,
+          "glossary": 13,
+          "questions": 6,
+          "references": 11
+        }
+      }
+    },
+    {
+      "check": "page_28_section_11_heading_precedes_all_five_pills_in_extracted_order",
+      "status": "PASS",
+      "detail": {
+        "tokens": [
+          "11 METSI · N07 PREPARACIÓN",
+          "Cinco píldoras para recordar",
+          "1. Toda pregunta propone un marco posible para la respuesta.",
+          "2. Un relato sincero puede ser impreciso y seguir siendo valioso.",
+          "3. Los episodios enseñan más que las opiniones generales.",
+          "4. Contradicción no es ruido: puede señalar fronteras o significados distintos.",
+          "5. El resumen automático nunca reemplaza la cadena hacia la fuente."
+        ],
+        "positions": [
+          1569,
+          1590,
+          1615,
+          1664,
+          1717,
+          1764,
+          1830
+        ]
+      }
+    },
+    {
+      "check": "sondas_utiles_label_stays_with_its_first_list_item",
+      "status": "PASS",
+      "detail": {
+        "heading_source_id": "N07-s06-b067",
+        "first_item_source_id": "N07-s06-b068",
+        "heading_pages": [
+          17
+        ],
+        "first_item_pages": [
+          17
+        ],
+        "shared_pages": [
+          17
+        ]
+      }
+    },
+    {
+      "check": "protocol_item_10_does_not_open_page_27_as_an_isolated_list_item",
+      "status": "PASS",
+      "detail": {
+        "item_pages": {
+          "8": [
+            26
+          ],
+          "9": [
+            27
+          ],
+          "10": [
+            27
+          ]
+        }
+      }
+    },
+    {
+      "check": "all_11_references_are_anchored",
+      "status": "PASS",
+      "detail": {
+        "Brinkmann y Kvale (2015)": true,
+        "Klein (1998)": true,
+        "Flanagan (1954)": true,
+        "Malterud, Siersma y Guassora (2016)": true,
+        "Costanza-Chock (2020)": true,
+        "Beyer y Holtzblatt (1997)": true,
+        "Braun y Clarke (2021)": true,
+        "Suchman (2007)": true,
+        "NIST AI 600-1 (2024)": true,
+        "NIST AI 100-4 (2024)": true,
+        "Reglamento europeo 2024/1689": true
+      }
+    },
+    {
+      "check": "pdf_is_distinct_finalized_artifact",
+      "status": "PASS",
+      "detail": {
+        "raw_sha256": "5c7e7c493698ef1ab87f0aeb49a591cee6be58f23b5c06d79ece60d29a99fb5d",
+        "final_sha256": "c7b36bffcd3da4d1955f3563f7836dc9fad28d5cb0fa5ed7129bba1f2b075bd9"
+      }
+    },
+    {
+      "check": "pdf_has_31_a4_pages",
+      "status": "PASS",
+      "detail": {
+        "pages": 31,
+        "sizes": [
+          {
+            "page": 1,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 2,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 3,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 4,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 5,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 6,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 7,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 8,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 9,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 10,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 11,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 12,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 13,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 14,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 15,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 16,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 17,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 18,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 19,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 20,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 21,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 22,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 23,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 24,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 25,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 26,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 27,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 28,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 29,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 30,
+            "width": 594.96,
+            "height": 841.92
+          },
+          {
+            "page": 31,
+            "width": 594.96,
+            "height": 841.92
+          }
+        ]
+      }
+    },
+    {
+      "check": "pdf_metadata_is_complete",
+      "status": "PASS",
+      "detail": {
+        "metadata": {
+          "/Title": "N07 · Entrevistar no es pedir requisitos",
+          "/Author": "Diego Carralbal",
+          "/Subject": "Metodología de Sistemas de Información · FCE · UBA"
+        },
+        "keywords": "METSI, UBA, lectura previa, Investigación y construcción del problema"
+      }
+    },
+    {
+      "check": "contents_and_section_reading_order_are_complete",
+      "status": "PASS",
+      "detail": {
+        "contents_positions": {
+          "Pregunta profesional": 146,
+          "La pregunta que fabricó la respuesta": 167,
+          "Tesis": 200,
+          "De N06 a N07: de la misión de evidencia a la conversación": 207,
+          "Movimiento 1 · Construir preguntas que no fabriquen la respuesta": 254,
+          "Movimiento 2 · Diseñar una situación en la que resulte posible decir": 310,
+          "Movimiento 3 · Convertir relatos en afirmaciones contrastables": 368,
+          "2026: transcribir y resumir automáticamente exige una cadena de evidencia": 424,
+          "De N07 a N08: de lo dicho a lo realizado": 489,
+          "Síntesis": 521,
+          "Cinco píldoras para recordar": 531,
+          "Glosario esencial": 558,
+          "Preguntas de preparación": 576
+        },
+        "pdf_headers": [
+          [
+            1,
+            4,
+            "PROBLEMA"
+          ],
+          [
+            2,
+            6,
+            "PROBLEMA"
+          ],
+          [
+            3,
+            7,
+            "PROBLEMA"
+          ],
+          [
+            4,
+            8,
+            "PROBLEMA"
+          ],
+          [
+            5,
+            8,
+            "DISTINCIONES"
+          ],
+          [
+            6,
+            14,
+            "DECISIONES"
+          ],
+          [
+            7,
+            18,
+            "PRUEBA"
+          ],
+          [
+            8,
+            25,
+            "TRANSFERENCIA"
+          ],
+          [
+            9,
+            27,
+            "TRANSFERENCIA"
+          ],
+          [
+            10,
+            28,
+            "PREPARACIÓN"
+          ],
+          [
+            11,
+            28,
+            "PREPARACIÓN"
+          ],
+          [
+            12,
+            29,
+            "PREPARACIÓN"
+          ],
+          [
+            13,
+            29,
+            "PREPARACIÓN"
+          ]
+        ],
+        "sin_num": 3
+      }
+    },
+    {
+      "check": "route_is_exact_in_html_and_pdf",
+      "status": "PASS",
+      "detail": {
+        "pdf": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ],
+        "html": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ],
+        "expected": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ],
+        "counts": {
+          "PROBLEMA": 4,
+          "DISTINCIONES": 1,
+          "DECISIONES": 1,
+          "PRUEBA": 1,
+          "TRANSFERENCIA": 2,
+          "PREPARACIÓN": 4
+        }
+      }
+    },
+    {
+      "check": "all_source_headings_keep_following_body_on_same_page",
+      "status": "PASS",
+      "detail": {
+        "passed": true,
+        "checked": 51,
+        "failed": []
+      }
+    },
+    {
+      "check": "ordinary_pages_are_at_least_55_percent_full",
+      "status": "PASS",
+      "detail": {
+        "ordinary_pages": {
+          "2": 0.9542,
+          "3": 0.7629,
+          "6": 0.9784,
+          "7": 0.7912,
+          "8": 0.7893,
+          "9": 0.8616,
+          "10": 0.9736,
+          "11": 0.9441,
+          "12": 0.9571,
+          "14": 0.8681,
+          "15": 0.9135,
+          "16": 0.971,
+          "17": 0.8801,
+          "18": 0.8153,
+          "19": 0.9821,
+          "20": 0.9951,
+          "21": 0.9728,
+          "22": 0.9413,
+          "23": 0.946,
+          "24": 0.7412,
+          "25": 0.998,
+          "26": 0.9701,
+          "27": 0.971,
+          "28": 0.9746,
+          "29": 0.7427,
+          "30": 0.5789
+        },
+        "exception": {
+          "4": {
+            "top": 524.53,
+            "bottom": 713.64,
+            "fill": 0.2542
+          }
+        },
+        "underfilled": {},
+        "minimum": 0.5789
+      }
+    },
+    {
+      "check": "page_4_is_intentional_dark_full_page_opening",
+      "status": "PASS",
+      "detail": {
+        "background": {
+          "passed": true,
+          "maximum_luminance": 0.2,
+          "full_page_rectangles": [
+            {
+              "gaps_pt": {
+                "left": 0.0,
+                "right": 0.0,
+                "top": 0.0,
+                "bottom": 0.0
+              },
+              "luminance": 0.098,
+              "color": [
+                0.098,
+                0.098,
+                0.098
+              ]
+            },
+            {
+              "gaps_pt": {
+                "left": 0.0,
+                "right": 0.0,
+                "top": 0.0,
+                "bottom": 0.0
+              },
+              "luminance": 0.098,
+              "color": [
+                0.098,
+                0.098,
+                0.098
+              ]
+            },
+            {
+              "gaps_pt": {
+                "left": 0.0,
+                "right": 0.0,
+                "top": 0.0,
+                "bottom": 0.134
+              },
+              "luminance": 0.9919,
+              "color": [
+                0.9922,
+                0.9922,
+                0.9882
+              ]
+            }
+          ]
+        },
+        "fill": {
+          "top": 524.53,
+          "bottom": 713.64,
+          "fill": 0.2542
+        }
+      }
+    },
+    {
+      "check": "rendered_pdf_contains_zero_arial",
+      "status": "PASS",
+      "detail": {
+        "fonts": [
+          "AAAAAA+Avenir-Book-0",
+          "AAAAAA+Didot",
+          "ABAAAA+Didot",
+          "BAAAAA+Avenir-Book",
+          "BBAAAA+Avenir-Heavy",
+          "CAAAAA+Avenir-Book",
+          "CBAAAA+Avenir-Book",
+          "DAAAAA+Didot",
+          "DBAAAA+Didot",
+          "EAAAAA+Avenir-Heavy",
+          "EBAAAA+Didot",
+          "FAAAAA+Didot",
+          "FBAAAA+Baskerville-SemiBold",
+          "GAAAAA+Didot",
+          "GBAAAA+Avenir-Heavy",
+          "HAAAAA+Baskerville",
+          "HBAAAA+Didot",
+          "IAAAAA+Baskerville-Bold",
+          "IBAAAA+Avenir-Book",
+          "JAAAAA+Avenir-Heavy",
+          "JBAAAA+Avenir-Heavy",
+          "KAAAAA+Avenir-Book",
+          "KBAAAA+Didot",
+          "LAAAAA+Avenir-Book",
+          "LBAAAA+Baskerville",
+          "MAAAAA+Avenir-Book",
+          "MBAAAA+Avenir-Book",
+          "NAAAAA+Baskerville-Bold",
+          "NBAAAA+Didot",
+          "OAAAAA+Baskerville",
+          "OBAAAA+Baskerville",
+          "PAAAAA+Didot-Bold",
+          "PBAAAA+Didot",
+          "QAAAAA+Avenir-Heavy",
+          "QBAAAA+Avenir-Heavy",
+          "RAAAAA+Avenir-Heavy",
+          "RBAAAA+Baskerville-SemiBold",
+          "SAAAAA+Baskerville-Italic",
+          "SBAAAA+Baskerville",
+          "TAAAAA+Avenir-Book",
+          "TBAAAA+Avenir-Book",
+          "UAAAAA+Didot-Italic",
+          "UBAAAA+Avenir-Heavy",
+          "VAAAAA+Avenir-Heavy",
+          "VBAAAA+Avenir-Medium",
+          "WAAAAA+Avenir-Medium",
+          "WBAAAA+Didot",
+          "XAAAAA+Avenir-MediumOblique",
+          "XBAAAA+Avenir-Book",
+          "YAAAAA+Avenir-Heavy",
+          "YBAAAA+Avenir-BookOblique",
+          "ZAAAAA+Didot"
+        ],
+        "qa_forbidden": []
+      }
+    },
+    {
+      "check": "page_1_cover_reaches_all_edges",
+      "status": "PASS",
+      "detail": {
+        "passed": true,
+        "tolerance_pt": 1.0,
+        "gaps_pt": {
+          "left": 0.0,
+          "right": 0.0,
+          "top": 0.0,
+          "bottom": 0.0
+        },
+        "bbox": {
+          "x0": 0.0,
+          "x1": 605.153,
+          "top": 0.0,
+          "bottom": 855.903
+        }
+      }
+    },
+    {
+      "check": "cover_title_and_pull_quote_keep_a_safe_gutter",
+      "status": "PASS",
+      "detail": {
+        "title_end_x_pt": 388.18,
+        "quote_start_x_pt": 415.209,
+        "gutter_pt": 27.029,
+        "minimum_pt": 12.0
+      }
+    },
+    {
+      "check": "page_1_cover_is_native_bw_without_css_conversion_or_heavy_global_scrim",
+      "status": "PASS",
+      "detail": {
+        "tone": {
+          "passed": true,
+          "channel_spread_p95": 2.0,
+          "luminance_p05": 8.0,
+          "luminance_p95": 208.93,
+          "luminance_stddev": 57.42
+        },
+        "contract": {
+          "file": "cover.png",
+          "source": "assets/cover-source-premium-bw-v1.png",
+          "sha256": "f6a489ed346b58124d306da0404cd3a1e1bddda9d8a389409adaaea0c566feb9",
+          "alt": "Dos profesionales argentinos conversan en un espacio de trabajo contemporáneo, con amplio espacio negativo y una escala luminosa de grises, en una fotografía editorial concebida en blanco y negro",
+          "photographic_origin": "native_black_and_white",
+          "render_treatment": "no_grayscale_conversion",
+          "art_direction": "lighting, wardrobe, materials and tonal separation conceived for monochrome"
+        },
+        "cover_rule": "inset:0;width:100%;height:100%;object-position:50% 48%;filter:none",
+        "shade_rule": "inset:0;width:100%;height:100%;background:linear-gradient(180deg,rgba(5,7,6,.13) 0,rgba(5,7,6,0) 29%,rgba(5,7,6,0) 62%,rgba(5,7,6,.46) 100%)",
+        "shade_alphas": [
+          0.13,
+          0.0,
+          0.0,
+          0.46
+        ],
+        "hashes_ok": true
+      }
+    },
+    {
+      "check": "cover_eyebrow_is_two_accessible_text_runs",
+      "status": "PASS",
+      "detail": "METSILECTURA PREVIA\nEDICIÓN 2026\nN07\nFCE · UBA\nMETODOLOGÍA DE SISTEMAS DE INFORMACIÓN\nEntrevistar no es pedirrequisitos\nN07\nUna entrevista de\ninvestigación busca\nepisodios, mecanismos,\ndecisiones, excepciones\ny signiﬁcados.\n01\nDiego Carralbal, 2026  ·  linkedin.com/in/carralbal\n"
+    },
+    {
+      "check": "four_editorial_photos_and_two_pause_photos_are_unique_and_provenanced",
+      "status": "PASS",
+      "detail": {
+        "audit": {
+          "passed": true,
+          "assets": [
+            {
+              "file": "assets/editorial-01.png",
+              "size": [
+                1536,
+                1024
+              ],
+              "sha256": "04933104fb9e7b3a43ff2cd200cca0188e9b6befee3dcd15058fb95fe9b269d4",
+              "channel_spread_p95": 1.0,
+              "monochrome": true
+            },
+            {
+              "file": "assets/editorial-02.png",
+              "size": [
+                1536,
+                1024
+              ],
+              "sha256": "f7bdea9ae8aab828350c11ccb9c89014ac9e09bca92547ae59f167473dd4537c",
+              "channel_spread_p95": 1.0,
+              "monochrome": true
+            },
+            {
+              "file": "assets/editorial-03.png",
+              "size": [
+                1536,
+                1024
+              ],
+              "sha256": "c468f3f29a977e9fb1d33d082b1f2145cc19fd6834c797bbd93eb0cfe2879ada",
+              "channel_spread_p95": 1.0,
+              "monochrome": true
+            },
+            {
+              "file": "assets/editorial-04.png",
+              "size": [
+                1536,
+                1024
+              ],
+              "sha256": "8b2045b00feaee3d0e4881205a3739c1557dbb2a8ea48d554c0f60afd6abe269",
+              "channel_spread_p95": 2.0,
+              "monochrome": true
+            },
+            {
+              "file": "assets/pause-01.png",
+              "size": [
+                1055,
+                1491
+              ],
+              "sha256": "e20f5aee71c2b4b89164fc37859c9b278d1ec761431f3f49cb14e3872a2beabd",
+              "channel_spread_p95": 1.0,
+              "monochrome": true
+            },
+            {
+              "file": "assets/pause-02.png",
+              "size": [
+                1055,
+                1491
+              ],
+              "sha256": "fd6d7c728cf3ce2e79fb8f584ba51ff5e3fb505263d312cff73a7084050d5457",
+              "channel_spread_p95": 1.0,
+              "monochrome": true
+            }
+          ],
+          "invalid": [],
+          "unique_hashes": 6,
+          "roles_ok": true,
+          "generator": "OpenAI ImageGen",
+          "policy_present": true
+        },
+        "internal_images": [
+          "editorial-01.png",
+          "editorial-02.png",
+          "editorial-03.png",
+          "editorial-04.png",
+          "pause-01.png",
+          "pause-02.png"
+        ],
+        "image_pages": {
+          "1": 1,
+          "2": 1,
+          "3": 6,
+          "4": 0,
+          "5": 1,
+          "6": 0,
+          "7": 1,
+          "8": 0,
+          "9": 0,
+          "10": 0,
+          "11": 0,
+          "12": 0,
+          "13": 1,
+          "14": 0,
+          "15": 0,
+          "16": 0,
+          "17": 1,
+          "18": 12,
+          "19": 0,
+          "20": 0,
+          "21": 0,
+          "22": 0,
+          "23": 0,
+          "24": 0,
+          "25": 5,
+          "26": 0,
+          "27": 0,
+          "28": 0,
+          "29": 0,
+          "30": 0,
+          "31": 1
+        }
+      }
+    },
+    {
+      "check": "contents_photo_is_unique_and_not_reused_in_body",
+      "status": "PASS",
+      "detail": {
+        "contents_reference_count": 1
+      }
+    },
+    {
+      "check": "pages_5_and_13_are_the_only_full_bleed_pauses",
+      "status": "PASS",
+      "detail": {
+        "html_count": 2,
+        "pages": {
+          "5": {
+            "passed": true,
+            "tolerance_pt": 1.0,
+            "gaps_pt": {
+              "left": 0.0,
+              "right": 0.0,
+              "top": 0.0,
+              "bottom": 0.134
+            },
+            "bbox": {
+              "x0": 0.0,
+              "x1": 594.972,
+              "top": 0.0,
+              "bottom": 841.786
+            }
+          },
+          "13": {
+            "passed": true,
+            "tolerance_pt": 1.0,
+            "gaps_pt": {
+              "left": 0.0,
+              "right": 0.0,
+              "top": 0.0,
+              "bottom": 0.135
+            },
+            "bbox": {
+              "x0": 0.0,
+              "x1": 594.972,
+              "top": -0.001,
+              "bottom": 841.785
+            }
+          }
+        }
+      }
+    },
+    {
+      "check": "reference_grade_infographic_is_anchored_to_movement_3",
+      "status": "PASS",
+      "detail": {
+        "source_sha256": "f3e8fedacccaed9cf30ad00dd15485a04cbbd31c4bd840e14ec660c00161d8bc",
+        "copy_sha256": "f3e8fedacccaed9cf30ad00dd15485a04cbbd31c4bd840e14ec660c00161d8bc",
+        "in_section_07": true,
+        "manifest": {
+          "number": 7,
+          "module": "Investigación y construcción del problema",
+          "topology": "reference-grade-interview-evidence-decision-chain",
+          "labels": [
+            "Pregunta decisoria",
+            "Fragmento fuente",
+            "Episodio concreto",
+            "Registros y artefactos",
+            "Caso negativo",
+            "Rastros y contraste",
+            "Alcance",
+            "Grado de confianza",
+            "Explicación rival",
+            "Afirmación calibrada",
+            "Decisión revisable",
+            "Próxima comprobación"
+          ],
+          "source_headings": [
+            "De N06 a N07: de la misión de evidencia a la conversación",
+            "Anatomía de una pregunta",
+            "Diseñar la situación de entrevista",
+            "La cadena de inferencia: de una frase a una decisión",
+            "Afirmaciones contrastables"
+          ],
+          "file": "N07-mapa-decision.svg",
+          "source": "infographic-evidence-chain/n07-evidence-chain.svg",
+          "source_sha256": "f3e8fedacccaed9cf30ad00dd15485a04cbbd31c4bd840e14ec660c00161d8bc"
+        }
+      }
+    },
+    {
+      "check": "infographic_labels_are_readable_at_final_a4_size",
+      "status": "PASS",
+      "detail": {
+        "minimum_svg_font_px": 30.0,
+        "final_width_mm": 160.0,
+        "minimum_equivalent_pt": 7.56
+      }
+    },
+    {
+      "check": "page_30_is_image_free_two_column_references",
+      "status": "PASS",
+      "detail": {
+        "columns": {
+          "passed": true,
+          "left": {
+            "Brinkmann,": 77.05,
+            "Klein,": 77.05,
+            "Flanagan,": 77.05,
+            "Malterud,": 77.05,
+            "Costanza-Chock,": 77.05,
+            "Beyer,": 77.05
+          },
+          "right": {
+            "Braun,": 315.47,
+            "Suchman,": 315.47,
+            "Unión": 315.47
+          },
+          "national": [
+            315.47,
+            315.47
+          ]
+        },
+        "images": 0,
+        "order_positions": [
+          42,
+          129,
+          183,
+          281,
+          448,
+          530,
+          613,
+          666,
+          754,
+          920,
+          1097
+        ]
+      }
+    },
+    {
+      "check": "five_exact_urls_are_printed_and_annotated_only_on_page_30",
+      "status": "PASS",
+      "detail": {
+        "source": [
+          "https://doi.org/10.1037/h0061470",
+          "https://doi.org/10.1177/1049732315617444",
+          "https://doi.org/10.6028/NIST.AI.100-4",
+          "https://doi.org/10.6028/NIST.AI.600-1",
+          "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+        ],
+        "annotations": [
+          "https://doi.org/10.1037/h0061470",
+          "https://doi.org/10.1177/1049732315617444",
+          "https://doi.org/10.6028/NIST.AI.100-4",
+          "https://doi.org/10.6028/NIST.AI.600-1",
+          "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+        ],
+        "pages": {
+          "30": [
+            "https://doi.org/10.1037/h0061470",
+            "https://doi.org/10.1177/1049732315617444",
+            "https://doi.org/10.6028/NIST.AI.100-4",
+            "https://doi.org/10.6028/NIST.AI.600-1",
+            "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+          ]
+        },
+        "printed": {
+          "https://doi.org/10.1177/1049732315617444": true,
+          "https://doi.org/10.6028/NIST.AI.100-4": true,
+          "https://doi.org/10.6028/NIST.AI.600-1": true,
+          "https://eur-lex.europa.eu/eli/reg/2024/1689/oj": true,
+          "https://doi.org/10.1037/h0061470": true
+        }
+      }
+    },
+    {
+      "check": "page_31_is_full_bleed_structured_matches_closing",
+      "status": "PASS",
+      "detail": {
+        "bleed": {
+          "passed": true,
+          "tolerance_pt": 1.0,
+          "gaps_pt": {
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0,
+            "bottom": 0.136
+          },
+          "bbox": {
+            "x0": 0.0,
+            "x1": 594.972,
+            "top": -0.002,
+            "bottom": 841.784
+          }
+        },
+        "text": "La secuencia vuelve visible que toda intervención consume recursos, deja huellas y necesita un criterio de cierre.\n31\nDiego Carralbal, 2026  ·  linkedin.com/in/carralbal\n",
+        "xobject_alts": [
+          "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza."
+        ]
+      }
+    },
+    {
+      "check": "six_unique_referents_have_complete_rights_and_provenance",
+      "status": "PASS",
+      "detail": {
+        "passed": true,
+        "actual": [
+          [
+            "Svend Brinkmann",
+            "assets/referent-svend-brinkmann.jpg"
+          ],
+          [
+            "Sasha Costanza-Chock",
+            "assets/referent-sasha-costanza-chock.jpg"
+          ],
+          [
+            "Lucy Suchman",
+            "assets/referent-lucy-suchman.jpg"
+          ],
+          [
+            "Reva Schwartz",
+            "assets/referent-reva-schwartz.jpg"
+          ],
+          [
+            "Elham Tabassi",
+            "assets/referent-elham-tabassi.jpg"
+          ],
+          [
+            "George Awad",
+            "assets/referent-george-awad.jpg"
+          ]
+        ],
+        "expected": [
+          [
+            "Svend Brinkmann",
+            "assets/referent-svend-brinkmann.jpg"
+          ],
+          [
+            "Sasha Costanza-Chock",
+            "assets/referent-sasha-costanza-chock.jpg"
+          ],
+          [
+            "Lucy Suchman",
+            "assets/referent-lucy-suchman.jpg"
+          ],
+          [
+            "Reva Schwartz",
+            "assets/referent-reva-schwartz.jpg"
+          ],
+          [
+            "Elham Tabassi",
+            "assets/referent-elham-tabassi.jpg"
+          ],
+          [
+            "George Awad",
+            "assets/referent-george-awad.jpg"
+          ]
+        ],
+        "manifest_files": [
+          "assets/referent-svend-brinkmann.jpg",
+          "assets/referent-sasha-costanza-chock.jpg",
+          "assets/referent-lucy-suchman.jpg",
+          "assets/referent-reva-schwartz.jpg",
+          "assets/referent-elham-tabassi.jpg",
+          "assets/referent-george-awad.jpg"
+        ],
+        "assets": [
+          {
+            "file": "assets/referent-svend-brinkmann.jpg",
+            "size": [
+              720,
+              720
+            ],
+            "mode": "L",
+            "sha256": "10cc713bb83b08af0465fba930a733d3b8e7c779b9a14c152c0ff341ff12f133"
+          },
+          {
+            "file": "assets/referent-sasha-costanza-chock.jpg",
+            "size": [
+              720,
+              720
+            ],
+            "mode": "L",
+            "sha256": "9005571a77550d7893be4721a55e7b52e37de64d8c11c91c8df63cf38bd4aca6"
+          },
+          {
+            "file": "assets/referent-lucy-suchman.jpg",
+            "size": [
+              720,
+              720
+            ],
+            "mode": "L",
+            "sha256": "63c0fec6a276bcfab293e3814ef8bcf3329d97e32242e3c93366df520c1bc177"
+          },
+          {
+            "file": "assets/referent-reva-schwartz.jpg",
+            "size": [
+              720,
+              720
+            ],
+            "mode": "L",
+            "sha256": "e6ce1ae11403ea57bb536b62d4a7ddef4d6eab192b9ed9a264d35019398372e2"
+          },
+          {
+            "file": "assets/referent-elham-tabassi.jpg",
+            "size": [
+              720,
+              720
+            ],
+            "mode": "L",
+            "sha256": "5e31371b63d980d83c65dd243471439ae4792f6c09fff43c7ffc287901d7709f"
+          },
+          {
+            "file": "assets/referent-george-awad.jpg",
+            "size": [
+              720,
+              720
+            ],
+            "mode": "L",
+            "sha256": "f8c0272ad9d54afa3711a0fb7e141abb27f0d16518f254827f1f42af82f2eb0a"
+          }
+        ],
+        "invalid": [],
+        "html_alts_complete": true,
+        "rights_policy_present": true
+      }
+    },
+    {
+      "check": "tagging_language_and_alt_structure_are_complete",
+      "status": "PASS",
+      "detail": {
+        "lang": "es-AR",
+        "marked": true,
+        "figures": [
+          {
+            "page": 1,
+            "alt": "Dos profesionales argentinos conversan en un espacio de trabajo contemporáneo, con amplio espacio negativo y una escala luminosa de grises, en una fotografía editorial concebida en blanco y negro"
+          },
+          {
+            "page": 2,
+            "alt": null
+          },
+          {
+            "page": 2,
+            "alt": "Escena editorial en blanco y negro sobre preguntas, recorridos y decisiones posibles durante una investigación profesional."
+          },
+          {
+            "page": 5,
+            "alt": "Dos sillas vacías frente a una puerta abierta en una sala de entrevistas, con luz lateral y una amplia escala de grises."
+          },
+          {
+            "page": 13,
+            "alt": "Trabajadora de servicio vista a través de capas de vidrio y reflejos en un corredor, entre lo que el procedimiento declara y el trabajo que efectivamente ocurre."
+          },
+          {
+            "page": 18,
+            "alt": "Secuencia entre pregunta decisoria, episodio concreto, rastros y contraste, afirmación calibrada y decisión revisable La entrevista produce evidencia cuando conecta episodios y rastros con afirmaciones de alcance explícito y decisiones que todavía pueden revisarse."
+          },
+          {
+            "page": 28,
+            "alt": "Cinco ideas para recordar"
+          },
+          {
+            "page": 31,
+            "alt": "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza."
+          }
+        ],
+        "required_alts": {
+          "1": "Dos profesionales argentinos conversan en un espacio de trabajo contemporáneo, con amplio espacio negativo y una escala luminosa de grises, en una fotografía editorial concebida en blanco y negro",
+          "2": "Escena editorial en blanco y negro sobre preguntas, recorridos y decisiones posibles durante una investigación profesional.",
+          "5": "Dos sillas vacías frente a una puerta abierta en una sala de entrevistas, con luz lateral y una amplia escala de grises.",
+          "13": "Trabajadora de servicio vista a través de capas de vidrio y reflejos en un corredor, entre lo que el procedimiento declara y el trabajo que efectivamente ocurre.",
+          "18": "Secuencia entre pregunta decisoria, episodio concreto, rastros y contraste, afirmación calibrada y decisión revisable La entrevista produce evidencia cuando conecta episodios y rastros con afirmaciones de alcance explícito y decisiones que todavía pueden revisarse.",
+          "28": "Cinco ideas para recordar",
+          "31": "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza."
+        },
+        "role_img_labels": [
+          "Dos profesionales argentinos conversan alrededor de una mesa de trabajo; una persona explica mientras la otra escucha y toma notas, con un mate visible entre los materiales. La forma de preguntar distribuye qué puede decirse, qué queda en silencio y qué respuesta termina pareciendo inevitable.",
+          "Dos trabajadoras argentinas conversan al mismo nivel en un entorno operativo; una viste indumentaria reflectiva y la otra escucha con un cuaderno. Una conversación produce evidencia sólo cuando la situación permite disentir sin convertir la respuesta en exposición o riesgo.",
+          "Secuencia entre pregunta decisoria, episodio concreto, rastros y contraste, afirmación calibrada y decisión revisable La entrevista produce evidencia cuando conecta episodios y rastros con afirmaciones de alcance explícito y decisiones que todavía pueden revisarse.",
+          "Vista cenital de manos que ordenan notas, tarjetas, un grabador y auriculares para reconstruir la trazabilidad de una entrevista. Conservar preguntas, rastros y transformaciones permite distinguir una frase recordada de una afirmación capaz de sostener una decisión.",
+          "Cinco ideas para recordar"
+        ]
+      }
+    },
+    {
+      "check": "all_pages_have_folio_and_linkedin_footer",
+      "status": "PASS",
+      "detail": {
+        "linkedin_annotations_per_page": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "check": "n06_final_pdf_regression_sha_is_unchanged",
+      "status": "PASS",
+      "detail": {
+        "actual": "c05782e7ad61b544994032c4eb6a740ff52ab34573b9a45d36960f5dd03bfd6a",
+        "expected": "c05782e7ad61b544994032c4eb6a740ff52ab34573b9a45d36960f5dd03bfd6a"
+      }
+    }
+  ]
 }

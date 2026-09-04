@@ -22,4 +22,4 @@
 
 El paquete completo debe publicarse junto con `image-manifest.json`, `assets/image-manifest.json`, `image-rights-manifest.json`, `infographic-work-layer/` y `provenance/`. Allí se conservan el inventario consolidado, los prompts, créditos, licencias, transformaciones, textos alternativos y bloqueos de regresión. Ningún activo puede sustituirse silenciosamente.
 
-La revisión autoral conjunta del tono de las tapas N00 a N10 puede modificar únicamente la tapa mediante una nueva versión explícita. No reabre el contenido ni el cuerpo de N09.
+La auditoría técnica consolidada de las tapas N00 a N10 cerró con resultado `PASS`. Cualquier cambio futuro requerirá una nueva versión explícita y no reabre el contenido ni el cuerpo de N09.

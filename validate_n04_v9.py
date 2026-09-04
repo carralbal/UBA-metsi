@@ -9,13 +9,16 @@ import sys
 from collections import Counter
 from pathlib import Path
 
+from PIL import Image, ImageChops, ImageEnhance
 from pypdf import PdfReader
 
 from validate_n03_v9 import (
     compact,
+    effective_css_rule,
     heading_alignment,
     links_by_page,
     page_extents,
+    regression_lock_audit,
     result,
     structure_alts,
 )
@@ -118,7 +121,57 @@ def main() -> int:
         "references": len(re.findall(r"^- ", references, re.M)),
     }
     alts = structure_alts(reader)
+    regression_lock = regression_lock_audit(
+        ROOT,
+        {
+            "source/N04_hechos_sintomas_relatos_hipotesis_y_decisiones-content-final.md",
+            "assets/cover-source-premium-bw-v2.png",
+            "assets/cover-source-premium-bw-v3.png",
+            "assets/cover.png",
+            "provenance/cover-image-premium-bw-v3.md",
+            "output/N04-METSI-lectura-previa-v9.pdf",
+            "output/N04-METSI-lectura-previa-v9-final.pdf",
+            "index.html",
+            "magazine.css",
+            "manifest.json",
+            "qa-report.json",
+            "integrity-report.json",
+            "source-manifest.json",
+        },
+    )
+    cover_source_v2 = ROOT / "assets/cover-source-premium-bw-v2.png"
+    cover_source_v3 = ROOT / "assets/cover-source-premium-bw-v3.png"
+    cover_alias = ROOT / "assets/cover.png"
+    with Image.open(cover_source_v2) as source_v2:
+        expected_v3 = ImageEnhance.Contrast(
+            ImageEnhance.Brightness(source_v2.convert("L")).enhance(1.35)
+        ).enhance(1.05)
+    with Image.open(cover_source_v3) as source_v3:
+        actual_v3 = source_v3.convert("L")
+        source_v3_size = source_v3.size
+        source_v3_mode = source_v3.mode
+    tonal_derivation_exact = (
+        source_v3_size == (1024, 1536)
+        and source_v3_mode == "L"
+        and ImageChops.difference(expected_v3, actual_v3).getbbox() is None
+    )
+    cover_provenance_text = (ROOT / "provenance/cover-image-premium-bw-v3.md").read_text(encoding="utf-8")
+    cover_rule = effective_css_rule(css, ".cover-n04>img")
+    cover_contract = manifest.get("cover", {})
+    cover_contract_pass = (
+        cover_contract.get("source") == "assets/cover-source-premium-bw-v3.png"
+        and cover_contract.get("sha256") == sha256(cover_source_v3)
+        and sha256(cover_source_v3) == sha256(cover_alias)
+        and cover_contract.get("photographic_origin") == "native_black_and_white"
+        and cover_contract.get("render_treatment") == "no_grayscale_conversion"
+        and str(cover_contract.get("alt", "")) in html
+        and str(cover_contract.get("alt", "")) in alts
+        and "filter:none" in cover_rule
+        and tonal_derivation_exact
+        and all(token in cover_provenance_text for token in ("Brightness 1.35", "Contrast 1.05", "No hubo recorte"))
+    )
     checks = [
+        result("regression_lock_matches_current_artifacts", regression_lock["passed"], regression_lock),
         result("canonical_source_is_byte_identical", SOURCE.read_bytes() == CANONICAL.read_bytes() and sha256(SOURCE) == EXPECTED_SOURCE_SHA, sha256(SOURCE)),
         result("canonical_structure", len(section_headings) == 11 and len(headings) == 12 and headings[-1] == "Referencias base", headings),
         result("three_movement_architecture", all(token in source for token in ("Movimiento 1 · Desarmar", "Movimiento 2 · Contrastar", "Movimiento 3 · Decidir")), "three movements present"),
@@ -138,7 +191,7 @@ def main() -> int:
         result("no_automatic_sparse_fills", qa.get("sparse_visual_fill_source_pages") == [] and qa.get("removed_blank_source_pages") == [], {"sparse": qa.get("sparse_visual_fill_source_pages"), "removed": qa.get("removed_blank_source_pages")}),
         result("two_internal_full_bleed_pauses", html.count('class="full-bleed full-bleed-quote"') == 2 and "Pregunta profesional" in page_texts[3] and "Una cifra no habla sola" in page_texts[4] and "La evidencia más valiosa" in page_texts[21], "question page 4, first pause page 5, second pause page 22"),
         result("cover_accessible_and_complete", all(token in page_texts[0] for token in ("LECTURA PREVIA", "EDICIÓN 2026", "N04", "FCE · UBA", "Hechos, síntomas")) and "L E C T U R A" not in page_texts[0], page_texts[0][:320]),
-        result("premium_cover_contract", "cover-source-premium-bw-v2.png" in json.dumps(manifest) and "Analista de sistemas argentina en un hotel de Buenos Aires" in html and "grayscale(1)" not in re.search(r"\.cover-n04>img\{([^}]*)\}", css).group(1), "native black-and-white cinematic photography, Argentine representation, no desaturation filter and dedicated alt text"),
+        result("premium_cover_contract_and_exact_tonal_provenance", cover_contract_pass, {"contract": cover_contract, "source_sha256": sha256(cover_source_v3), "alias_sha256": sha256(cover_alias), "derived_from_sha256": sha256(cover_source_v2), "brightness": 1.35, "contrast": 1.05, "order": ["brightness", "contrast"], "pixel_exact": tonal_derivation_exact, "composition_changed": False, "css_rule": cover_rule}),
         result("only_cover_changed_against_v8", cover_regression.get("status") == "PASS" and cover_regression.get("page_1_mean_absolute_pixel_difference", 0) > 0 and cover_regression.get("pages_2_to_32_maximum_mean_absolute_pixel_difference") == 0 and cover_regression.get("pages_2_to_32_changed") == [], cover_regression),
         result("cover_pauses_and_closing_are_full_bleed", all(extents[page]["fill"] >= 1.0 for page in (1, 5, 22, 32)), {page: extents[page]["fill"] for page in (1, 5, 22, 32)}),
         result("referents_and_hotel_voices", html.count('class="contributor"') == 6 and html.count("hotel-voice hotel-voice-") == 4 and len(re.findall(r'hotel-(?:elena|lucia|ricardo|federico)\.jpg', html)) == 4 and "ISO / IEC" in page_texts[2], "six referents and four distinct equal Hotel Horizonte portraits"),
@@ -160,6 +213,7 @@ def main() -> int:
         "pdf_sha256": sha256(PDF),
         "pdf_bytes": PDF.stat().st_size,
         "pdf_modified": PDF.stat().st_mtime,
+        "regression_lock_sha256": regression_lock.get("lock_sha256"),
         "pages": len(reader.pages),
         "checks": checks,
     }

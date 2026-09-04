@@ -3,12 +3,51 @@
   "version": "v9-final",
   "status": "PASS",
   "source_sha256": "46a9ecb180b96c6ff71790750e3e6d606ef7c0a1f061a0682ad29ad99dfcbf2b",
-  "pdf_sha256": "3b507eea1ddc0c7981ea90747039c1137a0149d233accb2d40ae86184b64d34f",
-  "pdf_bytes": 15201083,
-  "pdf_modified": 1788471956.0,
+  "pdf_sha256": "cf6088c205637cf3cfb2902e5f5804c880f6f1c9509317df4b8d3b2334ccc516",
+  "pdf_bytes": 15880141,
+  "pdf_modified": 1788519469.8026042,
+  "regression_lock_sha256": "01f65e4898c082f434156c8aca8c88163758e76c329d655e0bc8cc743f31dcb1",
   "pages": 28,
   "minimum_ordinary_page_fill": 0.5016,
   "checks": [
+    {
+      "check": "regression_lock_matches_current_artifacts",
+      "status": "PASS",
+      "detail": {
+        "passed": true,
+        "lock_sha256": "01f65e4898c082f434156c8aca8c88163758e76c329d655e0bc8cc743f31dcb1",
+        "declared_paths": [
+          "assets/cover-source-premium-bw-v2.png",
+          "assets/cover.png",
+          "document.json",
+          "image-manifest.json",
+          "index.html",
+          "integrity-report.json",
+          "magazine.css",
+          "manifest.json",
+          "metsi.css",
+          "output/N05-METSI-lectura-previa-v9-final.pdf",
+          "output/N05-METSI-lectura-previa-v9.pdf",
+          "provenance/cover-image-premium-bw-v2.md",
+          "provenance/editorial-image-provenance.md",
+          "qa-report.json",
+          "source-manifest.json",
+          "source/N05_actores_afectados_poder_y_perspectivas-content-final.md"
+        ],
+        "missing_declarations": [],
+        "unexpected_declarations": [],
+        "digest_format_ok": true,
+        "mismatches": {},
+        "coherence": {
+          "cover_asset": true,
+          "cover_alias": true,
+          "cover_provenance": true,
+          "final_pdf": true,
+          "raw_pdf": true,
+          "pdf_bytes": true
+        }
+      }
+    },
     {
       "check": "canonical_source_is_byte_identical",
       "status": "PASS",
@@ -66,8 +105,8 @@
       "check": "pdf_is_new_finalized_artifact",
       "status": "PASS",
       "detail": {
-        "raw": "720fe3fd4d973a83d71d0f64b8a17be1be3d6ac360763020a573fdecb8c8472c",
-        "final": "3b507eea1ddc0c7981ea90747039c1137a0149d233accb2d40ae86184b64d34f"
+        "raw": "5760125589e68a03b313d36d815b479ae743d7b95955cdeaaef4d821f6842c03",
+        "final": "cf6088c205637cf3cfb2902e5f5804c880f6f1c9509317df4b8d3b2334ccc516"
       }
     },
     {
@@ -202,9 +241,53 @@
       "detail": "METSILECTURA PREVIA\nEDICIÓN 2026\nN05\nFCE · UBA\nMETODOLOGÍA DE SISTEMAS DE INFORMACIÓN\nActores, afectados,poder y perspectivas\nN05\nUna decisión profesional\ntambién se juzga por\nquién puede\ncomprenderla, objetarla y\nreparar sus\nconsecuencias.\n01\nDiego Carralbal, 2026  ·  linkedin.com/in/carralbal\n"
     },
     {
-      "check": "premium_cover_contract",
+      "check": "premium_cover_contract_hash_provenance_and_tone",
       "status": "PASS",
-      "detail": "native black-and-white cover, Argentine/Latin American representation, no conversion filter"
+      "detail": {
+        "contract": {
+          "file": "cover.png",
+          "source": "assets/cover-source-premium-bw-v2.png",
+          "sha256": "0054cb5c5a9547134d476ff6bb02dd1d31e6757caa2fbcd32c77d648a180ccb8",
+          "alt": "Silla vacía frente a una mesa de decisión donde cuatro profesionales argentinos y latinoamericanos examinan documentos y distribuyen autoridad",
+          "photographic_origin": "native_black_and_white",
+          "render_treatment": "no_grayscale_conversion",
+          "art_direction": "lighting, wardrobe, materials and tonal separation conceived for monochrome"
+        },
+        "source_sha256": "0054cb5c5a9547134d476ff6bb02dd1d31e6757caa2fbcd32c77d648a180ccb8",
+        "alias_sha256": "0054cb5c5a9547134d476ff6bb02dd1d31e6757caa2fbcd32c77d648a180ccb8",
+        "source_record": [
+          {
+            "file": "assets/cover-source-premium-bw-v2.png",
+            "role": "cover-source",
+            "origin": "generated_for_metsi",
+            "photographic_origin": "native_black_and_white",
+            "sha256": "0054cb5c5a9547134d476ff6bb02dd1d31e6757caa2fbcd32c77d648a180ccb8",
+            "rights_status": "original_course_asset"
+          }
+        ],
+        "rendered_record": [
+          {
+            "file": "assets/cover.png",
+            "role": "cover-rendered",
+            "origin": "generated_for_metsi",
+            "derived_from": "assets/cover-source-premium-bw-v2.png",
+            "photographic_origin": "native_black_and_white",
+            "treatment": "Sin conversión cromática; gradiente localizado para la lectura del título.",
+            "sha256": "0054cb5c5a9547134d476ff6bb02dd1d31e6757caa2fbcd32c77d648a180ccb8",
+            "rights_status": "original_course_asset"
+          }
+        ],
+        "tone": {
+          "passed": true,
+          "channel_spread_p95": 2.0,
+          "luminance_p05": 10.72,
+          "luminance_p95": 189.28,
+          "tonal_span": 178.57,
+          "luminance_stddev": 53.73,
+          "fraction_below_32": 0.1341
+        },
+        "css_rule": "filter:none"
+      }
     },
     {
       "check": "cover_pauses_and_closing_are_full_bleed",
@@ -317,7 +400,7 @@
       "status": "PASS",
       "detail": {
         "language": "es-AR",
-        "alt_count": 3
+        "alt_count": 4
       }
     },
     {

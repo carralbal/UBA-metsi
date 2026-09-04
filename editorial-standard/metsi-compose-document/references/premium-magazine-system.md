@@ -67,6 +67,7 @@ Concentrate saturated color in one editorial event: a column, one hero image, a 
 - Use one dominant image per spread; subordinate secondary images through smaller scale or monochrome treatment.
 - Allow full bleed, half-page, vertical rail, panorama, collage, or small inset.
 - A full-page photograph or dark background must cover the complete A4 canvas to all four edges. White gutters, inherited margins, footer bands, and reduced background rectangles are defects.
+- Full bleed is verified on the final PDF, not inferred from HTML or CSS. Rasterize the page and compare the visible artwork with the media box on all four edges. A continuous paper-colored band is a blocking defect. Any browser-scaling compensation must cover every N document in the generation range and must not alter interior pages.
 - A stand-alone editorial photograph in an N document is a photographic pause and therefore occupies one complete page to all four edges. Inset photography is reserved for portraits, documentary evidence, instructional details, or images that are semantically part of the surrounding argument.
 - Never default every image to the same full-width panoramic band.
 - Do not overlay text unless the crop contains a deliberate quiet zone with verified contrast.

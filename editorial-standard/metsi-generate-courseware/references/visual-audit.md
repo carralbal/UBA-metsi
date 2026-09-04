@@ -44,6 +44,16 @@ The four supplied premium references behave as publications, not as collections 
 - Rounded corners, drop shadows, floating postcard frames, and one repeated panoramic band are absent.
 - Text overlays occur only on verified quiet zones with sufficient contrast.
 
+## Cover audit
+
+- Verify that the source photograph was conceived natively in black and white and that its manifest records that origin. A grayscale rendering filter is a blocking defect, not a substitute for monochrome art direction.
+- Inspect the source photograph and the composed PDF cover as separate artifacts. Confirm that mid-grays, highlights, textured shadows and local subject separation survive composition.
+- Use a scrim only as a local contrast correction behind specific copy. Reject a uniform dark veil and any combination of low source exposure plus overlay that crushes the image.
+- Measure contrast on every independent text zone, including masthead, both metadata blocks, kicker, title and thesis. Prefer changing light text to dark ink on a naturally light quiet zone over darkening the entire photograph.
+- Rasterize the final PDF page and verify full bleed at all four media-box edges. A CSS declaration alone does not prove the absence of a paper-colored halo.
+- Compare all covers in the current block on one contact sheet so an isolated acceptable image cannot create an excessively dark or repetitive sequence.
+- Inspect the tagged PDF, not only the HTML `alt` attribute. Chromium may omit a cover image from the structure tree when a CSS image filter is active. Require an actual page-one `/Figure` with the approved `/Alt`; if a tonal adjustment is needed, use a native tonal asset or a neutral substrate plus controlled opacity and repeat the semantic audit.
+
 ## Color and detail
 
 - White or warm paper, black ink, cool gray fields, and one controlled section accent.

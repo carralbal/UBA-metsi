@@ -1,56 +1,69 @@
 # Handoff autosuficiente · N05 v9 final
 
-## Estado
+## Estado real
 
-N05 queda compuesto, exportado, auditado y aprobado por el autor como PDF final. Usa el contenido canónico aprobado y no modifica N00, N01, N02, N03 ni N04.
+N05 está compuesto desde su contenido canónico, exportado y cerrado técnicamente. La auditoría consolidada de tapas del Bloque 01 lo verificó dentro de la familia N00 a N10 sin modificar el interior.
 
-## Entregable principal
+Este handoff no atribuye una aprobación autoral que no esté documentada. Registra el estado verificable de los archivos.
 
-`output/N05-METSI-lectura-previa-v9-final.pdf`
+## Entrega principal
 
-- 28 páginas A4.
-- 15.201.083 bytes.
-- Fecha de modificación: 3 de septiembre de 2026, 16:40:42, hora de Buenos Aires.
-- SHA-256: `3b507eea1ddc0c7981ea90747039c1137a0149d233accb2d40ae86184b64d34f`.
+- PDF final: `output/N05-METSI-lectura-previa-v9-final.pdf`.
+- PDF bruto reproducible: `output/N05-METSI-lectura-previa-v9.pdf`.
+- Páginas: 28, todas A4.
+- Tamaño exacto: 15.880.141 bytes.
+- Fecha de modificación: 2026-09-04 07:57:49, hora de Buenos Aires.
+- SHA-256 del PDF final: `cf6088c205637cf3cfb2902e5f5804c880f6f1c9509317df4b8d3b2334ccc516`.
 
-## Fuente autoritativa
+## Fuente y tapa vigentes
 
-`source/N05_actores_afectados_poder_y_perspectivas-content-final.md`
+- Fuente empaquetada: `source/N05_actores_afectados_poder_y_perspectivas-content-final.md`.
+- Fuente canónica: `../N05-content-final/source/N05_actores_afectados_poder_y_perspectivas-content-final.md`.
+- SHA-256 de la fuente: `46a9ecb180b96c6ff71790750e3e6d606ef7c0a1f061a0682ad29ad99dfcbf2b`.
+- Maestro de tapa vigente: `assets/cover-source-premium-bw-v2.png`.
+- Archivo desplegado: `assets/cover.png`.
+- SHA-256 de ambos archivos de tapa: `0054cb5c5a9547134d476ff6bb02dd1d31e6757caa2fbcd32c77d648a180ccb8`.
+- Procedencia vigente: `provenance/cover-image-premium-bw-v2.md`.
 
-Es byte a byte idéntica a la fuente de `N05-content-final`, con SHA-256 `46a9ecb180b96c6ff71790750e3e6d606ef7c0a1f061a0682ad29ad99dfcbf2b`.
+La tapa v2 es un activo original generado para METSI y concebido en blanco y negro. Representa a cuatro profesionales argentinos y latinoamericanos alrededor de una silla vacía. La composición usa un gradiente oscuro localizado en la base, sin velo global ni conversión monocromática por CSS.
 
-## Qué quedó cerrado
+## Contenido y composición cerrados
 
-- tapa fotográfica premium, cinematográfica y concebida nativamente en blanco y negro;
-- composición a sangre, sin halo ni margen blanco;
-- eyebrow en dos cadenas legibles: `LECTURA PREVIA` y `EDICIÓN 2026`;
-- índice completo y ordenado;
-- seis referentes con retratos distintos y cajas visuales idénticas de 25 mm por 25 mm;
-- once secciones y ruta de lectura monótona;
-- continuidad explícita N04, N05 y N06, con HH-05 como hilo conductor;
-- mapa Actor, Decisión, Consecuencia editable y auditado;
-- exactamente dos pausas visuales internas a página completa, en las páginas 5 y 19;
-- 279 bloques fuente renderizados una vez, sin pérdidas ni duplicados;
-- diez referencias ancladas y ocho URL externas completas y clicables;
-- cinco píldoras, glosario de 17 entradas y seis preguntas de preparación;
-- ningún título o subtítulo huérfano;
-- ninguna página ordinaria por debajo del 50 % de llenado; mínimo: 50,16 % en Referencias base;
-- cierre con fósforos, folio, línea de pie, epígrafe, texto alternativo y sin frase agregada;
-- PDF etiquetado con idioma `es-AR`.
+- 11 secciones numeradas, Referentes y Referencias base como aparatos `SIN NUM.`.
+- Ruta de lectura monótona y continuidad explícita entre N04, N05 y N06.
+- HH-05 como hilo conductor.
+- 279 bloques fuente renderizados exactamente una vez.
+- Diez referencias ancladas y ocho URLs externas completas y clicables.
+- Seis referentes con retratos distintos y cajas visuales uniformes.
+- Mapa Actor, Decisión, Consecuencia editable y auditado.
+- Cinco píldoras, glosario de 17 entradas y seis preguntas de preparación.
+- Pregunta profesional oscura en la página 4 y dos pausas fotográficas internas a sangre en las páginas 5 y 19.
+- Cierre canónico con fósforos a sangre, folio, línea de pie, epígrafe y texto alternativo, sin frase superpuesta.
+
+## Verificación final
+
+- Validador individual: `validation-v9.json`, estado `PASS`, 32 de 32 controles.
+- QA técnico: `qa-report.json`, PDF etiquetado, marcado y con idioma `es-AR`.
+- Cero títulos o subtítulos huérfanos en 52 controles.
+- Ninguna página ordinaria por debajo del 50 % de llenado; mínimo registrado: 50,16 %.
+- Páginas 2 a 28 idénticas píxel por píxel a la línea de base bloqueada.
+- Auditoría de tapas: `../BLOCK-01-cover-final/audit.json`, estado global `PASS`, 11 de 11 documentos, 328 páginas interiores idénticas y 11 de 11 conjuntos de URLs preservados.
+- En N05, la tapa llega a sangre, no presenta halo perimetral, conserva una escala amplia de grises y su figura semántica contiene el texto alternativo exacto.
 
 ## Archivos de control
 
-- `validation-v9.json`: auditoría determinista integral.
-- `qa-report.json`: control técnico del PDF.
-- `visual-audit.md`: auditoría visual final.
-- `qa/N05-contact-sheet.jpg`: vista completa de las 28 páginas.
-- `page-spread-plan.json`: plan y ubicación de aparatos, secciones y pausas.
-- `provenance/cover-image-premium-bw-v1.md`: procedencia y dirección de tapa.
-- `provenance/editorial-image-provenance.md`: trazabilidad de fotografías internas.
-- `provenance/referent-portrait-sources.md`: procedencia de los seis retratos.
-- `provenance/regression-lock.json`: valores que no deben cambiar en rondas posteriores.
+- `validation-v9.json`
+- `qa-report.json`
+- `integrity-report.json`
+- `visual-audit.md`
+- `qa/N05-contact-sheet.jpg`
+- `page-spread-plan.json`
+- `provenance/cover-image-premium-bw-v2.md`
+- `provenance/editorial-image-provenance.md`
+- `provenance/referent-portrait-sources.md`
+- `provenance/regression-lock.json`
 
-## Cómo reproducir y verificar
+## Reproducción
 
 Desde la raíz del repositorio:
 
@@ -61,8 +74,6 @@ python3 finalize_and_qa.py 5
 python3 validate_n05_v9.py
 ```
 
-El último comando debe terminar con código cero y `status: PASS`.
-
 ## Incertidumbre residual
 
-No queda una incertidumbre técnica, editorial ni autoral abierta sobre N05. La futura revisión comparada de tapas N00 a N10 podrá proponer un cambio exclusivo de cubierta. Hasta entonces, esta versión es la línea de base cerrada y ningún otro elemento puede modificarse.
+No quedan incertidumbres técnicas abiertas desde los archivos. Cualquier aprobación o cambio autoral posterior debe quedar documentado de forma explícita y limitarse al punto solicitado.

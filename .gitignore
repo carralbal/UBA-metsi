@@ -1,8 +1,9 @@
-# Repositorio local acotado a la recuperación de N01 y su estándar aprobado.
+# Repositorio METSI acotado a N00–N10 y a su estándar editorial versionado.
 *
 !.gitignore
 !*.md
 !*.py
+!requirements-qa.txt
 !collection-manifest.json
 !course-manifest.json
 !publish-config.json
@@ -59,6 +60,10 @@ N01-v16-final/qa/pages-final/
 !N01-v17-final/**
 N01-v17-final/qa/pages/
 N01-v17-final/qa/pages-final/
+!N01-v18-final/
+!N01-v18-final/**
+N01-v18-final/qa/pages/
+N01-v18-final/qa/pages-final/
 !N02-v9-final/
 !N02-v9-final/**
 N02-v9-final/qa/pages/
@@ -139,6 +144,8 @@ N09-v9-final/qa/rendered/
 N10-v9-final/qa/rendered/
 !editorial-standard/
 !editorial-standard/**
+!BLOCK-01-cover-final/
+!BLOCK-01-cover-final/**
 
 # Excluir intermedios efímeros incluso dentro de los árboles versionados.
 **/.DS_Store

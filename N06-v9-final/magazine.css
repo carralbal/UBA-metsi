@@ -1009,7 +1009,7 @@ body.premium-magazine {
 .cover-n05 .cover-title h1{font-size:38pt;line-height:.91;letter-spacing:-.025em}
 .cover-n05 .cover-thesis{right:18mm;bottom:22mm;width:56mm}
 .cover-n05 .cover-parallelogram{right:15.5mm;top:57mm}
-.cover-n06>img{object-position:50% 48%;filter:contrast(1.04) brightness(.96)}
+.cover-n06>img{object-position:50% 48%;filter:none}
 .cover-n06 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.13),rgba(10,12,10,.03) 40%,rgba(8,9,8,.70) 100%)}
 .cover-n06 .collection-masthead{top:16mm}
 .cover-n06 .cover-meta{top:29mm}
@@ -1806,3 +1806,7 @@ body.premium-magazine {
 .references-image-full::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.72) 100%)}
 .references-image-full p{position:absolute;z-index:3;left:18mm;right:18mm;bottom:22mm;margin:0;color:#fff;font-family:Didot,"Bodoni 72",serif;font-size:21pt;line-height:1.05}
 .premium-magazine .full-bleed{break-before:auto;break-after:auto;page-break-before:auto;page-break-after:auto}
+
+/* METSI cover audit 2026-09-04 */
+.cover-n06>img{filter:none}
+.cover-n06 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.46) 0,rgba(5,7,6,.14) 18%,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 62%,rgba(8,9,8,.55) 100%)}

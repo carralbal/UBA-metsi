@@ -25,6 +25,6 @@ Estado de derechos: `original_course_asset`.
 
 ## Tratamiento
 
-La regla específica no aplica `grayscale()` ni `saturate(0)`. Usa sólo contraste y luminosidad leves. El overlay es un instrumento local de legibilidad y no oscurece uniformemente toda la fotografía.
+La regla específica usa `filter: none`: no aplica `grayscale()`, `saturate(0)`, contraste ni luminosidad globales. El overlay es un instrumento local de legibilidad y no oscurece uniformemente toda la fotografía.
 
-La comparación autoral de las tapas N00 a N10 permanece como revisión visual conjunta posterior; no altera la cadena de derechos ni la reproducibilidad de este activo.
+La comparación conjunta de las tapas N00 a N10 quedó cerrada en la auditoría del Bloque 01. Esa revisión no altera la cadena de derechos ni la reproducibilidad de este activo.

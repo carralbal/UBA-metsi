@@ -20,4 +20,4 @@ La inspección de la plancha completa y de las páginas críticas confirma 28 p�
 | Accesibilidad y enlaces | PASS |
 | Cierre con fósforos | PASS |
 | Sangrado y halo perimetral | PASS |
-| Familia de tapas N00 a N10 | Pendiente de revisión autoral comparada |
+| Familia de tapas N00 a N10 | PASS técnico consolidado |

@@ -16,4 +16,4 @@ La comparación SHA-256 confirmó identidad byte a byte entre los seleccionados 
 | editorial-08.jpg | `baebd3cf314239fd94f7b46da3f474232b538bdcbab8db333e02674e910cf8ca` |
 | hotel-horizonte.jpg | `d6c80db164c44a4303ca85c7b6d7a6414923929dc9e7427a3a72738993b8b6af` |
 
-La tapa nueva no hereda la entrada `cover.jpg` del manifiesto histórico. Su procedencia se documenta por separado en `cover-image-premium-bw-v1.md`.
+La tapa vigente no hereda la entrada `cover.jpg` del manifiesto histórico. Su procedencia se documenta por separado en `cover-image-premium-bw-v2.md`.

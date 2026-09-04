@@ -12,7 +12,17 @@ from pathlib import Path
 from PIL import Image
 from pypdf import PdfReader
 
-from validate_n03_v9 import compact, heading_alignment, links_by_page, page_extents, result, structure_alts
+from validate_n03_v9 import (
+    compact,
+    cover_tonal_audit,
+    effective_css_rule,
+    heading_alignment,
+    links_by_page,
+    page_extents,
+    regression_lock_audit,
+    result,
+    structure_alts,
+)
 
 
 HERE = Path(__file__).resolve().parent
@@ -116,7 +126,54 @@ def main() -> int:
     }
     portraits, portraits_equal, portraits_unique = portrait_inventory()
     alts = structure_alts(reader)
+    regression_lock = regression_lock_audit(
+        ROOT,
+        {
+            "source/N05_actores_afectados_poder_y_perspectivas-content-final.md",
+            "assets/cover-source-premium-bw-v2.png",
+            "assets/cover.png",
+            "provenance/cover-image-premium-bw-v2.md",
+            "provenance/editorial-image-provenance.md",
+            "image-manifest.json",
+            "output/N05-METSI-lectura-previa-v9.pdf",
+            "output/N05-METSI-lectura-previa-v9-final.pdf",
+            "index.html",
+            "magazine.css",
+            "metsi.css",
+            "manifest.json",
+            "document.json",
+            "qa-report.json",
+            "integrity-report.json",
+            "source-manifest.json",
+        },
+    )
+    image_manifest = json.loads((ROOT / "image-manifest.json").read_text(encoding="utf-8"))
+    cover_source = ROOT / "assets/cover-source-premium-bw-v2.png"
+    cover_alias = ROOT / "assets/cover.png"
+    cover_contract = manifest.get("cover", {})
+    cover_source_records = [item for item in image_manifest.get("assets", []) if item.get("role") == "cover-source"]
+    cover_rendered_records = [item for item in image_manifest.get("assets", []) if item.get("role") == "cover-rendered"]
+    cover_rule = effective_css_rule(css, ".cover-n05>img")
+    cover_tone = cover_tonal_audit(cover_source)
+    cover_contract_pass = (
+        len(cover_source_records) == 1
+        and len(cover_rendered_records) == 1
+        and cover_contract.get("source") == "assets/cover-source-premium-bw-v2.png"
+        and cover_contract.get("sha256") == sha256(cover_source)
+        and sha256(cover_source) == sha256(cover_alias)
+        and cover_source_records[0].get("sha256") == sha256(cover_source)
+        and cover_rendered_records[0].get("sha256") == sha256(cover_alias)
+        and cover_rendered_records[0].get("derived_from") == "assets/cover-source-premium-bw-v2.png"
+        and cover_contract.get("photographic_origin") == "native_black_and_white"
+        and cover_contract.get("render_treatment") == "no_grayscale_conversion"
+        and cover_source_records[0].get("rights_status") == "original_course_asset"
+        and str(cover_contract.get("alt", "")) in html
+        and str(cover_contract.get("alt", "")) in alts
+        and cover_tone.get("passed") is True
+        and "filter:none" in cover_rule
+    )
     checks = [
+        result("regression_lock_matches_current_artifacts", regression_lock["passed"], regression_lock),
         result("canonical_source_is_byte_identical", SOURCE.read_bytes() == CANONICAL.read_bytes() and sha256(SOURCE) == EXPECTED_SOURCE_SHA, sha256(SOURCE)),
         result("canonical_structure", len(section_headings) == 11 and len(headings) == 12 and headings[-1] == "Referencias base", headings),
         result("three_movement_architecture", all(token in source for token in ("Movimiento 1 · Pasar", "Movimiento 2 · Diseñar", "Movimiento 3 · Gobernar")), "three movements present"),
@@ -136,7 +193,7 @@ def main() -> int:
         result("no_automatic_sparse_fills", qa.get("sparse_visual_fill_source_pages") == [] and qa.get("removed_blank_source_pages") == [], {"sparse": qa.get("sparse_visual_fill_source_pages"), "removed": qa.get("removed_blank_source_pages")}),
         result("two_internal_full_bleed_pauses", html.count('class="full-bleed full-bleed-quote"') == 2 and "Pregunta profesional" in page_texts[3] and "Una silla vacía" in page_texts[4] and "Participar importa" in page_texts[18], "question page 4, first pause page 5, second pause page 19"),
         result("cover_accessible_and_complete", all(token in page_texts[0] for token in ("LECTURA PREVIA", "EDICIÓN 2026", "N05", "FCE · UBA", "Actores, afectados")) and "L E C T U R A" not in page_texts[0], page_texts[0][:320]),
-        result("premium_cover_contract", "cover-source-premium-bw-v1.png" in json.dumps(manifest) and "profesionales argentinos y latinoamericanos" in html and "grayscale(1)" not in re.search(r"\.cover-n05>img\{([^}]*)\}", css).group(1), "native black-and-white cover, Argentine/Latin American representation, no conversion filter"),
+        result("premium_cover_contract_hash_provenance_and_tone", cover_contract_pass, {"contract": cover_contract, "source_sha256": sha256(cover_source), "alias_sha256": sha256(cover_alias), "source_record": cover_source_records, "rendered_record": cover_rendered_records, "tone": cover_tone, "css_rule": cover_rule}),
         result("cover_pauses_and_closing_are_full_bleed", all(extents[page]["fill"] >= 1.0 for page in (1, 5, 19, 28)), {page: extents[page]["fill"] for page in (1, 5, 19, 28)}),
         result("referents_are_equal_and_unique", len(portraits) == 6 and portraits_unique and html.count('class="contributor"') == 6 and ".contributor-portrait{display:block;width:25mm;height:25mm" in css, {"visual_box": "25mm × 25mm", "assets": portraits}),
         result("counts_close", counts == {"pills": 5, "glossary": 17, "questions": 6, "references": 10}, counts),
@@ -158,6 +215,7 @@ def main() -> int:
         "pdf_sha256": sha256(PDF),
         "pdf_bytes": PDF.stat().st_size,
         "pdf_modified": PDF.stat().st_mtime,
+        "regression_lock_sha256": regression_lock.get("lock_sha256"),
         "pages": len(reader.pages),
         "minimum_ordinary_page_fill": min(extents[page]["fill"] for page in ordinary_pages),
         "checks": checks,

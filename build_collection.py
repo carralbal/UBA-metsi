@@ -17,20 +17,20 @@ from dataclasses import dataclass
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
-SOURCES = ROOT / "work/metsi_content/lecturas_fuente_v8"
-N01_ROOT = ROOT / "work/N01-reference-grade"
-N01_FINAL = N01_ROOT / "final-keep-growing/output/N01-Metodologia-sin-recetas-Keep-Growing-METSI.pdf"
-N01_CSS = N01_ROOT / "final-keep-growing/body/final.css"
-N01_PORTRAITS = N01_ROOT / "contents-authors-spread-v3/review-v6"
-USER_BANK = N01_ROOT / "rebuild/assets/user-bank"
-MATCHES = N01_ROOT / "rebuild/assets/extracted/p35-01.png"
-HOTEL_HORIZONTE = N01_ROOT / "final-keep-growing/body/assets/extracted/p26-01.png"
+ROOT = HERE
+SOURCES = HERE / "N00" / "source"
+N01_ROOT = HERE / "N01-v18-final"
+N01_FINAL = N01_ROOT / "output/N01-METSI-lectura-previa-v18-final.pdf"
+N01_CSS = N01_ROOT / "magazine.css"
+N01_PORTRAITS = HERE / "assets" / "portraits"
+USER_BANK = HERE / "N03-v9-final" / "assets"
+MATCHES = HERE / "N08-v9-final" / "assets" / "matches-close.png"
+HOTEL_HORIZONTE = HERE / "N01-v18-final" / "assets" / "hotel-horizonte.png"
 PORTRAIT_REGISTRY_PATH = HERE / "portrait-registry.json"
 PORTRAIT_BANK = HERE / "assets/portraits"
 PORTRAIT_REGISTRY = json.loads(PORTRAIT_REGISTRY_PATH.read_text(encoding="utf-8"))["entries"]
-CHARACTER_PORTRAITS = N01_ROOT / "final-keep-growing/body/assets/portraits"
+CHARACTER_PORTRAITS = HERE / "assets" / "hotel-portraits"
 EDITORIAL_CHARACTER_PORTRAITS = HERE / "assets/hotel-portraits"
 
 
@@ -700,7 +700,7 @@ def references(sections: list[Section]) -> list[str]:
 
 def source_path(number: int) -> Path:
     if number == 0:
-        return SOURCES / "N00_como_leer_metsi.md"
+        return HERE / "N00" / "source" / "N00_como_leer_metsi.md"
     if number == 1:
         return HERE / "N01-content-final" / "source" / "N01_metodologia_sin_recetas-content-final.md"
     if number == 2:
@@ -721,7 +721,7 @@ def source_path(number: int) -> Path:
         return HERE / "N09-content-final" / "source" / "N09_experiencia_accesibilidad_y_adopcion-content-final.md"
     if number == 10:
         return HERE / "N10-content-final" / "source" / "N10_construir_el_problema_y_outcomes-content-final.md"
-    return next(SOURCES.glob(f"N{number:02d}_*.md"))
+    raise ValueError(f"N{number:02d} queda fuera del bloque disponible N00–N10")
 
 
 def asset_sha(path: Path) -> str:
@@ -1655,9 +1655,12 @@ def visual_figure(file: str, caption: str, alt: str, cls: str="photo-band") -> s
 
 def cover_alt_text(number: int, clean_title: str) -> str:
     alternatives = {
-        3: "Trabajadora hotelera argentina en un lobby nocturno, observada entre reflejos, corredores y capas de vidrio que sugieren fronteras y efectos que regresan",
+        0: "Músico de contrabajo durante un ensayo orquestal, visto entre el instrumento, la partitura y las relaciones del conjunto",
+        1: "Ruta serrana argentina que avanza entre curvas, roca y niebla hasta perderse en la distancia",
+        2: "Tres profesionales de un hotel porteño trabajan en recepción, un corredor operativo y un espacio reflejado detrás de un vidrio",
+        3: "Trabajadora hotelera argentina observa un corredor operativo desde un umbral de vidrio, con carros y puertas que prolongan el circuito hacia el fondo",
         4: "Analista de sistemas argentina en un hotel de Buenos Aires, observada entre reflejos y rastros documentales que sugieren evidencia, hipótesis rivales y decisiones",
-        5: "Silla vacía en primer plano junto a una larga mesa de reunión, con profesionales argentinos y latinoamericanos desenfocados al fondo, en una fotografía editorial concebida en blanco y negro",
+        5: "Silla vacía frente a una mesa de decisión donde cuatro profesionales argentinos y latinoamericanos examinan documentos y distribuyen autoridad",
         6: "Profesional argentina observa un muro de evidencias y caminos alternativos en un estudio de Buenos Aires, en una fotografía editorial concebida en blanco y negro con una escala amplia de grises",
         7: "Dos profesionales argentinos conversan en un espacio de trabajo contemporáneo, con amplio espacio negativo y una escala luminosa de grises, en una fotografía editorial concebida en blanco y negro",
         8: "Dos trabajadoras argentinas coordinan tareas en el umbral de una habitación de hotel, mientras una pared y un corredor dejan amplio espacio visual a la izquierda.",
@@ -1938,7 +1941,6 @@ def write_referent_rights_manifest(
             "license_short": "Free Art License 1.3",
             "approved": True,
         })
-        pawson_source = Path("/private/tmp/ray-pawson-source.jpg")
         pawson = {
             "file": "assets/referent-ray-pawson.jpg",
             "role": "referent-portrait",
@@ -1955,7 +1957,7 @@ def write_referent_rights_manifest(
             "share_alike_required": False,
             "source_width": 1013,
             "source_height": 1013,
-            "source_sha256": asset_sha(pawson_source) if pawson_source.exists() else "23a5803cf7646de8be9d62dcc8d6b379e86928ecd721a3d702907132f8660861",
+            "source_sha256": "23a5803cf7646de8be9d62dcc8d6b379e86928ecd721a3d702907132f8660861",
             "crop": "none, source already square",
             "changes": "Conversión al perfil Generic Gray; escala a 720 por 720 píxeles; JPEG calidad 94.",
             "derivative_license": "CC0 1.0",
@@ -2015,6 +2017,23 @@ def write_referent_rights_manifest(
 
 
 def principal_references(number: int, refs: list[str]) -> list[tuple[str, str, dict]]:
+    if number == 3:
+        selected: list[tuple[str, str, dict]] = []
+        reference_markers = {
+            "west-churchman": "Churchman, C. W.",
+            "gerald-midgley": "Midgley, G.",
+            "donella-meadows": "Meadows, D. H.",
+            "peter-senge": "Senge, P. M.",
+            "elham-tabassi": "Tabassi, E.",
+            "nist": "NIST AI 700-2",
+        }
+        for key, marker in reference_markers.items():
+            entry = PORTRAIT_REGISTRY[key]
+            raw = next((ref for ref in refs if marker.casefold() in ref.casefold()), None)
+            if raw is None:
+                raise ValueError(f"La referencia N03 no permite resolver al referente {key} mediante {marker}")
+            selected.append((raw, key, entry))
+        return selected
     if number == 6:
         selected: list[tuple[str, str, dict]] = []
         for key in N06_REFERENT_KEYS:
@@ -2104,7 +2123,7 @@ def reference_cards(number:int,refs:list[str],assets:Path)->str:
         inherited_portrait = Path(entry["local_file"]) if entry.get("local_file") else None
         portrait_source = (
             packaged_portrait
-            if number in {5, 6, 7, 8, 9, 10} and packaged_portrait.exists()
+            if packaged_portrait.exists()
             else inherited_portrait
             if inherited_portrait is not None
             else registry_portrait
@@ -2148,9 +2167,16 @@ def hotel_voices_html(number: int, assets: Path) -> str:
         }
         cards = []
         for index, (name, role, filename) in enumerate(N00_HOTEL_CHARACTERS, 1):
+            packaged_portrait = assets / f"hotel-{filename}"
             editorial_portrait = EDITORIAL_CHARACTER_PORTRAITS / filename
-            portrait_source = editorial_portrait if editorial_portrait.exists() else CHARACTER_PORTRAITS / filename
-            copy_asset(portrait_source, assets / f"hotel-{filename}")
+            portrait_source = (
+                packaged_portrait
+                if packaged_portrait.exists()
+                else editorial_portrait
+                if editorial_portrait.exists()
+                else CHARACTER_PORTRAITS / filename
+            )
+            copy_asset(portrait_source, packaged_portrait)
             age, traits, fear, assumption, blind_spot, contribution = profiles[name]
             cards.append(f'''<article class="hotel-archetype-card hotel-archetype-{index}"><div class="hotel-archetype-portrait"><img src="assets/hotel-{esc(filename)}" alt="Retrato editorial de {esc(name)}"></div><div class="hotel-archetype-copy"><span>{esc(role)} · {esc(age)}</span><h3>{esc(name)}</h3><p><b>Perfil.</b> {esc(traits)}</p><p><b>Miedo.</b> {esc(fear)}</p><p><b>Supuesto.</b> {esc(assumption)}</p><p><b>Punto ciego.</b> {esc(blind_spot)}</p><p><b>Aporte.</b> {esc(contribution)}</p></div></article>''')
         return f'''<aside class="hotel-archetypes"><header><b>HOTEL HORIZONTE · N00</b><h2>Las personas que sostienen el caso</h2><p>Seis arquetipos profesionales con responsabilidades, supuestos y temores diferentes.</p></header><div class="hotel-archetypes-grid">{''.join(cards)}</div></aside>'''
@@ -2171,6 +2197,8 @@ def hotel_voices_html(number: int, assets: Path) -> str:
             portrait_source = n07_portrait
         elif number in {7, 8, 9, 10} and n00_portrait.exists():
             portrait_source = n00_portrait
+        elif packaged_portrait.exists():
+            portrait_source = packaged_portrait
         else:
             portrait_source = editorial_portrait if editorial_portrait.exists() else CHARACTER_PORTRAITS / filename
         copy_asset(portrait_source, assets / f"hotel-{filename}")
@@ -2251,27 +2279,29 @@ def build_document(number:int)->dict:
     out=HERE/("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else "N05-v9-final" if number == 5 else "N06-v9-final" if number == 6 else "N07-v9-final" if number == 7 else "N08-v9-final" if number == 8 else "N09-v9-final" if number == 9 else "N10-v9-final" if number == 10 else f"N{number:02d}")
     assets=out/"assets"; diagrams=out/"diagrams"; output=out/"output"
     for folder in (assets,diagrams,output): folder.mkdir(parents=True,exist_ok=True)
-    if number in {1, 3, 4, 5, 6, 7, 8, 9, 10}:
+    if 0 <= number <= 10:
         packaged_source = out / "source"
         provenance = out / "provenance"
         packaged_source.mkdir(parents=True, exist_ok=True)
         provenance.mkdir(parents=True, exist_ok=True)
         copy_asset(source, packaged_source / source.name)
         if number == 1:
-            shutil.copy2(HERE / "N01" / "image-curation" / "image-manifest.json", provenance / "image-manifest.json")
+            packaged_image_manifest = provenance / "image-manifest.json"
+            if not packaged_image_manifest.exists():
+                raise FileNotFoundError("N01 requiere provenance/image-manifest.json dentro del paquete")
 
     if number == 0:
         cover_source = HERE / "N00" / "image-curation" / "selected" / "cover.jpg"
     elif number == 1:
-        cover_source = HERE / "N01" / "image-curation" / "selected" / "cover.jpg"
+        cover_source = HERE / "N01-v18-final" / "assets" / "cover-source-premium-bw-v1.png"
     elif number == 2:
-        cover_source = HERE / "N02" / "assets" / "cover.jpg"
+        cover_source = HERE / "N02-v14-final" / "assets" / "cover-source-premium-bw-v1.png"
     elif number == 3:
-        cover_source = HERE / "N03-v9-final" / "assets" / "cover-source-premium-v2.png"
+        cover_source = HERE / "N03-v9-final" / "assets" / "cover-source-premium-bw-v3.png"
     elif number == 4:
-        cover_source = HERE / "N04-v9-final" / "assets" / "cover-source-premium-bw-v2.png"
+        cover_source = HERE / "N04-v9-final" / "assets" / "cover-source-premium-bw-v3.png"
     elif number == 5:
-        cover_source = HERE / "N05-v9-final" / "assets" / "cover-source-premium-bw-v1.png"
+        cover_source = HERE / "N05-v9-final" / "assets" / "cover-source-premium-bw-v2.png"
     elif number == 6:
         cover_source = HERE / "N06-v9-final" / "assets" / "cover-source-premium-bw-v1.png"
     elif number == 7:
@@ -2289,18 +2319,14 @@ def build_document(number:int)->dict:
         cover_source=N01_ROOT/COVER_IMAGES[number-1]
     cover_file="cover"+cover_source.suffix.lower()
     copy_asset(cover_source,assets/cover_file)
-    closing_source = assets / "matches-close.png" if number in {5, 6, 7, 8, 9, 10} and (assets / "matches-close.png").exists() else HERE / "N08-v9-final" / "assets" / "matches-close.png" if number in {9, 10} else MATCHES
+    closing_source = (
+        assets / "matches-close.png"
+        if (assets / "matches-close.png").exists()
+        else HERE / "N08-v9-final" / "assets" / "matches-close.png"
+    )
     copy_asset(closing_source,assets/"matches-close.png")
-    if number == 0:
-        hotel_source = HERE / "N02" / "assets" / "hotel-horizonte.png"
-    elif number == 5:
-        hotel_source = HERE / "N05-v9-final" / "assets" / "hotel-horizonte.jpg"
-    elif number == 6:
-        hotel_source = None
-    elif number in {7, 8, 9, 10}:
-        hotel_source = None
-    else:
-        hotel_source = HOTEL_HORIZONTE
+    packaged_hotel = next(iter(sorted(assets.glob("hotel-horizonte.*"))), None)
+    hotel_source = None if number in {6, 7, 8, 9, 10} else packaged_hotel
     hotel_file = ""
     if hotel_source is not None:
         hotel_file = "hotel-horizonte" + hotel_source.suffix.lower()
@@ -2311,37 +2337,18 @@ def build_document(number:int)->dict:
     ) if USER_BANK.is_dir() else []
     selected=[]
     if number == 0:
-        editorial_sources = [
-            HERE / "N00" / "image-curation" / "selected" / "editorial-01.jpg",
-            HERE / "N00" / "image-curation" / "selected" / "editorial-02.jpg",
-            HERE / "N00" / "image-curation" / "selected" / "editorial-03.jpg",
-            HERE / "N00" / "image-curation" / "selected" / "editorial-07.jpg",
-            HERE / "N05" / "image-curation" / "selected" / "hotel-horizonte-n05.jpg",
-            HERE / "N00" / "image-curation" / "selected" / "editorial-06-ai-latam-v2.png",
-            HERE / "N00" / "image-curation" / "selected" / "editorial-06.jpg",
-            HERE / "N00" / "image-curation" / "selected" / "editorial-04-latam-v2.png",
-            HERE / "N00" / "image-curation" / "selected" / "editorial-05.jpg",
-        ]
+        editorial_sources = [assets / f"editorial-{index:02d}{'.png' if index in {6, 8} else '.jpg'}" for index in range(1, 10)]
     elif number == 1:
-        editorial_sources = [
-            HERE / "N01" / "image-curation" / "selected" / f"editorial-{index:02d}.jpg"
-            for index in range(1, 7)
-        ]
+        editorial_sources = [assets / f"editorial-{index:02d}.jpg" for index in range(1, 7)]
     elif number == 2:
-        editorial_sources = [HERE / "N02" / "assets" / f"editorial-{index:02d}.jpg" for index in range(1, 7)]
+        editorial_sources = [assets / f"editorial-{index:02d}.jpg" for index in range(1, 7)]
     elif number == 3:
-        editorial_sources = [bank_files[index] for index in (1, 2, 4, 7, 10, 13, 16)]
-    elif number == 4:
         editorial_sources = [
-            N01_ROOT / "recovered-references" / "candidate-pexels-34434151.jpg",
-            N01_ROOT / "recovered-references" / "candidate-unsplash-R54zbJosh6Q.jpg",
-            N01_ROOT / "final-keep-growing" / "body" / "assets" / "pexels-13663648.jpg",
-            N01_ROOT / "final-keep-growing" / "body" / "assets" / "pexels-16382939.jpg",
-            N01_ROOT / "final-keep-growing" / "body" / "assets" / "pexels-33487193.jpg",
-            N01_ROOT / "cover-proof" / "candidates-v5" / "pexels-7859332.jpg",
-            N01_ROOT / "cover-proof" / "candidates-v4" / "pexels-7047470.jpg",
-            N01_ROOT / "recovered-references" / "candidate-unsplash-8M6z_BLUFkU.jpg",
+            assets / f"editorial-{index:02d}{'.png' if index == 5 else '.jpg'}"
+            for index in range(1, 8)
         ]
+    elif number == 4:
+        editorial_sources = [assets / f"editorial-{index:02d}.jpg" for index in range(1, 9)]
     elif number == 5:
         editorial_sources = [
             HERE / "N05-v9-final" / "assets" / "editorial-01.jpg",
@@ -2430,15 +2437,13 @@ def build_document(number:int)->dict:
         # crean rellenos automáticos ni repeticiones dentro del documento.
         sparse_sources = []
     elif number == 1:
-        sparse_sources = [HERE / "N01" / "image-curation" / "selected" / "contents.jpg"]
+        sparse_sources = [assets / "sparse-fill-01.jpg"]
     elif number == 2:
-        sparse_sources = [HERE / "N02" / "assets" / f"sparse-fill-{index:02d}.jpg" for index in range(1, 3)]
+        sparse_sources = [assets / f"sparse-fill-{index:02d}.jpg" for index in range(1, 3)]
     elif number == 3:
         sparse_sources = [
-            bank_files[18],
-            bank_files[19],
-            N01_ROOT / "recovered-references" / "candidate-unsplash-8M6z_BLUFkU.jpg",
-            N01_ROOT / "recovered-references" / "candidate-unsplash-KgtOr1cCECw.jpg",
+            assets / f"sparse-fill-{index:02d}{'.png' if index == 2 else '.jpg'}"
+            for index in range(1, 5)
         ]
     elif number in {4, 5}:
         # N04 usa únicamente pausas visuales deliberadas y conceptuales.
@@ -3148,7 +3153,7 @@ def build_document(number:int)->dict:
     (out/"index.html").write_text(html_text,encoding="utf-8")
     rendered_ids=re.findall(r'data-source-id="([^"]+)"',html_text)
     source_ids=[entry["source_id"] for entry in source_entries]
-    source_label = f"source/{source.name}" if number in {5, 6, 7, 8, 9, 10} else str(source)
+    source_label = f"source/{source.name}"
     source_manifest={
         "document":f"N{number:02d}",
         "source":source_label,
@@ -3173,16 +3178,17 @@ def build_document(number:int)->dict:
         base_css = stable_css.split("/* METSI collection extensions:", 1)[0].rstrip()
         css_text = base_css + "\n\n" + COLLECTION_CSS
     else:
-        css_text = packaged_css.read_text(encoding="utf-8") if number in {5, 6} and packaged_css.exists() else N01_CSS.read_text(encoding="utf-8") + "\n" + COLLECTION_CSS
+        if number in {5, 6} and packaged_css.exists():
+            css_text = packaged_css.read_text(encoding="utf-8")
+        else:
+            stable_css = (HERE / "N01-v18-final" / "magazine.css").read_text(encoding="utf-8")
+            base_css = stable_css.split("/* METSI collection extensions:", 1)[0].rstrip()
+            css_text = base_css + "\n\n" + COLLECTION_CSS
     packaged_css.write_text(css_text,encoding="utf-8")
     if number in {5, 6, 7, 8, 9, 10}:
         (out / "metsi.css").write_text(css_text, encoding="utf-8")
-    cover_source_label = f"assets/{cover_source.name}" if number in {5, 6, 7, 8, 9, 10} else str(cover_source)
-    hotel_source_label = (
-        f"assets/{hotel_source.name}" if number in {5, 6, 7, 8, 9, 10} and hotel_source is not None else str(hotel_source)
-        if hotel_source is not None
-        else ""
-    )
+    cover_source_label = f"assets/{cover_source.name}"
+    hotel_source_label = f"assets/{hotel_file}" if hotel_source is not None else ""
     clean_title = title.replace(f"N{number:02d} — ", "").replace(f"N{number:02d} · ", "")
     manifest={
         "number":number,"title":title,"module":module_for(number)[1],"source":source_label,
@@ -3191,12 +3197,10 @@ def build_document(number:int)->dict:
             "file":cover_file,
             "source":cover_source_label,
             "sha256":asset_sha(cover_source),
-            **({"alt":cover_alt_text(number, clean_title)} if number in {6, 7, 8, 9, 10} else {}),
-            **({
-                "photographic_origin":"native_black_and_white",
-                "render_treatment":"no_grayscale_conversion",
-                "art_direction":"lighting, wardrobe, materials and tonal separation conceived for monochrome",
-            } if number in {4, 5, 6, 7, 8, 9, 10} else {}),
+            "alt":cover_alt_text(number, clean_title),
+            "photographic_origin":"native_black_and_white",
+            "render_treatment":"no_grayscale_conversion",
+            "art_direction":"lighting, wardrobe, materials and tonal separation conceived for monochrome",
         },
         "internal_images":selected,
         "sparse_fill_images":sparse_fill_images,
@@ -3210,7 +3214,7 @@ def build_document(number:int)->dict:
                 "name":"Mariela Benítez",
                 "role":"Personaje ficcional · Supervisión Housekeeping",
                 "file":"hotel-mariela-benitez-v1.png",
-                "source":str(EDITORIAL_CHARACTER_PORTRAITS/"mariela-benitez-v1.png"),
+                "source":"assets/hotel-mariela-benitez-v1.png",
                 "sha256":asset_sha(EDITORIAL_CHARACTER_PORTRAITS/"mariela-benitez-v1.png"),
                 "rights_status":"generated_editorial_fiction",
             },
@@ -3218,7 +3222,7 @@ def build_document(number:int)->dict:
                 "name":"Camila Duarte",
                 "role":"Personaje ficcional · Gerencia Comercial",
                 "file":"hotel-camila-duarte-v2.png",
-                "source":str(EDITORIAL_CHARACTER_PORTRAITS/"camila-duarte-v2.png"),
+                "source":"assets/hotel-camila-duarte-v2.png",
                 "sha256":asset_sha(EDITORIAL_CHARACTER_PORTRAITS/"camila-duarte-v2.png"),
                 "rights_status":"generated_editorial_fiction",
             },
@@ -3251,8 +3255,8 @@ COLLECTION_CSS=r'''
 .collection-cover .cover-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,7,6,.18),rgba(10,12,10,.18) 38%,rgba(8,9,8,.86) 100%)}
 .collection-cover .cover-shade{width:100%;height:100%}
 .cover-variant-2>img{object-position:42% 50%}.cover-variant-3>img{object-position:58% 50%}.cover-variant-4>img{filter:grayscale(1) saturate(0) contrast(1.12) brightness(.78)}
-.cover-n02>img{object-position:50% 47%;filter:grayscale(1) saturate(0) contrast(1.15) brightness(.73)}
-.cover-n02 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.34),rgba(10,12,10,.06) 35%,rgba(8,9,8,.88) 100%)}
+.cover-n02>img{object-position:50% 47%;filter:none}
+.cover-n02 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.18) 0,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 61%,rgba(8,9,8,.58) 100%)}
 .cover-meta{position:absolute;z-index:3;top:18mm;font-family:Avenir,sans-serif;font-size:7pt;line-height:1.35;letter-spacing:.13em}.cover-meta-left{left:18mm}.cover-meta-right{right:18mm;text-align:right}
 .collection-masthead{position:absolute;z-index:2;top:8mm;left:0;right:0;text-align:center;font-family:Didot,"Bodoni 72",serif;font-size:58pt;line-height:.9;letter-spacing:.06em;font-weight:400}
 .cover-title{position:absolute;z-index:3;left:18mm;bottom:29mm;width:119mm}.cover-title i{display:block;width:28mm;height:2mm;margin-bottom:4mm;background:#CFFF00;clip-path:polygon(8% 0,100% 0,92% 100%,0 100%)}
@@ -3261,7 +3265,9 @@ COLLECTION_CSS=r'''
 .cover-n01 .cover-meta{letter-spacing:.035em;line-height:1.2}
 .cover-n01 .cover-meta-eyebrow,.cover-n02 .cover-meta-eyebrow,.cover-n03 .cover-meta-eyebrow,.cover-n04 .cover-meta-eyebrow,.cover-n05 .cover-meta-eyebrow,.cover-n07 .cover-meta-eyebrow,.cover-n08 .cover-meta-eyebrow{display:flex;flex-direction:column;align-items:flex-start;gap:0;white-space:normal}
 .cover-n01 .cover-meta-eyebrow span,.cover-n02 .cover-meta-eyebrow span,.cover-n03 .cover-meta-eyebrow span,.cover-n04 .cover-meta-eyebrow span,.cover-n05 .cover-meta-eyebrow span,.cover-n07 .cover-meta-eyebrow span,.cover-n08 .cover-meta-eyebrow span{display:block;white-space:nowrap}
-.cover-n01::before{content:"";position:absolute;z-index:1;left:0;top:0;width:100%;height:52mm;pointer-events:none;background:linear-gradient(to bottom,rgba(0,0,0,.28) 0,rgba(0,0,0,.22) 44%,rgba(0,0,0,0) 100%)}
+.cover-n01>img{filter:none}
+.cover-n01 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.18) 0,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 61%,rgba(8,9,8,.55) 100%)}
+.cover-n01::before{content:"";position:absolute;z-index:1;left:0;top:0;width:100%;height:52mm;pointer-events:none;display:block;background:linear-gradient(to bottom,rgba(0,0,0,.48) 0,rgba(0,0,0,.38) 44%,rgba(0,0,0,0) 100%)}
 .cover-n01 .cover-title{width:160mm}
 .cover-n01 .cover-title h1{font-size:28.5pt;line-height:.96;letter-spacing:-.02em}
 .cover-n01 .cover-thesis{right:18mm;bottom:92mm;width:49mm}
@@ -3275,8 +3281,9 @@ COLLECTION_CSS=r'''
 .cover-n02 .cover-title h1{font-size:43pt;line-height:.89;letter-spacing:-.027em}
 .cover-n02 .cover-thesis{right:25mm;bottom:21mm;width:51mm}
 .cover-n02 .cover-parallelogram{right:15.5mm;top:57mm}
-.cover-n00>img{object-position:50% 48%;filter:grayscale(1) saturate(0) contrast(1.13) brightness(.73)}
-.cover-n00 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.30),rgba(10,12,10,.06) 35%,rgba(8,9,8,.90) 100%)}
+.cover-n00{background:#D0D0D0}
+.cover-n00>img{object-position:50% 48%;filter:none;opacity:.82}
+.cover-n00 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.08) 0,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 61%,rgba(8,9,8,.48) 100%)}
 .cover-n00{overflow:hidden}
 .cover-n00>img,.cover-n00 .cover-shade{inset:0;width:100%;height:100%}
 .cover-n00 .collection-masthead{top:16mm}
@@ -3288,8 +3295,8 @@ COLLECTION_CSS=r'''
 .cover-n00 .cover-thesis{right:17mm;bottom:23mm;width:78mm}
 .cover-n00 .cover-thesis p{font-size:11.2pt;line-height:1.08}
 .cover-n00 .cover-parallelogram{right:15.5mm;top:57mm}
-.cover-n03>img{object-position:50% 48%;filter:grayscale(1) saturate(0) contrast(1.14) brightness(.74)}
-.cover-n03 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.31),rgba(10,12,10,.07) 37%,rgba(8,9,8,.88) 100%)}
+.cover-n03>img{object-position:50% 48%;filter:none}
+.cover-n03 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.18) 0,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 61%,rgba(8,9,8,.58) 100%)}
 .cover-n03 .collection-masthead{top:16mm}
 .cover-n03 .cover-meta{top:29mm}
 .cover-n03 .cover-meta-left{left:15.5mm}
@@ -3298,8 +3305,9 @@ COLLECTION_CSS=r'''
 .cover-n03 .cover-title h1{font-size:36pt;line-height:.91;letter-spacing:-.025em}
 .cover-n03 .cover-thesis{right:25mm;bottom:21mm;width:51mm}
 .cover-n03 .cover-parallelogram{right:15.5mm;top:57mm}
-.cover-n04>img{object-position:50% 48%;filter:contrast(1.07) brightness(.82)}
-.cover-n04 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.30),rgba(10,12,10,.05) 36%,rgba(8,9,8,.89) 100%)}
+.cover-n04{background:#111}
+.cover-n04>img{object-position:50% 48%;filter:none;opacity:1}
+.cover-n04 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.10) 0,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 61%,rgba(8,9,8,.50) 100%)}
 .cover-n04 .collection-masthead{top:16mm}
 .cover-n04 .cover-meta{top:29mm}
 .cover-n04 .cover-meta-left{left:15.5mm}
@@ -3308,8 +3316,8 @@ COLLECTION_CSS=r'''
 .cover-n04 .cover-title h1{font-size:34pt;line-height:.91;letter-spacing:-.025em}
 .cover-n04 .cover-thesis{right:25mm;bottom:21mm;width:51mm}
 .cover-n04 .cover-parallelogram{right:15.5mm;top:57mm}
-.cover-n05>img{object-position:50% 48%;filter:contrast(1.06) brightness(.82)}
-.cover-n05 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.30),rgba(10,12,10,.05) 36%,rgba(8,9,8,.89) 100%)}
+.cover-n05>img{object-position:50% 48%;filter:none}
+.cover-n05 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.18) 0,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 61%,rgba(8,9,8,.58) 100%)}
 .cover-n05 .collection-masthead{top:16mm}
 .cover-n05 .cover-meta{top:29mm}
 .cover-n05 .cover-meta-left{left:15.5mm}
@@ -3318,8 +3326,8 @@ COLLECTION_CSS=r'''
 .cover-n05 .cover-title h1{font-size:38pt;line-height:.91;letter-spacing:-.025em}
 .cover-n05 .cover-thesis{right:18mm;bottom:22mm;width:56mm}
 .cover-n05 .cover-parallelogram{right:15.5mm;top:57mm}
-.cover-n06>img{object-position:50% 48%;filter:contrast(1.04) brightness(.96)}
-.cover-n06 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.13),rgba(10,12,10,.03) 40%,rgba(8,9,8,.70) 100%)}
+.cover-n06>img{object-position:50% 48%;filter:none}
+.cover-n06 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.46) 0,rgba(5,7,6,.14) 18%,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 62%,rgba(8,9,8,.55) 100%)}
 .cover-n06 .collection-masthead{top:16mm}
 .cover-n06 .cover-meta{top:29mm}
 .cover-n06 .cover-meta-left{left:15.5mm}
@@ -3330,7 +3338,7 @@ COLLECTION_CSS=r'''
 .cover-n06 .cover-parallelogram{right:15.5mm;top:57mm}
 .cover-n07{overflow:hidden}
 .cover-n07>img{inset:0;width:100%;height:100%;object-position:50% 48%;filter:none}
-.cover-n07 .cover-shade{inset:0;width:100%;height:100%;background:linear-gradient(180deg,rgba(5,7,6,.13) 0,rgba(5,7,6,0) 29%,rgba(5,7,6,0) 62%,rgba(5,7,6,.46) 100%)}
+.cover-n07 .cover-shade{inset:0;width:100%;height:100%;background:linear-gradient(180deg,rgba(5,7,6,.42) 0,rgba(5,7,6,.10) 18%,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 62%,rgba(5,7,6,.55) 100%)}
 .cover-n07 .collection-masthead{top:16mm}
 .cover-n07 .cover-meta{top:29mm}
 .cover-n07 .cover-meta-eyebrow{letter-spacing:.13em;line-height:1.28}
@@ -3348,9 +3356,11 @@ COLLECTION_CSS=r'''
 .cover-n08 .cover-meta-eyebrow{letter-spacing:.13em;line-height:1.28}
 .cover-n08 .cover-meta-left{left:15.5mm}
 .cover-n08 .cover-meta-right{right:15.5mm}
+.cover-n08 .cover-meta-right{color:#191919;text-shadow:0 .2mm .35mm rgba(255,255,255,.38)}
 .cover-n08 .cover-title{bottom:21mm;width:126mm}
 .cover-n08 .cover-title h1{font-size:34pt;line-height:.91;letter-spacing:-.025em}
 .cover-n08 .cover-thesis{right:16mm;bottom:21mm;width:51mm}
+.cover-n08 .cover-thesis{filter:drop-shadow(0 .5mm 1.4mm rgba(0,0,0,.92))}
 .cover-n08 .cover-parallelogram{right:15.5mm;top:57mm}
 .cover-n10>img{object-position:50% 50%;filter:grayscale(1) saturate(0) contrast(1.16) brightness(.72)}
 .cover-n10 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.31),rgba(10,12,10,.06) 36%,rgba(8,9,8,.89) 100%)}
@@ -3780,6 +3790,11 @@ COLLECTION_CSS=r'''
 .cover-n09 .cover-meta-eyebrow span,.cover-n10 .cover-meta-eyebrow span{display:block;white-space:nowrap}
 .cover-n09>img,.cover-n10>img{filter:none;object-position:center 48%}
 .cover-n09 .cover-shade,.cover-n10 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.08) 0,rgba(5,7,6,0) 29%,rgba(5,7,6,0) 62%,rgba(8,9,8,.55) 100%)}
+.cover-n09 .collection-masthead,.cover-n09 .cover-meta-left{color:#fff;text-shadow:none}
+.cover-n09 .cover-title span{text-shadow:none}
+.cover-n10{background:#808080}
+.cover-n10>img{filter:none;opacity:.78;object-position:center 48%}
+.cover-n10 .collection-masthead,.cover-n10 .cover-meta{color:#191919;text-shadow:0 .2mm .35mm rgba(255,255,255,.30)}
 .cover-n09 .cover-title,.cover-n10 .cover-title{width:132mm}
 .cover-n09 .cover-title h1,.cover-n10 .cover-title h1{font-size:31pt;line-height:.94}
 .premium-magazine.document-n09 .section-marker b,.premium-magazine.document-n10 .section-marker b{display:inline;font-weight:500}
@@ -4229,20 +4244,162 @@ def build_all(start:int,end:int)->None:
         path=HERE/("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else "N05-v9-final" if number == 5 else "N06-v9-final" if number == 6 else "N07-v9-final" if number == 7 else "N08-v9-final" if number == 8 else "N09-v9-final" if number == 9 else "N10-v9-final" if number == 10 else f"N{number:02d}")/"manifest.json"
         if path.exists():
             manifest = json.loads(path.read_text(encoding="utf-8"))
-            if number in {5, 6, 7, 8, 9, 10}:
-                package = path.parent.name
-                manifest["source"] = f"{package}/{manifest['source']}"
-                manifest["cover"]["source"] = f"{package}/{manifest['cover']['source']}"
-                if "hotel_horizonte" in manifest:
-                    manifest["hotel_horizonte"]["source"] = f"{package}/{manifest['hotel_horizonte']['source']}"
+            package = path.parent.name
+            manifest["source"] = f"{package}/{manifest['source']}"
+            manifest["cover"]["source"] = f"{package}/{manifest['cover']['source']}"
+            diagram_source = manifest.get("diagram", {}).get("source")
+            if diagram_source:
+                manifest["diagram"]["source"] = f"{package}/{diagram_source}"
+            if "hotel_horizonte" in manifest:
+                manifest["hotel_horizonte"]["source"] = f"{package}/{manifest['hotel_horizonte']['source']}"
+            for character in manifest.get("generated_character_assets", []):
+                character["source"] = f"{package}/{character['source']}"
             manifests_by_number[number] = manifest
     manifests = [manifests_by_number[number] for number in sorted(manifests_by_number)]
     collection_path.write_text(json.dumps(manifests,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 
 
+def cover_package_root(number: int) -> Path:
+    package = (
+        "N01-v18-final" if number == 1 else
+        "N02-v14-final" if number == 2 else
+        f"N{number:02d}-v9-final" if 3 <= number <= 10 else
+        f"N{number:02d}"
+    )
+    return HERE / package
+
+
+def cover_source_path(number: int) -> Path:
+    if number == 0:
+        return HERE / "N00" / "image-curation" / "selected" / "cover.jpg"
+    if number == 1:
+        return HERE / "N01-v18-final" / "assets" / "cover-source-premium-bw-v1.png"
+    if number == 2:
+        return HERE / "N02-v14-final" / "assets" / "cover-source-premium-bw-v1.png"
+    if number == 3:
+        return HERE / "N03-v9-final" / "assets" / "cover-source-premium-bw-v3.png"
+    if number == 4:
+        return HERE / "N04-v9-final" / "assets" / "cover-source-premium-bw-v3.png"
+    if number == 5:
+        return HERE / "N05-v9-final" / "assets" / "cover-source-premium-bw-v2.png"
+    if 6 <= number <= 8:
+        return HERE / f"N{number:02d}-v9-final" / "assets" / "cover-source-premium-bw-v1.png"
+    if number in {9, 10}:
+        package = HERE / f"N{number:02d}-v9-final" / "assets"
+        native = package / "cover-source-premium-bw-v1.png"
+        return native if native.exists() else package / "cover.png"
+    raise ValueError(f"N{number:02d} queda fuera del bloque disponible")
+
+
+COVER_AUDIT_CSS = {
+    0: """.cover-n00{background:#D0D0D0}
+.cover-n00>img{filter:none;opacity:.82}
+.cover-n00 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.08) 0,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 61%,rgba(8,9,8,.48) 100%)}""",
+    1: """.cover-n01>img{filter:none}
+.cover-n01 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.18) 0,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 61%,rgba(8,9,8,.55) 100%)}
+.cover-n01::before{display:block;background:linear-gradient(to bottom,rgba(0,0,0,.48) 0,rgba(0,0,0,.38) 44%,rgba(0,0,0,0) 100%)}""",
+    2: """.cover-n02>img{filter:none}
+.cover-n02 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.18) 0,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 61%,rgba(8,9,8,.58) 100%)}""",
+    3: """.cover-n03>img{filter:none}
+.cover-n03 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.18) 0,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 61%,rgba(8,9,8,.58) 100%)}""",
+    4: """.cover-n04{background:#111}
+.cover-n04>img{filter:none;opacity:1}
+.cover-n04::before{content:"";position:absolute;z-index:1;left:0;top:0;width:100%;height:52mm;pointer-events:none;display:block;background:linear-gradient(to bottom,rgba(0,0,0,.40) 0,rgba(0,0,0,.30) 44%,rgba(0,0,0,0) 100%)}
+.cover-n04 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.10) 0,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 61%,rgba(8,9,8,.50) 100%)}""",
+    5: """.cover-n05>img{filter:none}
+.cover-n05 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.18) 0,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 61%,rgba(8,9,8,.58) 100%)}""",
+    6: """.cover-n06>img{filter:none}
+.cover-n06 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.46) 0,rgba(5,7,6,.14) 18%,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 62%,rgba(8,9,8,.55) 100%)}""",
+    7: """.cover-n07>img{filter:none}
+.cover-n07 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.42) 0,rgba(5,7,6,.10) 18%,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 62%,rgba(8,9,8,.55) 100%)}""",
+    8: """.cover-n08 .cover-meta-right{color:#191919;text-shadow:0 .2mm .35mm rgba(255,255,255,.38)}
+.cover-n08 .cover-thesis{filter:drop-shadow(0 .5mm 1.4mm rgba(0,0,0,.92))}""",
+    9: """.cover-n09 .collection-masthead,.cover-n09 .cover-meta-left{color:#fff}
+.cover-n09 .cover-title span{text-shadow:none}""",
+    10: """.cover-n10{background:#808080}
+.cover-n10>img{filter:none;opacity:.78;object-position:center 48%}
+.cover-n10 .collection-masthead,.cover-n10 .cover-meta{color:#191919}""",
+}
+
+
+def cover_audit_css(css_text: str, number: int) -> str:
+    """Append only cover-scoped rules, preserving every approved interior rule."""
+    marker = "/* METSI cover audit 2026-09-04 */"
+    preserved = css_text.split(marker, 1)[0].rstrip()
+    return preserved + "\n\n" + marker + "\n" + COVER_AUDIT_CSS[number].strip() + "\n"
+
+
+def update_cover_only(number: int) -> None:
+    """Refresh one approved package without parsing or reflowing its interior."""
+    root = cover_package_root(number)
+    source = cover_source_path(number)
+    if not source.is_file():
+        raise FileNotFoundError(source)
+    manifest_path = root / "manifest.json"
+    html_path = root / "index.html"
+    css_path = root / "magazine.css"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    clean_title = manifest["title"].replace(f"N{number:02d} — ", "").replace(f"N{number:02d} · ", "")
+    cover_file = "cover" + source.suffix.lower()
+    copy_asset(source, root / "assets" / cover_file)
+
+    html_text = html_path.read_text(encoding="utf-8")
+    replacement = rf'\g<1>{esc(cover_file)}\g<2>{esc(cover_alt_text(number, clean_title))}\g<3>'
+    html_text, replacements = re.subn(
+        r'(<section class="collection-cover\b[^>]*><img src="assets/)[^"]+(" alt=")[^"]*(">)',
+        replacement,
+        html_text,
+        count=1,
+    )
+    if replacements != 1:
+        raise RuntimeError(f"No se pudo actualizar la tapa HTML de N{number:02d}")
+    html_path.write_text(html_text, encoding="utf-8")
+
+    css_text = cover_audit_css(css_path.read_text(encoding="utf-8"), number)
+    css_path.write_text(css_text, encoding="utf-8")
+    metsi_css = root / "metsi.css"
+    if metsi_css.exists():
+        metsi_css.write_text(cover_audit_css(metsi_css.read_text(encoding="utf-8"), number), encoding="utf-8")
+
+    manifest["cover"] = {
+        "file": cover_file,
+        "source": f"assets/{source.name}",
+        "sha256": asset_sha(source),
+        "alt": cover_alt_text(number, clean_title),
+        "photographic_origin": "native_black_and_white",
+        "render_treatment": "no_grayscale_conversion",
+        "art_direction": "lighting, wardrobe, materials and tonal separation conceived for monochrome",
+    }
+    trailing_newline = "\n" if number in {5, 6, 7, 8, 9, 10} else ""
+    manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + trailing_newline, encoding="utf-8")
+    document_path = root / "document.json"
+    if document_path.exists():
+        document = json.loads(document_path.read_text(encoding="utf-8"))
+        document["cover"] = manifest["cover"]
+        document_path.write_text(json.dumps(document, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    collection_path = HERE / "collection-manifest.json"
+    if collection_path.exists():
+        collection = json.loads(collection_path.read_text(encoding="utf-8"))
+        for entry in collection:
+            if entry.get("number") == number:
+                entry["cover"] = dict(manifest["cover"])
+                entry["cover"]["source"] = f"{root.name}/assets/{source.name}"
+                break
+        collection_path.write_text(json.dumps(collection, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"UPDATED COVER N{number:02d} {cover_file} {manifest['cover']['sha256']}")
+
+
 def main()->None:
-    parser=argparse.ArgumentParser();parser.add_argument('--start',type=int,default=0);parser.add_argument('--end',type=int,default=10)
-    args=parser.parse_args();build_all(args.start,args.end)
+    parser=argparse.ArgumentParser();parser.add_argument('--start',type=int,default=0);parser.add_argument('--end',type=int,default=10);parser.add_argument('--cover-only',action='store_true')
+    args=parser.parse_args()
+    if args.cover_only:
+        if args.start < 0 or args.end > 10 or args.start > args.end:
+            raise ValueError("El rango de la colección disponible es N00–N10")
+        for number in range(args.start, args.end + 1):
+            update_cover_only(number)
+    else:
+        build_all(args.start,args.end)
 
 
 if __name__=='__main__':main()

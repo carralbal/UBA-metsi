@@ -1,29 +1,57 @@
-# Auditoría visual, N03 v9 final
+# Auditoría visual · N03 v9 final
 
 ## Resultado
 
-APROBADO. Se inspeccionó la plancha de las 30 páginas después de la última exportación.
+**PASS.** La tapa vigente fue verificada individualmente y como parte de la familia N00 a N10. El interior permanece bloqueado.
 
-## Hallazgos cerrados
+## Tapa vigente
 
-- Portada a sangre, sin halo perimetral y con jerarquía estable. La fotografía tiene dirección cinematográfica, profundidad, reflejos, textura real y una protagonista argentina o latinoamericana creíble.
-- Regresión contra el PDF anterior: página 1 modificada; páginas 2 a 30 idénticas píxel por píxel a 72 dpi.
-- La exportación v9 es visualmente idéntica a la v8 corregida en las 30 páginas; el cambio de versión elimina únicamente la ambigüedad de ruta y caché.
-- Eyebrow construido como dos líneas completas y extraíbles.
-- Contenido y Referentes sin colisiones ni retratos repetidos.
-- Pregunta profesional en página 4 con fondo oscuro completo.
-- Pausas fotográficas a sangre en páginas 5 y 19, con frases legibles y separadas del cierre.
-- Cuerpo en columnas equilibradas, sin títulos huérfanos ni desbordes.
-- Ninguna página ordinaria por debajo de 50 % de llenado; mínimo 51,65 % en Referencias base.
-- Cinco píldoras, glosario y preparación mantienen jerarquía y cuerpo legible.
-- Referencias base sin barra lateral negra o volt, en doble columna minimalista.
-- Siete URLs enteras. El segmento `eur-lex` y los identificadores NIST no se parten dentro del guion.
-- Página final a sangre con fósforos, folio, línea de pie, pie breve y texto alternativo; no incluye frase superpuesta.
+- Maestro: `assets/cover-source-premium-bw-v3.png`.
+- Desplegado: `assets/cover.png`.
+- SHA-256 común: `06976e01da816e65e8becdc825c62bd6b166e90654f23b74f9cd2b900cb0be94`.
+- Procedencia: `provenance/cover-image-premium-bw-v3.md`.
+- Fotografía original en blanco y negro, sin `grayscale()` ni desaturación efectiva en CSS.
+- Sangrado completo y cero halo claro en los cuatro bordes.
+- Texto alternativo de la figura de tapa: “Trabajadora hotelera argentina observa un corredor operativo desde un umbral de vidrio, con carros y puertas que prolongan el circuito hacia el fondo”.
+- La figura tiene una ruta semántica válida en la estructura del PDF.
+
+## Escala tonal de la tapa compuesta
+
+| Métrica | Resultado |
+|---|---:|
+| Luminancia media | 123,55 |
+| Percentil 5 | 16,72 |
+| Percentil 95 | 215,53 |
+| Amplitud entre percentiles | 198,82 |
+| Desvío estándar | 57,83 |
+| Píxeles en tonos medios | 71,83 % |
+| Píxeles por debajo de 32 | 10,20 % |
+
+La tapa conserva sombras, grises medios y altas luces. El oscurecimiento está localizado detrás de la información editorial y no funciona como velo negro uniforme.
+
+## Documento completo
+
+- 30 páginas A4.
+- Pregunta profesional en fondo oscuro completo en la página 4.
+- Pausas internas a sangre en las páginas 5 y 19.
+- Cuerpo sin colisiones, desbordes ni títulos huérfanos.
+- Ninguna página ordinaria por debajo del 50 % de llenado; mínimo 51,65 %.
+- Referencias base en dos columnas minimalistas y siete URLs íntegras.
+- Cierre con fósforos a sangre, folio, línea de pie, epígrafe y texto alternativo.
+
+## Regresión y familia
+
+- Páginas 2 a 30: identidad píxel por píxel contra la línea de base bloqueada.
+- URLs: conjunto idéntico a la línea de base.
+- Auditoría consolidada: `../BLOCK-01-cover-final/audit.json`, `PASS` en 11 de 11 documentos.
+- La familia usa 11 fuentes de tapa distintas y supera el control de similitud perceptual.
 
 ## Evidencia
 
-- Plancha: `qa/N03-contact-sheet.jpg`
-- Métricas: `validation-v9.json`
-- Control general del PDF: `qa-report.json`
-- Regresión específica de tapa: `provenance/cover-change-regression.json`
-- Regresión de entrega v8 a v9: `provenance/version-v9-regression.json`
+- `qa/N03-contact-sheet.jpg`
+- `qa/N03-cover-v9.png`
+- `validation-v9.json`
+- `qa-report.json`
+- `provenance/cover-change-regression.json`
+- `provenance/version-v9-regression.json`
+- `../BLOCK-01-cover-final/contact-sheet-N00-N10.jpg`

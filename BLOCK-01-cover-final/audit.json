@@ -1,0 +1,3752 @@
+{
+  "artifacts": {
+    "audit_json": "BLOCK-01-cover-final/audit.json",
+    "baseline_manifest": "BLOCK-01-cover-final/baseline-interior-hashes.json",
+    "contact_sheet": "BLOCK-01-cover-final/contact-sheet-N00-N10.jpg"
+  },
+  "baseline": {
+    "baseline_id": "metsi-block01-cover-baseline-20260904",
+    "file": "baseline-interior-hashes.json",
+    "mode": "bundled_manifest",
+    "sha256": "64072008f839a5b266ad8189911e3b3e173748b5bdd0b7ea8effbc2378450a61"
+  },
+  "documents": [
+    {
+      "baseline": "bundled-manifest:baseline-interior-hashes.json",
+      "baseline_pdf_sha256": "f995354046f9c3b0f60c568e7ebc241926d88fa115833c61ca427935301c2eae",
+      "checks": {
+        "composed_cover_tone": {
+          "metrics": {
+            "channel_spread_p95": 1.0,
+            "file": "generated:cover-page-1@120dpi",
+            "luminance": {
+              "dark_below_32_pct": 3.92,
+              "highlights_above_224_pct": 0.62,
+              "mean": 66.22,
+              "midtones_64_192_pct": 31.7,
+              "p05": 33.0,
+              "p50": 51.0,
+              "p95": 154.0,
+              "range_p95_p05": 121.0,
+              "stddev": 40.07
+            },
+            "native_bw_passed": true,
+            "raw_tonal_reference_passed": false,
+            "sha256": "2fead5dfd98f234bd9cbd7efc08a98d58442879b1341aabcd3c0c09f56d67822",
+            "size_px": [
+              992,
+              1404
+            ]
+          },
+          "passed": true
+        },
+        "cover_alt": {
+          "accepted_semantic_routes": [
+            {
+              "kind": "MCR",
+              "mcid": 0,
+              "owner_structure_element": "517 0 R",
+              "page": 1,
+              "parent_tree_matches_owner": true,
+              "parent_tree_target": "517 0 R",
+              "stream": "17 0 R",
+              "struct_parents": 1,
+              "valid": true
+            }
+          ],
+          "exact_figure_match": true,
+          "exact_figure_with_valid_semantic_route": true,
+          "html_alt": "Músico de contrabajo durante un ensayo orquestal, visto entre el instrumento, la partitura y las relaciones del conjunto",
+          "image_xobject_alt_is_not_acceptance_evidence": true,
+          "image_xobject_exact_match_diagnostic": false,
+          "passed": true,
+          "pdf_language": "es-AR",
+          "pdf_marked": true,
+          "pdf_page_one_figure_alts": [
+            "Músico de contrabajo durante un ensayo orquestal, visto entre el instrumento, la partitura y las relaciones del conjunto"
+          ],
+          "pdf_page_one_figures": [
+            {
+              "alt": "Músico de contrabajo durante un ensayo orquestal, visto entre el instrumento, la partitura y las relaciones del conjunto",
+              "page": 1,
+              "semantic_routes": [
+                {
+                  "kind": "MCR",
+                  "mcid": 0,
+                  "owner_structure_element": "517 0 R",
+                  "page": 1,
+                  "parent_tree_matches_owner": true,
+                  "parent_tree_target": "517 0 R",
+                  "stream": "17 0 R",
+                  "struct_parents": 1,
+                  "valid": true
+                }
+              ],
+              "structure_element": "517 0 R",
+              "valid_page_one_route": true
+            }
+          ],
+          "pdf_page_one_image_xobject_alts": []
+        },
+        "css_full_page_cover": {
+          "image_full_page": true,
+          "overlay_full_page": true,
+          "passed": true,
+          "stylesheets": [
+            "magazine.css"
+          ]
+        },
+        "eyebrow_extractable": {
+          "expected": [
+            "LECTURA PREVIA",
+            "EDICIÓN 2026"
+          ],
+          "extracted_prefix": "METSILECTURA PREVIA EDICIÓN 2026 N00 FCE · UBA METODOLOGÍA DE SISTEMAS DE INFORMACIÓN METSI: ver,comprender,intervenir N00 Un contrato intelectual para llegar al encuentro con una posición revisable. 01 Diego Carralbal, 2026 · linkedin.com/in/carralbal",
+          "found_in_order": true,
+          "passed": true,
+          "separate_lines": false
+        },
+        "fonts": {
+          "families": [
+            "AppleSymbols",
+            "Avenir",
+            "Baskerville",
+            "Didot"
+          ],
+          "passed": true,
+          "unexpected": []
+        },
+        "interior_pixels_equal_baseline": {
+          "compared_page_range": [
+            2,
+            45
+          ],
+          "differences": [],
+          "missing_current": [],
+          "missing_expected": [],
+          "page_pixel_sha256": {
+            "10": "412f28b29a48a75a7a2b11f18b376161c3f4c33344067b82c76018b3dfc311d4",
+            "11": "c88b49fbfca089c1e582b13077c100cd895386a89fd3d98d409d5709fcfd9e8e",
+            "12": "972b58b3ba59663ab848b50579419ad0d2a8eadfe9a833e5ab99d8638cf42578",
+            "13": "35b427c7b8df610747a175a4662fc779d7a7dc4fe7d0ee44b900e9c329461855",
+            "14": "04b888d9f40fc93d36daa7f2a7266b791b359202a716e563045d7e1e28112369",
+            "15": "87702c38fb4f67c72c62c4c2c47088154e02ef6de4f595105ee7579058e643f5",
+            "16": "cc23289133ff69ec05a6b0a475eae63308b843287e757f33bac79385f46e0b77",
+            "17": "32e722e066e51827309a805bdffa8c4f0de9fba1cdffb8532523b2b5b67a9227",
+            "18": "7bc3bcc412bb5562f9c88157980b4fcb92446507b53a2e90a6950acac48c795d",
+            "19": "1c91436c6e5ff71a6de66cb8ff2f89bddf24e26f47bcf6d4785c78a0c08a0bda",
+            "2": "f3129c265f6805a43947cabe53246a51bde8b3b45355adb75b1e2c42ce1b492d",
+            "20": "55b0a5ce0196963f987bb2f977d45904fd4de10b462e926ebe5909d7360c09bd",
+            "21": "f5e9a129590170726e79ee0f8059f10d3b04f626bc08edcbedc6a1be88846856",
+            "22": "dc65973c84cd6a658198c8703ea70259810a147fddbdef47e8d9578262ae7da7",
+            "23": "747b012b0c8019d21e13c3a364ad667ac07f4d45df639f1b717eb584746f3b05",
+            "24": "a8095ba9e51e8070b138dd8741b1541d0cd6ca1de2eb0d83350145516f0e4e39",
+            "25": "bf6b0e863131559752a9b326cc40e3384632293d636d9751d2ca6c9cb227589e",
+            "26": "6f9a8a5a04be7c64cc54c604e8e6c096f02b9b485791c3927b45f6c56f638668",
+            "27": "7560fbf4028b138a5a3114adc168a1dccfcd656f3233dbf11c726c5acef77bfc",
+            "28": "54682a5b16fb23845ab13b8a7a165bf58c5418d2680c21436d1af3e6504f9d3c",
+            "29": "1a4fa1180b1db4f105bf72f1234dc101449c8ca5660b0f36623e17263aa5cc19",
+            "3": "4feafdf4bd15714eb0824d456390501e2b76de864e86b889a516214b84c876ea",
+            "30": "39a4c7bd5b7f52a5b69b9a7961e76526e38df30abd31aa196d9dce03bb743a21",
+            "31": "e20187ea90f99f81643be21c4df723ceed731e38a83cb7c2b47980ac49c6a1d2",
+            "32": "636ec83c7cec6199777b934ddd4bfe8ffafce3edd30059231f468189d5fc01f1",
+            "33": "dd4a25141fda34d7bd3c7056e3b0a33580fb246e606ac665b44ea2a3e3ffa4b0",
+            "34": "361a993845d40bb8d55c96953900a5ac5cdffd94c5fce99bc58248b619e63208",
+            "35": "736ed7467f674a116237c6f86949bf56238dab85e7a1990f6065960fdd2c77d2",
+            "36": "11d093adbbfb418832b5dcabf56d1233831e37a771b5aa0cbb232a51a3754cf0",
+            "37": "57d6020fed71911775e4bd80618cbebeeb9b78548575b6d51568eabe8b1fe833",
+            "38": "a830c56350047cf2badeb2ca302d30d58a41e53ccb354142a067e0b3a339bee8",
+            "39": "6934f34121c8d4fcaf94b1be24b55930db844b37b5aeb2691aedd88abeb70a71",
+            "4": "7406abbb321bb8a331ce01416673aec3bc52b69cf85d831c542014eb68c7f5c6",
+            "40": "356f8dc40cc470195e0be583f57bb636e66d2196b9d5ff6a0f456c9687012fb8",
+            "41": "a05047f82707da7038b36fa1f6ede5f40d5843bea4e8ae3943d7c0f10120dcf5",
+            "42": "cca36d1e937981980345dc42095c528f9693292b4cf5ca53da2412bce43b8efc",
+            "43": "ffbd19ec6ca67e2544706f00a627f1cc0498ef1c92c7e5a69eab02553c22ea83",
+            "44": "857963ff9ef60069895c3852d98cceab1acd1458c65e299788eec729ea9ee5f2",
+            "45": "b6e06b7a0cddf178f01d9066668aef19fdbf522457dee7636a7eb4090a1d66bb",
+            "5": "6718bc4f5161249e8ee2a4e6365238f4cb1d9398684f66409ea24bc8655f449c",
+            "6": "c98925d25126032785d52d80017da01d70f8d318c54007c6239e2c4b39670d40",
+            "7": "940a3995ef28c8a096311466ba37c3bfaa489c2fc7297b48ed588ffadd586faa",
+            "8": "a9ac52d7e8a7e4e6780fc2a8b8ee67506e378be5ffdda441afc86d4442ea7864",
+            "9": "5d2ec4923ed2a3f1d9bc04a97862e1c6dbb7857257d29733461b6d270015e788"
+          },
+          "pages_compared": 44,
+          "passed": true,
+          "renderer": "pdftoppm 72 dpi RGB PPM",
+          "unexpected_current": [],
+          "unexpected_expected": []
+        },
+        "manifest_and_provenance_contract": {
+          "checks": {
+            "declared_file_matches_deployed": true,
+            "declared_source_exists_and_matches_deployed": true,
+            "effective_css_has_no_bw_conversion": true,
+            "manifest_sha_matches_deployed": true,
+            "photographic_origin_native_black_and_white": true,
+            "render_treatment_no_grayscale_conversion": true
+          },
+          "declared_file": "cover.jpg",
+          "declared_sha256": "e0f87e115ad8f9be9d08989072276b44980858fd641b7b373114eb644ebae7f1",
+          "declared_source": "assets/cover.jpg",
+          "deployed_file": "cover.jpg",
+          "deployed_sha256": "e0f87e115ad8f9be9d08989072276b44980858fd641b7b373114eb644ebae7f1",
+          "effective_css_filter": {
+            "candidates": [
+              {
+                "order": 19,
+                "selector": ".collection-cover>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "grayscale(1) saturate(0) contrast(1.10) brightness(.81)"
+              },
+              {
+                "order": 22,
+                "selector": ".cover-n00>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "none"
+              },
+              {
+                "order": 49,
+                "selector": ".cover-n00>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "none"
+              }
+            ],
+            "conversion_filter_detected": false,
+            "effective": {
+              "order": 49,
+              "selector": ".cover-n00>img",
+              "source": "magazine.css",
+              "specificity": [
+                0,
+                1,
+                1
+              ],
+              "value": "none"
+            },
+            "passed": true
+          },
+          "manifest": "manifest.json",
+          "passed": true,
+          "photographic_origin": "native_black_and_white",
+          "render_treatment": "no_grayscale_conversion",
+          "source_exists": true,
+          "source_sha256": "e0f87e115ad8f9be9d08989072276b44980858fd641b7b373114eb644ebae7f1"
+        },
+        "native_cover_image": {
+          "asset": "N00/assets/cover.jpg",
+          "deployed_matches_premium_source": false,
+          "metrics": {
+            "channel_spread_p95": 0.0,
+            "file": "N00/assets/cover.jpg",
+            "luminance": {
+              "dark_below_32_pct": 60.14,
+              "highlights_above_224_pct": 0.04,
+              "mean": 40.56,
+              "midtones_64_192_pct": 20.75,
+              "p05": 2.0,
+              "p50": 23.0,
+              "p95": 137.0,
+              "range_p95_p05": 135.0,
+              "stddev": 44.04
+            },
+            "native_bw_passed": true,
+            "raw_tonal_reference_passed": false,
+            "sha256": "e0f87e115ad8f9be9d08989072276b44980858fd641b7b373114eb644ebae7f1",
+            "size_px": [
+              2600,
+              3900
+            ]
+          },
+          "passed": true,
+          "premium_sources": []
+        },
+        "pages_and_a4": {
+          "expected_a4_pt": [
+            594.96,
+            841.92
+          ],
+          "expected_pages": 45,
+          "non_a4_pages": [],
+          "pages": 45,
+          "passed": true,
+          "tolerance_pt": 1.0,
+          "unique_page_sizes_pt": [
+            [
+              594.96,
+              841.92
+            ]
+          ]
+        },
+        "pdf_image_bleed": {
+          "bbox": {
+            "bottom": 869.756,
+            "top": -24.786,
+            "x0": 0.0,
+            "x1": 596.361
+          },
+          "gaps_pt": {
+            "bottom": 0.0,
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0
+          },
+          "passed": true,
+          "tolerance_pt": 1.5
+        },
+        "rendered_halo": {
+          "bottom_band_max_row_mean_delta": 65.11,
+          "maximum_allowed_px": 1,
+          "pale_uniform_border_depth_px": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "passed": true
+        },
+        "urls_equal_baseline": {
+          "added": [],
+          "baseline": [
+            "https://doi.org/10.1073/pnas.1319030111",
+            "https://doi.org/10.1073/pnas.1821936116",
+            "https://doi.org/10.1080/00461520.2014.965823",
+            "https://doi.org/10.1111/j.1467-9280.2006.01693.x",
+            "https://doi.org/10.6028/NIST.AI.600-1",
+            "https://udlguidelines.cast.org/",
+            "https://unesdoc.unesco.org/ark:/48223/pf0000393812",
+            "https://unesdoc.unesco.org/ark:/48223/pf0000394935",
+            "https://www.linkedin.com/in/carralbal/"
+          ],
+          "baseline_count": 9,
+          "current": [
+            "https://doi.org/10.1073/pnas.1319030111",
+            "https://doi.org/10.1073/pnas.1821936116",
+            "https://doi.org/10.1080/00461520.2014.965823",
+            "https://doi.org/10.1111/j.1467-9280.2006.01693.x",
+            "https://doi.org/10.6028/NIST.AI.600-1",
+            "https://udlguidelines.cast.org/",
+            "https://unesdoc.unesco.org/ark:/48223/pf0000393812",
+            "https://unesdoc.unesco.org/ark:/48223/pf0000394935",
+            "https://www.linkedin.com/in/carralbal/"
+          ],
+          "current_count": 9,
+          "passed": true,
+          "removed": []
+        }
+      },
+      "code": "N00",
+      "package": "N00",
+      "passed": true,
+      "pdf": "N00/output/N00-METSI-lectura-previa-final.pdf",
+      "pdf_sha256": "1b4a1ab42665246349ed240659585a2e33766fe72157032bfbefc03cc7127f64"
+    },
+    {
+      "baseline": "bundled-manifest:baseline-interior-hashes.json",
+      "baseline_pdf_sha256": "c4699ae37c263815b942c810bb6f606cd129ae1e2ab1c9dc1daf3cef2b867e0a",
+      "checks": {
+        "composed_cover_tone": {
+          "metrics": {
+            "channel_spread_p95": 2.0,
+            "file": "generated:cover-page-1@120dpi",
+            "luminance": {
+              "dark_below_32_pct": 11.87,
+              "highlights_above_224_pct": 4.25,
+              "mean": 100.15,
+              "midtones_64_192_pct": 49.15,
+              "p05": 23.0,
+              "p50": 85.28,
+              "p95": 221.21,
+              "range_p95_p05": 198.21,
+              "stddev": 63.68
+            },
+            "native_bw_passed": true,
+            "raw_tonal_reference_passed": true,
+            "sha256": "e851808defe9f8ed6a7857035633a46756c5d03dbdc3047c7b2153b52ea7e7dd",
+            "size_px": [
+              992,
+              1404
+            ]
+          },
+          "passed": true
+        },
+        "cover_alt": {
+          "accepted_semantic_routes": [
+            {
+              "kind": "MCID",
+              "mcid": 2,
+              "owner_structure_element": "610 0 R",
+              "page": 1,
+              "parent_tree_matches_owner": true,
+              "parent_tree_target": "610 0 R",
+              "stream": null,
+              "struct_parents": 0,
+              "valid": true
+            }
+          ],
+          "exact_figure_match": true,
+          "exact_figure_with_valid_semantic_route": true,
+          "html_alt": "Ruta serrana argentina que avanza entre curvas, roca y niebla hasta perderse en la distancia",
+          "image_xobject_alt_is_not_acceptance_evidence": true,
+          "image_xobject_exact_match_diagnostic": true,
+          "passed": true,
+          "pdf_language": "es-AR",
+          "pdf_marked": true,
+          "pdf_page_one_figure_alts": [
+            "Ruta serrana argentina que avanza entre curvas, roca y niebla hasta perderse en la distancia"
+          ],
+          "pdf_page_one_figures": [
+            {
+              "alt": "Ruta serrana argentina que avanza entre curvas, roca y niebla hasta perderse en la distancia",
+              "page": 1,
+              "semantic_routes": [
+                {
+                  "kind": "MCID",
+                  "mcid": 2,
+                  "owner_structure_element": "610 0 R",
+                  "page": 1,
+                  "parent_tree_matches_owner": true,
+                  "parent_tree_target": "610 0 R",
+                  "stream": null,
+                  "struct_parents": 0,
+                  "valid": true
+                }
+              ],
+              "structure_element": "610 0 R",
+              "valid_page_one_route": true
+            }
+          ],
+          "pdf_page_one_image_xobject_alts": [
+            "Ruta serrana argentina que avanza entre curvas, roca y niebla hasta perderse en la distancia"
+          ]
+        },
+        "css_full_page_cover": {
+          "image_full_page": true,
+          "overlay_full_page": true,
+          "passed": true,
+          "stylesheets": [
+            "magazine.css"
+          ]
+        },
+        "eyebrow_extractable": {
+          "expected": [
+            "LECTURA PREVIA",
+            "EDICIÓN 2026"
+          ],
+          "extracted_prefix": "METSI LECTURA PREVIA EDICIÓN 2026 N01 FCE · UBA METODOLOGÍA DE SISTEMAS DE INFORMACIÓN Metodología sin recetas:intervenir cuando el problematodavía no está claro N01 Una metodología profesional organiza el juicio sin sustituirlo. 01 Diego Carralbal, 2026 · linkedin.com/in/carralb",
+          "found_in_order": true,
+          "passed": true,
+          "separate_lines": true
+        },
+        "fonts": {
+          "families": [
+            "Avenir",
+            "Baskerville",
+            "Didot"
+          ],
+          "passed": true,
+          "unexpected": []
+        },
+        "interior_pixels_equal_baseline": {
+          "compared_page_range": [
+            2,
+            29
+          ],
+          "differences": [],
+          "missing_current": [],
+          "missing_expected": [],
+          "page_pixel_sha256": {
+            "10": "08a8ad8814af7c52c18b55ed1ed085a70b172f0c80765f197add140f55f1011d",
+            "11": "b78083b04f5a061927b1769a9842fb6e1b46699adbac76bdf319e4a53b8b498b",
+            "12": "3522eef41d5d216dc2919a1b3eb762f562ecc88407e25823adce921d6fa0ac9a",
+            "13": "0eb27799c22b2fb194d48d78c2808251685a7ad163c84594af74c8866e796473",
+            "14": "61555454263181a30dc7f4e121f14c98a0e01328d3fa2019f9ad15819bfbf91c",
+            "15": "3af9fb20d57b97128b291bf7d54a2435034a7cc7bff55e405512eb01b4350c50",
+            "16": "55c93761edd2a218e39c6f5cf4357187e517f9696d592cd419993016c68c9d29",
+            "17": "94bfdbee9b00dd8161eb83819dfc8ba676c7becdc2039c8506dae8ab204ca200",
+            "18": "e0a0545f6517ac974e5ba21c24d1b53bac5c6116c5f992f50044798157e634fc",
+            "19": "171fcc175792064a8613336c0cd572d08227fe9dc073c5249bc08854cf4ffde1",
+            "2": "926c20dff5532318084470f6c41d5994f15cb0d655d9147ebdc0b40e811e9c1d",
+            "20": "e9423da5e988ba43954e040d551bfd93d23e3c94f376a00956acc5aa24256b0d",
+            "21": "f6e2e1e8eb481b203d7f21536d7e2fb9073b1065c31c783e12cc09729fbf9796",
+            "22": "dffb941e9cc24cfe9b0d08f8a669d32ebcdeddfb160df6e3c9aca236904ad1d9",
+            "23": "b489dd456728b3a96a73b0254fb32dc1646186257ca0652c11b5be00ddfea0f4",
+            "24": "10b3ceab2fea4ec4a946639d7ea846f8de806d7c1df91e4681cf1d91d263abe1",
+            "25": "3215b3a171a48bb43b63624b2776840310b37d5e3cdc20a1bc56bb9bd15b333f",
+            "26": "7496bff4854afa13ca944fed849316c1791ccda8794fe315e5e664f9a97c9592",
+            "27": "79bfe0f949e5444832ad9b721e0c79ec0b759cd49d74d4824503edfea7cd0e20",
+            "28": "98ee6cfb1e2d5af6073a38112085ae5f4e4c8866d9726a97644bde28a491c9ad",
+            "29": "bc3c5930c71b77f8d1227e8f577d92ee91bb8f812aec4f7439e86471f3313bd6",
+            "3": "0eacd772519e97492c42465f435fbef6fc5d67ade3e9d2ddb2399fd786330adf",
+            "4": "9610a9d27325c09ca51f2e542c895b7dd7dc28c57aeb5b93d6dd7647249eefec",
+            "5": "dcc140972f11bf0b886f9fd84e1bb446c63a0f392f123f04630eef25076bee7e",
+            "6": "21e46d8a6ecd2358d332021c7e63c822148db94f4dfc6bb1ed0604559a2a390b",
+            "7": "f67c8cea2189dbefbf40e3a97d0cb2446ae2ddf4f1fde30032bc8a70b2cd725c",
+            "8": "375a438554f5703ba4a7d96175ea1af2892f2c5f2550e99fc3019152e9dac783",
+            "9": "89490e71c0f87d8073c458c00efea68abcfbe3d19a32305de3f73dd357b82e65"
+          },
+          "pages_compared": 28,
+          "passed": true,
+          "renderer": "pdftoppm 72 dpi RGB PPM",
+          "unexpected_current": [],
+          "unexpected_expected": []
+        },
+        "manifest_and_provenance_contract": {
+          "checks": {
+            "declared_file_matches_deployed": true,
+            "declared_source_exists_and_matches_deployed": true,
+            "effective_css_has_no_bw_conversion": true,
+            "manifest_sha_matches_deployed": true,
+            "photographic_origin_native_black_and_white": true,
+            "render_treatment_no_grayscale_conversion": true
+          },
+          "declared_file": "cover.png",
+          "declared_sha256": "12a34ac7c675693add178d00f248eab710ea6154fa8ee5e4547f6e0ee6503679",
+          "declared_source": "assets/cover-source-premium-bw-v1.png",
+          "deployed_file": "cover.png",
+          "deployed_sha256": "12a34ac7c675693add178d00f248eab710ea6154fa8ee5e4547f6e0ee6503679",
+          "effective_css_filter": {
+            "candidates": [
+              {
+                "order": 19,
+                "selector": ".collection-cover>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "grayscale(1) saturate(0) contrast(1.10) brightness(.81)"
+              },
+              {
+                "order": 51,
+                "selector": ".cover-n01>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "none"
+              }
+            ],
+            "conversion_filter_detected": false,
+            "effective": {
+              "order": 51,
+              "selector": ".cover-n01>img",
+              "source": "magazine.css",
+              "specificity": [
+                0,
+                1,
+                1
+              ],
+              "value": "none"
+            },
+            "passed": true
+          },
+          "manifest": "manifest.json",
+          "passed": true,
+          "photographic_origin": "native_black_and_white",
+          "render_treatment": "no_grayscale_conversion",
+          "source_exists": true,
+          "source_sha256": "12a34ac7c675693add178d00f248eab710ea6154fa8ee5e4547f6e0ee6503679"
+        },
+        "native_cover_image": {
+          "asset": "N01-v18-final/assets/cover.png",
+          "deployed_matches_premium_source": true,
+          "metrics": {
+            "channel_spread_p95": 2.0,
+            "file": "N01-v18-final/assets/cover.png",
+            "luminance": {
+              "dark_below_32_pct": 5.64,
+              "highlights_above_224_pct": 5.89,
+              "mean": 120.89,
+              "midtones_64_192_pct": 53.93,
+              "p05": 30.79,
+              "p50": 107.0,
+              "p95": 225.43,
+              "range_p95_p05": 194.64,
+              "stddev": 66.05
+            },
+            "native_bw_passed": true,
+            "raw_tonal_reference_passed": true,
+            "sha256": "12a34ac7c675693add178d00f248eab710ea6154fa8ee5e4547f6e0ee6503679",
+            "size_px": [
+              1024,
+              1536
+            ]
+          },
+          "passed": true,
+          "premium_sources": [
+            "N01-v18-final/assets/cover-source-premium-bw-v1.png"
+          ]
+        },
+        "pages_and_a4": {
+          "expected_a4_pt": [
+            594.96,
+            841.92
+          ],
+          "expected_pages": 29,
+          "non_a4_pages": [],
+          "pages": 29,
+          "passed": true,
+          "tolerance_pt": 1.0,
+          "unique_page_sizes_pt": [
+            [
+              594.96,
+              841.92
+            ]
+          ]
+        },
+        "pdf_image_bleed": {
+          "bbox": {
+            "bottom": 843.962,
+            "top": -0.494,
+            "x0": 0.0,
+            "x1": 596.361
+          },
+          "gaps_pt": {
+            "bottom": 0.0,
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0
+          },
+          "passed": true,
+          "tolerance_pt": 1.5
+        },
+        "rendered_halo": {
+          "bottom_band_max_row_mean_delta": 114.68,
+          "maximum_allowed_px": 1,
+          "pale_uniform_border_depth_px": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "passed": true
+        },
+        "urls_equal_baseline": {
+          "added": [],
+          "baseline": [
+            "https://doi.org/10.1017/CBO9780511625510",
+            "https://doi.org/10.1287/orsc.2.1.71",
+            "https://doi.org/10.6028/NIST.AI.100-1",
+            "https://doi.org/10.6028/NIST.AI.600-1",
+            "https://dora.dev/research/2025/dora-report/",
+            "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+            "https://is2020.hosting2.acm.org/wp-content/uploads/2021/06/is2020.pdf",
+            "https://www.computer.org/education/bodies-of-knowledge/software-engineering",
+            "https://www.iso.org/standard/81702.html",
+            "https://www.iso.org/standard/84709.html",
+            "https://www.linkedin.com/in/carralbal/",
+            "https://www.pmi.org/standards/pmbok"
+          ],
+          "baseline_count": 12,
+          "current": [
+            "https://doi.org/10.1017/CBO9780511625510",
+            "https://doi.org/10.1287/orsc.2.1.71",
+            "https://doi.org/10.6028/NIST.AI.100-1",
+            "https://doi.org/10.6028/NIST.AI.600-1",
+            "https://dora.dev/research/2025/dora-report/",
+            "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+            "https://is2020.hosting2.acm.org/wp-content/uploads/2021/06/is2020.pdf",
+            "https://www.computer.org/education/bodies-of-knowledge/software-engineering",
+            "https://www.iso.org/standard/81702.html",
+            "https://www.iso.org/standard/84709.html",
+            "https://www.linkedin.com/in/carralbal/",
+            "https://www.pmi.org/standards/pmbok"
+          ],
+          "current_count": 12,
+          "passed": true,
+          "removed": []
+        }
+      },
+      "code": "N01",
+      "package": "N01-v18-final",
+      "passed": true,
+      "pdf": "N01-v18-final/output/N01-METSI-lectura-previa-v18-final.pdf",
+      "pdf_sha256": "668acc44383a86dbfec31620f47b9e511c1097ff1df7b846903942f8760d57fe"
+    },
+    {
+      "baseline": "bundled-manifest:baseline-interior-hashes.json",
+      "baseline_pdf_sha256": "fbe7afb20087cabac599f28f8bae3f51cee90e21933960476b874854e4f61052",
+      "checks": {
+        "composed_cover_tone": {
+          "metrics": {
+            "channel_spread_p95": 2.0,
+            "file": "generated:cover-page-1@120dpi",
+            "luminance": {
+              "dark_below_32_pct": 20.13,
+              "highlights_above_224_pct": 1.42,
+              "mean": 85.9,
+              "midtones_64_192_pct": 55.22,
+              "p05": 10.93,
+              "p50": 77.0,
+              "p95": 190.21,
+              "range_p95_p05": 179.28,
+              "stddev": 56.41
+            },
+            "native_bw_passed": true,
+            "raw_tonal_reference_passed": true,
+            "sha256": "455340eb01d48f18d4780e02c5116e9ffda3ba49626fbdc07255adce95c3acdd",
+            "size_px": [
+              992,
+              1404
+            ]
+          },
+          "passed": true
+        },
+        "cover_alt": {
+          "accepted_semantic_routes": [
+            {
+              "kind": "MCID",
+              "mcid": 2,
+              "owner_structure_element": "607 0 R",
+              "page": 1,
+              "parent_tree_matches_owner": true,
+              "parent_tree_target": "607 0 R",
+              "stream": null,
+              "struct_parents": 0,
+              "valid": true
+            }
+          ],
+          "exact_figure_match": true,
+          "exact_figure_with_valid_semantic_route": true,
+          "html_alt": "Tres profesionales de un hotel porteño trabajan en recepción, un corredor operativo y un espacio reflejado detrás de un vidrio",
+          "image_xobject_alt_is_not_acceptance_evidence": true,
+          "image_xobject_exact_match_diagnostic": true,
+          "passed": true,
+          "pdf_language": "es-AR",
+          "pdf_marked": true,
+          "pdf_page_one_figure_alts": [
+            "Tres profesionales de un hotel porteño trabajan en recepción, un corredor operativo y un espacio reflejado detrás de un vidrio"
+          ],
+          "pdf_page_one_figures": [
+            {
+              "alt": "Tres profesionales de un hotel porteño trabajan en recepción, un corredor operativo y un espacio reflejado detrás de un vidrio",
+              "page": 1,
+              "semantic_routes": [
+                {
+                  "kind": "MCID",
+                  "mcid": 2,
+                  "owner_structure_element": "607 0 R",
+                  "page": 1,
+                  "parent_tree_matches_owner": true,
+                  "parent_tree_target": "607 0 R",
+                  "stream": null,
+                  "struct_parents": 0,
+                  "valid": true
+                }
+              ],
+              "structure_element": "607 0 R",
+              "valid_page_one_route": true
+            }
+          ],
+          "pdf_page_one_image_xobject_alts": [
+            "Tres profesionales de un hotel porteño trabajan en recepción, un corredor operativo y un espacio reflejado detrás de un vidrio"
+          ]
+        },
+        "css_full_page_cover": {
+          "image_full_page": true,
+          "overlay_full_page": true,
+          "passed": true,
+          "stylesheets": [
+            "magazine.css"
+          ]
+        },
+        "eyebrow_extractable": {
+          "expected": [
+            "LECTURA PREVIA",
+            "EDICIÓN 2026"
+          ],
+          "extracted_prefix": "METSILECTURA PREVIA EDICIÓN 2026 N02 FCE · UBA METODOLOGÍA DE SISTEMAS DE INFORMACIÓN El sistema deinformación nocabe en unaaplicación N02 Un sistema deinformación organizacional no es unprograma ni una suma de aplicaciones. 01 Diego Carralbal, 2026 · linkedin.com/in/carralbal",
+          "found_in_order": true,
+          "passed": true,
+          "separate_lines": false
+        },
+        "fonts": {
+          "families": [
+            "Avenir",
+            "Baskerville",
+            "Didot"
+          ],
+          "passed": true,
+          "unexpected": []
+        },
+        "interior_pixels_equal_baseline": {
+          "compared_page_range": [
+            2,
+            29
+          ],
+          "differences": [],
+          "missing_current": [],
+          "missing_expected": [],
+          "page_pixel_sha256": {
+            "10": "09266fd11ed9b2ba7bf8ac0b718215158d00d81a93dc8b630c031a702e35f720",
+            "11": "322f2c2cde84aeb200b874b7443fcf309dc21db017bdf2914c0003fc8adf72df",
+            "12": "0e8f16bc3861be316e73a001c5ac90a6959344edf3b35368645dde0be6ba73c2",
+            "13": "72874ca18decf56882c75e990e5d9e58c0996f23d75d3de276a3275b1858f243",
+            "14": "b6e2a9bde68dc7a30b86b7aeb162c04246f75fcdcc10c4fcba3ace0f72eb2706",
+            "15": "1e45b73fbf7e33b504557bef94bb1b29fcf5fa4593486b34e3cc30def3dc08eb",
+            "16": "1cc35b2375f427a6697ace7c7fca729ee8a224515ad7eb9d35cf8c9b648d77b7",
+            "17": "e57277d7716d9d556bbe26f42f85be1a62344e8cb2ab5f3b73c1b97ea4ebaf46",
+            "18": "05aa64c06b2b776467b436f672b7ad57f00023137229c7c1f09be8b40a50bf63",
+            "19": "c63709859f78555172bb31fc4bcfa0f70906fc37c6ad6d746afe5c917b72157c",
+            "2": "3e8c0940fa061dc2115bbb09ea29266a9cebf63ba65de2303c5bd9bfe4e47530",
+            "20": "2dea43581cf179dd83680945ea6e7ac71ca0edd273f9b0ff31d217f35e7d5ece",
+            "21": "ffc511b190b6001e5a0788d66751a9d51dbbd3e97d488cf4c675360e1a4974d9",
+            "22": "38e59878868eabd60bdc1f809618a7b721b6012579b87b40fe943cbb9adabd88",
+            "23": "4523f525c1a41f661a614c8476fbc6e36c45f8d6462840d105d0baeb336d94c3",
+            "24": "54562dd5efd48ba977de7bf6dcea15f2d905341eb69d1a6d524f16aa1d51f8c3",
+            "25": "8a95724bc4d49e27ee4f10128d1456ed34510836add46310eaa6815a9b0b9628",
+            "26": "78cd685fc19a5e30b6b6b7a491270b084fafcde165db40295b5cbc4886b9c556",
+            "27": "f34b26dcad7adf559294de4ff44ddbde00daecc2ce19f86f817ad19b98558043",
+            "28": "2ed50920ac8a4b214677b7ee13df4e5c31b8f4a62ef60217219ec10c24e92b9e",
+            "29": "bc3c5930c71b77f8d1227e8f577d92ee91bb8f812aec4f7439e86471f3313bd6",
+            "3": "7cf1fa4867b7a70c79332d74ab6033632853b39331fe5cbb5d794abb2c999d8d",
+            "4": "3d97f586df29f6e89f008ef41fa724926e92b11c417a6c5aa10ab98c3963eae7",
+            "5": "1572122024d3b3217a1501ac38e94ece2419f9ed8642225c46abc2709c8958bf",
+            "6": "85f788daa145b35360f61883d34dd6f19c9159be7276874c47ce1811d1a46324",
+            "7": "1629eb703686e721ca450645c018239d9b69e12812fb27c1dff133441e707bc6",
+            "8": "82196782c25f7f15403fb1e6e09949c8f2e014836c419aabd3b544ac34806614",
+            "9": "f0ff4e2b570397b4be2eb09757c68dbb88c733db86bf6ed0a11e0513dc63fdd0"
+          },
+          "pages_compared": 28,
+          "passed": true,
+          "renderer": "pdftoppm 72 dpi RGB PPM",
+          "unexpected_current": [],
+          "unexpected_expected": []
+        },
+        "manifest_and_provenance_contract": {
+          "checks": {
+            "declared_file_matches_deployed": true,
+            "declared_source_exists_and_matches_deployed": true,
+            "effective_css_has_no_bw_conversion": true,
+            "manifest_sha_matches_deployed": true,
+            "photographic_origin_native_black_and_white": true,
+            "render_treatment_no_grayscale_conversion": true
+          },
+          "declared_file": "cover.png",
+          "declared_sha256": "72a08234f87ad623c3092b3c06684551619fb881f625c2829543ccf0c2b10501",
+          "declared_source": "assets/cover-source-premium-bw-v1.png",
+          "deployed_file": "cover.png",
+          "deployed_sha256": "72a08234f87ad623c3092b3c06684551619fb881f625c2829543ccf0c2b10501",
+          "effective_css_filter": {
+            "candidates": [
+              {
+                "order": 19,
+                "selector": ".collection-cover>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "grayscale(1) saturate(0) contrast(1.10) brightness(.81)"
+              },
+              {
+                "order": 21,
+                "selector": ".cover-n02>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "grayscale(1) saturate(0) contrast(1.15) brightness(.73)"
+              },
+              {
+                "order": 51,
+                "selector": ".cover-n02>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "none"
+              }
+            ],
+            "conversion_filter_detected": false,
+            "effective": {
+              "order": 51,
+              "selector": ".cover-n02>img",
+              "source": "magazine.css",
+              "specificity": [
+                0,
+                1,
+                1
+              ],
+              "value": "none"
+            },
+            "passed": true
+          },
+          "manifest": "manifest.json",
+          "passed": true,
+          "photographic_origin": "native_black_and_white",
+          "render_treatment": "no_grayscale_conversion",
+          "source_exists": true,
+          "source_sha256": "72a08234f87ad623c3092b3c06684551619fb881f625c2829543ccf0c2b10501"
+        },
+        "native_cover_image": {
+          "asset": "N02-v14-final/assets/cover.png",
+          "deployed_matches_premium_source": true,
+          "metrics": {
+            "channel_spread_p95": 1.0,
+            "file": "N02-v14-final/assets/cover.png",
+            "luminance": {
+              "dark_below_32_pct": 17.59,
+              "highlights_above_224_pct": 0.41,
+              "mean": 90.04,
+              "midtones_64_192_pct": 60.86,
+              "p05": 13.0,
+              "p50": 88.93,
+              "p95": 180.8,
+              "range_p95_p05": 167.8,
+              "stddev": 53.54
+            },
+            "native_bw_passed": true,
+            "raw_tonal_reference_passed": true,
+            "sha256": "72a08234f87ad623c3092b3c06684551619fb881f625c2829543ccf0c2b10501",
+            "size_px": [
+              1024,
+              1536
+            ]
+          },
+          "passed": true,
+          "premium_sources": [
+            "N02-v14-final/assets/cover-source-premium-bw-v1.png"
+          ]
+        },
+        "pages_and_a4": {
+          "expected_a4_pt": [
+            594.96,
+            841.92
+          ],
+          "expected_pages": 29,
+          "non_a4_pages": [],
+          "pages": 29,
+          "passed": true,
+          "tolerance_pt": 1.0,
+          "unique_page_sizes_pt": [
+            [
+              594.96,
+              841.92
+            ]
+          ]
+        },
+        "pdf_image_bleed": {
+          "bbox": {
+            "bottom": 870.507,
+            "top": -24.035,
+            "x0": 0.0,
+            "x1": 596.361
+          },
+          "gaps_pt": {
+            "bottom": 0.0,
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0
+          },
+          "passed": true,
+          "tolerance_pt": 1.5
+        },
+        "rendered_halo": {
+          "bottom_band_max_row_mean_delta": 66.37,
+          "maximum_allowed_px": 1,
+          "pale_uniform_border_depth_px": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "passed": true
+        },
+        "urls_equal_baseline": {
+          "added": [],
+          "baseline": [
+            "https://doi.org/10.1002/sys.21664",
+            "https://doi.org/10.1007/s10796-025-10591-5",
+            "https://doi.org/10.1007/s12525-024-00734-y",
+            "https://doi.org/10.1016/S0003-6870(00)00009-0",
+            "https://doi.org/10.1016/j.intcom.2010.07.003",
+            "https://doi.org/10.1177/001872675100400101",
+            "https://doi.org/10.17705/1CAIS.00906",
+            "https://doi.org/10.17705/1CAIS.05446",
+            "https://doi.org/10.6028/NIST.AI.100-1",
+            "https://doi.org/10.6028/NIST.AI.600-1",
+            "https://dora.dev/insights/balancing-ai-tensions/",
+            "https://dora.dev/research/2025/dora-report/",
+            "https://is2020.hosting2.acm.org/wp-content/uploads/2021/06/is2020.pdf",
+            "https://www.iso.org/standard/81702.html",
+            "https://www.linkedin.com/in/carralbal/",
+            "https://www.nist.gov/programs-projects/concept-note-ai-rmf-profile-trustworthy-ai-critical-infrastructure"
+          ],
+          "baseline_count": 16,
+          "current": [
+            "https://doi.org/10.1002/sys.21664",
+            "https://doi.org/10.1007/s10796-025-10591-5",
+            "https://doi.org/10.1007/s12525-024-00734-y",
+            "https://doi.org/10.1016/S0003-6870(00)00009-0",
+            "https://doi.org/10.1016/j.intcom.2010.07.003",
+            "https://doi.org/10.1177/001872675100400101",
+            "https://doi.org/10.17705/1CAIS.00906",
+            "https://doi.org/10.17705/1CAIS.05446",
+            "https://doi.org/10.6028/NIST.AI.100-1",
+            "https://doi.org/10.6028/NIST.AI.600-1",
+            "https://dora.dev/insights/balancing-ai-tensions/",
+            "https://dora.dev/research/2025/dora-report/",
+            "https://is2020.hosting2.acm.org/wp-content/uploads/2021/06/is2020.pdf",
+            "https://www.iso.org/standard/81702.html",
+            "https://www.linkedin.com/in/carralbal/",
+            "https://www.nist.gov/programs-projects/concept-note-ai-rmf-profile-trustworthy-ai-critical-infrastructure"
+          ],
+          "current_count": 16,
+          "passed": true,
+          "removed": []
+        }
+      },
+      "code": "N02",
+      "package": "N02-v14-final",
+      "passed": true,
+      "pdf": "N02-v14-final/output/N02-METSI-lectura-previa-v14-final.pdf",
+      "pdf_sha256": "35f7d39ac0981d11be568db17b9a422737e18005b583a281b326de8e069fe6a3"
+    },
+    {
+      "baseline": "bundled-manifest:baseline-interior-hashes.json",
+      "baseline_pdf_sha256": "5b0d2f0efb950f7d95f19b2bbb50c697b5f33901623c8a56ab6b768f8dfa9a15",
+      "checks": {
+        "composed_cover_tone": {
+          "metrics": {
+            "channel_spread_p95": 2.0,
+            "file": "generated:cover-page-1@120dpi",
+            "luminance": {
+              "dark_below_32_pct": 10.2,
+              "highlights_above_224_pct": 2.51,
+              "mean": 123.55,
+              "midtones_64_192_pct": 71.83,
+              "p05": 16.72,
+              "p50": 129.0,
+              "p95": 215.53,
+              "range_p95_p05": 198.82,
+              "stddev": 57.83
+            },
+            "native_bw_passed": true,
+            "raw_tonal_reference_passed": true,
+            "sha256": "7a5010803b03e2b3919aae22509809ffe3dcbe9498470eea77775e3938a732f5",
+            "size_px": [
+              992,
+              1404
+            ]
+          },
+          "passed": true
+        },
+        "cover_alt": {
+          "accepted_semantic_routes": [
+            {
+              "kind": "MCID",
+              "mcid": 2,
+              "owner_structure_element": "491 0 R",
+              "page": 1,
+              "parent_tree_matches_owner": true,
+              "parent_tree_target": "491 0 R",
+              "stream": null,
+              "struct_parents": 0,
+              "valid": true
+            }
+          ],
+          "exact_figure_match": true,
+          "exact_figure_with_valid_semantic_route": true,
+          "html_alt": "Trabajadora hotelera argentina observa un corredor operativo desde un umbral de vidrio, con carros y puertas que prolongan el circuito hacia el fondo",
+          "image_xobject_alt_is_not_acceptance_evidence": true,
+          "image_xobject_exact_match_diagnostic": true,
+          "passed": true,
+          "pdf_language": "es-AR",
+          "pdf_marked": true,
+          "pdf_page_one_figure_alts": [
+            "Trabajadora hotelera argentina observa un corredor operativo desde un umbral de vidrio, con carros y puertas que prolongan el circuito hacia el fondo"
+          ],
+          "pdf_page_one_figures": [
+            {
+              "alt": "Trabajadora hotelera argentina observa un corredor operativo desde un umbral de vidrio, con carros y puertas que prolongan el circuito hacia el fondo",
+              "page": 1,
+              "semantic_routes": [
+                {
+                  "kind": "MCID",
+                  "mcid": 2,
+                  "owner_structure_element": "491 0 R",
+                  "page": 1,
+                  "parent_tree_matches_owner": true,
+                  "parent_tree_target": "491 0 R",
+                  "stream": null,
+                  "struct_parents": 0,
+                  "valid": true
+                }
+              ],
+              "structure_element": "491 0 R",
+              "valid_page_one_route": true
+            }
+          ],
+          "pdf_page_one_image_xobject_alts": [
+            "Trabajadora hotelera argentina observa un corredor operativo desde un umbral de vidrio, con carros y puertas que prolongan el circuito hacia el fondo"
+          ]
+        },
+        "css_full_page_cover": {
+          "image_full_page": true,
+          "overlay_full_page": true,
+          "passed": true,
+          "stylesheets": [
+            "magazine.css"
+          ]
+        },
+        "eyebrow_extractable": {
+          "expected": [
+            "LECTURA PREVIA",
+            "EDICIÓN 2026"
+          ],
+          "extracted_prefix": "METSILECTURA PREVIA EDICIÓN 2026 N03 FCE · UBA METODOLOGÍA DE SISTEMAS DE INFORMACIÓN Fronteras,retroalimentación yefectos nointencionales N03 Toda frontera es una decisión analítica, operativa y política. 01 Diego Carralbal, 2026 · linkedin.com/in/carralbal",
+          "found_in_order": true,
+          "passed": true,
+          "separate_lines": false
+        },
+        "fonts": {
+          "families": [
+            "AppleSymbols",
+            "Avenir",
+            "Baskerville",
+            "Didot"
+          ],
+          "passed": true,
+          "unexpected": []
+        },
+        "interior_pixels_equal_baseline": {
+          "compared_page_range": [
+            2,
+            30
+          ],
+          "differences": [],
+          "missing_current": [],
+          "missing_expected": [],
+          "page_pixel_sha256": {
+            "10": "4f6cdafde850f58a673b3a6eae2196ed06e41af75b8004c4579e79efd870f33c",
+            "11": "f4cab4ee1fef8ae17bcfaa7f259f174520f05232a9627bd85a44a747b5b92c2a",
+            "12": "d4cbab8395c0604429bf8d61805ce850f92473447b6b4a2b24f4265fb2f1a3ff",
+            "13": "04ace7bee72e6739532e93573831fa2af6102b400979aa429202e3888fc9f3a3",
+            "14": "e197d3439f22df4d955b5532d75eea18b0dc93b223e1f2978949d33faf5693b9",
+            "15": "ef0f71a958ae28f0cabb2be5291e93802cec9a71ee283638bc6b32a612114e1f",
+            "16": "4e6afc3a51aa056ddb66b88c7b1dc7c737cd7b0478fde482c083827ca35b0234",
+            "17": "5a38ed2624be7f32a6b16f67b1180608e2e478a0bdbfb11bb7c91cf15c693acd",
+            "18": "a64c160f43ad30010156456ecf7a34fd70356b77aa3613c512179423b713a256",
+            "19": "d9512522c732481b7681126de2a66288bd8187643105eb3b2e49acb76699eaea",
+            "2": "fd190dbd6e287e7c7853bac0747b39474a6f4b760baa8b6e24211958a8b79262",
+            "20": "b452ebd1ca7b14a5f6262d86c3bf38d5fe426c7fc66dc7cd93af07e02593bd8a",
+            "21": "784053e40025ca10657e8917969d86e385594b4c090ee7ec73bb112798e6818c",
+            "22": "747945e9ce615b3d63917d5f762d5203db08f1e5518104448d81b457cab7be5e",
+            "23": "51805e31bc83103b6c41405fd3ebe618dcecda899c6c6460b4349c0f333b64e2",
+            "24": "657fb1aa024c285781e0ac80190d8976a195e8a40e7b643406d43dfc6992fe30",
+            "25": "68cc868fa2ef4a76f621e90c960a21c54293a57ac5ce0df2d4556662de80a863",
+            "26": "665b1446df59a7bc535f0447cf678a61641763f17f11b6310f70514d2ceab997",
+            "27": "5f4047fca2a890360e2a1b298adfcc56003bdc2931dd453476a30c890257a01a",
+            "28": "c278d976c5001fd4216989418818bc11fd243dc50cc1d2d0d65eb88c7c8642d4",
+            "29": "0499edc2db74dcc18a9a49614c268aa400f72a0aec4d2cbae9214652ff23d95d",
+            "3": "7d1d9d87e0066d225600f6f269b8d097c45debfd04a9e5a0d8b7066674fcf73b",
+            "30": "c027005a27c52a50fc6af0a47c4d84d5682615723a649aa79caf44ea8c1c6551",
+            "4": "c8dde341b13c97688ed021b6b1832dc0271a021b935361819a92a4a244a77c07",
+            "5": "d6d32c3630af208ffc9e0e0c624c52258b0b1b5fd3b0284f8c194dff6f972d76",
+            "6": "3a7526f23a22598c04c9a36b7ca4b83f2240246c735584a7d017b603c813cd70",
+            "7": "b9fb29d6437a5211b2e3981632773a3ebd932f7cccb102ceceb5e6c969ffa88a",
+            "8": "74ed8c4a20804df594798f6c30c53d4f25e9b29e8c4c50cbd926086638318a5e",
+            "9": "d748558f8849f2eef78b4f2493f5e4335ebade28fe351f51970da2cb5f9069ae"
+          },
+          "pages_compared": 29,
+          "passed": true,
+          "renderer": "pdftoppm 72 dpi RGB PPM",
+          "unexpected_current": [],
+          "unexpected_expected": []
+        },
+        "manifest_and_provenance_contract": {
+          "checks": {
+            "declared_file_matches_deployed": true,
+            "declared_source_exists_and_matches_deployed": true,
+            "effective_css_has_no_bw_conversion": true,
+            "manifest_sha_matches_deployed": true,
+            "photographic_origin_native_black_and_white": true,
+            "render_treatment_no_grayscale_conversion": true
+          },
+          "declared_file": "cover.png",
+          "declared_sha256": "06976e01da816e65e8becdc825c62bd6b166e90654f23b74f9cd2b900cb0be94",
+          "declared_source": "assets/cover-source-premium-bw-v3.png",
+          "deployed_file": "cover.png",
+          "deployed_sha256": "06976e01da816e65e8becdc825c62bd6b166e90654f23b74f9cd2b900cb0be94",
+          "effective_css_filter": {
+            "candidates": [
+              {
+                "order": 19,
+                "selector": ".collection-cover>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "grayscale(1) saturate(0) contrast(1.10) brightness(.81)"
+              },
+              {
+                "order": 23,
+                "selector": ".cover-n03>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "grayscale(1) saturate(0) contrast(1.14) brightness(.74)"
+              },
+              {
+                "order": 51,
+                "selector": ".cover-n03>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "none"
+              }
+            ],
+            "conversion_filter_detected": false,
+            "effective": {
+              "order": 51,
+              "selector": ".cover-n03>img",
+              "source": "magazine.css",
+              "specificity": [
+                0,
+                1,
+                1
+              ],
+              "value": "none"
+            },
+            "passed": true
+          },
+          "manifest": "manifest.json",
+          "passed": true,
+          "photographic_origin": "native_black_and_white",
+          "render_treatment": "no_grayscale_conversion",
+          "source_exists": true,
+          "source_sha256": "06976e01da816e65e8becdc825c62bd6b166e90654f23b74f9cd2b900cb0be94"
+        },
+        "native_cover_image": {
+          "asset": "N03-v9-final/assets/cover.png",
+          "deployed_matches_premium_source": true,
+          "metrics": {
+            "channel_spread_p95": 2.0,
+            "file": "N03-v9-final/assets/cover.png",
+            "luminance": {
+              "dark_below_32_pct": 9.42,
+              "highlights_above_224_pct": 2.03,
+              "mean": 140.54,
+              "midtones_64_192_pct": 69.44,
+              "p05": 18.0,
+              "p50": 155.21,
+              "p95": 218.21,
+              "range_p95_p05": 200.21,
+              "stddev": 58.28
+            },
+            "native_bw_passed": true,
+            "raw_tonal_reference_passed": true,
+            "sha256": "06976e01da816e65e8becdc825c62bd6b166e90654f23b74f9cd2b900cb0be94",
+            "size_px": [
+              1024,
+              1536
+            ]
+          },
+          "passed": true,
+          "premium_sources": [
+            "N03-v9-final/assets/cover-source-premium-bw-v3.png"
+          ]
+        },
+        "pages_and_a4": {
+          "expected_a4_pt": [
+            594.96,
+            841.92
+          ],
+          "expected_pages": 30,
+          "non_a4_pages": [],
+          "pages": 30,
+          "passed": true,
+          "tolerance_pt": 1.0,
+          "unique_page_sizes_pt": [
+            [
+              594.96,
+              841.92
+            ]
+          ]
+        },
+        "pdf_image_bleed": {
+          "bbox": {
+            "bottom": 882.578,
+            "top": -25.151,
+            "x0": 0.0,
+            "x1": 605.153
+          },
+          "gaps_pt": {
+            "bottom": 0.0,
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0
+          },
+          "passed": true,
+          "tolerance_pt": 1.5
+        },
+        "rendered_halo": {
+          "bottom_band_max_row_mean_delta": 94.62,
+          "maximum_allowed_px": 1,
+          "pale_uniform_border_depth_px": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "passed": true
+        },
+        "urls_equal_baseline": {
+          "added": [],
+          "baseline": [
+            "https://doi.org/10.1002/sys.21664",
+            "https://doi.org/10.1007/978-1-4615-4201-8",
+            "https://doi.org/10.6028/NIST.AI.600-1",
+            "https://doi.org/10.6028/NIST.AI.700-2",
+            "https://doi.org/10.7551/mitpress/8179.001.0001",
+            "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+            "https://www.iso.org/standard/81702.html",
+            "https://www.linkedin.com/in/carralbal/"
+          ],
+          "baseline_count": 8,
+          "current": [
+            "https://doi.org/10.1002/sys.21664",
+            "https://doi.org/10.1007/978-1-4615-4201-8",
+            "https://doi.org/10.6028/NIST.AI.600-1",
+            "https://doi.org/10.6028/NIST.AI.700-2",
+            "https://doi.org/10.7551/mitpress/8179.001.0001",
+            "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+            "https://www.iso.org/standard/81702.html",
+            "https://www.linkedin.com/in/carralbal/"
+          ],
+          "current_count": 8,
+          "passed": true,
+          "removed": []
+        }
+      },
+      "code": "N03",
+      "package": "N03-v9-final",
+      "passed": true,
+      "pdf": "N03-v9-final/output/N03-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "08154728ce84f956c88f65a46d08018fda8ec933ca820380f9fb1166cc3512ef"
+    },
+    {
+      "baseline": "bundled-manifest:baseline-interior-hashes.json",
+      "baseline_pdf_sha256": "b3f9d19b25589cba735adcc2d1ec611218e50af54cae5075c71294b8003a58e7",
+      "checks": {
+        "composed_cover_tone": {
+          "metrics": {
+            "channel_spread_p95": 1.0,
+            "file": "generated:cover-page-1@120dpi",
+            "luminance": {
+              "dark_below_32_pct": 21.57,
+              "highlights_above_224_pct": 1.63,
+              "mean": 67.27,
+              "midtones_64_192_pct": 43.56,
+              "p05": 9.0,
+              "p50": 59.72,
+              "p95": 162.0,
+              "range_p95_p05": 153.0,
+              "stddev": 47.47
+            },
+            "native_bw_passed": true,
+            "raw_tonal_reference_passed": false,
+            "sha256": "fcfbc2a4aab616f51f53cee29bbe8dba2e295a4700efe95d51496b3663fd5a4f",
+            "size_px": [
+              992,
+              1404
+            ]
+          },
+          "passed": true
+        },
+        "cover_alt": {
+          "accepted_semantic_routes": [
+            {
+              "kind": "MCID",
+              "mcid": 2,
+              "owner_structure_element": "521 0 R",
+              "page": 1,
+              "parent_tree_matches_owner": true,
+              "parent_tree_target": "521 0 R",
+              "stream": null,
+              "struct_parents": 0,
+              "valid": true
+            }
+          ],
+          "exact_figure_match": true,
+          "exact_figure_with_valid_semantic_route": true,
+          "html_alt": "Analista de sistemas argentina en un hotel de Buenos Aires, observada entre reflejos y rastros documentales que sugieren evidencia, hipótesis rivales y decisiones",
+          "image_xobject_alt_is_not_acceptance_evidence": true,
+          "image_xobject_exact_match_diagnostic": true,
+          "passed": true,
+          "pdf_language": "es-AR",
+          "pdf_marked": true,
+          "pdf_page_one_figure_alts": [
+            "Analista de sistemas argentina en un hotel de Buenos Aires, observada entre reflejos y rastros documentales que sugieren evidencia, hipótesis rivales y decisiones"
+          ],
+          "pdf_page_one_figures": [
+            {
+              "alt": "Analista de sistemas argentina en un hotel de Buenos Aires, observada entre reflejos y rastros documentales que sugieren evidencia, hipótesis rivales y decisiones",
+              "page": 1,
+              "semantic_routes": [
+                {
+                  "kind": "MCID",
+                  "mcid": 2,
+                  "owner_structure_element": "521 0 R",
+                  "page": 1,
+                  "parent_tree_matches_owner": true,
+                  "parent_tree_target": "521 0 R",
+                  "stream": null,
+                  "struct_parents": 0,
+                  "valid": true
+                }
+              ],
+              "structure_element": "521 0 R",
+              "valid_page_one_route": true
+            }
+          ],
+          "pdf_page_one_image_xobject_alts": [
+            "Analista de sistemas argentina en un hotel de Buenos Aires, observada entre reflejos y rastros documentales que sugieren evidencia, hipótesis rivales y decisiones"
+          ]
+        },
+        "css_full_page_cover": {
+          "image_full_page": true,
+          "overlay_full_page": true,
+          "passed": true,
+          "stylesheets": [
+            "magazine.css"
+          ]
+        },
+        "eyebrow_extractable": {
+          "expected": [
+            "LECTURA PREVIA",
+            "EDICIÓN 2026"
+          ],
+          "extracted_prefix": "METSILECTURA PREVIA EDICIÓN 2026 N04 FCE · UBA METODOLOGÍA DE SISTEMAS DE INFORMACIÓN Hechos, síntomas,relatos, hipótesisy decisiones N04 Intervenir exige conservar la historia de cada afirmación: qué se observó, cómo se transformó y qué decisión sostiene. 01 Diego Carralbal, 202",
+          "found_in_order": true,
+          "passed": true,
+          "separate_lines": false
+        },
+        "fonts": {
+          "families": [
+            "AppleSymbols",
+            "Avenir",
+            "Baskerville",
+            "Didot"
+          ],
+          "passed": true,
+          "unexpected": []
+        },
+        "interior_pixels_equal_baseline": {
+          "compared_page_range": [
+            2,
+            32
+          ],
+          "differences": [],
+          "missing_current": [],
+          "missing_expected": [],
+          "page_pixel_sha256": {
+            "10": "54e0d79d985aca764806eb4091a844adfae721a0af5d5bbe2ceedf9029a1b656",
+            "11": "6b7286934373a34b9a02a9118fb83bbcd979f8ef37a32f6dfe474a0291f150cb",
+            "12": "aa7924f201da36b7d9707f2e5f7a8474386c7dbae7e2582df630a630f7a92b25",
+            "13": "1ad81853a4d97f97042b86e8bd75c41e7328913cea769a62222c2dc4a3b9b455",
+            "14": "8cf518a3a404eb05e034ad357856c5ce1d5d12c33a72ca95cbdad73c56c4d3ec",
+            "15": "08ff92dbabc03dd4ad4a8c52b1c1e6fb988a19a577e92a9acf12ad0cca60b976",
+            "16": "cafc304d84d6e4e5945daac8e6362240d2af6816a98cb1bf6ef6762eec3768d6",
+            "17": "1f5f170ad8735f29df16e36ed90caad480a67d5be90a9f3e7832a5b5b2c718a2",
+            "18": "b17085c72033ce6664aab5de2833a222e6cb50910237ebeb593a3ba2c1707914",
+            "19": "df67f204de5dbc6673559c70c23303dea124bb5de803c7c7fade77e208fa5c58",
+            "2": "fdf3c7d3c02406e066143e5a523666a854af649223e0c0df0e80b3329237c1c4",
+            "20": "ea8d34019689554fcbabfb3a05b078cbe58500a2c1e02017e421f39d3f5e36b8",
+            "21": "7bd24d2c8a3e3cb733ff265c61ca228b311765694e0fee3a6ae1d92cd5eecf75",
+            "22": "1abb9b2d1f81f84cd54c185485e21c960639c569a28072d0bc916203749c6a6b",
+            "23": "a52fd8eeb493bcf266ace2e3ac68e3df7ea72fb2f5266a4e4295542b5fde46df",
+            "24": "8b0b4ec03c5b8674efae7d70ddff70c35f1262ad98fe762c1cf21151e11a2018",
+            "25": "72d3bfadfc6464c873f93b6498cfc7f9c5aa980a064c06a1319a7547f6c6d24a",
+            "26": "3f7d76e046a5f46e5f0bdb727d0e6c18a81be453da4f2f49e78026f82a534737",
+            "27": "17ebf3f18bad05019804614335f4f0edd275e200ee25b65e6f90e5b0c83b954f",
+            "28": "db853d00cae5a115011f65b45a49674254b638be058a00326c257de1315b9851",
+            "29": "f5fe47c835b393657da98b4cc20f5d5c238a92e1901cf02a6c18ad55183d7643",
+            "3": "501571adfd9b78a1f96fefa4e91b821e66eea1973e6d699c65867abffe9ce501",
+            "30": "36c468bc8237730a899c354de591c712992b5d026a992eaaf251b994fb1cf6f4",
+            "31": "8002cc5cc1259d2e0053865ce9c7d9491df6c339525b930430a9af664d735558",
+            "32": "9a360bc95df286a5b936795057ab8894ad92d934b9a45934404d86baaee20b7e",
+            "4": "20a0f351cf7ccac0c7d69c91c4b156761deea0bf1d81a3894035d536522ddb49",
+            "5": "f54c0cc2bafdf9ed7196baf427ee2648734e9a4efe22ddea4b73bcdaef8baad7",
+            "6": "b48419b6b948754b470c939a9e840344942594791c1a0e2c3304eef380a2e00d",
+            "7": "eacc12dcc73852e21054aced411da890ed9903daf25489bf3a2919fc07f464df",
+            "8": "a37e0aceea8a9dcceb87d9d0e3a075fa2cfa166f4d719a770b79152b8cd1df53",
+            "9": "e48968cc766d6f8105421ba187d25c907304893b9353c39eec30c06393884f4a"
+          },
+          "pages_compared": 31,
+          "passed": true,
+          "renderer": "pdftoppm 72 dpi RGB PPM",
+          "unexpected_current": [],
+          "unexpected_expected": []
+        },
+        "manifest_and_provenance_contract": {
+          "checks": {
+            "declared_file_matches_deployed": true,
+            "declared_source_exists_and_matches_deployed": true,
+            "effective_css_has_no_bw_conversion": true,
+            "manifest_sha_matches_deployed": true,
+            "photographic_origin_native_black_and_white": true,
+            "render_treatment_no_grayscale_conversion": true
+          },
+          "declared_file": "cover.png",
+          "declared_sha256": "ac947baf49208e1eba7c1d5842c88e27e5761b2d0be86a8f7660a1afd7532925",
+          "declared_source": "assets/cover-source-premium-bw-v3.png",
+          "deployed_file": "cover.png",
+          "deployed_sha256": "ac947baf49208e1eba7c1d5842c88e27e5761b2d0be86a8f7660a1afd7532925",
+          "effective_css_filter": {
+            "candidates": [
+              {
+                "order": 19,
+                "selector": ".collection-cover>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "grayscale(1) saturate(0) contrast(1.10) brightness(.81)"
+              },
+              {
+                "order": 24,
+                "selector": ".cover-n04>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "none"
+              },
+              {
+                "order": 51,
+                "selector": ".cover-n04>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "none"
+              }
+            ],
+            "conversion_filter_detected": false,
+            "effective": {
+              "order": 51,
+              "selector": ".cover-n04>img",
+              "source": "magazine.css",
+              "specificity": [
+                0,
+                1,
+                1
+              ],
+              "value": "none"
+            },
+            "passed": true
+          },
+          "manifest": "manifest.json",
+          "passed": true,
+          "photographic_origin": "native_black_and_white",
+          "render_treatment": "no_grayscale_conversion",
+          "source_exists": true,
+          "source_sha256": "ac947baf49208e1eba7c1d5842c88e27e5761b2d0be86a8f7660a1afd7532925"
+        },
+        "native_cover_image": {
+          "asset": "N04-v9-final/assets/cover.png",
+          "deployed_matches_premium_source": true,
+          "metrics": {
+            "channel_spread_p95": 0.0,
+            "file": "N04-v9-final/assets/cover.png",
+            "luminance": {
+              "dark_below_32_pct": 19.62,
+              "highlights_above_224_pct": 1.0,
+              "mean": 70.19,
+              "midtones_64_192_pct": 54.5,
+              "p05": 9.0,
+              "p50": 68.0,
+              "p95": 158.0,
+              "range_p95_p05": 149.0,
+              "stddev": 43.35
+            },
+            "native_bw_passed": true,
+            "raw_tonal_reference_passed": false,
+            "sha256": "ac947baf49208e1eba7c1d5842c88e27e5761b2d0be86a8f7660a1afd7532925",
+            "size_px": [
+              1024,
+              1536
+            ]
+          },
+          "passed": true,
+          "premium_sources": [
+            "N04-v9-final/assets/cover-source-premium-bw-v2.png",
+            "N04-v9-final/assets/cover-source-premium-bw-v3.png"
+          ]
+        },
+        "pages_and_a4": {
+          "expected_a4_pt": [
+            594.96,
+            841.92
+          ],
+          "expected_pages": 32,
+          "non_a4_pages": [],
+          "pages": 32,
+          "passed": true,
+          "tolerance_pt": 1.0,
+          "unique_page_sizes_pt": [
+            [
+              594.96,
+              841.92
+            ]
+          ]
+        },
+        "pdf_image_bleed": {
+          "bbox": {
+            "bottom": 882.578,
+            "top": -25.151,
+            "x0": 0.0,
+            "x1": 605.153
+          },
+          "gaps_pt": {
+            "bottom": 0.0,
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0
+          },
+          "passed": true,
+          "tolerance_pt": 1.5
+        },
+        "rendered_halo": {
+          "bottom_band_max_row_mean_delta": 110.52,
+          "maximum_allowed_px": 1,
+          "pale_uniform_border_depth_px": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "passed": true
+        },
+        "urls_equal_baseline": {
+          "added": [],
+          "baseline": [
+            "https://doi.org/10.1017/CBO9780511840005",
+            "https://doi.org/10.1080/07421222.1996.11518099",
+            "https://doi.org/10.6028/NIST.AI.100-1",
+            "https://doi.org/10.6028/NIST.AI.100-4",
+            "https://doi.org/10.6028/NIST.AI.600-1",
+            "https://iupress.org/9780253211903/the-essential-peirce-volume-2/",
+            "https://spec.c2pa.org/specifications/specifications/2.4/specs/C2PA_Specification.html",
+            "https://www.iso.org/standard/35736.html",
+            "https://www.linkedin.com/in/carralbal/"
+          ],
+          "baseline_count": 9,
+          "current": [
+            "https://doi.org/10.1017/CBO9780511840005",
+            "https://doi.org/10.1080/07421222.1996.11518099",
+            "https://doi.org/10.6028/NIST.AI.100-1",
+            "https://doi.org/10.6028/NIST.AI.100-4",
+            "https://doi.org/10.6028/NIST.AI.600-1",
+            "https://iupress.org/9780253211903/the-essential-peirce-volume-2/",
+            "https://spec.c2pa.org/specifications/specifications/2.4/specs/C2PA_Specification.html",
+            "https://www.iso.org/standard/35736.html",
+            "https://www.linkedin.com/in/carralbal/"
+          ],
+          "current_count": 9,
+          "passed": true,
+          "removed": []
+        }
+      },
+      "code": "N04",
+      "package": "N04-v9-final",
+      "passed": true,
+      "pdf": "N04-v9-final/output/N04-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "b6b4df7df6c92e4ed76cce15d89a0802f9c7c0b6529f16ed8cdeef1b9af23ccb"
+    },
+    {
+      "baseline": "bundled-manifest:baseline-interior-hashes.json",
+      "baseline_pdf_sha256": "3b507eea1ddc0c7981ea90747039c1137a0149d233accb2d40ae86184b64d34f",
+      "checks": {
+        "composed_cover_tone": {
+          "metrics": {
+            "channel_spread_p95": 2.0,
+            "file": "generated:cover-page-1@120dpi",
+            "luminance": {
+              "dark_below_32_pct": 16.08,
+              "highlights_above_224_pct": 2.0,
+              "mean": 86.25,
+              "midtones_64_192_pct": 51.85,
+              "p05": 9.0,
+              "p50": 73.0,
+              "p95": 192.21,
+              "range_p95_p05": 183.21,
+              "stddev": 56.82
+            },
+            "native_bw_passed": true,
+            "raw_tonal_reference_passed": true,
+            "sha256": "a1cd6c16509a174f796915ed98d5b18150da608ae4cb4dbca4f0eb7669ce093a",
+            "size_px": [
+              992,
+              1404
+            ]
+          },
+          "passed": true
+        },
+        "cover_alt": {
+          "accepted_semantic_routes": [
+            {
+              "kind": "MCID",
+              "mcid": 2,
+              "owner_structure_element": "492 0 R",
+              "page": 1,
+              "parent_tree_matches_owner": true,
+              "parent_tree_target": "492 0 R",
+              "stream": null,
+              "struct_parents": 0,
+              "valid": true
+            }
+          ],
+          "exact_figure_match": true,
+          "exact_figure_with_valid_semantic_route": true,
+          "html_alt": "Silla vacía frente a una mesa de decisión donde cuatro profesionales argentinos y latinoamericanos examinan documentos y distribuyen autoridad",
+          "image_xobject_alt_is_not_acceptance_evidence": true,
+          "image_xobject_exact_match_diagnostic": true,
+          "passed": true,
+          "pdf_language": "es-AR",
+          "pdf_marked": true,
+          "pdf_page_one_figure_alts": [
+            "Silla vacía frente a una mesa de decisión donde cuatro profesionales argentinos y latinoamericanos examinan documentos y distribuyen autoridad"
+          ],
+          "pdf_page_one_figures": [
+            {
+              "alt": "Silla vacía frente a una mesa de decisión donde cuatro profesionales argentinos y latinoamericanos examinan documentos y distribuyen autoridad",
+              "page": 1,
+              "semantic_routes": [
+                {
+                  "kind": "MCID",
+                  "mcid": 2,
+                  "owner_structure_element": "492 0 R",
+                  "page": 1,
+                  "parent_tree_matches_owner": true,
+                  "parent_tree_target": "492 0 R",
+                  "stream": null,
+                  "struct_parents": 0,
+                  "valid": true
+                }
+              ],
+              "structure_element": "492 0 R",
+              "valid_page_one_route": true
+            }
+          ],
+          "pdf_page_one_image_xobject_alts": [
+            "Silla vacía frente a una mesa de decisión donde cuatro profesionales argentinos y latinoamericanos examinan documentos y distribuyen autoridad"
+          ]
+        },
+        "css_full_page_cover": {
+          "image_full_page": true,
+          "overlay_full_page": true,
+          "passed": true,
+          "stylesheets": [
+            "magazine.css"
+          ]
+        },
+        "eyebrow_extractable": {
+          "expected": [
+            "LECTURA PREVIA",
+            "EDICIÓN 2026"
+          ],
+          "extracted_prefix": "METSILECTURA PREVIA EDICIÓN 2026 N05 FCE · UBA METODOLOGÍA DE SISTEMAS DE INFORMACIÓN Actores, afectados,poder y perspectivas N05 Una decisión profesional también se juzga por quién puede comprenderla, objetarla y reparar sus consecuencias. 01 Diego Carralbal, 2026 · linkedin.com",
+          "found_in_order": true,
+          "passed": true,
+          "separate_lines": false
+        },
+        "fonts": {
+          "families": [
+            "Avenir",
+            "Baskerville",
+            "Didot"
+          ],
+          "passed": true,
+          "unexpected": []
+        },
+        "interior_pixels_equal_baseline": {
+          "compared_page_range": [
+            2,
+            28
+          ],
+          "differences": [],
+          "missing_current": [],
+          "missing_expected": [],
+          "page_pixel_sha256": {
+            "10": "bc52167b84e59d59e507663e6a5f8543108a6638648fbee131ace2243af0311d",
+            "11": "b43f8902732b2e5d0c97ba8b37d603eca92c3b0d12cda43b0b75db2cbc19df27",
+            "12": "9a4c23584e97eba88fa32b73fed645d6f8ff757abe1af239561fbf54990eeb02",
+            "13": "6cf9a12230b152bb039ed09df1c405f9348fd9d19ae1f71a70a62f96bfbe9db9",
+            "14": "f9a34dddcae765e5dc5466eff2829f8e9241b41d5773d88a813934e95c27fde7",
+            "15": "3704d81daba423f54da1b9d71484a247647d480fdaa5d2946cb23e38e838aae5",
+            "16": "5fd8985adc14b382895b6b2ade50d25eb96a70cb9f79d5f613dfee8d5330bc48",
+            "17": "bec2fc57914011977fbe62f838327d1985a63c37c61fd93e64d0fd73de36566f",
+            "18": "e7cfdf480ea8a78e1bf7254f0cc4b829196315318be685a3b21d8719851c7d8c",
+            "19": "fb1ec07c4a20791c9d73b8121c33ea09b071224fb8872d93b9524e10dd4989a8",
+            "2": "57d75ef36da14d13dca8dedb5bff4ef2fd41b23653adfd3a8b734f3ff4140b94",
+            "20": "4388acad9615c8917e80c33d13ad7bc223828bfec0c8cc513da39d9dbb86033c",
+            "21": "a5c171eab17c24f6e80bb9163d4dd3144ac10e877bc717bd8e95b6d497c530e4",
+            "22": "952ac80763f9b9275ab2e5ea76f10fd6ef5706e71f7c0754aa8673851a550648",
+            "23": "be7cc0b696ad26017873dd479cad673a2e7c508b2f47fb1e0a8917b83de2981b",
+            "24": "45729f1e88daa0857fbe1063d8535f4c10c1cefd87f9361229309e3bbb0ea60c",
+            "25": "25b02c3f605788755ae6cfda3fcba4639a1644c16d750311c860d9dbf09ff36e",
+            "26": "46ef2b9a11bcd1c82ec3c1a62bf1ac7b26beeac93b92a6490431854084f286ee",
+            "27": "668e74e5872d2a2f450f5f45314cc63e8ad55b09fae6f18dcb17eb3d1c8e98f4",
+            "28": "0fc0911f81645a6c5557b1b36158a7fb12c1cecabdcb65ac71fdef6c84c7a3c4",
+            "3": "5c4f5daf34e712a8ee04799a369f994010f751c542c5010b794a474e0b3c93b2",
+            "4": "96cbbea2a1ae63ec7e66342fe64a7d4ab9af5cee629527813100fa944d9c6c72",
+            "5": "d66ee746ff29f30d00df1984c8c1318264ae33ef3dca8d9c46f62ac7805e003a",
+            "6": "13e94a82453d4927fa99dcc9c365546e27ae49b1a3f8d19e8afac6d638c77fbb",
+            "7": "424b552c869e06220ac943798da14ecde153c86890c7a62997069c809ee361d4",
+            "8": "b781f282fdda0963117309d5c2490a2434dfde50c9af2c5638e5ac4760e9c58f",
+            "9": "90a28f450e9f63283e65580b8505fae0e89bcfdd5ff47ec6507ab961af052549"
+          },
+          "pages_compared": 27,
+          "passed": true,
+          "renderer": "pdftoppm 72 dpi RGB PPM",
+          "unexpected_current": [],
+          "unexpected_expected": []
+        },
+        "manifest_and_provenance_contract": {
+          "checks": {
+            "declared_file_matches_deployed": true,
+            "declared_source_exists_and_matches_deployed": true,
+            "effective_css_has_no_bw_conversion": true,
+            "manifest_sha_matches_deployed": true,
+            "photographic_origin_native_black_and_white": true,
+            "render_treatment_no_grayscale_conversion": true
+          },
+          "declared_file": "cover.png",
+          "declared_sha256": "0054cb5c5a9547134d476ff6bb02dd1d31e6757caa2fbcd32c77d648a180ccb8",
+          "declared_source": "assets/cover-source-premium-bw-v2.png",
+          "deployed_file": "cover.png",
+          "deployed_sha256": "0054cb5c5a9547134d476ff6bb02dd1d31e6757caa2fbcd32c77d648a180ccb8",
+          "effective_css_filter": {
+            "candidates": [
+              {
+                "order": 19,
+                "selector": ".collection-cover>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "grayscale(1) saturate(0) contrast(1.10) brightness(.81)"
+              },
+              {
+                "order": 25,
+                "selector": ".cover-n05>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "contrast(1.06) brightness(.82)"
+              },
+              {
+                "order": 52,
+                "selector": ".cover-n05>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "none"
+              }
+            ],
+            "conversion_filter_detected": false,
+            "effective": {
+              "order": 52,
+              "selector": ".cover-n05>img",
+              "source": "magazine.css",
+              "specificity": [
+                0,
+                1,
+                1
+              ],
+              "value": "none"
+            },
+            "passed": true
+          },
+          "manifest": "manifest.json",
+          "passed": true,
+          "photographic_origin": "native_black_and_white",
+          "render_treatment": "no_grayscale_conversion",
+          "source_exists": true,
+          "source_sha256": "0054cb5c5a9547134d476ff6bb02dd1d31e6757caa2fbcd32c77d648a180ccb8"
+        },
+        "native_cover_image": {
+          "asset": "N05-v9-final/assets/cover.png",
+          "deployed_matches_premium_source": true,
+          "metrics": {
+            "channel_spread_p95": 2.0,
+            "file": "N05-v9-final/assets/cover.png",
+            "luminance": {
+              "dark_below_32_pct": 13.63,
+              "highlights_above_224_pct": 1.69,
+              "mean": 93.67,
+              "midtones_64_192_pct": 64.24,
+              "p05": 10.21,
+              "p50": 87.07,
+              "p95": 189.93,
+              "range_p95_p05": 179.72,
+              "stddev": 53.96
+            },
+            "native_bw_passed": true,
+            "raw_tonal_reference_passed": true,
+            "sha256": "0054cb5c5a9547134d476ff6bb02dd1d31e6757caa2fbcd32c77d648a180ccb8",
+            "size_px": [
+              1024,
+              1536
+            ]
+          },
+          "passed": true,
+          "premium_sources": [
+            "N05-v9-final/assets/cover-source-premium-bw-v1.png",
+            "N05-v9-final/assets/cover-source-premium-bw-v2.png"
+          ]
+        },
+        "pages_and_a4": {
+          "expected_a4_pt": [
+            594.96,
+            841.92
+          ],
+          "expected_pages": 28,
+          "non_a4_pages": [],
+          "pages": 28,
+          "passed": true,
+          "tolerance_pt": 1.0,
+          "unique_page_sizes_pt": [
+            [
+              594.96,
+              841.92
+            ]
+          ]
+        },
+        "pdf_image_bleed": {
+          "bbox": {
+            "bottom": 882.578,
+            "top": -25.151,
+            "x0": 0.0,
+            "x1": 605.153
+          },
+          "gaps_pt": {
+            "bottom": 0.0,
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0
+          },
+          "passed": true,
+          "tolerance_pt": 1.5
+        },
+        "rendered_halo": {
+          "bottom_band_max_row_mean_delta": 96.64,
+          "maximum_allowed_px": 1,
+          "pale_uniform_border_depth_px": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "passed": true
+        },
+        "urls_equal_baseline": {
+          "added": [],
+          "baseline": [
+            "https://doi.org/10.1023/A:1008651105359",
+            "https://doi.org/10.1080/01944366908977225",
+            "https://doi.org/10.1093/acprof:oso/9780198237907.001.0001",
+            "https://doi.org/10.1145/3630106.3658992",
+            "https://doi.org/10.6028/NIST.AI.100-1",
+            "https://doi.org/10.7551/mitpress/12255.001.0001",
+            "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+            "https://www.jstor.org/stable/20024652",
+            "https://www.linkedin.com/in/carralbal/"
+          ],
+          "baseline_count": 9,
+          "current": [
+            "https://doi.org/10.1023/A:1008651105359",
+            "https://doi.org/10.1080/01944366908977225",
+            "https://doi.org/10.1093/acprof:oso/9780198237907.001.0001",
+            "https://doi.org/10.1145/3630106.3658992",
+            "https://doi.org/10.6028/NIST.AI.100-1",
+            "https://doi.org/10.7551/mitpress/12255.001.0001",
+            "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+            "https://www.jstor.org/stable/20024652",
+            "https://www.linkedin.com/in/carralbal/"
+          ],
+          "current_count": 9,
+          "passed": true,
+          "removed": []
+        }
+      },
+      "code": "N05",
+      "package": "N05-v9-final",
+      "passed": true,
+      "pdf": "N05-v9-final/output/N05-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "cf6088c205637cf3cfb2902e5f5804c880f6f1c9509317df4b8d3b2334ccc516"
+    },
+    {
+      "baseline": "bundled-manifest:baseline-interior-hashes.json",
+      "baseline_pdf_sha256": "7cd9de77fdb634f90f8f47a083a2f9e77cadc042621ae01b7b9f5fae09df7955",
+      "checks": {
+        "composed_cover_tone": {
+          "metrics": {
+            "channel_spread_p95": 2.0,
+            "file": "generated:cover-page-1@120dpi",
+            "luminance": {
+              "dark_below_32_pct": 8.4,
+              "highlights_above_224_pct": 10.46,
+              "mean": 140.64,
+              "midtones_64_192_pct": 58.74,
+              "p05": 24.21,
+              "p50": 146.79,
+              "p95": 238.0,
+              "range_p95_p05": 213.79,
+              "stddev": 65.44
+            },
+            "native_bw_passed": true,
+            "raw_tonal_reference_passed": true,
+            "sha256": "589101c9ff1417c5de44f3f5301ee55c97d17c20e62a77ca44882bff3a6a5dc4",
+            "size_px": [
+              992,
+              1404
+            ]
+          },
+          "passed": true
+        },
+        "cover_alt": {
+          "accepted_semantic_routes": [
+            {
+              "kind": "MCID",
+              "mcid": 2,
+              "owner_structure_element": "408 0 R",
+              "page": 1,
+              "parent_tree_matches_owner": true,
+              "parent_tree_target": "408 0 R",
+              "stream": null,
+              "struct_parents": 0,
+              "valid": true
+            }
+          ],
+          "exact_figure_match": true,
+          "exact_figure_with_valid_semantic_route": true,
+          "html_alt": "Profesional argentina observa un muro de evidencias y caminos alternativos en un estudio de Buenos Aires, en una fotografía editorial concebida en blanco y negro con una escala amplia de grises",
+          "image_xobject_alt_is_not_acceptance_evidence": true,
+          "image_xobject_exact_match_diagnostic": true,
+          "passed": true,
+          "pdf_language": "es-AR",
+          "pdf_marked": true,
+          "pdf_page_one_figure_alts": [
+            "Profesional argentina observa un muro de evidencias y caminos alternativos en un estudio de Buenos Aires, en una fotografía editorial concebida en blanco y negro con una escala amplia de grises"
+          ],
+          "pdf_page_one_figures": [
+            {
+              "alt": "Profesional argentina observa un muro de evidencias y caminos alternativos en un estudio de Buenos Aires, en una fotografía editorial concebida en blanco y negro con una escala amplia de grises",
+              "page": 1,
+              "semantic_routes": [
+                {
+                  "kind": "MCID",
+                  "mcid": 2,
+                  "owner_structure_element": "408 0 R",
+                  "page": 1,
+                  "parent_tree_matches_owner": true,
+                  "parent_tree_target": "408 0 R",
+                  "stream": null,
+                  "struct_parents": 0,
+                  "valid": true
+                }
+              ],
+              "structure_element": "408 0 R",
+              "valid_page_one_route": true
+            }
+          ],
+          "pdf_page_one_image_xobject_alts": [
+            "Profesional argentina observa un muro de evidencias y caminos alternativos en un estudio de Buenos Aires, en una fotografía editorial concebida en blanco y negro con una escala amplia de grises"
+          ]
+        },
+        "css_full_page_cover": {
+          "image_full_page": true,
+          "overlay_full_page": true,
+          "passed": true,
+          "stylesheets": [
+            "magazine.css"
+          ]
+        },
+        "eyebrow_extractable": {
+          "expected": [
+            "LECTURA PREVIA",
+            "EDICIÓN 2026"
+          ],
+          "extracted_prefix": "METSILECTURA PREVIA EDICIÓN 2026 N06 FCE · UBA METODOLOGÍA DE SISTEMAS DE INFORMACIÓN Discovery comoestrategia de reducciónde incertidumbre N06 Discovery no es una fase preliminar ni una colección fija de entrevistas y prototipos. 01 Diego Carralbal, 2026 · linkedin.com/in/carral",
+          "found_in_order": true,
+          "passed": true,
+          "separate_lines": false
+        },
+        "fonts": {
+          "families": [
+            "Avenir",
+            "Baskerville",
+            "Didot"
+          ],
+          "passed": true,
+          "unexpected": []
+        },
+        "interior_pixels_equal_baseline": {
+          "compared_page_range": [
+            2,
+            28
+          ],
+          "differences": [],
+          "missing_current": [],
+          "missing_expected": [],
+          "page_pixel_sha256": {
+            "10": "f9e9bea11d85ee4b45d70f5476e4273a8991e2c90736f977c9eaf79ad8754d71",
+            "11": "69cb547b35ba305784070d8353aba091d85a72b6ee4b97ae8e512b09ceeef119",
+            "12": "a33a531fb571f99669628e45be863978ea4c6b49767d4ae6e34ead0df0d7d5fb",
+            "13": "9f36b5058c4902422c130bb9d9ad8648fcca20b54df6114700a7c93c0417b66d",
+            "14": "76b7598091802b8b2d25cfb8e16414195b2fc3a5e6b9389825cbbff60049032a",
+            "15": "5d386690109d9a7c37d2ce68de0c37df296e07c53af20c7c0911d9feecf52e75",
+            "16": "49254cde5e993fd2d1aa290aeaca2ca5e65e653a0db748f9f442d2e4c82c7636",
+            "17": "5f6834f1cde95427987e603d095534e637913f49a775363983810aea0799d6b2",
+            "18": "89ab74165318e174f91972eb141795f710920036c2b5bcee8b5aab4a4e3ddb1e",
+            "19": "c60bd665e6bdee48dedad3be3c198474ca641d55c8601d3ea5fea2bc7cbf2b0d",
+            "2": "9f5565a903fa2d2dfa2913e6af1e988b34acf2737f2f3e1de026c2f9fb267f55",
+            "20": "afbbd82ba6bf9a42a783c4109935ef2bf8f4a22542d1cb9b653af11ea61e1027",
+            "21": "22072ac3643c304911e49f78a9a19c0e02494e25e0cd7fa8f7e85fe14830b8d6",
+            "22": "d56d27208ab55a8dd0d47198e197ae7dd07996f283f9bec6addc400146bc871d",
+            "23": "e9912e7280e53db7c1de9d5ac9014ad046e07c57f2caa4142e0ae007c75748a5",
+            "24": "a2190b34d234b66176966cc67e59f855201d81f031a988416c58447ff43cfdb9",
+            "25": "be3d797d4a757597cd031f5e89a0e77bb92584871ef6b24b51343804d32d4dbd",
+            "26": "1123856a3b046cdaca01d6ef7742dd2f35f0df799633e070c8dc01f261693642",
+            "27": "4d0bc1cd8e9ba653ca1b305f27838ecf7a277d73c8f74bb1cddc3ef75607bb40",
+            "28": "0fc0911f81645a6c5557b1b36158a7fb12c1cecabdcb65ac71fdef6c84c7a3c4",
+            "3": "f3d6572c4cdb99a613fb635f5bfaf049f2a5037e0ef7ee8fa260655ccb2aa477",
+            "4": "be4a86a54f947b960fea4970d8c189bd901bb0612c1ab93916d7a96afee22178",
+            "5": "4a5c42c9b515c835f1a2efd1c1b130f14ad8774d7bccd9a8674a6b15690e4367",
+            "6": "c7ffa67e5de684553df69c71794d5db5a5ca9d39c521ba8705dda6274ae5120e",
+            "7": "36ef644986b00caab1030b3292637417365b6eb4b1a0e7ee9ca3c0ae3c172c38",
+            "8": "2c2e4a7e25f3a1c5bb01f56d818d5b29ad5e1773306ffb76e82088ee4241ae66",
+            "9": "c525670c91e716e73878eca952ba75903f66c2503bfdc0cc3272451e7e1a0774"
+          },
+          "pages_compared": 27,
+          "passed": true,
+          "renderer": "pdftoppm 72 dpi RGB PPM",
+          "unexpected_current": [],
+          "unexpected_expected": []
+        },
+        "manifest_and_provenance_contract": {
+          "checks": {
+            "declared_file_matches_deployed": true,
+            "declared_source_exists_and_matches_deployed": true,
+            "effective_css_has_no_bw_conversion": true,
+            "manifest_sha_matches_deployed": true,
+            "photographic_origin_native_black_and_white": true,
+            "render_treatment_no_grayscale_conversion": true
+          },
+          "declared_file": "cover.png",
+          "declared_sha256": "0780b6f86663444d876fb56f3d880b3a7256a44809e9ee569b10087603aa1fd0",
+          "declared_source": "assets/cover-source-premium-bw-v1.png",
+          "deployed_file": "cover.png",
+          "deployed_sha256": "0780b6f86663444d876fb56f3d880b3a7256a44809e9ee569b10087603aa1fd0",
+          "effective_css_filter": {
+            "candidates": [
+              {
+                "order": 19,
+                "selector": ".collection-cover>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "grayscale(1) saturate(0) contrast(1.10) brightness(.81)"
+              },
+              {
+                "order": 26,
+                "selector": ".cover-n06>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "none"
+              },
+              {
+                "order": 55,
+                "selector": ".cover-n06>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "none"
+              }
+            ],
+            "conversion_filter_detected": false,
+            "effective": {
+              "order": 55,
+              "selector": ".cover-n06>img",
+              "source": "magazine.css",
+              "specificity": [
+                0,
+                1,
+                1
+              ],
+              "value": "none"
+            },
+            "passed": true
+          },
+          "manifest": "manifest.json",
+          "passed": true,
+          "photographic_origin": "native_black_and_white",
+          "render_treatment": "no_grayscale_conversion",
+          "source_exists": true,
+          "source_sha256": "0780b6f86663444d876fb56f3d880b3a7256a44809e9ee569b10087603aa1fd0"
+        },
+        "native_cover_image": {
+          "asset": "N06-v9-final/assets/cover.png",
+          "deployed_matches_premium_source": true,
+          "metrics": {
+            "channel_spread_p95": 2.0,
+            "file": "N06-v9-final/assets/cover.png",
+            "luminance": {
+              "dark_below_32_pct": 5.7,
+              "highlights_above_224_pct": 21.02,
+              "mean": 168.66,
+              "midtones_64_192_pct": 41.95,
+              "p05": 30.14,
+              "p50": 186.0,
+              "p95": 250.0,
+              "range_p95_p05": 219.86,
+              "stddev": 66.53
+            },
+            "native_bw_passed": true,
+            "raw_tonal_reference_passed": true,
+            "sha256": "0780b6f86663444d876fb56f3d880b3a7256a44809e9ee569b10087603aa1fd0",
+            "size_px": [
+              1055,
+              1491
+            ]
+          },
+          "passed": true,
+          "premium_sources": [
+            "N06-v9-final/assets/cover-source-premium-bw-v1.png"
+          ]
+        },
+        "pages_and_a4": {
+          "expected_a4_pt": [
+            594.96,
+            841.92
+          ],
+          "expected_pages": 28,
+          "non_a4_pages": [],
+          "pages": 28,
+          "passed": true,
+          "tolerance_pt": 1.0,
+          "unique_page_sizes_pt": [
+            [
+              594.96,
+              841.92
+            ]
+          ]
+        },
+        "pdf_image_bleed": {
+          "bbox": {
+            "bottom": 855.903,
+            "top": 0.0,
+            "x0": 0.0,
+            "x1": 605.153
+          },
+          "gaps_pt": {
+            "bottom": 0.0,
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0
+          },
+          "passed": true,
+          "tolerance_pt": 1.5
+        },
+        "rendered_halo": {
+          "bottom_band_max_row_mean_delta": 90.62,
+          "maximum_allowed_px": 1,
+          "pale_uniform_border_depth_px": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "passed": true
+        },
+        "urls_equal_baseline": {
+          "added": [],
+          "baseline": [
+            "https://doi.org/10.1126/science.185.4157.1124",
+            "https://doi.org/10.1287/orsc.2.1.71",
+            "https://doi.org/10.6028/NIST.AI.100-1",
+            "https://dora.dev/research/2025/dora-report/",
+            "https://www.iso.org/standard/77520.html",
+            "https://www.linkedin.com/in/carralbal/"
+          ],
+          "baseline_count": 6,
+          "current": [
+            "https://doi.org/10.1126/science.185.4157.1124",
+            "https://doi.org/10.1287/orsc.2.1.71",
+            "https://doi.org/10.6028/NIST.AI.100-1",
+            "https://dora.dev/research/2025/dora-report/",
+            "https://www.iso.org/standard/77520.html",
+            "https://www.linkedin.com/in/carralbal/"
+          ],
+          "current_count": 6,
+          "passed": true,
+          "removed": []
+        }
+      },
+      "code": "N06",
+      "package": "N06-v9-final",
+      "passed": true,
+      "pdf": "N06-v9-final/output/N06-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "c05782e7ad61b544994032c4eb6a740ff52ab34573b9a45d36960f5dd03bfd6a"
+    },
+    {
+      "baseline": "bundled-manifest:baseline-interior-hashes.json",
+      "baseline_pdf_sha256": "6c27e0921b927f1954c9f40f520420bdb02d8ed60bcdfd39045b59d776791f9b",
+      "checks": {
+        "composed_cover_tone": {
+          "metrics": {
+            "channel_spread_p95": 2.0,
+            "file": "generated:cover-page-1@120dpi",
+            "luminance": {
+              "dark_below_32_pct": 16.48,
+              "highlights_above_224_pct": 1.14,
+              "mean": 93.67,
+              "midtones_64_192_pct": 66.84,
+              "p05": 7.72,
+              "p50": 97.0,
+              "p95": 191.0,
+              "range_p95_p05": 183.28,
+              "stddev": 53.19
+            },
+            "native_bw_passed": true,
+            "raw_tonal_reference_passed": true,
+            "sha256": "4ea980ec2d8f11057f190262bd2270c74cd3066bb5e20ae1a2d9cfb406771f3d",
+            "size_px": [
+              992,
+              1404
+            ]
+          },
+          "passed": true
+        },
+        "cover_alt": {
+          "accepted_semantic_routes": [
+            {
+              "kind": "MCID",
+              "mcid": 2,
+              "owner_structure_element": "485 0 R",
+              "page": 1,
+              "parent_tree_matches_owner": true,
+              "parent_tree_target": "485 0 R",
+              "stream": null,
+              "struct_parents": 0,
+              "valid": true
+            }
+          ],
+          "exact_figure_match": true,
+          "exact_figure_with_valid_semantic_route": true,
+          "html_alt": "Dos profesionales argentinos conversan en un espacio de trabajo contemporáneo, con amplio espacio negativo y una escala luminosa de grises, en una fotografía editorial concebida en blanco y negro",
+          "image_xobject_alt_is_not_acceptance_evidence": true,
+          "image_xobject_exact_match_diagnostic": true,
+          "passed": true,
+          "pdf_language": "es-AR",
+          "pdf_marked": true,
+          "pdf_page_one_figure_alts": [
+            "Dos profesionales argentinos conversan en un espacio de trabajo contemporáneo, con amplio espacio negativo y una escala luminosa de grises, en una fotografía editorial concebida en blanco y negro"
+          ],
+          "pdf_page_one_figures": [
+            {
+              "alt": "Dos profesionales argentinos conversan en un espacio de trabajo contemporáneo, con amplio espacio negativo y una escala luminosa de grises, en una fotografía editorial concebida en blanco y negro",
+              "page": 1,
+              "semantic_routes": [
+                {
+                  "kind": "MCID",
+                  "mcid": 2,
+                  "owner_structure_element": "485 0 R",
+                  "page": 1,
+                  "parent_tree_matches_owner": true,
+                  "parent_tree_target": "485 0 R",
+                  "stream": null,
+                  "struct_parents": 0,
+                  "valid": true
+                }
+              ],
+              "structure_element": "485 0 R",
+              "valid_page_one_route": true
+            }
+          ],
+          "pdf_page_one_image_xobject_alts": [
+            "Dos profesionales argentinos conversan en un espacio de trabajo contemporáneo, con amplio espacio negativo y una escala luminosa de grises, en una fotografía editorial concebida en blanco y negro"
+          ]
+        },
+        "css_full_page_cover": {
+          "image_full_page": true,
+          "overlay_full_page": true,
+          "passed": true,
+          "stylesheets": [
+            "magazine.css"
+          ]
+        },
+        "eyebrow_extractable": {
+          "expected": [
+            "LECTURA PREVIA",
+            "EDICIÓN 2026"
+          ],
+          "extracted_prefix": "METSILECTURA PREVIA EDICIÓN 2026 N07 FCE · UBA METODOLOGÍA DE SISTEMAS DE INFORMACIÓN Entrevistar no es pedirrequisitos N07 Una entrevista de investigación busca episodios, mecanismos, decisiones, excepciones y significados. 01 Diego Carralbal, 2026 · linkedin.com/in/carralbal",
+          "found_in_order": true,
+          "passed": true,
+          "separate_lines": false
+        },
+        "fonts": {
+          "families": [
+            "Avenir",
+            "Baskerville",
+            "Didot"
+          ],
+          "passed": true,
+          "unexpected": []
+        },
+        "interior_pixels_equal_baseline": {
+          "compared_page_range": [
+            2,
+            31
+          ],
+          "differences": [],
+          "missing_current": [],
+          "missing_expected": [],
+          "page_pixel_sha256": {
+            "10": "5e200d5f32298a2f2f219ecd88683bccb975f39f31e089673517d59c08b9b5c6",
+            "11": "bb2d6f2016965c6643e4a5e47d449d70c5017dfd73caa7f3b89c2508bda166f7",
+            "12": "2eb79029f5edab6bbd1fd3e0b9145e1905c3752c2f0868a9b8c848ac3a727e7c",
+            "13": "115b1dabc7cdbe611c597a007df2912d552e2fe155608f5f761cd3d7ad6a5d2c",
+            "14": "15d5979699823b72db93ab3ad05efb87b53be7e14be585c52b4bdcfee3eba15f",
+            "15": "d373ae2774e0b31d202a532453498cef15e781b999aceed5e687cfee545c8375",
+            "16": "ee1904248a6141d97048f6552cb5d5068a91d165cafbdd62bc100213162ba2fd",
+            "17": "c4676df2feb7b6289727a4712275710a9bb63f5bae6b0c38a3e27f00a8623ffd",
+            "18": "9922c189520ccaad6eabf858e66ff591c2cc76fbae9dea062097d361ceebee28",
+            "19": "7ff46d0b72761d86f954771b64bd7160a4f579595e08d0fb892602a99275d3f7",
+            "2": "15c1be51ffe02ad145a18eded238c70c65064f93a3bb1e468080b5b9a48969b4",
+            "20": "a90ef6956c20ad062d247689707a88fcff129eb0962a232878f3204cf709d2ec",
+            "21": "1baa55e360599c1e7c73381dfa13a85f52d4f85bf83041c472abfba1f69d77aa",
+            "22": "1dee1c5c2abf9e492e881791beb5eaaa40e8c8f5418809cc80dfef63f6aba52b",
+            "23": "9cec3d66937ea40f6ae27e4868604c6c240772c85d770d09760a2e3fcaae9e96",
+            "24": "6e4ed7637665aec346a6fa6f5d7ca75f54ba205162a2f3a5c4b3aeef07fa56e8",
+            "25": "ab99e3018ec4b10e09f04178e72a542ce6746fea138d74a45ef813411bc7b935",
+            "26": "68002fb16f70e2db2b7d0e107d20c7d40d07340cc0c18c5fac7cde1328b28273",
+            "27": "3fbf64ece5d70e9a277cb4c8a8f7e40c2d2fa24febeabdeeb686cfef25a732f0",
+            "28": "76841c9246f9231fb88adb0f78d2a0b104ac27642277b777d1b745a00e5dd293",
+            "29": "8e8d6ac0bbe5568562cf010d8c4f47797fbc3418e23f9d0b782260b0e6e3f348",
+            "3": "59815f3a4eaf4ae4e3d92440a5b7346c412e8a9a06d66a6197f94f294a4223dc",
+            "30": "589ac23b140c50df17f31ba69ada4d8eb4fe57e9836aee26e7542c00720156bc",
+            "31": "58122510f433a0d420e0b50d28f773d62b7445b7a55e5824a63d366f82e9fbf5",
+            "4": "a06055ccc0f345b82fa9bf1c3a71f9328f0e0b91741cc77a0baab311a509f0ad",
+            "5": "a3406f506ef331569f175a5ed4970b06afa647b44c6a4f391dfb664f6f13e07e",
+            "6": "5887f735207fe3d1e266bce79fb4154421fba17035871ea51a2a87e6b1e0ea2f",
+            "7": "18c28d8bc230011d76b6688b69c0b81ec176a5e81f6dcacbee2140f494179fc1",
+            "8": "8aa3b3e206e3216d073e2d86348cebf138eb00551a42115d01dc41ee60e079b3",
+            "9": "e0176a430ed60fdedb4ee19f40eda55a96738cbc70aadc03eedfb87fd1efd8d3"
+          },
+          "pages_compared": 30,
+          "passed": true,
+          "renderer": "pdftoppm 72 dpi RGB PPM",
+          "unexpected_current": [],
+          "unexpected_expected": []
+        },
+        "manifest_and_provenance_contract": {
+          "checks": {
+            "declared_file_matches_deployed": true,
+            "declared_source_exists_and_matches_deployed": true,
+            "effective_css_has_no_bw_conversion": true,
+            "manifest_sha_matches_deployed": true,
+            "photographic_origin_native_black_and_white": true,
+            "render_treatment_no_grayscale_conversion": true
+          },
+          "declared_file": "cover.png",
+          "declared_sha256": "f6a489ed346b58124d306da0404cd3a1e1bddda9d8a389409adaaea0c566feb9",
+          "declared_source": "assets/cover-source-premium-bw-v1.png",
+          "deployed_file": "cover.png",
+          "deployed_sha256": "f6a489ed346b58124d306da0404cd3a1e1bddda9d8a389409adaaea0c566feb9",
+          "effective_css_filter": {
+            "candidates": [
+              {
+                "order": 19,
+                "selector": ".collection-cover>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "grayscale(1) saturate(0) contrast(1.10) brightness(.81)"
+              },
+              {
+                "order": 27,
+                "selector": ".cover-n07>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "none"
+              },
+              {
+                "order": 55,
+                "selector": ".cover-n07>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "none"
+              }
+            ],
+            "conversion_filter_detected": false,
+            "effective": {
+              "order": 55,
+              "selector": ".cover-n07>img",
+              "source": "magazine.css",
+              "specificity": [
+                0,
+                1,
+                1
+              ],
+              "value": "none"
+            },
+            "passed": true
+          },
+          "manifest": "manifest.json",
+          "passed": true,
+          "photographic_origin": "native_black_and_white",
+          "render_treatment": "no_grayscale_conversion",
+          "source_exists": true,
+          "source_sha256": "f6a489ed346b58124d306da0404cd3a1e1bddda9d8a389409adaaea0c566feb9"
+        },
+        "native_cover_image": {
+          "asset": "N07-v9-final/assets/cover.png",
+          "deployed_matches_premium_source": true,
+          "metrics": {
+            "channel_spread_p95": 2.0,
+            "file": "N07-v9-final/assets/cover.png",
+            "luminance": {
+              "dark_below_32_pct": 14.92,
+              "highlights_above_224_pct": 1.61,
+              "mean": 111.1,
+              "midtones_64_192_pct": 69.2,
+              "p05": 8.0,
+              "p50": 121.0,
+              "p95": 209.21,
+              "range_p95_p05": 201.21,
+              "stddev": 57.73
+            },
+            "native_bw_passed": true,
+            "raw_tonal_reference_passed": true,
+            "sha256": "f6a489ed346b58124d306da0404cd3a1e1bddda9d8a389409adaaea0c566feb9",
+            "size_px": [
+              1055,
+              1491
+            ]
+          },
+          "passed": true,
+          "premium_sources": [
+            "N07-v9-final/assets/cover-source-premium-bw-v1.png"
+          ]
+        },
+        "pages_and_a4": {
+          "expected_a4_pt": [
+            594.96,
+            841.92
+          ],
+          "expected_pages": 31,
+          "non_a4_pages": [],
+          "pages": 31,
+          "passed": true,
+          "tolerance_pt": 1.0,
+          "unique_page_sizes_pt": [
+            [
+              594.96,
+              841.92
+            ]
+          ]
+        },
+        "pdf_image_bleed": {
+          "bbox": {
+            "bottom": 855.903,
+            "top": 0.0,
+            "x0": 0.0,
+            "x1": 605.153
+          },
+          "gaps_pt": {
+            "bottom": 0.0,
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0
+          },
+          "passed": true,
+          "tolerance_pt": 1.5
+        },
+        "rendered_halo": {
+          "bottom_band_max_row_mean_delta": 118.34,
+          "maximum_allowed_px": 1,
+          "pale_uniform_border_depth_px": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "passed": true
+        },
+        "urls_equal_baseline": {
+          "added": [],
+          "baseline": [
+            "https://doi.org/10.1037/h0061470",
+            "https://doi.org/10.1177/1049732315617444",
+            "https://doi.org/10.6028/NIST.AI.100-4",
+            "https://doi.org/10.6028/NIST.AI.600-1",
+            "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+            "https://www.linkedin.com/in/carralbal/"
+          ],
+          "baseline_count": 6,
+          "current": [
+            "https://doi.org/10.1037/h0061470",
+            "https://doi.org/10.1177/1049732315617444",
+            "https://doi.org/10.6028/NIST.AI.100-4",
+            "https://doi.org/10.6028/NIST.AI.600-1",
+            "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+            "https://www.linkedin.com/in/carralbal/"
+          ],
+          "current_count": 6,
+          "passed": true,
+          "removed": []
+        }
+      },
+      "code": "N07",
+      "package": "N07-v9-final",
+      "passed": true,
+      "pdf": "N07-v9-final/output/N07-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "c7b36bffcd3da4d1955f3563f7836dc9fad28d5cb0fa5ed7129bba1f2b075bd9"
+    },
+    {
+      "baseline": "bundled-manifest:baseline-interior-hashes.json",
+      "baseline_pdf_sha256": "0c1825a1effcb0b7f0c4ea2a312f0d1ef08cde461158e7b1b87bec40d599f4f3",
+      "checks": {
+        "composed_cover_tone": {
+          "metrics": {
+            "channel_spread_p95": 5.0,
+            "file": "generated:cover-page-1@120dpi",
+            "luminance": {
+              "dark_below_32_pct": 5.45,
+              "highlights_above_224_pct": 2.13,
+              "mean": 100.54,
+              "midtones_64_192_pct": 78.76,
+              "p05": 28.93,
+              "p50": 96.14,
+              "p95": 202.28,
+              "range_p95_p05": 173.35,
+              "stddev": 45.6
+            },
+            "native_bw_passed": true,
+            "raw_tonal_reference_passed": true,
+            "sha256": "b7329139059fccda28259587d22b5e40f1e7140c5e573d3b97d61f46c4709e36",
+            "size_px": [
+              992,
+              1404
+            ]
+          },
+          "passed": true
+        },
+        "cover_alt": {
+          "accepted_semantic_routes": [
+            {
+              "kind": "MCID",
+              "mcid": 2,
+              "owner_structure_element": "481 0 R",
+              "page": 1,
+              "parent_tree_matches_owner": true,
+              "parent_tree_target": "481 0 R",
+              "stream": null,
+              "struct_parents": 0,
+              "valid": true
+            }
+          ],
+          "exact_figure_match": true,
+          "exact_figure_with_valid_semantic_route": true,
+          "html_alt": "Dos trabajadoras argentinas coordinan tareas en el umbral de una habitación de hotel, mientras una pared y un corredor dejan amplio espacio visual a la izquierda.",
+          "image_xobject_alt_is_not_acceptance_evidence": true,
+          "image_xobject_exact_match_diagnostic": true,
+          "passed": true,
+          "pdf_language": "es-AR",
+          "pdf_marked": true,
+          "pdf_page_one_figure_alts": [
+            "Dos trabajadoras argentinas coordinan tareas en el umbral de una habitación de hotel, mientras una pared y un corredor dejan amplio espacio visual a la izquierda."
+          ],
+          "pdf_page_one_figures": [
+            {
+              "alt": "Dos trabajadoras argentinas coordinan tareas en el umbral de una habitación de hotel, mientras una pared y un corredor dejan amplio espacio visual a la izquierda.",
+              "page": 1,
+              "semantic_routes": [
+                {
+                  "kind": "MCID",
+                  "mcid": 2,
+                  "owner_structure_element": "481 0 R",
+                  "page": 1,
+                  "parent_tree_matches_owner": true,
+                  "parent_tree_target": "481 0 R",
+                  "stream": null,
+                  "struct_parents": 0,
+                  "valid": true
+                }
+              ],
+              "structure_element": "481 0 R",
+              "valid_page_one_route": true
+            }
+          ],
+          "pdf_page_one_image_xobject_alts": [
+            "Dos trabajadoras argentinas coordinan tareas en el umbral de una habitación de hotel, mientras una pared y un corredor dejan amplio espacio visual a la izquierda.",
+            "Dos trabajadoras argentinas coordinan tareas en el umbral de una habitación de hotel, mientras una pared y un corredor dejan amplio espacio visual a la izquierda."
+          ]
+        },
+        "css_full_page_cover": {
+          "image_full_page": true,
+          "overlay_full_page": true,
+          "passed": true,
+          "stylesheets": [
+            "magazine.css"
+          ]
+        },
+        "eyebrow_extractable": {
+          "expected": [
+            "LECTURA PREVIA",
+            "EDICIÓN 2026"
+          ],
+          "extracted_prefix": "METSILECTURA PREVIA EDICIÓN 2026 N08N08 FCE · UBAFCE · UBA METODOLOGÍA DE SISTEMAS DE INFORMACIÓN Observar el trabajoinvisible 01 Diego Carralbal, 2026 · linkedin.com/in/carralbal",
+          "found_in_order": true,
+          "passed": true,
+          "separate_lines": false
+        },
+        "fonts": {
+          "families": [
+            "Avenir",
+            "Baskerville",
+            "Didot"
+          ],
+          "passed": true,
+          "unexpected": []
+        },
+        "interior_pixels_equal_baseline": {
+          "compared_page_range": [
+            2,
+            28
+          ],
+          "differences": [],
+          "missing_current": [],
+          "missing_expected": [],
+          "page_pixel_sha256": {
+            "10": "132731d30b0f829c5b8a9af4a1390d074e5979f62f1150a7c62e438c192a94f4",
+            "11": "16f12ca1619b89e35ce34ade0ba0b2207425045ac2f11561d8cde68a4836cf78",
+            "12": "cd515c9d826455bed5dc7cc813ad6bf6fb78e78b1f292eaeaf388fdd93ca90e5",
+            "13": "18624cb07eb12baef203d1c4571c3d678721f6be2fb5455f7cbd1cf63571d46e",
+            "14": "d94bf52500e58278df499b06a5f0713f195cb5220abc41c9212c9e1226d0a6a9",
+            "15": "43f3e1230b64c283e29f5a090ba3a5e5b22bb043fe17705d8aa468b66e890b04",
+            "16": "5b51077fc0d150dc84418d04180e8a2244802b9c509826b8534d2211c6eb0844",
+            "17": "02baa7166f6078add42361cc3af7599d080b041b3d8a330eb1c80f67ec004d34",
+            "18": "1642bb8f93f6e1ad17a41a1932f95ca6434a3bdddfda1862ce65998bec049e72",
+            "19": "ae82a5cc4281337e8cb512dc9d27e22463cc58f385ca853a04444c2aa3f85586",
+            "2": "af118b152be283b76e7623e0ca48df736b060efeea44370694bafeef48530cd9",
+            "20": "fa70dafc934c6911b7a83a9a41539c7dc62ea6dac409adf38f10335e8c94eebc",
+            "21": "53d82b6b82bd65a24499732a8a8c17470975924b83c6d5845331a6f48f5fa422",
+            "22": "c1bcedd37565c9fa0e957350a619f72157c46c41ac0d836eac1a446f26d9d8c2",
+            "23": "82eddad62387a9212c7930391a8260f54d6e644e3514e3e6f95719ad1796f405",
+            "24": "38fee28e3ede96c099118c0275ca7efc434f238d69194d85eeb1fca838051957",
+            "25": "da593e66cb73730b0a000e2940180fb5aff2ec95b00c958816b2818104b0424f",
+            "26": "bc6e27a3d7a6fe0dc25f009c30e95486bd2ab39230b36f909deacdb108e619a3",
+            "27": "8b44ccfc9b75c84ac4b2dd6240b631782078a7b0f8905451e8fe4256ac4341ae",
+            "28": "0fc0911f81645a6c5557b1b36158a7fb12c1cecabdcb65ac71fdef6c84c7a3c4",
+            "3": "76c2898bc099447670e2ca4e5ccec5527c2ef10f76001dc95cc54c5c2cd23857",
+            "4": "9ef69e01c3f95839911e2c1c8ef69a078eb04360124e3fe6c054f533739b81d4",
+            "5": "983fd8c0e81a4028ca3cab8d85e06ff05db1762111f294fbbcc507cf1dabb212",
+            "6": "58a8465291f0c42e765bc416496c0b41e831aaca97d9e792f6566a6128c0b600",
+            "7": "5011267a672b8e2ec9abca54a2e320a1e877e0060f5922aaf4a5767366ad1a06",
+            "8": "e7a041604c28e2ee75ac5762351fe07b557179f1cd311c5ac8f044279253d6ea",
+            "9": "535e238c9ad0891c3477b1178490c00b8f56a68d589c09a3529356973ad7cf5a"
+          },
+          "pages_compared": 27,
+          "passed": true,
+          "renderer": "pdftoppm 72 dpi RGB PPM",
+          "unexpected_current": [],
+          "unexpected_expected": []
+        },
+        "manifest_and_provenance_contract": {
+          "checks": {
+            "declared_file_matches_deployed": true,
+            "declared_source_exists_and_matches_deployed": true,
+            "effective_css_has_no_bw_conversion": true,
+            "manifest_sha_matches_deployed": true,
+            "photographic_origin_native_black_and_white": true,
+            "render_treatment_no_grayscale_conversion": true
+          },
+          "declared_file": "cover.png",
+          "declared_sha256": "a7bc233b929a3112f196eb6c330c4c98035b8ec51806dbd368be9398c3be1e61",
+          "declared_source": "assets/cover-source-premium-bw-v1.png",
+          "deployed_file": "cover.png",
+          "deployed_sha256": "a7bc233b929a3112f196eb6c330c4c98035b8ec51806dbd368be9398c3be1e61",
+          "effective_css_filter": {
+            "candidates": [
+              {
+                "order": 19,
+                "selector": ".collection-cover>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "grayscale(1) saturate(0) contrast(1.10) brightness(.81)"
+              },
+              {
+                "order": 28,
+                "selector": ".cover-n08>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "none"
+              }
+            ],
+            "conversion_filter_detected": false,
+            "effective": {
+              "order": 28,
+              "selector": ".cover-n08>img",
+              "source": "magazine.css",
+              "specificity": [
+                0,
+                1,
+                1
+              ],
+              "value": "none"
+            },
+            "passed": true
+          },
+          "manifest": "manifest.json",
+          "passed": true,
+          "photographic_origin": "native_black_and_white",
+          "render_treatment": "no_grayscale_conversion",
+          "source_exists": true,
+          "source_sha256": "a7bc233b929a3112f196eb6c330c4c98035b8ec51806dbd368be9398c3be1e61"
+        },
+        "native_cover_image": {
+          "asset": "N08-v9-final/assets/cover.png",
+          "deployed_matches_premium_source": true,
+          "metrics": {
+            "channel_spread_p95": 5.0,
+            "file": "N08-v9-final/assets/cover.png",
+            "luminance": {
+              "dark_below_32_pct": 5.03,
+              "highlights_above_224_pct": 2.68,
+              "mean": 110.82,
+              "midtones_64_192_pct": 83.56,
+              "p05": 31.86,
+              "p50": 102.07,
+              "p95": 207.21,
+              "range_p95_p05": 175.35,
+              "stddev": 45.42
+            },
+            "native_bw_passed": true,
+            "raw_tonal_reference_passed": true,
+            "sha256": "a7bc233b929a3112f196eb6c330c4c98035b8ec51806dbd368be9398c3be1e61",
+            "size_px": [
+              1055,
+              1491
+            ]
+          },
+          "passed": true,
+          "premium_sources": [
+            "N08-v9-final/assets/cover-source-premium-bw-v1.png"
+          ]
+        },
+        "pages_and_a4": {
+          "expected_a4_pt": [
+            594.96,
+            841.92
+          ],
+          "expected_pages": 28,
+          "non_a4_pages": [],
+          "pages": 28,
+          "passed": true,
+          "tolerance_pt": 1.0,
+          "unique_page_sizes_pt": [
+            [
+              594.96,
+              841.92
+            ]
+          ]
+        },
+        "pdf_image_bleed": {
+          "bbox": {
+            "bottom": 855.903,
+            "top": 0.0,
+            "x0": 0.0,
+            "x1": 605.153
+          },
+          "gaps_pt": {
+            "bottom": 0.0,
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0
+          },
+          "passed": true,
+          "tolerance_pt": 1.5
+        },
+        "rendered_halo": {
+          "bottom_band_max_row_mean_delta": 82.41,
+          "maximum_allowed_px": 1,
+          "pale_uniform_border_depth_px": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "passed": true
+        },
+        "urls_equal_baseline": {
+          "added": [],
+          "baseline": [
+            "https://doi.org/10.1023/A:1008651105359",
+            "https://doi.org/10.1111/j.1533-8525.1988.tb01249.x",
+            "https://doi.org/10.1177/001872675100400101",
+            "https://doi.org/10.1787/287c13c4-en",
+            "https://doi.org/10.54394/HETP0387",
+            "https://doi.org/10.6028/NIST.AI.600-1",
+            "https://www.linkedin.com/in/carralbal/"
+          ],
+          "baseline_count": 7,
+          "current": [
+            "https://doi.org/10.1023/A:1008651105359",
+            "https://doi.org/10.1111/j.1533-8525.1988.tb01249.x",
+            "https://doi.org/10.1177/001872675100400101",
+            "https://doi.org/10.1787/287c13c4-en",
+            "https://doi.org/10.54394/HETP0387",
+            "https://doi.org/10.6028/NIST.AI.600-1",
+            "https://www.linkedin.com/in/carralbal/"
+          ],
+          "current_count": 7,
+          "passed": true,
+          "removed": []
+        }
+      },
+      "code": "N08",
+      "package": "N08-v9-final",
+      "passed": true,
+      "pdf": "N08-v9-final/output/N08-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "8513d10b826cf9f69d9f8948a941a9013c1c57968bc9a08bfdc9686e8c788f36"
+    },
+    {
+      "baseline": "bundled-manifest:baseline-interior-hashes.json",
+      "baseline_pdf_sha256": "f8c092baf23d2dba6d62f594f5da29a83e00fc69f1761a6d6e54ab7aebb246f1",
+      "checks": {
+        "composed_cover_tone": {
+          "metrics": {
+            "channel_spread_p95": 2.0,
+            "file": "generated:cover-page-1@120dpi",
+            "luminance": {
+              "dark_below_32_pct": 7.97,
+              "highlights_above_224_pct": 1.83,
+              "mean": 108.95,
+              "midtones_64_192_pct": 65.62,
+              "p05": 23.28,
+              "p50": 102.28,
+              "p95": 204.0,
+              "range_p95_p05": 180.72,
+              "stddev": 56.46
+            },
+            "native_bw_passed": true,
+            "raw_tonal_reference_passed": true,
+            "sha256": "235024926e5ef3ceea8b71a005a9cbac6f6bbf702f55bad91978acea71e8b062",
+            "size_px": [
+              992,
+              1404
+            ]
+          },
+          "passed": true
+        },
+        "cover_alt": {
+          "accepted_semantic_routes": [
+            {
+              "kind": "MCID",
+              "mcid": 2,
+              "owner_structure_element": "546 0 R",
+              "page": 1,
+              "parent_tree_matches_owner": true,
+              "parent_tree_target": "546 0 R",
+              "stream": null,
+              "struct_parents": 0,
+              "valid": true
+            }
+          ],
+          "exact_figure_match": true,
+          "exact_figure_with_valid_semantic_route": true,
+          "html_alt": "Una mujer argentina cruza de manera autónoma un umbral de vidrio contemporáneo apoyada en su bastón, con amplio espacio arquitectónico a la izquierda.",
+          "image_xobject_alt_is_not_acceptance_evidence": true,
+          "image_xobject_exact_match_diagnostic": true,
+          "passed": true,
+          "pdf_language": "es-AR",
+          "pdf_marked": true,
+          "pdf_page_one_figure_alts": [
+            "Una mujer argentina cruza de manera autónoma un umbral de vidrio contemporáneo apoyada en su bastón, con amplio espacio arquitectónico a la izquierda."
+          ],
+          "pdf_page_one_figures": [
+            {
+              "alt": "Una mujer argentina cruza de manera autónoma un umbral de vidrio contemporáneo apoyada en su bastón, con amplio espacio arquitectónico a la izquierda.",
+              "page": 1,
+              "semantic_routes": [
+                {
+                  "kind": "MCID",
+                  "mcid": 2,
+                  "owner_structure_element": "546 0 R",
+                  "page": 1,
+                  "parent_tree_matches_owner": true,
+                  "parent_tree_target": "546 0 R",
+                  "stream": null,
+                  "struct_parents": 0,
+                  "valid": true
+                }
+              ],
+              "structure_element": "546 0 R",
+              "valid_page_one_route": true
+            }
+          ],
+          "pdf_page_one_image_xobject_alts": [
+            "Una mujer argentina cruza de manera autónoma un umbral de vidrio contemporáneo apoyada en su bastón, con amplio espacio arquitectónico a la izquierda."
+          ]
+        },
+        "css_full_page_cover": {
+          "image_full_page": true,
+          "overlay_full_page": true,
+          "passed": true,
+          "stylesheets": [
+            "magazine.css"
+          ]
+        },
+        "eyebrow_extractable": {
+          "expected": [
+            "LECTURA PREVIA",
+            "EDICIÓN 2026"
+          ],
+          "extracted_prefix": "METSI LECTURA PREVIA EDICIÓN 2026 N09 FCE · UBA METODOLOGÍA DE SISTEMAS DE INFORMACIÓN Experiencia, accesibilidad yadopción no sondecoración N09 Una solución es utilizable y adoptable cuando personas diversas pueden comprender, decidir, actuar, corregir y obtener resultados bajo ",
+          "found_in_order": true,
+          "passed": true,
+          "separate_lines": true
+        },
+        "fonts": {
+          "families": [
+            "Avenir",
+            "Baskerville",
+            "Didot"
+          ],
+          "passed": true,
+          "unexpected": []
+        },
+        "interior_pixels_equal_baseline": {
+          "compared_page_range": [
+            2,
+            28
+          ],
+          "differences": [],
+          "missing_current": [],
+          "missing_expected": [],
+          "page_pixel_sha256": {
+            "10": "e629adc2ac26b360fe200f9cd9c775b5cfa50d7f0d19f6ffd01765791073f673",
+            "11": "f82d827ed2e0946bfb358c5255540e6bc2fb8132318736cc3943119f0ec10cd4",
+            "12": "9f6f9588d90ad25e11094728d43f6376253ab599e8c7b6dc18f0f440ed8bd5dc",
+            "13": "e0456abaa2b605424b6e40df4029ca67d940411c09c3cf27d5adb248f85b942c",
+            "14": "202ae42d924de55810c29a92cb93064032733eaa26ed1f94da53d52e77d2d768",
+            "15": "4f875395c67feaa4a4e9c612fb7e5daacc12e36d65710c4bca752a8800846b39",
+            "16": "1ad954e2bc200cd2effb8c2df32711d86defdbf257c6d6b79b2ed4639a511bc6",
+            "17": "a51a2e90d89aa9f05ee7d3ca2df8efab3cafc5b79f1b93853dea25cd2d20ce50",
+            "18": "c0aebcce8e29a12b00dead84af9d5bb20fe9475556245e8a7895674e100a0708",
+            "19": "3e5d71abb96b99c15f6b49bae8551d01c9d57c3c7bd097a1b2dee21d9925adb0",
+            "2": "299aa9c1153a0ba5eddca3b96bfbf2214cb6240275edef4aaecdcdec7e702efd",
+            "20": "27c73c25d8e4d790cdcf9b860c4581f5b83e7cc74c0be81d4a5cc76d83b6eeb9",
+            "21": "8c9c4c1b1c4fed682ad842786bc51eb21a8bcd5119ab457988a413c35c13e822",
+            "22": "1b54cf53277dbc53ce845c7b3e5ea1ea79b7559fa6796b81e00809c8f53efbee",
+            "23": "fa2576c85c9463558c536abf7dc64328cc66a2bb2509ed7c47e05d2a8ce676cf",
+            "24": "e7885cb60b7c1e5312b5603bdfbc39822b76fa8966432fff7793beaebaf98659",
+            "25": "82df9b15bedeb1e676b1437b9d1dbfd44833473646c872337b482ce888c9a675",
+            "26": "3bd0ead4206fb9e699fd9218b4a4781ce9fa9ce3eef3829f1906cf0b564422d8",
+            "27": "9a9511dd334cfb33c08f2e52cede4cb661268e1a28700518334b7ff0f4545843",
+            "28": "0fc0911f81645a6c5557b1b36158a7fb12c1cecabdcb65ac71fdef6c84c7a3c4",
+            "3": "44dfea3a8c192e083301ca31bda86533be900356f232c7ff17ce1e93e91d5d3c",
+            "4": "3c36e44896195a0d6bdc99cb32dbb173eda9a66a72a313a6279bb8c2ea650d36",
+            "5": "2fb17f4b8d9261efc1590b19c83bff8f07cbc9f07d797d5bd276eccb271c00a0",
+            "6": "ba8c6b0e1b1200e98d8a2947ba9b0f60d2a2732ff9881c5f5c202ecbffb4dcac",
+            "7": "8ca56260aabdff9b3e1562266565a73f19e9f656e46fbe2e7f5dc99475af276e",
+            "8": "203788ed31d5fcd89ab38c51bbfead3a1eb7a69c51cfcdc0f529459807a36653",
+            "9": "2536a19befcdfe348436226771c5dffc8187c90a4f91a6a94878996d46b3e93a"
+          },
+          "pages_compared": 27,
+          "passed": true,
+          "renderer": "pdftoppm 72 dpi RGB PPM",
+          "unexpected_current": [],
+          "unexpected_expected": []
+        },
+        "manifest_and_provenance_contract": {
+          "checks": {
+            "declared_file_matches_deployed": true,
+            "declared_source_exists_and_matches_deployed": true,
+            "effective_css_has_no_bw_conversion": true,
+            "manifest_sha_matches_deployed": true,
+            "photographic_origin_native_black_and_white": true,
+            "render_treatment_no_grayscale_conversion": true
+          },
+          "declared_file": "cover.png",
+          "declared_sha256": "9d6322f3e9c24890637f8c4f3ef740dfbea5907ad1dbc8c82233e9b1aae2a0f4",
+          "declared_source": "assets/cover.png",
+          "deployed_file": "cover.png",
+          "deployed_sha256": "9d6322f3e9c24890637f8c4f3ef740dfbea5907ad1dbc8c82233e9b1aae2a0f4",
+          "effective_css_filter": {
+            "candidates": [
+              {
+                "order": 19,
+                "selector": ".collection-cover>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "grayscale(1) saturate(0) contrast(1.10) brightness(.81)"
+              },
+              {
+                "order": 54,
+                "selector": ".cover-n09>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "none"
+              }
+            ],
+            "conversion_filter_detected": false,
+            "effective": {
+              "order": 54,
+              "selector": ".cover-n09>img",
+              "source": "magazine.css",
+              "specificity": [
+                0,
+                1,
+                1
+              ],
+              "value": "none"
+            },
+            "passed": true
+          },
+          "manifest": "manifest.json",
+          "passed": true,
+          "photographic_origin": "native_black_and_white",
+          "render_treatment": "no_grayscale_conversion",
+          "source_exists": true,
+          "source_sha256": "9d6322f3e9c24890637f8c4f3ef740dfbea5907ad1dbc8c82233e9b1aae2a0f4"
+        },
+        "native_cover_image": {
+          "asset": "N09-v9-final/assets/cover.png",
+          "deployed_matches_premium_source": false,
+          "metrics": {
+            "channel_spread_p95": 2.0,
+            "file": "N09-v9-final/assets/cover.png",
+            "luminance": {
+              "dark_below_32_pct": 6.71,
+              "highlights_above_224_pct": 1.38,
+              "mean": 117.3,
+              "midtones_64_192_pct": 68.21,
+              "p05": 26.0,
+              "p50": 120.28,
+              "p95": 203.28,
+              "range_p95_p05": 177.28,
+              "stddev": 55.01
+            },
+            "native_bw_passed": true,
+            "raw_tonal_reference_passed": true,
+            "sha256": "9d6322f3e9c24890637f8c4f3ef740dfbea5907ad1dbc8c82233e9b1aae2a0f4",
+            "size_px": [
+              1055,
+              1491
+            ]
+          },
+          "passed": true,
+          "premium_sources": []
+        },
+        "pages_and_a4": {
+          "expected_a4_pt": [
+            594.96,
+            841.92
+          ],
+          "expected_pages": 28,
+          "non_a4_pages": [],
+          "pages": 28,
+          "passed": true,
+          "tolerance_pt": 1.0,
+          "unique_page_sizes_pt": [
+            [
+              594.96,
+              841.92
+            ]
+          ]
+        },
+        "pdf_image_bleed": {
+          "bbox": {
+            "bottom": 855.903,
+            "top": 0.0,
+            "x0": 0.0,
+            "x1": 605.153
+          },
+          "gaps_pt": {
+            "bottom": 0.0,
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0
+          },
+          "passed": true,
+          "tolerance_pt": 1.5
+        },
+        "rendered_halo": {
+          "bottom_band_max_row_mean_delta": 89.08,
+          "maximum_allowed_px": 1,
+          "pale_uniform_border_depth_px": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "passed": true
+        },
+        "urls_equal_baseline": {
+          "added": [],
+          "baseline": [
+            "https://designjustice.mitpress.mit.edu/",
+            "https://doi.org/10.1016/C2013-0-13303-2",
+            "https://doi.org/10.1017/CBO9780511808418",
+            "https://doi.org/10.54394/HETP0387",
+            "https://doi.org/10.6028/NIST.AI.600-1",
+            "https://eur-lex.europa.eu/eli/dir/2019/882/oj",
+            "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+            "https://www.iso.org/standard/63500.html",
+            "https://www.iso.org/standard/77520.html",
+            "https://www.iso.org/standard/91029.html",
+            "https://www.linkedin.com/in/carralbal/",
+            "https://www.w3.org/TR/WCAG22/",
+            "https://www.w3.org/WAI/fundamentals/accessibility-principles/"
+          ],
+          "baseline_count": 13,
+          "current": [
+            "https://designjustice.mitpress.mit.edu/",
+            "https://doi.org/10.1016/C2013-0-13303-2",
+            "https://doi.org/10.1017/CBO9780511808418",
+            "https://doi.org/10.54394/HETP0387",
+            "https://doi.org/10.6028/NIST.AI.600-1",
+            "https://eur-lex.europa.eu/eli/dir/2019/882/oj",
+            "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+            "https://www.iso.org/standard/63500.html",
+            "https://www.iso.org/standard/77520.html",
+            "https://www.iso.org/standard/91029.html",
+            "https://www.linkedin.com/in/carralbal/",
+            "https://www.w3.org/TR/WCAG22/",
+            "https://www.w3.org/WAI/fundamentals/accessibility-principles/"
+          ],
+          "current_count": 13,
+          "passed": true,
+          "removed": []
+        }
+      },
+      "code": "N09",
+      "package": "N09-v9-final",
+      "passed": true,
+      "pdf": "N09-v9-final/output/N09-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "3cf21741a5b0ca81f924562171e38f45377acc1e4629e069719f8126879167aa"
+    },
+    {
+      "baseline": "bundled-manifest:baseline-interior-hashes.json",
+      "baseline_pdf_sha256": "53f251c2fbff6b6964d20e453a666c41dad0d7213caff31fe164d4cb751a1bcb",
+      "checks": {
+        "composed_cover_tone": {
+          "metrics": {
+            "channel_spread_p95": 5.0,
+            "file": "generated:cover-page-1@120dpi",
+            "luminance": {
+              "dark_below_32_pct": 7.12,
+              "highlights_above_224_pct": 0.46,
+              "mean": 140.31,
+              "midtones_64_192_pct": 28.68,
+              "p05": 29.22,
+              "p50": 176.28,
+              "p95": 213.0,
+              "range_p95_p05": 183.78,
+              "stddev": 71.54
+            },
+            "native_bw_passed": true,
+            "raw_tonal_reference_passed": true,
+            "sha256": "2e1af95b84dfde03fc8aca47090cefaf8eca1d9fc94748954fd85e1b08c14f57",
+            "size_px": [
+              992,
+              1404
+            ]
+          },
+          "passed": true
+        },
+        "cover_alt": {
+          "accepted_semantic_routes": [
+            {
+              "kind": "MCR",
+              "mcid": 0,
+              "owner_structure_element": "570 0 R",
+              "page": 1,
+              "parent_tree_matches_owner": true,
+              "parent_tree_target": "570 0 R",
+              "stream": "17 0 R",
+              "struct_parents": 1,
+              "valid": true
+            }
+          ],
+          "exact_figure_match": true,
+          "exact_figure_with_valid_semantic_route": true,
+          "html_alt": "Una profesional argentina observa desde el acceso peatonal de un puente cómo confluyen un colectivo, automóviles, ciclistas, peatones y una vía ferroviaria junto al río.",
+          "image_xobject_alt_is_not_acceptance_evidence": true,
+          "image_xobject_exact_match_diagnostic": false,
+          "passed": true,
+          "pdf_language": "es-AR",
+          "pdf_marked": true,
+          "pdf_page_one_figure_alts": [
+            "Una profesional argentina observa desde el acceso peatonal de un puente cómo confluyen un colectivo, automóviles, ciclistas, peatones y una vía ferroviaria junto al río."
+          ],
+          "pdf_page_one_figures": [
+            {
+              "alt": "Una profesional argentina observa desde el acceso peatonal de un puente cómo confluyen un colectivo, automóviles, ciclistas, peatones y una vía ferroviaria junto al río.",
+              "page": 1,
+              "semantic_routes": [
+                {
+                  "kind": "MCR",
+                  "mcid": 0,
+                  "owner_structure_element": "570 0 R",
+                  "page": 1,
+                  "parent_tree_matches_owner": true,
+                  "parent_tree_target": "570 0 R",
+                  "stream": "17 0 R",
+                  "struct_parents": 1,
+                  "valid": true
+                }
+              ],
+              "structure_element": "570 0 R",
+              "valid_page_one_route": true
+            }
+          ],
+          "pdf_page_one_image_xobject_alts": []
+        },
+        "css_full_page_cover": {
+          "image_full_page": true,
+          "overlay_full_page": true,
+          "passed": true,
+          "stylesheets": [
+            "magazine.css"
+          ]
+        },
+        "eyebrow_extractable": {
+          "expected": [
+            "LECTURA PREVIA",
+            "EDICIÓN 2026"
+          ],
+          "extracted_prefix": "METSILECTURA PREVIA EDICIÓN 2026 N10 FCE · UBA METODOLOGÍA DE SISTEMAS DE INFORMACIÓN Construir el problema: desíntomas a outcomesverificables N10 Un problemaprofesional no es un dato descubierto ni unafrase que resume síntomas. 01 Diego Carralbal, 2026 · linkedin.com/in/carralba",
+          "found_in_order": true,
+          "passed": true,
+          "separate_lines": false
+        },
+        "fonts": {
+          "families": [
+            "Avenir",
+            "Baskerville",
+            "Didot"
+          ],
+          "passed": true,
+          "unexpected": []
+        },
+        "interior_pixels_equal_baseline": {
+          "compared_page_range": [
+            2,
+            31
+          ],
+          "differences": [],
+          "missing_current": [],
+          "missing_expected": [],
+          "page_pixel_sha256": {
+            "10": "ddd6d663c9ac3e66f1419c9cbe35cefbaaf69bf6af089f6de0c7da46eed9599d",
+            "11": "a90445911a94bcb053d0cb38a685a589b023d9f9c2a0ad450c3095d7412dc234",
+            "12": "bb8aa3b0dddf72e8e3bbbbca3b4d4c7fa42e9a6a0af78b8bd188cf9a069fe948",
+            "13": "86ed8ccdc378bf3518f0ef51e04287ba0dd48dd8e454aebfc4d4f13d4436114e",
+            "14": "121f30e4b50bafb8c9ac0d904642176059e215250097b90a09111a62644c2b85",
+            "15": "1ca327e2c7df5b197b38740763b140460279bfb3d323844f991d902d4b4f220a",
+            "16": "d6c3f92e6bcc681542d2f3495c74ff187ff3ed53eb0b1bc50147fec60ffbebbf",
+            "17": "ee3a860a60d031303a94f5ff5af0724dfed215144c0b382b94585bf1007a5c22",
+            "18": "de712115845fd03fe3524e31270d872463baeb1573270427f77d99f106905a09",
+            "19": "26af490837dbbb88d01a46da8fcd536f0a0985af2e1e1b78ac415a06d9d79c02",
+            "2": "2d0fe20eb0c05738cb635c452b0dcc9f00b3d99b3c3b6aff157b0d1d0877bca8",
+            "20": "ddfaeb8ab67ea05ea704fb4a0e909f39f70ae77801b162f547c9bb727d33e81f",
+            "21": "a28ee565b55e4add8a5cdfbed3ef95f599ceae7d71a856771927f8626c6092d3",
+            "22": "20266ac8089b84c49386a56cd9380867a0d32981825db652a9a4138a80a6cab7",
+            "23": "af8b5610eff693a03f454c0d5ac2e96b4764b21c483f6e54d640036e0e51535c",
+            "24": "9a86cdb3d9a3b27db3fba8e7076cfaeca0d08bfdeca5af6f6afb84712b950214",
+            "25": "9f6ebb3fc57eee9b0fdb6195cc6df1dc58225bcf9c1f1c27bfac6f9412e9601c",
+            "26": "1cf2fa0b450ef485b1e4ca08e30e9dafd71e0326d145ef1c379587a68edc2250",
+            "27": "67c745b516f682439eb174c1e0b068561251ffda89dd81e4a3579d6ffbd70adf",
+            "28": "311d395cb31003383fe7d1174ba25a9b8b9b28b6e5877f7e8348bc9d7eea4577",
+            "29": "c831a60b0cd0ebf813ccbe15f359a91818e9a37e7045f236eb05c5985b23b033",
+            "3": "7b6c1ee81b0802aff340befc1d56f4046446960f5054974906db9d8393805df7",
+            "30": "e8dce508c86215f522093d6ca2c3be1b91fedfa0499ac2ae33da41dfbb41e780",
+            "31": "4f1b253dede1c388f2d9679ae3b6c39604a05164de1c989992a044cc04c4a96a",
+            "4": "935aed42acbe43c277a1ac08c644ed4c0827814c3d4d71b3e8ba063604b1fed1",
+            "5": "347e17ce0f6d0d039c28b6d451f44bc64a5930620e8579649515c3e955a014d7",
+            "6": "6e620b49076421d931c49f8d0bafbcba9c8a1d8414ee4a66031f872f8bd06460",
+            "7": "88ad48ac8400b11afe0aefa7e39f77b08c7282a3af70aa6a4eb423911c883e3c",
+            "8": "4564e0802a7e94659c6ac715e70f7c3fef72b2dfd6fa054dec231673e9e2bb6d",
+            "9": "d5483248243910bdd028e70bcb532384edd127f764765345c8500b24469adef0"
+          },
+          "pages_compared": 30,
+          "passed": true,
+          "renderer": "pdftoppm 72 dpi RGB PPM",
+          "unexpected_current": [],
+          "unexpected_expected": []
+        },
+        "manifest_and_provenance_contract": {
+          "checks": {
+            "declared_file_matches_deployed": true,
+            "declared_source_exists_and_matches_deployed": true,
+            "effective_css_has_no_bw_conversion": true,
+            "manifest_sha_matches_deployed": true,
+            "photographic_origin_native_black_and_white": true,
+            "render_treatment_no_grayscale_conversion": true
+          },
+          "declared_file": "cover.png",
+          "declared_sha256": "347f75bc02c056dfed010f231564c53188c078ce9e032549ae57488c87385744",
+          "declared_source": "assets/cover.png",
+          "deployed_file": "cover.png",
+          "deployed_sha256": "347f75bc02c056dfed010f231564c53188c078ce9e032549ae57488c87385744",
+          "effective_css_filter": {
+            "candidates": [
+              {
+                "order": 19,
+                "selector": ".collection-cover>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "grayscale(1) saturate(0) contrast(1.10) brightness(.81)"
+              },
+              {
+                "order": 29,
+                "selector": ".cover-n10>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "grayscale(1) saturate(0) contrast(1.16) brightness(.72)"
+              },
+              {
+                "order": 55,
+                "selector": ".cover-n10>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "none"
+              },
+              {
+                "order": 76,
+                "selector": ".cover-n10>img",
+                "source": "magazine.css",
+                "specificity": [
+                  0,
+                  1,
+                  1
+                ],
+                "value": "none"
+              }
+            ],
+            "conversion_filter_detected": false,
+            "effective": {
+              "order": 76,
+              "selector": ".cover-n10>img",
+              "source": "magazine.css",
+              "specificity": [
+                0,
+                1,
+                1
+              ],
+              "value": "none"
+            },
+            "passed": true
+          },
+          "manifest": "manifest.json",
+          "passed": true,
+          "photographic_origin": "native_black_and_white",
+          "render_treatment": "no_grayscale_conversion",
+          "source_exists": true,
+          "source_sha256": "347f75bc02c056dfed010f231564c53188c078ce9e032549ae57488c87385744"
+        },
+        "native_cover_image": {
+          "asset": "N10-v9-final/assets/cover.png",
+          "deployed_matches_premium_source": false,
+          "metrics": {
+            "channel_spread_p95": 6.0,
+            "file": "N10-v9-final/assets/cover.png",
+            "luminance": {
+              "dark_below_32_pct": 13.14,
+              "highlights_above_224_pct": 46.34,
+              "mean": 154.15,
+              "midtones_64_192_pct": 20.87,
+              "p05": 13.0,
+              "p50": 206.42,
+              "p95": 237.42,
+              "range_p95_p05": 224.42,
+              "stddev": 87.65
+            },
+            "native_bw_passed": true,
+            "raw_tonal_reference_passed": true,
+            "sha256": "347f75bc02c056dfed010f231564c53188c078ce9e032549ae57488c87385744",
+            "size_px": [
+              1055,
+              1491
+            ]
+          },
+          "passed": true,
+          "premium_sources": []
+        },
+        "pages_and_a4": {
+          "expected_a4_pt": [
+            594.96,
+            841.92
+          ],
+          "expected_pages": 31,
+          "non_a4_pages": [],
+          "pages": 31,
+          "passed": true,
+          "tolerance_pt": 1.0,
+          "unique_page_sizes_pt": [
+            [
+              594.96,
+              841.92
+            ]
+          ]
+        },
+        "pdf_image_bleed": {
+          "bbox": {
+            "bottom": 843.468,
+            "top": 0.0,
+            "x0": 0.0,
+            "x1": 596.361
+          },
+          "gaps_pt": {
+            "bottom": 0.0,
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0
+          },
+          "passed": true,
+          "tolerance_pt": 1.5
+        },
+        "rendered_halo": {
+          "bottom_band_max_row_mean_delta": 104.6,
+          "maximum_allowed_px": 1,
+          "pale_uniform_border_depth_px": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "passed": true
+        },
+        "urls_equal_baseline": {
+          "added": [],
+          "baseline": [
+            "https://doi.org/10.1016/j.destud.2011.07.006",
+            "https://doi.org/10.6028/NIST.AI.600-1",
+            "https://dora.dev/research/2025/dora-report/",
+            "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+            "https://www.computer.org/education/bodies-of-knowledge/software-engineering/v4",
+            "https://www.iso.org/standard/72089.html",
+            "https://www.iso.org/standard/81702.html",
+            "https://www.linkedin.com/in/carralbal/",
+            "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+          ],
+          "baseline_count": 9,
+          "current": [
+            "https://doi.org/10.1016/j.destud.2011.07.006",
+            "https://doi.org/10.6028/NIST.AI.600-1",
+            "https://dora.dev/research/2025/dora-report/",
+            "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+            "https://www.computer.org/education/bodies-of-knowledge/software-engineering/v4",
+            "https://www.iso.org/standard/72089.html",
+            "https://www.iso.org/standard/81702.html",
+            "https://www.linkedin.com/in/carralbal/",
+            "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+          ],
+          "current_count": 9,
+          "passed": true,
+          "removed": []
+        }
+      },
+      "code": "N10",
+      "package": "N10-v9-final",
+      "passed": true,
+      "pdf": "N10-v9-final/output/N10-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "cd5511c6bc9424c51ae2edd72444c0fe908dfa9f82753d29c93b39236a863f89"
+    }
+  ],
+  "method": {
+    "bleed_and_halo": "Caja de imagen a <= 1,5 pt de cada borde, CSS de imagen y overlay a página completa y borde pálido uniforme <= 1 px.",
+    "cover_alt": "Alt no vacío en HTML y coincidencia exacta con una Figure /Alt de la página 1 que tenga ruta semántica válida mediante MCID o MCR y ParentTree, u OBJR, StructParent y ParentTree; PDF marcado y con idioma español. El /Alt del XObject se informa sólo como diagnóstico.",
+    "eyebrow": "Las cadenas LECTURA PREVIA y EDICIÓN 2026 aparecen completas y en orden en la extracción de la página 1.",
+    "interior_pixel_comparison": "Páginas 2 a última, raster RGB PPM a 72 dpi con pdftoppm; SHA-256 exacto contra la huella canónica por página.",
+    "native_bw": "Dispersión RGB p95 menor o igual a 8 en el activo desplegado.",
+    "tonal_range": "Sobre la tapa PDF compuesta: media 60–190, p95 >= 145, p95 menos p05 >= 110, desvío >= 35, sombras < 32 <= 40 % y medios tonos 64–192 >= 25 %.",
+    "url_set": "Igualdad exacta de los URI de anotaciones PDF contra el baseline."
+  },
+  "passed": true,
+  "root": ".",
+  "schema_version": 2,
+  "scope": "METSI Bloque 1, N00–N10; N11 excluido",
+  "series_checks": {
+    "cover_source_uniqueness": {
+      "distinct_exact_sources": 11,
+      "documents": 11,
+      "exact_sha_duplicates": {},
+      "minimum_dhash_distance_64": 15,
+      "nearest_pairs": [
+        {
+          "distance_64": 15,
+          "pair": [
+            "N02",
+            "N05"
+          ]
+        },
+        {
+          "distance_64": 22,
+          "pair": [
+            "N01",
+            "N03"
+          ]
+        },
+        {
+          "distance_64": 23,
+          "pair": [
+            "N00",
+            "N02"
+          ]
+        },
+        {
+          "distance_64": 24,
+          "pair": [
+            "N07",
+            "N09"
+          ]
+        },
+        {
+          "distance_64": 25,
+          "pair": [
+            "N00",
+            "N03"
+          ]
+        },
+        {
+          "distance_64": 25,
+          "pair": [
+            "N03",
+            "N04"
+          ]
+        },
+        {
+          "distance_64": 25,
+          "pair": [
+            "N04",
+            "N09"
+          ]
+        },
+        {
+          "distance_64": 26,
+          "pair": [
+            "N00",
+            "N04"
+          ]
+        }
+      ],
+      "passed": true
+    },
+    "interior_pages_compared_total": {
+      "actual": 328,
+      "expected": 328,
+      "passed": true
+    }
+  },
+  "summary": {
+    "documents_passed": 11,
+    "documents_total": 11,
+    "failed_checks": {},
+    "interior_pages_compared": 328,
+    "url_sets_equal": 11
+  }
+}

@@ -2,16 +2,16 @@
 
 ## Estado
 
-N10 queda compuesto, exportado y auditado como candidato final desde la fuente canónica aprobada. El contenido, la estructura, la accesibilidad, las imágenes, los enlaces y la compaginación quedan cerrados técnicamente. La futura revisión comparada de las tapas N00 a N10 no habilita cambios en el cuerpo.
+N10 queda compuesto, exportado y auditado como PDF final desde la fuente canónica aprobada. El contenido, la estructura, la accesibilidad, las imágenes, los enlaces y la compaginación quedan cerrados técnicamente. La auditoría técnica consolidada de las tapas N00 a N10 cerró con resultado `PASS` para los once documentos, 328 páginas interiores y once conjuntos de URL.
 
 ## Entregable principal
 
 `output/N10-METSI-lectura-previa-v9-final.pdf`
 
 - 31 páginas A4.
-- 21.552.486 bytes.
-- Fecha de modificación: 4 de septiembre de 2026, 02:12:44, hora de Buenos Aires.
-- SHA-256: `53f251c2fbff6b6964d20e453a666c41dad0d7213caff31fe164d4cb751a1bcb`.
+- 21.552.865 bytes.
+- Fecha de modificación: 4 de septiembre de 2026, 08:48:04, hora de Buenos Aires.
+- SHA-256: `cd5511c6bc9424c51ae2edd72444c0fe908dfa9f82753d29c93b39236a863f89`.
 
 ## Fuente autoritativa
 
@@ -68,8 +68,8 @@ El último comando debe terminar con código cero y `status: PASS`.
 
 ## Publicación
 
-No se publicó ni se creó un commit durante este cierre. La publicación remota de N10 requiere autorización expresa.
+El paquete queda preparado localmente. La publicación remota de N10 requiere autorización expresa.
 
 ## Incertidumbre residual
 
-No queda incertidumbre de contenido, estructura, imágenes, enlaces, accesibilidad o compaginación. La única decisión todavía abierta es la comparación autoral conjunta del tono de las tapas N00 a N10.
+No queda incertidumbre técnica de contenido, estructura, imágenes, enlaces, accesibilidad, compaginación ni pertenencia de la tapa a la familia N00 a N10.

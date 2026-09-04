@@ -2,16 +2,16 @@
 
 ## Estado
 
-N08 queda compuesto, exportado y auditado como candidato final desde la fuente canónica aprobada. El contenido, la estructura, la accesibilidad, los enlaces y la compaginación quedan cerrados técnicamente. La futura revisión comparada de las tapas N00 a N10 no habilita cambios en el cuerpo.
+N08 queda compuesto, exportado y auditado como PDF final desde la fuente canónica aprobada. El contenido, la estructura, la accesibilidad, los enlaces y la compaginación quedan cerrados técnicamente. La auditoría técnica consolidada de las tapas N00 a N10 cerró con resultado `PASS` para los once documentos, 328 páginas interiores y once conjuntos de URL.
 
 ## Entregable principal
 
 `output/N08-METSI-lectura-previa-v9-final.pdf`
 
 - 28 páginas A4.
-- 19.296.200 bytes.
-- Fecha de modificación: 4 de septiembre de 2026, 00:33:33, hora de Buenos Aires.
-- SHA-256: `0c1825a1effcb0b7f0c4ea2a312f0d1ef08cde461158e7b1b87bec40d599f4f3`.
+- 19.397.092 bytes.
+- Fecha de modificación: 4 de septiembre de 2026, 07:57:59, hora de Buenos Aires.
+- SHA-256: `8513d10b826cf9f69d9f8948a941a9013c1c57968bc9a08bfdc9686e8c788f36`.
 
 ## Fuente autoritativa
 
@@ -36,7 +36,7 @@ Es byte a byte idéntica a `N08-content-final`, con SHA-256 `328d2858fbe170bee35
 - Referencias base en dos columnas minimalistas, sin fotografía ni barra ornamental;
 - cierre canónico con fósforos, folio, línea de pie, epígrafe, texto alternativo y sin frase grande;
 - PDF etiquetado en `es-AR`, con folio y pie enlazado en sus 28 páginas;
-- N07 preservado byte a byte.
+- N07 preservado con SHA-256 `c7b36bffcd3da4d1955f3563f7836dc9fad28d5cb0fa5ed7129bba1f2b075bd9`.
 - segunda construcción con HTML, CSS, manifiesto fuente y plancha de contacto idénticos a la primera; la marca temporal interna explica la variación binaria del PDF.
 
 ## Archivos de control
@@ -65,4 +65,4 @@ El último comando debe terminar con código cero y `status: PASS`.
 
 ## Incertidumbre residual
 
-No queda incertidumbre de contenido, estructura, imágenes, enlaces, accesibilidad o compaginación. La única decisión todavía abierta es la comparación autoral conjunta del tono de las tapas N00 a N10.
+No queda incertidumbre técnica de contenido, estructura, imágenes, enlaces, accesibilidad, compaginación ni pertenencia de la tapa a la familia N00 a N10. La publicación remota de N08 requiere autorización expresa.

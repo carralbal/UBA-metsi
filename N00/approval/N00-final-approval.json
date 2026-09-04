@@ -9,28 +9,30 @@
     "approval_statement": "N00 final aprobado.",
     "approved_at": "2026-08-31T15:33:12-03:00",
     "approved_by": "Diego Carralbal",
-    "approval_channel": "Conversación local de Codex"
+    "approval_channel": "Conversación local de Codex",
+    "approval_scope_note": "La aprobación y su fecha son las originales. La actualización de identidad del 4 de septiembre de 2026 registra el PDF vigente y su auditoría familiar, pero no constituye una aprobación autoral nueva.",
+    "artifact_refreshed_at": "2026-09-04T09:49:25-03:00"
   },
   "canonical_files": {
     "source_markdown": {
-      "path": "../../../metsi_content/lecturas_fuente_v8/N00_como_leer_metsi.md",
+      "path": "../source/N00_como_leer_metsi.md",
       "sha256": "e94edbd29855899f25f22c7ae695cd2a3fe7964371fe210d6b3a1035dd620763"
     },
     "builder": {
       "path": "../../build_collection.py",
-      "sha256": "2fd3183ad0f9346d23c62536d9aafbad984a8591414b31eff26d910d0c1236db"
+      "sha256": "f0249529fc10f42c2bcdc757f11c9a4e1ddb93dff1959926a104667c719f3ed6"
     },
     "generated_html": {
       "path": "../index.html",
-      "sha256": "8c64b64b6174a0ca74aa4f107e7a489248f5188f68fbf7dedca35517de62ffa6"
+      "sha256": "2ffb39fbab3c047db3853cd373f33a43b70b7aff8360146c7886efd1e998f5e9"
     },
     "generated_css": {
       "path": "../magazine.css",
-      "sha256": "ab1afbd477ab4afae362d19f37e46c4460bb40f8bdc8aaeb5985b120c376b8c2"
+      "sha256": "3d62c1390340de42b17e525e06b01d7fb38f7bd9aaca8c4d602622b97f379406"
     },
     "document_manifest": {
       "path": "../manifest.json",
-      "sha256": "73171576285ed512c7445431d6dad98f0c78105d02b9b18e60563ad87ae8923c"
+      "sha256": "f4e12a3df0bed2dc95129936f8119326cd1e8511b5f0ff70cc1384138affd927"
     },
     "integrity_report": {
       "path": "../integrity-report.json",
@@ -39,15 +41,27 @@
     },
     "qa_report": {
       "path": "../qa-report.json",
-      "sha256": "34f5812d5e63ede44eb5159403fa2984a47f9646960ef7401fb414bba74fbe2a",
+      "sha256": "4f1fbe45f002ed5231f4502b5434d226d3ba6a63d2293f65019e88131cd32a81",
       "status": "PASS"
     },
     "approved_pdf": {
       "path": "../output/N00-METSI-lectura-previa-final.pdf",
-      "sha256": "f995354046f9c3b0f60c568e7ebc241926d88fa115833c61ca427935301c2eae",
-      "bytes": 30977614,
+      "sha256": "1b4a1ab42665246349ed240659585a2e33766fe72157032bfbefc03cc7127f64",
+      "bytes": 30648242,
       "pages": 45,
-      "page_format": "A4"
+      "page_format": "A4",
+      "modified_at": "2026-09-04T08:59:48-03:00",
+      "tagged": true,
+      "marked": true,
+      "language": "es-AR"
+    },
+    "cover_asset": {
+      "path": "../assets/cover.jpg",
+      "sha256": "e0f87e115ad8f9be9d08989072276b44980858fd641b7b373114eb644ebae7f1",
+      "bytes": 1847786,
+      "photographic_origin": "native_black_and_white",
+      "render_treatment": "no_grayscale_conversion",
+      "alt": "Músico de contrabajo durante un ensayo orquestal, visto entre el instrumento, la partitura y las relaciones del conjunto"
     },
     "approved_contact_sheet": {
       "path": "N00-final-approved-contact-sheet.png",
@@ -55,25 +69,45 @@
       "bytes": 1947656,
       "pixel_width": 1100,
       "pixel_height": 3015,
-      "represented_pages": 45
+      "represented_pages": 45,
+      "evidence_scope": "historical_approval"
+    },
+    "current_family_audit": {
+      "path": "../../BLOCK-01-cover-final/audit.json",
+      "sha256": "295e3532f219649fdb6975fb68d66f6a4a5b186504ebac3ec3bb2f207c770f18",
+      "status": "PASS",
+      "documents_passed": 11,
+      "documents_total": 11,
+      "interior_pages_equal": 328,
+      "url_sets_equal": 11,
+      "semantic_cover_alts_valid": 11
+    },
+    "current_family_contact_sheet": {
+      "path": "../../BLOCK-01-cover-final/contact-sheet-N00-N10.jpg",
+      "sha256": "ac43864b744f8b79742fd85cb2a501a3ca47e2be38187485401b7c410d8a21e6",
+      "bytes": 427635
+    },
+    "portable_interior_baseline": {
+      "path": "../../BLOCK-01-cover-final/baseline-interior-hashes.json",
+      "sha256": "64072008f839a5b266ad8189911e3b3e173748b5bdd0b7ea8effbc2378450a61"
     }
   },
   "editorial_standard_snapshot": {
     "metsi_compose_document": {
-      "path": "/Users/diegocarralbal/.codex/skills/metsi-compose-document/SKILL.md",
-      "sha256": "76154d97870ee22eea00a2d427c1a2c6daf4ff454577fcb6a008c03a01b89ddf"
+      "path": "../../editorial-standard/metsi-compose-document/SKILL.md",
+      "sha256": "8f7930a01c66f0e2a5a3d207cdda7542b63374d94540bfd7c528449a81f010a3"
     },
     "premium_magazine_system": {
-      "path": "/Users/diegocarralbal/.codex/skills/metsi-compose-document/references/premium-magazine-system.md",
-      "sha256": "dacbcb87c4148356306b936cd21b0dc4d73c027e6882953d0256d2983c9605f2"
+      "path": "../../editorial-standard/metsi-compose-document/references/premium-magazine-system.md",
+      "sha256": "035a566641087300cf5abb767c9f8c18ccceb51265492306ac80d2e2c92cb74b"
     },
     "metsi_find_images": {
-      "path": "/Users/diegocarralbal/.codex/skills/metsi-find-images/SKILL.md",
+      "path": "../../editorial-standard/metsi-find-images/SKILL.md",
       "sha256": "5847607afc1e1ee2ae8e973192099b801ab184beefc1f1f6f25671e00dc5e01f"
     },
     "metsi_generate_courseware": {
-      "path": "/Users/diegocarralbal/.codex/skills/metsi-generate-courseware/SKILL.md",
-      "sha256": "cfb6c74faf4c9f69b0c31509c774f16cd4ca1b06cab504db37bd9d51a6c7fece"
+      "path": "../../editorial-standard/metsi-generate-courseware/SKILL.md",
+      "sha256": "3fbb62327b7a2c2754da60456c72aa0f3c299a4a892141919f28d68ecfb7813c"
     }
   },
   "locked_invariants": [
@@ -94,12 +128,11 @@
     "folios_and_orphans": "PASS",
     "numeral_rule": "PASS",
     "structural_counts": "PASS",
-    "final_pass_changed_pages": [
-      2,
-      15,
-      39
-    ],
-    "unchanged_pages_pixel_identical": 42
+    "cover_family_audit": "PASS",
+    "cover_semantic_figure_and_alt": "PASS",
+    "native_black_and_white_cover": "PASS",
+    "interior_pages_pixel_identical_to_approved_baseline": 44,
+    "family_url_sets_equal": 11
   },
   "reopening_policy": "Esta versión no se modifica salvo error objetivo expresamente identificado y autorizado. Toda revisión futura debe comparar sus archivos y su plancha visual contra este registro aprobado.",
   "backup_scope": "La copia de respaldo separada no fue consultada, abierta ni modificada durante este cierre."

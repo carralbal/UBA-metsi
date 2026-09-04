@@ -1561,3 +1561,8 @@ body.premium-magazine {
 .references-image-full::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.72) 100%)}
 .references-image-full p{position:absolute;z-index:3;left:18mm;right:18mm;bottom:22mm;margin:0;color:#fff;font-family:Didot,"Bodoni 72",serif;font-size:21pt;line-height:1.05}
 .premium-magazine .full-bleed{break-before:auto;break-after:auto;page-break-before:auto;page-break-after:auto}
+
+/* METSI cover audit 2026-09-04 */
+.cover-n01>img{filter:none}
+.cover-n01 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.18) 0,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 61%,rgba(8,9,8,.55) 100%)}
+.cover-n01::before{display:block;background:linear-gradient(to bottom,rgba(0,0,0,.48) 0,rgba(0,0,0,.38) 44%,rgba(0,0,0,0) 100%)}

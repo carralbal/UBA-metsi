@@ -20,6 +20,6 @@ La composición no aplica conversión CSS a escala de grises ni una capa negra g
 
 El encargo de producción, el texto alternativo y los datos técnicos se conservan en `image-generation-manifest.json`. La tapa usada por el HTML es `assets/cover.png`, copia byte a byte de la fuente preservada.
 
-## Revisión pendiente de familia
+## Revisión de familia
 
-La tapa aprueba la auditoría individual. La comparación autoral de tono, encuadre y continuidad entre las tapas N00 a N10 permanece reservada para la revisión conjunta solicitada por el autor.
+La tapa aprueba la auditoría individual y la auditoría técnica consolidada de tono, encuadre y continuidad de la familia N00 a N10. Resultado: `PASS`.

@@ -3,11 +3,47 @@
   "version": "v9-final",
   "status": "PASS",
   "source_sha256": "6930c5a6cf7c98ad2f60ebf662334a7f491827260e460c939c51b7c9acef6854",
-  "pdf_sha256": "5b0d2f0efb950f7d95f19b2bbb50c697b5f33901623c8a56ab6b768f8dfa9a15",
-  "pdf_bytes": 14050020,
-  "pdf_modified": 1788455218.7628562,
+  "pdf_sha256": "08154728ce84f956c88f65a46d08018fda8ec933ca820380f9fb1166cc3512ef",
+  "pdf_bytes": 15142425,
+  "pdf_modified": 1788519462.7547052,
+  "regression_lock_sha256": "19fdcb405e751c192385fb3014ccba1866550cc63ff4db821b6bf6b98ba931b7",
   "pages": 30,
   "checks": [
+    {
+      "check": "regression_lock_matches_current_artifacts",
+      "status": "PASS",
+      "detail": {
+        "passed": true,
+        "lock_sha256": "19fdcb405e751c192385fb3014ccba1866550cc63ff4db821b6bf6b98ba931b7",
+        "declared_paths": [
+          "assets/cover-source-premium-bw-v3.png",
+          "assets/cover.png",
+          "index.html",
+          "integrity-report.json",
+          "magazine.css",
+          "manifest.json",
+          "output/N03-METSI-lectura-previa-v9-final.pdf",
+          "output/N03-METSI-lectura-previa-v9.pdf",
+          "provenance/cover-image-premium-bw-v3.md",
+          "provenance/image-manifest.json",
+          "qa-report.json",
+          "source-manifest.json",
+          "source/N03_fronteras_retroalimentacion_y_efectos-content-final.md"
+        ],
+        "missing_declarations": [],
+        "unexpected_declarations": [],
+        "digest_format_ok": true,
+        "mismatches": {},
+        "coherence": {
+          "cover_asset": true,
+          "cover_alias": true,
+          "cover_provenance": true,
+          "final_pdf": true,
+          "raw_pdf": true,
+          "pdf_bytes": true
+        }
+      }
+    },
     {
       "check": "canonical_source_is_byte_identical",
       "status": "PASS",
@@ -68,8 +104,8 @@
       "check": "pdf_is_new_finalized_artifact",
       "status": "PASS",
       "detail": {
-        "raw_sha256": "c4742cede0ed1ee30013b8f1fa4b848c40bea35ebad2cdad77f87088e7e2e69d",
-        "final_sha256": "5b0d2f0efb950f7d95f19b2bbb50c697b5f33901623c8a56ab6b768f8dfa9a15"
+        "raw_sha256": "3601e82536770fba33ed07793675ad509471458799c3ea0ee2de9fcb9ecd68e4",
+        "final_sha256": "08154728ce84f956c88f65a46d08018fda8ec933ca820380f9fb1166cc3512ef"
       }
     },
     {
@@ -230,9 +266,43 @@
       "detail": "METSILECTURA PREVIA\nEDICIÓN 2026\nN03\nFCE · UBA\nMETODOLOGÍA DE SISTEMAS DE INFORMACIÓN\nFronteras,retroalimentación yefectos nointencionales\nN03\nToda frontera es una\ndecisión analítica,\noperativa y política.\n01\nDiego Carralbal, 2026  ·  linkedin.com/in/carralbal\n"
     },
     {
-      "check": "premium_cover_contract",
+      "check": "premium_cover_is_native_bw_tonally_open_hash_locked_and_locally_shaded",
       "status": "PASS",
-      "detail": "cinematic magazine photograph, Argentine representation, dedicated alt text and stable source asset"
+      "detail": {
+        "passed": true,
+        "source": "assets/cover-source-premium-bw-v3.png",
+        "sha256": "06976e01da816e65e8becdc825c62bd6b166e90654f23b74f9cd2b900cb0be94",
+        "tone": {
+          "passed": true,
+          "channel_spread_p95": 1.0,
+          "luminance_p05": 18.0,
+          "luminance_p95": 218.21,
+          "tonal_span": 200.21,
+          "luminance_stddev": 58.04,
+          "fraction_below_32": 0.0923
+        },
+        "contract": {
+          "file": "cover.png",
+          "source": "assets/cover-source-premium-bw-v3.png",
+          "sha256": "06976e01da816e65e8becdc825c62bd6b166e90654f23b74f9cd2b900cb0be94",
+          "alt": "Trabajadora hotelera argentina observa un corredor operativo desde un umbral de vidrio, con carros y puertas que prolongan el circuito hacia el fondo",
+          "photographic_origin": "native_black_and_white",
+          "render_treatment": "no_grayscale_conversion",
+          "art_direction": "lighting, wardrobe, materials and tonal separation conceived for monochrome"
+        },
+        "provenance": {
+          "file": "assets/cover-source-premium-bw-v3.png",
+          "role": "cover",
+          "origin": "generated_for_metsi",
+          "photographic_origin": "native_black_and_white",
+          "alt": "Trabajadora hotelera argentina observa un corredor operativo desde un umbral de vidrio, con carros y puertas que prolongan el circuito hacia el fondo",
+          "treatment": "Sin conversión cromática; gradiente localizado para la lectura del título.",
+          "sha256": "06976e01da816e65e8becdc825c62bd6b166e90654f23b74f9cd2b900cb0be94",
+          "rights_status": "original_course_asset"
+        },
+        "cover_rule": "filter:none",
+        "shade_rule": "background:linear-gradient(180deg,rgba(5,7,6,.18)0,rgba(5,7,6,0)30%,rgba(5,7,6,0)61%,rgba(8,9,8,.58)100%)"
+      }
     },
     {
       "check": "cover_pauses_and_closing_are_full_bleed",
@@ -287,7 +357,7 @@
       "status": "PASS",
       "detail": {
         "language": "es-AR",
-        "alt_count": 3,
+        "alt_count": 4,
         "closing_alt": true
       }
     },

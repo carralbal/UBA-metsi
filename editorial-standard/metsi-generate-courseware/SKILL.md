@@ -48,6 +48,7 @@ Transform source material into complete METSI courseware through the specialist 
 
 - Treat photographs as a coherent editorial series. Assign every image a role: hero, portrait, evidence, sequence, comparison, texture, or pause.
 - For every N-document cover, source or generate a photograph conceived natively in black and white. Require monochrome-specific art direction and verify that the final composition does not depend on post hoc desaturation or a grayscale rendering filter.
+- Audit the native cover and the composited cover separately. Require an ample range of grays, visible midtones, protected highlights and textured shadows. Use dark scrims only where copy needs contrast, at the lightest viable opacity; reject a uniform black veil or any treatment that turns the cover into a predominantly crushed dark field.
 - Use one dominant image per spread. Subordinate the rest through scale, crop, or monochrome treatment.
 - Do not use rounded corners, shadows, arbitrary centered widths, or the same panoramic band repeatedly.
 - Keep provenance in the manifest, never in visible captions.

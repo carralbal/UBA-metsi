@@ -1,8 +1,8 @@
 {
   "document": "N01",
   "version": "v18",
-  "candidate": "/Users/diegocarralbal/.codex/.chatgpt-projects/g-p-689403cb2e2c8191b5f7da28a0a310be/work/METSI-N02-v8/N01-v18-final/output/N01-METSI-lectura-previa-v18-final.pdf",
-  "pdf_sha256": "c4699ae37c263815b942c810bb6f606cd129ae1e2ab1c9dc1daf3cef2b867e0a",
+  "candidate": "output/N01-METSI-lectura-previa-v18-final.pdf",
+  "pdf_sha256": "668acc44383a86dbfec31620f47b9e511c1097ff1df7b846903942f8760d57fe",
   "status": "PASS",
   "checks": [
     {
@@ -386,8 +386,8 @@
           "white_contrast_ratio": 5.329
         },
         "v18": {
-          "median_gray": 107.0,
-          "white_contrast_ratio": 5.329
+          "median_gray": 112.0,
+          "white_contrast_ratio": 4.952
         }
       }
     },
@@ -431,16 +431,16 @@
           ]
         },
         "v18": {
-          "maximum_adjacent_step": 3,
+          "maximum_adjacent_step": 2,
           "maximum_at": [
-            298,
+            438,
             0
           ],
           "legacy_seam_samples": {
-            "0": 0,
+            "0": 1,
             "5": 0,
             "11": 1,
-            "16": 0
+            "16": 1
           },
           "width": 595,
           "height": 842,
@@ -456,12 +456,47 @@
       }
     },
     {
-      "check": "cover_change_confined_to_top_band",
+      "check": "cover_is_native_bw_tonally_open_hash_locked_and_locally_shaded",
+      "status": "PASS",
+      "detail": {
+        "passed": true,
+        "source": "assets/cover-source-premium-bw-v1.png",
+        "sha256": "12a34ac7c675693add178d00f248eab710ea6154fa8ee5e4547f6e0ee6503679",
+        "tone": {
+          "passed": true,
+          "channel_spread_p95": 1.0,
+          "luminance_p05": 31.0,
+          "luminance_p95": 225.28,
+          "tonal_span": 194.28,
+          "luminance_stddev": 65.9,
+          "fraction_below_32": 0.0527
+        },
+        "contract": {
+          "file": "cover.png",
+          "source": "assets/cover-source-premium-bw-v1.png",
+          "sha256": "12a34ac7c675693add178d00f248eab710ea6154fa8ee5e4547f6e0ee6503679",
+          "alt": "Ruta serrana argentina que avanza entre curvas, roca y niebla hasta perderse en la distancia",
+          "photographic_origin": "native_black_and_white",
+          "render_treatment": "no_grayscale_conversion",
+          "art_direction": "lighting, wardrobe, materials and tonal separation conceived for monochrome"
+        },
+        "cover_rule": "filter:none",
+        "shade_rule": "background:linear-gradient(180deg,rgba(5,7,6,.18)0,rgba(5,7,6,0)30%,rgba(5,7,6,0)61%,rgba(8,9,8,.55)100%)",
+        "top_rule": "display:block;background:linear-gradient(tobottom,rgba(0,0,0,.48)0,rgba(0,0,0,.38)44%,rgba(0,0,0,0)100%)"
+      }
+    },
+    {
+      "check": "cover_photo_replacement_reaches_the_whole_page",
       "status": "PASS",
       "detail": {
         "top_band_height_pixels_at_72dpi": 149,
-        "lower_cover_pixel_identical": true,
-        "full_difference_bbox": null
+        "lower_cover_pixel_identical": false,
+        "full_difference_bbox": [
+          0,
+          0,
+          595,
+          842
+        ]
       }
     },
     {
@@ -539,10 +574,11 @@
       "detail": "residual connector label absent from SVG and PDF text layer"
     },
     {
-      "check": "expected_repagination_uses_canonical_source",
+      "check": "expected_repagination_and_cover_audit_use_canonical_source",
       "status": "PASS",
       "detail": {
         "changed_visual_pages": [
+          1,
           2,
           3,
           24,
@@ -558,6 +594,7 @@
         "source_delta_words": 214,
         "pdf_delta_words": 208,
         "changed_visual_pages": [
+          1,
           2,
           3,
           24,
@@ -714,11 +751,12 @@
       "detail": "no uppercase production placeholder markers"
     },
     {
-      "check": "assets_preserved",
+      "check": "cover_and_editorial_assets_match_the_packaged_provenance",
       "status": "PASS",
       "detail": {
-        "assets": 8,
-        "hashes_valid": true
+        "passed": true,
+        "records": 8,
+        "failures": []
       }
     },
     {

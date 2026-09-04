@@ -29,14 +29,17 @@ Compose the final artifact directly as standards-based HTML and export it to PDF
    `python3 scripts/validate_magazine.py document.json`
 
 6. Inspect HTML at 1280 px, 768 px, and 390 px. For `magazine-print`, also export A4 PDF and inspect every page plus a contact sheet.
-7. Compare rendered `data-source-id` elements against the eligible-source manifest. Require equal block count, equal normalized text, and zero eligible-word delta.
-8. Reject accidental blank zones, orphan headings, split paragraphs, arbitrary image widths, repeated infographics, visible provenance, and any regression against previously approved pages.
-9. Deliver the output directory with `document.json`, source manifest, image manifest, editable diagrams, integrity report, PDF, contact sheet, and QA report.
+7. Rasterize every page declared full bleed from the final PDF and measure the rendered artwork against the PDF media box. A nominal CSS size of 210 × 297 mm is not evidence of bleed. Reject any continuous paper-colored strip on the top, bottom, left, or right edge. When a postprocess compensates for browser scaling, apply it consistently to every document in scope and only to the intended full-bleed page.
+8. Compare rendered `data-source-id` elements against the eligible-source manifest. Require equal block count, equal normalized text, and zero eligible-word delta.
+9. Reject accidental blank zones, orphan headings, split paragraphs, arbitrary image widths, repeated infographics, visible provenance, and any regression against previously approved pages.
+10. Deliver the output directory with `document.json`, source manifest, image manifest, editable diagrams, integrity report, PDF, contact sheet, and QA report.
 
 ## Magazine composition rules
 
 - Treat the spread as the primary editorial unit. Use a six-column grid per page and twelve columns per spread.
 - Create every METSI N-document cover photograph natively in black and white. The photographic concept, lighting ratios, wardrobe, materials, background separation, exposure, and tonal hierarchy must be designed for monochrome from the outset. Reject a cover conceived or sourced in color and later desaturated or converted with a grayscale filter. Record native monochrome intent and provenance in the image manifest, and do not apply a CSS grayscale conversion to the approved cover asset.
+- Preserve a broad monochrome tonal scale on covers. Mid-grays, luminous highlights, textured shadows, and local separation must remain visible; a METSI cover is not a uniformly dark field. Treat the dark scrim as a local legibility instrument, not a default aesthetic layer: begin with the lightest viable overlay, strengthen it only behind copy that fails contrast, and never let it crush photographic detail across the full page. Audit the native image and the composited cover separately so low exposure and an over-strong overlay cannot compound unnoticed.
+- Avoid CSS image filters on a cover when exporting with Chromium: even a tonal-only `contrast()` or `brightness()` filter can remove the image from the PDF structure tree. If tonal compression is necessary, prefer a native asset or a neutral substrate with controlled image opacity, then verify that page 1 retains a `/Figure` element with exact `/Alt`, `/Lang es-AR`, and a marked structure tree.
 - Establish one dominant mass, one secondary mass, and one support zone per spread.
 - Use high-contrast display serif for titles, readable serif for long body text, and sans serif for kickers, folios, labels, captions, and running matter.
 - Keep body typography consistent. Use smaller text only for captions, folios, metadata, compact tables, and reviewed infographic labels.
@@ -94,6 +97,7 @@ Reject the output if any of these are true:
 - title, body, metadata, and caption use an undifferentiated typographic voice;
 - a page has more than 40% avoidable empty area;
 - a visual-pause page is not intentionally full-page or structurally composed;
+- a cover, full-page photograph, dark divider, or closing page leaves a continuous paper-colored strip on any edge of the final PDF render, even when its source CSS declares full-page dimensions;
 - an infographic exceeds half a page without documented conceptual need;
 - two infographics repeat the same topology without comparative purpose;
 - a paragraph, list item, title, label, or caption is clipped or split awkwardly;

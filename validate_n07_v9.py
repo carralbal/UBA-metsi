@@ -30,7 +30,7 @@ from pypdf import PdfReader
 HERE = Path(__file__).resolve().parent
 DEFAULT_ROOT = HERE / "N07-v9-final"
 EXPECTED_SOURCE_SHA = "4e0416a028109761f0a9f498315946a62a147355c759054a733dd82902f639b6"
-EXPECTED_N06_PDF_SHA = "7cd9de77fdb634f90f8f47a083a2f9e77cadc042621ae01b7b9f5fae09df7955"
+EXPECTED_N06_PDF_SHA = "c05782e7ad61b544994032c4eb6a740ff52ab34573b9a45d36960f5dd03bfd6a"
 EXPECTED_BLOCKS = 371
 EXPECTED_PAGES = 31
 EXPECTED_A4 = (594.96, 841.92)
@@ -198,6 +198,24 @@ def percentile(values: list[float], fraction: float) -> float:
 
 def result(name: str, passed: bool, detail: Any) -> dict[str, Any]:
     return {"check": name, "status": "PASS" if passed else "FAIL", "detail": detail}
+
+
+def package_relative_report_paths(value: Any, root: Path) -> Any:
+    """Vuelve portables las rutas internas del informe sin alterar el gate."""
+    if isinstance(value, dict):
+        return {key: package_relative_report_paths(item, root) for key, item in value.items()}
+    if isinstance(value, list):
+        return [package_relative_report_paths(item, root) for item in value]
+    if isinstance(value, tuple):
+        return [package_relative_report_paths(item, root) for item in value]
+    if isinstance(value, str):
+        candidate = Path(value)
+        if candidate.is_absolute():
+            try:
+                return candidate.relative_to(root).as_posix()
+            except ValueError:
+                pass
+    return value
 
 
 class HtmlInventory(HTMLParser):
@@ -787,14 +805,15 @@ def main() -> int:
     ]
     missing_essential = [str(path) for path in essential if not path.exists()]
     if missing_essential:
+        error_report = {
+            "document": "N07",
+            "version": "v9-final",
+            "status": "ERROR",
+            "missing": missing_essential,
+        }
         print(
             json.dumps(
-                {
-                    "document": "N07",
-                    "version": "v9-final",
-                    "status": "ERROR",
-                    "missing": missing_essential,
-                },
+                package_relative_report_paths(error_report, root),
                 ensure_ascii=False,
                 indent=2,
             )
@@ -1361,7 +1380,7 @@ def main() -> int:
         "minimum_ordinary_page_fill": min(ordinary_fill.values()),
         "checks": checks,
     }
-    print(json.dumps(report, ensure_ascii=False, indent=2, default=str))
+    print(json.dumps(package_relative_report_paths(report, root), ensure_ascii=False, indent=2, default=str))
     return 0 if passed else 1
 
 

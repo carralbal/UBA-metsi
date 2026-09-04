@@ -25,4 +25,4 @@ La página de Contenido combina el índice con una fotografía propia que no se 
 | Referencias minimalistas en dos columnas | PASS |
 | Accesibilidad, folios y enlaces | PASS |
 | Cierre estructurado con fósforos | PASS |
-| Familia de tapas N00 a N10 | Pendiente de revisión autoral comparada |
+| Familia de tapas N00 a N10 | PASS técnico consolidado |

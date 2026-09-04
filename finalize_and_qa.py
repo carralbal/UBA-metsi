@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import zlib
 from io import BytesIO
@@ -20,12 +21,28 @@ from reportlab.lib.utils import ImageReader
 
 HERE = Path(__file__).resolve().parent
 LINKEDIN = "https://www.linkedin.com/in/carralbal/"
-N01_APPROVED = HERE.parent / "N01-reference-grade/cover-proof/output/pdf/N01-portada-editorial-premium-reticula-n02-v14.pdf"
+
+
+def resolve_font(env_name: str, packaged_name: str, system_path: str) -> Path:
+    """Resolve the exact METSI font without depending on a user directory."""
+    candidates = []
+    configured = os.environ.get(env_name)
+    if configured:
+        candidates.append(Path(configured).expanduser())
+    candidates.extend((HERE / "assets" / "fonts" / packaged_name, Path(system_path)))
+    for candidate in candidates:
+        if candidate.is_file():
+            return candidate
+    raise FileNotFoundError(
+        f"Falta {packaged_name}. Definí {env_name} con la ruta al archivo tipográfico autorizado."
+    )
 
 
 def register_fonts() -> None:
-    pdfmetrics.registerFont(TTFont("Avenir", "/System/Library/Fonts/Avenir.ttc", subfontIndex=0))
-    pdfmetrics.registerFont(TTFont("Didot", "/System/Library/Fonts/Supplemental/Didot.ttc", subfontIndex=0))
+    avenir = resolve_font("METSI_AVENIR_FONT", "Avenir.ttc", "/System/Library/Fonts/Avenir.ttc")
+    didot = resolve_font("METSI_DIDOT_FONT", "Didot.ttc", "/System/Library/Fonts/Supplemental/Didot.ttc")
+    pdfmetrics.registerFont(TTFont("Avenir", str(avenir), subfontIndex=0))
+    pdfmetrics.registerFont(TTFont("Didot", str(didot), subfontIndex=0))
 
 
 def footer(width: float, height: float, number: int, light: bool) -> bytes:
@@ -78,7 +95,11 @@ def solid_left_band(width: float, height: float, band_width: float, red: float, 
 
 
 def set_image_alt(page, value: str) -> int:
-    """Attach explicit alternative text to every image XObject on one page."""
+    """Attach diagnostic alt metadata to image XObjects.
+
+    This does not replace a tagged ``Figure`` connected through the structure
+    tree.  It is retained only as redundant metadata for compatible viewers.
+    """
     resources = page.get("/Resources")
     if not resources:
         return 0
@@ -332,12 +353,12 @@ def scale_cover_pattern_matrices(page, scale: float) -> int:
 
 
 def extend_n01_cover_pattern_to_trim(page) -> int:
-    """Extend both N01 cover scrim patterns to the bottom trim without tiling.
+    """Extend N01's localized cover scrim to the bottom trim without tiling.
 
-    Chromium rasterizes the general shade and the local contrast reinforcement
-    as separate full-page patterns. The general shade extends its dark final
-    row; the local pattern extends its transparent final row, so the lower cover
-    remains unchanged.
+    The final tonal treatment deliberately uses one localized gradient rather
+    than the earlier pair of overlapping scrims.  Chromium may rasterize that
+    gradient as one or more full-page patterns; every matching pattern must
+    reach the trim box.
     """
     resources = page.get("/Resources")
     if not resources:
@@ -407,8 +428,8 @@ def extend_n01_cover_pattern_to_trim(page) -> int:
         ).encode("ascii")
         pattern.pop(NameObject("/Filter"), None)
         adjusted += 1
-    if adjusted != 2:
-        raise RuntimeError(f"Se esperaban extender dos patrones de tapa N01 y se extendieron {adjusted}")
+    if adjusted < 1:
+        raise RuntimeError("No se encontró el patrón localizado de tapa N01 para extender al corte")
     return adjusted
 
 
@@ -600,7 +621,7 @@ def finalize(number: int) -> dict:
     manifest = json.loads((root / "manifest.json").read_text(encoding="utf-8"))
     reader = PdfReader(str(raw))
     writer = PdfWriter()
-    preserve_tagged_structure = number in {2, 3, 4, 5, 6, 7, 8, 9, 10}
+    preserve_tagged_structure = number in {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
     if preserve_tagged_structure:
         # Chromium ya produce un PDF etiquetado a partir del HTML semántico.
         # Clonar el documento completo conserva StructTreeRoot, Lang y MarkInfo;
@@ -613,6 +634,20 @@ def finalize(number: int) -> dict:
     kept_page_number = 0
     removed_blank_pages: list[int] = []
     sparse_visual_fills: list[int] = []
+    if number == 0 and preserve_tagged_structure:
+        blank_indexes: list[int] = []
+        for index, page in enumerate(writer.pages):
+            page_text = page.extract_text() or ""
+            try:
+                image_count = len(page.images)
+            except Exception:
+                image_count = 0
+            if not re.search(r"\w", page_text, flags=re.UNICODE) and image_count == 0:
+                blank_indexes.append(index)
+        for index in reversed(blank_indexes):
+            writer.remove_page(index)
+        removed_blank_pages.extend(index + 1 for index in blank_indexes)
+        writer.root_object[NameObject("/Lang")] = TextStringObject("es-AR")
     source_pages = writer.pages if preserve_tagged_structure else reader.pages
     for source_page_number, page in enumerate(source_pages, 1):
         page_text = page.extract_text() or ""
@@ -713,7 +748,7 @@ def finalize(number: int) -> dict:
                 extend_n01_cover_pattern_to_trim(page)
             if number == 6 and source_page_number == 1:
                 extend_n06_cover_pattern_to_trim(page, scale)
-        is_closing_page = source_page_number == len(reader.pages)
+        is_closing_page = source_page_number == len(source_pages)
         light = source_page_number == 1 or is_n00_part_divider or is_opening_question_page or any(q and q in normalized for q in quotes)
         overlay = PdfReader(BytesIO(footer(float(page.mediabox.width), float(page.mediabox.height), kept_page_number, light))).pages[0]
         page.merge_page(overlay)
@@ -725,12 +760,21 @@ def finalize(number: int) -> dict:
         # Clean the page only after it belongs to the writer.  pypdf 7 removes
         # support for replacing content on detached reader pages.
         strip_empty_helvetica(target_page, reader)
-        if number in {6, 8, 9, 10} and source_page_number == 1:
+        if number in {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10} and source_page_number == 1:
             set_image_alt(target_page, manifest.get("cover", {}).get("alt", ""))
         if number == 6 and source_page_number == 2:
             set_image_alt(target_page, "Imagen editorial asociada al contenido de N06")
         if is_closing_page:
             set_image_alt(target_page, manifest.get("closing", {}).get("alt", ""))
+    cover_structure_alts = set_structure_figure_alt(
+        writer,
+        1,
+        manifest.get("cover", {}).get("alt", ""),
+    )
+    if cover_structure_alts < 1:
+        raise RuntimeError(
+            f"La tapa de {code} no conserva una Figure semántica asociada a la página 1"
+        )
     if number == 6:
         set_structure_figure_alt(writer, 2, "Imagen editorial asociada al contenido de N06")
     writer.add_metadata({
@@ -795,7 +839,7 @@ def finalize(number: int) -> dict:
     document_language = str(catalog.get("/Lang", ""))
     result = {
         "number": number,
-        "pdf": f"output/{final.name}" if number in {6, 7, 8, 9, 10} else str(final),
+        "pdf": f"output/{final.name}",
         "pages": len(check.pages),
         "a4_pages": a4,
         "source_words": len(source.split()),
@@ -831,9 +875,9 @@ def finalize(number: int) -> dict:
         and closing_folio_present
         and closing_quote_absent
         and closing_alt_present
-        and (number not in {2, 3, 4, 5, 6, 7, 8, 9, 10} or struct_tree_present)
-        and (number not in {2, 3, 4, 5, 6, 7, 8, 9, 10} or marked_pdf)
-        and (number not in {2, 3, 4, 5, 6, 7, 8, 9, 10} or document_language == "es-AR")
+        and struct_tree_present
+        and marked_pdf
+        and document_language == "es-AR"
         and links_ok
     ) else "FAIL"
     (root / "qa-report.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")

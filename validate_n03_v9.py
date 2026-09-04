@@ -5,11 +5,13 @@ import hashlib
 import html as html_lib
 import json
 import re
+import statistics
 import sys
 from collections import Counter
 from pathlib import Path
 
 import pdfplumber
+from PIL import Image
 from pypdf import PdfReader
 
 HERE = Path(__file__).resolve().parent
@@ -20,6 +22,8 @@ PDF = ROOT / "output/N03-METSI-lectura-previa-v9-final.pdf"
 RAW_PDF = ROOT / "output/N03-METSI-lectura-previa-v9.pdf"
 HTML = ROOT / "index.html"
 CSS = ROOT / "magazine.css"
+MANIFEST = ROOT / "manifest.json"
+IMAGE_MANIFEST = ROOT / "provenance/image-manifest.json"
 QA = ROOT / "qa-report.json"
 INTEGRITY = ROOT / "integrity-report.json"
 REPORT = ROOT / "validation-v9.json"
@@ -52,6 +56,103 @@ def strip_markup(value: str) -> str:
 
 def result(name: str, passed: bool, detail: object) -> dict[str, object]:
     return {"check": name, "status": "PASS" if passed else "FAIL", "detail": detail}
+
+
+def regression_lock_audit(root: Path, expected_paths: set[str]) -> dict[str, object]:
+    lock_path = root / "provenance/regression-lock.json"
+    try:
+        lock = json.loads(lock_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as error:
+        return {"passed": False, "error": f"{type(error).__name__}: {error}"}
+    declared = lock.get("artifact_sha256")
+    if not isinstance(declared, dict):
+        return {"passed": False, "error": "artifact_sha256 missing or invalid"}
+    declared_paths = set(declared)
+    digest_format_ok = all(re.fullmatch(r"[0-9a-f]{64}", str(value)) for value in declared.values())
+    mismatches: dict[str, dict[str, str | None]] = {}
+    for relative_path in sorted(expected_paths):
+        expected_sha = declared.get(relative_path)
+        path = root / relative_path
+        actual_sha = sha256(path) if path.is_file() else None
+        if actual_sha != expected_sha:
+            mismatches[relative_path] = {"expected": str(expected_sha), "actual": actual_sha}
+    final_paths = sorted(path for path in declared_paths if path.startswith("output/") and path.endswith("-final.pdf"))
+    raw_paths = sorted(path for path in declared_paths if path.startswith("output/") and path.endswith(".pdf") and not path.endswith("-final.pdf"))
+    cover_path = f"assets/{lock.get('cover_asset', '')}"
+    coherence = {
+        "cover_asset": cover_path in declared and lock.get("cover_asset_sha256", lock.get("cover_sha256")) == declared.get(cover_path),
+        "cover_alias": lock.get("cover_alias_sha256") == declared.get("assets/cover.png"),
+        "cover_provenance": lock.get("cover_provenance_sha256") == declared.get(str(lock.get("cover_provenance_file", ""))),
+        "final_pdf": len(final_paths) == 1 and lock.get("pdf_sha256") == declared.get(final_paths[0]),
+        "raw_pdf": len(raw_paths) == 1 and lock.get("raw_pdf_sha256") == declared.get(raw_paths[0]),
+        "pdf_bytes": len(final_paths) == 1 and (root / final_paths[0]).is_file() and (root / final_paths[0]).stat().st_size == lock.get("pdf_bytes"),
+    }
+    return {
+        "passed": (
+            lock.get("status") == "PASS"
+            and declared_paths == expected_paths
+            and digest_format_ok
+            and not mismatches
+            and all(coherence.values())
+        ),
+        "lock_sha256": sha256(lock_path),
+        "declared_paths": sorted(declared_paths),
+        "missing_declarations": sorted(expected_paths - declared_paths),
+        "unexpected_declarations": sorted(declared_paths - expected_paths),
+        "digest_format_ok": digest_format_ok,
+        "mismatches": mismatches,
+        "coherence": coherence,
+    }
+
+
+def percentile(values: list[float], fraction: float) -> float:
+    ordered = sorted(values)
+    if not ordered:
+        return 0.0
+    position = (len(ordered) - 1) * fraction
+    lower = int(position)
+    upper = min(lower + 1, len(ordered) - 1)
+    return ordered[lower] + (ordered[upper] - ordered[lower]) * (position - lower)
+
+
+def cover_tonal_audit(path: Path) -> dict[str, object]:
+    with Image.open(path) as source:
+        image = source.convert("RGB")
+        image.thumbnail((512, 512), Image.Resampling.LANCZOS)
+        pixels = list(image.getdata())
+    luminance = [.2126 * red + .7152 * green + .0722 * blue for red, green, blue in pixels]
+    spreads = [float(max(pixel) - min(pixel)) for pixel in pixels]
+    p05 = percentile(luminance, .05)
+    p95 = percentile(luminance, .95)
+    spread_p95 = percentile(spreads, .95)
+    tonal_stddev = statistics.pstdev(luminance)
+    dark_fraction = sum(value < 32 for value in luminance) / len(luminance)
+    passed = (
+        spread_p95 <= 6.0
+        and p05 <= 70.0
+        and p95 >= 170.0
+        and p95 - p05 >= 150.0
+        and tonal_stddev >= 45.0
+        and dark_fraction <= .35
+    )
+    return {
+        "passed": passed,
+        "channel_spread_p95": round(spread_p95, 2),
+        "luminance_p05": round(p05, 2),
+        "luminance_p95": round(p95, 2),
+        "tonal_span": round(p95 - p05, 2),
+        "luminance_stddev": round(tonal_stddev, 2),
+        "fraction_below_32": round(dark_fraction, 4),
+    }
+
+
+def effective_css_rule(css: str, selector: str) -> str:
+    matches = re.findall(re.escape(selector) + r"\{([^}]*)\}", css)
+    return re.sub(r"\s+", "", matches[-1]) if matches else ""
+
+
+def rgba_alphas(rule: str) -> list[float]:
+    return [float(value) for value in re.findall(r"rgba\([^)]*,([0-9]*\.?[0-9]+)\)", rule)]
 
 
 def links_by_page(reader: PdfReader) -> list[list[str]]:
@@ -139,6 +240,8 @@ def main() -> int:
     canonical = CANONICAL.read_bytes()
     html = HTML.read_text(encoding="utf-8")
     css = CSS.read_text(encoding="utf-8")
+    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    image_manifest = json.loads(IMAGE_MANIFEST.read_text(encoding="utf-8"))
     qa = json.loads(QA.read_text(encoding="utf-8"))
     integrity = json.loads(INTEGRITY.read_text(encoding="utf-8"))
     source_manifest = json.loads((ROOT / "source-manifest.json").read_text(encoding="utf-8"))
@@ -185,7 +288,62 @@ def main() -> int:
         "references": len(re.findall(r"^- ", references, re.M)),
     }
     alts = structure_alts(reader)
+    cover_contract = manifest.get("cover", {})
+    cover_source_relative = str(cover_contract.get("source", ""))
+    cover_source = ROOT / cover_source_relative
+    cover_alias = ROOT / "assets" / str(cover_contract.get("file", ""))
+    cover_records = [record for record in image_manifest.get("used_assets", []) if record.get("role") == "cover"]
+    cover_record = cover_records[0] if len(cover_records) == 1 else {}
+    cover_tone = cover_tonal_audit(cover_source) if cover_source.is_file() else {"passed": False, "reason": "missing cover source"}
+    cover_rule = effective_css_rule(css, ".cover-n03>img")
+    shade_rule = effective_css_rule(css, ".cover-n03 .cover-shade")
+    shade_alphas = rgba_alphas(shade_rule)
+    cover_audit = {
+        "passed": (
+            cover_source.is_file()
+            and cover_alias.is_file()
+            and sha256(cover_source) == sha256(cover_alias) == cover_contract.get("sha256") == cover_record.get("sha256")
+            and cover_contract.get("photographic_origin") == "native_black_and_white"
+            and cover_contract.get("render_treatment") == "no_grayscale_conversion"
+            and cover_record.get("photographic_origin") == "native_black_and_white"
+            and cover_record.get("rights_status") == "original_course_asset"
+            and cover_record.get("alt") == cover_contract.get("alt")
+            and str(cover_contract.get("alt", "")) in html
+            and str(cover_contract.get("alt", "")) in alts
+            and cover_tone.get("passed") is True
+            and "filter:none" in cover_rule
+            and bool(shade_alphas)
+            and max(shade_alphas) <= .60
+            and ".collection-cover.cover-shade{position:absolute;inset:0" in re.sub(r"\s+", "", css)
+        ),
+        "source": cover_source_relative,
+        "sha256": sha256(cover_source) if cover_source.is_file() else None,
+        "tone": cover_tone,
+        "contract": cover_contract,
+        "provenance": cover_record,
+        "cover_rule": cover_rule,
+        "shade_rule": shade_rule,
+    }
+    regression_lock = regression_lock_audit(
+        ROOT,
+        {
+            "source/N03_fronteras_retroalimentacion_y_efectos-content-final.md",
+            "assets/cover-source-premium-bw-v3.png",
+            "assets/cover.png",
+            "provenance/cover-image-premium-bw-v3.md",
+            "provenance/image-manifest.json",
+            "output/N03-METSI-lectura-previa-v9.pdf",
+            "output/N03-METSI-lectura-previa-v9-final.pdf",
+            "index.html",
+            "magazine.css",
+            "manifest.json",
+            "qa-report.json",
+            "integrity-report.json",
+            "source-manifest.json",
+        },
+    )
     checks = [
+        result("regression_lock_matches_current_artifacts", regression_lock["passed"], regression_lock),
         result("canonical_source_is_byte_identical", SOURCE.read_bytes() == canonical and sha256(SOURCE) == EXPECTED_SOURCE_SHA, {"sha256": sha256(SOURCE), "expected": EXPECTED_SOURCE_SHA}),
         result("canonical_structure", len(section_headings) == 11 and len(headings) == 12 and headings[-1] == "Referencias base", headings),
         result("three_movement_architecture", all(token in source for token in ("Movimiento 1 · Delimitar", "Movimiento 2 · Observar", "Movimiento 3 · Decidir")), "three movements present"),
@@ -205,7 +363,7 @@ def main() -> int:
         result("no_automatic_sparse_fills", qa.get("sparse_visual_fill_source_pages") == [] and qa.get("removed_blank_source_pages") == [], {"sparse": qa.get("sparse_visual_fill_source_pages"), "removed": qa.get("removed_blank_source_pages")}),
         result("two_internal_full_bleed_pauses", html.count('class="full-bleed full-bleed-quote"') == 2 and "Pregunta profesional" in page_texts[3] and "El efecto de la intervención" in page_texts[4] and "Una estabilidad observada" in page_texts[18], "question page 4, first pause page 5, second pause page 19"),
         result("cover_accessible_and_complete", all(token in page_texts[0] for token in ("LECTURA PREVIA", "EDICIÓN 2026", "N03", "FCE · UBA", "Fronteras,")) and "L E C T U R A" not in page_texts[0], page_texts[0][:320]),
-        result("premium_cover_contract", "cover-source-premium-v2.png" in (ROOT / "manifest.json").read_text(encoding="utf-8") and "Trabajadora hotelera argentina en un lobby nocturno" in html, "cinematic magazine photograph, Argentine representation, dedicated alt text and stable source asset"),
+        result("premium_cover_is_native_bw_tonally_open_hash_locked_and_locally_shaded", cover_audit["passed"], cover_audit),
         result("cover_pauses_and_closing_are_full_bleed", all(extents[page]["fill"] >= 1.0 for page in (1, 5, 19, 30)), {page: extents[page]["fill"] for page in (1, 5, 19, 30)}),
         result("referents_and_hotel_voices", html.count('class="contributor"') == 6 and html.count("hotel-voice hotel-voice-") == 4 and len(re.findall(r'hotel-(?:elena|lucia|ricardo|federico)\.jpg', html)) == 4, "six referents and four distinct equal Hotel Horizonte portraits"),
         result("counts_close", counts == {"pills": 5, "glossary": 13, "questions": 6, "references": 11}, counts),
@@ -226,6 +384,7 @@ def main() -> int:
         "pdf_sha256": sha256(PDF),
         "pdf_bytes": PDF.stat().st_size,
         "pdf_modified": PDF.stat().st_mtime,
+        "regression_lock_sha256": regression_lock.get("lock_sha256"),
         "pages": len(reader.pages),
         "checks": checks,
     }
