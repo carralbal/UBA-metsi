@@ -222,7 +222,9 @@ def inspect_n01_n10() -> tuple[list[dict], dict]:
 
 def inspect_covers() -> dict:
     audit = load_json(ROOT / "BLOCK-01-cover-review-current/audit.json")
+    approval = load_json(ROOT / "BLOCK-01-cover-review-current/approval.json")
     documents = audit["documents"]
+    audit_hashes = {item["code"]: item["pdf_sha256"] for item in documents}
     checks = {
         "eleven_documents": len(documents) == 11,
         "all_a4": all(item["a4"] for item in documents),
@@ -234,9 +236,16 @@ def inspect_covers() -> dict:
         "all_original_cover_copy_kept_volt": all(
             item["metrics"]["thesis_zone_proxy"]["current_color"] == "volt" for item in documents
         ),
+        "author_approval_recorded": (
+            approval.get("status") == "approved_closed"
+            and approval.get("document_range") == "N00-N10"
+            and approval.get("pdf_sha256") == audit_hashes
+            and approval.get("publication_authorized") is False
+        ),
     }
     return {
         "source": "BLOCK-01-cover-review-current/audit.json",
+        "approval": "BLOCK-01-cover-review-current/approval.json",
         "checks": checks,
         "status": "PASS" if all(checks.values()) else "FAIL",
     }
@@ -297,7 +306,7 @@ def build_report() -> dict:
             "n00_legacy": "The prior approved N00 remains preserved as a historical baseline",
             "n01_n10_content": "BLOCK-01-content-final is canonical and frozen",
             "n01_n10_pdf": "The package versions listed below are the current final PDFs",
-            "cover_rule": "All copy originally designed in volt remains volt; only local tonal support may be adjusted",
+            "cover_rule": "The eleven covers are author-approved and closed; all copy originally designed in volt remains volt",
         },
         "n00": n00,
         "n01_n10": n01_n10,
@@ -319,10 +328,8 @@ def build_report() -> dict:
             },
         ],
         "pending_actions": [
-            "Revisar visualmente la serie de tapas N00 a N10 a tamaño útil y registrar cualquier observación concreta",
-            "Publicar N00 v2 sólo después de una autorización explícita de publicación; su aprobación editorial ya está registrada",
-            "Publicar N07 a N10 sólo después de una autorización explícita de publicación; esta auditoría no publica",
-            "Tratar la percepción del texto volt en prueba de impresión como revisión autoral, no como permiso para aplicar velos oscuros globales",
+            "Publicar N00 v2 sólo después de una autorización explícita de publicación; su aprobación editorial y de tapa ya está registrada",
+            "Publicar cualquier paquete todavía no autorizado sólo después de una instrucción explícita; esta auditoría no publica",
         ],
         "uncertainties": [
             "Esta pasada no afirma certificación PDF/UA formal; se apoya en los controles de accesibilidad del repositorio",
@@ -356,7 +363,7 @@ El estado técnico consolidado es **{report['overall']}**. No hay una deuda de c
 
 La distinción de autoridad de N00 quedó resuelta. N00 v2 fue aprobado por el autor, tiene {n00['v2_candidate']['audit_checks_passed']} de {n00['v2_candidate']['audit_checks_total']} controles técnicos aprobados y pasa a ser la versión autoritativa. El N00 anterior permanece intacto como baseline histórico. Esta aprobación no implica publicación externa.
 
-Esta auditoría no modificó fuentes, HTML, CSS ni PDF.
+Esta auditoría consolida los PDF y las tapas ya aprobados. No reabre ni modifica sus páginas interiores.
 
 ## Jerarquía de autoridad
 
@@ -364,7 +371,7 @@ Esta auditoría no modificó fuentes, HTML, CSS ni PDF.
 2. **N00 anterior:** `N00/output/N00-METSI-lectura-previa-final.pdf`, 45 páginas, SHA-256 `{n00['legacy_approved']['pdf_sha256']}`. Estado: baseline histórico preservado sin cambios.
 3. **Contenido N01 a N10:** `BLOCK-01-content-final/` es la autoridad canónica y congelada.
 4. **PDF N01 a N10:** las versiones de la tabla siguiente son los finales vigentes y contienen una copia exacta de su fuente canónica.
-5. **Tapas:** todo texto originalmente diseñado en volt permanece en volt. Se prohíbe resolver legibilidad con una tela oscura global. Cualquier apoyo debe ser tonal, localizado y sujeto a revisión de la tapa completa.
+5. **Tapas:** las once están aprobadas y cerradas. Todo texto originalmente diseñado en volt permanece en volt. El lienzo tonal llega a los cuatro bordes y cualquier apoyo aplicado es localizado.
 
 ## Procedencia fotográfica de N00 v2
 
@@ -380,7 +387,7 @@ Totales canónicos: {report['content_totals']['words_total']:,} palabras, {repor
 
 ## Tapas N00 a N10
 
-La auditoría comparativa vigente informa PASS: once páginas A4, once fotografías a sangre, once renders monocromos, once eyebrows extraíbles y conservación de la copia original en volt. La plancha de revisión sigue siendo `BLOCK-01-cover-review-current/contact-sheet-N00-N10-current.jpg`.
+La auditoría comparativa vigente informa PASS: once páginas A4, once fotografías a sangre, once renders monocromos, once eyebrows extraíbles, conservación de la copia original en volt y aprobación autoral explícita de toda la serie. La plancha final es `BLOCK-01-cover-review-current/contact-sheet-N00-N10-current.jpg`.
 
 ## Informes históricos que no abren trabajo nuevo
 
@@ -411,7 +418,7 @@ python3 BLOCK-01-state-current/validate_block01_state.py
 
 ## Próxima decisión correcta
 
-No corresponde reabrir N01 a N10 ni tocar sus interiores. N00 v2 ya está aprobado. La próxima tarea editorial es la revisión visual de las once tapas. Cualquier publicación de N00 v2 o de N07 a N10 permanece como una acción separada y requiere autorización explícita.
+No corresponde reabrir N00 a N10 ni tocar sus interiores o tapas. Los once documentos quedan cerrados en alcance editorial local. Cualquier publicación pendiente permanece como una acción separada y requiere autorización explícita.
 """
 
 

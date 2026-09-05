@@ -1,8 +1,8 @@
-# Corrección de portadas · candidato N00 a N10
+# Corrección de portadas aprobada · N00 a N10
 
 ## Estado
 
-Las once portadas fueron regeneradas en un entorno aislado. Los PDF finales vigentes no fueron reemplazados. Estos renders quedan preparados para la revisión visual del autor antes de integrar los candidatos como finales.
+Las once portadas fueron aprobadas expresamente por el autor el 4 de septiembre de 2026 e integradas en los PDF finales locales. Esta acta conserva el detalle de la corrección y de la auditoría previa al cierre.
 
 ## Cambios solicitados
 
@@ -21,8 +21,7 @@ Las once portadas fueron regeneradas en un entorno aislado. Los PDF finales vige
 - La finalización y la QA estructural dieron `PASS` en los once documentos.
 - Los únicos avisos de validadores históricos corresponden a bloqueos de hash o geometría de tapa que, por diseño, rechazan cualquier cambio posterior. No señalan regresiones de contenido ni de páginas interiores.
 
-## Archivos para revisión
+## Archivos finales de revisión
 
-- `contact-sheet-N00-N10-cover-fix-candidate.jpg`: plancha comparativa completa.
-- `cover-fix-candidate-N00.png` a `cover-fix-candidate-N10.png`: tapas individuales a 120 dpi.
-
+- `contact-sheet-N00-N10-current.jpg`: plancha comparativa final.
+- `cover-N00.png` a `cover-N10.png`: tapas finales individuales a 120 dpi.

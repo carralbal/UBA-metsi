@@ -1,6 +1,6 @@
 # Estado consolidado y autoridad vigente · METSI N00 a N10
 
-Fecha de auditoría: 2026-09-04T22:36:26-03:00.
+Fecha de auditoría: 2026-09-04T23:30:48-03:00.
 
 ## Dictamen
 
@@ -8,15 +8,15 @@ El estado técnico consolidado es **PASS**. No hay una deuda de contenido oculta
 
 La distinción de autoridad de N00 quedó resuelta. N00 v2 fue aprobado por el autor, tiene 27 de 27 controles técnicos aprobados y pasa a ser la versión autoritativa. El N00 anterior permanece intacto como baseline histórico. Esta aprobación no implica publicación externa.
 
-Esta auditoría no modificó fuentes, HTML, CSS ni PDF.
+Esta auditoría consolida los PDF y las tapas ya aprobados. No reabre ni modifica sus páginas interiores.
 
 ## Jerarquía de autoridad
 
-1. **N00 v2 aprobado y autoritativo:** `N00-v2-candidate/output/N00-METSI-lectura-previa-v2-candidate-final.pdf`, 43 páginas, SHA-256 `c5e3237214b701a9721dc77d8c3d03756a7959910a19054967a7bc531c14c497`. Estado: PASS técnico, aprobación autoral registrada, publicación externa todavía no autorizada.
+1. **N00 v2 aprobado y autoritativo:** `N00-v2-candidate/output/N00-METSI-lectura-previa-v2-candidate-final.pdf`, 43 páginas, SHA-256 `10617ec84767296639c592bb14226941851a5b6527dfbdcf83fb183ae802392a`. Estado: PASS técnico, aprobación autoral registrada, publicación externa todavía no autorizada.
 2. **N00 anterior:** `N00/output/N00-METSI-lectura-previa-final.pdf`, 45 páginas, SHA-256 `1b4a1ab42665246349ed240659585a2e33766fe72157032bfbefc03cc7127f64`. Estado: baseline histórico preservado sin cambios.
 3. **Contenido N01 a N10:** `BLOCK-01-content-final/` es la autoridad canónica y congelada.
 4. **PDF N01 a N10:** las versiones de la tabla siguiente son los finales vigentes y contienen una copia exacta de su fuente canónica.
-5. **Tapas:** todo texto originalmente diseñado en volt permanece en volt. Se prohíbe resolver legibilidad con una tela oscura global. Cualquier apoyo debe ser tonal, localizado y sujeto a revisión de la tapa completa.
+5. **Tapas:** las once están aprobadas y cerradas. Todo texto originalmente diseñado en volt permanece en volt. El lienzo tonal llega a los cuatro bordes y cualquier apoyo aplicado es localizado.
 
 ## Procedencia fotográfica de N00 v2
 
@@ -26,22 +26,22 @@ El manifiesto de imágenes quedó cerrado y verificable. Distingue los activos u
 
 | Documento | Páginas A4 | Palabras sustantivas | Profundidad | Fuente exacta | QA PDF | Integridad | SHA PDF |
 |---|---:|---:|---:|---|---|---|---|
-| N01 | 29 | 6,426 | 40/40 | Sí | PASS | PASS | `668acc44383a…` |
-| N02 | 29 | 6,145 | 40/40 | Sí | PASS | PASS | `35f7d39ac098…` |
-| N03 | 30 | 7,631 | 38/40 | Sí | PASS | PASS | `08154728ce84…` |
-| N04 | 32 | 8,695 | 38/40 | Sí | PASS | PASS | `b6b4df7df6c9…` |
-| N05 | 28 | 6,793 | 38/40 | Sí | PASS | PASS | `cf6088c20563…` |
-| N06 | 28 | 7,069 | 38/40 | Sí | PASS | PASS | `c05782e7ad61…` |
-| N07 | 31 | 8,474 | 38/40 | Sí | PASS | PASS | `c7b36bffcd3d…` |
-| N08 | 28 | 6,356 | 39/40 | Sí | PASS | PASS | `8513d10b826c…` |
-| N09 | 28 | 6,637 | 39/40 | Sí | PASS | PASS | `3cf21741a5b0…` |
-| N10 | 31 | 7,180 | 39/40 | Sí | PASS | PASS | `cd5511c6bc94…` |
+| N01 | 29 | 6,426 | 40/40 | Sí | PASS | PASS | `7250bb198fec…` |
+| N02 | 29 | 6,145 | 40/40 | Sí | PASS | PASS | `0fb77c1ed222…` |
+| N03 | 30 | 7,631 | 38/40 | Sí | PASS | PASS | `2f9423437c83…` |
+| N04 | 32 | 8,695 | 38/40 | Sí | PASS | PASS | `b24724c09077…` |
+| N05 | 28 | 6,793 | 38/40 | Sí | PASS | PASS | `47722dd21265…` |
+| N06 | 28 | 7,069 | 38/40 | Sí | PASS | PASS | `96884e85398a…` |
+| N07 | 31 | 8,474 | 38/40 | Sí | PASS | PASS | `b174fe88d67b…` |
+| N08 | 28 | 6,356 | 39/40 | Sí | PASS | PASS | `c931e032947c…` |
+| N09 | 28 | 6,637 | 39/40 | Sí | PASS | PASS | `756b4e73ca55…` |
+| N10 | 31 | 7,180 | 39/40 | Sí | PASS | PASS | `4143432bc28e…` |
 
 Totales canónicos: 86,198 palabras, 71,406 sustantivas, 123 referencias y 85 URL.
 
 ## Tapas N00 a N10
 
-La auditoría comparativa vigente informa PASS: once páginas A4, once fotografías a sangre, once renders monocromos, once eyebrows extraíbles y conservación de la copia original en volt. La plancha de revisión sigue siendo `BLOCK-01-cover-review-current/contact-sheet-N00-N10-current.jpg`.
+La auditoría comparativa vigente informa PASS: once páginas A4, once fotografías a sangre, once renders monocromos, once eyebrows extraíbles, conservación de la copia original en volt y aprobación autoral explícita de toda la serie. La plancha final es `BLOCK-01-cover-review-current/contact-sheet-N00-N10-current.jpg`.
 
 ## Informes históricos que no abren trabajo nuevo
 
@@ -66,10 +66,8 @@ La auditoría comparativa vigente informa PASS: once páginas A4, once fotograf�
 
 ## Únicos pendientes reales
 
-- Revisar visualmente la serie de tapas N00 a N10 a tamaño útil y registrar cualquier observación concreta.
-- Publicar N00 v2 sólo después de una autorización explícita de publicación; su aprobación editorial ya está registrada.
-- Publicar N07 a N10 sólo después de una autorización explícita de publicación; esta auditoría no publica.
-- Tratar la percepción del texto volt en prueba de impresión como revisión autoral, no como permiso para aplicar velos oscuros globales.
+- Publicar N00 v2 sólo después de una autorización explícita de publicación; su aprobación editorial y de tapa ya está registrada.
+- Publicar cualquier paquete todavía no autorizado sólo después de una instrucción explícita; esta auditoría no publica.
 
 ## Incertidumbres explícitas
 
@@ -88,4 +86,4 @@ python3 BLOCK-01-state-current/validate_block01_state.py
 
 ## Próxima decisión correcta
 
-No corresponde reabrir N01 a N10 ni tocar sus interiores. N00 v2 ya está aprobado. La próxima tarea editorial es la revisión visual de las once tapas. Cualquier publicación de N00 v2 o de N07 a N10 permanece como una acción separada y requiere autorización explícita.
+No corresponde reabrir N00 a N10 ni tocar sus interiores o tapas. Los once documentos quedan cerrados en alcance editorial local. Cualquier publicación pendiente permanece como una acción separada y requiere autorización explícita.

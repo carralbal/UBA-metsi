@@ -2,11 +2,11 @@
 
 ## Alcance
 
-Esta revisión compara la portada del N00 v2 aprobado con las versiones finales vigentes de N01 a N10. Es una auditoría de sólo lectura: no se modificó ningún PDF cerrado.
+Esta revisión documenta las once portadas finales de N00 a N10, aprobadas expresamente por el autor el 4 de septiembre de 2026. Los PDF vigentes incorporan la corrección de lienzo, la alineación del masthead y el ajuste tonal puntual de N00.
 
 ## Conclusión ejecutiva
 
-La serie tiene calidad editorial y funciona como familia. Las once fotografías llegan a sangre, se presentan en blanco y negro y conservan una variación tonal real. No corresponde volver a oscurecer todas las tapas con una capa negra general.
+La serie queda cerrada como familia editorial. Las once fotografías llegan a sangre, se presentan en blanco y negro y conservan una variación tonal real. El lienzo tonal alcanza los cuatro bordes del A4 en todos los documentos.
 
 La decisión autoral es conservar en volt todos los textos que fueron originalmente diseñados en volt. Por lo tanto, el color de la tesis no se sustituye por blanco ni por tinta en ninguna portada.
 
@@ -20,7 +20,7 @@ N00 vuelve a aplicar esta regla: tesis en volt, fotografía con matices y sin os
 - Los once bloques `LECTURA PREVIA` y `EDICIÓN 2026` se extraen correctamente.
 - Ninguna tapa presenta marco blanco uniforme ni pérdida de sangrado.
 - Las once composiciones renderizan en monocromo.
-- La luminancia media va de 66,28 en N00 a 140,68 en N06. La amplitud confirma que la serie no es uniformemente oscura.
+- La luminancia media va de 59,75 en N00 a 140,68 en N06. La amplitud confirma que la serie no es uniformemente oscura.
 - N00 y N04 son las tapas más densas y oscuras.
 - N06 y N10 son las más claras.
 - N03, N06, N07, N08 y N09 requieren especial atención perceptiva en la tesis volt porque el fondo tiene detalle o valores medios, aunque el proxy matemático resulte aceptable.
@@ -48,14 +48,14 @@ La serie evita la apariencia de banco de imágenes genérico porque cada fotogra
 
 El principal riesgo actual es perceptivo: el volt puede perder definición sobre textura o grises medios. La regla autoral prevalece y el volt se conserva. La fotografía debe proporcionar una zona de lectura suficiente mediante control tonal localizado, sin convertir toda la tapa en un campo oscuro.
 
-## Secuencia de implementación propuesta
+## Estado de cierre
 
-1. Conservar el volt original en las tesis de N00 a N10.
-2. No modificar fotografía, recorte, masthead, título, círculo, paralelogramos ni pie.
-3. Si una tapa falla en prueba real, intervenir sólo el entorno tonal inmediato del texto.
-4. Renderizar cualquier variante junto con la serie completa y revisar primero la plancha, después la tapa a tamaño completo.
-5. Verificar extracción del eyebrow, sangrado, ausencia de halo y conservación exacta de todas las páginas interiores.
-6. Someter cualquier variante a aprobación autoral antes de reemplazar o publicar un PDF.
+1. Las once tesis conservan el volt original.
+2. N01 y N09 alinean el masthead con la posición vertical común de la serie.
+3. N00 conserva matices de gris con un oscurecimiento localizado levemente mayor.
+4. El lienzo tonal llega al borde inferior y a los cuatro bordes en N00 a N10.
+5. Las 326 páginas interiores comparadas permanecen idénticas a sus versiones aprobadas.
+6. Las once tapas quedan cerradas por aprobación autoral.
 
 ## Archivos
 

@@ -14,6 +14,8 @@ OUT = ROOT / "qa-contact-sheets"
 
 def pdf_path(number: int) -> Path:
     code = f"N{number:02d}"
+    if number == 0:
+        return ROOT / "N00-v2-candidate" / "output" / "N00-METSI-lectura-previa-v2-candidate-final.pdf"
     if number == 1:
         return ROOT / "N01-v18-final" / "output" / "N01-METSI-lectura-previa-v18-final.pdf"
     if number == 2:
@@ -70,6 +72,8 @@ def render(number: int) -> Path:
         sheet.paste(thumb, (x, y))
     output = OUT / f"{code}-contact-sheet.jpg"
     sheet.save(output, quality=87, optimize=True)
+    if number == 0:
+        shutil.copy2(output, ROOT / "N00-v2-candidate" / "N00-v2-candidate-final-contact-sheet.jpg")
     if number == 1:
         package_qa = ROOT / "N01-v18-final" / "qa"
         package_qa.mkdir(parents=True, exist_ok=True)

@@ -596,6 +596,19 @@ def main() -> None:
     cover_scope = cover_change_scope(BASELINE_PDF, PDF)
     baseline_cover_geometry = cover_text_geometry(BASELINE_PDF)
     candidate_cover_geometry = cover_text_geometry(PDF)
+    baseline_cover_geometry_without_masthead = [
+        item for item in baseline_cover_geometry if item[0] != "METSI"
+    ]
+    candidate_cover_geometry_without_masthead = [
+        item for item in candidate_cover_geometry if item[0] != "METSI"
+    ]
+    baseline_masthead = [item for item in baseline_cover_geometry if item[0] == "METSI"]
+    candidate_masthead = [item for item in candidate_cover_geometry if item[0] == "METSI"]
+    masthead_alignment = {
+        "baseline": baseline_masthead,
+        "candidate": candidate_masthead,
+        "expected_candidate_y": 119.0,
+    }
     eyebrow_runs = cover_eyebrow_runs(PDF)
     baseline_contrast = cover_contrast_ratio(BASELINE_PDF)
     candidate_contrast = cover_contrast_ratio(PDF)
@@ -673,7 +686,16 @@ def main() -> None:
         check("cover_internal_seam_remains_absent", seam["maximum_adjacent_step"] <= 3 and max(seam["legacy_seam_samples"].values()) <= 3, {"v17": baseline_seam, "v18": seam}),
         check("cover_is_native_bw_tonally_open_hash_locked_and_locally_shaded", cover_audit["passed"], cover_audit),
         check("cover_photo_replacement_reaches_the_whole_page", not cover_scope["lower_cover_pixel_identical"] and cover_scope["full_difference_bbox"] == [0, 0, 595, 842], cover_scope),
-        check("cover_text_geometry_unchanged", candidate_cover_geometry == baseline_cover_geometry, {"runs": len(candidate_cover_geometry)}),
+        check(
+            "cover_text_geometry_preserved_except_approved_masthead_alignment",
+            candidate_cover_geometry_without_masthead == baseline_cover_geometry_without_masthead
+            and len(baseline_masthead) == len(candidate_masthead) == 1
+            and baseline_masthead[0][0] == candidate_masthead[0][0]
+            and baseline_masthead[0][1] == candidate_masthead[0][1]
+            and baseline_masthead[0][3] == candidate_masthead[0][3]
+            and candidate_masthead[0][2] == masthead_alignment["expected_candidate_y"],
+            masthead_alignment,
+        ),
         check("all_page_boundary_widows_removed", not boundary_audit["unresolved"], boundary_audit),
         check("no_source_paragraph_crosses_a_page_boundary", not paragraph_spans["spans"] and not paragraph_spans["missing"], paragraph_spans),
         check("target_paragraph_moves_complete_to_page11", compact("Estas distinciones no persiguen pureza terminológica") in compact(page_texts[10]) and compact("garantiza que la pregunta sea relevante") in compact(page_texts[10]) and compact("Estas distinciones no persiguen pureza terminológica") not in compact(page_texts[9]), {"physical_page": 11}),

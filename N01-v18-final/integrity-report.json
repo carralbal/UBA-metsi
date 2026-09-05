@@ -2,7 +2,7 @@
   "document": "N01",
   "version": "v18",
   "candidate": "output/N01-METSI-lectura-previa-v18-final.pdf",
-  "pdf_sha256": "668acc44383a86dbfec31620f47b9e511c1097ff1df7b846903942f8760d57fe",
+  "pdf_sha256": "7250bb198fecb1b3a7bd705ff3a825a082f7f1ea4e7e8295c29f6b1b1128827e",
   "status": "PASS",
   "checks": [
     {
@@ -500,10 +500,26 @@
       }
     },
     {
-      "check": "cover_text_geometry_unchanged",
+      "check": "cover_text_geometry_preserved_except_approved_masthead_alignment",
       "status": "PASS",
       "detail": {
-        "runs": 15
+        "baseline": [
+          [
+            "METSI",
+            257.141,
+            89.0,
+            77.33
+          ]
+        ],
+        "candidate": [
+          [
+            "METSI",
+            257.141,
+            119.0,
+            77.33
+          ]
+        ],
+        "expected_candidate_y": 119.0
       }
     },
     {
