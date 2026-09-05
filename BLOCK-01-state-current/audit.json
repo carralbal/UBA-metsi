@@ -1,6 +1,6 @@
 {
   "scope": "METSI N00-N10 current authority state",
-  "generated_at": "2026-09-04T21:49:05-03:00",
+  "generated_at": "2026-09-04T22:06:53-03:00",
   "overall": "PASS",
   "authority": {
     "n00_production": "N00 approved original remains authoritative until explicit author approval of v2 candidate",
@@ -39,7 +39,19 @@
       "integrity": "PASS",
       "audit": "PASS",
       "audit_checks_passed": 27,
-      "audit_checks_total": 27
+      "audit_checks_total": 27,
+      "image_provenance": {
+        "manifest": "N00-v2-candidate/image-curation/image-manifest.json",
+        "active_assets": 7,
+        "checks": {
+          "no_placeholder_authors": true,
+          "all_assets_classified": true,
+          "active_manifest_matches_html": true,
+          "active_sources_and_licenses_complete": true,
+          "active_selected_and_rendered_hashes_match": true
+        },
+        "status": "PASS"
+      }
     }
   },
   "n01_n10": [
@@ -312,6 +324,7 @@
     "all_final_pdf_files_directly_confirmed": true,
     "approved_n00_unchanged_and_passes": true,
     "n00_v2_candidate_technical_pass": true,
+    "n00_v2_image_provenance_pass": true,
     "cover_system_current_rule_pass": true
   },
   "superseded_or_historical": [
@@ -330,7 +343,6 @@
   ],
   "pending_actions": [
     "Revisión autoral y aprobación o rechazo explícito del candidato aislado N00 v2",
-    "Completar las atribuciones de autor todavía incompletas en el manifiesto de imágenes de N00 v2 antes de una publicación externa",
     "Publicar N07 a N10 sólo después de una autorización explícita de publicación; esta auditoría no publica",
     "Tratar la percepción del texto volt en prueba de impresión como revisión autoral, no como permiso para aplicar velos oscuros globales"
   ],

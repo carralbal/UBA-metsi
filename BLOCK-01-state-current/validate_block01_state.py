@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -86,6 +87,34 @@ def inspect_n00() -> dict:
     candidate_qa = load_json(candidate_root / "qa-report.json")
     candidate_integrity = load_json(candidate_root / "integrity-report.json")
     candidate_audit = load_json(candidate_root / "audit-report.json")
+    image_manifest = load_json(candidate_root / "image-curation/image-manifest.json")
+    candidate_html = (candidate_root / "index.html").read_text(encoding="utf-8")
+    rendered_image_refs = {
+        match
+        for match in re.findall(r'src="(assets/(?:cover\.jpg|editorial-[^"]+))"', candidate_html)
+    }
+    active_assets = [item for item in image_manifest["assets"] if item["usage_status"] == "active"]
+    active_rendered_files = {item["rendered_file"] for item in active_assets}
+    provenance_checks = {
+        "no_placeholder_authors": all(
+            item.get("author") and "Ver ficha" not in item["author"]
+            for item in image_manifest["assets"]
+        ),
+        "all_assets_classified": all(
+            item.get("usage_status") in {"active", "replaced", "not_selected"}
+            for item in image_manifest["assets"]
+        ),
+        "active_manifest_matches_html": active_rendered_files == rendered_image_refs,
+        "active_sources_and_licenses_complete": all(
+            item.get("source_page") or item.get("source") == "OpenAI image generation"
+            for item in active_assets
+        ) and all(item.get("license_name") and item.get("license_url") for item in active_assets),
+        "active_selected_and_rendered_hashes_match": all(
+            sha256(candidate_root / "image-curation" / item["file"]) == item["sha256"]
+            and sha256(candidate_root / item["rendered_file"]) == item["sha256"]
+            for item in active_assets
+        ),
+    }
     approved_pdf_facts = pdf_facts(approved_pdf)
     candidate_pdf_facts = pdf_facts(candidate_pdf)
 
@@ -120,6 +149,12 @@ def inspect_n00() -> dict:
             "audit": candidate_audit["status"],
             "audit_checks_passed": sum(bool(value) for value in candidate_audit["checks"].values()),
             "audit_checks_total": len(candidate_audit["checks"]),
+            "image_provenance": {
+                "manifest": "N00-v2-candidate/image-curation/image-manifest.json",
+                "active_assets": len(active_assets),
+                "checks": provenance_checks,
+                "status": "PASS" if all(provenance_checks.values()) else "FAIL",
+            },
         },
     }
 
@@ -242,6 +277,7 @@ def build_report() -> dict:
             and n00["v2_candidate"]["actual_pages"] == n00["v2_candidate"]["pages"]
             and n00["v2_candidate"]["actual_all_pages_a4"]
         ),
+        "n00_v2_image_provenance_pass": n00["v2_candidate"]["image_provenance"]["status"] == "PASS",
         "cover_system_current_rule_pass": covers["status"] == "PASS",
     }
 
@@ -277,7 +313,6 @@ def build_report() -> dict:
         ],
         "pending_actions": [
             "Revisión autoral y aprobación o rechazo explícito del candidato aislado N00 v2",
-            "Completar las atribuciones de autor todavía incompletas en el manifiesto de imágenes de N00 v2 antes de una publicación externa",
             "Publicar N07 a N10 sólo después de una autorización explícita de publicación; esta auditoría no publica",
             "Tratar la percepción del texto volt en prueba de impresión como revisión autoral, no como permiso para aplicar velos oscuros globales",
         ],
@@ -322,6 +357,10 @@ Esta auditoría no modificó fuentes, HTML, CSS ni PDF.
 3. **Contenido N01 a N10:** `BLOCK-01-content-final/` es la autoridad canónica y congelada.
 4. **PDF N01 a N10:** las versiones de la tabla siguiente son los finales vigentes y contienen una copia exacta de su fuente canónica.
 5. **Tapas:** todo texto originalmente diseñado en volt permanece en volt. Se prohíbe resolver legibilidad con una tela oscura global. Cualquier apoyo debe ser tonal, localizado y sujeto a revisión de la tapa completa.
+
+## Procedencia fotográfica de N00 v2
+
+El manifiesto de imágenes quedó cerrado y verificable. Distingue los activos usados de los reemplazados y no seleccionados; registra autor, página fuente, licencia, dimensiones y hash. Los {n00['v2_candidate']['image_provenance']['active_assets']} activos vigentes coinciden exactamente con las referencias del HTML y con los archivos renderizados. Estado: **{n00['v2_candidate']['image_provenance']['status']}**.
 
 ## Evidencia N01 a N10
 

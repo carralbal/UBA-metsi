@@ -52,6 +52,7 @@ La nueva versión vive en un paquete separado: `N00-v2-candidate/`.
 - Las fotografías a página completa y los fondos oscuros llegan a sangre. El cierre conserva la secuencia de fósforos, el folio, la línea de pie, el epígrafe y su descripción alternativa.
 - Las seis fotografías de arquetipos tienen igual caja y corresponden a seis personas diferentes.
 - Las escenas académicas y de trabajo con personas representan un contexto argentino o latinoamericano verosímil.
+- El manifiesto fotográfico distingue activos vigentes, reemplazos y opciones no seleccionadas. Cada fotografía de banco registra autor, página fuente, licencia, dimensiones y hash; cada imagen generada registra además su archivo efectivamente renderizado.
 - Se añadió comportamiento responsive para lectura web angosta sin alterar la composición A4 de impresión.
 
 ### Navegación y accesibilidad
@@ -102,7 +103,7 @@ La tapa recupera matices de gris y profundidad. El sistema visual mantiene fondo
 
 - **Aprobación autoral:** el paquete es un candidato. El N00 aprobado no debe reemplazarse hasta recibir aprobación explícita.
 - **PDF/UA:** el archivo está etiquetado, declara idioma y contiene descripciones para las 21 imágenes raster. No se afirma conformidad PDF/UA certificada. El árbol producido por Chrome expone nativamente tres elementos `Figure`; los demás textos alternativos quedan además asociados a los objetos raster. Una certificación formal requiere una herramienta especializada y revisión con lector de pantalla.
-- **Licencias y atribución:** las páginas de origen están registradas. Varias fichas históricas de Pexels todavía dicen `Ver ficha de la fuente` en el campo autor. Antes de una publicación externa definitiva conviene resolver el nombre de cada autor y volver a comprobar las condiciones vigentes. Por esta razón este cierre no publica el candidato.
+- **Aprobación de publicación:** la procedencia fotográfica está completa y comprobada, pero este cierre no publica el candidato porque la decisión autoral de promover N00 v2 sigue pendiente.
 - **Validación pedagógica en uso:** la carga declarada y la claridad de las consignas son coherentes desde los archivos, pero su precisión final sólo puede validarse con datos de una comisión real.
 
 ## Reproducción

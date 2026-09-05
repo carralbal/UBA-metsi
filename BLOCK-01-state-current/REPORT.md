@@ -1,6 +1,6 @@
 # Estado consolidado y autoridad vigente · METSI N00 a N10
 
-Fecha de auditoría: 2026-09-04T21:49:05-03:00.
+Fecha de auditoría: 2026-09-04T22:06:53-03:00.
 
 ## Dictamen
 
@@ -17,6 +17,10 @@ Esta auditoría no modificó fuentes, HTML, CSS ni PDF.
 3. **Contenido N01 a N10:** `BLOCK-01-content-final/` es la autoridad canónica y congelada.
 4. **PDF N01 a N10:** las versiones de la tabla siguiente son los finales vigentes y contienen una copia exacta de su fuente canónica.
 5. **Tapas:** todo texto originalmente diseñado en volt permanece en volt. Se prohíbe resolver legibilidad con una tela oscura global. Cualquier apoyo debe ser tonal, localizado y sujeto a revisión de la tapa completa.
+
+## Procedencia fotográfica de N00 v2
+
+El manifiesto de imágenes quedó cerrado y verificable. Distingue los activos usados de los reemplazados y no seleccionados; registra autor, página fuente, licencia, dimensiones y hash. Los 7 activos vigentes coinciden exactamente con las referencias del HTML y con los archivos renderizados. Estado: **PASS**.
 
 ## Evidencia N01 a N10
 
@@ -56,12 +60,12 @@ La auditoría comparativa vigente informa PASS: once páginas A4, once fotograf�
 - PASS: `all_final_pdf_files_directly_confirmed`
 - PASS: `approved_n00_unchanged_and_passes`
 - PASS: `n00_v2_candidate_technical_pass`
+- PASS: `n00_v2_image_provenance_pass`
 - PASS: `cover_system_current_rule_pass`
 
 ## Únicos pendientes reales
 
 - Revisión autoral y aprobación o rechazo explícito del candidato aislado N00 v2.
-- Completar las atribuciones de autor todavía incompletas en el manifiesto de imágenes de N00 v2 antes de una publicación externa.
 - Publicar N07 a N10 sólo después de una autorización explícita de publicación; esta auditoría no publica.
 - Tratar la percepción del texto volt en prueba de impresión como revisión autoral, no como permiso para aplicar velos oscuros globales.
 
