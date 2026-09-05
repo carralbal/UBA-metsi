@@ -11,6 +11,7 @@ import argparse
 import hashlib
 import html
 import json
+import os
 import re
 import shutil
 from dataclasses import dataclass
@@ -19,7 +20,8 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE
-SOURCES = HERE / "N00" / "source"
+N00_ROOT = Path(os.environ.get("METSI_N00_ROOT", HERE / "N00")).resolve()
+SOURCES = N00_ROOT / "source"
 N01_ROOT = HERE / "N01-v18-final"
 N01_FINAL = N01_ROOT / "output/N01-METSI-lectura-previa-v18-final.pdf"
 N01_CSS = N01_ROOT / "magazine.css"
@@ -700,7 +702,7 @@ def references(sections: list[Section]) -> list[str]:
 
 def source_path(number: int) -> Path:
     if number == 0:
-        return HERE / "N00" / "source" / "N00_como_leer_metsi.md"
+        return N00_ROOT / "source" / "N00_como_leer_metsi.md"
     if number == 1:
         return HERE / "N01-content-final" / "source" / "N01_metodologia_sin_recetas-content-final.md"
     if number == 2:
@@ -1647,8 +1649,8 @@ def pills_summary_icon() -> str:
 def visual_figure(file: str, caption: str, alt: str, cls: str="photo-band") -> str:
     accessible_label = f"{alt} {caption}".strip()
     return (
-        f'<figure class="{cls}" role="img" aria-label="{esc(accessible_label)}">'
-        f'<img src="assets/{esc(file)}" alt="">'
+        f'<figure class="{cls}">'
+        f'<img src="assets/{esc(file)}" alt="{esc(accessible_label)}">'
         f'<figcaption aria-hidden="true">{esc(caption)}</figcaption></figure>'
     )
 
@@ -1687,11 +1689,7 @@ def cover_html(number: int, title: str, thesis: str, file: str, title_source_id:
         cover_title = "Hechos, síntomas,<br>relatos, hipótesis<br>y decisiones"
     if number == 5:
         cover_title = "Actores, afectados,<br>poder y perspectivas"
-    cover_eyebrow = (
-        '<span>LECTURA PREVIA</span><span>EDICIÓN 2026</span>'
-        if number in {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-        else "LECTURA PREVIA\nEDICIÓN 2026"
-    )
+    cover_eyebrow = '<span>LECTURA PREVIA</span><span>EDICIÓN 2026</span>'
     cover_alt = cover_alt_text(number, clean)
     return f'''<section class="collection-cover cover-variant-{variant} cover-n{number:02d}"><img src="assets/{esc(file)}" alt="{esc(cover_alt)}"><div class="cover-shade"></div><div class="cover-meta cover-meta-left cover-meta-eyebrow">{cover_eyebrow}</div><div class="cover-meta cover-meta-right">N{number:02d}<br>FCE · UBA</div><div class="collection-masthead">METSI</div><div class="cover-title"><i></i><span>METODOLOGÍA DE SISTEMAS DE INFORMACIÓN</span><h1 data-source-id="{title_source_id}">{cover_title}</h1></div><div class="cover-thesis"><b>N{number:02d}</b><p>{esc(cover_thesis)}</p></div><div class="cover-parallelogram"></div></section>'''
 
@@ -1706,25 +1704,26 @@ def contents_html(
     visible=[s.title for s in sections if not s.title.startswith("Conexiones integradoras")]
     if number == 0:
         counter = 0
-        item_html = ['<li class="contents-unnumbered"><b>•</b><span>Referentes <small>SIN NUM.</small></span></li>']
+        item_html = ['<li class="contents-unnumbered"><a href="#referentes"><b>•</b><span>Referentes <small>SIN NUM.</small></span></a></li>']
         for item in visible:
             if is_part_section(item):
-                item_html.append(f'<li class="contents-part"><span>{esc(item)}</span></li>')
+                part_id = "parte-" + item.split(".", 1)[0].split()[-1].lower()
+                item_html.append(f'<li class="contents-part"><a href="#{part_id}"><span>{esc(item)}</span></a></li>')
                 continue
             if item == "Referencias base":
-                item_html.append('<li class="contents-unnumbered contents-apparatus"><b>•</b><span>Referencias base <small>SIN NUM.</small></span></li>')
+                item_html.append('<li class="contents-unnumbered contents-apparatus"><a href="#referencias"><b>•</b><span>Referencias base <small>SIN NUM.</small></span></a></li>')
                 continue
             counter += 1
             route = "core" if item in N00_CORE_TITLES else "extension"
             label = "NÚCLEO" if route == "core" else "EXT."
             item_html.append(
-                f'<li class="contents-item contents-{route}"><b>{counter:02d}</b>'
-                f'<span>{esc(item)} <small>{label}</small></span></li>'
+                f'<li class="contents-item contents-{route}"><a href="#section-{counter:02d}"><b>{counter:02d}</b>'
+                f'<span>{esc(item)} <small>{label}</small></span></a></li>'
             )
             if item == "Hotel Horizonte: el caso longitudinal de la materia":
                 item_html.extend([
-                    '<li class="contents-unnumbered"><b>•</b><span>HH-00. Memo de inicio <small>SIN NUM.</small></span></li>',
-                    '<li class="contents-unnumbered"><b>•</b><span>Las personas que sostienen el caso <small>SIN NUM.</small></span></li>',
+                    '<li class="contents-unnumbered"><a href="#section-10"><b>•</b><span>HH-00. Memo de inicio <small>SIN NUM.</small></span></a></li>',
+                    '<li class="contents-unnumbered"><a href="#personas"><b>•</b><span>Las personas que sostienen el caso <small>SIN NUM.</small></span></a></li>',
                 ])
         items = ''.join(item_html)
         route_note = '<p class="contents-route"><b>Ruta priorizada: 2 h 10 min a 2 h 45 min.</b> Núcleo: 90 a 110 min; ejercicio de Martina: 15 a 20 min; nota: 25 a 35 min. Las extensiones profundizan el recorrido.</p>'
@@ -1783,7 +1782,10 @@ def contents_html(
         contents_alt = "Equipo argentino contrasta evidencia, mecanismos rivales y outcomes sobre una mesa de trabajo."
     else:
         contents_alt = f"Imagen editorial asociada al contenido de N{number:02d}"
-    if hero:
+    if number == 0:
+        contents_visual = ""
+        contents_class = "front-page contents-page contents-page-text-only"
+    elif hero:
         contents_visual = (
             f'<figure><img src="assets/{esc(hero)}" alt="{esc(contents_alt)}">'
             f'<figcaption>{esc(contents_caption)}</figcaption></figure>'
@@ -2152,7 +2154,7 @@ def reference_cards(number:int,refs:list[str],assets:Path)->str:
 
 def authors_html(number:int,refs:list[str],assets:Path)->str:
     intro = "Seis referentes y las obras principales utilizadas para construir este mapa de la materia." if number == 0 else "Seis voces principales para ampliar, contrastar y discutir esta lectura."
-    return f'''<section class="front-page authors-page"><header><span>METSI · FCE-UBA</span><h2>Referentes</h2><p>{esc(intro)}</p></header><div class="contributors-grid">{reference_cards(number,refs,assets)}</div><blockquote>N{number:02d} no resume estas fuentes ni las convierte en una receta. Las pone en tensión para construir juicio profesional.</blockquote></section>'''
+    return f'''<section class="front-page authors-page" id="referentes"><header><span>METSI · FCE-UBA</span><h2>Referentes</h2><p>{esc(intro)}</p></header><div class="contributors-grid">{reference_cards(number,refs,assets)}</div><blockquote>N{number:02d} no resume estas fuentes ni las convierte en una receta. Las pone en tensión para construir juicio profesional.</blockquote></section>'''
 
 
 def hotel_voices_html(number: int, assets: Path) -> str:
@@ -2179,7 +2181,7 @@ def hotel_voices_html(number: int, assets: Path) -> str:
             copy_asset(portrait_source, packaged_portrait)
             age, traits, fear, assumption, blind_spot, contribution = profiles[name]
             cards.append(f'''<article class="hotel-archetype-card hotel-archetype-{index}"><div class="hotel-archetype-portrait"><img src="assets/hotel-{esc(filename)}" alt="Retrato editorial de {esc(name)}"></div><div class="hotel-archetype-copy"><span>{esc(role)} · {esc(age)}</span><h3>{esc(name)}</h3><p><b>Perfil.</b> {esc(traits)}</p><p><b>Miedo.</b> {esc(fear)}</p><p><b>Supuesto.</b> {esc(assumption)}</p><p><b>Punto ciego.</b> {esc(blind_spot)}</p><p><b>Aporte.</b> {esc(contribution)}</p></div></article>''')
-        return f'''<aside class="hotel-archetypes"><header><b>HOTEL HORIZONTE · N00</b><h2>Las personas que sostienen el caso</h2><p>Seis arquetipos profesionales con responsabilidades, supuestos y temores diferentes.</p></header><div class="hotel-archetypes-grid">{''.join(cards)}</div></aside>'''
+        return f'''<aside class="hotel-archetypes" id="personas"><header><b>HOTEL HORIZONTE · N00</b><h2>Las personas que sostienen el caso</h2><p>Seis arquetipos profesionales con responsabilidades, supuestos y temores diferentes.</p></header><div class="hotel-archetypes-grid">{''.join(cards)}</div></aside>'''
     voices = HOTEL_VOICES[number]
     characters = N00_HOTEL_CHARACTERS if number == 1 else HOTEL_CHARACTERS
     cards = []
@@ -2188,7 +2190,7 @@ def hotel_voices_html(number: int, assets: Path) -> str:
         packaged_portrait = assets / f"hotel-{filename}"
         n08_portrait = HERE / "N08-v9-final" / "assets" / f"hotel-{filename}"
         n07_portrait = HERE / "N07-v9-final" / "assets" / f"hotel-{filename}"
-        n00_portrait = HERE / "N00" / "assets" / f"hotel-{filename}"
+        n00_portrait = N00_ROOT / "assets" / f"hotel-{filename}"
         if number == 7 and packaged_portrait.exists():
             portrait_source = packaged_portrait
         elif number in {8, 9, 10} and n08_portrait.exists():
@@ -2276,7 +2278,7 @@ def keep_n08_observation_instrument_together(body: str) -> str:
 def build_document(number:int)->dict:
     source=source_path(number)
     title,sections=parse_source(source)
-    out=HERE/("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else "N05-v9-final" if number == 5 else "N06-v9-final" if number == 6 else "N07-v9-final" if number == 7 else "N08-v9-final" if number == 8 else "N09-v9-final" if number == 9 else "N10-v9-final" if number == 10 else f"N{number:02d}")
+    out=N00_ROOT if number == 0 else HERE/("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else "N05-v9-final" if number == 5 else "N06-v9-final" if number == 6 else "N07-v9-final" if number == 7 else "N08-v9-final" if number == 8 else "N09-v9-final" if number == 9 else "N10-v9-final")
     assets=out/"assets"; diagrams=out/"diagrams"; output=out/"output"
     for folder in (assets,diagrams,output): folder.mkdir(parents=True,exist_ok=True)
     if 0 <= number <= 10:
@@ -2291,7 +2293,7 @@ def build_document(number:int)->dict:
                 raise FileNotFoundError("N01 requiere provenance/image-manifest.json dentro del paquete")
 
     if number == 0:
-        cover_source = HERE / "N00" / "image-curation" / "selected" / "cover.jpg"
+        cover_source = N00_ROOT / "image-curation" / "selected" / "cover.jpg"
     elif number == 1:
         cover_source = HERE / "N01-v18-final" / "assets" / "cover-source-premium-bw-v1.png"
     elif number == 2:
@@ -2838,7 +2840,7 @@ def build_document(number:int)->dict:
                     f'''<img src="assets/{esc(selected[image_index])}" alt="{esc(alt)}"><p>{esc(quote)}</p></section>'''
                 )
             part_chunk += (
-                f'''<section class="part-divider part-divider-n{number:02d}">'''
+                f'''<section class="part-divider part-divider-n{number:02d}" id="parte-{part_label.split()[-1].lower()}">'''
                 f'''<div class="part-divider-copy"><b>{esc(part_label)}</b>'''
                 f'''<h2 data-source-id="{heading_source_id}">{esc(part_title)}</h2>'''
                 f'''<div class="part-divider-body">{body}</div></div></section>'''
@@ -3113,7 +3115,8 @@ def build_document(number:int)->dict:
         if number in {9, 10} and section.title.startswith("Movimiento 3 ·") and not hotel_voices_inserted:
             hotel_voices_inside = hotel_voices_html(number, assets)
             hotel_voices_inserted = True
-        chunks.append(f'<section class="{" ".join(classes)}" data-section="{data_section}">{heading}{hotel_figure}{prelude}<div class="section-body">{body}</div>{extra}{hotel_voices_inside}</section>')
+        section_id = "referencias" if reference_apparatus else f"section-{idx:02d}"
+        chunks.append(f'<section class="{" ".join(classes)}" id="{section_id}" data-section="{data_section}">{heading}{hotel_figure}{prelude}<div class="section-body">{body}</div>{extra}{hotel_voices_inside}</section>')
         if "hotel-case" in classes and not hotel_voices_inserted:
             chunks.append(hotel_voices_html(number, assets))
             hotel_voices_inserted = True
@@ -3263,8 +3266,8 @@ COLLECTION_CSS=r'''
 .cover-title span{font-family:Avenir,sans-serif;font-size:6.7pt;letter-spacing:.14em}.cover-title h1{margin:4mm 0 0;color:#fff;font-family:Didot,"Bodoni 72",serif;font-size:31pt;line-height:.94;letter-spacing:-.022em;font-weight:400}
 .cover-thesis{position:absolute;z-index:3;right:16mm;bottom:29mm;width:53mm;text-align:right}.cover-thesis b{display:inline-grid;place-items:center;width:15mm;height:15mm;margin-bottom:4mm;border:.35mm solid #CFFF00;border-radius:50%;color:#CFFF00;font-family:Avenir,sans-serif;font-size:7pt}.cover-thesis p{margin:0;color:#CFFF00;font-family:Didot,"Bodoni 72",serif;font-size:13.5pt;line-height:1.08}.cover-parallelogram{position:absolute;z-index:3;right:18mm;top:55mm;width:15mm;height:4mm;background:#CFFF00;clip-path:polygon(10% 0,100% 0,90% 100%,0 100%);opacity:.95}
 .cover-n01 .cover-meta{letter-spacing:.035em;line-height:1.2}
-.cover-n01 .cover-meta-eyebrow,.cover-n02 .cover-meta-eyebrow,.cover-n03 .cover-meta-eyebrow,.cover-n04 .cover-meta-eyebrow,.cover-n05 .cover-meta-eyebrow,.cover-n07 .cover-meta-eyebrow,.cover-n08 .cover-meta-eyebrow{display:flex;flex-direction:column;align-items:flex-start;gap:0;white-space:normal}
-.cover-n01 .cover-meta-eyebrow span,.cover-n02 .cover-meta-eyebrow span,.cover-n03 .cover-meta-eyebrow span,.cover-n04 .cover-meta-eyebrow span,.cover-n05 .cover-meta-eyebrow span,.cover-n07 .cover-meta-eyebrow span,.cover-n08 .cover-meta-eyebrow span{display:block;white-space:nowrap}
+.cover-n00 .cover-meta-eyebrow,.cover-n01 .cover-meta-eyebrow,.cover-n02 .cover-meta-eyebrow,.cover-n03 .cover-meta-eyebrow,.cover-n04 .cover-meta-eyebrow,.cover-n05 .cover-meta-eyebrow,.cover-n07 .cover-meta-eyebrow,.cover-n08 .cover-meta-eyebrow{display:flex;flex-direction:column;align-items:flex-start;gap:0;white-space:normal}
+.cover-n00 .cover-meta-eyebrow span,.cover-n01 .cover-meta-eyebrow span,.cover-n02 .cover-meta-eyebrow span,.cover-n03 .cover-meta-eyebrow span,.cover-n04 .cover-meta-eyebrow span,.cover-n05 .cover-meta-eyebrow span,.cover-n07 .cover-meta-eyebrow span,.cover-n08 .cover-meta-eyebrow span{display:block;white-space:nowrap}
 .cover-n01>img{filter:none}
 .cover-n01 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.18) 0,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 61%,rgba(8,9,8,.55) 100%)}
 .cover-n01::before{content:"";position:absolute;z-index:1;left:0;top:0;width:100%;height:52mm;pointer-events:none;display:block;background:linear-gradient(to bottom,rgba(0,0,0,.48) 0,rgba(0,0,0,.38) 44%,rgba(0,0,0,0) 100%)}
@@ -3293,7 +3296,7 @@ COLLECTION_CSS=r'''
 .cover-n00 .cover-title{left:15.5mm;bottom:21mm;width:106mm;padding-bottom:1mm}
 .cover-n00 .cover-title h1{font-size:34pt;line-height:.94;letter-spacing:-.022em}
 .cover-n00 .cover-thesis{right:17mm;bottom:23mm;width:78mm}
-.cover-n00 .cover-thesis p{font-size:11.2pt;line-height:1.08}
+.cover-n00 .cover-thesis p{font-size:11.2pt;line-height:1.08;color:#F7F6F2}
 .cover-n00 .cover-parallelogram{right:15.5mm;top:57mm}
 .cover-n03>img{object-position:50% 48%;filter:none}
 .cover-n03 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.18) 0,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 61%,rgba(8,9,8,.58) 100%)}
@@ -3379,24 +3382,31 @@ COLLECTION_CSS=r'''
 .document-n00 .contents-page{padding:14mm 16mm}
 .document-n00 .contents-page header h2{font-size:31pt;margin:2mm 0 1mm}
 .document-n00 .contents-page header>p{font-size:9.2pt;margin:0}
-.document-n00 .contents-page .contents-route{max-width:170mm;margin:2mm 0 0;padding-left:3mm;border-left:1.4mm solid #CFFF00;font:7.2pt/1.22 Avenir,sans-serif;color:#30322f}
-.document-n00 .contents-page .contents-sinnum-note{position:absolute;left:16mm;right:16mm;bottom:18mm;margin:0;padding-top:2mm;border-top:.2mm solid #BFC1BD;font:6.4pt/1.2 Avenir,sans-serif;color:#5B5D58}
+.document-n00 .contents-page .contents-route{max-width:170mm;margin:2mm 0 0;padding-left:3mm;border-left:1.4mm solid #CFFF00;font:7.7pt/1.24 Avenir,sans-serif;color:#30322f}
+.document-n00 .contents-page .contents-sinnum-note{position:absolute;left:16mm;right:16mm;bottom:18mm;margin:0;padding-top:2mm;border-top:.2mm solid #BFC1BD;font:7.1pt/1.22 Avenir,sans-serif;color:#5B5D58}
 .document-n00 .contents-layout{grid-template-columns:1.42fr .58fr;gap:6mm;height:207mm;margin-top:4mm}
 .document-n00 .contents-layout ol{columns:2;column-gap:5mm}
-.document-n00 .contents-layout li{grid-template-columns:7mm 1fr;gap:1.2mm;padding:1mm 0;font-size:6.75pt;line-height:1.12}
-.document-n00 .contents-layout li small{display:inline-block;margin-left:1mm;font-size:4.8pt;line-height:1;letter-spacing:.08em;color:#777}
+.document-n00 .contents-layout li{display:block;grid-template-columns:none;gap:0;padding:.9mm 0;font-size:7.25pt;line-height:1.12}
+.document-n00 .contents-layout li>a{display:grid;grid-template-columns:7mm 1fr;gap:1.2mm;color:inherit;text-decoration:none}
+.document-n00 .contents-layout .contents-part>a{display:block}
+.document-n00 .contents-layout li small{display:inline-block;margin-left:1mm;font-size:6pt;line-height:1;letter-spacing:.06em;color:#666}
 .document-n00 .contents-layout .contents-part{display:block;margin-top:1.7mm;padding:1.3mm 1.5mm;border:0;background:#202020;color:#FAFAF8;font-weight:700;letter-spacing:.05em;column-span:none}
 .document-n00 .contents-layout .contents-part span{display:block}
 .document-n00 .contents-layout .contents-core{border-left:1mm solid #CFFF00;padding-left:1.2mm}
 .document-n00 .contents-layout .contents-unnumbered{grid-template-columns:7mm 1fr;color:#666663;background:#F0F0EC}
 .document-n00 .contents-layout .contents-unnumbered b{color:#4D5A00}
 .document-n00 .contents-layout figure img{height:190mm;filter:grayscale(1) contrast(1.06)}
-.document-n00 .contents-layout figcaption{font-size:6.2pt;line-height:1.16}
+.document-n00 .contents-layout figcaption{font-size:7.2pt;line-height:1.2}
+.document-n00 .contents-page-text-only .contents-layout{display:block;height:220mm;margin-top:4mm}
+.document-n00 .contents-page-text-only .contents-layout ol{width:100%;columns:2;column-count:2;column-gap:9mm;column-rule:.2mm solid #D0D1CE}
+.document-n00 .contents-page-text-only .contents-layout li{font-size:8.1pt;line-height:1.18;padding:1mm 1.8mm 1mm 0}
+.document-n00 .contents-page-text-only .contents-layout li small{font-size:6.5pt}
 .document-n00 section[data-section="09"] .photo-band img{height:118mm;object-position:center 48%}
 .authors-page{background:linear-gradient(90deg,#FAFAF8 0 33.333%,#E8E9E8 33.333% 66.666%,#FAFAF8 66.666%)}.authors-page header{text-align:center}.authors-page header p{margin-left:auto;margin-right:auto}.contributors-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6mm 5mm;margin-top:8mm}.contributor{text-align:center;min-height:78mm;padding:2mm 3mm;border-bottom:.2mm solid #aaa}.contributor>b{display:block;margin-bottom:2mm;font-family:Didot,serif;font-size:13pt;color:#666}.contributor-portrait{display:block;width:25mm;height:25mm;margin:0 auto 3mm;object-fit:cover;border-radius:50%;filter:grayscale(1);background:#dedede;border:.25mm solid #555}.contributor h3{margin:1mm 0;font-family:Avenir,sans-serif;font-size:9.4pt;font-weight:700;text-transform:uppercase}.contributor span{display:block;color:#202020;font-family:Avenir,sans-serif;font-size:6pt;font-weight:700;letter-spacing:.08em}.contributor cite{display:block;min-height:11mm;margin-top:2.2mm;font-family:Baskerville,serif;font-size:8.2pt;line-height:1.24;font-style:italic;text-align:left}.contributor p{margin-top:1.2mm;font-family:Avenir,sans-serif;font-size:6.8pt;line-height:1.24;text-align:left;color:#565855}.authors-page blockquote{margin:6mm 8mm 0;padding-top:4mm;border-top:.25mm solid #999;text-align:center;font-family:Didot,serif;font-size:14pt;line-height:1.12;font-style:italic}
 .document-n00 .authors-page .contributors-grid{column-gap:8mm;row-gap:6mm}
 .document-n00 .authors-page .contributor{min-width:0;padding-left:4mm;padding-right:4mm}
 .document-n00 .authors-page .contributor cite,.document-n00 .authors-page .contributor p{overflow-wrap:anywhere}
+.document-n00 .authors-page .contributor p{font-size:7.5pt;line-height:1.25}
 .document-n00 .authors-page .contributor span{display:none}
 .hotel-archetypes{page:content;margin:5mm 0 6mm;padding:5mm 6mm;background:#DADDDC;border-top:.55mm solid #202020;break-inside:avoid-page}
 .hotel-archetypes header{margin-bottom:2mm}.hotel-archetypes header>b{font:700 5.8pt/1 Avenir,sans-serif;letter-spacing:.15em}.hotel-archetypes header h2{margin:1mm 0 .5mm;font:400 21pt/1 Didot,serif}.hotel-archetypes header p{margin:0;font-size:8.2pt}
@@ -3936,10 +3946,12 @@ COLLECTION_CSS=r'''
 .premium-magazine.document-n00 .n00-nuclei-index .section-body h3{break-after:avoid-page;page-break-after:avoid;margin:2.7mm 0 1mm;font-size:12.3pt;line-height:1.03}
 .premium-magazine.document-n00 .n00-nuclei-index .section-body ul{margin:0 0 2mm;padding-left:0;list-style:none;break-inside:avoid-page;page-break-inside:avoid}
 .premium-magazine.document-n00 .n00-nuclei-index .section-body li{margin:0;padding:0 0 1mm;border-bottom:.15mm solid #D0D1CE;font:7.65pt/1.19 Avenir,sans-serif;break-inside:avoid-page;page-break-inside:avoid}
-.premium-magazine.document-n00 .n00-curriculum-map .table-wrap{margin:2.5mm 0 4mm;break-inside:avoid-page;page-break-inside:avoid}
-.premium-magazine.document-n00 .n00-curriculum-map table{font-size:6.45pt;line-height:1.13}
+.premium-magazine.document-n00 .n00-curriculum-map .table-wrap{margin:2.5mm 0 4mm;break-inside:auto;page-break-inside:auto}
+.premium-magazine.document-n00 .n00-curriculum-map table{font-size:7.25pt;line-height:1.18}
+.premium-magazine.document-n00 .n00-curriculum-map thead{display:table-header-group}
+.premium-magazine.document-n00 .n00-curriculum-map tr{break-inside:avoid-page;page-break-inside:avoid}
 .premium-magazine.document-n00 .n00-curriculum-map th,.premium-magazine.document-n00 .n00-curriculum-map td{padding:1.15mm 1.3mm}
-.premium-magazine.document-n00 .guided-exercise{break-before:page;page-break-before:always}
+.premium-magazine.document-n00 .guided-exercise{break-before:auto;page-break-before:auto}
 .premium-magazine.document-n00 .guided-exercise .section-body h3{margin-top:5mm}
 .premium-magazine.document-n00 .exercise-writing-space{height:34mm;margin:3mm 0 6mm;padding:3mm 3.5mm;border:.25mm solid #B7BAB5;border-top:1.2mm solid #CFFF00;background:#FAFAF8;break-inside:avoid-page;page-break-inside:avoid}
 .premium-magazine.document-n00 .exercise-writing-space span{display:block;margin:0 0 1.2mm;padding:0;background:transparent;font:700 6.5pt/1 Avenir,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#4D5A00}
@@ -4227,6 +4239,23 @@ COLLECTION_CSS=r'''
 .references-image-full::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.72) 100%)}
 .references-image-full p{position:absolute;z-index:3;left:18mm;right:18mm;bottom:22mm;margin:0;color:#fff;font-family:Didot,"Bodoni 72",serif;font-size:21pt;line-height:1.05}
 .premium-magazine .full-bleed{break-before:auto;break-after:auto;page-break-before:auto;page-break-after:auto}
+@media screen and (max-width:760px){
+  body.premium-magazine{width:auto;min-width:0;margin:0;background:#FAFAF8}
+  .premium-magazine main{width:100%;max-width:100%;overflow:hidden}
+  .premium-magazine .collection-cover,.premium-magazine .front-page,.premium-magazine .reading-section,.premium-magazine .part-divider,.premium-magazine .full-bleed,.premium-magazine .closing-image{box-sizing:border-box;width:100%;max-width:100%;height:auto;min-height:100svh;margin:0;padding:8vw}
+  .premium-magazine .collection-cover{height:100svh}
+  .premium-magazine .reading{columns:auto;column-count:auto;width:100%}
+  .premium-magazine .section-body,.premium-magazine .two-column .section-body,.premium-magazine .n00-nuclei-index .section-body,.premium-magazine .references .section-body{columns:1!important;column-count:1!important;column-rule:0!important}
+  .premium-magazine .contents-layout,.premium-magazine .contributors-grid,.premium-magazine .hotel-archetypes-grid,.premium-magazine .questions .section-body ol{display:grid;grid-template-columns:1fr!important;height:auto!important}
+  .premium-magazine .contents-layout ol{columns:1!important;column-count:1!important}
+  .premium-magazine .contents-layout figure{display:none}
+  .premium-magazine .contents-page .contents-sinnum-note{position:static!important;margin-top:6vw!important}
+  .premium-magazine .photo-band,.premium-magazine .hotel-photo{margin-left:-8vw!important;margin-right:-8vw!important}
+  .premium-magazine .photo-band img,.premium-magazine .hotel-photo img{width:100%;height:auto;min-height:34vh;object-fit:cover}
+  .premium-magazine table{font-size:9pt;line-height:1.3}
+  .premium-magazine .table-wrap{overflow-x:auto}
+  .premium-magazine.document-n00 .n00-nuclei-index{min-height:0}
+}
 '''
 
 
@@ -4237,6 +4266,8 @@ def build_all(start:int,end:int)->None:
     for number in range(start,end+1):
         build_document(number)
         print(f"BUILT SOURCE N{number:02d}")
+    if N00_ROOT != (HERE / "N00").resolve():
+        return
     collection_path = HERE / "collection-manifest.json"
     existing = json.loads(collection_path.read_text(encoding="utf-8")) if collection_path.exists() else []
     manifests_by_number = {entry["number"]: entry for entry in existing}
@@ -4260,6 +4291,8 @@ def build_all(start:int,end:int)->None:
 
 
 def cover_package_root(number: int) -> Path:
+    if number == 0:
+        return N00_ROOT
     package = (
         "N01-v18-final" if number == 1 else
         "N02-v14-final" if number == 2 else
@@ -4271,7 +4304,7 @@ def cover_package_root(number: int) -> Path:
 
 def cover_source_path(number: int) -> Path:
     if number == 0:
-        return HERE / "N00" / "image-curation" / "selected" / "cover.jpg"
+        return N00_ROOT / "image-curation" / "selected" / "cover.jpg"
     if number == 1:
         return HERE / "N01-v18-final" / "assets" / "cover-source-premium-bw-v1.png"
     if number == 2:

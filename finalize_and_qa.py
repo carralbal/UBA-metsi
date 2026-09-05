@@ -117,6 +117,117 @@ def set_image_alt(page, value: str) -> int:
     return count
 
 
+def set_page_image_alts(page, values: list[str]) -> int:
+    """Attach one deterministic description to each raster image XObject."""
+    images = []
+    seen: set[tuple[int, int] | int] = set()
+
+    def walk_resources(resources) -> None:
+        if not resources:
+            return
+        resources = resources.get_object()
+        xobjects = resources.get("/XObject")
+        if not xobjects:
+            return
+        for reference in xobjects.get_object().values():
+            identity = (
+                (int(reference.idnum), int(reference.generation))
+                if hasattr(reference, "idnum")
+                else id(reference)
+            )
+            if identity in seen:
+                continue
+            seen.add(identity)
+            obj = reference.get_object()
+            if obj.get("/Subtype") == "/Image":
+                images.append(obj)
+            elif obj.get("/Subtype") == "/Form":
+                walk_resources(obj.get("/Resources"))
+
+    walk_resources(page.get("/Resources"))
+    if len(images) != len(values):
+        raise RuntimeError(
+            f"La página contiene {len(images)} imágenes y recibió {len(values)} textos alternativos"
+        )
+    for image, value in zip(images, values):
+        image[NameObject("/Alt")] = TextStringObject(value)
+    return len(images)
+
+
+def n00_page_image_alts(page_text: str, image_count: int, manifest: dict) -> list[str]:
+    """Resolve the approved N00 description for every image-bearing page."""
+    compact = normalize(page_text)
+    if image_count == 0:
+        return []
+    if "lecturaprevia" in compact and "uncontratointelectual" in compact:
+        return [manifest["cover"]["alt"]]
+    if "contenido" in compact and "rutapriorizada" in compact:
+        return ["Ensayo orquestal visto desde la platea, usado como imagen de orientación del contenido."]
+    if "seisreferentes" in compact:
+        return [
+            "Retrato documental de Donald A. Schön.",
+            "Retrato documental de Don Norman.",
+            "Retrato documental de Lucy Suchman.",
+            "Retrato documental de Sasha Costanza-Chock.",
+            "Retrato documental de Chris Argyris.",
+            "Retrato documental de Michelene T. H. Chi.",
+        ]
+    if "antesdeintervenirhayqueaprenderaescuchar" in compact:
+        return ["Auditorio visto desde la platea durante un ensayo orquestal."]
+    if "unplancoordinaexpectativas" in compact:
+        return ["Partitura y arco de un instrumento durante un ensayo orquestal."]
+    if "cadanúcleoagregaunacapacidad" in compact:
+        return ["Secuencia editorial que representa capacidades acumulativas entre Núcleos."]
+    if "elencuentroconvierteinterpretaciones" in compact:
+        return ["Grupo de estudiantes universitarios argentinos y latinoamericanos discute alrededor de una mesa con apuntes impresos."]
+    if "elsoftwarepuedefuncionarylapromesafallar" in compact:
+        return ["Cartel de Hotel Horizonte iluminado contra un cielo oscuro."]
+    if "seisarquetiposprofesionales" in compact:
+        return [
+            "Retrato editorial de Elena Acosta.",
+            "Retrato editorial de Lucía Ferreyra.",
+            "Retrato editorial de Ricardo Sosa.",
+            "Retrato editorial de Federico Müller.",
+            "Retrato editorial de Mariela Benítez.",
+            "Retrato editorial de Camila Duarte.",
+        ]
+    if "leernoesatravesarpáginas" in compact:
+        return ["Aula universitaria casi vacía con dos personas conversando junto a un pizarrón."]
+    if "laiaamplíaproducciónyexploración" in compact:
+        return ["Dos estudiantes y un docente latinoamericanos revisan fuentes impresas junto a una computadora portátil."]
+    if "lasecuenciavuelvevisible" in compact:
+        return [manifest["closing"]["alt"]]
+    raise RuntimeError(f"No se pudo resolver el texto alternativo de una página N00 con {image_count} imágenes")
+
+
+def add_n00_outline(writer: PdfWriter, source: str, page_texts: list[str]) -> dict:
+    """Create a navigable hierarchy without changing pagination or page paint."""
+    page_texts = [normalize(text) for text in page_texts]
+    root = writer.add_outline_item("N00 · METSI: ver, comprender, intervenir", 0)
+    writer.add_outline_item("Contenido", 1, parent=root)
+    writer.add_outline_item("Referentes", 2, parent=root)
+    current_part = root
+    added = 3
+    missing: list[str] = []
+    for line in source.splitlines():
+        if not line.startswith("## "):
+            continue
+        heading = line[3:].strip()
+        key = normalize(heading)
+        page_index = next((i for i, text in enumerate(page_texts[3:], 3) if key in text), None)
+        if page_index is None:
+            missing.append(heading)
+            continue
+        if heading.startswith("Parte "):
+            current_part = writer.add_outline_item(heading, page_index, parent=root)
+        elif heading == "Referencias base":
+            writer.add_outline_item(heading, page_index, parent=root)
+        else:
+            writer.add_outline_item(heading, page_index, parent=current_part)
+        added += 1
+    return {"added": added, "missing": missing}
+
+
 def set_structure_figure_alt(writer: PdfWriter, page_number: int, alt_text: str) -> int:
     """Set /Alt on Figure structure elements associated with one output page."""
     if not alt_text or not (1 <= page_number <= len(writer.pages)):
@@ -613,12 +724,15 @@ def consolidate_n01_cover_eyebrow(page, reader: PdfReader) -> int:
 
 def finalize(number: int) -> dict:
     code = f"N{number:02d}"
-    root = HERE / ("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else "N05-v9-final" if number == 5 else "N06-v9-final" if number == 6 else "N07-v9-final" if number == 7 else "N08-v9-final" if number == 8 else "N09-v9-final" if number == 9 else "N10-v9-final" if number == 10 else code)
-    raw_name = "N01-METSI-lectura-previa-v18.pdf" if number == 1 else "N02-METSI-lectura-previa-v14.pdf" if number == 2 else "N03-METSI-lectura-previa-v9.pdf" if number == 3 else "N04-METSI-lectura-previa-v9.pdf" if number == 4 else "N05-METSI-lectura-previa-v9.pdf" if number == 5 else "N06-METSI-lectura-previa-v9.pdf" if number == 6 else "N07-METSI-lectura-previa-v9.pdf" if number == 7 else "N08-METSI-lectura-previa-v9.pdf" if number == 8 else "N09-METSI-lectura-previa-v9.pdf" if number == 9 else "N10-METSI-lectura-previa-v9.pdf" if number == 10 else f"{code}-METSI-lectura-previa.pdf"
-    final_name = "N01-METSI-lectura-previa-v18-final.pdf" if number == 1 else "N02-METSI-lectura-previa-v14-final.pdf" if number == 2 else "N03-METSI-lectura-previa-v9-final.pdf" if number == 3 else "N04-METSI-lectura-previa-v9-final.pdf" if number == 4 else "N05-METSI-lectura-previa-v9-final.pdf" if number == 5 else "N06-METSI-lectura-previa-v9-final.pdf" if number == 6 else "N07-METSI-lectura-previa-v9-final.pdf" if number == 7 else "N08-METSI-lectura-previa-v9-final.pdf" if number == 8 else "N09-METSI-lectura-previa-v9-final.pdf" if number == 9 else "N10-METSI-lectura-previa-v9-final.pdf" if number == 10 else f"{code}-METSI-lectura-previa-final.pdf"
+    root = Path(os.environ.get("METSI_N00_ROOT", HERE / code)).resolve() if number == 0 else HERE / ("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else "N05-v9-final" if number == 5 else "N06-v9-final" if number == 6 else "N07-v9-final" if number == 7 else "N08-v9-final" if number == 8 else "N09-v9-final" if number == 9 else "N10-v9-final")
+    raw_name = "N01-METSI-lectura-previa-v18.pdf" if number == 1 else "N02-METSI-lectura-previa-v14.pdf" if number == 2 else "N03-METSI-lectura-previa-v9.pdf" if number == 3 else "N04-METSI-lectura-previa-v9.pdf" if number == 4 else "N05-METSI-lectura-previa-v9.pdf" if number == 5 else "N06-METSI-lectura-previa-v9.pdf" if number == 6 else "N07-METSI-lectura-previa-v9.pdf" if number == 7 else "N08-METSI-lectura-previa-v9.pdf" if number == 8 else "N09-METSI-lectura-previa-v9.pdf" if number == 9 else "N10-METSI-lectura-previa-v9.pdf" if number == 10 else os.environ.get("METSI_N00_RAW_NAME", f"{code}-METSI-lectura-previa.pdf")
+    final_name = "N01-METSI-lectura-previa-v18-final.pdf" if number == 1 else "N02-METSI-lectura-previa-v14-final.pdf" if number == 2 else "N03-METSI-lectura-previa-v9-final.pdf" if number == 3 else "N04-METSI-lectura-previa-v9-final.pdf" if number == 4 else "N05-METSI-lectura-previa-v9-final.pdf" if number == 5 else "N06-METSI-lectura-previa-v9-final.pdf" if number == 6 else "N07-METSI-lectura-previa-v9-final.pdf" if number == 7 else "N08-METSI-lectura-previa-v9-final.pdf" if number == 8 else "N09-METSI-lectura-previa-v9-final.pdf" if number == 9 else "N10-METSI-lectura-previa-v9-final.pdf" if number == 10 else os.environ.get("METSI_N00_FINAL_NAME", f"{code}-METSI-lectura-previa-final.pdf")
     raw = root / "output" / raw_name
     final = root / "output" / final_name
     manifest = json.loads((root / "manifest.json").read_text(encoding="utf-8"))
+    declared_source = Path(manifest["source"])
+    source_path = declared_source if declared_source.is_absolute() else root / declared_source
+    source = source_path.read_text(encoding="utf-8")
     reader = PdfReader(str(raw))
     writer = PdfWriter()
     preserve_tagged_structure = number in {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
@@ -634,6 +748,8 @@ def finalize(number: int) -> dict:
     kept_page_number = 0
     removed_blank_pages: list[int] = []
     sparse_visual_fills: list[int] = []
+    n00_alt_xobjects = 0
+    final_page_texts: list[str] = []
     if number == 0 and preserve_tagged_structure:
         blank_indexes: list[int] = []
         for index, page in enumerate(writer.pages):
@@ -697,6 +813,7 @@ def finalize(number: int) -> dict:
             page.merge_page(visual)
             sparse_visual_fills.append(source_page_number)
         kept_page_number += 1
+        final_page_texts.append(page_text)
         is_n00_part_divider = number == 0 and bool(re.search(r"\bPARTE\s+(?:I|II|III)\b", page_text))
         normalized = normalize(page_text)
         is_opening_question_page = number in {1, 2, 3, 4, 5, 6, 7, 8, 9, 10} and "preguntaprofesional" in normalized and source_word_count < 80
@@ -760,6 +877,11 @@ def finalize(number: int) -> dict:
         # Clean the page only after it belongs to the writer.  pypdf 7 removes
         # support for replacing content on detached reader pages.
         strip_empty_helvetica(target_page, reader)
+        if number == 0 and image_count:
+            n00_alt_xobjects += set_page_image_alts(
+                target_page,
+                n00_page_image_alts(page_text, image_count, manifest),
+            )
         if number in {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10} and source_page_number == 1:
             set_image_alt(target_page, manifest.get("cover", {}).get("alt", ""))
         if number == 6 and source_page_number == 2:
@@ -777,6 +899,7 @@ def finalize(number: int) -> dict:
         )
     if number == 6:
         set_structure_figure_alt(writer, 2, "Imagen editorial asociada al contenido de N06")
+    outline_report = add_n00_outline(writer, source, final_page_texts) if number == 0 else {"added": 0, "missing": []}
     writer.add_metadata({
         "/Title": manifest["title"],
         "/Author": "Diego Carralbal",
@@ -789,9 +912,6 @@ def finalize(number: int) -> dict:
     check = PdfReader(str(final))
     texts = [page.extract_text() or "" for page in check.pages]
     all_text = "\n".join(texts)
-    declared_source = Path(manifest["source"])
-    source_path = declared_source if declared_source.is_absolute() else root / declared_source
-    source = source_path.read_text(encoding="utf-8")
     headings = [line.lstrip("#").strip() for line in source.splitlines() if line.startswith("## ")]
     normalized_pdf = normalize(all_text)
     missing = [heading for heading in headings if normalize(heading) not in normalized_pdf]
@@ -802,12 +922,15 @@ def finalize(number: int) -> dict:
         for page in check.pages
     )
     links = []
+    internal_links = 0
     for index, page in enumerate(check.pages, 1):
         for annotation in page.get("/Annots", []):
             obj = annotation.get_object()
             action = obj.get("/A")
             if action and action.get("/URI"):
                 links.append((index, str(action.get("/URI"))))
+            if obj.get("/Dest") or (action and action.get("/S") == "/GoTo"):
+                internal_links += 1
     linkedin_page_set = {page for page, uri in links if "linkedin.com/in/carralbal" in uri}
     external_reference_links = sorted({
         uri for _page, uri in links if "linkedin.com/in/carralbal" not in uri
@@ -862,9 +985,15 @@ def finalize(number: int) -> dict:
         "font_inventory": sorted(fonts),
         "removed_blank_source_pages": removed_blank_pages,
         "sparse_visual_fill_source_pages": sparse_visual_fills,
+        "image_xobjects_with_alt": n00_alt_xobjects,
+        "outline_items": outline_report["added"],
+        "outline_missing": outline_report["missing"],
+        "internal_links": internal_links,
     }
     links_ok = len(external_reference_links) >= 4 if number == 0 else True
     closing_links_ok = closing_page_uris == [LINKEDIN]
+    navigation_ok = not outline_report["missing"] and (internal_links >= 27 if number == 0 else True)
+    image_alt_ok = n00_alt_xobjects >= 21 if number == 0 else True
     result["status"] = "PASS" if (
         a4 == len(check.pages)
         and not missing
@@ -879,6 +1008,8 @@ def finalize(number: int) -> dict:
         and marked_pdf
         and document_language == "es-AR"
         and links_ok
+        and navigation_ok
+        and image_alt_ok
     ) else "FAIL"
     (root / "qa-report.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     return result

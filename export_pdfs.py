@@ -12,14 +12,15 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent
+N00_ROOT = Path(os.environ.get("METSI_N00_ROOT", ROOT / "N00")).resolve()
 CHROME = Path("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
 
 
 def export(number: int) -> None:
     code = f"N{number:02d}"
-    document_root = ROOT / ("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else "N05-v9-final" if number == 5 else "N06-v9-final" if number == 6 else "N07-v9-final" if number == 7 else "N08-v9-final" if number == 8 else "N09-v9-final" if number == 9 else "N10-v9-final" if number == 10 else code)
+    document_root = N00_ROOT if number == 0 else ROOT / ("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else "N05-v9-final" if number == 5 else "N06-v9-final" if number == 6 else "N07-v9-final" if number == 7 else "N08-v9-final" if number == 8 else "N09-v9-final" if number == 9 else "N10-v9-final")
     source = (document_root / "index.html").resolve()
-    output_name = "N01-METSI-lectura-previa-v18.pdf" if number == 1 else "N02-METSI-lectura-previa-v14.pdf" if number == 2 else "N03-METSI-lectura-previa-v9.pdf" if number == 3 else "N04-METSI-lectura-previa-v9.pdf" if number == 4 else "N05-METSI-lectura-previa-v9.pdf" if number == 5 else "N06-METSI-lectura-previa-v9.pdf" if number == 6 else "N07-METSI-lectura-previa-v9.pdf" if number == 7 else "N08-METSI-lectura-previa-v9.pdf" if number == 8 else "N09-METSI-lectura-previa-v9.pdf" if number == 9 else "N10-METSI-lectura-previa-v9.pdf" if number == 10 else f"{code}-METSI-lectura-previa.pdf"
+    output_name = "N01-METSI-lectura-previa-v18.pdf" if number == 1 else "N02-METSI-lectura-previa-v14.pdf" if number == 2 else "N03-METSI-lectura-previa-v9.pdf" if number == 3 else "N04-METSI-lectura-previa-v9.pdf" if number == 4 else "N05-METSI-lectura-previa-v9.pdf" if number == 5 else "N06-METSI-lectura-previa-v9.pdf" if number == 6 else "N07-METSI-lectura-previa-v9.pdf" if number == 7 else "N08-METSI-lectura-previa-v9.pdf" if number == 8 else "N09-METSI-lectura-previa-v9.pdf" if number == 9 else "N10-METSI-lectura-previa-v9.pdf" if number == 10 else os.environ.get("METSI_N00_RAW_NAME", f"{code}-METSI-lectura-previa.pdf")
     output = (document_root / "output" / output_name).resolve()
     with tempfile.TemporaryDirectory(prefix=f"metsi-{code}-chrome-", dir="/private/tmp") as profile:
         # Usar un nombre por proceso evita que una instancia anterior de Chrome,
