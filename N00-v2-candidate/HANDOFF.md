@@ -43,7 +43,7 @@ La nueva versión vive en un paquete separado: `N00-v2-candidate/`.
 ### Dirección editorial y diseño
 
 - La portada conserva la fotografía concebida originalmente en blanco y negro, con una escala tonal amplia. No se añadió una tela oscura global.
-- La tesis breve de portada pasó de volt a blanco para recuperar contraste sobre la tapa más clara. El volt queda como acento de identidad en círculo y paralelogramos.
+- La tesis breve de portada conserva su color volt original. El ajuste tonal de la fotografía no altera los colores tipográficos aprobados.
 - `LECTURA PREVIA` y `EDICIÓN 2026` son dos cadenas completas y consecutivas en la capa de texto.
 - La página de Contenido se recompuso como doble columna editorial minimalista, sin barra lateral ornamental ni imagen competidora.
 - Se elevó la legibilidad de notas, etiquetas y datos bibliográficos pequeños.
@@ -96,7 +96,7 @@ El documento comunica desde el comienzo qué es obligatorio, cuánto tiempo esti
 
 ### Dirección de arte
 
-La tapa recupera matices de gris y profundidad. El sistema visual mantiene fondo papel, serif editorial, sans funcional y volt como firma. Las pausas fotográficas tienen función conceptual, las imágenes llegan a sangre y la composición alterna densidad, aire, fotografía, tabla y doble columna sin recurrir a plantillas genéricas.
+La tapa recupera matices de gris y profundidad. El sistema visual mantiene fondo papel, serif editorial, sans funcional y los textos originalmente definidos en volt. Las pausas fotográficas tienen función conceptual, las imágenes llegan a sangre y la composición alterna densidad, aire, fotografía, tabla y doble columna sin recurrir a plantillas genéricas.
 
 ## Incertidumbres y límites explícitos
 

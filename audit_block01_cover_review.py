@@ -89,7 +89,7 @@ def metrics(path: Path, code: str) -> dict:
         background = zone_luminance.ravel()
     p50 = float(np.percentile(background, 50))
     p75 = float(np.percentile(background, 75))
-    current_rgb = (247, 246, 242) if code == "N00" else (207, 255, 0)
+    current_rgb = (207, 255, 0)
     current_contrast = contrast(current_rgb, p75)
     white_contrast = contrast((247, 246, 242), p75)
     ink_contrast = contrast((25, 25, 24), p50)
@@ -117,7 +117,7 @@ def metrics(path: Path, code: str) -> dict:
         "thesis_zone_proxy": {
             "background_p50": round(p50, 2),
             "background_p75": round(p75, 2),
-            "current_color": "paper-white" if code == "N00" else "volt",
+            "current_color": "volt",
             "current_contrast_on_p75": round(current_contrast, 2),
             "paper_white_contrast_on_p75": round(white_contrast, 2),
             "ink_contrast_on_p50": round(ink_contrast, 2),
