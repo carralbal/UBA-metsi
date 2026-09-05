@@ -3,38 +3,365 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>METSI · Lecturas previas</title>
-  <meta name="description" content="Documentos finales y estándar editorial de METSI, FCE UBA.">
+  <title>METSI · Aprender a intervenir</title>
+  <meta name="description" content="Un recorrido por la propuesta académica, pedagógica y editorial de Metodología de los Sistemas de Información, FCE UBA.">
+  <meta name="theme-color" content="#171817">
+  <meta property="og:title" content="METSI · Aprender a intervenir">
+  <meta property="og:description" content="36 Núcleos, ocho bloques y un caso longitudinal para aprender a intervenir en sistemas sociotécnicos.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://carralbal.github.io/UBA-metsi/">
+  <meta property="og:image" content="https://carralbal.github.io/UBA-metsi/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="METSI · Aprender a intervenir">
+  <meta name="twitter:description" content="Una experiencia académica, pedagógica y editorial de FCE UBA.">
+  <meta name="twitter:image" content="https://carralbal.github.io/UBA-metsi/og.png">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="metsi.css">
+  <script src="metsi.js" defer></script>
 </head>
 <body>
-  <header>
-    <p class="eyebrow">FCE · UBA · EDICIÓN 2026</p>
-    <h1>METSI</h1>
-    <p class="deck">Metodología de los Sistemas de Información</p>
+  <a class="skip-link" href="#recorrido">Ir al recorrido</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="#inicio" aria-label="METSI, inicio">METSI</a>
+    <nav aria-label="Recorrido principal">
+      <a href="#propuesta">Propuesta</a>
+      <a href="#mapa">Mapa</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#biblioteca">Lecturas</a>
+    </nav>
+    <a class="header-cta" href="#biblioteca">Explorar la colección</a>
   </header>
-  <main>
-    <section aria-labelledby="lecturas">
-      <h2 id="lecturas">Lecturas previas finales</h2>
-      <div class="documents">
-        <a href="pdf/N00-METSI-lectura-previa-final.pdf"><strong>N00</strong><span>Cómo leer METSI</span><em>PDF aprobado</em></a>
-        <a href="pdf/N01-METSI-lectura-previa-v18-final.pdf"><strong>N01</strong><span>Metodología sin recetas</span><em>PDF cerrado</em></a>
-        <a href="pdf/N02-METSI-lectura-previa-v14-final.pdf"><strong>N02</strong><span>El sistema de información no cabe en una aplicación</span><em>PDF cerrado</em></a>
-        <a href="pdf/N03-METSI-lectura-previa-v9-final.pdf"><strong>N03</strong><span>Frontera, feedback y efectos no intencionales</span><em>PDF auditable</em></a>
-        <a href="pdf/N04-METSI-lectura-previa-v9-final.pdf"><strong>N04</strong><span>Hechos, síntomas, relatos, hipótesis y decisiones</span><em>PDF auditable</em></a>
-        <a href="pdf/N05-METSI-lectura-previa-v9-final.pdf"><strong>N05</strong><span>Actores, afectados, poder y perspectivas</span><em>PDF aprobado</em></a>
-        <a href="pdf/N06-METSI-lectura-previa-v9-final.pdf"><strong>N06</strong><span>Discovery como estrategia de reducción de incertidumbre</span><em>PDF auditable</em></a>
+
+  <main id="recorrido">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">FCE · UBA · LICENCIATURA EN SISTEMAS</p>
+        <h1 id="hero-title">Aprender a intervenir<br>cuando todavía<br>no hay una receta.</h1>
+        <p class="hero-deck">METSI transforma pedidos ambiguos en intervenciones defendibles. Integra pensamiento sistémico, investigación, modelado, estrategia, producto, operación e inteligencia artificial en una experiencia de aprendizaje acumulativa.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#propuesta">Comenzar el recorrido</a>
+          <a class="button button-quiet" href="#biblioteca">Descargar las lecturas</a>
+        </div>
+      </div>
+
+      <div class="cover-stage" aria-label="Tres portadas de la colección METSI">
+        <figure class="cover cover-left"><img src="covers/N00.png" alt="Portada de N00, METSI: ver, comprender, intervenir"></figure>
+        <figure class="cover cover-center"><img src="covers/N01.png" alt="Portada de N01, Metodología sin recetas"></figure>
+        <figure class="cover cover-right"><img src="covers/N10.png" alt="Portada de N10, Construir el problema"></figure>
+        <span class="orbit orbit-a" aria-hidden="true"></span>
+        <span class="orbit orbit-b" aria-hidden="true"></span>
+      </div>
+
+      <div class="hero-proof" aria-label="Dimensiones de la propuesta">
+        <span>36 Núcleos</span>
+        <span>8 bloques</span>
+        <span>1 caso longitudinal</span>
+        <span>Juicio profesional</span>
       </div>
     </section>
-    <section class="standard" aria-labelledby="estandar">
-      <div>
-        <p class="eyebrow">SISTEMA EDITORIAL</p>
-        <h2 id="estandar">Estándar y skills reproducibles</h2>
+
+    <section class="opening section-pad" id="propuesta" aria-labelledby="opening-title">
+      <div class="section-marker"><span>01</span><p>La propuesta</p></div>
+      <h2 id="opening-title">Una materia sobre sistemas.<br><em>No sólo sobre software.</em></h2>
+      <div class="opening-grid">
+        <p class="lead">En la vida profesional, los pedidos suelen llegar redactados como soluciones: “reemplacemos el sistema”, “hagamos una app”, “incorporemos IA”. METSI trabaja en el espacio que todavía falta construir entre ese pedido y una decisión responsable.</p>
+        <div>
+          <p>El objeto de la materia es la relación entre una situación que importa, el sistema sociotécnico que hoy la produce, la evidencia disponible y una intervención que debe poder justificarse, revisarse y, cuando sea necesario, detenerse o repararse.</p>
+          <p class="margin-note">Construir bien es indispensable. Decidir qué conviene construir, dentro de qué sistema y con qué régimen de revisión, también lo es.</p>
+        </div>
       </div>
-      <p>La publicación conserva las reglas de composición, fotografía, integridad de fuentes, infografías, accesibilidad, validación y publicación utilizadas para producir la colección.</p>
-      <p><a class="text-link" href="skills/metsi-compose-document/SKILL.md">Consultar la skill principal de composición</a></p>
+
+      <div class="value-grid" aria-label="Cuatro dimensiones de METSI">
+        <article><span>01</span><h3>Académicamente</h3><p>Conecta pensamiento sistémico, ingeniería, organización, experiencia, producto, operación e IA sin convertirlos en compartimentos.</p></article>
+        <article><span>02</span><h3>Profesionalmente</h3><p>Entrena para decidir bajo incertidumbre, explicitar supuestos, sostener evidencia y responder por consecuencias.</p></article>
+        <article><span>03</span><h3>Pedagógicamente</h3><p>Desplaza la primera aproximación conceptual fuera del encuentro para reservar el tiempo compartido a contraste, práctica y revisión.</p></article>
+        <article><span>04</span><h3>Editorialmente</h3><p>Convierte cada lectura en una pieza de orientación, ritmo y pensamiento: rigurosa, legible, visual y accesible.</p></article>
+      </div>
+    </section>
+
+    <section class="statement" aria-label="Tesis central">
+      <div class="statement-rule" aria-hidden="true"></div>
+      <blockquote>Una metodología profesional<br><em>organiza el juicio</em><br>sin sustituirlo.</blockquote>
+      <p>La calidad no se reconoce en la fidelidad a una receta, sino en la capacidad de reconstruir cómo una pregunta, una práctica y una evidencia modificaron una decisión.</p>
+    </section>
+
+    <section class="journey section-pad" id="viaje" aria-labelledby="journey-title">
+      <div class="section-marker"><span>02</span><p>El hilo conductor</p></div>
+      <div class="section-intro two-up">
+        <h2 id="journey-title">Del pedido a una intervención defendible.</h2>
+        <p>La materia no acumula temas. Construye una capacidad. Cada tramo toma una representación todavía insuficiente, la somete a evidencia y deja una decisión mejor preparada para el tramo siguiente.</p>
+      </div>
+
+      <ol class="journey-track" aria-label="Progresión de la materia">
+        <li><span class="journey-index">01</span><div><p class="journey-kicker">Pedido</p><h3>“Necesitamos una app.”</h3><p>La solución preferida entra como dato político y organizacional, no como diagnóstico.</p></div></li>
+        <li><span class="journey-index">02</span><div><p class="journey-kicker">Sistema</p><h3>¿Qué produce hoy el resultado?</h3><p>Personas, información, reglas, tecnología y condiciones materiales aparecen en una frontera revisable.</p></div></li>
+        <li><span class="journey-index">03</span><div><p class="journey-kicker">Evidencia</p><h3>¿Qué podemos afirmar?</h3><p>Relatos, observaciones, datos y modelos se distinguen por su procedencia y alcance.</p></div></li>
+        <li><span class="journey-index">04</span><div><p class="journey-kicker">Decisión</p><h3>¿Qué paso es proporcional?</h3><p>La estrategia conecta riesgo, incertidumbre, capacidad de aprendizaje y condiciones de salida.</p></div></li>
+        <li><span class="journey-index">05</span><div><p class="journey-kicker">Operación</p><h3>¿La promesa se sostiene?</h3><p>Producto, servicios, contratos, calidad, despliegue e IA se gobiernan en el sistema real.</p></div></li>
+        <li><span class="journey-index">06</span><div><p class="journey-kicker">Revisión</p><h3>¿Qué aprendimos al intervenir?</h3><p>El portfolio conserva versiones, objeciones y evidencia adversa para que la experiencia siga aprendiendo.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="curriculum" id="mapa" aria-labelledby="curriculum-title">
+      <div class="curriculum-head section-pad">
+        <div class="section-marker inverse"><span>03</span><p>La arquitectura</p></div>
+        <div class="section-intro two-up">
+          <h2 id="curriculum-title">Ocho bloques.<br>Una capacidad acumulativa.</h2>
+          <p>Los 36 Núcleos están presentes desde el comienzo como un mapa completo. N01 a N10 ya tienen lectura publicada. N11 a N36 muestran la continuidad curricular prevista y se habilitarán cuando sus documentos estén cerrados y auditados.</p>
+        </div>
+      </div>
+
+      <div class="block-map section-pad">
+        <details class="block" open>
+          <summary><span class="block-letter">A</span><span><strong>Ver el sistema antes de recetar</strong><small>N01 a N04 · Sistema e intervención sociotécnica</small></span><i>4 lecturas disponibles</i></summary>
+          <div class="block-body">
+            <p class="block-question">¿Cómo intervenir sin confundir el pedido, el software y el problema?</p>
+            <div class="nuclei-grid">
+              <a class="nucleus available" href="pdf/N01-METSI-lectura-previa-v18-final.pdf" download><b>N01</b><span>Situá para qué sirve una metodología cuando no puede garantizar el resultado.</span><em>Descargar PDF</em></a>
+              <a class="nucleus available" href="pdf/N02-METSI-lectura-previa-v14-final.pdf" download><b>N02</b><span>Mostrá que un sistema de información no cabe en una aplicación.</span><em>Descargar PDF</em></a>
+              <a class="nucleus available" href="pdf/N03-METSI-lectura-previa-v9-final.pdf" download><b>N03</b><span>Convertí la frontera en una hipótesis con consecuencias.</span><em>Descargar PDF</em></a>
+              <a class="nucleus available" href="pdf/N04-METSI-lectura-previa-v9-final.pdf" download><b>N04</b><span>Separá hechos, señales, relatos, hipótesis, supuestos y decisiones.</span><em>Descargar PDF</em></a>
+            </div>
+          </div>
+        </details>
+
+        <details class="block" open>
+          <summary><span class="block-letter">B</span><span><strong>Investigar antes de cerrar el problema</strong><small>N05 a N10 · Investigación y construcción del problema</small></span><i>6 lecturas disponibles</i></summary>
+          <div class="block-body">
+            <p class="block-question">¿A quién incluir, qué investigar y cuándo un problema está suficientemente bien formulado?</p>
+            <div class="nuclei-grid">
+              <a class="nucleus available" href="pdf/N05-METSI-lectura-previa-v9-final.pdf" download><b>N05</b><span>Reemplazá al stakeholder genérico por actores con poder, exposición, voz y reparación.</span><em>Descargar PDF</em></a>
+              <a class="nucleus available" href="pdf/N06-METSI-lectura-previa-v9-final.pdf" download><b>N06</b><span>Diseñá discovery como una inversión proporcional para reducir incertidumbre.</span><em>Descargar PDF</em></a>
+              <a class="nucleus available" href="pdf/N07-METSI-lectura-previa-v9-final.pdf" download><b>N07</b><span>Transformá la entrevista en reconstrucción de episodios.</span><em>Descargar PDF</em></a>
+              <a class="nucleus available" href="pdf/N08-METSI-lectura-previa-v9-final.pdf" download><b>N08</b><span>Observá trabajo prescripto, real, adaptativo e invisible.</span><em>Descargar PDF</em></a>
+              <a class="nucleus available" href="pdf/N09-METSI-lectura-previa-v9-final.pdf" download><b>N09</b><span>Estudiá experiencia end-to-end, accesibilidad, fricción y adopción.</span><em>Descargar PDF</em></a>
+              <a class="nucleus available" href="pdf/N10-METSI-lectura-previa-v9-final.pdf" download><b>N10</b><span>Integrá el bloque en un encuadre con mecanismos rivales y outcomes.</span><em>Descargar PDF</em></a>
+            </div>
+          </div>
+        </details>
+
+        <details class="block">
+          <summary><span class="block-letter">C</span><span><strong>Modelar sólo lo que ayuda a decidir</strong><small>N11 a N16 · Información y modelado selectivo</small></span><i>6 Núcleos en el mapa</i></summary>
+          <div class="block-body">
+            <p class="block-question">¿Qué información y qué modelos permiten afirmar, coordinar y decidir?</p>
+            <div class="nuclei-grid future-grid">
+              <article class="nucleus"><b>N11</b><span>Examiná cuándo un dato permite sostener una afirmación.</span></article>
+              <article class="nucleus"><b>N12</b><span>Distinguí eventos, estados, comandos, evidencia y autoridad.</span></article>
+              <article class="nucleus"><b>N13</b><span>Trabajá demoras, concurrencia, consistencia, idempotencia y reconciliación.</span></article>
+              <article class="nucleus"><b>N14</b><span>Recorré procesos end-to-end, handoffs, colas y excepciones.</span></article>
+              <article class="nucleus"><b>N15</b><span>Seleccioná modelos según pregunta, audiencia y costo.</span></article>
+              <article class="nucleus"><b>N16</b><span>Buscá coherencia y contradicciones productivas entre modelos.</span></article>
+            </div>
+          </div>
+        </details>
+
+        <details class="block">
+          <summary><span class="block-letter">D</span><span><strong>Diseñar una estrategia situada</strong><small>N17 a N20 · Estrategia de intervención</small></span><i>4 Núcleos en el mapa</i></summary>
+          <div class="block-body">
+            <p class="block-question">¿Cómo elegir y adaptar una estrategia de cambio según incertidumbre, legado y riesgo?</p>
+            <div class="nuclei-grid future-grid">
+              <article class="nucleus"><b>N17</b><span>Combiná lógicas predictivas, iterativas, incrementales, adaptativas y experimentales.</span></article>
+              <article class="nucleus"><b>N18</b><span>Tratá legado, regulación y documentación como valor, restricción y evidencia.</span></article>
+              <article class="nucleus"><b>N19</b><span>Ampliá la falsa disyuntiva construir o comprar.</span></article>
+              <article class="nucleus"><b>N20</b><span>Componé una estrategia con tailoring, hitos y condiciones de salida.</span></article>
+            </div>
+          </div>
+        </details>
+
+        <details class="block">
+          <summary><span class="block-letter">E</span><span><strong>Pasar de entregar cosas a gobernar capacidades</strong><small>N21 a N25 · Producto, valor, flujo y entrega</small></span><i>5 Núcleos en el mapa</i></summary>
+          <div class="block-body">
+            <p class="block-question">¿Cómo convertir una iniciativa en una capacidad que produce valor y aprendizaje?</p>
+            <div class="nuclei-grid future-grid">
+              <article class="nucleus"><b>N21</b><span>Distinguí proyecto, producto, servicio y plataforma.</span></article>
+              <article class="nucleus"><b>N22</b><span>Convertí iniciativas en hipótesis que pueden refutarse.</span></article>
+              <article class="nucleus"><b>N23</b><span>Cortá entregas por capacidad y aprendizaje.</span></article>
+              <article class="nucleus"><b>N24</b><span>Entendé la priorización como renuncia explícita.</span></article>
+              <article class="nucleus"><b>N25</b><span>Estudiá flujo, colas, trabajo en curso, lote, espera y feedback.</span></article>
+            </div>
+          </div>
+        </details>
+
+        <details class="block">
+          <summary><span class="block-letter">F</span><span><strong>Sostener la promesa en operación</strong><small>N26 a N30 · Ecosistemas, calidad y operación</small></span><i>5 Núcleos en el mapa</i></summary>
+          <div class="block-body">
+            <p class="block-question">¿Cómo sostener una promesa que depende de servicios, terceros, contratos y operación?</p>
+            <div class="nuclei-grid future-grid">
+              <article class="nucleus"><b>N26</b><span>Ampliá la arquitectura hacia un ecosistema de servicios y terceros.</span></article>
+              <article class="nucleus"><b>N27</b><span>Diseñá contratos sintácticos, semánticos, temporales y operacionales.</span></article>
+              <article class="nucleus"><b>N28</b><span>Construí evidencia de calidad según riesgo y atributos en tensión.</span></article>
+              <article class="nucleus"><b>N29</b><span>Goberná integración, despliegue, infraestructura, aprobación y rollback.</span></article>
+              <article class="nucleus"><b>N30</b><span>Conectá observabilidad, señales de negocio, incidentes y aprendizaje.</span></article>
+            </div>
+          </div>
+        </details>
+
+        <details class="block">
+          <summary><span class="block-letter">G</span><span><strong>Incorporar IA sin delegar el juicio</strong><small>N31 a N33 · IA, autonomía y gobierno</small></span><i>3 Núcleos en el mapa</i></summary>
+          <div class="block-body">
+            <p class="block-question">¿Cuándo incorporar IA y cómo gobernar comportamiento probabilístico y autonomía?</p>
+            <div class="nuclei-grid future-grid">
+              <article class="nucleus"><b>N31</b><span>Distinguí reglas, predicción, generación y agencia.</span></article>
+              <article class="nucleus"><b>N32</b><span>Evaluá tareas, cobertura, severidad, desigualdad, robustez y supervisión.</span></article>
+              <article class="nucleus"><b>N33</b><span>Diseñá gobierno vivo: ownership, datos, monitoreo, reparación y retiro.</span></article>
+            </div>
+          </div>
+        </details>
+
+        <details class="block">
+          <summary><span class="block-letter">H</span><span><strong>Integrar, defender, transferir y seguir aprendiendo</strong><small>N34 a N36 · Integración y reflexión</small></span><i>3 Núcleos en el mapa</i></summary>
+          <div class="block-body">
+            <p class="block-question">¿Puede la intervención defenderse, transferirse y seguir aprendiendo después del curso?</p>
+            <div class="nuclei-grid future-grid">
+              <article class="nucleus"><b>N34</b><span>Reconstruí la cadena completa desde problema y evidencia hasta operación.</span></article>
+              <article class="nucleus"><b>N35</b><span>Comunicá según audiencia, respondé objeciones y transferí criterios.</span></article>
+              <article class="nucleus"><b>N36</b><span>Cerrá con una práctica reflexiva capaz de aprender de decisiones y errores.</span></article>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="case-study section-pad" id="caso" aria-labelledby="case-title">
+      <div class="section-marker"><span>04</span><p>El caso longitudinal</p></div>
+      <div class="case-grid">
+        <div>
+          <p class="case-kicker">Hotel Horizonte</p>
+          <h2 id="case-title">Un caso que recuerda lo que la clase decidió.</h2>
+        </div>
+        <div class="case-copy">
+          <p class="lead">El hotel no es un ejercicio con una solución escondida. Es una organización ficticia y verosímil que acumula episodios, voces, documentos y consecuencias durante toda la materia.</p>
+          <p>Una frontera elegida en N03 afecta a quién se entrevista en N07. Una definición de estado acordada en N12 modifica un contrato en N27. Una hipótesis de outcome de N22 decide qué señal observar en N30. Una propuesta de IA en N31 hereda problemas de autoridad, accesibilidad y reparación que comenzaron mucho antes.</p>
+        </div>
+      </div>
+      <div class="case-thread" aria-label="Continuidad del caso Hotel Horizonte">
+        <div><b>HH-00</b><span>El pedido parece claro</span><small>Reemplazar el PMS, lanzar una app, incorporar un chatbot.</small></div>
+        <div><b>Investigar</b><span>La certeza se abre</span><small>Las voces y el trabajo real muestran mecanismos rivales.</small></div>
+        <div><b>Intervenir</b><span>La decisión toma forma</span><small>Se elige un paso proporcional, verificable y reversible.</small></div>
+        <div><b>Aprender</b><span>La evidencia vuelve</span><small>El caso obliga a revisar supuestos y conservar memoria.</small></div>
+      </div>
+    </section>
+
+    <section class="experience section-pad" id="experiencia" aria-labelledby="experience-title">
+      <div class="section-marker inverse"><span>05</span><p>La experiencia pedagógica</p></div>
+      <div class="section-intro two-up">
+        <h2 id="experience-title">La clase empieza antes<br>y termina después.</h2>
+        <p>La lectura previa compra una posibilidad colectiva. El encuentro usa esa preparación para producir contraste y práctica. El cierre conserva qué cambió, en lugar de esconder el recorrido detrás de una respuesta final.</p>
+      </div>
+      <div class="rhythm" aria-label="Antes, durante y después del encuentro">
+        <article><span class="rhythm-word">Antes</span><b>Preparar una contribución</b><p>Leer, marcar una tensión, formular una hipótesis y nombrar la evidencia que podría debilitarla.</p><em>Posición inicial</em></article>
+        <article><span class="rhythm-word">Durante</span><b>Contrastar y producir</b><p>Comparar interpretaciones, reconstruir episodios, construir artefactos y decidir frente a evidencia incompleta.</p><em>Trabajo compartido</em></article>
+        <article><span class="rhythm-word">Después</span><b>Hacer visible el cambio</b><p>Revisar lo producido, registrar el supuesto que cambió y conservar una decisión todavía discutible.</p><em>Aprendizaje trazable</em></article>
+      </div>
+      <div class="icap-line"><span>Atender</span><span>Actuar</span><span>Construir</span><span>Interactuar</span><p>La actividad visible no alcanza. METSI diseña para que aparezcan producción propia, contraste y revisión.</p></div>
+    </section>
+
+    <section class="anatomy section-pad" aria-labelledby="anatomy-title">
+      <div class="section-marker"><span>06</span><p>El dispositivo editorial</p></div>
+      <div class="section-intro two-up">
+        <h2 id="anatomy-title">Cada lectura es una partitura.<br><em>El encuentro produce la música.</em></h2>
+        <p>Una N combina texto académico, historia, evidencia, caso, imagen e instrumentos de recuperación. La consistencia orienta; la composición particular responde al argumento.</p>
+      </div>
+      <div class="anatomy-grid">
+        <article><b>01</b><h3>Pregunta profesional</h3><p>Abre un problema sin presuponer la solución.</p></article>
+        <article><b>02</b><h3>Historia</h3><p>Permite sentir la tensión antes de nombrarla técnicamente.</p></article>
+        <article><b>03</b><h3>Tesis</h3><p>Ofrece una posición examinable, nunca un dogma.</p></article>
+        <article><b>04</b><h3>Desarrollo</h3><p>Construye distinciones, mecanismos, evidencia y límites.</p></article>
+        <article><b>05</b><h3>Hotel Horizonte</h3><p>Obliga a aplicar lo aprendido en una situación ambigua.</p></article>
+        <article><b>06</b><h3>Preparación</h3><p>Recupera, pregunta y deja una contribución lista para contrastar.</p></article>
+      </div>
+      <div class="editorial-principles">
+        <p><span>Serif</span> para construir jerarquía y ritmo de lectura.</p>
+        <p><span>Volt</span> para orientar, nunca para decorar.</p>
+        <p><span>Fotografía</span> original en blanco y negro, situada y con función conceptual.</p>
+        <p><span>Infografía</span> sólo cuando una relación se entiende mejor visualmente.</p>
+        <p><span>Accesibilidad</span> desde el origen: contraste, estructura y alternativas textuales.</p>
+      </div>
+    </section>
+
+    <section class="audiences section-pad" id="audiencias" aria-labelledby="audiences-title">
+      <div class="section-marker inverse"><span>07</span><p>Cuatro maneras de mirar</p></div>
+      <h2 id="audiences-title">La misma experiencia.<br>Distintas preguntas.</h2>
+      <div class="audience-tabs" role="tablist" aria-label="Perspectivas sobre METSI">
+        <button type="button" role="tab" aria-selected="true" aria-controls="panel-catedra" id="tab-catedra" data-tab="catedra">Cátedra</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="panel-carrera" id="tab-carrera" data-tab="carrera" tabindex="-1">Carrera</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="panel-docencia" id="tab-docencia" data-tab="docencia" tabindex="-1">Equipo docente</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="panel-estudiantes" id="tab-estudiantes" data-tab="estudiantes" tabindex="-1">Estudiantes</button>
+      </div>
+      <div class="audience-panels">
+        <article role="tabpanel" id="panel-catedra" aria-labelledby="tab-catedra" data-panel="catedra">
+          <p class="panel-number">01</p><h3>Una propuesta que vuelve discutibles sus decisiones.</h3><p>El diseño declara propósito, progresión, carga, bibliografía, criterios de calidad y límites. La cátedra puede auditar la experiencia sin depender de una clase observada de manera aislada.</p>
+        </article>
+        <article role="tabpanel" id="panel-carrera" aria-labelledby="tab-carrera" data-panel="carrera" hidden>
+          <p class="panel-number">02</p><h3>Una materia que integra el perfil profesional.</h3><p>METSI conecta la formación técnica con análisis organizacional, investigación, gestión, producto, operación, accesibilidad e IA. No duplica una materia de construcción: trabaja el juicio que decide qué construir y por qué.</p>
+        </article>
+        <article role="tabpanel" id="panel-docencia" aria-labelledby="tab-docencia" data-panel="docencia" hidden>
+          <p class="panel-number">03</p><h3>Un marco común que no convierte enseñar en seguir un guion.</h3><p>Las lecturas liberan tiempo de exposición y ofrecen lenguaje, casos y evidencia compartida. El docente conserva la tarea de calibrar, perturbar, explicar de otro modo y diseñar la práctica.</p>
+        </article>
+        <article role="tabpanel" id="panel-estudiantes" aria-labelledby="tab-estudiantes" data-panel="estudiantes" hidden>
+          <p class="panel-number">04</p><h3>Una exigencia que tiene mapa, propósito y acompañamiento.</h3><p>Cada lectura anticipa su pregunta, ofrece una ruta priorizada y muestra cómo prepararse. La meta no es repetir el documento: es llegar con una idea propia que pueda mejorar al trabajar con otras personas.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="library section-pad" id="biblioteca" aria-labelledby="library-title">
+      <div class="section-marker"><span>08</span><p>La colección</p></div>
+      <div class="section-intro two-up">
+        <h2 id="library-title">Once puertas de entrada.<br>Un recorrido completo.</h2>
+        <div><p>Las once lecturas cerradas se pueden descargar. Juntas presentan el contrato de trabajo de METSI y completan los bloques curriculares A y B.</p><p class="library-note">N00 es el mapa de viaje. N01 a N10 forman el primer bloque editorial de la colección.</p></div>
+      </div>
+
+      <article class="guide-card">
+        <a href="pdf/N00-METSI-lectura-previa-v2-final.pdf" download><img src="covers/N00.png" alt="Portada de N00, METSI: ver, comprender, intervenir"></a>
+        <div><p class="card-code">N00 · GUÍA DE LA EXPERIENCIA</p><h3>METSI: ver, comprender, intervenir</h3><p>Qué materia empieza, cómo está organizada, qué función cumple cada lectura y cómo se conectan teoría, práctica y evaluación.</p><p class="file-meta">43 páginas · PDF final</p><a class="download-link" href="pdf/N00-METSI-lectura-previa-v2-final.pdf" download>Descargar N00 <span>↓</span></a></div>
+      </article>
+
+      <div class="cover-library">
+        <article><a href="pdf/N01-METSI-lectura-previa-v18-final.pdf" download><img src="covers/N01.png" alt="Portada de N01"></a><p>N01 · 29 páginas</p><h3>Metodología sin recetas</h3><a href="pdf/N01-METSI-lectura-previa-v18-final.pdf" download>Descargar PDF ↓</a></article>
+        <article><a href="pdf/N02-METSI-lectura-previa-v14-final.pdf" download><img src="covers/N02.png" alt="Portada de N02"></a><p>N02 · 29 páginas</p><h3>El sistema de información no cabe en una aplicación</h3><a href="pdf/N02-METSI-lectura-previa-v14-final.pdf" download>Descargar PDF ↓</a></article>
+        <article><a href="pdf/N03-METSI-lectura-previa-v9-final.pdf" download><img src="covers/N03.png" alt="Portada de N03"></a><p>N03 · 30 páginas</p><h3>Fronteras, retroalimentación y efectos no intencionales</h3><a href="pdf/N03-METSI-lectura-previa-v9-final.pdf" download>Descargar PDF ↓</a></article>
+        <article><a href="pdf/N04-METSI-lectura-previa-v9-final.pdf" download><img src="covers/N04.png" alt="Portada de N04"></a><p>N04 · 32 páginas</p><h3>Hechos, síntomas, relatos, hipótesis y decisiones</h3><a href="pdf/N04-METSI-lectura-previa-v9-final.pdf" download>Descargar PDF ↓</a></article>
+        <article><a href="pdf/N05-METSI-lectura-previa-v9-final.pdf" download><img src="covers/N05.png" alt="Portada de N05"></a><p>N05 · 28 páginas</p><h3>Actores, afectados, poder y perspectivas</h3><a href="pdf/N05-METSI-lectura-previa-v9-final.pdf" download>Descargar PDF ↓</a></article>
+        <article><a href="pdf/N06-METSI-lectura-previa-v9-final.pdf" download><img src="covers/N06.png" alt="Portada de N06"></a><p>N06 · 28 páginas</p><h3>Discovery como estrategia de reducción de incertidumbre</h3><a href="pdf/N06-METSI-lectura-previa-v9-final.pdf" download>Descargar PDF ↓</a></article>
+        <article><a href="pdf/N07-METSI-lectura-previa-v9-final.pdf" download><img src="covers/N07.png" alt="Portada de N07"></a><p>N07 · 31 páginas</p><h3>Entrevistar no es pedir requisitos</h3><a href="pdf/N07-METSI-lectura-previa-v9-final.pdf" download>Descargar PDF ↓</a></article>
+        <article><a href="pdf/N08-METSI-lectura-previa-v9-final.pdf" download><img src="covers/N08.png" alt="Portada de N08"></a><p>N08 · 28 páginas</p><h3>Observar el trabajo invisible</h3><a href="pdf/N08-METSI-lectura-previa-v9-final.pdf" download>Descargar PDF ↓</a></article>
+        <article><a href="pdf/N09-METSI-lectura-previa-v9-final.pdf" download><img src="covers/N09.png" alt="Portada de N09"></a><p>N09 · 28 páginas</p><h3>Experiencia, accesibilidad y adopción no son decoración</h3><a href="pdf/N09-METSI-lectura-previa-v9-final.pdf" download>Descargar PDF ↓</a></article>
+        <article><a href="pdf/N10-METSI-lectura-previa-v9-final.pdf" download><img src="covers/N10.png" alt="Portada de N10"></a><p>N10 · 31 páginas</p><h3>Construir el problema: de síntomas a outcomes verificables</h3><a href="pdf/N10-METSI-lectura-previa-v9-final.pdf" download>Descargar PDF ↓</a></article>
+      </div>
+    </section>
+
+    <section class="quality section-pad" id="calidad" aria-labelledby="quality-title">
+      <div class="section-marker inverse"><span>09</span><p>El estándar</p></div>
+      <div class="section-intro two-up"><h2 id="quality-title">Diseñar también es<br>hacerse responsable.</h2><p>La identidad visual no está separada de la propuesta académica. Orientación, legibilidad, procedencia, accesibilidad y control de pérdidas forman parte del mismo sistema de calidad.</p></div>
+      <div class="quality-grid">
+        <article><strong>11</strong><span>lecturas cerradas y descargables</span></article>
+        <article><strong>36</strong><span>Núcleos visibles en el mapa curricular</span></article>
+        <article><strong>8</strong><span>bloques con pregunta y capacidad explícitas</span></article>
+        <article><strong>1</strong><span>caso que conserva memoria durante el curso</span></article>
+      </div>
+      <ul class="quality-list">
+        <li><b>Fuentes trazables.</b><span>Referentes y referencias base vinculados al argumento.</span></li>
+        <li><b>Fotografía con función.</b><span>Imágenes en blanco y negro, situadas y no ornamentales.</span></li>
+        <li><b>Accesibilidad estructural.</b><span>Orden de lectura, contraste, folios y alternativas textuales.</span></li>
+        <li><b>Auditoría editorial.</b><span>Recuentos, enlaces, paginación, consistencia y control de regresiones.</span></li>
+        <li><b>Revisión pedagógica.</b><span>Carga priorizada, múltiples vías de participación y criterios transparentes.</span></li>
+      </ul>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <p class="eyebrow">METODOLOGÍA DE LOS SISTEMAS DE INFORMACIÓN</p>
+      <h2 id="closing-title">No formar personas que sepan nombrar métodos.<br><em>Formar profesionales que sepan cuándo, por qué y para qué usarlos.</em></h2>
+      <div class="closing-actions"><a class="button button-primary" href="pdf/N00-METSI-lectura-previa-v2-final.pdf" download>Empezar por N00</a><a class="button button-quiet" href="#mapa">Recorrer los 36 Núcleos</a></div>
     </section>
   </main>
-  <footer><span>Diego Carralbal, 2026</span><span>Facultad de Ciencias Económicas · Universidad de Buenos Aires</span></footer>
+
+  <footer>
+    <div><a class="brand" href="#inicio">METSI</a><p>Metodología de los Sistemas de Información</p></div>
+    <div><p>Facultad de Ciencias Económicas</p><p>Universidad de Buenos Aires</p></div>
+    <div><p>Diego Carralbal · 2026</p><a href="https://linkedin.com/in/carralbal">linkedin.com/in/carralbal</a></div>
+  </footer>
 </body>
 </html>
