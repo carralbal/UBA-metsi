@@ -626,6 +626,108 @@ def extend_n06_cover_pattern_to_trim(page, scale: float) -> int:
     return adjusted
 
 
+def extend_cover_patterns_to_trim(page, scale: float, number: int) -> int:
+    """Extend every N cover scrim pattern to the four A4 trim edges.
+
+    Chromium rasterizes full-height CSS gradients as tiling patterns. The
+    later full-bleed transformation enlarges the photograph but leaves those
+    patterns at their original height, which exposes a horizontal seam near
+    the lower trim. N01 and N06 retain their already validated repairs; this
+    generic branch applies the same correction to the remaining covers.
+    """
+    if number == 1:
+        scale_cover_pattern_matrices(page, scale)
+        return extend_n01_cover_pattern_to_trim(page)
+    if number == 6:
+        return extend_n06_cover_pattern_to_trim(page, scale)
+
+    resources = page.get("/Resources")
+    patterns = resources.get_object().get("/Pattern") if resources else None
+    if not patterns:
+        raise RuntimeError(f"La tapa N{number:02d} no contiene el patrón de lienzo esperado")
+
+    target_height = int(round(float(page.mediabox.height)))
+    adjusted = 0
+    for reference in patterns.get_object().values():
+        pattern = reference.get_object()
+        bbox = pattern.get("/BBox")
+        matrix = pattern.get("/Matrix")
+        if not bbox or len(bbox) != 4 or not matrix or len(matrix) != 6:
+            continue
+        old_height = int(round(float(bbox[3]) - float(bbox[1])))
+        width = int(round(float(bbox[2]) - float(bbox[0])))
+        is_letter_geometry = 538 <= width <= 542 and 762 <= old_height <= 766
+        is_chromium_geometry = 546 <= width <= 550 and 773 <= old_height <= 777
+        if not ((is_letter_geometry or is_chromium_geometry) and target_height > old_height):
+            continue
+
+        values = [FloatObject(float(value)) for value in matrix]
+        values[0] = FloatObject(float(values[0]) * scale)
+        pattern[NameObject("/Matrix")] = ArrayObject(values)
+
+        pattern_resources = pattern.get("/Resources")
+        xobjects = pattern_resources.get_object().get("/XObject") if pattern_resources else None
+        if not xobjects:
+            raise RuntimeError(f"Patrón de tapa N{number:02d} sin imágenes rasterizadas")
+        vertical_images = []
+        for name, image_reference in xobjects.get_object().items():
+            image = image_reference.get_object()
+            image_width = int(image.get("/Width", 0))
+            image_height = int(image.get("/Height", 0))
+            if (
+                image.get("/Subtype") == "/Image"
+                and image.get("/ColorSpace") == "/DeviceRGB"
+                and image_height == old_height
+                and image_width in {1, width}
+            ):
+                vertical_images.append((name, image))
+        if not vertical_images:
+            raise RuntimeError(f"Patrón de tapa N{number:02d} sin imagen vertical extensible")
+
+        for name, image in vertical_images:
+            image_width = int(image.get("/Width"))
+            image_height = int(image.get("/Height"))
+            row_stride = image_width * 3
+            image_data = image.get_data()
+            if len(image_data) != row_stride * image_height:
+                raise RuntimeError(f"Datos RGB inesperados en {name} de la tapa N{number:02d}")
+            image._data = zlib.compress(
+                image_data + image_data[-row_stride:] * (target_height - image_height)
+            )
+            image[NameObject("/Height")] = NumberObject(target_height)
+            soft_mask = image.get("/SMask")
+            if soft_mask is None:
+                raise RuntimeError(f"Falta máscara alfa en {name} de la tapa N{number:02d}")
+            soft_mask = soft_mask.get_object()
+            mask_data = soft_mask.get_data()
+            if len(mask_data) != image_width * image_height:
+                raise RuntimeError(f"Máscara alfa inesperada en {name} de la tapa N{number:02d}")
+            soft_mask._data = zlib.compress(
+                mask_data + mask_data[-image_width:] * (target_height - image_height)
+            )
+            soft_mask[NameObject("/Height")] = NumberObject(target_height)
+
+        pattern[NameObject("/BBox")] = ArrayObject([
+            FloatObject(0),
+            FloatObject(0),
+            FloatObject(float(bbox[2])),
+            FloatObject(target_height + .00012),
+        ])
+        pattern[NameObject("/YStep")] = FloatObject(target_height + 2.00012)
+        stream = pattern.get_data().decode("ascii")
+        pattern._data = re.sub(
+            rf"(?<![0-9]){old_height}(?=\b|\.)",
+            str(target_height),
+            stream,
+        ).encode("ascii")
+        pattern.pop(NameObject("/Filter"), None)
+        adjusted += 1
+
+    if adjusted < 1:
+        raise RuntimeError(f"No se encontró el lienzo de tapa N{number:02d} para extender al corte")
+    return adjusted
+
+
 def cid_width(font, cid: int) -> float:
     descendant = font.get("/DescendantFonts")[0].get_object()
     default = float(descendant.get("/DW", 1000))
@@ -860,11 +962,8 @@ def finalize(number: int) -> dict:
             page.add_transformation(
                 Transformation().scale(scale, scale).translate(0, height * (1 - scale))
             )
-            if number == 1 and source_page_number == 1:
-                scale_cover_pattern_matrices(page, scale)
-                extend_n01_cover_pattern_to_trim(page)
-            if number == 6 and source_page_number == 1:
-                extend_n06_cover_pattern_to_trim(page, scale)
+            if source_page_number == 1:
+                extend_cover_patterns_to_trim(page, scale, number)
         is_closing_page = source_page_number == len(source_pages)
         light = source_page_number == 1 or is_n00_part_divider or is_opening_question_page or any(q and q in normalized for q in quotes)
         overlay = PdfReader(BytesIO(footer(float(page.mediabox.width), float(page.mediabox.height), kept_page_number, light))).pages[0]

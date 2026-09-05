@@ -3266,6 +3266,7 @@ COLLECTION_CSS=r'''
 .cover-title span{font-family:Avenir,sans-serif;font-size:6.7pt;letter-spacing:.14em}.cover-title h1{margin:4mm 0 0;color:#fff;font-family:Didot,"Bodoni 72",serif;font-size:31pt;line-height:.94;letter-spacing:-.022em;font-weight:400}
 .cover-thesis{position:absolute;z-index:3;right:16mm;bottom:29mm;width:53mm;text-align:right}.cover-thesis b{display:inline-grid;place-items:center;width:15mm;height:15mm;margin-bottom:4mm;border:.35mm solid #CFFF00;border-radius:50%;color:#CFFF00;font-family:Avenir,sans-serif;font-size:7pt}.cover-thesis p{margin:0;color:#CFFF00;font-family:Didot,"Bodoni 72",serif;font-size:13.5pt;line-height:1.08}.cover-parallelogram{position:absolute;z-index:3;right:18mm;top:55mm;width:15mm;height:4mm;background:#CFFF00;clip-path:polygon(10% 0,100% 0,90% 100%,0 100%);opacity:.95}
 .cover-n01 .cover-meta{letter-spacing:.035em;line-height:1.2}
+.cover-n01 .collection-masthead{top:16mm}
 .cover-n00 .cover-meta-eyebrow,.cover-n01 .cover-meta-eyebrow,.cover-n02 .cover-meta-eyebrow,.cover-n03 .cover-meta-eyebrow,.cover-n04 .cover-meta-eyebrow,.cover-n05 .cover-meta-eyebrow,.cover-n07 .cover-meta-eyebrow,.cover-n08 .cover-meta-eyebrow{display:flex;flex-direction:column;align-items:flex-start;gap:0;white-space:normal}
 .cover-n00 .cover-meta-eyebrow span,.cover-n01 .cover-meta-eyebrow span,.cover-n02 .cover-meta-eyebrow span,.cover-n03 .cover-meta-eyebrow span,.cover-n04 .cover-meta-eyebrow span,.cover-n05 .cover-meta-eyebrow span,.cover-n07 .cover-meta-eyebrow span,.cover-n08 .cover-meta-eyebrow span{display:block;white-space:nowrap}
 .cover-n01>img{filter:none}
@@ -3286,7 +3287,7 @@ COLLECTION_CSS=r'''
 .cover-n02 .cover-parallelogram{right:15.5mm;top:57mm}
 .cover-n00{background:#D0D0D0}
 .cover-n00>img{object-position:50% 48%;filter:none;opacity:.82}
-.cover-n00 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.08) 0,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 61%,rgba(8,9,8,.48) 100%)}
+.cover-n00 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.13) 0,rgba(5,7,6,.03) 30%,rgba(5,7,6,.03) 61%,rgba(8,9,8,.58) 100%)}
 .cover-n00{overflow:hidden}
 .cover-n00>img,.cover-n00 .cover-shade{inset:0;width:100%;height:100%}
 .cover-n00 .collection-masthead{top:16mm}
@@ -3365,6 +3366,7 @@ COLLECTION_CSS=r'''
 .cover-n08 .cover-thesis{right:16mm;bottom:21mm;width:51mm}
 .cover-n08 .cover-thesis{filter:drop-shadow(0 .5mm 1.4mm rgba(0,0,0,.92))}
 .cover-n08 .cover-parallelogram{right:15.5mm;top:57mm}
+.cover-n09 .collection-masthead{top:16mm}
 .cover-n10>img{object-position:50% 50%;filter:grayscale(1) saturate(0) contrast(1.16) brightness(.72)}
 .cover-n10 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.31),rgba(10,12,10,.06) 36%,rgba(8,9,8,.89) 100%)}
 .cover-n10 .collection-masthead{top:16mm}
@@ -4327,8 +4329,9 @@ def cover_source_path(number: int) -> Path:
 COVER_AUDIT_CSS = {
     0: """.cover-n00{background:#D0D0D0}
 .cover-n00>img{filter:none;opacity:.82}
-.cover-n00 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.08) 0,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 61%,rgba(8,9,8,.48) 100%)}""",
+.cover-n00 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.13) 0,rgba(5,7,6,.03) 30%,rgba(5,7,6,.03) 61%,rgba(8,9,8,.58) 100%)}""",
     1: """.cover-n01>img{filter:none}
+.cover-n01 .collection-masthead{top:16mm}
 .cover-n01 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.18) 0,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 61%,rgba(8,9,8,.55) 100%)}
 .cover-n01::before{display:block;background:linear-gradient(to bottom,rgba(0,0,0,.48) 0,rgba(0,0,0,.38) 44%,rgba(0,0,0,0) 100%)}""",
     2: """.cover-n02>img{filter:none}
@@ -4347,7 +4350,8 @@ COVER_AUDIT_CSS = {
 .cover-n07 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.42) 0,rgba(5,7,6,.10) 18%,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 62%,rgba(8,9,8,.55) 100%)}""",
     8: """.cover-n08 .cover-meta-right{color:#191919;text-shadow:0 .2mm .35mm rgba(255,255,255,.38)}
 .cover-n08 .cover-thesis{filter:drop-shadow(0 .5mm 1.4mm rgba(0,0,0,.92))}""",
-    9: """.cover-n09 .collection-masthead,.cover-n09 .cover-meta-left{color:#fff}
+    9: """.cover-n09 .collection-masthead{top:16mm}
+.cover-n09 .collection-masthead,.cover-n09 .cover-meta-left{color:#fff}
 .cover-n09 .cover-title span{text-shadow:none}""",
     10: """.cover-n10{background:#808080}
 .cover-n10>img{filter:none;opacity:.78;object-position:center 48%}
