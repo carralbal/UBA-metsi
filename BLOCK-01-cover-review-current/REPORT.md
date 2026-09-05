@@ -2,7 +2,7 @@
 
 ## Alcance
 
-Esta revisión compara la portada del candidato N00 v2 con las versiones finales vigentes de N01 a N10. Es una auditoría de sólo lectura: no se modificó ningún PDF cerrado.
+Esta revisión compara la portada del N00 v2 aprobado con las versiones finales vigentes de N01 a N10. Es una auditoría de sólo lectura: no se modificó ningún PDF cerrado.
 
 ## Conclusión ejecutiva
 

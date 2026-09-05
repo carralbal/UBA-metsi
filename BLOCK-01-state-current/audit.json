@@ -1,17 +1,17 @@
 {
   "scope": "METSI N00-N10 current authority state",
-  "generated_at": "2026-09-04T22:06:53-03:00",
+  "generated_at": "2026-09-04T22:36:26-03:00",
   "overall": "PASS",
   "authority": {
-    "n00_production": "N00 approved original remains authoritative until explicit author approval of v2 candidate",
-    "n00_candidate": "N00 v2 candidate is technically ready but not production-authoritative",
+    "n00_production": "N00 v2 is approved and authoritative; external publication remains unauthorized",
+    "n00_legacy": "The prior approved N00 remains preserved as a historical baseline",
     "n01_n10_content": "BLOCK-01-content-final is canonical and frozen",
     "n01_n10_pdf": "The package versions listed below are the current final PDFs",
     "cover_rule": "All copy originally designed in volt remains volt; only local tonal support may be adjusted"
   },
   "n00": {
-    "approved_production": {
-      "status": "approved",
+    "legacy_approved": {
+      "status": "preserved_historical_baseline",
       "pdf": "N00/output/N00-METSI-lectura-previa-final.pdf",
       "pdf_sha256": "1b4a1ab42665246349ed240659585a2e33766fe72157032bfbefc03cc7127f64",
       "pdf_bytes": 30648242,
@@ -25,7 +25,18 @@
       "integrity": "PASS"
     },
     "v2_candidate": {
-      "status": "technical_pass_pending_author_approval",
+      "status": "approved_authoritative_unpublished",
+      "approval": {
+        "document": "N00",
+        "version": "v2",
+        "status": "approved_authoritative_unpublished",
+        "approved_at": "2026-09-04",
+        "approval_source": "Aprobación autoral explícita en la conversación de trabajo: N00 v2 aprobada.",
+        "pdf": "output/N00-METSI-lectura-previa-v2-candidate-final.pdf",
+        "pdf_sha256": "c5e3237214b701a9721dc77d8c3d03756a7959910a19054967a7bc531c14c497",
+        "publication_authorized": false,
+        "legacy_preserved": "N00/output/N00-METSI-lectura-previa-final.pdf"
+      },
       "pdf": "N00-v2-candidate/output/N00-METSI-lectura-previa-v2-candidate-final.pdf",
       "pdf_sha256": "c5e3237214b701a9721dc77d8c3d03756a7959910a19054967a7bc531c14c497",
       "pdf_bytes": 29993960,
@@ -325,6 +336,7 @@
     "approved_n00_unchanged_and_passes": true,
     "n00_v2_candidate_technical_pass": true,
     "n00_v2_image_provenance_pass": true,
+    "n00_v2_author_approval_recorded": true,
     "cover_system_current_rule_pass": true
   },
   "superseded_or_historical": [
@@ -342,13 +354,14 @@
     }
   ],
   "pending_actions": [
-    "Revisión autoral y aprobación o rechazo explícito del candidato aislado N00 v2",
+    "Revisar visualmente la serie de tapas N00 a N10 a tamaño útil y registrar cualquier observación concreta",
+    "Publicar N00 v2 sólo después de una autorización explícita de publicación; su aprobación editorial ya está registrada",
     "Publicar N07 a N10 sólo después de una autorización explícita de publicación; esta auditoría no publica",
     "Tratar la percepción del texto volt en prueba de impresión como revisión autoral, no como permiso para aplicar velos oscuros globales"
   ],
   "uncertainties": [
     "Esta pasada no afirma certificación PDF/UA formal; se apoya en los controles de accesibilidad del repositorio",
     "No se consultó el sitio público en vivo; aquí no se cambia ni se recertifica el estado de publicación",
-    "N00 v2 sigue siendo candidato pese a su PASS técnico hasta que el autor lo apruebe explícitamente"
+    "La aprobación de N00 v2 no permite inferir autorización de publicación externa"
   ]
 }

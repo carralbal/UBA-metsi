@@ -1,17 +1,17 @@
-# Handoff autosuficiente · N00 v2 candidato integral
+# Handoff autosuficiente · N00 v2 aprobado
 
 ## Estado
 
-El candidato integral de N00 está generado y auditado. Su estado técnico es **PASS**. No sustituye al N00 final aprobado hasta que el autor lo revise y lo apruebe de manera explícita.
+N00 v2 está generado, auditado y aprobado por el autor. Su estado técnico es **PASS** y pasa a ser la versión autoritativa de N00. El nombre histórico del directorio se conserva para no romper rutas ni trazabilidad. La aprobación no implica todavía autorización de publicación.
 
-El N00 aprobado permanece intacto:
+El N00 anterior permanece intacto como baseline histórico:
 
 - PDF aprobado: `N00/output/N00-METSI-lectura-previa-final.pdf`
 - SHA-256 del PDF aprobado: `1b4a1ab42665246349ed240659585a2e33766fe72157032bfbefc03cc7127f64`
 - Fuente aprobada: `N00/source/N00_como_leer_metsi.md`
 - SHA-256 de la fuente aprobada: `e94edbd29855899f25f22c7ae695cd2a3fe7964371fe210d6b3a1035dd620763`
 
-La nueva versión vive en un paquete separado: `N00-v2-candidate/`.
+La versión aprobada vive en el paquete separado `N00-v2-candidate/` y su aprobación se registra en `approval.json`.
 
 ## Entregables
 
@@ -101,9 +101,9 @@ La tapa recupera matices de gris y profundidad. El sistema visual mantiene fondo
 
 ## Incertidumbres y límites explícitos
 
-- **Aprobación autoral:** el paquete es un candidato. El N00 aprobado no debe reemplazarse hasta recibir aprobación explícita.
+- **Autoridad editorial:** N00 v2 fue aprobado de manera explícita y es la versión autoritativa. El N00 anterior se conserva sin cambios como baseline histórico.
 - **PDF/UA:** el archivo está etiquetado, declara idioma y contiene descripciones para las 21 imágenes raster. No se afirma conformidad PDF/UA certificada. El árbol producido por Chrome expone nativamente tres elementos `Figure`; los demás textos alternativos quedan además asociados a los objetos raster. Una certificación formal requiere una herramienta especializada y revisión con lector de pantalla.
-- **Aprobación de publicación:** la procedencia fotográfica está completa y comprobada, pero este cierre no publica el candidato porque la decisión autoral de promover N00 v2 sigue pendiente.
+- **Aprobación de publicación:** la procedencia fotográfica está completa y comprobada, pero la aprobación editorial de N00 v2 no autoriza por sí sola su publicación externa.
 - **Validación pedagógica en uso:** la carga declarada y la claridad de las consignas son coherentes desde los archivos, pero su precisión final sólo puede validarse con datos de una comisión real.
 
 ## Reproducción

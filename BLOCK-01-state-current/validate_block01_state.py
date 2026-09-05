@@ -87,6 +87,7 @@ def inspect_n00() -> dict:
     candidate_qa = load_json(candidate_root / "qa-report.json")
     candidate_integrity = load_json(candidate_root / "integrity-report.json")
     candidate_audit = load_json(candidate_root / "audit-report.json")
+    candidate_approval = load_json(candidate_root / "approval.json")
     image_manifest = load_json(candidate_root / "image-curation/image-manifest.json")
     candidate_html = (candidate_root / "index.html").read_text(encoding="utf-8")
     rendered_image_refs = {
@@ -119,8 +120,8 @@ def inspect_n00() -> dict:
     candidate_pdf_facts = pdf_facts(candidate_pdf)
 
     return {
-        "approved_production": {
-            "status": "approved",
+        "legacy_approved": {
+            "status": "preserved_historical_baseline",
             "pdf": relative(approved_pdf),
             "pdf_sha256": sha256(approved_pdf),
             "pdf_bytes": approved_pdf.stat().st_size,
@@ -134,7 +135,8 @@ def inspect_n00() -> dict:
             "integrity": approved_integrity["status"],
         },
         "v2_candidate": {
-            "status": "technical_pass_pending_author_approval",
+            "status": candidate_approval["status"],
+            "approval": candidate_approval,
             "pdf": relative(candidate_pdf),
             "pdf_sha256": sha256(candidate_pdf),
             "pdf_bytes": candidate_pdf.stat().st_size,
@@ -260,14 +262,14 @@ def build_report() -> dict:
             for item in n01_n10
         ),
         "approved_n00_unchanged_and_passes": (
-            n00["approved_production"]["pdf_sha256"]
+            n00["legacy_approved"]["pdf_sha256"]
             == "1b4a1ab42665246349ed240659585a2e33766fe72157032bfbefc03cc7127f64"
-            and n00["approved_production"]["source_sha256"]
+            and n00["legacy_approved"]["source_sha256"]
             == "e94edbd29855899f25f22c7ae695cd2a3fe7964371fe210d6b3a1035dd620763"
-            and n00["approved_production"]["qa"] == "PASS"
-            and n00["approved_production"]["integrity"] == "PASS"
-            and n00["approved_production"]["actual_pages"] == n00["approved_production"]["pages"]
-            and n00["approved_production"]["actual_all_pages_a4"]
+            and n00["legacy_approved"]["qa"] == "PASS"
+            and n00["legacy_approved"]["integrity"] == "PASS"
+            and n00["legacy_approved"]["actual_pages"] == n00["legacy_approved"]["pages"]
+            and n00["legacy_approved"]["actual_all_pages_a4"]
         ),
         "n00_v2_candidate_technical_pass": (
             n00["v2_candidate"]["qa"] == "PASS"
@@ -278,6 +280,11 @@ def build_report() -> dict:
             and n00["v2_candidate"]["actual_all_pages_a4"]
         ),
         "n00_v2_image_provenance_pass": n00["v2_candidate"]["image_provenance"]["status"] == "PASS",
+        "n00_v2_author_approval_recorded": (
+            n00["v2_candidate"]["status"] == "approved_authoritative_unpublished"
+            and n00["v2_candidate"]["approval"]["pdf_sha256"] == n00["v2_candidate"]["pdf_sha256"]
+            and not n00["v2_candidate"]["approval"]["publication_authorized"]
+        ),
         "cover_system_current_rule_pass": covers["status"] == "PASS",
     }
 
@@ -286,8 +293,8 @@ def build_report() -> dict:
         "generated_at": datetime.now(ZoneInfo("America/Argentina/Buenos_Aires")).isoformat(timespec="seconds"),
         "overall": "PASS" if all(gates.values()) else "FAIL",
         "authority": {
-            "n00_production": "N00 approved original remains authoritative until explicit author approval of v2 candidate",
-            "n00_candidate": "N00 v2 candidate is technically ready but not production-authoritative",
+            "n00_production": "N00 v2 is approved and authoritative; external publication remains unauthorized",
+            "n00_legacy": "The prior approved N00 remains preserved as a historical baseline",
             "n01_n10_content": "BLOCK-01-content-final is canonical and frozen",
             "n01_n10_pdf": "The package versions listed below are the current final PDFs",
             "cover_rule": "All copy originally designed in volt remains volt; only local tonal support may be adjusted",
@@ -312,14 +319,15 @@ def build_report() -> dict:
             },
         ],
         "pending_actions": [
-            "Revisión autoral y aprobación o rechazo explícito del candidato aislado N00 v2",
+            "Revisar visualmente la serie de tapas N00 a N10 a tamaño útil y registrar cualquier observación concreta",
+            "Publicar N00 v2 sólo después de una autorización explícita de publicación; su aprobación editorial ya está registrada",
             "Publicar N07 a N10 sólo después de una autorización explícita de publicación; esta auditoría no publica",
             "Tratar la percepción del texto volt en prueba de impresión como revisión autoral, no como permiso para aplicar velos oscuros globales",
         ],
         "uncertainties": [
             "Esta pasada no afirma certificación PDF/UA formal; se apoya en los controles de accesibilidad del repositorio",
             "No se consultó el sitio público en vivo; aquí no se cambia ni se recertifica el estado de publicación",
-            "N00 v2 sigue siendo candidato pese a su PASS técnico hasta que el autor lo apruebe explícitamente",
+            "La aprobación de N00 v2 no permite inferir autorización de publicación externa",
         ],
     }
 
@@ -346,14 +354,14 @@ Fecha de auditoría: {report['generated_at']}.
 
 El estado técnico consolidado es **{report['overall']}**. No hay una deuda de contenido oculta en N01 a N10: las diez fuentes empaquetadas coinciden byte por byte con las fuentes canónicas, los diez controles de QA de PDF informan PASS y los diez controles de integridad informan PASS.
 
-N00 requiere una distinción de autoridad. El N00 aprobado continúa siendo la versión de producción. El candidato N00 v2 está técnicamente listo, con {n00['v2_candidate']['audit_checks_passed']} de {n00['v2_candidate']['audit_checks_total']} controles aprobados, pero no reemplaza al original sin aprobación autoral explícita.
+La distinción de autoridad de N00 quedó resuelta. N00 v2 fue aprobado por el autor, tiene {n00['v2_candidate']['audit_checks_passed']} de {n00['v2_candidate']['audit_checks_total']} controles técnicos aprobados y pasa a ser la versión autoritativa. El N00 anterior permanece intacto como baseline histórico. Esta aprobación no implica publicación externa.
 
 Esta auditoría no modificó fuentes, HTML, CSS ni PDF.
 
 ## Jerarquía de autoridad
 
-1. **N00 de producción:** `N00/output/N00-METSI-lectura-previa-final.pdf`, 45 páginas, SHA-256 `{n00['approved_production']['pdf_sha256']}`.
-2. **N00 v2 candidato:** `N00-v2-candidate/output/N00-METSI-lectura-previa-v2-candidate-final.pdf`, 43 páginas, SHA-256 `{n00['v2_candidate']['pdf_sha256']}`. Estado: PASS técnico, pendiente de aprobación autoral.
+1. **N00 v2 aprobado y autoritativo:** `N00-v2-candidate/output/N00-METSI-lectura-previa-v2-candidate-final.pdf`, 43 páginas, SHA-256 `{n00['v2_candidate']['pdf_sha256']}`. Estado: PASS técnico, aprobación autoral registrada, publicación externa todavía no autorizada.
+2. **N00 anterior:** `N00/output/N00-METSI-lectura-previa-final.pdf`, 45 páginas, SHA-256 `{n00['legacy_approved']['pdf_sha256']}`. Estado: baseline histórico preservado sin cambios.
 3. **Contenido N01 a N10:** `BLOCK-01-content-final/` es la autoridad canónica y congelada.
 4. **PDF N01 a N10:** las versiones de la tabla siguiente son los finales vigentes y contienen una copia exacta de su fuente canónica.
 5. **Tapas:** todo texto originalmente diseñado en volt permanece en volt. Se prohíbe resolver legibilidad con una tela oscura global. Cualquier apoyo debe ser tonal, localizado y sujeto a revisión de la tapa completa.
@@ -403,7 +411,7 @@ python3 BLOCK-01-state-current/validate_block01_state.py
 
 ## Próxima decisión correcta
 
-No corresponde reabrir N01 a N10 ni tocar sus interiores. La próxima decisión editorial es revisar y aprobar o rechazar el candidato N00 v2. Sólo después de una aprobación explícita corresponde promoverlo, actualizar el manifiesto central y evaluar su publicación. La publicación de N07 a N10 también permanece como una acción separada y requiere autorización explícita.
+No corresponde reabrir N01 a N10 ni tocar sus interiores. N00 v2 ya está aprobado. La próxima tarea editorial es la revisión visual de las once tapas. Cualquier publicación de N00 v2 o de N07 a N10 permanece como una acción separada y requiere autorización explícita.
 """
 
 

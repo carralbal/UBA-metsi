@@ -1,19 +1,19 @@
 # Estado consolidado y autoridad vigente · METSI N00 a N10
 
-Fecha de auditoría: 2026-09-04T22:06:53-03:00.
+Fecha de auditoría: 2026-09-04T22:36:26-03:00.
 
 ## Dictamen
 
 El estado técnico consolidado es **PASS**. No hay una deuda de contenido oculta en N01 a N10: las diez fuentes empaquetadas coinciden byte por byte con las fuentes canónicas, los diez controles de QA de PDF informan PASS y los diez controles de integridad informan PASS.
 
-N00 requiere una distinción de autoridad. El N00 aprobado continúa siendo la versión de producción. El candidato N00 v2 está técnicamente listo, con 27 de 27 controles aprobados, pero no reemplaza al original sin aprobación autoral explícita.
+La distinción de autoridad de N00 quedó resuelta. N00 v2 fue aprobado por el autor, tiene 27 de 27 controles técnicos aprobados y pasa a ser la versión autoritativa. El N00 anterior permanece intacto como baseline histórico. Esta aprobación no implica publicación externa.
 
 Esta auditoría no modificó fuentes, HTML, CSS ni PDF.
 
 ## Jerarquía de autoridad
 
-1. **N00 de producción:** `N00/output/N00-METSI-lectura-previa-final.pdf`, 45 páginas, SHA-256 `1b4a1ab42665246349ed240659585a2e33766fe72157032bfbefc03cc7127f64`.
-2. **N00 v2 candidato:** `N00-v2-candidate/output/N00-METSI-lectura-previa-v2-candidate-final.pdf`, 43 páginas, SHA-256 `c5e3237214b701a9721dc77d8c3d03756a7959910a19054967a7bc531c14c497`. Estado: PASS técnico, pendiente de aprobación autoral.
+1. **N00 v2 aprobado y autoritativo:** `N00-v2-candidate/output/N00-METSI-lectura-previa-v2-candidate-final.pdf`, 43 páginas, SHA-256 `c5e3237214b701a9721dc77d8c3d03756a7959910a19054967a7bc531c14c497`. Estado: PASS técnico, aprobación autoral registrada, publicación externa todavía no autorizada.
+2. **N00 anterior:** `N00/output/N00-METSI-lectura-previa-final.pdf`, 45 páginas, SHA-256 `1b4a1ab42665246349ed240659585a2e33766fe72157032bfbefc03cc7127f64`. Estado: baseline histórico preservado sin cambios.
 3. **Contenido N01 a N10:** `BLOCK-01-content-final/` es la autoridad canónica y congelada.
 4. **PDF N01 a N10:** las versiones de la tabla siguiente son los finales vigentes y contienen una copia exacta de su fuente canónica.
 5. **Tapas:** todo texto originalmente diseñado en volt permanece en volt. Se prohíbe resolver legibilidad con una tela oscura global. Cualquier apoyo debe ser tonal, localizado y sujeto a revisión de la tapa completa.
@@ -61,11 +61,13 @@ La auditoría comparativa vigente informa PASS: once páginas A4, once fotograf�
 - PASS: `approved_n00_unchanged_and_passes`
 - PASS: `n00_v2_candidate_technical_pass`
 - PASS: `n00_v2_image_provenance_pass`
+- PASS: `n00_v2_author_approval_recorded`
 - PASS: `cover_system_current_rule_pass`
 
 ## Únicos pendientes reales
 
-- Revisión autoral y aprobación o rechazo explícito del candidato aislado N00 v2.
+- Revisar visualmente la serie de tapas N00 a N10 a tamaño útil y registrar cualquier observación concreta.
+- Publicar N00 v2 sólo después de una autorización explícita de publicación; su aprobación editorial ya está registrada.
 - Publicar N07 a N10 sólo después de una autorización explícita de publicación; esta auditoría no publica.
 - Tratar la percepción del texto volt en prueba de impresión como revisión autoral, no como permiso para aplicar velos oscuros globales.
 
@@ -73,7 +75,7 @@ La auditoría comparativa vigente informa PASS: once páginas A4, once fotograf�
 
 - Esta pasada no afirma certificación PDF/UA formal; se apoya en los controles de accesibilidad del repositorio.
 - No se consultó el sitio público en vivo; aquí no se cambia ni se recertifica el estado de publicación.
-- N00 v2 sigue siendo candidato pese a su PASS técnico hasta que el autor lo apruebe explícitamente.
+- La aprobación de N00 v2 no permite inferir autorización de publicación externa.
 
 ## Reproducción
 
@@ -86,4 +88,4 @@ python3 BLOCK-01-state-current/validate_block01_state.py
 
 ## Próxima decisión correcta
 
-No corresponde reabrir N01 a N10 ni tocar sus interiores. La próxima decisión editorial es revisar y aprobar o rechazar el candidato N00 v2. Sólo después de una aprobación explícita corresponde promoverlo, actualizar el manifiesto central y evaluar su publicación. La publicación de N07 a N10 también permanece como una acción separada y requiere autorización explícita.
+No corresponde reabrir N01 a N10 ni tocar sus interiores. N00 v2 ya está aprobado. La próxima tarea editorial es la revisión visual de las once tapas. Cualquier publicación de N00 v2 o de N07 a N10 permanece como una acción separada y requiere autorización explícita.
