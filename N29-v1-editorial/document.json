@@ -1,0 +1,148 @@
+{
+  "number": 29,
+  "title": "N29 · Gobierno de integración, despliegue, infraestructura, aprobación y rollback",
+  "module": "Sostener la promesa en operación",
+  "source": "source/N29_gobierno_de_integracion_despliegue_infraestructura_aprobacion_y_rollback-content-canonical-v1.md",
+  "source_sha256": "bffd801a0d485e464103de60289335e83aae01a9cbe49c52600fcc98928f8bba",
+  "source_words": 7256,
+  "content_audit": "canonical-v1-pass",
+  "cover": {
+    "file": "cover-source-premium-bw-v1.png",
+    "source": "assets/cover-source-premium-bw-v1.png",
+    "sha256": "436965908f8f2c963a6bc5edc0c5e9e308f3679ac3f4701dd73216114234049e",
+    "alt": "Una directora de operaciones argentina y un especialista técnico evalúan una ruta de avance y otra de recuperación.",
+    "photographic_origin": "native_black_and_white",
+    "render_treatment": "no_grayscale_conversion"
+  },
+  "internal_images": [
+    "pause-01.png",
+    "pause-02.png"
+  ],
+  "image_manifest": [
+    {
+      "file": "assets/pause-01.png",
+      "sha256": "97bebded16f0a14ae51670db1c89604133c891fe6ca64e45c842f92878344e16",
+      "alt": "Un técnico recorre una vía física de recuperación que incluye infraestructura, evidencia y trabajo humano.",
+      "role": "full_page_pause",
+      "rights_status": "project_bound_generated_media"
+    },
+    {
+      "file": "assets/pause-02.png",
+      "sha256": "e344190194207b8e4696eed7d78ec1de3763b326b6c38f0e09659f3bbb4916fe",
+      "alt": "Tres umbrales se habilitan de manera progresiva para limitar exposición antes de ampliar una liberación.",
+      "role": "full_page_pause",
+      "rights_status": "project_bound_generated_media"
+    }
+  ],
+  "portrait_references": [
+    {
+      "key": "humble-farley",
+      "name": "Jez Humble y David Farley",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "forsgren-humble-kim",
+      "name": "Nicole Forsgren, Jez Humble y Gene Kim",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "nist",
+      "name": "NIST",
+      "file": "assets/referent-nist.jpg",
+      "sha256": "482ac3e91fd444045dc072dac5311e0a45fb7d82d5d900203a4dccff24b190b6",
+      "rights_status": "verified_local_portrait"
+    },
+    {
+      "key": "slsa",
+      "name": "SLSA",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "cisa",
+      "name": "CISA",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "iso-iec",
+      "name": "ISO/IEC",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    }
+  ],
+  "diagrams": [
+    {
+      "file": "diagrams/N29-mapa-01.svg",
+      "title": "Cadena de liberación",
+      "labels": [
+        "Fuente",
+        "Artefacto",
+        "Ambiente",
+        "Despliegue",
+        "Cierre"
+      ],
+      "claim": "Cadena de liberación: la representación conecta fuente, artefacto, ambiente, despliegue, cierre para sostener una decisión revisable.",
+      "sha256": "c7fd4ebb2670b122007dbecb3d1b677d6f447d5d257fb336968113e45c939992"
+    },
+    {
+      "file": "diagrams/N29-mapa-02.svg",
+      "title": "Compromiso progresivo",
+      "labels": [
+        "Evidencia",
+        "Aprobación",
+        "Cohorte",
+        "Señal",
+        "Detención"
+      ],
+      "claim": "Compromiso progresivo: la representación conecta evidencia, aprobación, cohorte, señal, detención para sostener una decisión revisable.",
+      "sha256": "ae2a1dc7daaf12dce39266679a1f8aca7585f694e0fc1098f5d0fadb5e35032d"
+    },
+    {
+      "file": "diagrams/N29-mapa-03.svg",
+      "title": "Mapa HH-29",
+      "labels": [
+        "Código",
+        "Datos",
+        "Infraestructura",
+        "Rollback",
+        "Reparación"
+      ],
+      "claim": "Mapa HH-29: la representación conecta código, datos, infraestructura, rollback, reparación para sostener una decisión revisable.",
+      "sha256": "67e21bb698a304d31e91384902d2e62dbb3784858c8a9b1dea6af556caa2e948"
+    }
+  ],
+  "quotes": [
+    "N29 gobierna integración, despliegue, infraestructura, aprobación y rollback como una cadena de compromiso trazable, progresiva y reparable.",
+    "Ninguna arquitectura, contrato, prueba, control ni tablero elimina el juicio situado."
+  ],
+  "references": [
+    "Humble, J. y Farley, D. (2010). Continuous Delivery. Addison-Wesley.",
+    "Forsgren, N., Humble, J. y Kim, G. (2018). Accelerate. IT Revolution.",
+    "Google Cloud (2024). Accelerate State of DevOps Report. https://cloud.google.com/devops/state-of-devops",
+    "NIST (2022). Secure Software Development Framework 1.1, SP 800-218. https://doi.org/10.6028/NIST.SP.800-218",
+    "NIST (2024). Cybersecurity Supply Chain Risk Management Practices, SP 800-161r1-upd1. https://doi.org/10.6028/NIST.SP.800-161r1-upd1",
+    "NIST (2024). Strategies for the Integration of Software Supply Chain Security in DevSecOps CI/CD Pipelines, SP 800-204D. https://doi.org/10.6028/NIST.SP.800-204D",
+    "SLSA (2026). SLSA Specification 1.2. https://slsa.dev/spec/v1.2/",
+    "CISA (2023). Secure by Design. https://www.cisa.gov/resources-tools/resources/secure-by-design",
+    "ISO/IEC (2022). ISO/IEC 27001:2022 Information Security Management Systems. https://www.iso.org/standard/27001",
+    "ISO/IEC (2018). ISO/IEC 20000-1:2018 Service Management System Requirements. https://www.iso.org/standard/70636.html",
+    "OpenGitOps (2021). GitOps Principles 1.0. https://opengitops.dev/",
+    "Kim, G., Humble, J., Debois, P. y Willis, J. (2021). The DevOps Handbook, Second Edition. IT Revolution."
+  ],
+  "closing": {
+    "file": "matches-close.png",
+    "sha256": "06318b951ef619692a236027ed07ec7a4a1bb9b66cc875a916c40f060e47ecde",
+    "alt": "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza.",
+    "caption": "La secuencia vuelve visible que toda intervención consume recursos, deja huellas y necesita un criterio de cierre.",
+    "folio": true,
+    "footer": true
+  }
+}

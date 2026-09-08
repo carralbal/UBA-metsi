@@ -1,0 +1,148 @@
+{
+  "number": 18,
+  "title": "N18 · Legado, regulación y documentación como valor, restricción y evidencia",
+  "module": "Diseñar una estrategia situada",
+  "source": "source/N18_legado_regulacion_y_documentacion_como_valor_restriccion_y_evidencia-content-canonical-v1.md",
+  "source_sha256": "87ac8170bd89f98dbae2e81f90c07eb65a83d15b85e093a8e716532d408fee12",
+  "source_words": 7921,
+  "content_audit": "canonical-v1-pass",
+  "cover": {
+    "file": "cover-source-premium-bw-v1.png",
+    "source": "assets/cover-source-premium-bw-v1.png",
+    "sha256": "decce272c6d258980e252df2520db48783f2d06410bcbdc683a15ab686b4b0e8",
+    "alt": "Una especialista argentina examina capas de documentación, planos y terminales heredadas en un archivo técnico.",
+    "photographic_origin": "native_black_and_white",
+    "render_treatment": "no_grayscale_conversion"
+  },
+  "internal_images": [
+    "pause-01.png",
+    "pause-02.png"
+  ],
+  "image_manifest": [
+    {
+      "file": "assets/pause-01.png",
+      "sha256": "a8baa828f18f2026776340a07720e4033e270859e4760c7ee8515c005f970a74",
+      "alt": "Una mano revela anotaciones y dependencias ocultas entre registros de épocas diferentes.",
+      "role": "full_page_pause",
+      "rights_status": "project_bound_generated_media"
+    },
+    {
+      "file": "assets/pause-02.png",
+      "sha256": "bde7a0f96304115de6edec7b0f177db52a1bd7377aaa9ad92364a31838112a19",
+      "alt": "Una profesional recorre un depósito de equipos retirados mientras conserva una carpeta de evidencia vigente.",
+      "role": "full_page_pause",
+      "rights_status": "project_bound_generated_media"
+    }
+  ],
+  "portrait_references": [
+    {
+      "key": "manny-lehman",
+      "name": "Manny Lehman",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "david-parnas",
+      "name": "David Parnas",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "ward-cunningham",
+      "name": "Ward Cunningham",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "michael-feathers",
+      "name": "Michael Feathers",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "iso-iec-ieee",
+      "name": "ISO/IEC/IEEE",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "nist",
+      "name": "NIST",
+      "file": "assets/referent-nist.jpg",
+      "sha256": "482ac3e91fd444045dc072dac5311e0a45fb7d82d5d900203a4dccff24b190b6",
+      "rights_status": "verified_local_portrait"
+    }
+  ],
+  "diagrams": [
+    {
+      "file": "diagrams/N18-mapa-01.svg",
+      "title": "Capas del legado",
+      "labels": [
+        "Código",
+        "Datos",
+        "Rutinas",
+        "Contratos",
+        "Obligaciones"
+      ],
+      "claim": "Capas del legado: la representación conecta código, datos, rutinas, contratos, obligaciones para sostener una decisión revisable.",
+      "sha256": "1aeb164a3f6e44d64378cf34463959f109f073e17587b99fe6c13e1d814283e7"
+    },
+    {
+      "file": "diagrams/N18-mapa-02.svg",
+      "title": "Trazabilidad normativa",
+      "labels": [
+        "Norma",
+        "Interpretación",
+        "Control",
+        "Prueba",
+        "Reparación"
+      ],
+      "claim": "Trazabilidad normativa: la representación conecta norma, interpretación, control, prueba, reparación para sostener una decisión revisable.",
+      "sha256": "dfda63548561b1097c6766e425b0b4f3646fa93fbf7a358556912c97cbcaff92"
+    },
+    {
+      "file": "diagrams/N18-mapa-03.svg",
+      "title": "Mapa HH-18",
+      "labels": [
+        "Valor",
+        "Dependencia",
+        "Riesgo",
+        "Transición",
+        "Retiro"
+      ],
+      "claim": "Mapa HH-18: la representación conecta valor, dependencia, riesgo, transición, retiro para sostener una decisión revisable.",
+      "sha256": "5710d8496a43c90e01a7ed59967396782ad3807ca9fd6be57707069f8db6ec5b"
+    }
+  ],
+  "quotes": [
+    "N18 convierte legado, regulación y documentación en objetos de análisis con valor, costo, evidencia y ciclo de vida.",
+    "La evidencia nunca elimina por completo el juicio."
+  ],
+  "references": [
+    "Lehman, M. M. (1980). ‘Programs, Life Cycles, and Laws of Software Evolution’. Proceedings of the IEEE, 68(9), 1060–1076. https://doi.org/10.1109/PROC.1980.11805",
+    "Parnas, D. L. (1972). ‘On the Criteria to Be Used in Decomposing Systems into Modules’. Communications of the ACM, 15(12), 1053–1058. https://doi.org/10.1145/361598.361623",
+    "Feathers, M. (2004). Working Effectively with Legacy Code. Prentice Hall.",
+    "ISO/IEC/IEEE (2026). ISO/IEC/IEEE 12207:2026 Software Life Cycle Processes. https://www.iso.org/standard/90219.html",
+    "ISO/IEC/IEEE (2019). ISO/IEC/IEEE 15289:2019 Content of Life Cycle Information Items. https://www.iso.org/standard/74909.html",
+    "ISO/IEC/IEEE (2023). ISO/IEC/IEEE 15288:2023 System Life Cycle Processes. https://www.iso.org/standard/81702.html",
+    "European Union (2016). General Data Protection Regulation. https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+    "European Union (2024). Artificial Intelligence Act. https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+    "NIST (2022). Secure Software Development Framework 1.1. https://doi.org/10.6028/NIST.SP.800-218",
+    "NIST (2024). Secure Software Development Practices for Generative AI. https://doi.org/10.6028/NIST.SP.800-218A.ipd",
+    "CISA (2023). Secure by Design. https://www.cisa.gov/securebydesign",
+    "W3C (2013). PROV Overview. https://www.w3.org/TR/prov-overview/"
+  ],
+  "closing": {
+    "file": "matches-close.png",
+    "sha256": "06318b951ef619692a236027ed07ec7a4a1bb9b66cc875a916c40f060e47ecde",
+    "alt": "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza.",
+    "caption": "La secuencia vuelve visible que toda intervención consume recursos, deja huellas y necesita un criterio de cierre.",
+    "folio": true,
+    "footer": true
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "number": 12,
+  "title": "N12 · Eventos, estados, comandos, evidencia y autoridad",
+  "module": "Modelar sólo lo que ayuda a decidir",
+  "source": "source/N12_eventos_estados_comandos_evidencia_y_autoridad-content-canonical-v1.md",
+  "source_sha256": "ce69f661943c34cf0e812685b6b61bfb7c7baff0b2cb66fa4b636ff27630769a",
+  "source_words": 7835,
+  "content_audit": "canonical-v1-pass",
+  "cover": {
+    "file": "cover-source-premium-bw-v1.png",
+    "source": "assets/cover-source-premium-bw-v1.png",
+    "sha256": "9ff20568b0ae9d3c1763e03ddb7450a6cbcc73387369fad7002c2a43b7645287",
+    "alt": "Un profesional hotelero argentino acciona un lector de acceso ante un umbral de vidrio mientras otro trabajador sostiene el estado operativo desde el interior.",
+    "photographic_origin": "native_black_and_white",
+    "render_treatment": "no_grayscale_conversion"
+  },
+  "internal_images": [
+    "pause-01.png",
+    "pause-02.png"
+  ],
+  "image_manifest": [
+    {
+      "file": "assets/pause-01.png",
+      "sha256": "f11c1a8417bf2abf32dffdfce0fb09dc471f13ada92b8867ae41adc704bd878c",
+      "alt": "Dos manos sostienen una credencial de acceso y una ficha de estado a ambos lados de un umbral de servicio.",
+      "role": "full_page_pause",
+      "rights_status": "project_bound_generated_media"
+    },
+    {
+      "file": "assets/pause-02.png",
+      "sha256": "665fa5587d43d3c17fe6a84fa819bd2ee596c2176e2f51f3e548a5f070afa71b",
+      "alt": "Una trabajadora reconstruye un episodio entre un reloj, un registro temporal, una notificación y el reflejo de una puerta.",
+      "role": "full_page_pause",
+      "rights_status": "project_bound_generated_media"
+    }
+  ],
+  "portrait_references": [
+    {
+      "key": "eric-evans",
+      "name": "Eric Evans",
+      "file": "assets/referent-eric-evans.jpg",
+      "sha256": "7a075c10f9fbe2a5fbe2b0ddbfb0229675794b570da746efae4953accedaa001",
+      "rights_status": "verified_local_portrait"
+    },
+    {
+      "key": "leslie-lamport",
+      "name": "Leslie Lamport",
+      "file": "assets/referent-leslie-lamport.jpg",
+      "sha256": "a07f86a8b435c38eafbc945e4848ed4c2139e1aeb236518ea4a5fd6f4657e82a",
+      "rights_status": "verified_local_portrait"
+    },
+    {
+      "key": "martin-fowler",
+      "name": "Martin Fowler",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "david-ferraiolo",
+      "name": "David Ferraiolo",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "nancy-leveson",
+      "name": "Nancy Leveson",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "elham-tabassi",
+      "name": "Elham Tabassi",
+      "file": "assets/referent-elham-tabassi.jpg",
+      "sha256": "e97f6d01a940c10c7eb57cddd28ffee01e6ddc7da6b2117fbee44a3e9853a35e",
+      "rights_status": "verified_local_portrait"
+    }
+  ],
+  "diagrams": [
+    {
+      "file": "diagrams/N12-mapa-01.svg",
+      "title": "Transición verificable",
+      "labels": [
+        "Comando",
+        "Regla",
+        "Evento",
+        "Evidencia",
+        "Estado"
+      ],
+      "claim": "Transición verificable: la representación conecta comando, regla, evento, evidencia, estado para sostener una decisión revisable.",
+      "sha256": "3335883baa34e63e6fad08a8f6a863e28c7036ea1764074a8c7b08ae326a267b"
+    },
+    {
+      "file": "diagrams/N12-mapa-02.svg",
+      "title": "Autoridad y reparación",
+      "labels": [
+        "Proponer",
+        "Autorizar",
+        "Ejecutar",
+        "Verificar",
+        "Reparar"
+      ],
+      "claim": "Autoridad y reparación: la representación conecta proponer, autorizar, ejecutar, verificar, reparar para sostener una decisión revisable.",
+      "sha256": "dba39c5f49fb4064be1430734b328c925ece1ec684801b319ed0c816c986f231"
+    },
+    {
+      "file": "diagrams/N12-mapa-03.svg",
+      "title": "Tres tiempos de un episodio",
+      "labels": [
+        "Ocurrió",
+        "Se registró",
+        "Se conoció",
+        "Se proyectó",
+        "Se corrigió"
+      ],
+      "claim": "Tres tiempos de un episodio: la representación conecta ocurrió, se registró, se conoció, se proyectó, se corrigió para sostener una decisión revisable.",
+      "sha256": "388dbe1ad380fecabf1fbcbd2dd76bd4a0743f54e0d7f95a1e5fb0d12cc77b5d"
+    }
+  ],
+  "quotes": [
+    "Un sistema de información conserva mejor la realidad operacional cuando distingue cinco funciones.",
+    "La historia completa puede entrar en conflicto con privacidad, costo y derecho a rectificación."
+  ],
+  "references": [
+    "Evans, E. (2004). *Domain-Driven Design: Tackling Complexity in the Heart of Software*. Addison-Wesley.",
+    "Lamport, L. (1978). “Time, Clocks, and the Ordering of Events in a Distributed System”. *Communications of the ACM*, 21(7), 558–565. https://doi.org/10.1145/359545.359563",
+    "Fowler, M. (2005). “Event Sourcing”. https://martinfowler.com/eaaDev/EventSourcing.html",
+    "Fowler, M. (2011). “CQRS”. https://martinfowler.com/bliki/CQRS.html",
+    "Ferraiolo, D. F. y Kuhn, D. R. (1992). “Role-Based Access Controls”. *15th National Computer Security Conference*, 554–563. https://csrc.nist.gov/projects/role-based-access-control",
+    "Sandhu, R. S., Coyne, E. J., Feinstein, H. L. y Youman, C. E. (1996). “Role-Based Access Control Models”. *Computer*, 29(2), 38–47. https://csrc.nist.gov/csrc/media/projects/role-based-access-control/documents/sandhu96.pdf",
+    "Leveson, N. (2011). *Engineering a Safer World: Systems Thinking Applied to Safety*. MIT Press. https://doi.org/10.7551/mitpress/8179.001.0001",
+    "Object Management Group (2017). *Unified Modeling Language, Version 2.5.1*. https://www.omg.org/spec/UML/2.5.1",
+    "Object Management Group (2014). *Business Process Model and Notation, Version 2.0.2*. https://www.omg.org/spec/BPMN/2.0.2",
+    "Cloud Native Computing Foundation (2022). *CloudEvents Specification, Version 1.0.2*. https://github.com/cloudevents/spec/tree/ce@v1.0.2",
+    "AsyncAPI Initiative (2026). *AsyncAPI Specification, Version 3.1.0*. https://www.asyncapi.com/docs/reference/specification/v3.1.0",
+    "Tabassi, E. (2023). *Artificial Intelligence Risk Management Framework, AI RMF 1.0*. NIST AI 100-1. https://doi.org/10.6028/NIST.AI.100-1",
+    "Autio, C. et al. (2024). *Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile*. NIST AI 600-1. https://doi.org/10.6028/NIST.AI.600-1",
+    "Unión Europea (2024). *Reglamento (UE) 2024/1689 por el que se establecen normas armonizadas en materia de inteligencia artificial*. https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+  ],
+  "closing": {
+    "file": "matches-close.png",
+    "sha256": "06318b951ef619692a236027ed07ec7a4a1bb9b66cc875a916c40f060e47ecde",
+    "alt": "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza.",
+    "caption": "La secuencia vuelve visible que toda intervención consume recursos, deja huellas y necesita un criterio de cierre.",
+    "folio": true,
+    "footer": true
+  }
+}

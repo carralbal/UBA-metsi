@@ -1,0 +1,1300 @@
+{
+  "document": "N29",
+  "stage": "content-canonical-v1",
+  "source": "source/N29_gobierno_de_integracion_despliegue_infraestructura_aprobacion_y_rollback-content-canonical-v1.md",
+  "source_sha256": "bffd801a0d485e464103de60289335e83aae01a9cbe49c52600fcc98928f8bba",
+  "eligible_blocks": [
+    {
+      "source_id": "src-0001",
+      "kind": "heading",
+      "text": "# N29 · Gobierno de integración, despliegue, infraestructura, aprobación y rollback"
+    },
+    {
+      "source_id": "src-0002",
+      "kind": "heading",
+      "text": "## Pregunta profesional"
+    },
+    {
+      "source_id": "src-0003",
+      "kind": "paragraph",
+      "text": "¿Cómo liberar cambios con velocidad responsable cuando código, configuración, infraestructura, datos y autoridad deben avanzar juntos y poder recuperarse?"
+    },
+    {
+      "source_id": "src-0004",
+      "kind": "heading",
+      "text": "## El botón de volver no devolvía el servicio"
+    },
+    {
+      "source_id": "src-0005",
+      "kind": "paragraph",
+      "text": "Hotel Horizonte despliega una nueva versión del circuito de ingreso durante una tarde de baja demanda. La aplicación puede volver a la versión anterior, pero la migración ya transformó estados de reserva y el proveedor de cerraduras actualizó una regla incompatible. El botón de rollback revierte código y deja la operación partida."
+    },
+    {
+      "source_id": "src-0006",
+      "kind": "paragraph",
+      "text": "La aprobación había revisado alcance y pruebas funcionales. No había verificado procedencia del artefacto, compatibilidad de datos, configuración, infraestructura, terceros, observabilidad ni autoridad para interrumpir. El despliegue era técnicamente automatizado y organizacionalmente incompleto."
+    },
+    {
+      "source_id": "src-0007",
+      "kind": "paragraph",
+      "text": "Gobernar una liberación significa coordinar una decisión reversible o reparable a través de toda la cadena. Incluye integración continua, artefactos trazables, ambientes, infraestructura como código, pruebas, segregación, despliegue progresivo, monitoreo y planes de recuperación."
+    },
+    {
+      "source_id": "src-0008",
+      "kind": "paragraph",
+      "text": "El equipo reconstruye la versión liberada desde su origen. Declara qué cambia, qué evidencia habilita cada puerta, quién aprueba según riesgo, qué población se expone y cómo se recuperan código, datos, configuración y operación."
+    },
+    {
+      "source_id": "src-0009",
+      "kind": "paragraph",
+      "text": "La velocidad deja de medirse por frecuencia aislada. Importa cuánto compromiso puede asumirse sin perder capacidad de observar, detener, corregir y aprender."
+    },
+    {
+      "source_id": "src-0010",
+      "kind": "paragraph",
+      "text": "N29 recibe de HH-28 reclamos de calidad y los convierte en decisiones de liberación. El objetivo no es agregar burocracia, sino ubicar control donde reduce incertidumbre y daño."
+    },
+    {
+      "source_id": "src-0011",
+      "kind": "heading",
+      "text": "## Hotel Horizonte: una estrategia para una contradicción ya conocida"
+    },
+    {
+      "source_id": "src-0012",
+      "kind": "paragraph",
+      "text": "HH-29 organiza una liberación progresiva del circuito de ingreso. El expediente vincula cambio, artefacto, procedencia, ambientes, datos, infraestructura, pruebas, aprobación, exposición, señales y recuperación. Un ensayo descubre que volver código no restaura estados; el plan cambia antes de ampliar el despliegue."
+    },
+    {
+      "source_id": "src-0013",
+      "kind": "heading",
+      "text": "## Tesis"
+    },
+    {
+      "source_id": "src-0014",
+      "kind": "paragraph",
+      "text": "N29 gobierna integración, despliegue, infraestructura, aprobación y rollback como una cadena de compromiso trazable, progresiva y reparable."
+    },
+    {
+      "source_id": "src-0015",
+      "kind": "heading",
+      "text": "## Del cierre anterior al nuevo avance"
+    },
+    {
+      "source_id": "src-0016",
+      "kind": "paragraph",
+      "text": "N28 deja evidencia y decisiones abiertas que N29 utiliza sin reabrir su contenido. N29 gobierna integración, despliegue, infraestructura, aprobación y rollback como una cadena de compromiso trazable, progresiva y reparable."
+    },
+    {
+      "source_id": "src-0017",
+      "kind": "paragraph",
+      "text": "N30 observará la promesa ya operativa mediante señales técnicas, de negocio y de experiencia, y organizará incidentes y aprendizaje. N29 no diseña todavía el sistema completo de observabilidad."
+    },
+    {
+      "source_id": "src-0018",
+      "kind": "heading",
+      "text": "## Tradiciones y marcos utilizados en el argumento"
+    },
+    {
+      "source_id": "src-0019",
+      "kind": "paragraph",
+      "text": "Humble, J. y Farley, D. organizan artefactos liberables, automatización y recuperación. En N29, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N29: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0020",
+      "kind": "paragraph",
+      "text": "Forsgren, N., Humble, J. y Kim, G. relacionan desempeño de entrega con estabilidad y aprendizaje. En N29, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N29: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0021",
+      "kind": "paragraph",
+      "text": "Google Cloud relaciona desempeño de entrega con estabilidad y aprendizaje. En N29, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N29: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0022",
+      "kind": "paragraph",
+      "text": "NIST integra prácticas de desarrollo seguro al ciclo de vida. En N29, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N29: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0023",
+      "kind": "paragraph",
+      "text": "NIST integra riesgo de cadena de suministro durante el ciclo de vida. En N29, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N29: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0024",
+      "kind": "paragraph",
+      "text": "NIST integra seguridad de cadena de suministro en pipelines. En N29, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N29: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0025",
+      "kind": "paragraph",
+      "text": "SLSA define niveles y attestations de procedencia de software. En N29, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N29: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0026",
+      "kind": "paragraph",
+      "text": "CISA desplaza seguridad hacia decisiones de producto y proveedor. En N29, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N29: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0027",
+      "kind": "paragraph",
+      "text": "ISO/IEC estructura un sistema de gestión de seguridad de la información. En N29, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N29: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0028",
+      "kind": "paragraph",
+      "text": "ISO/IEC establece requisitos de gestión para sostener servicios. En N29, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N29: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0029",
+      "kind": "paragraph",
+      "text": "OpenGitOps formula operación declarativa, versionada y reconciliada. En N29, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N29: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0030",
+      "kind": "paragraph",
+      "text": "Kim, G., Humble, J., Debois, P. y Willis, J. integran flujo, retroalimentación y aprendizaje organizacional. En N29, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N29: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0031",
+      "kind": "heading",
+      "text": "## Movimiento 1 · Reconocer dependencias y promesas operativas"
+    },
+    {
+      "source_id": "src-0032",
+      "kind": "heading",
+      "text": "### Integración continua"
+    },
+    {
+      "source_id": "src-0033",
+      "kind": "paragraph",
+      "text": "Integración continua mantiene cambios pequeños combinados y verificados con frecuencia sobre una base compartida. La definición fija el objeto de decisión. Si el equipo de N29 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0034",
+      "kind": "paragraph",
+      "text": "No es ejecutar una herramienta ni fusionar sin disciplina. La distinción evita que una palabra familiar oculte otro mecanismo. En N29, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0035",
+      "kind": "paragraph",
+      "text": "En integración continua, el recorrido causal debe mostrar qué condición habilita la acción, qué transformación ocurre y quién absorbe el resultado. Reduce distancia entre versiones y detecta incompatibilidades antes de acumularlas. Si un salto depende sólo de una explicación oral, la estrategia todavía no puede gobernarlo."
+    },
+    {
+      "source_id": "src-0036",
+      "kind": "paragraph",
+      "text": "La evidencia relevante para integración continua no se limita al resultado promedio. Frecuencia, tiempo de reparación y fallas de integración muestran su eficacia. N29 busca además casos negativos, diferencias entre poblaciones y señales de que la explicación elegida podría ser insuficiente."
+    },
+    {
+      "source_id": "src-0037",
+      "kind": "paragraph",
+      "text": "Ejemplo. El cambio de reserva se integra con pruebas de contrato y migración. En N29, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0038",
+      "kind": "paragraph",
+      "text": "El tradeoff central de integración continua aparece entre anticipar y preservar opciones. Anticipar puede reducir coordinación y también fijar una premisa prematura; preservar opciones puede producir aprendizaje y también demorar una protección necesaria. La elección debe declarar cuál de esos costos acepta, durante cuánto tiempo y para quién."
+    },
+    {
+      "source_id": "src-0039",
+      "kind": "paragraph",
+      "text": "La auditoría de integración continua termina con una pregunta de uso: ¿qué podría decidir ahora una persona que antes no podía? En N29, la respuesta debe nombrar una acción, una restricción y una evidencia, no sólo una comprensión mejorada."
+    },
+    {
+      "source_id": "src-0040",
+      "kind": "paragraph",
+      "text": "Operacionalizar integración continua requiere asignar una unidad observable. El equipo define qué episodio contará, desde qué momento, con qué población y bajo qué fuente. Después compara al menos un caso ordinario con otro que fuerce excepción. Esta precisión en N29 evita que una conclusión general se sostenga sólo en ejemplos convenientes."
+    },
+    {
+      "source_id": "src-0041",
+      "kind": "paragraph",
+      "text": "La decisión profesional no termina en adoptar integración continua. Se compara una ruta principal con una explicación rival, se explicita quién queda expuesto y se conserva un modo de revisar. Una base verde puede ocultar escenarios no automatizados. El límite forma parte del diseño y no una nota posterior."
+    },
+    {
+      "source_id": "src-0042",
+      "kind": "heading",
+      "text": "### Artefacto liberable"
+    },
+    {
+      "source_id": "src-0043",
+      "kind": "paragraph",
+      "text": "Un artefacto liberable es una unidad identificada, inmutable y trazable que puede promoverse entre ambientes. Conviene comenzar por su función profesional. Si el equipo de N29 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0044",
+      "kind": "paragraph",
+      "text": "No es cualquier compilación ni una copia reconstruida para producción. El contraste importa porque conduce a pruebas distintas. En N29, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0045",
+      "kind": "paragraph",
+      "text": "El mecanismo de artefacto liberable no se presume por el nombre. Conserva versión, dependencias, procedencia, firmas y evidencia asociada. Debe localizarse dónde comienza, qué relaciones activa, qué demora introduce y qué capacidad de reparación queda disponible cuando la expectativa no se cumple."
+    },
+    {
+      "source_id": "src-0046",
+      "kind": "paragraph",
+      "text": "Una afirmación sobre artefacto liberable gana fuerza cuando puede reconstruirse desde fuentes independientes. Verificación reproducible y attestations permiten rastrear origen. La ausencia de señal también se interpreta: puede significar estabilidad, mala observación o exclusión del caso que más importa."
+    },
+    {
+      "source_id": "src-0047",
+      "kind": "paragraph",
+      "text": "Ejemplo. La misma imagen probada se promueve al despliegue. En N29, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0048",
+      "kind": "paragraph",
+      "text": "La escala modifica artefacto liberable. Una solución válida para un equipo puede fallar cuando atraviesa sedes, turnos o proveedores porque aumenta la distancia entre señal y autoridad. Antes de ampliar, N29 prueba si la misma decisión conserva significado y reparación bajo esa nueva distribución."
+    },
+    {
+      "source_id": "src-0049",
+      "kind": "paragraph",
+      "text": "Para evitar consenso aparente, artefacto liberable se revisa con alguien afectado y con alguien responsable de reparar. Las dos perspectivas pueden valorar resultados diferentes y obligan a declarar la prioridad elegida."
+    },
+    {
+      "source_id": "src-0050",
+      "kind": "paragraph",
+      "text": "En la práctica, artefacto liberable atraviesa más de un área. Se identifican handoffs, esperas, decisiones y datos que cada participante puede ver. Cuando dos áreas usan evidencia distinta en N29, el expediente conserva la divergencia hasta determinar si representa error, perspectiva legítima o una brecha que la estrategia debe resolver."
+    },
+    {
+      "source_id": "src-0051",
+      "kind": "paragraph",
+      "text": "En una revisión, artefacto liberable debe responder tres preguntas: qué mejora, qué desplaza y qué vuelve más difícil de revertir. La trazabilidad no garantiza que el contenido sea adecuado. Si esas respuestas cambian, también debe cambiar el compromiso, aunque el trabajo previo haya sido técnicamente correcto."
+    },
+    {
+      "source_id": "src-0052",
+      "kind": "heading",
+      "text": "### Ambiente y configuración"
+    },
+    {
+      "source_id": "src-0053",
+      "kind": "paragraph",
+      "text": "Ambiente y configuración reúnen condiciones externas que determinan el comportamiento de una versión. El concepto adquiere valor cuando cambia una decisión. Si el equipo de N29 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0054",
+      "kind": "paragraph",
+      "text": "No son detalles posteriores al código. Su vecino conceptual puede parecer equivalente y no lo es. En N29, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0055",
+      "kind": "paragraph",
+      "text": "Comprender ambiente y configuración exige seguir la decisión en el tiempo. Versionado, paridad relevante y gestión segura reducen diferencias invisibles. El análisis distingue condición, intervención, señal temprana y consecuencia para evitar atribuir a una práctica un efecto producido por otro cambio simultáneo."
+    },
+    {
+      "source_id": "src-0056",
+      "kind": "paragraph",
+      "text": "La prueba de ambiente y configuración debe formularse antes de conocer el resultado. Inventarios, comparaciones y pruebas en condiciones reales revelan deriva. Se registra qué observación sostendría continuar, cuál obligaría a adaptar y cuál activaría detención o escalamiento."
+    },
+    {
+      "source_id": "src-0057",
+      "kind": "paragraph",
+      "text": "Ejemplo. Reglas de cerradura y secretos se controlan junto con la aplicación. En N29, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0058",
+      "kind": "paragraph",
+      "text": "El tiempo también altera ambiente y configuración. Una evidencia suficiente para explorar puede ser insuficiente para operar de forma permanente. Por eso se separan prueba local, compromiso transitorio y condición estable, y cada estado conserva fecha, alcance y responsable de revisión."
+    },
+    {
+      "source_id": "src-0059",
+      "kind": "paragraph",
+      "text": "El registro de ambiente y configuración conserva una explicación rival. Si esa alternativa predice mejor el episodio siguiente, el equipo cambia de curso sin reescribir retrospectivamente lo que creía saber."
+    },
+    {
+      "source_id": "src-0060",
+      "kind": "paragraph",
+      "text": "La gobernanza de ambiente y configuración incluye quién puede proponer, aprobar, ejecutar, observar y reparar. Esas funciones no se presumen por cargo ni por permiso técnico. N29 las prueba en un escenario donde falta la persona habitual, porque una capacidad que sólo funciona con conocimiento privado todavía no pertenece a la organización."
+    },
+    {
+      "source_id": "src-0061",
+      "kind": "paragraph",
+      "text": "El juicio sobre ambiente y configuración incluye distribución de consecuencias. La producción nunca puede replicarse por completo en prueba. Una mejora agregada no alcanza si concentra espera, riesgo o trabajo invisible en un grupo sin autoridad para discutir la decisión."
+    },
+    {
+      "source_id": "src-0062",
+      "kind": "heading",
+      "text": "### Infraestructura como código"
+    },
+    {
+      "source_id": "src-0063",
+      "kind": "paragraph",
+      "text": "Infraestructura como código expresa recursos y políticas mediante definiciones versionadas y revisables. La definición fija el objeto de decisión. Si el equipo de N29 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0064",
+      "kind": "paragraph",
+      "text": "No significa automatizar cualquier cambio sin control. La distinción evita que una palabra familiar oculte otro mecanismo. En N29, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0065",
+      "kind": "paragraph",
+      "text": "La explicación operacional de infraestructura como código conecta personas, reglas y tecnología. Permite reproducibilidad, comparación, revisión y recuperación. Esa conexión permite decidir qué parte puede modificarse localmente y cuál requiere coordinación con otras autoridades o capacidades."
+    },
+    {
+      "source_id": "src-0066",
+      "kind": "paragraph",
+      "text": "Para auditar infraestructura como código, conviene combinar evidencia de diseño, ejecución y consecuencia. Planes, estados, pruebas y reconstrucciones verifican la definición. Ninguna fuente domina automáticamente; una especificación correcta puede convivir con una operación dañina."
+    },
+    {
+      "source_id": "src-0067",
+      "kind": "paragraph",
+      "text": "Ejemplo. Red, permisos y capacidad del ingreso quedan registrados. En N29, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0068",
+      "kind": "paragraph",
+      "text": "Existe además una dimensión política en infraestructura como código. La opción más eficiente puede reducir la capacidad de una persona para cuestionar una decisión o trasladar trabajo sin reconocerlo. N29 registra esa distribución y no la esconde dentro de un indicador agregado."
+    },
+    {
+      "source_id": "src-0069",
+      "kind": "paragraph",
+      "text": "Una prueba adversa de infraestructura como código introduce demora, ausencia de autoridad o dato incompleto. El objetivo de N29 no es cubrir todas las fallas, sino revelar si la estrategia mantiene una salida segura fuera del camino ordinario."
+    },
+    {
+      "source_id": "src-0070",
+      "kind": "paragraph",
+      "text": "El indicador de infraestructura como código se elige después de formular la decisión. Puede combinar tiempo, calidad, distribución y costo de reparación. Una cifra aislada rara vez explica el mecanismo. En N29, la lectura conjunta de señales evita optimizar velocidad mientras aumenta retrabajo, exclusión o dependencia."
+    },
+    {
+      "source_id": "src-0071",
+      "kind": "paragraph",
+      "text": "La condición de cierre de infraestructura como código no es perfección. El estado externo y los cambios manuales pueden producir deriva. Es evidencia suficiente para el uso previsto, riesgo residual aceptado por autoridad y una ruta clara cuando el supuesto deje de cumplirse."
+    },
+    {
+      "source_id": "src-0072",
+      "kind": "heading",
+      "text": "## Movimiento 2 · Construir evidencia y controles proporcionales"
+    },
+    {
+      "source_id": "src-0073",
+      "kind": "heading",
+      "text": "### Puerta de decisión"
+    },
+    {
+      "source_id": "src-0074",
+      "kind": "paragraph",
+      "text": "Una puerta de decisión vincula evidencia y autoridad con el compromiso que puede asumirse. Conviene comenzar por su función profesional. Si el equipo de N29 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0075",
+      "kind": "paragraph",
+      "text": "No es una reunión fija ni una firma ceremonial. El contraste importa porque conduce a pruebas distintas. En N29, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0076",
+      "kind": "paragraph",
+      "text": "Para que puerta de decisión sea algo más que una etiqueta, debe existir una cadena examinable. Aumenta exigencia según exposición, irreversibilidad y riesgo. La cadena incluye supuestos, handoffs y efectos laterales que una descripción ideal suele omitir."
+    },
+    {
+      "source_id": "src-0077",
+      "kind": "paragraph",
+      "text": "El equipo no declara resuelto puerta de decisión por acuerdo retórico. Criterios previos y decisiones registradas permiten auditarla. Una persona ajena al diseño debe poder repetir la prueba y comprender por qué el resultado habilita una decisión concreta."
+    },
+    {
+      "source_id": "src-0078",
+      "kind": "paragraph",
+      "text": "Ejemplo. Una población limitada se habilita sólo si pasan escenarios críticos. En N29, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0079",
+      "kind": "paragraph",
+      "text": "La mantenibilidad de puerta de decisión se prueba mediante cambio deliberado. Se modifica una regla, una fuente o una dependencia y se observa quién detecta el impacto, cuánto tarda en responder y qué información necesita. En N29, si la respuesta depende de memoria privada, la capacidad todavía es frágil."
+    },
+    {
+      "source_id": "src-0080",
+      "kind": "paragraph",
+      "text": "El costo de puerta de decisión se observa tanto en presupuesto como en atención, espera, coordinación y dependencia. Lo que no figura en una factura puede seguir siendo el costo que define la viabilidad."
+    },
+    {
+      "source_id": "src-0081",
+      "kind": "paragraph",
+      "text": "La transición asociada con puerta de decisión necesita un estado intermedio explícito. Durante ese período conviven reglas, versiones o capacidades diferentes. N29 declara cuál rige para cada población, cómo se comunica y qué contingencia protege a quien podría quedar entre ambos sistemas."
+    },
+    {
+      "source_id": "src-0082",
+      "kind": "paragraph",
+      "text": "El análisis de puerta de decisión evita dos extremos: conservar por inercia y cambiar por identidad metodológica. Demasiadas puertas pueden dispersar responsabilidad y demorar reparación. Entre ambos queda una decisión provisional con fecha, responsable y prueba de revisión."
+    },
+    {
+      "source_id": "src-0083",
+      "kind": "heading",
+      "text": "### Aprobación basada en riesgo"
+    },
+    {
+      "source_id": "src-0084",
+      "kind": "paragraph",
+      "text": "Aprobación basada en riesgo ajusta controles y autoridad al daño y a la reversibilidad del cambio. El concepto adquiere valor cuando cambia una decisión. Si el equipo de N29 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0085",
+      "kind": "paragraph",
+      "text": "No equivale a aprobar todo automáticamente ni a exigir comité para cada versión. Su vecino conceptual puede parecer equivalente y no lo es. En N29, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0086",
+      "kind": "paragraph",
+      "text": "El valor de aprobación basada en riesgo aparece al contrastar alternativas. Clasifica cambios por alcance, evidencia, dependencia y recuperación. Si dos opciones producen el mismo entregable inmediato, el mecanismo permite compararlas por aprendizaje, dependencia, riesgo residual y posibilidad de salida."
+    },
+    {
+      "source_id": "src-0087",
+      "kind": "paragraph",
+      "text": "La suficiencia de evidencia para aprobación basada en riesgo depende del costo de equivocarse. Historial de fallas y calidad de controles recalibran la clasificación. A mayor irreversibilidad o desigualdad de daño, mayor contraste, supervisión y autoridad se requieren."
+    },
+    {
+      "source_id": "src-0088",
+      "kind": "paragraph",
+      "text": "Ejemplo. Un texto puede fluir con control automático; una migración requiere revisión adicional. En N29, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0089",
+      "kind": "paragraph",
+      "text": "Finalmente, aprobación basada en riesgo debe convivir con otras decisiones. Optimizarla de manera aislada puede empeorar flujo, seguridad o comprensión. El expediente N29 explicita dependencias y evita que una mejora local se presente como outcome completo del sistema."
+    },
+    {
+      "source_id": "src-0090",
+      "kind": "paragraph",
+      "text": "La revisión de aprobación basada en riesgo fija fecha y desencadenante. Puede ocurrir por incidente, cambio normativo, nueva población o evidencia acumulada. Sin esa regla en N29, una decisión provisional se vuelve permanente por olvido."
+    },
+    {
+      "source_id": "src-0091",
+      "kind": "paragraph",
+      "text": "El cierre de aprobación basada en riesgo debe sobrevivir a una revisión independiente. La evidencia, las decisiones y los límites se almacenan de manera que otra persona pueda cuestionarlos. En N29, la trazabilidad no busca eliminar desacuerdo; busca que el desacuerdo se concentre en supuestos examinables y no en recuerdos incompatibles."
+    },
+    {
+      "source_id": "src-0092",
+      "kind": "paragraph",
+      "text": "La estrategia debe poder explicar por qué aprobación basada en riesgo recibe cierta inversión y no otra. Una taxonomía rígida puede ser manipulada o quedar obsoleta. Esa explicación conecta valor, costo, aprendizaje y reparación, y permanece abierta a evidencia nueva."
+    },
+    {
+      "source_id": "src-0093",
+      "kind": "heading",
+      "text": "### Segregación de funciones"
+    },
+    {
+      "source_id": "src-0094",
+      "kind": "paragraph",
+      "text": "Segregación de funciones distribuye capacidades sensibles para reducir abuso y error no detectado. La definición fija el objeto de decisión. Si el equipo de N29 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0095",
+      "kind": "paragraph",
+      "text": "No exige que cada acción pase por muchas personas. La distinción evita que una palabra familiar oculte otro mecanismo. En N29, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0096",
+      "kind": "paragraph",
+      "text": "En segregación de funciones, el recorrido causal debe mostrar qué condición habilita la acción, qué transformación ocurre y quién absorbe el resultado. Combina permisos, revisión, trazabilidad y controles compensatorios. Si un salto depende sólo de una explicación oral, la estrategia todavía no puede gobernarlo."
+    },
+    {
+      "source_id": "src-0097",
+      "kind": "paragraph",
+      "text": "La evidencia relevante para segregación de funciones no se limita al resultado promedio. Registros de acceso y ejercicios muestran si la separación es efectiva. N29 busca además casos negativos, diferencias entre poblaciones y señales de que la explicación elegida podría ser insuficiente."
+    },
+    {
+      "source_id": "src-0098",
+      "kind": "paragraph",
+      "text": "Ejemplo. Quien desarrolla no puede borrar sin rastro la evidencia de producción. En N29, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0099",
+      "kind": "paragraph",
+      "text": "El tradeoff central de segregación de funciones aparece entre anticipar y preservar opciones. Anticipar puede reducir coordinación y también fijar una premisa prematura; preservar opciones puede producir aprendizaje y también demorar una protección necesaria. La elección debe declarar cuál de esos costos acepta, durante cuánto tiempo y para quién."
+    },
+    {
+      "source_id": "src-0100",
+      "kind": "paragraph",
+      "text": "La auditoría de segregación de funciones termina con una pregunta de uso: ¿qué podría decidir ahora una persona que antes no podía? En N29, la respuesta debe nombrar una acción, una restricción y una evidencia, no sólo una comprensión mejorada."
+    },
+    {
+      "source_id": "src-0101",
+      "kind": "paragraph",
+      "text": "Operacionalizar segregación de funciones requiere asignar una unidad observable. El equipo define qué episodio contará, desde qué momento, con qué población y bajo qué fuente. Después compara al menos un caso ordinario con otro que fuerce excepción. Esta precisión en N29 evita que una conclusión general se sostenga sólo en ejemplos convenientes."
+    },
+    {
+      "source_id": "src-0102",
+      "kind": "paragraph",
+      "text": "La decisión profesional no termina en adoptar segregación de funciones. Se compara una ruta principal con una explicación rival, se explicita quién queda expuesto y se conserva un modo de revisar. Equipos pequeños necesitan diseños proporcionales que no bloqueen respuesta. El límite forma parte del diseño y no una nota posterior."
+    },
+    {
+      "source_id": "src-0103",
+      "kind": "heading",
+      "text": "### Despliegue progresivo"
+    },
+    {
+      "source_id": "src-0104",
+      "kind": "paragraph",
+      "text": "Despliegue progresivo amplía exposición por etapas mientras observa evidencia y conserva salida. Conviene comenzar por su función profesional. Si el equipo de N29 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0105",
+      "kind": "paragraph",
+      "text": "No es liberar lentamente sin criterio. El contraste importa porque conduce a pruebas distintas. En N29, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0106",
+      "kind": "paragraph",
+      "text": "El mecanismo de despliegue progresivo no se presume por el nombre. Utiliza cohortes, feature flags, canarios y umbrales previos. Debe localizarse dónde comienza, qué relaciones activa, qué demora introduce y qué capacidad de reparación queda disponible cuando la expectativa no se cumple."
+    },
+    {
+      "source_id": "src-0107",
+      "kind": "paragraph",
+      "text": "Una afirmación sobre despliegue progresivo gana fuerza cuando puede reconstruirse desde fuentes independientes. Comparación de señales y detención automática limitan impacto. La ausencia de señal también se interpreta: puede significar estabilidad, mala observación o exclusión del caso que más importa."
+    },
+    {
+      "source_id": "src-0108",
+      "kind": "paragraph",
+      "text": "Ejemplo. El nuevo ingreso comienza en un turno y una categoría controlados. En N29, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0109",
+      "kind": "paragraph",
+      "text": "La escala modifica despliegue progresivo. Una solución válida para un equipo puede fallar cuando atraviesa sedes, turnos o proveedores porque aumenta la distancia entre señal y autoridad. Antes de ampliar, N29 prueba si la misma decisión conserva significado y reparación bajo esa nueva distribución."
+    },
+    {
+      "source_id": "src-0110",
+      "kind": "paragraph",
+      "text": "Para evitar consenso aparente, despliegue progresivo se revisa con alguien afectado y con alguien responsable de reparar. Las dos perspectivas pueden valorar resultados diferentes y obligan a declarar la prioridad elegida."
+    },
+    {
+      "source_id": "src-0111",
+      "kind": "paragraph",
+      "text": "En la práctica, despliegue progresivo atraviesa más de un área. Se identifican handoffs, esperas, decisiones y datos que cada participante puede ver. Cuando dos áreas usan evidencia distinta en N29, el expediente conserva la divergencia hasta determinar si representa error, perspectiva legítima o una brecha que la estrategia debe resolver."
+    },
+    {
+      "source_id": "src-0112",
+      "kind": "paragraph",
+      "text": "En una revisión, despliegue progresivo debe responder tres preguntas: qué mejora, qué desplaza y qué vuelve más difícil de revertir. Una muestra pequeña puede no representar picos ni poblaciones críticas. Si esas respuestas cambian, también debe cambiar el compromiso, aunque el trabajo previo haya sido técnicamente correcto."
+    },
+    {
+      "source_id": "src-0113",
+      "kind": "heading",
+      "text": "## Movimiento 3 · Gobernar cambio, degradación y aprendizaje"
+    },
+    {
+      "source_id": "src-0114",
+      "kind": "heading",
+      "text": "### Rollback"
+    },
+    {
+      "source_id": "src-0115",
+      "kind": "paragraph",
+      "text": "Rollback restaura una versión o estado anterior cuando la reversión es segura y completa. El concepto adquiere valor cuando cambia una decisión. Si el equipo de N29 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0116",
+      "kind": "paragraph",
+      "text": "No es un botón universal ni sinónimo de recuperación. Su vecino conceptual puede parecer equivalente y no lo es. En N29, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0117",
+      "kind": "paragraph",
+      "text": "Comprender rollback exige seguir la decisión en el tiempo. Debe abarcar código, configuración, datos, infraestructura y contratos relevantes. El análisis distingue condición, intervención, señal temprana y consecuencia para evitar atribuir a una práctica un efecto producido por otro cambio simultáneo."
+    },
+    {
+      "source_id": "src-0118",
+      "kind": "paragraph",
+      "text": "La prueba de rollback debe formularse antes de conocer el resultado. Ensayos y tiempos medidos prueban la capacidad real. Se registra qué observación sostendría continuar, cuál obligaría a adaptar y cuál activaría detención o escalamiento."
+    },
+    {
+      "source_id": "src-0119",
+      "kind": "paragraph",
+      "text": "Ejemplo. La versión anterior vuelve junto con reglas compatibles. En N29, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0120",
+      "kind": "paragraph",
+      "text": "El tiempo también altera rollback. Una evidencia suficiente para explorar puede ser insuficiente para operar de forma permanente. Por eso se separan prueba local, compromiso transitorio y condición estable, y cada estado conserva fecha, alcance y responsable de revisión."
+    },
+    {
+      "source_id": "src-0121",
+      "kind": "paragraph",
+      "text": "El registro de rollback conserva una explicación rival. Si esa alternativa predice mejor el episodio siguiente, el equipo cambia de curso sin reescribir retrospectivamente lo que creía saber."
+    },
+    {
+      "source_id": "src-0122",
+      "kind": "paragraph",
+      "text": "La gobernanza de rollback incluye quién puede proponer, aprobar, ejecutar, observar y reparar. Esas funciones no se presumen por cargo ni por permiso técnico. N29 las prueba en un escenario donde falta la persona habitual, porque una capacidad que sólo funciona con conocimiento privado todavía no pertenece a la organización."
+    },
+    {
+      "source_id": "src-0123",
+      "kind": "paragraph",
+      "text": "El juicio sobre rollback incluye distribución de consecuencias. Migraciones destructivas y efectos externos pueden impedirlo. Una mejora agregada no alcanza si concentra espera, riesgo o trabajo invisible en un grupo sin autoridad para discutir la decisión."
+    },
+    {
+      "source_id": "src-0124",
+      "kind": "heading",
+      "text": "### Rollforward y reparación"
+    },
+    {
+      "source_id": "src-0125",
+      "kind": "paragraph",
+      "text": "Rollforward y reparación corrigen hacia adelante cuando volver no restaura la promesa. La definición fija el objeto de decisión. Si el equipo de N29 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0126",
+      "kind": "paragraph",
+      "text": "No es improvisar bajo presión ni negar la necesidad de contingencia. La distinción evita que una palabra familiar oculte otro mecanismo. En N29, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0127",
+      "kind": "paragraph",
+      "text": "La explicación operacional de rollforward y reparación conecta personas, reglas y tecnología. Prepara cambios compensatorios, reconciliación y comunicación. Esa conexión permite decidir qué parte puede modificarse localmente y cuál requiere coordinación con otras autoridades o capacidades."
+    },
+    {
+      "source_id": "src-0128",
+      "kind": "paragraph",
+      "text": "Para auditar rollforward y reparación, conviene combinar evidencia de diseño, ejecución y consecuencia. Ejercicios y runbooks contrastados reducen dependencia de héroes. Ninguna fuente domina automáticamente; una especificación correcta puede convivir con una operación dañina."
+    },
+    {
+      "source_id": "src-0129",
+      "kind": "paragraph",
+      "text": "Ejemplo. El hotel repara estados migrados y mantiene una vía manual segura. En N29, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0130",
+      "kind": "paragraph",
+      "text": "Existe además una dimensión política en rollforward y reparación. La opción más eficiente puede reducir la capacidad de una persona para cuestionar una decisión o trasladar trabajo sin reconocerlo. N29 registra esa distribución y no la esconde dentro de un indicador agregado."
+    },
+    {
+      "source_id": "src-0131",
+      "kind": "paragraph",
+      "text": "Una prueba adversa de rollforward y reparación introduce demora, ausencia de autoridad o dato incompleto. El objetivo de N29 no es cubrir todas las fallas, sino revelar si la estrategia mantiene una salida segura fuera del camino ordinario."
+    },
+    {
+      "source_id": "src-0132",
+      "kind": "paragraph",
+      "text": "El indicador de rollforward y reparación se elige después de formular la decisión. Puede combinar tiempo, calidad, distribución y costo de reparación. Una cifra aislada rara vez explica el mecanismo. En N29, la lectura conjunta de señales evita optimizar velocidad mientras aumenta retrabajo, exclusión o dependencia."
+    },
+    {
+      "source_id": "src-0133",
+      "kind": "paragraph",
+      "text": "La condición de cierre de rollforward y reparación no es perfección. Corregir hacia adelante puede aumentar exposición si el diagnóstico es incierto. Es evidencia suficiente para el uso previsto, riesgo residual aceptado por autoridad y una ruta clara cuando el supuesto deje de cumplirse."
+    },
+    {
+      "source_id": "src-0134",
+      "kind": "heading",
+      "text": "### Procedencia y cadena de suministro"
+    },
+    {
+      "source_id": "src-0135",
+      "kind": "paragraph",
+      "text": "Procedencia y cadena de suministro permiten conocer origen, transformación y controles de componentes y artefactos. Conviene comenzar por su función profesional. Si el equipo de N29 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0136",
+      "kind": "paragraph",
+      "text": "No se resuelven con un inventario estático de paquetes. El contraste importa porque conduce a pruebas distintas. En N29, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0137",
+      "kind": "paragraph",
+      "text": "Para que procedencia y cadena de suministro sea algo más que una etiqueta, debe existir una cadena examinable. Firmas, SBOM, attestations y políticas conectan fuente, build y despliegue. La cadena incluye supuestos, handoffs y efectos laterales que una descripción ideal suele omitir."
+    },
+    {
+      "source_id": "src-0138",
+      "kind": "paragraph",
+      "text": "El equipo no declara resuelto procedencia y cadena de suministro por acuerdo retórico. Verificación independiente y monitoreo de vulnerabilidades sostienen confianza. Una persona ajena al diseño debe poder repetir la prueba y comprender por qué el resultado habilita una decisión concreta."
+    },
+    {
+      "source_id": "src-0139",
+      "kind": "paragraph",
+      "text": "Ejemplo. El artefacto del PMS puede rastrearse hasta fuente y plataforma de build. En N29, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0140",
+      "kind": "paragraph",
+      "text": "La mantenibilidad de procedencia y cadena de suministro se prueba mediante cambio deliberado. Se modifica una regla, una fuente o una dependencia y se observa quién detecta el impacto, cuánto tarda en responder y qué información necesita. En N29, si la respuesta depende de memoria privada, la capacidad todavía es frágil."
+    },
+    {
+      "source_id": "src-0141",
+      "kind": "paragraph",
+      "text": "El costo de procedencia y cadena de suministro se observa tanto en presupuesto como en atención, espera, coordinación y dependencia. Lo que no figura en una factura puede seguir siendo el costo que define la viabilidad."
+    },
+    {
+      "source_id": "src-0142",
+      "kind": "paragraph",
+      "text": "La transición asociada con procedencia y cadena de suministro necesita un estado intermedio explícito. Durante ese período conviven reglas, versiones o capacidades diferentes. N29 declara cuál rige para cada población, cómo se comunica y qué contingencia protege a quien podría quedar entre ambos sistemas."
+    },
+    {
+      "source_id": "src-0143",
+      "kind": "paragraph",
+      "text": "El análisis de procedencia y cadena de suministro evita dos extremos: conservar por inercia y cambiar por identidad metodológica. Procedencia válida no demuestra ausencia de vulnerabilidades. Entre ambos queda una decisión provisional con fecha, responsable y prueba de revisión."
+    },
+    {
+      "source_id": "src-0144",
+      "kind": "heading",
+      "text": "### Cierre de liberación"
+    },
+    {
+      "source_id": "src-0145",
+      "kind": "paragraph",
+      "text": "Cierre de liberación confirma que el cambio quedó operable, observado, documentado y transferido. El concepto adquiere valor cuando cambia una decisión. Si el equipo de N29 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0146",
+      "kind": "paragraph",
+      "text": "No coincide con terminar el pipeline ni alcanzar cien por ciento de tráfico. Su vecino conceptual puede parecer equivalente y no lo es. En N29, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0147",
+      "kind": "paragraph",
+      "text": "El valor de cierre de liberación aparece al contrastar alternativas. Revisa resultados, excepciones, ownership, deuda y próximos umbrales. Si dos opciones producen el mismo entregable inmediato, el mecanismo permite compararlas por aprendizaje, dependencia, riesgo residual y posibilidad de salida."
+    },
+    {
+      "source_id": "src-0148",
+      "kind": "paragraph",
+      "text": "La suficiencia de evidencia para cierre de liberación depende del costo de equivocarse. Evidencia de producción y aceptación operativa permiten cerrar. A mayor irreversibilidad o desigualdad de daño, mayor contraste, supervisión y autoridad se requieren."
+    },
+    {
+      "source_id": "src-0149",
+      "kind": "paragraph",
+      "text": "Ejemplo. Recepción confirma capacidad y conoce contingencia antes de retirar soporte reforzado. En N29, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0150",
+      "kind": "paragraph",
+      "text": "Finalmente, cierre de liberación debe convivir con otras decisiones. Optimizarla de manera aislada puede empeorar flujo, seguridad o comprensión. El expediente N29 explicita dependencias y evita que una mejora local se presente como outcome completo del sistema."
+    },
+    {
+      "source_id": "src-0151",
+      "kind": "paragraph",
+      "text": "La revisión de cierre de liberación fija fecha y desencadenante. Puede ocurrir por incidente, cambio normativo, nueva población o evidencia acumulada. Sin esa regla en N29, una decisión provisional se vuelve permanente por olvido."
+    },
+    {
+      "source_id": "src-0152",
+      "kind": "paragraph",
+      "text": "El cierre de cierre de liberación debe sobrevivir a una revisión independiente. La evidencia, las decisiones y los límites se almacenan de manera que otra persona pueda cuestionarlos. En N29, la trazabilidad no busca eliminar desacuerdo; busca que el desacuerdo se concentre en supuestos examinables y no en recuerdos incompatibles."
+    },
+    {
+      "source_id": "src-0153",
+      "kind": "paragraph",
+      "text": "La estrategia debe poder explicar por qué cierre de liberación recibe cierta inversión y no otra. Cerrar demasiado pronto borra señales; sostener modo especial indefinido crea dependencia. Esa explicación conecta valor, costo, aprendizaje y reparación, y permanece abierta a evidencia nueva."
+    },
+    {
+      "source_id": "src-0154",
+      "kind": "heading",
+      "text": "### Instrumento HH-29: expediente de liberación y recuperación"
+    },
+    {
+      "source_id": "src-0155",
+      "kind": "paragraph",
+      "text": "El instrumento organiza una decisión concreta y no una descripción total. Cada campo debe completarse con evidencia disponible, incertidumbre explícita y autoridad identificada. Si un campo todavía no puede responderse, se registra como asunto abierto y no se completa por inferencia."
+    },
+    {
+      "source_id": "src-0156",
+      "kind": "list-item",
+      "text": "1. **Cambio y alcance.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N29, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0157",
+      "kind": "list-item",
+      "text": "2. **Artefacto y procedencia.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N29, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0158",
+      "kind": "list-item",
+      "text": "3. **Ambientes.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N29, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0159",
+      "kind": "list-item",
+      "text": "4. **Configuración.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N29, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0160",
+      "kind": "list-item",
+      "text": "5. **Datos.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N29, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0161",
+      "kind": "list-item",
+      "text": "6. **Infraestructura.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N29, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0162",
+      "kind": "list-item",
+      "text": "7. **Contratos.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N29, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0163",
+      "kind": "list-item",
+      "text": "8. **Evidencia.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N29, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0164",
+      "kind": "list-item",
+      "text": "9. **Aprobación.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N29, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0165",
+      "kind": "list-item",
+      "text": "10. **Exposición.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N29, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0166",
+      "kind": "list-item",
+      "text": "11. **Rollback o reparación.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N29, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0167",
+      "kind": "list-item",
+      "text": "12. **Cierre.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N29, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0168",
+      "kind": "paragraph",
+      "text": "El expediente se prueba con un escenario ordinario y uno adverso. Una persona que no participó en su construcción debe poder reconstruir qué se decidió, por qué, qué permanece incierto y cuál es la próxima puerta. El cierre no exige certeza total; exige incertidumbre gobernada y una salida practicable."
+    },
+    {
+      "source_id": "src-0169",
+      "kind": "heading",
+      "text": "### Caso de transferencia: liquidación bancaria"
+    },
+    {
+      "source_id": "src-0170",
+      "kind": "paragraph",
+      "text": "Un banco cambia una regla de liquidación que combina aplicación, datos, mensajería y proveedor externo. Volver una versión no revierte transferencias ya emitidas."
+    },
+    {
+      "source_id": "src-0171",
+      "kind": "paragraph",
+      "text": "La liberación usa exposición progresiva, reconciliación, autorización proporcional y rollforward preparado. El plan distingue restaurar software de reparar consecuencias."
+    },
+    {
+      "source_id": "src-0172",
+      "kind": "paragraph",
+      "text": "HH-29 convierte el despliegue en una decisión sobre compromiso y no en un evento técnico."
+    },
+    {
+      "source_id": "src-0173",
+      "kind": "heading",
+      "text": "### Contraejemplo: pipeline verde"
+    },
+    {
+      "source_id": "src-0174",
+      "kind": "paragraph",
+      "text": "Una organización automatiza build, pruebas y despliegue y considera gobernada la entrega."
+    },
+    {
+      "source_id": "src-0175",
+      "kind": "paragraph",
+      "text": "El pipeline no conoce cambios manuales, datos irreversibles, autoridad ni capacidad del turno. La velocidad aumenta y la reparación depende de improvisación."
+    },
+    {
+      "source_id": "src-0176",
+      "kind": "paragraph",
+      "text": "La automatización es control sólo cuando representa la promesa y sus riesgos."
+    },
+    {
+      "source_id": "src-0177",
+      "kind": "heading",
+      "text": "### Prueba integral antes de ampliar compromiso"
+    },
+    {
+      "source_id": "src-0178",
+      "kind": "paragraph",
+      "text": "La prueba integral de gobierno de integración, despliegue, infraestructura, aprobación y rollback toma una decisión real y la recorre desde su origen hasta una consecuencia observable. Utiliza cambio y alcance, artefacto y procedencia, ambientes, configuración para evitar que el análisis quede dividido en artefactos independientes. Cada afirmación debe encontrar una fuente, una autoridad y una condición de revisión. Cuando dos registros no coinciden, la diferencia se conserva como hallazgo hasta explicar su mecanismo."
+    },
+    {
+      "source_id": "src-0179",
+      "kind": "paragraph",
+      "text": "El escenario ordinario verifica que n29 gobierna integración, despliegue, infraestructura, aprobación y rollback como una cadena de compromiso trazable, progresiva y reparable. El escenario adverso modifica una dependencia, introduce demora y deja ausente a la persona que suele resolver. El equipo observa si la estrategia detecta el cambio, limita el daño, comunica incertidumbre y activa reparación sin recurrir a conocimiento privado."
+    },
+    {
+      "source_id": "src-0180",
+      "kind": "paragraph",
+      "text": "La comparación incluye una alternativa descartada. Se documenta por qué no fue elegida, qué supuesto la volvería preferible y qué costo tendría recuperarla. Este ejercicio protege opciones futuras y evita presentar la decisión actual como única solución técnicamente posible. También vuelve discutibles los costos hundidos cuando aparece evidencia nueva."
+    },
+    {
+      "source_id": "src-0181",
+      "kind": "paragraph",
+      "text": "La prueba concluye con una defensa breve ante una audiencia ajena al equipo. Esa audiencia debe poder reconstruir el problema, objetar la evidencia y comprender por qué la salida propuesta es proporcional. Si sólo puede repetir la recomendación, el expediente todavía no sostiene una decisión profesional. Si puede reconocer límites y actuar ante una excepción, existe capacidad transferible."
+    },
+    {
+      "source_id": "src-0182",
+      "kind": "heading",
+      "text": "## Errores frecuentes"
+    },
+    {
+      "source_id": "src-0183",
+      "kind": "heading",
+      "text": "### Confundir despliegue con liberación"
+    },
+    {
+      "source_id": "src-0184",
+      "kind": "paragraph",
+      "text": "Confundir despliegue con liberación simplifica una decisión que depende de propósito, evidencia y consecuencia. La velocidad inicial se paga cuando operación descubre el supuesto omitido. La corrección vuelve al episodio, identifica quién absorbe el costo y define una prueba antes de continuar."
+    },
+    {
+      "source_id": "src-0185",
+      "kind": "heading",
+      "text": "### Reconstruir artefactos"
+    },
+    {
+      "source_id": "src-0186",
+      "kind": "paragraph",
+      "text": "Reconstruir artefactos parece reducir coordinación, pero confunde acuerdo con conocimiento suficiente. El equipo debe comparar una explicación rival, localizar autoridad y registrar qué señal cambiaría el curso elegido."
+    },
+    {
+      "source_id": "src-0187",
+      "kind": "heading",
+      "text": "### Ignorar configuración"
+    },
+    {
+      "source_id": "src-0188",
+      "kind": "paragraph",
+      "text": "Ignorar configuración desplaza incertidumbre hacia personas que no participaron de la elección. Corregirlo exige reconstruir el mecanismo, hacer visible el trabajo añadido y establecer una condición de salida proporcional al daño posible."
+    },
+    {
+      "source_id": "src-0189",
+      "kind": "heading",
+      "text": "### Aprobar por calendario"
+    },
+    {
+      "source_id": "src-0190",
+      "kind": "paragraph",
+      "text": "Aprobar por calendario convierte una práctica en fin. La revisión pregunta qué función debía cumplir, qué evidencia produjo y por qué sigue siendo necesaria. Si la función desapareció, la práctica se adapta o se retira."
+    },
+    {
+      "source_id": "src-0191",
+      "kind": "heading",
+      "text": "### Automatizar sin autoridad"
+    },
+    {
+      "source_id": "src-0192",
+      "kind": "paragraph",
+      "text": "Automatizar sin autoridad oculta una frontera. El artefacto puede cerrar y la capacidad seguir incompleta. Un escenario adverso permite observar handoffs, excepciones y reparación antes de ampliar compromiso."
+    },
+    {
+      "source_id": "src-0193",
+      "kind": "heading",
+      "text": "### Desplegar a todos de una vez"
+    },
+    {
+      "source_id": "src-0194",
+      "kind": "paragraph",
+      "text": "Desplegar a todos de una vez confunde cumplimiento formal con decisión defendible. Se necesita conectar fuente, interpretación, implementación y efecto, incluyendo la autoridad que acepta el riesgo residual."
+    },
+    {
+      "source_id": "src-0195",
+      "kind": "heading",
+      "text": "### Prometer rollback incompleto"
+    },
+    {
+      "source_id": "src-0196",
+      "kind": "paragraph",
+      "text": "Prometer rollback incompleto suele premiar lo visible y dejar fuera mantenimiento, soporte y aprendizaje. La corrección compara el ciclo completo, documenta dependencia y ensaya una salida real."
+    },
+    {
+      "source_id": "src-0197",
+      "kind": "heading",
+      "text": "### Olvidar datos y terceros"
+    },
+    {
+      "source_id": "src-0198",
+      "kind": "paragraph",
+      "text": "Olvidar datos y terceros reduce diversidad de casos a un promedio conveniente. Se revisan poblaciones, extremos y daños asimétricos para evitar que una mejora global silencie una pérdida crítica."
+    },
+    {
+      "source_id": "src-0199",
+      "kind": "heading",
+      "text": "### Confiar sólo en el pipeline"
+    },
+    {
+      "source_id": "src-0200",
+      "kind": "paragraph",
+      "text": "Confiar sólo en el pipeline borra memoria y vuelve inexplicable el cambio de rumbo. Una baseline y un registro breve permiten conservar razones sin inmovilizar la estrategia."
+    },
+    {
+      "source_id": "src-0201",
+      "kind": "heading",
+      "text": "### Cerrar sin operación"
+    },
+    {
+      "source_id": "src-0202",
+      "kind": "paragraph",
+      "text": "Cerrar sin operación deja responsabilidad sin capacidad. El diseño debe unir permiso, recursos, evidencia y posibilidad de reparar; nombrar un dueño no crea por sí mismo una función operativa."
+    },
+    {
+      "source_id": "src-0203",
+      "kind": "heading",
+      "text": "## Consecuencias profesionales"
+    },
+    {
+      "source_id": "src-0204",
+      "kind": "paragraph",
+      "text": "N29 gobierna integración, despliegue, infraestructura, aprobación y rollback como una cadena de compromiso trazable, progresiva y reparable. El avance profesional consiste en sostener una promesa bajo condiciones reales, con autoridad, evidencia y reparación, no en declarar que la solución quedó disponible."
+    },
+    {
+      "source_id": "src-0205",
+      "kind": "heading",
+      "text": "## Límites y tensiones"
+    },
+    {
+      "source_id": "src-0206",
+      "kind": "paragraph",
+      "text": "Ninguna arquitectura, contrato, prueba, control ni tablero elimina el juicio situado. Las dependencias cambian, la evidencia llega con demora, la operación distribuye poder y una mejora local puede desplazar daño. El expediente debe conservar población afectada, supuestos, autoridad, degradación aceptable, reparación y fecha de revisión."
+    },
+    {
+      "source_id": "src-0207",
+      "kind": "heading",
+      "text": "## De N29 a N30"
+    },
+    {
+      "source_id": "src-0208",
+      "kind": "paragraph",
+      "text": "N30 observará la promesa ya operativa mediante señales técnicas, de negocio y de experiencia, y organizará incidentes y aprendizaje. N29 no diseña todavía el sistema completo de observabilidad."
+    },
+    {
+      "source_id": "src-0209",
+      "kind": "heading",
+      "text": "## Síntesis"
+    },
+    {
+      "source_id": "src-0210",
+      "kind": "paragraph",
+      "text": "N29 gobierna integración, despliegue, infraestructura, aprobación y rollback como una cadena de compromiso trazable, progresiva y reparable."
+    },
+    {
+      "source_id": "src-0211",
+      "kind": "paragraph",
+      "text": "El bloque no propone reemplazar una doctrina por otra. Propone hacer visibles las decisiones que cada práctica organiza, la evidencia que necesita y los daños que puede producir. El resultado es una intervención que puede explicarse, probarse y revisarse."
+    },
+    {
+      "source_id": "src-0212",
+      "kind": "heading",
+      "text": "## Cinco píldoras para recordar"
+    },
+    {
+      "source_id": "src-0213",
+      "kind": "list-item",
+      "text": "1. Integración continua mantiene cambios pequeños combinados y verificados con frecuencia sobre una base compartida."
+    },
+    {
+      "source_id": "src-0214",
+      "kind": "list-item",
+      "text": "2. Un artefacto liberable es una unidad identificada, inmutable y trazable que puede promoverse entre ambientes."
+    },
+    {
+      "source_id": "src-0215",
+      "kind": "list-item",
+      "text": "3. Ambiente y configuración reúnen condiciones externas que determinan el comportamiento de una versión."
+    },
+    {
+      "source_id": "src-0216",
+      "kind": "list-item",
+      "text": "4. Infraestructura como código expresa recursos y políticas mediante definiciones versionadas y revisables."
+    },
+    {
+      "source_id": "src-0217",
+      "kind": "list-item",
+      "text": "5. Una puerta de decisión vincula evidencia y autoridad con el compromiso que puede asumirse."
+    },
+    {
+      "source_id": "src-0218",
+      "kind": "heading",
+      "text": "## Glosario esencial"
+    },
+    {
+      "source_id": "src-0219",
+      "kind": "paragraph",
+      "text": "**Integración continua:** integración continua mantiene cambios pequeños combinados y verificados con frecuencia sobre una base compartida."
+    },
+    {
+      "source_id": "src-0220",
+      "kind": "paragraph",
+      "text": "**Artefacto liberable:** un artefacto liberable es una unidad identificada, inmutable y trazable que puede promoverse entre ambientes."
+    },
+    {
+      "source_id": "src-0221",
+      "kind": "paragraph",
+      "text": "**Ambiente y configuración:** ambiente y configuración reúnen condiciones externas que determinan el comportamiento de una versión."
+    },
+    {
+      "source_id": "src-0222",
+      "kind": "paragraph",
+      "text": "**Infraestructura como código:** infraestructura como código expresa recursos y políticas mediante definiciones versionadas y revisables."
+    },
+    {
+      "source_id": "src-0223",
+      "kind": "paragraph",
+      "text": "**Puerta de decisión:** una puerta de decisión vincula evidencia y autoridad con el compromiso que puede asumirse."
+    },
+    {
+      "source_id": "src-0224",
+      "kind": "paragraph",
+      "text": "**Aprobación basada en riesgo:** aprobación basada en riesgo ajusta controles y autoridad al daño y a la reversibilidad del cambio."
+    },
+    {
+      "source_id": "src-0225",
+      "kind": "paragraph",
+      "text": "**Segregación de funciones:** segregación de funciones distribuye capacidades sensibles para reducir abuso y error no detectado."
+    },
+    {
+      "source_id": "src-0226",
+      "kind": "paragraph",
+      "text": "**Despliegue progresivo:** despliegue progresivo amplía exposición por etapas mientras observa evidencia y conserva salida."
+    },
+    {
+      "source_id": "src-0227",
+      "kind": "paragraph",
+      "text": "**Rollback:** rollback restaura una versión o estado anterior cuando la reversión es segura y completa."
+    },
+    {
+      "source_id": "src-0228",
+      "kind": "paragraph",
+      "text": "**Rollforward y reparación:** rollforward y reparación corrigen hacia adelante cuando volver no restaura la promesa."
+    },
+    {
+      "source_id": "src-0229",
+      "kind": "paragraph",
+      "text": "**Procedencia y cadena de suministro:** procedencia y cadena de suministro permiten conocer origen, transformación y controles de componentes y artefactos."
+    },
+    {
+      "source_id": "src-0230",
+      "kind": "paragraph",
+      "text": "**Cierre de liberación:** cierre de liberación confirma que el cambio quedó operable, observado, documentado y transferido."
+    },
+    {
+      "source_id": "src-0231",
+      "kind": "heading",
+      "text": "## Preguntas de preparación"
+    },
+    {
+      "source_id": "src-0232",
+      "kind": "list-item",
+      "text": "1. ¿Qué decisión permite sostener integración continua y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "src-0233",
+      "kind": "list-item",
+      "text": "2. ¿Qué decisión permite sostener artefacto liberable y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "src-0234",
+      "kind": "list-item",
+      "text": "3. ¿Qué decisión permite sostener ambiente y configuración y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "src-0235",
+      "kind": "list-item",
+      "text": "4. ¿Qué decisión permite sostener infraestructura como código y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "src-0236",
+      "kind": "list-item",
+      "text": "5. ¿Qué decisión permite sostener puerta de decisión y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "src-0237",
+      "kind": "list-item",
+      "text": "6. ¿Qué decisión permite sostener aprobación basada en riesgo y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "src-0238",
+      "kind": "paragraph",
+      "text": "Para el encuentro, seleccionar una intervención conocida, completar el instrumento con evidencia verificable y preparar una decisión provisional. Incluir una explicación rival, una condición que obligaría a revisar y una consecuencia para una persona afectada."
+    },
+    {
+      "source_id": "src-0239",
+      "kind": "heading",
+      "text": "## Referentes"
+    },
+    {
+      "source_id": "src-0240",
+      "kind": "paragraph",
+      "text": "**Jez Humble y David Farley.** Sistematizaron entrega continua y artefactos liberables."
+    },
+    {
+      "source_id": "src-0241",
+      "kind": "paragraph",
+      "text": "**Nicole Forsgren, Jez Humble y Gene Kim.** Relacionan desempeño de entrega, estabilidad y prácticas organizacionales."
+    },
+    {
+      "source_id": "src-0242",
+      "kind": "paragraph",
+      "text": "**NIST.** Integra desarrollo seguro y cadena de suministro."
+    },
+    {
+      "source_id": "src-0243",
+      "kind": "paragraph",
+      "text": "**SLSA.** Define niveles y attestations de procedencia de software."
+    },
+    {
+      "source_id": "src-0244",
+      "kind": "paragraph",
+      "text": "**CISA.** Promueve seguridad incorporada al diseño y al proveedor."
+    },
+    {
+      "source_id": "src-0245",
+      "kind": "paragraph",
+      "text": "**ISO/IEC.** Vincula seguridad y gestión del servicio con control operativo."
+    },
+    {
+      "source_id": "src-0246",
+      "kind": "heading",
+      "text": "## Referencias base"
+    },
+    {
+      "source_id": "src-0247",
+      "kind": "list-item",
+      "text": "- Humble, J. y Farley, D. (2010). Continuous Delivery. Addison-Wesley."
+    },
+    {
+      "source_id": "src-0248",
+      "kind": "list-item",
+      "text": "- Forsgren, N., Humble, J. y Kim, G. (2018). Accelerate. IT Revolution."
+    },
+    {
+      "source_id": "src-0249",
+      "kind": "list-item",
+      "text": "- Google Cloud (2024). Accelerate State of DevOps Report. https://cloud.google.com/devops/state-of-devops"
+    },
+    {
+      "source_id": "src-0250",
+      "kind": "list-item",
+      "text": "- NIST (2022). Secure Software Development Framework 1.1, SP 800-218. https://doi.org/10.6028/NIST.SP.800-218"
+    },
+    {
+      "source_id": "src-0251",
+      "kind": "list-item",
+      "text": "- NIST (2024). Cybersecurity Supply Chain Risk Management Practices, SP 800-161r1-upd1. https://doi.org/10.6028/NIST.SP.800-161r1-upd1"
+    },
+    {
+      "source_id": "src-0252",
+      "kind": "list-item",
+      "text": "- NIST (2024). Strategies for the Integration of Software Supply Chain Security in DevSecOps CI/CD Pipelines, SP 800-204D. https://doi.org/10.6028/NIST.SP.800-204D"
+    },
+    {
+      "source_id": "src-0253",
+      "kind": "list-item",
+      "text": "- SLSA (2026). SLSA Specification 1.2. https://slsa.dev/spec/v1.2/"
+    },
+    {
+      "source_id": "src-0254",
+      "kind": "list-item",
+      "text": "- CISA (2023). Secure by Design. https://www.cisa.gov/resources-tools/resources/secure-by-design"
+    },
+    {
+      "source_id": "src-0255",
+      "kind": "list-item",
+      "text": "- ISO/IEC (2022). ISO/IEC 27001:2022 Information Security Management Systems. https://www.iso.org/standard/27001"
+    },
+    {
+      "source_id": "src-0256",
+      "kind": "list-item",
+      "text": "- ISO/IEC (2018). ISO/IEC 20000-1:2018 Service Management System Requirements. https://www.iso.org/standard/70636.html"
+    },
+    {
+      "source_id": "src-0257",
+      "kind": "list-item",
+      "text": "- OpenGitOps (2021). GitOps Principles 1.0. https://opengitops.dev/"
+    },
+    {
+      "source_id": "src-0258",
+      "kind": "list-item",
+      "text": "- Kim, G., Humble, J., Debois, P. y Willis, J. (2021). The DevOps Handbook, Second Edition. IT Revolution."
+    }
+  ],
+  "block_count": 258,
+  "word_count": 7256
+}

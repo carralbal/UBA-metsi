@@ -1,0 +1,148 @@
+{
+  "number": 25,
+  "title": "N25 · Flujo más allá de las ceremonias: colas, lote, espera y feedback",
+  "module": "Pasar de entregar cosas a gobernar capacidades",
+  "source": "source/N25_flujo_mas_alla_de_las_ceremonias_colas_lote_espera_y_feedback-content-canonical-v1.md",
+  "source_sha256": "00fb6005a38d9a177a28ee7bed6256f684627a61387d9482f6f7ec02b68673e0",
+  "source_words": 7410,
+  "content_audit": "canonical-v1-pass",
+  "cover": {
+    "file": "cover-source-premium-bw-v1.png",
+    "source": "assets/cover-source-premium-bw-v1.png",
+    "sha256": "afcea40916edea23c511dbbdf3664736146b92e9d36563f199a93fa5a38683ce",
+    "alt": "Trabajadores hoteleros argentinos ocupan etapas distintas mientras un carro espera en el centro del corredor.",
+    "photographic_origin": "native_black_and_white",
+    "render_treatment": "no_grayscale_conversion"
+  },
+  "internal_images": [
+    "pause-01.png",
+    "pause-02.png"
+  ],
+  "image_manifest": [
+    {
+      "file": "assets/pause-01.png",
+      "sha256": "3d33958bfad46dc50f3df0c99d9a47a2234ba10afdf62ed98b6e038ef2ad9c88",
+      "alt": "Un carro permanece inmóvil en un umbral mientras varias personas trabajan a ambos lados.",
+      "role": "full_page_pause",
+      "rights_status": "project_bound_generated_media"
+    },
+    {
+      "file": "assets/pause-02.png",
+      "sha256": "8323a122e95415b60555afbb9d2c8b815117986888aaf8ec3b006b0bd7159511",
+      "alt": "Dos profesionales devuelven una evidencia desde operación hacia una mesa de decisión a través de reflejos.",
+      "role": "full_page_pause",
+      "rights_status": "project_bound_generated_media"
+    }
+  ],
+  "portrait_references": [
+    {
+      "key": "john-little",
+      "name": "John D. C. Little",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "wallace-hopp-mark-spearman",
+      "name": "Wallace Hopp y Mark Spearman",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "donald-reinertsen",
+      "name": "Donald Reinertsen",
+      "file": "assets/referent-donald-reinertsen.jpg",
+      "sha256": "ec5bce70c9b58f02df3115ddc5dbab7c4d81909399a323120a2bc2b50ddd546c",
+      "rights_status": "verified_local_portrait"
+    },
+    {
+      "key": "taiichi-ohno",
+      "name": "Taiichi Ohno",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "david-anderson",
+      "name": "David J. Anderson",
+      "file": "assets/referent-david-anderson.jpg",
+      "sha256": "92e1260db17a0dae1e2fe683d8d43cd1fea228bf23739a0ec817b56baca3342b",
+      "rights_status": "verified_local_portrait"
+    },
+    {
+      "key": "nicole-forsgren",
+      "name": "Nicole Forsgren",
+      "file": "assets/referent-nicole-forsgren.jpg",
+      "sha256": "4022e1af854478421f21d79348dd9d702bd0467f8b582e2f9c0e83f638f04c9f",
+      "rights_status": "verified_local_portrait"
+    }
+  ],
+  "diagrams": [
+    {
+      "file": "diagrams/N25-mapa-01.svg",
+      "title": "Flujo de punta a punta",
+      "labels": [
+        "Demanda",
+        "Cola",
+        "Trabajo",
+        "Uso",
+        "Feedback"
+      ],
+      "claim": "Flujo de punta a punta: la representación conecta demanda, cola, trabajo, uso, feedback para sostener una decisión revisable.",
+      "sha256": "3700da8d3efdc2c3135925db2303732ed6bfd05eac8af1f58e060f75519fdcf9"
+    },
+    {
+      "file": "diagrams/N25-mapa-02.svg",
+      "title": "Economía del flujo",
+      "labels": [
+        "Trabajo en curso",
+        "Throughput",
+        "Tiempo",
+        "Lote",
+        "Variabilidad"
+      ],
+      "claim": "Economía del flujo: la representación conecta trabajo en curso, throughput, tiempo, lote, variabilidad para sostener una decisión revisable.",
+      "sha256": "964c5cfad5df759140ad7056d573774775448c3b85e5aef762d64c1c7bd10538"
+    },
+    {
+      "file": "diagrams/N25-mapa-03.svg",
+      "title": "Mapa HH-25",
+      "labels": [
+        "Unidad",
+        "Espera",
+        "Handoff",
+        "Política",
+        "Reparación"
+      ],
+      "claim": "Mapa HH-25: la representación conecta unidad, espera, handoff, política, reparación para sostener una decisión revisable.",
+      "sha256": "cf100760238b31e94d5067666ae793557fa27d626e30dbd07ad79ee15ea82d36"
+    }
+  ],
+  "quotes": [
+    "N25 estudia flujo de punta a punta mediante colas, trabajo en curso, lote, espera, handoffs, feedback y reparación, y separa desempeño sistémico de actividad local o…",
+    "Ninguna categoría elimina el juicio situado."
+  ],
+  "references": [
+    "Little, J. D. C. (1961). ‘A Proof for the Queuing Formula L = λW’. Operations Research, 9(3), 383–387. https://doi.org/10.1287/opre.9.3.383",
+    "Hopp, W. J. y Spearman, M. L. (2011). Factory Physics, Third Edition. Waveland Press.",
+    "Reinertsen, D. G. (2009). The Principles of Product Development Flow. Celeritas.",
+    "Ohno, T. (1988). Toyota Production System. Productivity Press.",
+    "Anderson, D. J. (2010). Kanban. Blue Hole Press.",
+    "Forsgren, N., Humble, J. y Kim, G. (2018). Accelerate. IT Revolution.",
+    "Kim, G. et al. (2021). The DevOps Handbook, Second Edition. IT Revolution.",
+    "Kanban Guides (2025). The Kanban Guide. https://kanbanguides.org/english/",
+    "Google Cloud (2024). Accelerate State of DevOps Report. https://cloud.google.com/devops/state-of-devops",
+    "Google Cloud (2025). DORA State of AI-Assisted Software Development. https://cloud.google.com/devops/state-of-devops",
+    "Project Management Institute (2021). A Guide to the Project Management Body of Knowledge, Seventh Edition. PMI.",
+    "ISO/IEC (2018). ISO/IEC 20000-1:2018 Service Management System Requirements. https://www.iso.org/standard/70636.html"
+  ],
+  "closing": {
+    "file": "matches-close.png",
+    "sha256": "06318b951ef619692a236027ed07ec7a4a1bb9b66cc875a916c40f060e47ecde",
+    "alt": "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza.",
+    "caption": "La secuencia vuelve visible que toda intervención consume recursos, deja huellas y necesita un criterio de cierre.",
+    "folio": true,
+    "footer": true
+  }
+}

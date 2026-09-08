@@ -1,0 +1,1300 @@
+{
+  "document": "N30",
+  "stage": "content-canonical-v1",
+  "source": "source/N30_observabilidad_senales_sli_slo_incidentes_y_aprendizaje-content-canonical-v1.md",
+  "source_sha256": "a51958e232d525981f08005b50e416580c318f705382a2654d5dad6fc4189125",
+  "eligible_blocks": [
+    {
+      "source_id": "src-0001",
+      "kind": "heading",
+      "text": "# N30 · Observabilidad técnica, señales de negocio, SLI, SLO, incidentes y aprendizaje"
+    },
+    {
+      "source_id": "src-0002",
+      "kind": "heading",
+      "text": "## Pregunta profesional"
+    },
+    {
+      "source_id": "src-0003",
+      "kind": "paragraph",
+      "text": "¿Cómo saber si una promesa sigue en pie, detectar una degradación antes de que se vuelva normal y convertir incidentes en capacidad colectiva?"
+    },
+    {
+      "source_id": "src-0004",
+      "kind": "heading",
+      "text": "## Los tableros estaban verdes y el huésped esperaba"
+    },
+    {
+      "source_id": "src-0005",
+      "kind": "paragraph",
+      "text": "Hotel Horizonte completa el despliegue del circuito de ingreso. CPU, memoria, disponibilidad y errores permanecen dentro de rango. Esa noche, varias reservas externas quedan en un estado intermedio y Recepción crea una cola manual. Los tableros están verdes mientras el servicio se degrada."
+    },
+    {
+      "source_id": "src-0006",
+      "kind": "paragraph",
+      "text": "La infraestructura emitía datos, pero nadie había conectado señales técnicas con la promesa. Tampoco existía un indicador de recorrido, un objetivo explícito ni un aviso que pudiera accionar el turno. La organización observaba componentes y no podía explicar el comportamiento del sistema completo."
+    },
+    {
+      "source_id": "src-0007",
+      "kind": "paragraph",
+      "text": "Observabilidad es capacidad para formular y responder preguntas sobre estados internos a partir de señales externas. Necesita telemetría coherente, contexto, indicadores de nivel de servicio, objetivos, señales de negocio, experiencia, alertas accionables y conocimiento operativo."
+    },
+    {
+      "source_id": "src-0008",
+      "kind": "paragraph",
+      "text": "El equipo define el ingreso logrado como evento de negocio y lo relaciona con trazas, métricas y logs. Separa disponibilidad técnica de capacidad efectiva, fija un SLO por recorrido, acuerda presupuesto de error y prepara respuesta ante estados indeterminados."
+    },
+    {
+      "source_id": "src-0009",
+      "kind": "paragraph",
+      "text": "Cuando ocurre el siguiente incidente, el turno detecta la degradación, limita exposición y conserva evidencia. La revisión posterior reconstruye condiciones y decisiones sin buscar una causa humana única. El aprendizaje modifica arquitectura, contrato, guardia y umbral."
+    },
+    {
+      "source_id": "src-0010",
+      "kind": "paragraph",
+      "text": "N30 cierra el Bloque F. Recibe una liberación gobernada y completa el circuito con señales, respuesta y aprendizaje. La promesa operativa deja de depender de que alguien note tarde que el sistema ya cambió."
+    },
+    {
+      "source_id": "src-0011",
+      "kind": "heading",
+      "text": "## Hotel Horizonte: una estrategia para una contradicción ya conocida"
+    },
+    {
+      "source_id": "src-0012",
+      "kind": "paragraph",
+      "text": "HH-30 construye un mapa de observabilidad para el ingreso. Vincula promesa, recorrido, SLI, SLO, presupuesto de error, señales técnicas, de negocio y de experiencia, alertas, ownership, respuesta y aprendizaje. El tablero deja de informar sólo salud de componentes y permite decidir si ampliar, limitar, reparar o revisar."
+    },
+    {
+      "source_id": "src-0013",
+      "kind": "heading",
+      "text": "## Tesis"
+    },
+    {
+      "source_id": "src-0014",
+      "kind": "paragraph",
+      "text": "N30 conecta observabilidad técnica, señales de negocio, SLI, SLO, incidentes y aprendizaje para gobernar la promesa en operación y retroalimentar decisiones anteriores."
+    },
+    {
+      "source_id": "src-0015",
+      "kind": "heading",
+      "text": "## Del cierre anterior al nuevo avance"
+    },
+    {
+      "source_id": "src-0016",
+      "kind": "paragraph",
+      "text": "N29 deja evidencia y decisiones abiertas que N30 utiliza sin reabrir su contenido. N30 conecta observabilidad técnica, señales de negocio, SLI, SLO, incidentes y aprendizaje para gobernar la promesa en operación y retroalimentar decisiones anteriores."
+    },
+    {
+      "source_id": "src-0017",
+      "kind": "paragraph",
+      "text": "N31 abrirá el Bloque G y distinguirá reglas, predicción, generación y agencia para decidir si la inteligencia artificial resulta pertinente. N30 no automatiza todavía el juicio ni selecciona modelos."
+    },
+    {
+      "source_id": "src-0018",
+      "kind": "heading",
+      "text": "## Tradiciones y marcos utilizados en el argumento"
+    },
+    {
+      "source_id": "src-0019",
+      "kind": "paragraph",
+      "text": "Beyer, B., Jones, C., Petoff, J. y Murphy, N. R. conectan confiabilidad, objetivos y operación. En N30, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N30: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0020",
+      "kind": "paragraph",
+      "text": "Beyer, B., Murphy, N. R., Rensin, D. K., Kawahara, K. y Thorne, S. traducen confiabilidad en prácticas e instrumentos operativos. En N30, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N30: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0021",
+      "kind": "paragraph",
+      "text": "OpenTelemetry estandariza señales, contexto y procesamiento de telemetría. En N30, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N30: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0022",
+      "kind": "paragraph",
+      "text": "OpenTelemetry distingue trazas, métricas, logs y contexto para observar sistemas. En N30, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N30: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0023",
+      "kind": "paragraph",
+      "text": "NIST integra respuesta a incidentes con gobierno de riesgo. En N30, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N30: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0024",
+      "kind": "paragraph",
+      "text": "NIST incorpora gobierno al manejo de riesgo de ciberseguridad. En N30, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N30: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0025",
+      "kind": "paragraph",
+      "text": "Forsgren, N., Humble, J. y Kim, G. relacionan desempeño de entrega con estabilidad y aprendizaje. En N30, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N30: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0026",
+      "kind": "paragraph",
+      "text": "Allspaw, J. examina decisiones y adaptación bajo presión operativa. En N30, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N30: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0027",
+      "kind": "paragraph",
+      "text": "Hollnagel, E. amplía el aprendizaje desde fallas hacia variabilidad cotidiana. En N30, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N30: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0028",
+      "kind": "paragraph",
+      "text": "Woods, D. D. define capacidades para responder a sorpresa y cambio. En N30, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N30: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0029",
+      "kind": "paragraph",
+      "text": "Leveson, N. analiza seguridad mediante controles y condiciones sistémicas. En N30, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N30: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0030",
+      "kind": "paragraph",
+      "text": "ISO/IEC establece requisitos de gestión para sostener servicios. En N30, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N30: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "src-0031",
+      "kind": "heading",
+      "text": "## Movimiento 1 · Reconocer dependencias y promesas operativas"
+    },
+    {
+      "source_id": "src-0032",
+      "kind": "heading",
+      "text": "### Observabilidad"
+    },
+    {
+      "source_id": "src-0033",
+      "kind": "paragraph",
+      "text": "Observabilidad es la capacidad de comprender estados y comportamientos internos mediante señales externas suficientes y contextualizadas. La definición fija el objeto de decisión. Si el equipo de N30 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0034",
+      "kind": "paragraph",
+      "text": "No es sinónimo de monitoreo, acumulación de logs ni compra de una plataforma. La distinción evita que una palabra familiar oculte otro mecanismo. En N30, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0035",
+      "kind": "paragraph",
+      "text": "En observabilidad, el recorrido causal debe mostrar qué condición habilita la acción, qué transformación ocurre y quién absorbe el resultado. Integra instrumentación, contexto y preguntas nuevas sobre el sistema. Si un salto depende sólo de una explicación oral, la estrategia todavía no puede gobernarlo."
+    },
+    {
+      "source_id": "src-0036",
+      "kind": "paragraph",
+      "text": "La evidencia relevante para observabilidad no se limita al resultado promedio. La posibilidad de explicar episodios no previstos muestra su calidad. N30 busca además casos negativos, diferencias entre poblaciones y señales de que la explicación elegida podría ser insuficiente."
+    },
+    {
+      "source_id": "src-0037",
+      "kind": "paragraph",
+      "text": "Ejemplo. Una traza conecta la reserva externa con el estado intermedio y la cola manual. En N30, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0038",
+      "kind": "paragraph",
+      "text": "El tradeoff central de observabilidad aparece entre anticipar y preservar opciones. Anticipar puede reducir coordinación y también fijar una premisa prematura; preservar opciones puede producir aprendizaje y también demorar una protección necesaria. La elección debe declarar cuál de esos costos acepta, durante cuánto tiempo y para quién."
+    },
+    {
+      "source_id": "src-0039",
+      "kind": "paragraph",
+      "text": "La auditoría de observabilidad termina con una pregunta de uso: ¿qué podría decidir ahora una persona que antes no podía? En N30, la respuesta debe nombrar una acción, una restricción y una evidencia, no sólo una comprensión mejorada."
+    },
+    {
+      "source_id": "src-0040",
+      "kind": "paragraph",
+      "text": "Operacionalizar observabilidad requiere asignar una unidad observable. El equipo define qué episodio contará, desde qué momento, con qué población y bajo qué fuente. Después compara al menos un caso ordinario con otro que fuerce excepción. Esta precisión en N30 evita que una conclusión general se sostenga sólo en ejemplos convenientes."
+    },
+    {
+      "source_id": "src-0041",
+      "kind": "paragraph",
+      "text": "La decisión profesional no termina en adoptar observabilidad. Se compara una ruta principal con una explicación rival, se explicita quién queda expuesto y se conserva un modo de revisar. No todo estado puede inferirse y la instrumentación también falla. El límite forma parte del diseño y no una nota posterior."
+    },
+    {
+      "source_id": "src-0042",
+      "kind": "heading",
+      "text": "### Monitoreo"
+    },
+    {
+      "source_id": "src-0043",
+      "kind": "paragraph",
+      "text": "Monitoreo compara señales conocidas con condiciones y umbrales previamente definidos. Conviene comenzar por su función profesional. Si el equipo de N30 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0044",
+      "kind": "paragraph",
+      "text": "No responde por sí solo preguntas nuevas ni explica causalidad. El contraste importa porque conduce a pruebas distintas. En N30, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0045",
+      "kind": "paragraph",
+      "text": "El mecanismo de monitoreo no se presume por el nombre. Detecta desviaciones esperadas y activa decisiones operativas. Debe localizarse dónde comienza, qué relaciones activa, qué demora introduce y qué capacidad de reparación queda disponible cuando la expectativa no se cumple."
+    },
+    {
+      "source_id": "src-0046",
+      "kind": "paragraph",
+      "text": "Una afirmación sobre monitoreo gana fuerza cuando puede reconstruirse desde fuentes independientes. Cobertura, precisión y accionabilidad de alertas permiten evaluarlo. La ausencia de señal también se interpreta: puede significar estabilidad, mala observación o exclusión del caso que más importa."
+    },
+    {
+      "source_id": "src-0047",
+      "kind": "paragraph",
+      "text": "Ejemplo. Una caída de ingresos logrados por minuto dispara revisión. En N30, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0048",
+      "kind": "paragraph",
+      "text": "La escala modifica monitoreo. Una solución válida para un equipo puede fallar cuando atraviesa sedes, turnos o proveedores porque aumenta la distancia entre señal y autoridad. Antes de ampliar, N30 prueba si la misma decisión conserva significado y reparación bajo esa nueva distribución."
+    },
+    {
+      "source_id": "src-0049",
+      "kind": "paragraph",
+      "text": "Para evitar consenso aparente, monitoreo se revisa con alguien afectado y con alguien responsable de reparar. Las dos perspectivas pueden valorar resultados diferentes y obligan a declarar la prioridad elegida."
+    },
+    {
+      "source_id": "src-0050",
+      "kind": "paragraph",
+      "text": "En la práctica, monitoreo atraviesa más de un área. Se identifican handoffs, esperas, decisiones y datos que cada participante puede ver. Cuando dos áreas usan evidencia distinta en N30, el expediente conserva la divergencia hasta determinar si representa error, perspectiva legítima o una brecha que la estrategia debe resolver."
+    },
+    {
+      "source_id": "src-0051",
+      "kind": "paragraph",
+      "text": "En una revisión, monitoreo debe responder tres preguntas: qué mejora, qué desplaza y qué vuelve más difícil de revertir. Umbrales estáticos pueden ignorar contexto o producir ruido. Si esas respuestas cambian, también debe cambiar el compromiso, aunque el trabajo previo haya sido técnicamente correcto."
+    },
+    {
+      "source_id": "src-0052",
+      "kind": "heading",
+      "text": "### Telemetría"
+    },
+    {
+      "source_id": "src-0053",
+      "kind": "paragraph",
+      "text": "Telemetría reúne trazas, métricas, logs y contexto emitidos por componentes y recorridos. El concepto adquiere valor cuando cambia una decisión. Si el equipo de N30 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0054",
+      "kind": "paragraph",
+      "text": "No es evidencia útil sólo por existir en gran volumen. Su vecino conceptual puede parecer equivalente y no lo es. En N30, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0055",
+      "kind": "paragraph",
+      "text": "Comprender telemetría exige seguir la decisión en el tiempo. Correlación, semántica y procedencia permiten reconstruir actividad distribuida. El análisis distingue condición, intervención, señal temprana y consecuencia para evitar atribuir a una práctica un efecto producido por otro cambio simultáneo."
+    },
+    {
+      "source_id": "src-0056",
+      "kind": "paragraph",
+      "text": "La prueba de telemetría debe formularse antes de conocer el resultado. Muestreo, completitud y capacidad de enlazar señales determinan utilidad. Se registra qué observación sostendría continuar, cuál obligaría a adaptar y cuál activaría detención o escalamiento."
+    },
+    {
+      "source_id": "src-0057",
+      "kind": "paragraph",
+      "text": "Ejemplo. El identificador del episodio atraviesa canal, PMS y cerradura. En N30, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0058",
+      "kind": "paragraph",
+      "text": "El tiempo también altera telemetría. Una evidencia suficiente para explorar puede ser insuficiente para operar de forma permanente. Por eso se separan prueba local, compromiso transitorio y condición estable, y cada estado conserva fecha, alcance y responsable de revisión."
+    },
+    {
+      "source_id": "src-0059",
+      "kind": "paragraph",
+      "text": "El registro de telemetría conserva una explicación rival. Si esa alternativa predice mejor el episodio siguiente, el equipo cambia de curso sin reescribir retrospectivamente lo que creía saber."
+    },
+    {
+      "source_id": "src-0060",
+      "kind": "paragraph",
+      "text": "La gobernanza de telemetría incluye quién puede proponer, aprobar, ejecutar, observar y reparar. Esas funciones no se presumen por cargo ni por permiso técnico. N30 las prueba en un escenario donde falta la persona habitual, porque una capacidad que sólo funciona con conocimiento privado todavía no pertenece a la organización."
+    },
+    {
+      "source_id": "src-0061",
+      "kind": "paragraph",
+      "text": "El juicio sobre telemetría incluye distribución de consecuencias. Más telemetría aumenta costo, exposición de datos y carga cognitiva. Una mejora agregada no alcanza si concentra espera, riesgo o trabajo invisible en un grupo sin autoridad para discutir la decisión."
+    },
+    {
+      "source_id": "src-0062",
+      "kind": "heading",
+      "text": "### Señal de negocio"
+    },
+    {
+      "source_id": "src-0063",
+      "kind": "paragraph",
+      "text": "Una señal de negocio representa una consecuencia operativa o de valor producida por el sistema. La definición fija el objeto de decisión. Si el equipo de N30 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0064",
+      "kind": "paragraph",
+      "text": "No se reduce a transacciones técnicas ni a un indicador financiero tardío. La distinción evita que una palabra familiar oculte otro mecanismo. En N30, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0065",
+      "kind": "paragraph",
+      "text": "La explicación operacional de señal de negocio conecta personas, reglas y tecnología. Vincula eventos del recorrido con poblaciones, decisiones y resultados. Esa conexión permite decidir qué parte puede modificarse localmente y cuál requiere coordinación con otras autoridades o capacidades."
+    },
+    {
+      "source_id": "src-0066",
+      "kind": "paragraph",
+      "text": "Para auditar señal de negocio, conviene combinar evidencia de diseño, ejecución y consecuencia. Reconciliación con evidencia operativa verifica su significado. Ninguna fuente domina automáticamente; una especificación correcta puede convivir con una operación dañina."
+    },
+    {
+      "source_id": "src-0067",
+      "kind": "paragraph",
+      "text": "Ejemplo. Ingreso logrado sin reasignación mide mejor la promesa que respuesta HTTP exitosa. En N30, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0068",
+      "kind": "paragraph",
+      "text": "Existe además una dimensión política en señal de negocio. La opción más eficiente puede reducir la capacidad de una persona para cuestionar una decisión o trasladar trabajo sin reconocerlo. N30 registra esa distribución y no la esconde dentro de un indicador agregado."
+    },
+    {
+      "source_id": "src-0069",
+      "kind": "paragraph",
+      "text": "Una prueba adversa de señal de negocio introduce demora, ausencia de autoridad o dato incompleto. El objetivo de N30 no es cubrir todas las fallas, sino revelar si la estrategia mantiene una salida segura fuera del camino ordinario."
+    },
+    {
+      "source_id": "src-0070",
+      "kind": "paragraph",
+      "text": "El indicador de señal de negocio se elige después de formular la decisión. Puede combinar tiempo, calidad, distribución y costo de reparación. Una cifra aislada rara vez explica el mecanismo. En N30, la lectura conjunta de señales evita optimizar velocidad mientras aumenta retrabajo, exclusión o dependencia."
+    },
+    {
+      "source_id": "src-0071",
+      "kind": "paragraph",
+      "text": "La condición de cierre de señal de negocio no es perfección. La métrica puede incentivar atajos si se separa de salvaguardas. Es evidencia suficiente para el uso previsto, riesgo residual aceptado por autoridad y una ruta clara cuando el supuesto deje de cumplirse."
+    },
+    {
+      "source_id": "src-0072",
+      "kind": "heading",
+      "text": "## Movimiento 2 · Construir evidencia y controles proporcionales"
+    },
+    {
+      "source_id": "src-0073",
+      "kind": "heading",
+      "text": "### Indicador de nivel de servicio"
+    },
+    {
+      "source_id": "src-0074",
+      "kind": "paragraph",
+      "text": "Un SLI cuantifica una dimensión observable de la experiencia o capacidad que importa a quienes dependen del servicio. Conviene comenzar por su función profesional. Si el equipo de N30 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0075",
+      "kind": "paragraph",
+      "text": "No es cualquier métrica disponible ni una cifra elegida por facilidad. El contraste importa porque conduce a pruebas distintas. En N30, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0076",
+      "kind": "paragraph",
+      "text": "Para que indicador de nivel de servicio sea algo más que una etiqueta, debe existir una cadena examinable. Define eventos válidos, población, ventana y método de cálculo. La cadena incluye supuestos, handoffs y efectos laterales que una descripción ideal suele omitir."
+    },
+    {
+      "source_id": "src-0077",
+      "kind": "paragraph",
+      "text": "El equipo no declara resuelto indicador de nivel de servicio por acuerdo retórico. Comparación con episodios reales prueba su representatividad. Una persona ajena al diseño debe poder repetir la prueba y comprender por qué el resultado habilita una decisión concreta."
+    },
+    {
+      "source_id": "src-0078",
+      "kind": "paragraph",
+      "text": "Ejemplo. Proporción de ingresos completados dentro del umbral acordado. En N30, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0079",
+      "kind": "paragraph",
+      "text": "La mantenibilidad de indicador de nivel de servicio se prueba mediante cambio deliberado. Se modifica una regla, una fuente o una dependencia y se observa quién detecta el impacto, cuánto tarda en responder y qué información necesita. En N30, si la respuesta depende de memoria privada, la capacidad todavía es frágil."
+    },
+    {
+      "source_id": "src-0080",
+      "kind": "paragraph",
+      "text": "El costo de indicador de nivel de servicio se observa tanto en presupuesto como en atención, espera, coordinación y dependencia. Lo que no figura en una factura puede seguir siendo el costo que define la viabilidad."
+    },
+    {
+      "source_id": "src-0081",
+      "kind": "paragraph",
+      "text": "La transición asociada con indicador de nivel de servicio necesita un estado intermedio explícito. Durante ese período conviven reglas, versiones o capacidades diferentes. N30 declara cuál rige para cada población, cómo se comunica y qué contingencia protege a quien podría quedar entre ambos sistemas."
+    },
+    {
+      "source_id": "src-0082",
+      "kind": "paragraph",
+      "text": "El análisis de indicador de nivel de servicio evita dos extremos: conservar por inercia y cambiar por identidad metodológica. Un indicador agregado puede ocultar grupos o momentos críticos. Entre ambos queda una decisión provisional con fecha, responsable y prueba de revisión."
+    },
+    {
+      "source_id": "src-0083",
+      "kind": "heading",
+      "text": "### Objetivo de nivel de servicio"
+    },
+    {
+      "source_id": "src-0084",
+      "kind": "paragraph",
+      "text": "Un SLO establece el nivel esperado de un SLI durante una ventana y orienta decisiones. El concepto adquiere valor cuando cambia una decisión. Si el equipo de N30 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0085",
+      "kind": "paragraph",
+      "text": "No es una promesa de perfección ni un SLA contractual automático. Su vecino conceptual puede parecer equivalente y no lo es. En N30, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0086",
+      "kind": "paragraph",
+      "text": "El valor de objetivo de nivel de servicio aparece al contrastar alternativas. Crea un límite común para equilibrar confiabilidad, cambio y costo. Si dos opciones producen el mismo entregable inmediato, el mecanismo permite compararlas por aprendizaje, dependencia, riesgo residual y posibilidad de salida."
+    },
+    {
+      "source_id": "src-0087",
+      "kind": "paragraph",
+      "text": "La suficiencia de evidencia para objetivo de nivel de servicio depende del costo de equivocarse. Resultados por ventana y decisiones tomadas muestran si gobierna. A mayor irreversibilidad o desigualdad de daño, mayor contraste, supervisión y autoridad se requieren."
+    },
+    {
+      "source_id": "src-0088",
+      "kind": "paragraph",
+      "text": "Ejemplo. El recorrido sostiene el umbral para la población definida. En N30, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0089",
+      "kind": "paragraph",
+      "text": "Finalmente, objetivo de nivel de servicio debe convivir con otras decisiones. Optimizarla de manera aislada puede empeorar flujo, seguridad o comprensión. El expediente N30 explicita dependencias y evita que una mejora local se presente como outcome completo del sistema."
+    },
+    {
+      "source_id": "src-0090",
+      "kind": "paragraph",
+      "text": "La revisión de objetivo de nivel de servicio fija fecha y desencadenante. Puede ocurrir por incidente, cambio normativo, nueva población o evidencia acumulada. Sin esa regla en N30, una decisión provisional se vuelve permanente por olvido."
+    },
+    {
+      "source_id": "src-0091",
+      "kind": "paragraph",
+      "text": "El cierre de objetivo de nivel de servicio debe sobrevivir a una revisión independiente. La evidencia, las decisiones y los límites se almacenan de manera que otra persona pueda cuestionarlos. En N30, la trazabilidad no busca eliminar desacuerdo; busca que el desacuerdo se concentre en supuestos examinables y no en recuerdos incompatibles."
+    },
+    {
+      "source_id": "src-0092",
+      "kind": "paragraph",
+      "text": "La estrategia debe poder explicar por qué objetivo de nivel de servicio recibe cierta inversión y no otra. Un objetivo arbitrario puede normalizar mala experiencia o costo excesivo. Esa explicación conecta valor, costo, aprendizaje y reparación, y permanece abierta a evidencia nueva."
+    },
+    {
+      "source_id": "src-0093",
+      "kind": "heading",
+      "text": "### Presupuesto de error"
+    },
+    {
+      "source_id": "src-0094",
+      "kind": "paragraph",
+      "text": "El presupuesto de error expresa la tolerancia restante entre desempeño observado y objetivo acordado. La definición fija el objeto de decisión. Si el equipo de N30 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0095",
+      "kind": "paragraph",
+      "text": "No autoriza daño ni convierte toda falla en aceptable. La distinción evita que una palabra familiar oculte otro mecanismo. En N30, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0096",
+      "kind": "paragraph",
+      "text": "En presupuesto de error, el recorrido causal debe mostrar qué condición habilita la acción, qué transformación ocurre y quién absorbe el resultado. Vincula confiabilidad con ritmo de cambio y medidas de protección. Si un salto depende sólo de una explicación oral, la estrategia todavía no puede gobernarlo."
+    },
+    {
+      "source_id": "src-0097",
+      "kind": "paragraph",
+      "text": "La evidencia relevante para presupuesto de error no se limita al resultado promedio. Consumo, tendencia y acciones asociadas demuestran su uso. N30 busca además casos negativos, diferencias entre poblaciones y señales de que la explicación elegida podría ser insuficiente."
+    },
+    {
+      "source_id": "src-0098",
+      "kind": "paragraph",
+      "text": "Ejemplo. Si el presupuesto se agota, se limita exposición y se prioriza recuperación. En N30, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0099",
+      "kind": "paragraph",
+      "text": "El tradeoff central de presupuesto de error aparece entre anticipar y preservar opciones. Anticipar puede reducir coordinación y también fijar una premisa prematura; preservar opciones puede producir aprendizaje y también demorar una protección necesaria. La elección debe declarar cuál de esos costos acepta, durante cuánto tiempo y para quién."
+    },
+    {
+      "source_id": "src-0100",
+      "kind": "paragraph",
+      "text": "La auditoría de presupuesto de error termina con una pregunta de uso: ¿qué podría decidir ahora una persona que antes no podía? En N30, la respuesta debe nombrar una acción, una restricción y una evidencia, no sólo una comprensión mejorada."
+    },
+    {
+      "source_id": "src-0101",
+      "kind": "paragraph",
+      "text": "Operacionalizar presupuesto de error requiere asignar una unidad observable. El equipo define qué episodio contará, desde qué momento, con qué población y bajo qué fuente. Después compara al menos un caso ordinario con otro que fuerce excepción. Esta precisión en N30 evita que una conclusión general se sostenga sólo en ejemplos convenientes."
+    },
+    {
+      "source_id": "src-0102",
+      "kind": "paragraph",
+      "text": "La decisión profesional no termina en adoptar presupuesto de error. Se compara una ruta principal con una explicación rival, se explicita quién queda expuesto y se conserva un modo de revisar. Derechos y obligaciones críticas pueden exigir tolerancia nula. El límite forma parte del diseño y no una nota posterior."
+    },
+    {
+      "source_id": "src-0103",
+      "kind": "heading",
+      "text": "### Alerta accionable"
+    },
+    {
+      "source_id": "src-0104",
+      "kind": "paragraph",
+      "text": "Una alerta accionable comunica una condición relevante a alguien capaz de intervenir con contexto suficiente. Conviene comenzar por su función profesional. Si el equipo de N30 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0105",
+      "kind": "paragraph",
+      "text": "No es cada anomalía ni un mensaje sin prioridad. El contraste importa porque conduce a pruebas distintas. En N30, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0106",
+      "kind": "paragraph",
+      "text": "El mecanismo de alerta accionable no se presume por el nombre. Relaciona señal, impacto, urgencia, owner y primera acción segura. Debe localizarse dónde comienza, qué relaciones activa, qué demora introduce y qué capacidad de reparación queda disponible cuando la expectativa no se cumple."
+    },
+    {
+      "source_id": "src-0107",
+      "kind": "paragraph",
+      "text": "Una afirmación sobre alerta accionable gana fuerza cuando puede reconstruirse desde fuentes independientes. Tiempo de reconocimiento, utilidad y falsos positivos permiten mejorarla. La ausencia de señal también se interpreta: puede significar estabilidad, mala observación o exclusión del caso que más importa."
+    },
+    {
+      "source_id": "src-0108",
+      "kind": "paragraph",
+      "text": "Ejemplo. Recepción recibe una alerta sobre estados indeterminados y activa contingencia. En N30, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0109",
+      "kind": "paragraph",
+      "text": "La escala modifica alerta accionable. Una solución válida para un equipo puede fallar cuando atraviesa sedes, turnos o proveedores porque aumenta la distancia entre señal y autoridad. Antes de ampliar, N30 prueba si la misma decisión conserva significado y reparación bajo esa nueva distribución."
+    },
+    {
+      "source_id": "src-0110",
+      "kind": "paragraph",
+      "text": "Para evitar consenso aparente, alerta accionable se revisa con alguien afectado y con alguien responsable de reparar. Las dos perspectivas pueden valorar resultados diferentes y obligan a declarar la prioridad elegida."
+    },
+    {
+      "source_id": "src-0111",
+      "kind": "paragraph",
+      "text": "En la práctica, alerta accionable atraviesa más de un área. Se identifican handoffs, esperas, decisiones y datos que cada participante puede ver. Cuando dos áreas usan evidencia distinta en N30, el expediente conserva la divergencia hasta determinar si representa error, perspectiva legítima o una brecha que la estrategia debe resolver."
+    },
+    {
+      "source_id": "src-0112",
+      "kind": "paragraph",
+      "text": "En una revisión, alerta accionable debe responder tres preguntas: qué mejora, qué desplaza y qué vuelve más difícil de revertir. Automatizar avisos sin autoridad produce fatiga y abandono. Si esas respuestas cambian, también debe cambiar el compromiso, aunque el trabajo previo haya sido técnicamente correcto."
+    },
+    {
+      "source_id": "src-0113",
+      "kind": "heading",
+      "text": "## Movimiento 3 · Gobernar cambio, degradación y aprendizaje"
+    },
+    {
+      "source_id": "src-0114",
+      "kind": "heading",
+      "text": "### Incidente"
+    },
+    {
+      "source_id": "src-0115",
+      "kind": "paragraph",
+      "text": "Un incidente es una alteración no deseada de la capacidad o promesa que requiere coordinación y aprendizaje. El concepto adquiere valor cuando cambia una decisión. Si el equipo de N30 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0116",
+      "kind": "paragraph",
+      "text": "No se define sólo por caída técnica ni por severidad declarada al final. Su vecino conceptual puede parecer equivalente y no lo es. En N30, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0117",
+      "kind": "paragraph",
+      "text": "Comprender incidente exige seguir la decisión en el tiempo. Organiza detección, contención, comunicación, reparación y recuperación. El análisis distingue condición, intervención, señal temprana y consecuencia para evitar atribuir a una práctica un efecto producido por otro cambio simultáneo."
+    },
+    {
+      "source_id": "src-0118",
+      "kind": "paragraph",
+      "text": "La prueba de incidente debe formularse antes de conocer el resultado. Línea temporal, decisiones y consecuencias sostienen su reconstrucción. Se registra qué observación sostendría continuar, cuál obligaría a adaptar y cuál activaría detención o escalamiento."
+    },
+    {
+      "source_id": "src-0119",
+      "kind": "paragraph",
+      "text": "Ejemplo. Reservas válidas no pueden transformarse en ingresos durante un turno. En N30, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0120",
+      "kind": "paragraph",
+      "text": "El tiempo también altera incidente. Una evidencia suficiente para explorar puede ser insuficiente para operar de forma permanente. Por eso se separan prueba local, compromiso transitorio y condición estable, y cada estado conserva fecha, alcance y responsable de revisión."
+    },
+    {
+      "source_id": "src-0121",
+      "kind": "paragraph",
+      "text": "El registro de incidente conserva una explicación rival. Si esa alternativa predice mejor el episodio siguiente, el equipo cambia de curso sin reescribir retrospectivamente lo que creía saber."
+    },
+    {
+      "source_id": "src-0122",
+      "kind": "paragraph",
+      "text": "La gobernanza de incidente incluye quién puede proponer, aprobar, ejecutar, observar y reparar. Esas funciones no se presumen por cargo ni por permiso técnico. N30 las prueba en un escenario donde falta la persona habitual, porque una capacidad que sólo funciona con conocimiento privado todavía no pertenece a la organización."
+    },
+    {
+      "source_id": "src-0123",
+      "kind": "paragraph",
+      "text": "El juicio sobre incidente incluye distribución de consecuencias. La clasificación inicial cambia con evidencia y no debe impedir respuesta. Una mejora agregada no alcanza si concentra espera, riesgo o trabajo invisible en un grupo sin autoridad para discutir la decisión."
+    },
+    {
+      "source_id": "src-0124",
+      "kind": "heading",
+      "text": "### Respuesta coordinada"
+    },
+    {
+      "source_id": "src-0125",
+      "kind": "paragraph",
+      "text": "Respuesta coordinada distribuye autoridad y comunicación para limitar daño bajo presión. La definición fija el objeto de decisión. Si el equipo de N30 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0126",
+      "kind": "paragraph",
+      "text": "No depende de una persona heroica ni de un runbook inflexible. La distinción evita que una palabra familiar oculte otro mecanismo. En N30, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0127",
+      "kind": "paragraph",
+      "text": "La explicación operacional de respuesta coordinada conecta personas, reglas y tecnología. Define roles, canales, prioridades, escalamiento y vínculo con poblaciones afectadas. Esa conexión permite decidir qué parte puede modificarse localmente y cuál requiere coordinación con otras autoridades o capacidades."
+    },
+    {
+      "source_id": "src-0128",
+      "kind": "paragraph",
+      "text": "Para auditar respuesta coordinada, conviene combinar evidencia de diseño, ejecución y consecuencia. Ejercicios y episodios reales muestran si la capacidad existe. Ninguna fuente domina automáticamente; una especificación correcta puede convivir con una operación dañina."
+    },
+    {
+      "source_id": "src-0129",
+      "kind": "paragraph",
+      "text": "Ejemplo. Tecnología repara estados mientras Operaciones sostiene la atención y comunica. En N30, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0130",
+      "kind": "paragraph",
+      "text": "Existe además una dimensión política en respuesta coordinada. La opción más eficiente puede reducir la capacidad de una persona para cuestionar una decisión o trasladar trabajo sin reconocerlo. N30 registra esa distribución y no la esconde dentro de un indicador agregado."
+    },
+    {
+      "source_id": "src-0131",
+      "kind": "paragraph",
+      "text": "Una prueba adversa de respuesta coordinada introduce demora, ausencia de autoridad o dato incompleto. El objetivo de N30 no es cubrir todas las fallas, sino revelar si la estrategia mantiene una salida segura fuera del camino ordinario."
+    },
+    {
+      "source_id": "src-0132",
+      "kind": "paragraph",
+      "text": "El indicador de respuesta coordinada se elige después de formular la decisión. Puede combinar tiempo, calidad, distribución y costo de reparación. Una cifra aislada rara vez explica el mecanismo. En N30, la lectura conjunta de señales evita optimizar velocidad mientras aumenta retrabajo, exclusión o dependencia."
+    },
+    {
+      "source_id": "src-0133",
+      "kind": "paragraph",
+      "text": "La condición de cierre de respuesta coordinada no es perfección. La coordinación puede fallar si las responsabilidades cotidianas contradicen el plan. Es evidencia suficiente para el uso previsto, riesgo residual aceptado por autoridad y una ruta clara cuando el supuesto deje de cumplirse."
+    },
+    {
+      "source_id": "src-0134",
+      "kind": "heading",
+      "text": "### Revisión posterior"
+    },
+    {
+      "source_id": "src-0135",
+      "kind": "paragraph",
+      "text": "Una revisión posterior reconstruye condiciones, decisiones y mecanismos para aprender sin reducir el incidente a culpa individual. Conviene comenzar por su función profesional. Si el equipo de N30 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0136",
+      "kind": "paragraph",
+      "text": "No es una cronología ornamental ni una búsqueda de causa única. El contraste importa porque conduce a pruebas distintas. En N30, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0137",
+      "kind": "paragraph",
+      "text": "Para que revisión posterior sea algo más que una etiqueta, debe existir una cadena examinable. Conecta evidencia con cambios verificables en sistema y organización. La cadena incluye supuestos, handoffs y efectos laterales que una descripción ideal suele omitir."
+    },
+    {
+      "source_id": "src-0138",
+      "kind": "paragraph",
+      "text": "El equipo no declara resuelto revisión posterior por acuerdo retórico. Seguimiento de acciones y recurrencia muestran aprendizaje real. Una persona ajena al diseño debe poder repetir la prueba y comprender por qué el resultado habilita una decisión concreta."
+    },
+    {
+      "source_id": "src-0139",
+      "kind": "paragraph",
+      "text": "Ejemplo. La revisión modifica contrato temporal, alerta y modo degradado. En N30, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0140",
+      "kind": "paragraph",
+      "text": "La mantenibilidad de revisión posterior se prueba mediante cambio deliberado. Se modifica una regla, una fuente o una dependencia y se observa quién detecta el impacto, cuánto tarda en responder y qué información necesita. En N30, si la respuesta depende de memoria privada, la capacidad todavía es frágil."
+    },
+    {
+      "source_id": "src-0141",
+      "kind": "paragraph",
+      "text": "El costo de revisión posterior se observa tanto en presupuesto como en atención, espera, coordinación y dependencia. Lo que no figura en una factura puede seguir siendo el costo que define la viabilidad."
+    },
+    {
+      "source_id": "src-0142",
+      "kind": "paragraph",
+      "text": "La transición asociada con revisión posterior necesita un estado intermedio explícito. Durante ese período conviven reglas, versiones o capacidades diferentes. N30 declara cuál rige para cada población, cómo se comunica y qué contingencia protege a quien podría quedar entre ambos sistemas."
+    },
+    {
+      "source_id": "src-0143",
+      "kind": "paragraph",
+      "text": "El análisis de revisión posterior evita dos extremos: conservar por inercia y cambiar por identidad metodológica. Ausencia de castigo no significa ausencia de responsabilidad o reparación. Entre ambos queda una decisión provisional con fecha, responsable y prueba de revisión."
+    },
+    {
+      "source_id": "src-0144",
+      "kind": "heading",
+      "text": "### Bucle de aprendizaje operativo"
+    },
+    {
+      "source_id": "src-0145",
+      "kind": "paragraph",
+      "text": "Un bucle de aprendizaje operativo devuelve evidencia de uso e incidentes a arquitectura, contratos, calidad y gobierno de liberación. El concepto adquiere valor cuando cambia una decisión. Si el equipo de N30 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "src-0146",
+      "kind": "paragraph",
+      "text": "No es una retrospectiva aislada ni una lista infinita de acciones. Su vecino conceptual puede parecer equivalente y no lo es. En N30, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "src-0147",
+      "kind": "paragraph",
+      "text": "El valor de bucle de aprendizaje operativo aparece al contrastar alternativas. Prioriza cambios por mecanismo, riesgo y capacidad de prevenir o contener. Si dos opciones producen el mismo entregable inmediato, el mecanismo permite compararlas por aprendizaje, dependencia, riesgo residual y posibilidad de salida."
+    },
+    {
+      "source_id": "src-0148",
+      "kind": "paragraph",
+      "text": "La suficiencia de evidencia para bucle de aprendizaje operativo depende del costo de equivocarse. Decisiones cerradas, hipótesis revisadas y reducción de recurrencia sostienen el bucle. A mayor irreversibilidad o desigualdad de daño, mayor contraste, supervisión y autoridad se requieren."
+    },
+    {
+      "source_id": "src-0149",
+      "kind": "paragraph",
+      "text": "Ejemplo. HH-30 actualiza HH-26 a HH-29 con evidencia del turno. En N30, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "src-0150",
+      "kind": "paragraph",
+      "text": "Finalmente, bucle de aprendizaje operativo debe convivir con otras decisiones. Optimizarla de manera aislada puede empeorar flujo, seguridad o comprensión. El expediente N30 explicita dependencias y evita que una mejora local se presente como outcome completo del sistema."
+    },
+    {
+      "source_id": "src-0151",
+      "kind": "paragraph",
+      "text": "La revisión de bucle de aprendizaje operativo fija fecha y desencadenante. Puede ocurrir por incidente, cambio normativo, nueva población o evidencia acumulada. Sin esa regla en N30, una decisión provisional se vuelve permanente por olvido."
+    },
+    {
+      "source_id": "src-0152",
+      "kind": "paragraph",
+      "text": "El cierre de bucle de aprendizaje operativo debe sobrevivir a una revisión independiente. La evidencia, las decisiones y los límites se almacenan de manera que otra persona pueda cuestionarlos. En N30, la trazabilidad no busca eliminar desacuerdo; busca que el desacuerdo se concentre en supuestos examinables y no en recuerdos incompatibles."
+    },
+    {
+      "source_id": "src-0153",
+      "kind": "paragraph",
+      "text": "La estrategia debe poder explicar por qué bucle de aprendizaje operativo recibe cierta inversión y no otra. Aprender localmente no corrige incentivos o dependencias estructurales sin autoridad. Esa explicación conecta valor, costo, aprendizaje y reparación, y permanece abierta a evidencia nueva."
+    },
+    {
+      "source_id": "src-0154",
+      "kind": "heading",
+      "text": "### Instrumento HH-30: mapa de observabilidad y aprendizaje"
+    },
+    {
+      "source_id": "src-0155",
+      "kind": "paragraph",
+      "text": "El instrumento organiza una decisión concreta y no una descripción total. Cada campo debe completarse con evidencia disponible, incertidumbre explícita y autoridad identificada. Si un campo todavía no puede responderse, se registra como asunto abierto y no se completa por inferencia."
+    },
+    {
+      "source_id": "src-0156",
+      "kind": "list-item",
+      "text": "1. **Promesa y recorrido.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N30, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0157",
+      "kind": "list-item",
+      "text": "2. **Población.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N30, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0158",
+      "kind": "list-item",
+      "text": "3. **SLI.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N30, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0159",
+      "kind": "list-item",
+      "text": "4. **SLO.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N30, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0160",
+      "kind": "list-item",
+      "text": "5. **Presupuesto de error.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N30, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0161",
+      "kind": "list-item",
+      "text": "6. **Señales técnicas.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N30, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0162",
+      "kind": "list-item",
+      "text": "7. **Señales de negocio.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N30, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0163",
+      "kind": "list-item",
+      "text": "8. **Señales de experiencia.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N30, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0164",
+      "kind": "list-item",
+      "text": "9. **Alerta y owner.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N30, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0165",
+      "kind": "list-item",
+      "text": "10. **Respuesta.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N30, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0166",
+      "kind": "list-item",
+      "text": "11. **Reparación.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N30, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0167",
+      "kind": "list-item",
+      "text": "12. **Aprendizaje.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N30, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "src-0168",
+      "kind": "paragraph",
+      "text": "El expediente se prueba con un escenario ordinario y uno adverso. Una persona que no participó en su construcción debe poder reconstruir qué se decidió, por qué, qué permanece incierto y cuál es la próxima puerta. El cierre no exige certeza total; exige incertidumbre gobernada y una salida practicable."
+    },
+    {
+      "source_id": "src-0169",
+      "kind": "heading",
+      "text": "### Caso de transferencia: prestación social digital"
+    },
+    {
+      "source_id": "src-0170",
+      "kind": "paragraph",
+      "text": "Una plataforma pública mantiene infraestructura disponible, pero una validación externa deja solicitudes en espera sin explicación. El tablero técnico no refleja la pérdida de capacidad ciudadana."
+    },
+    {
+      "source_id": "src-0171",
+      "kind": "paragraph",
+      "text": "El mapa incorpora recorrido, señal de negocio, población, SLO, comunicación y contingencia. La revisión posterior modifica el acuerdo con el tercero y la vía presencial."
+    },
+    {
+      "source_id": "src-0172",
+      "kind": "paragraph",
+      "text": "HH-30 permite observar la prestación y no sólo la plataforma."
+    },
+    {
+      "source_id": "src-0173",
+      "kind": "heading",
+      "text": "### Contraejemplo: más dashboards"
+    },
+    {
+      "source_id": "src-0174",
+      "kind": "paragraph",
+      "text": "Una organización agrega paneles para cada componente y declara resuelta la observabilidad."
+    },
+    {
+      "source_id": "src-0175",
+      "kind": "paragraph",
+      "text": "Las señales no comparten contexto, no representan la promesa y ninguna alerta indica una acción. El volumen crece y la incertidumbre permanece."
+    },
+    {
+      "source_id": "src-0176",
+      "kind": "paragraph",
+      "text": "Observar significa poder formular una pregunta relevante y convertir la respuesta en decisión."
+    },
+    {
+      "source_id": "src-0177",
+      "kind": "heading",
+      "text": "### Prueba integral antes de ampliar compromiso"
+    },
+    {
+      "source_id": "src-0178",
+      "kind": "paragraph",
+      "text": "La prueba integral de observabilidad técnica, señales de negocio, sli, slo, incidentes y aprendizaje toma una decisión real y la recorre desde su origen hasta una consecuencia observable. Utiliza promesa y recorrido, población, sli, slo para evitar que el análisis quede dividido en artefactos independientes. Cada afirmación debe encontrar una fuente, una autoridad y una condición de revisión. Cuando dos registros no coinciden, la diferencia se conserva como hallazgo hasta explicar su mecanismo."
+    },
+    {
+      "source_id": "src-0179",
+      "kind": "paragraph",
+      "text": "El escenario ordinario verifica que n30 conecta observabilidad técnica, señales de negocio, sli, slo, incidentes y aprendizaje para gobernar la promesa en operación y retroalimentar decisiones anteriores. El escenario adverso modifica una dependencia, introduce demora y deja ausente a la persona que suele resolver. El equipo observa si la estrategia detecta el cambio, limita el daño, comunica incertidumbre y activa reparación sin recurrir a conocimiento privado."
+    },
+    {
+      "source_id": "src-0180",
+      "kind": "paragraph",
+      "text": "La comparación incluye una alternativa descartada. Se documenta por qué no fue elegida, qué supuesto la volvería preferible y qué costo tendría recuperarla. Este ejercicio protege opciones futuras y evita presentar la decisión actual como única solución técnicamente posible. También vuelve discutibles los costos hundidos cuando aparece evidencia nueva."
+    },
+    {
+      "source_id": "src-0181",
+      "kind": "paragraph",
+      "text": "La prueba concluye con una defensa breve ante una audiencia ajena al equipo. Esa audiencia debe poder reconstruir el problema, objetar la evidencia y comprender por qué la salida propuesta es proporcional. Si sólo puede repetir la recomendación, el expediente todavía no sostiene una decisión profesional. Si puede reconocer límites y actuar ante una excepción, existe capacidad transferible."
+    },
+    {
+      "source_id": "src-0182",
+      "kind": "heading",
+      "text": "## Errores frecuentes"
+    },
+    {
+      "source_id": "src-0183",
+      "kind": "heading",
+      "text": "### Confundir observabilidad con tableros"
+    },
+    {
+      "source_id": "src-0184",
+      "kind": "paragraph",
+      "text": "Confundir observabilidad con tableros simplifica una decisión que depende de propósito, evidencia y consecuencia. La velocidad inicial se paga cuando operación descubre el supuesto omitido. La corrección vuelve al episodio, identifica quién absorbe el costo y define una prueba antes de continuar."
+    },
+    {
+      "source_id": "src-0185",
+      "kind": "heading",
+      "text": "### Medir sólo componentes"
+    },
+    {
+      "source_id": "src-0186",
+      "kind": "paragraph",
+      "text": "Medir sólo componentes parece reducir coordinación, pero confunde acuerdo con conocimiento suficiente. El equipo debe comparar una explicación rival, localizar autoridad y registrar qué señal cambiaría el curso elegido."
+    },
+    {
+      "source_id": "src-0187",
+      "kind": "heading",
+      "text": "### Elegir SLI por disponibilidad"
+    },
+    {
+      "source_id": "src-0188",
+      "kind": "paragraph",
+      "text": "Elegir SLI por disponibilidad desplaza incertidumbre hacia personas que no participaron de la elección. Corregirlo exige reconstruir el mecanismo, hacer visible el trabajo añadido y establecer una condición de salida proporcional al daño posible."
+    },
+    {
+      "source_id": "src-0189",
+      "kind": "heading",
+      "text": "### Fijar SLO sin consecuencia"
+    },
+    {
+      "source_id": "src-0190",
+      "kind": "paragraph",
+      "text": "Fijar SLO sin consecuencia convierte una práctica en fin. La revisión pregunta qué función debía cumplir, qué evidencia produjo y por qué sigue siendo necesaria. Si la función desapareció, la práctica se adapta o se retira."
+    },
+    {
+      "source_id": "src-0191",
+      "kind": "heading",
+      "text": "### Usar presupuesto para tolerar daño"
+    },
+    {
+      "source_id": "src-0192",
+      "kind": "paragraph",
+      "text": "Usar presupuesto para tolerar daño oculta una frontera. El artefacto puede cerrar y la capacidad seguir incompleta. Un escenario adverso permite observar handoffs, excepciones y reparación antes de ampliar compromiso."
+    },
+    {
+      "source_id": "src-0193",
+      "kind": "heading",
+      "text": "### Alertar sin owner"
+    },
+    {
+      "source_id": "src-0194",
+      "kind": "paragraph",
+      "text": "Alertar sin owner confunde cumplimiento formal con decisión defendible. Se necesita conectar fuente, interpretación, implementación y efecto, incluyendo la autoridad que acepta el riesgo residual."
+    },
+    {
+      "source_id": "src-0195",
+      "kind": "heading",
+      "text": "### Depender de héroes"
+    },
+    {
+      "source_id": "src-0196",
+      "kind": "paragraph",
+      "text": "Depender de héroes suele premiar lo visible y dejar fuera mantenimiento, soporte y aprendizaje. La corrección compara el ciclo completo, documenta dependencia y ensaya una salida real."
+    },
+    {
+      "source_id": "src-0197",
+      "kind": "heading",
+      "text": "### Buscar una causa única"
+    },
+    {
+      "source_id": "src-0198",
+      "kind": "paragraph",
+      "text": "Buscar una causa única reduce diversidad de casos a un promedio conveniente. Se revisan poblaciones, extremos y daños asimétricos para evitar que una mejora global silencie una pérdida crítica."
+    },
+    {
+      "source_id": "src-0199",
+      "kind": "heading",
+      "text": "### Cerrar acciones sin verificar"
+    },
+    {
+      "source_id": "src-0200",
+      "kind": "paragraph",
+      "text": "Cerrar acciones sin verificar borra memoria y vuelve inexplicable el cambio de rumbo. Una baseline y un registro breve permiten conservar razones sin inmovilizar la estrategia."
+    },
+    {
+      "source_id": "src-0201",
+      "kind": "heading",
+      "text": "### Aprender sin devolver evidencia"
+    },
+    {
+      "source_id": "src-0202",
+      "kind": "paragraph",
+      "text": "Aprender sin devolver evidencia deja responsabilidad sin capacidad. El diseño debe unir permiso, recursos, evidencia y posibilidad de reparar; nombrar un dueño no crea por sí mismo una función operativa."
+    },
+    {
+      "source_id": "src-0203",
+      "kind": "heading",
+      "text": "## Consecuencias profesionales"
+    },
+    {
+      "source_id": "src-0204",
+      "kind": "paragraph",
+      "text": "N30 conecta observabilidad técnica, señales de negocio, SLI, SLO, incidentes y aprendizaje para gobernar la promesa en operación y retroalimentar decisiones anteriores. El avance profesional consiste en sostener una promesa bajo condiciones reales, con autoridad, evidencia y reparación, no en declarar que la solución quedó disponible."
+    },
+    {
+      "source_id": "src-0205",
+      "kind": "heading",
+      "text": "## Límites y tensiones"
+    },
+    {
+      "source_id": "src-0206",
+      "kind": "paragraph",
+      "text": "Ninguna arquitectura, contrato, prueba, control ni tablero elimina el juicio situado. Las dependencias cambian, la evidencia llega con demora, la operación distribuye poder y una mejora local puede desplazar daño. El expediente debe conservar población afectada, supuestos, autoridad, degradación aceptable, reparación y fecha de revisión."
+    },
+    {
+      "source_id": "src-0207",
+      "kind": "heading",
+      "text": "## De N30 a N31"
+    },
+    {
+      "source_id": "src-0208",
+      "kind": "paragraph",
+      "text": "N31 abrirá el Bloque G y distinguirá reglas, predicción, generación y agencia para decidir si la inteligencia artificial resulta pertinente. N30 no automatiza todavía el juicio ni selecciona modelos."
+    },
+    {
+      "source_id": "src-0209",
+      "kind": "heading",
+      "text": "## Síntesis"
+    },
+    {
+      "source_id": "src-0210",
+      "kind": "paragraph",
+      "text": "N30 conecta observabilidad técnica, señales de negocio, SLI, SLO, incidentes y aprendizaje para gobernar la promesa en operación y retroalimentar decisiones anteriores."
+    },
+    {
+      "source_id": "src-0211",
+      "kind": "paragraph",
+      "text": "El bloque no propone reemplazar una doctrina por otra. Propone hacer visibles las decisiones que cada práctica organiza, la evidencia que necesita y los daños que puede producir. El resultado es una intervención que puede explicarse, probarse y revisarse."
+    },
+    {
+      "source_id": "src-0212",
+      "kind": "heading",
+      "text": "## Cinco píldoras para recordar"
+    },
+    {
+      "source_id": "src-0213",
+      "kind": "list-item",
+      "text": "1. Observabilidad es la capacidad de comprender estados y comportamientos internos mediante señales externas suficientes y contextualizadas."
+    },
+    {
+      "source_id": "src-0214",
+      "kind": "list-item",
+      "text": "2. Monitoreo compara señales conocidas con condiciones y umbrales previamente definidos."
+    },
+    {
+      "source_id": "src-0215",
+      "kind": "list-item",
+      "text": "3. Telemetría reúne trazas, métricas, logs y contexto emitidos por componentes y recorridos."
+    },
+    {
+      "source_id": "src-0216",
+      "kind": "list-item",
+      "text": "4. Una señal de negocio representa una consecuencia operativa o de valor producida por el sistema."
+    },
+    {
+      "source_id": "src-0217",
+      "kind": "list-item",
+      "text": "5. Un SLI cuantifica una dimensión observable de la experiencia o capacidad que importa a quienes dependen del servicio."
+    },
+    {
+      "source_id": "src-0218",
+      "kind": "heading",
+      "text": "## Glosario esencial"
+    },
+    {
+      "source_id": "src-0219",
+      "kind": "paragraph",
+      "text": "**Observabilidad:** observabilidad es la capacidad de comprender estados y comportamientos internos mediante señales externas suficientes y contextualizadas."
+    },
+    {
+      "source_id": "src-0220",
+      "kind": "paragraph",
+      "text": "**Monitoreo:** monitoreo compara señales conocidas con condiciones y umbrales previamente definidos."
+    },
+    {
+      "source_id": "src-0221",
+      "kind": "paragraph",
+      "text": "**Telemetría:** telemetría reúne trazas, métricas, logs y contexto emitidos por componentes y recorridos."
+    },
+    {
+      "source_id": "src-0222",
+      "kind": "paragraph",
+      "text": "**Señal de negocio:** una señal de negocio representa una consecuencia operativa o de valor producida por el sistema."
+    },
+    {
+      "source_id": "src-0223",
+      "kind": "paragraph",
+      "text": "**Indicador de nivel de servicio:** un SLI cuantifica una dimensión observable de la experiencia o capacidad que importa a quienes dependen del servicio."
+    },
+    {
+      "source_id": "src-0224",
+      "kind": "paragraph",
+      "text": "**Objetivo de nivel de servicio:** un SLO establece el nivel esperado de un SLI durante una ventana y orienta decisiones."
+    },
+    {
+      "source_id": "src-0225",
+      "kind": "paragraph",
+      "text": "**Presupuesto de error:** el presupuesto de error expresa la tolerancia restante entre desempeño observado y objetivo acordado."
+    },
+    {
+      "source_id": "src-0226",
+      "kind": "paragraph",
+      "text": "**Alerta accionable:** una alerta accionable comunica una condición relevante a alguien capaz de intervenir con contexto suficiente."
+    },
+    {
+      "source_id": "src-0227",
+      "kind": "paragraph",
+      "text": "**Incidente:** un incidente es una alteración no deseada de la capacidad o promesa que requiere coordinación y aprendizaje."
+    },
+    {
+      "source_id": "src-0228",
+      "kind": "paragraph",
+      "text": "**Respuesta coordinada:** respuesta coordinada distribuye autoridad y comunicación para limitar daño bajo presión."
+    },
+    {
+      "source_id": "src-0229",
+      "kind": "paragraph",
+      "text": "**Revisión posterior:** una revisión posterior reconstruye condiciones, decisiones y mecanismos para aprender sin reducir el incidente a culpa individual."
+    },
+    {
+      "source_id": "src-0230",
+      "kind": "paragraph",
+      "text": "**Bucle de aprendizaje operativo:** un bucle de aprendizaje operativo devuelve evidencia de uso e incidentes a arquitectura, contratos, calidad y gobierno de liberación."
+    },
+    {
+      "source_id": "src-0231",
+      "kind": "heading",
+      "text": "## Preguntas de preparación"
+    },
+    {
+      "source_id": "src-0232",
+      "kind": "list-item",
+      "text": "1. ¿Qué decisión permite sostener observabilidad y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "src-0233",
+      "kind": "list-item",
+      "text": "2. ¿Qué decisión permite sostener monitoreo y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "src-0234",
+      "kind": "list-item",
+      "text": "3. ¿Qué decisión permite sostener telemetría y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "src-0235",
+      "kind": "list-item",
+      "text": "4. ¿Qué decisión permite sostener señal de negocio y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "src-0236",
+      "kind": "list-item",
+      "text": "5. ¿Qué decisión permite sostener indicador de nivel de servicio y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "src-0237",
+      "kind": "list-item",
+      "text": "6. ¿Qué decisión permite sostener objetivo de nivel de servicio y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "src-0238",
+      "kind": "paragraph",
+      "text": "Para el encuentro, seleccionar una intervención conocida, completar el instrumento con evidencia verificable y preparar una decisión provisional. Incluir una explicación rival, una condición que obligaría a revisar y una consecuencia para una persona afectada."
+    },
+    {
+      "source_id": "src-0239",
+      "kind": "heading",
+      "text": "## Referentes"
+    },
+    {
+      "source_id": "src-0240",
+      "kind": "paragraph",
+      "text": "**Google SRE.** Formaliza SLI, SLO, presupuestos de error y prácticas de confiabilidad."
+    },
+    {
+      "source_id": "src-0241",
+      "kind": "paragraph",
+      "text": "**OpenTelemetry.** Estandariza señales y contexto de telemetría."
+    },
+    {
+      "source_id": "src-0242",
+      "kind": "paragraph",
+      "text": "**NIST.** Integra respuesta a incidentes con gobierno de riesgo."
+    },
+    {
+      "source_id": "src-0243",
+      "kind": "paragraph",
+      "text": "**Nicole Forsgren, Jez Humble y Gene Kim.** Relacionan estabilidad, flujo y desempeño organizacional."
+    },
+    {
+      "source_id": "src-0244",
+      "kind": "paragraph",
+      "text": "**Erik Hollnagel.** Desarrolla aprendizaje desde el trabajo que sale bien y mal."
+    },
+    {
+      "source_id": "src-0245",
+      "kind": "paragraph",
+      "text": "**Nancy Leveson.** Analiza accidentes como resultado de controles y condiciones sistémicas."
+    },
+    {
+      "source_id": "src-0246",
+      "kind": "heading",
+      "text": "## Referencias base"
+    },
+    {
+      "source_id": "src-0247",
+      "kind": "list-item",
+      "text": "- Beyer, B., Jones, C., Petoff, J. y Murphy, N. R. (2016). Site Reliability Engineering. O'Reilly. https://sre.google/sre-book/table-of-contents/"
+    },
+    {
+      "source_id": "src-0248",
+      "kind": "list-item",
+      "text": "- Beyer, B., Murphy, N. R., Rensin, D. K., Kawahara, K. y Thorne, S. (2018). The Site Reliability Workbook. O'Reilly. https://sre.google/workbook/table-of-contents/"
+    },
+    {
+      "source_id": "src-0249",
+      "kind": "list-item",
+      "text": "- OpenTelemetry (2026). OpenTelemetry Specification 1.60.0. https://opentelemetry.io/docs/specs/otel/"
+    },
+    {
+      "source_id": "src-0250",
+      "kind": "list-item",
+      "text": "- OpenTelemetry (2026). Signals. https://opentelemetry.io/docs/concepts/signals/"
+    },
+    {
+      "source_id": "src-0251",
+      "kind": "list-item",
+      "text": "- NIST (2025). Incident Response Recommendations and Considerations for Cybersecurity Risk Management, SP 800-61r3. https://doi.org/10.6028/NIST.SP.800-61r3"
+    },
+    {
+      "source_id": "src-0252",
+      "kind": "list-item",
+      "text": "- NIST (2024). The Cybersecurity Framework 2.0. https://doi.org/10.6028/NIST.CSWP.29"
+    },
+    {
+      "source_id": "src-0253",
+      "kind": "list-item",
+      "text": "- Forsgren, N., Humble, J. y Kim, G. (2018). Accelerate. IT Revolution."
+    },
+    {
+      "source_id": "src-0254",
+      "kind": "list-item",
+      "text": "- Allspaw, J. (2016). Trade-Offs Under Pressure. Adaptive Capacity Labs."
+    },
+    {
+      "source_id": "src-0255",
+      "kind": "list-item",
+      "text": "- Hollnagel, E. (2014). Safety-I and Safety-II. Ashgate."
+    },
+    {
+      "source_id": "src-0256",
+      "kind": "list-item",
+      "text": "- Woods, D. D. (2015). Four Concepts for Resilience and the Implications for the Future of Resilience Engineering. Reliability Engineering and System Safety, 141, 5-9."
+    },
+    {
+      "source_id": "src-0257",
+      "kind": "list-item",
+      "text": "- Leveson, N. (2011). Engineering a Safer World. MIT Press."
+    },
+    {
+      "source_id": "src-0258",
+      "kind": "list-item",
+      "text": "- ISO/IEC (2018). ISO/IEC 20000-1:2018 Service Management System Requirements. https://www.iso.org/standard/70636.html"
+    }
+  ],
+  "block_count": 258,
+  "word_count": 7384
+}

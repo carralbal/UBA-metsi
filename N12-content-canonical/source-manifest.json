@@ -1,0 +1,2475 @@
+{
+  "document": "N12",
+  "stage": "content-canonical-v1",
+  "source": "source/N12_eventos_estados_comandos_evidencia_y_autoridad-content-canonical-v1.md",
+  "source_sha256": "ce69f661943c34cf0e812685b6b61bfb7c7baff0b2cb66fa4b636ff27630769a",
+  "eligible_blocks": [
+    {
+      "kind": "heading",
+      "line_start": 1,
+      "line_end": 1,
+      "text": "# N12 · Eventos, estados, comandos, evidencia y autoridad",
+      "source_id": "N12-S001",
+      "sha256": "b25b80c79ae3de40a552cc5925467ab290974e644b12b7bdccbcfcdc11baa601",
+      "words": 7
+    },
+    {
+      "kind": "heading",
+      "line_start": 3,
+      "line_end": 3,
+      "text": "## Pregunta profesional",
+      "source_id": "N12-S002",
+      "sha256": "dd0503d4a27aa0c6208344d52128946ea432c08b50a5f0b47381782f27bcb1e4",
+      "words": 2
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 5,
+      "line_end": 5,
+      "text": "¿Cómo distinguir lo que ocurrió, lo que alguien intentó hacer, lo que el sistema considera vigente y quién tenía autoridad para decidirlo?",
+      "source_id": "N12-S003",
+      "sha256": "e99384d17399db3b63d0bf9d8b9e684c4c39c594d4de6236be58ca2f8786c774",
+      "words": 22
+    },
+    {
+      "kind": "heading",
+      "line_start": 7,
+      "line_end": 7,
+      "text": "## La inscripción que estaba aceptada y no existía",
+      "source_id": "N12-S004",
+      "sha256": "a567b274c8f7d27edec5162997379ed37d6a0ed974ba2304b208462b464ec093",
+      "words": 8
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 9,
+      "line_end": 9,
+      "text": "La inscripción a una materia universitaria abre a las nueve. Hay un solo lugar disponible y decenas de estudiantes actualizan la pantalla. A las 9:00:04, Martina presiona “Inscribirme”. La interfaz muestra un círculo verde y el mensaje “Solicitud procesada”. A las 9:00:06 recibe un correo con el asunto “Inscripción confirmada”. Cierra la computadora convencida de que obtuvo la vacante.",
+      "source_id": "N12-S005",
+      "sha256": "50e158d963be50761f8e1aec8548c60d8d0a30b6f313d00f64e42d33cd9b22a1",
+      "words": 63
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 11,
+      "line_end": 11,
+      "text": "En otra casa, Julián presiona el mismo botón casi al mismo tiempo. Su pantalla tarda unos segundos, pero también muestra confirmación. El sistema de autogestión registra dos solicitudes, el servicio de cupos recibe primero la de Julián y la base de la facultad conserva sólo una vacante asignada. El correo de Martina fue emitido por un componente que interpretó “solicitud recibida” como “inscripción aceptada”.",
+      "source_id": "N12-S006",
+      "sha256": "1c183a15f5385d9c6f0fcd7104d7aba4b811eb58455592d30fb316f041d74eeb",
+      "words": 64
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 13,
+      "line_end": 13,
+      "text": "El lunes, Martina no aparece en la lista docente. Presenta el correo y una captura de pantalla. La administración consulta tres sistemas. La interfaz conserva una operación exitosa; el servicio de cupos registra un rechazo; la base académica muestra a Julián como inscripto. Ningún registro fue necesariamente inventado. Cada uno habla de una cosa distinta.",
+      "source_id": "N12-S007",
+      "sha256": "34dab958f283b65f2ca6f8d0bfdf19a1724f960034dd24be709b5b5bd5100cee",
+      "words": 55
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 15,
+      "line_end": 15,
+      "text": "Una persona de soporte resume el incidente con una frase conocida: “los sistemas quedaron inconsistentes”. La descripción es cierta, pero todavía no permite reparar. ¿El botón emitió una orden o registró una inscripción? ¿El círculo verde confirmó recepción o aceptación? ¿El correo es evidencia de una decisión, de un mensaje enviado o de una promesa institucional? ¿Qué sistema puede declarar quién ocupa la vacante? ¿La facultad debe respetar una confirmación emitida sin cupo?",
+      "source_id": "N12-S008",
+      "sha256": "1f0b494b2d509448b03fafab3a2439890d664cc7cdf76776aed802a95d10e3d7",
+      "words": 73
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 17,
+      "line_end": 17,
+      "text": "El equipo reconstruye la secuencia. La acción de Martina produjo un **comando**: una solicitud para reservar una vacante. El servicio de cupos evaluó reglas y produjo un **evento** de rechazo porque la vacante ya había sido asignada. La interfaz construyó un **estado** local de éxito a partir de haber enviado la solicitud, no de haber recibido la decisión. El correo funciona como **evidencia** de lo que la institución comunicó, aunque no pruebe por sí solo que la inscripción académica se haya perfeccionado. La **autoridad** para reconocer la vacante pertenece al régimen académico y a los roles definidos por la facultad, no al componente que pudo enviar el correo.",
+      "source_id": "N12-S009",
+      "sha256": "b231285ae0fd1d0aa11a13b3b550dd5ae9bc30a2bbe1ce4195d3ff02bd7a622e",
+      "words": 108
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 19,
+      "line_end": 19,
+      "text": "Nombrar las piezas cambia la intervención. Si el botón se llama “Confirmar inscripción”, pero sólo envía una solicitud, el problema es semántico y de experiencia. Si el servicio acepta dos comandos contra la última vacante, existe además un problema de concurrencia. Si un correo puede crear una obligación institucional aunque la base no cambie, hace falta una política de reparación. Si soporte puede agregar a Martina manualmente, se debe registrar con qué autoridad y qué ocurre con el cupo.",
+      "source_id": "N12-S010",
+      "sha256": "e037e360c3aa4a8f4c7e1762b265f5b630bd77e36b5218f3d6f5f0e9abc955de",
+      "words": 79
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 21,
+      "line_end": 21,
+      "text": "El equipo decide no comenzar por una arquitectura nueva. Primero define el contrato de la transición. El comando “Solicitar inscripción” puede ser aceptado o rechazado. Sólo el evento “Inscripción aceptada” habilita el estado “Inscripta”. La interfaz debe diferenciar “solicitud recibida” de “vacante confirmada”. Cada resultado conserva identificador, momento, regla aplicada y actor responsable. Cuando una persona autorizada repara una promesa errónea, el sistema registra la excepción sin borrar el rechazo original.",
+      "source_id": "N12-S011",
+      "sha256": "e4caf2f92aa68f48325f7f5c967af1b7dec405feafddbb58306f65fbfa65cd52",
+      "words": 71
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 23,
+      "line_end": 23,
+      "text": "La solución tampoco consiste en convertir todo en eventos. La lista actual de estudiantes puede seguir siendo una vista conveniente. El valor de la distinción está en que esa vista ya no se confunde con la historia completa ni con la autoridad para cambiarla. Se puede preguntar cómo se llegó al estado, qué comando lo provocó, qué regla fue evaluada y qué evidencia permite revisar la decisión.",
+      "source_id": "N12-S012",
+      "sha256": "bb9cdfbe0fb0b7bc6a589b9441ab8b90ace3261f49626d4ecb360b145e8ce51d",
+      "words": 67
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 25,
+      "line_end": 25,
+      "text": "La escena muestra por qué muchas discusiones técnicas son, al mismo tiempo, institucionales. Una aplicación puede aceptar un clic sin aceptar una inscripción. Un mensaje puede circular correctamente y expresar una promesa equivocada. Una persona puede tener permiso de escritura y no autoridad para modificar un régimen. Un estado puede ser actual y, aun así, no ser legítimo.",
+      "source_id": "N12-S013",
+      "sha256": "89fd06b896f4df549cd6f982226295551d3dd49edf14b6bf064db1638fef3bd1",
+      "words": 58
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 27,
+      "line_end": 27,
+      "text": "Esta lectura trabaja esa frontera. Eventos, estados, comandos, evidencia y autoridad no son cinco nombres para objetos de software. Son distinciones para conservar intención, historia, significado, responsabilidad y posibilidad de reparación dentro de un sistema de información.",
+      "source_id": "N12-S014",
+      "sha256": "8dc862343520e5a849d9871c13616afca226e571029a814be7dfd4f7ba5b0cae",
+      "words": 37
+    },
+    {
+      "kind": "heading",
+      "line_start": 29,
+      "line_end": 29,
+      "text": "## Hotel Horizonte: una habitación lista en tres sistemas",
+      "source_id": "N12-S015",
+      "sha256": "f00d50d37ba275987aa8cd9cc9baf8d00ed899abff94bb2eec3c9f61d00192c8",
+      "words": 8
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 31,
+      "line_end": 31,
+      "text": "HH-11 dejó tres afirmaciones con fuerzas diferentes. La más defendible sostiene que ciertas integraciones de terceros presentan mayor proporción de episodios de reparación durante el período auditado. Una segunda propone que la divergencia de significado sobre disponibilidad contribuye al problema. Una tercera formula como hipótesis que una conciliación anticipada podría reducir reparaciones sin aumentar rechazos incorrectos.",
+      "source_id": "N12-S016",
+      "sha256": "aab6b39a5c803ec1e520357f8312e5648d3e0dfb6d466e2318649745408f2976",
+      "words": 56
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 33,
+      "line_end": 33,
+      "text": "Para avanzar, el equipo observa una reserva concreta. A las 13:42, Mariela Benítez marca “limpieza terminada” en la planilla de Housekeeping. A las 13:55, una supervisora confirma la inspección. A las 14:03, el PMS recibe el valor “disponible”. A las 14:04, Lucía intenta asignar la habitación. A las 14:05, la cerradura informa batería insuficiente. Comercial, mientras tanto, había prometido ingreso a partir de las 14:00.",
+      "source_id": "N12-S017",
+      "sha256": "e7a81e83e7dad0b143f1b92cc6610223e5bebe87d8d6bced6b30960ebe3a96cf",
+      "words": 71
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 35,
+      "line_end": 35,
+      "text": "¿Cuándo estuvo lista la habitación? La pregunta mezcla por lo menos cuatro estados: limpieza terminada, inspección aprobada, asignable y accesible. También mezcla eventos, comandos y autoridad. La marca de Mariela describe trabajo realizado. La confirmación de supervisión reconoce una condición operativa. La asignación de Lucía es una orden condicionada. El aviso de la cerradura aporta evidencia de que el acceso no puede completarse. La promesa comercial agrega una obligación que ningún estado técnico representa por sí solo.",
+      "source_id": "N12-S018",
+      "sha256": "f5a7fcb85a66cd68614365ce921cb0bbb2a54e6c0be5f6eaaa3127f97a4a1aa7",
+      "words": 77
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 37,
+      "line_end": 37,
+      "text": "HH-12 no buscará elegir una palabra única para todo. Construirá una transición verificable entre intención, decisión, cambio reconocido y evidencia, con responsabilidades y reparación explícitas.",
+      "source_id": "N12-S019",
+      "sha256": "a04c73496b05e28f7f3c8dfa62f4a3cc746bf4522db00046ceffe9cb9b5128e7",
+      "words": 25
+    },
+    {
+      "kind": "heading",
+      "line_start": 39,
+      "line_end": 39,
+      "text": "## Tesis",
+      "source_id": "N12-S020",
+      "sha256": "07fd7743611d693b9206dc5452d45acbf89b634bf3a5b717f7899f11a241a3bb",
+      "words": 1
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 41,
+      "line_end": 41,
+      "text": "Un sistema de información conserva mejor la realidad operacional cuando distingue cinco funciones. Un comando expresa una intención dirigida a una autoridad. Un evento afirma que algo ocurrió. Un estado representa qué se considera vigente bajo ciertas reglas y hasta cierto momento. La evidencia permite sostener o impugnar esas afirmaciones. La autoridad determina quién o qué puede reconocer una transición y asumir sus consecuencias.",
+      "source_id": "N12-S021",
+      "sha256": "adc3954f87e81656a60a9d65a2e04e8c713e609da1d478df93ce1993dd78cdfc",
+      "words": 64
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 43,
+      "line_end": 43,
+      "text": "Confundir esas funciones produce promesas prematuras, estados imposibles, auditorías engañosas y automatizaciones sin responsabilidad. Separarlas no obliga a adoptar una arquitectura orientada a eventos ni a almacenar toda la historia. Obliga a hacer explícito qué afirma cada representación, qué decisión la produjo, qué regla se aplicó y cómo puede repararse.",
+      "source_id": "N12-S022",
+      "sha256": "660ac198e97cb53f54b8d9fc41251e9de120dc89252cfb9861a2097b07a4ef31",
+      "words": 50
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 45,
+      "line_end": 45,
+      "text": "La corrección técnica tampoco alcanza. Un mensaje bien formado no demuestra que el evento sea verdadero; un permiso de acceso no crea autoridad institucional; una intervención humana no garantiza control efectivo. El diseño debe conectar semántica, temporalidad, reglas, evidencia y responsabilidad con la promesa que el sistema sostiene.",
+      "source_id": "N12-S023",
+      "sha256": "df9472bf18373779a33d91076ccfdcc076f6151b91680216acd09357d77cf293",
+      "words": 48
+    },
+    {
+      "kind": "heading",
+      "line_start": 47,
+      "line_end": 47,
+      "text": "## De N11 a N12: de la afirmación a la transición",
+      "source_id": "N12-S024",
+      "sha256": "dd58ed0c8ceb9b965b56ac6ce4a311883056199a04177058ec203feaa0bf4285",
+      "words": 10
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 49,
+      "line_end": 49,
+      "text": "N11 mostró que un dato sostiene una afirmación cuando conserva relación auditable con fenómeno, operacionalización, población, procedencia, transformación, incertidumbre y decisión. HH-11 delimitó qué puede afirmarse sobre las reparaciones de Hotel Horizonte y qué usos exceden la evidencia.",
+      "source_id": "N12-S025",
+      "sha256": "5823877b09e8e6328890738b2f67965edcec3fb18369bb408ff301ec37905326",
+      "words": 38
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 51,
+      "line_end": 51,
+      "text": "N12 cambia la unidad de análisis. Ya no pregunta principalmente si una tasa representa bien un fenómeno. Pregunta qué tipo de representación necesita cada cambio operacional. “Se solicitó una asignación”, “la asignación fue aceptada”, “la habitación está asignada” y “Recepción podía asignarla” no son versiones estilísticas de una misma frase. Expresan intención, ocurrencia, estado y autoridad.",
+      "source_id": "N12-S026",
+      "sha256": "b6f36513a3819cc8930a5caf16393a2cb65236a48a9e571969cdaf791af7a1bd",
+      "words": 56
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 53,
+      "line_end": 53,
+      "text": "El avance tampoco repite N03. Allí la frontera y la retroalimentación mostraron que observar e intervenir cambia el sistema. N12 toma una transición concreta dentro de ese sistema y pregunta cómo representarla sin borrar su historia normativa. Tampoco desarrolla todavía demoras, entrega repetida, concurrencia, consistencia, idempotencia ni reconciliación. Esos problemas pertenecen a N13. Aquí se construye el vocabulario que permitirá distinguirlos.",
+      "source_id": "N12-S027",
+      "sha256": "1c83406847e6c081fef99d04f6976b0abfd669a1c4416116192c8b9739ae238f",
+      "words": 61
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 55,
+      "line_end": 55,
+      "text": "El producto será HH-12, mapa de transición verificable. Recibirá una afirmación de HH-11 y mostrará comando, autoridad, precondiciones, evento, estado resultante, evidencia, tiempos, excepciones y reparación.",
+      "source_id": "N12-S028",
+      "sha256": "1143222cc8d86d8d6e292c5e8e282a985877b006d13a0ea0c7faae15b6a08b07",
+      "words": 26
+    },
+    {
+      "kind": "heading",
+      "line_start": 57,
+      "line_end": 57,
+      "text": "## Movimiento 1 · Separar intención, ocurrencia y situación vigente",
+      "source_id": "N12-S029",
+      "sha256": "54b351cbed1ff2961d3f67af6f6b178c45e64878dfdc180d69c2e25fd85b536c",
+      "words": 8
+    },
+    {
+      "kind": "heading",
+      "line_start": 59,
+      "line_end": 59,
+      "text": "### Evento: una afirmación sobre algo que ocurrió",
+      "source_id": "N12-S030",
+      "sha256": "051a44dc6d581cfc15972a9b8e2761d728fe54cc41159b9ff015868e026a66fe",
+      "words": 7
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 61,
+      "line_end": 61,
+      "text": "Un evento representa una ocurrencia relevante para el sistema. Se nombra en pasado porque no ordena ni predice: “Reserva confirmada”, “Limpieza terminada”, “Inspección aprobada”, “Asignación rechazada”. Su forma declara que, según cierta fuente y cierto criterio, algo ya sucedió.",
+      "source_id": "N12-S031",
+      "sha256": "dcd48fcdb382015a7aac4c77e7a71eb1ae2079df195fb2d5bff56723f6c8b04b",
+      "words": 39
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 63,
+      "line_end": 63,
+      "text": "Esto no convierte al evento en hecho indiscutible. Puede haber sido emitido por error, duplicado, producido con una regla defectuosa o contradicho por evidencia posterior. La inmutabilidad técnica de un registro no garantiza verdad. Conserva que el sistema afirmó algo en un momento.",
+      "source_id": "N12-S032",
+      "sha256": "dc842c41bcfe8023faf04f375e6ddfad9d9ec60b4a6afd487c30f8795eb090fd",
+      "words": 43
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 65,
+      "line_end": 65,
+      "text": "Un buen evento identifica qué ocurrió, sobre qué entidad, cuándo ocurrió, quién o qué lo produjo y con qué correlación puede vincularse a otras piezas. También delimita su semántica. “Estado actualizado” dice poco porque obliga a conocer una tabla externa. “Inspección de habitación aprobada” conserva una distinción que puede ser comprendida y auditada.",
+      "source_id": "N12-S033",
+      "sha256": "6d9eb2173e8e84c7e0ded9d1113e9a427ed39f1f637f70e34863d897f2cc5a80",
+      "words": 53
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 67,
+      "line_end": 67,
+      "text": "El evento debe tener relevancia de dominio. Registrar cada escritura de base produce detalle técnico sin necesariamente preservar intención. Una modificación del campo `status` puede deberse a aprobación, corrección, migración o reparación. Si esas causas importan para decidir, el modelo necesita representarlas.",
+      "source_id": "N12-S034",
+      "sha256": "18f051aa32832d1625ecb0fd275979adbde59ca4c38fb6a668e56a8d335346a7",
+      "words": 42
+    },
+    {
+      "kind": "heading",
+      "line_start": 69,
+      "line_end": 69,
+      "text": "### Comando: una intención que puede ser rechazada",
+      "source_id": "N12-S035",
+      "sha256": "bd03dab34931d803dc46cea5ce9546deacbad3c8dcd4bbcfb7abfe32f58cdcbe",
+      "words": 7
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 71,
+      "line_end": 71,
+      "text": "Un comando solicita que el sistema intente producir un cambio. Se formula como acción: “Asignar habitación”, “Confirmar reserva”, “Cancelar estadía”, “Autorizar excepción”. A diferencia del evento, todavía no afirma que el cambio ocurrió.",
+      "source_id": "N12-S036",
+      "sha256": "9d33b66714fa20a65c7320a67b52f20f0e0a81adff67e9885ed8419537fc4dde",
+      "words": 33
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 73,
+      "line_end": 73,
+      "text": "Esta distinción protege contra la confirmación prematura. Una interfaz que muestra éxito porque envió el comando confunde transporte con decisión. Un correo que dice “reserva cancelada” antes de que el sistema valide cargos, autoridad y dependencias convierte una intención en promesa.",
+      "source_id": "N12-S037",
+      "sha256": "a01ad04f4b3d1c7b558dbce5bd1d400db0681231bf9d0c17dd212674ef218f75",
+      "words": 41
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 75,
+      "line_end": 75,
+      "text": "Todo comando necesita destinatario responsable, actor emisor, precondiciones y resultados posibles. Puede aceptarse, rechazarse, quedar pendiente o requerir revisión. El rechazo también es información. Debe explicar una razón suficiente para que la persona o el sistema sepa qué alternativa existe.",
+      "source_id": "N12-S038",
+      "sha256": "e70720332324e309b307e890421bfa428b40660e2355c9aaee6705b30f90e103",
+      "words": 40
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 77,
+      "line_end": 77,
+      "text": "No toda interacción merece modelarse como comando. Consultar disponibilidad no intenta cambiarla. Descargar una factura no debería alterar el contrato que representa. La separación entre consulta y comando reduce efectos ocultos, aunque no obliga a implementar CQRS. Martin Fowler advierte que separar modelos de lectura y escritura agrega complejidad y sólo conviene cuando el dominio lo justifica.",
+      "source_id": "N12-S039",
+      "sha256": "e804fbea37115ab182e8b10a74adf9517b4186afda84cc94d5a5cb84934d9ee5",
+      "words": 57
+    },
+    {
+      "kind": "heading",
+      "line_start": 79,
+      "line_end": 79,
+      "text": "### Estado: una respuesta vigente construida bajo reglas",
+      "source_id": "N12-S040",
+      "sha256": "acc00e1d6f327d3cffba9b5428be919628a501f0d5acc5b27c22ecf5130ef92e",
+      "words": 7
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 81,
+      "line_end": 81,
+      "text": "Un estado representa la situación reconocida de una entidad o proceso en un momento. Puede almacenarse directamente o derivarse de una secuencia de eventos. “Habitación asignable”, “reserva confirmada” y “pago conciliado” son respuestas a preguntas operacionales.",
+      "source_id": "N12-S041",
+      "sha256": "9a691b85c47afdb19b00f482b544822ce0a6f8439cb1b88d2cf8b2138efc9059",
+      "words": 36
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 83,
+      "line_end": 83,
+      "text": "El estado no es la suma completa de la historia. Selecciona lo necesario para una decisión. Dos reservas pueden estar “confirmadas” y haber llegado allí por caminos diferentes: pago anticipado, garantía corporativa o excepción manual. Si el camino cambia derechos o reparaciones, el estado necesita conservar vínculos con la evidencia relevante.",
+      "source_id": "N12-S042",
+      "sha256": "017187268a6eaf6ef3519ef3d4effd2cab838f8817f0669b6b59c6ba5c69c760",
+      "words": 51
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 85,
+      "line_end": 85,
+      "text": "Una vista de estado puede estar desactualizada respecto de otra. También puede ser correcta para un propósito y equivocada para otro. “Limpieza terminada” responde por una tarea; no necesariamente por inspección, cerradura, asignación ni promesa comercial. El error aparece cuando una palabra atraviesa fronteras sin conservar su definición.",
+      "source_id": "N12-S043",
+      "sha256": "1d523478d4edfaea32e057151c5d7c9db8289618bf4d14bf78d4949048c19880",
+      "words": 48
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 87,
+      "line_end": 87,
+      "text": "En UML, una máquina de estados modela estados y transiciones disparadas por eventos bajo condiciones. METSI conserva esa precisión, pero amplía la pregunta: ¿quién reconoce la transición, qué evidencia la sostiene y qué obligación produce? El diagrama técnico es necesario en algunos casos, pero no reemplaza la dimensión institucional.",
+      "source_id": "N12-S044",
+      "sha256": "af9035f083831225fb42a0728e8a6b33816c86ea1b645dc24a18b30f7412a806",
+      "words": 49
+    },
+    {
+      "kind": "heading",
+      "line_start": 89,
+      "line_end": 89,
+      "text": "### Consulta: preguntar no debería fingir que se decidió",
+      "source_id": "N12-S045",
+      "sha256": "4515a8c2195e70775b2abe358527c0ba06dc45acae6476ecc7482e2c5b9d0f3c",
+      "words": 8
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 91,
+      "line_end": 91,
+      "text": "Una consulta solicita información sin intención de cambiar el sistema. “¿Qué habitaciones son asignables?” puede responderse con una proyección. “Asignar la 412” es un comando. Mezclar ambas funciones crea operaciones que parecen lectura y producen efectos.",
+      "source_id": "N12-S046",
+      "sha256": "f89e67c45b55e7dec5f4ab597cfb6791d2a9681c5da44c55032dda6bf595b80f",
+      "words": 36
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 93,
+      "line_end": 93,
+      "text": "La separación también ayuda a reconocer incertidumbre. Una consulta puede responder “desconocido” o “actualizado hasta las 13:58”. No necesita fabricar un estado definitivo cuando la información todavía no llegó. La interfaz debe representar esa condición para que quien decide no confunda ausencia de actualización con ausencia de problema.",
+      "source_id": "N12-S047",
+      "sha256": "9beef133d91fbbe536da67f4e5e241ff118527fa4e67d1696aa046e2bf2baeba",
+      "words": 49
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 95,
+      "line_end": 95,
+      "text": "En el caso de la inscripción universitaria, consultar la lista no asigna vacantes. En Hotel Horizonte, ver una habitación como disponible no debe reservarla silenciosamente. Los bloqueos o reservas temporales pueden ser necesarios, pero deben modelarse como decisiones explícitas y no como efectos laterales invisibles.",
+      "source_id": "N12-S048",
+      "sha256": "72da34b88df298bd152dc2e239bdf7d030ecbced18fa99bee5eb9daae55b505e",
+      "words": 45
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 97,
+      "line_end": 97,
+      "text": "La consulta tampoco es neutral por definición. Una lista puede omitir casos, ordenar prioridades o exponer información que modifica la conducta. Lo que la distingue del comando es que su contrato no autoriza una transición. Si observar produce un bloqueo, registra una preferencia o consume una oportunidad, ya existe un efecto que debe nombrarse. Esta prueba evita llamar lectura a una decisión encubierta.",
+      "source_id": "N12-S049",
+      "sha256": "1ba12801dc83e21bd59de9b6d5a8d3e8360da78f63e29faaea1fb22c8e534079",
+      "words": 63
+    },
+    {
+      "kind": "heading",
+      "line_start": 99,
+      "line_end": 99,
+      "text": "### Evidencia: por qué se cree que el evento ocurrió",
+      "source_id": "N12-S050",
+      "sha256": "0f0962484565b788bea085b78400266ba62dc5e547816eb3d7372a95aa832c6b",
+      "words": 9
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 101,
+      "line_end": 101,
+      "text": "Un evento es una afirmación estructurada. La evidencia permite evaluar esa afirmación. Puede incluir una firma, un documento, una lectura de sensor, un registro técnico, una observación, una aprobación o una combinación.",
+      "source_id": "N12-S051",
+      "sha256": "aaedcbbf114287185324b34ce1b471a4f2c15f64e913b552245a54c62019dd9e",
+      "words": 32
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 103,
+      "line_end": 103,
+      "text": "“Pago recibido” podría sostenerse con confirmación del procesador, identificador de transacción y conciliación posterior. “Habitación inspeccionada” puede requerir identidad de quien inspeccionó, criterio aplicado y observaciones. Un clic registrado demuestra interacción con una interfaz, no necesariamente comprensión ni consentimiento.",
+      "source_id": "N12-S052",
+      "sha256": "101bc81a07b97a76c1b0a7e0305d555786652dd4ca15e501d80e5ea77a082148",
+      "words": 39
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 105,
+      "line_end": 105,
+      "text": "La evidencia debe ser proporcional al efecto. Para actualizar una preferencia reversible puede alcanzar la acción autenticada de una persona. Para cancelar una estadía, devolver dinero o negar acceso, se necesitan controles más fuertes y una vía de impugnación.",
+      "source_id": "N12-S053",
+      "sha256": "010acb2a9c26b89c9cc7f1525f2feaee5d3de0f3e8a430aa09cc771d1cc9b9bc",
+      "words": 39
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 107,
+      "line_end": 107,
+      "text": "No se debe adjuntar evidencia ilimitada. Guardar imágenes, conversaciones o datos personales por si algún día resultan útiles crea riesgos. El principio es conservar lo mínimo que permite sostener, auditar y reparar la transición bajo una política de retención explícita.",
+      "source_id": "N12-S054",
+      "sha256": "1e8747de12346eb0f795c296a7ae0a23df66ede5a61a913af40a4fce192cc370",
+      "words": 40
+    },
+    {
+      "kind": "heading",
+      "line_start": 109,
+      "line_end": 109,
+      "text": "### Autoridad: capacidad legítima, no sólo permiso técnico",
+      "source_id": "N12-S055",
+      "sha256": "76d4bdc5cb6d93847cea8d47a8b2a63c1f52ef10092556d3943719387ff23414",
+      "words": 7
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 111,
+      "line_end": 111,
+      "text": "La autoridad es la capacidad reconocida para ordenar, validar o asumir una decisión dentro de un sistema social. Puede estar distribuida entre personas, áreas, normas, contratos y componentes. Un permiso técnico implementa parte de esa capacidad, pero no la define por completo.",
+      "source_id": "N12-S056",
+      "sha256": "e1a8a755bf2bc82d6c0083b922db311a783d223c7b96a59070a7742a6a9e2bbe",
+      "words": 42
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 113,
+      "line_end": 113,
+      "text": "El control de acceso basado en roles fue propuesto por David Ferraiolo y Richard Kuhn y desarrollado luego por Ravi Sandhu y otros. Organiza usuarios, roles, permisos y restricciones, y resulta valioso para responder quién puede ejecutar una operación sobre un recurso. Sin embargo, que una cuenta posea permiso `UPDATE` no demuestra que la persona tenga autoridad para comprometer una habitación, conceder una devolución o alterar una nota.",
+      "source_id": "N12-S057",
+      "sha256": "357209cf6be116dfb27010c350351af27fa65edc7cb9ae87fb168ed289cb2112",
+      "words": 68
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 115,
+      "line_end": 115,
+      "text": "La autoridad también depende de contexto. Una supervisora puede aprobar una habitación durante su turno y no modificar una tarifa corporativa. Recepción puede reasignar ante una falla y necesitar una autorización adicional si el cambio afecta accesibilidad. Un proveedor puede procesar un pago sin decidir si la promesa comercial fue cumplida.",
+      "source_id": "N12-S058",
+      "sha256": "04efdaf1cd9d8f26f2d616d0bb8ad834822a64d126c74f019f6cdad30447ae73",
+      "words": 51
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 117,
+      "line_end": 117,
+      "text": "Modelar autoridad exige registrar fuente normativa, alcance, condiciones, delegación, separación de funciones y reparación. Cuando la organización no puede explicar por qué un actor estaba habilitado, el sistema sólo conserva capacidad técnica.",
+      "source_id": "N12-S059",
+      "sha256": "6ea5bbdf646bbcb03cf94a6daf658324d6d58b46f8dc88e3f4fffa35cf2ae920",
+      "words": 32
+    },
+    {
+      "kind": "heading",
+      "line_start": 119,
+      "line_end": 119,
+      "text": "### Transición: la unidad que conecta las cinco funciones",
+      "source_id": "N12-S060",
+      "sha256": "110f29ffc4a0c27d89ec99e30d04299fc6bf63ff516210f01b1cb8fa00400adf",
+      "words": 8
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 121,
+      "line_end": 121,
+      "text": "Una transición verificable conecta situación previa, comando, evaluación, evento, estado resultante, evidencia y autoridad. No todas las transiciones contienen cada pieza como objeto separado, pero el razonamiento debe poder reconstruirse.",
+      "source_id": "N12-S061",
+      "sha256": "791db4f0f743b7152d1c6dc6b0614c82f0b40e6b6e2cafaa91f3da28bf7e6a26",
+      "words": 30
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 123,
+      "line_end": 123,
+      "text": "Considérese “asignar habitación”. Estado previo: reserva confirmada, identidad validada, habitación inspeccionada y accesible. Comando: asignar la 412 a la reserva R73. Autoridad: Recepción dentro de su turno y bajo reglas de categoría. Evaluación: no existe otra asignación vigente y la habitación cumple condiciones. Evento: asignación aceptada. Estado: habitación 412 asignada a R73. Evidencia: identificadores, reglas, tiempos y actor. Reparación: si la cerradura falla, reasignar sin borrar la historia.",
+      "source_id": "N12-S062",
+      "sha256": "39e25d825814c8c5896f7783463364178c3b25636b0e41a4597cd96b46f3d585",
+      "words": 68
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 125,
+      "line_end": 125,
+      "text": "Una transición puede fallar aunque cada componente funcione. El comando llega, la regla se evalúa, el evento se emite y la proyección se actualiza. Pero si la regla no representa la autoridad o la evidencia no permite verificar, la corrección técnica sostiene una decisión equivocada.",
+      "source_id": "N12-S063",
+      "sha256": "c9b624f0d0dc4131ac0d5cd1ce460e0c5b52c8a1e032e5f422bfebaafb8fa4b6",
+      "words": 45
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 127,
+      "line_end": 127,
+      "text": "También puede haber una transición legítima sin un único mensaje que la represente. Una conversación aprobada, una firma y una carga posterior pueden formar el episodio. El análisis no debe confundir el límite de una API con el límite de la decisión. HH-12 admite piezas técnicas y humanas, pero exige que la relación entre ellas pueda explicarse sin inventar continuidad.",
+      "source_id": "N12-S064",
+      "sha256": "7a8b5b7a93147ec11917a23076308d7978ec86f35694105d4fac69d5ff20f3ce",
+      "words": 60
+    },
+    {
+      "kind": "heading",
+      "line_start": 129,
+      "line_end": 129,
+      "text": "### Primera aplicación de HH-12: desarmar “habitación disponible”",
+      "source_id": "N12-S065",
+      "sha256": "b894c3e37e510c0169c5131dfd0fa1264fdc1a21ba427518886fbf8f140a2c49",
+      "words": 7
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 131,
+      "line_end": 131,
+      "text": "El equipo reemplaza una etiqueta única por cuatro condiciones relacionadas:",
+      "source_id": "N12-S066",
+      "sha256": "fa8e36bb0b9a15b383a2924dd3a9b89e965e67005152abb23d52e61d84da9d1a",
+      "words": 10
+    },
+    {
+      "kind": "list_item",
+      "line_start": 133,
+      "line_end": 133,
+      "text": "1. **Limpieza terminada:** Housekeeping declara que concluyó la tarea.",
+      "source_id": "N12-S067",
+      "sha256": "7a4d184fb0a1393052120c514a2e65d1616edae1f0c5504bec07e08a5cdd8758",
+      "words": 9
+    },
+    {
+      "kind": "list_item",
+      "line_start": 134,
+      "line_end": 134,
+      "text": "2. **Inspección aprobada:** una persona autorizada valida condiciones operativas.",
+      "source_id": "N12-S068",
+      "sha256": "4ec88942274a35b0a9b66ca004b4ea3255f25fd2b676d4b2e1819271563b1434",
+      "words": 9
+    },
+    {
+      "kind": "list_item",
+      "line_start": 135,
+      "line_end": 135,
+      "text": "3. **Habitación asignable:** las reglas permiten vincularla con una reserva específica.",
+      "source_id": "N12-S069",
+      "sha256": "f1a6fdb64c19303d287ccd5c0a5f37bc8bebc2a49a0d56efe9548e3e64dabc11",
+      "words": 11
+    },
+    {
+      "kind": "list_item",
+      "line_start": 136,
+      "line_end": 136,
+      "text": "4. **Acceso operativo:** la cerradura y los medios de ingreso pueden cumplir la entrega.",
+      "source_id": "N12-S070",
+      "sha256": "a03ddcb026063cb0625aa72593cee577e113b8ade6caf56ef034fbd1b42211a8",
+      "words": 14
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 138,
+      "line_end": 138,
+      "text": "Cada condición posee comandos y eventos propios. “Declarar limpieza terminada” no es “Aprobar inspección”. “Solicitar asignación” no es “Habitación asignada”. “Reportar batería baja” no cancela automáticamente la reserva, pero puede invalidar la asignabilidad bajo ciertas reglas.",
+      "source_id": "N12-S071",
+      "sha256": "585e61463252eb5fce68ffff3021fb2a65f18edc26f50c0cd6921bab8a4e673a",
+      "words": 36
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 140,
+      "line_end": 140,
+      "text": "La separación no obliga a mostrar cuatro estados al huésped. La experiencia puede comunicar una promesa simple. El sistema interno necesita conservar las distinciones que permiten cumplirla y reparar. Una interfaz sencilla no justifica un modelo semánticamente pobre.",
+      "source_id": "N12-S072",
+      "sha256": "53e1727b33a39f9e689f9a0910ffcef739e6828f8c3f72b77a06ec994f8d474e",
+      "words": 38
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 142,
+      "line_end": 142,
+      "text": "El equipo prueba entonces dos consultas. La primera pregunta qué habitaciones terminaron limpieza. La segunda pregunta cuáles pueden prometerse a una reserva concreta durante los próximos quince minutos. La lista cambia porque la segunda incorpora inspección, acceso, asignación y autoridad temporal. “Disponible” deja de ser una propiedad aislada y se vuelve una conclusión bajo condiciones.",
+      "source_id": "N12-S073",
+      "sha256": "c223d400fb36d8c414f41f21e60e4c886b575f70718aebd6705afd9438191ee9",
+      "words": 55
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 144,
+      "line_end": 144,
+      "text": "Esa diferencia afecta la decisión de Lucía. Si falta evidencia de cerradura, la respuesta no debe convertirse automáticamente en “no disponible”: puede ser “pendiente de verificación”. Así se evita que la incertidumbre se disfrace de rechazo y que una ausencia de mensaje se interprete como un hecho operativo.",
+      "source_id": "N12-S074",
+      "sha256": "04a54a11fffb21abc653e88f6de332545466608f997dd14af2313837f781c384",
+      "words": 48
+    },
+    {
+      "kind": "heading",
+      "line_start": 146,
+      "line_end": 146,
+      "text": "## Movimiento 2 · Conservar tiempo, significado y responsabilidad",
+      "source_id": "N12-S075",
+      "sha256": "7b9602cf1bee33f44fbc69028e93609dcd00560316567a29b4902a900791d620",
+      "words": 7
+    },
+    {
+      "kind": "heading",
+      "line_start": 148,
+      "line_end": 148,
+      "text": "### Tres tiempos para una misma ocurrencia",
+      "source_id": "N12-S076",
+      "sha256": "7729867813018dbcfd2c66f7a4848d28f6abd4b9889f75f629e47dfdf2893784",
+      "words": 6
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 150,
+      "line_end": 150,
+      "text": "Una transición posee al menos tres tiempos. **Tiempo del fenómeno:** cuándo ocurrió en el mundo. **Tiempo de registro:** cuándo una fuente lo capturó. **Tiempo de conocimiento:** cuándo estuvo disponible para quien debía decidir.",
+      "source_id": "N12-S077",
+      "sha256": "1b7918088e2298379b6003fbe55f2f3400a443d6dc3c2a13ccad72afe0f69b5a",
+      "words": 33
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 152,
+      "line_end": 152,
+      "text": "Housekeeping termina a las 13:42, registra a las 13:47 y el PMS recibe a las 14:03. Si se estudia productividad, interesa el primer tiempo. Si se audita la asignación de Lucía a las 14:00, importa qué información estaba disponible entonces. Reemplazar todas las marcas por la hora de sincronización reescribe la historia.",
+      "source_id": "N12-S078",
+      "sha256": "d7bbedcf580e9e3470bbb8d6a0aa358c91d37a48083ba86b8180eb33eacf5d3f",
+      "words": 56
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 154,
+      "line_end": 154,
+      "text": "Los relojes también pueden diferir. Leslie Lamport mostró que en sistemas distribuidos no existe necesariamente un reloj global suficiente para ordenar todos los acontecimientos. Su relación “ocurrió antes que” permite reconocer orden causal parcial. N12 toma una consecuencia conceptual: una marca temporal idéntica o cercana no prueba por sí sola el orden semántico.",
+      "source_id": "N12-S079",
+      "sha256": "be3529b1fecdca1c40799d67be09e712e342353e8da8855984ccf780cc8dd2ec",
+      "words": 53
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 156,
+      "line_end": 156,
+      "text": "N13 desarrollará demoras, concurrencia y consistencia. Aquí basta establecer que todo evento temporalmente relevante debe declarar qué reloj utiliza y qué orden necesita conservar para la decisión.",
+      "source_id": "N12-S080",
+      "sha256": "dea207ab1f7c8ed6c7e556c7b5f707c827ceb2efe9158d582d3e4fb6ed9a87fe",
+      "words": 27
+    },
+    {
+      "kind": "heading",
+      "line_start": 158,
+      "line_end": 158,
+      "text": "### Correlación: saber qué piezas pertenecen al mismo episodio",
+      "source_id": "N12-S081",
+      "sha256": "c20440874c6637f23ad338f054970c3e5020b1b654063648c2665ac00fb45897",
+      "words": 8
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 160,
+      "line_end": 160,
+      "text": "Un sistema puede registrar todos los mensajes y no poder reconstruir una historia. La correlación vincula comandos, resultados, eventos y reparaciones de un mismo episodio mediante identificadores estables.",
+      "source_id": "N12-S082",
+      "sha256": "0c245e96863a48e641b64eb70655e8518765193a7dc3b92f68f568a493295467",
+      "words": 28
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 162,
+      "line_end": 162,
+      "text": "En una reserva, el identificador del PMS puede diferir del de la agencia, el pago y la cerradura. Unir por nombre del huésped produce errores y expone datos. Se necesita una estrategia de identidad y correspondencia que permita seguir el caso sin fingir que todos los sistemas comparten la misma entidad.",
+      "source_id": "N12-S083",
+      "sha256": "d872224388b42e44d500e6dde14d54faf9eda5cb1a7e18e9a7dbe0b2dabebbc4",
+      "words": 51
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 164,
+      "line_end": 164,
+      "text": "La especificación CloudEvents 1.0.2 normaliza atributos como identificador, fuente, tipo y versión para intercambiar eventos entre servicios. AsyncAPI 3.1.0 describe aplicaciones, canales, mensajes, operaciones y correlación en interfaces dirigidas por mensajes. Ambos estándares mejoran interoperabilidad, pero no deciden qué significa “habitación lista” ni quién puede declararla. El sobre técnico conserva contexto; la semántica y la autoridad siguen siendo decisiones del dominio.",
+      "source_id": "N12-S084",
+      "sha256": "2e56227b9562520bd82415cd5045cd500f5e92b107a8b485ffc543bc17539ff5",
+      "words": 65
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 166,
+      "line_end": 166,
+      "text": "La correlación tampoco equivale a causalidad. Que dos mensajes compartan reserva permite reunirlos, pero no demuestra que uno haya provocado al otro. Para sostener una cadena causal se necesitan relaciones explícitas entre comando, evaluación y resultado. Esta distinción importa cuando varias acciones concurrentes afectan la misma entidad o cuando una reparación agrupa episodios anteriores sin haberlos originado.",
+      "source_id": "N12-S085",
+      "sha256": "7b9291c2ef790b70bcc2f42b779a66f726c0e18e76c87c7e560349be00068bd6",
+      "words": 57
+    },
+    {
+      "kind": "heading",
+      "line_start": 168,
+      "line_end": 168,
+      "text": "### Nombrar el evento por el hecho relevante",
+      "source_id": "N12-S086",
+      "sha256": "502761b1852e96a99214930e8b421206bf513f65ecce1d2feaf4c8eaf8e70e1a",
+      "words": 7
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 170,
+      "line_end": 170,
+      "text": "Los nombres genéricos trasladan significado fuera del mensaje. `RoomUpdated`, `StatusChanged` o “registro procesado” dicen que algo cambió sin explicar qué. Los consumidores deben interpretar campos y terminan construyendo semánticas incompatibles.",
+      "source_id": "N12-S087",
+      "sha256": "1f1837fa8d1a7342f9502e5ce11f9076d1259ad7ddbfeac304563d28b8f52d35",
+      "words": 30
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 172,
+      "line_end": 172,
+      "text": "Un evento orientado al dominio nombra la ocurrencia: “Inspección aprobada”, “Asignación rechazada por accesibilidad”, “Promesa comercial modificada”. Debe evitar incluir como hecho una intención no confirmada. “Reserva solicitada” y “Reserva confirmada” no son intercambiables.",
+      "source_id": "N12-S088",
+      "sha256": "8ee898a7440546ecf15ed83cbf0da21ecbe2337334f380e37b4bfefa3a8d2eb1",
+      "words": 34
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 174,
+      "line_end": 174,
+      "text": "El nombre tampoco debe prometer más de lo que la fuente sabe. Un sensor de puerta puede emitir “Apertura detectada”, no “Huésped ingresó”. Una clasificación automática puede emitir “Documento clasificado como válido por modelo M”, no “Identidad verificada”, salvo que el proceso completo lo autorice.",
+      "source_id": "N12-S089",
+      "sha256": "7d453a078c4b0d9389a59f2fb9508c672fc14bec73238ef7905759a14fdd99b5",
+      "words": 45
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 176,
+      "line_end": 176,
+      "text": "El lenguaje ubicuo propuesto por Eric Evans en diseño dirigido por el dominio resulta pertinente: términos compartidos entre especialistas y software reducen traducciones ocultas. METSI agrega una prueba: el término debe conservar no sólo significado, sino también autoridad y consecuencia.",
+      "source_id": "N12-S090",
+      "sha256": "d60c36741419203d1744537f480bd5e801a0ed65527010dd6d550b8795cec73f",
+      "words": 40
+    },
+    {
+      "kind": "heading",
+      "line_start": 178,
+      "line_end": 178,
+      "text": "### Estado derivado y múltiples proyecciones",
+      "source_id": "N12-S091",
+      "sha256": "e611ee912944e83a0cab7c5e878e18c07032867ea85492130a964d73eb54f2c6",
+      "words": 5
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 180,
+      "line_end": 180,
+      "text": "El mismo conjunto de eventos puede alimentar varias vistas. Recepción necesita habitaciones asignables ahora. Dirección puede analizar tiempos de preparación. Mantenimiento necesita fallas de cerradura. No existe obligación de imponer una tabla única para todos.",
+      "source_id": "N12-S092",
+      "sha256": "4ef434a6636b6004bb26e640d21bc7359ddc02e1000c699c245a19857181f2e2",
+      "words": 35
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 182,
+      "line_end": 182,
+      "text": "Martin Fowler denomina *event sourcing* al patrón que conserva cambios de estado como secuencia de eventos y permite reconstruir estados. Puede aportar auditoría y vistas alternativas, pero agrega complejidad de evolución, consulta, privacidad y operación. No es la conclusión automática de N12.",
+      "source_id": "N12-S093",
+      "sha256": "332f94fd1dff2e910f791ecba7ceaa221fc25481b8824233dd04bf1a9261f17e",
+      "words": 42
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 184,
+      "line_end": 184,
+      "text": "Una base tradicional puede conservar estado actual más un historial selectivo y resultar suficiente. La decisión depende de cuánto importa reconstruir, corregir y explicar. Si sólo se necesita el saldo vigente de una preferencia simple, almacenar toda interacción puede ser excesivo. Si la organización debe probar quién autorizó una devolución y bajo qué regla, borrar cada valor anterior es insuficiente.",
+      "source_id": "N12-S094",
+      "sha256": "9aed6069963b8445b92d5a5c18da12b801f83220160179bb8bf478e8483738b2",
+      "words": 60
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 186,
+      "line_end": 186,
+      "text": "La proyección debe declarar su demora y alcance. “Disponibilidad actualizada a las 14:03” es más honesto que “disponibilidad en tiempo real” cuando existen integraciones asincrónicas. Una vista optimizada no debe presentarse como fuente original.",
+      "source_id": "N12-S095",
+      "sha256": "5657e5bc14372355029c483ebeb70bfeba74043c59b4b2cd4d6a2f0567c03717",
+      "words": 35
+    },
+    {
+      "kind": "heading",
+      "line_start": 188,
+      "line_end": 188,
+      "text": "### Corrección, retractación y compensación",
+      "source_id": "N12-S096",
+      "sha256": "473cf6fcd87d813acb5f9fb34ee42c88b80ce0321ecae97b31b39376d600ab80",
+      "words": 4
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 190,
+      "line_end": 190,
+      "text": "Los eventos pueden contener errores. Corregir no significa borrar silenciosamente. Una **rectificación** afirma que un dato anterior fue incorrecto y presenta el valor corregido. Una **retractación** retira una afirmación sin necesariamente reemplazarla. Una **compensación** produce una acción que contrarresta efectos, aunque no haga desaparecer lo ocurrido.",
+      "source_id": "N12-S097",
+      "sha256": "8ac56c82c01a17d060957be9b75a6fbc00d1f6386e309ba4ef383d6c1a50dcb7",
+      "words": 46
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 192,
+      "line_end": 192,
+      "text": "Si una reserva fue cancelada por error y luego restaurada, el sistema no volvió exactamente al punto inicial. Pudo enviar correos, liberar inventario o generar angustia. Registrar sólo “confirmada” oculta consecuencias. El diseño necesita distinguir estado final de historia reparada.",
+      "source_id": "N12-S098",
+      "sha256": "1177bb7465873abaa2f7de638c1f6edd210c807006e5bda55d1cde7b81632ad7",
+      "words": 40
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 194,
+      "line_end": 194,
+      "text": "La compensación no es una máquina del tiempo. Devolver un pago repara dinero, pero quizá no una oportunidad perdida. Reasignar una habitación puede restaurar alojamiento y no borrar una espera. La evidencia debe conservar qué parte fue reparada y cuál permanece.",
+      "source_id": "N12-S099",
+      "sha256": "0d12508ce528d641dc5178718628d94aaa78f21c4c2024403d5be7e363bf7747",
+      "words": 41
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 196,
+      "line_end": 196,
+      "text": "Elegir entre rectificar, retractar y compensar depende de qué estaba equivocado. Si el evento identificó mal la habitación, corresponde rectificar el dato. Si no existe evidencia suficiente de que la inspección ocurrió, corresponde retractar la afirmación. Si la reserva fue válidamente cancelada bajo una regla luego considerada injusta, puede corresponder compensar sus efectos sin falsificar la historia.",
+      "source_id": "N12-S100",
+      "sha256": "504d96b82632d0bfd3a85fa515e7e2d071c49b1131b95a8852b86bcbb237a5a3",
+      "words": 57
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 198,
+      "line_end": 198,
+      "text": "La persona afectada necesita una explicación coherente con esa elección. “El sistema se actualizó” no informa si cambió el hecho, la interpretación o la respuesta institucional. Una reparación defendible nombra el daño, la decisión adoptada y el aspecto que todavía no puede restaurarse.",
+      "source_id": "N12-S101",
+      "sha256": "b10437b286c1c0320d404ea0109b6732019debdad298ce8c0bf029d152aea21f",
+      "words": 43
+    },
+    {
+      "kind": "heading",
+      "line_start": 200,
+      "line_end": 200,
+      "text": "### Evidencia no es lo mismo que registro de auditoría",
+      "source_id": "N12-S102",
+      "sha256": "1aed51f4ad7f5c4de833d8eb8643b75d97595914ea89d6d3eb6ed4158a9f37a6",
+      "words": 9
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 202,
+      "line_end": 202,
+      "text": "Un registro de auditoría conserva acciones o cambios según una política. Puede ser evidencia, pero su existencia no garantiza suficiencia. Si registra usuario y hora sin motivo, regla ni resultado, permite saber quién tocó un campo y no por qué la decisión era válida.",
+      "source_id": "N12-S103",
+      "sha256": "aa431787a9facc49b23d185352617fdb75225fe80982f7ccaba0ce8244494a8b",
+      "words": 44
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 204,
+      "line_end": 204,
+      "text": "También puede ser manipulado, incompleto o inaccesible para quien debe investigar. Un sistema seguro necesita controles de integridad, acceso, retención y separación de funciones. Un sistema justo necesita además que las personas afectadas puedan conocer y cuestionar decisiones cuando corresponda.",
+      "source_id": "N12-S104",
+      "sha256": "b5d9db33ddf51f0ecaaf0fc3f1d2469aab7775b127e6f4511d0d13d65412099e",
+      "words": 40
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 206,
+      "line_end": 206,
+      "text": "La evidencia se diseña desde la afirmación. Para sostener “la supervisora aprobó la inspección bajo el protocolo vigente” hacen falta identidad, protocolo o versión, resultado, momento y vínculo con la habitación. Grabar video continuo sería desproporcionado. Una marca sin protocolo sería débil.",
+      "source_id": "N12-S105",
+      "sha256": "48f1c784507a6991c7e7ea52f78d8c90d77f48c77acc0d699727ecd932c11573",
+      "words": 42
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 208,
+      "line_end": 208,
+      "text": "La cadena de evidencia debe conservar accesibilidad además de integridad. Un registro cifrado e inalterable que nadie autorizado puede interpretar a tiempo fracasa como apoyo de decisión. También fracasa si sólo el proveedor puede consultarlo o si su retención vence antes del período de reclamo. Diseñar evidencia implica prever quién la necesitará, para qué controversia y durante cuánto tiempo.",
+      "source_id": "N12-S106",
+      "sha256": "0c3653e4b79010c6433ab3844f4946face2f5ed3cbee6a5e92956c7529af503e",
+      "words": 59
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 210,
+      "line_end": 210,
+      "text": "Esto no exige que toda prueba resida en el mismo sistema. Puede existir un comprobante externo, una norma vigente o una observación humana. HH-12 registra vínculo, procedencia y criterio de suficiencia. La transición debe seguir siendo auditable aunque una pieza requiera custodia distinta por privacidad o seguridad.",
+      "source_id": "N12-S107",
+      "sha256": "744c046e1e764a7ef049f1a5d5530d92b0e3132a1af9a19ee3e47e7eedeb0a6d",
+      "words": 47
+    },
+    {
+      "kind": "heading",
+      "line_start": 212,
+      "line_end": 212,
+      "text": "### Autoridad distribuida y separaciones necesarias",
+      "source_id": "N12-S108",
+      "sha256": "58df8970362d8063ce1ef8a4686ce99feee35c003fd8693206df88c6b1e9f236",
+      "words": 5
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 214,
+      "line_end": 214,
+      "text": "En organizaciones reales, ninguna aplicación posee toda la autoridad. Comercial puede prometer una categoría. Housekeeping declara trabajo terminado. Supervisión aprueba condiciones. Recepción asigna. Seguridad gestiona acceso. Finanzas decide ciertas devoluciones. La transición completa cruza responsabilidades.",
+      "source_id": "N12-S109",
+      "sha256": "e123d4b4274ab4efd46e85d69a1ff351040ce2208dd15ceb4561c67b434bf255",
+      "words": 35
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 216,
+      "line_end": 216,
+      "text": "Esta distribución puede evitar abusos y errores. La separación de funciones impide que una misma persona cree, apruebe y concilie una operación sensible. Pero también puede producir esperas si nadie tiene autoridad para resolver excepciones.",
+      "source_id": "N12-S110",
+      "sha256": "4685cbe65411a70e1cb47a7b32f09ae17f3c186a5ccc713e679438007fce8da6",
+      "words": 35
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 218,
+      "line_end": 218,
+      "text": "Diseñar autoridad implica responder quién decide en el caso ordinario, quién puede exceptuar, quién revisa, cómo se delega y qué ocurre fuera de horario. Un flujo sin autoridad de reparación convierte cualquier anomalía en trabajo informal. Un flujo con excepción ilimitada vuelve irrelevantes las reglas.",
+      "source_id": "N12-S111",
+      "sha256": "0c69b3bb6f16aff1e78bbeea9bab17703e32f1210862ee21b9def0dd0dcbf8a1",
+      "words": 45
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 220,
+      "line_end": 220,
+      "text": "Nancy Leveson analiza la seguridad como un problema de control dentro de sistemas sociotécnicos, no sólo como suma de fallas de componentes. Esa mirada ayuda a comprender que una transición segura necesita restricciones, retroalimentación y responsabilidades adecuadas, incluso cuando el software ejecuta correctamente.",
+      "source_id": "N12-S112",
+      "sha256": "4f0be42a3074a2549f14d6c0f79ee3fc8c77e6e2d5a64beb49b16c4a66d6f44a",
+      "words": 43
+    },
+    {
+      "kind": "heading",
+      "line_start": 222,
+      "line_end": 222,
+      "text": "### Agentes de inteligencia artificial: proponer no es decidir",
+      "source_id": "N12-S113",
+      "sha256": "f372d11edd66eb56b468e04c1ff8ac4885738c2018d79e06925f8734022a9c6d",
+      "words": 8
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 224,
+      "line_end": 224,
+      "text": "En 2026, un asistente puede leer mensajes, completar formularios, recomendar una habitación o emitir comandos a otros sistemas. La palabra “agente” describe capacidad técnica, no autoridad institucional. Se debe decidir qué puede observar, proponer, ejecutar, revertir y escalar.",
+      "source_id": "N12-S114",
+      "sha256": "9ff6cb32b62d8560982478d0a5035c0072c48eeb9e8b8e61f4df72710e7e8ce0",
+      "words": 38
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 226,
+      "line_end": 226,
+      "text": "Una recomendación generada es una salida analítica. Un comando enviado por el agente es una intención operacional. Un evento posterior registra si el sistema la aceptó. Confundir las tres piezas produce automatización sin control. También vuelve inútil una revisión humana que recibe la decisión consumada.",
+      "source_id": "N12-S115",
+      "sha256": "aaf53709cbe83ecf48dac81ac0094769049a061a0efdec747657dd67a98fd26b",
+      "words": 45
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 228,
+      "line_end": 228,
+      "text": "NIST AI RMF 1.0 exige distinguir roles y responsabilidades en configuraciones entre personas e inteligencia artificial. Su perfil para IA generativa de 2024 profundiza riesgos de integridad, cadena de valor y monitoreo. El Reglamento de Inteligencia Artificial de la Unión Europea establece requisitos de supervisión humana para sistemas de alto riesgo. La lección metodológica no es agregar un botón de aprobación. La persona debe contar con tiempo, información, competencia y autoridad efectiva para cambiar el curso.",
+      "source_id": "N12-S116",
+      "sha256": "beb85454cdb3096b4fe7f7bb91d458fc8cce4328ac187e9bdf874a298d5fc969",
+      "words": 77
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 230,
+      "line_end": 230,
+      "text": "En Hotel Horizonte, un agente puede proponer conciliaciones y reunir evidencia. No debe declarar una habitación accesible si no posee fuente ni autoridad, ni rechazar una reserva sensible sin revisión y reparación. El límite se define por consecuencia, no por capacidad del modelo.",
+      "source_id": "N12-S117",
+      "sha256": "300d607b92760e14a71bae076b52c0ee60ea23b80e2ac9ab351a3a8e25426bb4",
+      "words": 43
+    },
+    {
+      "kind": "heading",
+      "line_start": 232,
+      "line_end": 232,
+      "text": "### Segunda aplicación de HH-12: reconstruir un episodio sin inventar orden",
+      "source_id": "N12-S118",
+      "sha256": "a0a995420ee64ab1baaba120ae50a87ea3680da8c81a06218ce382bbef86d486",
+      "words": 10
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 234,
+      "line_end": 234,
+      "text": "El equipo reúne ocho piezas del episodio de la habitación 412:",
+      "source_id": "N12-S119",
+      "sha256": "f0509f4b45891350085873dd4f4a14543ad7fc99e72323fa840c8df1d91dd32e",
+      "words": 11
+    },
+    {
+      "kind": "list_item",
+      "line_start": 236,
+      "line_end": 236,
+      "text": "1. Evento de Housekeeping: limpieza terminada a las 13:42, registrada a las 13:47.",
+      "source_id": "N12-S120",
+      "sha256": "ff84bf2dc73b6622a52ea8cab7f83930a1839eefe101cdf38ed28c64df6a7d73",
+      "words": 15
+    },
+    {
+      "kind": "list_item",
+      "line_start": 237,
+      "line_end": 237,
+      "text": "2. Comando de supervisión: aprobar inspección, emitido a las 13:55.",
+      "source_id": "N12-S121",
+      "sha256": "8b7cfaf64a979722cb4690ecc06c3efc2e9977112a4685c147135fa1c42cb8af",
+      "words": 11
+    },
+    {
+      "kind": "list_item",
+      "line_start": 238,
+      "line_end": 238,
+      "text": "3. Evento: inspección aprobada bajo protocolo P4.",
+      "source_id": "N12-S122",
+      "sha256": "65ade6dab3e14c5dc8abacbd26c34f7d6937acacd9ae3885183818050b316056",
+      "words": 7
+    },
+    {
+      "kind": "list_item",
+      "line_start": 239,
+      "line_end": 239,
+      "text": "4. Proyección del PMS: habitación disponible a las 14:03.",
+      "source_id": "N12-S123",
+      "sha256": "adb3a2d270c2b764a87a91127d3c3dba077a16d74a1dbf4a2292331cf200f0a4",
+      "words": 10
+    },
+    {
+      "kind": "list_item",
+      "line_start": 240,
+      "line_end": 240,
+      "text": "5. Comando de Lucía: asignar 412 a R73 a las 14:04.",
+      "source_id": "N12-S124",
+      "sha256": "0ec9d99f2b53a35cd3b03d5dc911f5896b96596507d513f0e9490b8dd63ea4bb",
+      "words": 12
+    },
+    {
+      "kind": "list_item",
+      "line_start": 241,
+      "line_end": 241,
+      "text": "6. Evento de cerradura: batería insuficiente a las 14:05.",
+      "source_id": "N12-S125",
+      "sha256": "c770eb8076718d327d2338a4c87fca834907162729c0f057fb4aeeec5c3d6411",
+      "words": 10
+    },
+    {
+      "kind": "list_item",
+      "line_start": 242,
+      "line_end": 242,
+      "text": "7. Evento del PMS: asignación aceptada a las 14:05.",
+      "source_id": "N12-S126",
+      "sha256": "7d7c3298d28a33c4fb0e1b05833265fde94dec0947d48be5e0ae756d35eea6f0",
+      "words": 10
+    },
+    {
+      "kind": "list_item",
+      "line_start": 243,
+      "line_end": 243,
+      "text": "8. Reparación: reasignación a 418 autorizada a las 14:12.",
+      "source_id": "N12-S127",
+      "sha256": "581a0b19f58c28e268f2d5a9b6543ed11db45f001bb76c993eae2f1170fc6a5c",
+      "words": 10
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 245,
+      "line_end": 245,
+      "text": "La lista no autoriza un relato único. La cerradura pudo detectar la batería antes de que el PMS aceptara, aunque el mensaje llegara después. La regla de asignabilidad no consultaba acceso. La aprobación de inspección tampoco incluía cerradura. El equipo identifica entonces una brecha de control: ninguna autoridad reunía las condiciones necesarias para reconocer “entregable”.",
+      "source_id": "N12-S128",
+      "sha256": "54879f03016666cb1b8ad730ee672ca0f9c3c4a0a8273d240f5c0bbc6df6a06f",
+      "words": 55
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 247,
+      "line_end": 247,
+      "text": "La intervención no consiste solamente en sumar un campo. Se define un comando de verificación de entrega, una regla que combina inspección, asignación y acceso, un evento de resultado y una autoridad de excepción. El estado “entregable” conserva versión de condiciones y momento de conocimiento.",
+      "source_id": "N12-S129",
+      "sha256": "23deff6b86b3f353b9e225914ba46476a46a82d80d9de5058c546e7347b5248d",
+      "words": 45
+    },
+    {
+      "kind": "heading",
+      "line_start": 249,
+      "line_end": 249,
+      "text": "## Movimiento 3 · Diseñar transiciones que puedan explicarse y repararse",
+      "source_id": "N12-S130",
+      "sha256": "db718e63847ed75bba4fe7abef78ab1c86ca411d9d1ca5cc97f6053545444c46",
+      "words": 9
+    },
+    {
+      "kind": "heading",
+      "line_start": 251,
+      "line_end": 251,
+      "text": "### Instrumento HH-12: mapa de transición verificable",
+      "source_id": "N12-S131",
+      "sha256": "44f5d208ab991056b5cc29c357690808d964f28df90fc9b9c7d8588953321e46",
+      "words": 6
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 253,
+      "line_end": 253,
+      "text": "HH-12 organiza una transición mediante nueve decisiones:",
+      "source_id": "N12-S132",
+      "sha256": "f560aad093970a26e2d110d1f433f115ead145d3bbd3274efc923815b78e252e",
+      "words": 7
+    },
+    {
+      "kind": "list_item",
+      "line_start": 255,
+      "line_end": 255,
+      "text": "1. **Propósito:** qué promesa u outcome protege la transición.",
+      "source_id": "N12-S133",
+      "sha256": "85ff0f7a4e305b8f84a273fda24b9c5a1349d620c5cf136626f355fe4aeb7e9e",
+      "words": 9
+    },
+    {
+      "kind": "list_item",
+      "line_start": 256,
+      "line_end": 256,
+      "text": "2. **Estado previo:** qué debe ser cierto antes de intentar el cambio.",
+      "source_id": "N12-S134",
+      "sha256": "719a94ace826c1f4a03b6b3c1077e1a48d7f95bc67bd8eddf17965743a556b57",
+      "words": 12
+    },
+    {
+      "kind": "list_item",
+      "line_start": 257,
+      "line_end": 257,
+      "text": "3. **Comando:** qué acción se solicita y sobre qué entidad.",
+      "source_id": "N12-S135",
+      "sha256": "f0fdfcd1923c9ba59c05fdab7080964a0c3e1ceded551345c0cd42037ee2e10d",
+      "words": 10
+    },
+    {
+      "kind": "list_item",
+      "line_start": 258,
+      "line_end": 258,
+      "text": "4. **Emisor y autoridad:** quién lo solicita, quién puede aceptarlo y bajo qué fuente normativa.",
+      "source_id": "N12-S136",
+      "sha256": "7f15311c528890e67526a4e65d391f1ea99006117fe987e96d7d0efb6fd27bca",
+      "words": 15
+    },
+    {
+      "kind": "list_item",
+      "line_start": 259,
+      "line_end": 259,
+      "text": "5. **Reglas y resultados:** condiciones de aceptación, rechazo, espera o escalamiento.",
+      "source_id": "N12-S137",
+      "sha256": "a623f967247c0cd221f1f1992a717f50368825ddfe7525ffed47c619f0317d43",
+      "words": 11
+    },
+    {
+      "kind": "list_item",
+      "line_start": 260,
+      "line_end": 260,
+      "text": "6. **Evento:** qué ocurrencia se registra para cada resultado relevante.",
+      "source_id": "N12-S138",
+      "sha256": "f2b340e34b0c1523b640cf1ba7ce873f53e220b3364f203d369de34ebfebf422",
+      "words": 10
+    },
+    {
+      "kind": "list_item",
+      "line_start": 261,
+      "line_end": 261,
+      "text": "7. **Estado y proyecciones:** qué se considera vigente y para qué audiencia.",
+      "source_id": "N12-S139",
+      "sha256": "827ca6e902038f45ca9875e94af25815a10c5684abe914ca6235f75d70637c50",
+      "words": 12
+    },
+    {
+      "kind": "list_item",
+      "line_start": 262,
+      "line_end": 262,
+      "text": "8. **Evidencia y tiempo:** qué sostiene la transición, cuándo ocurrió, se registró y estuvo disponible.",
+      "source_id": "N12-S140",
+      "sha256": "d7e89b7287bc4733cc3a8a19fd89bcbb8b84bd84ce1510a034f3fd879a74f2eb",
+      "words": 15
+    },
+    {
+      "kind": "list_item",
+      "line_start": 263,
+      "line_end": 263,
+      "text": "9. **Excepción y reparación:** cómo se impugna, revierte, compensa o escala sin borrar la historia.",
+      "source_id": "N12-S141",
+      "sha256": "226dfe2f9803af9875552e52eb4213c985a573faea4a055e2683ff5a31f5ac50",
+      "words": 15
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 265,
+      "line_end": 265,
+      "text": "El mapa no se completa de izquierda a derecha de manera rígida. Una excepción puede revelar que el estado previo estaba mal definido. Una evidencia débil puede obligar a reducir autoridad automática. Una proyección tardía puede cambiar el diseño del comando.",
+      "source_id": "N12-S142",
+      "sha256": "372fd8903029b7fa237fe097eef193f8fbc019b1b2509ba6a25ac9d7983a2104",
+      "words": 41
+    },
+    {
+      "kind": "heading",
+      "line_start": 267,
+      "line_end": 267,
+      "text": "### Prueba de coherencia entre nombre, regla y efecto",
+      "source_id": "N12-S143",
+      "sha256": "7e5d27b833a1448f2948d24428a1036a703c1047d8c8c2f1c46c29e2a2b87bc1",
+      "words": 8
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 269,
+      "line_end": 269,
+      "text": "Cada transición atraviesa tres preguntas. ¿El nombre describe lo que realmente ocurrió? ¿La regla utiliza condiciones suficientes para ese nombre? ¿El efecto posterior corresponde a la autoridad que aceptó el comando?",
+      "source_id": "N12-S144",
+      "sha256": "8970e22a800a3e8acfc6cf6ee15ac10908ae02f27f141aac58cddb90609de22c",
+      "words": 31
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 271,
+      "line_end": 271,
+      "text": "Si el evento se llama “Habitación entregable”, pero sólo valida limpieza, el nombre excede la regla. Si la regla consulta cerradura y asignación, pero cualquier cuenta puede aceptarla, el efecto excede la autoridad. Si la autoridad es correcta, pero el estado visible no se actualiza a tiempo, la promesa excede el conocimiento disponible.",
+      "source_id": "N12-S145",
+      "sha256": "85934a2da96d1802f8f5a5bece2ce091d72486eafe5d5c08fa697a3ea5010707",
+      "words": 53
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 273,
+      "line_end": 273,
+      "text": "La prueba debe incluir un caso ordinario, un rechazo, una demora, una corrección y una excepción. Diseñar sólo el camino feliz produce estados que no explican el trabajo real.",
+      "source_id": "N12-S146",
+      "sha256": "748cd733abbc490c27b12dad8429db600ede9ad1d772642d6b5c800a73ca4219",
+      "words": 29
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 275,
+      "line_end": 275,
+      "text": "La coherencia se rompe también cuando el mismo nombre produce consecuencias distintas sin condición visible. “Reserva confirmada” no puede significar pago aceptado en un canal y mera recepción en otro si ambas versiones habilitan la misma comunicación. Cuando la organización necesita significados diferentes, debe nombrarlos o declarar el alcance en la proyección.",
+      "source_id": "N12-S147",
+      "sha256": "30cf814a27ef3385dcb5c270fa9053472b8eecf73474c1418a5591558182fa74",
+      "words": 52
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 277,
+      "line_end": 277,
+      "text": "La prueba termina con una pregunta de reparación: si el evento fue falso o la autoridad estaba mal configurada, ¿qué decisión permite el modelo sin borrar el episodio? Si la respuesta exige editar directamente una tabla, la transición todavía no está completamente diseñada.",
+      "source_id": "N12-S148",
+      "sha256": "9927d97726b1970712663d873abdf4783a62bd9a92d098934f593a4b95de174e",
+      "words": 43
+    },
+    {
+      "kind": "heading",
+      "line_start": 279,
+      "line_end": 279,
+      "text": "### Matriz de autoridad y reparación",
+      "source_id": "N12-S149",
+      "sha256": "060379c556014a9d355fb2956fcec4c9d178fccbc580630620d03f8f330b5fda",
+      "words": 5
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 281,
+      "line_end": 281,
+      "text": "Para cada comando sensible, HH-12 registra cinco roles posibles: solicitar, aceptar, ejecutar, revisar y reparar. Una persona o sistema puede ocupar más de uno si el riesgo lo permite. En decisiones de alto impacto, conviene separar al menos aceptación y revisión.",
+      "source_id": "N12-S150",
+      "sha256": "4274cd7bd06d94ccdaae3665d4ecf234c4d07b31f3aaf167811338b39eb8dc94",
+      "words": 41
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 283,
+      "line_end": 283,
+      "text": "La matriz no debe copiar el organigrama. Se construye desde episodios y responsabilidades. El cargo “gerencia” puede tener autoridad presupuestaria y no conocimiento para declarar una habitación accesible. Una supervisora puede reconocer condiciones y no autorizar compensaciones económicas.",
+      "source_id": "N12-S151",
+      "sha256": "34763d368958ccf7e3cea5a60393134c7aaa1e9a83afa577ea22686793a2fa6b",
+      "words": 38
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 285,
+      "line_end": 285,
+      "text": "También se declara qué ocurre cuando el rol no está disponible. La excepción fuera de horario forma parte del diseño, no un detalle operativo. Si el único camino es compartir credenciales o enviar mensajes informales, el sistema está empujando autoridad a la sombra.",
+      "source_id": "N12-S152",
+      "sha256": "b4dae83fda07588db0badb2fbdc6a756d7ac61c5cfc6b4a8df7f1c8dcb39875d",
+      "words": 43
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 287,
+      "line_end": 287,
+      "text": "Cada rol necesita además alcance, vigencia y evidencia de delegación. Una autorización para reparar una cerradura no habilita a conceder descuentos. Una delegación de turno debe caducar y dejar rastro. La autoridad automática requiere una fuente equivalente: reglas aprobadas, versión vigente y responsable de modificarlas.",
+      "source_id": "N12-S153",
+      "sha256": "873db15d798f26f47c9b35d4124be562271ea8f118a6033d0de5c72c24d79f06",
+      "words": 45
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 289,
+      "line_end": 289,
+      "text": "La matriz permite detectar dos fallas opuestas. En la primera, demasiados actores aceptan una transición y nadie responde por ella. En la segunda, todos pueden observar el daño y nadie puede repararlo. Ambas generan trabajo informal, aunque la configuración de permisos parezca correcta.",
+      "source_id": "N12-S154",
+      "sha256": "f1217c03e1cc4a5f3834c50fbca6965f44afd8513718b4fe42e93a6cb3a4e958",
+      "words": 43
+    },
+    {
+      "kind": "heading",
+      "line_start": 291,
+      "line_end": 291,
+      "text": "### Condiciones e invariantes",
+      "source_id": "N12-S155",
+      "sha256": "a14ee59735f3bdd160049298430891016b17bc11482ed103f985cef4911984f7",
+      "words": 3
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 293,
+      "line_end": 293,
+      "text": "Una condición evalúa si un comando puede aceptarse. Una invariante expresa algo que debe mantenerse a través de transiciones. “Una habitación no puede estar asignada a dos reservas vigentes” es una invariante. “La batería debe superar cierto umbral para emitir acceso” es una condición.",
+      "source_id": "N12-S156",
+      "sha256": "6fa873bdbb355bb34c159763acbb71735ac7c0e2b475ecef0a0707c80c1f1f01",
+      "words": 44
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 295,
+      "line_end": 295,
+      "text": "Las invariantes hacen visibles decisiones que una interfaz suele dispersar. También exponen conflictos. Una política comercial de sobreventa acepta que las confirmaciones superen inventario físico bajo ciertas condiciones; no puede coexistir sin más con la afirmación “toda reserva confirmada tiene habitación asignada”. Se necesita distinguir promesa de categoría, inventario esperado y asignación concreta.",
+      "source_id": "N12-S157",
+      "sha256": "d8af27c70697dbf5fa041aeef96c05bb93728d434d62388eb8e665fb7460525f",
+      "words": 53
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 297,
+      "line_end": 297,
+      "text": "Una regla puede ser técnicamente consistente y normativamente discutible. Bloquear toda asignación manual evita duplicados, pero puede impedir reparar un caso de accesibilidad. HH-12 exige identificar autoridad y evidencia de excepción.",
+      "source_id": "N12-S158",
+      "sha256": "4e2e82069f7edb6964073262bbafa8d2541c728d9882b750db9235069533c54c",
+      "words": 31
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 299,
+      "line_end": 299,
+      "text": "Las invariantes deben formularse en el nivel de la promesa y no sólo de la base. “No hay dos filas activas” puede cumplirse mientras dos huéspedes reciben confirmación para la misma capacidad. La invariante relevante vincula reservas, inventario, tiempo y tipo de compromiso. Su prueba atraviesa servicios y canales.",
+      "source_id": "N12-S159",
+      "sha256": "3243767367c06bdfe53d501d31fdc32f46f9a80bc2f0fc05d0d9aadb4c0a4193",
+      "words": 49
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 301,
+      "line_end": 301,
+      "text": "También conviene diferenciar una invariante de una meta. “Toda habitación se entrega antes de las catorce” es un objetivo que puede incumplirse; “ninguna llave vigente abre una habitación reasignada a otra reserva” expresa una restricción de seguridad. Confundirlas vuelve imposible tratar excepciones sin declarar al sistema inválido.",
+      "source_id": "N12-S160",
+      "sha256": "ef8cdd39b6f8055f41f0ecbaa2890981dfd5fa450c57540ef64714ad6445ab90",
+      "words": 47
+    },
+    {
+      "kind": "heading",
+      "line_start": 303,
+      "line_end": 303,
+      "text": "### Probar la transición, no sólo el componente",
+      "source_id": "N12-S161",
+      "sha256": "021db086453b145675743eac4a02bad9724ea4d438163c290993087b54b5134e",
+      "words": 7
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 305,
+      "line_end": 305,
+      "text": "Una prueba unitaria puede demostrar que un servicio emite el evento correcto ante una entrada. Una prueba de contrato puede verificar formato. Ninguna muestra por sí sola que la transición completa conserva significado y autoridad.",
+      "source_id": "N12-S162",
+      "sha256": "46744e8be0d12978f85bf5bbd12bee840c35a14b232200c415d2b3c891af379d",
+      "words": 35
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 307,
+      "line_end": 307,
+      "text": "La prueba metodológica utiliza episodios. Dado un estado previo y evidencia, cuando un actor autorizado emite un comando, entonces debe producirse un resultado comprensible, una proyección coherente y una vía de reparación. También se prueba qué ocurre con actor no autorizado, evidencia incompleta, mensaje tardío y corrección.",
+      "source_id": "N12-S163",
+      "sha256": "2e4a7923814236052100788b7ab307daaa2aec53c5c608826a10178bd9fd8bf0",
+      "words": 47
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 309,
+      "line_end": 309,
+      "text": "BPMN 2.0.2 ofrece eventos, actividades, compuertas y mensajes para representar procesos. UML 2.5.1 ofrece máquinas de estados y transiciones. Son lenguajes útiles, pero el tipo de diagrama no garantiza que el episodio esté bien encuadrado. El modelo debe responder qué decisión mejora y qué contradicción permite descubrir.",
+      "source_id": "N12-S164",
+      "sha256": "0a21b71451492ed9037e970cc6939e50c5c3b459bb6d02287334fe008ea40f72",
+      "words": 51
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 311,
+      "line_end": 311,
+      "text": "La prueba se ejecuta también sobre lenguaje y capas de lectura. Se compara lo que afirma la interfaz, lo que registra el evento, lo que muestra la proyección y lo que entiende el área responsable. Si cada capa supera su prueba aislada, pero usa “confirmada” con sentidos incompatibles, la transición falla de principio a fin.",
+      "source_id": "N12-S165",
+      "sha256": "f919ca1ee0fa7143f2c716a8339921c3cccc8d8768aaf07d1438f4d12c8ba5fa",
+      "words": 55
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 313,
+      "line_end": 313,
+      "text": "Por último, se verifica una reparación real. No alcanza con simular el resultado esperado. El equipo debe poder identificar autoridad, emitir la corrección, actualizar proyecciones y conservar evidencia sin recurrir a una modificación clandestina. Esa prueba revela dependencias organizacionales que un entorno técnico aislado no reproduce.",
+      "source_id": "N12-S166",
+      "sha256": "b0fee7f5ef4a3a4b9046fbc0dc73c3770cd1c4d965c770c8241cec9a8a031503",
+      "words": 46
+    },
+    {
+      "kind": "heading",
+      "line_start": 315,
+      "line_end": 315,
+      "text": "### Tercera aplicación de HH-12: “entregable” como transición defendible",
+      "source_id": "N12-S167",
+      "sha256": "07fbd0f1116344c673791558c3752b33dfc3f03ae63315550ff50a233c566c33",
+      "words": 8
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 317,
+      "line_end": 317,
+      "text": "Propósito: evitar prometer ingreso cuando la habitación no puede asignarse y abrirse bajo condiciones acordadas.",
+      "source_id": "N12-S168",
+      "sha256": "b4e30c0e26828d63378313b8091e17747550da6b695276b7ae2f0a53716f8247",
+      "words": 15
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 319,
+      "line_end": 319,
+      "text": "Estado previo: limpieza terminada, inspección aprobada, reserva vigente y habitación sin asignación incompatible.",
+      "source_id": "N12-S169",
+      "sha256": "71d4af4b7bd917738acaf3057b75b9be8ad49f879ec39b8fd36f0fe7e7641116",
+      "words": 13
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 321,
+      "line_end": 321,
+      "text": "Comando: verificar y declarar entregabilidad para una reserva concreta.",
+      "source_id": "N12-S170",
+      "sha256": "ae6f67b58a10c7ba742125565f9b38cb55c4ed5ace4b6e7bfdd95dd88dd12ef2",
+      "words": 9
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 323,
+      "line_end": 323,
+      "text": "Autoridad: el sistema puede aceptar automáticamente si todas las evidencias están vigentes. Una persona de Recepción puede solicitar excepción; supervisión debe aprobarla cuando afecta accesibilidad o seguridad.",
+      "source_id": "N12-S171",
+      "sha256": "86e6e6838f8904f6f8938e9939c85f07d359dc55364390bf787e28e219a9c848",
+      "words": 27
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 325,
+      "line_end": 325,
+      "text": "Resultados: entregable, no entregable, evidencia pendiente o revisión requerida. Cada uno produce un evento específico.",
+      "source_id": "N12-S172",
+      "sha256": "50a839a5b8b86962c1e5b87fa9509f914476c0150a2836a35b14456e056bd24f",
+      "words": 15
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 327,
+      "line_end": 327,
+      "text": "Proyecciones: Recepción ve acción disponible y razón; Housekeeping ve condiciones pendientes; el huésped recibe una comunicación simple que no expone detalles internos; dirección puede auditar tiempos y reparaciones.",
+      "source_id": "N12-S173",
+      "sha256": "5f4d2265e811195f8b8c1963a876c52024cd733874a5436f51e53343b694031b",
+      "words": 28
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 329,
+      "line_end": 329,
+      "text": "Evidencia: marcas de inspección, estado de cerradura, asignación, versión de regla y tiempos de disponibilidad.",
+      "source_id": "N12-S174",
+      "sha256": "7d7fc6046cc73710f991eb34324727eb4670a21c7daa7aa5e34fe3e327587a28",
+      "words": 15
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 331,
+      "line_end": 331,
+      "text": "Reparación: si una evidencia posterior invalida el resultado, se emite rectificación, se reasigna o compensa y se conserva el impacto. No se elimina el evento original.",
+      "source_id": "N12-S175",
+      "sha256": "e6975c12d788538a2e8a52f8d3f2e9b9dbdc719ed069122b43fbf28ca753f0cf",
+      "words": 26
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 333,
+      "line_end": 333,
+      "text": "La transición no resuelve todavía mensajes duplicados, carreras entre asignaciones ni convergencia de proyecciones. HH-12 deja esos riesgos localizados para N13.",
+      "source_id": "N12-S176",
+      "sha256": "1ee5a0904b6fb2e743b50d1e9d62467a6f0af9484b2924dcb57c851b64d857f6",
+      "words": 21
+    },
+    {
+      "kind": "heading",
+      "line_start": 335,
+      "line_end": 335,
+      "text": "### Caso de transferencia: administrar una medicación hospitalaria",
+      "source_id": "N12-S177",
+      "sha256": "15841f4c5030b86bc97751bb699820a018f0dcd2f586a7c2953f764d1c146702",
+      "words": 7
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 337,
+      "line_end": 337,
+      "text": "En un hospital, una profesional prescribe una medicación, farmacia la valida, enfermería la prepara y una persona autorizada la administra. Un sistema podría representar todo con el estado “medicación dada”, pero esa simplificación impide distinguir intención, validación, preparación y ejecución.",
+      "source_id": "N12-S178",
+      "sha256": "96c1eb07a2a4c230074679ec11c6475b4fe93b16f6e2d94ba271b0d954f1fce7",
+      "words": 40
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 339,
+      "line_end": 339,
+      "text": "La prescripción es un comando clínico emitido con autoridad. Su aceptación depende de identidad, dosis, alergias y reglas. La validación produce eventos y puede modificar el curso. La administración efectiva es otro evento que necesita evidencia del paciente, medicamento, dosis, vía y momento. El estado del plan terapéutico se deriva de esas piezas.",
+      "source_id": "N12-S179",
+      "sha256": "a64c5aa135e06b9728b298db244997bb4d05f59afabc82bffe25244e675d849b",
+      "words": 53
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 341,
+      "line_end": 341,
+      "text": "Un lector de código puede confirmar coincidencia técnica y no reemplazar el juicio clínico. Una enfermera puede tener permiso para registrar y reconocer que la dosis no debe administrarse. Un sistema de IA puede detectar una interacción y proponer revisión, pero no adquiere autoridad por acertar.",
+      "source_id": "N12-S180",
+      "sha256": "8eea01d3f1e2560e6355dcd15ba7df4d1788db580742cc04ca5a8cbfd7d01722",
+      "words": 46
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 343,
+      "line_end": 343,
+      "text": "El caso muestra el límite de la metáfora del flujo. No se trasladan mecánicamente reglas hoteleras a salud. Se transfiere una pregunta: ¿qué ocurrió, quién podía decidir, qué evidencia lo sostiene y cómo se repara sin borrar la historia?",
+      "source_id": "N12-S181",
+      "sha256": "f055f31809b98f13306b7dee217d1f7bcc5c5db3097d7f96447cb7571a459948",
+      "words": 39
+    },
+    {
+      "kind": "heading",
+      "line_start": 345,
+      "line_end": 345,
+      "text": "### Contraejemplo: conservar todos los eventos y perder la verdad",
+      "source_id": "N12-S182",
+      "sha256": "5fcdef7eaf21e617061b8c06979407472c3f0cc73d0a41e77a318224611690e5",
+      "words": 9
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 347,
+      "line_end": 347,
+      "text": "Una empresa adopta almacenamiento de eventos para “tener auditoría total”. Cada servicio emite `StatusChanged` con hora e identificador. Cuando ocurre un conflicto, existen miles de mensajes, pero nadie puede explicar qué significa cada estado, qué comando lo provocó ni qué sistema tenía autoridad.",
+      "source_id": "N12-S183",
+      "sha256": "cca62e812053322e3ac555f1030d5ee2ff6366d837018dfb8950e40fed962052",
+      "words": 43
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 349,
+      "line_end": 349,
+      "text": "El historial completo no alcanza. La cantidad de eventos aumentó observabilidad técnica y redujo comprensión. La empresa debe reconstruir semántica y responsabilidad desde código, conversaciones y hábitos. El contraejemplo refuta la idea de que una arquitectura orientada a eventos garantiza trazabilidad.",
+      "source_id": "N12-S184",
+      "sha256": "e6ba14bfa4bb8988ce4bfdb518f47821478bf53894864792f987908f86c11a70",
+      "words": 41
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 351,
+      "line_end": 351,
+      "text": "El criterio es selectivo: conservar los eventos cuya historia cambia decisiones y diseñarlos con significado, evidencia y autoridad. Para el resto, un estado actual bien gobernado puede ser mejor.",
+      "source_id": "N12-S185",
+      "sha256": "b4c9a221eb8008481f76f74032a6d899bb45c9c004ff4180d71b7c407b5390f8",
+      "words": 29
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 353,
+      "line_end": 353,
+      "text": "La empresa corrige primero tres transiciones críticas, no todo el sistema. Reemplaza nombres genéricos, vincula cada resultado con su comando, declara la fuente de autoridad y conserva una política de rectificación. El resto de los cambios técnicos permanece como telemetría. La mejora surge de diferenciar evidencia de dominio y observabilidad de infraestructura, no de acumular más mensajes.",
+      "source_id": "N12-S186",
+      "sha256": "f51ed30d131696cb38cfbd63b578da90ab46bb6f3c782dfd9918aada6185a9bb",
+      "words": 57
+    },
+    {
+      "kind": "heading",
+      "line_start": 355,
+      "line_end": 355,
+      "text": "## Errores frecuentes",
+      "source_id": "N12-S187",
+      "sha256": "3f515976b68297af3089458bfda89b37bf79e4d0b6aa11d8679037a583854f0c",
+      "words": 2
+    },
+    {
+      "kind": "heading",
+      "line_start": 357,
+      "line_end": 357,
+      "text": "### Nombrar como evento una intención",
+      "source_id": "N12-S188",
+      "sha256": "be7f9a94620b95ace903207bb8f1b32ad1783475f7c768607b3a2345de75ab98",
+      "words": 5
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 359,
+      "line_end": 359,
+      "text": "“Reserva cancelada” no debe emitirse cuando sólo se solicitó cancelar. La promesa visible debe esperar el resultado o declarar que está pendiente.",
+      "source_id": "N12-S189",
+      "sha256": "a4d5f6f2e8d4c635fae17e923353015b23d19cd39b09177fcfa2b74ff50b4820",
+      "words": 22
+    },
+    {
+      "kind": "heading",
+      "line_start": 361,
+      "line_end": 361,
+      "text": "### Tratar el estado como verdad eterna",
+      "source_id": "N12-S190",
+      "sha256": "dc9096d570cb49cdc6ed8e16da69077c91055a5867945533b19d2654ad6ca24f",
+      "words": 6
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 363,
+      "line_end": 363,
+      "text": "Un estado es una proyección vigente bajo reglas y conocimiento determinados. Necesita fecha, alcance y posibilidad de corrección.",
+      "source_id": "N12-S191",
+      "sha256": "ca9a0f22ef1b1b55d728b55f8da9937183294c4d70b8682d359197048d820372",
+      "words": 18
+    },
+    {
+      "kind": "heading",
+      "line_start": 365,
+      "line_end": 365,
+      "text": "### Registrar cambios de campos en lugar de hechos relevantes",
+      "source_id": "N12-S192",
+      "sha256": "0f4a38456e8103e3958ee5c69dbfdfe35c8957a1d70c5373ee47d8d89f831966",
+      "words": 9
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 367,
+      "line_end": 367,
+      "text": "`Updated` conserva movimiento técnico y pierde intención. El evento debe expresar la ocurrencia que importa al dominio.",
+      "source_id": "N12-S193",
+      "sha256": "9061327b1c2de2d927d530265cc9c714b66f1e9fca32bb627e9e8e65899a9920",
+      "words": 17
+    },
+    {
+      "kind": "heading",
+      "line_start": 369,
+      "line_end": 369,
+      "text": "### Confundir permiso con autoridad",
+      "source_id": "N12-S194",
+      "sha256": "32d7c2c0f449cf26bf44b74e5275294036fdcdb68b2355025fd69568c33339da",
+      "words": 4
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 371,
+      "line_end": 371,
+      "text": "Una cuenta habilitada puede ejecutar una operación que la organización no reconoce como legítima. Roles, políticas y excepciones deben alinearse.",
+      "source_id": "N12-S195",
+      "sha256": "c8ec09f127238759d31bdfe39b7e81a9165b8a652e616c36fb76015d7e7dea0f",
+      "words": 20
+    },
+    {
+      "kind": "heading",
+      "line_start": 373,
+      "line_end": 373,
+      "text": "### Suponer que la marca temporal ordena todo",
+      "source_id": "N12-S196",
+      "sha256": "6613823979630ac33f67a0948769275e8c98327940c3a9f3b7c75df0d6c01236",
+      "words": 7
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 375,
+      "line_end": 375,
+      "text": "Relojes, demoras y concurrencia pueden producir órdenes aparentes. Se debe conservar causalidad y correlación pertinentes.",
+      "source_id": "N12-S197",
+      "sha256": "31a5402b54941837f422a037c9401a55d2dd110fdeafd745af1f6d87ff753abc",
+      "words": 15
+    },
+    {
+      "kind": "heading",
+      "line_start": 377,
+      "line_end": 377,
+      "text": "### Borrar el error para restaurar consistencia",
+      "source_id": "N12-S198",
+      "sha256": "1373686cdcf9cfb9597d963efa765612c00dda63dc3e7e10000538ccbe4ca545",
+      "words": 6
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 379,
+      "line_end": 379,
+      "text": "Corregir estado sin registrar rectificación o compensación impide reconstruir consecuencias y aprender.",
+      "source_id": "N12-S199",
+      "sha256": "74beb038e0a9c9e7a1c9cfd88b9242412f24a053e5766cdde5e3638345679bee",
+      "words": 12
+    },
+    {
+      "kind": "heading",
+      "line_start": 381,
+      "line_end": 381,
+      "text": "### Agregar intervención humana al final",
+      "source_id": "N12-S200",
+      "sha256": "98698ba064ec5bc8e2f25fe930b21e020025cafd0b7bbc561549a7476bdecfab",
+      "words": 5
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 383,
+      "line_end": 383,
+      "text": "Una aprobación humana sin tiempo, evidencia ni capacidad de cambiar la decisión es una firma decorativa.",
+      "source_id": "N12-S201",
+      "sha256": "11a8173111d70c9f921c64e0a526f3450fac3dbb9db082bdd49b5bbed35df8b8",
+      "words": 16
+    },
+    {
+      "kind": "heading",
+      "line_start": 385,
+      "line_end": 385,
+      "text": "### Adoptar event sourcing por moda",
+      "source_id": "N12-S202",
+      "sha256": "40530d7546f3ae02fb679ce4b24d6fffccf786501ad56b25bb906e1595c81344",
+      "words": 5
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 387,
+      "line_end": 387,
+      "text": "Conservar toda la historia introduce costos. Debe elegirse sólo donde reconstrucción, auditoría o proyecciones alternativas justifican la complejidad.",
+      "source_id": "N12-S203",
+      "sha256": "ada72bdd3f49af76f16ed339c7e63de1136039e4dcffb596b82301704a40455c",
+      "words": 18
+    },
+    {
+      "kind": "heading",
+      "line_start": 389,
+      "line_end": 389,
+      "text": "### Diseñar sólo el camino feliz",
+      "source_id": "N12-S204",
+      "sha256": "cc6b2b223ad317b41e699491201d939abcaa6e889c9683205635c3fcbf98faba",
+      "words": 5
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 391,
+      "line_end": 391,
+      "text": "Rechazo, demora, evidencia incompleta, excepción y reparación forman parte del sistema real. Si no aparecen en el modelo, reaparecen como trabajo informal.",
+      "source_id": "N12-S205",
+      "sha256": "55f3312cb558155cc5923b31199584d98dd606dc800b189610faed09040f533d",
+      "words": 22
+    },
+    {
+      "kind": "heading",
+      "line_start": 393,
+      "line_end": 393,
+      "text": "## Consecuencias profesionales",
+      "source_id": "N12-S206",
+      "sha256": "e2b14d0172cf0e92eb12b84dc39469ac45420a1308fcc2606e6bd75ef1257175",
+      "words": 2
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 395,
+      "line_end": 395,
+      "text": "Diseñar información es diseñar posibilidades de acción. El nombre de un botón, un evento, un estado o un rol puede crear una promesa, ocultar una condición o trasladar responsabilidad. Estas decisiones no pertenecen sólo a arquitectura de software.",
+      "source_id": "N12-S207",
+      "sha256": "17f916692cdf556e06c2b866624477d9fef27e0574326f89dac59b4eb3ada927",
+      "words": 38
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 397,
+      "line_end": 397,
+      "text": "Análisis necesita reconstruir episodios y significado. Producto debe distinguir consulta, intención y resultado. Desarrollo implementa reglas y trazas. Seguridad controla permisos y separación de funciones. Operaciones conoce excepciones y tiempos reales. Dirección define autoridad y reparación. La calidad emerge de esa coordinación.",
+      "source_id": "N12-S208",
+      "sha256": "e843687cde4038c5a60b070fb1f7d970597c829b5b07ec83e63a68f14ed513f9",
+      "words": 42
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 399,
+      "line_end": 399,
+      "text": "Un modelo profesional permite responder no sólo “qué valor tiene ahora”, sino “cómo llegó allí”, “qué se intentó”, “quién podía aceptarlo”, “qué evidencia existía” y “qué ocurre si estaba equivocado”. Esa capacidad convierte un sistema registrador en un sistema responsable.",
+      "source_id": "N12-S209",
+      "sha256": "5ef8a4ed1c53858f9f386b8fb3b0229b3cea78342a6e06fd140b11132acd4d17",
+      "words": 40
+    },
+    {
+      "kind": "heading",
+      "line_start": 401,
+      "line_end": 401,
+      "text": "## Límites y tensiones",
+      "source_id": "N12-S210",
+      "sha256": "58f94eedcaa90bb0bee335fdef54a571fa1308409ea51939ceac2ebf4da4327e",
+      "words": 3
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 403,
+      "line_end": 403,
+      "text": "La historia completa puede entrar en conflicto con privacidad, costo y derecho a rectificación. Inmutabilidad no autoriza retención ilimitada. Se pueden separar datos personales, aplicar políticas de acceso, conservar referencias mínimas o eliminar información bajo reglas sin destruir la coherencia necesaria.",
+      "source_id": "N12-S211",
+      "sha256": "126a28b588ed0af6d486f7a303dfd8b9aa3c5db959971ec3a747ec6f437c5f42",
+      "words": 41
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 405,
+      "line_end": 405,
+      "text": "La autoridad formal puede reproducir desigualdades. Modelar quién decide no significa aceptar sin discusión la distribución existente. N05 sigue vigente: exposición, voz y capacidad de reparación deben entrar al análisis. HH-12 describe autoridad y permite cuestionarla.",
+      "source_id": "N12-S212",
+      "sha256": "2f30c7cfa91e0021eef0598fed74f4bf26a9c8107bcf882e1f847c56db34b739",
+      "words": 36
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 407,
+      "line_end": 407,
+      "text": "No todo evento importante puede capturarse automáticamente. El trabajo humano incluye interpretación, negociación y cuidado. Forzar cada matiz dentro de categorías puede empobrecer la situación. El modelo debe conservar espacios para relato y revisión.",
+      "source_id": "N12-S213",
+      "sha256": "2bdbbf2cccd13f443fb4a17bb723f9720cc6f8fe1429da4206436b0257be341a",
+      "words": 34
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 409,
+      "line_end": 409,
+      "text": "Finalmente, separar conceptos aumenta claridad y puede aumentar complejidad. Si el costo del modelo supera la consecuencia de equivocarse, una solución más simple es defendible. La exigencia no es representar todo, sino preservar las distinciones que cambian decisiones.",
+      "source_id": "N12-S214",
+      "sha256": "847f3c3546e14a7cdfbece2d790459bb3adb5516c0678aabf2b685a8299bc994",
+      "words": 38
+    },
+    {
+      "kind": "heading",
+      "line_start": 411,
+      "line_end": 411,
+      "text": "## De N12 a N13: cuando las transiciones viajan y se cruzan",
+      "source_id": "N12-S215",
+      "sha256": "86f12a5b8c6cf45c1610111fa1a02a1641c91f7ec2bafb07d283c7427ee0fe3e",
+      "words": 11
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 413,
+      "line_end": 413,
+      "text": "HH-12 dejó eventos con identidad, comandos que pueden rechazarse, estados derivados, evidencia y autoridad. Al distribuir esas piezas aparecen preguntas nuevas. ¿Qué ocurre si un mensaje llega tarde o dos veces? ¿Cómo se decide entre comandos concurrentes? ¿Qué significa consistencia cuando distintas vistas se actualizan en momentos diferentes? ¿Cómo se repara una divergencia sin repetir efectos?",
+      "source_id": "N12-S216",
+      "sha256": "3439f3c0b000efc492b13ee8f9b70a7c8ff9081cec8d26a907cc890a4655af35",
+      "words": 56
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 415,
+      "line_end": 415,
+      "text": "N13 trabajará demoras, concurrencia, consistencia, idempotencia y reconciliación. No redefinirá evento, estado ni comando. Utilizará las transiciones de HH-12 como casos de prueba. El avance será pasar de una transición defendible a un sistema distribuido que pueda sostenerla bajo desorden, repetición y falla parcial.",
+      "source_id": "N12-S217",
+      "sha256": "9d531c7aa92f47cecf4d58e82f6c2b7ad69637b60561a95d2b4d0f13cdbc4a64",
+      "words": 44
+    },
+    {
+      "kind": "heading",
+      "line_start": 417,
+      "line_end": 417,
+      "text": "## Síntesis",
+      "source_id": "N12-S218",
+      "sha256": "35f809ce6d10c61d346069bdadb271cfba7c62553642e102d7cbc2a02621645e",
+      "words": 1
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 419,
+      "line_end": 419,
+      "text": "Un comando expresa intención y puede ser rechazado. Un evento afirma que algo ocurrió. Un estado representa qué se considera vigente. La evidencia permite sostener o impugnar la transición. La autoridad define quién puede reconocerla y asumir sus consecuencias.",
+      "source_id": "N12-S219",
+      "sha256": "f59194cd691f653b05454dd423baab20eaf18b6405850ae8baab4a6076bbc858",
+      "words": 39
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 421,
+      "line_end": 421,
+      "text": "Estas funciones se conectan, pero no deben colapsarse. Enviar un comando no confirma el resultado. Registrar un evento no demuestra verdad. Mostrar un estado no conserva toda la historia. Tener permiso no equivale a autoridad. Agregar una aprobación humana no garantiza control.",
+      "source_id": "N12-S220",
+      "sha256": "5c5043cc0e1bc3fd398f20b309164044ec7fb831386c8ae08b4b762c6ab1218b",
+      "words": 42
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 423,
+      "line_end": 423,
+      "text": "Tiempo, correlación, semántica, rectificación y reparación permiten reconstruir episodios. Estándares como CloudEvents y AsyncAPI mejoran la interoperabilidad del sobre técnico; UML y BPMN aportan lenguajes de modelado. Ninguno decide por sí solo qué significa una transición ni quién puede realizarla.",
+      "source_id": "N12-S221",
+      "sha256": "da0f64b8cd7ecf3c4cc77c2171503b032b1d853bbe78bcb03a8bd65530830803",
+      "words": 40
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 425,
+      "line_end": 425,
+      "text": "HH-12 organiza nueve decisiones desde propósito hasta reparación. Su resultado no es una arquitectura obligatoria. Es una transición que puede explicarse, probarse e impugnarse. Modelar sólo lo que ayuda a decidir significa conservar la diferencia entre lo pedido, lo ocurrido, lo vigente y lo legítimo.",
+      "source_id": "N12-S222",
+      "sha256": "2b8c705c1747e0ff37e41f3eb288a001d287aea90ba615d16367aad9b546a0e6",
+      "words": 45
+    },
+    {
+      "kind": "heading",
+      "line_start": 427,
+      "line_end": 427,
+      "text": "## Cinco píldoras para recordar",
+      "source_id": "N12-S223",
+      "sha256": "58d952c0bae9a4c58435a69522ed0128639afd6d7d1f9cad12cd60845d6be215",
+      "words": 4
+    },
+    {
+      "kind": "list_item",
+      "line_start": 429,
+      "line_end": 429,
+      "text": "1. Un comando solicita; un evento afirma que algo ocurrió.",
+      "source_id": "N12-S224",
+      "sha256": "d62a002eac0e19c70ac2a27b70a396da7d9422aefba93e1fcc01ce15e9b5b587",
+      "words": 10
+    },
+    {
+      "kind": "list_item",
+      "line_start": 430,
+      "line_end": 430,
+      "text": "2. Un estado es una proyección vigente, no la historia completa.",
+      "source_id": "N12-S225",
+      "sha256": "21aa23034c37000f7de342a34f69394ddf6c8f2d48341b4e8aa91c210919857c",
+      "words": 11
+    },
+    {
+      "kind": "list_item",
+      "line_start": 431,
+      "line_end": 431,
+      "text": "3. La evidencia sostiene la transición; el registro técnico por sí solo puede no alcanzar.",
+      "source_id": "N12-S226",
+      "sha256": "d0709d5194185058e3a24faf49a7168a5b94d55ba3ddc76812acc07c0b0f26f5",
+      "words": 15
+    },
+    {
+      "kind": "list_item",
+      "line_start": 432,
+      "line_end": 432,
+      "text": "4. El permiso habilita una operación; la autoridad asume su legitimidad y consecuencias.",
+      "source_id": "N12-S227",
+      "sha256": "91687f26c7f9dd0372316f70a6b7c1a3df5d029342769d989e7a57ab9abcca7d",
+      "words": 13
+    },
+    {
+      "kind": "list_item",
+      "line_start": 433,
+      "line_end": 433,
+      "text": "5. Una transición responsable declara rechazo, excepción y reparación, no sólo éxito.",
+      "source_id": "N12-S228",
+      "sha256": "12c91efd51b6fabd67778da8f23229a5e180edd33a68259d7e92d1b80ec509ad",
+      "words": 12
+    },
+    {
+      "kind": "heading",
+      "line_start": 435,
+      "line_end": 435,
+      "text": "## Glosario esencial",
+      "source_id": "N12-S229",
+      "sha256": "5b94312d56051ca01e0f23f62610cf5bc85553b0e82f0152273ca62d470e516a",
+      "words": 2
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 437,
+      "line_end": 437,
+      "text": "**Autoridad:** capacidad reconocida para ordenar, aceptar, revisar o reparar una decisión dentro de un contexto.",
+      "source_id": "N12-S230",
+      "sha256": "b2538a099b86c8df486571ebeba6c71af019d184cd1d882a0fa5f7b21387d1e2",
+      "words": 15
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 439,
+      "line_end": 439,
+      "text": "**Comando:** solicitud dirigida a un responsable para intentar producir un cambio.",
+      "source_id": "N12-S231",
+      "sha256": "42ffaa94d0097a26b5bde433214bbaca2535a1c3f19eabf976be2c4e6afc3bea",
+      "words": 11
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 441,
+      "line_end": 441,
+      "text": "**Compensación:** acción posterior que contrarresta ciertos efectos sin borrar lo ocurrido.",
+      "source_id": "N12-S232",
+      "sha256": "7a77526a94292b22bebfe894c48e27465f6be70edce18d7c3886bd3c10bcfa5b",
+      "words": 11
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 443,
+      "line_end": 443,
+      "text": "**Correlación:** vínculo que permite reconocer qué comandos, eventos y reparaciones pertenecen al mismo episodio.",
+      "source_id": "N12-S233",
+      "sha256": "5682bfbe770a3b3aed93cda765cd09df7cb83184f560c539ecd7b9cc519641a2",
+      "words": 14
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 445,
+      "line_end": 445,
+      "text": "**Estado:** representación de lo que se considera vigente para una entidad o proceso bajo reglas y hasta un momento.",
+      "source_id": "N12-S234",
+      "sha256": "9b6786a372455f2648a211cbacc6a7e052905e334aeec940e734657e9b2dc8dc",
+      "words": 19
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 447,
+      "line_end": 447,
+      "text": "**Evento:** afirmación estructurada de que ocurrió algo relevante.",
+      "source_id": "N12-S235",
+      "sha256": "895e84e08c2ad7165253f7d02736d400b8f3d41ebf6932772f5949e36b508632",
+      "words": 8
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 449,
+      "line_end": 449,
+      "text": "**Evidencia:** información que permite sostener, debilitar o impugnar un evento, estado o decisión.",
+      "source_id": "N12-S236",
+      "sha256": "3dc46a8fbbe9d32dd8bea13149d0596b17daa67c7d134eeb01a2b898bea12adc",
+      "words": 13
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 451,
+      "line_end": 451,
+      "text": "**Excepción:** situación que no puede resolverse mediante el camino ordinario y requiere otra autoridad o regla.",
+      "source_id": "N12-S237",
+      "sha256": "acd2028d62231fdcf493a6c77b202b64e855698f7b59a21af5c1b4410568617e",
+      "words": 16
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 453,
+      "line_end": 453,
+      "text": "**Invariante:** condición que debe mantenerse a través de todas las transiciones válidas.",
+      "source_id": "N12-S238",
+      "sha256": "278c36a2cad348d6025f9b2ceb6a2fdf1930d66ae6fa7109e7c1fbbd9f796f24",
+      "words": 12
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 455,
+      "line_end": 455,
+      "text": "**Máquina de estados:** modelo que representa estados, transiciones, disparadores y condiciones.",
+      "source_id": "N12-S239",
+      "sha256": "e96aa1c20bfebe7a6b1bd7200de6d1630de37922eed9acb2f400ee630d0bd498",
+      "words": 11
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 457,
+      "line_end": 457,
+      "text": "**Permiso:** habilitación técnica para ejecutar una operación sobre un recurso.",
+      "source_id": "N12-S240",
+      "sha256": "03371050ab271c27699dd8689589e8d2ac9da54ea55ca3325c1ab6363bae2484",
+      "words": 10
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 459,
+      "line_end": 459,
+      "text": "**Proyección:** vista de estado construida para una pregunta o audiencia a partir de fuentes y reglas.",
+      "source_id": "N12-S241",
+      "sha256": "b33091204f1391cbc056910a0c00746c8ed102869c719ad88b64a1f18950a59c",
+      "words": 16
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 461,
+      "line_end": 461,
+      "text": "**Rectificación:** registro que corrige una afirmación anterior y conserva la historia del cambio.",
+      "source_id": "N12-S242",
+      "sha256": "bb37b848ee48d15b800325573135853f7b15626bef78155cb886b4549cecfbba",
+      "words": 13
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 463,
+      "line_end": 463,
+      "text": "**Retractación:** retiro explícito de una afirmación sin necesidad de reemplazarla.",
+      "source_id": "N12-S243",
+      "sha256": "7ddd64f586e2b08baa63f1f404726837d10ea176a911783910606f8cb9ff11d3",
+      "words": 10
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 465,
+      "line_end": 465,
+      "text": "**Transición:** pasaje reconocido entre situaciones mediante intención, reglas, evento, evidencia y autoridad.",
+      "source_id": "N12-S244",
+      "sha256": "a81a73fe9d55d010d84b7b2768d655c50bbc05dfc8076847621fa2de79254206",
+      "words": 12
+    },
+    {
+      "kind": "heading",
+      "line_start": 467,
+      "line_end": 467,
+      "text": "## Preguntas de preparación",
+      "source_id": "N12-S245",
+      "sha256": "893ef0eee85afc596fc20d729e9ec23d2e9a8233a81cd6b4b33d3a3e4e17a1b2",
+      "words": 3
+    },
+    {
+      "kind": "list_item",
+      "line_start": 469,
+      "line_end": 469,
+      "text": "1. ¿Qué diferencia existe entre “solicitud recibida”, “decisión aceptada” y “estado vigente”?",
+      "source_id": "N12-S246",
+      "sha256": "2069f7f8020d7a351e424548d1bfbf7c468d2525598ac6c673a566786df25483",
+      "words": 12
+    },
+    {
+      "kind": "list_item",
+      "line_start": 470,
+      "line_end": 470,
+      "text": "2. ¿Cuándo un registro de evento constituye evidencia suficiente y cuándo sólo demuestra que un sistema emitió un mensaje?",
+      "source_id": "N12-S247",
+      "sha256": "88a228cf916c0ebca3f3a4ef3c27d3b5d6ece11c79f335692e713c3a2f89d449",
+      "words": 19
+    },
+    {
+      "kind": "list_item",
+      "line_start": 471,
+      "line_end": 471,
+      "text": "3. ¿Por qué un permiso técnico puede existir sin autoridad institucional?",
+      "source_id": "N12-S248",
+      "sha256": "d9424ed9d9f706a8b1bc9ec8039af828ff1875543d279a110dbb14423252bd37",
+      "words": 11
+    },
+    {
+      "kind": "list_item",
+      "line_start": 472,
+      "line_end": 472,
+      "text": "4. ¿Qué tiempos deberían conservarse para reconstruir el episodio de la habitación 412?",
+      "source_id": "N12-S249",
+      "sha256": "748bcaa14f6d156aca3a88f346e55bad71401fb61f204989be0d89465386eff3",
+      "words": 13
+    },
+    {
+      "kind": "list_item",
+      "line_start": 473,
+      "line_end": 473,
+      "text": "5. ¿Qué parte de HH-12 puede automatizarse y qué condiciones deberían mantenerse bajo responsabilidad humana?",
+      "source_id": "N12-S250",
+      "sha256": "3443799a6d6ad862cfaa0ee33d6f854962c9edaea69316087f696291f8db8135",
+      "words": 15
+    },
+    {
+      "kind": "list_item",
+      "line_start": 474,
+      "line_end": 474,
+      "text": "6. ¿Cuándo conviene conservar una secuencia de eventos y cuándo basta un estado actual con historial selectivo?",
+      "source_id": "N12-S251",
+      "sha256": "2b0a0cd19c16cab68dddfc6fed0b645f80ab37a413a7e20bab39012d2e8c4d94",
+      "words": 17
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 476,
+      "line_end": 476,
+      "text": "Para el encuentro, seleccionar una transición conocida de un sistema universitario, laboral o cotidiano. Describir estado previo, comando, autoridad, regla, evento, estado resultante, evidencia y reparación. Identificar una confusión posible entre intención y resultado.",
+      "source_id": "N12-S252",
+      "sha256": "bfcb082d05dc24ac9de2471e327db1cc99ad0399e696fdf0bf0b390713efd8f5",
+      "words": 34
+    },
+    {
+      "kind": "heading",
+      "line_start": 478,
+      "line_end": 478,
+      "text": "## Referentes",
+      "source_id": "N12-S253",
+      "sha256": "c34b4518431558f26e3f5fc3e20725e209c760c8e77a933eace1114e364c0e69",
+      "words": 1
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 480,
+      "line_end": 480,
+      "text": "**Eric Evans.** Articuló el diseño dirigido por el dominio y la necesidad de construir un lenguaje compartido entre especialistas y software.",
+      "source_id": "N12-S254",
+      "sha256": "df1650fd6fec813c9263ce9726bc88829108cee9adfeb56d31d256396236c7d7",
+      "words": 21
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 482,
+      "line_end": 482,
+      "text": "**Leslie Lamport.** Demostró que el orden de eventos en sistemas distribuidos exige relaciones causales y no puede descansar ingenuamente en un reloj global.",
+      "source_id": "N12-S255",
+      "sha256": "773980bfcc2cc01cd9da4f4576fd68f407ecc0fa5f1fefa23a4f9a937014059a",
+      "words": 23
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 484,
+      "line_end": 484,
+      "text": "**Martin Fowler.** Sistematizó patrones como event sourcing y CQRS, junto con sus beneficios y costos de complejidad.",
+      "source_id": "N12-S256",
+      "sha256": "329f55f7bb954aa01d6057a01d7b10e683b42ae03c9203905c66de44e76e7d5a",
+      "words": 17
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 486,
+      "line_end": 486,
+      "text": "**David Ferraiolo y Richard Kuhn.** Contribuyeron al modelo de control de acceso basado en roles y a la separación entre usuarios, roles, permisos y restricciones.",
+      "source_id": "N12-S257",
+      "sha256": "9db35e64018403149ff8d1e7dd76b1f0809295b7ca1c966f268bc56751043d89",
+      "words": 25
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 488,
+      "line_end": 488,
+      "text": "**Nancy Leveson.** Desarrolló una concepción sociotécnica de seguridad basada en control, restricciones y retroalimentación.",
+      "source_id": "N12-S258",
+      "sha256": "9dde8dcb604a624fabae25020439e9a3f3a3ee5add890e3d920d60738e6f536d",
+      "words": 14
+    },
+    {
+      "kind": "paragraph",
+      "line_start": 490,
+      "line_end": 490,
+      "text": "**Elham Tabassi.** Lideró el NIST AI RMF, que exige responsabilidades explícitas para decisiones y configuraciones entre personas e inteligencia artificial.",
+      "source_id": "N12-S259",
+      "sha256": "4b67bbdb392e1095fd3e7173d7ba2ae534029b275066be3635a52e6dd2a3463d",
+      "words": 20
+    },
+    {
+      "kind": "heading",
+      "line_start": 492,
+      "line_end": 492,
+      "text": "## Referencias base",
+      "source_id": "N12-S260",
+      "sha256": "3ddd51c3e6438f925e6b9e824a235945cafaefb02293e32f03cf09cd6158c41e",
+      "words": 2
+    },
+    {
+      "kind": "list_item",
+      "line_start": 494,
+      "line_end": 494,
+      "text": "- Evans, E. (2004). *Domain-Driven Design: Tackling Complexity in the Heart of Software*. Addison-Wesley.",
+      "source_id": "N12-S261",
+      "sha256": "388b3e27f9b76358e5eb80e082d184aa7eaa669756efcd2af0d777bd788adcf9",
+      "words": 13
+    },
+    {
+      "kind": "list_item",
+      "line_start": 495,
+      "line_end": 495,
+      "text": "- Lamport, L. (1978). “Time, Clocks, and the Ordering of Events in a Distributed System”. *Communications of the ACM*, 21(7), 558–565. https://doi.org/10.1145/359545.359563",
+      "source_id": "N12-S262",
+      "sha256": "eee3f699890f969c2d4e1833264855c2f1bd26b66989235193503a4f8bcbc6ed",
+      "words": 29
+    },
+    {
+      "kind": "list_item",
+      "line_start": 496,
+      "line_end": 496,
+      "text": "- Fowler, M. (2005). “Event Sourcing”. https://martinfowler.com/eaaDev/EventSourcing.html",
+      "source_id": "N12-S263",
+      "sha256": "29e678c3b33dfc4544a9d3d22f33d6ccaffbded4c6a896346674db0f6aebe4ed",
+      "words": 11
+    },
+    {
+      "kind": "list_item",
+      "line_start": 497,
+      "line_end": 497,
+      "text": "- Fowler, M. (2011). “CQRS”. https://martinfowler.com/bliki/CQRS.html",
+      "source_id": "N12-S264",
+      "sha256": "3814ffa35f1e5d929ca038aea61e09569f72ee6f9ca8ff84f86c7e638b881a18",
+      "words": 10
+    },
+    {
+      "kind": "list_item",
+      "line_start": 498,
+      "line_end": 498,
+      "text": "- Ferraiolo, D. F. y Kuhn, D. R. (1992). “Role-Based Access Controls”. *15th National Computer Security Conference*, 554–563. https://csrc.nist.gov/projects/role-based-access-control",
+      "source_id": "N12-S265",
+      "sha256": "f5517a2194621b5b0104138587d50caffde748d46b0c9e0985251cd75b7b3de9",
+      "words": 24
+    },
+    {
+      "kind": "list_item",
+      "line_start": 499,
+      "line_end": 499,
+      "text": "- Sandhu, R. S., Coyne, E. J., Feinstein, H. L. y Youman, C. E. (1996). “Role-Based Access Control Models”. *Computer*, 29(2), 38–47. https://csrc.nist.gov/csrc/media/projects/role-based-access-control/documents/sandhu96.pdf",
+      "source_id": "N12-S266",
+      "sha256": "33e152e38bcb102cbd4477c263c95ad5d6f3bac2a83774e2abaa492c1b7fd64d",
+      "words": 34
+    },
+    {
+      "kind": "list_item",
+      "line_start": 500,
+      "line_end": 500,
+      "text": "- Leveson, N. (2011). *Engineering a Safer World: Systems Thinking Applied to Safety*. MIT Press. https://doi.org/10.7551/mitpress/8179.001.0001",
+      "source_id": "N12-S267",
+      "sha256": "5804f517efbfe7f4db3518267706264971f3b250ca7af342e3e92ebb35fc8a69",
+      "words": 23
+    },
+    {
+      "kind": "list_item",
+      "line_start": 501,
+      "line_end": 501,
+      "text": "- Object Management Group (2017). *Unified Modeling Language, Version 2.5.1*. https://www.omg.org/spec/UML/2.5.1",
+      "source_id": "N12-S268",
+      "sha256": "38ef0e7b942ef402a1b7006dee908d2c444313cc9a621f951e1e343faaac06d4",
+      "words": 20
+    },
+    {
+      "kind": "list_item",
+      "line_start": 502,
+      "line_end": 502,
+      "text": "- Object Management Group (2014). *Business Process Model and Notation, Version 2.0.2*. https://www.omg.org/spec/BPMN/2.0.2",
+      "source_id": "N12-S269",
+      "sha256": "6c334db45394cb0fb85b099416c93adeba168555ccc954f54dc947f9e8addd1b",
+      "words": 22
+    },
+    {
+      "kind": "list_item",
+      "line_start": 503,
+      "line_end": 503,
+      "text": "- Cloud Native Computing Foundation (2022). *CloudEvents Specification, Version 1.0.2*. https://github.com/cloudevents/spec/tree/ce@v1.0.2",
+      "source_id": "N12-S270",
+      "sha256": "e5da5468275806dddeddeaa0d74d3e0edb9ac4200c3c6b98035971e705759bdc",
+      "words": 21
+    },
+    {
+      "kind": "list_item",
+      "line_start": 504,
+      "line_end": 504,
+      "text": "- AsyncAPI Initiative (2026). *AsyncAPI Specification, Version 3.1.0*. https://www.asyncapi.com/docs/reference/specification/v3.1.0",
+      "source_id": "N12-S271",
+      "sha256": "fac9bb785f369f430aa99af179f8855c67bc1f8dd96b50ecc12c1bbbd8b4332f",
+      "words": 19
+    },
+    {
+      "kind": "list_item",
+      "line_start": 505,
+      "line_end": 505,
+      "text": "- Tabassi, E. (2023). *Artificial Intelligence Risk Management Framework, AI RMF 1.0*. NIST AI 100-1. https://doi.org/10.6028/NIST.AI.100-1",
+      "source_id": "N12-S272",
+      "sha256": "4f85daf439cc7d4b9c980be3e34dfee45cce405e1e0af657041808b23034b8ad",
+      "words": 23
+    },
+    {
+      "kind": "list_item",
+      "line_start": 506,
+      "line_end": 506,
+      "text": "- Autio, C. et al. (2024). *Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile*. NIST AI 600-1. https://doi.org/10.6028/NIST.AI.600-1",
+      "source_id": "N12-S273",
+      "sha256": "30d20356236135e98e90e6f0a3adeb69ff45e9f4e5b41a0f71e2894298bd6b0d",
+      "words": 25
+    },
+    {
+      "kind": "list_item",
+      "line_start": 507,
+      "line_end": 507,
+      "text": "- Unión Europea (2024). *Reglamento (UE) 2024/1689 por el que se establecen normas armonizadas en materia de inteligencia artificial*. https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+      "source_id": "N12-S274",
+      "sha256": "1f1a61440cdff9674b9d6a34226fe4879e667aede0da3fb31a5806da28578082",
+      "words": 28
+    }
+  ],
+  "block_count": 274
+}

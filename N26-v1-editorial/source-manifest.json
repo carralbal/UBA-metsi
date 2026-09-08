@@ -1,0 +1,1261 @@
+{
+  "document": "N26",
+  "source": "source/N26_ecosistema_de_servicios_plataformas_y_terceros-content-canonical-v1.md",
+  "eligible_blocks": [
+    {
+      "source_id": "N26-h1",
+      "kind": "heading-1",
+      "text": "Ecosistema de servicios, plataformas y terceros"
+    },
+    {
+      "source_id": "N26-s01-h2",
+      "kind": "heading-2",
+      "text": "Pregunta profesional"
+    },
+    {
+      "source_id": "N26-s01-b001",
+      "kind": "paragraph",
+      "text": "¿Cómo gobernar una promesa cuando depende de servicios internos, plataformas compartidas y terceros que ninguna unidad controla por completo?"
+    },
+    {
+      "source_id": "N26-s02-h2",
+      "kind": "heading-2",
+      "text": "La habitación estaba lista, pero el ecosistema no"
+    },
+    {
+      "source_id": "N26-s02-b001",
+      "kind": "paragraph",
+      "text": "Hotel Horizonte recibe a una familia que reservó por un canal externo. La habitación está limpia, el pago figura aprobado y la cerradura responde. Sin embargo, Recepción no puede completar el ingreso porque el proveedor de identidad devuelve un estado distinto del que conserva el canal de reservas."
+    },
+    {
+      "source_id": "N26-s02-b002",
+      "kind": "paragraph",
+      "text": "Cada componente funciona dentro de su propio tablero. El canal confirma la venta, pagos confirma la autorización, identidad confirma la cuenta y el PMS confirma disponibilidad. La promesa falla en el vínculo entre esas certezas parciales. Nadie posee el recorrido completo ni puede reparar por sí solo todas sus dependencias."
+    },
+    {
+      "source_id": "N26-s02-b003",
+      "kind": "paragraph",
+      "text": "Una arquitectura de ecosistema no es un inventario ampliado. Explicita capacidades, participantes, fronteras de confianza, contratos, datos, incentivos, modos de degradación y rutas de salida. También distingue qué se comparte, qué permanece autónomo y quién responde cuando una dependencia externa altera la experiencia."
+    },
+    {
+      "source_id": "N26-s02-b004",
+      "kind": "paragraph",
+      "text": "El equipo reconstruye el episodio desde la reserva hasta la llave. Descubre una plataforma de identidad, cinco servicios internos, tres proveedores y dos decisiones manuales que nunca aparecieron en el diagrama técnico. El mapa incorpora responsables, criticidad, sustitución, evidencia y reparación."
+    },
+    {
+      "source_id": "N26-s02-b005",
+      "kind": "paragraph",
+      "text": "La intervención no busca controlar lo incontrolable. Busca diseñar opciones antes de la falla, acordar señales antes del incidente y evitar que la complejidad contractual se convierta en abandono para quien espera en el mostrador."
+    },
+    {
+      "source_id": "N26-s02-b006",
+      "kind": "paragraph",
+      "text": "N26 abre el Bloque F. Recibe de N25 una mirada sobre flujo y espera, y amplía la unidad de análisis hacia el conjunto de organizaciones, plataformas y servicios que sostienen la promesa en operación."
+    },
+    {
+      "source_id": "N26-s03-h2",
+      "kind": "heading-2",
+      "text": "Hotel Horizonte: una estrategia para una contradicción ya conocida"
+    },
+    {
+      "source_id": "N26-s03-b001",
+      "kind": "paragraph",
+      "text": "HH-26 toma el recorrido de ingreso y construye un mapa de ecosistema. Cada dependencia queda vinculada con una capacidad, un responsable, un contrato, una frontera de confianza, una señal de salud, un modo de degradación y una alternativa de salida. El mapa muestra que el huésped experimenta una sola promesa aunque la organización distribuya su realización entre múltiples participantes."
+    },
+    {
+      "source_id": "N26-s04-h2",
+      "kind": "heading-2",
+      "text": "Tesis"
+    },
+    {
+      "source_id": "N26-s04-b001",
+      "kind": "paragraph",
+      "text": "N26 amplía la arquitectura hacia un ecosistema de servicios, plataformas y terceros, y convierte dependencias invisibles en decisiones de ownership, confianza, resiliencia y salida."
+    },
+    {
+      "source_id": "N26-s05-h2",
+      "kind": "heading-2",
+      "text": "Del cierre anterior al nuevo avance"
+    },
+    {
+      "source_id": "N26-s05-b001",
+      "kind": "paragraph",
+      "text": "N25 deja evidencia y decisiones abiertas que N26 utiliza sin reabrir su contenido. N26 amplía la arquitectura hacia un ecosistema de servicios, plataformas y terceros, y convierte dependencias invisibles en decisiones de ownership, confianza, resiliencia y salida."
+    },
+    {
+      "source_id": "N26-s05-b002",
+      "kind": "paragraph",
+      "text": "N27 utilizará este mapa para precisar contratos sintácticos, semánticos, temporales y operacionales. N26 no define todavía cada interfaz ni sus pruebas de conformidad."
+    },
+    {
+      "source_id": "N26-s06-h2",
+      "kind": "heading-2",
+      "text": "Tradiciones y marcos utilizados en el argumento"
+    },
+    {
+      "source_id": "N26-s06-b001",
+      "kind": "paragraph",
+      "text": "AXELOS aporta una fuente contrastable para definir alcance, evidencia y condiciones de revisión. En N26, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N26: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N26-s06-b002",
+      "kind": "paragraph",
+      "text": "Parker, G. G., Van Alstyne, M. W. y Choudary, S. P. analiza plataformas, reglas y efectos de red en ecosistemas. En N26, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N26: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N26-s06-b003",
+      "kind": "paragraph",
+      "text": "Tiwana, A. vincula arquitectura, gobierno y evolución de plataformas. En N26, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N26: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N26-s06-b004",
+      "kind": "paragraph",
+      "text": "Skelton, M. y Pais, M. relacionan plataformas internas con interacción de equipos y flujo. En N26, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N26: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N26-s06-b005",
+      "kind": "paragraph",
+      "text": "ISO/IEC establece requisitos de gestión para sostener servicios. En N26, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N26: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N26-s06-b006",
+      "kind": "paragraph",
+      "text": "NIST integra riesgo de cadena de suministro durante el ciclo de vida. En N26, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N26: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N26-s06-b007",
+      "kind": "paragraph",
+      "text": "NIST sitúa verificación y acceso en fronteras de confianza explícitas. En N26, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N26: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N26-s06-b008",
+      "kind": "paragraph",
+      "text": "CISA aporta una fuente contrastable para definir alcance, evidencia y condiciones de revisión. En N26, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N26: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N26-s06-b009",
+      "kind": "paragraph",
+      "text": "European Union incorpora portabilidad, acceso y condiciones de cambio de proveedor. En N26, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N26: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N26-s06-b010",
+      "kind": "paragraph",
+      "text": "Ross, J. W., Weill, P. y Robertson, D. C. conectan arquitectura con capacidades y modelo operativo. En N26, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N26: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N26-s06-b011",
+      "kind": "paragraph",
+      "text": "Hohpe, G. y Woolf, B. aportan patrones para intercambios, mensajería y fallas. En N26, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N26: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N26-s06-b012",
+      "kind": "paragraph",
+      "text": "FinOps Foundation hace visible costo tecnológico como responsabilidad compartida. En N26, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N26: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N26-s07-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 1 · Reconocer dependencias y promesas operativas"
+    },
+    {
+      "source_id": "N26-s07-b001",
+      "kind": "heading-3",
+      "text": "Ecosistema de servicio"
+    },
+    {
+      "source_id": "N26-s07-b002",
+      "kind": "paragraph",
+      "text": "Un ecosistema de servicio reúne participantes autónomos que sostienen una promesa mediante capacidades, reglas e intercambios interdependientes. La definición fija el objeto de decisión. Si el equipo de N26 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N26-s07-b003",
+      "kind": "paragraph",
+      "text": "No es una lista de proveedores ni una arquitectura encerrada dentro de una organización. La distinción evita que una palabra familiar oculte otro mecanismo. En N26, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N26-s07-b004",
+      "kind": "paragraph",
+      "text": "En ecosistema de servicio, el recorrido causal debe mostrar qué condición habilita la acción, qué transformación ocurre y quién absorbe el resultado. El valor emerge de coordinaciones que cruzan límites jurídicos, técnicos y operativos. Si un salto depende sólo de una explicación oral, la estrategia todavía no puede gobernarlo."
+    },
+    {
+      "source_id": "N26-s07-b005",
+      "kind": "paragraph",
+      "text": "La evidencia relevante para ecosistema de servicio no se limita al resultado promedio. Se observa en recorridos, dependencias, incentivos, fallas y mecanismos de reparación. N26 busca además casos negativos, diferencias entre poblaciones y señales de que la explicación elegida podría ser insuficiente."
+    },
+    {
+      "source_id": "N26-s07-b006",
+      "kind": "paragraph",
+      "text": "Ejemplo. Reserva, identidad, pago, disponibilidad y cerradura participan del mismo ingreso. En N26, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N26-s07-b007",
+      "kind": "paragraph",
+      "text": "El tradeoff central de ecosistema de servicio aparece entre anticipar y preservar opciones. Anticipar puede reducir coordinación y también fijar una premisa prematura; preservar opciones puede producir aprendizaje y también demorar una protección necesaria. La elección debe declarar cuál de esos costos acepta, durante cuánto tiempo y para quién."
+    },
+    {
+      "source_id": "N26-s07-b008",
+      "kind": "paragraph",
+      "text": "La auditoría de ecosistema de servicio termina con una pregunta de uso: ¿qué podría decidir ahora una persona que antes no podía? En N26, la respuesta debe nombrar una acción, una restricción y una evidencia, no sólo una comprensión mejorada."
+    },
+    {
+      "source_id": "N26-s07-b009",
+      "kind": "paragraph",
+      "text": "Operacionalizar ecosistema de servicio requiere asignar una unidad observable. El equipo define qué episodio contará, desde qué momento, con qué población y bajo qué fuente. Después compara al menos un caso ordinario con otro que fuerce excepción. Esta precisión en N26 evita que una conclusión general se sostenga sólo en ejemplos convenientes."
+    },
+    {
+      "source_id": "N26-s07-b010",
+      "kind": "paragraph",
+      "text": "La decisión profesional no termina en adoptar ecosistema de servicio. Se compara una ruta principal con una explicación rival, se explicita quién queda expuesto y se conserva un modo de revisar. El mapa simplifica y debe declarar qué participantes y efectos quedan fuera. El límite forma parte del diseño y no una nota posterior."
+    },
+    {
+      "source_id": "N26-s07-b011",
+      "kind": "heading-3",
+      "text": "Capacidad de servicio"
+    },
+    {
+      "source_id": "N26-s07-b012",
+      "kind": "paragraph",
+      "text": "Una capacidad de servicio combina personas, información, tecnología y autoridad para producir un resultado repetible. Conviene comenzar por su función profesional. Si el equipo de N26 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N26-s07-b013",
+      "kind": "paragraph",
+      "text": "No equivale a una aplicación, endpoint, equipo ni función de organigrama. El contraste importa porque conduce a pruebas distintas. En N26, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N26-s07-b014",
+      "kind": "paragraph",
+      "text": "El mecanismo de capacidad de servicio no se presume por el nombre. Agrupa recursos y decisiones alrededor de lo que debe poder hacerse bajo condiciones reales. Debe localizarse dónde comienza, qué relaciones activa, qué demora introduce y qué capacidad de reparación queda disponible cuando la expectativa no se cumple."
+    },
+    {
+      "source_id": "N26-s07-b015",
+      "kind": "paragraph",
+      "text": "Una afirmación sobre capacidad de servicio gana fuerza cuando puede reconstruirse desde fuentes independientes. Episodios ordinarios y adversos muestran si la capacidad existe más allá del camino feliz. La ausencia de señal también se interpreta: puede significar estabilidad, mala observación o exclusión del caso que más importa."
+    },
+    {
+      "source_id": "N26-s07-b016",
+      "kind": "paragraph",
+      "text": "Ejemplo. Entregar una habitación asignable requiere más que confirmar inventario. En N26, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N26-s07-b017",
+      "kind": "paragraph",
+      "text": "La escala modifica capacidad de servicio. Una solución válida para un equipo puede fallar cuando atraviesa sedes, turnos o proveedores porque aumenta la distancia entre señal y autoridad. Antes de ampliar, N26 prueba si la misma decisión conserva significado y reparación bajo esa nueva distribución."
+    },
+    {
+      "source_id": "N26-s07-b018",
+      "kind": "paragraph",
+      "text": "Para evitar consenso aparente, capacidad de servicio se revisa con alguien afectado y con alguien responsable de reparar. Las dos perspectivas pueden valorar resultados diferentes y obligan a declarar la prioridad elegida."
+    },
+    {
+      "source_id": "N26-s07-b019",
+      "kind": "paragraph",
+      "text": "En la práctica, capacidad de servicio atraviesa más de un área. Se identifican handoffs, esperas, decisiones y datos que cada participante puede ver. Cuando dos áreas usan evidencia distinta en N26, el expediente conserva la divergencia hasta determinar si representa error, perspectiva legítima o una brecha que la estrategia debe resolver."
+    },
+    {
+      "source_id": "N26-s07-b020",
+      "kind": "paragraph",
+      "text": "En una revisión, capacidad de servicio debe responder tres preguntas: qué mejora, qué desplaza y qué vuelve más difícil de revertir. Una capacidad puede depender de acuerdos que la unidad responsable no controla. Si esas respuestas cambian, también debe cambiar el compromiso, aunque el trabajo previo haya sido técnicamente correcto."
+    },
+    {
+      "source_id": "N26-s07-b021",
+      "kind": "heading-3",
+      "text": "Plataforma compartida"
+    },
+    {
+      "source_id": "N26-s07-b022",
+      "kind": "paragraph",
+      "text": "Una plataforma compartida ofrece capacidades gobernadas que otros equipos o actores utilizan para construir y operar servicios. El concepto adquiere valor cuando cambia una decisión. Si el equipo de N26 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N26-s07-b023",
+      "kind": "paragraph",
+      "text": "No es infraestructura neutral ni una concentración automática de funciones. Su vecino conceptual puede parecer equivalente y no lo es. En N26, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N26-s07-b024",
+      "kind": "paragraph",
+      "text": "Comprender plataforma compartida exige seguir la decisión en el tiempo. Reduce coordinación mediante interfaces, estándares, autoservicio y reglas de evolución. El análisis distingue condición, intervención, señal temprana y consecuencia para evitar atribuir a una práctica un efecto producido por otro cambio simultáneo."
+    },
+    {
+      "source_id": "N26-s07-b025",
+      "kind": "paragraph",
+      "text": "La prueba de plataforma compartida debe formularse antes de conocer el resultado. Adopción útil, tiempo de integración, confiabilidad y costo de salida revelan su desempeño. Se registra qué observación sostendría continuar, cuál obligaría a adaptar y cuál activaría detención o escalamiento."
+    },
+    {
+      "source_id": "N26-s07-b026",
+      "kind": "paragraph",
+      "text": "Ejemplo. Identidad y pagos sirven a varios recorridos del hotel. En N26, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N26-s07-b027",
+      "kind": "paragraph",
+      "text": "El tiempo también altera plataforma compartida. Una evidencia suficiente para explorar puede ser insuficiente para operar de forma permanente. Por eso se separan prueba local, compromiso transitorio y condición estable, y cada estado conserva fecha, alcance y responsable de revisión."
+    },
+    {
+      "source_id": "N26-s07-b028",
+      "kind": "paragraph",
+      "text": "El registro de plataforma compartida conserva una explicación rival. Si esa alternativa predice mejor el episodio siguiente, el equipo cambia de curso sin reescribir retrospectivamente lo que creía saber."
+    },
+    {
+      "source_id": "N26-s07-b029",
+      "kind": "paragraph",
+      "text": "La gobernanza de plataforma compartida incluye quién puede proponer, aprobar, ejecutar, observar y reparar. Esas funciones no se presumen por cargo ni por permiso técnico. N26 las prueba en un escenario donde falta la persona habitual, porque una capacidad que sólo funciona con conocimiento privado todavía no pertenece a la organización."
+    },
+    {
+      "source_id": "N26-s07-b030",
+      "kind": "paragraph",
+      "text": "El juicio sobre plataforma compartida incluye distribución de consecuencias. Una plataforma puede acelerar a unos participantes y crear dependencia para otros. Una mejora agregada no alcanza si concentra espera, riesgo o trabajo invisible en un grupo sin autoridad para discutir la decisión."
+    },
+    {
+      "source_id": "N26-s07-b031",
+      "kind": "heading-3",
+      "text": "Tercero crítico"
+    },
+    {
+      "source_id": "N26-s07-b032",
+      "kind": "paragraph",
+      "text": "Un tercero crítico es un participante externo cuya falla o decisión puede comprometer una promesa material. La definición fija el objeto de decisión. Si el equipo de N26 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N26-s07-b033",
+      "kind": "paragraph",
+      "text": "No todo proveedor es crítico y criticidad no coincide con gasto contractual. La distinción evita que una palabra familiar oculte otro mecanismo. En N26, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N26-s07-b034",
+      "kind": "paragraph",
+      "text": "La explicación operacional de tercero crítico conecta personas, reglas y tecnología. La criticidad surge de concentración, sustituibilidad, tiempo de recuperación y alcance del impacto. Esa conexión permite decidir qué parte puede modificarse localmente y cuál requiere coordinación con otras autoridades o capacidades."
+    },
+    {
+      "source_id": "N26-s07-b035",
+      "kind": "paragraph",
+      "text": "Para auditar tercero crítico, conviene combinar evidencia de diseño, ejecución y consecuencia. Escenarios de indisponibilidad, datos incompletos y cambio unilateral permiten evaluarla. Ninguna fuente domina automáticamente; una especificación correcta puede convivir con una operación dañina."
+    },
+    {
+      "source_id": "N26-s07-b036",
+      "kind": "paragraph",
+      "text": "Ejemplo. El canal de reservas es crítico cuando concentra demanda y excepciones. En N26, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N26-s07-b037",
+      "kind": "paragraph",
+      "text": "Existe además una dimensión política en tercero crítico. La opción más eficiente puede reducir la capacidad de una persona para cuestionar una decisión o trasladar trabajo sin reconocerlo. N26 registra esa distribución y no la esconde dentro de un indicador agregado."
+    },
+    {
+      "source_id": "N26-s07-b038",
+      "kind": "paragraph",
+      "text": "Una prueba adversa de tercero crítico introduce demora, ausencia de autoridad o dato incompleto. El objetivo de N26 no es cubrir todas las fallas, sino revelar si la estrategia mantiene una salida segura fuera del camino ordinario."
+    },
+    {
+      "source_id": "N26-s07-b039",
+      "kind": "paragraph",
+      "text": "El indicador de tercero crítico se elige después de formular la decisión. Puede combinar tiempo, calidad, distribución y costo de reparación. Una cifra aislada rara vez explica el mecanismo. En N26, la lectura conjunta de señales evita optimizar velocidad mientras aumenta retrabajo, exclusión o dependencia."
+    },
+    {
+      "source_id": "N26-s07-b040",
+      "kind": "paragraph",
+      "text": "La condición de cierre de tercero crítico no es perfección. La clasificación cambia con el diseño y debe revisarse. Es evidencia suficiente para el uso previsto, riesgo residual aceptado por autoridad y una ruta clara cuando el supuesto deje de cumplirse."
+    },
+    {
+      "source_id": "N26-s08-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 2 · Construir evidencia y controles proporcionales"
+    },
+    {
+      "source_id": "N26-s08-b001",
+      "kind": "heading-3",
+      "text": "Ownership de capacidad"
+    },
+    {
+      "source_id": "N26-s08-b002",
+      "kind": "paragraph",
+      "text": "Ownership de capacidad reúne autoridad persistente para priorizar, observar, coordinar y reparar una promesa. Conviene comenzar por su función profesional. Si el equipo de N26 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N26-s08-b003",
+      "kind": "paragraph",
+      "text": "No es un contacto de escalamiento ni responsabilidad sin recursos. El contraste importa porque conduce a pruebas distintas. En N26, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N26-s08-b004",
+      "kind": "paragraph",
+      "text": "Para que ownership de capacidad sea algo más que una etiqueta, debe existir una cadena examinable. Conecta decisiones de producto, operación, arquitectura, seguridad y relación con terceros. La cadena incluye supuestos, handoffs y efectos laterales que una descripción ideal suele omitir."
+    },
+    {
+      "source_id": "N26-s08-b005",
+      "kind": "paragraph",
+      "text": "El equipo no declara resuelto ownership de capacidad por acuerdo retórico. Se verifica cuando alguien puede limitar exposición, acordar cambios y financiar recuperación. Una persona ajena al diseño debe poder repetir la prueba y comprender por qué el resultado habilita una decisión concreta."
+    },
+    {
+      "source_id": "N26-s08-b006",
+      "kind": "paragraph",
+      "text": "Ejemplo. Ingreso conserva un owner aunque sus componentes pertenezcan a áreas distintas. En N26, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N26-s08-b007",
+      "kind": "paragraph",
+      "text": "La mantenibilidad de ownership de capacidad se prueba mediante cambio deliberado. Se modifica una regla, una fuente o una dependencia y se observa quién detecta el impacto, cuánto tarda en responder y qué información necesita. En N26, si la respuesta depende de memoria privada, la capacidad todavía es frágil."
+    },
+    {
+      "source_id": "N26-s08-b008",
+      "kind": "paragraph",
+      "text": "El costo de ownership de capacidad se observa tanto en presupuesto como en atención, espera, coordinación y dependencia. Lo que no figura en una factura puede seguir siendo el costo que define la viabilidad."
+    },
+    {
+      "source_id": "N26-s08-b009",
+      "kind": "paragraph",
+      "text": "La transición asociada con ownership de capacidad necesita un estado intermedio explícito. Durante ese período conviven reglas, versiones o capacidades diferentes. N26 declara cuál rige para cada población, cómo se comunica y qué contingencia protege a quien podría quedar entre ambos sistemas."
+    },
+    {
+      "source_id": "N26-s08-b010",
+      "kind": "paragraph",
+      "text": "El análisis de ownership de capacidad evita dos extremos: conservar por inercia y cambiar por identidad metodológica. Una sola persona no puede absorber obligaciones distribuidas ni reemplazar acuerdos formales. Entre ambos queda una decisión provisional con fecha, responsable y prueba de revisión."
+    },
+    {
+      "source_id": "N26-s08-b011",
+      "kind": "heading-3",
+      "text": "Mapa de dependencias"
+    },
+    {
+      "source_id": "N26-s08-b012",
+      "kind": "paragraph",
+      "text": "Un mapa de dependencias representa qué necesita cada capacidad, en qué secuencia y bajo qué supuestos. El concepto adquiere valor cuando cambia una decisión. Si el equipo de N26 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N26-s08-b013",
+      "kind": "paragraph",
+      "text": "No es un diagrama estático de cajas y flechas. Su vecino conceptual puede parecer equivalente y no lo es. En N26, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N26-s08-b014",
+      "kind": "paragraph",
+      "text": "El valor de mapa de dependencias aparece al contrastar alternativas. Vincula dependencias técnicas con datos, autoridad, contratos y trabajo humano. Si dos opciones producen el mismo entregable inmediato, el mecanismo permite compararlas por aprendizaje, dependencia, riesgo residual y posibilidad de salida."
+    },
+    {
+      "source_id": "N26-s08-b015",
+      "kind": "paragraph",
+      "text": "La suficiencia de evidencia para mapa de dependencias depende del costo de equivocarse. Trazas, entrevistas, incidentes y pruebas de conmutación contrastan el mapa. A mayor irreversibilidad o desigualdad de daño, mayor contraste, supervisión y autoridad se requieren."
+    },
+    {
+      "source_id": "N26-s08-b016",
+      "kind": "paragraph",
+      "text": "Ejemplo. La llave depende de identidad, pago, estado de habitación y autorización local. En N26, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N26-s08-b017",
+      "kind": "paragraph",
+      "text": "Finalmente, mapa de dependencias debe convivir con otras decisiones. Optimizarla de manera aislada puede empeorar flujo, seguridad o comprensión. El expediente N26 explicita dependencias y evita que una mejora local se presente como outcome completo del sistema."
+    },
+    {
+      "source_id": "N26-s08-b018",
+      "kind": "paragraph",
+      "text": "La revisión de mapa de dependencias fija fecha y desencadenante. Puede ocurrir por incidente, cambio normativo, nueva población o evidencia acumulada. Sin esa regla en N26, una decisión provisional se vuelve permanente por olvido."
+    },
+    {
+      "source_id": "N26-s08-b019",
+      "kind": "paragraph",
+      "text": "El cierre de mapa de dependencias debe sobrevivir a una revisión independiente. La evidencia, las decisiones y los límites se almacenan de manera que otra persona pueda cuestionarlos. En N26, la trazabilidad no busca eliminar desacuerdo; busca que el desacuerdo se concentre en supuestos examinables y no en recuerdos incompatibles."
+    },
+    {
+      "source_id": "N26-s08-b020",
+      "kind": "paragraph",
+      "text": "La estrategia debe poder explicar por qué mapa de dependencias recibe cierta inversión y no otra. La dependencia informal puede quedar oculta si sólo se inspecciona software. Esa explicación conecta valor, costo, aprendizaje y reparación, y permanece abierta a evidencia nueva."
+    },
+    {
+      "source_id": "N26-s08-b021",
+      "kind": "heading-3",
+      "text": "Frontera de confianza"
+    },
+    {
+      "source_id": "N26-s08-b022",
+      "kind": "paragraph",
+      "text": "Una frontera de confianza marca dónde cambian las garantías, la autoridad y la evidencia aceptada. La definición fija el objeto de decisión. Si el equipo de N26 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N26-s08-b023",
+      "kind": "paragraph",
+      "text": "No coincide necesariamente con red, empresa, nube ni componente. La distinción evita que una palabra familiar oculte otro mecanismo. En N26, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N26-s08-b024",
+      "kind": "paragraph",
+      "text": "En frontera de confianza, el recorrido causal debe mostrar qué condición habilita la acción, qué transformación ocurre y quién absorbe el resultado. Obliga a declarar qué afirmaciones se reciben, cómo se verifican y qué ocurre ante contradicción. Si un salto depende sólo de una explicación oral, la estrategia todavía no puede gobernarlo."
+    },
+    {
+      "source_id": "N26-s08-b025",
+      "kind": "paragraph",
+      "text": "La evidencia relevante para frontera de confianza no se limita al resultado promedio. Controles de acceso, procedencia, reconciliación y auditoría muestran su tratamiento. N26 busca además casos negativos, diferencias entre poblaciones y señales de que la explicación elegida podría ser insuficiente."
+    },
+    {
+      "source_id": "N26-s08-b026",
+      "kind": "paragraph",
+      "text": "Ejemplo. El PMS no acepta sin verificación cualquier estado enviado por el canal. En N26, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N26-s08-b027",
+      "kind": "paragraph",
+      "text": "El tradeoff central de frontera de confianza aparece entre anticipar y preservar opciones. Anticipar puede reducir coordinación y también fijar una premisa prematura; preservar opciones puede producir aprendizaje y también demorar una protección necesaria. La elección debe declarar cuál de esos costos acepta, durante cuánto tiempo y para quién."
+    },
+    {
+      "source_id": "N26-s08-b028",
+      "kind": "paragraph",
+      "text": "La auditoría de frontera de confianza termina con una pregunta de uso: ¿qué podría decidir ahora una persona que antes no podía? En N26, la respuesta debe nombrar una acción, una restricción y una evidencia, no sólo una comprensión mejorada."
+    },
+    {
+      "source_id": "N26-s08-b029",
+      "kind": "paragraph",
+      "text": "Operacionalizar frontera de confianza requiere asignar una unidad observable. El equipo define qué episodio contará, desde qué momento, con qué población y bajo qué fuente. Después compara al menos un caso ordinario con otro que fuerce excepción. Esta precisión en N26 evita que una conclusión general se sostenga sólo en ejemplos convenientes."
+    },
+    {
+      "source_id": "N26-s08-b030",
+      "kind": "paragraph",
+      "text": "La decisión profesional no termina en adoptar frontera de confianza. Se compara una ruta principal con una explicación rival, se explicita quién queda expuesto y se conserva un modo de revisar. Demasiada desconfianza puede volver inviable el servicio; demasiada confianza concentra riesgo. El límite forma parte del diseño y no una nota posterior."
+    },
+    {
+      "source_id": "N26-s08-b031",
+      "kind": "heading-3",
+      "text": "Responsabilidad compartida"
+    },
+    {
+      "source_id": "N26-s08-b032",
+      "kind": "paragraph",
+      "text": "Responsabilidad compartida distribuye tareas sin diluir quién responde por la consecuencia completa. Conviene comenzar por su función profesional. Si el equipo de N26 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N26-s08-b033",
+      "kind": "paragraph",
+      "text": "No significa que todos sean responsables de todo. El contraste importa porque conduce a pruebas distintas. En N26, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N26-s08-b034",
+      "kind": "paragraph",
+      "text": "El mecanismo de responsabilidad compartida no se presume por el nombre. Asigna obligaciones por capa y conserva una autoridad para el resultado end-to-end. Debe localizarse dónde comienza, qué relaciones activa, qué demora introduce y qué capacidad de reparación queda disponible cuando la expectativa no se cumple."
+    },
+    {
+      "source_id": "N26-s08-b035",
+      "kind": "paragraph",
+      "text": "Una afirmación sobre responsabilidad compartida gana fuerza cuando puede reconstruirse desde fuentes independientes. Matrices de decisión, acuerdos, ejercicios e incidentes prueban si la distribución funciona. La ausencia de señal también se interpreta: puede significar estabilidad, mala observación o exclusión del caso que más importa."
+    },
+    {
+      "source_id": "N26-s08-b036",
+      "kind": "paragraph",
+      "text": "Ejemplo. El proveedor protege la plataforma y el hotel gobierna configuración, acceso y reparación al huésped. En N26, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N26-s08-b037",
+      "kind": "paragraph",
+      "text": "La escala modifica responsabilidad compartida. Una solución válida para un equipo puede fallar cuando atraviesa sedes, turnos o proveedores porque aumenta la distancia entre señal y autoridad. Antes de ampliar, N26 prueba si la misma decisión conserva significado y reparación bajo esa nueva distribución."
+    },
+    {
+      "source_id": "N26-s08-b038",
+      "kind": "paragraph",
+      "text": "Para evitar consenso aparente, responsabilidad compartida se revisa con alguien afectado y con alguien responsable de reparar. Las dos perspectivas pueden valorar resultados diferentes y obligan a declarar la prioridad elegida."
+    },
+    {
+      "source_id": "N26-s08-b039",
+      "kind": "paragraph",
+      "text": "En la práctica, responsabilidad compartida atraviesa más de un área. Se identifican handoffs, esperas, decisiones y datos que cada participante puede ver. Cuando dos áreas usan evidencia distinta en N26, el expediente conserva la divergencia hasta determinar si representa error, perspectiva legítima o una brecha que la estrategia debe resolver."
+    },
+    {
+      "source_id": "N26-s08-b040",
+      "kind": "paragraph",
+      "text": "En una revisión, responsabilidad compartida debe responder tres preguntas: qué mejora, qué desplaza y qué vuelve más difícil de revertir. Los modelos genéricos no sustituyen el reparto específico de cada servicio. Si esas respuestas cambian, también debe cambiar el compromiso, aunque el trabajo previo haya sido técnicamente correcto."
+    },
+    {
+      "source_id": "N26-s09-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 3 · Gobernar cambio, degradación y aprendizaje"
+    },
+    {
+      "source_id": "N26-s09-b001",
+      "kind": "heading-3",
+      "text": "Degradación diseñada"
+    },
+    {
+      "source_id": "N26-s09-b002",
+      "kind": "paragraph",
+      "text": "Degradación diseñada mantiene una parte segura y valiosa de la promesa cuando una dependencia falla. El concepto adquiere valor cuando cambia una decisión. Si el equipo de N26 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N26-s09-b003",
+      "kind": "paragraph",
+      "text": "No es tolerar silenciosamente peor calidad ni ocultar una caída. Su vecino conceptual puede parecer equivalente y no lo es. En N26, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N26-s09-b004",
+      "kind": "paragraph",
+      "text": "Comprender degradación diseñada exige seguir la decisión en el tiempo. Define capacidades mínimas, prioridades, comunicación y límites antes del incidente. El análisis distingue condición, intervención, señal temprana y consecuencia para evitar atribuir a una práctica un efecto producido por otro cambio simultáneo."
+    },
+    {
+      "source_id": "N26-s09-b005",
+      "kind": "paragraph",
+      "text": "La prueba de degradación diseñada debe formularse antes de conocer el resultado. Pruebas de falla y tiempos reales muestran si el modo degradado es practicable. Se registra qué observación sostendría continuar, cuál obligaría a adaptar y cuál activaría detención o escalamiento."
+    },
+    {
+      "source_id": "N26-s09-b006",
+      "kind": "paragraph",
+      "text": "Ejemplo. Recepción entrega una llave temporal bajo control cuando identidad externa no responde. En N26, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N26-s09-b007",
+      "kind": "paragraph",
+      "text": "El tiempo también altera degradación diseñada. Una evidencia suficiente para explorar puede ser insuficiente para operar de forma permanente. Por eso se separan prueba local, compromiso transitorio y condición estable, y cada estado conserva fecha, alcance y responsable de revisión."
+    },
+    {
+      "source_id": "N26-s09-b008",
+      "kind": "paragraph",
+      "text": "El registro de degradación diseñada conserva una explicación rival. Si esa alternativa predice mejor el episodio siguiente, el equipo cambia de curso sin reescribir retrospectivamente lo que creía saber."
+    },
+    {
+      "source_id": "N26-s09-b009",
+      "kind": "paragraph",
+      "text": "La gobernanza de degradación diseñada incluye quién puede proponer, aprobar, ejecutar, observar y reparar. Esas funciones no se presumen por cargo ni por permiso técnico. N26 las prueba en un escenario donde falta la persona habitual, porque una capacidad que sólo funciona con conocimiento privado todavía no pertenece a la organización."
+    },
+    {
+      "source_id": "N26-s09-b010",
+      "kind": "paragraph",
+      "text": "El juicio sobre degradación diseñada incluye distribución de consecuencias. Algunas obligaciones no admiten degradación y requieren detener. Una mejora agregada no alcanza si concentra espera, riesgo o trabajo invisible en un grupo sin autoridad para discutir la decisión."
+    },
+    {
+      "source_id": "N26-s09-b011",
+      "kind": "heading-3",
+      "text": "Riesgo de concentración"
+    },
+    {
+      "source_id": "N26-s09-b012",
+      "kind": "paragraph",
+      "text": "Riesgo de concentración aparece cuando múltiples capacidades dependen de un mismo proveedor, dato o punto de control. La definición fija el objeto de decisión. Si el equipo de N26 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N26-s09-b013",
+      "kind": "paragraph",
+      "text": "No se reduce a participación de mercado ni a disponibilidad histórica. La distinción evita que una palabra familiar oculte otro mecanismo. En N26, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N26-s09-b014",
+      "kind": "paragraph",
+      "text": "La explicación operacional de riesgo de concentración conecta personas, reglas y tecnología. Una falla común propaga consecuencias que los tableros por servicio no anticipan. Esa conexión permite decidir qué parte puede modificarse localmente y cuál requiere coordinación con otras autoridades o capacidades."
+    },
+    {
+      "source_id": "N26-s09-b015",
+      "kind": "paragraph",
+      "text": "Para auditar riesgo de concentración, conviene combinar evidencia de diseño, ejecución y consecuencia. Inventarios, escenarios y análisis de dependencia revelan exposición acumulada. Ninguna fuente domina automáticamente; una especificación correcta puede convivir con una operación dañina."
+    },
+    {
+      "source_id": "N26-s09-b016",
+      "kind": "paragraph",
+      "text": "Ejemplo. Identidad compartida puede detener reservas, ingreso y accesos internos. En N26, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N26-s09-b017",
+      "kind": "paragraph",
+      "text": "Existe además una dimensión política en riesgo de concentración. La opción más eficiente puede reducir la capacidad de una persona para cuestionar una decisión o trasladar trabajo sin reconocerlo. N26 registra esa distribución y no la esconde dentro de un indicador agregado."
+    },
+    {
+      "source_id": "N26-s09-b018",
+      "kind": "paragraph",
+      "text": "Una prueba adversa de riesgo de concentración introduce demora, ausencia de autoridad o dato incompleto. El objetivo de N26 no es cubrir todas las fallas, sino revelar si la estrategia mantiene una salida segura fuera del camino ordinario."
+    },
+    {
+      "source_id": "N26-s09-b019",
+      "kind": "paragraph",
+      "text": "El indicador de riesgo de concentración se elige después de formular la decisión. Puede combinar tiempo, calidad, distribución y costo de reparación. Una cifra aislada rara vez explica el mecanismo. En N26, la lectura conjunta de señales evita optimizar velocidad mientras aumenta retrabajo, exclusión o dependencia."
+    },
+    {
+      "source_id": "N26-s09-b020",
+      "kind": "paragraph",
+      "text": "La condición de cierre de riesgo de concentración no es perfección. Duplicar proveedores también agrega complejidad y no garantiza independencia. Es evidencia suficiente para el uso previsto, riesgo residual aceptado por autoridad y una ruta clara cuando el supuesto deje de cumplirse."
+    },
+    {
+      "source_id": "N26-s09-b021",
+      "kind": "heading-3",
+      "text": "Portabilidad y salida"
+    },
+    {
+      "source_id": "N26-s09-b022",
+      "kind": "paragraph",
+      "text": "Portabilidad y salida preservan la posibilidad de mover datos, procesos y responsabilidades sin quebrar la promesa. Conviene comenzar por su función profesional. Si el equipo de N26 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N26-s09-b023",
+      "kind": "paragraph",
+      "text": "No es una cláusula ornamental ni una migración improvisada al final. El contraste importa porque conduce a pruebas distintas. En N26, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N26-s09-b024",
+      "kind": "paragraph",
+      "text": "Para que portabilidad y salida sea algo más que una etiqueta, debe existir una cadena examinable. Se diseña con formatos, derechos, conocimiento, pruebas, costos y continuidad. La cadena incluye supuestos, handoffs y efectos laterales que una descripción ideal suele omitir."
+    },
+    {
+      "source_id": "N26-s09-b025",
+      "kind": "paragraph",
+      "text": "El equipo no declara resuelto portabilidad y salida por acuerdo retórico. Ensayos de exportación, sustitución y recuperación verifican la opción. Una persona ajena al diseño debe poder repetir la prueba y comprender por qué el resultado habilita una decisión concreta."
+    },
+    {
+      "source_id": "N26-s09-b026",
+      "kind": "paragraph",
+      "text": "Ejemplo. El hotel puede recuperar reservas y reglas si cambia de canal. En N26, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N26-s09-b027",
+      "kind": "paragraph",
+      "text": "La mantenibilidad de portabilidad y salida se prueba mediante cambio deliberado. Se modifica una regla, una fuente o una dependencia y se observa quién detecta el impacto, cuánto tarda en responder y qué información necesita. En N26, si la respuesta depende de memoria privada, la capacidad todavía es frágil."
+    },
+    {
+      "source_id": "N26-s09-b028",
+      "kind": "paragraph",
+      "text": "El costo de portabilidad y salida se observa tanto en presupuesto como en atención, espera, coordinación y dependencia. Lo que no figura en una factura puede seguir siendo el costo que define la viabilidad."
+    },
+    {
+      "source_id": "N26-s09-b029",
+      "kind": "paragraph",
+      "text": "La transición asociada con portabilidad y salida necesita un estado intermedio explícito. Durante ese período conviven reglas, versiones o capacidades diferentes. N26 declara cuál rige para cada población, cómo se comunica y qué contingencia protege a quien podría quedar entre ambos sistemas."
+    },
+    {
+      "source_id": "N26-s09-b030",
+      "kind": "paragraph",
+      "text": "El análisis de portabilidad y salida evita dos extremos: conservar por inercia y cambiar por identidad metodológica. Una salida técnicamente posible puede ser operacionalmente inviable. Entre ambos queda una decisión provisional con fecha, responsable y prueba de revisión."
+    },
+    {
+      "source_id": "N26-s09-b031",
+      "kind": "heading-3",
+      "text": "Gobernanza del ecosistema"
+    },
+    {
+      "source_id": "N26-s09-b032",
+      "kind": "paragraph",
+      "text": "Gobernanza del ecosistema coordina reglas comunes entre participantes que conservan autonomía. El concepto adquiere valor cuando cambia una decisión. Si el equipo de N26 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N26-s09-b033",
+      "kind": "paragraph",
+      "text": "No equivale a centralizar toda decisión ni a confiar sólo en contratos. Su vecino conceptual puede parecer equivalente y no lo es. En N26, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N26-s09-b034",
+      "kind": "paragraph",
+      "text": "El valor de gobernanza del ecosistema aparece al contrastar alternativas. Combina foros, estándares, métricas, escalamiento, incentivos y revisión. Si dos opciones producen el mismo entregable inmediato, el mecanismo permite compararlas por aprendizaje, dependencia, riesgo residual y posibilidad de salida."
+    },
+    {
+      "source_id": "N26-s09-b035",
+      "kind": "paragraph",
+      "text": "La suficiencia de evidencia para gobernanza del ecosistema depende del costo de equivocarse. Cambios de interfaz e incidentes muestran si el gobierno anticipa y aprende. A mayor irreversibilidad o desigualdad de daño, mayor contraste, supervisión y autoridad se requieren."
+    },
+    {
+      "source_id": "N26-s09-b036",
+      "kind": "paragraph",
+      "text": "Ejemplo. Hotel, canal y proveedor acuerdan estados, avisos y reparación. En N26, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N26-s09-b037",
+      "kind": "paragraph",
+      "text": "Finalmente, gobernanza del ecosistema debe convivir con otras decisiones. Optimizarla de manera aislada puede empeorar flujo, seguridad o comprensión. El expediente N26 explicita dependencias y evita que una mejora local se presente como outcome completo del sistema."
+    },
+    {
+      "source_id": "N26-s09-b038",
+      "kind": "paragraph",
+      "text": "La revisión de gobernanza del ecosistema fija fecha y desencadenante. Puede ocurrir por incidente, cambio normativo, nueva población o evidencia acumulada. Sin esa regla en N26, una decisión provisional se vuelve permanente por olvido."
+    },
+    {
+      "source_id": "N26-s09-b039",
+      "kind": "paragraph",
+      "text": "El cierre de gobernanza del ecosistema debe sobrevivir a una revisión independiente. La evidencia, las decisiones y los límites se almacenan de manera que otra persona pueda cuestionarlos. En N26, la trazabilidad no busca eliminar desacuerdo; busca que el desacuerdo se concentre en supuestos examinables y no en recuerdos incompatibles."
+    },
+    {
+      "source_id": "N26-s09-b040",
+      "kind": "paragraph",
+      "text": "La estrategia debe poder explicar por qué gobernanza del ecosistema recibe cierta inversión y no otra. El participante con más poder puede imponer costos que el mecanismo formal no corrige. Esa explicación conecta valor, costo, aprendizaje y reparación, y permanece abierta a evidencia nueva."
+    },
+    {
+      "source_id": "N26-s09-b041",
+      "kind": "heading-3",
+      "text": "Instrumento HH-26: mapa de ecosistema y dependencia"
+    },
+    {
+      "source_id": "N26-s09-b042",
+      "kind": "paragraph",
+      "text": "El instrumento organiza una decisión concreta y no una descripción total. Cada campo debe completarse con evidencia disponible, incertidumbre explícita y autoridad identificada. Si un campo todavía no puede responderse, se registra como asunto abierto y no se completa por inferencia."
+    },
+    {
+      "source_id": "N26-s09-b043",
+      "kind": "list-item",
+      "text": "**Promesa y población.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N26, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N26-s09-b044",
+      "kind": "list-item",
+      "text": "**Capacidades.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N26, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N26-s09-b045",
+      "kind": "list-item",
+      "text": "**Participantes.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N26, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N26-s09-b046",
+      "kind": "list-item",
+      "text": "**Ownership end-to-end.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N26, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N26-s09-b047",
+      "kind": "list-item",
+      "text": "**Dependencias críticas.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N26, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N26-s09-b048",
+      "kind": "list-item",
+      "text": "**Fronteras de confianza.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N26, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N26-s09-b049",
+      "kind": "list-item",
+      "text": "**Contratos y datos.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N26, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N26-s09-b050",
+      "kind": "list-item",
+      "text": "**Señales de salud.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N26, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N26-s09-b051",
+      "kind": "list-item",
+      "text": "**Modo degradado.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N26, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N26-s09-b052",
+      "kind": "list-item",
+      "text": "**Reparación.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N26, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N26-s09-b053",
+      "kind": "list-item",
+      "text": "**Portabilidad.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N26, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N26-s09-b054",
+      "kind": "list-item",
+      "text": "**Fecha de revisión.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N26, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N26-s09-b055",
+      "kind": "paragraph",
+      "text": "El expediente se prueba con un escenario ordinario y uno adverso. Una persona que no participó en su construcción debe poder reconstruir qué se decidió, por qué, qué permanece incierto y cuál es la próxima puerta. El cierre no exige certeza total; exige incertidumbre gobernada y una salida practicable."
+    },
+    {
+      "source_id": "N26-s09-b056",
+      "kind": "heading-3",
+      "text": "Caso de transferencia: turnos hospitalarios"
+    },
+    {
+      "source_id": "N26-s09-b057",
+      "kind": "paragraph",
+      "text": "Un hospital coordina turnos con obras sociales, laboratorios, identidad provincial y servicios internos. Cada actor conserva autonomía, pero la persona experimenta un único recorrido."
+    },
+    {
+      "source_id": "N26-s09-b058",
+      "kind": "paragraph",
+      "text": "El mapa distingue qué puede resolver el hospital, qué debe acordar y qué necesita una vía degradada. Una autorización externa ausente no se convierte automáticamente en abandono clínico."
+    },
+    {
+      "source_id": "N26-s09-b059",
+      "kind": "paragraph",
+      "text": "HH-26 permite gobernar la promesa sin fingir control total sobre el ecosistema."
+    },
+    {
+      "source_id": "N26-s09-b060",
+      "kind": "heading-3",
+      "text": "Contraejemplo: el diagrama de microservicios"
+    },
+    {
+      "source_id": "N26-s09-b061",
+      "kind": "paragraph",
+      "text": "Un equipo presenta un diagrama con servicios, colas y APIs y lo llama mapa de ecosistema."
+    },
+    {
+      "source_id": "N26-s09-b062",
+      "kind": "paragraph",
+      "text": "No aparecen operadores, proveedores, contratos, decisiones manuales, concentración ni salida. El dibujo explica conectividad y oculta la promesa."
+    },
+    {
+      "source_id": "N26-s09-b063",
+      "kind": "paragraph",
+      "text": "La arquitectura se vuelve útil cuando relaciona dependencias con autoridad, consecuencias y reparación."
+    },
+    {
+      "source_id": "N26-s09-b064",
+      "kind": "heading-3",
+      "text": "Prueba integral antes de ampliar compromiso"
+    },
+    {
+      "source_id": "N26-s09-b065",
+      "kind": "paragraph",
+      "text": "La prueba integral de ecosistema de servicios, plataformas y terceros toma una decisión real y la recorre desde su origen hasta una consecuencia observable. Utiliza promesa y población, capacidades, participantes, ownership end-to-end para evitar que el análisis quede dividido en artefactos independientes. Cada afirmación debe encontrar una fuente, una autoridad y una condición de revisión. Cuando dos registros no coinciden, la diferencia se conserva como hallazgo hasta explicar su mecanismo."
+    },
+    {
+      "source_id": "N26-s09-b066",
+      "kind": "paragraph",
+      "text": "El escenario ordinario verifica que n26 amplía la arquitectura hacia un ecosistema de servicios, plataformas y terceros, y convierte dependencias invisibles en decisiones de ownership, confianza, resiliencia y salida. El escenario adverso modifica una dependencia, introduce demora y deja ausente a la persona que suele resolver. El equipo observa si la estrategia detecta el cambio, limita el daño, comunica incertidumbre y activa reparación sin recurrir a conocimiento privado."
+    },
+    {
+      "source_id": "N26-s09-b067",
+      "kind": "paragraph",
+      "text": "La comparación incluye una alternativa descartada. Se documenta por qué no fue elegida, qué supuesto la volvería preferible y qué costo tendría recuperarla. Este ejercicio protege opciones futuras y evita presentar la decisión actual como única solución técnicamente posible. También vuelve discutibles los costos hundidos cuando aparece evidencia nueva."
+    },
+    {
+      "source_id": "N26-s09-b068",
+      "kind": "paragraph",
+      "text": "La prueba concluye con una defensa breve ante una audiencia ajena al equipo. Esa audiencia debe poder reconstruir el problema, objetar la evidencia y comprender por qué la salida propuesta es proporcional. Si sólo puede repetir la recomendación, el expediente todavía no sostiene una decisión profesional. Si puede reconocer límites y actuar ante una excepción, existe capacidad transferible."
+    },
+    {
+      "source_id": "N26-s10-h2",
+      "kind": "heading-2",
+      "text": "Errores frecuentes"
+    },
+    {
+      "source_id": "N26-s10-b001",
+      "kind": "heading-3",
+      "text": "Confundir ecosistema con inventario"
+    },
+    {
+      "source_id": "N26-s10-b002",
+      "kind": "paragraph",
+      "text": "Confundir ecosistema con inventario simplifica una decisión que depende de propósito, evidencia y consecuencia. La velocidad inicial se paga cuando operación descubre el supuesto omitido. La corrección vuelve al episodio, identifica quién absorbe el costo y define una prueba antes de continuar."
+    },
+    {
+      "source_id": "N26-s10-b003",
+      "kind": "heading-3",
+      "text": "Dibujar sólo tecnología"
+    },
+    {
+      "source_id": "N26-s10-b004",
+      "kind": "paragraph",
+      "text": "Dibujar sólo tecnología parece reducir coordinación, pero confunde acuerdo con conocimiento suficiente. El equipo debe comparar una explicación rival, localizar autoridad y registrar qué señal cambiaría el curso elegido."
+    },
+    {
+      "source_id": "N26-s10-b005",
+      "kind": "heading-3",
+      "text": "Asignar ownership sin autoridad"
+    },
+    {
+      "source_id": "N26-s10-b006",
+      "kind": "paragraph",
+      "text": "Asignar ownership sin autoridad desplaza incertidumbre hacia personas que no participaron de la elección. Corregirlo exige reconstruir el mecanismo, hacer visible el trabajo añadido y establecer una condición de salida proporcional al daño posible."
+    },
+    {
+      "source_id": "N26-s10-b007",
+      "kind": "heading-3",
+      "text": "Tratar al tercero como caja negra"
+    },
+    {
+      "source_id": "N26-s10-b008",
+      "kind": "paragraph",
+      "text": "Tratar al tercero como caja negra convierte una práctica en fin. La revisión pregunta qué función debía cumplir, qué evidencia produjo y por qué sigue siendo necesaria. Si la función desapareció, la práctica se adapta o se retira."
+    },
+    {
+      "source_id": "N26-s10-b009",
+      "kind": "heading-3",
+      "text": "Ignorar concentración"
+    },
+    {
+      "source_id": "N26-s10-b010",
+      "kind": "paragraph",
+      "text": "Ignorar concentración oculta una frontera. El artefacto puede cerrar y la capacidad seguir incompleta. Un escenario adverso permite observar handoffs, excepciones y reparación antes de ampliar compromiso."
+    },
+    {
+      "source_id": "N26-s10-b011",
+      "kind": "heading-3",
+      "text": "Confiar sin verificar"
+    },
+    {
+      "source_id": "N26-s10-b012",
+      "kind": "paragraph",
+      "text": "Confiar sin verificar confunde cumplimiento formal con decisión defendible. Se necesita conectar fuente, interpretación, implementación y efecto, incluyendo la autoridad que acepta el riesgo residual."
+    },
+    {
+      "source_id": "N26-s10-b013",
+      "kind": "heading-3",
+      "text": "Degradar sin límite"
+    },
+    {
+      "source_id": "N26-s10-b014",
+      "kind": "paragraph",
+      "text": "Degradar sin límite suele premiar lo visible y dejar fuera mantenimiento, soporte y aprendizaje. La corrección compara el ciclo completo, documenta dependencia y ensaya una salida real."
+    },
+    {
+      "source_id": "N26-s10-b015",
+      "kind": "heading-3",
+      "text": "Prometer sustitución instantánea"
+    },
+    {
+      "source_id": "N26-s10-b016",
+      "kind": "paragraph",
+      "text": "Prometer sustitución instantánea reduce diversidad de casos a un promedio conveniente. Se revisan poblaciones, extremos y daños asimétricos para evitar que una mejora global silencie una pérdida crítica."
+    },
+    {
+      "source_id": "N26-s10-b017",
+      "kind": "heading-3",
+      "text": "Olvidar trabajo manual"
+    },
+    {
+      "source_id": "N26-s10-b018",
+      "kind": "paragraph",
+      "text": "Olvidar trabajo manual borra memoria y vuelve inexplicable el cambio de rumbo. Una baseline y un registro breve permiten conservar razones sin inmovilizar la estrategia."
+    },
+    {
+      "source_id": "N26-s10-b019",
+      "kind": "heading-3",
+      "text": "Gobernar sólo por contrato"
+    },
+    {
+      "source_id": "N26-s10-b020",
+      "kind": "paragraph",
+      "text": "Gobernar sólo por contrato deja responsabilidad sin capacidad. El diseño debe unir permiso, recursos, evidencia y posibilidad de reparar; nombrar un dueño no crea por sí mismo una función operativa."
+    },
+    {
+      "source_id": "N26-s11-h2",
+      "kind": "heading-2",
+      "text": "Consecuencias profesionales"
+    },
+    {
+      "source_id": "N26-s11-b001",
+      "kind": "paragraph",
+      "text": "N26 amplía la arquitectura hacia un ecosistema de servicios, plataformas y terceros, y convierte dependencias invisibles en decisiones de ownership, confianza, resiliencia y salida. El avance profesional consiste en sostener una promesa bajo condiciones reales, con autoridad, evidencia y reparación, no en declarar que la solución quedó disponible."
+    },
+    {
+      "source_id": "N26-s12-h2",
+      "kind": "heading-2",
+      "text": "Límites y tensiones"
+    },
+    {
+      "source_id": "N26-s12-b001",
+      "kind": "paragraph",
+      "text": "Ninguna arquitectura, contrato, prueba, control ni tablero elimina el juicio situado. Las dependencias cambian, la evidencia llega con demora, la operación distribuye poder y una mejora local puede desplazar daño. El expediente debe conservar población afectada, supuestos, autoridad, degradación aceptable, reparación y fecha de revisión."
+    },
+    {
+      "source_id": "N26-s13-h2",
+      "kind": "heading-2",
+      "text": "De N26 a N27"
+    },
+    {
+      "source_id": "N26-s13-b001",
+      "kind": "paragraph",
+      "text": "N27 utilizará este mapa para precisar contratos sintácticos, semánticos, temporales y operacionales. N26 no define todavía cada interfaz ni sus pruebas de conformidad."
+    },
+    {
+      "source_id": "N26-s14-h2",
+      "kind": "heading-2",
+      "text": "Síntesis"
+    },
+    {
+      "source_id": "N26-s14-b001",
+      "kind": "paragraph",
+      "text": "N26 amplía la arquitectura hacia un ecosistema de servicios, plataformas y terceros, y convierte dependencias invisibles en decisiones de ownership, confianza, resiliencia y salida."
+    },
+    {
+      "source_id": "N26-s14-b002",
+      "kind": "paragraph",
+      "text": "El bloque no propone reemplazar una doctrina por otra. Propone hacer visibles las decisiones que cada práctica organiza, la evidencia que necesita y los daños que puede producir. El resultado es una intervención que puede explicarse, probarse y revisarse."
+    },
+    {
+      "source_id": "N26-s15-h2",
+      "kind": "heading-2",
+      "text": "Cinco píldoras para recordar"
+    },
+    {
+      "source_id": "N26-s15-b001",
+      "kind": "list-item",
+      "text": "Un ecosistema de servicio reúne participantes autónomos que sostienen una promesa mediante capacidades, reglas e intercambios interdependientes."
+    },
+    {
+      "source_id": "N26-s15-b002",
+      "kind": "list-item",
+      "text": "Una capacidad de servicio combina personas, información, tecnología y autoridad para producir un resultado repetible."
+    },
+    {
+      "source_id": "N26-s15-b003",
+      "kind": "list-item",
+      "text": "Una plataforma compartida ofrece capacidades gobernadas que otros equipos o actores utilizan para construir y operar servicios."
+    },
+    {
+      "source_id": "N26-s15-b004",
+      "kind": "list-item",
+      "text": "Un tercero crítico es un participante externo cuya falla o decisión puede comprometer una promesa material."
+    },
+    {
+      "source_id": "N26-s15-b005",
+      "kind": "list-item",
+      "text": "Ownership de capacidad reúne autoridad persistente para priorizar, observar, coordinar y reparar una promesa."
+    },
+    {
+      "source_id": "N26-s16-h2",
+      "kind": "heading-2",
+      "text": "Glosario esencial"
+    },
+    {
+      "source_id": "N26-s16-b001",
+      "kind": "paragraph",
+      "text": "**Ecosistema de servicio:** un ecosistema de servicio reúne participantes autónomos que sostienen una promesa mediante capacidades, reglas e intercambios interdependientes."
+    },
+    {
+      "source_id": "N26-s16-b002",
+      "kind": "paragraph",
+      "text": "**Capacidad de servicio:** una capacidad de servicio combina personas, información, tecnología y autoridad para producir un resultado repetible."
+    },
+    {
+      "source_id": "N26-s16-b003",
+      "kind": "paragraph",
+      "text": "**Plataforma compartida:** una plataforma compartida ofrece capacidades gobernadas que otros equipos o actores utilizan para construir y operar servicios."
+    },
+    {
+      "source_id": "N26-s16-b004",
+      "kind": "paragraph",
+      "text": "**Tercero crítico:** un tercero crítico es un participante externo cuya falla o decisión puede comprometer una promesa material."
+    },
+    {
+      "source_id": "N26-s16-b005",
+      "kind": "paragraph",
+      "text": "**Ownership de capacidad:** ownership de capacidad reúne autoridad persistente para priorizar, observar, coordinar y reparar una promesa."
+    },
+    {
+      "source_id": "N26-s16-b006",
+      "kind": "paragraph",
+      "text": "**Mapa de dependencias:** un mapa de dependencias representa qué necesita cada capacidad, en qué secuencia y bajo qué supuestos."
+    },
+    {
+      "source_id": "N26-s16-b007",
+      "kind": "paragraph",
+      "text": "**Frontera de confianza:** una frontera de confianza marca dónde cambian las garantías, la autoridad y la evidencia aceptada."
+    },
+    {
+      "source_id": "N26-s16-b008",
+      "kind": "paragraph",
+      "text": "**Responsabilidad compartida:** responsabilidad compartida distribuye tareas sin diluir quién responde por la consecuencia completa."
+    },
+    {
+      "source_id": "N26-s16-b009",
+      "kind": "paragraph",
+      "text": "**Degradación diseñada:** degradación diseñada mantiene una parte segura y valiosa de la promesa cuando una dependencia falla."
+    },
+    {
+      "source_id": "N26-s16-b010",
+      "kind": "paragraph",
+      "text": "**Riesgo de concentración:** riesgo de concentración aparece cuando múltiples capacidades dependen de un mismo proveedor, dato o punto de control."
+    },
+    {
+      "source_id": "N26-s16-b011",
+      "kind": "paragraph",
+      "text": "**Portabilidad y salida:** portabilidad y salida preservan la posibilidad de mover datos, procesos y responsabilidades sin quebrar la promesa."
+    },
+    {
+      "source_id": "N26-s16-b012",
+      "kind": "paragraph",
+      "text": "**Gobernanza del ecosistema:** gobernanza del ecosistema coordina reglas comunes entre participantes que conservan autonomía."
+    },
+    {
+      "source_id": "N26-s17-h2",
+      "kind": "heading-2",
+      "text": "Preguntas de preparación"
+    },
+    {
+      "source_id": "N26-s17-b001",
+      "kind": "list-item",
+      "text": "¿Qué decisión permite sostener ecosistema de servicio y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "N26-s17-b002",
+      "kind": "list-item",
+      "text": "¿Qué decisión permite sostener capacidad de servicio y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "N26-s17-b003",
+      "kind": "list-item",
+      "text": "¿Qué decisión permite sostener plataforma compartida y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "N26-s17-b004",
+      "kind": "list-item",
+      "text": "¿Qué decisión permite sostener tercero crítico y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "N26-s17-b005",
+      "kind": "list-item",
+      "text": "¿Qué decisión permite sostener ownership de capacidad y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "N26-s17-b006",
+      "kind": "list-item",
+      "text": "¿Qué decisión permite sostener mapa de dependencias y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "N26-s17-b007",
+      "kind": "paragraph",
+      "text": "Para el encuentro, seleccionar una intervención conocida, completar el instrumento con evidencia verificable y preparar una decisión provisional. Incluir una explicación rival, una condición que obligaría a revisar y una consecuencia para una persona afectada."
+    },
+    {
+      "source_id": "N26-s18-h2",
+      "kind": "heading-2",
+      "text": "Referencias base"
+    },
+    {
+      "source_id": "N26-s18-b001",
+      "kind": "list-item",
+      "text": "AXELOS (2019). ITIL Foundation: ITIL 4 Edition. TSO."
+    },
+    {
+      "source_id": "N26-s18-b002",
+      "kind": "list-item",
+      "text": "Parker, G. G., Van Alstyne, M. W. y Choudary, S. P. (2016). Platform Revolution. Norton."
+    },
+    {
+      "source_id": "N26-s18-b003",
+      "kind": "list-item",
+      "text": "Tiwana, A. (2014). Platform Ecosystems. Morgan Kaufmann."
+    },
+    {
+      "source_id": "N26-s18-b004",
+      "kind": "list-item",
+      "text": "Skelton, M. y Pais, M. (2019). Team Topologies. IT Revolution."
+    },
+    {
+      "source_id": "N26-s18-b005",
+      "kind": "list-item",
+      "text": "ISO/IEC (2018). ISO/IEC 20000-1:2018 Service Management System Requirements. https://www.iso.org/standard/70636.html"
+    },
+    {
+      "source_id": "N26-s18-b006",
+      "kind": "list-item",
+      "text": "NIST (2024). Cybersecurity Supply Chain Risk Management Practices for Systems and Organizations, SP 800-161r1-upd1. https://doi.org/10.6028/NIST.SP.800-161r1-upd1"
+    },
+    {
+      "source_id": "N26-s18-b007",
+      "kind": "list-item",
+      "text": "NIST (2020). Zero Trust Architecture, SP 800-207. https://doi.org/10.6028/NIST.SP.800-207"
+    },
+    {
+      "source_id": "N26-s18-b008",
+      "kind": "list-item",
+      "text": "CISA (2023). Shifting the Balance of Cybersecurity Risk: Principles and Approaches for Security-by-Design and Default. https://www.cisa.gov/resources-tools/resources/secure-by-design"
+    },
+    {
+      "source_id": "N26-s18-b009",
+      "kind": "list-item",
+      "text": "European Union (2023). Regulation (EU) 2023/2854, Data Act. https://eur-lex.europa.eu/eli/reg/2023/2854/oj"
+    },
+    {
+      "source_id": "N26-s18-b010",
+      "kind": "list-item",
+      "text": "Ross, J. W., Weill, P. y Robertson, D. C. (2006). Enterprise Architecture as Strategy. Harvard Business School Press."
+    },
+    {
+      "source_id": "N26-s18-b011",
+      "kind": "list-item",
+      "text": "Hohpe, G. y Woolf, B. (2003). Enterprise Integration Patterns. Addison-Wesley."
+    },
+    {
+      "source_id": "N26-s18-b012",
+      "kind": "list-item",
+      "text": "FinOps Foundation (2026). FinOps Framework. https://www.finops.org/framework/"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "number": 13,
+  "title": "N13 · Demoras, concurrencia, consistencia, idempotencia y reconciliación",
+  "module": "Modelar sólo lo que ayuda a decidir",
+  "source": "source/N13_demoras_concurrencia_consistencia_idempotencia_y_reconciliacion-content-canonical-v1.md",
+  "source_sha256": "d5b0a1d77030d279299883f31f183ca71cf2b14e045a97c54edcc4f560fc96a8",
+  "source_words": 6772,
+  "content_audit": "canonical-v1-pass",
+  "cover": {
+    "file": "cover-source-premium-bw-v1.png",
+    "source": "assets/cover-source-premium-bw-v1.png",
+    "sha256": "65cf13b098e2b5e311447f90d52ab387a83cd9012920d0bdfe3afb2e3f1443a4",
+    "alt": "Dos trabajadores hoteleros se aproximan desde corredores opuestos a la última habitación, entre puertas reflejadas y un reloj.",
+    "photographic_origin": "native_black_and_white",
+    "render_treatment": "no_grayscale_conversion"
+  },
+  "internal_images": [
+    "pause-01.png",
+    "pause-02.png"
+  ],
+  "image_manifest": [
+    {
+      "file": "assets/pause-01.png",
+      "sha256": "d4b99fbcb6ac39764b923c2c2a4b40ca448f4c33f9aa63bf982ea209f2c17aad",
+      "alt": "Dos manos acercan sobres de llave idénticos desde lados opuestos de un mostrador donde queda una sola llave física.",
+      "role": "full_page_pause",
+      "rights_status": "project_bound_generated_media"
+    },
+    {
+      "file": "assets/pause-02.png",
+      "sha256": "8649b355708729d0b571ca66c0721c2203422b250f73f6c03cdd05f736331d8a",
+      "alt": "Un trabajador compara dos registros demorados junto a un reloj mientras un carro espera en la bifurcación de dos corredores.",
+      "role": "full_page_pause",
+      "rights_status": "project_bound_generated_media"
+    }
+  ],
+  "portrait_references": [
+    {
+      "key": "leslie-lamport",
+      "name": "Leslie Lamport",
+      "file": "assets/referent-leslie-lamport.jpg",
+      "sha256": "a07f86a8b435c38eafbc945e4848ed4c2139e1aeb236518ea4a5fd6f4657e82a",
+      "rights_status": "verified_local_portrait"
+    },
+    {
+      "key": "jim-gray",
+      "name": "Jim Gray",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "pat-helland",
+      "name": "Pat Helland",
+      "file": "assets/referent-pat-helland.jpg",
+      "sha256": "d3bed5f83500914d986d371e33e8b39e3552b42f3e5890baecee48586b523da2",
+      "rights_status": "verified_local_portrait"
+    },
+    {
+      "key": "werner-vogels",
+      "name": "Werner Vogels",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "martin-kleppmann",
+      "name": "Martin Kleppmann",
+      "file": "assets/referent-martin-kleppmann.jpg",
+      "sha256": "6e22bcc4111875cc08157978c5d81d10a52c50709b5a76e9be6f4c171c03aa39",
+      "rights_status": "verified_local_portrait"
+    },
+    {
+      "key": "peter-bailis",
+      "name": "Peter Bailis",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    }
+  ],
+  "diagrams": [
+    {
+      "file": "diagrams/N13-mapa-01.svg",
+      "title": "Falla parcial",
+      "labels": [
+        "Intención",
+        "Envío",
+        "Timeout",
+        "Reintento",
+        "Efecto protegido"
+      ],
+      "claim": "Falla parcial: la representación conecta intención, envío, timeout, reintento, efecto protegido para sostener una decisión revisable.",
+      "sha256": "518657b8e7501545fe135723b8de824f11e653de0df738b28671a9b02c38a290"
+    },
+    {
+      "file": "diagrams/N13-mapa-02.svg",
+      "title": "Convergencia defendible",
+      "labels": [
+        "Detectar",
+        "Correlacionar",
+        "Comparar",
+        "Explicar",
+        "Resolver"
+      ],
+      "claim": "Convergencia defendible: la representación conecta detectar, correlacionar, comparar, explicar, resolver para sostener una decisión revisable.",
+      "sha256": "5825804150927529769a578054fe9f23cf81ab91a3698a66d5dffd9874b892f8"
+    },
+    {
+      "file": "diagrams/N13-mapa-03.svg",
+      "title": "Perturbaciones",
+      "labels": [
+        "Demora",
+        "Duplicación",
+        "Reordenamiento",
+        "Concurrencia",
+        "Caída"
+      ],
+      "claim": "Perturbaciones: la representación conecta demora, duplicación, reordenamiento, concurrencia, caída para sostener una decisión revisable.",
+      "sha256": "38c04094585d23af8fc68fe8a24f18c070308c051d9561bc7df4fc5efaa832cd"
+    }
+  ],
+  "quotes": [
+    "En un sistema distribuido, la ausencia de respuesta no prueba ausencia de efecto y la simultaneidad aparente no determina un orden legítimo.",
+    "Las garantías fuertes cuestan coordinación, pero el costo no siempre justifica reducirlas."
+  ],
+  "references": [
+    "Lamport, L. (1978). “Time, Clocks, and the Ordering of Events in a Distributed System”. *Communications of the ACM*, 21(7), 558–565. https://doi.org/10.1145/359545.359563",
+    "Gray, J. y Reuter, A. (1992). *Transaction Processing: Concepts and Techniques*. Morgan Kaufmann.",
+    "Helland, P. (2007). “Life beyond Distributed Transactions: An Apostate’s Opinion”. *CIDR*. https://www.cidrdb.org/cidr2007/papers/cidr07p15.pdf",
+    "Vogels, W. (2009). “Eventually Consistent”. *Communications of the ACM*, 52(1), 40–44. https://doi.org/10.1145/1435417.1435432",
+    "Kleppmann, M. (2017). *Designing Data-Intensive Applications*. O’Reilly Media.",
+    "Bailis, P., Fekete, A., Franklin, M. J., Ghodsi, A., Hellerstein, J. M. y Stoica, I. (2014). “Coordination Avoidance in Database Systems”. *Proceedings of the VLDB Endowment*, 8(3), 185–196. https://doi.org/10.14778/2735508.2735509",
+    "Fielding, R., Nottingham, M. y Reschke, J. (2022). *RFC 9110: HTTP Semantics*. RFC Editor. https://www.rfc-editor.org/rfc/rfc9110.html",
+    "Featonby, M. (2021). “Making Retries Safe with Idempotent APIs”. *Amazon Builders’ Library*. https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/",
+    "Microsoft (2026). “Retry Pattern”. *Azure Architecture Center*. https://learn.microsoft.com/en-us/azure/architecture/patterns/retry",
+    "Microsoft (2026). “Saga Distributed Transactions Pattern”. *Azure Architecture Center*. https://learn.microsoft.com/en-us/azure/architecture/patterns/saga",
+    "Microsoft (2026). “Compensating Transaction Pattern”. *Azure Architecture Center*. https://learn.microsoft.com/en-us/azure/architecture/patterns/compensating-transaction",
+    "NIST (2022). *Engineering Trustworthy Secure Systems*. NIST SP 800-160 Vol. 1 Rev. 1. https://doi.org/10.6028/NIST.SP.800-160v1r1"
+  ],
+  "closing": {
+    "file": "matches-close.png",
+    "sha256": "06318b951ef619692a236027ed07ec7a4a1bb9b66cc875a916c40f060e47ecde",
+    "alt": "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza.",
+    "caption": "La secuencia vuelve visible que toda intervención consume recursos, deja huellas y necesita un criterio de cierre.",
+    "folio": true,
+    "footer": true
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "document": "N13",
+  "title": "Demoras, concurrencia, consistencia, idempotencia y reconciliación",
+  "stage": "content-canonical-v1",
+  "language": "es-AR",
+  "source": "N13-content-canonical/source/N13_demoras_concurrencia_consistencia_idempotencia_y_reconciliacion-content-canonical-v1.md",
+  "sha256": "d5b0a1d77030d279299883f31f183ca71cf2b14e045a97c54edcc4f560fc96a8",
+  "bytes": 49156,
+  "words_total": 6772,
+  "words_substantive": 6018,
+  "source_blocks": 241,
+  "references": 12,
+  "urls": 10,
+  "results": [
+    {
+      "check": "source_exists",
+      "result": "pass",
+      "evidence": "N13-content-canonical/source/N13_demoras_concurrencia_consistencia_idempotencia_y_reconciliacion-content-canonical-v1.md"
+    },
+    {
+      "check": "substantive_word_floor",
+      "result": "pass",
+      "evidence": 6018
+    },
+    {
+      "check": "total_word_count",
+      "result": "pass",
+      "evidence": 6772
+    },
+    {
+      "check": "required_architecture",
+      "result": "pass",
+      "evidence": [
+        "Pregunta profesional",
+        "La beca que se pagó dos veces y seguía figurando impaga",
+        "Hotel Horizonte: dos asignaciones para la última habitación",
+        "Tesis",
+        "De N12 a N13: de la transición verificable a la transición bajo falla parcial",
+        "Movimiento 1 · Aceptar que no saber también es un estado",
+        "Movimiento 2 · Elegir consistencia e idempotencia por consecuencia",
+        "Movimiento 3 · Reconciliar para converger sin falsificar la historia",
+        "Errores frecuentes",
+        "Consecuencias profesionales",
+        "Límites y tensiones",
+        "De N13 a N14: de la convergencia técnica al flujo real",
+        "Síntesis",
+        "Cinco píldoras para recordar",
+        "Glosario esencial",
+        "Preguntas de preparación",
+        "Referentes",
+        "Referencias base"
+      ]
+    },
+    {
+      "check": "three_movements",
+      "result": "pass",
+      "evidence": [
+        "Movimiento 1 · Aceptar que no saber también es un estado",
+        "Movimiento 2 · Elegir consistencia e idempotencia por consecuencia",
+        "Movimiento 3 · Reconciliar para converger sin falsificar la historia"
+      ]
+    },
+    {
+      "check": "complete_concept_units",
+      "result": "pass",
+      "evidence": [
+        {
+          "title": "Falla parcial: una operación puede ocurrir sin que quien la inició lo sepa",
+          "words": 171
+        },
+        {
+          "title": "Demora y presupuesto de tiempo",
+          "words": 175
+        },
+        {
+          "title": "Entrega y procesamiento no son la misma garantía",
+          "words": 169
+        },
+        {
+          "title": "Orden causal y orden de llegada",
+          "words": 238
+        },
+        {
+          "title": "Concurrencia: dos intenciones válidas pueden ser incompatibles juntas",
+          "words": 217
+        },
+        {
+          "title": "Primera aplicación de HH-13: localizar la ambigüedad",
+          "words": 235
+        },
+        {
+          "title": "Consistencia: proteger invariantes, no sincronizar todo",
+          "words": 161
+        },
+        {
+          "title": "Disponibilidad, coordinación y consecuencia",
+          "words": 157
+        },
+        {
+          "title": "Idempotencia: repetir la misma intención sin multiplicar el efecto protegido",
+          "words": 162
+        },
+        {
+          "title": "Deduplicación e identidad de intención",
+          "words": 206
+        },
+        {
+          "title": "Control optimista, bloqueo y operaciones conmutativas",
+          "words": 248
+        },
+        {
+          "title": "Segunda aplicación de HH-13: proteger la última habitación",
+          "words": 238
+        },
+        {
+          "title": "Reconciliación: comparar, explicar y decidir",
+          "words": 260
+        },
+        {
+          "title": "Compensación y sagas",
+          "words": 253
+        },
+        {
+          "title": "Instrumento HH-13: expediente de convergencia",
+          "words": 172
+        },
+        {
+          "title": "Prueba de perturbación",
+          "words": 191
+        },
+        {
+          "title": "Tercera aplicación de HH-13: converger sin elegir un registro por costumbre",
+          "words": 251
+        },
+        {
+          "title": "Caso de transferencia: una orden de medicación repetida",
+          "words": 236
+        },
+        {
+          "title": "Contraejemplo: cuando coordinar todo empeora el servicio",
+          "words": 189
+        }
+      ]
+    },
+    {
+      "check": "instrument_fields",
+      "result": "pass",
+      "evidence": 10
+    },
+    {
+      "check": "five_pills",
+      "result": "pass",
+      "evidence": 5
+    },
+    {
+      "check": "six_questions",
+      "result": "pass",
+      "evidence": 6
+    },
+    {
+      "check": "six_referents",
+      "result": "pass",
+      "evidence": 6
+    },
+    {
+      "check": "reference_depth",
+      "result": "pass",
+      "evidence": 12
+    },
+    {
+      "check": "recent_literature",
+      "result": "pass",
+      "evidence": 5
+    },
+    {
+      "check": "reference_urls",
+      "result": "pass",
+      "evidence": 10
+    },
+    {
+      "check": "all_references_anchored_in_body",
+      "result": "pass",
+      "evidence": {
+        "Lamport": true,
+        "Gray and Reuter": true,
+        "Helland": true,
+        "Vogels": true,
+        "Kleppmann": true,
+        "Bailis": true,
+        "RFC 9110": true,
+        "AWS": true,
+        "Microsoft Retry": true,
+        "Microsoft Saga": true,
+        "Microsoft Compensation": true,
+        "NIST": true
+      }
+    },
+    {
+      "check": "cross_document_uniqueness",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "boundary_terms",
+      "result": "pass",
+      "evidence": [
+        "HH-12",
+        "HH-13",
+        "N12",
+        "N14",
+        "falla parcial",
+        "demora",
+        "concurrencia",
+        "consistencia",
+        "idempotencia",
+        "reconciliación",
+        "Hotel Horizonte",
+        "inteligencia artificial"
+      ]
+    },
+    {
+      "check": "impersonal_register",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "no_placeholders",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "no_incidental_dashes_in_prose",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "content_only_package",
+      "result": "pass",
+      "evidence": "no PDF, HTML or CSS"
+    }
+  ],
+  "overall": "pass"
+}

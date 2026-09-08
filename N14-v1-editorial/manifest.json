@@ -1,0 +1,149 @@
+{
+  "number": 14,
+  "title": "N14 · Procesos end-to-end, handoffs, colas y excepciones",
+  "module": "Modelar sólo lo que ayuda a decidir",
+  "source": "source/N14_procesos_end_to_end_handoffs_colas_y_excepciones-content-canonical-v1.md",
+  "source_sha256": "87d05b028d9ed12ac747443f102639b2fef81f944e7e59e47c580659938fb5f0",
+  "source_words": 6690,
+  "content_audit": "canonical-v1-pass",
+  "cover": {
+    "file": "cover-source-premium-bw-v1.png",
+    "source": "assets/cover-source-premium-bw-v1.png",
+    "sha256": "c681ed416f0876c0603db0378c3a8c303f60a743903dbb6bf14be44f755624e0",
+    "alt": "Una trabajadora hotelera recorre un corredor de servicio con carros, ascensor y cruces de personal que vuelven visibles handoffs y colas.",
+    "photographic_origin": "native_black_and_white",
+    "render_treatment": "no_grayscale_conversion"
+  },
+  "internal_images": [
+    "pause-01.png",
+    "pause-02.png"
+  ],
+  "image_manifest": [
+    {
+      "file": "assets/pause-01.png",
+      "sha256": "5f93d4c0830f91c50e9c2c6ccc57303a3383b34a202a30ebe273bedbacf66549",
+      "alt": "Tres carros esperan en colas diferentes mientras trabajadores intercambian ropa blanca y una ficha en un corredor de servicio.",
+      "role": "full_page_pause",
+      "rights_status": "project_bound_generated_media"
+    },
+    {
+      "file": "assets/pause-02.png",
+      "sha256": "5edf3dab4da8338ba2a4e014027c3c86cd8878f678dc4b34343f8e95e3d123a6",
+      "alt": "Una profesional sigue un expediente físico a través de un mostrador, una escalera y una sala de espera vistos en reflejos sucesivos.",
+      "role": "full_page_pause",
+      "rights_status": "project_bound_generated_media"
+    }
+  ],
+  "portrait_references": [
+    {
+      "key": "michael-hammer",
+      "name": "Michael Hammer",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "thomas-davenport",
+      "name": "Thomas Davenport",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "geary-rummler",
+      "name": "Geary Rummler",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "wil-van-der-aalst",
+      "name": "Wil van der Aalst",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "john-little",
+      "name": "John D. C. Little",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "wallace-hopp",
+      "name": "Wallace Hopp",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    }
+  ],
+  "diagrams": [
+    {
+      "file": "diagrams/N14-mapa-01.svg",
+      "title": "Proceso de punta a punta",
+      "labels": [
+        "Promesa",
+        "Caso",
+        "Handoff",
+        "Cola",
+        "Excepción",
+        "Cierre"
+      ],
+      "claim": "Proceso de punta a punta: la representación conecta promesa, caso, handoff, cola, excepción, cierre para sostener una decisión revisable.",
+      "sha256": "9ad7d2a062894cb18af63ad6b0e22ebc26004880c2e53526b9f0ca521d709266"
+    },
+    {
+      "file": "diagrams/N14-mapa-02.svg",
+      "title": "Tiempo real del servicio",
+      "labels": [
+        "Trabajo",
+        "Espera",
+        "Retrabajo",
+        "Demanda de falla",
+        "Calendario"
+      ],
+      "claim": "Tiempo real del servicio: la representación conecta trabajo, espera, retrabajo, demanda de falla, calendario para sostener una decisión revisable.",
+      "sha256": "c137fe938a0e3004264d73c5d9c53b9b81fa7cf5a28aea946182d87712fd1fa8"
+    },
+    {
+      "file": "diagrams/N14-mapa-03.svg",
+      "title": "Mapa de flujo real",
+      "labels": [
+        "Declarado",
+        "Ejecutado",
+        "Experimentado",
+        "Evidencia",
+        "Prueba de mejora"
+      ],
+      "claim": "Mapa de flujo real: la representación conecta declarado, ejecutado, experimentado, evidencia, prueba de mejora para sostener una decisión revisable.",
+      "sha256": "570c1b1887fa5f51e6cb820ca4f50d3e61478b37ab53e484f0f1f5b265f6ad9c"
+    }
+  ],
+  "quotes": [
+    "Un proceso end-to-end es una secuencia coordinada de trabajo, decisiones, esperas y reparaciones que transforma una necesidad en un outcome observable para una persona o…",
+    "Un proceso end-to-end puede atravesar organizaciones que no comparten autoridad ni datos."
+  ],
+  "references": [
+    "Hammer, M. (1990). “Reengineering Work: Don’t Automate, Obliterate”. *Harvard Business Review*, 68(4), 104–112. https://hbr.org/1990/07/reengineering-work-dont-automate-obliterate",
+    "Davenport, T. H. (1993). *Process Innovation: Reengineering Work through Information Technology*. Harvard Business School Press.",
+    "Rummler, G. A. y Brache, A. P. (2012). *Improving Performance: How to Manage the White Space on the Organization Chart*. Jossey-Bass.",
+    "Dumas, M., La Rosa, M., Mendling, J. y Reijers, H. A. (2018). *Fundamentals of Business Process Management*. Springer. https://doi.org/10.1007/978-3-662-56509-4",
+    "van der Aalst, W. M. P. (2016). *Process Mining: Data Science in Action*. Springer. https://doi.org/10.1007/978-3-662-49851-4",
+    "van der Aalst, W. M. P. y Carmona, J., eds. (2022). *Process Mining Handbook*. Springer. https://doi.org/10.1007/978-3-031-08848-3",
+    "Little, J. D. C. (1961). “A Proof for the Queuing Formula: L = λW”. *Operations Research*, 9(3), 383–387. https://doi.org/10.1287/opre.9.3.383",
+    "Hopp, W. J. y Spearman, M. L. (2011). *Factory Physics*. Waveland Press.",
+    "Seddon, J. (2003). *Freedom from Command and Control*. Vanguard Press.",
+    "Object Management Group (2014). *Business Process Model and Notation, Version 2.0.2*. https://www.omg.org/spec/BPMN/2.0.2",
+    "APQC (2026). *Process Classification Framework, Version 8.0*. https://www.apqc.org/process-frameworks",
+    "ISO (2015). *ISO 9001:2015 Quality Management Systems, Requirements*. https://www.iso.org/standard/62085.html"
+  ],
+  "closing": {
+    "file": "matches-close.png",
+    "sha256": "06318b951ef619692a236027ed07ec7a4a1bb9b66cc875a916c40f060e47ecde",
+    "alt": "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza.",
+    "caption": "La secuencia vuelve visible que toda intervención consume recursos, deja huellas y necesita un criterio de cierre.",
+    "folio": true,
+    "footer": true
+  }
+}

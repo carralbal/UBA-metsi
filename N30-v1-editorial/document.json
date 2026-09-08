@@ -1,0 +1,148 @@
+{
+  "number": 30,
+  "title": "N30 · Observabilidad técnica, señales de negocio, SLI, SLO, incidentes y aprendizaje",
+  "module": "Sostener la promesa en operación",
+  "source": "source/N30_observabilidad_senales_sli_slo_incidentes_y_aprendizaje-content-canonical-v1.md",
+  "source_sha256": "a51958e232d525981f08005b50e416580c318f705382a2654d5dad6fc4189125",
+  "source_words": 7382,
+  "content_audit": "canonical-v1-pass",
+  "cover": {
+    "file": "cover-source-premium-bw-v1.png",
+    "source": "assets/cover-source-premium-bw-v1.png",
+    "sha256": "0a55b45077ef8acb52bb56642375c70aa1669d4a13f05ffba81dc765e7eb6be9",
+    "alt": "Una responsable nocturna argentina observa señales humanas y técnicas que revelan una degradación del recorrido de ingreso.",
+    "photographic_origin": "native_black_and_white",
+    "render_treatment": "no_grayscale_conversion"
+  },
+  "internal_images": [
+    "pause-01.png",
+    "pause-02.png"
+  ],
+  "image_manifest": [
+    {
+      "file": "assets/pause-01.png",
+      "sha256": "8a7e7381c0769af1a1773646e145f1ce637e9290ec8e166932ce597199e92229",
+      "alt": "Un trabajador nocturno responde a una secuencia de señales en un corredor donde emerge un incidente.",
+      "role": "full_page_pause",
+      "rights_status": "project_bound_generated_media"
+    },
+    {
+      "file": "assets/pause-02.png",
+      "sha256": "d8049f8dd725287e2afe8563f3405d47dfaeebde5e2477fea237be50c5289cb1",
+      "alt": "Tres integrantes de operación reconstruyen un episodio con evidencia para aprender sin reducirlo a culpa individual.",
+      "role": "full_page_pause",
+      "rights_status": "project_bound_generated_media"
+    }
+  ],
+  "portrait_references": [
+    {
+      "key": "google-sre",
+      "name": "Google SRE",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "opentelemetry",
+      "name": "OpenTelemetry",
+      "file": "assets/referent-opentelemetry.jpg",
+      "sha256": "24d27506f3ae459078de74c36ac32cb5ea45614a8be7bde9a12558d2dc4c57af",
+      "rights_status": "verified_local_portrait"
+    },
+    {
+      "key": "nist",
+      "name": "NIST",
+      "file": "assets/referent-nist.jpg",
+      "sha256": "482ac3e91fd444045dc072dac5311e0a45fb7d82d5d900203a4dccff24b190b6",
+      "rights_status": "verified_local_portrait"
+    },
+    {
+      "key": "forsgren-humble-kim",
+      "name": "Nicole Forsgren, Jez Humble y Gene Kim",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "erik-hollnagel",
+      "name": "Erik Hollnagel",
+      "file": "assets/referent-erik-hollnagel.jpg",
+      "sha256": "161e31010b3f04392d0da4570b3f185ae53a9fe2d9608114abe408ef439c1a18",
+      "rights_status": "verified_local_portrait"
+    },
+    {
+      "key": "nancy-leveson",
+      "name": "Nancy Leveson",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    }
+  ],
+  "diagrams": [
+    {
+      "file": "diagrams/N30-mapa-01.svg",
+      "title": "Señales de la promesa",
+      "labels": [
+        "Recorrido",
+        "Telemetría",
+        "Negocio",
+        "Experiencia",
+        "Decisión"
+      ],
+      "claim": "Señales de la promesa: la representación conecta recorrido, telemetría, negocio, experiencia, decisión para sostener una decisión revisable.",
+      "sha256": "ea5e15bf90be0c4c368f038ada6d2efa3d34d78ba3d612294bded6ecc03a1920"
+    },
+    {
+      "file": "diagrams/N30-mapa-02.svg",
+      "title": "Confiabilidad gobernada",
+      "labels": [
+        "SLI",
+        "SLO",
+        "Presupuesto",
+        "Alerta",
+        "Respuesta"
+      ],
+      "claim": "Confiabilidad gobernada: la representación conecta sli, slo, presupuesto, alerta, respuesta para sostener una decisión revisable.",
+      "sha256": "b208f7a5ad30621508dc7f14b2c85e7f19d7da810bda3472620ffcc25be4e535"
+    },
+    {
+      "file": "diagrams/N30-mapa-03.svg",
+      "title": "Mapa HH-30",
+      "labels": [
+        "Incidente",
+        "Contención",
+        "Reparación",
+        "Revisión",
+        "Aprendizaje"
+      ],
+      "claim": "Mapa HH-30: la representación conecta incidente, contención, reparación, revisión, aprendizaje para sostener una decisión revisable.",
+      "sha256": "32207ffbe76a94aa60574c80a392d839df41b314c8acc57b148473bc52e13700"
+    }
+  ],
+  "quotes": [
+    "N30 conecta observabilidad técnica, señales de negocio, SLI, SLO, incidentes y aprendizaje para gobernar la promesa en operación y retroalimentar decisiones anteriores.",
+    "Ninguna arquitectura, contrato, prueba, control ni tablero elimina el juicio situado."
+  ],
+  "references": [
+    "Beyer, B., Jones, C., Petoff, J. y Murphy, N. R. (2016). Site Reliability Engineering. O'Reilly. https://sre.google/sre-book/table-of-contents/",
+    "Beyer, B., Murphy, N. R., Rensin, D. K., Kawahara, K. y Thorne, S. (2018). The Site Reliability Workbook. O'Reilly. https://sre.google/workbook/table-of-contents/",
+    "OpenTelemetry (2026). OpenTelemetry Specification 1.60.0. https://opentelemetry.io/docs/specs/otel/",
+    "OpenTelemetry (2026). Signals. https://opentelemetry.io/docs/concepts/signals/",
+    "NIST (2025). Incident Response Recommendations and Considerations for Cybersecurity Risk Management, SP 800-61r3. https://doi.org/10.6028/NIST.SP.800-61r3",
+    "NIST (2024). The Cybersecurity Framework 2.0. https://doi.org/10.6028/NIST.CSWP.29",
+    "Forsgren, N., Humble, J. y Kim, G. (2018). Accelerate. IT Revolution.",
+    "Allspaw, J. (2016). Trade-Offs Under Pressure. Adaptive Capacity Labs.",
+    "Hollnagel, E. (2014). Safety-I and Safety-II. Ashgate.",
+    "Woods, D. D. (2015). Four Concepts for Resilience and the Implications for the Future of Resilience Engineering. Reliability Engineering and System Safety, 141, 5-9.",
+    "Leveson, N. (2011). Engineering a Safer World. MIT Press.",
+    "ISO/IEC (2018). ISO/IEC 20000-1:2018 Service Management System Requirements. https://www.iso.org/standard/70636.html"
+  ],
+  "closing": {
+    "file": "matches-close.png",
+    "sha256": "06318b951ef619692a236027ed07ec7a4a1bb9b66cc875a916c40f060e47ecde",
+    "alt": "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza.",
+    "caption": "La secuencia vuelve visible que toda intervención consume recursos, deja huellas y necesita un criterio de cierre.",
+    "folio": true,
+    "footer": true
+  }
+}

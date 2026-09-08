@@ -1,0 +1,147 @@
+{
+  "number": 27,
+  "title": "N27 · Contratos sintácticos, semánticos, temporales y operacionales",
+  "module": "Sostener la promesa en operación",
+  "source": "source/N27_contratos_sintacticos_semanticos_temporales_y_operacionales-content-canonical-v1.md",
+  "source_sha256": "9cae3099871968287ebe71395e38c1a751380f42e260955cabc3ece855453abd",
+  "source_words": 7215,
+  "content_audit": "canonical-v1-pass",
+  "cover": {
+    "file": "cover-source-premium-bw-v1.png",
+    "source": "assets/cover-source-premium-bw-v1.png",
+    "sha256": "900b1090fec1c87e088e7c520084842c85becb81e62a96db7875043794661b31",
+    "alt": "Dos profesionales argentinos intercambian una llave y un registro a través de un mostrador donde el tiempo también condiciona el acuerdo.",
+    "photographic_origin": "native_black_and_white",
+    "render_treatment": "no_grayscale_conversion"
+  },
+  "internal_images": [
+    "pause-01.png",
+    "pause-02.png"
+  ],
+  "image_manifest": [
+    {
+      "file": "assets/pause-01.png",
+      "sha256": "c60105cbdc96c04e9dfd4857e393e0953f6807c4b0bd7c01da52fb76bdb077d2",
+      "alt": "Dos manos intercambian una llave y una ficha mientras otras esperan, haciendo visibles orden, duplicación y consecuencia.",
+      "role": "full_page_pause",
+      "rights_status": "project_bound_generated_media"
+    },
+    {
+      "file": "assets/pause-02.png",
+      "sha256": "d0f7271c5f0fbab7ed05fcc0b7b3d663219565abe1dee9a300ccf94b180796a3",
+      "alt": "Una secuencia de puertas e indicadores muestra que estructura, significado, tiempo y operación deben coincidir.",
+      "role": "full_page_pause",
+      "rights_status": "project_bound_generated_media"
+    }
+  ],
+  "portrait_references": [
+    {
+      "key": "ietf",
+      "name": "IETF",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "openapi-initiative",
+      "name": "OpenAPI Initiative",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "json-schema",
+      "name": "JSON Schema",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "eric-evans",
+      "name": "Eric Evans",
+      "file": "assets/referent-eric-evans.jpg",
+      "sha256": "7a075c10f9fbe2a5fbe2b0ddbfb0229675794b570da746efae4953accedaa001",
+      "rights_status": "verified_local_portrait"
+    },
+    {
+      "key": "martin-kleppmann",
+      "name": "Martin Kleppmann",
+      "file": "assets/referent-martin-kleppmann.jpg",
+      "sha256": "6e22bcc4111875cc08157978c5d81d10a52c50709b5a76e9be6f4c171c03aa39",
+      "rights_status": "verified_local_portrait"
+    },
+    {
+      "key": "hohpe-woolf",
+      "name": "Gregor Hohpe y Bobby Woolf",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    }
+  ],
+  "diagrams": [
+    {
+      "file": "diagrams/N27-mapa-01.svg",
+      "title": "Capas del contrato",
+      "labels": [
+        "Sintaxis",
+        "Semántica",
+        "Tiempo",
+        "Operación"
+      ],
+      "claim": "Capas del contrato: la representación conecta sintaxis, semántica, tiempo, operación para sostener una decisión revisable.",
+      "sha256": "344a1e7a8395a5f1c954f1375a4059a4af614e2b28b5d2342709d7289f25f4c2"
+    },
+    {
+      "file": "diagrams/N27-mapa-02.svg",
+      "title": "Comportamiento verificable",
+      "labels": [
+        "Precondición",
+        "Invariante",
+        "Error",
+        "Reintento",
+        "Evolución"
+      ],
+      "claim": "Comportamiento verificable: la representación conecta precondición, invariante, error, reintento, evolución para sostener una decisión revisable.",
+      "sha256": "9a883853d85297ab20a2cb715e1e8740985698e8795878df77fc2717d5ce2a22"
+    },
+    {
+      "file": "diagrams/N27-mapa-03.svg",
+      "title": "Mapa HH-27",
+      "labels": [
+        "Productor",
+        "Consumidor",
+        "Efecto",
+        "Prueba",
+        "Reparación"
+      ],
+      "claim": "Mapa HH-27: la representación conecta productor, consumidor, efecto, prueba, reparación para sostener una decisión revisable.",
+      "sha256": "dfd20c5870fa060e52703dec5c4092ed8c350c5aeb1e866ee768ff3dfa433a2d"
+    }
+  ],
+  "quotes": [
+    "N27 diseña contratos sintácticos, semánticos, temporales y operacionales, y vincula conformidad técnica con significado compartido, comportamiento observable y capacidad…",
+    "Ninguna arquitectura, contrato, prueba, control ni tablero elimina el juicio situado."
+  ],
+  "references": [
+    "IETF (2022). RFC 9110, HTTP Semantics. https://www.rfc-editor.org/rfc/rfc9110",
+    "OpenAPI Initiative (2024). OpenAPI Specification 3.1.1. https://spec.openapis.org/oas/v3.1.1.html",
+    "JSON Schema (2022). Draft 2020-12. https://json-schema.org/draft/2020-12",
+    "Evans, E. (2003). Domain-Driven Design. Addison-Wesley.",
+    "Kleppmann, M. (2017). Designing Data-Intensive Applications. O'Reilly.",
+    "Hohpe, G. y Woolf, B. (2003). Enterprise Integration Patterns. Addison-Wesley.",
+    "Fowler, M. (2002). Patterns of Enterprise Application Architecture. Addison-Wesley.",
+    "AsyncAPI Initiative (2024). AsyncAPI Specification 3.0.0. https://www.asyncapi.com/docs/reference/specification/v3.0.0",
+    "W3C (2013). PROV Overview. https://www.w3.org/TR/prov-overview/",
+    "ISO/IEC (2023). ISO/IEC 25010:2023 Product Quality Model. https://www.iso.org/standard/78176.html",
+    "NIST (2020). Zero Trust Architecture, SP 800-207. https://doi.org/10.6028/NIST.SP.800-207",
+    "Pact Foundation (2026). Consumer Driven Contract Testing. https://docs.pact.io/"
+  ],
+  "closing": {
+    "file": "matches-close.png",
+    "sha256": "06318b951ef619692a236027ed07ec7a4a1bb9b66cc875a916c40f060e47ecde",
+    "alt": "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza.",
+    "caption": "La secuencia vuelve visible que toda intervención consume recursos, deja huellas y necesita un criterio de cierre.",
+    "folio": true,
+    "footer": true
+  }
+}

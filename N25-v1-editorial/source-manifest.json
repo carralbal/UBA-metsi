@@ -1,0 +1,1261 @@
+{
+  "document": "N25",
+  "source": "source/N25_flujo_mas_alla_de_las_ceremonias_colas_lote_espera_y_feedback-content-canonical-v1.md",
+  "eligible_blocks": [
+    {
+      "source_id": "N25-h1",
+      "kind": "heading-1",
+      "text": "Flujo más allá de las ceremonias: colas, lote, espera y feedback"
+    },
+    {
+      "source_id": "N25-s01-h2",
+      "kind": "heading-2",
+      "text": "Pregunta profesional"
+    },
+    {
+      "source_id": "N25-s01-b001",
+      "kind": "paragraph",
+      "text": "¿Cómo mejorar un sistema de trabajo cuando todas las ceremonias ocurren y, sin embargo, las decisiones y el valor siguen esperando?"
+    },
+    {
+      "source_id": "N25-s02-h2",
+      "kind": "heading-2",
+      "text": "El sprint que duraba dos semanas y el cambio que tardaba cuatro meses"
+    },
+    {
+      "source_id": "N25-s02-b001",
+      "kind": "paragraph",
+      "text": "Hotel Horizonte trabaja en sprints de dos semanas. Las reuniones comienzan a horario, el tablero se actualiza y la velocidad es estable. Una corrección sobre asignación accesible tarda ciento dieciocho días desde el primer episodio hasta su uso en todos los turnos."
+    },
+    {
+      "source_id": "N25-s02-b002",
+      "kind": "paragraph",
+      "text": "La mayor parte del tiempo no contiene trabajo activo. El pedido espera validación, el análisis espera datos, el cambio espera ambiente, la prueba espera agenda y la liberación espera comité. Cada área parece ocupada; el sistema completo acumula colas."
+    },
+    {
+      "source_id": "N25-s02-b003",
+      "kind": "paragraph",
+      "text": "Flujo describe el movimiento de una unidad de valor desde demanda hasta resultado y feedback. Para comprenderlo hay que observar trabajo en curso, edad, espera, lote, handoffs, bloqueos, retrabajo y capacidad de reparación. La cadencia de ceremonias puede ayudar, pero no garantiza flujo."
+    },
+    {
+      "source_id": "N25-s02-b004",
+      "kind": "paragraph",
+      "text": "El equipo limita iniciativas, reduce tamaños de lote, acerca prueba y operación, define políticas de entrada y mide tiempo de punta a punta. La velocidad local baja mientras el tiempo total mejora. También aparece una verdad incómoda: algunos controles aportaban protección y no podían simplemente eliminarse."
+    },
+    {
+      "source_id": "N25-s02-b005",
+      "kind": "paragraph",
+      "text": "Optimizar flujo no significa acelerar todo. Significa diseñar movimiento sostenible, hacer visibles colas y elegir dónde la espera protege, dónde destruye valor y quién soporta cada demora."
+    },
+    {
+      "source_id": "N25-s02-b006",
+      "kind": "paragraph",
+      "text": "N25 cierra el Bloque E. Recibe una cartera priorizada y la convierte en un sistema de trabajo observable que entrega, aprende y repara más allá de sus ceremonias."
+    },
+    {
+      "source_id": "N25-s03-h2",
+      "kind": "heading-2",
+      "text": "Hotel Horizonte: una estrategia para una contradicción ya conocida"
+    },
+    {
+      "source_id": "N25-s03-b001",
+      "kind": "paragraph",
+      "text": "HH-25 sigue cada slice desde la demanda hasta el outcome. Distingue tiempo activo y espera, mide edad, limita trabajo en curso, reduce lote e integra feedback operacional. Las políticas reservan capacidad para incidentes y obligaciones sin permitir que toda urgencia salte la cola."
+    },
+    {
+      "source_id": "N25-s04-h2",
+      "kind": "heading-2",
+      "text": "Tesis"
+    },
+    {
+      "source_id": "N25-s04-b001",
+      "kind": "paragraph",
+      "text": "N25 estudia flujo de punta a punta mediante colas, trabajo en curso, lote, espera, handoffs, feedback y reparación, y separa desempeño sistémico de actividad local o cumplimiento ceremonial."
+    },
+    {
+      "source_id": "N25-s05-h2",
+      "kind": "heading-2",
+      "text": "Del cierre anterior al nuevo avance"
+    },
+    {
+      "source_id": "N25-s05-b001",
+      "kind": "paragraph",
+      "text": "N24 deja evidencia y decisiones abiertas que N25 utiliza sin reabrir su contenido. N25 estudia flujo de punta a punta mediante colas, trabajo en curso, lote, espera, handoffs, feedback y reparación, y separa desempeño sistémico de actividad local o cumplimiento ceremonial."
+    },
+    {
+      "source_id": "N25-s05-b002",
+      "kind": "paragraph",
+      "text": "N26 abrirá el Bloque F y ampliará la arquitectura hacia un ecosistema de servicios, plataformas y terceros. N25 entrega un flujo gobernado sin diseñar todavía esa arquitectura."
+    },
+    {
+      "source_id": "N25-s06-h2",
+      "kind": "heading-2",
+      "text": "Tradiciones y marcos utilizados en el argumento"
+    },
+    {
+      "source_id": "N25-s06-b001",
+      "kind": "paragraph",
+      "text": "Little, J. D. C. formaliza la relación entre trabajo en curso, throughput y tiempo. En N25, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N25: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N25-s06-b002",
+      "kind": "paragraph",
+      "text": "Hopp, W. J. y Spearman, M. L. explica variabilidad, colas y comportamiento operacional. En N25, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N25: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N25-s06-b003",
+      "kind": "paragraph",
+      "text": "Reinertsen, D. G. explica economía de colas, lotes y costo de demora. En N25, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N25: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N25-s06-b004",
+      "kind": "paragraph",
+      "text": "Ohno, T. fundamenta flujo, trabajo visible y aprendizaje en operación. En N25, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N25: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N25-s06-b005",
+      "kind": "paragraph",
+      "text": "Anderson, D. J. aporta límites, políticas y gestión evolutiva del flujo. En N25, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N25: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N25-s06-b006",
+      "kind": "paragraph",
+      "text": "Forsgren, N., Humble, J. y Kim, G. aportan evidencia sobre capacidades de entrega y desempeño. En N25, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N25: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N25-s06-b007",
+      "kind": "paragraph",
+      "text": "Kim, G. et al. integran entrega, operación, feedback y mejora continua. En N25, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N25: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N25-s06-b008",
+      "kind": "paragraph",
+      "text": "Kanban Guides aporta límites, políticas y gestión evolutiva del flujo. En N25, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N25: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N25-s06-b009",
+      "kind": "paragraph",
+      "text": "Google Cloud aporta evidencia sobre capacidades de entrega y desempeño. En N25, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N25: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N25-s06-b010",
+      "kind": "paragraph",
+      "text": "Google Cloud aporta una fuente contrastable para definir alcance, evidencia y condiciones de revisión. En N25, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N25: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N25-s06-b011",
+      "kind": "paragraph",
+      "text": "Project Management Institute provee principios y dominios que deben adaptarse al contexto y al valor. En N25, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N25: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N25-s06-b012",
+      "kind": "paragraph",
+      "text": "ISO/IEC establece requisitos para gobernar sistemas de gestión de servicios. En N25, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N25: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+    },
+    {
+      "source_id": "N25-s07-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 1 · Reconocer condiciones antes de prescribir"
+    },
+    {
+      "source_id": "N25-s07-b001",
+      "kind": "heading-3",
+      "text": "Flujo de valor"
+    },
+    {
+      "source_id": "N25-s07-b002",
+      "kind": "paragraph",
+      "text": "Flujo de valor es el movimiento de una necesidad hasta una capacidad usada, observada y reparable. La definición fija el objeto de decisión. Si el equipo de N25 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N25-s07-b003",
+      "kind": "paragraph",
+      "text": "No es el movimiento de tickets ni la suma de actividades internas. La distinción evita que una palabra familiar oculte otro mecanismo. En N25, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N25-s07-b004",
+      "kind": "paragraph",
+      "text": "En flujo de valor, el recorrido causal debe mostrar qué condición habilita la acción, qué transformación ocurre y quién absorbe el resultado. Conecta demanda, decisión, construcción, operación y feedback de punta a punta. Si un salto depende sólo de una explicación oral, la estrategia todavía no puede gobernarlo."
+    },
+    {
+      "source_id": "N25-s07-b005",
+      "kind": "paragraph",
+      "text": "La evidencia relevante para flujo de valor no se limita al resultado promedio. Tiempo, outcome, calidad y distribución permiten juzgarlo. N25 busca además casos negativos, diferencias entre poblaciones y señales de que la explicación elegida podría ser insuficiente."
+    },
+    {
+      "source_id": "N25-s07-b006",
+      "kind": "paragraph",
+      "text": "Ejemplo. Una corrección termina cuando el turno la usa y puede resolver una excepción. En N25, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N25-s07-b007",
+      "kind": "paragraph",
+      "text": "El tradeoff central de flujo de valor aparece entre anticipar y preservar opciones. Anticipar puede reducir coordinación y también fijar una premisa prematura; preservar opciones puede producir aprendizaje y también demorar una protección necesaria. La elección debe declarar cuál de esos costos acepta, durante cuánto tiempo y para quién."
+    },
+    {
+      "source_id": "N25-s07-b008",
+      "kind": "paragraph",
+      "text": "La auditoría de flujo de valor termina con una pregunta de uso: ¿qué podría decidir ahora una persona que antes no podía? En N25, la respuesta debe nombrar una acción, una restricción y una evidencia, no sólo una comprensión mejorada."
+    },
+    {
+      "source_id": "N25-s07-b009",
+      "kind": "paragraph",
+      "text": "Operacionalizar flujo de valor requiere asignar una unidad observable. El equipo define qué episodio contará, desde qué momento, con qué población y bajo qué fuente. Después compara al menos un caso ordinario con otro que fuerce excepción. Esta precisión en N25 evita que una conclusión general se sostenga sólo en ejemplos convenientes."
+    },
+    {
+      "source_id": "N25-s07-b010",
+      "kind": "paragraph",
+      "text": "La decisión profesional no termina en adoptar flujo de valor. Se compara una ruta principal con una explicación rival, se explicita quién queda expuesto y se conserva un modo de revisar. El valor puede ser plural y no siempre fluye por una única secuencia. El límite forma parte del diseño y no una nota posterior."
+    },
+    {
+      "source_id": "N25-s07-b011",
+      "kind": "heading-3",
+      "text": "Trabajo en curso"
+    },
+    {
+      "source_id": "N25-s07-b012",
+      "kind": "paragraph",
+      "text": "Trabajo en curso reúne unidades iniciadas que todavía no producen su resultado o cierre. Conviene comenzar por su función profesional. Si el equipo de N25 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N25-s07-b013",
+      "kind": "paragraph",
+      "text": "No equivale a backlog, inventario de ideas ni utilización. El contraste importa porque conduce a pruebas distintas. En N25, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N25-s07-b014",
+      "kind": "paragraph",
+      "text": "El mecanismo de trabajo en curso no se presume por el nombre. Cada unidad consume atención, crea coordinación y alarga las colas del sistema. Debe localizarse dónde comienza, qué relaciones activa, qué demora introduce y qué capacidad de reparación queda disponible cuando la expectativa no se cumple."
+    },
+    {
+      "source_id": "N25-s07-b015",
+      "kind": "paragraph",
+      "text": "Una afirmación sobre trabajo en curso gana fuerza cuando puede reconstruirse desde fuentes independientes. Conteo, edad y bloqueos muestran su carga real. La ausencia de señal también se interpreta: puede significar estabilidad, mala observación o exclusión del caso que más importa."
+    },
+    {
+      "source_id": "N25-s07-b016",
+      "kind": "paragraph",
+      "text": "Ejemplo. Diecisiete iniciativas abiertas dispersan a los mismos especialistas. En N25, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N25-s07-b017",
+      "kind": "paragraph",
+      "text": "La escala modifica trabajo en curso. Una solución válida para un equipo puede fallar cuando atraviesa sedes, turnos o proveedores porque aumenta la distancia entre señal y autoridad. Antes de ampliar, N25 prueba si la misma decisión conserva significado y reparación bajo esa nueva distribución."
+    },
+    {
+      "source_id": "N25-s07-b018",
+      "kind": "paragraph",
+      "text": "Para evitar consenso aparente, trabajo en curso se revisa con alguien afectado y con alguien responsable de reparar. Las dos perspectivas pueden valorar resultados diferentes y obligan a declarar la prioridad elegida."
+    },
+    {
+      "source_id": "N25-s07-b019",
+      "kind": "paragraph",
+      "text": "En la práctica, trabajo en curso atraviesa más de un área. Se identifican handoffs, esperas, decisiones y datos que cada participante puede ver. Cuando dos áreas usan evidencia distinta en N25, el expediente conserva la divergencia hasta determinar si representa error, perspectiva legítima o una brecha que la estrategia debe resolver."
+    },
+    {
+      "source_id": "N25-s07-b020",
+      "kind": "paragraph",
+      "text": "En una revisión, trabajo en curso debe responder tres preguntas: qué mejora, qué desplaza y qué vuelve más difícil de revertir. Algún trabajo paralelo protege opciones y necesita límite situado. Si esas respuestas cambian, también debe cambiar el compromiso, aunque el trabajo previo haya sido técnicamente correcto."
+    },
+    {
+      "source_id": "N25-s07-b021",
+      "kind": "heading-3",
+      "text": "Cola"
+    },
+    {
+      "source_id": "N25-s07-b022",
+      "kind": "paragraph",
+      "text": "Una cola es demanda que espera capacidad o una decisión antes de avanzar. El concepto adquiere valor cuando cambia una decisión. Si el equipo de N25 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N25-s07-b023",
+      "kind": "paragraph",
+      "text": "No sólo existe donde hay una lista visible. Su vecino conceptual puede parecer equivalente y no lo es. En N25, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N25-s07-b024",
+      "kind": "paragraph",
+      "text": "Comprender cola exige seguir la decisión en el tiempo. Aparece ante especialidades, aprobaciones, ambientes, información o autoridad escasas. El análisis distingue condición, intervención, señal temprana y consecuencia para evitar atribuir a una práctica un efecto producido por otro cambio simultáneo."
+    },
+    {
+      "source_id": "N25-s07-b025",
+      "kind": "paragraph",
+      "text": "La prueba de cola debe formularse antes de conocer el resultado. Longitud, edad, variabilidad y disciplina de selección la hacen observable. Se registra qué observación sostendría continuar, cuál obligaría a adaptar y cuál activaría detención o escalamiento."
+    },
+    {
+      "source_id": "N25-s07-b026",
+      "kind": "paragraph",
+      "text": "Ejemplo. Cambios esperan al único comité aunque los equipos estén activos. En N25, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N25-s07-b027",
+      "kind": "paragraph",
+      "text": "El tiempo también altera cola. Una evidencia suficiente para explorar puede ser insuficiente para operar de forma permanente. Por eso se separan prueba local, compromiso transitorio y condición estable, y cada estado conserva fecha, alcance y responsable de revisión."
+    },
+    {
+      "source_id": "N25-s07-b028",
+      "kind": "paragraph",
+      "text": "El registro de cola conserva una explicación rival. Si esa alternativa predice mejor el episodio siguiente, el equipo cambia de curso sin reescribir retrospectivamente lo que creía saber."
+    },
+    {
+      "source_id": "N25-s07-b029",
+      "kind": "paragraph",
+      "text": "La gobernanza de cola incluye quién puede proponer, aprobar, ejecutar, observar y reparar. Esas funciones no se presumen por cargo ni por permiso técnico. N25 las prueba en un escenario donde falta la persona habitual, porque una capacidad que sólo funciona con conocimiento privado todavía no pertenece a la organización."
+    },
+    {
+      "source_id": "N25-s07-b030",
+      "kind": "paragraph",
+      "text": "El juicio sobre cola incluye distribución de consecuencias. Eliminar una cola puede trasladarla a personas menos visibles. Una mejora agregada no alcanza si concentra espera, riesgo o trabajo invisible en un grupo sin autoridad para discutir la decisión."
+    },
+    {
+      "source_id": "N25-s07-b031",
+      "kind": "heading-3",
+      "text": "Tiempo de flujo"
+    },
+    {
+      "source_id": "N25-s07-b032",
+      "kind": "paragraph",
+      "text": "Tiempo de flujo es el lapso desde que una unidad entra al sistema hasta que alcanza su condición de salida. La definición fija el objeto de decisión. Si el equipo de N25 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N25-s07-b033",
+      "kind": "paragraph",
+      "text": "No es esfuerzo, duración de sprint ni tiempo técnico de ciclo aislado. La distinción evita que una palabra familiar oculte otro mecanismo. En N25, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N25-s07-b034",
+      "kind": "paragraph",
+      "text": "La explicación operacional de tiempo de flujo conecta personas, reglas y tecnología. Incluye espera, trabajo, retrabajo y coordinación. Esa conexión permite decidir qué parte puede modificarse localmente y cuál requiere coordinación con otras autoridades o capacidades."
+    },
+    {
+      "source_id": "N25-s07-b035",
+      "kind": "paragraph",
+      "text": "Para auditar tiempo de flujo, conviene combinar evidencia de diseño, ejecución y consecuencia. Timestamps coherentes y definición estable permiten medir percentiles y dispersión. Ninguna fuente domina automáticamente; una especificación correcta puede convivir con una operación dañina."
+    },
+    {
+      "source_id": "N25-s07-b036",
+      "kind": "paragraph",
+      "text": "Ejemplo. El cambio usa ocho horas de trabajo y espera ciento diez días. En N25, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N25-s07-b037",
+      "kind": "paragraph",
+      "text": "Existe además una dimensión política en tiempo de flujo. La opción más eficiente puede reducir la capacidad de una persona para cuestionar una decisión o trasladar trabajo sin reconocerlo. N25 registra esa distribución y no la esconde dentro de un indicador agregado."
+    },
+    {
+      "source_id": "N25-s07-b038",
+      "kind": "paragraph",
+      "text": "Una prueba adversa de tiempo de flujo introduce demora, ausencia de autoridad o dato incompleto. El objetivo de N25 no es cubrir todas las fallas, sino revelar si la estrategia mantiene una salida segura fuera del camino ordinario."
+    },
+    {
+      "source_id": "N25-s07-b039",
+      "kind": "paragraph",
+      "text": "El indicador de tiempo de flujo se elige después de formular la decisión. Puede combinar tiempo, calidad, distribución y costo de reparación. Una cifra aislada rara vez explica el mecanismo. En N25, la lectura conjunta de señales evita optimizar velocidad mientras aumenta retrabajo, exclusión o dependencia."
+    },
+    {
+      "source_id": "N25-s07-b040",
+      "kind": "paragraph",
+      "text": "La condición de cierre de tiempo de flujo no es perfección. El inicio elegido modifica la cifra y debe corresponder a la pregunta. Es evidencia suficiente para el uso previsto, riesgo residual aceptado por autoridad y una ruta clara cuando el supuesto deje de cumplirse."
+    },
+    {
+      "source_id": "N25-s08-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 2 · Diseñar opciones con evidencia y autoridad"
+    },
+    {
+      "source_id": "N25-s08-b001",
+      "kind": "heading-3",
+      "text": "Ley de Little"
+    },
+    {
+      "source_id": "N25-s08-b002",
+      "kind": "paragraph",
+      "text": "La Ley de Little relaciona trabajo en curso, throughput y tiempo medio en un sistema estable. Conviene comenzar por su función profesional. Si el equipo de N25 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N25-s08-b003",
+      "kind": "paragraph",
+      "text": "No es una promesa causal ni una fórmula que ignore variabilidad. El contraste importa porque conduce a pruebas distintas. En N25, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N25-s08-b004",
+      "kind": "paragraph",
+      "text": "Para que ley de little sea algo más que una etiqueta, debe existir una cadena examinable. Muestra que sostener más trabajo abierto con throughput similar alarga el tiempo. La cadena incluye supuestos, handoffs y efectos laterales que una descripción ideal suele omitir."
+    },
+    {
+      "source_id": "N25-s08-b005",
+      "kind": "paragraph",
+      "text": "El equipo no declara resuelto ley de little por acuerdo retórico. Se usa con fronteras y unidades consistentes durante un período representativo. Una persona ajena al diseño debe poder repetir la prueba y comprender por qué el resultado habilita una decisión concreta."
+    },
+    {
+      "source_id": "N25-s08-b006",
+      "kind": "paragraph",
+      "text": "Ejemplo. Reducir iniciativas activas acorta espera sin aumentar horas. En N25, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N25-s08-b007",
+      "kind": "paragraph",
+      "text": "La mantenibilidad de ley de little se prueba mediante cambio deliberado. Se modifica una regla, una fuente o una dependencia y se observa quién detecta el impacto, cuánto tarda en responder y qué información necesita. En N25, si la respuesta depende de memoria privada, la capacidad todavía es frágil."
+    },
+    {
+      "source_id": "N25-s08-b008",
+      "kind": "paragraph",
+      "text": "El costo de ley de little se observa tanto en presupuesto como en atención, espera, coordinación y dependencia. Lo que no figura en una factura puede seguir siendo el costo que define la viabilidad."
+    },
+    {
+      "source_id": "N25-s08-b009",
+      "kind": "paragraph",
+      "text": "La transición asociada con ley de little necesita un estado intermedio explícito. Durante ese período conviven reglas, versiones o capacidades diferentes. N25 declara cuál rige para cada población, cómo se comunica y qué contingencia protege a quien podría quedar entre ambos sistemas."
+    },
+    {
+      "source_id": "N25-s08-b010",
+      "kind": "paragraph",
+      "text": "El análisis de ley de little evita dos extremos: conservar por inercia y cambiar por identidad metodológica. Sistemas inestables o poblaciones mezcladas requieren interpretación prudente. Entre ambos queda una decisión provisional con fecha, responsable y prueba de revisión."
+    },
+    {
+      "source_id": "N25-s08-b011",
+      "kind": "heading-3",
+      "text": "Tamaño de lote"
+    },
+    {
+      "source_id": "N25-s08-b012",
+      "kind": "paragraph",
+      "text": "Tamaño de lote es la cantidad de cambio acumulada antes de pasar a la etapa siguiente. El concepto adquiere valor cuando cambia una decisión. Si el equipo de N25 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N25-s08-b013",
+      "kind": "paragraph",
+      "text": "No es sólo cantidad de código o frecuencia de despliegue. Su vecino conceptual puede parecer equivalente y no lo es. En N25, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N25-s08-b014",
+      "kind": "paragraph",
+      "text": "El valor de tamaño de lote aparece al contrastar alternativas. Lotes pequeños acortan feedback, reducen riesgo e integración, pero aumentan algunos costos de coordinación. Si dos opciones producen el mismo entregable inmediato, el mecanismo permite compararlas por aprendizaje, dependencia, riesgo residual y posibilidad de salida."
+    },
+    {
+      "source_id": "N25-s08-b015",
+      "kind": "paragraph",
+      "text": "La suficiencia de evidencia para tamaño de lote depende del costo de equivocarse. Se observa tiempo, fallas, costo de transacción y capacidad de recuperación. A mayor irreversibilidad o desigualdad de daño, mayor contraste, supervisión y autoridad se requieren."
+    },
+    {
+      "source_id": "N25-s08-b016",
+      "kind": "paragraph",
+      "text": "Ejemplo. Una regla se prueba por episodio en vez de esperar el paquete trimestral. En N25, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N25-s08-b017",
+      "kind": "paragraph",
+      "text": "Finalmente, tamaño de lote debe convivir con otras decisiones. Optimizarla de manera aislada puede empeorar flujo, seguridad o comprensión. El expediente N25 explicita dependencias y evita que una mejora local se presente como outcome completo del sistema."
+    },
+    {
+      "source_id": "N25-s08-b018",
+      "kind": "paragraph",
+      "text": "La revisión de tamaño de lote fija fecha y desencadenante. Puede ocurrir por incidente, cambio normativo, nueva población o evidencia acumulada. Sin esa regla en N25, una decisión provisional se vuelve permanente por olvido."
+    },
+    {
+      "source_id": "N25-s08-b019",
+      "kind": "paragraph",
+      "text": "El cierre de tamaño de lote debe sobrevivir a una revisión independiente. La evidencia, las decisiones y los límites se almacenan de manera que otra persona pueda cuestionarlos. En N25, la trazabilidad no busca eliminar desacuerdo; busca que el desacuerdo se concentre en supuestos examinables y no en recuerdos incompatibles."
+    },
+    {
+      "source_id": "N25-s08-b020",
+      "kind": "paragraph",
+      "text": "La estrategia debe poder explicar por qué tamaño de lote recibe cierta inversión y no otra. Lotes demasiado pequeños pueden fragmentar outcome o saturar revisión. Esa explicación conecta valor, costo, aprendizaje y reparación, y permanece abierta a evidencia nueva."
+    },
+    {
+      "source_id": "N25-s08-b021",
+      "kind": "heading-3",
+      "text": "Handoff"
+    },
+    {
+      "source_id": "N25-s08-b022",
+      "kind": "paragraph",
+      "text": "Un handoff transfiere trabajo, información o responsabilidad entre actores o contextos. La definición fija el objeto de decisión. Si el equipo de N25 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N25-s08-b023",
+      "kind": "paragraph",
+      "text": "No es toda colaboración ni necesariamente un defecto. La distinción evita que una palabra familiar oculte otro mecanismo. En N25, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N25-s08-b024",
+      "kind": "paragraph",
+      "text": "En handoff, el recorrido causal debe mostrar qué condición habilita la acción, qué transformación ocurre y quién absorbe el resultado. Introduce traducción, espera y riesgo de pérdida cuando las fronteras no son explícitas. Si un salto depende sólo de una explicación oral, la estrategia todavía no puede gobernarlo."
+    },
+    {
+      "source_id": "N25-s08-b025",
+      "kind": "paragraph",
+      "text": "La evidencia relevante para handoff no se limita al resultado promedio. Retrabajo, aclaraciones y decisiones devueltas revelan su costo. N25 busca además casos negativos, diferencias entre poblaciones y señales de que la explicación elegida podría ser insuficiente."
+    },
+    {
+      "source_id": "N25-s08-b026",
+      "kind": "paragraph",
+      "text": "Ejemplo. Análisis entrega una especificación sin la excepción que Operaciones conocía. En N25, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N25-s08-b027",
+      "kind": "paragraph",
+      "text": "El tradeoff central de handoff aparece entre anticipar y preservar opciones. Anticipar puede reducir coordinación y también fijar una premisa prematura; preservar opciones puede producir aprendizaje y también demorar una protección necesaria. La elección debe declarar cuál de esos costos acepta, durante cuánto tiempo y para quién."
+    },
+    {
+      "source_id": "N25-s08-b028",
+      "kind": "paragraph",
+      "text": "La auditoría de handoff termina con una pregunta de uso: ¿qué podría decidir ahora una persona que antes no podía? En N25, la respuesta debe nombrar una acción, una restricción y una evidencia, no sólo una comprensión mejorada."
+    },
+    {
+      "source_id": "N25-s08-b029",
+      "kind": "paragraph",
+      "text": "Operacionalizar handoff requiere asignar una unidad observable. El equipo define qué episodio contará, desde qué momento, con qué población y bajo qué fuente. Después compara al menos un caso ordinario con otro que fuerce excepción. Esta precisión en N25 evita que una conclusión general se sostenga sólo en ejemplos convenientes."
+    },
+    {
+      "source_id": "N25-s08-b030",
+      "kind": "paragraph",
+      "text": "La decisión profesional no termina en adoptar handoff. Se compara una ruta principal con una explicación rival, se explicita quién queda expuesto y se conserva un modo de revisar. Algunas separaciones protegen independencia o control y deben diseñarse. El límite forma parte del diseño y no una nota posterior."
+    },
+    {
+      "source_id": "N25-s08-b031",
+      "kind": "heading-3",
+      "text": "Feedback"
+    },
+    {
+      "source_id": "N25-s08-b032",
+      "kind": "paragraph",
+      "text": "Feedback es información sobre el efecto de una acción que puede modificar una decisión posterior. Conviene comenzar por su función profesional. Si el equipo de N25 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N25-s08-b033",
+      "kind": "paragraph",
+      "text": "No es reunión, comentario, métrica ni encuesta por sí sola. El contraste importa porque conduce a pruebas distintas. En N25, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N25-s08-b034",
+      "kind": "paragraph",
+      "text": "El mecanismo de feedback no se presume por el nombre. Necesita señal relevante, baja latencia, audiencia y autoridad para actuar. Debe localizarse dónde comienza, qué relaciones activa, qué demora introduce y qué capacidad de reparación queda disponible cuando la expectativa no se cumple."
+    },
+    {
+      "source_id": "N25-s08-b035",
+      "kind": "paragraph",
+      "text": "Una afirmación sobre feedback gana fuerza cuando puede reconstruirse desde fuentes independientes. Se evalúa por decisiones cambiadas y tiempo hasta la corrección. La ausencia de señal también se interpreta: puede significar estabilidad, mala observación o exclusión del caso que más importa."
+    },
+    {
+      "source_id": "N25-s08-b036",
+      "kind": "paragraph",
+      "text": "Ejemplo. Un incidente llega al equipo antes de ampliar la regla. En N25, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N25-s08-b037",
+      "kind": "paragraph",
+      "text": "La escala modifica feedback. Una solución válida para un equipo puede fallar cuando atraviesa sedes, turnos o proveedores porque aumenta la distancia entre señal y autoridad. Antes de ampliar, N25 prueba si la misma decisión conserva significado y reparación bajo esa nueva distribución."
+    },
+    {
+      "source_id": "N25-s08-b038",
+      "kind": "paragraph",
+      "text": "Para evitar consenso aparente, feedback se revisa con alguien afectado y con alguien responsable de reparar. Las dos perspectivas pueden valorar resultados diferentes y obligan a declarar la prioridad elegida."
+    },
+    {
+      "source_id": "N25-s08-b039",
+      "kind": "paragraph",
+      "text": "En la práctica, feedback atraviesa más de un área. Se identifican handoffs, esperas, decisiones y datos que cada participante puede ver. Cuando dos áreas usan evidencia distinta en N25, el expediente conserva la divergencia hasta determinar si representa error, perspectiva legítima o una brecha que la estrategia debe resolver."
+    },
+    {
+      "source_id": "N25-s08-b040",
+      "kind": "paragraph",
+      "text": "En una revisión, feedback debe responder tres preguntas: qué mejora, qué desplaza y qué vuelve más difícil de revertir. Más señal sin capacidad de respuesta crea ruido y fatiga. Si esas respuestas cambian, también debe cambiar el compromiso, aunque el trabajo previo haya sido técnicamente correcto."
+    },
+    {
+      "source_id": "N25-s09-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 3 · Gobernar transición, aprendizaje y retiro"
+    },
+    {
+      "source_id": "N25-s09-b001",
+      "kind": "heading-3",
+      "text": "Variabilidad"
+    },
+    {
+      "source_id": "N25-s09-b002",
+      "kind": "paragraph",
+      "text": "Variabilidad son diferencias en llegada, tamaño, dificultad o capacidad que alteran el comportamiento del flujo. El concepto adquiere valor cuando cambia una decisión. Si el equipo de N25 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N25-s09-b003",
+      "kind": "paragraph",
+      "text": "No equivale a desorden ni puede eliminarse completamente. Su vecino conceptual puede parecer equivalente y no lo es. En N25, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N25-s09-b004",
+      "kind": "paragraph",
+      "text": "Comprender variabilidad exige seguir la decisión en el tiempo. Aumenta espera cuando el sistema opera cerca de saturación. El análisis distingue condición, intervención, señal temprana y consecuencia para evitar atribuir a una práctica un efecto producido por otro cambio simultáneo."
+    },
+    {
+      "source_id": "N25-s09-b005",
+      "kind": "paragraph",
+      "text": "La prueba de variabilidad debe formularse antes de conocer el resultado. Distribuciones, percentiles y escenarios distinguen patrones de promedios. Se registra qué observación sostendría continuar, cuál obligaría a adaptar y cuál activaría detención o escalamiento."
+    },
+    {
+      "source_id": "N25-s09-b006",
+      "kind": "paragraph",
+      "text": "Ejemplo. Los picos de check-in vuelven crítica una cola invisible en días normales. En N25, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N25-s09-b007",
+      "kind": "paragraph",
+      "text": "El tiempo también altera variabilidad. Una evidencia suficiente para explorar puede ser insuficiente para operar de forma permanente. Por eso se separan prueba local, compromiso transitorio y condición estable, y cada estado conserva fecha, alcance y responsable de revisión."
+    },
+    {
+      "source_id": "N25-s09-b008",
+      "kind": "paragraph",
+      "text": "El registro de variabilidad conserva una explicación rival. Si esa alternativa predice mejor el episodio siguiente, el equipo cambia de curso sin reescribir retrospectivamente lo que creía saber."
+    },
+    {
+      "source_id": "N25-s09-b009",
+      "kind": "paragraph",
+      "text": "La gobernanza de variabilidad incluye quién puede proponer, aprobar, ejecutar, observar y reparar. Esas funciones no se presumen por cargo ni por permiso técnico. N25 las prueba en un escenario donde falta la persona habitual, porque una capacidad que sólo funciona con conocimiento privado todavía no pertenece a la organización."
+    },
+    {
+      "source_id": "N25-s09-b010",
+      "kind": "paragraph",
+      "text": "El juicio sobre variabilidad incluye distribución de consecuencias. La holgura necesaria puede parecer ineficiencia local. Una mejora agregada no alcanza si concentra espera, riesgo o trabajo invisible en un grupo sin autoridad para discutir la decisión."
+    },
+    {
+      "source_id": "N25-s09-b011",
+      "kind": "heading-3",
+      "text": "Throughput"
+    },
+    {
+      "source_id": "N25-s09-b012",
+      "kind": "paragraph",
+      "text": "Throughput es la cantidad de unidades que alcanzan salida en un período. La definición fija el objeto de decisión. Si el equipo de N25 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N25-s09-b013",
+      "kind": "paragraph",
+      "text": "No es productividad individual ni puntos completados. La distinción evita que una palabra familiar oculte otro mecanismo. En N25, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N25-s09-b014",
+      "kind": "paragraph",
+      "text": "La explicación operacional de throughput conecta personas, reglas y tecnología. Refleja capacidad del sistema y definición de unidad. Esa conexión permite decidir qué parte puede modificarse localmente y cuál requiere coordinación con otras autoridades o capacidades."
+    },
+    {
+      "source_id": "N25-s09-b015",
+      "kind": "paragraph",
+      "text": "Para auditar throughput, conviene combinar evidencia de diseño, ejecución y consecuencia. Se interpreta junto con calidad, demanda, trabajo en curso y outcome. Ninguna fuente domina automáticamente; una especificación correcta puede convivir con una operación dañina."
+    },
+    {
+      "source_id": "N25-s09-b016",
+      "kind": "paragraph",
+      "text": "Ejemplo. El hotel cuenta episodios resueltos, no tareas técnicas cerradas. En N25, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N25-s09-b017",
+      "kind": "paragraph",
+      "text": "Existe además una dimensión política en throughput. La opción más eficiente puede reducir la capacidad de una persona para cuestionar una decisión o trasladar trabajo sin reconocerlo. N25 registra esa distribución y no la esconde dentro de un indicador agregado."
+    },
+    {
+      "source_id": "N25-s09-b018",
+      "kind": "paragraph",
+      "text": "Una prueba adversa de throughput introduce demora, ausencia de autoridad o dato incompleto. El objetivo de N25 no es cubrir todas las fallas, sino revelar si la estrategia mantiene una salida segura fuera del camino ordinario."
+    },
+    {
+      "source_id": "N25-s09-b019",
+      "kind": "paragraph",
+      "text": "El indicador de throughput se elige después de formular la decisión. Puede combinar tiempo, calidad, distribución y costo de reparación. Una cifra aislada rara vez explica el mecanismo. En N25, la lectura conjunta de señales evita optimizar velocidad mientras aumenta retrabajo, exclusión o dependencia."
+    },
+    {
+      "source_id": "N25-s09-b020",
+      "kind": "paragraph",
+      "text": "La condición de cierre de throughput no es perfección. Aumentarlo mediante unidades triviales o defectuosas destruye sentido. Es evidencia suficiente para el uso previsto, riesgo residual aceptado por autoridad y una ruta clara cuando el supuesto deje de cumplirse."
+    },
+    {
+      "source_id": "N25-s09-b021",
+      "kind": "heading-3",
+      "text": "Eficiencia de flujo"
+    },
+    {
+      "source_id": "N25-s09-b022",
+      "kind": "paragraph",
+      "text": "Eficiencia de flujo compara tiempo activo con tiempo total para localizar espera, no para exigir actividad continua. Conviene comenzar por su función profesional. Si el equipo de N25 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N25-s09-b023",
+      "kind": "paragraph",
+      "text": "No es utilización de personas ni objetivo universal de cien por ciento. El contraste importa porque conduce a pruebas distintas. En N25, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N25-s09-b024",
+      "kind": "paragraph",
+      "text": "Para que eficiencia de flujo sea algo más que una etiqueta, debe existir una cadena examinable. Revela dónde el sistema deja inmóvil una unidad mientras protege ocupación local. La cadena incluye supuestos, handoffs y efectos laterales que una descripción ideal suele omitir."
+    },
+    {
+      "source_id": "N25-s09-b025",
+      "kind": "paragraph",
+      "text": "El equipo no declara resuelto eficiencia de flujo por acuerdo retórico. Muestreo de episodios y causas de espera orienta decisiones. Una persona ajena al diseño debe poder repetir la prueba y comprender por qué el resultado habilita una decisión concreta."
+    },
+    {
+      "source_id": "N25-s09-b026",
+      "kind": "paragraph",
+      "text": "Ejemplo. La corrección trabaja un día y espera cuatro meses. En N25, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N25-s09-b027",
+      "kind": "paragraph",
+      "text": "La mantenibilidad de eficiencia de flujo se prueba mediante cambio deliberado. Se modifica una regla, una fuente o una dependencia y se observa quién detecta el impacto, cuánto tarda en responder y qué información necesita. En N25, si la respuesta depende de memoria privada, la capacidad todavía es frágil."
+    },
+    {
+      "source_id": "N25-s09-b028",
+      "kind": "paragraph",
+      "text": "El costo de eficiencia de flujo se observa tanto en presupuesto como en atención, espera, coordinación y dependencia. Lo que no figura en una factura puede seguir siendo el costo que define la viabilidad."
+    },
+    {
+      "source_id": "N25-s09-b029",
+      "kind": "paragraph",
+      "text": "La transición asociada con eficiencia de flujo necesita un estado intermedio explícito. Durante ese período conviven reglas, versiones o capacidades diferentes. N25 declara cuál rige para cada población, cómo se comunica y qué contingencia protege a quien podría quedar entre ambos sistemas."
+    },
+    {
+      "source_id": "N25-s09-b030",
+      "kind": "paragraph",
+      "text": "El análisis de eficiencia de flujo evita dos extremos: conservar por inercia y cambiar por identidad metodológica. Alguna espera agrega control, aprendizaje o seguridad. Entre ambos queda una decisión provisional con fecha, responsable y prueba de revisión."
+    },
+    {
+      "source_id": "N25-s09-b031",
+      "kind": "heading-3",
+      "text": "Sistema de feedback y reparación"
+    },
+    {
+      "source_id": "N25-s09-b032",
+      "kind": "paragraph",
+      "text": "Un sistema de feedback y reparación detecta desvíos, decide respuesta y restaura capacidad con aprendizaje. El concepto adquiere valor cuando cambia una decisión. Si el equipo de N25 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N25-s09-b033",
+      "kind": "paragraph",
+      "text": "No es sólo observabilidad técnica ni retrospectiva. Su vecino conceptual puede parecer equivalente y no lo es. En N25, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N25-s09-b034",
+      "kind": "paragraph",
+      "text": "El valor de sistema de feedback y reparación aparece al contrastar alternativas. Conecta señales de operación, usuarios, negocio y riesgo con autoridad y acción. Si dos opciones producen el mismo entregable inmediato, el mecanismo permite compararlas por aprendizaje, dependencia, riesgo residual y posibilidad de salida."
+    },
+    {
+      "source_id": "N25-s09-b035",
+      "kind": "paragraph",
+      "text": "La suficiencia de evidencia para sistema de feedback y reparación depende del costo de equivocarse. Tiempo de detección, recuperación y prevención muestran su funcionamiento. A mayor irreversibilidad o desigualdad de daño, mayor contraste, supervisión y autoridad se requieren."
+    },
+    {
+      "source_id": "N25-s09-b036",
+      "kind": "paragraph",
+      "text": "Ejemplo. Recepción reporta una excepción y la regla se corrige antes del siguiente lote. En N25, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N25-s09-b037",
+      "kind": "paragraph",
+      "text": "Finalmente, sistema de feedback y reparación debe convivir con otras decisiones. Optimizarla de manera aislada puede empeorar flujo, seguridad o comprensión. El expediente N25 explicita dependencias y evita que una mejora local se presente como outcome completo del sistema."
+    },
+    {
+      "source_id": "N25-s09-b038",
+      "kind": "paragraph",
+      "text": "La revisión de sistema de feedback y reparación fija fecha y desencadenante. Puede ocurrir por incidente, cambio normativo, nueva población o evidencia acumulada. Sin esa regla en N25, una decisión provisional se vuelve permanente por olvido."
+    },
+    {
+      "source_id": "N25-s09-b039",
+      "kind": "paragraph",
+      "text": "El cierre de sistema de feedback y reparación debe sobrevivir a una revisión independiente. La evidencia, las decisiones y los límites se almacenan de manera que otra persona pueda cuestionarlos. En N25, la trazabilidad no busca eliminar desacuerdo; busca que el desacuerdo se concentre en supuestos examinables y no en recuerdos incompatibles."
+    },
+    {
+      "source_id": "N25-s09-b040",
+      "kind": "paragraph",
+      "text": "La estrategia debe poder explicar por qué sistema de feedback y reparación recibe cierta inversión y no otra. Automatizar feedback sin juicio puede amplificar ruido o sesgo. Esa explicación conecta valor, costo, aprendizaje y reparación, y permanece abierta a evidencia nueva."
+    },
+    {
+      "source_id": "N25-s09-b041",
+      "kind": "heading-3",
+      "text": "Instrumento HH-25: mapa de flujo real"
+    },
+    {
+      "source_id": "N25-s09-b042",
+      "kind": "paragraph",
+      "text": "El instrumento organiza una decisión concreta y no una descripción total. Cada campo debe completarse con evidencia disponible, incertidumbre explícita y autoridad identificada. Si un campo todavía no puede responderse, se registra como asunto abierto y no se completa por inferencia."
+    },
+    {
+      "source_id": "N25-s09-b043",
+      "kind": "list-item",
+      "text": "**Unidad de valor.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N25, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N25-s09-b044",
+      "kind": "list-item",
+      "text": "**Inicio y salida.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N25, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N25-s09-b045",
+      "kind": "list-item",
+      "text": "**Demanda.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N25, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N25-s09-b046",
+      "kind": "list-item",
+      "text": "**Trabajo en curso.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N25, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N25-s09-b047",
+      "kind": "list-item",
+      "text": "**Colas.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N25, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N25-s09-b048",
+      "kind": "list-item",
+      "text": "**Tiempo activo.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N25, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N25-s09-b049",
+      "kind": "list-item",
+      "text": "**Espera.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N25, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N25-s09-b050",
+      "kind": "list-item",
+      "text": "**Lote.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N25, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N25-s09-b051",
+      "kind": "list-item",
+      "text": "**Handoffs.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N25, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N25-s09-b052",
+      "kind": "list-item",
+      "text": "**Feedback.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N25, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N25-s09-b053",
+      "kind": "list-item",
+      "text": "**Políticas.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N25, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N25-s09-b054",
+      "kind": "list-item",
+      "text": "**Reparación.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N25, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N25-s09-b055",
+      "kind": "paragraph",
+      "text": "El expediente se prueba con un escenario ordinario y uno adverso. Una persona que no participó en su construcción debe poder reconstruir qué se decidió, por qué, qué permanece incierto y cuál es la próxima puerta. El cierre no exige certeza total; exige incertidumbre gobernada y una salida practicable."
+    },
+    {
+      "source_id": "N25-s09-b056",
+      "kind": "heading-3",
+      "text": "Caso de transferencia: alta de proveedor"
+    },
+    {
+      "source_id": "N25-s09-b057",
+      "kind": "paragraph",
+      "text": "Una empresa completa formularios en dos días, pero tarda noventa en habilitar un proveedor. Compras, legales, seguridad y finanzas optimizan sus tareas mientras el expediente espera."
+    },
+    {
+      "source_id": "N25-s09-b058",
+      "kind": "paragraph",
+      "text": "HH-25 sigue una unidad completa, distingue controles necesarios de esperas accidentales y reduce lote sin borrar obligaciones."
+    },
+    {
+      "source_id": "N25-s09-b059",
+      "kind": "paragraph",
+      "text": "La mejora sistémica puede reducir utilización local y aumentar capacidad efectiva."
+    },
+    {
+      "source_id": "N25-s09-b060",
+      "kind": "heading-3",
+      "text": "Contraejemplo: acelerar eliminando todos los controles"
+    },
+    {
+      "source_id": "N25-s09-b061",
+      "kind": "paragraph",
+      "text": "Un equipo elimina revisiones para reducir tiempo de ciclo y duplica despliegues."
+    },
+    {
+      "source_id": "N25-s09-b062",
+      "kind": "paragraph",
+      "text": "Las fallas llegan antes a operación, crece el retrabajo y el tiempo hasta outcome empeora."
+    },
+    {
+      "source_id": "N25-s09-b063",
+      "kind": "paragraph",
+      "text": "Fluir no es omitir protección. Es integrar la protección con el menor lote y feedback útil."
+    },
+    {
+      "source_id": "N25-s09-b064",
+      "kind": "heading-3",
+      "text": "Prueba integral antes de ampliar compromiso"
+    },
+    {
+      "source_id": "N25-s09-b065",
+      "kind": "paragraph",
+      "text": "La prueba integral de flujo más allá de las ceremonias: colas, lote, espera y feedback toma una decisión real y la recorre desde su origen hasta una consecuencia observable. Utiliza unidad de valor, inicio y salida, demanda, trabajo en curso para evitar que el análisis quede dividido en artefactos independientes. Cada afirmación debe encontrar una fuente, una autoridad y una condición de revisión. Cuando dos registros no coinciden, la diferencia se conserva como hallazgo hasta explicar su mecanismo."
+    },
+    {
+      "source_id": "N25-s09-b066",
+      "kind": "paragraph",
+      "text": "El escenario ordinario verifica que n25 estudia flujo de punta a punta mediante colas, trabajo en curso, lote, espera, handoffs, feedback y reparación, y separa desempeño sistémico de actividad local o cumplimiento ceremonial. El escenario adverso modifica una dependencia, introduce demora y deja ausente a la persona que suele resolver. El equipo observa si la estrategia detecta el cambio, limita el daño, comunica incertidumbre y activa reparación sin recurrir a conocimiento privado."
+    },
+    {
+      "source_id": "N25-s09-b067",
+      "kind": "paragraph",
+      "text": "La comparación incluye una alternativa descartada. Se documenta por qué no fue elegida, qué supuesto la volvería preferible y qué costo tendría recuperarla. Este ejercicio protege opciones futuras y evita presentar la decisión actual como única solución técnicamente posible. También vuelve discutibles los costos hundidos cuando aparece evidencia nueva."
+    },
+    {
+      "source_id": "N25-s09-b068",
+      "kind": "paragraph",
+      "text": "La prueba concluye con una defensa breve ante una audiencia ajena al equipo. Esa audiencia debe poder reconstruir el problema, objetar la evidencia y comprender por qué la salida propuesta es proporcional. Si sólo puede repetir la recomendación, el expediente todavía no sostiene una decisión profesional. Si puede reconocer límites y actuar ante una excepción, existe capacidad transferible."
+    },
+    {
+      "source_id": "N25-s10-h2",
+      "kind": "heading-2",
+      "text": "Errores frecuentes"
+    },
+    {
+      "source_id": "N25-s10-b001",
+      "kind": "heading-3",
+      "text": "Medir velocidad como outcome"
+    },
+    {
+      "source_id": "N25-s10-b002",
+      "kind": "paragraph",
+      "text": "Medir velocidad como outcome simplifica una decisión que depende de propósito, evidencia y consecuencia. La velocidad inicial se paga cuando operación descubre el supuesto omitido. La corrección vuelve al episodio, identifica quién absorbe el costo y define una prueba antes de continuar."
+    },
+    {
+      "source_id": "N25-s10-b003",
+      "kind": "heading-3",
+      "text": "Optimizar un área"
+    },
+    {
+      "source_id": "N25-s10-b004",
+      "kind": "paragraph",
+      "text": "Optimizar un área parece reducir coordinación, pero confunde acuerdo con conocimiento suficiente. El equipo debe comparar una explicación rival, localizar autoridad y registrar qué señal cambiaría el curso elegido."
+    },
+    {
+      "source_id": "N25-s10-b005",
+      "kind": "heading-3",
+      "text": "Maximizar utilización"
+    },
+    {
+      "source_id": "N25-s10-b006",
+      "kind": "paragraph",
+      "text": "Maximizar utilización desplaza incertidumbre hacia personas que no participaron de la elección. Corregirlo exige reconstruir el mecanismo, hacer visible el trabajo añadido y establecer una condición de salida proporcional al daño posible."
+    },
+    {
+      "source_id": "N25-s10-b007",
+      "kind": "heading-3",
+      "text": "Ignorar trabajo invisible"
+    },
+    {
+      "source_id": "N25-s10-b008",
+      "kind": "paragraph",
+      "text": "Ignorar trabajo invisible convierte una práctica en fin. La revisión pregunta qué función debía cumplir, qué evidencia produjo y por qué sigue siendo necesaria. Si la función desapareció, la práctica se adapta o se retira."
+    },
+    {
+      "source_id": "N25-s10-b009",
+      "kind": "heading-3",
+      "text": "Confundir actividad con flujo"
+    },
+    {
+      "source_id": "N25-s10-b010",
+      "kind": "paragraph",
+      "text": "Confundir actividad con flujo oculta una frontera. El artefacto puede cerrar y la capacidad seguir incompleta. Un escenario adverso permite observar handoffs, excepciones y reparación antes de ampliar compromiso."
+    },
+    {
+      "source_id": "N25-s10-b011",
+      "kind": "heading-3",
+      "text": "Reducir lote sin capacidad completa"
+    },
+    {
+      "source_id": "N25-s10-b012",
+      "kind": "paragraph",
+      "text": "Reducir lote sin capacidad completa confunde cumplimiento formal con decisión defendible. Se necesita conectar fuente, interpretación, implementación y efecto, incluyendo la autoridad que acepta el riesgo residual."
+    },
+    {
+      "source_id": "N25-s10-b013",
+      "kind": "heading-3",
+      "text": "Eliminar esperas protectoras"
+    },
+    {
+      "source_id": "N25-s10-b014",
+      "kind": "paragraph",
+      "text": "Eliminar esperas protectoras suele premiar lo visible y dejar fuera mantenimiento, soporte y aprendizaje. La corrección compara el ciclo completo, documenta dependencia y ensaya una salida real."
+    },
+    {
+      "source_id": "N25-s10-b015",
+      "kind": "heading-3",
+      "text": "Aceptar urgencias sin política"
+    },
+    {
+      "source_id": "N25-s10-b016",
+      "kind": "paragraph",
+      "text": "Aceptar urgencias sin política reduce diversidad de casos a un promedio conveniente. Se revisan poblaciones, extremos y daños asimétricos para evitar que una mejora global silencie una pérdida crítica."
+    },
+    {
+      "source_id": "N25-s10-b017",
+      "kind": "heading-3",
+      "text": "Medir sólo promedios"
+    },
+    {
+      "source_id": "N25-s10-b018",
+      "kind": "paragraph",
+      "text": "Medir sólo promedios borra memoria y vuelve inexplicable el cambio de rumbo. Una baseline y un registro breve permiten conservar razones sin inmovilizar la estrategia."
+    },
+    {
+      "source_id": "N25-s10-b019",
+      "kind": "heading-3",
+      "text": "Recibir feedback sin autoridad"
+    },
+    {
+      "source_id": "N25-s10-b020",
+      "kind": "paragraph",
+      "text": "Recibir feedback sin autoridad deja responsabilidad sin capacidad. El diseño debe unir permiso, recursos, evidencia y posibilidad de reparar; nombrar un dueño no crea por sí mismo una función operativa."
+    },
+    {
+      "source_id": "N25-s11-h2",
+      "kind": "heading-2",
+      "text": "Consecuencias profesionales"
+    },
+    {
+      "source_id": "N25-s11-b001",
+      "kind": "paragraph",
+      "text": "N25 estudia flujo de punta a punta mediante colas, trabajo en curso, lote, espera, handoffs, feedback y reparación, y separa desempeño sistémico de actividad local o cumplimiento ceremonial. El avance profesional consiste en gobernar una capacidad y sus consecuencias, no en defender el nombre de una práctica ni la cantidad de entregables producidos."
+    },
+    {
+      "source_id": "N25-s12-h2",
+      "kind": "heading-2",
+      "text": "Límites y tensiones"
+    },
+    {
+      "source_id": "N25-s12-b001",
+      "kind": "paragraph",
+      "text": "Ninguna categoría elimina el juicio situado. Los indicadores simplifican, los contratos distribuyen poder, la urgencia altera prioridades y la evidencia llega con demora. Por eso el expediente conserva supuestos, poblaciones afectadas, autoridad, excepciones y una fecha de revisión. La disciplina no promete neutralidad: vuelve discutible qué se privilegia y qué se deja de hacer."
+    },
+    {
+      "source_id": "N25-s13-h2",
+      "kind": "heading-2",
+      "text": "De N25 a N26"
+    },
+    {
+      "source_id": "N25-s13-b001",
+      "kind": "paragraph",
+      "text": "N26 abrirá el Bloque F y ampliará la arquitectura hacia un ecosistema de servicios, plataformas y terceros. N25 entrega un flujo gobernado sin diseñar todavía esa arquitectura."
+    },
+    {
+      "source_id": "N25-s14-h2",
+      "kind": "heading-2",
+      "text": "Síntesis"
+    },
+    {
+      "source_id": "N25-s14-b001",
+      "kind": "paragraph",
+      "text": "N25 estudia flujo de punta a punta mediante colas, trabajo en curso, lote, espera, handoffs, feedback y reparación, y separa desempeño sistémico de actividad local o cumplimiento ceremonial."
+    },
+    {
+      "source_id": "N25-s14-b002",
+      "kind": "paragraph",
+      "text": "El bloque no propone reemplazar una doctrina por otra. Propone hacer visibles las decisiones que cada práctica organiza, la evidencia que necesita y los daños que puede producir. El resultado es una intervención que puede explicarse, probarse y revisarse."
+    },
+    {
+      "source_id": "N25-s15-h2",
+      "kind": "heading-2",
+      "text": "Cinco píldoras para recordar"
+    },
+    {
+      "source_id": "N25-s15-b001",
+      "kind": "list-item",
+      "text": "Flujo de valor es el movimiento de una necesidad hasta una capacidad usada, observada y reparable."
+    },
+    {
+      "source_id": "N25-s15-b002",
+      "kind": "list-item",
+      "text": "Trabajo en curso reúne unidades iniciadas que todavía no producen su resultado o cierre."
+    },
+    {
+      "source_id": "N25-s15-b003",
+      "kind": "list-item",
+      "text": "Una cola es demanda que espera capacidad o una decisión antes de avanzar."
+    },
+    {
+      "source_id": "N25-s15-b004",
+      "kind": "list-item",
+      "text": "Tiempo de flujo es el lapso desde que una unidad entra al sistema hasta que alcanza su condición de salida."
+    },
+    {
+      "source_id": "N25-s15-b005",
+      "kind": "list-item",
+      "text": "La Ley de Little relaciona trabajo en curso, throughput y tiempo medio en un sistema estable."
+    },
+    {
+      "source_id": "N25-s16-h2",
+      "kind": "heading-2",
+      "text": "Glosario esencial"
+    },
+    {
+      "source_id": "N25-s16-b001",
+      "kind": "paragraph",
+      "text": "**Flujo de valor:** flujo de valor es el movimiento de una necesidad hasta una capacidad usada, observada y reparable."
+    },
+    {
+      "source_id": "N25-s16-b002",
+      "kind": "paragraph",
+      "text": "**Trabajo en curso:** trabajo en curso reúne unidades iniciadas que todavía no producen su resultado o cierre."
+    },
+    {
+      "source_id": "N25-s16-b003",
+      "kind": "paragraph",
+      "text": "**Cola:** una cola es demanda que espera capacidad o una decisión antes de avanzar."
+    },
+    {
+      "source_id": "N25-s16-b004",
+      "kind": "paragraph",
+      "text": "**Tiempo de flujo:** tiempo de flujo es el lapso desde que una unidad entra al sistema hasta que alcanza su condición de salida."
+    },
+    {
+      "source_id": "N25-s16-b005",
+      "kind": "paragraph",
+      "text": "**Ley de Little:** la Ley de Little relaciona trabajo en curso, throughput y tiempo medio en un sistema estable."
+    },
+    {
+      "source_id": "N25-s16-b006",
+      "kind": "paragraph",
+      "text": "**Tamaño de lote:** tamaño de lote es la cantidad de cambio acumulada antes de pasar a la etapa siguiente."
+    },
+    {
+      "source_id": "N25-s16-b007",
+      "kind": "paragraph",
+      "text": "**Handoff:** un handoff transfiere trabajo, información o responsabilidad entre actores o contextos."
+    },
+    {
+      "source_id": "N25-s16-b008",
+      "kind": "paragraph",
+      "text": "**Feedback:** feedback es información sobre el efecto de una acción que puede modificar una decisión posterior."
+    },
+    {
+      "source_id": "N25-s16-b009",
+      "kind": "paragraph",
+      "text": "**Variabilidad:** variabilidad son diferencias en llegada, tamaño, dificultad o capacidad que alteran el comportamiento del flujo."
+    },
+    {
+      "source_id": "N25-s16-b010",
+      "kind": "paragraph",
+      "text": "**Throughput:** throughput es la cantidad de unidades que alcanzan salida en un período."
+    },
+    {
+      "source_id": "N25-s16-b011",
+      "kind": "paragraph",
+      "text": "**Eficiencia de flujo:** eficiencia de flujo compara tiempo activo con tiempo total para localizar espera, no para exigir actividad continua."
+    },
+    {
+      "source_id": "N25-s16-b012",
+      "kind": "paragraph",
+      "text": "**Sistema de feedback y reparación:** un sistema de feedback y reparación detecta desvíos, decide respuesta y restaura capacidad con aprendizaje."
+    },
+    {
+      "source_id": "N25-s17-h2",
+      "kind": "heading-2",
+      "text": "Preguntas de preparación"
+    },
+    {
+      "source_id": "N25-s17-b001",
+      "kind": "list-item",
+      "text": "¿Qué decisión permite sostener flujo de valor y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "N25-s17-b002",
+      "kind": "list-item",
+      "text": "¿Qué decisión permite sostener trabajo en curso y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "N25-s17-b003",
+      "kind": "list-item",
+      "text": "¿Qué decisión permite sostener cola y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "N25-s17-b004",
+      "kind": "list-item",
+      "text": "¿Qué decisión permite sostener tiempo de flujo y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "N25-s17-b005",
+      "kind": "list-item",
+      "text": "¿Qué decisión permite sostener ley de little y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "N25-s17-b006",
+      "kind": "list-item",
+      "text": "¿Qué decisión permite sostener tamaño de lote y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "N25-s17-b007",
+      "kind": "paragraph",
+      "text": "Para el encuentro, seleccionar una intervención conocida, completar el instrumento con evidencia verificable y preparar una decisión provisional. Incluir una explicación rival, una condición que obligaría a revisar y una consecuencia para una persona afectada."
+    },
+    {
+      "source_id": "N25-s18-h2",
+      "kind": "heading-2",
+      "text": "Referencias base"
+    },
+    {
+      "source_id": "N25-s18-b001",
+      "kind": "list-item",
+      "text": "Little, J. D. C. (1961). ‘A Proof for the Queuing Formula L = λW’. Operations Research, 9(3), 383–387. https://doi.org/10.1287/opre.9.3.383"
+    },
+    {
+      "source_id": "N25-s18-b002",
+      "kind": "list-item",
+      "text": "Hopp, W. J. y Spearman, M. L. (2011). Factory Physics, Third Edition. Waveland Press."
+    },
+    {
+      "source_id": "N25-s18-b003",
+      "kind": "list-item",
+      "text": "Reinertsen, D. G. (2009). The Principles of Product Development Flow. Celeritas."
+    },
+    {
+      "source_id": "N25-s18-b004",
+      "kind": "list-item",
+      "text": "Ohno, T. (1988). Toyota Production System. Productivity Press."
+    },
+    {
+      "source_id": "N25-s18-b005",
+      "kind": "list-item",
+      "text": "Anderson, D. J. (2010). Kanban. Blue Hole Press."
+    },
+    {
+      "source_id": "N25-s18-b006",
+      "kind": "list-item",
+      "text": "Forsgren, N., Humble, J. y Kim, G. (2018). Accelerate. IT Revolution."
+    },
+    {
+      "source_id": "N25-s18-b007",
+      "kind": "list-item",
+      "text": "Kim, G. et al. (2021). The DevOps Handbook, Second Edition. IT Revolution."
+    },
+    {
+      "source_id": "N25-s18-b008",
+      "kind": "list-item",
+      "text": "Kanban Guides (2025). The Kanban Guide. https://kanbanguides.org/english/"
+    },
+    {
+      "source_id": "N25-s18-b009",
+      "kind": "list-item",
+      "text": "Google Cloud (2024). Accelerate State of DevOps Report. https://cloud.google.com/devops/state-of-devops"
+    },
+    {
+      "source_id": "N25-s18-b010",
+      "kind": "list-item",
+      "text": "Google Cloud (2025). DORA State of AI-Assisted Software Development. https://cloud.google.com/devops/state-of-devops"
+    },
+    {
+      "source_id": "N25-s18-b011",
+      "kind": "list-item",
+      "text": "Project Management Institute (2021). A Guide to the Project Management Body of Knowledge, Seventh Edition. PMI."
+    },
+    {
+      "source_id": "N25-s18-b012",
+      "kind": "list-item",
+      "text": "ISO/IEC (2018). ISO/IEC 20000-1:2018 Service Management System Requirements. https://www.iso.org/standard/70636.html"
+    }
+  ]
+}
