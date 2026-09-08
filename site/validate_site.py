@@ -29,6 +29,20 @@ PDF_FILES = {
     "N08": "N08-METSI-lectura-previa-v9-final.pdf",
     "N09": "N09-METSI-lectura-previa-v9-final.pdf",
     "N10": "N10-METSI-lectura-previa-v9-final.pdf",
+    **{f"N{number:02d}": f"publicados/N{number:02d}-METSI-lectura-previa-v1-final.pdf" for number in range(11, 31)},
+}
+
+COVER_FILES = {
+    **{f"N{number:02d}": f"N{number:02d}.png" for number in range(0, 11)},
+    **{f"N{number:02d}": f"N{number:02d}.jpg" for number in range(11, 31)},
+}
+
+EXPECTED_PAGES = {
+    "N00": 43, "N01": 29, "N02": 29, "N03": 30, "N04": 32,
+    "N05": 28, "N06": 28, "N07": 31, "N08": 28, "N09": 28, "N10": 31,
+    "N11": 30, "N12": 28, "N13": 27, "N14": 26, "N15": 26, "N16": 27,
+    "N17": 33, "N18": 29, "N19": 29, "N20": 28,
+    **{f"N{number:02d}": 28 for number in range(21, 31)},
 }
 
 
@@ -89,8 +103,12 @@ def main() -> int:
     local_links = [target for link in parser.links if (target := local_target(link))]
     actual_pdf_hashes = {code: sha256(ROOT / "pdf" / file) for code, file in PDF_FILES.items()}
     page_counts = {code: len(PdfReader(str(ROOT / "pdf" / file)).pages) for code, file in PDF_FILES.items()}
-    actual_cover_hashes = {code: sha256(ROOT / "covers" / f"{code}.png") for code in PDF_FILES}
-    pdf_downloads = {Path(urlparse(link).path).name for link in parser.download_links if link.startswith("pdf/")}
+    actual_cover_hashes = {code: sha256(ROOT / "covers" / COVER_FILES[code]) for code in PDF_FILES}
+    source_pdf_hashes = {
+        f"N{number:02d}": sha256(REPO / f"N{number:02d}-v1-editorial" / "output" / f"N{number:02d}-METSI-lectura-previa-v1-final.pdf")
+        for number in range(11, 31)
+    }
+    pdf_downloads = {urlparse(link).path.removeprefix("pdf/") for link in parser.download_links if link.startswith("pdf/")}
     mapped_codes = {f"N{number:02d}" for number in range(1, 37)}
     visible_codes = set(re.findall(r"\bN(?:0[1-9]|[12][0-9]|3[0-6])\b", html))
 
@@ -100,12 +118,14 @@ def main() -> int:
         "unique_ids": len(parser.ids) == len(set(parser.ids)),
         "aria_controls_resolve": set(parser.controls).issubset(set(parser.ids)),
         "all_images_have_alt": bool(parser.images) and all("alt" in image and image["alt"].strip() for image in parser.images),
-        "eleven_exact_pdf_downloads": pdf_downloads == set(PDF_FILES.values()) and len(list((ROOT / "pdf").glob("*.pdf"))) == 11,
-        "pdfs_match_closed_approvals": actual_pdf_hashes == approval["pdf_sha256"],
-        "pdf_page_counts_expected": page_counts == {"N00":43,"N01":29,"N02":29,"N03":30,"N04":32,"N05":28,"N06":28,"N07":31,"N08":28,"N09":28,"N10":31},
-        "covers_match_closed_review_assets": actual_cover_hashes == expected_cover_hashes,
+        "thirty_one_exact_pdf_downloads": pdf_downloads == set(PDF_FILES.values()) and len(list((ROOT / "pdf").rglob("*.pdf"))) == 31,
+        "approved_pdfs_remain_unchanged": {code: actual_pdf_hashes[code] for code in approval["pdf_sha256"]} == approval["pdf_sha256"],
+        "new_pdfs_match_audited_sources": {code: actual_pdf_hashes[code] for code in source_pdf_hashes} == source_pdf_hashes,
+        "pdf_page_counts_expected": page_counts == EXPECTED_PAGES,
+        "approved_covers_remain_unchanged": {code: actual_cover_hashes[code] for code in expected_cover_hashes} == expected_cover_hashes,
+        "all_published_covers_present": len(actual_cover_hashes) == 31,
         "all_36_nuclei_present": visible_codes.issuperset(mapped_codes),
-        "future_nuclei_not_fake_downloads": not any(re.search(r"N(?:1[1-9]|2[0-9]|3[0-6])", link) for link in parser.links),
+        "future_nuclei_not_fake_downloads": not any(re.search(r"N3[1-6]", link) for link in parser.links),
         "eight_curricular_blocks": html.count('class="block"') == 8,
         "audience_tabs_complete": html.count('role="tab"') == 4 and html.count('role="tabpanel"') == 4,
         "responsive_and_reduced_motion_css": "@media(max-width:650px)" in css and "prefers-reduced-motion" in css,
