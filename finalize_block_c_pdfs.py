@@ -79,8 +79,8 @@ def main() -> None:
     parser.add_argument("--start", type=int, default=11)
     parser.add_argument("--end", type=int, default=16)
     args = parser.parse_args()
-    if args.start < 11 or args.end > 30 or args.start > args.end:
-        raise ValueError("El finalizador cubre N11–N30")
+    if args.start < 11 or args.end > 36 or args.start > args.end:
+        raise ValueError("El finalizador cubre N11–N36")
     for number in range(args.start, args.end + 1):
         finalize(number)
 

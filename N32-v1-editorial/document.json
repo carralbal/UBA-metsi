@@ -1,0 +1,147 @@
+{
+  "number": 32,
+  "title": "N32 · Evaluar tareas, cobertura, severidad, desigualdad, robustez y supervisión",
+  "module": "Incorporar IA sin delegar el juicio",
+  "source": "source/N32_evaluar_tareas_cobertura_severidad_desigualdad_robustez_y_supervision-content-canonical-v1.md",
+  "source_sha256": "514fb1194a1c41a113467fa98e0a977673ad9f2da762db65b568288ca7eb8823",
+  "source_words": 7981,
+  "content_audit": "canonical-v1-pass",
+  "cover": {
+    "file": "cover-source-premium-bw-v1.png",
+    "source": "assets/cover-source-premium-bw-v1.png",
+    "sha256": "c2692a3989df397d07e426a216cde28e8f73f9e0d892a59fb62f2fe503345524",
+    "alt": "Una especialista argentina observa dos recorridos de servicio y evalúa consecuencias desiguales.",
+    "photographic_origin": "native_black_and_white",
+    "render_treatment": "no_grayscale_conversion"
+  },
+  "internal_images": [
+    "pause-01.png",
+    "pause-02.png"
+  ],
+  "image_manifest": [
+    {
+      "file": "assets/pause-01.png",
+      "sha256": "5f10930a2e118c607fb06806c9d604ae4aae0aab47c3bcbbd05ec871fcff8318",
+      "alt": "Un equipo hotelero prueba casos ordinarios y extremos con evidencia material.",
+      "role": "full_page_pause",
+      "rights_status": "project_bound_generated_media"
+    },
+    {
+      "file": "assets/pause-02.png",
+      "sha256": "70a10ae3347fd7b88e36857dbe9abb45cda145997b8dc88c57b19722512d002b",
+      "alt": "Una supervisora nocturna enfrenta varias excepciones simultáneas y vuelve visible el límite del control humano.",
+      "role": "full_page_pause",
+      "rights_status": "project_bound_generated_media"
+    }
+  ],
+  "portrait_references": [
+    {
+      "key": "nist",
+      "name": "NIST",
+      "file": "assets/referent-nist.jpg",
+      "sha256": "482ac3e91fd444045dc072dac5311e0a45fb7d82d5d900203a4dccff24b190b6",
+      "rights_status": "verified_local_portrait"
+    },
+    {
+      "key": "joy-buolamwini-timnit-gebru",
+      "name": "Joy Buolamwini y Timnit Gebru",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "batya-friedman-david-hendry",
+      "name": "Batya Friedman y David Hendry",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "madeleine-elish",
+      "name": "Madeleine Clare Elish",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "ben-shneiderman",
+      "name": "Ben Shneiderman",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    },
+    {
+      "key": "iso-iec",
+      "name": "ISO/IEC",
+      "file": "",
+      "sha256": "",
+      "rights_status": "portrait_withheld_pending_rights"
+    }
+  ],
+  "diagrams": [
+    {
+      "file": "diagrams/N32-mapa-01.svg",
+      "title": "Arquitectura de evaluación",
+      "labels": [
+        "Tarea",
+        "Cobertura",
+        "Métrica",
+        "Severidad",
+        "Decisión"
+      ],
+      "claim": "Arquitectura de evaluación: la representación conecta tarea, cobertura, métrica, severidad, decisión para sostener una decisión revisable.",
+      "sha256": "2b38564b5eaad11fdc9f1c54e6f58a677f0aa4fd887478f004f922de6a6d567a"
+    },
+    {
+      "file": "diagrams/N32-mapa-02.svg",
+      "title": "Autonomía proporcional",
+      "labels": [
+        "Baseline",
+        "Desagregación",
+        "Robustez",
+        "Supervisión"
+      ],
+      "claim": "Autonomía proporcional: la representación conecta baseline, desagregación, robustez, supervisión para sostener una decisión revisable.",
+      "sha256": "baadd8a7740b1b69783d015bd0b986c4d4c581353a5957bdefbf1021d44b3fc2"
+    },
+    {
+      "file": "diagrams/N32-mapa-03.svg",
+      "title": "Mapa HH-32",
+      "labels": [
+        "Prueba",
+        "Umbral",
+        "Exposición",
+        "Monitoreo",
+        "Retiro"
+      ],
+      "claim": "Mapa HH-32: la representación conecta prueba, umbral, exposición, monitoreo, retiro para sostener una decisión revisable.",
+      "sha256": "9dfc1fd4bf2c39ac92b162f3aaa62ec3b3dcaf2a9bc72099fb1f6cc327cfca5a"
+    }
+  ],
+  "quotes": [
+    "N32 evalúa tareas, cobertura, severidad, desigualdad, robustez y supervisión real antes de asignar autonomía a una capacidad de inteligencia artificial.",
+    "Ningún modelo, expediente o marco elimina incertidumbre, conflicto ni asimetrías de poder."
+  ],
+  "references": [
+    "NIST (2023). Artificial Intelligence Risk Management Framework 1.0. https://doi.org/10.6028/NIST.AI.100-1",
+    "NIST (2024). Generative Artificial Intelligence Profile. https://doi.org/10.6028/NIST.AI.600-1",
+    "NIST (2026). ARIA 0.1 Pilot Evaluation Report, NIST AI 800-4. https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-4.pdf",
+    "NIST (2026). TEVV-Athlon Framework, Initial Public Draft. https://www.nist.gov/artificial-intelligence/ai-research/tevv-athlon-framework-evaluating-ai-systems",
+    "Buolamwini, J. y Gebru, T. (2018). Gender Shades. Proceedings of Machine Learning Research, 81, 1-15. http://proceedings.mlr.press/v81/buolamwini18a.html",
+    "Friedman, B. y Hendry, D. G. (2019). Value Sensitive Design. MIT Press.",
+    "Elish, M. C. (2019). Moral Crumple Zones. Engaging Science, Technology, and Society, 5, 40-60. https://doi.org/10.17351/ests2019.260",
+    "Shneiderman, B. (2022). Human Centered AI. Oxford University Press.",
+    "ISO/IEC (2023). ISO/IEC 23894:2023 Artificial Intelligence Risk Management. https://www.iso.org/standard/77304.html",
+    "ISO/IEC (2024). ISO/IEC TR 24027:2021 Bias in AI Systems and AI Aided Decision Making. https://www.iso.org/standard/77607.html",
+    "Amershi, S. et al. (2019). Guidelines for Human AI Interaction. https://doi.org/10.1145/3290605.3300233",
+    "Raji, I. D. et al. (2020). Closing the AI Accountability Gap. https://doi.org/10.1145/3351095.3372873"
+  ],
+  "closing": {
+    "file": "matches-close.png",
+    "sha256": "06318b951ef619692a236027ed07ec7a4a1bb9b66cc875a916c40f060e47ecde",
+    "alt": "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza.",
+    "caption": "La secuencia vuelve visible que toda intervención consume recursos, deja huellas y necesita un criterio de cierre.",
+    "folio": true,
+    "footer": true
+  }
+}

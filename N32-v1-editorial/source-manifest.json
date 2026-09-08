@@ -1,0 +1,1281 @@
+{
+  "document": "N32",
+  "source": "source/N32_evaluar_tareas_cobertura_severidad_desigualdad_robustez_y_supervision-content-canonical-v1.md",
+  "eligible_blocks": [
+    {
+      "source_id": "N32-h1",
+      "kind": "heading-1",
+      "text": "Evaluar tareas, cobertura, severidad, desigualdad, robustez y supervisión"
+    },
+    {
+      "source_id": "N32-s01-h2",
+      "kind": "heading-2",
+      "text": "Pregunta profesional"
+    },
+    {
+      "source_id": "N32-s01-b001",
+      "kind": "paragraph",
+      "text": "¿Qué evidencia permite asignar autonomía a una capacidad de IA sin ocultar fallas graves detrás de un buen promedio?"
+    },
+    {
+      "source_id": "N32-s02-h2",
+      "kind": "heading-2",
+      "text": "El promedio era alto y las habitaciones accesibles fallaban"
+    },
+    {
+      "source_id": "N32-s02-b001",
+      "kind": "paragraph",
+      "text": "El asistente de Hotel Horizonte alcanza noventa y dos por ciento de respuestas consideradas correctas. La cifra habilita un piloto amplio. Una semana después, el equipo descubre que las consultas sobre accesibilidad eran escasas en el conjunto de prueba y concentraban casi todos los errores graves."
+    },
+    {
+      "source_id": "N32-s02-b002",
+      "kind": "paragraph",
+      "text": "La evaluación había medido desempeño medio, no cobertura del uso ni severidad de consecuencias. Tampoco había probado cambios de temporada, instrucciones adversas, capacidad de supervisión ni tiempo disponible para reparar."
+    },
+    {
+      "source_id": "N32-s02-b003",
+      "kind": "paragraph",
+      "text": "Evaluar un sistema de IA exige definir unidad de análisis, población, baseline, criterio, umbral y decisión asociada. La evaluación sociotécnica debe representar el sistema sociotécnico completo, incluyendo personas, interfaces, datos y operación."
+    },
+    {
+      "source_id": "N32-s02-b004",
+      "kind": "paragraph",
+      "text": "El equipo de evaluación reconstruye casos, separa error inocuo de daño material, desagrega resultados y mide al conjunto humano y automático. La autonomía deja de ser una etiqueta y se convierte en una exposición graduada."
+    },
+    {
+      "source_id": "N32-s02-b005",
+      "kind": "paragraph",
+      "text": "La evaluación sociotécnica anterior al despliegue no alcanza. El comportamiento cambia con entradas, modelos, proveedores, incentivos y aprendizaje de usuarios; la evaluación continúa durante la operación."
+    },
+    {
+      "source_id": "N32-s02-b006",
+      "kind": "paragraph",
+      "text": "N32 recibe de N31 una capacidad considerada pertinente y pregunta si la evidencia de desempeño disponible justifica su alcance, su nivel de autonomía y sus protecciones."
+    },
+    {
+      "source_id": "N32-s03-h2",
+      "kind": "heading-2",
+      "text": "Hotel Horizonte: una estrategia para una contradicción ya conocida"
+    },
+    {
+      "source_id": "N32-s03-b001",
+      "kind": "paragraph",
+      "text": "HH-32 evalúa clasificación, redacción y acción por separado. Construye un conjunto con casos ordinarios, extremos y adversos, desagrega por tipo de necesidad, pondera severidad, compara baseline humana y simple, y ensaya la supervisión bajo carga. La autonomía sólo aumenta cuando desempeño, cobertura y reparación cumplen umbrales explícitos."
+    },
+    {
+      "source_id": "N32-s04-h2",
+      "kind": "heading-2",
+      "text": "Tesis"
+    },
+    {
+      "source_id": "N32-s04-b001",
+      "kind": "paragraph",
+      "text": "N32 evalúa tareas, cobertura, severidad, desigualdad, robustez y supervisión real antes de asignar autonomía a una capacidad de inteligencia artificial."
+    },
+    {
+      "source_id": "N32-s05-h2",
+      "kind": "heading-2",
+      "text": "Del cierre anterior al nuevo avance"
+    },
+    {
+      "source_id": "N32-s05-b001",
+      "kind": "paragraph",
+      "text": "N31 deja evidencia y decisiones abiertas que N32 utiliza sin reabrir su contenido. N32 evalúa tareas, cobertura, severidad, desigualdad, robustez y supervisión real antes de asignar autonomía a una capacidad de inteligencia artificial."
+    },
+    {
+      "source_id": "N32-s05-b002",
+      "kind": "paragraph",
+      "text": "N33 convertirá esa evidencia en gobierno vivo del ciclo de vida. N32 no diseña todavía inventario institucional, ownership, control de cambios, incidentes ni retiro."
+    },
+    {
+      "source_id": "N32-s06-h2",
+      "kind": "heading-2",
+      "text": "Tradiciones y marcos utilizados en el argumento"
+    },
+    {
+      "source_id": "N32-s06-b001",
+      "kind": "paragraph",
+      "text": "NIST incorpora gobierno, medición y manejo del riesgo de inteligencia artificial. En N32, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N32: ninguna referencia sustituye la evidencia de desempeño del caso ni la autoridad de despliegue necesaria para intervenir."
+    },
+    {
+      "source_id": "N32-s06-b002",
+      "kind": "paragraph",
+      "text": "NIST aporta una fuente contrastable para definir alcance, evidencia y condiciones de revisión. En N32, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N32: ninguna referencia sustituye la evidencia de desempeño del caso ni la autoridad de despliegue necesaria para intervenir."
+    },
+    {
+      "source_id": "N32-s06-b003",
+      "kind": "paragraph",
+      "text": "NIST muestra por qué la evaluación previa necesita observación repetida en despliegue. En N32, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N32: ninguna referencia sustituye la evidencia de desempeño del caso ni la autoridad de despliegue necesaria para intervenir."
+    },
+    {
+      "source_id": "N32-s06-b004",
+      "kind": "paragraph",
+      "text": "NIST propone una arquitectura borrador para evaluación sociotécnica continua. En N32, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N32: ninguna referencia sustituye la evidencia de desempeño del caso ni la autoridad de despliegue necesaria para intervenir."
+    },
+    {
+      "source_id": "N32-s06-b005",
+      "kind": "paragraph",
+      "text": "Buolamwini, J. y Gebru, T. demuestra cómo el promedio puede ocultar desigualdades relevantes. En N32, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N32: ninguna referencia sustituye la evidencia de desempeño del caso ni la autoridad de despliegue necesaria para intervenir."
+    },
+    {
+      "source_id": "N32-s06-b006",
+      "kind": "paragraph",
+      "text": "Friedman, B. y Hendry, D. G. aportan una fuente contrastable para definir alcance, evidencia y condiciones de revisión. En N32, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N32: ninguna referencia sustituye la evidencia de desempeño del caso ni la autoridad de despliegue necesaria para intervenir."
+    },
+    {
+      "source_id": "N32-s06-b007",
+      "kind": "paragraph",
+      "text": "Elish, M. C. explica cómo la responsabilidad puede deformarse alrededor de personas supervisoras. En N32, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N32: ninguna referencia sustituye la evidencia de desempeño del caso ni la autoridad de despliegue necesaria para intervenir."
+    },
+    {
+      "source_id": "N32-s06-b008",
+      "kind": "paragraph",
+      "text": "Shneiderman, B. aporta una fuente contrastable para definir alcance, evidencia y condiciones de revisión. En N32, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N32: ninguna referencia sustituye la evidencia de desempeño del caso ni la autoridad de despliegue necesaria para intervenir."
+    },
+    {
+      "source_id": "N32-s06-b009",
+      "kind": "paragraph",
+      "text": "ISO/IEC incorpora gobierno, medición y manejo del riesgo de inteligencia artificial. En N32, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N32: ninguna referencia sustituye la evidencia de desempeño del caso ni la autoridad de despliegue necesaria para intervenir."
+    },
+    {
+      "source_id": "N32-s06-b010",
+      "kind": "paragraph",
+      "text": "ISO/IEC aporta una fuente contrastable para definir alcance, evidencia y condiciones de revisión. En N32, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N32: ninguna referencia sustituye la evidencia de desempeño del caso ni la autoridad de despliegue necesaria para intervenir."
+    },
+    {
+      "source_id": "N32-s06-b011",
+      "kind": "paragraph",
+      "text": "Amershi, S. et al. aportan pautas para expectativa, control, corrección y recuperación. En N32, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N32: ninguna referencia sustituye la evidencia de desempeño del caso ni la autoridad de despliegue necesaria para intervenir."
+    },
+    {
+      "source_id": "N32-s06-b012",
+      "kind": "paragraph",
+      "text": "Raji, I. D. et al. conectan auditoría con documentación, roles y procesos internos. En N32, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N32: ninguna referencia sustituye la evidencia de desempeño del caso ni la autoridad de despliegue necesaria para intervenir."
+    },
+    {
+      "source_id": "N32-s07-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 1 · Distinguir capacidad, propósito y consecuencia"
+    },
+    {
+      "source_id": "N32-s07-b001",
+      "kind": "heading-3",
+      "text": "Unidad de evaluación"
+    },
+    {
+      "source_id": "N32-s07-b002",
+      "kind": "paragraph",
+      "text": "La unidad de evaluación combina tarea, población, contexto, salida y consecuencia. La definición fija el objeto de decisión. Si el equipo de N32 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N32-s07-b003",
+      "kind": "paragraph",
+      "text": "No es el modelo aislado ni un benchmark genérico. La distinción evita que una palabra familiar oculte otro mecanismo. En N32, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N32-s07-b004",
+      "kind": "paragraph",
+      "text": "En unidad de evaluación, el recorrido causal debe mostrar qué condición habilita la acción, qué transformación ocurre y quién absorbe el resultado. Unidad de evaluación se operacionaliza delimitando propósito, población, entradas, autoridad, acción, consecuencia y condición de revisión. El recorrido se contrasta con una alternativa más simple y con un escenario adverso antes de ampliar compromiso. Si un salto depende sólo de una explicación oral, la estrategia todavía no puede gobernarlo."
+    },
+    {
+      "source_id": "N32-s07-b005",
+      "kind": "paragraph",
+      "text": "La evidencia relevante para unidad de evaluación no se limita al resultado promedio. La evidencia integra una prueba previa, resultados desagregados y el episodio siguiente: Cada respuesta del asistente se vincula con la decisión posterior También conserva las decisiones humanas y automáticas que produjeron ese resultado. N32 busca además casos negativos, diferencias entre poblaciones y señales de que la explicación elegida podría ser insuficiente."
+    },
+    {
+      "source_id": "N32-s07-b006",
+      "kind": "paragraph",
+      "text": "Ejemplo. Cada respuesta del asistente se vincula con la decisión posterior En N32, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N32-s07-b007",
+      "kind": "paragraph",
+      "text": "El tradeoff central de unidad de evaluación aparece entre anticipar y preservar opciones. Anticipar puede reducir coordinación y también fijar una premisa prematura; preservar opciones puede producir aprendizaje y también demorar una protección necesaria. La elección debe declarar cuál de esos costos acepta, durante cuánto tiempo y para quién."
+    },
+    {
+      "source_id": "N32-s07-b008",
+      "kind": "paragraph",
+      "text": "La evaluación independiente de unidad de evaluación termina con una pregunta de uso: ¿qué podría decidir ahora una persona que antes no podía? En N32, la respuesta debe nombrar una acción, una restricción y una evidencia, no sólo una comprensión mejorada."
+    },
+    {
+      "source_id": "N32-s07-b009",
+      "kind": "paragraph",
+      "text": "Operacionalizar unidad de evaluación requiere asignar una unidad observable. El equipo de evaluación define qué episodio contará, desde qué momento, con qué población y bajo qué fuente. Después compara al menos un caso ordinario con otro que fuerce excepción. Esta precisión en N32 evita que una conclusión general se sostenga sólo en ejemplos convenientes."
+    },
+    {
+      "source_id": "N32-s07-b010",
+      "kind": "paragraph",
+      "text": "La decisión profesional no termina en adoptar unidad de evaluación. Se compara una ruta principal con una explicación rival, se explicita quién queda expuesto y se conserva un modo de revisar. Cambiar la unidad puede invertir la conclusión sobre desempeño. El límite forma parte del diseño y no una nota posterior."
+    },
+    {
+      "source_id": "N32-s07-b011",
+      "kind": "heading-3",
+      "text": "Cobertura"
+    },
+    {
+      "source_id": "N32-s07-b012",
+      "kind": "paragraph",
+      "text": "La cobertura expresa qué proporción y diversidad del uso previsto está representada. Conviene comenzar por su función profesional. Si el equipo de N32 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N32-s07-b013",
+      "kind": "paragraph",
+      "text": "No coincide con cantidad total de casos. El contraste importa porque conduce a pruebas distintas. En N32, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N32-s07-b014",
+      "kind": "paragraph",
+      "text": "El mecanismo de cobertura no se presume por el nombre. Cobertura se operacionaliza delimitando propósito, población, entradas, autoridad, acción, consecuencia y condición de revisión. El recorrido se contrasta con una alternativa más simple y con un escenario adverso antes de ampliar compromiso. Debe localizarse dónde comienza, qué relaciones activa, qué demora introduce y qué capacidad de reparación queda disponible cuando la expectativa no se cumple."
+    },
+    {
+      "source_id": "N32-s07-b015",
+      "kind": "paragraph",
+      "text": "Una afirmación sobre cobertura gana fuerza cuando puede reconstruirse desde fuentes independientes. La evidencia integra una prueba previa, resultados desagregados y el episodio siguiente: El conjunto incluye excepciones de accesibilidad y temporadas altas También conserva las decisiones humanas y automáticas que produjeron ese resultado. La ausencia de señal también se interpreta: puede significar estabilidad, mala observación o exclusión del caso que más importa."
+    },
+    {
+      "source_id": "N32-s07-b016",
+      "kind": "paragraph",
+      "text": "Ejemplo. El conjunto incluye excepciones de accesibilidad y temporadas altas En N32, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N32-s07-b017",
+      "kind": "paragraph",
+      "text": "La escala modifica cobertura. Una solución válida para un equipo puede fallar cuando atraviesa sedes, turnos o proveedores porque aumenta la distancia entre señal y autoridad. Antes de ampliar, N32 prueba si la misma decisión conserva significado y reparación bajo esa nueva distribución."
+    },
+    {
+      "source_id": "N32-s07-b018",
+      "kind": "paragraph",
+      "text": "Para evitar consenso aparente, cobertura se revisa con alguien afectado y con alguien responsable de reparar. Las dos perspectivas pueden valorar resultados diferentes y obligan a declarar la prioridad elegida."
+    },
+    {
+      "source_id": "N32-s07-b019",
+      "kind": "paragraph",
+      "text": "En la práctica, cobertura atraviesa más de un área. Se identifican handoffs, esperas, decisiones y datos que cada participante puede ver. Cuando dos áreas usan evidencia distinta en N32, el expediente conserva la divergencia hasta determinar si representa error, perspectiva legítima o una brecha que la estrategia debe resolver."
+    },
+    {
+      "source_id": "N32-s07-b020",
+      "kind": "paragraph",
+      "text": "En una revisión, cobertura debe responder tres preguntas: qué mejora, qué desplaza y qué vuelve más difícil de revertir. Casos raros pueden dominar el riesgo aunque pesen poco en el promedio. Si esas respuestas cambian, también debe cambiar el compromiso, aunque el trabajo previo haya sido técnicamente correcto."
+    },
+    {
+      "source_id": "N32-s07-b021",
+      "kind": "heading-3",
+      "text": "Baseline"
+    },
+    {
+      "source_id": "N32-s07-b022",
+      "kind": "paragraph",
+      "text": "La baseline representa la mejor alternativa practicable sin el cambio evaluado. El concepto adquiere valor cuando cambia un nivel de autonomía. Si el equipo de N32 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N32-s07-b023",
+      "kind": "paragraph",
+      "text": "No es ausencia de solución ni desempeño humano idealizado. Su vecino conceptual puede parecer equivalente y no lo es. En N32, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N32-s07-b024",
+      "kind": "paragraph",
+      "text": "Comprender baseline exige seguir la decisión en el tiempo. Baseline se operacionaliza delimitando propósito, población, entradas, autoridad, acción, consecuencia y condición de revisión. El recorrido se contrasta con una alternativa más simple y con un escenario adverso antes de ampliar compromiso. La medición distingue condición, intervención, señal temprana y consecuencia para evitar atribuir a una práctica un efecto producido por otro cambio simultáneo."
+    },
+    {
+      "source_id": "N32-s07-b025",
+      "kind": "paragraph",
+      "text": "La evaluación sociotécnica de baseline debe formularse antes de conocer el resultado. La evidencia integra una prueba previa, resultados desagregados y el episodio siguiente: Se compara con búsqueda guiada y atención actual También conserva las decisiones humanas y automáticas que produjeron ese resultado. Se registra qué observación sostendría continuar, cuál obligaría a adaptar y cuál activaría detención o escalamiento."
+    },
+    {
+      "source_id": "N32-s07-b026",
+      "kind": "paragraph",
+      "text": "Ejemplo. Se compara con búsqueda guiada y atención actual En N32, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N32-s07-b027",
+      "kind": "paragraph",
+      "text": "El tiempo también altera baseline. Una evidencia suficiente para explorar puede ser insuficiente para operar de forma permanente. Por eso se separan prueba local, compromiso transitorio y condición estable, y cada estado conserva fecha, alcance y responsable de revisión."
+    },
+    {
+      "source_id": "N32-s07-b028",
+      "kind": "paragraph",
+      "text": "El registro de baseline conserva una explicación rival. Si esa alternativa predice mejor el episodio siguiente, el equipo cambia de curso sin reescribir retrospectivamente lo que creía saber."
+    },
+    {
+      "source_id": "N32-s07-b029",
+      "kind": "paragraph",
+      "text": "La gobernanza de baseline incluye quién puede proponer, aprobar, ejecutar, observar y reparar. Esas funciones no se presumen por cargo ni por permiso técnico. N32 las prueba en un escenario donde falta la persona habitual, porque una capacidad que sólo funciona con conocimiento privado todavía no pertenece a la organización."
+    },
+    {
+      "source_id": "N32-s07-b030",
+      "kind": "paragraph",
+      "text": "El juicio sobre baseline incluye distribución de consecuencias. Una baseline degradada puede inflar artificialmente el valor incremental. Una mejora agregada no alcanza si concentra espera, riesgo o trabajo invisible en un grupo sin autoridad para discutir la decisión."
+    },
+    {
+      "source_id": "N32-s07-b031",
+      "kind": "heading-3",
+      "text": "Validez de constructo"
+    },
+    {
+      "source_id": "N32-s07-b032",
+      "kind": "paragraph",
+      "text": "La validez pregunta si la medida representa la capacidad que se pretende juzgar. La definición fija el objeto de decisión. Si el equipo de N32 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N32-s07-b033",
+      "kind": "paragraph",
+      "text": "Exactitud superficial puede no medir utilidad ni seguridad. La distinción evita que una palabra familiar oculte otro mecanismo. En N32, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N32-s07-b034",
+      "kind": "paragraph",
+      "text": "La explicación operacional de validez de constructo conecta personas, reglas y tecnología. Validez de constructo se operacionaliza delimitando propósito, población, entradas, autoridad, acción, consecuencia y condición de revisión. El recorrido se contrasta con una alternativa más simple y con un escenario adverso antes de ampliar compromiso. Esa conexión permite decidir qué parte puede modificarse localmente y cuál requiere coordinación con otras autoridades o capacidades."
+    },
+    {
+      "source_id": "N32-s07-b035",
+      "kind": "paragraph",
+      "text": "Para auditar validez de constructo, conviene combinar evidencia de diseño, ejecución y consecuencia. La evidencia integra una prueba previa, resultados desagregados y el episodio siguiente: Una rúbrica distingue respuesta completa de respuesta persuasiva También conserva las decisiones humanas y automáticas que produjeron ese resultado. Ninguna fuente domina automáticamente; una especificación correcta puede convivir con una operación dañina."
+    },
+    {
+      "source_id": "N32-s07-b036",
+      "kind": "paragraph",
+      "text": "Ejemplo. Una rúbrica distingue respuesta completa de respuesta persuasiva En N32, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N32-s07-b037",
+      "kind": "paragraph",
+      "text": "Existe además una dimensión política en validez de constructo. La opción más eficiente puede reducir la capacidad de una persona para cuestionar un nivel de autonomía o trasladar trabajo sin reconocerlo. N32 registra esa distribución y no la esconde dentro de un indicador agregado."
+    },
+    {
+      "source_id": "N32-s07-b038",
+      "kind": "paragraph",
+      "text": "Una prueba adversa de validez de constructo introduce demora, ausencia de autoridad o dato incompleto. El objetivo de N32 no es cubrir todas las fallas, sino revelar si la estrategia mantiene una salida segura fuera del camino ordinario."
+    },
+    {
+      "source_id": "N32-s07-b039",
+      "kind": "paragraph",
+      "text": "El indicador de validez de constructo se elige después de formular la decisión. Puede combinar tiempo, calidad, distribución y costo de reparación. Una cifra aislada rara vez explica el mecanismo. En N32, la lectura conjunta de señales evita optimizar velocidad mientras aumenta retrabajo, exclusión o dependencia."
+    },
+    {
+      "source_id": "N32-s07-b040",
+      "kind": "paragraph",
+      "text": "La condición de cierre de validez de constructo no es perfección. La métrica puede premiar conducta contraria al propósito. Es evidencia suficiente para el uso previsto, riesgo residual aceptado por autoridad y una ruta clara cuando el supuesto deje de cumplirse."
+    },
+    {
+      "source_id": "N32-s08-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 2 · Evaluar exposición, evidencia y control humano"
+    },
+    {
+      "source_id": "N32-s08-b001",
+      "kind": "heading-3",
+      "text": "Severidad"
+    },
+    {
+      "source_id": "N32-s08-b002",
+      "kind": "paragraph",
+      "text": "La severidad clasifica consecuencias por daño, alcance, reversibilidad y población. Conviene comenzar por su función profesional. Si el equipo de N32 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N32-s08-b003",
+      "kind": "paragraph",
+      "text": "No equivale a frecuencia ni confianza del modelo. El contraste importa porque conduce a pruebas distintas. En N32, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N32-s08-b004",
+      "kind": "paragraph",
+      "text": "Para que severidad sea algo más que una etiqueta, debe existir una cadena examinable. Severidad se operacionaliza delimitando propósito, población, entradas, autoridad, acción, consecuencia y condición de revisión. El recorrido se contrasta con una alternativa más simple y con un escenario adverso antes de ampliar compromiso. La cadena incluye supuestos, handoffs y efectos laterales que una descripción ideal suele omitir."
+    },
+    {
+      "source_id": "N32-s08-b005",
+      "kind": "paragraph",
+      "text": "El equipo de evaluación no declara resuelto severidad por acuerdo retórico. La evidencia integra una prueba previa, resultados desagregados y el episodio siguiente: Negar una habitación accesible pesa más que un error de estilo También conserva las decisiones humanas y automáticas que produjeron ese resultado. Una persona ajena al diseño debe poder repetir la prueba y comprender por qué el resultado habilita un nivel de autonomía concreta."
+    },
+    {
+      "source_id": "N32-s08-b006",
+      "kind": "paragraph",
+      "text": "Ejemplo. Negar una habitación accesible pesa más que un error de estilo En N32, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N32-s08-b007",
+      "kind": "paragraph",
+      "text": "La mantenibilidad de severidad se prueba mediante cambio deliberado. Se modifica una regla, una fuente o una dependencia y se observa quién detecta el impacto, cuánto tarda en responder y qué información necesita. En N32, si la respuesta depende de memoria privada, la capacidad todavía es frágil."
+    },
+    {
+      "source_id": "N32-s08-b008",
+      "kind": "paragraph",
+      "text": "El costo de severidad se observa tanto en presupuesto como en atención, espera, coordinación y dependencia. Lo que no figura en una factura puede seguir siendo el costo que define la viabilidad."
+    },
+    {
+      "source_id": "N32-s08-b009",
+      "kind": "paragraph",
+      "text": "La transición asociada con severidad necesita un estado intermedio explícito. Durante ese período conviven reglas, versiones o capacidades diferentes. N32 declara cuál rige para cada población, cómo se comunica y qué contingencia protege a quien podría quedar entre ambos sistemas."
+    },
+    {
+      "source_id": "N32-s08-b010",
+      "kind": "paragraph",
+      "text": "La medición de severidad evita dos extremos: conservar por inercia y cambiar por identidad metodológica. Baja frecuencia no vuelve tolerable un daño irreversible. Entre ambos queda un nivel de autonomía provisional con fecha, responsable y prueba de revisión."
+    },
+    {
+      "source_id": "N32-s08-b011",
+      "kind": "heading-3",
+      "text": "Desempeño desagregado"
+    },
+    {
+      "source_id": "N32-s08-b012",
+      "kind": "paragraph",
+      "text": "El desempeño desagregado muestra diferencias entre grupos, contextos y clases de caso. El concepto adquiere valor cuando cambia un nivel de autonomía. Si el equipo de N32 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N32-s08-b013",
+      "kind": "paragraph",
+      "text": "Un promedio global puede ocultar desigualdad sistemática. Su vecino conceptual puede parecer equivalente y no lo es. En N32, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N32-s08-b014",
+      "kind": "paragraph",
+      "text": "El valor de desempeño desagregado aparece al contrastar alternativas. Desempeño desagregado se operacionaliza delimitando propósito, población, entradas, autoridad, acción, consecuencia y condición de revisión. El recorrido se contrasta con una alternativa más simple y con un escenario adverso antes de ampliar compromiso. Si dos opciones producen el mismo entregable inmediato, el mecanismo permite compararlas por aprendizaje, dependencia, riesgo residual y posibilidad de salida."
+    },
+    {
+      "source_id": "N32-s08-b015",
+      "kind": "paragraph",
+      "text": "La suficiencia de evidencia para desempeño desagregado depende del costo de equivocarse. La evidencia integra una prueba previa, resultados desagregados y el episodio siguiente: Se comparan consultas por idioma, canal y necesidad También conserva las decisiones humanas y automáticas que produjeron ese resultado. A mayor irreversibilidad o desigualdad de daño, mayor contraste, supervisión y autoridad se requieren."
+    },
+    {
+      "source_id": "N32-s08-b016",
+      "kind": "paragraph",
+      "text": "Ejemplo. Se comparan consultas por idioma, canal y necesidad En N32, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N32-s08-b017",
+      "kind": "paragraph",
+      "text": "Finalmente, desempeño desagregado debe convivir con otras decisiones. Optimizarla de manera aislada puede empeorar flujo, seguridad o comprensión. HH-32 N32 explicita dependencias y evita que una mejora local se presente como outcome completo del sistema."
+    },
+    {
+      "source_id": "N32-s08-b018",
+      "kind": "paragraph",
+      "text": "La revisión de desempeño desagregado fija fecha y desencadenante. Puede ocurrir por incidente, cambio normativo, nueva población o evidencia acumulada. Sin esa regla en N32, un nivel de autonomía provisional se vuelve permanente por olvido."
+    },
+    {
+      "source_id": "N32-s08-b019",
+      "kind": "paragraph",
+      "text": "El cierre de desempeño desagregado debe sobrevivir a una revisión independiente. La evidencia, las decisiones y los límites se almacenan de manera que otra persona pueda cuestionarlos. En N32, la trazabilidad no busca eliminar desacuerdo; busca que el desacuerdo se concentre en supuestos examinables y no en recuerdos incompatibles."
+    },
+    {
+      "source_id": "N32-s08-b020",
+      "kind": "paragraph",
+      "text": "La exposición evaluada debe poder explicar por qué desempeño desagregado recibe cierta inversión y no otra. Categorías demasiado amplias pueden volver invisible la población relevante. Esa explicación conecta valor, costo, aprendizaje y reparación, y permanece abierta a evidencia nueva."
+    },
+    {
+      "source_id": "N32-s08-b021",
+      "kind": "heading-3",
+      "text": "Robustez"
+    },
+    {
+      "source_id": "N32-s08-b022",
+      "kind": "paragraph",
+      "text": "La robustez es capacidad de sostener comportamiento aceptable ante variación esperable. La definición fija el objeto de decisión. Si el equipo de N32 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N32-s08-b023",
+      "kind": "paragraph",
+      "text": "No significa inmunidad a todo cambio. La distinción evita que una palabra familiar oculte otro mecanismo. En N32, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N32-s08-b024",
+      "kind": "paragraph",
+      "text": "En robustez, el recorrido causal debe mostrar qué condición habilita la acción, qué transformación ocurre y quién absorbe el resultado. Robustez se operacionaliza delimitando propósito, población, entradas, autoridad, acción, consecuencia y condición de revisión. El recorrido se contrasta con una alternativa más simple y con un escenario adverso antes de ampliar compromiso. Si un salto depende sólo de una explicación oral, la estrategia todavía no puede gobernarlo."
+    },
+    {
+      "source_id": "N32-s08-b025",
+      "kind": "paragraph",
+      "text": "La evidencia relevante para robustez no se limita al resultado promedio. La evidencia integra una prueba previa, resultados desagregados y el episodio siguiente: Se modifican redacción, orden y datos irrelevantes de la consulta También conserva las decisiones humanas y automáticas que produjeron ese resultado. N32 busca además casos negativos, diferencias entre poblaciones y señales de que la explicación elegida podría ser insuficiente."
+    },
+    {
+      "source_id": "N32-s08-b026",
+      "kind": "paragraph",
+      "text": "Ejemplo. Se modifican redacción, orden y datos irrelevantes de la consulta En N32, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N32-s08-b027",
+      "kind": "paragraph",
+      "text": "El tradeoff central de robustez aparece entre anticipar y preservar opciones. Anticipar puede reducir coordinación y también fijar una premisa prematura; preservar opciones puede producir aprendizaje y también demorar una protección necesaria. La elección debe declarar cuál de esos costos acepta, durante cuánto tiempo y para quién."
+    },
+    {
+      "source_id": "N32-s08-b028",
+      "kind": "paragraph",
+      "text": "La evaluación independiente de robustez termina con una pregunta de uso: ¿qué podría decidir ahora una persona que antes no podía? En N32, la respuesta debe nombrar una acción, una restricción y una evidencia, no sólo una comprensión mejorada."
+    },
+    {
+      "source_id": "N32-s08-b029",
+      "kind": "paragraph",
+      "text": "Operacionalizar robustez requiere asignar una unidad observable. El equipo de evaluación define qué episodio contará, desde qué momento, con qué población y bajo qué fuente. Después compara al menos un caso ordinario con otro que fuerce excepción. Esta precisión en N32 evita que una conclusión general se sostenga sólo en ejemplos convenientes."
+    },
+    {
+      "source_id": "N32-s08-b030",
+      "kind": "paragraph",
+      "text": "La decisión profesional no termina en adoptar robustez. Se compara una ruta principal con una explicación rival, se explicita quién queda expuesto y se conserva un modo de revisar. Una prueba limitada no anticipa todas las distribuciones futuras. El límite forma parte del diseño y no una nota posterior."
+    },
+    {
+      "source_id": "N32-s08-b031",
+      "kind": "heading-3",
+      "text": "Prueba adversa"
+    },
+    {
+      "source_id": "N32-s08-b032",
+      "kind": "paragraph",
+      "text": "La evaluación sociotécnica adversa busca activamente modos de falla, abuso y evasión. Conviene comenzar por su función profesional. Si el equipo de N32 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N32-s08-b033",
+      "kind": "paragraph",
+      "text": "No es creatividad sin modelo de amenaza. El contraste importa porque conduce a pruebas distintas. En N32, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N32-s08-b034",
+      "kind": "paragraph",
+      "text": "El mecanismo de prueba adversa no se presume por el nombre. Prueba adversa se operacionaliza delimitando propósito, población, entradas, autoridad, acción, consecuencia y condición de revisión. El recorrido se contrasta con una alternativa más simple y con un escenario adverso antes de ampliar compromiso. Debe localizarse dónde comienza, qué relaciones activa, qué demora introduce y qué capacidad de reparación queda disponible cuando la expectativa no se cumple."
+    },
+    {
+      "source_id": "N32-s08-b035",
+      "kind": "paragraph",
+      "text": "Una afirmación sobre prueba adversa gana fuerza cuando puede reconstruirse desde fuentes independientes. La evidencia integra una prueba previa, resultados desagregados y el episodio siguiente: Se intenta obtener descuentos o datos mediante instrucciones maliciosas También conserva las decisiones humanas y automáticas que produjeron ese resultado. La ausencia de señal también se interpreta: puede significar estabilidad, mala observación o exclusión del caso que más importa."
+    },
+    {
+      "source_id": "N32-s08-b036",
+      "kind": "paragraph",
+      "text": "Ejemplo. Se intenta obtener descuentos o datos mediante instrucciones maliciosas En N32, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N32-s08-b037",
+      "kind": "paragraph",
+      "text": "La escala modifica prueba adversa. Una solución válida para un equipo puede fallar cuando atraviesa sedes, turnos o proveedores porque aumenta la distancia entre señal y autoridad. Antes de ampliar, N32 prueba si la misma decisión conserva significado y reparación bajo esa nueva distribución."
+    },
+    {
+      "source_id": "N32-s08-b038",
+      "kind": "paragraph",
+      "text": "Para evitar consenso aparente, prueba adversa se revisa con alguien afectado y con alguien responsable de reparar. Las dos perspectivas pueden valorar resultados diferentes y obligan a declarar la prioridad elegida."
+    },
+    {
+      "source_id": "N32-s08-b039",
+      "kind": "paragraph",
+      "text": "En la práctica, prueba adversa atraviesa más de un área. Se identifican handoffs, esperas, decisiones y datos que cada participante puede ver. Cuando dos áreas usan evidencia distinta en N32, el expediente conserva la divergencia hasta determinar si representa error, perspectiva legítima o una brecha que la estrategia debe resolver."
+    },
+    {
+      "source_id": "N32-s08-b040",
+      "kind": "paragraph",
+      "text": "En una revisión, prueba adversa debe responder tres preguntas: qué mejora, qué desplaza y qué vuelve más difícil de revertir. Publicar ataques sin control también puede ampliar exposición. Si esas respuestas cambian, también debe cambiar el compromiso, aunque el trabajo previo haya sido técnicamente correcto."
+    },
+    {
+      "source_id": "N32-s09-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 3 · Gobernar cambio, incidentes y retiro"
+    },
+    {
+      "source_id": "N32-s09-b001",
+      "kind": "heading-3",
+      "text": "Confiabilidad y repetibilidad"
+    },
+    {
+      "source_id": "N32-s09-b002",
+      "kind": "paragraph",
+      "text": "La confiabilidad estudia variación entre ejecuciones y condiciones equivalentes. El concepto adquiere valor cuando cambia un nivel de autonomía. Si el equipo de N32 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N32-s09-b003",
+      "kind": "paragraph",
+      "text": "Una única respuesta correcta no caracteriza un sistema no determinista. Su vecino conceptual puede parecer equivalente y no lo es. En N32, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N32-s09-b004",
+      "kind": "paragraph",
+      "text": "Comprender confiabilidad y repetibilidad exige seguir la decisión en el tiempo. Confiabilidad y repetibilidad se operacionaliza delimitando propósito, población, entradas, autoridad, acción, consecuencia y condición de revisión. El recorrido se contrasta con una alternativa más simple y con un escenario adverso antes de ampliar compromiso. La medición distingue condición, intervención, señal temprana y consecuencia para evitar atribuir a una práctica un efecto producido por otro cambio simultáneo."
+    },
+    {
+      "source_id": "N32-s09-b005",
+      "kind": "paragraph",
+      "text": "La evaluación sociotécnica de confiabilidad y repetibilidad debe formularse antes de conocer el resultado. La evidencia integra una prueba previa, resultados desagregados y el episodio siguiente: Se repite la misma tarea con versiones y temperaturas controladas También conserva las decisiones humanas y automáticas que produjeron ese resultado. Se registra qué observación sostendría continuar, cuál obligaría a adaptar y cuál activaría detención o escalamiento."
+    },
+    {
+      "source_id": "N32-s09-b006",
+      "kind": "paragraph",
+      "text": "Ejemplo. Se repite la misma tarea con versiones y temperaturas controladas En N32, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N32-s09-b007",
+      "kind": "paragraph",
+      "text": "El tiempo también altera confiabilidad y repetibilidad. Una evidencia suficiente para explorar puede ser insuficiente para operar de forma permanente. Por eso se separan prueba local, compromiso transitorio y condición estable, y cada estado conserva fecha, alcance y responsable de revisión."
+    },
+    {
+      "source_id": "N32-s09-b008",
+      "kind": "paragraph",
+      "text": "El registro de confiabilidad y repetibilidad conserva una explicación rival. Si esa alternativa predice mejor el episodio siguiente, el equipo cambia de curso sin reescribir retrospectivamente lo que creía saber."
+    },
+    {
+      "source_id": "N32-s09-b009",
+      "kind": "paragraph",
+      "text": "La gobernanza de confiabilidad y repetibilidad incluye quién puede proponer, aprobar, ejecutar, observar y reparar. Esas funciones no se presumen por cargo ni por permiso técnico. N32 las prueba en un escenario donde falta la persona habitual, porque una capacidad que sólo funciona con conocimiento privado todavía no pertenece a la organización."
+    },
+    {
+      "source_id": "N32-s09-b010",
+      "kind": "paragraph",
+      "text": "El juicio sobre confiabilidad y repetibilidad incluye distribución de consecuencias. La repetibilidad total puede ser innecesaria si la consecuencia permanece estable. Una mejora agregada no alcanza si concentra espera, riesgo o trabajo invisible en un grupo sin autoridad para discutir la decisión."
+    },
+    {
+      "source_id": "N32-s09-b011",
+      "kind": "heading-3",
+      "text": "Desempeño del equipo humano IA"
+    },
+    {
+      "source_id": "N32-s09-b012",
+      "kind": "paragraph",
+      "text": "La evaluación sociotécnica mide el resultado del conjunto y no sólo de sus componentes. La definición fija el objeto de decisión. Si el equipo de N32 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N32-s09-b013",
+      "kind": "paragraph",
+      "text": "Una mejor recomendación puede empeorar la decisión si induce confianza excesiva. La distinción evita que una palabra familiar oculte otro mecanismo. En N32, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N32-s09-b014",
+      "kind": "paragraph",
+      "text": "La explicación operacional de desempeño del equipo humano ia conecta personas, reglas y tecnología. Desempeño del equipo humano IA se operacionaliza delimitando propósito, población, entradas, autoridad, acción, consecuencia y condición de revisión. El recorrido se contrasta con una alternativa más simple y con un escenario adverso antes de ampliar compromiso. Esa conexión permite decidir qué parte puede modificarse localmente y cuál requiere coordinación con otras autoridades o capacidades."
+    },
+    {
+      "source_id": "N32-s09-b015",
+      "kind": "paragraph",
+      "text": "Para auditar desempeño del equipo humano ia, conviene combinar evidencia de diseño, ejecución y consecuencia. La evidencia integra una prueba previa, resultados desagregados y el episodio siguiente: Se observa cuándo Recepción acepta, corrige o ignora sugerencias También conserva las decisiones humanas y automáticas que produjeron ese resultado. Ninguna fuente domina automáticamente; una especificación correcta puede convivir con una operación dañina."
+    },
+    {
+      "source_id": "N32-s09-b016",
+      "kind": "paragraph",
+      "text": "Ejemplo. Se observa cuándo Recepción acepta, corrige o ignora sugerencias En N32, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N32-s09-b017",
+      "kind": "paragraph",
+      "text": "Existe además una dimensión política en desempeño del equipo humano ia. La opción más eficiente puede reducir la capacidad de una persona para cuestionar un nivel de autonomía o trasladar trabajo sin reconocerlo. N32 registra esa distribución y no la esconde dentro de un indicador agregado."
+    },
+    {
+      "source_id": "N32-s09-b018",
+      "kind": "paragraph",
+      "text": "Una prueba adversa de desempeño del equipo humano ia introduce demora, ausencia de autoridad o dato incompleto. El objetivo de N32 no es cubrir todas las fallas, sino revelar si la estrategia mantiene una salida segura fuera del camino ordinario."
+    },
+    {
+      "source_id": "N32-s09-b019",
+      "kind": "paragraph",
+      "text": "El indicador de desempeño del equipo humano ia se elige después de formular la decisión. Puede combinar tiempo, calidad, distribución y costo de reparación. Una cifra aislada rara vez explica el mecanismo. En N32, la lectura conjunta de señales evita optimizar velocidad mientras aumenta retrabajo, exclusión o dependencia."
+    },
+    {
+      "source_id": "N32-s09-b020",
+      "kind": "paragraph",
+      "text": "La condición de cierre de desempeño del equipo humano ia no es perfección. La intervención humana puede sumar sesgo, demora o automatización complaciente. Es evidencia suficiente para el uso previsto, riesgo residual aceptado por autoridad y una ruta clara cuando el supuesto deje de cumplirse."
+    },
+    {
+      "source_id": "N32-s09-b021",
+      "kind": "heading-3",
+      "text": "Supervisión real"
+    },
+    {
+      "source_id": "N32-s09-b022",
+      "kind": "paragraph",
+      "text": "La supervisión real combina competencia, atención, tiempo, autoridad y alternativa. Conviene comenzar por su función profesional. Si el equipo de N32 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N32-s09-b023",
+      "kind": "paragraph",
+      "text": "No se prueba con una casilla de aprobación. El contraste importa porque conduce a pruebas distintas. En N32, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N32-s09-b024",
+      "kind": "paragraph",
+      "text": "Para que supervisión real sea algo más que una etiqueta, debe existir una cadena examinable. Supervisión real se operacionaliza delimitando propósito, población, entradas, autoridad, acción, consecuencia y condición de revisión. El recorrido se contrasta con una alternativa más simple y con un escenario adverso antes de ampliar compromiso. La cadena incluye supuestos, handoffs y efectos laterales que una descripción ideal suele omitir."
+    },
+    {
+      "source_id": "N32-s09-b025",
+      "kind": "paragraph",
+      "text": "El equipo de evaluación no declara resuelto supervisión real por acuerdo retórico. La evidencia integra una prueba previa, resultados desagregados y el episodio siguiente: El turno nocturno detecta y revierte una compensación improcedente También conserva las decisiones humanas y automáticas que produjeron ese resultado. Una persona ajena al diseño debe poder repetir la prueba y comprender por qué el resultado habilita un nivel de autonomía concreta."
+    },
+    {
+      "source_id": "N32-s09-b026",
+      "kind": "paragraph",
+      "text": "Ejemplo. El turno nocturno detecta y revierte una compensación improcedente En N32, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N32-s09-b027",
+      "kind": "paragraph",
+      "text": "La mantenibilidad de supervisión real se prueba mediante cambio deliberado. Se modifica una regla, una fuente o una dependencia y se observa quién detecta el impacto, cuánto tarda en responder y qué información necesita. En N32, si la respuesta depende de memoria privada, la capacidad todavía es frágil."
+    },
+    {
+      "source_id": "N32-s09-b028",
+      "kind": "paragraph",
+      "text": "El costo de supervisión real se observa tanto en presupuesto como en atención, espera, coordinación y dependencia. Lo que no figura en una factura puede seguir siendo el costo que define la viabilidad."
+    },
+    {
+      "source_id": "N32-s09-b029",
+      "kind": "paragraph",
+      "text": "La transición asociada con supervisión real necesita un estado intermedio explícito. Durante ese período conviven reglas, versiones o capacidades diferentes. N32 declara cuál rige para cada población, cómo se comunica y qué contingencia protege a quien podría quedar entre ambos sistemas."
+    },
+    {
+      "source_id": "N32-s09-b030",
+      "kind": "paragraph",
+      "text": "La medición de supervisión real evita dos extremos: conservar por inercia y cambiar por identidad metodológica. La carga puede convertir revisión nominal en aceptación automática. Entre ambos queda un nivel de autonomía provisional con fecha, responsable y prueba de revisión."
+    },
+    {
+      "source_id": "N32-s09-b031",
+      "kind": "heading-3",
+      "text": "Evaluación en operación"
+    },
+    {
+      "source_id": "N32-s09-b032",
+      "kind": "paragraph",
+      "text": "La evaluación en operación repite pruebas y observa consecuencias después del despliegue. El concepto adquiere valor cuando cambia un nivel de autonomía. Si el equipo de N32 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+    },
+    {
+      "source_id": "N32-s09-b033",
+      "kind": "paragraph",
+      "text": "No es sólo monitoreo técnico ni auditoría anual. Su vecino conceptual puede parecer equivalente y no lo es. En N32, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+    },
+    {
+      "source_id": "N32-s09-b034",
+      "kind": "paragraph",
+      "text": "El valor de evaluación en operación aparece al contrastar alternativas. Evaluación en operación se operacionaliza delimitando propósito, población, entradas, autoridad, acción, consecuencia y condición de revisión. El recorrido se contrasta con una alternativa más simple y con un escenario adverso antes de ampliar compromiso. Si dos opciones producen el mismo entregable inmediato, el mecanismo permite compararlas por aprendizaje, dependencia, riesgo residual y posibilidad de salida."
+    },
+    {
+      "source_id": "N32-s09-b035",
+      "kind": "paragraph",
+      "text": "La suficiencia de evidencia para evaluación en operación depende del costo de equivocarse. La evidencia integra una prueba previa, resultados desagregados y el episodio siguiente: Cambios de temporada disparan nuevas muestras y umbrales También conserva las decisiones humanas y automáticas que produjeron ese resultado. A mayor irreversibilidad o desigualdad de daño, mayor contraste, supervisión y autoridad se requieren."
+    },
+    {
+      "source_id": "N32-s09-b036",
+      "kind": "paragraph",
+      "text": "Ejemplo. Cambios de temporada disparan nuevas muestras y umbrales En N32, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+    },
+    {
+      "source_id": "N32-s09-b037",
+      "kind": "paragraph",
+      "text": "Finalmente, evaluación en operación debe convivir con otras decisiones. Optimizarla de manera aislada puede empeorar flujo, seguridad o comprensión. HH-32 N32 explicita dependencias y evita que una mejora local se presente como outcome completo del sistema."
+    },
+    {
+      "source_id": "N32-s09-b038",
+      "kind": "paragraph",
+      "text": "La revisión de evaluación en operación fija fecha y desencadenante. Puede ocurrir por incidente, cambio normativo, nueva población o evidencia acumulada. Sin esa regla en N32, un nivel de autonomía provisional se vuelve permanente por olvido."
+    },
+    {
+      "source_id": "N32-s09-b039",
+      "kind": "paragraph",
+      "text": "El cierre de evaluación en operación debe sobrevivir a una revisión independiente. La evidencia, las decisiones y los límites se almacenan de manera que otra persona pueda cuestionarlos. En N32, la trazabilidad no busca eliminar desacuerdo; busca que el desacuerdo se concentre en supuestos examinables y no en recuerdos incompatibles."
+    },
+    {
+      "source_id": "N32-s09-b040",
+      "kind": "paragraph",
+      "text": "La exposición evaluada debe poder explicar por qué evaluación en operación recibe cierta inversión y no otra. Medir sin capacidad de limitar o retirar no gobierna el riesgo. Esa explicación conecta valor, costo, aprendizaje y reparación, y permanece abierta a evidencia nueva."
+    },
+    {
+      "source_id": "N32-s09-b041",
+      "kind": "heading-3",
+      "text": "Instrumento HH-32: expediente de evaluación y autonomía"
+    },
+    {
+      "source_id": "N32-s09-b042",
+      "kind": "paragraph",
+      "text": "El instrumento organiza un nivel de autonomía concreta y no una descripción total. Cada campo debe completarse con evidencia disponible, incertidumbre explícita y autoridad identificada. Si un campo todavía no puede responderse, se registra como asunto abierto y no se completa por inferencia."
+    },
+    {
+      "source_id": "N32-s09-b043",
+      "kind": "list-item",
+      "text": "**Tarea y población.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N32, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N32-s09-b044",
+      "kind": "list-item",
+      "text": "**Decisión habilitada.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N32, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N32-s09-b045",
+      "kind": "list-item",
+      "text": "**Baseline.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N32, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N32-s09-b046",
+      "kind": "list-item",
+      "text": "**Conjunto y cobertura.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N32, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N32-s09-b047",
+      "kind": "list-item",
+      "text": "**Métrica y validez.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N32, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N32-s09-b048",
+      "kind": "list-item",
+      "text": "**Severidad.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N32, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N32-s09-b049",
+      "kind": "list-item",
+      "text": "**Desagregación.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N32, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N32-s09-b050",
+      "kind": "list-item",
+      "text": "**Robustez.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N32, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N32-s09-b051",
+      "kind": "list-item",
+      "text": "**Prueba adversa.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N32, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N32-s09-b052",
+      "kind": "list-item",
+      "text": "**Equipo humano IA.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N32, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N32-s09-b053",
+      "kind": "list-item",
+      "text": "**Umbral de autonomía.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N32, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N32-s09-b054",
+      "kind": "list-item",
+      "text": "**Evaluación continua.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N32, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+    },
+    {
+      "source_id": "N32-s09-b055",
+      "kind": "paragraph",
+      "text": "HH-32 se prueba con un escenario ordinario y uno adverso. Una persona que no participó en su construcción debe poder reconstruir qué se decidió, por qué, qué permanece incierto y cuál es la próxima puerta. El cierre no exige certeza total; exige incertidumbre gobernada y una salida practicable."
+    },
+    {
+      "source_id": "N32-s09-b056",
+      "kind": "heading-3",
+      "text": "Caso de transferencia: priorización hospitalaria"
+    },
+    {
+      "source_id": "N32-s09-b057",
+      "kind": "paragraph",
+      "text": "Un hospital evalúa una herramienta que ordena estudios pendientes. El promedio de concordancia es alto, pero los casos urgentes y las poblaciones con datos incompletos requieren otra lectura."
+    },
+    {
+      "source_id": "N32-s09-b058",
+      "kind": "paragraph",
+      "text": "HH-32 pondera severidad, cobertura, desempeño desagregado y capacidad del equipo para detectar fallas bajo carga. La herramienta prioriza sólo dentro de límites y nunca elimina revisión clínica."
+    },
+    {
+      "source_id": "N32-s09-b059",
+      "kind": "paragraph",
+      "text": "La transferencia muestra que la autonomía se diseña por tarea y consecuencia, no por prestigio del modelo."
+    },
+    {
+      "source_id": "N32-s09-b060",
+      "kind": "heading-3",
+      "text": "Contraejemplo: ganar el benchmark"
+    },
+    {
+      "source_id": "N32-s09-b061",
+      "kind": "paragraph",
+      "text": "Un proveedor exhibe una mejora de dos puntos en un conjunto público y pide automatizar decisiones."
+    },
+    {
+      "source_id": "N32-s09-b062",
+      "kind": "paragraph",
+      "text": "El conjunto no representa la población local, no incluye consecuencias ni mide supervisión. La comparación no puede sostener la decisión solicitada."
+    },
+    {
+      "source_id": "N32-s09-b063",
+      "kind": "paragraph",
+      "text": "La evidencia vale por la relación que establece entre uso, riesgo y autoridad, no por el ranking."
+    },
+    {
+      "source_id": "N32-s09-b064",
+      "kind": "heading-3",
+      "text": "Prueba integral antes de ampliar compromiso"
+    },
+    {
+      "source_id": "N32-s09-b065",
+      "kind": "paragraph",
+      "text": "La evaluación sociotécnica integral de evaluar tareas, cobertura, severidad, desigualdad, robustez y supervisión toma un nivel de autonomía real y la recorre desde su origen hasta una consecuencia observable. Utiliza tarea y población, decisión habilitada, baseline, conjunto y cobertura para evitar que el análisis quede dividido en artefactos independientes. Cada afirmación debe encontrar una fuente, una autoridad y una condición de revisión. Cuando dos registros no coinciden, la diferencia se conserva como hallazgo hasta explicar su mecanismo."
+    },
+    {
+      "source_id": "N32-s09-b066",
+      "kind": "paragraph",
+      "text": "El escenario ordinario verifica que n32 evalúa tareas, cobertura, severidad, desigualdad, robustez y supervisión real antes de asignar autonomía a una capacidad de inteligencia artificial. El escenario adverso modifica una dependencia, introduce demora y deja ausente a la persona que suele resolver. El equipo de evaluación observa si la estrategia detecta el cambio, limita el daño, comunica incertidumbre y activa reparación sin recurrir a conocimiento privado."
+    },
+    {
+      "source_id": "N32-s09-b067",
+      "kind": "paragraph",
+      "text": "La comparación incluye una alternativa descartada. Se documenta por qué no fue elegida, qué supuesto la volvería preferible y qué costo tendría recuperarla. Este ejercicio protege opciones futuras y evita presentar la decisión actual como única solución técnicamente posible. También vuelve discutibles los costos hundidos cuando aparece evidencia nueva."
+    },
+    {
+      "source_id": "N32-s09-b068",
+      "kind": "paragraph",
+      "text": "La evaluación sociotécnica concluye con una defensa breve ante una audiencia ajena al equipo. Esa audiencia debe poder reconstruir el problema, objetar la evidencia de desempeño y comprender por qué la salida propuesta es proporcional. Si sólo puede repetir la recomendación, el expediente todavía no sostiene un nivel de autonomía profesional. Si puede reconocer límites y actuar ante una excepción, existe capacidad transferible."
+    },
+    {
+      "source_id": "N32-s10-h2",
+      "kind": "heading-2",
+      "text": "Errores frecuentes"
+    },
+    {
+      "source_id": "N32-s10-b001",
+      "kind": "heading-3",
+      "text": "Evaluar sólo el modelo"
+    },
+    {
+      "source_id": "N32-s10-b002",
+      "kind": "paragraph",
+      "text": "Evaluar sólo el modelo simplifica un nivel de autonomía que depende de propósito, evidencia y consecuencia. La velocidad inicial se paga cuando operación descubre el supuesto omitido. La recalibración vuelve al episodio, identifica quién absorbe el costo y define una prueba antes de continuar."
+    },
+    {
+      "source_id": "N32-s10-b003",
+      "kind": "heading-3",
+      "text": "Usar un promedio único"
+    },
+    {
+      "source_id": "N32-s10-b004",
+      "kind": "paragraph",
+      "text": "Usar un promedio único parece reducir coordinación, pero confunde acuerdo con conocimiento suficiente. El equipo de evaluación debe comparar una explicación rival, localizar autoridad y registrar qué señal cambiaría el curso elegido."
+    },
+    {
+      "source_id": "N32-s10-b005",
+      "kind": "heading-3",
+      "text": "Confundir volumen con cobertura"
+    },
+    {
+      "source_id": "N32-s10-b006",
+      "kind": "paragraph",
+      "text": "Confundir volumen con cobertura desplaza incertidumbre hacia personas que no participaron de la elección. Corregirlo exige reconstruir el mecanismo, hacer visible el trabajo añadido y establecer una condición de salida proporcional al daño posible."
+    },
+    {
+      "source_id": "N32-s10-b007",
+      "kind": "heading-3",
+      "text": "Omitir baseline"
+    },
+    {
+      "source_id": "N32-s10-b008",
+      "kind": "paragraph",
+      "text": "Omitir baseline convierte una práctica en fin. La revisión pregunta qué función debía cumplir, qué evidencia produjo y por qué sigue siendo necesaria. Si la función desapareció, la práctica se adapta o se retira."
+    },
+    {
+      "source_id": "N32-s10-b009",
+      "kind": "heading-3",
+      "text": "Medir lo fácil"
+    },
+    {
+      "source_id": "N32-s10-b010",
+      "kind": "paragraph",
+      "text": "Medir lo fácil oculta una frontera. El artefacto puede cerrar y la capacidad seguir incompleta. Un escenario adverso permite observar handoffs, excepciones y reparación antes de ampliar compromiso."
+    },
+    {
+      "source_id": "N32-s10-b011",
+      "kind": "heading-3",
+      "text": "Tratar frecuencia como severidad"
+    },
+    {
+      "source_id": "N32-s10-b012",
+      "kind": "paragraph",
+      "text": "Tratar frecuencia como severidad confunde cumplimiento formal con decisión defendible. Se necesita conectar fuente, interpretación, implementación y efecto, incluyendo la autoridad de despliegue que acepta el riesgo residual."
+    },
+    {
+      "source_id": "N32-s10-b013",
+      "kind": "heading-3",
+      "text": "No desagregar"
+    },
+    {
+      "source_id": "N32-s10-b014",
+      "kind": "paragraph",
+      "text": "No desagregar suele premiar lo visible y dejar fuera mantenimiento, soporte y aprendizaje. La recalibración compara el ciclo completo, documenta dependencia y ensaya una salida real."
+    },
+    {
+      "source_id": "N32-s10-b015",
+      "kind": "heading-3",
+      "text": "Probar sólo el camino feliz"
+    },
+    {
+      "source_id": "N32-s10-b016",
+      "kind": "paragraph",
+      "text": "Probar sólo el camino feliz reduce diversidad de casos a un promedio conveniente. Se revisan poblaciones, extremos y daños asimétricos para evitar que una mejora global silencie una pérdida crítica."
+    },
+    {
+      "source_id": "N32-s10-b017",
+      "kind": "heading-3",
+      "text": "Ignorar variabilidad"
+    },
+    {
+      "source_id": "N32-s10-b018",
+      "kind": "paragraph",
+      "text": "Ignorar variabilidad borra memoria y vuelve inexplicable el cambio de rumbo. Una baseline y un registro breve permiten conservar razones sin inmovilizar la estrategia."
+    },
+    {
+      "source_id": "N32-s10-b019",
+      "kind": "heading-3",
+      "text": "Evaluar humanos y máquina por separado"
+    },
+    {
+      "source_id": "N32-s10-b020",
+      "kind": "paragraph",
+      "text": "Evaluar humanos y máquina por separado deja responsabilidad sin capacidad. El diseño debe unir permiso, recursos, evidencia y posibilidad de reparar; nombrar un dueño no crea por sí mismo una función operativa."
+    },
+    {
+      "source_id": "N32-s10-b021",
+      "kind": "heading-3",
+      "text": "Simular supervisión sin carga"
+    },
+    {
+      "source_id": "N32-s10-b022",
+      "kind": "paragraph",
+      "text": "Simular supervisión sin carga simplifica un nivel de autonomía que depende de propósito, evidencia y consecuencia. La velocidad inicial se paga cuando operación descubre el supuesto omitido. La recalibración vuelve al episodio, identifica quién absorbe el costo y define una prueba antes de continuar."
+    },
+    {
+      "source_id": "N32-s10-b023",
+      "kind": "heading-3",
+      "text": "Cerrar evaluación al desplegar"
+    },
+    {
+      "source_id": "N32-s10-b024",
+      "kind": "paragraph",
+      "text": "Cerrar evaluación al desplegar parece reducir coordinación, pero confunde acuerdo con conocimiento suficiente. El equipo de evaluación debe comparar una explicación rival, localizar autoridad y registrar qué señal cambiaría el curso elegido."
+    },
+    {
+      "source_id": "N32-s11-h2",
+      "kind": "heading-2",
+      "text": "Consecuencias profesionales"
+    },
+    {
+      "source_id": "N32-s11-b001",
+      "kind": "paragraph",
+      "text": "N32 evalúa tareas, cobertura, severidad, desigualdad, robustez y supervisión real antes de asignar autonomía a una capacidad de inteligencia artificial. La competencia profesional aparece cuando la elección conserva trazabilidad, expone sus límites y puede ser discutida por quienes deciden, operan y reciben sus consecuencias."
+    },
+    {
+      "source_id": "N32-s12-h2",
+      "kind": "heading-2",
+      "text": "Límites y tensiones"
+    },
+    {
+      "source_id": "N32-s12-b001",
+      "kind": "paragraph",
+      "text": "Ningún modelo, expediente o marco elimina incertidumbre, conflicto ni asimetrías de poder. La evidencia disponible puede ser incompleta, los incentivos pueden desplazar daño y la autoridad de despliegue formal puede carecer de capacidad real. La lectura exige declarar esas restricciones, limitar exposición, preservar reparación y fijar una revisión verificable."
+    },
+    {
+      "source_id": "N32-s13-h2",
+      "kind": "heading-2",
+      "text": "De N32 a N33"
+    },
+    {
+      "source_id": "N32-s13-b001",
+      "kind": "paragraph",
+      "text": "N33 convertirá esa evidencia en gobierno vivo del ciclo de vida. N32 no diseña todavía inventario institucional, ownership, control de cambios, incidentes ni retiro."
+    },
+    {
+      "source_id": "N32-s14-h2",
+      "kind": "heading-2",
+      "text": "Síntesis"
+    },
+    {
+      "source_id": "N32-s14-b001",
+      "kind": "paragraph",
+      "text": "N32 evalúa tareas, cobertura, severidad, desigualdad, robustez y supervisión real antes de asignar autonomía a una capacidad de inteligencia artificial."
+    },
+    {
+      "source_id": "N32-s14-b002",
+      "kind": "paragraph",
+      "text": "El bloque no propone reemplazar una doctrina por otra. Propone hacer visibles las decisiones que cada práctica organiza, la evidencia de desempeño que necesita y los daños que puede producir. El resultado es una intervención que puede explicarse, probarse y revisarse."
+    },
+    {
+      "source_id": "N32-s15-h2",
+      "kind": "heading-2",
+      "text": "Cinco píldoras para recordar"
+    },
+    {
+      "source_id": "N32-s15-b001",
+      "kind": "list-item",
+      "text": "La unidad de evaluación combina tarea, población, contexto, salida y consecuencia."
+    },
+    {
+      "source_id": "N32-s15-b002",
+      "kind": "list-item",
+      "text": "La cobertura expresa qué proporción y diversidad del uso previsto está representada."
+    },
+    {
+      "source_id": "N32-s15-b003",
+      "kind": "list-item",
+      "text": "La baseline representa la mejor alternativa practicable sin el cambio evaluado."
+    },
+    {
+      "source_id": "N32-s15-b004",
+      "kind": "list-item",
+      "text": "La validez pregunta si la medida representa la capacidad que se pretende juzgar."
+    },
+    {
+      "source_id": "N32-s15-b005",
+      "kind": "list-item",
+      "text": "La severidad clasifica consecuencias por daño, alcance, reversibilidad y población."
+    },
+    {
+      "source_id": "N32-s16-h2",
+      "kind": "heading-2",
+      "text": "Glosario esencial"
+    },
+    {
+      "source_id": "N32-s16-b001",
+      "kind": "paragraph",
+      "text": "**Unidad de evaluación:** la unidad de evaluación combina tarea, población, contexto, salida y consecuencia."
+    },
+    {
+      "source_id": "N32-s16-b002",
+      "kind": "paragraph",
+      "text": "**Cobertura:** la cobertura expresa qué proporción y diversidad del uso previsto está representada."
+    },
+    {
+      "source_id": "N32-s16-b003",
+      "kind": "paragraph",
+      "text": "**Baseline:** la baseline representa la mejor alternativa practicable sin el cambio evaluado."
+    },
+    {
+      "source_id": "N32-s16-b004",
+      "kind": "paragraph",
+      "text": "**Validez de constructo:** la validez pregunta si la medida representa la capacidad que se pretende juzgar."
+    },
+    {
+      "source_id": "N32-s16-b005",
+      "kind": "paragraph",
+      "text": "**Severidad:** la severidad clasifica consecuencias por daño, alcance, reversibilidad y población."
+    },
+    {
+      "source_id": "N32-s16-b006",
+      "kind": "paragraph",
+      "text": "**Desempeño desagregado:** el desempeño desagregado muestra diferencias entre grupos, contextos y clases de caso."
+    },
+    {
+      "source_id": "N32-s16-b007",
+      "kind": "paragraph",
+      "text": "**Robustez:** la robustez es capacidad de sostener comportamiento aceptable ante variación esperable."
+    },
+    {
+      "source_id": "N32-s16-b008",
+      "kind": "paragraph",
+      "text": "**Prueba adversa:** la prueba adversa busca activamente modos de falla, abuso y evasión."
+    },
+    {
+      "source_id": "N32-s16-b009",
+      "kind": "paragraph",
+      "text": "**Confiabilidad y repetibilidad:** la confiabilidad estudia variación entre ejecuciones y condiciones equivalentes."
+    },
+    {
+      "source_id": "N32-s16-b010",
+      "kind": "paragraph",
+      "text": "**Desempeño del equipo humano IA:** la evaluación sociotécnica mide el resultado del conjunto y no sólo de sus componentes."
+    },
+    {
+      "source_id": "N32-s16-b011",
+      "kind": "paragraph",
+      "text": "**Supervisión real:** la supervisión real combina competencia, atención, tiempo, autoridad y alternativa."
+    },
+    {
+      "source_id": "N32-s16-b012",
+      "kind": "paragraph",
+      "text": "**Evaluación en operación:** la evaluación en operación repite pruebas y observa consecuencias después del despliegue."
+    },
+    {
+      "source_id": "N32-s17-h2",
+      "kind": "heading-2",
+      "text": "Preguntas de preparación"
+    },
+    {
+      "source_id": "N32-s17-b001",
+      "kind": "list-item",
+      "text": "¿Qué decisión permite sostener unidad de evaluación y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "N32-s17-b002",
+      "kind": "list-item",
+      "text": "¿Qué decisión permite sostener cobertura y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "N32-s17-b003",
+      "kind": "list-item",
+      "text": "¿Qué decisión permite sostener baseline y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "N32-s17-b004",
+      "kind": "list-item",
+      "text": "¿Qué decisión permite sostener validez de constructo y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "N32-s17-b005",
+      "kind": "list-item",
+      "text": "¿Qué decisión permite sostener severidad y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "N32-s17-b006",
+      "kind": "list-item",
+      "text": "¿Qué decisión permite sostener desempeño desagregado y qué evidencia podría refutarla?"
+    },
+    {
+      "source_id": "N32-s17-b007",
+      "kind": "paragraph",
+      "text": "Para el encuentro, seleccionar una intervención conocida, completar el instrumento con evidencia verificable y preparar un nivel de autonomía provisional. Incluir una explicación rival, una condición que obligaría a revisar y una consecuencia para una persona afectada."
+    },
+    {
+      "source_id": "N32-s18-h2",
+      "kind": "heading-2",
+      "text": "Referencias base"
+    },
+    {
+      "source_id": "N32-s18-b001",
+      "kind": "list-item",
+      "text": "NIST (2023). Artificial Intelligence Risk Management Framework 1.0. https://doi.org/10.6028/NIST.AI.100-1"
+    },
+    {
+      "source_id": "N32-s18-b002",
+      "kind": "list-item",
+      "text": "NIST (2024). Generative Artificial Intelligence Profile. https://doi.org/10.6028/NIST.AI.600-1"
+    },
+    {
+      "source_id": "N32-s18-b003",
+      "kind": "list-item",
+      "text": "NIST (2026). ARIA 0.1 Pilot Evaluation Report, NIST AI 800-4. https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-4.pdf"
+    },
+    {
+      "source_id": "N32-s18-b004",
+      "kind": "list-item",
+      "text": "NIST (2026). TEVV-Athlon Framework, Initial Public Draft. https://www.nist.gov/artificial-intelligence/ai-research/tevv-athlon-framework-evaluating-ai-systems"
+    },
+    {
+      "source_id": "N32-s18-b005",
+      "kind": "list-item",
+      "text": "Buolamwini, J. y Gebru, T. (2018). Gender Shades. Proceedings of Machine Learning Research, 81, 1-15. http://proceedings.mlr.press/v81/buolamwini18a.html"
+    },
+    {
+      "source_id": "N32-s18-b006",
+      "kind": "list-item",
+      "text": "Friedman, B. y Hendry, D. G. (2019). Value Sensitive Design. MIT Press."
+    },
+    {
+      "source_id": "N32-s18-b007",
+      "kind": "list-item",
+      "text": "Elish, M. C. (2019). Moral Crumple Zones. Engaging Science, Technology, and Society, 5, 40-60. https://doi.org/10.17351/ests2019.260"
+    },
+    {
+      "source_id": "N32-s18-b008",
+      "kind": "list-item",
+      "text": "Shneiderman, B. (2022). Human Centered AI. Oxford University Press."
+    },
+    {
+      "source_id": "N32-s18-b009",
+      "kind": "list-item",
+      "text": "ISO/IEC (2023). ISO/IEC 23894:2023 Artificial Intelligence Risk Management. https://www.iso.org/standard/77304.html"
+    },
+    {
+      "source_id": "N32-s18-b010",
+      "kind": "list-item",
+      "text": "ISO/IEC (2024). ISO/IEC TR 24027:2021 Bias in AI Systems and AI Aided Decision Making. https://www.iso.org/standard/77607.html"
+    },
+    {
+      "source_id": "N32-s18-b011",
+      "kind": "list-item",
+      "text": "Amershi, S. et al. (2019). Guidelines for Human AI Interaction. https://doi.org/10.1145/3290605.3300233"
+    },
+    {
+      "source_id": "N32-s18-b012",
+      "kind": "list-item",
+      "text": "Raji, I. D. et al. (2020). Closing the AI Accountability Gap. https://doi.org/10.1145/3351095.3372873"
+    }
+  ]
+}

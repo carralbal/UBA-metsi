@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the editorial source packages for METSI N11 through N16.
+"""Build the editorial source packages for METSI N11 through N36.
 
 The canonical Markdown remains authoritative and untouched. This generator
 adds only editorial paratext, source-grounded diagrams, licensed portraits and
@@ -22,11 +22,11 @@ import build_collection as base
 ROOT = Path(__file__).resolve().parent
 PORTRAIT_ROOT = ROOT / "assets" / "portraits-block-c"
 SHARED_PORTRAITS = ROOT / "assets" / "portraits"
-MATCHES = ROOT / "N08-v9-final" / "assets" / "matches-close.png"
+MATCHES = ROOT / "N30-v1-editorial" / "assets" / "matches-close.png"
 
 SOURCES = {
     n: next((ROOT / f"N{n}-content-canonical" / "source").glob("*.md"))
-    for n in range(11, 31)
+    for n in range(11, 37)
 }
 
 REFERENTS = {
@@ -50,6 +50,12 @@ REFERENTS = {
     28: ["iso-iec", "bass-clements-kazman", "victor-basili", "nist", "w3c", "forsgren-humble-kim"],
     29: ["humble-farley", "forsgren-humble-kim", "nist", "slsa", "cisa", "iso-iec"],
     30: ["google-sre", "opentelemetry", "nist", "forsgren-humble-kim", "erik-hollnagel", "nancy-leveson"],
+    31: ["oecd", "nist", "unesco", "stuart-russell", "judea-pearl", "virginia-dignum"],
+    32: ["nist", "joy-buolamwini-timnit-gebru", "batya-friedman-david-hendry", "madeleine-elish", "ben-shneiderman", "iso-iec"],
+    33: ["nist", "iso-iec", "european-union", "inioluwa-raji", "margaret-mitchell", "timnit-gebru"],
+    34: ["peter-checkland-john-poulter", "donald-schon", "stephen-toulmin", "iso-iec-ieee", "sebok", "pmi"],
+    35: ["stephen-toulmin", "edward-tufte", "donald-schon", "chris-argyris", "paulo-freire", "etienne-wenger"],
+    36: ["donald-schon", "chris-argyris-donald-schon", "john-dewey", "david-kolb", "amy-edmondson", "jack-mezirow"],
 }
 
 PORTRAIT_NAMES = {
@@ -85,6 +91,19 @@ PORTRAIT_NAMES = {
     "w3c": "W3C", "forsgren-humble-kim": "Nicole Forsgren, Jez Humble y Gene Kim",
     "humble-farley": "Jez Humble y David Farley", "slsa": "SLSA", "google-sre": "Google SRE",
     "opentelemetry": "OpenTelemetry", "erik-hollnagel": "Erik Hollnagel",
+    "oecd": "OECD", "unesco": "UNESCO", "stuart-russell": "Stuart Russell",
+    "judea-pearl": "Judea Pearl", "virginia-dignum": "Virginia Dignum",
+    "joy-buolamwini-timnit-gebru": "Joy Buolamwini y Timnit Gebru",
+    "batya-friedman-david-hendry": "Batya Friedman y David Hendry",
+    "madeleine-elish": "Madeleine Clare Elish", "ben-shneiderman": "Ben Shneiderman",
+    "european-union": "European Union", "inioluwa-raji": "Inioluwa Deborah Raji",
+    "margaret-mitchell": "Margaret Mitchell", "timnit-gebru": "Timnit Gebru",
+    "peter-checkland-john-poulter": "Peter Checkland y John Poulter",
+    "stephen-toulmin": "Stephen Toulmin", "edward-tufte": "Edward Tufte",
+    "paulo-freire": "Paulo Freire", "etienne-wenger": "Etienne Wenger",
+    "chris-argyris-donald-schon": "Chris Argyris y Donald Schön",
+    "john-dewey": "John Dewey", "david-kolb": "David Kolb",
+    "amy-edmondson": "Amy Edmondson", "jack-mezirow": "Jack Mezirow",
 }
 
 PHOTO_ALTS = {
@@ -188,6 +207,12 @@ PHOTO_ALTS = {
         "Un trabajador nocturno responde a una secuencia de señales en un corredor donde emerge un incidente.",
         "Tres integrantes de operación reconstruyen un episodio con evidencia para aprender sin reducirlo a culpa individual.",
     ],
+    31: ["Una profesional argentina delimita el uso pertinente de inteligencia artificial en una recepción porteña.", "Un equipo separa reglas, predicción y decisión sobre una mesa de operaciones.", "Una mano se detiene antes de automatizar una acción mientras conserva una vía manual."],
+    32: ["Una especialista argentina observa dos recorridos de servicio y evalúa consecuencias desiguales.", "Un equipo hotelero prueba casos ordinarios y extremos con evidencia material.", "Una supervisora nocturna enfrenta varias excepciones simultáneas y vuelve visible el límite del control humano."],
+    33: ["Una responsable argentina recorre un archivo operativo donde versiones, accesos y cambios deben permanecer gobernados.", "Un equipo actualiza un inventario vivo de capacidades, fuentes y responsables.", "Una profesional retira un acceso preservando evidencia y continuidad del servicio."],
+    34: ["Una profesional argentina sigue una cadena de intervención a través de varios umbrales institucionales.", "Dos profesionales conectan evidencia, mapa operativo y consecuencia en un mismo expediente.", "Un recorrido hotelero atraviesa personas y áreas sin perder la promesa común."],
+    35: ["Una profesional argentina escucha una objeción ante audiencias diversas y conserva visible la evidencia.", "Profesionales discuten un mismo caso desde perspectivas distintas.", "Una persona transfiere expediente y capacidad operacional a otro equipo."],
+    36: ["Una profesional argentina revisa decisiones y evidencia después de una intervención.", "Un equipo reconstruye una sorpresa sin reducirla a culpa individual.", "Una persona egresada sale a la ciudad con un método abierto de aprendizaje profesional."],
 }
 
 DIAGRAMS = {
@@ -251,6 +276,12 @@ DIAGRAMS = {
     28: [("Argumento de calidad", ["Promesa", "Escenario", "Riesgo", "Reclamo", "Evidencia"]), ("Atributos en tensión", ["Confiabilidad", "Desempeño", "Seguridad", "Accesibilidad", "Cambio"]), ("Mapa HH-28", ["Población", "Oráculo", "Umbral", "Renuncia", "Autoridad"])],
     29: [("Cadena de liberación", ["Fuente", "Artefacto", "Ambiente", "Despliegue", "Cierre"]), ("Compromiso progresivo", ["Evidencia", "Aprobación", "Cohorte", "Señal", "Detención"]), ("Mapa HH-29", ["Código", "Datos", "Infraestructura", "Rollback", "Reparación"])],
     30: [("Señales de la promesa", ["Recorrido", "Telemetría", "Negocio", "Experiencia", "Decisión"]), ("Confiabilidad gobernada", ["SLI", "SLO", "Presupuesto", "Alerta", "Respuesta"]), ("Mapa HH-30", ["Incidente", "Contención", "Reparación", "Revisión", "Aprendizaje"])],
+    31: [("Capacidades diferentes", ["Regla", "Predicción", "Generación", "Agencia"]), ("Juicio de pertinencia", ["Tarea", "Alternativa", "Valor", "Consecuencia", "Control"]), ("Mapa HH-31", ["Propósito", "Evidencia", "Autoridad", "No uso", "Revisión"])],
+    32: [("Arquitectura de evaluación", ["Tarea", "Cobertura", "Métrica", "Severidad", "Decisión"]), ("Autonomía proporcional", ["Baseline", "Desagregación", "Robustez", "Supervisión"]), ("Mapa HH-32", ["Prueba", "Umbral", "Exposición", "Monitoreo", "Retiro"])],
+    33: [("Registro vivo", ["Uso", "Frontera", "Owner", "Versión", "Riesgo"]), ("Ciclo de gobierno", ["Datos", "Proveedor", "Cambio", "Monitoreo", "Incidente"]), ("Mapa HH-33", ["Contestar", "Reparar", "Aprender", "Retirar"] )],
+    34: [("Cadena completa", ["Problema", "Evidencia", "Decisión", "Operación", "Gobierno"]), ("Coherencia defendible", ["Vertical", "Horizontal", "Contradicción", "Puerta"]), ("Mapa HH-34", ["Supuesto", "Prueba", "Consecuencia", "Revisión"])],
+    35: [("Argumento situado", ["Audiencia", "Tesis", "Evidencia", "Garantía", "Objeción"]), ("Cuatro defensas", ["Ejecutiva", "Técnica", "Operativa", "Afectada"]), ("Mapa HH-35", ["Transferir", "Apropiar", "Probar", "Reformular"])],
+    36: [("Ciclo reflexivo", ["Decidir", "Actuar", "Observar", "Sorprender", "Revisar"]), ("Aprender en dos bucles", ["Corregir acción", "Revisar marco", "Cambiar práctica"]), ("Mapa HH-36", ["Episodio", "Evidencia", "IA crítica", "Próxima prueba"])],
 }
 
 
@@ -424,7 +455,7 @@ def build(number: int) -> dict:
             classes += ["two-column", "block-c-synthesis"]
         if section.title == "Referencias base":
             classes += ["block-c-references"]
-        if section.title.startswith("De N"):
+        if section.title.startswith("De N") or section.title == "Después de N36":
             classes += ["block-c-handoff"]
         marker = (
             f'<div class="section-marker"><span>{rendered_section:02d}</span>'
@@ -501,7 +532,7 @@ def build(number: int) -> dict:
     manifest = {
         "number": number,
         "title": title,
-        "module": "Sostener la promesa en operación" if number >= 26 else "Pasar de entregar cosas a gobernar capacidades" if number >= 21 else "Diseñar una estrategia situada" if number >= 17 else "Modelar sólo lo que ayuda a decidir",
+        "module": "Integrar, defender, transferir y seguir aprendiendo" if number >= 34 else "Incorporar IA sin delegar el juicio" if number >= 31 else "Sostener la promesa en operación" if number >= 26 else "Pasar de entregar cosas a gobernar capacidades" if number >= 21 else "Diseñar una estrategia situada" if number >= 17 else "Modelar sólo lo que ayuda a decidir",
         "source": f"source/{source.name}",
         "source_sha256": sha(source),
         "source_words": len(re.findall(r"\b[\wÁÉÍÓÚÜÑáéíóúüñ'-]+\b", source.read_text(encoding="utf-8"))),
@@ -642,6 +673,17 @@ BLOCK_C_CSS = r'''
 .block-c.document-n27 .reading-section[data-section="06"]{break-inside:avoid-page;page-break-inside:avoid}
 .block-c.document-n27 .reading-section[data-section="06"] .section-body{columns:auto;column-count:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.2mm 7.5mm;font-size:9.15pt;line-height:1.23}
 .block-c.document-n27 .reading-section[data-section="06"] .section-body p{margin:0;break-inside:avoid}
+.block-c:is(.document-n31,.document-n32,.document-n33,.document-n34,.document-n35,.document-n36) .reading-section[data-section="02"]{height:246mm;min-height:246mm;box-sizing:border-box;padding:16mm 14mm;background:#F0F1EE;display:flex;flex-direction:column;justify-content:center;border-left:1.5mm solid #CFFF00;break-inside:avoid-page;page-break-inside:avoid}
+.block-c:is(.document-n31,.document-n32,.document-n33,.document-n34,.document-n35,.document-n36) .block-c-references{min-height:246mm;box-sizing:border-box;padding:13mm 12mm!important;background:#F0F1EE!important;display:flex;flex-direction:column;justify-content:center}
+.block-c:is(.document-n31,.document-n32,.document-n33,.document-n34,.document-n35,.document-n36) .block-c-references .section-body ul{columns:2;column-count:2;column-gap:10mm;max-width:none}
+.block-c:is(.document-n31,.document-n32,.document-n33,.document-n34,.document-n35,.document-n36) .block-c-references li{margin-bottom:5mm;font-size:9pt;line-height:1.38}
+.block-c.document-n31 .block-c-references .section-body ul{columns:1;column-count:1;max-width:155mm}
+.block-c.document-n31 .block-c-references li{margin-bottom:3.8mm;font-size:9.25pt;line-height:1.34}
+.block-c:is(.document-n31,.document-n32,.document-n33,.document-n34,.document-n35,.document-n36) .questions{min-height:230mm;box-sizing:border-box;break-inside:avoid-page;page-break-inside:avoid}
+.block-c:is(.document-n31,.document-n32,.document-n33,.document-n34,.document-n35,.document-n36) .pill-summary{min-height:230mm;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;padding:16mm 14mm}
+.block-c:is(.document-n31,.document-n32,.document-n33,.document-n34,.document-n35,.document-n36) .pill-summary .section-body ol{columns:auto;display:grid;grid-template-columns:1fr;gap:6mm;margin:7mm 0 0;padding-left:8mm}
+.block-c:is(.document-n31,.document-n32,.document-n33,.document-n34,.document-n35,.document-n36) .pill-summary .section-body li{font-size:12pt;line-height:1.38;margin:0;break-inside:avoid}
+.block-c:is(.document-n31,.document-n32,.document-n33,.document-n34,.document-n35,.document-n36) .reading-section[data-section="11"]{min-height:230mm;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;padding:16mm 14mm;background:#E3E6E4;border-left:1.5mm solid #CFFF00}
 '''
 
 
@@ -650,8 +692,8 @@ def main() -> None:
     parser.add_argument("--start", type=int, default=11)
     parser.add_argument("--end", type=int, default=16)
     args = parser.parse_args()
-    if args.start < 11 or args.end > 30 or args.start > args.end:
-        raise ValueError("El generador cubre N11–N30")
+    if args.start < 11 or args.end > 36 or args.start > args.end:
+        raise ValueError("El generador cubre N11–N36")
     for number in range(args.start, args.end + 1):
         manifest = build(number)
         print(f"BUILT N{number:02d} {manifest['source_words']} words")
