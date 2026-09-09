@@ -4,13 +4,13 @@
   "stage": "content-canonical-v1",
   "language": "es-AR",
   "source": "N14-content-canonical/source/N14_procesos_end_to_end_handoffs_colas_y_excepciones-content-canonical-v1.md",
-  "sha256": "87d05b028d9ed12ac747443f102639b2fef81f944e7e59e47c580659938fb5f0",
-  "bytes": 46835,
-  "words_total": 6690,
-  "words_substantive": 6017,
-  "source_blocks": 262,
-  "references": 12,
-  "urls": 8,
+  "sha256": "a761414da465eea49f41c4302a7b1a062b5b36cb8f51e7cdae7ef245beaba0e1",
+  "bytes": 55578,
+  "words_total": 7945,
+  "words_substantive": 6360,
+  "source_blocks": 284,
+  "references": 16,
+  "urls": 9,
   "results": [
     {
       "check": "source_exists",
@@ -20,12 +20,12 @@
     {
       "check": "substantive_word_floor",
       "result": "pass",
-      "evidence": 6017
+      "evidence": 7202
     },
     {
       "check": "total_word_count",
       "result": "pass",
-      "evidence": 6690
+      "evidence": 7939
     },
     {
       "check": "required_architecture",
@@ -90,7 +90,11 @@
         },
         {
           "title": "Handoff: traslado de trabajo, información y responsabilidad",
-          "words": 188
+          "words": 189
+        },
+        {
+          "title": "Contrato de recepción y tipos de transferencia",
+          "words": 513
         },
         {
           "title": "Colas: inventario de trabajo y política de prioridad",
@@ -106,7 +110,11 @@
         },
         {
           "title": "Excepción: el trabajo que el camino feliz expulsa",
-          "words": 169
+          "words": 188
+        },
+        {
+          "title": "Ciclo de vida de una excepción y retorno al flujo",
+          "words": 560
         },
         {
           "title": "Trabajo en sombra y memoria organizacional",
@@ -134,7 +142,7 @@
         },
         {
           "title": "BPMN y nivel de detalle",
-          "words": 196
+          "words": 271
         },
         {
           "title": "Métricas end-to-end",
@@ -181,7 +189,7 @@
     {
       "check": "reference_depth",
       "result": "pass",
-      "evidence": 12
+      "evidence": 16
     },
     {
       "check": "recent_literature",
@@ -191,7 +199,7 @@
     {
       "check": "reference_urls",
       "result": "pass",
-      "evidence": 8
+      "evidence": 9
     },
     {
       "check": "all_references_anchored_in_body",
@@ -253,5 +261,11 @@
       "evidence": "no PDF, HTML or CSS"
     }
   ],
-  "overall": "pass"
+  "overall": "pass",
+  "word_count": 7945,
+  "block_count": 284,
+  "checks": {
+    "source_sha256": "a761414da465eea49f41c4302a7b1a062b5b36cb8f51e7cdae7ef245beaba0e1",
+    "references": 16
+  }
 }

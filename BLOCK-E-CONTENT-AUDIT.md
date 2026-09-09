@@ -6,7 +6,7 @@ El bloque avanza desde la distinción de objetos de gestión hasta el gobierno d
 
 ## N21 · Proyecto, producto, servicio y plataforma
 
-Resultado: **PASS**. Palabras sustantivas: 6984. Profundidad: 40/40. Referencias: 12.
+Resultado: **PASS**. Palabras sustantivas: 6376. Profundidad: 40/40. Referencias: 11.
 
 - title: PASS
 - substantive_floor: PASS
@@ -27,7 +27,7 @@ Resultado: **PASS**. Palabras sustantivas: 6984. Profundidad: 40/40. Referencias
 
 ## N22 · Iniciativas como hipótesis que pueden refutarse
 
-Resultado: **PASS**. Palabras sustantivas: 6638. Profundidad: 40/40. Referencias: 12.
+Resultado: **PASS**. Palabras sustantivas: 6387. Profundidad: 40/40. Referencias: 12.
 
 - title: PASS
 - substantive_floor: PASS
@@ -48,7 +48,7 @@ Resultado: **PASS**. Palabras sustantivas: 6638. Profundidad: 40/40. Referencias
 
 ## N23 · Capacidad y aprendizaje: cortar entregas por outcome
 
-Resultado: **PASS**. Palabras sustantivas: 6731. Profundidad: 40/40. Referencias: 12.
+Resultado: **PASS**. Palabras sustantivas: 6358. Profundidad: 40/40. Referencias: 12.
 
 - title: PASS
 - substantive_floor: PASS
@@ -69,7 +69,7 @@ Resultado: **PASS**. Palabras sustantivas: 6731. Profundidad: 40/40. Referencias
 
 ## N24 · Priorizar es renunciar: valor, costo de demora y límites
 
-Resultado: **PASS**. Palabras sustantivas: 6675. Profundidad: 40/40. Referencias: 12.
+Resultado: **PASS**. Palabras sustantivas: 6423. Profundidad: 40/40. Referencias: 20.
 
 - title: PASS
 - substantive_floor: PASS
@@ -90,7 +90,7 @@ Resultado: **PASS**. Palabras sustantivas: 6675. Profundidad: 40/40. Referencias
 
 ## N25 · Flujo más allá de las ceremonias: colas, lote, espera y feedback
 
-Resultado: **PASS**. Palabras sustantivas: 6764. Profundidad: 40/40. Referencias: 12.
+Resultado: **PASS**. Palabras sustantivas: 6486. Profundidad: 40/40. Referencias: 20.
 
 - title: PASS
 - substantive_floor: PASS
@@ -111,16 +111,16 @@ Resultado: **PASS**. Palabras sustantivas: 6764. Profundidad: 40/40. Referencias
 
 ## Solapamiento transversal
 
-- N21-N22: 0.2034, PASS.
-- N21-N23: 0.2040, PASS.
-- N21-N24: 0.2093, PASS.
-- N21-N25: 0.2075, PASS.
-- N22-N23: 0.2081, PASS.
-- N22-N24: 0.2081, PASS.
-- N22-N25: 0.2020, PASS.
-- N23-N24: 0.2108, PASS.
-- N23-N25: 0.2084, PASS.
-- N24-N25: 0.2135, PASS.
+- N21-N22: 0.0000, PASS.
+- N21-N23: 0.0000, PASS.
+- N21-N24: 0.0001, PASS.
+- N21-N25: 0.0000, PASS.
+- N22-N23: 0.0000, PASS.
+- N22-N24: 0.0000, PASS.
+- N22-N25: 0.0000, PASS.
+- N23-N24: 0.0000, PASS.
+- N23-N25: 0.0000, PASS.
+- N24-N25: 0.0000, PASS.
 
 ## Red team
 

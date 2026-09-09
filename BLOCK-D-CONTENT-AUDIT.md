@@ -4,7 +4,7 @@ Resultado global: **PASS**.
 
 ## N17 · Lógicas predictivas, iterativas, incrementales, adaptativas y experimentales
 
-Resultado: **PASS**. Palabras sustantivas: 9643. Referencias: 12.
+Resultado: **PASS**. Palabras sustantivas: 6744. Referencias: 13.
 
 - title: PASS
 - substantive_floor: PASS
@@ -23,7 +23,7 @@ Resultado: **PASS**. Palabras sustantivas: 9643. Referencias: 12.
 
 ## N18 · Legado, regulación y documentación como valor, restricción y evidencia
 
-Resultado: **PASS**. Palabras sustantivas: 7225. Referencias: 12.
+Resultado: **PASS**. Palabras sustantivas: 6309. Referencias: 14.
 
 - title: PASS
 - substantive_floor: PASS
@@ -42,7 +42,7 @@ Resultado: **PASS**. Palabras sustantivas: 7225. Referencias: 12.
 
 ## N19 · Alternativas de realización: configurar, integrar, construir y no automatizar
 
-Resultado: **PASS**. Palabras sustantivas: 6989. Referencias: 12.
+Resultado: **PASS**. Palabras sustantivas: 6344. Referencias: 15.
 
 - title: PASS
 - substantive_floor: PASS
@@ -61,7 +61,7 @@ Resultado: **PASS**. Palabras sustantivas: 6989. Referencias: 12.
 
 ## N20 · Estrategia metodológica: tailoring, hitos y condiciones de salida
 
-Resultado: **PASS**. Palabras sustantivas: 6980. Referencias: 12.
+Resultado: **PASS**. Palabras sustantivas: 6410. Referencias: 13.
 
 - title: PASS
 - substantive_floor: PASS

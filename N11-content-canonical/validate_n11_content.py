@@ -131,7 +131,7 @@ def main() -> int:
         "Wang and Strong": "Wang y Strong",
         "ISO IEC 25012": "ISO/IEC 25012",
         "ISO IEC 5259": "ISO/IEC 5259",
-        "W3C PROV": "W3C PROV",
+        "W3C PROV": "W3C Provenance Working Group",
         "Moreau and Missier": "Luc Moreau y Paolo Missier",
         "Groves and Lyberg": "Robert Groves, Lars Lyberg",
         "National Academies 2019": "Academias Nacionales de Estados Unidos de 2019",

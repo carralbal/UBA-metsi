@@ -4,7 +4,7 @@ Resultado global: **PASS**.
 
 ## N31 · Reglas, predicción, generación y agencia: cuándo la IA es pertinente
 
-Resultado: **PASS**. Palabras sustantivas: 7447. Referencias: 12.
+Resultado: **PASS**. Palabras sustantivas: 6280. Referencias: 13.
 
 - title: PASS
 - substantive_floor: PASS
@@ -25,7 +25,7 @@ Resultado: **PASS**. Palabras sustantivas: 7447. Referencias: 12.
 
 ## N32 · Evaluar tareas, cobertura, severidad, desigualdad, robustez y supervisión
 
-Resultado: **PASS**. Palabras sustantivas: 7368. Referencias: 12.
+Resultado: **PASS**. Palabras sustantivas: 6396. Referencias: 14.
 
 - title: PASS
 - substantive_floor: PASS
@@ -46,7 +46,7 @@ Resultado: **PASS**. Palabras sustantivas: 7368. Referencias: 12.
 
 ## N33 · Gobierno vivo de IA: inventario, ownership, datos, proveedores, cambios, incidentes, reparación y retiro
 
-Resultado: **PASS**. Palabras sustantivas: 7474. Referencias: 12.
+Resultado: **PASS**. Palabras sustantivas: 6676. Referencias: 13.
 
 - title: PASS
 - substantive_floor: PASS
@@ -67,7 +67,7 @@ Resultado: **PASS**. Palabras sustantivas: 7474. Referencias: 12.
 
 ## N34 · Reconstruir la cadena completa: del problema y la evidencia a la operación y el gobierno
 
-Resultado: **PASS**. Palabras sustantivas: 7378. Referencias: 12.
+Resultado: **PASS**. Palabras sustantivas: 6457. Referencias: 16.
 
 - title: PASS
 - substantive_floor: PASS
@@ -88,7 +88,7 @@ Resultado: **PASS**. Palabras sustantivas: 7378. Referencias: 12.
 
 ## N35 · Comunicar, defender y transferir criterios sin copiar soluciones
 
-Resultado: **PASS**. Palabras sustantivas: 7223. Referencias: 12.
+Resultado: **PASS**. Palabras sustantivas: 6537. Referencias: 14.
 
 - title: PASS
 - substantive_floor: PASS
@@ -109,7 +109,7 @@ Resultado: **PASS**. Palabras sustantivas: 7223. Referencias: 12.
 
 ## N36 · Práctica reflexiva: aprender de decisiones, errores, sorpresas y asistencia de IA
 
-Resultado: **PASS**. Palabras sustantivas: 7519. Referencias: 12.
+Resultado: **PASS**. Palabras sustantivas: 6708. Referencias: 13.
 
 - title: PASS
 - substantive_floor: PASS
@@ -130,21 +130,21 @@ Resultado: **PASS**. Palabras sustantivas: 7519. Referencias: 12.
 
 ## Solapamiento transversal
 
-- N31-N32: 0.2127, PASS.
-- N31-N33: 0.2080, PASS.
-- N31-N34: 0.2049, PASS.
-- N31-N35: 0.2124, PASS.
-- N31-N36: 0.2028, PASS.
-- N32-N33: 0.2144, PASS.
-- N32-N34: 0.2056, PASS.
-- N32-N35: 0.2095, PASS.
-- N32-N36: 0.2033, PASS.
-- N33-N34: 0.2051, PASS.
-- N33-N35: 0.2088, PASS.
-- N33-N36: 0.2015, PASS.
-- N34-N35: 0.2172, PASS.
-- N34-N36: 0.2152, PASS.
-- N35-N36: 0.2163, PASS.
+- N31-N32: 0.0000, PASS.
+- N31-N33: 0.0000, PASS.
+- N31-N34: 0.0000, PASS.
+- N31-N35: 0.0000, PASS.
+- N31-N36: 0.0000, PASS.
+- N32-N33: 0.0000, PASS.
+- N32-N34: 0.0000, PASS.
+- N32-N35: 0.0000, PASS.
+- N32-N36: 0.0000, PASS.
+- N33-N34: 0.0000, PASS.
+- N33-N35: 0.0000, PASS.
+- N33-N36: 0.0000, PASS.
+- N34-N35: 0.0000, PASS.
+- N34-N36: 0.0000, PASS.
+- N35-N36: 0.0000, PASS.
 
 ## Red team
 

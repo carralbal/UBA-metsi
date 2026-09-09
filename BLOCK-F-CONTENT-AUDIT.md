@@ -6,7 +6,7 @@ El bloque recorre la promesa operativa desde su ecosistema de dependencias hasta
 
 ## N26 · Ecosistema de servicios, plataformas y terceros
 
-Resultado: **PASS**. Palabras sustantivas: 6869. Profundidad: 40/40. Referencias: 12.
+Resultado: **PASS**. Palabras sustantivas: 6389. Profundidad: 40/40. Referencias: 15.
 
 - title: PASS
 - substantive_floor: PASS
@@ -27,7 +27,7 @@ Resultado: **PASS**. Palabras sustantivas: 6869. Profundidad: 40/40. Referencias
 
 ## N27 · Contratos sintácticos, semánticos, temporales y operacionales
 
-Resultado: **PASS**. Palabras sustantivas: 6647. Profundidad: 40/40. Referencias: 12.
+Resultado: **PASS**. Palabras sustantivas: 6399. Profundidad: 40/40. Referencias: 16.
 
 - title: PASS
 - substantive_floor: PASS
@@ -48,7 +48,7 @@ Resultado: **PASS**. Palabras sustantivas: 6647. Profundidad: 40/40. Referencias
 
 ## N28 · Evidencia de calidad según riesgo y atributos en tensión
 
-Resultado: **PASS**. Palabras sustantivas: 6648. Profundidad: 40/40. Referencias: 12.
+Resultado: **PASS**. Palabras sustantivas: 6410. Profundidad: 40/40. Referencias: 17.
 
 - title: PASS
 - substantive_floor: PASS
@@ -69,7 +69,7 @@ Resultado: **PASS**. Palabras sustantivas: 6648. Profundidad: 40/40. Referencias
 
 ## N29 · Gobierno de integración, despliegue, infraestructura, aprobación y rollback
 
-Resultado: **PASS**. Palabras sustantivas: 6622. Profundidad: 40/40. Referencias: 12.
+Resultado: **PASS**. Palabras sustantivas: 6280. Profundidad: 40/40. Referencias: 16.
 
 - title: PASS
 - substantive_floor: PASS
@@ -90,7 +90,7 @@ Resultado: **PASS**. Palabras sustantivas: 6622. Profundidad: 40/40. Referencias
 
 ## N30 · Observabilidad técnica, señales de negocio, SLI, SLO, incidentes y aprendizaje
 
-Resultado: **PASS**. Palabras sustantivas: 6736. Profundidad: 40/40. Referencias: 12.
+Resultado: **PASS**. Palabras sustantivas: 6385. Profundidad: 40/40. Referencias: 15.
 
 - title: PASS
 - substantive_floor: PASS
@@ -111,16 +111,16 @@ Resultado: **PASS**. Palabras sustantivas: 6736. Profundidad: 40/40. Referencias
 
 ## Solapamiento transversal
 
-- N26-N27: 0.2069, PASS.
-- N26-N28: 0.2043, PASS.
-- N26-N29: 0.2067, PASS.
-- N26-N30: 0.1993, PASS.
-- N27-N28: 0.2017, PASS.
-- N27-N29: 0.2011, PASS.
-- N27-N30: 0.1997, PASS.
-- N28-N29: 0.2074, PASS.
-- N28-N30: 0.2099, PASS.
-- N29-N30: 0.2054, PASS.
+- N26-N27: 0.0000, PASS.
+- N26-N28: 0.0000, PASS.
+- N26-N29: 0.0024, PASS.
+- N26-N30: 0.0000, PASS.
+- N27-N28: 0.0000, PASS.
+- N27-N29: 0.0000, PASS.
+- N27-N30: 0.0000, PASS.
+- N28-N29: 0.0009, PASS.
+- N28-N30: 0.0000, PASS.
+- N29-N30: 0.0000, PASS.
 
 ## Red team
 

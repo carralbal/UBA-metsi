@@ -1,0 +1,1121 @@
+{
+  "document": "N26",
+  "source": "source/N26_ecosistema_de_servicios_plataformas_y_terceros-content-canonical-v1.md",
+  "eligible_blocks": [
+    {
+      "source_id": "N26-h1",
+      "kind": "heading-1",
+      "text": "Ecosistema de servicios, plataformas y terceros"
+    },
+    {
+      "source_id": "N26-s01-h2",
+      "kind": "heading-2",
+      "text": "Pregunta profesional"
+    },
+    {
+      "source_id": "N26-s01-b001",
+      "kind": "paragraph",
+      "text": "¿Cómo gobernar una promesa cuando depende de servicios internos, plataformas compartidas y terceros que ninguna unidad controla por completo?"
+    },
+    {
+      "source_id": "N26-s02-h2",
+      "kind": "heading-2",
+      "text": "La habitación estaba lista, pero el ecosistema no"
+    },
+    {
+      "source_id": "N26-s02-b001",
+      "kind": "paragraph",
+      "text": "Hotel Horizonte recibe a una familia que reservó por un canal externo. La habitación está limpia, el pago figura aprobado y la cerradura responde a la verificación de disponibilidad. Sin embargo, Recepción no puede completar el ingreso ni emitir la llave porque el proveedor de identidad devuelve un estado distinto del que conserva el canal de reservas."
+    },
+    {
+      "source_id": "N26-s02-b002",
+      "kind": "paragraph",
+      "text": "Cada componente funciona dentro de su propio tablero. El canal confirma la venta, el servicio de pagos confirma la autorización, el servicio de identidad confirma la cuenta y el sistema de gestión hotelera (PMS) confirma disponibilidad. La promesa falla en el vínculo entre esas certezas parciales. Nadie posee el recorrido completo ni puede reparar por sí solo todas sus dependencias."
+    },
+    {
+      "source_id": "N26-s02-b003",
+      "kind": "paragraph",
+      "text": "Una arquitectura de ecosistema no es un inventario ampliado. Explicita capacidades, participantes, fronteras de confianza, contratos, datos, incentivos, modos de degradación y rutas de salida. También distingue qué se comparte, qué permanece autónomo y quién responde cuando una dependencia externa altera la experiencia."
+    },
+    {
+      "source_id": "N26-s02-b004",
+      "kind": "paragraph",
+      "text": "El equipo reconstruye el episodio desde la reserva hasta la llave. Descubre una plataforma de identidad, cinco servicios internos, tres proveedores y dos decisiones manuales que nunca aparecieron en el diagrama técnico. El mapa incorpora responsables, criticidad, sustitución, evidencia y reparación."
+    },
+    {
+      "source_id": "N26-s02-b005",
+      "kind": "paragraph",
+      "text": "La intervención no busca controlar lo incontrolable. Busca diseñar opciones antes de la falla, acordar señales antes del incidente y evitar que la complejidad contractual se convierta en abandono para quien espera en el mostrador."
+    },
+    {
+      "source_id": "N26-s02-b006",
+      "kind": "paragraph",
+      "text": "N26 abre el Bloque F. Recibe de N25 una mirada sobre flujo y espera, y amplía la unidad de análisis hacia el conjunto de organizaciones, plataformas y servicios que sostienen la promesa en operación."
+    },
+    {
+      "source_id": "N26-s03-h2",
+      "kind": "heading-2",
+      "text": "Hotel Horizonte: la reserva confirmada que nadie podía ejecutar"
+    },
+    {
+      "source_id": "N26-s03-b001",
+      "kind": "paragraph",
+      "text": "HH-26 retoma el mapa temporal de HH-25 y sigue a una familia que llega a las 22.15 con una reserva prepagada de un canal externo. Lucía Ferreyra encuentra la habitación limpia y disponible, pero el PMS conserva una identidad sin validar y la cerradura no acepta emitir una llave. Mariela Benítez muestra el registro de liberación de Housekeeping. Camila Duarte presenta la confirmación comercial. Federico Müller comprueba que cada integración responde, aunque con estados incompatibles. La evidencia no describe una falla única, sino cuatro verdades parciales que no producen ingreso."
+    },
+    {
+      "source_id": "N26-s03-b002",
+      "kind": "paragraph",
+      "text": "Ricardo Sosa reconstruye el recorrido y descubre dos decisiones manuales fuera de los tableros: Recepción compara apellidos cuando el servicio de identidad se demora y Seguridad habilita una llave temporal sólo con autorización de guardia. Ninguna figura en el contrato con el canal. Elena Acosta rechaza la propuesta inicial de «escalar al proveedor», porque no resuelve qué debe hacer el hotel mientras el proveedor investiga ni quién responde ante la familia."
+    },
+    {
+      "source_id": "N26-s03-b003",
+      "kind": "paragraph",
+      "text": "El mapa HH-26 vincula la promesa «ingreso confirmado» con capacidades, responsables, datos, fronteras de confianza, modos de degradación y rutas de salida. La decisión es habilitar un procedimiento transitorio de verificación presencial y llave limitada, con doble registro y aviso posterior al canal. Federico conserva la trazabilidad técnica, Lucía la evidencia del episodio y Ricardo la autoridad operativa. Camila debe corregir la promesa del canal para no vender como instantáneo un recorrido que depende de validaciones externas."
+    },
+    {
+      "source_id": "N26-s03-b004",
+      "kind": "paragraph",
+      "text": "La consecuencia aceptada es más trabajo durante la contingencia a cambio de no abandonar a la persona frente a una disputa entre sistemas. El acuerdo se revisará después de veinte ingresos por canal externo o ante el primer caso de identidad controvertida, lo que ocurra antes. HH-27 retomará los estados contradictorios y los convertirá en contratos verificables, sin dar por resuelto el ecosistema que HH-26 acaba de hacer visible."
+    },
+    {
+      "source_id": "N26-s04-h2",
+      "kind": "heading-2",
+      "text": "Tesis"
+    },
+    {
+      "source_id": "N26-s04-b001",
+      "kind": "paragraph",
+      "text": "Una promesa distribuida sólo puede gobernarse si las dependencias se tratan como compromisos entre capacidades autónomas, con frontera de confianza, responsable, modo de degradación y salida verificable. Si el control se reduce a la disponibilidad de componentes o al contrato del proveedor, cada parte puede cumplir y el servicio completo fallar sin autoridad de reparación; por eso la intervención profesional debe diseñar contingencia y asignar responsabilidad antes del incidente, no escalar después."
+    },
+    {
+      "source_id": "N26-s05-h2",
+      "kind": "heading-2",
+      "text": "Del cierre anterior al nuevo avance"
+    },
+    {
+      "source_id": "N26-s05-b001",
+      "kind": "paragraph",
+      "text": "N25 y HH-25 hicieron visible que la espera y el trabajo en curso atraviesan el recorrido completo, aun cuando cada área optimice su tramo. N26 extiende ahora esa frontera fuera del hotel: incorpora plataformas compartidas, canales, proveedores y decisiones que ninguna unidad controla por sí sola."
+    },
+    {
+      "source_id": "N26-s05-b002",
+      "kind": "paragraph",
+      "text": "El foco sigue siendo la promesa, pero cambia la pregunta de gobierno. Antes de especificar cada intercambio, hace falta saber qué capacidades dependen unas de otras, dónde cambia la confianza, quién puede actuar y qué salida existe cuando un participante autónomo falla."
+    },
+    {
+      "source_id": "N26-s06-h2",
+      "kind": "heading-2",
+      "text": "Tradiciones y marcos utilizados en el argumento"
+    },
+    {
+      "source_id": "N26-s06-b001",
+      "kind": "paragraph",
+      "text": "ITIL 4 de AXELOS permite leer el servicio como cocreación de valor y no como suma de componentes administrados por separado."
+    },
+    {
+      "source_id": "N26-s06-b002",
+      "kind": "paragraph",
+      "text": "Parker, G. G., Van Alstyne, M. W. y Choudary, S. P. analizan cómo reglas de acceso, interacción y gobierno producen efectos de red y distribuyen valor en plataformas."
+    },
+    {
+      "source_id": "N26-s06-b003",
+      "kind": "paragraph",
+      "text": "Tiwana, A. vincula arquitectura, gobierno y evolución de plataformas."
+    },
+    {
+      "source_id": "N26-s06-b004",
+      "kind": "paragraph",
+      "text": "Skelton, M. y Pais, M. relacionan plataformas internas con interacción de equipos y flujo."
+    },
+    {
+      "source_id": "N26-s06-b005",
+      "kind": "paragraph",
+      "text": "ISO/IEC establece requisitos de gestión para sostener servicios."
+    },
+    {
+      "source_id": "N26-s06-b006",
+      "kind": "paragraph",
+      "text": "Boyens, J. M., Smith, A., Bartol, N., Winkler, K., Holbrook, A. y Fallon, M. integran riesgo de cadena de suministro durante el ciclo de vida."
+    },
+    {
+      "source_id": "N26-s06-b007",
+      "kind": "paragraph",
+      "text": "Rose, S., Borchert, O., Mitchell, S. y Connelly, S. sitúan verificación y acceso en fronteras de confianza explícitas."
+    },
+    {
+      "source_id": "N26-s06-b008",
+      "kind": "paragraph",
+      "text": "CISA desplaza parte de la responsabilidad de seguridad hacia quienes diseñan y proveen productos, una corrección necesaria frente a contratos que cargan todo el riesgo sobre el cliente."
+    },
+    {
+      "source_id": "N26-s06-b009",
+      "kind": "paragraph",
+      "text": "El Reglamento de Datos de la Unión Europea incorpora obligaciones de acceso, portabilidad y cambio en ámbitos definidos, entre ellos los servicios de tratamiento de datos. N26 no lo presenta como un derecho universal aplicable a cualquier proveedor o jurisdicción."
+    },
+    {
+      "source_id": "N26-s06-b010",
+      "kind": "paragraph",
+      "text": "Ross, J. W., Weill, P. y Robertson, D. C. conectan arquitectura con capacidades y modelo operativo."
+    },
+    {
+      "source_id": "N26-s06-b011",
+      "kind": "paragraph",
+      "text": "Hohpe, G. y Woolf, B. aportan patrones para intercambios, mensajería y fallas."
+    },
+    {
+      "source_id": "N26-s06-b012",
+      "kind": "paragraph",
+      "text": "FinOps Foundation hace visible el costo tecnológico como responsabilidad compartida entre ingeniería, finanzas, producto y liderazgo, y en 2026 profundiza un alcance ya ampliado más allá de la nube pública."
+    },
+    {
+      "source_id": "N26-s06-b013",
+      "kind": "paragraph",
+      "text": "FinOps designa una práctica de gestión financiera de tecnología que reúne decisiones de ingeniería, finanzas y negocio. En N26 se utiliza para hacer visibles asignación, consumo y responsabilidad económica de capacidades compartidas, no como sinónimo de reducción automática de costos."
+    },
+    {
+      "source_id": "N26-s06-b014",
+      "kind": "paragraph",
+      "text": "Coase, R. H. permite examinar qué coordinaciones conviene sostener dentro de una organización y cuáles se confían al mercado; Mintzberg, H. muestra que coordinar exige mecanismos diferentes según la estructura y la incertidumbre; Cockburn, A. devuelve la arquitectura a las personas, las comunicaciones y las fronteras concretas de colaboración."
+    },
+    {
+      "source_id": "N26-s07-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 1 · Delimitar promesa, capacidades y participantes"
+    },
+    {
+      "source_id": "N26-s07-b001",
+      "kind": "heading-3",
+      "text": "Ecosistema de servicio"
+    },
+    {
+      "source_id": "N26-s07-b002",
+      "kind": "paragraph",
+      "text": "Un ecosistema de servicio reúne participantes autónomos que sostienen una misma promesa mediante capacidades, reglas e intercambios interdependientes. No es una lista ampliada de proveedores ni una arquitectura encerrada en el hotel. La unidad de análisis es el recorrido que una persona espera completar, aunque cada parte pertenezca a una organización distinta."
+    },
+    {
+      "source_id": "N26-s07-b003",
+      "kind": "paragraph",
+      "text": "En HH-26, reserva, identidad, pago, disponibilidad y cerradura intervienen en un solo ingreso. El mapa debe mostrar qué afirmación entrega cada actor, quién puede cuestionarla y cómo se repara una contradicción. También debe incorporar planillas, llamados y autorizaciones de turno, porque el trabajo manual forma parte del sistema aun cuando no aparezca en una API."
+    },
+    {
+      "source_id": "N26-s07-b004",
+      "kind": "paragraph",
+      "text": "La decisión profesional consiste en reconocer qué coordinaciones son indispensables y cuáles admiten sustitución o degradación. El mapa conserva participantes omitidos, incentivos y efectos laterales como incertidumbres explícitas. Se revisa después de episodios ordinarios y adversos, no cuando todos los componentes declaran disponibilidad por separado."
+    },
+    {
+      "source_id": "N26-s07-b005",
+      "kind": "paragraph",
+      "text": "El límite del ecosistema se traza a partir de la promesa y no de la propiedad jurídica. Si un canal decide qué oferta ve el huésped, si una red de pagos condiciona la confirmación o si una empresa de cerraduras determina cuándo puede abrirse una habitación, esos participantes forman parte del sistema relevante aunque no integren el organigrama. La inclusión no los vuelve equivalentes: cada uno aporta una capacidad, persigue incentivos propios y conserva márgenes de decisión diferentes. Una representación útil distingue relaciones contractuales, intercambios técnicos y dependencias operativas para evitar que la existencia de un contrato se interprete como control efectivo."
+    },
+    {
+      "source_id": "N26-s07-b006",
+      "kind": "heading-3",
+      "text": "Capacidad de servicio"
+    },
+    {
+      "source_id": "N26-s07-b007",
+      "kind": "paragraph",
+      "text": "Una capacidad de servicio combina personas, información, tecnología y autoridad para producir un resultado repetible bajo condiciones definidas. No equivale a una aplicación, un equipo o una función del organigrama. Su nombre expresa qué debe poder lograrse y no qué componente se compró o quién lo administra."
+    },
+    {
+      "source_id": "N26-s07-b008",
+      "kind": "paragraph",
+      "text": "Entregar una habitación asignable exige inventario, limpieza, cerradura, identidad, autoridad de Recepción y posibilidad de resolver una excepción. HH-26 contrasta el camino ordinario con una llegada tardía, una habitación accesible y una dependencia caída. Si el resultado sólo aparece cuando interviene alguien con conocimiento privado, la capacidad todavía no pertenece a la organización."
+    },
+    {
+      "source_id": "N26-s07-b009",
+      "kind": "paragraph",
+      "text": "La evidencia combina episodios, tiempos, decisiones y consecuencias para el huésped. El cierre declara población, nivel mínimo, responsable y condición de revisión. Una capacidad puede depender de acuerdos que su responsable no controla, por lo que prometerla exige reconocer esas fronteras y diseñar una salida antes de ampliar alcance."
+    },
+    {
+      "source_id": "N26-s07-b010",
+      "kind": "paragraph",
+      "text": "Una capacidad también necesita condiciones operativas explícitas. «Entregar una habitación» cambia de significado si se excluyen llegadas nocturnas, fallas de conectividad o necesidades de accesibilidad. Por eso el análisis registra volumen, ventana temporal, recursos, autoridad y criterio de éxito. El indicador no se elige por comodidad técnica, sino por su relación con el resultado: una respuesta del PMS puede ser rápida y, sin embargo, no producir una habitación utilizable. Probar la capacidad implica observar el recorrido completo, identificar qué trabajo compensa sus fallas y decidir si ese trabajo es parte diseñada del servicio o una adaptación frágil."
+    },
+    {
+      "source_id": "N26-s07-b011",
+      "kind": "heading-3",
+      "text": "Plataforma compartida"
+    },
+    {
+      "source_id": "N26-s07-b012",
+      "kind": "paragraph",
+      "text": "Una plataforma compartida ofrece capacidades gobernadas que otros equipos utilizan para construir y operar servicios. No es infraestructura neutral: sus interfaces, estándares, prioridades y reglas de evolución distribuyen posibilidades y restricciones. Centralizar una función puede reducir coordinación y, al mismo tiempo, concentrar dependencia."
+    },
+    {
+      "source_id": "N26-s07-b013",
+      "kind": "paragraph",
+      "text": "En Hotel Horizonte, identidad y pagos sirven a varios recorridos. HH-26 observa adopción útil, tiempo de integración, confiabilidad, soporte y costo de salida, no la cantidad de consumidores registrados. Una plataforma que obliga a cada turno a mantener una planilla paralela puede exhibir disponibilidad técnica y seguir trasladando trabajo a la operación."
+    },
+    {
+      "source_id": "N26-s07-b014",
+      "kind": "paragraph",
+      "text": "El gobierno de la plataforma define quién prioriza, quién financia capacidad, qué cambios requieren aviso y cómo se atiende una excepción. La prueba incluye un consumidor nuevo, una versión incompatible y la ausencia de la persona habitual. La expansión sólo se justifica si mejora recorridos concretos sin volver inviable la reparación ni encerrar a los participantes."
+    },
+    {
+      "source_id": "N26-s07-b015",
+      "kind": "paragraph",
+      "text": "La relación entre plataforma y equipos consumidores es recíproca. La plataforma necesita señales sobre adopción, errores y necesidades locales; los consumidores necesitan un compromiso verificable sobre estabilidad, soporte y evolución. Si sólo se mide cantidad de integraciones, puede premiarse la dependencia mientras crece el costo de cada cambio. Una revisión madura observa tiempo hasta el primer uso valioso, frecuencia de excepciones, esfuerzo de integración y capacidad de abandono. También distingue un estándar común que reduce variación de una imposición central que borra diferencias necesarias entre recorridos."
+    },
+    {
+      "source_id": "N26-s07-b016",
+      "kind": "paragraph",
+      "text": "N26 distingue una plataforma interna de una plataforma multilateral. La primera ofrece capacidades a equipos o servicios de una organización y se juzga por autonomía, confiabilidad, soporte y costo de integración, como proponen Skelton y Pais (2019) para plataformas orientadas al flujo de equipos. La segunda coordina grupos de participantes con reglas de acceso e interacción capaces de producir efectos de red, asunto central en Parker, Van Alstyne y Choudary (2016). Un canal externo puede funcionar como plataforma multilateral; el conjunto de identidad y pagos del hotel puede ser una plataforma interna. Compartir infraestructura no basta para atribuir dinámica de mercado."
+    },
+    {
+      "source_id": "N26-s07-b017",
+      "kind": "paragraph",
+      "text": "La distinción modifica métricas y gobierno. En la plataforma interna interesa si Recepción o un nuevo canal pueden descubrir, probar, usar y abandonar una capacidad sin favores informales. En la multilateral también importan comisión, visibilidad, acceso a datos, cambios unilaterales y distribución de poder entre hotel, canal y huéspedes. Mezclar ambas bajo “cantidad de consumidores” puede celebrar dependencia centralizada o interpretar adopción obligatoria como efecto de red. El mapa registra configuración, participantes, autoridad sobre reglas y alternativa practicable."
+    },
+    {
+      "source_id": "N26-s07-b018",
+      "kind": "heading-3",
+      "text": "Tercero crítico"
+    },
+    {
+      "source_id": "N26-s07-b019",
+      "kind": "paragraph",
+      "text": "Un tercero crítico es un participante externo cuya falla o decisión puede comprometer una promesa material. La criticidad no coincide necesariamente con gasto, prestigio ni frecuencia de uso. Surge de concentración, sustituibilidad, tiempo de recuperación, acceso a evidencia y alcance del daño."
+    },
+    {
+      "source_id": "N26-s07-b020",
+      "kind": "paragraph",
+      "text": "El canal de reservas es crítico cuando concentra demanda y excepciones, aun si el contrato lo presenta como un intermediario. HH-26 simula indisponibilidad, datos incompletos y un cambio unilateral. La pregunta no es sólo cuánto tarda en volver, sino qué puede hacer el hotel mientras tanto y qué población queda sin alternativa segura."
+    },
+    {
+      "source_id": "N26-s07-b021",
+      "kind": "paragraph",
+      "text": "La clasificación se documenta con fuente, responsable y fecha. Puede cambiar cuando aparece otra vía, se modifica una dependencia o una obligación se vuelve más severa. Un acuerdo de nivel de servicio, conocido por la sigla SLA, o una certificación aportan evidencia, pero no sustituyen un ensayo de contingencia ni liberan al hotel de responder frente a la persona afectada."
+    },
+    {
+      "source_id": "N26-s07-b022",
+      "kind": "paragraph",
+      "text": "La criticidad debe analizarse por escenario y no como una etiqueta permanente. Un servicio de mensajería puede ser secundario para confirmar una reserva ordinaria y crítico para comunicar una evacuación; un proveedor de identidad puede admitir demora durante una consulta y bloquear por completo una llegada nocturna. El registro vincula dependencia, población, consecuencia, tiempo máximo tolerable y alternativa practicable. Esa matriz permite decidir dónde exigir notificación de cambios, dónde duplicar capacidades y dónde aceptar dependencia. También evita invertir en redundancia costosa para riesgos bajos mientras una única decisión manual continúa sin reemplazo."
+    },
+    {
+      "source_id": "N26-s08-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 2 · Asignar responsabilidad, confianza y capacidad de respuesta"
+    },
+    {
+      "source_id": "N26-s08-b001",
+      "kind": "heading-3",
+      "text": "Responsabilidad sobre la capacidad"
+    },
+    {
+      "source_id": "N26-s08-b002",
+      "kind": "paragraph",
+      "text": "La responsabilidad sobre una capacidad reúne autoridad persistente para priorizar, observar, coordinar y reparar una promesa. No es un contacto para escalar ni una responsabilidad nominal sin recursos. La persona responsable debe poder negociar con terceros, limitar exposición, financiar recuperación y explicar por qué una decisión sigue vigente."
+    },
+    {
+      "source_id": "N26-s08-b003",
+      "kind": "paragraph",
+      "text": "El ingreso conserva una responsabilidad integral aunque identidad, pagos, inventario y cerraduras pertenezcan a áreas diferentes. HH-26 registra qué decisiones puede tomar la autoridad asignada, cuáles requieren otra intervención y qué señales recibe. Un nombre en una matriz no alcanza si, durante una llegada nocturna, nadie puede autorizar una llave temporal o compensar al huésped."
+    },
+    {
+      "source_id": "N26-s08-b004",
+      "kind": "paragraph",
+      "text": "El rol se prueba mediante una excepción y un cambio de dependencia. Si la respuesta depende de favores o memoria privada, se documenta la fragilidad y se corrige el acuerdo. La responsabilidad completa no implica ejecutar todo, sino asegurar que obligaciones distribuidas formen una capacidad gobernable y revisable."
+    },
+    {
+      "source_id": "N26-s08-b005",
+      "kind": "paragraph",
+      "text": "La autoridad se vuelve observable en decisiones concretas: detener una campaña, limitar un canal, autorizar una contingencia, exigir evidencia al proveedor o financiar una reparación. Una matriz de responsabilidades que sólo asigna consultas e información no resuelve quién puede elegir bajo presión. En HH-26 se comparan las decisiones declaradas con las efectivamente tomadas durante el incidente. Si Ricardo debe esperar una autorización que nadie atiende, la brecha no se corrige agregando su nombre a otro documento. Se modifica el derecho de decisión, el acceso a señales o el mecanismo de reemplazo, y luego se vuelve a ensayar."
+    },
+    {
+      "source_id": "N26-s08-b006",
+      "kind": "heading-3",
+      "text": "Mapa de dependencias"
+    },
+    {
+      "source_id": "N26-s08-b007",
+      "kind": "paragraph",
+      "text": "Un mapa de dependencias representa qué necesita cada capacidad, en qué secuencia y bajo qué supuestos. Se diferencia de un diagrama de componentes porque incluye datos, autoridad, contratos, decisiones manuales y condiciones de recuperación. Cada vínculo debe expresar qué afirmación transporta y qué ocurre si resulta tardía o falsa."
+    },
+    {
+      "source_id": "N26-s08-b008",
+      "kind": "paragraph",
+      "text": "En HH-26, la llave depende de identidad, pago, estado de habitación y autorización local. Trazas, entrevistas, incidentes y ejercicios de conmutación contrastan esa representación. La discrepancia entre el dibujo y la práctica no se corrige de inmediato: puede revelar trabajo invisible, una excepción legítima o una dependencia que nadie gobierna."
+    },
+    {
+      "source_id": "N26-s08-b009",
+      "kind": "paragraph",
+      "text": "El mapa sirve para elegir dónde invertir, qué aislar y qué probar primero. Debe declarar alcance y fecha, porque una dependencia puede cambiar sin alterar la interfaz visible. Si sólo inspecciona software, deja fuera la coordinación que sostiene la promesa y produce una seguridad analítica ficticia."
+    },
+    {
+      "source_id": "N26-s08-b010",
+      "kind": "paragraph",
+      "text": "Las dependencias no son todas del mismo tipo ni actúan siempre. Conviene distinguir vínculos obligatorios, condicionales y de recuperación, además de su dirección y duración. La identidad es necesaria para el camino ordinario, pero la autorización de guardia aparece sólo durante la contingencia; la conciliación se ejecuta después y puede reparar una decisión provisional. Esta temporalidad permite analizar propagación y contención. Un mapa que sólo dibuja flechas permanentes sugiere que toda falla produce el mismo efecto y oculta las decisiones que activan o desactivan rutas alternativas."
+    },
+    {
+      "source_id": "N26-s08-b011",
+      "kind": "heading-3",
+      "text": "Frontera de confianza"
+    },
+    {
+      "source_id": "N26-s08-b012",
+      "kind": "paragraph",
+      "text": "Una frontera de confianza marca dónde cambian las garantías, la autoridad y la evidencia aceptada. Puede atravesar una organización, una red o un componente; no coincide automáticamente con ninguno de esos límites. Al cruzarla, una afirmación requiere reglas explícitas de verificación, vigencia y tratamiento de contradicciones."
+    },
+    {
+      "source_id": "N26-s08-b013",
+      "kind": "paragraph",
+      "text": "El PMS no debería aceptar cualquier estado enviado por el canal como si tuviera idéntica procedencia. HH-26 registra identidad del emisor, permisos, frescura, reconciliación y evidencia de acceso. También prueba qué hace Recepción cuando dos fuentes válidas discrepan, porque rechazar todo puede ser tan dañino como confiar sin controles."
+    },
+    {
+      "source_id": "N26-s08-b014",
+      "kind": "paragraph",
+      "text": "La decisión equilibra exposición y continuidad. Una frontera demasiado rígida vuelve inviable la atención; una demasiado permeable concentra riesgo y hace irreconstruible el episodio. Los controles se revisan cuando cambia un proveedor, una población o el daño posible, y siempre conservan una vía de reparación comprensible."
+    },
+    {
+      "source_id": "N26-s08-b015",
+      "kind": "paragraph",
+      "text": "La confianza se asigna a afirmaciones específicas y no a organizaciones completas. El hotel puede confiar en que el canal autentica una cuenta y, al mismo tiempo, exigir otra prueba para aceptar que una habitación es accesible. Cada cruce declara procedencia, propósito, vigencia y autoridad para corregir. El principio reduce dos errores simétricos: aceptar datos por prestigio del emisor y duplicar verificaciones sin relación con el daño. Durante la prueba, Federico altera frescura y procedencia mientras Lucía decide con qué evidencia todavía puede actuar; así se observa si la frontera protege sin impedir una reparación legítima."
+    },
+    {
+      "source_id": "N26-s08-b016",
+      "kind": "heading-3",
+      "text": "Responsabilidad compartida"
+    },
+    {
+      "source_id": "N26-s08-b017",
+      "kind": "paragraph",
+      "text": "Responsabilidad compartida distribuye tareas entre participantes sin diluir quién responde por la consecuencia completa. No significa que todos sean responsables de todo. Cada obligación debe vincularse con autoridad, evidencia, tiempo de respuesta y una persona capaz de coordinar cuando el reparto falla."
+    },
+    {
+      "source_id": "N26-s08-b018",
+      "kind": "paragraph",
+      "text": "El proveedor protege la plataforma; el hotel gobierna configuración, accesos, promesa comercial y reparación al huésped. HH-26 transforma ese enunciado genérico en decisiones verificables para una llegada bloqueada. Matrices, contratos y guías operativas aportan evidencia sólo si coinciden con lo que los turnos pueden ejecutar bajo presión."
+    },
+    {
+      "source_id": "N26-s08-b019",
+      "kind": "paragraph",
+      "text": "El modelo se revisa con una falla que cruza varias capas. Si cada parte cumple su indicador y nadie restituye el ingreso, la distribución es incompleta. El hotel puede delegar tareas técnicas, pero no la obligación de reconocer el daño, explicar el límite ni sostener una alternativa segura."
+    },
+    {
+      "source_id": "N26-s08-b020",
+      "kind": "paragraph",
+      "text": "Las zonas más peligrosas son los vacíos y las superposiciones. En un vacío, cada participante supone que otro verifica o comunica; en una superposición, dos áreas actúan con criterios incompatibles. El expediente de HH-26 enumera obligaciones antes, durante y después del incidente y las conecta con una señal de cumplimiento. La evidencia no se limita a una declaración contractual: incluye quién recibió la alerta, cuánto tardó en decidir y cómo se reparó al huésped. Esa reconstrucción permite negociar acuerdos precisos sin convertir la responsabilidad compartida en una excusa para diluir la rendición de cuentas."
+    },
+    {
+      "source_id": "N26-s09-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 3 · Diseñar degradación, salida y gobernanza"
+    },
+    {
+      "source_id": "N26-s09-b001",
+      "kind": "heading-3",
+      "text": "Degradación diseñada"
+    },
+    {
+      "source_id": "N26-s09-b002",
+      "kind": "paragraph",
+      "text": "La degradación diseñada mantiene una parte segura y valiosa de la promesa cuando una dependencia falla. No equivale a tolerar en silencio una calidad inferior. Define antes del incidente qué capacidad mínima continúa, para quién, durante cuánto tiempo y bajo qué señal debe detenerse."
+    },
+    {
+      "source_id": "N26-s09-b003",
+      "kind": "paragraph",
+      "text": "En HH-26, Recepción puede entregar una llave temporal bajo autorización cuando identidad externa no responde. La medida requiere registro, verificación posterior y límites que protejan seguridad y privacidad. El ejercicio incluye una habitación accesible y una llegada nocturna para comprobar que la contingencia no dependa de condiciones excepcionales favorables."
+    },
+    {
+      "source_id": "N26-s09-b004",
+      "kind": "paragraph",
+      "text": "Algunas obligaciones no admiten degradación y obligan a detener. Otras permiten un servicio reducido si la persona comprende la situación y conserva reparación. El modo se revisa por duración, errores y trabajo desplazado; si se vuelve rutina, dejó de ser contingencia y pasó a ocultar una capacidad incumplida."
+    },
+    {
+      "source_id": "N26-s09-b005",
+      "kind": "paragraph",
+      "text": "Diseñar degradación requiere una escala de capacidades, no una alternativa binaria entre funcionamiento total y caída. El hotel puede mantener consulta, reserva provisional o ingreso asistido bajo condiciones distintas, pero no presentar cada nivel como equivalente. Para cada modo se fijan datos mínimos, autoridad, población incluida, duración máxima y criterio de salida. Una señal visible informa a Comercial qué no puede prometer y a Recepción qué debe explicar. Si el modo reducido supera su ventana o acumula decisiones pendientes, la respuesta correcta puede ser suspender antes que normalizar una operación insegura."
+    },
+    {
+      "source_id": "N26-s09-b006",
+      "kind": "heading-3",
+      "text": "Riesgo de concentración"
+    },
+    {
+      "source_id": "N26-s09-b007",
+      "kind": "paragraph",
+      "text": "El riesgo de concentración aparece cuando varias capacidades dependen de un mismo proveedor, dato, servicio o punto de decisión. La diversidad nominal no garantiza independencia: dos canales pueden usar la misma nube y múltiples recorridos pueden apoyarse en una única identidad."
+    },
+    {
+      "source_id": "N26-s09-b008",
+      "kind": "paragraph",
+      "text": "HH-26 construye escenarios de falla común y no se limita a disponibilidad histórica. Observa cuántas promesas se afectan, qué poblaciones carecen de alternativa y cuánto tiempo necesita la recuperación. El mapa también incluye concentración de conocimiento, porque una sola persona puede ser un punto crítico aunque la infraestructura esté replicada."
+    },
+    {
+      "source_id": "N26-s09-b009",
+      "kind": "paragraph",
+      "text": "Reducir concentración puede requerir redundancia, aislamiento, sustitución o una forma segura de operar sin la dependencia. Cada opción agrega costo y complejidad; por eso se compara contra el daño evitado y se prueba. Duplicar proveedores sin ensayar conmutación sólo multiplica contratos y mantiene la misma fragilidad."
+    },
+    {
+      "source_id": "N26-s09-b010",
+      "kind": "paragraph",
+      "text": "La correlación importa más que el número de alternativas. Dos proveedores alojados en la misma región, dos canales que usan el mismo servicio de identidad o dos equipos que dependen de una única persona conservan un punto común de falla. HH-26 construye un escenario que elimina esa base compartida y observa qué capacidad queda. La decisión puede ser separar dominios, reservar una vía manual o aceptar el riesgo con un límite de exposición. El expediente registra el costo de la medida y el riesgo residual para que la diversificación no se convierta en un objetivo abstracto."
+    },
+    {
+      "source_id": "N26-s09-b011",
+      "kind": "heading-3",
+      "text": "Portabilidad y salida"
+    },
+    {
+      "source_id": "N26-s09-b012",
+      "kind": "paragraph",
+      "text": "Portabilidad y salida preservan la posibilidad de mover datos, procesos y responsabilidades sin quebrar la promesa. No son una cláusula ornamental ni una exportación de archivos al final del contrato. Incluyen formatos, derechos, reglas, secuencias, competencias, costos y continuidad durante la transición."
+    },
+    {
+      "source_id": "N26-s09-b013",
+      "kind": "paragraph",
+      "text": "El hotel debe poder recuperar reservas, definiciones de estado y evidencia si cambia de canal. HH-26 ensaya una extracción, valida completitud y reconstruye un recorrido con el sistema alternativo. La prueba muestra dependencias ocultas en credenciales, conocimiento operativo y decisiones comerciales que un archivo técnicamente correcto no conserva."
+    },
+    {
+      "source_id": "N26-s09-b014",
+      "kind": "paragraph",
+      "text": "La opción de salida se gobierna desde el inicio y se revisa con cada cambio material. Una migración técnicamente posible puede ser operacionalmente inviable si demora más que la tolerancia del servicio o exige trabajo que nadie puede sostener. Declarar ese límite permite negociar, invertir o aceptar dependencia con conciencia."
+    },
+    {
+      "source_id": "N26-s09-b015",
+      "kind": "paragraph",
+      "text": "El Reglamento de Datos de la Unión Europea (2023) aporta requisitos concretos para facilitar el cambio y la portabilidad entre servicios de tratamiento de datos, incluida información sobre formatos, restricciones y procedimientos. Su aplicación depende del tipo de servicio, del ámbito territorial y de excepciones previstas por la norma. Por eso HH-26 separa tres bases: derecho u obligación aplicable, cláusula contractual negociada y capacidad técnica propia. Una cláusula inspirada en la norma puede ser conveniente fuera de su alcance, pero no debe presentarse como mandato jurídico sin análisis competente."
+    },
+    {
+      "source_id": "N26-s09-b016",
+      "kind": "paragraph",
+      "text": "La salida se ensaya antes de necesitarla. El ejercicio selecciona reservas activas, exporta datos y reglas, reconstruye estados en una alternativa y mide decisiones que todavía requieren al proveedor saliente. También comprueba continuidad durante la transición y revocación posterior de accesos. La frecuencia depende de criticidad y cambio, no de un calendario universal. Un ensayo antiguo pierde fuerza cuando se modifica formato, subcontratación, volumen o población, aunque la cláusula contractual permanezca idéntica."
+    },
+    {
+      "source_id": "N26-s09-b017",
+      "kind": "paragraph",
+      "text": "Una prueba de salida recorre más que la descarga de datos. Verifica semántica, orden, historia de cambios, permisos, documentación, competencias y capacidad de operar durante la transición. El hotel toma una muestra representativa, reconstruye reservas activas y compara estados con el sistema de origen. También mide cuántas decisiones requieren asistencia del proveedor saliente. Si la exportación entrega archivos completos pero nadie puede interpretar excepciones, la portabilidad es nominal. Los hallazgos se traducen en cláusulas, automatizaciones o entrenamiento y vuelven a probarse antes de que una urgencia obligue a migrar."
+    },
+    {
+      "source_id": "N26-s09-b018",
+      "kind": "heading-3",
+      "text": "Gobernanza del ecosistema"
+    },
+    {
+      "source_id": "N26-s09-b019",
+      "kind": "paragraph",
+      "text": "La gobernanza del ecosistema coordina reglas comunes entre participantes que conservan autonomía. No centraliza toda decisión ni supone que el contrato resolverá una caída. Combina foros, estándares, incentivos, métricas, escalamiento, práctica de contingencia y mecanismos para revisar acuerdos."
+    },
+    {
+      "source_id": "N26-s09-b020",
+      "kind": "paragraph",
+      "text": "Hotel, canal y proveedor definen juntos estados, avisos y reparación, pero mantienen responsabilidades diferentes. HH-26 utiliza incidentes y cambios de interfaz para observar si el gobierno anticipa consecuencias o sólo distribuye culpa después. Las personas afectadas deben tener una vía visible cuando el conflicto entre organizaciones bloquea su recorrido."
+    },
+    {
+      "source_id": "N26-s09-b021",
+      "kind": "paragraph",
+      "text": "El participante con más poder puede imponer costos que el mecanismo formal no corrige. Por eso la gobernanza registra quién puede proponer, vetar, financiar y salir, además de quién ejecuta. Su eficacia se mide por la capacidad de sostener y reparar la promesa, aprender del episodio y modificar reglas sin borrar la autonomía necesaria."
+    },
+    {
+      "source_id": "N26-s09-b022",
+      "kind": "paragraph",
+      "text": "Los incentivos forman parte del mapa. El canal puede beneficiarse al confirmar pronto, el proveedor puede optimizar disponibilidad de su componente y el hotel absorber compensaciones en el mostrador. Un indicador compartido no elimina esa diferencia. HH-26 asigna a cada parte la señal que controla, la consecuencia que puede producir y la obligación de comunicar cambios. El foro conjunto revisa episodios y decisiones, mientras la autoridad del hotel conserva la responsabilidad frente al huésped. Gobernar cooperación no equivale a suponer intereses alineados."
+    },
+    {
+      "source_id": "N26-s09-b023",
+      "kind": "paragraph",
+      "text": "La cadencia de gobierno se vincula con decisiones observables. Una revisión periódica examina incidentes, cambios próximos, concentración, desempeño de contingencias y reclamos de personas afectadas. Las excepciones no se aceptan indefinidamente: tienen responsable, fecha y prueba de cierre. Los participantes conservan derecho a cuestionar evidencia y a registrar desacuerdo cuando los incentivos no coinciden. En HH-26, el foro conjunto no reemplaza la autoridad operativa del hotel; la prepara con información y acuerdos para que una caída real no inaugure la negociación que debió ocurrir antes."
+    },
+    {
+      "source_id": "N26-s09-b024",
+      "kind": "heading-3",
+      "text": "Instrumento HH-26: mapa de ecosistema y dependencia"
+    },
+    {
+      "source_id": "N26-s09-b025",
+      "kind": "paragraph",
+      "text": "HH-26 representa la promesa de ingreso como una red de capacidades y compromisos, no como un catálogo de aplicaciones. Cada casillero exige una fuente y una persona capaz de actuar; lo desconocido permanece visible como hipótesis pendiente."
+    },
+    {
+      "source_id": "N26-s09-b026",
+      "kind": "list-item",
+      "text": "**Promesa y población.** Precisar qué experiencia se sostiene, para quiénes y bajo qué situaciones ordinarias y excepcionales."
+    },
+    {
+      "source_id": "N26-s09-b027",
+      "kind": "list-item",
+      "text": "**Capacidades.** Enumerar resultados que el ecosistema debe producir, no componentes ni áreas del organigrama."
+    },
+    {
+      "source_id": "N26-s09-b028",
+      "kind": "list-item",
+      "text": "**Participantes.** Identificar hotel, canales, proveedores y actores públicos que toman decisiones o absorben consecuencias."
+    },
+    {
+      "source_id": "N26-s09-b029",
+      "kind": "list-item",
+      "text": "**Responsabilidad de punta a punta.** Nombrar quién puede priorizar la promesa completa, convocar a terceros y ordenar una reparación."
+    },
+    {
+      "source_id": "N26-s09-b030",
+      "kind": "list-item",
+      "text": "**Dependencias críticas.** Registrar condición requerida, grado de concentración, tiempo tolerable de falla y alternativa disponible."
+    },
+    {
+      "source_id": "N26-s09-b031",
+      "kind": "list-item",
+      "text": "**Fronteras de confianza.** Marcar dónde cambia la garantía sobre identidad, estado, dato o decisión y qué verificación se agrega."
+    },
+    {
+      "source_id": "N26-s09-b032",
+      "kind": "list-item",
+      "text": "**Contratos y datos.** Vincular cada intercambio con significado, oportunidad, autoridad de corrección y evidencia conservada."
+    },
+    {
+      "source_id": "N26-s09-b033",
+      "kind": "list-item",
+      "text": "**Señales de salud.** Combinar telemetría técnica con espera, abandono, excepción y trabajo manual del recorrido real."
+    },
+    {
+      "source_id": "N26-s09-b034",
+      "kind": "list-item",
+      "text": "**Modo degradado.** Definir qué parte segura de la promesa continúa, durante cuánto tiempo y con qué límites explícitos."
+    },
+    {
+      "source_id": "N26-s09-b035",
+      "kind": "list-item",
+      "text": "**Reparación.** Especificar cómo se reconcilian estados, se compensa a la persona afectada y se recupera trazabilidad."
+    },
+    {
+      "source_id": "N26-s09-b036",
+      "kind": "list-item",
+      "text": "**Portabilidad.** Probar que datos, reglas y responsabilidades pueden trasladarse sin depender de una promesa contractual abstracta."
+    },
+    {
+      "source_id": "N26-s09-b037",
+      "kind": "list-item",
+      "text": "**Fecha de revisión.** Fijar una cadencia y eventos que obliguen a reexaminar criticidad, concentración y salida."
+    },
+    {
+      "source_id": "N26-s09-b038",
+      "kind": "paragraph",
+      "text": "El mapa se ensaya con una reserva ordinaria y con la caída del canal externo durante un ingreso accesible. Si Lucía no puede ejecutar la contingencia sin llamar a Federico, la capacidad todavía depende de conocimiento privado aunque el diagrama esté completo."
+    },
+    {
+      "source_id": "N26-s09-b039",
+      "kind": "paragraph",
+      "text": "La lectura del instrumento empieza por una sola promesa y sigue sus dependencias hasta una decisión observable. No se completan los doce campos como inventario independiente: una frontera debe corresponder a un intercambio, una señal debe permitir actuar sobre una dependencia y una reparación debe devolver coherencia al estado afectado. Las contradicciones permanecen anotadas con su fuente. Esa disciplina permite comparar versiones del mapa y reconocer si una nueva integración amplió capacidad o sólo agregó otro participante que debe coordinarse."
+    },
+    {
+      "source_id": "N26-s09-b040",
+      "kind": "paragraph",
+      "text": "El expediente adjunta al menos un episodio real, un escenario adverso y una decisión de gobierno. El episodio evita modelar un sistema imaginado; el escenario hace visible la fragilidad; la decisión demuestra para qué sirve la representación. Después del ensayo, el equipo registra qué vínculo faltaba, qué supuesto resultó falso y qué obligación necesita otro acuerdo. La validez del mapa no se presume por su prolijidad: se sostiene mientras otra persona puede usarlo para anticipar, contener y reparar una interrupción concreta."
+    },
+    {
+      "source_id": "N26-s09-b041",
+      "kind": "paragraph",
+      "text": "La versión completada de HH-26 enumera, en lugar de aludir a ellos, los cinco servicios internos del episodio: inventario y reserva en el PMS, estado material de Housekeeping, asignación de Recepción, conciliación de pagos y registro operacional de eventos. Distingue tres proveedores: el canal externo, el servicio de identidad y la plataforma de cerraduras. Las dos decisiones manuales son comparar identidad con evidencia disponible y emitir una llave limitada con autorización de guardia. Esta enumeración permite comprobar límites y no debe interpretarse como arquitectura exhaustiva del hotel."
+    },
+    {
+      "source_id": "N26-s09-b042",
+      "kind": "paragraph",
+      "text": "Cada vínculo recibe una condición y una alternativa. El canal debe transmitir reserva, procedencia y cambios; si queda indisponible, el hotel conserva una copia operativa limitada y registra conciliación pendiente. Identidad aporta una afirmación vigente y trazable; ante resultado indeterminado, Recepción ejecuta verificación presencial dentro de criterios documentados. Cerraduras reciben una autorización con tiempo de validez; si el servicio central no emite, Seguridad puede crear una llave limitada y auditable. Pago conserva autorización y ruta de reversión; Housekeeping mantiene la condición material con fuente y hora. Ninguna contingencia inventa que el estado externo fue confirmado."
+    },
+    {
+      "source_id": "N26-s09-b043",
+      "kind": "paragraph",
+      "text": "El mapa registra responsabilidad completa en Ricardo, autoridad de ejecución en Lucía y responsabilidad técnica por contratos y trazas en Federico. Camila debe limitar la promesa del canal a lo que la capacidad puede sostener. El escenario adverso combina llegada a las 22.15, reserva accesible y demora de identidad. La salida resulta practicable sólo si el turno aloja sin perder restricciones, conserva datos mínimos, informa la condición provisoria y reconcilia después sin duplicar reserva ni cobro. El ensayo mide tiempo, decisiones manuales, acceso a evidencia y carga adicional."
+    },
+    {
+      "source_id": "N26-s09-b044",
+      "kind": "paragraph",
+      "text": "La prueba de concentración descubre que canal e identidad dependen de la misma región de nube. Contratar otro canal no diversifica ese modo de falla. HH-26 registra la base común, el tiempo tolerable y la opción manual; luego decide si aislar, duplicar o aceptar el riesgo. FinOps Foundation (2026) permite asignar el costo tecnológico de esa decisión entre quienes consumen y gobiernan la capacidad, pero la elección se justifica por continuidad y daño, no sólo por ahorro. El mapa se revisa ante cambio de proveedor, incidente severo o nueva población."
+    },
+    {
+      "source_id": "N26-s09-b045",
+      "kind": "heading-3",
+      "text": "Caso de transferencia: turnos hospitalarios"
+    },
+    {
+      "source_id": "N26-s09-b046",
+      "kind": "paragraph",
+      "text": "Un hospital coordina turnos con obras sociales, laboratorios, identidad provincial y servicios internos. Cada actor conserva autonomía, pero la persona experimenta un único recorrido."
+    },
+    {
+      "source_id": "N26-s09-b047",
+      "kind": "paragraph",
+      "text": "El mapa distingue qué puede resolver el hospital, qué debe acordar y qué necesita una vía degradada. Una autorización externa ausente no se convierte automáticamente en abandono clínico."
+    },
+    {
+      "source_id": "N26-s09-b048",
+      "kind": "paragraph",
+      "text": "La promesa se formula como acceder a una prestación segura en una ventana clínica, no como obtener una respuesta exitosa del sistema de turnos. El recorrido incorpora orden médica, cobertura, identidad, disponibilidad del profesional, preparación y comunicación al paciente. Para una práctica urgente, la demora de la obra social tiene una consecuencia diferente que para un control programado. Esa distinción modifica criticidad, tiempo tolerable y autoridad de contingencia."
+    },
+    {
+      "source_id": "N26-s09-b049",
+      "kind": "paragraph",
+      "text": "La prueba simula una autorización tardía durante un turno ya asignado. Admisión conserva el episodio, un profesional autorizado decide si la atención puede continuar y el área administrativa reconcilia después la cobertura. El hospital registra qué dato aceptó provisionalmente, quién asumió el riesgo y cómo informó a la persona. Si la única salida es «llamar a alguien conocido» o cancelar sin evaluar la necesidad clínica, el ecosistema carece de degradación diseñada aunque cada proveedor cumpla su contrato."
+    },
+    {
+      "source_id": "N26-s09-b050",
+      "kind": "paragraph",
+      "text": "HH-26 permite gobernar la promesa sin fingir control total sobre el ecosistema."
+    },
+    {
+      "source_id": "N26-s09-b051",
+      "kind": "heading-3",
+      "text": "Contraejemplo: el diagrama de microservicios"
+    },
+    {
+      "source_id": "N26-s09-b052",
+      "kind": "paragraph",
+      "text": "Un equipo presenta un diagrama con servicios, colas y APIs y lo llama mapa de ecosistema."
+    },
+    {
+      "source_id": "N26-s09-b053",
+      "kind": "paragraph",
+      "text": "No aparecen operadores, proveedores, contratos, decisiones manuales, concentración ni salida. El dibujo explica conectividad y oculta la promesa."
+    },
+    {
+      "source_id": "N26-s09-b054",
+      "kind": "paragraph",
+      "text": "La arquitectura se vuelve útil cuando relaciona dependencias con autoridad, consecuencias y reparación."
+    },
+    {
+      "source_id": "N26-s09-b055",
+      "kind": "heading-3",
+      "text": "Prueba integral antes de ampliar compromiso"
+    },
+    {
+      "source_id": "N26-s09-b056",
+      "kind": "paragraph",
+      "text": "La prueba recorre una llegada desde el canal hasta la llave y marca cada participante capaz de detenerla. Se ejecuta primero con todos los servicios disponibles y luego con identidad externa caída, una habitación accesible y Camila sosteniendo la promesa comercial."
+    },
+    {
+      "source_id": "N26-s09-b057",
+      "kind": "paragraph",
+      "text": "Ricardo debe mantener una parte segura del servicio, Lucía debe reconocer el estado y Elena debe saber qué riesgo residual acepta. Después se reemplaza temporalmente al proveedor crítico con el mecanismo de salida documentado y se verifica que reservas, reglas y trazas sigan utilizables."
+    },
+    {
+      "source_id": "N26-s09-b058",
+      "kind": "paragraph",
+      "text": "N26 aprueba si una persona ajena al mapa puede explicar dónde cambia la confianza, quién coordina la excepción y cómo se repara al huésped. Si el recorrido sólo puede sostenerse mediante contactos informales, la promesa todavía no pertenece al ecosistema gobernado."
+    },
+    {
+      "source_id": "N26-s09-b059",
+      "kind": "paragraph",
+      "text": "La devolución de la prueba separa tres resultados. Una falla de representación exige corregir el mapa; una falla de acuerdo exige negociar autoridad, tiempo o evidencia; una falla de capacidad exige invertir, limitar la promesa o diseñar otra vía. Confundirlos conduce a agregar documentación cuando falta poder de decisión o a comprar tecnología cuando el problema es semántico. Elena acepta ampliar el alcance sólo si el expediente identifica cuál de esas fallas apareció, quién modificará la condición y qué episodio posterior permitirá verificar que el cambio produjo una capacidad efectiva."
+    },
+    {
+      "source_id": "N26-s09-b060",
+      "kind": "paragraph",
+      "text": "La revisión conserva además el riesgo residual y la población todavía excluida, para impedir que una mejora parcial se comunique como garantía universal del ecosistema."
+    },
+    {
+      "source_id": "N26-s09-b061",
+      "kind": "paragraph",
+      "text": "Esa reserva queda asociada a una fecha y una autoridad concretas."
+    },
+    {
+      "source_id": "N26-s10-h2",
+      "kind": "heading-2",
+      "text": "Errores frecuentes"
+    },
+    {
+      "source_id": "N26-s10-b001",
+      "kind": "heading-3",
+      "text": "Confundir ecosistema con inventario"
+    },
+    {
+      "source_id": "N26-s10-b002",
+      "kind": "paragraph",
+      "text": "Enumerar sistemas y proveedores no muestra qué promesa los conecta ni cómo una falla atraviesa sus fronteras. El mapa debe seguir al huésped, no al organigrama de compras."
+    },
+    {
+      "source_id": "N26-s10-b003",
+      "kind": "heading-3",
+      "text": "Dibujar sólo tecnología"
+    },
+    {
+      "source_id": "N26-s10-b004",
+      "kind": "paragraph",
+      "text": "Un diagrama de APIs omite decisiones manuales, incentivos contractuales y capacidad de compensar. Esas relaciones pueden ser más críticas que la conectividad técnica."
+    },
+    {
+      "source_id": "N26-s10-b005",
+      "kind": "heading-3",
+      "text": "Asignar responsabilidad sin autoridad"
+    },
+    {
+      "source_id": "N26-s10-b006",
+      "kind": "paragraph",
+      "text": "Nombrar a una persona responsable sin presupuesto, información ni poder sobre terceros produce un escalamiento ficticio. El rol debe probarse durante una excepción realista."
+    },
+    {
+      "source_id": "N26-s10-b007",
+      "kind": "heading-3",
+      "text": "Tratar al tercero como caja negra"
+    },
+    {
+      "source_id": "N26-s10-b008",
+      "kind": "paragraph",
+      "text": "Aceptar una certificación o un SLA como evidencia completa impide examinar cambios, subcontratación y reparación. La opacidad contractual no elimina la responsabilidad del hotel."
+    },
+    {
+      "source_id": "N26-s10-b009",
+      "kind": "heading-3",
+      "text": "Ignorar concentración"
+    },
+    {
+      "source_id": "N26-s10-b010",
+      "kind": "paragraph",
+      "text": "Dos proveedores distintos pueden depender de la misma nube, identidad o fuente de datos. La diversidad nominal no reduce un punto común de falla."
+    },
+    {
+      "source_id": "N26-s10-b011",
+      "kind": "heading-3",
+      "text": "Confiar sin verificar"
+    },
+    {
+      "source_id": "N26-s10-b012",
+      "kind": "paragraph",
+      "text": "La confianza organizacional necesita evidencia proporcionada al daño posible. La verificación acordada protege la relación porque permite discutir una desviación antes de convertirla en acusación."
+    },
+    {
+      "source_id": "N26-s10-b013",
+      "kind": "heading-3",
+      "text": "Degradar sin límite"
+    },
+    {
+      "source_id": "N26-s10-b014",
+      "kind": "paragraph",
+      "text": "Un modo degradado sin duración, población ni umbral de salida normaliza una promesa inferior. La contingencia debe conservar seguridad y disparar reparación."
+    },
+    {
+      "source_id": "N26-s10-b015",
+      "kind": "heading-3",
+      "text": "Prometer sustitución instantánea"
+    },
+    {
+      "source_id": "N26-s10-b016",
+      "kind": "paragraph",
+      "text": "Exportar datos no equivale a recuperar reglas, secuencias, competencias ni autoridad. La sustituibilidad se demuestra mediante un ensayo, no mediante una cláusula."
+    },
+    {
+      "source_id": "N26-s10-b017",
+      "kind": "heading-3",
+      "text": "Olvidar trabajo manual"
+    },
+    {
+      "source_id": "N26-s10-b018",
+      "kind": "paragraph",
+      "text": "Las planillas, llamados y decisiones de turno sostienen capacidades cuando la integración falla. Omitirlos produce una arquitectura aparentemente limpia e incapaz de operar."
+    },
+    {
+      "source_id": "N26-s10-b019",
+      "kind": "heading-3",
+      "text": "Gobernar sólo por contrato"
+    },
+    {
+      "source_id": "N26-s10-b020",
+      "kind": "paragraph",
+      "text": "El contrato fija obligaciones, pero no coordina por sí solo una caída ni compensa a una persona. Gobierno también requiere señales, foros, decisiones y práctica de contingencia."
+    },
+    {
+      "source_id": "N26-s11-h2",
+      "kind": "heading-2",
+      "text": "Consecuencias profesionales"
+    },
+    {
+      "source_id": "N26-s11-b001",
+      "kind": "paragraph",
+      "text": "N26 desplaza la responsabilidad profesional desde el componente propio hacia la promesa que atraviesa organizaciones. Diseñar arquitectura implica ahora negociar garantías, verificar terceros, preparar degradación y conservar una salida cuando nadie posee control total."
+    },
+    {
+      "source_id": "N26-s11-b002",
+      "kind": "paragraph",
+      "text": "Esta mirada modifica la contratación. Comparar proveedores por precio y funciones resulta insuficiente si no se examinan dependencias, derechos de decisión, observabilidad, portabilidad y reparación. Una propuesta económica puede ocultar que la organización no accederá a eventos críticos, que el proveedor cambiará condiciones sin una ventana suficiente o que retirar datos exigirá meses. El análisis profesional traduce cada cláusula en una capacidad operativa: qué podrá observar el hotel, quién actuará durante una caída y cómo continuará el servicio mientras se disputa una responsabilidad."
+    },
+    {
+      "source_id": "N26-s11-b003",
+      "kind": "paragraph",
+      "text": "También cambia la arquitectura interna. Un equipo de plataforma no se evalúa por cantidad de servicios disponibles, sino por la autonomía segura que habilita a quienes los usan. Documentación, interfaces y automatización reducen carga sólo cuando permiten comprender límites y recuperarse de errores. Si cada excepción requiere convocar a especialistas centrales, la plataforma concentra dependencia aunque tenga una interfaz moderna. La evidencia combina tiempo hasta una decisión, calidad de la degradación y capacidad de un turno para resolver sin privilegios extraordinarios."
+    },
+    {
+      "source_id": "N26-s11-b004",
+      "kind": "paragraph",
+      "text": "La dirección conserva una responsabilidad que ningún contrato puede transferir. Puede distribuir tareas, alojar datos o comprar una identidad digital, pero sigue respondiendo por la promesa realizada y por la reparación. Esa responsabilidad exige presupuesto de salida, autoridad para limitar una integración y conversaciones periódicas con quienes operan las fronteras. El mapa de ecosistema se vuelve entonces un instrumento de inversión y gobierno: muestra dónde una mejora local aumenta exposición común y qué capacidad conviene desarrollar antes de ampliar el servicio."
+    },
+    {
+      "source_id": "N26-s12-h2",
+      "kind": "heading-2",
+      "text": "Límites y tensiones"
+    },
+    {
+      "source_id": "N26-s12-b001",
+      "kind": "paragraph",
+      "text": "Mapear un ecosistema simplifica relaciones que cambian y puede dar a quien dibuja una apariencia de control inexistente. Los acuerdos comerciales distribuyen poder de manera desigual; por eso criticidad, confianza y portabilidad deben revisarse con quienes operan y reciben las consecuencias."
+    },
+    {
+      "source_id": "N26-s12-b002",
+      "kind": "paragraph",
+      "text": "La dependencia no es necesariamente un defecto. Especializar puede mejorar seguridad, escala o acceso a conocimiento difícil de reproducir. El problema aparece cuando la organización confunde beneficio con control o no conoce qué supuesto vuelve aceptable la relación. N26 no prescribe internalizar todo. Exige comparar el valor obtenido con concentración, costo de cambio, exposición de datos y capacidad de sostener una alternativa. Una dependencia crítica puede aceptarse si su falla está delimitada, su salida fue ensayada y existe autoridad para activar la contingencia."
+    },
+    {
+      "source_id": "N26-s12-b003",
+      "kind": "paragraph",
+      "text": "La portabilidad también posee límites. Exportar una tabla no restituye reglas, historial, identidades, permisos ni acuerdos semánticos. Una prueba de salida debe reconstruir una capacidad mínima en otro entorno y medir pérdida, tiempo, costo y trabajo manual. Si la exportación sólo sirve al proveedor original, la cláusula de portabilidad es nominal. En Hotel Horizonte, trasladar reservas sin conservar accesibilidad o autoridad de modificación produciría una copia técnicamente correcta e inútil para operar. La salida se diseña desde la consecuencia que debe mantenerse."
+    },
+    {
+      "source_id": "N26-s12-b004",
+      "kind": "paragraph",
+      "text": "Los mapas envejecen cuando se actualizan sólo durante proyectos. Nuevas integraciones, cambios societarios y prácticas informales alteran la red sin pasar por una revisión central. Por eso cada vínculo crítico tiene una señal de cambio y una persona que puede confirmar su vigencia. Facturación, inventario de accesos y registros de incidentes permiten detectar dependencias no declaradas. La revisión no intenta capturar todo el ecosistema; prioriza los cambios capaces de modificar una promesa, una frontera de confianza o una condición de reparación."
+    },
+    {
+      "source_id": "N26-s12-b005",
+      "kind": "paragraph",
+      "text": "Finalmente, la búsqueda de resiliencia puede trasladar costos a actores con menos poder. Exigir redundancia a un proveedor pequeño, duplicar registros o imponer disponibilidad continua puede volver inviable una relación valiosa. La decisión debe considerar proporcionalidad y alternativas colaborativas, como acuerdos de contingencia compartidos o una degradación explícita. Gobernar el ecosistema no significa maximizar control unilateral, sino sostener una promesa común con responsabilidades comprensibles, evidencia suficiente y una distribución defendible de cargas y beneficios."
+    },
+    {
+      "source_id": "N26-s13-h2",
+      "kind": "heading-2",
+      "text": "De N26 a N27"
+    },
+    {
+      "source_id": "N26-s13-b001",
+      "kind": "paragraph",
+      "text": "El mapa de N26 permite localizar dependencias y responsables, pero todavía no demuestra que dos participantes interpreten igual un intercambio ni sepan actuar cuando llega tarde o falla. N27 convertirá los vínculos críticos en contratos sintácticos, semánticos, temporales y operacionales que puedan probarse."
+    },
+    {
+      "source_id": "N26-s14-h2",
+      "kind": "heading-2",
+      "text": "Síntesis"
+    },
+    {
+      "source_id": "N26-s14-b001",
+      "kind": "paragraph",
+      "text": "Una promesa de punta a punta pertenece a un ecosistema cuando depende de participantes autónomos y, aun así, conserva responsabilidad, evidencia y reparación. Plataforma, proveedor y contrato no son el resultado; son capacidades y compromisos que deben gobernarse."
+    },
+    {
+      "source_id": "N26-s14-b002",
+      "kind": "paragraph",
+      "text": "El mapa resulta útil si revela concentración, fronteras de confianza y modos degradados que un diagrama técnico omitiría. Su prueba decisiva es mantener una salida segura cuando falla la dependencia más cómoda de ignorar."
+    },
+    {
+      "source_id": "N26-s14-b003",
+      "kind": "paragraph",
+      "text": "La decisión profesional se completa cuando el mapa cambia una acción. Puede conducir a diversificar una dependencia, renegociar una cláusula, instrumentar una frontera, limitar una promesa o aceptar conscientemente un riesgo. Cada alternativa conserva costo, tiempo y consecuencia. La organización no necesita dominar cada componente para gobernar el ecosistema, pero sí reconocer qué no controla, qué evidencia recibe y cómo responderá cuando el acuerdo falle. En Hotel Horizonte, la reserva sólo vuelve a ser una promesa defendible cuando identidad, pago, inventario y cerradura poseen una degradación coordinada y una autoridad capaz de reparar. Esa conclusión es transferible a cualquier servicio compuesto: la arquitectura se juzga por la continuidad de una capacidad para personas concretas, no por la prolijidad del diagrama ni por el cumplimiento aislado de proveedores."
+    },
+    {
+      "source_id": "N26-s14-b004",
+      "kind": "paragraph",
+      "text": "La revisión queda fechada y conserva una autoridad capaz de cambiar el acuerdo."
+    },
+    {
+      "source_id": "N26-s15-h2",
+      "kind": "heading-2",
+      "text": "Cinco píldoras para recordar"
+    },
+    {
+      "source_id": "N26-s15-b001",
+      "kind": "list-item",
+      "text": "Una promesa que atraviesa organizaciones sigue necesitando una autoridad capaz de responder por el resultado completo."
+    },
+    {
+      "source_id": "N26-s15-b002",
+      "kind": "list-item",
+      "text": "Que cada componente funcione no demuestra que el ecosistema pueda completar ni reparar el recorrido."
+    },
+    {
+      "source_id": "N26-s15-b003",
+      "kind": "list-item",
+      "text": "Una plataforma reduce coordinación sólo si sus consumidores comprenden sus reglas y conservan una salida practicable."
+    },
+    {
+      "source_id": "N26-s15-b004",
+      "kind": "list-item",
+      "text": "La criticidad de un tercero depende de la consecuencia, la concentración y el tiempo de sustitución, no sólo del gasto."
+    },
+    {
+      "source_id": "N26-s15-b005",
+      "kind": "list-item",
+      "text": "La degradación segura se diseña y se ensaya antes del incidente; improvisarla bajo presión traslada el riesgo a la persona afectada."
+    },
+    {
+      "source_id": "N26-s16-h2",
+      "kind": "heading-2",
+      "text": "Glosario esencial"
+    },
+    {
+      "source_id": "N26-s16-b001",
+      "kind": "paragraph",
+      "text": "**Ecosistema de servicio:** un ecosistema de servicio reúne participantes autónomos que sostienen una promesa mediante capacidades, reglas e intercambios interdependientes."
+    },
+    {
+      "source_id": "N26-s16-b002",
+      "kind": "paragraph",
+      "text": "**Capacidad de servicio:** una capacidad de servicio combina personas, información, tecnología y autoridad para producir un resultado repetible."
+    },
+    {
+      "source_id": "N26-s16-b003",
+      "kind": "paragraph",
+      "text": "**Plataforma compartida:** una plataforma compartida ofrece capacidades gobernadas que otros equipos o actores utilizan para construir y operar servicios."
+    },
+    {
+      "source_id": "N26-s16-b004",
+      "kind": "paragraph",
+      "text": "**Tercero crítico:** un tercero crítico es un participante externo cuya falla o decisión puede comprometer una promesa material."
+    },
+    {
+      "source_id": "N26-s16-b005",
+      "kind": "paragraph",
+      "text": "**Responsabilidad sobre la capacidad:** reúne autoridad persistente para priorizar, observar, coordinar y reparar una promesa."
+    },
+    {
+      "source_id": "N26-s16-b006",
+      "kind": "paragraph",
+      "text": "**Mapa de dependencias:** un mapa de dependencias representa qué necesita cada capacidad, en qué secuencia y bajo qué supuestos."
+    },
+    {
+      "source_id": "N26-s16-b007",
+      "kind": "paragraph",
+      "text": "**Frontera de confianza:** una frontera de confianza marca dónde cambian las garantías, la autoridad y la evidencia aceptada."
+    },
+    {
+      "source_id": "N26-s16-b008",
+      "kind": "paragraph",
+      "text": "**Responsabilidad compartida:** responsabilidad compartida distribuye tareas sin diluir quién responde por la consecuencia completa."
+    },
+    {
+      "source_id": "N26-s16-b009",
+      "kind": "paragraph",
+      "text": "**Degradación diseñada:** degradación diseñada mantiene una parte segura y valiosa de la promesa cuando una dependencia falla."
+    },
+    {
+      "source_id": "N26-s16-b010",
+      "kind": "paragraph",
+      "text": "**Riesgo de concentración:** riesgo de concentración aparece cuando múltiples capacidades dependen de un mismo proveedor, dato o punto de control."
+    },
+    {
+      "source_id": "N26-s16-b011",
+      "kind": "paragraph",
+      "text": "**Portabilidad y salida:** portabilidad y salida preservan la posibilidad de mover datos, procesos y responsabilidades sin quebrar la promesa."
+    },
+    {
+      "source_id": "N26-s16-b012",
+      "kind": "paragraph",
+      "text": "**Gobernanza del ecosistema:** gobernanza del ecosistema coordina reglas comunes entre participantes que conservan autonomía."
+    },
+    {
+      "source_id": "N26-s17-h2",
+      "kind": "heading-2",
+      "text": "Preguntas de preparación"
+    },
+    {
+      "source_id": "N26-s17-b001",
+      "kind": "list-item",
+      "text": "¿Qué promesa atraviesa más de una organización y quién puede responder por su resultado completo?"
+    },
+    {
+      "source_id": "N26-s17-b002",
+      "kind": "list-item",
+      "text": "¿Qué capacidad depende hoy de conocimiento, permiso o trabajo manual que el mapa técnico no muestra?"
+    },
+    {
+      "source_id": "N26-s17-b003",
+      "kind": "list-item",
+      "text": "¿Cuándo una plataforma reduce coordinación y cuándo concentra un riesgo que antes estaba distribuido?"
+    },
+    {
+      "source_id": "N26-s17-b004",
+      "kind": "list-item",
+      "text": "¿Qué tercero se volvería crítico por consecuencia o tiempo de sustitución aunque represente poco gasto?"
+    },
+    {
+      "source_id": "N26-s17-b005",
+      "kind": "list-item",
+      "text": "¿Qué autoridad y recursos necesita la persona responsable para actuar durante una falla que cruza fronteras?"
+    },
+    {
+      "source_id": "N26-s17-b006",
+      "kind": "list-item",
+      "text": "¿Qué modo degradado preserva valor sin convertir una contingencia temporal en servicio inferior permanente?"
+    },
+    {
+      "source_id": "N26-s17-b007",
+      "kind": "paragraph",
+      "text": "Para el encuentro, mapear una promesa conocida o utilizar el ecosistema completado de HH-26. Incluir al menos un tercero, una frontera de confianza y una dependencia concentrada. Proponer un modo degradado y la prueba que demostraría si la salida es practicable."
+    },
+    {
+      "source_id": "N26-s18-h2",
+      "kind": "heading-2",
+      "text": "Referencias base"
+    },
+    {
+      "source_id": "N26-s18-b001",
+      "kind": "list-item",
+      "text": "AXELOS (2019). *ITIL Foundation: ITIL 4 Edition*. TSO."
+    },
+    {
+      "source_id": "N26-s18-b002",
+      "kind": "list-item",
+      "text": "Parker, G. G., Van Alstyne, M. W. y Choudary, S. P. (2016). *Platform Revolution*. Norton."
+    },
+    {
+      "source_id": "N26-s18-b003",
+      "kind": "list-item",
+      "text": "Tiwana, A. (2014). *Platform Ecosystems*. Morgan Kaufmann."
+    },
+    {
+      "source_id": "N26-s18-b004",
+      "kind": "list-item",
+      "text": "Skelton, M. y Pais, M. (2019). *Team Topologies*. IT Revolution."
+    },
+    {
+      "source_id": "N26-s18-b005",
+      "kind": "list-item",
+      "text": "ISO/IEC (2018). *ISO/IEC 20000-1:2018 Information technology — Service management — Part 1: Service management system requirements*. https://www.iso.org/standard/70636.html"
+    },
+    {
+      "source_id": "N26-s18-b006",
+      "kind": "list-item",
+      "text": "Boyens, J. M., Smith, A., Bartol, N., Winkler, K., Holbrook, A. y Fallon, M. (2024). *Cybersecurity Supply Chain Risk Management Practices for Systems and Organizations*. NIST SP 800-161 Rev. 1 Update 1. https://doi.org/10.6028/NIST.SP.800-161r1-upd1"
+    },
+    {
+      "source_id": "N26-s18-b007",
+      "kind": "list-item",
+      "text": "Rose, S., Borchert, O., Mitchell, S. y Connelly, S. (2020). *Zero Trust Architecture*. NIST SP 800-207. https://doi.org/10.6028/NIST.SP.800-207"
+    },
+    {
+      "source_id": "N26-s18-b008",
+      "kind": "list-item",
+      "text": "CISA (2023). *Shifting the Balance of Cybersecurity Risk: Principles and Approaches for Secure by Design Software*. https://www.cisa.gov/resources-tools/resources/secure-by-design"
+    },
+    {
+      "source_id": "N26-s18-b009",
+      "kind": "list-item",
+      "text": "Unión Europea (2023). *Reglamento (UE) 2023/2854 sobre normas armonizadas para un acceso justo a los datos y su utilización (Reglamento de Datos)*. https://eur-lex.europa.eu/eli/reg/2023/2854/oj"
+    },
+    {
+      "source_id": "N26-s18-b010",
+      "kind": "list-item",
+      "text": "Ross, J. W., Weill, P. y Robertson, D. C. (2006). *Enterprise Architecture as Strategy*. Harvard Business School Press."
+    },
+    {
+      "source_id": "N26-s18-b011",
+      "kind": "list-item",
+      "text": "Hohpe, G. y Woolf, B. (2003). *Enterprise Integration Patterns*. Addison-Wesley."
+    },
+    {
+      "source_id": "N26-s18-b012",
+      "kind": "list-item",
+      "text": "FinOps Foundation (2026). *FinOps Framework*. https://www.finops.org/framework/"
+    },
+    {
+      "source_id": "N26-s18-b013",
+      "kind": "list-item",
+      "text": "Coase, R. H. (1937). “The Nature of the Firm”. *Economica*, 4(16), 386–405. https://doi.org/10.1111/j.1468-0335.1937.tb00002.x"
+    },
+    {
+      "source_id": "N26-s18-b014",
+      "kind": "list-item",
+      "text": "Mintzberg, H. (1983). *Structure in Fives: Designing Effective Organizations*. Prentice-Hall."
+    },
+    {
+      "source_id": "N26-s18-b015",
+      "kind": "list-item",
+      "text": "Cockburn, A. (2006). *Agile Software Development: The Cooperative Game* (2.ª ed.). Addison-Wesley."
+    }
+  ]
+}

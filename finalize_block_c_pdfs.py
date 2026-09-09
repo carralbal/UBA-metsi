@@ -10,11 +10,23 @@ from pathlib import Path
 import pdfplumber
 from pypdf import PdfReader, PdfWriter
 from pypdf.generic import NameObject, TextStringObject
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen import canvas
 
 
 ROOT = Path(__file__).resolve().parent
 LINKEDIN = "https://www.linkedin.com/in/carralbal"
+PACKAGE_VERSION = 3
+AVENIR = Path("/System/Library/Fonts/Avenir.ttc")
+
+
+def register_fonts() -> None:
+    """Keep the footer inside the approved METSI type system."""
+    if "Avenir" not in pdfmetrics.getRegisteredFontNames():
+        if not AVENIR.is_file():
+            raise FileNotFoundError(f"Tipografía editorial no disponible: {AVENIR}")
+        pdfmetrics.registerFont(TTFont("Avenir", str(AVENIR), subfontIndex=0))
 
 
 def footer_page(width: float, height: float, number: int, total: int, white: bool) -> PdfReader:
@@ -25,11 +37,11 @@ def footer_page(width: float, height: float, number: int, total: int, white: boo
     c.setFillColorRGB(*color)
     c.setLineWidth(0.45)
     c.line(49, 30, width - 49, 30)
-    c.setFont("Helvetica", 6.4)
+    c.setFont("Avenir", 6.4)
     folio = f"{number:02d}"
     credit = "Diego Carralbal, 2026  ·  linkedin.com/in/carralbal"
     c.drawString(49, 16, folio)
-    credit_width = c.stringWidth(credit, "Helvetica", 6.4)
+    credit_width = c.stringWidth(credit, "Avenir", 6.4)
     x = width - 49 - credit_width
     c.drawString(x, 16, credit)
     c.linkURL(LINKEDIN, (x, 12, width - 49, 24), relative=0, thickness=0)
@@ -39,9 +51,10 @@ def footer_page(width: float, height: float, number: int, total: int, white: boo
 
 
 def finalize(number: int) -> Path:
-    package = ROOT / f"N{number:02d}-v1-editorial"
-    source = package / "output" / f"N{number:02d}-METSI-lectura-previa-v1.pdf"
-    target = package / "output" / f"N{number:02d}-METSI-lectura-previa-v1-final.pdf"
+    register_fonts()
+    package = ROOT / f"N{number:02d}-v{PACKAGE_VERSION}-editorial"
+    source = package / "output" / f"N{number:02d}-METSI-lectura-previa-v{PACKAGE_VERSION}.pdf"
+    target = package / "output" / f"N{number:02d}-METSI-lectura-previa-v{PACKAGE_VERSION}-final.pdf"
     reader = PdfReader(source)
     writer = PdfWriter()
     writer.clone_document_from_reader(reader)

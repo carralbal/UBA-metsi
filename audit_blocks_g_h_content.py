@@ -29,7 +29,10 @@ def words(text: str) -> list[str]:
 
 
 def substantive(text: str) -> int:
-    return len(words(text.split("## Cinco píldoras para recordar", 1)[0]))
+    start = text.find("## Tesis")
+    stop = text.find("## Cinco píldoras para recordar")
+    body = text[start if start >= 0 else 0 : stop if stop >= 0 else None]
+    return len(words(body))
 
 
 def shingles(text: str, n: int = 12) -> set[tuple[str, ...]]:

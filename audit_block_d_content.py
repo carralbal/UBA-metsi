@@ -8,6 +8,8 @@ import json
 import re
 from pathlib import Path
 
+from audit_canonical_n11_n36 import anchor_for, normalized
+
 ROOT = Path(__file__).resolve().parent
 EXPECTED = {
     17: "Lógicas predictivas, iterativas, incrementales, adaptativas y experimentales",
@@ -16,7 +18,7 @@ EXPECTED = {
     20: "Estrategia metodológica: tailoring, hitos y condiciones de salida",
 }
 REQUIRED = [
-    "Pregunta profesional", "Hotel Horizonte", "Tesis", "Del cierre anterior al nuevo avance",
+    "Pregunta profesional", "Hotel Horizonte", "Tesis",
     "Tradiciones y marcos utilizados en el argumento", "Errores frecuentes",
     "Consecuencias profesionales", "Límites y tensiones", "Síntesis",
     "Cinco píldoras para recordar", "Glosario esencial", "Preguntas de preparación",
@@ -24,13 +26,23 @@ REQUIRED = [
 ]
 
 
+def references_anchored(entries: list[str], body: str) -> bool:
+    normalized_body = normalized(body)
+    return all(
+        any(candidate and normalized(candidate) in normalized_body for candidate in anchor_for(entry)[1])
+        for entry in entries
+    )
+
+
 def words(text: str) -> list[str]:
     return re.findall(r"[A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9]+", text)
 
 
 def substantive(text: str) -> int:
+    start = text.find("## Tesis")
     stop = text.find("## Cinco píldoras para recordar")
-    return len(words(text[: stop if stop >= 0 else None]))
+    body = text[start if start >= 0 else 0 : stop if stop >= 0 else None]
+    return len(words(body))
 
 
 def main() -> None:
@@ -50,12 +62,14 @@ def main() -> None:
             "title": text.startswith(f"# {code} · {title}"),
             "substantive_floor": substantive(text) >= 6000,
             "three_movements": len(re.findall(r"^## Movimiento [123]", text, re.M)) == 3,
-            "required_sections": all(label in text for label in REQUIRED),
+            "required_sections": all(label in text for label in REQUIRED) and bool(
+                re.search(r"^## (?:De N\d+ a N\d+|Después de N36)", text, re.M)
+            ),
             "five_pills": len(re.findall(r"^[1-5]\. ", text.split("## Cinco píldoras para recordar", 1)[1].split("## Glosario esencial", 1)[0], re.M)) == 5,
             "six_questions": len(re.findall(r"^[1-6]\. ", text.split("## Preguntas de preparación", 1)[1].split("## Referentes", 1)[0], re.M)) == 6,
             "six_referents": len(re.findall(r"^\*\*[^\n]+\.\*\*", text.split("## Referentes", 1)[1].split("## Referencias base", 1)[0], re.M)) == 6,
             "references": len(ref_lines) >= 10,
-            "reference_anchors": all(ref.split(" (", 1)[0] in body for ref in ref_lines),
+            "reference_anchors": references_anchored(ref_lines, body),
             "no_placeholders": not re.search(r"\b(?:TBD|TODO|LOREM|XXX)\b|\[(?:pendiente|completar|insertar)[^\]]*\]", text),
             "no_incidental_dashes": "—" not in body and "–" not in body,
             "rioplatense_impersonal": not re.search(r"\b(?:vos|usted|ustedes|tu|tus|te)\b", text, re.I),

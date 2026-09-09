@@ -6,9 +6,9 @@
       "document": "N26",
       "title": "Ecosistema de servicios, plataformas y terceros",
       "result": "PASS",
-      "words_total": 7540,
-      "words_substantive": 6869,
-      "references": 12,
+      "words_total": 7861,
+      "words_substantive": 6389,
+      "references": 15,
       "depth_scores": {
         "conceptual_precision": 4,
         "mechanism": 4,
@@ -45,9 +45,9 @@
       "document": "N27",
       "title": "Contratos sintácticos, semánticos, temporales y operacionales",
       "result": "PASS",
-      "words_total": 7234,
-      "words_substantive": 6647,
-      "references": 12,
+      "words_total": 7789,
+      "words_substantive": 6399,
+      "references": 16,
       "depth_scores": {
         "conceptual_precision": 4,
         "mechanism": 4,
@@ -84,9 +84,9 @@
       "document": "N28",
       "title": "Evidencia de calidad según riesgo y atributos en tensión",
       "result": "PASS",
-      "words_total": 7295,
-      "words_substantive": 6648,
-      "references": 12,
+      "words_total": 7885,
+      "words_substantive": 6410,
+      "references": 17,
       "depth_scores": {
         "conceptual_precision": 4,
         "mechanism": 4,
@@ -123,9 +123,9 @@
       "document": "N29",
       "title": "Gobierno de integración, despliegue, infraestructura, aprobación y rollback",
       "result": "PASS",
-      "words_total": 7275,
-      "words_substantive": 6622,
-      "references": 12,
+      "words_total": 7666,
+      "words_substantive": 6280,
+      "references": 16,
       "depth_scores": {
         "conceptual_precision": 4,
         "mechanism": 4,
@@ -162,9 +162,9 @@
       "document": "N30",
       "title": "Observabilidad técnica, señales de negocio, SLI, SLO, incidentes y aprendizaje",
       "result": "PASS",
-      "words_total": 7402,
-      "words_substantive": 6736,
-      "references": 12,
+      "words_total": 7798,
+      "words_substantive": 6385,
+      "references": 15,
       "depth_scores": {
         "conceptual_precision": 4,
         "mechanism": 4,
@@ -201,62 +201,62 @@
   "cross_document_overlap": [
     {
       "pair": "N26-N27",
-      "shared_12grams": 920,
-      "ratio": 0.2069,
+      "shared_12grams": 0,
+      "ratio": 0.0,
       "pass": true
     },
     {
       "pair": "N26-N28",
-      "shared_12grams": 913,
-      "ratio": 0.2043,
+      "shared_12grams": 0,
+      "ratio": 0.0,
       "pass": true
     },
     {
       "pair": "N26-N29",
-      "shared_12grams": 918,
-      "ratio": 0.2067,
+      "shared_12grams": 14,
+      "ratio": 0.0024,
       "pass": true
     },
     {
       "pair": "N26-N30",
-      "shared_12grams": 904,
-      "ratio": 0.1993,
+      "shared_12grams": 0,
+      "ratio": 0.0,
       "pass": true
     },
     {
       "pair": "N27-N28",
-      "shared_12grams": 897,
-      "ratio": 0.2017,
+      "shared_12grams": 0,
+      "ratio": 0.0,
       "pass": true
     },
     {
       "pair": "N27-N29",
-      "shared_12grams": 893,
-      "ratio": 0.2011,
+      "shared_12grams": 0,
+      "ratio": 0.0,
       "pass": true
     },
     {
       "pair": "N27-N30",
-      "shared_12grams": 888,
-      "ratio": 0.1997,
+      "shared_12grams": 0,
+      "ratio": 0.0,
       "pass": true
     },
     {
       "pair": "N28-N29",
-      "shared_12grams": 921,
-      "ratio": 0.2074,
+      "shared_12grams": 5,
+      "ratio": 0.0009,
       "pass": true
     },
     {
       "pair": "N28-N30",
-      "shared_12grams": 938,
-      "ratio": 0.2099,
+      "shared_12grams": 0,
+      "ratio": 0.0,
       "pass": true
     },
     {
       "pair": "N29-N30",
-      "shared_12grams": 912,
-      "ratio": 0.2054,
+      "shared_12grams": 0,
+      "ratio": 0.0,
       "pass": true
     }
   ]

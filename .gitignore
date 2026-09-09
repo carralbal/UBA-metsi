@@ -1,4 +1,4 @@
-# Repositorio METSI acotado a N00–N10 y a su estándar editorial versionado.
+# Repositorio METSI acotado a la colección canónica N00-N36 y a su sistema editorial versionado.
 *
 !.gitignore
 !*.md
@@ -229,6 +229,28 @@ N10-v9-final/qa/rendered/
 !N29-v1-editorial/**
 !N30-v1-editorial/
 !N30-v1-editorial/**
+
+# Paquetes editoriales v3 N11-N36, versionados de forma lean y reproducible.
+# Se conservan fuentes, HTML/CSS, manifiestos, diagramas, activos y sólo el PDF
+# final. El PDF crudo y los contactos/renders de QA se regeneran localmente.
+!N1[1-9]-v3-editorial/
+!N1[1-9]-v3-editorial/**
+!N2[0-9]-v3-editorial/
+!N2[0-9]-v3-editorial/**
+!N3[0-6]-v3-editorial/
+!N3[0-6]-v3-editorial/**
+N1[1-9]-v3-editorial/output/*
+N2[0-9]-v3-editorial/output/*
+N3[0-6]-v3-editorial/output/*
+!N1[1-9]-v3-editorial/output/*-v3-final.pdf
+!N2[0-9]-v3-editorial/output/*-v3-final.pdf
+!N3[0-6]-v3-editorial/output/*-v3-final.pdf
+N1[1-9]-v3-editorial/qa/
+N2[0-9]-v3-editorial/qa/
+N3[0-6]-v3-editorial/qa/
+!qa-reports/
+!qa-reports/block-c-v3/
+!qa-reports/block-c-v3/*.json
 !qa-contact-sheets/
 qa-contact-sheets/*
 !qa-contact-sheets/N11-contact-sheet.jpg
@@ -251,6 +273,12 @@ qa-contact-sheets/*
 !qa-contact-sheets/N28-contact-sheet.jpg
 !qa-contact-sheets/N29-contact-sheet.jpg
 !qa-contact-sheets/N30-contact-sheet.jpg
+!qa-contact-sheets/N31-contact-sheet.jpg
+!qa-contact-sheets/N32-contact-sheet.jpg
+!qa-contact-sheets/N33-contact-sheet.jpg
+!qa-contact-sheets/N34-contact-sheet.jpg
+!qa-contact-sheets/N35-contact-sheet.jpg
+!qa-contact-sheets/N36-contact-sheet.jpg
 !BLOCK-C-*.md
 !BLOCK-D-*.md
 !BLOCK-D-*.json

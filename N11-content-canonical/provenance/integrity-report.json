@@ -4,13 +4,13 @@
   "stage": "content-canonical-v1",
   "language": "es-AR",
   "source": "N11-content-canonical/source/N11_cuando_un_dato_sostiene_una_afirmacion-content-canonical-v1.md",
-  "sha256": "783f5c54ad7e5a399f03de91c1be34be7ed9e5ed0fbe1e68ef64013deabd5e67",
-  "bytes": 60577,
-  "words_total": 8567,
-  "words_substantive": 7623,
-  "source_blocks": 266,
-  "references": 13,
-  "urls": 11,
+  "sha256": "a0a225d6d8740f4ab58da9591c44accf8b2fb6f64480fd1949d1274ccaf18e9b",
+  "bytes": 61401,
+  "words_total": 8695,
+  "words_substantive": 6785,
+  "source_blocks": 269,
+  "references": 15,
+  "urls": 12,
   "results": [
     {
       "check": "source_exists",
@@ -20,12 +20,12 @@
     {
       "check": "substantive_word_floor",
       "result": "pass",
-      "evidence": 7623
+      "evidence": 7718
     },
     {
       "check": "total_word_count",
       "result": "pass",
-      "evidence": 8567
+      "evidence": 8694
     },
     {
       "check": "required_architecture",
@@ -66,7 +66,7 @@
       "evidence": [
         {
           "title": "Un dato es una representación, no el fenómeno",
-          "words": 239
+          "words": 296
         },
         {
           "title": "La afirmación fija la carga de prueba",
@@ -86,7 +86,7 @@
         },
         {
           "title": "Calidad suficiente para el uso, no perfección universal",
-          "words": 248
+          "words": 255
         },
         {
           "title": "Primera aplicación de HH-11: tres afirmaciones, tres exigencias",
@@ -94,7 +94,7 @@
         },
         {
           "title": "Procedencia: entidad, actividad y agente",
-          "words": 223
+          "words": 224
         },
         {
           "title": "Cada transformación puede cambiar el significado",
@@ -130,7 +130,7 @@
         },
         {
           "title": "Datos producidos o interpretados con inteligencia artificial",
-          "words": 242
+          "words": 272
         },
         {
           "title": "Segunda aplicación de HH-11: auditar la cadena del tablero",
@@ -193,7 +193,7 @@
     {
       "check": "reference_depth",
       "result": "pass",
-      "evidence": 13
+      "evidence": 15
     },
     {
       "check": "recent_literature",
@@ -203,7 +203,7 @@
     {
       "check": "reference_urls",
       "result": "pass",
-      "evidence": 11
+      "evidence": 12
     },
     {
       "check": "all_references_anchored_in_body",
@@ -269,5 +269,11 @@
       "evidence": "no PDF, HTML or CSS"
     }
   ],
-  "overall": "pass"
+  "overall": "pass",
+  "word_count": 8695,
+  "block_count": 269,
+  "checks": {
+    "source_sha256": "a0a225d6d8740f4ab58da9591c44accf8b2fb6f64480fd1949d1274ccaf18e9b",
+    "references": 15
+  }
 }

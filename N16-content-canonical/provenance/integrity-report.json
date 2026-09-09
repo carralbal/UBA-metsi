@@ -4,13 +4,13 @@
   "stage": "content-canonical-v1",
   "language": "es-AR",
   "source": "N16-content-canonical/source/N16_coherencia_contradicciones_productivas_y_ciclos_de_vida-content-canonical-v1.md",
-  "sha256": "f7be84140f471b3e77c5bed4d1ee5078ccfa83535546b4e3510082f389d835f8",
-  "bytes": 48645,
-  "words_total": 6693,
-  "words_substantive": 6078,
-  "source_blocks": 292,
-  "references": 12,
-  "urls": 8,
+  "sha256": "e0316f2661f760181c5e623616aed38745bc9a54f16d27a066a8c50112dbe127",
+  "bytes": 61989,
+  "words_total": 8629,
+  "words_substantive": 7132,
+  "source_blocks": 319,
+  "references": 15,
+  "urls": 9,
   "results": [
     {
       "check": "source_exists",
@@ -20,12 +20,12 @@
     {
       "check": "substantive_word_floor",
       "result": "pass",
-      "evidence": 6078
+      "evidence": 7929
     },
     {
       "check": "total_word_count",
       "result": "pass",
-      "evidence": 6693
+      "evidence": 8629
     },
     {
       "check": "required_architecture",
@@ -66,51 +66,47 @@
       "evidence": [
         {
           "title": "Coherencia no es igualdad",
-          "words": 641
+          "words": 1726
         },
         {
-          "title": "Contradicción de identidad y granularidad",
-          "words": 355
-        },
-        {
-          "title": "Contradicción de actor y autoridad",
-          "words": 414
+          "title": "Primera aplicación de HH-16: auditar “entregable”",
+          "words": 207
         },
         {
           "title": "Modelos como afirmaciones revisables",
-          "words": 369
+          "words": 726
         },
         {
           "title": "Dependencias entre decisión, modelo y operación",
-          "words": 291
+          "words": 292
         },
         {
           "title": "Baseline, versión y decisión",
-          "words": 369
+          "words": 443
         },
         {
           "title": "Ciclos de vida no son cascadas obligatorias",
-          "words": 208
+          "words": 366
         },
         {
           "title": "Priorizar contradicciones por consecuencia y reversibilidad",
-          "words": 365
+          "words": 469
         },
         {
           "title": "Instrumento HH-16: expediente de coherencia y ciclo de vida",
-          "words": 177
+          "words": 187
         },
         {
           "title": "Recorrido de escenario transversal",
-          "words": 165
+          "words": 319
         },
         {
           "title": "Prueba de retiro, recuperación y memoria",
-          "words": 257
+          "words": 258
         },
         {
           "title": "Revisión de contradicciones abiertas",
-          "words": 441
+          "words": 645
         },
         {
           "title": "Ejemplo simple: un turno que cambió de canal",
@@ -118,7 +114,7 @@
         },
         {
           "title": "Caso institucional: una política vigente sin capacidad distribuida",
-          "words": 361
+          "words": 430
         }
       ]
     },
@@ -145,7 +141,7 @@
     {
       "check": "reference_depth",
       "result": "pass",
-      "evidence": 12
+      "evidence": 15
     },
     {
       "check": "recent_literature",
@@ -155,7 +151,7 @@
     {
       "check": "reference_urls",
       "result": "pass",
-      "evidence": 8
+      "evidence": 9
     },
     {
       "check": "all_references_anchored_in_body",
@@ -218,5 +214,11 @@
       "evidence": "no PDF, HTML or CSS"
     }
   ],
-  "overall": "pass"
+  "overall": "pass",
+  "word_count": 8629,
+  "block_count": 319,
+  "checks": {
+    "source_sha256": "e0316f2661f760181c5e623616aed38745bc9a54f16d27a066a8c50112dbe127",
+    "references": 15
+  }
 }

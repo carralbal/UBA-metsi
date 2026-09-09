@@ -1,0 +1,284 @@
+{
+  "number": 14,
+  "title": "N14 · Procesos end-to-end, handoffs, colas y excepciones",
+  "module": "Modelar sólo lo que ayuda a decidir",
+  "source": "source/N14_procesos_end_to_end_handoffs_colas_y_excepciones-content-canonical-v1.md",
+  "source_sha256": "a761414da465eea49f41c4302a7b1a062b5b36cb8f51e7cdae7ef245beaba0e1",
+  "source_words": 7945,
+  "content_audit": "canonical-v2-under-exhaustive-audit",
+  "cover": {
+    "file": "cover-source-premium-bw-v1.png",
+    "source": "assets/cover-source-premium-bw-v1.png",
+    "sha256": "c681ed416f0876c0603db0378c3a8c303f60a743903dbb6bf14be44f755624e0",
+    "alt": "Una mujer empuja un carro de ropa blanca por un corredor alto y luminoso, junto a ascensores que reflejan otros carros.",
+    "photographic_origin": "native_black_and_white",
+    "render_treatment": "no_grayscale_conversion"
+  },
+  "internal_images": [
+    "pause-01.png",
+    "pause-02.png",
+    "editorial-01.png",
+    "editorial-02.png",
+    "editorial-03.png",
+    "editorial-04.png",
+    "editorial-05.png",
+    "editorial-06.png",
+    "editorial-07.png",
+    "editorial-08.png"
+  ],
+  "image_manifest": [
+    {
+      "file": "assets/pause-01.png",
+      "sha256": "5f93d4c0830f91c50e9c2c6ccc57303a3383b34a202a30ebe273bedbacf66549",
+      "alt": "Tres carros esperan en colas diferentes mientras trabajadores intercambian ropa blanca y una ficha en un corredor de servicio.",
+      "role": "full_page_pause",
+      "rights_status": "project_bound_generated_media"
+    },
+    {
+      "file": "assets/pause-02.png",
+      "sha256": "5edf3dab4da8338ba2a4e014027c3c86cd8878f678dc4b34343f8e95e3d123a6",
+      "alt": "Una profesional sigue un expediente físico a través de un mostrador, una escalera y una sala de espera vistos en reflejos sucesivos.",
+      "role": "full_page_pause",
+      "rights_status": "project_bound_generated_media"
+    },
+    {
+      "file": "assets/hotel-elena.jpg",
+      "sha256": "cbdc3fbb0c472ffb71b9f308a4f8ca28f48328a9fccd8c1801e18b691e5cb68f",
+      "alt": "",
+      "role": "hotel_horizonte_character",
+      "rights_status": "project_authorized_character_asset"
+    },
+    {
+      "file": "assets/hotel-lucia.jpg",
+      "sha256": "e0f1e862fe8b8117d269d46e8b5373b874baebf8ce125d7e2cb2d7114b424ed1",
+      "alt": "",
+      "role": "hotel_horizonte_character",
+      "rights_status": "project_authorized_character_asset"
+    },
+    {
+      "file": "assets/hotel-ricardo.jpg",
+      "sha256": "52a07a9be54c05d7152bb218d240fb3ef3ea9d1b6974f5aee085486d2ae389e3",
+      "alt": "",
+      "role": "hotel_horizonte_character",
+      "rights_status": "project_authorized_character_asset"
+    },
+    {
+      "file": "assets/hotel-federico.jpg",
+      "sha256": "354e828c3d8f790c20baff3ecc18f24d44dd7f619a6b1e3cb768a2c216cf9b63",
+      "alt": "",
+      "role": "hotel_horizonte_character",
+      "rights_status": "project_authorized_character_asset"
+    },
+    {
+      "file": "assets/hotel-mariela-benitez-v1.png",
+      "sha256": "f7972b4fca32393893f06672fe240d64d1f2c157d4e0a56a959fb0cadeccb0cb",
+      "alt": "",
+      "role": "hotel_horizonte_character",
+      "rights_status": "project_authorized_character_asset"
+    },
+    {
+      "file": "assets/hotel-camila-duarte-v2.png",
+      "sha256": "8c7d51cf105ec25743ab926c62efe81d6d7db641e1a0b1afabfc6bb15a71809b",
+      "alt": "",
+      "role": "hotel_horizonte_character",
+      "rights_status": "project_authorized_character_asset"
+    },
+    {
+      "file": "assets/editorial-01.png",
+      "sha256": "fac5036c9c306fe723703a14f3da41497f4bd487381ceff1dc4b9ba4f0188762",
+      "alt": "Una mujer con traje y carpeta recorre un estrecho pasillo de servicio con estantes de toallas y botellas.",
+      "role": "contents_editorial",
+      "rights_status": "project_bound_generated_media",
+      "contact_sheet_panel": null
+    },
+    {
+      "file": "assets/editorial-02.png",
+      "sha256": "57326b64a08d06a6b0f4e65550608bf11a492adbc60845a382cb4591bf26710d",
+      "alt": "Cinco personas con distintos uniformes se inclinan sobre planos extendidos en una mesa y señalan el mismo sector.",
+      "role": "hotel_evidence_primary",
+      "rights_status": "project_bound_generated_media",
+      "contact_sheet_panel": null
+    },
+    {
+      "file": "assets/editorial-03.png",
+      "sha256": "60090e59dd80a4ed8662412e54ed83d5bc22c0e8d33232c73ec3a426b2952e39",
+      "alt": "Varias manos intercambian una llave sobre un sobre, una radio portátil y una carpeta negra cerrada.",
+      "role": "problem_or_consequences_evidence",
+      "rights_status": "project_bound_generated_media",
+      "contact_sheet_panel": null
+    },
+    {
+      "file": "assets/editorial-04.png",
+      "sha256": "5030989f2627e553d974796562b544e972fb06e456ec295fe519e06222aa00ad",
+      "alt": "Una mujer junto a un carro de limpieza entrega documentos a un hombre con traje frente a una habitación abierta.",
+      "role": "movement_two_evidence",
+      "rights_status": "project_bound_generated_media",
+      "contact_sheet_panel": null
+    },
+    {
+      "file": "assets/editorial-05.png",
+      "sha256": "d5a46097941ce59ecfb408cd4a31ac2f51d1819606752ffcdbc9a5e9f1d67d2d",
+      "alt": "Un hombre con traje observa mientras dos mujeres conversan en un vestíbulo concurrido, una de ellas junto a una valija.",
+      "role": "movement_three_or_diptych_evidence",
+      "rights_status": "project_bound_generated_media",
+      "contact_sheet_panel": null
+    },
+    {
+      "file": "assets/editorial-06.png",
+      "sha256": "bfe4031f131946ed115c51b019548dcff7ebef0190f8893bd4bb5c210dd0ee40",
+      "alt": "Sobre un mostrador hay flores, una carpeta, una radio, llaves, una taza y una hoja de papel arrugada.",
+      "role": "errors_evidence",
+      "rights_status": "project_bound_generated_media",
+      "contact_sheet_panel": null
+    },
+    {
+      "file": "assets/editorial-07.png",
+      "sha256": "17ada0bde8098b4fbd63039908ac3a09f36b2f36906751bb7f6c3787f8ccf6b6",
+      "alt": "Cuatro personas trabajan sobre un gran papel con rutas dibujadas y tarjetas, rodeadas de cuadernos y una botella térmica.",
+      "role": "synthesis_evidence",
+      "rights_status": "project_bound_generated_media",
+      "contact_sheet_panel": null
+    },
+    {
+      "file": "assets/editorial-08.png",
+      "sha256": "976ab6ef2514977584f6f3953d88078484f47b197711d9b200493801c9202e56",
+      "alt": "Un corredor de arcos reúne personas caminando, otras sentadas en mesas laterales y una figura detenida junto a una puerta.",
+      "role": "preparation",
+      "rights_status": "project_bound_generated_media",
+      "contact_sheet_panel": null
+    }
+  ],
+  "portrait_references": [
+    {
+      "key": "august-wilhelm-scheer",
+      "name": "August-Wilhelm Scheer",
+      "file": "assets/referent-august-wilhelm-scheer.jpg",
+      "sha256": "d7a0d324b2c010dec6c2d4ab5d7bb74648a2425857f7db30e878a88e484edcd7",
+      "rights_status": "approved_open_reuse_candidate",
+      "source_page": "https://commons.wikimedia.org/wiki/File:August-Wilhelm_Scheer-_Deutschland_ohne_digitale_Strategie.jpg",
+      "creator": "Video screenshot; attribution recorded on Commons",
+      "credit_line": "Wikimedia Commons source attribution",
+      "license_name": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "approved": true,
+      "rights_registry": "portrait-rights-N11-N23.json"
+    },
+    {
+      "key": "thomas-davenport",
+      "name": "Thomas Davenport",
+      "file": "assets/referent-thomas-davenport.png",
+      "sha256": "07c1dae04e5823beb36c68b915d3596d569cd04263f50c24f7f35981386f8a7e",
+      "rights_status": "approved_open_reuse",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Tom-Davenport-photo-2025.png",
+      "creator": "Thomas H. Davenport",
+      "credit_line": "Thomas H. Davenport",
+      "license_name": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "approved": true,
+      "rights_registry": "portrait-rights-N11-N23.json"
+    },
+    {
+      "key": "jan-vom-brocke",
+      "name": "Jan vom Brocke",
+      "file": "assets/referent-jan-vom-brocke.jpg",
+      "sha256": "9dcc431fa49bb9b7fd3b078ef41164f52ae435d2972a8a55b0cff1536de04760",
+      "rights_status": "approved_open_reuse_editorial_crop",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Academic_Director_Jan_vom_Brocke_presenting_at_the_Annual_Workshop_2023_in_Wroc%C5%82aw.jpg",
+      "creator": "Appanachi01",
+      "credit_line": "Appanachi01",
+      "license_name": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "approved": true,
+      "rights_registry": "portrait-rights-N11-N23.json"
+    },
+    {
+      "key": "wil-van-der-aalst",
+      "name": "Wil van der Aalst",
+      "file": "assets/referent-wil-van-der-aalst.jpg",
+      "sha256": "da071492fc94d5dae14dea63f352af7b0191204efa7783ca8e0000e8d9d53259",
+      "rights_status": "approved_open_reuse",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Wil_van_der_Aalst_and_the_process_mining_science,_2016.jpg",
+      "creator": "Fondazione Bruno Kessler",
+      "credit_line": "Fondazione Bruno Kessler",
+      "license_name": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "approved": true,
+      "rights_registry": "portrait-rights-N24-N36.json"
+    },
+    {
+      "key": "leonard-kleinrock",
+      "name": "Leonard Kleinrock",
+      "file": "assets/referent-leonard-kleinrock.png",
+      "sha256": "ec09834676928e4eeb5d4fc5c3bf5ef97bb3b01206ac87a7998ad00fc72f001b",
+      "rights_status": "approved_open_reuse_candidate",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Kleinrock_headshot.png",
+      "creator": "TippyZora",
+      "credit_line": "TippyZora",
+      "license_name": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "approved": true,
+      "rights_registry": "portrait-rights-N11-N23.json"
+    },
+    {
+      "key": "henry-mintzberg",
+      "name": "Henry Mintzberg",
+      "file": "assets/referent-henry-mintzberg.jpg",
+      "sha256": "ad572e0341fc229448e9d522527a8939b0061619fbec3c8e6ac89d02df68cd47",
+      "rights_status": "approved_open_reuse_low_quality_warning",
+      "source_page": "https://commons.wikimedia.org/wiki/File:HenryMintzberg230948.jpg",
+      "creator": "Personeelsnet",
+      "credit_line": "Personeelsnet",
+      "license_name": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "approved": true,
+      "rights_registry": "portrait-rights-N24-N36.json"
+    }
+  ],
+  "diagrams": [
+    {
+      "file": "diagrams/N14-mapa-01.svg",
+      "title": "Proceso de punta a punta",
+      "labels": [
+        "Promesa",
+        "Caso",
+        "Transferencia",
+        "Cola",
+        "Excepción",
+        "Cierre"
+      ],
+      "claim": "Proceso de punta a punta ordena promesa, caso, transferencia, cola, excepción, cierre para localizar dónde una promesa cambia de estado y quién debe responder por ese pasaje.",
+      "family": "sequence",
+      "sha256": "8e5e5039aa3cb15511c44191f967789ab2f5ecc685ef9f11211a849742bd6e64"
+    }
+  ],
+  "quotes": [
+    "Un proceso coordina trabajo, decisiones, esperas y reparaciones para producir un resultado observable.",
+    "Un proceso end-to-end puede atravesar organizaciones que no comparten autoridad ni datos."
+  ],
+  "references": [
+    "Hammer, M. (1990). “Reengineering Work: Don’t Automate, Obliterate”. *Harvard Business Review*, 68(4), 104–112. https://hbr.org/1990/07/reengineering-work-dont-automate-obliterate",
+    "Davenport, T. H. (1993). *Process Innovation: Reengineering Work through Information Technology*. Harvard Business School Press.",
+    "Rummler, G. A. y Brache, A. P. (2012). *Improving Performance: How to Manage the White Space on the Organization Chart*. Jossey-Bass.",
+    "Dumas, M., La Rosa, M., Mendling, J. y Reijers, H. A. (2018). *Fundamentals of Business Process Management*. Springer. https://doi.org/10.1007/978-3-662-56509-4",
+    "van der Aalst, W. M. P. (2016). *Process Mining: Data Science in Action* (2.ª ed.). Springer. https://doi.org/10.1007/978-3-662-49851-4",
+    "van der Aalst, W. M. P. y Carmona, J., eds. (2022). *Process Mining Handbook*. Springer. https://doi.org/10.1007/978-3-031-08848-3",
+    "Little, J. D. C. (1961). “A Proof for the Queuing Formula: L = λW”. *Operations Research*, 9(3), 383–387. https://doi.org/10.1287/opre.9.3.383",
+    "Hopp, W. J. y Spearman, M. L. (2011). *Factory Physics* (3.ª ed.). Waveland Press.",
+    "Seddon, J. (2003). *Freedom from Command and Control*. Vanguard Press.",
+    "Scheer, A.-W. (1998). *ARIS, Business Process Frameworks*. Springer.",
+    "vom Brocke, J. y Rosemann, M. (eds.) (2015). *Handbook on Business Process Management 2*. Springer. https://doi.org/10.1007/978-3-642-45103-4",
+    "Kleinrock, L. (1975). *Queueing Systems, Volume 1: Theory*. Wiley.",
+    "Mintzberg, H. (1994). *The Rise and Fall of Strategic Planning*. Free Press.",
+    "Object Management Group (2014). *Business Process Model and Notation, Version 2.0.2*. https://www.omg.org/spec/BPMN/2.0.2",
+    "APQC (2026). *Process Classification Framework, Version 8.0*. https://www.apqc.org/process-frameworks",
+    "ISO (2015). *ISO 9001:2015 Quality management systems — Requirements*. https://www.iso.org/standard/62085.html"
+  ],
+  "closing": {
+    "file": "matches-close.png",
+    "sha256": "06318b951ef619692a236027ed07ec7a4a1bb9b66cc875a916c40f060e47ecde",
+    "alt": "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza.",
+    "caption": "La secuencia vuelve visible que toda intervención consume recursos, deja huellas y necesita un criterio de cierre.",
+    "folio": true,
+    "footer": true
+  }
+}

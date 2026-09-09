@@ -15,13 +15,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 CHROME = Path("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
+PACKAGE_VERSION = 3
 
 
 def export(number: int) -> Path:
-    package = ROOT / f"N{number:02d}-v1-editorial"
+    package = ROOT / f"N{number:02d}-v{PACKAGE_VERSION}-editorial"
     source = package / "index.html"
-    output = package / "output" / f"N{number:02d}-METSI-lectura-previa-v1.pdf"
-    temporary = Path("/private/tmp") / f"N{number:02d}-METSI-block-c-{os.getpid()}.pdf"
+    output = package / "output" / f"N{number:02d}-METSI-lectura-previa-v{PACKAGE_VERSION}.pdf"
+    temporary = Path("/private/tmp") / f"N{number:02d}-METSI-v{PACKAGE_VERSION}-{os.getpid()}.pdf"
     with tempfile.TemporaryDirectory(prefix=f"metsi-N{number:02d}-", dir="/private/tmp") as profile:
         command = [
             str(CHROME), "--headless=new", "--no-sandbox", "--disable-gpu",

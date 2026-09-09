@@ -2,7 +2,7 @@
   "document": "N27",
   "stage": "content-canonical-v1",
   "source": "source/N27_contratos_sintacticos_semanticos_temporales_y_operacionales-content-canonical-v1.md",
-  "source_sha256": "9cae3099871968287ebe71395e38c1a751380f42e260955cabc3ece855453abd",
+  "source_sha256": "819102f81b27ba8a3cd05bc8ae6111d7eabb1ec6409dc62a11c5eeea59ff00a3",
   "eligible_blocks": [
     {
       "source_id": "src-0001",
@@ -27,7 +27,7 @@
     {
       "source_id": "src-0005",
       "kind": "paragraph",
-      "text": "El canal externo envía al Hotel Horizonte un mensaje válido: la reserva quedó confirmada. El PMS acepta el esquema, registra el identificador y responde con éxito. Minutos después, Recepción descubre que la habitación accesible fue reasignada porque ambos sistemas interpretaban confirmada de manera distinta."
+      "text": "El canal externo envía al Hotel Horizonte un mensaje válido: la reserva quedó confirmada. El sistema de gestión hotelera (PMS) acepta el esquema, registra el identificador y responde con éxito. Minutos después, Recepción descubre que la habitación accesible fue reasignada porque ambos sistemas interpretaban confirmada de manera distinta."
     },
     {
       "source_id": "src-0006",
@@ -57,1244 +57,1139 @@
     {
       "source_id": "src-0011",
       "kind": "heading",
-      "text": "## Hotel Horizonte: una estrategia para una contradicción ya conocida"
+      "text": "## Hotel Horizonte: «liberada» no significaba lo mismo para todos"
     },
     {
       "source_id": "src-0012",
       "kind": "paragraph",
-      "text": "HH-27 selecciona la integración entre canal y PMS. El expediente registra estructura, vocabulario, temporalidad, precondiciones, efectos, errores, seguridad, compatibilidad y operación. Luego prueba mensajes duplicados, demorados, fuera de orden y semánticamente contradictorios. La reserva sólo cambia de estado cuando todas las capas sostienen la misma consecuencia."
+      "text": "HH-27 retoma una deuda declarada en HH-23 y situada dentro del ecosistema por HH-26. El corte de HH-23 había creado una proyección compuesta y provisoria para completar una llegada, sin cerrar el significado compartido. Ahora Mariela Benítez muestra que Housekeeping emite `liberada` cuando termina la limpieza; Lucía Ferreyra necesita además que la habitación esté asignable, que la cerradura responda y que no exista una restricción de mantenimiento. Federico Müller descubre que el mensaje es sintácticamente válido en todos los casos. El defecto pendiente está en el significado, el momento y la consecuencia que cada consumidor atribuye al mismo estado."
     },
     {
       "source_id": "src-0013",
-      "kind": "heading",
-      "text": "## Tesis"
+      "kind": "paragraph",
+      "text": "El equipo reúne mensajes del PMS, la bitácora de cerraduras, la planilla de Housekeeping y tres episodios de Recepción. Uno contiene un evento repetido, otro llega diecisiete minutos tarde y el tercero conserva el estado anterior después de una reasignación. Ricardo Sosa señala que un tiempo máximo de espera, o *timeout*, no puede decidir por sí solo si se entrega una llave. Camila Duarte advierte que la web ya promete disponibilidad inmediata, aun cuando la operación no dispone de esa garantía."
     },
     {
       "source_id": "src-0014",
       "kind": "paragraph",
-      "text": "N27 diseña contratos sintácticos, semánticos, temporales y operacionales, y vincula conformidad técnica con significado compartido, comportamiento observable y capacidad de reparación."
+      "text": "La ficha HH-27 define productor, consumidores, precondiciones, transición permitida, vigencia temporal, clave de idempotencia y contrato de error. La decisión es reservar `liberada` para limpieza terminada y crear `asignable` como estado operacional compuesto. Recepción sólo entrega cuando puede reconstruir las condiciones que lo produjeron. Ante duplicados mantiene una única transición; ante demora conserva el estado previo y abre una verificación visible, en vez de inventar éxito."
     },
     {
       "source_id": "src-0015",
-      "kind": "heading",
-      "text": "## Del cierre anterior al nuevo avance"
+      "kind": "paragraph",
+      "text": "La medida se revisará tras treinta transiciones o ante una habitación entregada incorrectamente. Si el contrato reduce inconsistencias pero aumenta esperas sin explicación, no habrá cumplido su propósito. HH-28 usará esos mismos episodios para discutir qué evidencia de calidad alcanza cuando confiabilidad, desempeño, accesibilidad y capacidad de recuperación entran en tensión."
     },
     {
       "source_id": "src-0016",
-      "kind": "paragraph",
-      "text": "N26 deja evidencia y decisiones abiertas que N27 utiliza sin reabrir su contenido. N27 diseña contratos sintácticos, semánticos, temporales y operacionales, y vincula conformidad técnica con significado compartido, comportamiento observable y capacidad de reparación."
+      "kind": "heading",
+      "text": "## Tesis"
     },
     {
       "source_id": "src-0017",
       "kind": "paragraph",
-      "text": "N28 tomará esos contratos y decidirá qué evidencia de calidad exige cada riesgo. N27 no establece todavía el conjunto completo de atributos ni la suficiencia de sus pruebas."
+      "text": "Dos sistemas no están integrados porque intercambien mensajes válidos, sino cuando comparten o traducen de manera explícita significado, vigencia, efecto y manejo de la indeterminación. Un contrato que omite cualquiera de esas capas puede pasar pruebas sintácticas y producir decisiones incompatibles ante demora, duplicación o falla parcial; por eso debe probarse sobre la consecuencia operacional y conservar quién puede detener y reparar."
     },
     {
       "source_id": "src-0018",
       "kind": "heading",
-      "text": "## Tradiciones y marcos utilizados en el argumento"
+      "text": "## Del cierre anterior al nuevo avance"
     },
     {
       "source_id": "src-0019",
       "kind": "paragraph",
-      "text": "IETF define semántica, mensajes y comportamiento de HTTP. En N27, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N27: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+      "text": "El mapa HH-26 mostró dependencias, fronteras de confianza y responsables, pero cada flecha todavía podía ocultar un desacuerdo. N27 toma esos vínculos y pregunta qué reciben realmente productor, consumidor y operación cuando circula un mensaje."
     },
     {
       "source_id": "src-0020",
       "kind": "paragraph",
-      "text": "OpenAPI Initiative estandariza descripciones legibles por personas y máquinas. En N27, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N27: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+      "text": "La progresión va de la dependencia reconocida al compromiso verificable. La forma del dato es sólo una capa: significado, vigencia, efecto, error y reparación deben permitir que las partes anticipen la misma consecuencia antes de discutir si la calidad alcanzada resulta suficiente."
     },
     {
       "source_id": "src-0021",
-      "kind": "paragraph",
-      "text": "JSON Schema define vocabularios para describir y validar estructuras JSON. En N27, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N27: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+      "kind": "heading",
+      "text": "## Tradiciones y marcos utilizados en el argumento"
     },
     {
       "source_id": "src-0022",
       "kind": "paragraph",
-      "text": "Evans, E. vincula lenguaje compartido con modelos y fronteras de dominio. En N27, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N27: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+      "text": "Fielding, R. T., Nottingham, M. y Reschke, J. definen semántica, mensajes y comportamiento de HTTP."
     },
     {
       "source_id": "src-0023",
       "kind": "paragraph",
-      "text": "Kleppmann, M. analiza tiempo, distribución, consistencia y fallas en sistemas de datos. En N27, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N27: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+      "text": "OpenAPI Initiative estandariza descripciones legibles por personas y máquinas."
     },
     {
       "source_id": "src-0024",
       "kind": "paragraph",
-      "text": "Hohpe, G. y Woolf, B. aportan patrones para intercambios, mensajería y fallas. En N27, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N27: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+      "text": "JSON Schema define vocabularios para describir y validar estructuras JSON."
     },
     {
       "source_id": "src-0025",
       "kind": "paragraph",
-      "text": "Fowler, M. aporta patrones para discutir integración y evolución sin reducirlas a conectividad. En N27, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N27: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+      "text": "Evans, E. vincula lenguaje compartido con modelos y fronteras de dominio."
     },
     {
       "source_id": "src-0026",
       "kind": "paragraph",
-      "text": "AsyncAPI Initiative extiende contratos a interacciones asincrónicas y orientadas a eventos. En N27, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N27: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+      "text": "Kleppmann, M. analiza tiempo, distribución, consistencia y fallas en sistemas de datos."
     },
     {
       "source_id": "src-0027",
       "kind": "paragraph",
-      "text": "W3C fundamenta procedencia mediante entidades, actividades y agentes. En N27, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N27: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+      "text": "Hohpe, G. y Woolf, B. aportan patrones para explicitar canales, mensajes, correlación, idempotencia y manejo de errores dentro de contratos operacionales."
     },
     {
       "source_id": "src-0028",
       "kind": "paragraph",
-      "text": "ISO/IEC actualiza el modelo de calidad de productos y sistemas TIC. En N27, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N27: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+      "text": "Fowler, M. aporta patrones para discutir integración y evolución sin reducirlas a conectividad."
     },
     {
       "source_id": "src-0029",
       "kind": "paragraph",
-      "text": "NIST sitúa verificación y acceso en fronteras de confianza explícitas. En N27, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N27: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+      "text": "AsyncAPI Initiative extiende contratos a interacciones asincrónicas y orientadas a eventos."
     },
     {
       "source_id": "src-0030",
       "kind": "paragraph",
-      "text": "Pact Foundation prueba expectativas de consumidores contra productores. En N27, ese aporte pone a prueba decisiones concretas y no funciona como respaldo ornamental. Su alcance se conserva en N27: ninguna referencia sustituye la evidencia del caso ni la autoridad necesaria para intervenir."
+      "text": "W3C Provenance Working Group fundamenta procedencia mediante entidades, actividades y agentes."
     },
     {
       "source_id": "src-0031",
-      "kind": "heading",
-      "text": "## Movimiento 1 · Reconocer dependencias y promesas operativas"
+      "kind": "paragraph",
+      "text": "Fielding, R. T. muestra que una interfaz distribuida adquiere propiedades por sus restricciones y semántica de interacción, no por adoptar una etiqueta tecnológica."
     },
     {
       "source_id": "src-0032",
-      "kind": "heading",
-      "text": "### Contrato sintáctico"
+      "kind": "paragraph",
+      "text": "Rose, S., Borchert, O., Mitchell, S. y Connelly, S. permiten definir identidad, autorización y evidencia de acceso como obligaciones verificables del contrato, y no como supuestos externos a la interfaz."
     },
     {
       "source_id": "src-0033",
       "kind": "paragraph",
-      "text": "Un contrato sintáctico define estructura, tipos, obligatoriedad y formato de un intercambio. La definición fija el objeto de decisión. Si el equipo de N27 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+      "text": "Pact Foundation prueba expectativas de consumidores contra productores."
     },
     {
       "source_id": "src-0034",
       "kind": "paragraph",
-      "text": "No garantiza significado, oportunidad ni efecto correcto. La distinción evita que una palabra familiar oculte otro mecanismo. En N27, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+      "text": "Parnas, D. L. permite delimitar módulos por decisiones que conviene ocultar; Lamport, L. vuelve examinable el orden causal cuando no existe un reloj global; Vogels, W. explicita los compromisos de la consistencia eventual; Gray, J. aporta el vocabulario transaccional necesario para razonar sobre estados, fallas y recuperación."
     },
     {
       "source_id": "src-0035",
-      "kind": "paragraph",
-      "text": "En contrato sintáctico, el recorrido causal debe mostrar qué condición habilita la acción, qué transformación ocurre y quién absorbe el resultado. Permite validar mensajes antes de procesarlos y detectar incompatibilidades estructurales. Si un salto depende sólo de una explicación oral, la estrategia todavía no puede gobernarlo."
+      "kind": "heading",
+      "text": "## Movimiento 1 · Acordar forma, significado, tiempo y efecto"
     },
     {
       "source_id": "src-0036",
-      "kind": "paragraph",
-      "text": "La evidencia relevante para contrato sintáctico no se limita al resultado promedio. Esquemas, ejemplos y pruebas de validación sostienen su conformidad. N27 busca además casos negativos, diferencias entre poblaciones y señales de que la explicación elegida podría ser insuficiente."
+      "kind": "heading",
+      "text": "### Contrato sintáctico"
     },
     {
       "source_id": "src-0037",
       "kind": "paragraph",
-      "text": "Ejemplo. La reserva exige identificador, fecha, categoría y estado con tipos definidos. En N27, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+      "text": "Un contrato sintáctico define estructura, tipos, obligatoriedad y formato de un intercambio. Permite detectar mensajes incompletos o incompatibles antes de procesarlos, pero no garantiza que productor y consumidor compartan significado, oportunidad ni efecto."
     },
     {
       "source_id": "src-0038",
       "kind": "paragraph",
-      "text": "El tradeoff central de contrato sintáctico aparece entre anticipar y preservar opciones. Anticipar puede reducir coordinación y también fijar una premisa prematura; preservar opciones puede producir aprendizaje y también demorar una protección necesaria. La elección debe declarar cuál de esos costos acepta, durante cuánto tiempo y para quién."
+      "text": "En HH-27, una reserva debe declarar identificador, fecha, categoría y estado con tipos precisos. Esquemas, ejemplos válidos y casos que deben rechazarse forman una especificación ejecutable. La prueba conserva versión y consumidor, porque una estructura aceptada por un canal puede quebrar otro."
     },
     {
       "source_id": "src-0039",
       "kind": "paragraph",
-      "text": "La auditoría de contrato sintáctico termina con una pregunta de uso: ¿qué podría decidir ahora una persona que antes no podía? En N27, la respuesta debe nombrar una acción, una restricción y una evidencia, no sólo una comprensión mejorada."
+      "text": "Dos mensajes sintácticamente válidos pueden inducir decisiones opuestas. Por eso el cierre no dice «la API funciona», sino qué formas se aceptan, cómo se versionan y qué ocurre con un mensaje dudoso. La sintaxis es una condición necesaria dentro de un contrato más amplio."
     },
     {
       "source_id": "src-0040",
       "kind": "paragraph",
-      "text": "Operacionalizar contrato sintáctico requiere asignar una unidad observable. El equipo define qué episodio contará, desde qué momento, con qué población y bajo qué fuente. Después compara al menos un caso ordinario con otro que fuerce excepción. Esta precisión en N27 evita que una conclusión general se sostenga sólo en ejemplos convenientes."
+      "text": "La precisión sintáctica evita trasladar ambigüedad a valores especiales. Un campo ausente no necesariamente equivale a cero, falso o desconocido; una fecha sin zona horaria no permite ordenar eventos entre sedes; un identificador libre puede perder ceros o cambiar de codificación. La ficha declara diferencias entre obligatorio, opcional y anulable, además de unidades, zonas horarias, cardinalidad y vocabularios permitidos. Los ejemplos incluyen límites y rechazos esperados, no sólo un mensaje ideal. Así, la validación detecta una incompatibilidad antes de que un consumidor complete silenciosamente lo que el productor nunca afirmó."
     },
     {
       "source_id": "src-0041",
       "kind": "paragraph",
-      "text": "La decisión profesional no termina en adoptar contrato sintáctico. Se compara una ruta principal con una explicación rival, se explicita quién queda expuesto y se conserva un modo de revisar. Dos mensajes válidos pueden representar decisiones opuestas. El límite forma parte del diseño y no una nota posterior."
+      "text": "JSON Schema Draft 2020-12 permite expresar restricciones estructurales y OpenAPI 3.2.0 vincula esquemas con operaciones documentadas (JSON Schema, 2022; OpenAPI Initiative, 2025). Ninguno de los dos artefactos garantiza por sí mismo que `liberada` habilite la misma decisión para Housekeeping y Recepción. La ficha usa esas fuentes para anclar forma y ejemplos y reserva el acuerdo semántico para reglas, episodios y autoridad del dominio."
     },
     {
       "source_id": "src-0042",
+      "kind": "paragraph",
+      "text": "La prueba sintáctica se ejecuta sobre el artefacto que llegará a producción. Una especificación correcta no alcanza si el serializador emite otra estructura o una pasarela elimina campos. Se conservan versión, huella del esquema y muestra de intercambio para vincular el resultado con la liberación. Cuando el contrato cambia, una comparación identifica adiciones compatibles, restricciones nuevas y transformaciones que exigen migración. La decisión no es aprobar toda diferencia automática, sino distinguir qué variación puede consumir cada actor sin inventar valores."
+    },
+    {
+      "source_id": "src-0043",
       "kind": "heading",
       "text": "### Contrato semántico"
     },
     {
-      "source_id": "src-0043",
-      "kind": "paragraph",
-      "text": "Un contrato semántico acuerda qué significa cada dato, estado y transición en un contexto de decisión. Conviene comenzar por su función profesional. Si el equipo de N27 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
-    },
-    {
       "source_id": "src-0044",
       "kind": "paragraph",
-      "text": "No es un glosario aislado ni una etiqueta compartida. El contraste importa porque conduce a pruebas distintas. En N27, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+      "text": "Un contrato semántico acuerda qué significa cada dato, estado y transición en un contexto de decisión. No es un glosario aislado: vincula términos con reglas, autoridad, población y consecuencias observables."
     },
     {
       "source_id": "src-0045",
       "kind": "paragraph",
-      "text": "El mecanismo de contrato semántico no se presume por el nombre. Relaciona términos con reglas, autoridad, población y consecuencia. Debe localizarse dónde comienza, qué relaciones activa, qué demora introduce y qué capacidad de reparación queda disponible cuando la expectativa no se cumple."
+      "text": "Para Hotel Horizonte, «confirmada» debe distinguir mensaje recibido, pago autorizado y capacidad efectivamente reservada. Episodios límite y tablas de decisión revelan ambigüedades que una definición general no muestra. Lucía y Federico deben poder anticipar la misma próxima acción al leer el estado."
     },
     {
       "source_id": "src-0046",
       "kind": "paragraph",
-      "text": "Una afirmación sobre contrato semántico gana fuerza cuando puede reconstruirse desde fuentes independientes. Ejemplos límite, episodios y tablas de decisión revelan ambigüedades. La ausencia de señal también se interpreta: puede significar estabilidad, mala observación o exclusión del caso que más importa."
+      "text": "El significado cambia con contexto y necesita gobierno. Cada término conserva ejemplos positivos, contraejemplos, responsable y condición de revisión. Si la operación crea una excepción nueva, el contrato se actualiza sin reescribir retrospectivamente qué significaba el estado durante el episodio anterior."
     },
     {
       "source_id": "src-0047",
       "kind": "paragraph",
-      "text": "Ejemplo. Confirmada significa capacidad reservada y no sólo mensaje recibido. En N27, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+      "text": "Una definición semántica resulta útil cuando permite clasificar un episodio y anticipar una acción. «Disponible» puede referirse a inventario comercial, habitación limpia, cerradura operativa o capacidad de recibir a una persona con determinadas necesidades. El contrato indica cuál de esas afirmaciones expresa el campo, quién tiene autoridad para producirla y qué evidencia la respalda. También nombra lo que no afirma. Esta delimitación impide que un consumidor extienda el significado por conveniencia y permite que otra fuente contradiga el dato sin ser descartada como error técnico."
     },
     {
       "source_id": "src-0048",
       "kind": "paragraph",
-      "text": "La escala modifica contrato semántico. Una solución válida para un equipo puede fallar cuando atraviesa sedes, turnos o proveedores porque aumenta la distancia entre señal y autoridad. Antes de ampliar, N27 prueba si la misma decisión conserva significado y reparación bajo esa nueva distribución."
+      "text": "Las tablas de transición ayudan a verificar la semántica, pero no sustituyen la conversación con quienes usan los estados. Lucía aporta episodios en los que una categoría formal no alcanza; Mariela explica qué condición operacional todavía falta; Camila muestra cómo se comunica al mercado. El equipo conserva el desacuerdo hasta localizar el mecanismo. Después agrega un ejemplo, separa estados o limita el uso. La definición se considera estable sólo para una población y una decisión concretas, con una fecha de revisión ante nuevas excepciones."
     },
     {
       "source_id": "src-0049",
       "kind": "paragraph",
-      "text": "Para evitar consenso aparente, contrato semántico se revisa con alguien afectado y con alguien responsable de reparar. Las dos perspectivas pueden valorar resultados diferentes y obligan a declarar la prioridad elegida."
+      "text": "Evans (2003) vincula lenguaje compartido y fronteras de dominio. N27 toma esa referencia de manera operacional: el vocabulario común debe permitir que dos actores anticipen la misma transición relevante, pero no obliga a borrar diferencias legítimas. `liberada` conserva el sentido de limpieza terminada en Housekeeping; `asignable` se crea para la condición compuesta que habilita la decisión de Recepción. La traducción entre ambos estados queda explícita y no se resuelve declarando sinónimos."
     },
     {
       "source_id": "src-0050",
-      "kind": "paragraph",
-      "text": "En la práctica, contrato semántico atraviesa más de un área. Se identifican handoffs, esperas, decisiones y datos que cada participante puede ver. Cuando dos áreas usan evidencia distinta en N27, el expediente conserva la divergencia hasta determinar si representa error, perspectiva legítima o una brecha que la estrategia debe resolver."
-    },
-    {
-      "source_id": "src-0051",
-      "kind": "paragraph",
-      "text": "En una revisión, contrato semántico debe responder tres preguntas: qué mejora, qué desplaza y qué vuelve más difícil de revertir. El significado cambia con contexto y necesita gobierno. Si esas respuestas cambian, también debe cambiar el compromiso, aunque el trabajo previo haya sido técnicamente correcto."
-    },
-    {
-      "source_id": "src-0052",
       "kind": "heading",
       "text": "### Contrato temporal"
     },
     {
+      "source_id": "src-0051",
+      "kind": "paragraph",
+      "text": "Un contrato temporal define ventanas, orden, vigencia, latencia y tratamiento de demora. No se reduce a un tiempo máximo de espera, conocido como *timeout*. Establece cuándo una afirmación puede usarse y qué decisión corresponde si llega tarde, duplicada o fuera de secuencia."
+    },
+    {
+      "source_id": "src-0052",
+      "kind": "paragraph",
+      "text": "HH-27 prueba un estado de habitación que arriba después de una reasignación. Relojes, trazas y versiones permiten reconstruir qué sabía cada sistema al actuar. La regla distingue ausencia de respuesta, rechazo y resultado indeterminado para impedir que el vencimiento invente una certeza."
+    },
+    {
       "source_id": "src-0053",
       "kind": "paragraph",
-      "text": "Un contrato temporal define ventanas, orden, vigencia, latencia y tratamiento de demora. El concepto adquiere valor cuando cambia una decisión. Si el equipo de N27 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+      "text": "Los relojes no son perfectos y la operación necesita tolerancias explícitas. El contrato declara qué orden importa, cuánto dura una afirmación y cómo se reconcilian eventos atrasados. Esas condiciones se revisan con transiciones reales, no sólo con latencia promedio."
     },
     {
       "source_id": "src-0054",
       "kind": "paragraph",
-      "text": "No se reduce a un timeout técnico. Su vecino conceptual puede parecer equivalente y no lo es. En N27, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+      "text": "El análisis diferencia tiempo del evento, tiempo de recepción y tiempo de procesamiento. Una habitación puede haberse liberado a las 14.02, llegar al PMS a las 14.07 y ser procesada a las 14.09; usar sólo el último sello borra la demora que condicionó la decisión. Cuando no existe un reloj común, se preservan identificadores de secuencia y relaciones causales suficientes. La operación define qué comparación necesita exactitud y cuál admite una ventana. La meta no es ordenar universalmente todos los sucesos, sino evitar que una llegada tardía revoque una decisión más reciente."
     },
     {
       "source_id": "src-0055",
       "kind": "paragraph",
-      "text": "Comprender contrato temporal exige seguir la decisión en el tiempo. Establece cuándo una afirmación puede usarse y qué ocurre si llega tarde o fuera de secuencia. El análisis distingue condición, intervención, señal temprana y consecuencia para evitar atribuir a una práctica un efecto producido por otro cambio simultáneo."
+      "text": "Lamport (1978) muestra por qué el orden causal no se deduce de un reloj global perfecto en un sistema distribuido. HH-27 no intenta resolver sincronización en abstracto: exige identificador de intención, versión del estado, tiempo del evento y relación con la transición anterior cuando la decisión lo necesita. Un mensaje más reciente por hora de recepción no puede revocar automáticamente una reasignación causalmente posterior."
     },
     {
       "source_id": "src-0056",
       "kind": "paragraph",
-      "text": "La prueba de contrato temporal debe formularse antes de conocer el resultado. Relojes, trazas y pruebas con demora permiten contrastarlo. Se registra qué observación sostendría continuar, cuál obligaría a adaptar y cuál activaría detención o escalamiento."
+      "text": "La vigencia también depende del propósito. Un estado puede servir para informar una estimación y no para entregar una llave. HH-27 asigna a cada afirmación un tiempo máximo y una conducta al vencimiento: volver a consultar, pasar a indeterminado, solicitar verificación humana o detener. El vencimiento no destruye el registro anterior, porque todavía puede explicar una acción. En la conciliación se compara lo conocido por cada actor en ese momento y se repara el estado sin acusar retrospectivamente a quien decidió con información válida pero incompleta."
     },
     {
       "source_id": "src-0057",
-      "kind": "paragraph",
-      "text": "Ejemplo. Un estado de habitación pierde validez después de una reasignación. En N27, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
-    },
-    {
-      "source_id": "src-0058",
-      "kind": "paragraph",
-      "text": "El tiempo también altera contrato temporal. Una evidencia suficiente para explorar puede ser insuficiente para operar de forma permanente. Por eso se separan prueba local, compromiso transitorio y condición estable, y cada estado conserva fecha, alcance y responsable de revisión."
-    },
-    {
-      "source_id": "src-0059",
-      "kind": "paragraph",
-      "text": "El registro de contrato temporal conserva una explicación rival. Si esa alternativa predice mejor el episodio siguiente, el equipo cambia de curso sin reescribir retrospectivamente lo que creía saber."
-    },
-    {
-      "source_id": "src-0060",
-      "kind": "paragraph",
-      "text": "La gobernanza de contrato temporal incluye quién puede proponer, aprobar, ejecutar, observar y reparar. Esas funciones no se presumen por cargo ni por permiso técnico. N27 las prueba en un escenario donde falta la persona habitual, porque una capacidad que sólo funciona con conocimiento privado todavía no pertenece a la organización."
-    },
-    {
-      "source_id": "src-0061",
-      "kind": "paragraph",
-      "text": "El juicio sobre contrato temporal incluye distribución de consecuencias. Los relojes no son perfectos y la operación necesita tolerancias explícitas. Una mejora agregada no alcanza si concentra espera, riesgo o trabajo invisible en un grupo sin autoridad para discutir la decisión."
-    },
-    {
-      "source_id": "src-0062",
       "kind": "heading",
       "text": "### Contrato operacional"
     },
     {
-      "source_id": "src-0063",
+      "source_id": "src-0058",
       "kind": "paragraph",
-      "text": "Un contrato operacional define efectos, errores, escalamiento, observación y reparación alrededor de una interfaz. La definición fija el objeto de decisión. Si el equipo de N27 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+      "text": "Un contrato operacional define efectos, errores, observación, escalamiento y reparación alrededor de una interfaz. No es un SLA ni una página de soporte. Traduce comportamiento técnico en acciones posibles para quienes sostienen el servicio."
+    },
+    {
+      "source_id": "src-0059",
+      "kind": "paragraph",
+      "text": "En HH-27, Recepción necesita saber cómo continuar cuando la confirmación queda indeterminada. La ficha especifica quién diagnostica, quién decide, qué evidencia recibe el turno y cómo se informa al huésped. Un error sin próxima acción segura deja la integración técnicamente descripta y operacionalmente incompleta."
+    },
+    {
+      "source_id": "src-0060",
+      "kind": "paragraph",
+      "text": "El contrato se prueba con una falla parcial y con la ausencia de la persona experta. Si el procedimiento depende de conocimiento privado, no constituye una capacidad organizacional. El cierre exige una ruta ejecutable, autoridad identificada y señal de que la reparación produjo el efecto esperado."
+    },
+    {
+      "source_id": "src-0061",
+      "kind": "paragraph",
+      "text": "El acuerdo operacional debe distinguir diagnóstico, decisión y comunicación. Tecnología puede localizar la causa sin tener autoridad para alojar al huésped; Recepción puede decidir una contingencia sin poder corregir el dato; Comercial debe detener una promesa que ya no puede cumplirse. La ficha relaciona cada clase de situación con un destinatario, una ventana y una primera acción segura. Esta distribución evita que una alerta general convoque a muchas personas y no habilite a ninguna. También protege al turno de recibir detalles técnicos que no modifican su decisión."
+    },
+    {
+      "source_id": "src-0062",
+      "kind": "paragraph",
+      "text": "La reparación forma parte del contrato y no de una etapa posterior. Incluye reconciliar reservas, restituir capacidad, informar a la persona afectada y conservar evidencia del cambio. El equipo ensaya el procedimiento con herramientas y permisos reales. Si una instrucción indica modificar una tabla a la que el turno no accede o depende de un contacto disponible sólo en horario comercial, la prueba falla. El resultado esperado es una capacidad repetible, no la demostración heroica de que una persona experta puede resolver el caso."
+    },
+    {
+      "source_id": "src-0063",
+      "kind": "heading",
+      "text": "## Movimiento 2 · Proteger invariantes frente a duplicados, demoras y errores"
     },
     {
       "source_id": "src-0064",
-      "kind": "paragraph",
-      "text": "No es sólo un SLA ni una página de soporte. La distinción evita que una palabra familiar oculte otro mecanismo. En N27, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
-    },
-    {
-      "source_id": "src-0065",
-      "kind": "paragraph",
-      "text": "La explicación operacional de contrato operacional conecta personas, reglas y tecnología. Conecta comportamiento técnico con responsabilidades de personas y equipos. Esa conexión permite decidir qué parte puede modificarse localmente y cuál requiere coordinación con otras autoridades o capacidades."
-    },
-    {
-      "source_id": "src-0066",
-      "kind": "paragraph",
-      "text": "Para auditar contrato operacional, conviene combinar evidencia de diseño, ejecución y consecuencia. Ejercicios de falla e incidentes muestran si puede operarse. Ninguna fuente domina automáticamente; una especificación correcta puede convivir con una operación dañina."
-    },
-    {
-      "source_id": "src-0067",
-      "kind": "paragraph",
-      "text": "Ejemplo. Recepción sabe cómo continuar cuando la confirmación queda indeterminada. En N27, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
-    },
-    {
-      "source_id": "src-0068",
-      "kind": "paragraph",
-      "text": "Existe además una dimensión política en contrato operacional. La opción más eficiente puede reducir la capacidad de una persona para cuestionar una decisión o trasladar trabajo sin reconocerlo. N27 registra esa distribución y no la esconde dentro de un indicador agregado."
-    },
-    {
-      "source_id": "src-0069",
-      "kind": "paragraph",
-      "text": "Una prueba adversa de contrato operacional introduce demora, ausencia de autoridad o dato incompleto. El objetivo de N27 no es cubrir todas las fallas, sino revelar si la estrategia mantiene una salida segura fuera del camino ordinario."
-    },
-    {
-      "source_id": "src-0070",
-      "kind": "paragraph",
-      "text": "El indicador de contrato operacional se elige después de formular la decisión. Puede combinar tiempo, calidad, distribución y costo de reparación. Una cifra aislada rara vez explica el mecanismo. En N27, la lectura conjunta de señales evita optimizar velocidad mientras aumenta retrabajo, exclusión o dependencia."
-    },
-    {
-      "source_id": "src-0071",
-      "kind": "paragraph",
-      "text": "La condición de cierre de contrato operacional no es perfección. Un procedimiento que depende de conocimiento privado no constituye capacidad. Es evidencia suficiente para el uso previsto, riesgo residual aceptado por autoridad y una ruta clara cuando el supuesto deje de cumplirse."
-    },
-    {
-      "source_id": "src-0072",
-      "kind": "heading",
-      "text": "## Movimiento 2 · Construir evidencia y controles proporcionales"
-    },
-    {
-      "source_id": "src-0073",
       "kind": "heading",
       "text": "### Precondición y poscondición"
     },
     {
-      "source_id": "src-0074",
+      "source_id": "src-0065",
       "kind": "paragraph",
-      "text": "Precondición y poscondición declaran qué debe ser cierto antes y después de una operación. Conviene comenzar por su función profesional. Si el equipo de N27 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+      "text": "Las precondiciones y poscondiciones declaran qué debe ser cierto antes y después de una operación. No son comentarios sobre el camino feliz: limitan estados válidos y vuelven comprobable el efecto prometido."
     },
     {
-      "source_id": "src-0075",
+      "source_id": "src-0066",
       "kind": "paragraph",
-      "text": "No son comentarios opcionales sobre el camino feliz. El contraste importa porque conduce a pruebas distintas. En N27, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+      "text": "Para asignar una habitación, HH-27 exige disponibilidad vigente, restricciones satisfechas y autoridad. Después, la reserva debe quedar vinculada con la habitación y conservar trazabilidad. Pruebas de transición e invariantes verifican ambas condiciones, incluidos rechazo y resultado indeterminado."
     },
     {
-      "source_id": "src-0076",
+      "source_id": "src-0067",
       "kind": "paragraph",
-      "text": "Para que precondición y poscondición sea algo más que una etiqueta, debe existir una cadena examinable. Limitan estados válidos y vuelven comprobable el efecto prometido. La cadena incluye supuestos, handoffs y efectos laterales que una descripción ideal suele omitir."
+      "text": "La concurrencia puede invalidar una precondición entre lectura y escritura. Por eso la especificación incluye momento de evaluación, mecanismo de exclusión o compensación y evidencia persistida. La corrección se juzga sobre el estado material, no sobre la respuesta que vio un único componente."
     },
     {
-      "source_id": "src-0077",
+      "source_id": "src-0068",
       "kind": "paragraph",
-      "text": "El equipo no declara resuelto precondición y poscondición por acuerdo retórico. Pruebas de transición y registros de estado contrastan ambas condiciones. Una persona ajena al diseño debe poder repetir la prueba y comprender por qué el resultado habilita una decisión concreta."
+      "text": "Una precondición debe poder observarse con la información disponible para quien decide. Exigir «que no exista otra reserva concurrente» resulta inútil si ningún componente puede comprobarlo de forma atómica. El contrato traduce esa intención en un control implementable, como una versión esperada, una reserva temporal o una operación condicional. Si el control falla, la respuesta conserva qué condición dejó de cumplirse. Así el consumidor puede volver a leer o escalar sin repetir una acción cuyo efecto anterior sigue siendo desconocido."
     },
     {
-      "source_id": "src-0078",
+      "source_id": "src-0069",
       "kind": "paragraph",
-      "text": "Ejemplo. Sólo se asigna una habitación disponible y el resultado conserva trazabilidad. En N27, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+      "text": "Las poscondiciones abarcan efectos externos y obligaciones pendientes. Una respuesta exitosa puede haber asignado habitación sin emitir el aviso, actualizado el PMS sin la cerradura o iniciado un cobro todavía reversible. HH-27 enumera estados confirmados, efectos en curso y tareas de compensación. La prueba interrumpe la secuencia después de cada paso para observar qué queda. El contrato sólo promete aquello que puede demostrar en esos cortes; los demás resultados se expresan como pendientes o indeterminados en lugar de ocultarse detrás de un código de éxito."
     },
     {
-      "source_id": "src-0079",
-      "kind": "paragraph",
-      "text": "La mantenibilidad de precondición y poscondición se prueba mediante cambio deliberado. Se modifica una regla, una fuente o una dependencia y se observa quién detecta el impacto, cuánto tarda en responder y qué información necesita. En N27, si la respuesta depende de memoria privada, la capacidad todavía es frágil."
-    },
-    {
-      "source_id": "src-0080",
-      "kind": "paragraph",
-      "text": "El costo de precondición y poscondición se observa tanto en presupuesto como en atención, espera, coordinación y dependencia. Lo que no figura en una factura puede seguir siendo el costo que define la viabilidad."
-    },
-    {
-      "source_id": "src-0081",
-      "kind": "paragraph",
-      "text": "La transición asociada con precondición y poscondición necesita un estado intermedio explícito. Durante ese período conviven reglas, versiones o capacidades diferentes. N27 declara cuál rige para cada población, cómo se comunica y qué contingencia protege a quien podría quedar entre ambos sistemas."
-    },
-    {
-      "source_id": "src-0082",
-      "kind": "paragraph",
-      "text": "El análisis de precondición y poscondición evita dos extremos: conservar por inercia y cambiar por identidad metodológica. Sistemas concurrentes pueden invalidar una precondición entre lectura y escritura. Entre ambos queda una decisión provisional con fecha, responsable y prueba de revisión."
-    },
-    {
-      "source_id": "src-0083",
+      "source_id": "src-0070",
       "kind": "heading",
       "text": "### Invariante"
     },
     {
-      "source_id": "src-0084",
+      "source_id": "src-0071",
       "kind": "paragraph",
-      "text": "Una invariante es una condición que debe preservarse a través de operaciones y fallas. El concepto adquiere valor cuando cambia una decisión. Si el equipo de N27 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+      "text": "Una invariante es una condición que debe preservarse a través de operaciones, versiones y fallas. Se diferencia de una preferencia porque violarla vuelve inaceptable el estado, aunque una métrica agregada mejore."
     },
     {
-      "source_id": "src-0085",
+      "source_id": "src-0072",
       "kind": "paragraph",
-      "text": "No equivale a una preferencia ni a una regla sin autoridad. Su vecino conceptual puede parecer equivalente y no lo es. En N27, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+      "text": "Una habitación accesible prometida no puede reasignarse sin decisión autorizada. HH-27 busca violaciones mediante secuencias concurrentes, reintentos y cambios de versión. El registro debe mostrar cuándo se evaluó la condición y quién pudo detener o reparar la transición."
     },
     {
-      "source_id": "src-0086",
+      "source_id": "src-0073",
       "kind": "paragraph",
-      "text": "El valor de invariante aparece al contrastar alternativas. Orienta diseño, control y reparación cuando existen múltiples caminos. Si dos opciones producen el mismo entregable inmediato, el mecanismo permite compararlas por aprendizaje, dependencia, riesgo residual y posibilidad de salida."
+      "text": "Dos invariantes pueden entrar en tensión, por ejemplo continuidad de atención y protección de datos. La prioridad no se resuelve en el código: requiere decisión institucional, alcance y contingencia. El contrato conserva ese criterio para que la excepción no dependa del turno."
     },
     {
-      "source_id": "src-0087",
+      "source_id": "src-0074",
       "kind": "paragraph",
-      "text": "La suficiencia de evidencia para invariante depende del costo de equivocarse. Pruebas generativas y revisión de incidentes buscan violaciones. A mayor irreversibilidad o desigualdad de daño, mayor contraste, supervisión y autoridad se requieren."
+      "text": "La formulación de una invariante necesita alcance y lenguaje comprobable. «Nunca perder una reserva» puede ser imposible frente a datos corruptos; «toda confirmación aceptada conserva un identificador, una fuente y una ruta de reparación» define una obligación verificable. El equipo busca secuencias mínimas que la rompan y registra si el defecto surge de la especificación, de una implementación o de una operación manual. Esa distinción orienta la corrección y evita declarar invariante una aspiración que nadie puede controlar."
     },
     {
-      "source_id": "src-0088",
+      "source_id": "src-0075",
       "kind": "paragraph",
-      "text": "Ejemplo. Una habitación accesible prometida no puede reasignarse sin decisión autorizada. En N27, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+      "text": "Las pruebas basadas en propiedades complementan ejemplos conocidos al generar órdenes, duplicados y combinaciones no anticipadas. Sin embargo, una propiedad formalmente satisfecha puede proteger la condición equivocada. Lucía y Mariela revisan si la regla preserva la experiencia que se pretende sostener. Cuando dos invariantes chocan, Elena define prioridad, excepción autorizada y evidencia posterior. La decisión se registra porque el software sólo ejecutará una elección institucional que debe poder discutirse y revisarse."
     },
     {
-      "source_id": "src-0089",
-      "kind": "paragraph",
-      "text": "Finalmente, invariante debe convivir con otras decisiones. Optimizarla de manera aislada puede empeorar flujo, seguridad o comprensión. El expediente N27 explicita dependencias y evita que una mejora local se presente como outcome completo del sistema."
-    },
-    {
-      "source_id": "src-0090",
-      "kind": "paragraph",
-      "text": "La revisión de invariante fija fecha y desencadenante. Puede ocurrir por incidente, cambio normativo, nueva población o evidencia acumulada. Sin esa regla en N27, una decisión provisional se vuelve permanente por olvido."
-    },
-    {
-      "source_id": "src-0091",
-      "kind": "paragraph",
-      "text": "El cierre de invariante debe sobrevivir a una revisión independiente. La evidencia, las decisiones y los límites se almacenan de manera que otra persona pueda cuestionarlos. En N27, la trazabilidad no busca eliminar desacuerdo; busca que el desacuerdo se concentre en supuestos examinables y no en recuerdos incompatibles."
-    },
-    {
-      "source_id": "src-0092",
-      "kind": "paragraph",
-      "text": "La estrategia debe poder explicar por qué invariante recibe cierta inversión y no otra. Invariantes en conflicto requieren prioridad y decisión institucional. Esa explicación conecta valor, costo, aprendizaje y reparación, y permanece abierta a evidencia nueva."
-    },
-    {
-      "source_id": "src-0093",
+      "source_id": "src-0076",
       "kind": "heading",
       "text": "### Idempotencia"
     },
     {
-      "source_id": "src-0094",
+      "source_id": "src-0077",
       "kind": "paragraph",
-      "text": "Idempotencia permite repetir una operación sin multiplicar su efecto material. La definición fija el objeto de decisión. Si el equipo de N27 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+      "text": "La idempotencia permite repetir una operación sin multiplicar su efecto material. No exige respuestas textuales idénticas ni elimina el costo del reintento. Su propósito es preservar la consecuencia cuando la comunicación deja incierto el resultado anterior."
     },
     {
-      "source_id": "src-0095",
+      "source_id": "src-0078",
       "kind": "paragraph",
-      "text": "No significa que toda respuesta sea idéntica ni que no exista costo. La distinción evita que una palabra familiar oculte otro mecanismo. En N27, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+      "text": "En HH-27, reenviar una confirmación no debe crear dos reservas ni duplicar un cobro. Claves, estados y deduplicación sostienen la garantía, que se prueba perdiendo respuestas y repitiendo mensajes. La evidencia incluye el estado final y los efectos externos."
     },
     {
-      "source_id": "src-0096",
+      "source_id": "src-0079",
       "kind": "paragraph",
-      "text": "En idempotencia, el recorrido causal debe mostrar qué condición habilita la acción, qué transformación ocurre y quién absorbe el resultado. Utiliza claves, estados y deduplicación para controlar reintentos. Si un salto depende sólo de una explicación oral, la estrategia todavía no puede gobernarlo."
+      "text": "La irreversibilidad no impide por sí sola un tratamiento idempotente. Una solicitud que produce un cobro o envía una orden irreversible puede aceptar reintentos sin repetir el efecto si conserva una identidad estable y deduplica dentro de una ventana adecuada. Cuando un efecto externo no puede controlarse o la ventana ya venció, hace falta conciliación y, si existe una acción legítima que compense la consecuencia, compensación. Gray, J. y Reuter, A. (1992) aportan el vocabulario transaccional para separar ejecución, recuperación y efectos; RFC 9110, sección 9.2.2, delimita la idempotencia de métodos HTTP (Fielding, Nottingham y Reschke, 2022)."
     },
     {
-      "source_id": "src-0097",
+      "source_id": "src-0080",
       "kind": "paragraph",
-      "text": "La evidencia relevante para idempotencia no se limita al resultado promedio. Mensajes duplicados y fallas intermedias prueban el mecanismo. N27 busca además casos negativos, diferencias entre poblaciones y señales de que la explicación elegida podría ser insuficiente."
+      "text": "La garantía requiere una identidad estable de la intención. Si cada reintento genera una clave nueva, el productor no puede distinguir repetición de otra solicitud legítima. El contrato define quién crea la clave, cuánto tiempo conserva deduplicación y qué respuesta recibe el consumidor ante una repetición. Esa ventana debe cubrir demoras reales y no sólo el tiempo habitual. También se decide qué ocurre cuando dos solicitudes iguales son en verdad decisiones distintas, para que la deduplicación no elimine una acción válida."
     },
     {
-      "source_id": "src-0098",
+      "source_id": "src-0081",
       "kind": "paragraph",
-      "text": "Ejemplo. Reenviar una confirmación no crea dos reservas. En N27, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+      "text": "Los efectos laterales se revisan por separado. Una asignación puede ser idempotente en el PMS y duplicar un correo, un cobro o una orden a cerraduras. HH-27 sigue la misma intención a través de sus participantes y comprueba el estado final en cada uno. Cuando la coordinación no admite atomicidad, se definen compensaciones y señales de conciliación. El término idempotente no se usa como garantía absoluta del recorrido; describe una propiedad precisa de una operación bajo condiciones y ventanas declaradas."
     },
     {
-      "source_id": "src-0099",
-      "kind": "paragraph",
-      "text": "El tradeoff central de idempotencia aparece entre anticipar y preservar opciones. Anticipar puede reducir coordinación y también fijar una premisa prematura; preservar opciones puede producir aprendizaje y también demorar una protección necesaria. La elección debe declarar cuál de esos costos acepta, durante cuánto tiempo y para quién."
-    },
-    {
-      "source_id": "src-0100",
-      "kind": "paragraph",
-      "text": "La auditoría de idempotencia termina con una pregunta de uso: ¿qué podría decidir ahora una persona que antes no podía? En N27, la respuesta debe nombrar una acción, una restricción y una evidencia, no sólo una comprensión mejorada."
-    },
-    {
-      "source_id": "src-0101",
-      "kind": "paragraph",
-      "text": "Operacionalizar idempotencia requiere asignar una unidad observable. El equipo define qué episodio contará, desde qué momento, con qué población y bajo qué fuente. Después compara al menos un caso ordinario con otro que fuerce excepción. Esta precisión en N27 evita que una conclusión general se sostenga sólo en ejemplos convenientes."
-    },
-    {
-      "source_id": "src-0102",
-      "kind": "paragraph",
-      "text": "La decisión profesional no termina en adoptar idempotencia. Se compara una ruta principal con una explicación rival, se explicita quién queda expuesto y se conserva un modo de revisar. Operaciones irreversibles pueden requerir compensación en lugar de idempotencia. El límite forma parte del diseño y no una nota posterior."
-    },
-    {
-      "source_id": "src-0103",
+      "source_id": "src-0082",
       "kind": "heading",
       "text": "### Contrato de error"
     },
     {
-      "source_id": "src-0104",
+      "source_id": "src-0083",
       "kind": "paragraph",
-      "text": "Un contrato de error clasifica fallas, incertidumbre y respuestas que productores y consumidores pueden manejar. Conviene comenzar por su función profesional. Si el equipo de N27 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+      "text": "Un contrato de error clasifica fallas, incertidumbre y respuestas que productores, consumidores y operación pueden manejar. No es una lista genérica de códigos: distingue rechazo, demora, duplicación, resultado indeterminado y degradación."
     },
     {
-      "source_id": "src-0105",
+      "source_id": "src-0084",
       "kind": "paragraph",
-      "text": "No es una lista genérica de códigos. El contraste importa porque conduce a pruebas distintas. En N27, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+      "text": "El PMS debe informar si la reserva fue rechazada o si todavía se desconoce el estado. HH-27 asocia cada clase con una acción segura, evidencia mínima y autoridad de escalamiento. Pruebas negativas verifican que un consumidor no interprete silencio como éxito ni como fracaso definitivo."
     },
     {
-      "source_id": "src-0106",
+      "source_id": "src-0085",
       "kind": "paragraph",
-      "text": "El mecanismo de contrato de error no se presume por el nombre. Distingue rechazo, demora, duplicación, resultado indeterminado y degradación. Debe localizarse dónde comienza, qué relaciones activa, qué demora introduce y qué capacidad de reparación queda disponible cuando la expectativa no se cumple."
+      "text": "El detalle necesita equilibrio. Un mensaje opaco impide reparar; uno excesivo puede exponer información o acoplar consumidores a la implementación. El contrato publica lo necesario para decidir y conserva trazas protegidas para investigar sin trasladar el riesgo a quien espera."
     },
     {
-      "source_id": "src-0107",
+      "source_id": "src-0086",
       "kind": "paragraph",
-      "text": "Una afirmación sobre contrato de error gana fuerza cuando puede reconstruirse desde fuentes independientes. Pruebas negativas y simulaciones verifican detección y acción. La ausencia de señal también se interpreta: puede significar estabilidad, mala observación o exclusión del caso que más importa."
+      "text": "La taxonomía separa condiciones permanentes, transitorias e indeterminadas. Las primeras suelen exigir corregir la solicitud; las segundas pueden admitir espera o reintento; las terceras obligan a consultar el estado antes de actuar otra vez. Esa clasificación no se deriva sólo del código numérico. Incluye si el efecto pudo ocurrir, cuándo conviene volver a intentar y qué autoridad puede resolver. Un consumidor que recibe «error» sin estas dimensiones queda forzado a adivinar, y cada adivinación se convierte en una nueva fuente de inconsistencia."
     },
     {
-      "source_id": "src-0108",
+      "source_id": "src-0087",
       "kind": "paragraph",
-      "text": "Ejemplo. El PMS informa si la reserva fue rechazada o si el estado quedó desconocido. En N27, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+      "text": "El mensaje dirigido a la operación traduce la clase técnica sin prometer una causa no demostrada. «No se pudo confirmar» conserva incertidumbre; «reserva inexistente» afirma un hecho más fuerte. HH-27 prueba qué ve Lucía y qué decisión toma con cada mensaje. Federico conserva detalles protegidos para investigar y correlacionar. Si la interfaz induce a repetir una operación peligrosa o a negar una reserva válida, el contrato de error falló aunque el registro técnico contenga información suficiente."
     },
     {
-      "source_id": "src-0109",
-      "kind": "paragraph",
-      "text": "La escala modifica contrato de error. Una solución válida para un equipo puede fallar cuando atraviesa sedes, turnos o proveedores porque aumenta la distancia entre señal y autoridad. Antes de ampliar, N27 prueba si la misma decisión conserva significado y reparación bajo esa nueva distribución."
-    },
-    {
-      "source_id": "src-0110",
-      "kind": "paragraph",
-      "text": "Para evitar consenso aparente, contrato de error se revisa con alguien afectado y con alguien responsable de reparar. Las dos perspectivas pueden valorar resultados diferentes y obligan a declarar la prioridad elegida."
-    },
-    {
-      "source_id": "src-0111",
-      "kind": "paragraph",
-      "text": "En la práctica, contrato de error atraviesa más de un área. Se identifican handoffs, esperas, decisiones y datos que cada participante puede ver. Cuando dos áreas usan evidencia distinta en N27, el expediente conserva la divergencia hasta determinar si representa error, perspectiva legítima o una brecha que la estrategia debe resolver."
-    },
-    {
-      "source_id": "src-0112",
-      "kind": "paragraph",
-      "text": "En una revisión, contrato de error debe responder tres preguntas: qué mejora, qué desplaza y qué vuelve más difícil de revertir. Exponer detalle excesivo puede crear riesgo de seguridad o acoplamiento. Si esas respuestas cambian, también debe cambiar el compromiso, aunque el trabajo previo haya sido técnicamente correcto."
-    },
-    {
-      "source_id": "src-0113",
+      "source_id": "src-0088",
       "kind": "heading",
-      "text": "## Movimiento 3 · Gobernar cambio, degradación y aprendizaje"
+      "text": "## Movimiento 3 · Evolucionar y probar contratos sin quebrar consumidores"
     },
     {
-      "source_id": "src-0114",
+      "source_id": "src-0089",
       "kind": "heading",
       "text": "### Evolución compatible"
     },
     {
-      "source_id": "src-0115",
+      "source_id": "src-0090",
       "kind": "paragraph",
-      "text": "Evolución compatible permite cambiar un contrato sin quebrar consumidores existentes ni congelar el servicio. El concepto adquiere valor cuando cambia una decisión. Si el equipo de N27 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+      "text": "La evolución compatible permite cambiar un contrato sin quebrar consumidores existentes ni congelar el servicio. No se resuelve incrementando un número de versión. Requiere declarar qué se conserva, qué se depreca y durante cuánto tiempo convivirán interpretaciones."
     },
     {
-      "source_id": "src-0116",
+      "source_id": "src-0091",
       "kind": "paragraph",
-      "text": "No se resuelve sólo incrementando un número de versión. Su vecino conceptual puede parecer equivalente y no lo es. En N27, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+      "text": "HH-27 incorpora un estado nuevo mientras algunos canales sólo comprenden el vocabulario anterior. Pruebas con consumidores reales y telemetría de uso muestran quién sigue expuesto. La migración tiene responsable, fecha y condición de retiro, además de una traducción segura durante la convivencia."
     },
     {
-      "source_id": "src-0117",
+      "source_id": "src-0092",
       "kind": "paragraph",
-      "text": "Comprender evolución compatible exige seguir la decisión en el tiempo. Declara compatibilidad, deprecación, ventana de migración y criterio de retiro. El análisis distingue condición, intervención, señal temprana y consecuencia para evitar atribuir a una práctica un efecto producido por otro cambio simultáneo."
+      "text": "Mantener compatibilidad indefinida acumula complejidad y puede impedir una mejora necesaria. El gobierno compara costo de migración, riesgo de ruptura y valor del cambio. El cierre ocurre cuando la evidencia demuestra adopción suficiente y existe reparación para quien todavía envíe una versión antigua."
     },
     {
-      "source_id": "src-0118",
+      "source_id": "src-0093",
       "kind": "paragraph",
-      "text": "La prueba de evolución compatible debe formularse antes de conocer el resultado. Pruebas con consumidores reales y telemetría de uso muestran exposición. Se registra qué observación sostendría continuar, cuál obligaría a adaptar y cuál activaría detención o escalamiento."
+      "text": "La compatibilidad se evalúa por comportamiento y no sólo por lectura del esquema. Agregar un estado puede ser sintácticamente aditivo y quebrar un consumidor que trata todo valor desconocido como error. Cambiar una regla de orden puede conservar campos y producir otro efecto. El equipo construye una matriz de consumidores, supuestos y versiones observadas. Las pruebas se ejecutan con muestras reales y la telemetría muestra qué variante sigue activa. Así la decisión de retirar no depende de que todos declaren haber migrado."
     },
     {
-      "source_id": "src-0119",
+      "source_id": "src-0094",
       "kind": "paragraph",
-      "text": "Ejemplo. Un nuevo estado convive hasta que todos los canales puedan interpretarlo. En N27, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+      "text": "Una estrategia de evolución incluye aviso, período de convivencia, traducción, soporte y salida. Cada excepción tiene fecha y responsable; de otro modo la compatibilidad se convierte en deuda permanente. Para un consumidor que no puede actualizarse, el hotel puede mantener un adaptador limitado o restringir la capacidad ofrecida. La elección se compara con el daño y el costo de sostener dos significados. Retirar una versión es una decisión operacional que necesita evidencia de uso y contingencia, no un acto administrativo del productor."
     },
     {
-      "source_id": "src-0120",
-      "kind": "paragraph",
-      "text": "El tiempo también altera evolución compatible. Una evidencia suficiente para explorar puede ser insuficiente para operar de forma permanente. Por eso se separan prueba local, compromiso transitorio y condición estable, y cada estado conserva fecha, alcance y responsable de revisión."
-    },
-    {
-      "source_id": "src-0121",
-      "kind": "paragraph",
-      "text": "El registro de evolución compatible conserva una explicación rival. Si esa alternativa predice mejor el episodio siguiente, el equipo cambia de curso sin reescribir retrospectivamente lo que creía saber."
-    },
-    {
-      "source_id": "src-0122",
-      "kind": "paragraph",
-      "text": "La gobernanza de evolución compatible incluye quién puede proponer, aprobar, ejecutar, observar y reparar. Esas funciones no se presumen por cargo ni por permiso técnico. N27 las prueba en un escenario donde falta la persona habitual, porque una capacidad que sólo funciona con conocimiento privado todavía no pertenece a la organización."
-    },
-    {
-      "source_id": "src-0123",
-      "kind": "paragraph",
-      "text": "El juicio sobre evolución compatible incluye distribución de consecuencias. Compatibilidad indefinida acumula complejidad y puede impedir mejora. Una mejora agregada no alcanza si concentra espera, riesgo o trabajo invisible en un grupo sin autoridad para discutir la decisión."
-    },
-    {
-      "source_id": "src-0124",
+      "source_id": "src-0095",
       "kind": "heading",
       "text": "### Contrato de datos"
     },
     {
-      "source_id": "src-0125",
+      "source_id": "src-0096",
       "kind": "paragraph",
-      "text": "Un contrato de datos acuerda significado, calidad, ownership, privacidad y cambio de un producto de datos. La definición fija el objeto de decisión. Si el equipo de N27 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+      "text": "Un contrato de datos acuerda significado, calidad, responsabilidad, privacidad y cambio de un producto de datos. No es sólo un esquema de tabla ni un acuerdo entre equipos técnicos. Explica qué usos habilita una observación y qué límites conserva."
     },
     {
-      "source_id": "src-0126",
+      "source_id": "src-0097",
       "kind": "paragraph",
-      "text": "No es sólo esquema de tabla ni acuerdo entre equipos técnicos. La distinción evita que una palabra familiar oculte otro mecanismo. En N27, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+      "text": "La disponibilidad de habitación registra fuente, frescura, reglas de corrección y población. HH-27 sigue su linaje desde Housekeeping hasta el canal y contrasta consultas reales. Un valor estructuralmente válido puede ser inadecuado si perdió vigencia o si omite una restricción relevante."
     },
     {
-      "source_id": "src-0127",
+      "source_id": "src-0098",
       "kind": "paragraph",
-      "text": "La explicación operacional de contrato de datos conecta personas, reglas y tecnología. Vincula productores y consumidores con reglas de uso y consecuencias. Esa conexión permite decidir qué parte puede modificarse localmente y cuál requiere coordinación con otras autoridades o capacidades."
+      "text": "El contrato también hace visible quién corrige y quién responde por el uso. Puede formalizar una definición injusta si ninguna persona afectada interviene en su revisión. Por eso combina controles automáticos con episodios, consecuencias y una regla de cambio verificable."
     },
     {
-      "source_id": "src-0128",
+      "source_id": "src-0099",
       "kind": "paragraph",
-      "text": "Para auditar contrato de datos, conviene combinar evidencia de diseño, ejecución y consecuencia. Controles de calidad, linaje y consultas reales verifican su cumplimiento. Ninguna fuente domina automáticamente; una especificación correcta puede convivir con una operación dañina."
+      "text": "Los compromisos de calidad se vinculan con usos declarados. Completitud, oportunidad o exactitud no tienen un umbral universal: una ausencia tolerable para análisis mensual puede impedir entregar una habitación. La ficha registra población, cálculo, ventana y acción ante incumplimiento. Los productores no prometen aquello que no observan, y los consumidores no reutilizan el dato para decisiones no evaluadas. Cuando aparece un nuevo uso, se reabre el contrato en lugar de asumir que la disponibilidad técnica equivale a aptitud."
     },
     {
-      "source_id": "src-0129",
+      "source_id": "src-0100",
       "kind": "paragraph",
-      "text": "Ejemplo. Disponibilidad de habitación conserva fuente, frescura y reglas de corrección. En N27, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+      "text": "El linaje permite localizar dónde cambió una afirmación y quién puede corregirla. HH-27 conserva fuente original, transformaciones, reglas manuales y momento de cada versión. Si un valor se deriva, el contrato expresa qué parte es observación y qué parte es inferencia. Esta separación es esencial para disputar un resultado y para cumplir una rectificación. La responsabilidad asignada incluye capacidad de modificar el dato, notificar consumidores y verificar que la corrección llegó a las copias relevantes."
     },
     {
-      "source_id": "src-0130",
+      "source_id": "src-0101",
       "kind": "paragraph",
-      "text": "Existe además una dimensión política en contrato de datos. La opción más eficiente puede reducir la capacidad de una persona para cuestionar una decisión o trasladar trabajo sin reconocerlo. N27 registra esa distribución y no la esconde dentro de un indicador agregado."
+      "text": "El modelo PROV de W3C distingue entidades, actividades y agentes y ofrece un anclaje para registrar procedencia sin prescribir el dominio (W3C Provenance Working Group, 2013). En HH-27, la observación material de Housekeeping, la regla que calcula `asignable` y el actor que autoriza una corrección quedan relacionados. Esa procedencia permite explicar por qué un estado cambió y localizar qué consumidores recibieron la versión anterior."
     },
     {
-      "source_id": "src-0131",
-      "kind": "paragraph",
-      "text": "Una prueba adversa de contrato de datos introduce demora, ausencia de autoridad o dato incompleto. El objetivo de N27 no es cubrir todas las fallas, sino revelar si la estrategia mantiene una salida segura fuera del camino ordinario."
-    },
-    {
-      "source_id": "src-0132",
-      "kind": "paragraph",
-      "text": "El indicador de contrato de datos se elige después de formular la decisión. Puede combinar tiempo, calidad, distribución y costo de reparación. Una cifra aislada rara vez explica el mecanismo. En N27, la lectura conjunta de señales evita optimizar velocidad mientras aumenta retrabajo, exclusión o dependencia."
-    },
-    {
-      "source_id": "src-0133",
-      "kind": "paragraph",
-      "text": "La condición de cierre de contrato de datos no es perfección. Un contrato puede formalizar una definición injusta si no revisa su efecto. Es evidencia suficiente para el uso previsto, riesgo residual aceptado por autoridad y una ruta clara cuando el supuesto deje de cumplirse."
-    },
-    {
-      "source_id": "src-0134",
+      "source_id": "src-0102",
       "kind": "heading",
       "text": "### Contrato de seguridad"
     },
     {
-      "source_id": "src-0135",
+      "source_id": "src-0103",
       "kind": "paragraph",
-      "text": "Un contrato de seguridad define identidad, autorización, confidencialidad, integridad y evidencia de acceso. Conviene comenzar por su función profesional. Si el equipo de N27 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+      "text": "Un contrato de seguridad define identidad, autorización, confidencialidad, integridad y evidencia de acceso. No consiste en agregar autenticación al final. Distribuye controles según fronteras de confianza, propósito y daño posible."
     },
     {
-      "source_id": "src-0136",
+      "source_id": "src-0104",
       "kind": "paragraph",
-      "text": "No consiste en agregar autenticación al final. El contraste importa porque conduce a pruebas distintas. En N27, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+      "text": "El canal puede consultar una categoría sin acceder a datos innecesarios del huésped. HH-27 prueba permisos mínimos, intentos indebidos, trazabilidad y revocación. También verifica la contingencia, porque un control que bloquea toda atención durante una falla puede producir otro daño."
     },
     {
-      "source_id": "src-0137",
+      "source_id": "src-0105",
       "kind": "paragraph",
-      "text": "Para que contrato de seguridad sea algo más que una etiqueta, debe existir una cadena examinable. Distribuye controles según la frontera de confianza y el daño posible. La cadena incluye supuestos, handoffs y efectos laterales que una descripción ideal suele omitir."
+      "text": "Seguridad, continuidad y accesibilidad pueden entrar en tensión. La decisión debe declarar qué riesgo se acepta, quién lo autoriza y qué señal obliga a revisar. El contrato protege tanto la información como la posibilidad de explicar y reparar una acción."
     },
     {
-      "source_id": "src-0138",
+      "source_id": "src-0106",
       "kind": "paragraph",
-      "text": "El equipo no declara resuelto contrato de seguridad por acuerdo retórico. Pruebas de autorización, auditoría y escenarios de abuso contrastan garantías. Una persona ajena al diseño debe poder repetir la prueba y comprender por qué el resultado habilita una decisión concreta."
+      "text": "Autenticar un sistema no autoriza todos sus usos. El contrato relaciona identidad con propósito, operación, población y campos mínimos. Un canal autenticado puede consultar disponibilidad agregada sin recibir notas sensibles de accesibilidad. La decisión se aplica en cada frontera y se prueba con identidades válidas que intentan acciones fuera de alcance. Este escenario detecta permisos excesivos que una prueba de credenciales correctas no revela. También se comprueba revocación, porque retirar acceso tarde puede prolongar un daño después del cambio contractual."
     },
     {
-      "source_id": "src-0139",
+      "source_id": "src-0107",
       "kind": "paragraph",
-      "text": "Ejemplo. El canal puede consultar una categoría sin acceder a datos innecesarios del huésped. En N27, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+      "text": "La evidencia de seguridad debe ser suficiente para investigar sin convertirse en otra exposición. Se registra quién solicitó, qué regla autorizó, qué versión respondió y qué campos fueron afectados, con retención y acceso acordes al riesgo. Durante una contingencia, los permisos excepcionales tienen duración, justificación y reconciliación posterior. Si el modo degradado exige compartir cuentas o exportar datos innecesarios, no es una alternativa segura. El contrato obliga a diseñar continuidad y protección como una misma decisión."
     },
     {
-      "source_id": "src-0140",
-      "kind": "paragraph",
-      "text": "La mantenibilidad de contrato de seguridad se prueba mediante cambio deliberado. Se modifica una regla, una fuente o una dependencia y se observa quién detecta el impacto, cuánto tarda en responder y qué información necesita. En N27, si la respuesta depende de memoria privada, la capacidad todavía es frágil."
-    },
-    {
-      "source_id": "src-0141",
-      "kind": "paragraph",
-      "text": "El costo de contrato de seguridad se observa tanto en presupuesto como en atención, espera, coordinación y dependencia. Lo que no figura en una factura puede seguir siendo el costo que define la viabilidad."
-    },
-    {
-      "source_id": "src-0142",
-      "kind": "paragraph",
-      "text": "La transición asociada con contrato de seguridad necesita un estado intermedio explícito. Durante ese período conviven reglas, versiones o capacidades diferentes. N27 declara cuál rige para cada población, cómo se comunica y qué contingencia protege a quien podría quedar entre ambos sistemas."
-    },
-    {
-      "source_id": "src-0143",
-      "kind": "paragraph",
-      "text": "El análisis de contrato de seguridad evita dos extremos: conservar por inercia y cambiar por identidad metodológica. Más control puede reducir accesibilidad o continuidad si no existe contingencia. Entre ambos queda una decisión provisional con fecha, responsable y prueba de revisión."
-    },
-    {
-      "source_id": "src-0144",
+      "source_id": "src-0108",
       "kind": "heading",
       "text": "### Prueba de contrato"
     },
     {
-      "source_id": "src-0145",
+      "source_id": "src-0109",
       "kind": "paragraph",
-      "text": "Una prueba de contrato verifica acuerdos relevantes desde la perspectiva de productor, consumidor y operación. El concepto adquiere valor cuando cambia una decisión. Si el equipo de N27 no puede expresar qué compromiso organiza, la categoría funciona como etiqueta y no como instrumento."
+      "text": "Una prueba de contrato verifica acuerdos relevantes desde las perspectivas del productor, el consumidor y la operación. No reemplaza pruebas de punta a punta ni evidencia del resultado observable; localiza incompatibilidades antes de exponer el recorrido completo."
     },
     {
-      "source_id": "src-0146",
+      "source_id": "src-0110",
       "kind": "paragraph",
-      "text": "No reemplaza pruebas end-to-end ni evidencia del outcome. Su vecino conceptual puede parecer equivalente y no lo es. En N27, confundirlos cambia qué se observa, qué se acepta como avance y quién debe intervenir."
+      "text": "En HH-27, el consumidor publica expectativas y el productor las ejecuta antes de desplegar. La suite cubre estructura, significado, orden, duplicados, demora, errores, permisos y versiones. Cada resultado conserva la especificación y el artefacto que efectivamente se probó."
     },
     {
-      "source_id": "src-0147",
+      "source_id": "src-0111",
       "kind": "paragraph",
-      "text": "El valor de prueba de contrato aparece al contrastar alternativas. Automatiza conformidad estable y conserva escenarios semánticos y adversos. Si dos opciones producen el mismo entregable inmediato, el mecanismo permite compararlas por aprendizaje, dependencia, riesgo residual y posibilidad de salida."
+      "text": "Una suite verde puede omitir contratos humanos, temporales o regulatorios. Por eso se complementa con una transición realista y una persona de turno que interpreta el resultado. La prueba aporta confianza cuando discrimina una falla relevante y habilita una decisión concreta, no cuando sólo aumenta cobertura."
     },
     {
-      "source_id": "src-0148",
+      "source_id": "src-0112",
       "kind": "paragraph",
-      "text": "La suficiencia de evidencia para prueba de contrato depende del costo de equivocarse. Resultados reproducibles, cobertura de estados y fallas conocidas sostienen confianza. A mayor irreversibilidad o desigualdad de daño, mayor contraste, supervisión y autoridad se requieren."
+      "text": "Las pruebas se distribuyen por alcance. Un esquema valida forma; una prueba de productor confirma comportamiento local; una expectativa del consumidor verifica el uso que realmente realiza; una prueba operacional observa interpretación y reparación. Ningún nivel reemplaza al siguiente. Si todas las combinaciones se trasladan a una prueba integral, el diagnóstico se vuelve lento y frágil; si sólo se prueban componentes, la promesa queda sin evidencia. La estrategia elige el nivel más pequeño capaz de detectar cada incumplimiento y conserva algunos escenarios completos para verificar la cadena."
     },
     {
-      "source_id": "src-0149",
+      "source_id": "src-0113",
       "kind": "paragraph",
-      "text": "Ejemplo. El consumidor publica expectativas y el productor las verifica antes de desplegar. En N27, el episodio vuelve visible la relación entre ritmo, autoridad, evidencia y capacidad de reparación."
+      "text": "Una expectativa del consumidor también puede estar equivocada o exigir una implementación particular. El gobierno revisa si expresa una necesidad legítima y una consecuencia, no si coincide con el código actual. Productor y consumidor negocian el contrato con Operaciones cuando la diferencia afecta el turno. Cada falla indica qué acuerdo se rompió y bloquea sólo el cambio pertinente. La prueba deja de ser un rito de integración y se convierte en un mecanismo de coordinación que hace visible el costo de evolucionar."
     },
     {
-      "source_id": "src-0150",
+      "source_id": "src-0114",
       "kind": "paragraph",
-      "text": "Finalmente, prueba de contrato debe convivir con otras decisiones. Optimizarla de manera aislada puede empeorar flujo, seguridad o comprensión. El expediente N27 explicita dependencias y evita que una mejora local se presente como outcome completo del sistema."
+      "text": "Pact documenta pruebas dirigidas por expectativas de consumidores y resulta pertinente para verificar compatibilidad observable entre productor y consumidor (Pact Foundation, 2026). N27 limita su alcance: una expectativa ejecutable puede comprobar formato y comportamiento acordado, pero no reemplaza la decisión institucional sobre significado, privacidad o reparación. AsyncAPI 3.1.0 aporta una descripción actual de interacciones asincrónicas; la ficha agrega orden, vigencia e indeterminación porque un documento de interfaz no decide por sí solo qué debe hacer el turno."
     },
     {
-      "source_id": "src-0151",
-      "kind": "paragraph",
-      "text": "La revisión de prueba de contrato fija fecha y desencadenante. Puede ocurrir por incidente, cambio normativo, nueva población o evidencia acumulada. Sin esa regla en N27, una decisión provisional se vuelve permanente por olvido."
-    },
-    {
-      "source_id": "src-0152",
-      "kind": "paragraph",
-      "text": "El cierre de prueba de contrato debe sobrevivir a una revisión independiente. La evidencia, las decisiones y los límites se almacenan de manera que otra persona pueda cuestionarlos. En N27, la trazabilidad no busca eliminar desacuerdo; busca que el desacuerdo se concentre en supuestos examinables y no en recuerdos incompatibles."
-    },
-    {
-      "source_id": "src-0153",
-      "kind": "paragraph",
-      "text": "La estrategia debe poder explicar por qué prueba de contrato recibe cierta inversión y no otra. Una suite verde puede omitir contratos humanos, temporales o regulatorios. Esa explicación conecta valor, costo, aprendizaje y reparación, y permanece abierta a evidencia nueva."
-    },
-    {
-      "source_id": "src-0154",
+      "source_id": "src-0115",
       "kind": "heading",
       "text": "### Instrumento HH-27: ficha de contrato verificable"
     },
     {
-      "source_id": "src-0155",
+      "source_id": "src-0116",
       "kind": "paragraph",
-      "text": "El instrumento organiza una decisión concreta y no una descripción total. Cada campo debe completarse con evidencia disponible, incertidumbre explícita y autoridad identificada. Si un campo todavía no puede responderse, se registra como asunto abierto y no se completa por inferencia."
+      "text": "HH-27 vuelve verificable un intercambio desde la intención hasta la reparación. La ficha se completa entre productor, consumidor y operación; ningún equipo puede declarar unilateralmente que el contrato está cerrado."
     },
     {
-      "source_id": "src-0156",
+      "source_id": "src-0117",
       "kind": "list-item",
-      "text": "1. **Propósito y consecuencia.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N27, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+      "text": "1. **Propósito y consecuencia.** Indicar qué decisión habilita el mensaje y qué daño aparece si se interpreta mal."
     },
     {
-      "source_id": "src-0157",
+      "source_id": "src-0118",
       "kind": "list-item",
-      "text": "2. **Productor y consumidor.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N27, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+      "text": "2. **Productor y consumidor.** Nombrar sistemas y roles, incluyendo quién corrige cada extremo durante la operación."
     },
     {
-      "source_id": "src-0158",
+      "source_id": "src-0119",
       "kind": "list-item",
-      "text": "3. **Sintaxis.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N27, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+      "text": "3. **Sintaxis.** Fijar campos, tipos, obligatoriedad, formato y reglas para valores ausentes o desconocidos."
     },
     {
-      "source_id": "src-0159",
+      "source_id": "src-0120",
       "kind": "list-item",
-      "text": "4. **Semántica.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N27, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+      "text": "4. **Semántica.** Definir estados y términos mediante decisiones observables, no sólo mediante palabras equivalentes."
     },
     {
-      "source_id": "src-0160",
+      "source_id": "src-0121",
       "kind": "list-item",
-      "text": "5. **Temporalidad.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N27, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+      "text": "5. **Temporalidad.** Declarar vigencia, orden, latencia admitida y tratamiento de mensajes tardíos o duplicados."
     },
     {
-      "source_id": "src-0161",
+      "source_id": "src-0122",
       "kind": "list-item",
-      "text": "6. **Precondiciones.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N27, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+      "text": "6. **Precondiciones.** Explicitar qué debe ser verdadero antes de aceptar la transición solicitada."
     },
     {
-      "source_id": "src-0162",
+      "source_id": "src-0123",
       "kind": "list-item",
-      "text": "7. **Poscondiciones.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N27, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+      "text": "7. **Poscondiciones.** Indicar qué estado, evidencia y obligación de comunicación quedan después de ejecutarla."
     },
     {
-      "source_id": "src-0163",
+      "source_id": "src-0124",
       "kind": "list-item",
-      "text": "8. **Invariantes.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N27, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+      "text": "8. **Invariantes.** Formular las condiciones que ninguna secuencia válida puede quebrar, como evitar doble asignación."
     },
     {
-      "source_id": "src-0164",
+      "source_id": "src-0125",
       "kind": "list-item",
-      "text": "9. **Errores y reintentos.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N27, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+      "text": "9. **Errores y reintentos.** Distinguir rechazo, indisponibilidad e indeterminación, y asociar a cada estado una acción segura."
     },
     {
-      "source_id": "src-0165",
+      "source_id": "src-0126",
       "kind": "list-item",
-      "text": "10. **Seguridad.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N27, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+      "text": "10. **Seguridad.** Limitar datos, identidades y permisos al propósito acordado y registrar los accesos relevantes."
     },
     {
-      "source_id": "src-0166",
+      "source_id": "src-0127",
       "kind": "list-item",
-      "text": "11. **Evolución.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N27, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+      "text": "11. **Evolución.** Definir compatibilidad, período de convivencia, migración y retiro de cada versión."
     },
     {
-      "source_id": "src-0167",
+      "source_id": "src-0128",
       "kind": "list-item",
-      "text": "12. **Operación y reparación.** Registrar la formulación vigente, su fuente, la consecuencia que organiza y la condición que obligaría a revisarla. En N27, el campo se vincula con el episodio y evita respuestas genéricas que podrían pertenecer a cualquier intervención."
+      "text": "12. **Operación y reparación.** Asignar señales, escalamiento, conciliación y compensación cuando el acuerdo falla."
     },
     {
-      "source_id": "src-0168",
+      "source_id": "src-0129",
       "kind": "paragraph",
-      "text": "El expediente se prueba con un escenario ordinario y uno adverso. Una persona que no participó en su construcción debe poder reconstruir qué se decidió, por qué, qué permanece incierto y cuál es la próxima puerta. El cierre no exige certeza total; exige incertidumbre gobernada y una salida practicable."
+      "text": "La ficha se prueba enviando dos veces la misma reserva y retrasando la confirmación hasta después del cambio de turno. El contrato sólo es defendible si el segundo consumo no duplica la habitación y si Lucía puede distinguir demora de rechazo."
     },
     {
-      "source_id": "src-0169",
+      "source_id": "src-0130",
+      "kind": "paragraph",
+      "text": "El instrumento se completa desde un episodio y no desde la documentación existente. Primero se identifica qué decisión produjo el intercambio y qué consecuencia tuvo; después se reconstruyen forma, significado, temporalidad y efecto. Ese orden evita formalizar una interfaz que nadie necesita o legitimar como contrato una práctica accidental. Cada campo señala evidencia y una persona capaz de revisarla. Las contradicciones no se resuelven con una definición de compromiso: se prueban mediante transiciones y permanecen abiertas si falta autoridad para elegir."
+    },
+    {
+      "source_id": "src-0131",
+      "kind": "paragraph",
+      "text": "La versión final vincula especificación, pruebas y procedimiento operacional. Una modificación semántica debe reflejarse en los casos ejecutables, en el mensaje que recibe el turno y en la regla de conciliación. Si alguno conserva el acuerdo anterior, la migración no terminó. Ricardo aprueba el cierre cuando un consumidor antiguo, uno actualizado y una persona de Recepción pueden actuar sin producir estados incompatibles. La ficha incluye fecha de revisión porque nuevos episodios pueden mostrar un supuesto que ningún ejemplo inicial había representado."
+    },
+    {
+      "source_id": "src-0132",
+      "kind": "paragraph",
+      "text": "La versión completada de HH-27 define al productor como Housekeeping y al PMS como responsable de derivar la condición compuesta. Los consumidores son Recepción, el canal comercial y cerraduras. `liberada` afirma únicamente limpieza terminada, con identificador de habitación, fuente, versión y tiempo del evento. `asignable` afirma que existe reserva compatible, condición material vigente, cerradura operativa y ausencia de bloqueo de mantenimiento para una decisión de ingreso determinada. No afirma que el huésped ya recibió la habitación ni que cualquier canal pueda prometer disponibilidad futura."
+    },
+    {
+      "source_id": "src-0133",
+      "kind": "paragraph",
+      "text": "La transición hacia `asignable` requiere las cuatro precondiciones y deja como poscondición una decisión reconstruible. La invariante impide asignar simultáneamente una habitación a dos reservas y prohíbe perder una restricción accesible. La vigencia termina ante reasignación, bloqueo de mantenimiento o cambio material informado por Housekeeping. Un mensaje tardío no restaura el estado anterior; abre conciliación. Un duplicado con la misma identidad no repite asignación, correo, cobro ni orden de cerradura. Un resultado indeterminado mantiene el estado previo y ofrece al turno una acción segura."
+    },
+    {
+      "source_id": "src-0134",
+      "kind": "paragraph",
+      "text": "La evolución convive durante treinta transiciones con consumidores antiguos. Un adaptador traduce `asignable` a la señal anterior sólo para usos que no amplían significado; el canal que interpreta todo valor desconocido como error recibe una versión controlada y una fecha de migración. La prueba ejecuta mensaje válido, campo ausente, duplicado, inversión de orden, demora de diecisiete minutos, revocación de permiso y ausencia de Federico. Cada resultado vincula versión de OpenAPI o AsyncAPI, esquema JSON, expectativa del consumidor, traza de procedencia y procedimiento operacional. El cierre exige que Lucía distinga rechazo, demora e indeterminación sin llamada privada."
+    },
+    {
+      "source_id": "src-0135",
+      "kind": "paragraph",
+      "text": "Este artefacto resuelve la continuidad del caso. HH-23 había usado una proyección local para aprender sin bloquear el corte; HH-27 establece ahora nombres, productores, consumidores, temporalidad, invariantes, errores y migración comunes. La diferencia entre ambos pasos queda preservada como decisión: una solución provisoria puede habilitar evidencia limitada, pero no se convierte en contrato institucional hasta que quienes producen, consumen y reparan pueden verificar la misma consecuencia."
+    },
+    {
+      "source_id": "src-0136",
       "kind": "heading",
       "text": "### Caso de transferencia: resultados de laboratorio"
     },
     {
-      "source_id": "src-0170",
+      "source_id": "src-0137",
       "kind": "paragraph",
       "text": "Un laboratorio externo envía resultados a una historia clínica. El esquema es válido, pero urgente, preliminar y corregido no significan lo mismo para todos los actores."
     },
     {
-      "source_id": "src-0171",
+      "source_id": "src-0138",
       "kind": "paragraph",
       "text": "El contrato incorpora significado, orden, vigencia, confirmación, corrección y escalamiento clínico. Una prueba técnica no reemplaza la responsabilidad profesional sobre el resultado."
     },
     {
-      "source_id": "src-0172",
+      "source_id": "src-0139",
+      "kind": "paragraph",
+      "text": "Una corrección recibida después de una decisión clínica no borra el valor anterior. El sistema conserva ambas versiones, identifica cuál vio cada profesional y activa una comunicación proporcional al daño posible. Si «preliminar» se muestra con el mismo tratamiento que «validado», la sintaxis puede ser perfecta y la interfaz inducir una decisión equivocada. La prueba incluye un resultado urgente tardío, una corrección y la ausencia del profesional solicitante para verificar que significado, tiempo y escalamiento forman un único compromiso operacional."
+    },
+    {
+      "source_id": "src-0140",
       "kind": "paragraph",
       "text": "HH-27 permite separar interoperabilidad estructural de interoperabilidad operativa."
     },
     {
-      "source_id": "src-0173",
+      "source_id": "src-0141",
       "kind": "heading",
       "text": "### Contraejemplo: una API documentada"
     },
     {
-      "source_id": "src-0174",
+      "source_id": "src-0142",
       "kind": "paragraph",
       "text": "Una organización publica OpenAPI, genera clientes y declara resuelta la integración."
     },
     {
-      "source_id": "src-0175",
+      "source_id": "src-0143",
       "kind": "paragraph",
       "text": "Los campos validan, pero nadie acuerda significado, orden, resultado indeterminado ni reparación. La documentación describe la superficie y no el compromiso."
     },
     {
-      "source_id": "src-0176",
+      "source_id": "src-0144",
       "kind": "paragraph",
       "text": "El contrato se completa cuando una falla puede interpretarse y tratarse sin improvisación."
     },
     {
-      "source_id": "src-0177",
+      "source_id": "src-0145",
       "kind": "heading",
       "text": "### Prueba integral antes de ampliar compromiso"
     },
     {
-      "source_id": "src-0178",
+      "source_id": "src-0146",
       "kind": "paragraph",
-      "text": "La prueba integral de contratos sintácticos, semánticos, temporales y operacionales toma una decisión real y la recorre desde su origen hasta una consecuencia observable. Utiliza propósito y consecuencia, productor y consumidor, sintaxis, semántica para evitar que el análisis quede dividido en artefactos independientes. Cada afirmación debe encontrar una fuente, una autoridad y una condición de revisión. Cuando dos registros no coinciden, la diferencia se conserva como hallazgo hasta explicar su mecanismo."
+      "text": "La prueba envía una reserva válida, duplica el mensaje, invierte el orden de dos transiciones y demora la confirmación hasta el turno siguiente. Productor y consumidor deben acordar no sólo qué estructura aceptan, sino qué estado queda y qué acción corresponde en cada resultado."
     },
     {
-      "source_id": "src-0179",
+      "source_id": "src-0147",
       "kind": "paragraph",
-      "text": "El escenario ordinario verifica que n27 diseña contratos sintácticos, semánticos, temporales y operacionales, y vincula conformidad técnica con significado compartido, comportamiento observable y capacidad de reparación. El escenario adverso modifica una dependencia, introduce demora y deja ausente a la persona que suele resolver. El equipo observa si la estrategia detecta el cambio, limita el daño, comunica incertidumbre y activa reparación sin recurrir a conocimiento privado."
+      "text": "Lucía intenta entregar la habitación mientras Federico observa trazas y Ricardo evalúa la continuidad operacional. La prueba verifica que un tiempo de espera agotado no se convierta en rechazo, que el reintento no duplique capacidad y que una versión nueva conviva con la anterior durante la migración."
     },
     {
-      "source_id": "src-0180",
+      "source_id": "src-0148",
       "kind": "paragraph",
-      "text": "La comparación incluye una alternativa descartada. Se documenta por qué no fue elegida, qué supuesto la volvería preferible y qué costo tendría recuperarla. Este ejercicio protege opciones futuras y evita presentar la decisión actual como única solución técnicamente posible. También vuelve discutibles los costos hundidos cuando aparece evidencia nueva."
+      "text": "N27 aprueba cuando la operación puede distinguir error, espera e indeterminación y puede reconciliar sin inventar el significado. Una API documentada que deja esa decisión en una llamada privada no constituye un contrato completo."
     },
     {
-      "source_id": "src-0181",
-      "kind": "paragraph",
-      "text": "La prueba concluye con una defensa breve ante una audiencia ajena al equipo. Esa audiencia debe poder reconstruir el problema, objetar la evidencia y comprender por qué la salida propuesta es proporcional. Si sólo puede repetir la recomendación, el expediente todavía no sostiene una decisión profesional. Si puede reconocer límites y actuar ante una excepción, existe capacidad transferible."
-    },
-    {
-      "source_id": "src-0182",
+      "source_id": "src-0149",
       "kind": "heading",
       "text": "## Errores frecuentes"
     },
     {
-      "source_id": "src-0183",
+      "source_id": "src-0150",
       "kind": "heading",
       "text": "### Confundir sintaxis con acuerdo"
     },
     {
-      "source_id": "src-0184",
+      "source_id": "src-0151",
       "kind": "paragraph",
-      "text": "Confundir sintaxis con acuerdo simplifica una decisión que depende de propósito, evidencia y consecuencia. La velocidad inicial se paga cuando operación descubre el supuesto omitido. La corrección vuelve al episodio, identifica quién absorbe el costo y define una prueba antes de continuar."
+      "text": "Dos sistemas pueden validar el mismo JSON y asignar consecuencias distintas a «confirmada». La conformidad estructural es necesaria, pero no prueba un entendimiento común."
     },
     {
-      "source_id": "src-0185",
+      "source_id": "src-0152",
       "kind": "heading",
       "text": "### Definir estados sin transición"
     },
     {
-      "source_id": "src-0186",
+      "source_id": "src-0153",
       "kind": "paragraph",
-      "text": "Definir estados sin transición parece reducir coordinación, pero confunde acuerdo con conocimiento suficiente. El equipo debe comparar una explicación rival, localizar autoridad y registrar qué señal cambiaría el curso elegido."
+      "text": "Una lista de estados no explica quién puede moverlos, desde dónde ni con qué efecto. El contrato debe impedir transiciones imposibles y hacer visibles las indeterminadas."
     },
     {
-      "source_id": "src-0187",
+      "source_id": "src-0154",
       "kind": "heading",
       "text": "### Ignorar tiempo y orden"
     },
     {
-      "source_id": "src-0188",
+      "source_id": "src-0155",
       "kind": "paragraph",
-      "text": "Ignorar tiempo y orden desplaza incertidumbre hacia personas que no participaron de la elección. Corregirlo exige reconstruir el mecanismo, hacer visible el trabajo añadido y establecer una condición de salida proporcional al daño posible."
+      "text": "Un mensaje correcto que llega tarde puede invalidar una decisión ya ejecutada. La ventana temporal y el orden forman parte del significado operacional."
     },
     {
-      "source_id": "src-0189",
+      "source_id": "src-0156",
       "kind": "heading",
-      "text": "### Usar timeout como decisión"
+      "text": "### Usar el tiempo máximo de espera como decisión"
     },
     {
-      "source_id": "src-0190",
+      "source_id": "src-0157",
       "kind": "paragraph",
-      "text": "Usar timeout como decisión convierte una práctica en fin. La revisión pregunta qué función debía cumplir, qué evidencia produjo y por qué sigue siendo necesaria. Si la función desapareció, la práctica se adapta o se retira."
+      "text": "El vencimiento sólo indica ausencia de respuesta a tiempo, no rechazo ni éxito. Traducirlo automáticamente a una decisión crea estados falsos difíciles de reconciliar."
     },
     {
-      "source_id": "src-0191",
+      "source_id": "src-0158",
       "kind": "heading",
       "text": "### Reintentar sin idempotencia"
     },
     {
-      "source_id": "src-0192",
+      "source_id": "src-0159",
       "kind": "paragraph",
-      "text": "Reintentar sin idempotencia oculta una frontera. El artefacto puede cerrar y la capacidad seguir incompleta. Un escenario adverso permite observar handoffs, excepciones y reparación antes de ampliar compromiso."
+      "text": "Repetir una operación después de una respuesta perdida puede cobrar, reservar o notificar dos veces. El consumidor necesita una clave y una garantía verificable."
     },
     {
-      "source_id": "src-0193",
+      "source_id": "src-0160",
       "kind": "heading",
       "text": "### Devolver errores ambiguos"
     },
     {
-      "source_id": "src-0194",
+      "source_id": "src-0161",
       "kind": "paragraph",
-      "text": "Devolver errores ambiguos confunde cumplimiento formal con decisión defendible. Se necesita conectar fuente, interpretación, implementación y efecto, incluyendo la autoridad que acepta el riesgo residual."
+      "text": "«Falló» no permite distinguir rechazo, espera, reintento o escalamiento. Los errores deben expresar estado conocido y próxima acción segura."
     },
     {
-      "source_id": "src-0195",
+      "source_id": "src-0162",
       "kind": "heading",
       "text": "### Versionar sin migración"
     },
     {
-      "source_id": "src-0196",
+      "source_id": "src-0163",
       "kind": "paragraph",
-      "text": "Versionar sin migración suele premiar lo visible y dejar fuera mantenimiento, soporte y aprendizaje. La corrección compara el ciclo completo, documenta dependencia y ensaya una salida real."
+      "text": "Publicar una versión nueva sin período de convivencia traslada la coordinación a cada consumidor. La evolución requiere compatibilidad, migración observada y fecha de retiro."
     },
     {
-      "source_id": "src-0197",
+      "source_id": "src-0164",
       "kind": "heading",
       "text": "### Ocultar trabajo operacional"
     },
     {
-      "source_id": "src-0198",
+      "source_id": "src-0165",
       "kind": "paragraph",
-      "text": "Ocultar trabajo operacional reduce diversidad de casos a un promedio conveniente. Se revisan poblaciones, extremos y daños asimétricos para evitar que una mejora global silencie una pérdida crítica."
+      "text": "Un contrato puede funcionar porque Lucía corrige a mano los mensajes dudosos. Si esa intervención no se registra, la interfaz parece más confiable de lo que es."
     },
     {
-      "source_id": "src-0199",
+      "source_id": "src-0166",
       "kind": "heading",
       "text": "### Probar sólo el camino feliz"
     },
     {
-      "source_id": "src-0200",
+      "source_id": "src-0167",
       "kind": "paragraph",
-      "text": "Probar sólo el camino feliz borra memoria y vuelve inexplicable el cambio de rumbo. Una baseline y un registro breve permiten conservar razones sin inmovilizar la estrategia."
+      "text": "La conformidad ordinaria no revela duplicados, demora, caída parcial ni cambio de versión. Esos escenarios prueban las garantías que más necesita la operación."
     },
     {
-      "source_id": "src-0201",
+      "source_id": "src-0168",
       "kind": "heading",
       "text": "### Formalizar significado sin actores"
     },
     {
-      "source_id": "src-0202",
+      "source_id": "src-0169",
       "kind": "paragraph",
-      "text": "Formalizar significado sin actores deja responsabilidad sin capacidad. El diseño debe unir permiso, recursos, evidencia y posibilidad de reparar; nombrar un dueño no crea por sí mismo una función operativa."
+      "text": "Una ontología no resuelve desacuerdos si quienes deciden y reparan no participaron. El significado se sostiene en prácticas, autoridad y consecuencias compartidas."
     },
     {
-      "source_id": "src-0203",
+      "source_id": "src-0170",
       "kind": "heading",
       "text": "## Consecuencias profesionales"
     },
     {
-      "source_id": "src-0204",
+      "source_id": "src-0171",
       "kind": "paragraph",
-      "text": "N27 diseña contratos sintácticos, semánticos, temporales y operacionales, y vincula conformidad técnica con significado compartido, comportamiento observable y capacidad de reparación. El avance profesional consiste en sostener una promesa bajo condiciones reales, con autoridad, evidencia y reparación, no en declarar que la solución quedó disponible."
+      "text": "N27 convierte una interfaz en compromiso verificable entre productores, consumidores y operación. La competencia profesional no se agota en publicar un esquema: incluye acordar significado, tiempo, efecto, error, evolución y reparación."
     },
     {
-      "source_id": "src-0205",
+      "source_id": "src-0172",
+      "kind": "paragraph",
+      "text": "Esta competencia obliga a diseñar desde el consumidor real. Una respuesta válida para el productor puede llegar tarde, duplicarse o carecer del estado que el turno necesita para decidir. El análisis recorre la cadena completa y pregunta qué interpretación hará cada participante bajo condiciones ordinarias y adversas. En HH-27, el valor `liberada` no se aprueba hasta que Housekeeping, PMS, cerraduras y Recepción puedan reconocer el mismo compromiso o traducir explícitamente sus diferencias. La semántica se prueba mediante decisiones, no mediante definiciones aisladas."
+    },
+    {
+      "source_id": "src-0173",
+      "kind": "paragraph",
+      "text": "Los contratos también vuelven visible el costo del cambio. Agregar un campo opcional puede parecer compatible y, sin embargo, alterar una regla de negocio, una firma o una expectativa temporal. La evolución responsable identifica consumidores, versiones y ventanas, mantiene traducciones seguras y conserva evidencia de quién sigue expuesto. Retirar la versión anterior es una decisión operacional que requiere telemetría y autoridad. Si un consumidor desconocido todavía actúa sobre el contrato viejo, declarar finalizada la migración sólo desplaza el incidente."
+    },
+    {
+      "source_id": "src-0174",
+      "kind": "paragraph",
+      "text": "La prueba deja de ser una actividad exclusivamente técnica. Operaciones aporta estados posibles, Recepción muestra decisiones bajo presión y las personas afectadas permiten verificar si el resultado conserva la promesa. Un simulador puede validar formato y secuencia; un episodio real revela autoridad, excepción y reparación. La combinación evita dos falsos positivos: una interfaz que compila pero no coordina significado y una práctica manual que oculta la incompatibilidad mientras una persona experta permanece disponible."
+    },
+    {
+      "source_id": "src-0175",
       "kind": "heading",
       "text": "## Límites y tensiones"
     },
     {
-      "source_id": "src-0206",
+      "source_id": "src-0176",
       "kind": "paragraph",
-      "text": "Ninguna arquitectura, contrato, prueba, control ni tablero elimina el juicio situado. Las dependencias cambian, la evidencia llega con demora, la operación distribuye poder y una mejora local puede desplazar daño. El expediente debe conservar población afectada, supuestos, autoridad, degradación aceptable, reparación y fecha de revisión."
+      "text": "Formalizar un contrato reduce ambigüedad, pero también puede congelar un significado inadecuado o imponer al consumidor el costo de evolución. Los acuerdos se revisan cuando cambian prácticas, poblaciones o consecuencias, aun si la interfaz mantiene compatibilidad técnica."
     },
     {
-      "source_id": "src-0207",
+      "source_id": "src-0177",
+      "kind": "paragraph",
+      "text": "No toda relación necesita el mismo grado de formalidad. Un intercambio exploratorio, reversible y de bajo impacto puede comenzar con ejemplos y observación; una decisión financiera, clínica o de acceso requiere invariantes explícitas, procedencia y manejo de indeterminación. Sobredocumentar una conexión menor puede distraer de contratos críticos, mientras dejar implícita una obligación severa vuelve imposible atribuir responsabilidad. La proporcionalidad se justifica por consecuencia, frecuencia de cambio y dificultad de reparación, no por prestigio de la tecnología utilizada."
+    },
+    {
+      "source_id": "src-0178",
+      "kind": "paragraph",
+      "text": "La consistencia presenta una tensión particular. Exigir sincronía total puede reducir disponibilidad y aumentar fragilidad; aceptar estados temporales distintos puede confundir una promesa irreversible. El contrato debe nombrar qué discrepancias son tolerables, durante cuánto tiempo y para qué decisiones. En el hotel, inventario y limpieza pueden converger, pero una llave no debe emitirse mientras la autoridad permanezca indeterminada. El criterio no es uniformidad absoluta, sino preservar invariantes capaces de proteger a la persona durante la transición."
+    },
+    {
+      "source_id": "src-0179",
+      "kind": "paragraph",
+      "text": "La reparación atraviesa fronteras organizacionales. Un productor puede corregir su dato sin deshacer una decisión que el consumidor ya tomó. Por eso el acuerdo incluye identificadores, trazas, compensaciones y comunicación, además del mensaje correcto. Cuando no se sabe si una operación ocurrió, repetir sin idempotencia puede duplicar un cargo y asumir éxito puede abandonar al huésped. Un estado explícito de indeterminación permite detener, investigar y resolver. Negar esa posibilidad sólo la traslada al trabajo informal de quienes atienden la excepción."
+    },
+    {
+      "source_id": "src-0180",
+      "kind": "paragraph",
+      "text": "Finalmente, el lenguaje compartido nunca queda cerrado de una vez. Nuevos productos, regulaciones y prácticas crean casos que los términos originales no anticiparon. La gobernanza semántica conserva ejemplos, decisiones y fecha, y distingue cambiar una definición de corregir un dato. Una versión nueva no reescribe el significado histórico, porque hacerlo impediría comprender incidentes anteriores. Aprender exige saber con qué contrato actuó cada participante y cómo la organización transformó ese acuerdo después de observar sus límites."
+    },
+    {
+      "source_id": "src-0181",
       "kind": "heading",
       "text": "## De N27 a N28"
     },
     {
-      "source_id": "src-0208",
+      "source_id": "src-0182",
       "kind": "paragraph",
-      "text": "N28 tomará esos contratos y decidirá qué evidencia de calidad exige cada riesgo. N27 no establece todavía el conjunto completo de atributos ni la suficiencia de sus pruebas."
+      "text": "Un contrato verificable delimita comportamiento, pero no decide por sí solo si ese comportamiento ofrece calidad suficiente para todas las poblaciones y consecuencias. N28 transformará las garantías de N27 en escenarios, riesgos, atributos y evidencia de aceptación."
     },
     {
-      "source_id": "src-0209",
+      "source_id": "src-0183",
       "kind": "heading",
       "text": "## Síntesis"
     },
     {
-      "source_id": "src-0210",
+      "source_id": "src-0184",
       "kind": "paragraph",
-      "text": "N27 diseña contratos sintácticos, semánticos, temporales y operacionales, y vincula conformidad técnica con significado compartido, comportamiento observable y capacidad de reparación."
+      "text": "Un contrato completo define qué puede circular, qué significa, cuándo sigue vigente y qué ocurre cuando no puede cumplirse. Cada dimensión impide convertir una respuesta técnica en una falsa promesa operacional."
     },
     {
-      "source_id": "src-0211",
+      "source_id": "src-0185",
       "kind": "paragraph",
-      "text": "El bloque no propone reemplazar una doctrina por otra. Propone hacer visibles las decisiones que cada práctica organiza, la evidencia que necesita y los daños que puede producir. El resultado es una intervención que puede explicarse, probarse y revisarse."
+      "text": "La prueba del acuerdo no es que ambos extremos compilen, sino que puedan manejar duplicados, demora, indeterminación y cambio sin perder invariantes ni capacidad de reparación."
     },
     {
-      "source_id": "src-0212",
+      "source_id": "src-0186",
+      "kind": "paragraph",
+      "text": "Un contrato defendible une especificación y práctica. Define mensajes y estados, pero también quién puede interpretar una excepción, qué evidencia queda y cómo se corrige una consecuencia. Su prueba más exigente combina una versión anterior, demora, repetición y una persona que necesita decidir antes de que el sistema converja. Si productor y consumidor preservan el invariante y la operación puede reconocer la indeterminación, el acuerdo coordina. Si el éxito depende de que alguien conozca una convención no escrita, existe conocimiento local y no contrato. El objetivo no es eliminar toda ambigüedad futura, sino volverla localizable, discutible y reparable antes de que una diferencia semántica se convierta en una promesa falsa."
+    },
+    {
+      "source_id": "src-0187",
       "kind": "heading",
       "text": "## Cinco píldoras para recordar"
     },
     {
-      "source_id": "src-0213",
+      "source_id": "src-0188",
       "kind": "list-item",
-      "text": "1. Un contrato sintáctico define estructura, tipos, obligatoriedad y formato de un intercambio."
+      "text": "1. Un mensaje válido puede producir una decisión equivocada cuando las partes no comparten significado."
     },
     {
-      "source_id": "src-0214",
+      "source_id": "src-0189",
       "kind": "list-item",
-      "text": "2. Un contrato semántico acuerda qué significa cada dato, estado y transición en un contexto de decisión."
+      "text": "2. Orden, demora, duplicación y vencimiento forman parte del contrato aunque no aparezcan en el esquema."
     },
     {
-      "source_id": "src-0215",
+      "source_id": "src-0190",
       "kind": "list-item",
-      "text": "3. Un contrato temporal define ventanas, orden, vigencia, latencia y tratamiento de demora."
+      "text": "3. Un tiempo máximo de espera informa incertidumbre; no autoriza por sí solo a declarar éxito ni fracaso."
     },
     {
-      "source_id": "src-0216",
+      "source_id": "src-0191",
       "kind": "list-item",
-      "text": "4. Un contrato operacional define efectos, errores, escalamiento, observación y reparación alrededor de una interfaz."
+      "text": "4. La invariante protege la consecuencia que ninguna repetición, reintento o falla parcial puede quebrar."
     },
     {
-      "source_id": "src-0217",
+      "source_id": "src-0192",
       "kind": "list-item",
-      "text": "5. Precondición y poscondición declaran qué debe ser cierto antes y después de una operación."
+      "text": "5. Evolucionar un contrato exige probar convivencia, observación y reparación, no sólo compatibilidad de formato."
     },
     {
-      "source_id": "src-0218",
+      "source_id": "src-0193",
       "kind": "heading",
       "text": "## Glosario esencial"
     },
     {
-      "source_id": "src-0219",
+      "source_id": "src-0194",
       "kind": "paragraph",
       "text": "**Contrato sintáctico:** un contrato sintáctico define estructura, tipos, obligatoriedad y formato de un intercambio."
     },
     {
-      "source_id": "src-0220",
+      "source_id": "src-0195",
       "kind": "paragraph",
       "text": "**Contrato semántico:** un contrato semántico acuerda qué significa cada dato, estado y transición en un contexto de decisión."
     },
     {
-      "source_id": "src-0221",
+      "source_id": "src-0196",
       "kind": "paragraph",
       "text": "**Contrato temporal:** un contrato temporal define ventanas, orden, vigencia, latencia y tratamiento de demora."
     },
     {
-      "source_id": "src-0222",
+      "source_id": "src-0197",
       "kind": "paragraph",
       "text": "**Contrato operacional:** un contrato operacional define efectos, errores, escalamiento, observación y reparación alrededor de una interfaz."
     },
     {
-      "source_id": "src-0223",
+      "source_id": "src-0198",
       "kind": "paragraph",
       "text": "**Precondición y poscondición:** precondición y poscondición declaran qué debe ser cierto antes y después de una operación."
     },
     {
-      "source_id": "src-0224",
+      "source_id": "src-0199",
       "kind": "paragraph",
       "text": "**Invariante:** una invariante es una condición que debe preservarse a través de operaciones y fallas."
     },
     {
-      "source_id": "src-0225",
+      "source_id": "src-0200",
       "kind": "paragraph",
       "text": "**Idempotencia:** idempotencia permite repetir una operación sin multiplicar su efecto material."
     },
     {
-      "source_id": "src-0226",
+      "source_id": "src-0201",
       "kind": "paragraph",
       "text": "**Contrato de error:** un contrato de error clasifica fallas, incertidumbre y respuestas que productores y consumidores pueden manejar."
     },
     {
-      "source_id": "src-0227",
+      "source_id": "src-0202",
       "kind": "paragraph",
       "text": "**Evolución compatible:** evolución compatible permite cambiar un contrato sin quebrar consumidores existentes ni congelar el servicio."
     },
     {
-      "source_id": "src-0228",
+      "source_id": "src-0203",
       "kind": "paragraph",
-      "text": "**Contrato de datos:** un contrato de datos acuerda significado, calidad, ownership, privacidad y cambio de un producto de datos."
+      "text": "**Contrato de datos:** un contrato de datos acuerda significado, calidad, responsabilidad, privacidad y cambio de un producto de datos."
     },
     {
-      "source_id": "src-0229",
+      "source_id": "src-0204",
       "kind": "paragraph",
       "text": "**Contrato de seguridad:** un contrato de seguridad define identidad, autorización, confidencialidad, integridad y evidencia de acceso."
     },
     {
-      "source_id": "src-0230",
+      "source_id": "src-0205",
       "kind": "paragraph",
-      "text": "**Prueba de contrato:** una prueba de contrato verifica acuerdos relevantes desde la perspectiva de productor, consumidor y operación."
+      "text": "**Prueba de contrato:** una prueba de contrato verifica acuerdos relevantes desde la perspectiva del productor, del consumidor y de la operación."
     },
     {
-      "source_id": "src-0231",
+      "source_id": "src-0206",
       "kind": "heading",
       "text": "## Preguntas de preparación"
     },
     {
-      "source_id": "src-0232",
+      "source_id": "src-0207",
       "kind": "list-item",
-      "text": "1. ¿Qué decisión permite sostener contrato sintáctico y qué evidencia podría refutarla?"
+      "text": "1. ¿Qué parte de un intercambio actual está definida sólo por costumbre y no por un contrato verificable?"
     },
     {
-      "source_id": "src-0233",
+      "source_id": "src-0208",
       "kind": "list-item",
-      "text": "2. ¿Qué decisión permite sostener contrato semántico y qué evidencia podría refutarla?"
+      "text": "2. ¿Qué estado comparte nombre entre dos áreas pero habilita decisiones diferentes?"
     },
     {
-      "source_id": "src-0234",
+      "source_id": "src-0209",
       "kind": "list-item",
-      "text": "3. ¿Qué decisión permite sostener contrato temporal y qué evidencia podría refutarla?"
+      "text": "3. ¿Qué debería ocurrir cuando un mensaje correcto llega después de que la operación tomó otra decisión?"
     },
     {
-      "source_id": "src-0235",
+      "source_id": "src-0210",
       "kind": "list-item",
-      "text": "4. ¿Qué decisión permite sostener contrato operacional y qué evidencia podría refutarla?"
+      "text": "4. ¿Cómo distingue el consumidor rechazo, demora e indeterminación, y qué acción segura asocia a cada caso?"
     },
     {
-      "source_id": "src-0236",
+      "source_id": "src-0211",
       "kind": "list-item",
-      "text": "5. ¿Qué decisión permite sostener precondición y poscondición y qué evidencia podría refutarla?"
+      "text": "5. ¿Qué invariante no puede quebrarse aunque una operación se repita o falle a mitad de camino?"
     },
     {
-      "source_id": "src-0237",
+      "source_id": "src-0212",
       "kind": "list-item",
-      "text": "6. ¿Qué decisión permite sostener invariante y qué evidencia podría refutarla?"
+      "text": "6. ¿Cómo se probará una nueva versión mientras convive con consumidores que todavía usan la anterior?"
     },
     {
-      "source_id": "src-0238",
+      "source_id": "src-0213",
       "kind": "paragraph",
-      "text": "Para el encuentro, seleccionar una intervención conocida, completar el instrumento con evidencia verificable y preparar una decisión provisional. Incluir una explicación rival, una condición que obligaría a revisar y una consecuencia para una persona afectada."
+      "text": "Para el encuentro, elegir un intercambio real o utilizar el contrato `asignable` completado en HH-27. Revisar sintaxis, semántica, temporalidad y error, y preparar un caso duplicado o tardío que permita comprobar la garantía operacional."
     },
     {
-      "source_id": "src-0239",
+      "source_id": "src-0214",
       "kind": "heading",
       "text": "## Referentes"
     },
     {
-      "source_id": "src-0240",
+      "source_id": "src-0215",
       "kind": "paragraph",
-      "text": "**IETF.** Define la semántica común de HTTP."
+      "text": "**Roy T. Fielding.** Fundamenta las restricciones de REST y la semántica de las interacciones distribuidas más allá del formato de un mensaje."
     },
     {
-      "source_id": "src-0241",
+      "source_id": "src-0216",
       "kind": "paragraph",
-      "text": "**OpenAPI Initiative.** Estandariza descripciones de interfaces HTTP."
+      "text": "**Martin Fowler.** Conecta contratos de aplicación, transacciones y evolución de interfaces con consecuencias operativas."
     },
     {
-      "source_id": "src-0242",
+      "source_id": "src-0217",
       "kind": "paragraph",
-      "text": "**JSON Schema.** Proporciona vocabularios para validar estructura."
+      "text": "**David Parnas.** Muestra que una frontera modular debe proteger decisiones de diseño y reducir el alcance de los cambios."
     },
     {
-      "source_id": "src-0243",
+      "source_id": "src-0218",
       "kind": "paragraph",
-      "text": "**Eric Evans.** Vincula lenguaje compartido con modelos de dominio."
+      "text": "**Leslie Lamport.** Establece bases para razonar sobre tiempo, orden causal y coordinación en sistemas distribuidos."
     },
     {
-      "source_id": "src-0244",
+      "source_id": "src-0219",
       "kind": "paragraph",
-      "text": "**Martin Kleppmann.** Analiza datos, distribución, tiempo y fallas."
+      "text": "**Werner Vogels.** Expone los compromisos prácticos de consistencia, disponibilidad y evolución en servicios distribuidos."
     },
     {
-      "source_id": "src-0245",
+      "source_id": "src-0220",
       "kind": "paragraph",
-      "text": "**Gregor Hohpe y Bobby Woolf.** Sistematizaron patrones de integración empresarial."
+      "text": "**Jim Gray.** Sistematiza transacciones, recuperación y garantías que permiten distinguir un mensaje recibido de una operación concluida."
     },
     {
-      "source_id": "src-0246",
+      "source_id": "src-0221",
       "kind": "heading",
       "text": "## Referencias base"
     },
     {
-      "source_id": "src-0247",
+      "source_id": "src-0222",
       "kind": "list-item",
-      "text": "- IETF (2022). RFC 9110, HTTP Semantics. https://www.rfc-editor.org/rfc/rfc9110"
+      "text": "- Fielding, R. T., Nottingham, M. y Reschke, J. (2022). *RFC 9110: HTTP Semantics*. RFC Editor. https://www.rfc-editor.org/rfc/rfc9110.html"
     },
     {
-      "source_id": "src-0248",
+      "source_id": "src-0223",
       "kind": "list-item",
-      "text": "- OpenAPI Initiative (2024). OpenAPI Specification 3.1.1. https://spec.openapis.org/oas/v3.1.1.html"
+      "text": "- OpenAPI Initiative (2025). *OpenAPI Specification 3.2.0*. https://spec.openapis.org/oas/v3.2.0.html"
     },
     {
-      "source_id": "src-0249",
+      "source_id": "src-0224",
       "kind": "list-item",
-      "text": "- JSON Schema (2022). Draft 2020-12. https://json-schema.org/draft/2020-12"
+      "text": "- JSON Schema (2022). *Draft 2020-12*. https://json-schema.org/draft/2020-12"
     },
     {
-      "source_id": "src-0250",
+      "source_id": "src-0225",
       "kind": "list-item",
-      "text": "- Evans, E. (2003). Domain-Driven Design. Addison-Wesley."
+      "text": "- Evans, E. (2003). *Domain-Driven Design: Tackling Complexity in the Heart of Software*. Addison-Wesley."
     },
     {
-      "source_id": "src-0251",
+      "source_id": "src-0226",
       "kind": "list-item",
-      "text": "- Kleppmann, M. (2017). Designing Data-Intensive Applications. O'Reilly."
+      "text": "- Kleppmann, M. (2017). *Designing Data-Intensive Applications*. O’Reilly Media."
     },
     {
-      "source_id": "src-0252",
+      "source_id": "src-0227",
       "kind": "list-item",
-      "text": "- Hohpe, G. y Woolf, B. (2003). Enterprise Integration Patterns. Addison-Wesley."
+      "text": "- Hohpe, G. y Woolf, B. (2003). *Enterprise Integration Patterns*. Addison-Wesley."
     },
     {
-      "source_id": "src-0253",
+      "source_id": "src-0228",
       "kind": "list-item",
-      "text": "- Fowler, M. (2002). Patterns of Enterprise Application Architecture. Addison-Wesley."
+      "text": "- Fowler, M. (2002). *Patterns of Enterprise Application Architecture*. Addison-Wesley."
     },
     {
-      "source_id": "src-0254",
+      "source_id": "src-0229",
       "kind": "list-item",
-      "text": "- AsyncAPI Initiative (2024). AsyncAPI Specification 3.0.0. https://www.asyncapi.com/docs/reference/specification/v3.0.0"
+      "text": "- AsyncAPI Initiative (2026). *AsyncAPI Specification, Version 3.1.0*. https://www.asyncapi.com/docs/reference/specification/v3.1.0"
     },
     {
-      "source_id": "src-0255",
+      "source_id": "src-0230",
       "kind": "list-item",
-      "text": "- W3C (2013). PROV Overview. https://www.w3.org/TR/prov-overview/"
+      "text": "- W3C Provenance Working Group (2013). *PROV-Overview: An Overview of the PROV Family of Documents*. https://www.w3.org/TR/prov-overview/"
     },
     {
-      "source_id": "src-0256",
+      "source_id": "src-0231",
       "kind": "list-item",
-      "text": "- ISO/IEC (2023). ISO/IEC 25010:2023 Product Quality Model. https://www.iso.org/standard/78176.html"
+      "text": "- Fielding, R. T. (2000). *Architectural Styles and the Design of Network-based Software Architectures*. University of California, Irvine. https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm"
     },
     {
-      "source_id": "src-0257",
+      "source_id": "src-0232",
       "kind": "list-item",
-      "text": "- NIST (2020). Zero Trust Architecture, SP 800-207. https://doi.org/10.6028/NIST.SP.800-207"
+      "text": "- Rose, S., Borchert, O., Mitchell, S. y Connelly, S. (2020). *Zero Trust Architecture*. NIST SP 800-207. https://doi.org/10.6028/NIST.SP.800-207"
     },
     {
-      "source_id": "src-0258",
+      "source_id": "src-0233",
       "kind": "list-item",
-      "text": "- Pact Foundation (2026). Consumer Driven Contract Testing. https://docs.pact.io/"
+      "text": "- Pact Foundation (2026). *Consumer Driven Contract Testing*. https://docs.pact.io/"
+    },
+    {
+      "source_id": "src-0234",
+      "kind": "list-item",
+      "text": "- Parnas, D. L. (1972). “On the Criteria to Be Used in Decomposing Systems into Modules”. *Communications of the ACM*, 15(12), 1053–1058. https://doi.org/10.1145/361598.361623"
+    },
+    {
+      "source_id": "src-0235",
+      "kind": "list-item",
+      "text": "- Lamport, L. (1978). “Time, Clocks, and the Ordering of Events in a Distributed System”. *Communications of the ACM*, 21(7), 558–565. https://doi.org/10.1145/359545.359563"
+    },
+    {
+      "source_id": "src-0236",
+      "kind": "list-item",
+      "text": "- Vogels, W. (2009). “Eventually Consistent”. *Communications of the ACM*, 52(1), 40–44. https://doi.org/10.1145/1435417.1435432"
+    },
+    {
+      "source_id": "src-0237",
+      "kind": "list-item",
+      "text": "- Gray, J. y Reuter, A. (1992). *Transaction Processing: Concepts and Techniques*. Morgan Kaufmann."
     }
   ],
-  "block_count": 258,
-  "word_count": 7216
+  "block_count": 237,
+  "word_count": 7740
 }

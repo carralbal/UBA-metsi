@@ -4,12 +4,12 @@
   "stage": "content-canonical-v1",
   "language": "es-AR",
   "source": "N15-content-canonical/source/N15_seleccionar_modelos_segun_pregunta_audiencia_y_costo-content-canonical-v1.md",
-  "sha256": "a491caceeaec2092eb344f53dafada1a9d78b066160c2fbcce13f493b9385a88",
-  "bytes": 47538,
-  "words_total": 6613,
-  "words_substantive": 6010,
-  "source_blocks": 286,
-  "references": 12,
+  "sha256": "94a0ca22cca9888c649eca8b0f663bb9115ab0634888b445a3f66f15decec80f",
+  "bytes": 57179,
+  "words_total": 8004,
+  "words_substantive": 6353,
+  "source_blocks": 306,
+  "references": 17,
   "urls": 9,
   "results": [
     {
@@ -20,12 +20,12 @@
     {
       "check": "substantive_word_floor",
       "result": "pass",
-      "evidence": 6010
+      "evidence": 7327
     },
     {
       "check": "total_word_count",
       "result": "pass",
-      "evidence": 6613
+      "evidence": 7988
     },
     {
       "check": "required_architecture",
@@ -73,8 +73,8 @@
           "words": 159
         },
         {
-          "title": "Stakeholders, preocupaciones y viewpoints",
-          "words": 155
+          "title": "Partes interesadas, preocupaciones y puntos de vista",
+          "words": 164
         },
         {
           "title": "Alcance, nivel y resolución",
@@ -82,7 +82,7 @@
         },
         {
           "title": "Tiempo y versión del modelo",
-          "words": 152
+          "words": 154
         },
         {
           "title": "Notación y semántica",
@@ -90,7 +90,7 @@
         },
         {
           "title": "Primera aplicación de HH-15: separar cuatro preguntas del check-in",
-          "words": 197
+          "words": 224
         },
         {
           "title": "Modelo del problema antes que modelo de la solución",
@@ -98,7 +98,7 @@
         },
         {
           "title": "Modelos de estructura",
-          "words": 161
+          "words": 162
         },
         {
           "title": "Modelos de comportamiento y tiempo",
@@ -106,7 +106,7 @@
         },
         {
           "title": "Modelos de decisión y causalidad",
-          "words": 162
+          "words": 230
         },
         {
           "title": "Modelos de experiencia y perspectiva",
@@ -126,7 +126,7 @@
         },
         {
           "title": "Segunda aplicación de HH-15: reducir una cartera que creció sin control",
-          "words": 172
+          "words": 208
         },
         {
           "title": "Criterio de descarte y suficiencia",
@@ -138,19 +138,27 @@
         },
         {
           "title": "Matriz pregunta modelo",
-          "words": 164
+          "words": 176
+        },
+        {
+          "title": "Matriz aplicada a la validación previa",
+          "words": 493
         },
         {
           "title": "Prueba de lectura y decisión",
           "words": 165
         },
         {
+          "title": "Comparar carteras antes de comprometer mantenimiento",
+          "words": 356
+        },
+        {
           "title": "Trazabilidad sin modelo total",
           "words": 157
         },
         {
-          "title": "Tercera aplicación de HH-15: cinco modelos para una decisión de arribo",
-          "words": 166
+          "title": "Tercera aplicación de HH-15: cinco familias de representación para una decisión de arribo",
+          "words": 265
         },
         {
           "title": "Caso de transferencia: seleccionar modelos para una alerta de fraude",
@@ -185,12 +193,12 @@
     {
       "check": "reference_depth",
       "result": "pass",
-      "evidence": 12
+      "evidence": 17
     },
     {
       "check": "recent_literature",
       "result": "pass",
-      "evidence": 4
+      "evidence": 3
     },
     {
       "check": "reference_urls",
@@ -258,5 +266,11 @@
       "evidence": "no PDF, HTML or CSS"
     }
   ],
-  "overall": "pass"
+  "overall": "pass",
+  "word_count": 8004,
+  "block_count": 306,
+  "checks": {
+    "source_sha256": "94a0ca22cca9888c649eca8b0f663bb9115ab0634888b445a3f66f15decec80f",
+    "references": 17
+  }
 }
