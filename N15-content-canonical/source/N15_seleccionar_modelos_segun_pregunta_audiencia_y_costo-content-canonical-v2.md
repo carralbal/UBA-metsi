@@ -200,7 +200,7 @@ Un lazo causal no demuestra magnitud ni demora. Una tabla de decisión no explic
 
 ### Modelos de experiencia y perspectiva
 
-Journey, blueprint de servicio, mapa de actores y escenario conservan lo que vive una persona y cómo se relaciona con trabajo interno. Responden dónde aparece fricción, información, emoción, exclusión o reparación.
+Journey, blueprint de servicio, mapa de actores y escenario conservan lo que vive una persona y cómo se relaciona con trabajo interno. Responden dónde aparece fricción, información, emoción, exclusión o reparación. Stickdorn, Hormess, Lawrence y Schneider organizan esta relación mediante recorridos y blueprints de servicio que conectan la experiencia visible con la operación que la sostiene.
 
 No reemplazan proceso ni arquitectura. Una línea emocional no prueba causa. Una persona ficticia no sustituye evidencia. Su valor consiste en mantener la promesa y las perspectivas que los modelos técnicos excluyen.
 

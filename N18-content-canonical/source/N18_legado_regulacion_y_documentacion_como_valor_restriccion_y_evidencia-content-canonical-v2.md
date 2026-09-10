@@ -192,7 +192,7 @@ El exceso también daña. Miles de páginas sin jerarquía aumentan el costo de 
 
 ### Documentación versionada junto con el cambio
 
-La documentación tratada como código se conserva en archivos de texto, atraviesa control de versiones y se revisa con el cambio que explica. Este enfoque permite comparar diferencias, identificar autoría, ejecutar validaciones y publicar una versión coherente. No significa que toda documentación deba escribirse con herramientas de desarrollo ni que una confirmación técnica reemplace la aprobación institucional.
+La documentación tratada como código se conserva en archivos de texto, atraviesa control de versiones y se revisa con el cambio que explica. Chacon y Straub describen en *Pro Git* el modelo distribuido que permite conservar versiones, comparar cambios y reconstruir relaciones entre contribuciones. Este enfoque permite identificar autoría, ejecutar validaciones y publicar una versión coherente. No significa que toda documentación deba escribirse con herramientas de desarrollo ni que una confirmación técnica reemplace la aprobación institucional.
 
 En HH-18, la definición de `asignable`, la guía de contingencia y la decisión que justifica una excepción comparten identificador con la modificación correspondiente. Una revisión comprueba que cambien juntos cuando se altera el contrato. Git conserva la secuencia de versiones y permite reconstruir quién propuso una diferencia; no demuestra que la explicación sea cierta, suficiente o comprensible para el turno. La prueba sigue siendo que otra persona pueda operar, cuestionar y reparar.
 

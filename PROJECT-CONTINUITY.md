@@ -12,6 +12,9 @@ Este archivo define qué debe conservar Git para reconstruir el proyecto sin dep
 - Sitio publicable: `site`.
 - Sistema editorial y skills recuperables: `editorial-standard`.
 - Decisiones autorales que condicionan trabajo futuro: `decisions`.
+- Selección académica vigente para la próxima reconstrucción de N11 a N36: `academic-content-revision-manifest-n11-n36.json`, acompañada por `ACADEMIC-CONTENT-AUDIT-N11-N36.md`.
+
+Los paquetes `N11-v7-editorial` a `N36-v7-editorial` siguen siendo la versión pública hasta que la nueva composición supere su auditoría visual y de PDF. El manifiesto académico selecciona las fuentes de la próxima versión, pero no autoriza por sí mismo reemplazar los PDF ni actualizar el sitio.
 
 ## Elementos que deben quedar versionados
 
@@ -36,6 +39,7 @@ Este archivo define qué debe conservar Git para reconstruir el proyecto sin dep
 3. Ejecutar `python3 sync_metsi_skills.py` para comprobar la sincronización.
 4. Ejecutar `python3 editorial-standard/metsi-publish-course/scripts/verify_publishable.py .` desde la raíz.
 5. Ejecutar `python3 site/validate_site.py --check-only --require-sources` para verificar la publicación local.
+6. Ejecutar `python3 scripts/audit_academic_content_revision.py` para comprobar la revisión académica seleccionada de N11 a N36 antes de cualquier nueva composición.
 
 El cierre integrado de N00 a N36 se reproduce con `python3 scripts/build_block01_completion.py`, se sella con `python3 scripts/audit_integrated_collection.py` y se publica localmente con `python3 scripts/sync_block01_integrated_release.py`.
 
