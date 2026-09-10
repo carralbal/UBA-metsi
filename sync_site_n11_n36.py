@@ -2,7 +2,7 @@
 """Stage and, only with --apply, publish rebuilt N11-N36 into ``site``.
 
 The public ``v1-final`` filenames are stable compatibility routes. Their bytes
-come from the current v3 editorial packages. The default invocation is a dry
+come from the current v6 editorial packages. The default invocation is a dry
 run: it performs every source/gate/staging check but does not mutate ``site`` or
 either course manifest. The apply phase is guarded against concurrent changes
 and rolls back every replaced file if the final site validator fails.
@@ -34,7 +34,8 @@ SITE = REPO / "site"
 FIRST = 11
 LAST = 36
 COVER_DPI = 120
-SOURCE_VERSION = "v3-editorial"
+SOURCE_VERSION = "v6-editorial"
+SOURCE_VERSION_SHORT = "v6"
 PUBLIC_ROUTE_CONTRACT = "stable-v1-filename"
 
 
@@ -48,7 +49,7 @@ def code_for(number: int) -> str:
 
 def source_pdf_relative(number: int) -> Path:
     code = code_for(number)
-    return Path(f"{code}-v3-editorial/output/{code}-METSI-lectura-previa-v3-final.pdf")
+    return Path(f"{code}-{SOURCE_VERSION}/output/{code}-METSI-lectura-previa-{SOURCE_VERSION_SHORT}-final.pdf")
 
 
 def public_pdf_relative(number: int) -> Path:
@@ -129,7 +130,7 @@ def one_canonical_source(number: int) -> Path:
 
 def lean_package_fingerprint(number: int) -> dict[Path, str]:
     code = code_for(number)
-    package = REPO / f"{code}-v3-editorial"
+    package = REPO / f"{code}-{SOURCE_VERSION}"
     files: set[Path] = set()
     for candidate in package.iterdir():
         if candidate.is_file() and candidate.suffix.casefold() in {".json", ".html", ".css", ".md"}:
@@ -166,7 +167,7 @@ def collect_package_inputs() -> tuple[list[dict[str, Any]], dict[Path, str]]:
     stale: list[str] = []
     for number in range(FIRST, LAST + 1):
         code = code_for(number)
-        package = REPO / f"{code}-v3-editorial"
+        package = REPO / f"{code}-{SOURCE_VERSION}"
         document_path = package / "document.json"
         integrity_path = package / "integrity-report.json"
         source_pdf = REPO / source_pdf_relative(number)
@@ -189,7 +190,7 @@ def collect_package_inputs() -> tuple[list[dict[str, Any]], dict[Path, str]]:
             package_source = package / "__missing__"
         else:
             package_source = confined_repo_path(
-                f"{code}-v3-editorial/{declared_source}",
+                f"{code}-{SOURCE_VERSION}/{declared_source}",
                 package / "source" / canonical.name,
             )
         if not package_source.is_file() or package_source.is_symlink():
@@ -202,7 +203,7 @@ def collect_package_inputs() -> tuple[list[dict[str, Any]], dict[Path, str]]:
         declared_hash = document.get("source_sha256")
         if package_source_hash != canonical_hash or declared_hash != canonical_hash:
             stale.append(
-                f"{code}: fuente v3 desincronizada "
+                f"{code}: fuente {SOURCE_VERSION_SHORT} desincronizada "
                 f"(canónica={canonical_hash}, paquete={package_source_hash}, document.json={declared_hash})"
             )
         if integrity.get("status") != "PASS" or integrity.get("missing_source_ids") or integrity.get("unexpected_source_ids"):
@@ -246,16 +247,16 @@ def collect_package_inputs() -> tuple[list[dict[str, Any]], dict[Path, str]]:
     if stale:
         detail = "\n  - ".join(stale)
         raise PublicationError(
-            "Los paquetes v3 no corresponden a las fuentes canónicas vigentes. "
+            f"Los paquetes {SOURCE_VERSION_SHORT} no corresponden a las fuentes canónicas vigentes. "
             "Hay que reconstruir antes de publicar:\n  - " + detail
         )
     return partial, fingerprints
 
 
 def run_exhaustive_gate() -> dict[str, dict[str, Any]]:
-    validator = REPO / "validate_block_c_v2.py"
+    validator = REPO / "validate_n11_n36_v6.py"
     if not validator.is_file():
-        raise PublicationError("Falta validate_block_c_v2.py")
+        raise PublicationError("Falta validate_n11_n36_v6.py")
     process = subprocess.run(
         [sys.executable, str(validator), "--start", str(FIRST), "--end", str(LAST)],
         cwd=REPO,
@@ -295,7 +296,7 @@ def run_exhaustive_gate() -> dict[str, dict[str, Any]]:
 
 def merge_gate(partial: list[dict[str, Any]], reports: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
     records: list[dict[str, Any]] = []
-    validator_hash = sha256(REPO / "validate_block_c_v2.py")
+    validator_hash = sha256(REPO / "validate_n11_n36_v6.py")
     for item in partial:
         code = item["code"]
         report = reports[code]
@@ -314,7 +315,7 @@ def merge_gate(partial: list[dict[str, Any]], reports: dict[str, dict[str, Any]]
             {
                 "qa_validator": str(report.get("validator", "")),
                 "qa_validator_sha256": validator_hash,
-                "qa_report": f"qa-reports/block-c-v3/{code}-validation-v3.json",
+                "qa_report": f"qa-reports/n11-n36-v6/{code}-validation-v6.json",
                 "qa_status": str(report.get("status", "")),
                 "qa_checks": int(report.get("total_checks", 0)),
                 "qa_report_sha256": hashlib.sha256(rendered_json(report).encode("utf-8")).hexdigest(),
@@ -424,7 +425,7 @@ def update_manifests(records: list[dict[str, Any]]) -> tuple[dict[str, Any], dic
                 "code": record["code"],
                 "status": "closed",
                 "pdf": record["source_pdf"],
-                "tag": f"{record['code'].casefold()}-v3-editorial-final",
+                "tag": f"{record['code'].casefold()}-{SOURCE_VERSION}-final",
                 "public_pdf": f"site/{record['public_pdf']}",
                 "cover": f"site/{record['cover']}",
                 "pages": record["pages"],
@@ -663,7 +664,7 @@ def main() -> int:
     try:
         verify_protected_approval()
         partial, input_fingerprints = collect_package_inputs()
-        input_fingerprints[REPO / "validate_block_c_v2.py"] = sha256(REPO / "validate_block_c_v2.py")
+        input_fingerprints[REPO / "validate_n11_n36_v6.py"] = sha256(REPO / "validate_n11_n36_v6.py")
         reports = run_exhaustive_gate()
         assert_snapshot(
             {path: (True, digest) for path, digest in input_fingerprints.items()},
@@ -679,7 +680,7 @@ def main() -> int:
         protected_baseline = snapshot(protected_paths)
         target_relatives = [public_pdf_relative(n) for n in range(FIRST, LAST + 1)]
         target_relatives += [cover_relative(n) for n in range(FIRST, LAST + 1)]
-        target_relatives += [Path(f"qa-reports/block-c-v3/{code_for(n)}-validation-v3.json") for n in range(FIRST, LAST + 1)]
+        target_relatives += [Path(f"qa-reports/n11-n36-v6/{code_for(n)}-validation-v6.json") for n in range(FIRST, LAST + 1)]
         target_relatives += [Path("site/index.html"), Path("site/course-manifest.json"), Path("course-manifest.json"), Path("site/audit.json")]
         target_baseline = snapshot([REPO / relative for relative in target_relatives])
 

@@ -1,0 +1,130 @@
+{
+  "title": "La cadena se prueba en ambos sentidos",
+  "claim": "Una intervención es defendible cuando puede recorrerse desde el problema hasta su consecuencia y desde un incidente hasta la decisión, la evidencia y el encuadre que lo habilitaron.",
+  "source_sections": [
+    {
+      "id": "s1",
+      "heading": "La cadena se prueba en ambos sentidos",
+      "summary": "Una intervención es defendible cuando puede recorrerse desde el problema hasta su consecuencia y desde un incidente hasta la decisión, la evidencia y el encuadre que lo habilitaron."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "label": "Llegada accesible, operable y reparable",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n2",
+      "label": "Problema",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n3",
+      "label": "Decisión",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n4",
+      "label": "Operación",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n5",
+      "label": "Contradicciones abiertas",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n6",
+      "label": "Puerta no compensable",
+      "role": "decision",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "relation": "feedback",
+      "source": [
+        "s1"
+      ],
+      "meaning": "feedback: 1 hacia 2"
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n3",
+      "relation": "feedback",
+      "source": [
+        "s1"
+      ],
+      "meaning": "feedback: 2 hacia 3"
+    },
+    {
+      "id": "e3",
+      "from": "n3",
+      "to": "n4",
+      "relation": "feedback",
+      "source": [
+        "s1"
+      ],
+      "meaning": "feedback: 3 hacia 4"
+    },
+    {
+      "id": "e4",
+      "from": "n4",
+      "to": "n5",
+      "relation": "feedback",
+      "source": [
+        "s1"
+      ],
+      "meaning": "feedback: 4 hacia 5"
+    },
+    {
+      "id": "e5",
+      "from": "n5",
+      "to": "n6",
+      "relation": "feedback",
+      "source": [
+        "s1"
+      ],
+      "meaning": "feedback: 5 hacia 6"
+    },
+    {
+      "id": "e6",
+      "from": "n6",
+      "to": "n1",
+      "relation": "feedback",
+      "source": [
+        "s1"
+      ],
+      "meaning": "feedback: 6 hacia 1"
+    }
+  ],
+  "topology": "bidirectional"
+}

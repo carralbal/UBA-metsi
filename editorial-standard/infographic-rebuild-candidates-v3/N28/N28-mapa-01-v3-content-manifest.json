@@ -1,0 +1,140 @@
+{
+  "title": "La calidad se aprueba por escenario, no por promedio",
+  "claim": "Un resultado agregado no autoriza una promesa general cuando una población crítica, una consecuencia severa o una capacidad de reparación exigen evidencia propia.",
+  "source_sections": [
+    {
+      "id": "s1",
+      "heading": "La calidad se aprueba por escenario, no por promedio",
+      "summary": "Un resultado agregado no autoriza una promesa general cuando una población crítica, una consecuencia severa o una capacidad de reparación exigen evidencia propia."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "label": "194 de 200",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n2",
+      "label": "Ingreso ordinario",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n3",
+      "label": "Llegada accesible",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n4",
+      "label": "Caída de identidad",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n5",
+      "label": "Arquitectura de evidencia",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n6",
+      "label": "Alcance autorizado",
+      "role": "decision",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "relation": "evidence",
+      "source": [
+        "s1"
+      ],
+      "meaning": "evidence: 1 hacia 2"
+    },
+    {
+      "id": "e2",
+      "from": "n1",
+      "to": "n3",
+      "relation": "evidence",
+      "source": [
+        "s1"
+      ],
+      "meaning": "evidence: 1 hacia 3"
+    },
+    {
+      "id": "e3",
+      "from": "n1",
+      "to": "n4",
+      "relation": "evidence",
+      "source": [
+        "s1"
+      ],
+      "meaning": "evidence: 1 hacia 4"
+    },
+    {
+      "id": "e4",
+      "from": "n2",
+      "to": "n5",
+      "relation": "evidence",
+      "source": [
+        "s1"
+      ],
+      "meaning": "evidence: 2 hacia 5"
+    },
+    {
+      "id": "e5",
+      "from": "n3",
+      "to": "n5",
+      "relation": "evidence",
+      "source": [
+        "s1"
+      ],
+      "meaning": "evidence: 3 hacia 5"
+    },
+    {
+      "id": "e6",
+      "from": "n4",
+      "to": "n5",
+      "relation": "evidence",
+      "source": [
+        "s1"
+      ],
+      "meaning": "evidence: 4 hacia 5"
+    },
+    {
+      "id": "e7",
+      "from": "n5",
+      "to": "n6",
+      "relation": "evidence",
+      "source": [
+        "s1"
+      ],
+      "meaning": "evidence: 5 hacia 6"
+    }
+  ],
+  "topology": "scenario_matrix"
+}

@@ -137,6 +137,8 @@ def render_flow(spec: dict, content_x: int, top: int, content_w: int) -> tuple[l
     layout = "horizontal"
     if orientation == "vertical":
         layout = "vertical"
+    elif orientation == "matrix":
+        layout = "matrix"
     elif orientation == "zigzag" or count >= 5:
         layout = "zigzag"
 
@@ -153,7 +155,7 @@ def render_flow(spec: dict, content_x: int, top: int, content_w: int) -> tuple[l
             h = node_height(item, w)
             positions.append((content_x, y, w, h))
             y += h + gap
-    else:
+    elif layout == "zigzag":
         # Five or more text-rich steps use a two-column serpentine path. The
         # center gutter is reserved exclusively for connectors.
         columns, column_gap, row_gap = 2, 92, 30
@@ -170,6 +172,25 @@ def render_flow(spec: dict, content_x: int, top: int, content_w: int) -> tuple[l
                 y += row_heights[row - 1] + row_gap
             x = content_x + col * (w + column_gap)
             positions.append((x, y, w, row_heights[row]))
+    else:
+        # A wide two-row matrix preserves the reading sequence while giving
+        # short labels enough scale for a landscape editorial spread.
+        columns, column_gap, row_gap = min(4, count), 24, 30
+        w = (content_w - column_gap * (columns - 1)) / columns
+        rows = math.ceil(count / columns)
+        row_heights = []
+        for row in range(rows):
+            row_items = items[row * columns:(row + 1) * columns]
+            row_heights.append(max(node_height(item, w) for item in row_items))
+        y = top
+        positions = []
+        for index, item in enumerate(items):
+            row, logical_col = divmod(index, columns)
+            if row and logical_col == 0:
+                y += row_heights[row - 1] + row_gap
+            col = logical_col if row % 2 == 0 else columns - 1 - logical_col
+            x = content_x + col * (w + column_gap)
+            positions.append((x, y, w, row_heights[row]))
 
     for i, item in enumerate(items):
         targets = item.get("next", [i + 1] if i + 1 < count else [])
@@ -184,7 +205,7 @@ def render_flow(spec: dict, content_x: int, top: int, content_w: int) -> tuple[l
             elif layout == "vertical":
                 x1, y1, x2, y2 = x + w / 2, y + h, tx + tw / 2, ty
                 path = f"M {x1:.1f} {y1:.1f} L {x2:.1f} {y2:.1f}"
-            else:
+            elif layout == "zigzag":
                 gutter_x = content_x + w + 46
                 if int(target) // 2 == i // 2:
                     x1, y1, x2, y2 = x + w, y + h / 2, tx, ty + th / 2
@@ -193,6 +214,17 @@ def render_flow(spec: dict, content_x: int, top: int, content_w: int) -> tuple[l
                     x1, y1 = x, y + h / 2
                     x2, y2 = tx + tw, ty + th / 2
                     path = f"M {x1:.1f} {y1:.1f} H {gutter_x:.1f} V {y2:.1f} H {x2:.1f}"
+            else:
+                same_row = abs(y - ty) < 1
+                if same_row:
+                    if tx > x:
+                        x1, y1, x2, y2 = x + w, y + h / 2, tx, ty + th / 2
+                    else:
+                        x1, y1, x2, y2 = x, y + h / 2, tx + tw, ty + th / 2
+                    path = f"M {x1:.1f} {y1:.1f} L {x2:.1f} {y2:.1f}"
+                else:
+                    x1, y1, x2, y2 = x + w / 2, y + h, tx + tw / 2, ty
+                    path = f"M {x1:.1f} {y1:.1f} L {x2:.1f} {y2:.1f}"
             connectors.append(f'<path d="{path}" stroke="{BORDER}" stroke-width="3" fill="none" marker-end="url(#arrow)"/>')
         fill, stroke, sw = card_style(spec.get("style", "outline"))
         nodes.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h:.1f}" rx="9" fill="{fill}" stroke="{stroke}" stroke-width="{sw}"/>')

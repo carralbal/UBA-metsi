@@ -1,0 +1,140 @@
+{
+  "title": "El resultado no cierra el aprendizaje",
+  "claim": "Un resultado favorable sólo se convierte en aprendizaje profesional cuando una sorpresa contrasta teorías rivales, modifica una práctica, una regla, una autoridad o el sistema de aprendizaje y vuelve a una prueba observable.",
+  "source_sections": [
+    {
+      "id": "s1",
+      "heading": "El resultado no cierra el aprendizaje",
+      "summary": "Un resultado favorable sólo se convierte en aprendizaje profesional cuando una sorpresa contrasta teorías rivales, modifica una práctica, una regla, una autoridad o el sistema de aprendizaje y vuelve a una prueba observable."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "label": "Expectativa",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n2",
+      "label": "Trabajo manual invisible",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n3",
+      "label": "Teoría declarada",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n4",
+      "label": "Doble bucle",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n5",
+      "label": "Asistencia de IA acotada",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n6",
+      "label": "Capacidad observable",
+      "role": "decision",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "relation": "feedback",
+      "source": [
+        "s1"
+      ],
+      "meaning": "feedback: 1 hacia 2"
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n3",
+      "relation": "feedback",
+      "source": [
+        "s1"
+      ],
+      "meaning": "feedback: 2 hacia 3"
+    },
+    {
+      "id": "e3",
+      "from": "n3",
+      "to": "n4",
+      "relation": "feedback",
+      "source": [
+        "s1"
+      ],
+      "meaning": "feedback: 3 hacia 4"
+    },
+    {
+      "id": "e4",
+      "from": "n4",
+      "to": "n5",
+      "relation": "feedback",
+      "source": [
+        "s1"
+      ],
+      "meaning": "feedback: 4 hacia 5"
+    },
+    {
+      "id": "e5",
+      "from": "n5",
+      "to": "n6",
+      "relation": "feedback",
+      "source": [
+        "s1"
+      ],
+      "meaning": "feedback: 5 hacia 6"
+    },
+    {
+      "id": "e6",
+      "from": "n6",
+      "to": "n1",
+      "relation": "feedback",
+      "source": [
+        "s1"
+      ],
+      "meaning": "feedback: 6 hacia 1"
+    },
+    {
+      "id": "e7",
+      "from": "n3",
+      "to": "n2",
+      "relation": "feedback",
+      "source": [
+        "s1"
+      ],
+      "meaning": "feedback: 3 hacia 2"
+    }
+  ],
+  "topology": "double_loop"
+}

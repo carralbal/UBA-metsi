@@ -1,0 +1,130 @@
+{
+  "title": "Una contradicción se clasifica antes de corregirse",
+  "claim": "La coherencia entre modelos se prueba con el mismo episodio, clasifica la diferencia y asigna tratamiento, responsable, plazo y condición de cierre a lo largo del ciclo de vida.",
+  "source_sections": [
+    {
+      "id": "s1",
+      "heading": "Una contradicción se clasifica antes de corregirse",
+      "summary": "La coherencia entre modelos se prueba con el mismo episodio, clasifica la diferencia y asigna tratamiento, responsable, plazo y condición de cierre a lo largo del ciclo de vida."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "label": "Proceso: inspección, asignación y acceso",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n2",
+      "label": "Estados: preparada para inventario",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n3",
+      "label": "Tablero: limpieza terminada",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n4",
+      "label": "R73, mismo episodio transversal",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n5",
+      "label": "Corregir, decidir, investigar o aceptar riesgo",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n6",
+      "label": "Proponer, validar, usar, revisar y retirar",
+      "role": "decision",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n4",
+      "relation": "evidence",
+      "source": [
+        "s1"
+      ],
+      "meaning": "evidence: 1 hacia 4"
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n4",
+      "relation": "evidence",
+      "source": [
+        "s1"
+      ],
+      "meaning": "evidence: 2 hacia 4"
+    },
+    {
+      "id": "e3",
+      "from": "n3",
+      "to": "n4",
+      "relation": "evidence",
+      "source": [
+        "s1"
+      ],
+      "meaning": "evidence: 3 hacia 4"
+    },
+    {
+      "id": "e4",
+      "from": "n4",
+      "to": "n5",
+      "relation": "evidence",
+      "source": [
+        "s1"
+      ],
+      "meaning": "evidence: 4 hacia 5"
+    },
+    {
+      "id": "e5",
+      "from": "n4",
+      "to": "n6",
+      "relation": "evidence",
+      "source": [
+        "s1"
+      ],
+      "meaning": "evidence: 4 hacia 6"
+    },
+    {
+      "id": "e6",
+      "from": "n6",
+      "to": "n4",
+      "relation": "evidence",
+      "source": [
+        "s1"
+      ],
+      "meaning": "evidence: 6 hacia 4"
+    }
+  ],
+  "topology": "contradiction"
+}

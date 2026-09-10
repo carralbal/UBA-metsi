@@ -1,0 +1,120 @@
+{
+  "title": "No se conserva la pieza: se conserva la capacidad",
+  "claim": "La modernización separa la capacidad, el derecho y la evidencia que deben continuar de la implementación heredada que puede adaptarse o retirarse.",
+  "source_sections": [
+    {
+      "id": "s1",
+      "heading": "No se conserva la pieza: se conserva la capacidad",
+      "summary": "La modernización separa la capacidad, el derecho y la evidencia que deben continuar de la implementación heredada que puede adaptarse o retirarse."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "label": "Llamar antes de reasignar una habitación accesible",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n2",
+      "label": "Compromiso verificado",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n3",
+      "label": "Implementación contingente",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n4",
+      "label": "Dependencia concentrada",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n5",
+      "label": "Conservar, validar, reemplazar, distribuir y preservar",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n6",
+      "label": "Fuente, interpretación, diseño, prueba y retiro",
+      "role": "decision",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "relation": "dependency",
+      "source": [
+        "s1"
+      ],
+      "meaning": "dependency: 1 hacia 2"
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n3",
+      "relation": "dependency",
+      "source": [
+        "s1"
+      ],
+      "meaning": "dependency: 2 hacia 3"
+    },
+    {
+      "id": "e3",
+      "from": "n3",
+      "to": "n4",
+      "relation": "dependency",
+      "source": [
+        "s1"
+      ],
+      "meaning": "dependency: 3 hacia 4"
+    },
+    {
+      "id": "e4",
+      "from": "n4",
+      "to": "n5",
+      "relation": "dependency",
+      "source": [
+        "s1"
+      ],
+      "meaning": "dependency: 4 hacia 5"
+    },
+    {
+      "id": "e5",
+      "from": "n5",
+      "to": "n6",
+      "relation": "dependency",
+      "source": [
+        "s1"
+      ],
+      "meaning": "dependency: 5 hacia 6"
+    }
+  ],
+  "topology": "strata"
+}

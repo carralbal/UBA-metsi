@@ -1,0 +1,1 @@
+Secuencia de diez transformaciones en orden de lectura: del pedido al problema, del software al sistema de trabajo, de la opinión a la evidencia, de la actividad al mecanismo, del modelo a la decisión, del marco a la estrategia situada, del output al outcome, de la aplicación al ecosistema, de la demostración de IA a la autonomía gobernada y del portfolio a la práctica reflexiva.

@@ -1,0 +1,26 @@
+{
+  "schema": "metsi-publication-gate-summary/v1",
+  "checked_at": "2026-09-10",
+  "range": "N11-N36",
+  "source_version": "v6-editorial",
+  "status": "BLOCKED",
+  "command": "python3 sync_site_n11_n36.py",
+  "result": "The public site was not modified.",
+  "failure_groups": {
+    "infographic_manifest_or_layout": [
+      "N11", "N12", "N13", "N14", "N15", "N16", "N17", "N18", "N19", "N20",
+      "N22", "N23", "N24", "N25", "N26", "N28", "N29", "N30", "N31", "N32", "N35", "N36"
+    ],
+    "ordinary_page_density_below_55_percent": [
+      "N11", "N12", "N13", "N14", "N15", "N16", "N17", "N18", "N19", "N20",
+      "N21", "N22", "N23", "N35", "N36"
+    ],
+    "placeholder_detector": ["N26"]
+  },
+  "notes": [
+    "The N26 placeholder result appears to be a false positive caused by the substring 'todo:'.",
+    "N11 includes an ordinary page with measured vertical density 0.3254.",
+    "The provisionally approved v3 infographic candidates have not yet been integrated into the v6 PDFs.",
+    "Publication must remain blocked until the rebuilt PDFs pass the exhaustive gate."
+  ]
+}

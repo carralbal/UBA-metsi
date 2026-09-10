@@ -1,0 +1,130 @@
+{
+  "title": "Repetir un mensaje no debe multiplicar el efecto",
+  "claim": "Una transición distribuida converge cuando conserva la identidad de la intención, protege una invariante y reconcilia representaciones divergentes sin falsificar la historia.",
+  "source_sections": [
+    {
+      "id": "s1",
+      "heading": "Repetir un mensaje no debe multiplicar el efecto",
+      "summary": "Una transición distribuida converge cuando conserva la identidad de la intención, protege una invariante y reconcilia representaciones divergentes sin falsificar la historia."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "label": "Solicitud original para asignar la última habitación",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n2",
+      "label": "Reintento de la misma intención ante una respuesta ausente",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n3",
+      "label": "Clave estable de intención",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n4",
+      "label": "Una habitación física no puede tener dos asignaciones vigentes superpuestas",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n5",
+      "label": "Estado ambiguo que no debe confirmarse ni sobrescribirse sin evidencia",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n6",
+      "label": "Comparar agencia, PMS y cerradura para explicar y reparar",
+      "role": "decision",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n4",
+      "relation": "transformation",
+      "source": [
+        "s1"
+      ],
+      "meaning": "transformation: 1 hacia 4"
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n4",
+      "relation": "transformation",
+      "source": [
+        "s1"
+      ],
+      "meaning": "transformation: 2 hacia 4"
+    },
+    {
+      "id": "e3",
+      "from": "n3",
+      "to": "n4",
+      "relation": "transformation",
+      "source": [
+        "s1"
+      ],
+      "meaning": "transformation: 3 hacia 4"
+    },
+    {
+      "id": "e4",
+      "from": "n4",
+      "to": "n5",
+      "relation": "transformation",
+      "source": [
+        "s1"
+      ],
+      "meaning": "transformation: 4 hacia 5"
+    },
+    {
+      "id": "e5",
+      "from": "n4",
+      "to": "n6",
+      "relation": "transformation",
+      "source": [
+        "s1"
+      ],
+      "meaning": "transformation: 4 hacia 6"
+    },
+    {
+      "id": "e6",
+      "from": "n6",
+      "to": "n4",
+      "relation": "transformation",
+      "source": [
+        "s1"
+      ],
+      "meaning": "transformation: 6 hacia 4"
+    }
+  ],
+  "topology": "converge"
+}

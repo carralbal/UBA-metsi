@@ -1,0 +1,130 @@
+{
+  "title": "El hito existe cuando cambia una decisión posible",
+  "claim": "Una estrategia situada vincula cada práctica y cada hito con función, evidencia, autoridad, consecuencia y salida.",
+  "source_sections": [
+    {
+      "id": "s1",
+      "heading": "El hito existe cuando cambia una decisión posible",
+      "summary": "Una estrategia situada vincula cada práctica y cada hito con función, evidencia, autoridad, consecuencia y salida."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "label": "Confirmar una habitación con capacidad disponible, observable y reparable",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n2",
+      "label": "Comprender",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n3",
+      "label": "Preparar",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n4",
+      "label": "Transferir",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n5",
+      "label": "Autonomía operacional",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n6",
+      "label": "Investigar, reducir, reparar o retirar",
+      "role": "decision",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "relation": "decision",
+      "source": [
+        "s1"
+      ],
+      "meaning": "decision: 1 hacia 2"
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n3",
+      "relation": "decision",
+      "source": [
+        "s1"
+      ],
+      "meaning": "decision: 2 hacia 3"
+    },
+    {
+      "id": "e3",
+      "from": "n3",
+      "to": "n6",
+      "relation": "decision",
+      "source": [
+        "s1"
+      ],
+      "meaning": "decision: 3 hacia 6"
+    },
+    {
+      "id": "e4",
+      "from": "n2",
+      "to": "n4",
+      "relation": "decision",
+      "source": [
+        "s1"
+      ],
+      "meaning": "decision: 2 hacia 4"
+    },
+    {
+      "id": "e5",
+      "from": "n3",
+      "to": "n5",
+      "relation": "decision",
+      "source": [
+        "s1"
+      ],
+      "meaning": "decision: 3 hacia 5"
+    },
+    {
+      "id": "e6",
+      "from": "n5",
+      "to": "n6",
+      "relation": "decision",
+      "source": [
+        "s1"
+      ],
+      "meaning": "decision: 5 hacia 6"
+    }
+  ],
+  "topology": "gates"
+}

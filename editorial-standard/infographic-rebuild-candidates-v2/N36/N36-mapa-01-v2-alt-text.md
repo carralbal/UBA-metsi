@@ -1,0 +1,1 @@
+Un resultado favorable sólo se convierte en aprendizaje profesional cuando una sorpresa contrasta teorías rivales, modifica una práctica, una regla, una autoridad o el sistema de aprendizaje y vuelve a una prueba observable.

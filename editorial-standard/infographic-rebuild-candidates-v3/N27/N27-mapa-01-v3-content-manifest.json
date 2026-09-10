@@ -1,0 +1,120 @@
+{
+  "title": "El contrato real tiene cuatro capas",
+  "claim": "Un mensaje aceptado sólo constituye un contrato defendible cuando forma, significado, tiempo y operación permiten anticipar la misma consecuencia y una reparación practicable.",
+  "source_sections": [
+    {
+      "id": "s1",
+      "heading": "El contrato real tiene cuatro capas",
+      "summary": "Un mensaje aceptado sólo constituye un contrato defendible cuando forma, significado, tiempo y operación permiten anticipar la misma consecuencia y una reparación practicable."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "label": "liberada",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n2",
+      "label": "Sintaxis",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n3",
+      "label": "Semántica",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n4",
+      "label": "Tiempo",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n5",
+      "label": "Operación",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n6",
+      "label": "Contrato completo",
+      "role": "decision",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "relation": "dependency",
+      "source": [
+        "s1"
+      ],
+      "meaning": "dependency: 1 hacia 2"
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n3",
+      "relation": "dependency",
+      "source": [
+        "s1"
+      ],
+      "meaning": "dependency: 2 hacia 3"
+    },
+    {
+      "id": "e3",
+      "from": "n3",
+      "to": "n4",
+      "relation": "dependency",
+      "source": [
+        "s1"
+      ],
+      "meaning": "dependency: 3 hacia 4"
+    },
+    {
+      "id": "e4",
+      "from": "n4",
+      "to": "n5",
+      "relation": "dependency",
+      "source": [
+        "s1"
+      ],
+      "meaning": "dependency: 4 hacia 5"
+    },
+    {
+      "id": "e5",
+      "from": "n5",
+      "to": "n6",
+      "relation": "dependency",
+      "source": [
+        "s1"
+      ],
+      "meaning": "dependency: 5 hacia 6"
+    }
+  ],
+  "topology": "strata"
+}

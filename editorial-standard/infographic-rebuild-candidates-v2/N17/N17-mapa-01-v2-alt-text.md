@@ -1,0 +1,1 @@
+Una intervención situada asigna lógicas predictiva, iterativa, incremental, adaptativa o experimental según conocimiento, costo del error, reversibilidad y evidencia, y aumenta compromiso mediante una puerta explícita.

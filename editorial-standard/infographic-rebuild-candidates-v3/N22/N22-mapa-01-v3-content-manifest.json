@@ -1,0 +1,140 @@
+{
+  "title": "Una hipótesis debe poder perder apoyo",
+  "claim": "Una iniciativa sólo aprende cuando una observación puede debilitar su mecanismo, activar una salvaguarda y modificar una decisión preparada antes de aumentar exposición.",
+  "source_sections": [
+    {
+      "id": "s1",
+      "heading": "Una hipótesis debe poder perder apoyo",
+      "summary": "Una iniciativa sólo aprende cuando una observación puede debilitar su mecanismo, activar una salvaguarda y modificar una decisión preparada antes de aumentar exposición."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "label": "Llegadas anticipadas",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n2",
+      "label": "Confirmación asistida",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n3",
+      "label": "Mensajes más claros",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n4",
+      "label": "Línea de base segmentada",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n5",
+      "label": "Revisión ante una falla crítica de accesibilidad",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n6",
+      "label": "Mantener asistencia directa y no ampliar",
+      "role": "decision",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "relation": "evidence",
+      "source": [
+        "s1"
+      ],
+      "meaning": "evidence: 1 hacia 2"
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n3",
+      "relation": "evidence",
+      "source": [
+        "s1"
+      ],
+      "meaning": "evidence: 2 hacia 3"
+    },
+    {
+      "id": "e3",
+      "from": "n2",
+      "to": "n4",
+      "relation": "evidence",
+      "source": [
+        "s1"
+      ],
+      "meaning": "evidence: 2 hacia 4"
+    },
+    {
+      "id": "e4",
+      "from": "n3",
+      "to": "n5",
+      "relation": "evidence",
+      "source": [
+        "s1"
+      ],
+      "meaning": "evidence: 3 hacia 5"
+    },
+    {
+      "id": "e5",
+      "from": "n4",
+      "to": "n5",
+      "relation": "evidence",
+      "source": [
+        "s1"
+      ],
+      "meaning": "evidence: 4 hacia 5"
+    },
+    {
+      "id": "e6",
+      "from": "n5",
+      "to": "n6",
+      "relation": "evidence",
+      "source": [
+        "s1"
+      ],
+      "meaning": "evidence: 5 hacia 6"
+    },
+    {
+      "id": "e7",
+      "from": "n6",
+      "to": "n2",
+      "relation": "evidence",
+      "source": [
+        "s1"
+      ],
+      "meaning": "evidence: 6 hacia 2"
+    }
+  ],
+  "topology": "hypothesis"
+}

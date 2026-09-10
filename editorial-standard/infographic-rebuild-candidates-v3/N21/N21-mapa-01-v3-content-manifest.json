@@ -1,0 +1,120 @@
+{
+  "title": "Una capacidad convive con cuatro gobiernos",
+  "claim": "Proyecto, producto, servicio y plataforma comparten capacidades, pero exigen horizontes, evidencia, autoridad y cierres diferentes.",
+  "source_sections": [
+    {
+      "id": "s1",
+      "heading": "Una capacidad convive con cuatro gobiernos",
+      "summary": "Proyecto, producto, servicio y plataforma comparten capacidades, pero exigen horizontes, evidencia, autoridad y cierres diferentes."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "label": "Entregar una habitación utilizable o una reparación definida",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n2",
+      "label": "Proyecto",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n3",
+      "label": "Producto",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n4",
+      "label": "Servicio",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n5",
+      "label": "Plataforma",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n6",
+      "label": "Limitar población y conservar salida",
+      "role": "decision",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n2",
+      "to": "n1",
+      "relation": "authority",
+      "source": [
+        "s1"
+      ],
+      "meaning": "authority: 2 hacia 1"
+    },
+    {
+      "id": "e2",
+      "from": "n3",
+      "to": "n1",
+      "relation": "authority",
+      "source": [
+        "s1"
+      ],
+      "meaning": "authority: 3 hacia 1"
+    },
+    {
+      "id": "e3",
+      "from": "n4",
+      "to": "n1",
+      "relation": "authority",
+      "source": [
+        "s1"
+      ],
+      "meaning": "authority: 4 hacia 1"
+    },
+    {
+      "id": "e4",
+      "from": "n5",
+      "to": "n1",
+      "relation": "authority",
+      "source": [
+        "s1"
+      ],
+      "meaning": "authority: 5 hacia 1"
+    },
+    {
+      "id": "e5",
+      "from": "n1",
+      "to": "n6",
+      "relation": "authority",
+      "source": [
+        "s1"
+      ],
+      "meaning": "authority: 1 hacia 6"
+    }
+  ],
+  "topology": "governance"
+}

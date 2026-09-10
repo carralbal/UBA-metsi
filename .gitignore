@@ -251,6 +251,8 @@ N3[0-6]-v3-editorial/qa/
 !qa-reports/
 !qa-reports/block-c-v3/
 !qa-reports/block-c-v3/*.json
+!qa-reports/n11-n36-v6/
+!qa-reports/n11-n36-v6/*.json
 !qa-contact-sheets/
 qa-contact-sheets/*
 !qa-contact-sheets/N11-contact-sheet.jpg
@@ -335,6 +337,22 @@ N3[0-6]-v6-editorial/qa/*
 !BLOCK-01-cover-review-current/**
 !BLOCK-01-state-current/
 !BLOCK-01-state-current/**
+
+# Decisiones, evidencia de auditoría y catálogos necesarios para recuperar el
+# estado editorial aunque no sobreviva la conversación que los originó.
+!decisions/
+!decisions/**
+!PROJECT-CONTINUITY.md
+!BLOCK-CANONICAL-AUDIT.json
+!editorial-audit/
+!editorial-audit/**
+!output/
+!output/pdf/
+!output/pdf/METSI-catalogo-infografias-N00-N36-backlog.pdf
+!output/pdf/METSI-catalogo-infografias-N00-N36-revision-v2.pdf
+!output/pdf/METSI-catalogo-infografias-N00-N36-revision-v3.pdf
+!sync_metsi_skills.py
+!validate_n11_n36_v6.py
 
 # Excluir intermedios efímeros incluso dentro de los árboles versionados.
 **/.DS_Store

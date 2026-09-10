@@ -1,0 +1,140 @@
+{
+  "title": "La tarea visible no es el tiempo del servicio",
+  "claim": "Un proceso de punta a punta se define por la promesa y debe seguir instancias completas para hacer visibles trabajo, espera, handoffs, colas, excepciones y reparación.",
+  "source_sections": [
+    {
+      "id": "s1",
+      "heading": "La tarea visible no es el tiempo del servicio",
+      "summary": "Un proceso de punta a punta se define por la promesa y debe seguir instancias completas para hacer visibles trabajo, espera, handoffs, colas, excepciones y reparación."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "label": "Cuatro minutos de atención en mostrador",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n2",
+      "label": "Llegada como evento inicial",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n3",
+      "label": "Cola de inspección con edad y responsable",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n4",
+      "label": "Decisión sobre identidad ordinaria o variante",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n5",
+      "label": "Asignación y acceso vigentes",
+      "role": "process",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    },
+    {
+      "id": "n6",
+      "label": "Identidad no conciliada como excepción frecuente",
+      "role": "decision",
+      "source": [
+        "s1"
+      ],
+      "purpose": "Elemento necesario del argumento visual"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "relation": "flow",
+      "source": [
+        "s1"
+      ],
+      "meaning": "flow: 1 hacia 2"
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n3",
+      "relation": "flow",
+      "source": [
+        "s1"
+      ],
+      "meaning": "flow: 2 hacia 3"
+    },
+    {
+      "id": "e3",
+      "from": "n3",
+      "to": "n4",
+      "relation": "flow",
+      "source": [
+        "s1"
+      ],
+      "meaning": "flow: 3 hacia 4"
+    },
+    {
+      "id": "e4",
+      "from": "n4",
+      "to": "n5",
+      "relation": "flow",
+      "source": [
+        "s1"
+      ],
+      "meaning": "flow: 4 hacia 5"
+    },
+    {
+      "id": "e5",
+      "from": "n5",
+      "to": "n6",
+      "relation": "flow",
+      "source": [
+        "s1"
+      ],
+      "meaning": "flow: 5 hacia 6"
+    },
+    {
+      "id": "e6",
+      "from": "n4",
+      "to": "n2",
+      "relation": "flow",
+      "source": [
+        "s1"
+      ],
+      "meaning": "flow: 4 hacia 2"
+    },
+    {
+      "id": "e7",
+      "from": "n6",
+      "to": "n5",
+      "relation": "flow",
+      "source": [
+        "s1"
+      ],
+      "meaning": "flow: 6 hacia 5"
+    }
+  ],
+  "topology": "service"
+}
