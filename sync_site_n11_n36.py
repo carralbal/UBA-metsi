@@ -2,7 +2,7 @@
 """Stage and, only with --apply, publish rebuilt N11-N36 into ``site``.
 
 The public ``v1-final`` filenames are stable compatibility routes. Their bytes
-come from the current v7 editorial packages. The default invocation is a dry
+come from the current v8 editorial packages. The default invocation is a dry
 run: it performs every source/gate/staging check but does not mutate ``site`` or
 either course manifest. The apply phase is guarded against concurrent changes
 and rolls back every replaced file if the final site validator fails.
@@ -34,10 +34,11 @@ SITE = REPO / "site"
 FIRST = 11
 LAST = 36
 COVER_DPI = 120
-SOURCE_VERSION = "v7-editorial"
-SOURCE_VERSION_SHORT = "v7"
-VALIDATOR_VERSION = 7
+SOURCE_VERSION = "v8-editorial"
+SOURCE_VERSION_SHORT = "v8"
+VALIDATOR_VERSION = 8
 PUBLIC_ROUTE_CONTRACT = "stable-v1-filename"
+ACADEMIC_REVISION_MANIFEST = REPO / "academic-content-revision-manifest-n11-n36.json"
 
 
 class PublicationError(RuntimeError):
@@ -120,14 +121,27 @@ def rendered_json(value: dict[str, Any]) -> str:
 
 
 def one_canonical_source(number: int) -> Path:
-    folder = REPO / f"{code_for(number)}-content-canonical" / "source"
-    candidates_v2 = sorted(folder.glob("*-content-canonical-v2.md"))
-    candidates = candidates_v2 or sorted(folder.glob("*-content-canonical-v1.md"))
-    if len(candidates) != 1:
+    manifest = load_json(ACADEMIC_REVISION_MANIFEST)
+    documents = manifest.get("documents")
+    if not isinstance(documents, list):
+        raise PublicationError("El manifiesto académico no contiene documents")
+    code = code_for(number)
+    matches = [item for item in documents if isinstance(item, dict) and item.get("code") == code]
+    if len(matches) != 1:
+        raise PublicationError(f"El manifiesto académico debe declarar exactamente una fuente para {code}")
+    relative = matches[0].get("source")
+    expected_hash = matches[0].get("sha256")
+    if not isinstance(relative, str) or not relative or not isinstance(expected_hash, str):
+        raise PublicationError(f"La entrada académica de {code} está incompleta")
+    source = confined_repo_path(relative, REPO / relative)
+    if not source.is_file() or source.is_symlink():
+        raise PublicationError(f"La fuente académica de {code} no es un archivo regular")
+    actual_hash = sha256(source)
+    if actual_hash != expected_hash:
         raise PublicationError(
-            f"{folder.relative_to(REPO)} debe contener exactamente una fuente canónica vigente; hay {len(candidates)}"
+            f"La fuente académica de {code} cambió: manifiesto={expected_hash}, archivo={actual_hash}"
         )
-    return candidates[0]
+    return source
 
 
 def lean_package_fingerprint(number: int) -> dict[Path, str]:
@@ -326,7 +340,7 @@ def merge_gate(partial: list[dict[str, Any]], reports: dict[str, dict[str, Any]]
             {
                 "qa_validator": str(report.get("validator", "")),
                 "qa_validator_sha256": validator_hash,
-                "qa_report": f"qa-reports/n11-n36-v7/{code}-validation-v7.json",
+                "qa_report": f"qa-reports/n11-n36-v8/{code}-validation-v8.json",
                 "qa_status": str(report.get("status", "")),
                 "qa_checks": int(report.get("total_checks", 0)),
                 "qa_report_sha256": hashlib.sha256(rendered_json(report).encode("utf-8")).hexdigest(),
@@ -536,16 +550,23 @@ def assert_snapshot(expected: dict[Path, tuple[bool, str | None]], label: str) -
 
 def protected_n00_n10_paths() -> list[Path]:
     pdf_names = {
-        0: "N00-METSI-lectura-previa-v2-final.pdf",
+        0: "N00-METSI-lectura-previa-v3-final.pdf",
         1: "N01-METSI-lectura-previa-v18-final.pdf",
-        2: "N02-METSI-lectura-previa-v14-final.pdf",
-        **{number: f"N{number:02d}-METSI-lectura-previa-v9-final.pdf" for number in range(3, 11)},
+        2: "N02-METSI-lectura-previa-v15-final.pdf",
+        3: "N03-METSI-lectura-previa-v10-final.pdf",
+        4: "N04-METSI-lectura-previa-v9-final.pdf",
+        5: "N05-METSI-lectura-previa-v10-final.pdf",
+        6: "N06-METSI-lectura-previa-v10-final.pdf",
+        7: "N07-METSI-lectura-previa-v10-final.pdf",
+        8: "N08-METSI-lectura-previa-v10-final.pdf",
+        9: "N09-METSI-lectura-previa-v10-final.pdf",
+        10: "N10-METSI-lectura-previa-v9-final.pdf",
     }
     return [SITE / "pdf" / pdf_names[number] for number in range(0, 11)] + [SITE / "covers" / f"N{number:02d}.png" for number in range(0, 11)]
 
 
 def verify_protected_approval() -> None:
-    approval = load_json(REPO / "BLOCK-01-cover-review-current" / "approval.json")
+    approval = load_json(REPO / "BLOCK-01-integrated-release-current" / "approval.json")
     cover_audit = load_json(REPO / "BLOCK-01-cover-review-current" / "audit.json")
     approved_pdfs = approval.get("pdf_sha256", {})
     cover_hashes = {
@@ -691,7 +712,7 @@ def main() -> int:
         protected_baseline = snapshot(protected_paths)
         target_relatives = [public_pdf_relative(n) for n in range(FIRST, LAST + 1)]
         target_relatives += [cover_relative(n) for n in range(FIRST, LAST + 1)]
-        target_relatives += [Path(f"qa-reports/n11-n36-v7/{code_for(n)}-validation-v7.json") for n in range(FIRST, LAST + 1)]
+        target_relatives += [Path(f"qa-reports/n11-n36-v8/{code_for(n)}-validation-v8.json") for n in range(FIRST, LAST + 1)]
         target_relatives += [Path("site/index.html"), Path("site/course-manifest.json"), Path("course-manifest.json"), Path("site/audit.json")]
         target_baseline = snapshot([REPO / relative for relative in target_relatives])
 

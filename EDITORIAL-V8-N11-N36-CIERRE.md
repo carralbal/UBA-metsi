@@ -1,7 +1,7 @@
 # METSI · cierre editorial v8 de N11 a N36
 
 Fecha de auditoría: 10 de septiembre de 2026.
-Estado: aprobado para revisión académica interna, todavía no publicado en el sitio.
+Estado: aprobado para revisión académica interna y preparado como candidato de sitio en la rama de trabajo, todavía no publicado.
 
 ## Resultado ejecutivo
 
@@ -74,4 +74,4 @@ El control determinístico terminó con 26 documentos aprobados, cero fallas y c
 
 ## Decisión de publicación
 
-Esta versión queda cerrada como candidata editorial para revisión del autor. No reemplaza todavía los PDF de `site/pdf/publicados/` ni modifica la rama pública `main`. La publicación será una operación posterior y explícita, luego de la inspección del paquete de revisión.
+Esta versión queda cerrada como candidata editorial para revisión del autor. Los PDF de `site/pdf/publicados/` fueron reemplazados únicamente dentro de la rama de trabajo para probar las rutas reales. La rama pública `main` y el sitio en producción no fueron modificados. La publicación será una operación posterior y explícita.
