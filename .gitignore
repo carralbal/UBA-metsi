@@ -25,6 +25,11 @@ N00-v2-candidate/qa-pages-final/
 N00-v2-candidate/qa-pages-final-v2/
 N00-v2-candidate/output/N00-METSI-lectura-previa-v2-candidate.pdf
 N00-v2-candidate/N00-v2-candidate-contact-sheet.jpg
+!N00-v3-final/
+!N00-v3-final/**
+N00-v3-final/output/*
+!N00-v3-final/output/*-v3-final.pdf
+N00-v3-final/qa/
 !N01/
 !N01/**
 !N01-v8-final/
@@ -95,6 +100,11 @@ N02-v13-final/qa/pages-final/
 !N02-v14-final/**
 N02-v14-final/qa/pages/
 N02-v14-final/qa/pages-final/
+!N02-v15-final/
+!N02-v15-final/**
+N02-v15-final/output/*
+!N02-v15-final/output/*-v15-final.pdf
+N02-v15-final/qa/
 !N03-content-final/
 !N03-content-final/**
 !N03-v8-final/
@@ -105,6 +115,11 @@ N03-v8-final/qa/pages-final/
 !N03-v9-final/**
 N03-v9-final/qa/pages/
 N03-v9-final/qa/pages-final/
+!N03-v10-final/
+!N03-v10-final/**
+N03-v10-final/output/*
+!N03-v10-final/output/*-v10-final.pdf
+N03-v10-final/qa/
 !N04-v8-final/
 !N04-v8-final/**
 N04-v8-final/qa/pages/
@@ -120,9 +135,19 @@ N04-v9-final/qa/pages-final/
 !N05-v9-final/
 !N05-v9-final/**
 N05-v9-final/qa/rendered/
+!N05-v10-final/
+!N05-v10-final/**
+N05-v10-final/output/*
+!N05-v10-final/output/*-v10-final.pdf
+N05-v10-final/qa/
 !N06-v9-final/
 !N06-v9-final/**
 N06-v9-final/qa/rendered/
+!N06-v10-final/
+!N06-v10-final/**
+N06-v10-final/output/*
+!N06-v10-final/output/*-v10-final.pdf
+N06-v10-final/qa/
 # Activos heredados que N06 ya no referencia ni publica.
 N06-v9-final/assets/hotel-horizonte.png
 N06-v9-final/assets/referent-douglas-hubbard.jpg
@@ -140,12 +165,27 @@ N06-v9-final/assets/sparse-fill-03.jpg
 !N07-v9-final/
 !N07-v9-final/**
 N07-v9-final/qa/rendered/
+!N07-v10-final/
+!N07-v10-final/**
+N07-v10-final/output/*
+!N07-v10-final/output/*-v10-final.pdf
+N07-v10-final/qa/
 !N08-v9-final/
 !N08-v9-final/**
 N08-v9-final/qa/rendered/
+!N08-v10-final/
+!N08-v10-final/**
+N08-v10-final/output/*
+!N08-v10-final/output/*-v10-final.pdf
+N08-v10-final/qa/
 !N09-v9-final/
 !N09-v9-final/**
 N09-v9-final/qa/rendered/
+!N09-v10-final/
+!N09-v10-final/**
+N09-v10-final/output/*
+!N09-v10-final/output/*-v10-final.pdf
+N09-v10-final/qa/
 !N10-v9-final/
 !N10-v9-final/**
 N10-v9-final/qa/rendered/
@@ -255,6 +295,8 @@ N3[0-6]-v3-editorial/qa/
 !qa-reports/n11-n36-v6/*.json
 !qa-reports/n11-n36-v7/
 !qa-reports/n11-n36-v7/*.json
+!qa-reports/block01-completion-build.json
+!qa-reports/METSI-N00-N36-auditoria-de-integracion-final.pdf
 !qa-contact-sheets/
 qa-contact-sheets/*
 !qa-contact-sheets/N11-contact-sheet.jpg
@@ -358,12 +400,15 @@ N3[0-6]-v7-editorial/qa/*
 !BLOCK-01-cover-review-current/**
 !BLOCK-01-state-current/
 !BLOCK-01-state-current/**
+!BLOCK-01-integrated-release-current/
+!BLOCK-01-integrated-release-current/**
 
 # Decisiones, evidencia de auditoría y catálogos necesarios para recuperar el
 # estado editorial aunque no sobreviva la conversación que los originó.
 !decisions/
 !decisions/**
 !audits/
+!audits/**
 !audits/2026-09-10-editorial-v7-n11-n36-closure.md
 !scripts/
 !scripts/run_editorial_v7_gate.py

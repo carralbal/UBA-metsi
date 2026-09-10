@@ -1,0 +1,154 @@
+{
+  "document": "N06",
+  "edition": "v9-final",
+  "verified_on": "2026-09-03",
+  "policy": "Este manifiesto enumera exclusivamente las imágenes renderizadas por N06 y la fuente editable de su tapa. Cada activo conserva ruta relativa, huella digital y una cadena de procedencia y derechos verificable. Los archivos presentes en assets pero no referenciados por la composición no se declaran como usados.",
+  "rendered_asset_count": 11,
+  "source_asset_count": 1,
+  "assets": [
+    {
+      "file": "assets/cover-source-premium-bw-v1.png",
+      "role": "cover-source",
+      "origin": "generated_for_metsi",
+      "provenance_file": "provenance/cover-image-premium-bw-v1.md",
+      "sha256": "0780b6f86663444d876fb56f3d880b3a7256a44809e9ee569b10087603aa1fd0",
+      "rights_status": "original_course_asset"
+    },
+    {
+      "file": "assets/cover.png",
+      "role": "cover-rendered",
+      "origin": "generated_for_metsi",
+      "derived_from": "assets/cover-source-premium-bw-v1.png",
+      "changes": "Copia byte a byte de la fuente de tapa para la composición HTML.",
+      "sha256": "0780b6f86663444d876fb56f3d880b3a7256a44809e9ee569b10087603aa1fd0",
+      "rights_status": "original_course_asset"
+    },
+    {
+      "file": "assets/editorial-03.jpg",
+      "role": "first-full-page-pause",
+      "source_page": "https://www.pexels.com/photo/stairs-shadow-on-building-wall-20856996/",
+      "creator": "Dazzing zhang",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "changes": "Selección y encuadre editorial en blanco y negro para una página A4 a sangre.",
+      "sha256": "6e7dfe28987038883c31b6eea7c23fe70d936d8f0690b025dbf350cbde265464",
+      "rights_status": "pexels_license"
+    },
+    {
+      "file": "assets/editorial-06.jpg",
+      "role": "second-full-page-pause",
+      "source_page": "https://unsplash.com/photos/silhouettes-of-people-walking-in-a-dimly-lit-museum-ejmDu4GEq-g",
+      "creator": "Dmitry Spravko",
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "changes": "Selección, encuadre editorial y tratamiento parcialmente desaturado para una página A4 a sangre.",
+      "sha256": "9eea9829fe0c76defc57a069817bf138dee6b3181c7ea140e6b2757a494bb790",
+      "rights_status": "unsplash_license"
+    },
+    {
+      "file": "assets/editorial-07.jpg",
+      "role": "contents-page-image",
+      "source_page": "https://www.pexels.com/photo/abstract-black-and-white-glass-reflection-with-cables-37124589/",
+      "creator": "Peter Dyllong",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "changes": "Selección, recorte y ajuste monocromático para la página de contenido.",
+      "sha256": "d63a7d59f07ea5ae478dfaf477254dfbfcf598b3d79fb869258c728c49c1bc26",
+      "rights_status": "pexels_license"
+    },
+    {
+      "file": "assets/referent-james-march.jpg",
+      "role": "referent-portrait",
+      "name": "James G. March",
+      "source_page": "https://commons.wikimedia.org/wiki/File:James_G._March.jpg",
+      "creator": "James C. March",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source_sha256": "2bcc0899a54188e1b2fa9febdcaa968d5cce325d4ce48f10e222bd0285b45d50",
+      "changes": "Desde la fuente Commons: conversión a gris PGM de 8 bits; recorte 604:604:0:25; escala Lanczos a 720 por 720 px; unsharp 5:5:0.20:5:5:0.0; JPEG gris progresivo, calidad 94 y optimizado.",
+      "sha256": "269ffac60a980d48753207e759aac67a61508b9df84d58a9a571d1f4cafc3f63",
+      "rights_status": "licensed"
+    },
+    {
+      "file": "assets/referent-michael-quinn-patton.jpg",
+      "role": "referent-portrait",
+      "name": "Michael Quinn Patton",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Michael_Quinn_Patton.jpg",
+      "creator": "Omar David Sandoval Sida",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source_sha256": "caedea1b3f378fac846b1d11dfe7795e143c6a00595a9e15ae0644b1c7e90e4b",
+      "changes": "Desde la fuente Commons: conversión a gris PGM de 8 bits; recorte 1280:1280:0:185; escala Lanczos a 720 por 720 px; unsharp 5:5:0.16:5:5:0.0; JPEG gris progresivo, calidad 94 y optimizado.",
+      "sha256": "e5460a13542e2fdd21acab9fd3ca7a2767aa5215fffe22f02cac9c4b6f644f53",
+      "rights_status": "licensed"
+    },
+    {
+      "file": "assets/referent-eric-ries.jpg",
+      "role": "referent-portrait",
+      "name": "Eric Ries",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Eric_Ries2.jpg",
+      "creator": "Margot Duane",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "source_sha256": "cd6a51e575de0f81c2223d891c1d3f8b3fd1febdbc5927216268472449917a93",
+      "changes": "Desde la fuente Commons: conversión a gris PGM de 8 bits; recorte 562:562:0:22; escala Lanczos a 720 por 720 px; unsharp 5:5:0.18:5:5:0.0; JPEG gris progresivo, calidad 94 y optimizado.",
+      "sha256": "3801ff80f068355faa16c723f4e9d0531f77cc1d41dd7242a19ffd6619cf909d",
+      "rights_status": "licensed"
+    },
+    {
+      "file": "assets/referent-donald-schon.jpg",
+      "role": "referent-portrait",
+      "name": "Donald A. Schön",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Donald_schon_pic.jpg",
+      "creator": "VectorStudy",
+      "license": "Free Art License 1.3",
+      "license_url": "https://artlibre.org/licence/lal/en/",
+      "source_sha256": "5c3d3c7dbeb3369ef30d5ae757a9dfaa056ca9e9341d3d7e3f6b920e11c0285e",
+      "changes": "Desde la fuente Commons: conversión a gris PGM de 8 bits; recorte 350:350:0:25; escala Lanczos a 720 por 720 px; unsharp 5:5:0.25:5:5:0.0; JPEG gris progresivo, calidad 94 y optimizado.",
+      "provenance_note": "La página de Wikimedia Commons declara de forma explícita la Free Art License para el archivo. La cadena previa al archivo alojado en Commons no ofrece una historia de publicación independiente más detallada; esta limitación de origen queda documentada sin invalidar la licencia activa explícita.",
+      "sha256": "063bcf1e175d052097db26cae67f6f1b7630b1a00a74a565b3d4b35d4db38b1c",
+      "rights_status": "licensed_with_origin_limitation_documented"
+    },
+    {
+      "file": "assets/referent-elham-tabassi.jpg",
+      "role": "referent-portrait",
+      "name": "Elham Tabassi",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Elham-Tabassi.jpg",
+      "creator": "NIST / Brandon Hayes",
+      "license": "Dominio público, obra del Gobierno de los Estados Unidos",
+      "license_url": "https://www.nist.gov/copyrights-disclaimers",
+      "source_sha256": "f4d9fcaeae2fdcfaa2b040dff63fdd71d76b249a6be5dde4aba30e5c4f132d00",
+      "changes": "Desde la fuente Commons: conversión a gris PGM de 8 bits; recorte 384:384:0:28; escala Lanczos a 720 por 720 px; unsharp 5:5:0.20:5:5:0.0; JPEG gris progresivo, calidad 94 y optimizado.",
+      "sha256": "75614d3af4c3bf80cd70ffd89e98bda72042f269daf4a96010113fe61b1c4dbf",
+      "rights_status": "public_domain_us_government"
+    },
+    {
+      "file": "assets/referent-daniel-kahneman.jpg",
+      "role": "referent-portrait",
+      "name": "Daniel Kahneman",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Daniel_Kahneman_(3283955327)_(cropped).jpg",
+      "creator": "Eirik Solheim / NRKbeta",
+      "source_contributors": "Recorte de Belbury; ajuste de color de Alfred Kiefer.",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "source_sha256": "e068963b8556e8935fd53bc4c9531f42b86d22e89e65b4d6837ac109406eef44",
+      "changes": "Desde la fuente Commons ya recortada: conversión a gris PGM de 8 bits; recorte 688:688:0:28; escala Lanczos a 720 por 720 px; unsharp 5:5:0.16:5:5:0.0; JPEG gris progresivo, calidad 94 y optimizado.",
+      "sha256": "0094e5718e5e34eb2de23e394bee2ae02229f0691ec9b1777740ecd8710d187a",
+      "rights_status": "licensed"
+    },
+    {
+      "file": "assets/matches-close.png",
+      "role": "canonical-collection-closing",
+      "origin": "approved_metsi_collection_asset",
+      "rights_basis": "Activo de curso aprobado como cierre canónico de la colección y preservado byte a byte desde N00.",
+      "sha256": "06318b951ef619692a236027ed07ec7a4a1bb9b66cc875a916c40f060e47ecde",
+      "rights_status": "canonical_course_asset"
+    }
+  ],
+  "explicitly_excluded": [
+    {
+      "file": "assets/hotel-horizonte.png",
+      "reason": "No está referenciado por la composición N06 y no integra el inventario publicable de imágenes usadas."
+    }
+  ]
+}

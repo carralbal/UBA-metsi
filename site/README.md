@@ -1,8 +1,8 @@
 # Sitio narrativo METSI
 
-La página presenta la propuesta académica, pedagógica y editorial completa de METSI. Hace visibles los 36 Núcleos organizados en ocho bloques y permite descargar únicamente los once documentos cerrados, N00 a N10.
+La página presenta la propuesta académica, pedagógica y editorial completa de METSI. Hace visibles los 36 Núcleos organizados en ocho bloques y permite descargar los 37 documentos cerrados y auditados, N00 a N36.
 
-El mapa distingue de manera explícita las lecturas disponibles de los Núcleos futuros. No comunica N11 a N36 como documentos producidos.
+El mapa funciona como recorrido curricular y como acceso directo a toda la colección publicada.
 
 ## Validación
 

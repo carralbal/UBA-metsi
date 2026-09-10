@@ -15,25 +15,25 @@ OUT = ROOT / "qa-contact-sheets"
 def pdf_path(number: int) -> Path:
     code = f"N{number:02d}"
     if number == 0:
-        return ROOT / "N00-v2-candidate" / "output" / "N00-METSI-lectura-previa-v2-candidate-final.pdf"
+        return ROOT / "N00-v3-final" / "output" / "N00-METSI-lectura-previa-v3-final.pdf"
     if number == 1:
         return ROOT / "N01-v18-final" / "output" / "N01-METSI-lectura-previa-v18-final.pdf"
     if number == 2:
-        return ROOT / "N02-v14-final" / "output" / "N02-METSI-lectura-previa-v14-final.pdf"
+        return ROOT / "N02-v15-final" / "output" / "N02-METSI-lectura-previa-v15-final.pdf"
     if number == 3:
-        return ROOT / "N03-v9-final" / "output" / "N03-METSI-lectura-previa-v9-final.pdf"
+        return ROOT / "N03-v10-final" / "output" / "N03-METSI-lectura-previa-v10-final.pdf"
     if number == 4:
         return ROOT / "N04-v9-final" / "output" / "N04-METSI-lectura-previa-v9-final.pdf"
     if number == 5:
-        return ROOT / "N05-v9-final" / "output" / "N05-METSI-lectura-previa-v9-final.pdf"
+        return ROOT / "N05-v10-final" / "output" / "N05-METSI-lectura-previa-v10-final.pdf"
     if number == 6:
-        return ROOT / "N06-v9-final" / "output" / "N06-METSI-lectura-previa-v9-final.pdf"
+        return ROOT / "N06-v10-final" / "output" / "N06-METSI-lectura-previa-v10-final.pdf"
     if number == 7:
-        return ROOT / "N07-v9-final" / "output" / "N07-METSI-lectura-previa-v9-final.pdf"
+        return ROOT / "N07-v10-final" / "output" / "N07-METSI-lectura-previa-v10-final.pdf"
     if number == 8:
-        return ROOT / "N08-v9-final" / "output" / "N08-METSI-lectura-previa-v9-final.pdf"
+        return ROOT / "N08-v10-final" / "output" / "N08-METSI-lectura-previa-v10-final.pdf"
     if number == 9:
-        return ROOT / "N09-v9-final" / "output" / "N09-METSI-lectura-previa-v9-final.pdf"
+        return ROOT / "N09-v10-final" / "output" / "N09-METSI-lectura-previa-v10-final.pdf"
     if number == 10:
         return ROOT / "N10-v9-final" / "output" / "N10-METSI-lectura-previa-v9-final.pdf"
     if 11 <= number <= 36:
@@ -74,52 +74,9 @@ def render(number: int) -> Path:
         sheet.paste(thumb, (x, y))
     output = OUT / f"{code}-contact-sheet.jpg"
     sheet.save(output, quality=87, optimize=True)
-    if number == 0:
-        shutil.copy2(output, ROOT / "N00-v2-candidate" / "N00-v2-candidate-final-contact-sheet.jpg")
-    if number == 1:
-        package_qa = ROOT / "N01-v18-final" / "qa"
-        package_qa.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(output, package_qa / output.name)
-    if number == 2:
-        package_qa = ROOT / "N02-v14-final" / "qa"
-        package_qa.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(output, package_qa / output.name)
-    if number == 3:
-        package_qa = ROOT / "N03-v9-final" / "qa"
-        package_qa.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(output, package_qa / output.name)
-    if number == 4:
-        package_qa = ROOT / "N04-v9-final" / "qa"
-        package_qa.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(output, package_qa / output.name)
-    if number == 5:
-        package_qa = ROOT / "N05-v9-final" / "qa"
-        package_qa.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(output, package_qa / output.name)
-    if number == 6:
-        package_qa = ROOT / "N06-v9-final" / "qa"
-        package_qa.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(output, package_qa / output.name)
-    if number == 7:
-        package_qa = ROOT / "N07-v9-final" / "qa"
-        package_qa.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(output, package_qa / output.name)
-    if number == 8:
-        package_qa = ROOT / "N08-v9-final" / "qa"
-        package_qa.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(output, package_qa / output.name)
-    if number == 9:
-        package_qa = ROOT / "N09-v9-final" / "qa"
-        package_qa.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(output, package_qa / output.name)
-    if number == 10:
-        package_qa = ROOT / "N10-v9-final" / "qa"
-        package_qa.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(output, package_qa / output.name)
-    if 11 <= number <= 36:
-        package_qa = ROOT / f"N{number:02d}-v7-editorial" / "qa"
-        package_qa.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(output, package_qa / output.name)
+    package_qa = pdf_path(number).parent.parent / "qa"
+    package_qa.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(output, package_qa / output.name)
     shutil.rmtree(tmp)
     return output
 

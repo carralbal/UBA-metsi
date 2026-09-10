@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Deterministic validation for the METSI narrative course site.
 
-N00-N10 remain locked by the approved Block 01 audit. N11-N36 are checked
+N00-N10 are locked by the integrated Block 01 audit. N11-N36 are checked
 against the content-addressed publication contract written by
 ``sync_site_n11_n36.py``. With ``--check-only`` this program is read-only.
 """
@@ -32,16 +32,16 @@ DYNAMIC_QA_ROOT = "qa-reports/n11-n36-v7"
 DYNAMIC_QA_VALIDATOR = "validate_n11_n36_v6.py"
 
 PDF_FILES = {
-    "N00": "N00-METSI-lectura-previa-v2-final.pdf",
+    "N00": "N00-METSI-lectura-previa-v3-final.pdf",
     "N01": "N01-METSI-lectura-previa-v18-final.pdf",
-    "N02": "N02-METSI-lectura-previa-v14-final.pdf",
-    "N03": "N03-METSI-lectura-previa-v9-final.pdf",
+    "N02": "N02-METSI-lectura-previa-v15-final.pdf",
+    "N03": "N03-METSI-lectura-previa-v10-final.pdf",
     "N04": "N04-METSI-lectura-previa-v9-final.pdf",
-    "N05": "N05-METSI-lectura-previa-v9-final.pdf",
-    "N06": "N06-METSI-lectura-previa-v9-final.pdf",
-    "N07": "N07-METSI-lectura-previa-v9-final.pdf",
-    "N08": "N08-METSI-lectura-previa-v9-final.pdf",
-    "N09": "N09-METSI-lectura-previa-v9-final.pdf",
+    "N05": "N05-METSI-lectura-previa-v10-final.pdf",
+    "N06": "N06-METSI-lectura-previa-v10-final.pdf",
+    "N07": "N07-METSI-lectura-previa-v10-final.pdf",
+    "N08": "N08-METSI-lectura-previa-v10-final.pdf",
+    "N09": "N09-METSI-lectura-previa-v10-final.pdf",
     "N10": "N10-METSI-lectura-previa-v9-final.pdf",
     **{
         f"N{number:02d}": f"publicados/N{number:02d}-METSI-lectura-previa-v1-final.pdf"
@@ -55,16 +55,16 @@ COVER_FILES = {
 }
 
 LOCKED_PAGES = {
-    "N00": 43,
+    "N00": 44,
     "N01": 29,
-    "N02": 29,
+    "N02": 30,
     "N03": 30,
     "N04": 32,
     "N05": 28,
     "N06": 28,
     "N07": 31,
-    "N08": 28,
-    "N09": 28,
+    "N08": 29,
+    "N09": 30,
     "N10": 31,
 }
 
@@ -313,7 +313,7 @@ def build_report(require_sources: bool = False) -> dict[str, Any]:
 
     site_manifest, site_manifest_error = load_json(ROOT / "course-manifest.json")
     root_manifest, root_manifest_error = load_json(REPO / "course-manifest.json")
-    approval, approval_error = load_json(REPO / "BLOCK-01-cover-review-current" / "approval.json")
+    approval, approval_error = load_json(REPO / "BLOCK-01-integrated-release-current" / "approval.json")
     cover_audit, cover_audit_error = load_json(REPO / "BLOCK-01-cover-review-current" / "audit.json")
 
     publication = site_manifest.get("publication", {}) if isinstance(site_manifest.get("publication"), dict) else {}

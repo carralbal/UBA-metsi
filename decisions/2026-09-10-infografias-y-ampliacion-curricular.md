@@ -12,7 +12,7 @@ Se acepta diferir una pasada de microcomposición. Persisten casos puntuales en 
 
 La colección debe conservar infografías específicas para cada lectura. La repetición de una familia visual sólo es admisible cuando la relación conceptual representada es realmente equivalente. La paleta queda restringida al sistema METSI aprobado. No se admiten bloques negros dominantes ni colores ajenos a papel, blanco, tinta, grises y volt.
 
-Esta aprobación no autoriza a alterar ahora los PDF publicados. Primero se revisan las fuentes canónicas con la ampliación curricular aprobada, luego se audita el contenido y finalmente se recompaginan los PDF.
+La aprobación autorizó una integración controlada en PDF después de cerrar fuentes y auditoría. La integración se ejecutó sin alterar los documentos fuera de alcance.
 
 ## Distribución curricular aprobada
 
@@ -105,4 +105,4 @@ La ampliación fue incorporada en fuentes Markdown v2 de N02, N03, N05, N06, N08
 
 La auditoría reproducible `scripts/audit_curricular_expansion.py` cerró en `PASS` y dejó evidencia en `audits/2026-09-10-curricular-expansion-audit.json`. El conjunto controlado suma 229.138 palabras bajo el contador del auditor, 10.562 más que las fuentes de base. No se detectaron estructuras incompletas, marcadores, rayas de inciso nuevas, pérdida de Hotel Horizonte ni párrafos extensos duplicados entre documentos.
 
-Los PDF actuales continúan preservados como línea de base y todavía no contienen esta ampliación curricular. Su recompaginación pertenece a la etapa siguiente.
+La ampliación quedó integrada en nuevas versiones de N02, N03, N05, N06, N08 y N09. Las infografías aprobadas quedaron integradas en nuevas versiones de N00, N07, N08 y N09. N01, N04 y N10 se preservaron sin cambios, y N11 a N36 ya contenían la ampliación aprobada en sus paquetes editoriales v7. La auditoría final y el sello de publicación quedan documentados en `audits/2026-09-10-integracion-curricular-y-grafica-N00-N36.json` y en el dossier PDF correspondiente.

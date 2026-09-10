@@ -35,6 +35,15 @@ PORTRAIT_REGISTRY = json.loads(PORTRAIT_REGISTRY_PATH.read_text(encoding="utf-8"
 CHARACTER_PORTRAITS = HERE / "assets" / "hotel-portraits"
 EDITORIAL_CHARACTER_PORTRAITS = HERE / "assets/hotel-portraits"
 
+# Reproducible edition overrides used by scoped rebuilds. Normal collection
+# builds keep the established defaults; release scripts can select a canonical
+# source, a new package root and an approved infographic without rewriting the
+# historical editions.
+SOURCE_PATH_OVERRIDES: dict[int, Path] = {}
+OUTPUT_ROOT_OVERRIDES: dict[int, Path] = {}
+PACKAGE_VERSION_LABELS: dict[int, str] = {}
+INFOGRAPHIC_PATH_OVERRIDES: dict[int, Path] = {}
+
 
 HOTEL_VOICES = {
     0: {
@@ -701,6 +710,8 @@ def references(sections: list[Section]) -> list[str]:
 
 
 def source_path(number: int) -> Path:
+    if number in SOURCE_PATH_OVERRIDES:
+        return Path(SOURCE_PATH_OVERRIDES[number]).resolve()
     if number == 0:
         return N00_ROOT / "source" / "N00_como_leer_metsi.md"
     if number == 1:
@@ -776,6 +787,43 @@ def diagram_labels(sections: list[Section]) -> list[str]:
 
 
 def build_diagram(number: int, title: str, sections: list[Section], output: Path) -> dict:
+    if number in INFOGRAPHIC_PATH_OVERRIDES:
+        package = Path(INFOGRAPHIC_PATH_OVERRIDES[number]).resolve()
+        source_svg = next(package.glob("*.svg"))
+        spec_path = next(package.glob("*.spec.json"))
+        alt_path = next(package.glob("*alt-text.md"))
+        spec = json.loads(spec_path.read_text(encoding="utf-8"))
+        copy_asset(source_svg, output)
+        (output.parent / "alt-text.md").write_text(
+            alt_path.read_text(encoding="utf-8").strip() + "\n",
+            encoding="utf-8",
+        )
+        content_manifest = {
+            "document": f"N{number:02d}",
+            "title": spec["title"],
+            "topology": spec.get("orientation", "flow"),
+            "source_sections": [{"heading": item["title"]} for item in spec.get("items", [])],
+            "nodes": [{"id": item["number"], "label": item["title"]} for item in spec.get("items", [])],
+            "alt": spec["alt"],
+            "approved_source": str(source_svg.relative_to(HERE)),
+            "approved_source_sha256": asset_sha(source_svg),
+        }
+        (output.parent / "content-manifest.json").write_text(
+            json.dumps(content_manifest, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        return {
+            "number": number,
+            "module": module_for(number)[1],
+            "topology": content_manifest["topology"],
+            "labels": [item["title"] for item in spec.get("items", [])],
+            "source_headings": [item["title"] for item in spec.get("items", [])],
+            "file": output.name,
+            "content_manifest": "diagrams/content-manifest.json",
+            "approved_source": content_manifest["approved_source"],
+            "approved_source_sha256": content_manifest["approved_source_sha256"],
+            "alt": spec["alt"],
+        }
     if number == 0:
         # La tabla y la prosa del mapa ya explican esta progresión. La antigua
         # lámina de diez cajas la duplicaba sin agregar una relación nueva.
@@ -1997,7 +2045,7 @@ def write_referent_rights_manifest(
 
     rights_manifest = {
         "document": f"N{number:02d}",
-        "edition": "v9-final",
+        "edition": PACKAGE_VERSION_LABELS.get(number, "v9-final"),
         "status": "approved",
         "verified_on": "2026-09-04",
         "manifest_scope": "Seis retratos de referentes presentes en el aparato Referentes.",
@@ -2259,8 +2307,8 @@ def split_n08_glossary_for_print(body: str) -> str:
 def keep_n08_observation_instrument_together(body: str) -> str:
     """Keep the instrument heading, lead-in and seven-layer table together."""
     pattern = (
-        r'(<h3 data-source-id="N08-s06-b039">.*?</h3>)'
-        r'(<p data-source-id="N08-s06-b040">.*?</p>)'
+        r'(<h3 data-source-id="N08-s06-b\d+">Instrumento de decisión: registro en capas</h3>)'
+        r'(<p data-source-id="N08-s06-b\d+">.*?</p>)'
         r'(<div class="table-wrap"><table>.*?</table></div>)'
     )
     updated, count = re.subn(
@@ -2278,7 +2326,8 @@ def keep_n08_observation_instrument_together(body: str) -> str:
 def build_document(number:int)->dict:
     source=source_path(number)
     title,sections=parse_source(source)
-    out=N00_ROOT if number == 0 else HERE/("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else "N05-v9-final" if number == 5 else "N06-v9-final" if number == 6 else "N07-v9-final" if number == 7 else "N08-v9-final" if number == 8 else "N09-v9-final" if number == 9 else "N10-v9-final")
+    default_out=N00_ROOT if number == 0 else HERE/("N01-v18-final" if number == 1 else "N02-v14-final" if number == 2 else "N03-v9-final" if number == 3 else "N04-v9-final" if number == 4 else "N05-v9-final" if number == 5 else "N06-v9-final" if number == 6 else "N07-v9-final" if number == 7 else "N08-v9-final" if number == 8 else "N09-v9-final" if number == 9 else "N10-v9-final")
+    out=Path(OUTPUT_ROOT_OVERRIDES.get(number, default_out)).resolve()
     assets=out/"assets"; diagrams=out/"diagrams"; output=out/"output"
     for folder in (assets,diagrams,output): folder.mkdir(parents=True,exist_ok=True)
     if 0 <= number <= 10:
@@ -2471,7 +2520,7 @@ def build_document(number:int)->dict:
         if number == 10 and (diagrams / "N10-HH10-encuadre-puerta-decision.svg").exists()
         else f"N{number:02d}-mapa-decision.svg"
     )
-    if number in {9, 10} and diagram_path.exists():
+    if number in {9, 10} and diagram_path.exists() and number not in INFOGRAPHIC_PATH_OVERRIDES:
         content_manifest_path = diagrams / "content-manifest.json"
         if not content_manifest_path.exists():
             content_manifest_path = out / "infographic-work-layer" / "content-manifest.json"
@@ -2801,7 +2850,7 @@ def build_document(number:int)->dict:
     # same SVG later in the document creates a false sense of new information.
     # The compact map opens the conceptual family after the first pause and is
     # immediately interpreted by prose on the same reading sequence.
-    diagram_before=set() if number == 0 else {6}
+    diagram_before={6}
     hotel_voices_inserted = False
     display_index = 0
     for source_index,section in enumerate(sections,1):
@@ -2932,8 +2981,11 @@ def build_document(number:int)->dict:
         prelude=""
         extra=""
         standalone_before=""
-        if (number == 4 and section.title.startswith("Movimiento 1 ·")) or (number == 5 and section.title.startswith("Movimiento 2 ·")) or (number == 6 and section.title == "Instrumento de decisión: tablero mínimo de incertidumbres") or (number == 7 and section.title.startswith("Movimiento 3 ·")) or (number == 8 and section.title.startswith("Movimiento 2 ·")) or (number in {9, 10} and section.title.startswith("Movimiento 3 ·")) or (number == 1 and section.title == "Método, metodología, marco, práctica, técnica y herramienta") or (number == 2 and section.title == "Cinco objetos que no conviene llamar simplemente “el sistema”") or (number not in {0, 1, 2, 4, 5, 6, 7, 8, 9, 10} and idx in diagram_before):
-            if number == 1:
+        if (number == 0 and section.title == "El mapa de la materia: ocho bloques, una capacidad acumulativa") or (number == 4 and section.title.startswith("Movimiento 1 ·")) or (number == 5 and section.title.startswith("Movimiento 2 ·")) or (number == 6 and section.title == "Instrumento de decisión: tablero mínimo de incertidumbres") or (number == 7 and section.title.startswith("Movimiento 3 ·")) or (number == 8 and section.title.startswith("Movimiento 2 ·")) or (number in {9, 10} and section.title.startswith("Movimiento 3 ·")) or (number == 1 and section.title == "Método, metodología, marco, práctica, técnica y herramienta") or (number == 2 and section.title == "Cinco objetos que no conviene llamar simplemente “el sistema”") or (number not in {0, 1, 2, 4, 5, 6, 7, 8, 9, 10} and idx in diagram_before):
+            if number == 0:
+                diagram_alt = "Secuencia de ocho bloques que recorre el sistema, la investigación, el modelado, la estrategia, las capacidades, la operación, la inteligencia artificial y la integración del aprendizaje"
+                diagram_caption = "Los ocho bloques agregan capacidades acumulativas para pasar de un pedido ambiguo a una intervención defendible y revisable."
+            elif number == 1:
                 diagram_alt = "Relación entre marco, metodología, método, práctica, técnica y herramienta"
                 diagram_caption = "Cada término cumple una función distinta: orientar, justificar, proceder, actuar, ejecutar o soportar."
             elif number == 3:
@@ -3042,9 +3094,13 @@ def build_document(number:int)->dict:
                 # La imagen acompaña la segunda aplicación dentro del flujo de
                 # la sección. Dejarla como cierre externo producía una página
                 # fotográfica aislada inmediatamente antes de la pausa visual.
-                anchor = '<h3 data-source-id="N08-s06-b067">'
-                if anchor not in body:
+                anchor_match = re.search(
+                    r'<h3 data-source-id="N08-s06-b\d+">Segunda aplicación de HH-08: separar evento, interpretación y pregunta</h3>',
+                    body,
+                )
+                if not anchor_match:
                     raise RuntimeError("No se encontró el anclaje interno de la fotografía N08")
+                anchor = anchor_match.group(0)
                 body = body.replace(anchor, photo_figure + anchor, 1)
             else:
                 extra += photo_figure
@@ -3195,6 +3251,7 @@ def build_document(number:int)->dict:
     clean_title = title.replace(f"N{number:02d} — ", "").replace(f"N{number:02d} · ", "")
     manifest={
         "number":number,"title":title,"module":module_for(number)[1],"source":source_label,
+        "edition":PACKAGE_VERSION_LABELS.get(number, "current"),
         "source_words":len(source.read_text(encoding='utf-8').split()),
         "cover":{
             "file":cover_file,
@@ -4241,6 +4298,8 @@ COLLECTION_CSS=r'''
 .references-image-full::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.72) 100%)}
 .references-image-full p{position:absolute;z-index:3;left:18mm;right:18mm;bottom:22mm;margin:0;color:#fff;font-family:Didot,"Bodoni 72",serif;font-size:21pt;line-height:1.05}
 .premium-magazine .full-bleed{break-before:auto;break-after:auto;page-break-before:auto;page-break-after:auto}
+.premium-magazine.document-n00 .infographic-boundaries{column-span:all;width:158mm;max-width:158mm;max-height:121mm;margin:4mm auto 6mm;break-inside:avoid-page;page-break-inside:avoid}
+.premium-magazine.document-n00 .infographic-boundaries img{display:block;width:158mm;max-width:158mm;height:auto;max-height:112mm;margin:0 auto;filter:none}
 @media screen and (max-width:760px){
   body.premium-magazine{width:auto;min-width:0;margin:0;background:#FAFAF8}
   .premium-magazine main{width:100%;max-width:100%;overflow:hidden}
