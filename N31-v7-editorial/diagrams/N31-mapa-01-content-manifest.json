@@ -1,0 +1,27 @@
+{
+  "title": "La tarea elige una capacidad antes que una herramienta",
+  "claim": "La inteligencia artificial sólo es pertinente cuando una capacidad concreta aporta valor incremental frente a una alternativa practicable y conserva límites, supervisión, reparación y una condición ejecutable de no uso.",
+  "source_sections": [
+    {"id":"problem","heading":"El agente resolvió la reserva y creó una promesa que nadie había autorizado","summary":"Una respuesta fluida concedió una mejora que Comercial nunca ofreció."},
+    {"id":"hh31","heading":"Hotel Horizonte: el asistente resolvió una reserva que no podía prometer","summary":"HH-31 separa explicación, predicción, redacción y modificación de estado."},
+    {"id":"movement1","heading":"Movimiento 1 · Distinguir capacidad, propósito y consecuencia","summary":"Regla, predicción, generación y agencia exigen pruebas y controles diferentes."},
+    {"id":"movement2","heading":"Movimiento 2 · Comparar tarea, alternativa y valor incremental","summary":"La propuesta se compara con la mejor alternativa sin IA bajo la misma consecuencia."},
+    {"id":"movement3","heading":"Movimiento 3 · Calibrar incertidumbre y delimitar autoridad","summary":"La autorización depende de supervisión, procedencia, permisos y condición de no uso."}
+  ],
+  "nodes": [
+    {"id":"rule","label":"Regla determinista","role":"capability","source":["movement1"],"purpose":"Validar condiciones explícitas y auditables."},
+    {"id":"search","label":"Búsqueda","role":"capability","source":["problem","movement1"],"purpose":"Recuperar una política correcta, vigente y autorizada."},
+    {"id":"prediction","label":"Predicción","role":"capability","source":["movement1"],"purpose":"Estimar aceptación con calibración, umbral y costo de error."},
+    {"id":"generation","label":"Generación","role":"capability","source":["movement1"],"purpose":"Redactar una opción con fuente, verificación y abstención."},
+    {"id":"agency","label":"Agencia","role":"capability","source":["hh31","movement1"],"purpose":"Usar herramientas y producir efectos bajo permisos mínimos."},
+    {"id":"baseline","label":"Alternativa sin IA","role":"baseline","source":["movement2"],"purpose":"Comparar regla, búsqueda y escalamiento humano con la misma población y consecuencia."},
+    {"id":"gate","label":"Puerta de pertinencia","role":"decision_gate","source":["movement3"],"purpose":"Autorizar, restringir o descartar una capacidad según evidencia y exposición."}
+  ],
+  "edges": [
+    {"id":"supports","from":"rule","to":"search","relation":"supports","source":["problem"],"meaning":"Una regla y una búsqueda pueden resolver pasos distintos sin agencia."},
+    {"id":"estimates","from":"prediction","to":"generation","relation":"informs","source":["movement1"],"meaning":"Una estimación puede informar una propuesta sin decidirla."},
+    {"id":"acts","from":"generation","to":"agency","relation":"may_trigger","source":["hh31"],"meaning":"La redacción sólo produce un efecto cuando una herramienta modifica el estado."},
+    {"id":"compares","from":"baseline","to":"gate","relation":"is_compared_at","source":["movement2"],"meaning":"La línea de base impide confundir novedad con valor incremental."},
+    {"id":"limits","from":"agency","to":"gate","relation":"is_limited_by","source":["movement3"],"meaning":"Permisos, supervisión y reparación restringen la agencia defendible."}
+  ]
+}

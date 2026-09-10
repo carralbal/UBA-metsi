@@ -6,35 +6,34 @@ Este archivo prevalece sobre auditorías anteriores cuando exista una diferencia
 
 ## Colección pública
 
-La biblioteca de `site` conserva las rutas públicas estables de N00 a N36. N00 a N10 mantienen sus versiones aprobadas. N11 a N36 no se reemplazan todavía por los paquetes v6 porque la puerta exhaustiva de publicación no los habilitó como conjunto.
+La biblioteca de `site` conserva las rutas públicas estables de N00 a N36. N00 a N10 mantienen sus versiones aprobadas y protegidas por hash. N11 a N36 publican los PDF del paquete editorial v7.
 
-## Paquetes N11 a N36 v6
+La transacción de publicación cerró en `PASS`, con 37 PDF descargables, 37 tapas, 162 referencias locales comprobadas y coincidencia entre fuentes canónicas, paquetes, manifiestos, PDF y biblioteca.
 
-Los paquetes `N11-v6-editorial` a `N36-v6-editorial` se conservan completos como línea de reconstrucción recuperable. Incluyen fuentes, composición, activos, manifiestos, auditorías determinísticas y un PDF final de cada N.
+## Paquetes N11 a N36 v7
 
-No deben confundirse con una nueva aprobación externa. Una verificación posterior a su construcción detectó páginas ordinarias con densidad inferior al criterio editorial y una discordancia entre etiquetas declaradas y SVG en varias infografías. N26 presenta además un falso positivo probable del detector de marcadores sobre la cadena `todo:`. Esos hallazgos no se corrigen en este cierre porque el autor dispuso primero preservar decisiones y versiones, y después intervenir contenido y PDF.
+Los paquetes `N11-v7-editorial` a `N36-v7-editorial` integran las fuentes curriculares vigentes y las infografías específicas aprobadas. Conservan fuente, HTML, CSS, manifiestos, activos, diagramas, informe de integridad y PDF final.
+
+La puerta determinística cerró en `PASS` para los 26 documentos. Cada documento superó 26 comprobaciones. La revisión visual de todas las páginas confirmó tapas a sangre, Contenido y Referentes normalizados, caso Hotel Horizonte, reparto editorial de fotografías, dos pausas de lectura, preguntas sin fotografía, síntesis, píldoras, glosario, referencias y cierre.
 
 ## Infografías
 
-La serie de `editorial-standard/infographic-rebuild-candidates-v3` y su catálogo `output/pdf/METSI-catalogo-infografias-N00-N36-revision-v3.pdf` están aprobados provisionalmente.
+La serie integrada se considera aprobada de manera provisional. Cada N utiliza un mapa específico y no una repetición mecánica de una misma estructura.
 
-La aprobación acepta por ahora proximidades y solapamientos puntuales de texto con cajas. Esa deuda queda abierta. La serie todavía no está integrada en los PDF v6.
+Se conserva como deuda no bloqueante la revisión fina de proximidades puntuales entre algunos textos y cajas. Esa deuda no invalida el cierre actual y deberá abordarse en una ronda visual posterior sin alterar contenido ni arquitectura editorial.
 
 ## Ampliación curricular
 
 La distribución de PMI, PMBOK, Scrum, Kanban, UI, UX, diseño, DevOps, DORA, APIs, Git, GitHub, BPM, BPMN y autores argentinos y latinoamericanos está aprobada en `decisions/2026-09-10-infografias-y-ampliacion-curricular.md`.
 
-La ampliación quedó escrita en fuentes Markdown v2 de 25 lecturas y auditada junto con N35 y N36, que se preservaron byte por byte. La evidencia reproducible está en `audits/2026-09-10-curricular-expansion-audit.json` y su ejecutor en `scripts/audit_curricular_expansion.py`. Resultado: `PASS`, 27 fuentes presentes, 229.138 palabras totales, 10.562 palabras incorporadas, estructura completa, anclajes temáticos presentes, continuidad de Hotel Horizonte, cero párrafos extensos duplicados y cero cambios de PDF.
+La ampliación quedó escrita en las fuentes Markdown vigentes y auditada en `audits/2026-09-10-curricular-expansion-audit.json`. Resultado: `PASS`, 27 fuentes presentes, 229.138 palabras totales, 10.562 palabras incorporadas, estructura completa, anclajes temáticos presentes, continuidad de Hotel Horizonte, cero párrafos extensos duplicados y registro impersonal.
 
-Las fuentes anteriores se conservan como línea de base. Los PDF públicos y los paquetes v6 todavía no contienen la ampliación.
+## Evidencia de cierre
 
-## Próxima secuencia autorizada
+El cierre editorial está documentado en `audits/2026-09-10-editorial-v7-n11-n36-closure.md`. La evidencia máquina está en `qa-reports/n11-n36-v7/`. El identificador del conjunto publicado es `599ff4472432e682bc64c15d735c97c823cc49cf3f2e1fc7898a872f74083f43`.
 
-1. Resolver la deuda geométrica puntual de las infografías aprobadas.
-2. Integrar las fuentes v2 y las infografías en nuevos paquetes editoriales, sin sobrescribir las líneas de base.
-3. Recompaginar y superar la puerta exhaustiva de contenido, estructura, imágenes, densidad y accesibilidad.
-4. Sustituir los PDF de la biblioteca únicamente cuando el conjunto nuevo cierre en `PASS`.
+Los seis skills METSI activos coinciden con su copia versionada. La última sincronización cerró en `PASS` y no necesitó copiar ningún archivo.
 
 ## Condición de recuperación
 
-El repositorio debe contener este estado, las decisiones, los seis skills METSI, los generadores, validadores, catálogos, paquetes v6 y PDF finales. Los renders, cachés y PDF crudos permanecen excluidos por ser regenerables.
+El repositorio debe contener este estado, las decisiones, los seis skills METSI, los generadores, validadores, fuentes canónicas, paquetes v7, auditorías, PDF finales y archivos de publicación. Los PDF crudos, renders y cachés permanecen excluidos porque son regenerables.

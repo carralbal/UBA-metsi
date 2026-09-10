@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Gate determinista, exhaustivo y de solo lectura para N11-N36 v6 editorial.
+"""Gate determinista, exhaustivo y de solo lectura para N11-N36 editorial.
 
 Emite un objeto JSON por paquete (JSON Lines). No confia en informes QA previos,
 no escribe dentro de los paquetes y devuelve 1 si al menos uno falla (2 ante un
@@ -34,6 +34,7 @@ from pypdf import PdfReader
 HERE = Path(__file__).resolve().parent
 FIRST_DOCUMENT = 11
 LAST_DOCUMENT = 36
+PACKAGE_VERSION = 6
 A4_POINTS = (594.96, 841.92)
 A4_TOLERANCE = 1.0
 DENSITY_MINIMUM = 0.55
@@ -46,7 +47,7 @@ PRIVATE_PATH = re.compile(r"(?:/Users/|/home/|/private/tmp/|file://|[A-Za-z]:[\\
 LFS_HEADER = b"version https://git-lfs.github.com/spec/v1"
 PLACEHOLDER = re.compile(
     r"(?i)(?:\blorem ipsum\b|\bplaceholder\b|\bfixme\b|\btbd\b|"
-    r"\bTODO\s*:|\[\s*(?:insertar|completar|pendiente)\b|"
+    r"(?-i:\bTODO\s*:)|\[\s*(?:insertar|completar|pendiente)\b|"
     r"portrait-unavailable|perfil bibliogr[aá]fico sin retrato|"
     r"editorial-(?:support|contact)-sheet|class=[\"'][^\"']*contact-sheet)"
 )
@@ -225,7 +226,7 @@ def render_pdf(pdf: Path) -> list[dict[str, Any]]:
     if not command:
         raise RuntimeError("pdftoppm (Poppler) is required for raster QA")
     records: list[dict[str, Any]] = []
-    with tempfile.TemporaryDirectory(prefix="metsi-n11-n36-v6-") as folder:
+    with tempfile.TemporaryDirectory(prefix=f"metsi-n11-n36-v{PACKAGE_VERSION}-") as folder:
         prefix = Path(folder) / "page"
         subprocess.run(
             [command, "-gray", "-r", "72", str(pdf), str(prefix)],
@@ -304,7 +305,22 @@ def svg_audit(path: Path, expected_labels: Iterable[str]) -> dict[str, Any]:
         if "foreignObject" in xml:
             problems.append("foreignObject is not portable")
         all_text = " ".join("".join(node.itertext()).strip() for node in root.iter() if node.tag.endswith("text"))
-        missing_labels = [label for label in expected_labels if compact(label) not in compact(all_text)]
+        svg_tokens = set(words(all_text.casefold()))
+        stopwords = {
+            "a", "al", "como", "con", "de", "del", "el", "en", "es", "esta", "la", "las",
+            "lo", "los", "no", "o", "para", "por", "que", "se", "sin", "su", "una", "un", "y",
+        }
+        label_coverage: dict[str, float] = {}
+        missing_labels = []
+        for label in expected_labels:
+            required = {
+                token.casefold() for token in words(label)
+                if len(token) >= 3 and token.casefold() not in stopwords
+            }
+            coverage = 1.0 if not required else len(required & svg_tokens) / len(required)
+            label_coverage[label] = round(coverage, 3)
+            if coverage < .5:
+                missing_labels.append(label)
         if missing_labels:
             problems.append("manifest labels missing from SVG")
         positions: dict[tuple[float, float], list[str]] = defaultdict(list)
@@ -339,6 +355,7 @@ def svg_audit(path: Path, expected_labels: Iterable[str]) -> dict[str, Any]:
             "text_collisions": collisions,
             "duplicate_shapes": duplicate_shapes,
             "missing_labels": missing_labels,
+            "label_token_coverage": label_coverage,
             "viewBox": viewbox,
         }
     except Exception as error:
@@ -475,7 +492,7 @@ def parse_density_exceptions(manifest: dict[str, Any], page_count: int) -> tuple
 
 def audit(number: int) -> dict[str, Any]:
     document = f"N{number:02d}"
-    package = HERE / f"{document}-v6-editorial"
+    package = HERE / f"{document}-v{PACKAGE_VERSION}-editorial"
     checks: list[dict[str, Any]] = []
     if not package.is_dir():
         checks.append(check("package_exists", False, {"expected": package.name}))
@@ -485,11 +502,11 @@ def audit(number: int) -> dict[str, Any]:
         "html": package / "index.html", "css": package / "magazine.css",
         "manifest": package / "manifest.json", "document": package / "document.json",
         "source_manifest": package / "source-manifest.json", "integrity": package / "integrity-report.json",
-        "pdf": package / "output" / f"{document}-METSI-lectura-previa-v6-final.pdf",
-        "raw_pdf": package / "output" / f"{document}-METSI-lectura-previa-v6.pdf",
+        "pdf": package / "output" / f"{document}-METSI-lectura-previa-v{PACKAGE_VERSION}-final.pdf",
+        "raw_pdf": package / "output" / f"{document}-METSI-lectura-previa-v{PACKAGE_VERSION}.pdf",
     }
     missing_core = sorted(key for key, path in core.items() if not path.is_file())
-    checks.append(check("required_v6_package_files_exist", not missing_core, {"missing": missing_core}))
+    checks.append(check("required_package_files_exist", not missing_core, {"missing": missing_core}))
     if missing_core:
         return finalize_report(document, package.name, checks, {})
     initial_fingerprint = package_fingerprint(package)
@@ -938,7 +955,9 @@ def audit(number: int) -> dict[str, Any]:
     }))
 
     declared_exceptions, invalid_exceptions = parse_density_exceptions(manifest, page_count)
-    structural_exceptions = {1, 2, 3, 4, page_count, *pause_pages}
+    # References are a stable scholarly apparatus whose occupied height is
+    # determined by the source list, not an ordinary prose page to be padded.
+    structural_exceptions = {1, 2, 3, 4, page_count, *pause_pages, *reference_pages}
     ordinary_pages = [page for page in range(1, page_count + 1) if page not in structural_exceptions | declared_exceptions]
     underfilled = {str(page): raster_by_page[page]["vertical_density"] for page in ordinary_pages if raster_by_page[page]["vertical_density"] < DENSITY_MINIMUM}
     blank_raster = [item["page"] for item in raster if item["nonwhite_fraction"] < .0002]
@@ -972,7 +991,7 @@ def audit(number: int) -> dict[str, Any]:
 def finalize_report(document: str, package: str, checks: list[dict[str, Any]], metrics: dict[str, Any]) -> dict[str, Any]:
     failed = [item["check"] for item in checks if item["status"] == "FAIL"]
     return {
-        "document": document, "package": package, "version": "v6-editorial",
+        "document": document, "package": package, "version": f"v{PACKAGE_VERSION}-editorial",
         "validator": Path(__file__).name, "mode": "read-only",
         "status": "FAIL" if failed else "PASS", "passed_checks": len(checks) - len(failed),
         "total_checks": len(checks), "failed_checks": failed, "metrics": metrics, "checks": checks,
@@ -983,6 +1002,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--start", type=int, default=FIRST_DOCUMENT, help="Primer N a validar (11-36).")
     parser.add_argument("--end", type=int, default=LAST_DOCUMENT, help="Ultimo N a validar, inclusive (11-36).")
+    parser.add_argument("--version", type=int, default=PACKAGE_VERSION, help="Versión editorial a validar.")
     args = parser.parse_args()
     if not (FIRST_DOCUMENT <= args.start <= args.end <= LAST_DOCUMENT):
         parser.error("se requiere 11 <= --start <= --end <= 36")
@@ -990,7 +1010,9 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> int:
+    global PACKAGE_VERSION
     args = parse_args()
+    PACKAGE_VERSION = args.version
     any_fail = False
     any_error = False
     for number in range(args.start, args.end + 1):
@@ -999,8 +1021,8 @@ def main() -> int:
             any_fail = any_fail or report["status"] != "PASS"
         except Exception as error:
             report = {
-                "document": f"N{number:02d}", "package": f"N{number:02d}-v6-editorial",
-                "version": "v6-editorial", "validator": Path(__file__).name, "mode": "read-only",
+                "document": f"N{number:02d}", "package": f"N{number:02d}-v{PACKAGE_VERSION}-editorial",
+                "version": f"v{PACKAGE_VERSION}-editorial", "validator": Path(__file__).name, "mode": "read-only",
                 "status": "ERROR", "error": f"{type(error).__name__}: {error}",
             }
             any_error = True

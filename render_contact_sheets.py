@@ -37,7 +37,7 @@ def pdf_path(number: int) -> Path:
     if number == 10:
         return ROOT / "N10-v9-final" / "output" / "N10-METSI-lectura-previa-v9-final.pdf"
     if 11 <= number <= 36:
-        return ROOT / f"N{number:02d}-v3-editorial" / "output" / f"N{number:02d}-METSI-lectura-previa-v3-final.pdf"
+        return ROOT / f"N{number:02d}-v7-editorial" / "output" / f"N{number:02d}-METSI-lectura-previa-v7-final.pdf"
     return ROOT / code / "output" / f"{code}-METSI-lectura-previa-final.pdf"
 
 
@@ -117,7 +117,7 @@ def render(number: int) -> Path:
         package_qa.mkdir(parents=True, exist_ok=True)
         shutil.copy2(output, package_qa / output.name)
     if 11 <= number <= 36:
-        package_qa = ROOT / f"N{number:02d}-v3-editorial" / "qa"
+        package_qa = ROOT / f"N{number:02d}-v7-editorial" / "qa"
         package_qa.mkdir(parents=True, exist_ok=True)
         shutil.copy2(output, package_qa / output.name)
     shutil.rmtree(tmp)

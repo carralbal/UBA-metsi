@@ -26,6 +26,10 @@ ROOT = Path(__file__).resolve().parent
 REPO = ROOT.parent
 FIRST_DYNAMIC = 11
 LAST_DYNAMIC = 36
+DYNAMIC_SOURCE_VERSION = "v7-editorial"
+DYNAMIC_SOURCE_VERSION_SHORT = "v7"
+DYNAMIC_QA_ROOT = "qa-reports/n11-n36-v7"
+DYNAMIC_QA_VALIDATOR = "validate_n11_n36_v6.py"
 
 PDF_FILES = {
     "N00": "N00-METSI-lectura-previa-v2-final.pdf",
@@ -198,12 +202,12 @@ def load_json(path: Path) -> tuple[dict[str, Any], str | None]:
 
 
 def package_file_problems(code: str, record: dict[str, Any]) -> list[str]:
-    """Lightweight clone/CI proof that the lean v3 package is complete."""
+    """Lightweight clone/CI proof that the lean v7 package is complete."""
     number = int(code[1:])
-    package = REPO / f"{code}-v3-editorial"
+    package = REPO / f"{code}-{DYNAMIC_SOURCE_VERSION}"
     canonical_name = Path(str(record.get("canonical_source", ""))).name
     expected_package_source = package / "source" / canonical_name
-    expected_source_pdf = package / "output" / f"{code}-METSI-lectura-previa-v3-final.pdf"
+    expected_source_pdf = package / "output" / f"{code}-METSI-lectura-previa-{DYNAMIC_SOURCE_VERSION_SHORT}-final.pdf"
     required = [
         package / "document.json",
         package / "manifest.json",
@@ -349,8 +353,14 @@ def build_report(require_sources: bool = False) -> dict[str, Any]:
     for code in dynamic_codes:
         record = record_by_code.get(code, {})
         number = int(code[1:])
-        expected_source = f"{code}-v3-editorial/output/{code}-METSI-lectura-previa-v3-final.pdf"
-        expected_package_source = f"{code}-v3-editorial/source/{Path(str(record.get('canonical_source', ''))).name}"
+        expected_source = (
+            f"{code}-{DYNAMIC_SOURCE_VERSION}/output/"
+            f"{code}-METSI-lectura-previa-{DYNAMIC_SOURCE_VERSION_SHORT}-final.pdf"
+        )
+        expected_package_source = (
+            f"{code}-{DYNAMIC_SOURCE_VERSION}/source/"
+            f"{Path(str(record.get('canonical_source', ''))).name}"
+        )
         expected_canonical_parent = f"{code}-content-canonical/source"
         source_value = record.get("source_pdf", "")
         source = (REPO / source_value).resolve() if isinstance(source_value, str) and source_value else REPO / "__missing__"
@@ -398,9 +408,9 @@ def build_report(require_sources: bool = False) -> dict[str, Any]:
             source_contract_problems.append(f"{code}.title")
         if record.get("qa_status") != "PASS" or not isinstance(record.get("qa_checks"), int) or record.get("qa_checks", 0) <= 0:
             source_contract_problems.append(f"{code}.qa")
-        if record.get("qa_validator") != "validate_block_c_v2.py":
+        if record.get("qa_validator") != DYNAMIC_QA_VALIDATOR:
             source_contract_problems.append(f"{code}.qa_validator")
-        expected_qa_report = f"qa-reports/block-c-v3/{code}-validation-v3.json"
+        expected_qa_report = f"{DYNAMIC_QA_ROOT}/{code}-validation-{DYNAMIC_SOURCE_VERSION_SHORT}.json"
         if record.get("qa_report") != expected_qa_report:
             source_contract_problems.append(f"{code}.qa_report.route")
         qa_report_path = REPO / expected_qa_report
@@ -422,7 +432,7 @@ def build_report(require_sources: bool = False) -> dict[str, Any]:
             ):
                 source_contract_problems.append(f"{code}.qa_report.content")
         if require_sources:
-            validator_path = REPO / "validate_block_c_v2.py"
+            validator_path = REPO / DYNAMIC_QA_VALIDATOR
             if not validator_path.is_file() or safe_hash(validator_path) != record.get("qa_validator_sha256"):
                 source_file_problems.append(f"{code}.qa_validator_sha256")
 
@@ -500,12 +510,12 @@ def build_report(require_sources: bool = False) -> dict[str, Any]:
     release_metadata_match = (
         records_complete
         and publication.get("range") == "N11-N36"
-        and publication.get("source_version") == "v3-editorial"
+        and publication.get("source_version") == DYNAMIC_SOURCE_VERSION
         and publication.get("public_route_contract") == "stable-v1-filename"
         and publication.get("release_sha256") == expected_release_digest
         and root_manifest.get("site_publication") == {
             "range": "N11-N36",
-            "source_version": "v3-editorial",
+            "source_version": DYNAMIC_SOURCE_VERSION,
             "public_route_contract": "stable-v1-filename",
             "release_sha256": expected_release_digest,
         }
@@ -526,7 +536,7 @@ def build_report(require_sources: bool = False) -> dict[str, Any]:
         "all_images_have_alt": bool(parser.images) and all("alt" in image and image["alt"].strip() for image in parser.images),
         "thirty_seven_exact_pdf_downloads": pdf_downloads == set(PDF_FILES.values()) and len(list((ROOT / "pdf").rglob("*.pdf"))) == 37,
         "approved_pdfs_remain_unchanged": bool(approved_pdf_hashes) and {code: actual_pdf_hashes.get(code) for code in approved_pdf_hashes} == approved_pdf_hashes,
-        "n11_n36_pdfs_match_v3_sources_and_manifest": declared_hashes_match and (not require_sources or source_hashes_match),
+        "n11_n36_pdfs_match_v7_sources_and_manifest": declared_hashes_match and (not require_sources or source_hashes_match),
         "pdf_page_counts_match_manifests": len(expected_pages) == 37 and page_counts == expected_pages and not pdf_errors,
         "approved_covers_remain_unchanged": bool(expected_cover_hashes) and {code: actual_cover_hashes.get(code) for code in expected_cover_hashes} == expected_cover_hashes,
         "n11_n36_covers_match_manifest": records_complete and all(

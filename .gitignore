@@ -253,6 +253,8 @@ N3[0-6]-v3-editorial/qa/
 !qa-reports/block-c-v3/*.json
 !qa-reports/n11-n36-v6/
 !qa-reports/n11-n36-v6/*.json
+!qa-reports/n11-n36-v7/
+!qa-reports/n11-n36-v7/*.json
 !qa-contact-sheets/
 qa-contact-sheets/*
 !qa-contact-sheets/N11-contact-sheet.jpg
@@ -305,6 +307,25 @@ N3[0-6]-v6-editorial/qa/*
 !N1[1-9]-v6-editorial/qa/rebuild-audit.json
 !N2[0-9]-v6-editorial/qa/rebuild-audit.json
 !N3[0-6]-v6-editorial/qa/rebuild-audit.json
+
+# Paquetes editoriales v7 N11-N36. Integran el contenido curricular v2
+# auditado y las infografías específicas aprobadas. Se conserva el paquete
+# reproducible completo, la auditoría determinística y sólo el PDF final.
+!N1[1-9]-v7-editorial/
+!N1[1-9]-v7-editorial/**
+!N2[0-9]-v7-editorial/
+!N2[0-9]-v7-editorial/**
+!N3[0-6]-v7-editorial/
+!N3[0-6]-v7-editorial/**
+N1[1-9]-v7-editorial/output/*
+N2[0-9]-v7-editorial/output/*
+N3[0-6]-v7-editorial/output/*
+!N1[1-9]-v7-editorial/output/*-v7-final.pdf
+!N2[0-9]-v7-editorial/output/*-v7-final.pdf
+!N3[0-6]-v7-editorial/output/*-v7-final.pdf
+N1[1-9]-v7-editorial/qa/*
+N2[0-9]-v7-editorial/qa/*
+N3[0-6]-v7-editorial/qa/*
 !qa-contact-sheets/N36-contact-sheet.jpg
 !BLOCK-C-*.md
 !BLOCK-D-*.md
@@ -342,6 +363,10 @@ N3[0-6]-v6-editorial/qa/*
 # estado editorial aunque no sobreviva la conversación que los originó.
 !decisions/
 !decisions/**
+!audits/
+!audits/2026-09-10-editorial-v7-n11-n36-closure.md
+!scripts/
+!scripts/run_editorial_v7_gate.py
 !PROJECT-CONTINUITY.md
 !BLOCK-CANONICAL-AUDIT.json
 !editorial-audit/

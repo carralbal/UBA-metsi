@@ -1,0 +1,25 @@
+{
+  "title":"No se conserva la pieza: se conserva la capacidad",
+  "claim":"La modernización separa la capacidad, el derecho y la evidencia que deben continuar de la implementación heredada que puede adaptarse o retirarse.",
+  "source_sections":[
+    {"id":"thesis","heading":"Tesis","summary":"Legado, regulación y documentación son objetos de análisis con valor, costo, evidencia y ciclo de vida."},
+    {"id":"hh18","heading":"Hotel Horizonte: la regla heredada que todavía protege","summary":"Una llamada contingente conserva provisionalmente una protección comprometida mientras se valida su alcance normativo."},
+    {"id":"legacy","heading":"Movimiento 1 · Leer el legado como capacidad y evidencia","summary":"La pieza visible se separa del conocimiento, dependencia, derecho y riesgo acumulados."},
+    {"id":"transition","heading":"Movimiento 3 · Cambiar con trazabilidad, contingencia y retiro","summary":"La transición conserva originales, prueba operación y declara condición de retiro."}
+  ],
+  "nodes":[
+    {"id":"practice","label":"Llamar antes de reasignar una habitación accesible","role":"evidence","source":["hh18"],"purpose":"Abrir el expediente desde una práctica concreta."},
+    {"id":"commitment","label":"Compromiso verificado","role":"constraint","source":["hh18"],"purpose":"Conservar provisionalmente la protección comprometida."},
+    {"id":"norm","label":"Fuente normativa pendiente","role":"authority","source":["hh18"],"purpose":"Evitar atribuir fuerza jurídica a un testimonio operativo."},
+    {"id":"implementation","label":"Implementación contingente","role":"change","source":["hh18"],"purpose":"Permitir reemplazar la llamada sin perder función."},
+    {"id":"dependency","label":"Dependencia concentrada","role":"risk","source":["legacy"],"purpose":"Distribuir roles, conocimiento y escalamiento."},
+    {"id":"history","label":"Registros históricos","role":"evidence","source":["hh18","transition"],"purpose":"Preservar originales y declarar correspondencias inseguras."},
+    {"id":"transition_gate","label":"Conservar, validar, reemplazar, distribuir y preservar","role":"decision","source":["transition"],"purpose":"Producir salidas diferenciadas en vez de modernización binaria."},
+    {"id":"trace","label":"Fuente, interpretación, diseño, prueba y retiro","role":"governance","source":["transition"],"purpose":"Mantener trazabilidad hasta una salida segura."}
+  ],
+  "edges":[
+    {"id":"open_file","from":"practice","to":"commitment","relation":"evidence","source":["hh18"],"meaning":"La práctica se descompone por función, evidencia y autoridad."},
+    {"id":"classify_to_transition","from":"history","to":"transition_gate","relation":"decision","source":["hh18","transition"],"meaning":"Cada clase recibe una decisión de transición propia."},
+    {"id":"govern_with_trace","from":"transition_gate","to":"trace","relation":"governance","source":["transition"],"meaning":"La salida conserva prueba y condición de retiro."}
+  ]
+}

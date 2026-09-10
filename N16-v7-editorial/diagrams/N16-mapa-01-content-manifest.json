@@ -1,0 +1,29 @@
+{
+  "title":"Una contradicción se clasifica antes de corregirse",
+  "claim":"La coherencia entre modelos se prueba con el mismo episodio, clasifica la diferencia y asigna tratamiento, responsable, plazo y condición de cierre a lo largo del ciclo de vida.",
+  "source_sections":[
+    {"id":"thesis","heading":"Tesis","summary":"La coherencia no exige igualdad literal, sino compatibilidad de propósito, alcance, nivel, tiempo, evidencia y decisión."},
+    {"id":"hh16","heading":"Hotel Horizonte: entregable no significaba lo mismo en toda la cartera","summary":"Proceso, estados, experiencia y tablero usan la misma etiqueta para condiciones diferentes del caso R73."},
+    {"id":"classify","heading":"Movimiento 1 · Clasificar diferencias antes de corregir","summary":"La auditoría distingue diferencia legítima, error, brecha temporal y tensión abierta antes de elegir un tratamiento."},
+    {"id":"lifecycle","heading":"Movimiento 2 · Usar contradicciones para aprender y gobernar cambios","summary":"Los modelos se proponen, validan, usan, revisan, reemplazan y retiran con trazabilidad."}
+  ],
+  "nodes":[
+    {"id":"process","label":"Proceso: inspección, asignación y acceso","role":"evidence","source":["hh16"],"purpose":"Declarar qué condiciones sostienen una llegada operable."},
+    {"id":"states","label":"Estados: preparada para inventario","role":"evidence","source":["hh16"],"purpose":"Mostrar que el término entregable responde otra pregunta."},
+    {"id":"experience","label":"Experiencia: confirmación recibida","role":"evidence","source":["hh16"],"purpose":"Representar cuándo el huésped percibe la promesa."},
+    {"id":"dashboard","label":"Tablero: limpieza terminada","role":"evidence","source":["hh16"],"purpose":"Exponer una métrica que no equivale a llegada cumplida."},
+    {"id":"episode","label":"R73, mismo episodio transversal","role":"decision","source":["hh16","classify"],"purpose":"Contrastar vistas sin comparar páginas completas por semejanza."},
+    {"id":"classification","label":"Diferencia legítima, error, brecha temporal o tensión abierta","role":"constraint","source":["classify"],"purpose":"Evitar corregir antes de comprender la incompatibilidad."},
+    {"id":"treatment","label":"Corregir, decidir, investigar o aceptar riesgo","role":"outcome","source":["classify"],"purpose":"Asignar efecto, responsable, plazo y cierre."},
+    {"id":"lifecycle_node","label":"Proponer, validar, usar, revisar y retirar","role":"governance","source":["lifecycle"],"purpose":"Mantener la cartera coherente a través del cambio."}
+  ],
+  "edges":[
+    {"id":"compare_process","from":"process","to":"episode","relation":"evidence","source":["hh16"],"meaning":"La vista se prueba con la misma reserva y población."},
+    {"id":"compare_states","from":"states","to":"episode","relation":"evidence","source":["hh16"],"meaning":"La diferencia de estado se vuelve explícita."},
+    {"id":"compare_experience","from":"experience","to":"episode","relation":"evidence","source":["hh16"],"meaning":"La promesa se contrasta con la experiencia."},
+    {"id":"compare_dashboard","from":"dashboard","to":"episode","relation":"evidence","source":["hh16"],"meaning":"La métrica se limita a la afirmación que puede sostener."},
+    {"id":"classify_difference","from":"episode","to":"classification","relation":"decision","source":["classify"],"meaning":"El contraste precede a la corrección."},
+    {"id":"assign_treatment","from":"classification","to":"treatment","relation":"governance","source":["classify"],"meaning":"Cada diferencia recibe un tratamiento y cierre explícitos."},
+    {"id":"govern_lifecycle","from":"treatment","to":"lifecycle_node","relation":"change","source":["lifecycle"],"meaning":"El tratamiento modifica o retira modelos con trazabilidad."}
+  ]
+}

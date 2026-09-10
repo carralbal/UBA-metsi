@@ -1,0 +1,28 @@
+{
+  "title": "Un tablero verde puede ocultar una promesa rota",
+  "claim": "La observación se vuelve operable cuando conecta señales técnicas, de recorrido, de negocio y de experiencia con un SLI defendible, un SLO situado, una autoridad capaz de actuar y un aprendizaje que modifica el sistema.",
+  "source_sections": [
+    {"id":"problem","heading":"Los tableros estaban verdes y el huésped esperaba","summary":"Los componentes permanecieron dentro de rango mientras varias reservas quedaron en estado intermedio."},
+    {"id":"hh30","heading":"Hotel Horizonte: todos los tableros estaban verdes y Lucía veía una fila","summary":"Siete ingresos superaron quince minutos aunque identidad, PMS y cerraduras informaban más de 99,9 por ciento."},
+    {"id":"movement1","heading":"Movimiento 1 · Conectar telemetría con la promesa observable","summary":"Cuatro escalas relacionan comportamiento técnico con recorrido, negocio y experiencia."},
+    {"id":"movement2","heading":"Movimiento 2 · Formular SLI, SLO, presupuestos y alertas accionables","summary":"El objetivo se construye con eventos buenos y válidos y se vincula con una política de acción."},
+    {"id":"movement3","heading":"Movimiento 3 · Responder, aprender y modificar la operación","summary":"El incidente separa detección, contención, recuperación, reparación y aprendizaje verificable."}
+  ],
+  "nodes": [
+    {"id":"components","label":"Tres componentes sobre 99,9 por ciento","role":"technical_signal","source":["hh30"],"purpose":"Mostrar que la disponibilidad local no representa la promesa completa."},
+    {"id":"journey_failure","label":"Siete llegadas sobre quince minutos","role":"journey_consequence","source":["hh30"],"purpose":"Hacer visible la contradicción que los tableros excluyen."},
+    {"id":"signal_scales","label":"Cuatro escalas de señal","role":"evidence_assembly","source":["movement1"],"purpose":"Conservar el mismo episodio entre técnica, recorrido, negocio y experiencia."},
+    {"id":"sli","label":"SLI del ingreso","role":"service_indicator","source":["movement2"],"purpose":"Definir eventos buenos, válidos, ventana y condiciones de representación."},
+    {"id":"slo","label":"SLO de 99 por ciento en veintiocho días","role":"service_objective","source":["movement2"],"purpose":"Vincular el indicador con un compromiso y un guardrail crítico separado."},
+    {"id":"alert","label":"Alerta con autoridad","role":"decision_gate","source":["movement2"],"purpose":"Relacionar condición, responsable y primera acción segura."},
+    {"id":"incident_loop","label":"Bucle del incidente","role":"learning_loop","source":["movement3"],"purpose":"Distinguir detectar, contener, recuperar, reparar y aprender."}
+  ],
+  "edges": [
+    {"id":"contradicts","from":"components","to":"journey_failure","relation":"contradicts","source":["hh30"],"meaning":"Los tableros saludables no impiden que el recorrido se degrade."},
+    {"id":"contextualizes","from":"signal_scales","to":"sli","relation":"contextualizes","source":["movement1","movement2"],"meaning":"Las cuatro escalas permiten calcular un indicador sin perder el episodio."},
+    {"id":"governs","from":"sli","to":"slo","relation":"is_governed_by","source":["movement2"],"meaning":"El SLO fija un nivel esperado para el indicador dentro de una ventana."},
+    {"id":"activates","from":"slo","to":"alert","relation":"activates_policy","source":["movement2"],"meaning":"La tasa de quema o un daño crítico convocan una autoridad y una acción."},
+    {"id":"coordinates","from":"alert","to":"incident_loop","relation":"coordinates_response","source":["movement3"],"meaning":"La alerta inicia una respuesta que distingue contención, recuperación y reparación."},
+    {"id":"learns","from":"incident_loop","to":"signal_scales","relation":"updates","source":["movement3"],"meaning":"El aprendizaje modifica señales, contratos o prácticas y vuelve a comprobar su efecto."}
+  ]
+}

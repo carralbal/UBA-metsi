@@ -28,7 +28,7 @@ PORTRAIT_ROOT = ROOT / "assets" / "portraits-block-c"
 SHARED_PORTRAITS = ROOT / "assets" / "portraits"
 SUPPORT_ROOT = ROOT / "assets" / "rebuild-support"
 APPROVED_INFOGRAPHIC_ROOT = ROOT / "editorial-standard" / "approved-infographics"
-PACKAGE_VERSION = 6
+PACKAGE_VERSION = 7
 MATCHES = ROOT / "N10-v9-final" / "assets" / "matches-close.png"
 HOTEL_HORIZONTE = SUPPORT_ROOT / "hotel-horizonte-canonical-v1.png"
 
@@ -464,9 +464,9 @@ CONSEQUENCE_PHOTO_DOCS = {
     11, 12, 14, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
 }
 
-# These movement-three sections already continued onto a short final page.
-# Splitting the approved movement diptych across movements two and three turns
-# that page into a source-relevant photographic close.
+# These documents use one documentary band before Movimiento 2.  The second
+# image remains available for the full-page pause and is not repeated after
+# Movimiento 3, where it previously produced isolated image-only pages.
 MOVEMENT_THREE_PHOTO_DOCS = {11, 12, 13, 14, 15, 16, 17, 21, 23, 24}
 
 HOTEL_ASSET_SOURCES = {
@@ -478,19 +478,32 @@ HOTEL_ASSET_SOURCES = {
     "camila-duarte-v2.png": ROOT / "assets" / "hotel-portraits" / "camila-duarte-v2.png",
 }
 
-SOURCES = {
-    n: next((ROOT / f"N{n}-content-canonical" / "source").glob("*.md"))
-    for n in range(11, 37)
-}
+def canonical_source(number: int) -> Path:
+    """Select the newest approved content source without relying on glob order."""
+    source_root = ROOT / f"N{number}-content-canonical" / "source"
+    v2 = sorted(source_root.glob("*-content-canonical-v2.md"))
+    if len(v2) == 1:
+        return v2[0]
+    if len(v2) > 1:
+        raise RuntimeError(f"Más de una fuente v2 para N{number:02d}: {v2}")
+    v1 = sorted(source_root.glob("*-content-canonical-v1.md"))
+    if len(v1) != 1:
+        raise RuntimeError(f"No se pudo resolver una fuente canónica única para N{number:02d}")
+    return v1[0]
+
+
+SOURCES = {n: canonical_source(n) for n in range(11, 37)}
 
 # Movement prose normally flows as continuous magazine text.  Five measured
 # endings are long enough to constitute a complete final argument but too short
 # to occupy their own ordinary page.  They receive a deliberate editorial close
 # without moving or rewriting a source block.
 MOVEMENT_EDITORIAL_CLOSES: set[tuple[int, int]] = {
-    (20, 2), (22, 3), (30, 2),
+    (11, 3), (14, 3), (15, 3), (16, 3), (17, 3), (20, 2), (21, 3),
+    (22, 3), (23, 3), (28, 3), (29, 3), (30, 2), (32, 3), (33, 3),
 }
 MOVEMENT_CLOSE_RETAIN_WORDS: dict[tuple[int, int], int] = {}
+MOVEMENT_CLOSE_SUBSECTIONS: dict[tuple[int, int], int] = {}
 
 REFERENTS = {
     11: ["george-box", "victoria-pillitteri", "robert-groves", "helen-nissenbaum", "elham-tabassi", "cathy-oneil"],
@@ -1275,7 +1288,7 @@ def split_last_paragraph_html(body: str) -> tuple[str, str]:
 
 
 def split_last_subsection_as_editorial_close(
-    body: str, variant: int, retain_words: int = 0
+    body: str, variant: int, retain_words: int = 0, subsection_count: int = 1
 ) -> tuple[str, str]:
     """Keep a movement's final argument together as a designed close.
 
@@ -1286,8 +1299,10 @@ def split_last_subsection_as_editorial_close(
     matches = list(re.finditer(r"(<h3\b[^>]*>.*?</h3>)(.*?)(?=<h3\b|\Z)", body, re.S))
     if not matches:
         return body, ""
-    match = matches[-1]
-    heading, prose = match.group(1), match.group(2)
+    selected = matches[-max(1, min(subsection_count, len(matches))):]
+    match = selected[0]
+    heading = selected[0].group(1)
+    prose = selected[0].group(2) + "".join(item.group(1) + item.group(2) for item in selected[1:])
     word_count = len(re.findall(r"\b\w+\b", re.sub(r"<[^>]+>", " ", prose)))
     retained = ""
     close_heading = heading
@@ -1313,7 +1328,7 @@ def split_last_subsection_as_editorial_close(
         f'<aside class="movement-editorial-close {length_class}{continuation_class} close-variant-{variant}">'
         f'{close_heading}<div class="movement-editorial-close-body">{close_prose}</div></aside>'
     )
-    return body[:match.start()] + retained + body[match.end():], close
+    return body[:match.start()] + retained + body[selected[-1].end():], close
 
 
 def wrap_hotel_text_columns(body: str, column_count: int = 3) -> str:
@@ -1783,7 +1798,10 @@ def build(number: int) -> dict:
     rendered_section = 0
     diagram_cursor = 0
     first_pause_after = 1
-    second_pause_after = 8
+    # The second pause closes the three-movement sequence.  Interrupting it
+    # after Movimiento 2 expelled the final lines of that section onto nearly
+    # empty pages in several documents.
+    second_pause_after = 9
     pause_map = {
         first_pause_after: ("pause-01.png", FIRST_PAUSE_QUOTES[number], PHOTO_ALTS[number][1]),
         second_pause_after: ("pause-02.png", "", PHOTO_ALTS[number][2]),
@@ -1877,6 +1895,10 @@ def build(number: int) -> dict:
                 if number in APPROVED_INFOGRAPHICS:
                     after_section += (
                         '<section class="approved-infographic-page">'
+                        '<header>'
+                        f'<span>METSI · N{number:02d} · MAPA DE DECISIÓN</span>'
+                        f'<p>{html.escape(diagram["claim"])}</p>'
+                        '</header>'
                         f'<figure><img src="{diagram["file"]}" alt="{html.escape(diagram["claim"])}">'
                         f'<figcaption>{html.escape(diagram.get("caption", diagram["claim"]))}</figcaption>'
                         '</figure></section>'
@@ -1925,6 +1947,7 @@ def build(number: int) -> dict:
                 section_body,
                 (number + movement_number) % 3,
                 MOVEMENT_CLOSE_RETAIN_WORDS.get((number, movement_number), 0),
+                MOVEMENT_CLOSE_SUBSECTIONS.get((number, movement_number), 1),
             )
         if section.title.startswith("Movimiento 2"):
             if number in MOVEMENT_THREE_PHOTO_DOCS:
@@ -1939,15 +1962,6 @@ def build(number: int) -> dict:
                     "Dos registros del trabajo real permiten contrastar la decisión con sus condiciones de operación.",
                     "movement-two-photo",
                 )
-        if (
-            section.title.startswith("Movimiento 3")
-            and number in MOVEMENT_THREE_PHOTO_DOCS
-        ):
-            after_body += photo_band(
-                support[4], SUPPORT_ALTS[number][4],
-                "La segunda evidencia devuelve la prueba al contexto, las consecuencias y la posibilidad de revisión.",
-                "movement-three-photo",
-            )
         if section.title == "Errores frecuentes":
             after_body += photo_band(
                 support[5], SUPPORT_ALTS[number][5],
@@ -2128,7 +2142,7 @@ def build(number: int) -> dict:
         "source": f"source/{source.name}",
         "source_sha256": sha(source),
         "source_words": len(re.findall(r"\b[\wÁÉÍÓÚÜÑáéíóúüñ'-]+\b", source.read_text(encoding="utf-8"))),
-        "content_audit": "canonical-v2-under-exhaustive-audit",
+        "content_audit": "curricular-expansion-v2-audited-pass",
         "cover": {"file": cover.name, "source": f"assets/{cover.name}", "sha256": sha(cover), "alt": COVER_ALTS[number], "photographic_origin": "native_black_and_white", "render_treatment": "no_grayscale_conversion"},
         "internal_images": ["pause-01.png", "pause-02.png", hotel_horizonte_asset.name] + sorted({path.name for path in support}) + ([story_asset.name] if story_asset else []),
         "image_manifest": [
@@ -2629,6 +2643,12 @@ body.document-n21.block-c .thesis-with-approved-plate .section-lead p{font-size:
 body.document-n21.block-c .questions .section-body{font-size:12.4pt!important;line-height:1.5!important}
 body.document-n21.block-c .questions .section-body ol{gap:14mm 12mm!important}
 body.document-n21.block-c .questions .section-body>p:last-child{margin-top:15mm!important;font-size:9.2pt!important;line-height:1.42!important}
+body.block-c:is(.document-n11,.document-n12,.document-n14,.document-n15,.document-n17,.document-n20,.document-n21) .questions .section-body ol{
+  gap:22mm 12mm!important
+}
+body.block-c:is(.document-n11,.document-n12,.document-n14,.document-n15,.document-n17,.document-n20,.document-n21) .questions .section-body>p:last-child{
+  margin-top:18mm!important
+}
 body.document-n21.block-c .block-c-references .section-body{font-size:10.1pt!important;line-height:1.42!important}
 body.document-n21.block-c .block-c-references li{margin-bottom:4.4mm!important}
 body.document-n22.block-c .block-c-thesis .section-lead p{font-size:25pt!important;line-height:1.44!important}
@@ -2854,15 +2874,28 @@ body.block-c .approved-infographic-page{
   box-sizing:border-box!important;height:236mm!important;min-height:236mm!important;
   break-before:page!important;page-break-before:always!important;
   break-after:page!important;page-break-after:always!important;
-  display:flex!important;align-items:center!important;justify-content:center!important;
-  padding:14mm 8mm!important;background:#F7F7F4!important
+  display:grid!important;grid-template-rows:auto 1fr!important;
+  align-items:start!important;padding:12mm 8mm 10mm!important;background:#F7F7F4!important
+}
+body.block-c .approved-infographic-page header{
+  max-width:158mm!important;border-top:.35mm solid #202020!important;
+  padding-top:5mm!important
+}
+body.block-c .approved-infographic-page header span{
+  display:block!important;font:700 7pt/1 Avenir,sans-serif!important;
+  letter-spacing:.16em!important;color:#4F534F!important;text-transform:uppercase!important
+}
+body.block-c .approved-infographic-page header p{
+  max-width:150mm!important;margin:6mm 0 0!important;
+  font:400 19pt/1.16 Didot,"Bodoni 72",serif!important;color:#171817!important
 }
 body.block-c .approved-infographic-page figure{
-  width:100%!important;margin:0!important;display:flex!important;
-  flex-direction:column!important;align-items:stretch!important
+  width:100%!important;height:100%!important;margin:8mm 0 0!important;
+  display:flex!important;flex-direction:column!important;justify-content:flex-end!important;
+  align-items:stretch!important
 }
 body.block-c .approved-infographic-page img{
-  display:block!important;width:100%!important;height:auto!important;max-height:180mm!important;
+  display:block!important;width:100%!important;height:auto!important;max-height:126mm!important;
   object-fit:contain!important
 }
 body.block-c .approved-infographic-page figcaption{
@@ -2945,6 +2978,31 @@ body.block-c.document-n16 .movement-3 .section-body:not(.section-lead){
 body.block-c.document-n16 .movement-3 .section-body:not(.section-lead) p{margin-bottom:1.5mm!important}
 body.block-c.document-n16 .movement-3 .section-body:not(.section-lead) h3{
   margin:3.5mm 0 1.5mm!important;padding-top:1.7mm!important
+}
+body.block-c.document-n23 .movement-3 .section-body:not(.section-lead){
+  font-size:12pt!important;line-height:1.42!important
+}
+body.block-c.document-n23 .movement-3 .section-body:not(.section-lead) p{
+  margin-bottom:2.4mm!important
+}
+body.block-c.document-n23 .movement-3 .section-body:not(.section-lead) h3{
+  margin:4mm 0 2mm!important;padding-top:2mm!important
+}
+body.block-c.document-n20 .movement-2 .section-body:not(.section-lead){
+  font-size:10.8pt!important;line-height:1.34!important
+}
+body.block-c.document-n20 .movement-2 .section-body:not(.section-lead) p{
+  margin-bottom:2mm!important
+}
+body.block-c.document-n20 .movement-2 .section-body:not(.section-lead) h3{
+  margin:3.6mm 0 1.8mm!important;padding-top:1.7mm!important
+}
+body.block-c.document-n30 .movement-2 .section-body:not(.section-lead){
+  font-size:10.2pt!important;line-height:1.3!important
+}
+body.block-c.document-n30 .movement-2 .section-body:not(.section-lead) p{margin-bottom:1.6mm!important}
+body.block-c.document-n30 .movement-2 .section-body:not(.section-lead) h3{
+  margin:3.3mm 0 1.5mm!important;padding-top:1.5mm!important
 }
 body.block-c .movement-editorial-close{
   column-span:all;box-sizing:border-box;width:100%;margin:5mm 0 0;padding:9mm 10mm;
@@ -3496,11 +3554,13 @@ body.block-c.document-n11 .questions .section-body{
   font-size:11.7pt!important;line-height:1.45!important
 }
 body.block-c.document-n11 .questions .section-body ol{
-  gap:11mm 12mm!important
+  gap:14mm 12mm!important
 }
 body.block-c.document-n11 .questions .section-body>p:last-child{
-  margin-top:9mm!important
+  margin-top:12mm!important
 }
+body.block-c.document-n17 .questions .section-body ol{gap:23mm 12mm!important}
+body.block-c.document-n17 .questions .section-body>p:last-child{margin-top:19mm!important}
 '''
 
 

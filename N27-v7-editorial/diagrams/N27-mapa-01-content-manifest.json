@@ -1,0 +1,26 @@
+{
+  "title": "El contrato real tiene cuatro capas",
+  "claim": "Un mensaje aceptado sólo constituye un contrato defendible cuando forma, significado, tiempo y operación permiten anticipar la misma consecuencia y una reparación practicable.",
+  "source_sections": [
+    {"id":"problem","heading":"El mensaje era válido y la habitación seguía bloqueada","summary":"La sintaxis coincidía, pero significado, tiempo y trabajo no."},
+    {"id":"hh27","heading":"Hotel Horizonte: liberada no significaba lo mismo para todos","summary":"HH-27 separa liberada de asignable y prueba duplicados, demora y desorden."},
+    {"id":"movement1","heading":"Movimiento 1 · Acordar forma, significado, tiempo y efecto","summary":"El contrato real reúne cuatro dimensiones con pruebas diferentes."},
+    {"id":"movement2","heading":"Movimiento 2 · Proteger invariantes frente a duplicados, demoras y errores","summary":"Duplicados y demoras no deben multiplicar ni revocar efectos."},
+    {"id":"movement3","heading":"Movimiento 3 · Evolucionar y probar contratos","summary":"La aceptación requiere convivencia, observación y reparación."}
+  ],
+  "nodes": [
+    {"id":"event","label":"liberada","role":"received_state","source":["problem","hh27"],"purpose":"Conservar un mismo episodio como unidad de prueba."},
+    {"id":"syntax","label":"Sintaxis","role":"contract_layer","source":["movement1"],"purpose":"Definir forma, tipos, campos y versión."},
+    {"id":"semantics","label":"Semántica","role":"contract_layer","source":["hh27","movement1"],"purpose":"Distinguir limpieza terminada de asignabilidad operacional."},
+    {"id":"time","label":"Tiempo","role":"contract_layer","source":["hh27","movement1","movement2"],"purpose":"Declarar evento, recepción, proceso, vigencia y tratamiento del desorden."},
+    {"id":"operation","label":"Operación","role":"contract_layer","source":["hh27","movement1","movement3"],"purpose":"Vincular efecto, error, autoridad y reparación."},
+    {"id":"acceptance","label":"Contrato completo","role":"decision_gate","source":["movement3"],"purpose":"Aceptar sólo cuando productor, consumidor y operación anticipan la misma consecuencia."}
+  ],
+  "edges": [
+    {"id":"decomposes","from":"event","to":"syntax","relation":"is_examined_as","source":["problem"],"meaning":"El episodio se prueba primero por su forma."},
+    {"id":"means","from":"syntax","to":"semantics","relation":"must_add","source":["movement1"],"meaning":"La estructura aceptada todavía necesita un significado delimitado."},
+    {"id":"validity","from":"semantics","to":"time","relation":"must_add","source":["movement1"],"meaning":"El significado sólo puede usarse dentro de una vigencia y un orden explícitos."},
+    {"id":"consequence","from":"time","to":"operation","relation":"must_add","source":["movement1"],"meaning":"La temporalidad debe desembocar en una próxima acción segura."},
+    {"id":"accepts","from":"operation","to":"acceptance","relation":"enables","source":["movement3"],"meaning":"La prueba integral acepta el compromiso sobre la consecuencia y la reparación."}
+  ]
+}

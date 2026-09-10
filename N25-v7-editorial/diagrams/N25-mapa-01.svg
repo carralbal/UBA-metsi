@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600" role="img" aria-labelledby="title desc">
+  <title id="title">N25, el flujo conserva identidad y hace visible la espera</title>
+  <desc id="desc">Una unidad de cambio se sigue desde la demanda reconocida hasta la capacidad en uso. Dos relojes distinguen tiempo desde la demanda y tiempo desde el compromiso. De cuarenta y seis días, ocho contienen trabajo activo y treinta y ocho corresponden a espera en cuatro colas. La intervención reduce trabajo en curso de siete a tres, cambia validación mensual por semanal, incorpora Operaciones desde el diseño y cierra feedback sólo cuando una señal modifica una regla o acción.</desc>
+  <defs>
+    <style>
+      .sans{font-family:Inter,Arial,Helvetica,sans-serif;fill:#202020}.serif{font-family:Georgia,'Times New Roman',serif;fill:#202020}.eyebrow{font-size:22px;font-weight:700;letter-spacing:6px}.title{font-size:45px;letter-spacing:-1px}.subtitle{font-size:20px;fill:#5E605D}.section{font-size:18px;font-weight:700;letter-spacing:4px}.label{font-size:18px;font-weight:700}.body{font-size:16px;fill:#4F524F}.small{font-size:14px;fill:#646764}.number{font-size:14px;font-weight:700;letter-spacing:3px}.metric{font-size:48px;font-weight:700}.rule{stroke:#A8AAA6;stroke-width:2}.edge{fill:none;stroke:#737673;stroke-width:3}.outline{fill:#FFFFFF;stroke:#777A76;stroke-width:2}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#737673"/></marker>
+  </defs>
+  <rect width="1200" height="1600" fill="#F7F7F4"/><rect x="34" y="34" width="1132" height="1532" rx="18" fill="none" stroke="#C6C8C4" stroke-width="2"/>
+  <path d="M68 72 H188 L176 92 H56 Z" fill="#CFFF00"/><text x="214" y="91" class="sans eyebrow">N25 · MAPA TEMPORAL</text>
+  <text x="68" y="155" class="serif title">El flujo conserva identidad y hace visible la espera</text>
+  <text x="70" y="196" class="sans subtitle">Una ceremonia ordena el calendario; una unidad real revela el sistema.</text><path d="M68 226 H1132" class="rule"/>
+
+  <g aria-label="Una unidad y dos relojes">
+    <text x="72" y="270" class="sans section">UNA UNIDAD, DOS RELOJES</text>
+    <path d="M72 302 H1128 V542 H72 Z" class="outline"/>
+    <path d="M128 374 H1028" class="edge" marker-end="url(#arrow)"/>
+    <g><circle cx="132" cy="374" r="24" fill="#CFFF00" stroke="#202020" stroke-width="2"/><text x="132" y="380" class="sans number" text-anchor="middle">01</text><text x="132" y="424" class="sans label" text-anchor="middle">Demanda</text><text x="132" y="450" class="sans small" text-anchor="middle">reconocida</text></g>
+    <g><circle cx="356" cy="374" r="24" fill="#FFFFFF" stroke="#202020" stroke-width="2"/><text x="356" y="380" class="sans number" text-anchor="middle">02</text><text x="356" y="424" class="sans label" text-anchor="middle">Definición</text><text x="356" y="450" class="sans small" text-anchor="middle">compartida</text></g>
+    <g><circle cx="580" cy="374" r="24" fill="#FFFFFF" stroke="#202020" stroke-width="2"/><text x="580" y="380" class="sans number" text-anchor="middle">03</text><text x="580" y="424" class="sans label" text-anchor="middle">Cambio</text><text x="580" y="450" class="sans small" text-anchor="middle">integrado</text></g>
+    <g><circle cx="804" cy="374" r="24" fill="#FFFFFF" stroke="#202020" stroke-width="2"/><text x="804" y="380" class="sans number" text-anchor="middle">04</text><text x="804" y="424" class="sans label" text-anchor="middle">Validación</text><text x="804" y="450" class="sans small" text-anchor="middle">operacional</text></g>
+    <g><circle cx="1028" cy="374" r="24" fill="#FFFFFF" stroke="#202020" stroke-width="2"/><text x="1028" y="380" class="sans number" text-anchor="middle">05</text><text x="1028" y="424" class="sans label" text-anchor="middle">Capacidad</text><text x="1028" y="450" class="sans small" text-anchor="middle">en uso</text></g>
+    <path d="M104 492 H566" class="rule"/><path d="M634 492 H1096" class="rule"/>
+    <text x="104" y="520" class="sans number">RELOJ DE DEMANDA</text><text x="566" y="520" class="sans body" text-anchor="end">46 días hasta uso</text>
+    <text x="634" y="520" class="sans number">RELOJ DE COMPROMISO</text><text x="1096" y="520" class="sans body" text-anchor="end">trabajo abierto visible</text>
+  </g>
+
+  <g aria-label="Trabajo y espera">
+    <text x="72" y="604" class="sans section">CUARENTA Y SEIS DÍAS NO SON CUARENTA Y SEIS DÍAS DE TRABAJO</text>
+    <path d="M72 636 H1128 V842 H72 Z" fill="#E4E6E3" stroke="#777A76" stroke-width="2"/>
+    <text x="108" y="706" class="sans metric">8</text><text x="172" y="690" class="sans label">días activos</text><text x="172" y="720" class="sans body">definir, construir, probar y corregir</text>
+    <text x="666" y="706" class="sans metric">38</text><text x="754" y="690" class="sans label">días de espera</text><text x="754" y="720" class="sans body">la demora que el tablero local no mostraba</text>
+    <rect x="108" y="756" width="174" height="28" fill="#CFFF00"/><rect x="282" y="756" width="810" height="28" fill="#C9CBC8"/>
+    <text x="108" y="820" class="sans small">definición</text><text x="356" y="820" class="sans small">revisión</text><text x="602" y="820" class="sans small">ventana técnica</text><text x="894" y="820" class="sans small">validación de Operaciones</text>
+  </g>
+
+  <g aria-label="Intervenciones sobre el sistema">
+    <text x="72" y="906" class="sans section">INTERVENIR SOBRE EL SISTEMA, NO SOBRE LA APARIENCIA DE ACTIVIDAD</text>
+    <path d="M72 938 H1128 V1194 H72 Z" class="outline"/>
+    <g><text x="108" y="986" class="sans number">TRABAJO EN CURSO</text><text x="108" y="1022" class="sans label">7 activas</text><path d="M248 1012 H390" class="edge" marker-end="url(#arrow)"/><text x="420" y="1022" class="sans label">3 activas</text><text x="420" y="1050" class="sans small">cerrar antes de comenzar más</text></g>
+    <path d="M600 962 V1170" class="rule"/>
+    <g><text x="642" y="986" class="sans number">VALIDACIÓN</text><text x="642" y="1022" class="sans label">mensual</text><path d="M756 1012 H884" class="edge" marker-end="url(#arrow)"/><text x="914" y="1022" class="sans label">semanal</text><text x="914" y="1050" class="sans small">sobre cortes pequeños</text></g>
+    <path d="M108 1080 H556" class="rule"/><path d="M642 1080 H1092" class="rule"/>
+    <g><text x="108" y="1120" class="sans number">OPERACIONES</text><text x="108" y="1154" class="sans body">contexto al final</text><path d="M282 1146 H390" class="edge" marker-end="url(#arrow)"/><text x="420" y="1154" class="sans body">participa desde el diseño</text></g>
+    <g><text x="642" y="1120" class="sans number">FEEDBACK</text><text x="642" y="1154" class="sans body">mensaje enviado</text><path d="M806 1146 H894" class="edge" marker-end="url(#arrow)"/><text x="924" y="1154" class="sans body">regla o acción modificada</text></g>
+  </g>
+
+  <g aria-label="Circuito de retroalimentación">
+    <text x="72" y="1258" class="sans section">EL CIRCUITO CIERRA CUANDO CAMBIA UNA DECISIÓN</text>
+    <path d="M72 1290 H1128 V1460 H72 Z" fill="#E4E6E3" stroke="#777A76" stroke-width="2"/>
+    <path d="M138 1350 H1048" class="edge" marker-end="url(#arrow)"/>
+    <g><circle cx="142" cy="1350" r="24" fill="#CFFF00" stroke="#202020" stroke-width="2"/><text x="142" y="1356" class="sans number" text-anchor="middle">01</text><text x="142" y="1400" class="sans label" text-anchor="middle">Señal</text><text x="142" y="1426" class="sans small" text-anchor="middle">con contexto</text></g>
+    <g><circle cx="366" cy="1350" r="24" fill="#FFFFFF" stroke="#202020" stroke-width="2"/><text x="366" y="1356" class="sans number" text-anchor="middle">02</text><text x="366" y="1400" class="sans label" text-anchor="middle">Destinatario</text><text x="366" y="1426" class="sans small" text-anchor="middle">con autoridad</text></g>
+    <g><circle cx="590" cy="1350" r="24" fill="#FFFFFF" stroke="#202020" stroke-width="2"/><text x="590" y="1356" class="sans number" text-anchor="middle">03</text><text x="590" y="1400" class="sans label" text-anchor="middle">Decisión</text><text x="590" y="1426" class="sans small" text-anchor="middle">oportuna</text></g>
+    <g><circle cx="814" cy="1350" r="24" fill="#FFFFFF" stroke="#202020" stroke-width="2"/><text x="814" y="1356" class="sans number" text-anchor="middle">04</text><text x="814" y="1400" class="sans label" text-anchor="middle">Regla</text><text x="814" y="1426" class="sans small" text-anchor="middle">modificada</text></g>
+    <g><circle cx="1038" cy="1350" r="24" fill="#FFFFFF" stroke="#202020" stroke-width="2"/><text x="1038" y="1356" class="sans number" text-anchor="middle">05</text><text x="1038" y="1400" class="sans label" text-anchor="middle">Efecto</text><text x="1038" y="1426" class="sans small" text-anchor="middle">observado</text></g>
+  </g>
+  <path d="M72 1502 H1128" class="rule"/><text x="72" y="1538" class="sans small">MÁS ACTIVIDAD LOCAL PUEDE PRODUCIR MÁS ESPERA TOTAL.</text><text x="1128" y="1538" class="sans small" text-anchor="end">N25 · METSI</text>
+</svg>
