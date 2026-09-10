@@ -1,0 +1,30 @@
+{
+  "title": "La tarea visible no es el tiempo del servicio",
+  "claim": "Un proceso de punta a punta se define por la promesa y debe seguir instancias completas para hacer visibles trabajo, espera, handoffs, colas, excepciones y reparación.",
+  "source_sections": [
+    {"id":"thesis","heading":"Tesis","summary":"La frontera del proceso se define por la promesa y el outcome, no por un área, una aplicación ni una tarea."},
+    {"id":"hh14","heading":"Hotel Horizonte: el check-in empieza antes del mostrador y termina después de la llave","summary":"Cuatro minutos de atención visibles conviven con veintisiete minutos promedio de experiencia y colas ocultas en varias áreas."},
+    {"id":"handoffs","heading":"Handoff: traslado de trabajo, información y responsabilidad","summary":"Un handoff cambia responsabilidad y necesita condición de aceptación, evidencia y vía de devolución."},
+    {"id":"instrument","heading":"Instrumento HH-14: mapa de flujo real y excepciones","summary":"HH-14 organiza outcome, demanda, tareas, decisiones, handoffs, colas, tiempos, retrabajo, excepciones, autoridad y evidencia."}
+  ],
+  "nodes": [
+    {"id":"local_metric","label":"Cuatro minutos de atención en mostrador","role":"evidence","source":["hh14"],"purpose":"Mostrar la medición local que no representa la experiencia completa."},
+    {"id":"end_to_end_time","label":"Veintisiete minutos promedio desde llegada hasta acceso","role":"evidence","source":["hh14"],"purpose":"Delimitar el tiempo de servicio experimentado por el huésped."},
+    {"id":"arrival","label":"Llegada como evento inicial","role":"evidence","source":["hh14"],"purpose":"Iniciar la instancia que será seguida de punta a punta."},
+    {"id":"inspection_queue","label":"Cola de inspección con edad y responsable","role":"constraint","source":["hh14","instrument"],"purpose":"Hacer visible una espera que no pertenece al mostrador."},
+    {"id":"handoff","label":"Transferencia de responsabilidad de Housekeeping a Recepción","role":"authority","source":["handoffs","hh14"],"purpose":"Distinguir un handoff completo del simple envío de información."},
+    {"id":"identity_gate","label":"Identidad","role":"decision","source":["hh14","instrument"],"purpose":"Separar el camino habitual de una excepción que necesita autoridad."},
+    {"id":"assignment","label":"Asignación y acceso vigentes","role":"outcome","source":["hh14"],"purpose":"Conectar el trabajo interno con una capacidad utilizable."},
+    {"id":"outcome","label":"La llave abre o existe una reparación visible","role":"outcome","source":["thesis","hh14"],"purpose":"Definir un cierre verificable desde la promesa y no desde una tarea."},
+    {"id":"identity_exception","label":"Identidad no conciliada como excepción frecuente","role":"constraint","source":["hh14","instrument"],"purpose":"Mostrar una variante que requiere autoridad, estado y devolución sin reiniciar el caso."}
+  ],
+  "edges": [
+    {"id":"enter_queue","from":"arrival","to":"inspection_queue","relation":"sequence","source":["hh14"],"meaning":"La instancia puede esperar una condición antes de llegar al mostrador."},
+    {"id":"transfer_responsibility","from":"inspection_queue","to":"handoff","relation":"authority","source":["handoffs"],"meaning":"La salida de Housekeeping necesita una aceptación accionable por Recepción."},
+    {"id":"classify_variant","from":"handoff","to":"identity_gate","relation":"decision","source":["hh14","instrument"],"meaning":"La identidad del caso determina si sigue el recorrido ordinario o exige tratamiento específico."},
+    {"id":"complete_access","from":"identity_gate","to":"assignment","relation":"sequence","source":["hh14"],"meaning":"Una identidad conciliada permite asignar habitación y acceso."},
+    {"id":"observe_outcome","from":"assignment","to":"outcome","relation":"outcome","source":["thesis","hh14"],"meaning":"El proceso cierra cuando el huésped puede usar la capacidad prometida o acceder a reparación."},
+    {"id":"handle_exception","from":"identity_gate","to":"identity_exception","relation":"constraint","source":["hh14","instrument"],"meaning":"Una variante frecuente se separa para recibir autoridad y tratamiento explícitos."},
+    {"id":"return_to_flow","from":"identity_exception","to":"outcome","relation":"feedback","source":["instrument"],"meaning":"La excepción resuelta vuelve al flujo sin borrar trabajo ya validado."}
+  ]
+}

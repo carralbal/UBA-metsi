@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600" role="img" aria-labelledby="title desc">
+  <title id="title">N28, la calidad se aprueba por escenario, no por promedio</title>
+  <desc id="desc">El tablero muestra que 194 de 200 ingresos, el 97 por ciento, demoraron menos de diez minutos, pero ese promedio no autoriza una promesa general. El expediente separa tres escenarios. Para ingreso ordinario exige al menos 95 por ciento dentro de diez minutos y ninguna pérdida de integridad. Para llegada accesible exige verificación de las condiciones solicitadas antes de prometer y detención si falta alguna. Para caída de identidad exige llave limitada, autoridad registrada y reconciliación sin duplicados. Cada escenario vincula población, riesgo, evidencia y una decisión de alcance.</desc>
+  <defs>
+    <style>
+      .sans{font-family:Inter,Arial,Helvetica,sans-serif;fill:#202020}.serif{font-family:Georgia,'Times New Roman',serif;fill:#202020}.eyebrow{font-size:22px;font-weight:700;letter-spacing:6px}.title{font-size:45px;letter-spacing:-1px}.scenario{font-size:29px;letter-spacing:-.4px}.subtitle{font-size:20px;fill:#5E605D}.section{font-size:18px;font-weight:700;letter-spacing:4px}.label{font-size:18px;font-weight:700}.body{font-size:16px;fill:#4F524F}.small{font-size:14px;fill:#646764}.number{font-size:14px;font-weight:700;letter-spacing:3px}.evidence{font-size:10.5px;font-weight:700;letter-spacing:1.1px}.metric{font-size:64px}.rule{stroke:#A8AAA6;stroke-width:2}.outline{fill:#FFFFFF;stroke:#777A76;stroke-width:2}.pale{fill:#E4E6E3;stroke:#777A76;stroke-width:2}.dash{fill:none;stroke:#8E918D;stroke-width:2;stroke-dasharray:9 9}
+    </style>
+  </defs>
+  <rect width="1200" height="1600" fill="#F7F7F4"/><rect x="34" y="34" width="1132" height="1532" rx="18" fill="none" stroke="#C6C8C4" stroke-width="2"/>
+  <path d="M68 72 H188 L176 92 H56 Z" fill="#CFFF00"/><text x="214" y="91" class="sans eyebrow">N28 · EXPEDIENTE DE CALIDAD</text>
+  <text x="68" y="155" class="serif title">La calidad se aprueba por escenario</text><text x="70" y="196" class="sans subtitle">El promedio puede ser correcto y todavía ocultar la consecuencia decisiva.</text><path d="M68 226 H1132" class="rule"/>
+
+  <g aria-label="Promedio agregado">
+    <text x="72" y="270" class="sans section">EL TABLERO AGREGA; LA DECISIÓN NECESITA DESAGREGAR</text>
+    <rect x="72" y="304" width="1056" height="176" class="pale"/>
+    <text x="116" y="382" class="serif metric">194 / 200</text><text x="116" y="423" class="sans label">ingresos en menos de diez minutos</text>
+    <path d="M532 330 V454" class="rule"/><text x="572" y="365" class="sans number">97 POR CIENTO</text><text x="572" y="403" class="sans label">describe frecuencia agregada</text><text x="572" y="433" class="sans body">no prueba calidad para toda población y consecuencia</text>
+    <circle cx="1054" cy="392" r="32" fill="#FFFFFF" stroke="#202020" stroke-width="2"/><path d="M1034 392 H1074" stroke="#202020" stroke-width="4"/>
+  </g>
+
+  <g aria-label="Escenarios de calidad">
+    <text x="72" y="538" class="sans section">TRES ESCENARIOS, TRES UMBRALES, TRES DECISIONES</text>
+    <g aria-label="Ingreso ordinario">
+      <rect x="72" y="574" width="1056" height="212" class="outline"/>
+      <circle cx="122" cy="626" r="24" fill="#CFFF00" stroke="#202020" stroke-width="2"/><text x="122" y="632" class="sans number" text-anchor="middle">01</text>
+      <text x="170" y="622" class="sans number">INGRESO ORDINARIO</text><text x="170" y="658" class="serif scenario">velocidad con integridad</text>
+      <g aria-label="Reclamo ordinario"><path d="M520 600 V756" class="rule"/><text x="554" y="626" class="sans number">RECLAMO ORDINARIO</text><text x="554" y="659" class="sans label">≥ 95 % en 10 min</text><text x="554" y="689" class="sans body">y ninguna reserva duplicada o perdida</text></g>
+      <g aria-label="Alcance ordinario"><path d="M854 600 V756" class="rule"/><text x="888" y="626" class="sans number">ALCANCE PROBADO</text><text x="888" y="659" class="sans label">mantener limitado</text><text x="888" y="689" class="sans body">reservas directas</text><text x="888" y="719" class="sans small">bajo carga observada</text></g>
+    </g>
+    <g aria-label="Llegada accesible">
+      <rect x="72" y="810" width="1056" height="212" class="pale"/>
+      <circle cx="122" cy="862" r="24" fill="#FFFFFF" stroke="#202020" stroke-width="2"/><text x="122" y="868" class="sans number" text-anchor="middle">02</text>
+      <text x="170" y="858" class="sans number">LLEGADA ACCESIBLE</text><text x="170" y="894" class="serif scenario">condición antes que promedio</text>
+      <g aria-label="Reclamo accesible"><path d="M520 836 V992" class="rule"/><text x="554" y="862" class="sans number">RECLAMO ACCESIBLE</text><text x="554" y="895" class="sans label">cada condición verificada</text><text x="554" y="925" class="sans body">antes de ofrecer la habitación</text><text x="554" y="955" class="sans small">si falta, detener y activar alternativa</text></g>
+      <g aria-label="Alcance accesible"><path d="M854 836 V992" class="rule"/><text x="888" y="862" class="sans number">ALCANCE DETENIDO</text><text x="888" y="895" class="sans label">promesa detenida</text><text x="888" y="925" class="sans body">hasta corregir el modelo</text><text x="888" y="955" class="sans small">y repetir el recorrido</text></g>
+    </g>
+    <g aria-label="Caída de identidad">
+      <rect x="72" y="1046" width="1056" height="212" class="outline"/>
+      <circle cx="122" cy="1098" r="24" fill="#FFFFFF" stroke="#202020" stroke-width="2"/><text x="122" y="1104" class="sans number" text-anchor="middle">03</text>
+      <text x="170" y="1094" class="sans number">CAÍDA DE IDENTIDAD</text><text x="170" y="1130" class="serif scenario">continuar sin inventar certeza</text>
+      <g aria-label="Reclamo de continuidad"><path d="M520 1072 V1228" class="rule"/><text x="554" y="1098" class="sans number">RECLAMO DE CONTINUIDAD</text><text x="554" y="1131" class="sans label">llave limitada y autoridad</text><text x="554" y="1161" class="sans body">registrada para el turno</text><text x="554" y="1191" class="sans small">reconciliación sin duplicados</text></g>
+      <g aria-label="Alcance de continuidad"><path d="M854 1072 V1228" class="rule"/><text x="888" y="1098" class="sans number">ALCANCE LIMITADO</text><text x="888" y="1131" class="sans label">exposición limitada</text><text x="888" y="1161" class="sans body">mientras exista doble registro</text><text x="888" y="1191" class="sans small">y revisión ante el primer daño</text></g>
+    </g>
+  </g>
+
+  <g aria-label="Arquitectura de evidencia">
+    <text x="72" y="1320" class="sans section">LA EVIDENCIA CAMBIA CON EL MECANISMO Y EL DAÑO</text>
+    <rect x="72" y="1354" width="1056" height="106" class="pale"/>
+    <text x="108" y="1395" class="sans evidence">CONTRATO HH-27</text><path d="M258 1378 V1438" class="rule"/>
+    <text x="292" y="1395" class="sans evidence">EVENTOS PMS</text><path d="M422 1378 V1438" class="rule"/>
+    <text x="456" y="1395" class="sans evidence">CERRADURAS</text><path d="M582 1378 V1438" class="rule"/>
+    <text x="616" y="1395" class="sans evidence">CONTROL MATERIAL</text><path d="M784 1378 V1438" class="rule"/>
+    <text x="818" y="1395" class="sans evidence">OBSERVACIÓN</text><path d="M952 1378 V1438" class="rule"/>
+    <text x="986" y="1395" class="sans evidence">RELATO</text>
+    <text x="108" y="1428" class="sans small">ninguna fuente sustituye a las demás</text><text x="1092" y="1428" class="sans small" text-anchor="end">Elena acepta el riesgo residual</text>
+  </g>
+  <path d="M72 1504 H1128" class="rule"/><text x="72" y="1540" class="sans small">UNA CIFRA FAVORABLE NO AUTORIZA UNA PROMESA UNIVERSAL.</text><text x="1128" y="1540" class="sans small" text-anchor="end">N28 · METSI</text>
+</svg>

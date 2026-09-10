@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600" role="img" aria-labelledby="title desc">
+  <title id="title">N30, un tablero verde puede ocultar una promesa rota</title>
+  <desc id="desc">Tres servicios técnicos informan más de 99,9 por ciento de disponibilidad, pero siete llegadas superan quince minutos. El mapa conecta señales técnicas, de recorrido, de negocio y de experiencia con un indicador de ingresos completados, un objetivo del 99 por ciento y una alerta accionable. El incidente cierra cuando detectar, contener, recuperar, reparar y aprender modifican el sistema de trabajo.</desc>
+  <defs>
+    <style>
+      .sans{font-family:Inter,Arial,Helvetica,sans-serif;fill:#202020}.serif{font-family:Georgia,'Times New Roman',serif;fill:#202020}.eyebrow{font-size:22px;font-weight:700;letter-spacing:6px}.title{font-size:45px;letter-spacing:-1px}.subtitle{font-size:20px;fill:#5E605D}.section{font-size:18px;font-weight:700;letter-spacing:4px}.label{font-size:18px;font-weight:700}.body{font-size:16px;fill:#4F524F}.small{font-size:14px;fill:#646764}.number{font-size:14px;font-weight:700;letter-spacing:3px}.metric{font-size:34px}.rule{stroke:#A8AAA6;stroke-width:2}.outline{fill:#FFFFFF;stroke:#777A76;stroke-width:2}.pale{fill:#E4E6E3;stroke:#777A76;stroke-width:2}.arrow{fill:none;stroke:#737673;stroke-width:3}.signal{fill:#FFFFFF;stroke:#202020;stroke-width:2}.volt{fill:#CFFF00;stroke:#202020;stroke-width:2}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#737673"/></marker>
+  </defs>
+  <rect width="1200" height="1600" fill="#F7F7F4"/><rect x="34" y="34" width="1132" height="1532" rx="18" fill="none" stroke="#C6C8C4" stroke-width="2"/>
+  <path d="M68 72 H188 L176 92 H56 Z" fill="#CFFF00"/><text x="214" y="91" class="sans eyebrow">N30 · OBSERVACIÓN OPERABLE</text>
+  <text x="68" y="155" class="serif title">Un tablero verde puede ocultar una promesa rota</text><text x="70" y="196" class="sans subtitle">La señal vale cuando representa el recorrido y habilita una decisión.</text><path d="M68 226 H1132" class="rule"/>
+
+  <g aria-label="Contradicción inicial entre componentes y recorrido">
+    <text x="72" y="270" class="sans section">LOS COMPONENTES RESPONDEN</text>
+    <g aria-label="Identidad disponible"><rect x="72" y="302" width="318" height="112" class="outline"/><text x="100" y="338" class="sans number">IDENTIDAD</text><text x="100" y="380" class="serif metric">&gt; 99,9 %</text><circle cx="354" cy="336" r="9" class="volt"/></g>
+    <g aria-label="PMS disponible"><rect x="441" y="302" width="318" height="112" class="outline"/><text x="469" y="338" class="sans number">PMS</text><text x="469" y="380" class="serif metric">más de 99,9 %</text><circle cx="723" cy="336" r="9" class="volt"/></g>
+    <g aria-label="Cerraduras disponibles"><rect x="810" y="302" width="318" height="112" class="outline"/><text x="838" y="338" class="sans number">CERRADURAS</text><text x="838" y="380" class="serif metric">sobre 99,9 %</text><circle cx="1092" cy="336" r="9" class="volt"/></g>
+    <path d="M231 414 V450 H969 V414 M600 450 V488" class="arrow" marker-end="url(#arrow)"/>
+    <rect x="72" y="490" width="1056" height="128" class="pale"/><text x="104" y="530" class="sans number">PERO EL RECORRIDO SE DEGRADA</text><text x="104" y="574" class="serif metric">7 llegadas superan 15 minutos</text><text x="750" y="548" class="sans label">la fila que ve Lucía</text><text x="750" y="578" class="sans body">queda fuera de los tres tableros</text><circle cx="1084" cy="554" r="24" fill="#FFFFFF" stroke="#202020" stroke-width="2"/><text x="1084" y="560" class="sans number" text-anchor="middle">!</text>
+  </g>
+
+  <g aria-label="Cuatro escalas de señal">
+    <text x="72" y="682" class="sans section">CUATRO ESCALAS CONSERVAN EL MISMO EPISODIO</text>
+    <path d="M138 744 V1052" class="arrow" marker-end="url(#arrow)"/>
+    <circle cx="138" cy="758" r="12" class="signal"/><text x="176" y="752" class="sans number">01 · TÉCNICA</text><text x="176" y="780" class="sans label">latencia · reintentos · estado indeterminado</text>
+    <circle cx="138" cy="850" r="12" class="signal"/><text x="176" y="844" class="sans number">02 · RECORRIDO</text><text x="176" y="872" class="sans label">reserva → asignación → llave funcional</text>
+    <circle cx="138" cy="942" r="12" class="signal"/><text x="176" y="936" class="sans number">03 · NEGOCIO</text><text x="176" y="964" class="sans label">ingreso logrado · contingencia · compensación</text>
+    <circle cx="138" cy="1034" r="12" class="volt"/><text x="176" y="1028" class="sans number">04 · EXPERIENCIA</text><text x="176" y="1056" class="sans label">espera · accesibilidad · necesidad de ayuda</text>
+    <g aria-label="Indicador y objetivo de nivel de servicio"><rect x="742" y="724" width="386" height="346" class="outline"/>
+      <text x="774" y="764" class="sans number">SLI DEL INGRESO</text><text x="774" y="810" class="serif metric">eventos buenos</text><path d="M774 830 H1088" class="rule"/><text x="774" y="862" class="serif metric">eventos válidos</text>
+      <text x="774" y="912" class="sans body">llave funcional en ≤ 10 min</text><text x="774" y="942" class="sans body">sin reasignación impropia</text><text x="774" y="972" class="sans body">accesibilidad prometida</text>
+      <path d="M774 998 H1088" class="rule"/><text x="774" y="1034" class="sans label">SLO ≥ 99 % · 28 días</text><text x="774" y="1059" class="sans small">guardrail crítico por separado</text>
+    </g>
+    <path d="M654 896 H720" class="arrow" marker-end="url(#arrow)"/>
+  </g>
+
+  <g aria-label="Alerta accionable">
+    <path d="M600 1072 V1112" class="arrow" marker-end="url(#arrow)"/>
+    <text x="72" y="1144" class="sans section">LA ALERTA LLEGA CON AUTORIDAD</text>
+    <rect x="72" y="1176" width="1056" height="126" class="pale"/>
+    <text x="104" y="1216" class="sans number">CONDICIÓN</text><text x="104" y="1250" class="sans label">tasa de quema o daño crítico</text><path d="M488 1196 V1280" class="rule"/>
+    <text x="524" y="1216" class="sans number">RESPONSABLE</text><text x="524" y="1250" class="sans label">turno con contexto suficiente</text><path d="M830 1196 V1280" class="rule"/>
+    <text x="866" y="1216" class="sans number">PRIMERA ACCIÓN</text><text x="866" y="1250" class="sans label">limitar exposición</text><text x="866" y="1278" class="sans small">sin adivinar una causa</text>
+  </g>
+
+  <g aria-label="Bucle de aprendizaje del incidente">
+    <text x="72" y="1364" class="sans section">EL INCIDENTE DEVUELVE EVIDENCIA AL SISTEMA</text>
+    <path d="M138 1430 H1062" class="arrow" marker-end="url(#arrow)"/>
+    <circle cx="156" cy="1430" r="30" class="outline"/><text x="156" y="1436" class="sans number" text-anchor="middle">01</text><text x="156" y="1490" class="sans label" text-anchor="middle">detectar</text>
+    <circle cx="378" cy="1430" r="30" class="outline"/><text x="378" y="1436" class="sans number" text-anchor="middle">02</text><text x="378" y="1490" class="sans label" text-anchor="middle">contener</text>
+    <circle cx="600" cy="1430" r="30" class="outline"/><text x="600" y="1436" class="sans number" text-anchor="middle">03</text><text x="600" y="1490" class="sans label" text-anchor="middle">recuperar</text>
+    <circle cx="822" cy="1430" r="30" class="outline"/><text x="822" y="1436" class="sans number" text-anchor="middle">04</text><text x="822" y="1490" class="sans label" text-anchor="middle">reparar</text>
+    <circle cx="1044" cy="1430" r="30" class="volt"/><text x="1044" y="1436" class="sans number" text-anchor="middle">05</text><text x="1044" y="1490" class="sans label" text-anchor="middle">aprender</text>
+    <text x="600" y="1530" class="sans small" text-anchor="middle">cambia una señal, un contrato o una práctica y vuelve a comprobar su efecto</text>
+  </g>
+</svg>

@@ -28,7 +28,8 @@ PORTRAIT_ROOT = ROOT / "assets" / "portraits-block-c"
 SHARED_PORTRAITS = ROOT / "assets" / "portraits"
 SUPPORT_ROOT = ROOT / "assets" / "rebuild-support"
 APPROVED_INFOGRAPHIC_ROOT = ROOT / "editorial-standard" / "approved-infographics"
-PACKAGE_VERSION = 7
+PACKAGE_VERSION = 8
+ACADEMIC_REVISION_MANIFEST = ROOT / "academic-content-revision-manifest-n11-n36.json"
 MATCHES = ROOT / "N10-v9-final" / "assets" / "matches-close.png"
 HOTEL_HORIZONTE = SUPPORT_ROOT / "hotel-horizonte-canonical-v1.png"
 
@@ -479,17 +480,28 @@ HOTEL_ASSET_SOURCES = {
 }
 
 def canonical_source(number: int) -> Path:
-    """Select the newest approved content source without relying on glob order."""
-    source_root = ROOT / f"N{number}-content-canonical" / "source"
-    v2 = sorted(source_root.glob("*-content-canonical-v2.md"))
-    if len(v2) == 1:
-        return v2[0]
-    if len(v2) > 1:
-        raise RuntimeError(f"Más de una fuente v2 para N{number:02d}: {v2}")
-    v1 = sorted(source_root.glob("*-content-canonical-v1.md"))
-    if len(v1) != 1:
-        raise RuntimeError(f"No se pudo resolver una fuente canónica única para N{number:02d}")
-    return v1[0]
+    """Resolve the exact academically approved source and verify its digest.
+
+    Editorial version numbers and content version numbers are intentionally
+    independent. Selecting the largest filename suffix silently skipped the
+    audited v3 sources, so v8 is pinned to the collection-level approval
+    manifest instead of relying on glob order.
+    """
+    if not ACADEMIC_REVISION_MANIFEST.is_file():
+        raise FileNotFoundError(ACADEMIC_REVISION_MANIFEST)
+    approval = json.loads(ACADEMIC_REVISION_MANIFEST.read_text(encoding="utf-8"))
+    records = {item["code"]: item for item in approval["documents"]}
+    code = f"N{number:02d}"
+    if code not in records:
+        raise RuntimeError(f"La aprobación académica no contiene {code}")
+    record = records[code]
+    source = ROOT / record["source"]
+    if not source.is_file():
+        raise FileNotFoundError(source)
+    digest = hashlib.sha256(source.read_bytes()).hexdigest()
+    if digest != record["sha256"]:
+        raise RuntimeError(f"La fuente {code} cambió después de la auditoría académica")
+    return source
 
 
 SOURCES = {n: canonical_source(n) for n in range(11, 37)}
@@ -1682,7 +1694,9 @@ def icon_strip(section: base.Section) -> str:
 def build(number: int) -> dict:
     source = SOURCES[number]
     title, all_sections = base.parse_source(source)
-    legacy = ROOT / f"N{number:02d}-v1-editorial"
+    # The approved v7 package is the immutable visual baseline. v8 receives
+    # copies of its assets and never mutates the published package in place.
+    legacy = ROOT / f"N{number:02d}-v7-editorial"
     legacy_assets = legacy / "assets"
     out = ROOT / f"N{number:02d}-v{PACKAGE_VERSION}-editorial"
     assets, diagrams, output, source_dir = (out / "assets", out / "diagrams", out / "output", out / "source")
@@ -1721,6 +1735,16 @@ def build(number: int) -> dict:
         else:
             shutil.copy2(source_pause, target_pause)
     support = support_assets(number, legacy_assets, assets)
+    # The Contents page is a neutral navigation apparatus. Produce a real
+    # grayscale derivative instead of a CSS filter: Chrome preserves the img
+    # element and its semantic alternate text in the tagged PDF.
+    contents_source = support[0]
+    contents_target = assets / "contents-neutral.png"
+    with Image.open(contents_source) as image:
+        prepared_contents = ImageOps.exif_transpose(image).convert("L").convert("RGB")
+        prepared_contents = ImageEnhance.Contrast(prepared_contents).enhance(1.02)
+        prepared_contents.save(contents_target, format="PNG", optimize=True)
+    support[0] = contents_target
     story_asset: Path | None = None
     story_alt = "Una profesional argentina contrasta un cronograma cumplido con evidencia de una operación que exige revisar el plan."
     if number == 17:
@@ -1909,12 +1933,6 @@ def build(number: int) -> dict:
                         f'<figcaption>{html.escape(diagram.get("caption", diagram["claim"]))}</figcaption></figure>'
                     )
                 diagram_cursor += 1
-        if index == 2 and number >= 26:
-            after_body += photo_band(
-                support[2], SUPPORT_ALTS[number][2],
-                "La escena material sitúa el problema en el sistema de trabajo antes de formular una solución.",
-                "section-two-photo",
-            )
         if section.title.startswith("Movimiento 3") and diagram_cursor < len(diagram_records):
             diagram = diagram_records[diagram_cursor]
             before_body += (
@@ -2020,10 +2038,15 @@ def build(number: int) -> dict:
             )
         else:
             body_html = f'{before_body}<div class="section-body">{section_body}</div>'
-        section_html = (
+        section_core = (
             f'<section class="{" ".join(dict.fromkeys(classes))}" id="section-{rendered_section:02d}" data-section="{rendered_section:02d}"{section_attrs}>'
             f'<div class="section-heading">{marker}{heading_icon}<h2 data-source-id="{heading_id}">{html.escape(section.title)}</h2></div>'
-            f'{lead_html}{body_html}{after_body}</section>{after_section}'
+            f'{lead_html}{body_html}{after_body}</section>'
+        )
+        section_html = (
+            f'<div class="thesis-infographic-page">{section_core}{after_section}</div>'
+            if section.title == "Tesis" and after_section
+            else f'{section_core}{after_section}'
         )
         if index == 1:
             close_article()
@@ -2121,7 +2144,7 @@ def build(number: int) -> dict:
     (out / "index.html").write_text(html_text, encoding="utf-8")
 
     stable_css = (ROOT / "N10-v9-final" / "magazine.css").read_text(encoding="utf-8")
-    css = stable_css + "\n\n" + BLOCK_C_CSS
+    css = stable_css + "\n\n" + BLOCK_C_CSS + "\n\n" + V8_EDITORIAL_CORRECTIONS
     (out / "magazine.css").write_text(css, encoding="utf-8")
 
     rendered_ids = re.findall(r'data-source-id="([^"]+)"', html_text)
@@ -2142,7 +2165,7 @@ def build(number: int) -> dict:
         "source": f"source/{source.name}",
         "source_sha256": sha(source),
         "source_words": len(re.findall(r"\b[\wÁÉÍÓÚÜÑáéíóúüñ'-]+\b", source.read_text(encoding="utf-8"))),
-        "content_audit": "curricular-expansion-v2-audited-pass",
+        "content_audit": "academic-content-revision-n11-n36-audited-pass",
         "cover": {"file": cover.name, "source": f"assets/{cover.name}", "sha256": sha(cover), "alt": COVER_ALTS[number], "photographic_origin": "native_black_and_white", "render_treatment": "no_grayscale_conversion"},
         "internal_images": ["pause-01.png", "pause-02.png", hotel_horizonte_asset.name] + sorted({path.name for path in support}) + ([story_asset.name] if story_asset else []),
         "image_manifest": [
@@ -2199,6 +2222,48 @@ def build(number: int) -> dict:
     (out / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (out / "document.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (diagrams / "content-manifest.json").write_text(json.dumps({"document": f"N{number:02d}", "diagrams": diagram_records}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    spread_units = [
+        {"order": 1, "role": "cover", "layout": "full_bleed_cover"},
+        {"order": 2, "role": "contents", "layout": "index_with_neutral_documentary_image"},
+        {"order": 3, "role": "referents", "layout": "six_voice_portrait_grid"},
+    ]
+    order = 4
+    for section in sections:
+        if section.title == "Referencias base":
+            continue
+        spread_units.append({
+            "order": order,
+            "role": "section",
+            "title": section.title,
+            "layout": (
+                "hotel_horizonte_spread" if "Hotel Horizonte" in section.title
+                else "questions_typographic" if section.title == "Preguntas de preparación"
+                else "synthesis_two_column" if section.title == "Síntesis"
+                else "five_pills" if section.title == "Cinco píldoras para recordar"
+                else "glossary" if section.title == "Glosario esencial"
+                else "compact_thesis" if section.title == "Tesis"
+                else "editorial_reading"
+            ),
+        })
+        order += 1
+    spread_units.extend([
+        {"order": order, "role": "references", "layout": "two_column_reference_apparatus"},
+        {"order": order + 1, "role": "closing", "layout": "full_bleed_matches"},
+    ])
+    (out / "spread-plan.json").write_text(json.dumps({
+        "document": f"N{number:02d}",
+        "version": f"v{PACKAGE_VERSION}",
+        "source": f"source/{source.name}",
+        "invariants": [
+            "two_full_page_photographic_pauses",
+            "questions_without_photography",
+            "contents_image_neutral_black_and_white",
+            "hotel_horizonte_canonical_anchor",
+            "approved_document_specific_infographic",
+            "full_bleed_matches_closing",
+        ],
+        "units": spread_units,
+    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return manifest
 
 
@@ -3561,6 +3626,112 @@ body.block-c.document-n11 .questions .section-body>p:last-child{
 }
 body.block-c.document-n17 .questions .section-body ol{gap:23mm 12mm!important}
 body.block-c.document-n17 .questions .section-body>p:last-child{margin-top:19mm!important}
+'''
+
+
+V8_EDITORIAL_CORRECTIONS = r'''
+/* METSI N11–N36 v8 · convergence with the approved N00–N10 editorial system.
+   These rules remove artificial page inflation introduced by v7 while keeping
+   every audited source block, approved image and infographic intact. */
+
+/* Contents photography is an orienting apparatus and remains neutral. */
+body.block-c .contents-photo-viewport img{
+  filter:none!important
+}
+
+/* A thesis is a compact argumentative hinge, not an oversized poster. */
+body.block-c .block-c-thesis,
+body.block-c .thesis-with-approved-plate{
+  height:auto!important;min-height:0!important;display:block!important;
+  justify-content:initial!important;padding:7mm!important;
+  break-before:page!important;page-break-before:always!important;
+  break-inside:avoid-page!important;page-break-inside:avoid!important
+}
+body.block-c .block-c-thesis .section-lead{max-width:none!important;margin-bottom:3mm!important}
+body.block-c .block-c-thesis .section-lead p{
+  font:400 18pt/1.3 Didot,"Bodoni 72",serif!important
+}
+body.block-c .block-c-thesis .section-body:not(.section-lead){
+  font-size:10.8pt!important;line-height:1.4!important
+}
+body.block-c .thesis-infographic-page{
+  box-sizing:border-box!important;height:236mm!important;min-height:236mm!important;
+  display:grid!important;grid-template-rows:auto minmax(0,1fr)!important;gap:5mm!important;
+  break-before:page!important;page-break-before:always!important;
+  break-after:page!important;page-break-after:always!important
+}
+body.block-c .thesis-infographic-page .block-c-thesis{
+  break-before:auto!important;page-break-before:auto!important;
+  margin:0!important;padding:6mm 7mm!important
+}
+body.block-c .thesis-infographic-page .block-c-thesis .section-lead p{
+  font-size:15.5pt!important;line-height:1.27!important
+}
+body.block-c .thesis-infographic-page .approved-infographic-page{
+  height:auto!important;min-height:0!important;padding:5mm 8mm 6mm!important;
+  break-before:auto!important;page-break-before:auto!important;
+  break-after:auto!important;page-break-after:auto!important
+}
+body.block-c .thesis-infographic-page .approved-infographic-page header{padding-top:3mm!important}
+body.block-c .thesis-infographic-page .approved-infographic-page header p{
+  margin-top:3mm!important;font-size:14.5pt!important;line-height:1.16!important
+}
+body.block-c .thesis-infographic-page .approved-infographic-page figure{
+  min-height:0!important;margin-top:3mm!important;justify-content:flex-start!important
+}
+body.block-c .thesis-infographic-page .approved-infographic-page img{
+  flex:1 1 auto!important;height:100%!important;max-height:118mm!important
+}
+body.block-c .thesis-infographic-page .approved-infographic-page figcaption{margin-top:2mm!important}
+
+/* Recurring study apparatus uses content-driven height. No page is filled by
+   enlarged gaps, a forced 236 mm card or a decorative photograph. */
+body.block-c .pills-glossary-page{
+  height:auto!important;min-height:0!important;padding:0!important;gap:5mm!important
+}
+body.block-c .pill-summary{
+  height:auto!important;min-height:0!important;display:block!important;
+  padding:6mm 7mm!important
+}
+body.block-c .pill-summary .pills-photo{display:none!important}
+body.block-c .pill-summary .section-body ol{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:3.5mm 9mm!important;margin-top:3mm!important
+}
+body.block-c .pill-summary .section-body li{
+  font-size:10pt!important;line-height:1.32!important;font-weight:600!important
+}
+body.block-c .glossary-two-column{
+  height:auto!important;min-height:0!important;padding:6mm 7mm!important
+}
+body.block-c .glossary-two-column .section-body,
+body.block-c .pills-glossary-page .glossary-two-column .section-body{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  font-size:9.2pt!important;line-height:1.29!important;gap:0 9mm!important
+}
+body.block-c .glossary-two-column .section-body p{padding:2.7mm 0 2.3mm!important}
+
+/* Preparation is deliberately image-free and evenly paced. */
+body.block-c .questions{
+  height:auto!important;min-height:0!important;display:block!important;
+  padding:7mm!important
+}
+body.block-c .questions .preparation-photo{display:none!important}
+body.block-c .questions .section-body{font-size:11.8pt!important;line-height:1.46!important}
+body.block-c .questions .section-body ol{
+  min-height:0!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  grid-template-rows:repeat(3,auto)!important;gap:14mm 12mm!important;
+  margin:3mm 0 0!important
+}
+body.block-c .questions .section-body>p:last-child{
+  margin-top:12mm!important;font-size:9pt!important;line-height:1.36!important
+}
+
+/* Final apparatus keeps the reference size readable in every N. */
+body.block-c .block-c-references .section-body{
+  font-size:9.2pt!important;line-height:1.34!important
+}
+body.block-c .block-c-references li{font-size:9.2pt!important;line-height:1.34!important}
 '''
 
 

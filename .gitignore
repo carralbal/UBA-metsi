@@ -307,6 +307,10 @@ N3[0-6]-v3-editorial/qa/
 !qa-reports/n11-n36-v6/*.json
 !qa-reports/n11-n36-v7/
 !qa-reports/n11-n36-v7/*.json
+!qa-reports/n11-n36-v8/
+!qa-reports/n11-n36-v8/*.json
+!qa-reports/n11-n36-v8/contact-sheets/
+!qa-reports/n11-n36-v8/contact-sheets/*.png
 !qa-reports/block01-completion-build.json
 !qa-reports/METSI-N00-N36-auditoria-de-integracion-final.pdf
 !qa-contact-sheets/
@@ -380,6 +384,26 @@ N3[0-6]-v7-editorial/output/*
 N1[1-9]-v7-editorial/qa/*
 N2[0-9]-v7-editorial/qa/*
 N3[0-6]-v7-editorial/qa/*
+
+# Paquetes editoriales v8 N11-N36. Integran la revisión académica profunda,
+# recuperan la densidad y la arquitectura editorial de N00-N10 y agregan un
+# plan de páginas verificable. Se versiona el paquete reproducible completo,
+# la auditoría determinística, las planchas de revisión y sólo el PDF final.
+!N1[1-9]-v8-editorial/
+!N1[1-9]-v8-editorial/**
+!N2[0-9]-v8-editorial/
+!N2[0-9]-v8-editorial/**
+!N3[0-6]-v8-editorial/
+!N3[0-6]-v8-editorial/**
+N1[1-9]-v8-editorial/output/*
+N2[0-9]-v8-editorial/output/*
+N3[0-6]-v8-editorial/output/*
+!N1[1-9]-v8-editorial/output/*-v8-final.pdf
+!N2[0-9]-v8-editorial/output/*-v8-final.pdf
+!N3[0-6]-v8-editorial/output/*-v8-final.pdf
+N1[1-9]-v8-editorial/qa/*
+N2[0-9]-v8-editorial/qa/*
+N3[0-6]-v8-editorial/qa/*
 !qa-contact-sheets/N36-contact-sheet.jpg
 !BLOCK-C-*.md
 !BLOCK-D-*.md

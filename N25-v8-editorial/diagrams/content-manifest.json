@@ -1,0 +1,25 @@
+{
+  "document": "N25",
+  "diagrams": [
+    {
+      "file": "diagrams/N25-mapa-01.svg",
+      "title": "El flujo conserva identidad y hace visible la espera",
+      "labels": [
+        "Unidad de cambio",
+        "Reloj de demanda",
+        "Reloj de compromiso",
+        "Treinta y ocho días de espera",
+        "Trabajo en curso de siete a tres",
+        "Validación semanal",
+        "Circuito de retroalimentación"
+      ],
+      "claim": "El sistema de cambio sólo puede mejorar cuando sigue una unidad estable desde la demanda hasta la capacidad en uso, hace visibles sus colas y cierra el feedback con una decisión modificada.",
+      "caption": "La unidad conserva identidad entre demanda y capacidad en uso, hace visibles trabajo, espera y colas, y cierra el feedback sólo cuando cambia una decisión.",
+      "family": "temporal-flow-map",
+      "sha256": "7c7834db3a171feb4567837c9962261cc7da03d9c90aa5680b8ccce9bee86b0f",
+      "approved": true,
+      "source_manifest": "diagrams/N25-mapa-01-content-manifest.json",
+      "alt_text": "diagrams/N25-mapa-01-alt-text.md"
+    }
+  ]
+}
