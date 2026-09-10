@@ -278,6 +278,31 @@ qa-contact-sheets/*
 !qa-contact-sheets/N33-contact-sheet.jpg
 !qa-contact-sheets/N34-contact-sheet.jpg
 !qa-contact-sheets/N35-contact-sheet.jpg
+
+# Paquetes editoriales v6 N11-N36, reconstruidos según el estándar aprobado.
+# Se versionan fuentes, HTML/CSS, manifiestos, diagramas, activos, auditoría
+# determinística y PDF final. El PDF crudo y los contactos de QA son regenerables.
+!N1[1-9]-v6-editorial/
+!N1[1-9]-v6-editorial/**
+!N2[0-9]-v6-editorial/
+!N2[0-9]-v6-editorial/**
+!N3[0-6]-v6-editorial/
+!N3[0-6]-v6-editorial/**
+N1[1-9]-v6-editorial/output/*
+N2[0-9]-v6-editorial/output/*
+N3[0-6]-v6-editorial/output/*
+!N1[1-9]-v6-editorial/output/*-v6-final.pdf
+!N2[0-9]-v6-editorial/output/*-v6-final.pdf
+!N3[0-6]-v6-editorial/output/*-v6-final.pdf
+N1[1-9]-v6-editorial/qa/*
+N2[0-9]-v6-editorial/qa/*
+N3[0-6]-v6-editorial/qa/*
+!N1[1-9]-v6-editorial/qa/INTEGRATION-REPORT.md
+!N2[0-9]-v6-editorial/qa/INTEGRATION-REPORT.md
+!N3[0-6]-v6-editorial/qa/INTEGRATION-REPORT.md
+!N1[1-9]-v6-editorial/qa/rebuild-audit.json
+!N2[0-9]-v6-editorial/qa/rebuild-audit.json
+!N3[0-6]-v6-editorial/qa/rebuild-audit.json
 !qa-contact-sheets/N36-contact-sheet.jpg
 !BLOCK-C-*.md
 !BLOCK-D-*.md

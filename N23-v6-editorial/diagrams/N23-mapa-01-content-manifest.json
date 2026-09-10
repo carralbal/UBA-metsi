@@ -1,0 +1,28 @@
+{
+  "title": "Un corte vertical conserva una llegada completa",
+  "claim": "Un corte pequeño produce capacidad y aprendizaje sólo si atraviesa integración, operación, reparación y retorno seguro para una población delimitada.",
+  "source_sections": [
+    {"id":"problem","heading":"Cinco componentes terminados y ninguna llegada posible","summary":"Los outputs locales no forman una trayectoria utilizable de punta a punta."},
+    {"id":"hh23","heading":"Hotel Horizonte: el primer slice debe completar una llegada","summary":"HH-23 limita población y variante, pero conserva la promesa, la decisión, la acción material y la reparación."},
+    {"id":"thesis","heading":"Tesis","summary":"El corte vertical preserva capacidad completa y el corte por aprendizaje reduce una incertidumbre decisiva."},
+    {"id":"movement2","heading":"Movimiento 2 · Construir slices que atraviesen el sistema","summary":"La integración temprana y el esqueleto operable revelan contratos y excepciones antes de ampliar."},
+    {"id":"movement3","heading":"Movimiento 3 · Exponer, aprender y expandir sin ocultar deuda","summary":"Cada ampliación cambia una dimensión, requiere evidencia y vuelve a examinar la frontera."}
+  ],
+  "nodes": [
+    {"id":"components","label":"Cinco componentes terminados","role":"false_progress","source":["problem"],"purpose":"Mostrar outputs sin capacidad utilizable."},
+    {"id":"slice","label":"Llegada directa anticipada de punta a punta","role":"vertical_slice","source":["hh23"],"purpose":"Conservar todas las capas necesarias para el episodio."},
+    {"id":"operation","label":"Turno que sostiene la llegada","role":"operation_test","source":["hh23","movement2"],"purpose":"Separar posibilidad técnica de capacidad sostenida."},
+    {"id":"repair","label":"Retorno seguro ante falla","role":"repair_test","source":["hh23","movement2"],"purpose":"Incluir excepción y reparación dentro de terminado."},
+    {"id":"learning","label":"Evidencia que cambia el próximo corte","role":"learning_test","source":["movement3"],"purpose":"Vincular el slice con una decisión posterior."},
+    {"id":"expansion","label":"Ampliar una sola dimensión","role":"expansion_gate","source":["movement3"],"purpose":"Revalidar cuando cambia turno, canal, volumen o mecanismo."},
+    {"id":"boundary","label":"Canales externos y sobreventa todavía excluidos","role":"negative_boundary","source":["hh23"],"purpose":"Hacer visible lo que la capacidad aún no promete."}
+  ],
+  "edges": [
+    {"id":"reframe","from":"components","to":"slice","relation":"reframe","source":["problem","hh23"],"meaning":"La unidad de entrega cambia de componentes a episodio de valor."},
+    {"id":"operate","from":"slice","to":"operation","relation":"proves","source":["hh23"],"meaning":"El uso debe sostenerse sin apoyo privado del equipo creador."},
+    {"id":"recover","from":"slice","to":"repair","relation":"proves","source":["hh23","movement2"],"meaning":"La capacidad incluye una ruta de reparación real."},
+    {"id":"learn","from":"operation","to":"learning","relation":"produces_evidence","source":["movement3"],"meaning":"La operación genera evidencia para la siguiente decisión."},
+    {"id":"advance","from":"learning","to":"expansion","relation":"authorizes","source":["movement3"],"meaning":"La evidencia habilita una ampliación delimitada."},
+    {"id":"limits","from":"boundary","to":"expansion","relation":"constrains","source":["hh23","movement3"],"meaning":"La población excluida no ingresa por simple generalización."}
+  ]
+}

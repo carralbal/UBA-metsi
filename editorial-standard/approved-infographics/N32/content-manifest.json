@@ -1,0 +1,25 @@
+{
+  "title": "El permiso se asigna a tareas, no al promedio",
+  "claim": "Un promedio de desempeño no autoriza autonomía: la evaluación debe representar usos y poblaciones, ponderar severidad y desigualdad, probar robustez y demostrar supervisión y reparación reales.",
+  "source_sections": [
+    {"id":"problem","heading":"El promedio era alto y las habitaciones accesibles fallaban","summary":"El 91 por ciento agregado ocultaba cinco fallas en doce pedidos de accesibilidad."},
+    {"id":"hh32","heading":"Hotel Horizonte: el promedio aprobaba un asistente que fallaba en la excepción","summary":"HH-32 redefine unidad, cobertura, severidad, robustez y carga de supervisión."},
+    {"id":"movement1","heading":"Movimiento 1 · Definir unidad, cobertura, línea de base y validez","summary":"La evaluación representa el uso y la consecuencia que pretende autorizar."},
+    {"id":"movement2","heading":"Movimiento 2 · Desagregar desempeño y probar casos severos","summary":"Frecuencia, gravedad y distribución del daño permanecen separadas."},
+    {"id":"movement3","heading":"Movimiento 3 · Evaluar el equipo y asignar autonomía reversible","summary":"Los permisos dependen de la capacidad real de detectar, disentir y reparar."}
+  ],
+  "nodes": [
+    {"id":"aggregate","label":"91 por ciento","role":"aggregate_result","source":["problem"],"purpose":"Mostrar el resultado medio que inició la autorización."},
+    {"id":"accessibility","label":"5 de 12","role":"critical_slice","source":["problem","hh32"],"purpose":"Exponer la falla severa diluida por el promedio."},
+    {"id":"representation","label":"Representar el uso","role":"evaluation_layer","source":["movement1"],"purpose":"Fijar unidad, cobertura, línea de base y validez."},
+    {"id":"exposure","label":"Exponer el daño","role":"evaluation_layer","source":["movement2"],"purpose":"Separar severidad, desigualdad, robustez y prueba adversa."},
+    {"id":"team","label":"Probar el equipo real","role":"evaluation_layer","source":["movement3"],"purpose":"Medir confiabilidad, supervisión, carga y reparación."},
+    {"id":"permission","label":"Matriz de permisos","role":"decision_gate","source":["hh32","movement3"],"purpose":"Asignar autonomía por tarea y condición con revisión explícita."}
+  ],
+  "edges": [
+    {"id":"contradicts","from":"accessibility","to":"aggregate","relation":"contradicts","source":["problem"],"meaning":"Una falla severa refuta la autorización aunque el promedio sea alto."},
+    {"id":"represents","from":"representation","to":"exposure","relation":"enables","source":["movement1","movement2"],"meaning":"Sólo una población representada permite interpretar la distribución del daño."},
+    {"id":"tests","from":"exposure","to":"team","relation":"extends_to","source":["movement2","movement3"],"meaning":"El riesgo sólo se completa al probar la intervención y reparación humanas."},
+    {"id":"authorizes","from":"team","to":"permission","relation":"limits","source":["movement3"],"meaning":"La capacidad real del equipo delimita el permiso que puede sostenerse."}
+  ]
+}

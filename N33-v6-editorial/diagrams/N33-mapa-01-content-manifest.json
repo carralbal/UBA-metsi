@@ -1,0 +1,25 @@
+{
+  "title": "El uso conserva identidad aunque cambie el producto",
+  "claim": "La aprobación pertenece a un uso y una configuración sociotécnica verificable; cambios de modelo, fuentes, permisos, población o contexto reabren evidencia, autoridad, reparación y retiro.",
+  "source_sections": [
+    {"id":"problem","heading":"El modelo cambió sin que cambiara el proyecto","summary":"Cambios pequeños y dispersos volvieron obsoleta el acta de aprobación."},
+    {"id":"hh33","heading":"Hotel Horizonte: el nombre del producto no cambió, el sistema sí","summary":"HH-33 suspende acciones automáticas y reconstruye versión, fuentes y permisos."},
+    {"id":"movement1","heading":"Movimiento 1 · Inventariar usos, fronteras y riesgos","summary":"El registro se organiza por uso, propósito, población y autoridad."},
+    {"id":"movement2","heading":"Movimiento 2 · Gobernar procedencia, proveedores, cambios y monitoreo","summary":"La configuración vigente vincula procedencia, proveedor, evaluación y señales."},
+    {"id":"movement3","heading":"Movimiento 3 · Responder incidentes, reparar y retirar","summary":"Gobernar exige contener, explicar, reparar, cambiar y poder salir."}
+  ],
+  "nodes": [
+    {"id":"stable_name","label":"Asistente de reservas","role":"declared_identity","source":["problem"],"purpose":"Mostrar que el nombre puede permanecer mientras cambia el sistema."},
+    {"id":"version","label":"Versión y procedencia","role":"living_register_field","source":["movement2"],"purpose":"Reconstruir modelo, fuentes, datos y transformaciones."},
+    {"id":"authority","label":"Autoridad y riesgo","role":"living_register_field","source":["movement1"],"purpose":"Identificar quién puede limitar, suspender y reparar."},
+    {"id":"monitoring","label":"Evaluación y monitoreo","role":"living_register_field","source":["movement2"],"purpose":"Vincular cobertura, daño, deriva y umbrales con decisiones."},
+    {"id":"incident","label":"Recorrido del incidente","role":"response_cycle","source":["movement3"],"purpose":"Conectar contención, explicación, reparación y cambio."},
+    {"id":"exit","label":"Salida verificable","role":"exit_gate","source":["movement3"],"purpose":"Revocar accesos, sostener continuidad y preservar evidencia legítima."}
+  ],
+  "edges": [
+    {"id":"silent_change","from":"stable_name","to":"version","relation":"conceals_change","source":["problem","hh33"],"meaning":"La identidad comercial oculta cambios materiales de configuración."},
+    {"id":"reopens","from":"version","to":"authority","relation":"reopens","source":["movement2"],"meaning":"Un cambio material reabre evidencia, permiso y autoridad."},
+    {"id":"triggers","from":"monitoring","to":"incident","relation":"triggers","source":["movement2","movement3"],"meaning":"Una señal o episodio activa investigación y contención."},
+    {"id":"retires","from":"incident","to":"exit","relation":"may_require","source":["movement3"],"meaning":"La respuesta puede exigir limitar, suspender o retirar la capacidad."}
+  ]
+}

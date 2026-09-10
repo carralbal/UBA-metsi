@@ -1,0 +1,28 @@
+{
+  "title": "El flujo conserva identidad y hace visible la espera",
+  "claim": "El sistema de cambio sólo puede mejorar cuando sigue una unidad estable desde la demanda hasta la capacidad en uso, hace visibles sus colas y cierra el feedback con una decisión modificada.",
+  "source_sections": [
+    {"id":"problem","heading":"El sprint que duraba dos semanas y el cambio que tardaba cuatro meses","summary":"Las ceremonias cumplen su cadencia mientras el cambio espera entre fronteras locales."},
+    {"id":"hh25","heading":"Hotel Horizonte: el tiempo que el tablero no mostraba","summary":"Una modificación tarda cuarenta y seis días, ocho activos, y atraviesa cuatro colas invisibles."},
+    {"id":"movement1","heading":"Movimiento 1 · Seguir la unidad de valor de punta a punta","summary":"La unidad conserva identidad y distingue reloj de demanda y reloj de compromiso."},
+    {"id":"movement2","heading":"Movimiento 2 · Reducir trabajo en curso, lotes y esperas","summary":"El límite baja de siete a tres unidades y la validación pasa de mensual a semanal."},
+    {"id":"movement3","heading":"Movimiento 3 · Cerrar feedback y gobernar el flujo","summary":"La retroalimentación termina cuando cambia una regla o una acción y el efecto vuelve a observarse."}
+  ],
+  "nodes": [
+    {"id":"unit","label":"Unidad de cambio","role":"identity_thread","source":["movement1"],"purpose":"Conservar el vínculo entre demanda, trabajo, validación y uso."},
+    {"id":"demand_clock","label":"Reloj de demanda","role":"external_clock","source":["movement1"],"purpose":"Mostrar toda la espera soportada por quien demanda."},
+    {"id":"commitment_clock","label":"Reloj de compromiso","role":"governance_clock","source":["movement1"],"purpose":"Gobernar trabajo abierto sin ocultar la cola previa."},
+    {"id":"wait","label":"Treinta y ocho días de espera","role":"hidden_inventory","source":["hh25"],"purpose":"Separar tiempo activo de colas y esperas."},
+    {"id":"wip","label":"Trabajo en curso de siete a tres","role":"system_intervention","source":["hh25","movement2"],"purpose":"Cerrar unidades antes de iniciar más."},
+    {"id":"validation","label":"Validación semanal","role":"batch_reduction","source":["hh25","movement2"],"purpose":"Acortar el lote y producir evidencia antes."},
+    {"id":"feedback","label":"Circuito de retroalimentación","role":"closed_loop","source":["hh25","movement3"],"purpose":"Vincular señal, autoridad, decisión, cambio y observación."}
+  ],
+  "edges": [
+    {"id":"preserves","from":"unit","to":"demand_clock","relation":"preserves_identity","source":["movement1"],"meaning":"La misma unidad atraviesa toda la trayectoria desde la demanda."},
+    {"id":"distinguishes","from":"demand_clock","to":"commitment_clock","relation":"distinguishes","source":["movement1"],"meaning":"Los dos relojes responden preguntas distintas y evitan esconder demanda."},
+    {"id":"reveals","from":"unit","to":"wait","relation":"reveals","source":["hh25"],"meaning":"La reconstrucción de punta a punta hace visibles cuatro colas."},
+    {"id":"limits","from":"wait","to":"wip","relation":"motivates","source":["hh25","movement2"],"meaning":"La espera observada justifica limitar el trabajo abierto."},
+    {"id":"shortens","from":"wip","to":"validation","relation":"enables","source":["movement2"],"meaning":"Menos unidades abiertas permite validar cortes pequeños con mayor frecuencia."},
+    {"id":"closes","from":"validation","to":"feedback","relation":"produces_evidence","source":["movement3"],"meaning":"La validación genera señales que sólo cierran cuando modifican una decisión y su efecto se observa."}
+  ]
+}

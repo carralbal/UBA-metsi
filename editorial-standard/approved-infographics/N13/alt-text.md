@@ -1,0 +1,3 @@
+# Texto alternativo
+
+Tres mensajes vinculados con una misma habitación llegan en momentos distintos: una solicitud original, un reintento de la misma intención y una cancelación demorada. Una clave estable permite reconocer la identidad de la intención. Los mensajes atraviesan una puerta que protege la invariante según la cual una habitación física no puede tener dos asignaciones vigentes superpuestas. La salida puede aplicar una sola vez el efecto protegido o declarar un estado ambiguo. En este último caso, la reconciliación compara la confirmación de la agencia, la asignación vigente en el PMS y la credencial activa en la cerradura para explicar la diferencia y decidir una reparación sin borrar la historia.

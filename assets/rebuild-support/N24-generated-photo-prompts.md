@@ -1,0 +1,9 @@
+# N24 · Prompts de fotografía editorial
+
+## Pausa visual a página completa
+
+Fotografía editorial documental premium, vertical A4, concebida originalmente en color y tratada con desaturación elegante. Directora de hotel sola, junto a una mesa de decisión, compara dos carpetas activas mientras otras dos quedan deliberadamente fuera del área de trabajo. La escena comunica capacidad limitada, renuncia explícita y responsabilidad por las consecuencias. Interior profesional de hotel en Buenos Aires, luz natural, cámara profesional, composición cinematográfica y sobria, grises cálidos, contraste moderado, pequeño acento físico volt, sin texto legible, sin logotipos y sin estética de banco de imágenes.
+
+## Imagen interior horizontal
+
+Fotografía editorial documental premium, horizontal 16:9, concebida originalmente en color y luego tratada con desaturación elegante. Reunión de priorización operativa en un hotel profesional de Buenos Aires. Sobre una mesa hay cuatro carpetas físicas o tableros que representan cuatro opciones reales; dos fueron movidas a una franja activa estrecha, una opción comercial queda claramente en espera y una cuarta opción de automatización queda apartada. Participan perfiles diversos del hotel, incluyendo operaciones o housekeeping, comercial y tecnología, discutiendo consecuencias y capacidad limitada. La escena comunica renuncia explícita, límite de trabajo en curso y decisión defendible, no una sesión genérica de brainstorming. Fotografía cinematográfica, luz natural, cámara profesional, profundidad de campo medida, grises cálidos, piel natural, contraste moderado y apenas un pequeño marcador color volt como acento físico. Sin texto legible, sin logotipos, sin pantallas protagonistas, sin poses publicitarias, sin estética de stock y sin colores ajenos a la paleta METSI.

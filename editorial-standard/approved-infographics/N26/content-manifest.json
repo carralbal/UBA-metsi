@@ -1,0 +1,26 @@
+{
+  "title": "La promesa vive entre capacidades autónomas",
+  "claim": "Una promesa distribuida se gobierna cuando capacidades internas y participantes autónomos conservan compromisos verificables, una frontera de confianza y una salida practicable antes de la falla.",
+  "source_sections": [
+    {"id":"problem","heading":"La habitación estaba lista, pero el ecosistema no","summary":"Cada componente funciona, pero las certezas parciales no producen el ingreso."},
+    {"id":"hh26","heading":"Hotel Horizonte: la reserva confirmada que nadie podía ejecutar","summary":"HH-26 diseña verificación presencial, llave limitada y reconciliación posterior."},
+    {"id":"movement1","heading":"Movimiento 1 · Delimitar promesa, capacidades y participantes","summary":"La promesa define el límite del ecosistema y las capacidades relevantes."},
+    {"id":"movement2","heading":"Movimiento 2 · Asignar responsabilidad, confianza y capacidad de respuesta","summary":"Cada cruce conserva procedencia, vigencia, autoridad y alternativa."},
+    {"id":"movement3","heading":"Movimiento 3 · Diseñar degradación, salida y gobernanza","summary":"La contingencia y la salida se ensayan antes del incidente."}
+  ],
+  "nodes": [
+    {"id":"promise","label":"Ingreso confirmado","role":"service_promise","source":["problem","hh26"],"purpose":"Conservar el resultado completo como unidad de gobierno."},
+    {"id":"internal","label":"Cinco capacidades internas","role":"hotel_capabilities","source":["movement1"],"purpose":"Reunir inventario, estado material, asignación, pagos y eventos."},
+    {"id":"external","label":"Tres participantes autónomos","role":"external_participants","source":["movement1"],"purpose":"Identificar canal, identidad y cerraduras como parte del sistema relevante."},
+    {"id":"trust","label":"Frontera de confianza","role":"trust_boundary","source":["movement2"],"purpose":"Declarar qué cambia al aceptar una afirmación externa."},
+    {"id":"fallback","label":"Degradación diseñada","role":"degraded_mode","source":["hh26","movement3"],"purpose":"Sostener una parte segura de la promesa durante la falla."},
+    {"id":"accountability","label":"Responsabilidad de punta a punta","role":"accountability","source":["hh26","movement2"],"purpose":"Distribuir tareas sin diluir quién responde por la consecuencia completa."}
+  ],
+  "edges": [
+    {"id":"requires","from":"promise","to":"internal","relation":"requires","source":["movement1"],"meaning":"La promesa sólo existe cuando las capacidades internas producen el recorrido completo."},
+    {"id":"depends","from":"promise","to":"external","relation":"depends_on","source":["movement1"],"meaning":"Canal, identidad y cerraduras condicionan el ingreso aunque no pertenezcan al hotel."},
+    {"id":"crosses","from":"external","to":"trust","relation":"crosses","source":["movement2"],"meaning":"Cada afirmación externa cruza garantías y autoridades diferentes."},
+    {"id":"degrades","from":"trust","to":"fallback","relation":"activates","source":["hh26","movement3"],"meaning":"Un resultado indeterminado activa una contingencia previamente definida."},
+    {"id":"assigns","from":"accountability","to":"fallback","relation":"authorizes","source":["hh26","movement2"],"meaning":"Roles concretos gobiernan, ejecutan, trazan y limitan la promesa durante la contingencia."}
+  ]
+}

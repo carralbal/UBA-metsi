@@ -1,0 +1,30 @@
+{
+  "title": "Volver el código no devuelve la promesa",
+  "claim": "La liberación sólo es reversible o reparable cuando artefacto, configuración, infraestructura, datos, terceros y operación conservan identidad, exposición, autoridad y una salida ensayada.",
+  "source_sections": [
+    {"id":"problem","heading":"El botón de volver no devolvía el servicio","summary":"El rollback restauró código, pero dejó datos y cerraduras bajo otra interpretación."},
+    {"id":"hh29","heading":"Hotel Horizonte: volver el código no devolvía el servicio","summary":"HH-29 separa despliegue de liberación y prepara rollback y rollforward."},
+    {"id":"movement1","heading":"Movimiento 1 · Identificar artefacto, ambiente y configuración","summary":"La misma identidad de artefacto debe atravesar ambientes y condiciones declaradas."},
+    {"id":"movement2","heading":"Movimiento 2 · Autorizar y exponer cambios según riesgo","summary":"La puerta vincula evidencia, población y autoridad con una exposición gradual."},
+    {"id":"movement3","heading":"Movimiento 3 · Diseñar recuperación, procedencia y cierre","summary":"La salida distingue rollback, rollforward, aislamiento y reparación."}
+  ],
+  "nodes": [
+    {"id":"release","label":"HH-29, artefacto A29","role":"release_identity","source":["hh29","movement1"],"purpose":"Conservar la identidad del cambio y la población expuesta."},
+    {"id":"code","label":"Código","role":"release_domain","source":["movement1"],"purpose":"Distinguir la reversión de versión de la reparación del servicio."},
+    {"id":"configuration","label":"Configuración","role":"release_domain","source":["movement1"],"purpose":"Versionar reglas y banderas y reconciliar la deriva."},
+    {"id":"infrastructure","label":"Infraestructura","role":"release_domain","source":["movement1"],"purpose":"Recrear, aislar o reparar recursos y permisos."},
+    {"id":"data","label":"Datos","role":"release_domain","source":["hh29","movement3"],"purpose":"Preparar rollforward cuando los estados ya cambiaron."},
+    {"id":"third_parties","label":"Terceros","role":"release_domain","source":["hh29","movement3"],"purpose":"Incluir reglas de cerraduras y canales en la unidad de recuperación."},
+    {"id":"operation","label":"Operación","role":"release_domain","source":["hh29","movement3"],"purpose":"Confirmar, comunicar y reparar la consecuencia completa."},
+    {"id":"gate","label":"Puerta de exposición","role":"decision_gate","source":["movement2"],"purpose":"Aprobar, limitar o detener mediante evidencia y autoridad."},
+    {"id":"recovery","label":"Árbol de recuperación","role":"recovery_decision","source":["movement3"],"purpose":"Elegir rollback, rollforward o reparación según los efectos producidos."}
+  ],
+  "edges": [
+    {"id":"contains","from":"release","to":"code","relation":"contains","source":["movement1"],"meaning":"El artefacto es sólo una parte de la liberación."},
+    {"id":"binds","from":"release","to":"data","relation":"binds","source":["hh29"],"meaning":"La versión debe relacionarse con estados y migraciones."},
+    {"id":"coordinates","from":"release","to":"third_parties","relation":"coordinates","source":["hh29"],"meaning":"La regla del proveedor condiciona la misma promesa."},
+    {"id":"authorizes","from":"gate","to":"release","relation":"authorizes_exposure","source":["movement2"],"meaning":"La puerta autoriza una población, no sólo un despliegue."},
+    {"id":"selects","from":"data","to":"recovery","relation":"selects_branch","source":["movement3"],"meaning":"Los efectos persistidos determinan si volver resulta seguro."},
+    {"id":"repairs","from":"recovery","to":"operation","relation":"restores","source":["movement3"],"meaning":"El cierre se reconoce cuando la promesa vuelve a una condición explicable."}
+  ]
+}

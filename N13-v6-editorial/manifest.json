@@ -1,0 +1,337 @@
+{
+  "number": 13,
+  "title": "N13 · Demoras, concurrencia, consistencia, idempotencia y reconciliación",
+  "module": "Modelar sólo lo que ayuda a decidir",
+  "source": "source/N13_demoras_concurrencia_consistencia_idempotencia_y_reconciliacion-content-canonical-v1.md",
+  "source_sha256": "f724740e79a5e88ec16781f961f81bce97844c9741d3bb8168080b10f22fa96b",
+  "source_words": 7923,
+  "content_audit": "canonical-v2-under-exhaustive-audit",
+  "cover": {
+    "file": "cover-source-premium-bw-v1.png",
+    "source": "assets/cover-source-premium-bw-v1.png",
+    "sha256": "65cf13b098e2b5e311447f90d52ab387a83cd9012920d0bdfe3afb2e3f1443a4",
+    "alt": "Un hombre con traje acciona un lector junto a una puerta vidriada; el vidrio refleja a otra persona y edificios de la calle.",
+    "photographic_origin": "native_black_and_white",
+    "render_treatment": "no_grayscale_conversion"
+  },
+  "internal_images": [
+    "pause-01.png",
+    "pause-02.png",
+    "hotel-horizonte-canonical.png",
+    "editorial-01.png",
+    "editorial-02.png",
+    "editorial-03.png",
+    "editorial-04.png",
+    "editorial-05.png",
+    "editorial-06.png",
+    "editorial-07.png",
+    "editorial-08.png"
+  ],
+  "image_manifest": [
+    {
+      "file": "assets/pause-01.png",
+      "sha256": "d4b99fbcb6ac39764b923c2c2a4b40ca448f4c33f9aa63bf982ea209f2c17aad",
+      "alt": "Dos manos acercan sobres de llave idénticos desde lados opuestos de un mostrador donde queda una sola llave física.",
+      "role": "full_page_pause",
+      "saturation_review": "neutral",
+      "treatment": "none",
+      "rights_status": "project_bound_generated_media"
+    },
+    {
+      "file": "assets/pause-02.png",
+      "sha256": "bd5274169018ef68c7a13b85f48b4d1355844d2111bdfe1a43f691d5ae2352f7",
+      "alt": "Un trabajador compara dos registros demorados junto a un reloj mientras un carro espera en la bifurcación de dos corredores.",
+      "role": "full_page_pause",
+      "saturation_review": "restrained-accent",
+      "treatment": "natural_desaturated_color",
+      "rights_status": "project_bound_generated_media"
+    },
+    {
+      "file": "assets/hotel-horizonte-canonical.png",
+      "sha256": "84a810086dc67fb3da71df83cd9db8c479e8ed78b3e4d387f0b3957e1e4bb29c",
+      "alt": "Cartel luminoso de HOTEL recortado en diagonal sobre una fachada oscura.",
+      "role": "hotel_horizonte_canonical_anchor",
+      "saturation_review": "neutral",
+      "treatment": "none",
+      "rights_status": "project_authorized_fixed_asset"
+    },
+    {
+      "file": "assets/hotel-elena.jpg",
+      "sha256": "cbdc3fbb0c472ffb71b9f308a4f8ca28f48328a9fccd8c1801e18b691e5cb68f",
+      "alt": "",
+      "role": "hotel_horizonte_character",
+      "saturation_review": "neutral",
+      "treatment": "grayscale",
+      "rights_status": "project_authorized_character_asset"
+    },
+    {
+      "file": "assets/hotel-lucia.jpg",
+      "sha256": "e0f1e862fe8b8117d269d46e8b5373b874baebf8ce125d7e2cb2d7114b424ed1",
+      "alt": "",
+      "role": "hotel_horizonte_character",
+      "saturation_review": "neutral",
+      "treatment": "grayscale",
+      "rights_status": "project_authorized_character_asset"
+    },
+    {
+      "file": "assets/hotel-ricardo.jpg",
+      "sha256": "52a07a9be54c05d7152bb218d240fb3ef3ea9d1b6974f5aee085486d2ae389e3",
+      "alt": "",
+      "role": "hotel_horizonte_character",
+      "saturation_review": "neutral",
+      "treatment": "grayscale",
+      "rights_status": "project_authorized_character_asset"
+    },
+    {
+      "file": "assets/hotel-federico.jpg",
+      "sha256": "354e828c3d8f790c20baff3ecc18f24d44dd7f619a6b1e3cb768a2c216cf9b63",
+      "alt": "",
+      "role": "hotel_horizonte_character",
+      "saturation_review": "neutral",
+      "treatment": "grayscale",
+      "rights_status": "project_authorized_character_asset"
+    },
+    {
+      "file": "assets/hotel-mariela-benitez-v1.png",
+      "sha256": "f7972b4fca32393893f06672fe240d64d1f2c157d4e0a56a959fb0cadeccb0cb",
+      "alt": "",
+      "role": "hotel_horizonte_character",
+      "saturation_review": "neutral",
+      "treatment": "grayscale",
+      "rights_status": "project_authorized_character_asset"
+    },
+    {
+      "file": "assets/hotel-camila-duarte-v2.png",
+      "sha256": "8c7d51cf105ec25743ab926c62efe81d6d7db641e1a0b1afabfc6bb15a71809b",
+      "alt": "",
+      "role": "hotel_horizonte_character",
+      "saturation_review": "neutral",
+      "treatment": "grayscale",
+      "rights_status": "project_authorized_character_asset"
+    },
+    {
+      "file": "assets/editorial-01.png",
+      "sha256": "49e60bbcff8f52bdaa9181364b502859907209b68ae70231b2ac9cf4b61c7b1e",
+      "alt": "Una mujer con toallas abre una puerta en un corredor de hotel con varias habitaciones alineadas.",
+      "role": "contents_editorial",
+      "saturation_review": "neutral",
+      "treatment": "none",
+      "rights_status": "project_bound_generated_media",
+      "contact_sheet_panel": null
+    },
+    {
+      "file": "assets/editorial-02.png",
+      "sha256": "4a2d0b20423c65e755b719c5c36d212c8d7deb6a556ebc48af2afe427f8d50d2",
+      "alt": "Un hombre junto a un carro de limpieza abre una puerta en el lado opuesto del mismo corredor.",
+      "role": "hotel_evidence_primary",
+      "saturation_review": "neutral",
+      "treatment": "none",
+      "rights_status": "project_bound_generated_media",
+      "contact_sheet_panel": null
+    },
+    {
+      "file": "assets/editorial-03.png",
+      "sha256": "67fb4f439cb8e262298761a45bcf7090643a03d180a96cd3fb7bc6019e92e50e",
+      "alt": "Una mujer y un hombre con traje comparan dos sobres frente a un mostrador de hotel.",
+      "role": "problem_or_consequences_evidence",
+      "saturation_review": "neutral",
+      "treatment": "none",
+      "rights_status": "project_bound_generated_media",
+      "contact_sheet_panel": null
+    },
+    {
+      "file": "assets/editorial-04.png",
+      "sha256": "f41ce3dfee22ac7af0c23dd6328d3cd569de67f06a4b1650cb4618bd68d9921b",
+      "alt": "Dos manos sitúan dos sobres a ambos lados de una única llave sobre un mostrador de mármol.",
+      "role": "movement_two_evidence",
+      "saturation_review": "restrained-accent",
+      "treatment": "natural_restrained_color",
+      "rights_status": "project_bound_generated_media",
+      "contact_sheet_panel": null
+    },
+    {
+      "file": "assets/editorial-05.png",
+      "sha256": "ae77468e49a689550bd33dbd229e74983ef5190b49c74700a9a40a45a7181d6a",
+      "alt": "Un reloj de arena, dos sobres, un cuaderno, dos engranajes y un salvavidas forman una secuencia sobre mármol.",
+      "role": "movement_three_or_diptych_evidence",
+      "saturation_review": "neutral",
+      "treatment": "none",
+      "rights_status": "project_bound_generated_media",
+      "contact_sheet_panel": null
+    },
+    {
+      "file": "assets/editorial-06.png",
+      "sha256": "6fd66be8482e323f3f3e397da2909e58cf83cb17565da0fac351ae818f45c031",
+      "alt": "Tres estudiantes ordenan tarjetas pequeñas y notas alrededor de una mesa de trabajo.",
+      "role": "errors_evidence",
+      "saturation_review": "neutral",
+      "treatment": "none",
+      "rights_status": "project_bound_generated_media",
+      "contact_sheet_panel": null
+    },
+    {
+      "file": "assets/editorial-07.png",
+      "sha256": "4824780b7d995f2dbc7a9af5ce543970027996399fa7bba1b294054afb570348",
+      "alt": "Una trabajadora con toallas atraviesa un corredor espejado mientras otra figura permanece al fondo.",
+      "role": "synthesis_evidence",
+      "saturation_review": "neutral",
+      "treatment": "none",
+      "rights_status": "project_bound_generated_media",
+      "contact_sheet_panel": null
+    },
+    {
+      "file": "assets/editorial-08.png",
+      "sha256": "cf6df8c9de38f53623ee6fa742c9f9ed06f8848ab6a40811925200ba425c932a",
+      "alt": "Una trabajadora empuja un carro por un corredor vidriado hacia una ventana con una cúpula distante.",
+      "role": "preparation",
+      "saturation_review": "neutral",
+      "treatment": "none",
+      "rights_status": "project_bound_generated_media",
+      "contact_sheet_panel": null
+    }
+  ],
+  "portrait_references": [
+    {
+      "key": "leslie-lamport",
+      "name": "Leslie Lamport",
+      "file": "assets/referent-leslie-lamport.jpg",
+      "sha256": "1438037e558df1cb0f47b2452b0ec3172c06392ce8f73e1ef7ecdae0569ac276",
+      "rights_status": "approved_open_reuse",
+      "primary_reference": "Lamport, L. (1978). “Time, Clocks, and the Ordering of Events in a Distributed System”. *Communications of the ACM*, 21(7), 558–565. https://doi.org/10.1145/359545.359563",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Leslie_Lamport_September_2006.jpg",
+      "creator": "Andrej Bauer",
+      "credit_line": "Andrej Bauer",
+      "license_name": "CC BY-SA 2.5 Slovenia",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.5/si/",
+      "approved": true,
+      "rights_registry": "portrait-rights-N24-N36.json"
+    },
+    {
+      "key": "jim-gray",
+      "name": "Jim Gray",
+      "file": "assets/referent-jim-gray.jpg",
+      "sha256": "84aa38f3716bd27dde12b18db9bd5d62cfe893d12d134c5212e232d614a98479",
+      "rights_status": "approved_open_reuse",
+      "primary_reference": "Gray, J. y Reuter, A. (1992). *Transaction Processing: Concepts and Techniques*. Morgan Kaufmann.",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Jim_Gray_on_Tenacious_2006.jpg",
+      "creator": "Tony Hey",
+      "credit_line": "Tony Hey, via Microsoft Research",
+      "license_name": "CC BY-SA 3.0 US",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/us/",
+      "approved": true,
+      "rights_registry": "portrait-rights-N24-N36.json"
+    },
+    {
+      "key": "barbara-liskov",
+      "name": "Barbara Liskov",
+      "file": "assets/referent-barbara-liskov.jpg",
+      "sha256": "287f4ad74b40f4bd66660cdd0eeaa5381d83959c72640ee1b23321d4f36be443",
+      "rights_status": "approved_open_reuse_candidate",
+      "primary_reference": "Liskov, B. H. y Wing, J. M. (1994). “A Behavioral Notion of Subtyping”. *ACM Transactions on Programming Languages and Systems*, 16(6), 1811–1841. https://doi.org/10.1145/197320.197383",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Barbara_Liskov_computer_scientist_2010.jpg",
+      "creator": "Kenneth C. Zirkel",
+      "credit_line": "Kenneth C. Zirkel",
+      "license_name": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "approved": true,
+      "rights_registry": "portrait-rights-N11-N23.json"
+    },
+    {
+      "key": "werner-vogels",
+      "name": "Werner Vogels",
+      "file": "assets/referent-werner-vogels.jpg",
+      "sha256": "c931168906342075b39b862bb5e4b0f8b950ba9bba879252e99dae1bd7c70813",
+      "rights_status": "approved_open_reuse",
+      "primary_reference": "Vogels, W. (2009). “Eventually Consistent”. *Communications of the ACM*, 52(1), 40–44. https://doi.org/10.1145/1435417.1435432",
+      "source_page": "https://commons.wikimedia.org/wiki/File:WernerVogels2.JPG",
+      "creator": "Raysonho @ Open Grid Scheduler / Grid Engine",
+      "credit_line": "Raysonho @ Open Grid Scheduler / Grid Engine",
+      "license_name": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "approved": true,
+      "rights_registry": "portrait-rights-N24-N36.json"
+    },
+    {
+      "key": "david-parnas",
+      "name": "David Parnas",
+      "file": "assets/referent-david-parnas.jpg",
+      "sha256": "46c45f4b7f3ce50553073ffd3b82ecab1406cb8a1c9d1bc0dd22cca0ce4db9d6",
+      "rights_status": "approved_open_reuse",
+      "primary_reference": "Parnas, D. L. (1972). “On the Criteria to Be Used in Decomposing Systems into Modules”. *Communications of the ACM*, 15(12), 1053–1058. https://doi.org/10.1145/361598.361623",
+      "source_page": "https://commons.wikimedia.org/wiki/File:David_Parnas.jpg",
+      "creator": "Hubert Baumeister",
+      "credit_line": "Hubert Baumeister",
+      "license_name": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "approved": true,
+      "rights_registry": "portrait-rights-N24-N36.json"
+    },
+    {
+      "key": "leonard-kleinrock",
+      "name": "Leonard Kleinrock",
+      "file": "assets/referent-leonard-kleinrock.png",
+      "sha256": "ec09834676928e4eeb5d4fc5c3bf5ef97bb3b01206ac87a7998ad00fc72f001b",
+      "rights_status": "approved_open_reuse_candidate",
+      "primary_reference": "Kleinrock, L. (1975). *Queueing Systems, Volume 1: Theory*. Wiley.",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Kleinrock_headshot.png",
+      "creator": "TippyZora",
+      "credit_line": "TippyZora",
+      "license_name": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "approved": true,
+      "rights_registry": "portrait-rights-N11-N23.json"
+    }
+  ],
+  "diagrams": [
+    {
+      "file": "diagrams/N13-mapa-01.svg",
+      "title": "Repetir un mensaje no debe multiplicar el efecto",
+      "labels": [
+        "Solicitud original para asignar la última habitación",
+        "Reintento de la misma intención ante una respuesta ausente",
+        "Cancelación que llega tarde y puede encontrar otro estado",
+        "Clave estable de intención",
+        "Una habitación física no puede tener dos asignaciones vigentes superpuestas",
+        "Aplicar una vez el efecto protegido",
+        "Estado ambiguo que no debe confirmarse ni sobrescribirse sin evidencia",
+        "Comparar agencia, PMS y cerradura para explicar y reparar"
+      ],
+      "claim": "Una transición distribuida converge cuando conserva la identidad de la intención, protege una invariante y reconcilia representaciones divergentes sin falsificar la historia.",
+      "caption": "La convergencia conserva la identidad de la intención, protege una invariante y repara divergencias sin borrar la historia.",
+      "family": "convergence-gate",
+      "sha256": "8d22ba619f1a08227fa7464707dc0df5b702ed86aa5c64b361a7f6248a255ef1",
+      "approved": true,
+      "source_manifest": "diagrams/N13-mapa-01-content-manifest.json",
+      "alt_text": "diagrams/N13-mapa-01-alt-text.md"
+    }
+  ],
+  "quotes": [
+    "Cada frontera introduce demora, repetición, pérdida, reordenamiento y conocimiento parcial.",
+    "Las garantías fuertes cuestan coordinación, pero el costo no siempre justifica reducirlas."
+  ],
+  "references": [
+    "Lamport, L. (1978). “Time, Clocks, and the Ordering of Events in a Distributed System”. *Communications of the ACM*, 21(7), 558–565. https://doi.org/10.1145/359545.359563",
+    "Gray, J. y Reuter, A. (1992). *Transaction Processing: Concepts and Techniques*. Morgan Kaufmann.",
+    "Helland, P. (2007). “Life beyond Distributed Transactions: An Apostate’s Opinion”. *CIDR*. https://www.cidrdb.org/cidr2007/papers/cidr07p15.pdf",
+    "Vogels, W. (2009). “Eventually Consistent”. *Communications of the ACM*, 52(1), 40–44. https://doi.org/10.1145/1435417.1435432",
+    "Kleppmann, M. (2017). *Designing Data-Intensive Applications*. O’Reilly Media.",
+    "Bailis, P., Fekete, A., Franklin, M. J., Ghodsi, A., Hellerstein, J. M. y Stoica, I. (2014). “Coordination Avoidance in Database Systems”. *Proceedings of the VLDB Endowment*, 8(3), 185–196. https://doi.org/10.14778/2735508.2735509",
+    "Liskov, B. H. y Wing, J. M. (1994). “A Behavioral Notion of Subtyping”. *ACM Transactions on Programming Languages and Systems*, 16(6), 1811–1841. https://doi.org/10.1145/197320.197383",
+    "Parnas, D. L. (1972). “On the Criteria to Be Used in Decomposing Systems into Modules”. *Communications of the ACM*, 15(12), 1053–1058. https://doi.org/10.1145/361598.361623",
+    "Kleinrock, L. (1975). *Queueing Systems, Volume 1: Theory*. Wiley.",
+    "Fielding, R. T., Nottingham, M. y Reschke, J. (2022). *RFC 9110: HTTP Semantics*. RFC Editor. https://www.rfc-editor.org/rfc/rfc9110.html",
+    "Featonby, M. (2021). “Making Retries Safe with Idempotent APIs”. *Amazon Builders’ Library*. https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/",
+    "Microsoft (2026). “Retry Pattern”. *Azure Architecture Center*. https://learn.microsoft.com/en-us/azure/architecture/patterns/retry",
+    "Microsoft (2026). “Saga Distributed Transactions Pattern”. *Azure Architecture Center*. https://learn.microsoft.com/en-us/azure/architecture/patterns/saga",
+    "Microsoft (2026). “Compensating Transaction Pattern”. *Azure Architecture Center*. https://learn.microsoft.com/en-us/azure/architecture/patterns/compensating-transaction",
+    "Ross, R., McEvilley, M. y Winstead, M. (2022). *Engineering Trustworthy Secure Systems*. NIST SP 800-160 Vol. 1 Rev. 1. https://doi.org/10.6028/NIST.SP.800-160v1r1"
+  ],
+  "closing": {
+    "file": "matches-close.png",
+    "sha256": "06318b951ef619692a236027ed07ec7a4a1bb9b66cc875a916c40f060e47ecde",
+    "alt": "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza.",
+    "caption": "La secuencia vuelve visible que toda intervención consume recursos, deja huellas y necesita un criterio de cierre.",
+    "folio": true,
+    "footer": true
+  }
+}

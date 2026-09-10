@@ -1,0 +1,29 @@
+{
+  "title": "Una hipótesis debe poder perder apoyo",
+  "claim": "Una iniciativa sólo aprende cuando una observación puede debilitar su mecanismo, activar una salvaguarda y modificar una decisión preparada antes de aumentar exposición.",
+  "source_sections": [
+    {"id":"hh22","heading":"Hotel Horizonte: una iniciativa que también puede fracasar","summary":"HH-22 separa población, mecanismo, rival, umbral, salvaguarda, resultado, interpretación y decisión."},
+    {"id":"thesis","heading":"Tesis","summary":"Una iniciativa refutable explicita qué evidencia puede modificar o retirar la apuesta."},
+    {"id":"movement1","heading":"Movimiento 1 · Convertir la iniciativa en una afirmación refutable","summary":"La formulación conecta intervención, mecanismo, población, outcome y decisión futura."},
+    {"id":"movement2","heading":"Movimiento 2 · Diseñar evidencia que distinga explicaciones rivales","summary":"Una misma observación debe confrontarse con mecanismos plausibles y una línea de base comparable."},
+    {"id":"movement3","heading":"Movimiento 3 · Detener, ampliar o retirar con salvaguardas","summary":"El gobierno vincula umbrales y salvaguardas con autoridad y acciones ejecutables."}
+  ],
+  "nodes": [
+    {"id":"population","label":"Llegadas anticipadas","role":"population","source":["hh22"],"purpose":"Delimitar a quién alcanza la inferencia."},
+    {"id":"intervention","label":"Confirmación asistida","role":"intervention","source":["hh22"],"purpose":"Nombrar la acción cuyo efecto se evalúa."},
+    {"id":"main","label":"Estados consistentes antes de la promesa","role":"main_mechanism","source":["hh22","movement1"],"purpose":"Proponer cómo la intervención podría reducir reasignaciones."},
+    {"id":"rival","label":"Mensajes más claros","role":"rival_mechanism","source":["hh22","movement2"],"purpose":"Ofrecer una explicación alternativa discriminable."},
+    {"id":"baseline","label":"Línea de base segmentada","role":"comparison","source":["hh22","movement2"],"purpose":"Conservar canal, turno, tipo de habitación y accesibilidad."},
+    {"id":"threshold","label":"Reducción sostenida de reasignaciones","role":"continuation_threshold","source":["hh22","movement2"],"purpose":"Exigir evidencia acumulada antes de ampliar."},
+    {"id":"safeguard","label":"Revisión ante una falla crítica de accesibilidad","role":"safeguard","source":["hh22","movement3"],"purpose":"Proteger una población y detener exposición de inmediato."},
+    {"id":"decision","label":"Mantener asistencia directa y no ampliar","role":"decision","source":["hh22"],"purpose":"Modificar el alcance sin convertir el resultado en una afirmación total."}
+  ],
+  "edges": [
+    {"id":"acts","from":"population","to":"intervention","relation":"scope","source":["hh22"],"meaning":"La intervención se aplica a una población declarada."},
+    {"id":"expects","from":"intervention","to":"main","relation":"causal_hypothesis","source":["hh22","movement1"],"meaning":"La intervención sólo justifica el outcome mediante un mecanismo observable."},
+    {"id":"compares","from":"main","to":"rival","relation":"rival_explanation","source":["movement2"],"meaning":"La observación debe distinguir explicaciones rivales."},
+    {"id":"anchors","from":"baseline","to":"threshold","relation":"comparison","source":["movement2"],"meaning":"El umbral se interpreta contra una comparación previa segmentada."},
+    {"id":"protects","from":"safeguard","to":"decision","relation":"override","source":["hh22","movement3"],"meaning":"Una falla crítica puede detener aunque exista apoyo parcial."},
+    {"id":"governs","from":"threshold","to":"decision","relation":"decision_rule","source":["hh22","movement3"],"meaning":"La evidencia acumulada habilita o impide ampliar."}
+  ]
+}

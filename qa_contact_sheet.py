@@ -17,7 +17,11 @@ def main() -> None:
     parser.add_argument("--columns", type=int, default=5)
     args = parser.parse_args()
 
-    files = sorted(args.input_dir.glob("page-*.jpg"))
+    files = sorted(
+        path
+        for pattern in ("page-*.png", "page-*.jpg", "page-*.jpeg")
+        for path in args.input_dir.glob(pattern)
+    )
     if not files:
         raise SystemExit("No rendered pages found")
 

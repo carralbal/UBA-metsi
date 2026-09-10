@@ -20,15 +20,393 @@ import unicodedata
 from pathlib import Path
 
 import build_collection as base
-from PIL import Image, ImageOps
+from PIL import Image, ImageEnhance, ImageOps
 
 
 ROOT = Path(__file__).resolve().parent
 PORTRAIT_ROOT = ROOT / "assets" / "portraits-block-c"
 SHARED_PORTRAITS = ROOT / "assets" / "portraits"
 SUPPORT_ROOT = ROOT / "assets" / "rebuild-support"
-PACKAGE_VERSION = 3
+APPROVED_INFOGRAPHIC_ROOT = ROOT / "editorial-standard" / "approved-infographics"
+PACKAGE_VERSION = 6
 MATCHES = ROOT / "N10-v9-final" / "assets" / "matches-close.png"
+HOTEL_HORIZONTE = SUPPORT_ROOT / "hotel-horizonte-canonical-v1.png"
+
+APPROVED_INFOGRAPHICS = {
+    11: {
+        "file": "N11-expediente-sosten.svg",
+        "family": "assembly",
+        "caption": (
+            "La evidencia se vuelve defendible cuando el expediente conserva "
+            "afirmación, rastro, límite y relación con una decisión."
+        ),
+    },
+    12: {
+        "file": "N12-transicion-verificable.svg",
+        "family": "transition-gate",
+        "caption": (
+            "La transición separa lo solicitado, lo ocurrido y lo vigente, y conserva "
+            "autoridad, evidencia y reparación."
+        ),
+    },
+    13: {
+        "file": "N13-convergencia-bajo-desorden.svg",
+        "family": "convergence-gate",
+        "caption": (
+            "La convergencia conserva la identidad de la intención, protege una "
+            "invariante y repara divergencias sin borrar la historia."
+        ),
+    },
+    14: {
+        "file": "N14-flujo-real-y-excepciones.svg",
+        "family": "flow-map",
+        "caption": (
+            "El tiempo de servicio reúne trabajo, espera, handoffs y excepciones "
+            "entre el evento inicial y un cierre verificable."
+        ),
+    },
+    15: {
+        "file": "N15-pregunta-elige-vista.svg",
+        "family": "selection-gate",
+        "caption": (
+            "La pregunta y la decisión seleccionan una cartera mínima de vistas con "
+            "audiencia, evidencia, costo y vigencia explícitos."
+        ),
+    },
+    16: {
+        "file": "N16-contradiccion-clasificada.svg",
+        "family": "coherence-register",
+        "caption": (
+            "La coherencia se prueba sobre un mismo episodio, clasifica la diferencia "
+            "antes de corregir y gobierna su tratamiento a través del cambio."
+        ),
+    },
+    17: {
+        "file": "N17-logicas-por-decision.svg",
+        "family": "strategy-portfolio",
+        "caption": (
+            "Una estrategia situada asigna una lógica distinta a cada decisión y "
+            "aumenta compromiso sólo cuando la evidencia atraviesa la puerta."
+        ),
+    },
+    18: {
+        "file": "N18-capacidad-antes-que-pieza.svg",
+        "family": "legacy-decision-gate",
+        "caption": (
+            "La transición conserva capacidades, derechos y evidencia, pero puede "
+            "adaptar o retirar las piezas históricas que los implementaban."
+        ),
+    },
+    19: {
+        "file": "N19-alternativas-misma-prueba.svg",
+        "family": "realization-field",
+        "caption": (
+            "Configurar, integrar, construir, contratar, operar manualmente y no "
+            "automatizar se comparan contra la misma capacidad, falla, reparación y salida."
+        ),
+    },
+    20: {
+        "file": "N20-estrategia-con-puertas.svg",
+        "family": "situated-strategy-gates",
+        "caption": (
+            "La estrategia selecciona prácticas por función, vincula cada puerta con "
+            "evidencia y autoridad, y conserva salidas efectivas antes de transferir la capacidad."
+        ),
+    },
+    21: {
+        "file": "N21-cuatro-gobiernos-una-capacidad.svg",
+        "family": "object-governance-map",
+        "caption": (
+            "Proyecto, producto, servicio y plataforma conviven alrededor de una misma "
+            "capacidad, pero exigen horizontes, evidencia, autoridad y cierres diferentes."
+        ),
+    },
+    22: {
+        "file": "N22-hipotesis-que-puede-perder.svg",
+        "family": "refutable-hypothesis-dossier",
+        "caption": (
+            "La hipótesis explicita una explicación rival, exige evidencia acumulada "
+            "para continuar y deja que una salvaguarda crítica detenga la expansión."
+        ),
+    },
+    23: {
+        "file": "N23-corte-conserva-capacidad.svg",
+        "family": "capacity-cross-section",
+        "caption": (
+            "El corte vertical limita población y variedad, pero conserva una llegada completa, "
+            "su operación, su reparación y la evidencia que habilita el próximo incremento."
+        ),
+    },
+    24: {
+        "file": "N24-prioridad-hace-visible-renuncia.svg",
+        "family": "renunciation-register",
+        "caption": (
+            "La cartera protege límites antes de comparar, restringe el trabajo activo y "
+            "conserva quién espera, qué consecuencia se acepta y cuándo se revisa."
+        ),
+    },
+    25: {
+        "file": "N25-flujo-conserva-identidad.svg",
+        "family": "temporal-flow-map",
+        "caption": (
+            "La unidad conserva identidad entre demanda y capacidad en uso, hace visibles "
+            "trabajo, espera y colas, y cierra el feedback sólo cuando cambia una decisión."
+        ),
+    },
+    26: {
+        "file": "N26-promesa-entre-capacidades.svg",
+        "family": "service-ecosystem-map",
+        "caption": (
+            "La promesa conecta capacidades internas y participantes autónomos mediante "
+            "fronteras de confianza, contingencia y responsabilidad de punta a punta."
+        ),
+    },
+    27: {
+        "file": "N27-contrato-cuatro-capas.svg",
+        "family": "layered-contract-dossier",
+        "caption": (
+            "Un intercambio sólo se vuelve contrato cuando forma, significado, tiempo y "
+            "operación permiten anticipar la misma consecuencia y una reparación practicable."
+        ),
+    },
+    28: {
+        "file": "N28-calidad-por-escenario.svg",
+        "family": "risk-evidence-dossier",
+        "caption": (
+            "El promedio describe el conjunto, pero sólo escenarios con población, riesgo, "
+            "umbral y evidencia permiten autorizar un alcance de calidad defendible."
+        ),
+    },
+    29: {
+        "file": "N29-recuperacion-promesa-completa.svg",
+        "family": "release-recovery-dossier",
+        "caption": (
+            "La unidad de liberación reúne artefacto, configuración, infraestructura, datos, "
+            "terceros y operación; la salida se elige según los efectos que ya ocurrieron."
+        ),
+    },
+    30: {
+        "file": "N30-senales-promesa-y-aprendizaje.svg",
+        "family": "observability-learning-map",
+        "caption": (
+            "Tres tableros saludables pueden ocultar una fila real; la observación se vuelve "
+            "operable cuando conecta escalas de señal, SLI, SLO, autoridad y aprendizaje."
+        ),
+    },
+    31: {
+        "file": "N31-capacidad-antes-que-ia.svg",
+        "family": "ai-pertinence-dossier",
+        "caption": (
+            "El recorrido asigna reglas, búsqueda, predicción, generación y agencia a pasos "
+            "concretos, los compara con una línea de base y limita la acción mediante una puerta."
+        ),
+    },
+    32: {
+        "file": "N32-permiso-por-tarea.svg",
+        "family": "autonomy-evidence-dossier",
+        "caption": (
+            "El promedio se confronta con cobertura, severidad, desigualdad, robustez y "
+            "supervisión real antes de asignar un permiso revisable a cada tarea."
+        ),
+    },
+    33: {
+        "file": "N33-registro-vivo-gobierno.svg",
+        "family": "living-governance-register",
+        "caption": (
+            "El registro mantiene unido propósito, configuración, autoridad, evaluación, "
+            "incidentes y salida, y reabre el permiso cuando cambia la frontera."
+        ),
+    },
+    34: {
+        "file": "N34-cadena-en-ambos-sentidos.svg",
+        "family": "integrated-evidence-chain",
+        "caption": (
+            "La cadena se prueba desde la promesa hasta la consecuencia y desde un incidente "
+            "hasta la decisión, la evidencia y el encuadre que lo habilitaron."
+        ),
+    },
+    35: {
+        "file": "N35-tesis-y-recorridos.svg",
+        "family": "defense-transfer-matrix",
+        "caption": (
+            "La tesis conserva afirmación, evidencia, garantía, límite, objeción y revisión, "
+            "mientras cada audiencia recorre esos elementos para una decisión diferente."
+        ),
+    },
+    36: {
+        "file": "N36-sorpresa-reabre-practica.svg",
+        "family": "reflective-practice-system",
+        "caption": (
+            "La sorpresa separa el resultado de su explicación y abre cambios en la acción, "
+            "la regla, la autoridad o el propio sistema de aprendizaje antes de volver a probar."
+        ),
+    },
+}
+
+# N11 is the first reconstruction pilot. Colour is reserved for source-relevant
+# evidence on a white surface and for one full-page reading pause. Contents and
+# recurring apparatus remain neutral, matching the approved N00–N10 language.
+PREMIUM_COLOR_OVERRIDES: dict[int, dict[int, Path]] = {
+    11: {
+        3: SUPPORT_ROOT / "N11-premium-color-03.png",
+    },
+    12: {
+        3: SUPPORT_ROOT / "N12-premium-color-03.png",
+    },
+    13: {
+        3: SUPPORT_ROOT / "N13-premium-color-03.png",
+    },
+    14: {
+        3: SUPPORT_ROOT / "N14-premium-color-03.png",
+    },
+    15: {
+        3: SUPPORT_ROOT / "N15-premium-color-03.png",
+    },
+    16: {
+        3: SUPPORT_ROOT / "N16-premium-color-03.png",
+    },
+    17: {
+        3: SUPPORT_ROOT / "N17-premium-color-03.png",
+    },
+    18: {
+        3: SUPPORT_ROOT / "N18-premium-color-03.png",
+    },
+    19: {
+        3: SUPPORT_ROOT / "N19-premium-color-03.png",
+    },
+    20: {
+        3: SUPPORT_ROOT / "N20-premium-color-03.png",
+    },
+    21: {
+        3: SUPPORT_ROOT / "N21-premium-color-03.png",
+    },
+    22: {
+        3: SUPPORT_ROOT / "N22-premium-color-03.png",
+    },
+    23: {
+        3: SUPPORT_ROOT / "N23-premium-color-03.png",
+    },
+    24: {
+        3: SUPPORT_ROOT / "N24-premium-color-03.png",
+    },
+    25: {
+        3: SUPPORT_ROOT / "N25-premium-color-03.png",
+    },
+    26: {
+        3: SUPPORT_ROOT / "N26-premium-color-03.png",
+    },
+    27: {
+        3: SUPPORT_ROOT / "N27-premium-color-03.png",
+    },
+    28: {
+        3: SUPPORT_ROOT / "N28-premium-color-03.png",
+    },
+    29: {
+        3: SUPPORT_ROOT / "N29-premium-color-03.png",
+    },
+    30: {
+        3: SUPPORT_ROOT / "N30-premium-color-03.png",
+    },
+    31: {
+        3: SUPPORT_ROOT / "N31-premium-color-03.png",
+    },
+    32: {
+        3: SUPPORT_ROOT / "N32-premium-color-03.png",
+    },
+    33: {
+        3: SUPPORT_ROOT / "N33-premium-color-03.png",
+    },
+    34: {
+        3: SUPPORT_ROOT / "N34-premium-color-03.png",
+    },
+    35: {
+        3: SUPPORT_ROOT / "N35-premium-color-03.png",
+    },
+    36: {
+        3: SUPPORT_ROOT / "N36-premium-color-03.png",
+    },
+}
+
+PREMIUM_PAUSE_OVERRIDES: dict[int, dict[int, Path]] = {
+    11: {
+        2: SUPPORT_ROOT / "N11-premium-color-01.png",
+    },
+    12: {
+        2: SUPPORT_ROOT / "N12-premium-color-01.png",
+    },
+    13: {
+        2: SUPPORT_ROOT / "N13-premium-color-01.png",
+    },
+    14: {
+        2: SUPPORT_ROOT / "N14-premium-color-01.png",
+    },
+    15: {
+        2: SUPPORT_ROOT / "N15-premium-color-01.png",
+    },
+    16: {
+        2: SUPPORT_ROOT / "N16-premium-color-01.png",
+    },
+    17: {
+        2: SUPPORT_ROOT / "N17-premium-color-01.png",
+    },
+    18: {
+        2: SUPPORT_ROOT / "N18-premium-color-01.png",
+    },
+    19: {
+        2: SUPPORT_ROOT / "N19-premium-color-01.png",
+    },
+    20: {
+        2: SUPPORT_ROOT / "N20-premium-color-01.png",
+    },
+    21: {
+        2: SUPPORT_ROOT / "N21-premium-color-01.png",
+    },
+    22: {
+        2: SUPPORT_ROOT / "N22-premium-color-01.png",
+    },
+    23: {
+        2: SUPPORT_ROOT / "N23-premium-color-01.png",
+    },
+    24: {
+        2: SUPPORT_ROOT / "N24-premium-color-01.png",
+    },
+    25: {
+        2: SUPPORT_ROOT / "N25-premium-color-01.png",
+    },
+    26: {
+        2: SUPPORT_ROOT / "N26-premium-color-01.png",
+    },
+    27: {
+        2: SUPPORT_ROOT / "N27-premium-color-01.png",
+    },
+    28: {
+        2: SUPPORT_ROOT / "N28-premium-color-01.png",
+    },
+    29: {
+        2: SUPPORT_ROOT / "N29-premium-color-01.png",
+    },
+    30: {
+        2: SUPPORT_ROOT / "N30-premium-color-01.png",
+    },
+    31: {
+        2: SUPPORT_ROOT / "N31-premium-color-01.png",
+    },
+    32: {
+        2: SUPPORT_ROOT / "N32-premium-color-01.png",
+    },
+    33: {
+        2: SUPPORT_ROOT / "N33-premium-color-01.png",
+    },
+    34: {
+        2: SUPPORT_ROOT / "N34-premium-color-01.png",
+    },
+    35: {
+        2: SUPPORT_ROOT / "N35-premium-color-01.png",
+    },
+    36: {
+        2: SUPPORT_ROOT / "N36-premium-color-01.png",
+    },
+}
 ALT_TEXT_MATRIX = json.loads(
     (SUPPORT_ROOT / "N11-N36-alt-text-matrix.json").read_text(encoding="utf-8")
 )["documents"]
@@ -527,6 +905,87 @@ def normalized_name(name: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", plain.casefold()).strip()
 
 
+REFERENCE_ALIAS_TOKENS = {
+    "george-box": ["box"],
+    "cynthia-kurtz-david-snowden": ["kurtz", "snowden"],
+    "carliss-baldwin-kim-clark": ["baldwin", "clark"],
+    "parker-van-alstyne-choudary": ["parker", "alstyne", "choudary"],
+    "wallace-hopp-mark-spearman": ["hopp", "spearman"],
+    "bass-clements-kazman": ["bass", "clements", "kazman"],
+    "forsgren-humble-kim": ["forsgren", "humble", "kim"],
+    "humble-farley": ["humble", "farley"],
+    "hohpe-woolf": ["hohpe", "woolf"],
+    "joy-buolamwini-timnit-gebru": ["buolamwini", "gebru"],
+    "batya-friedman-david-hendry": ["friedman", "hendry"],
+    "peter-checkland-john-poulter": ["checkland", "poulter"],
+    "chris-argyris-donald-schon": ["argyris", "schon"],
+    "mary-tom-poppendieck": ["poppendieck"],
+    "agile-alliance": ["agile", "manifesto"],
+    "team-topologies": ["team", "topologies"],
+    "google-sre": ["site", "reliability"],
+    "openapi-initiative": ["openapi"],
+    "json-schema": ["json", "schema"],
+    "iso-iec-ieee": ["iso", "iec", "ieee"],
+    "iso-iec": ["iso", "iec"],
+    "european-union": ["union", "europea"],
+}
+
+
+def reference_lines(section: base.Section) -> list[str]:
+    return [line[2:].strip() for line in section.lines if line.strip().startswith("- ")]
+
+
+def primary_reference_for(key: str, display: str, section: base.Section) -> str:
+    """Resolve the source-backed principal work shown on a Referentes card."""
+    stop = {"and", "del", "the", "van", "von", "para", "con", "initiative", "institute"}
+    tokens = REFERENCE_ALIAS_TOKENS.get(key)
+    if not tokens:
+        tokens = [
+            token for token in normalized_name(display).split()
+            if len(token) >= 4 and token not in stop
+        ]
+    candidates: list[tuple[int, int, str]] = []
+    for position, raw in enumerate(reference_lines(section)):
+        normalized = normalized_name(raw)
+        score = sum(1 for token in tokens if token in normalized)
+        if score:
+            candidates.append((score, -position, raw))
+    if not candidates:
+        raise ValueError(f"No se encontró una obra principal en Referencias base para {display}")
+    return max(candidates)[2]
+
+
+def primary_work_markup(reference: str) -> str:
+    """Render title and publication metadata with the hierarchy used in N02."""
+    italic = re.search(r"(?<!\*)\*([^*]+)\*(?!\*)", reference)
+    quoted = re.search(r"[“\"]([^”\"]+)[”\"]", reference)
+    # Articles are identified by their quoted title, while books and reports
+    # use the italic title.  Preferring the quote avoids presenting the journal
+    # name as if it were the contributor's principal work.
+    match = quoted or italic
+    if match:
+        title = match.group(1).strip()
+        tail = reference[match.end():]
+    else:
+        title = reference.split(".", 1)[-1].strip()
+        tail = ""
+    year_match = re.search(r"\b(?:19|20)\d{2}\b", reference)
+    year = year_match.group(0) if year_match else ""
+    journal = re.search(r"\*([^*]+)\*", tail)
+    if quoted and match is quoted and journal:
+        tail = journal.group(1)
+    tail = re.sub(r"https?://\S+", "", tail)
+    tail = tail.replace("*", "")
+    tail = re.sub(r"\s+", " ", tail).strip(" .")
+    if len(tail) > 92:
+        tail = tail[:89].rsplit(" ", 1)[0] + "…"
+    meta = " · ".join(part for part in (tail, year) if part)
+    return (
+        f'<cite>{html.escape(title)}</cite>'
+        f'<small>{html.escape(meta)}</small>'
+    )
+
+
 def portrait_rights_registry() -> dict[str, dict]:
     """Load only the explicit, machine-readable portrait release evidence.
 
@@ -563,7 +1022,13 @@ def portrait_key_for_display(display: str) -> str:
     return normalized.replace(" ", "-")
 
 
-def build_referents(number: int, section: base.Section, assets: Path, legacy_assets: Path) -> tuple[str, list[dict]]:
+def build_referents(
+    number: int,
+    section: base.Section,
+    references_section: base.Section,
+    assets: Path,
+    legacy_assets: Path,
+) -> tuple[str, list[dict]]:
     paragraphs = referent_paragraphs(section)
     if len(paragraphs) != 6:
         raise ValueError(f"N{number:02d} requiere seis Referentes; se encontraron {len(paragraphs)}")
@@ -583,6 +1048,8 @@ def build_referents(number: int, section: base.Section, assets: Path, legacy_ass
         display = match.group(1) if match else f"Referente {index}"
         body = match.group(2) if match else raw
         key = portrait_key_for_display(display)
+        primary_reference = primary_reference_for(key, display, references_section)
+        work_markup = primary_work_markup(primary_reference)
         source = portrait_source(key, legacy_assets)
         proof = rights.get(normalized_name(display), {})
         proof_sha = str(proof.get("sha256") or "")
@@ -618,7 +1085,8 @@ def build_referents(number: int, section: base.Section, assets: Path, legacy_ass
             status = "portrait_withheld_pending_rights"
         cards.append(
             f'<article class="contributor contributor-{key}"><div class="portrait-frame">{visual}</div><b>{index:02d}</b>'
-            f'<h3>{html.escape(display)}</h3><p>{base.inline(body)}</p></article>'
+            f'<h3>{html.escape(display)}</h3><div class="contributor-work">{work_markup}</div>'
+            f'<p>{base.inline(body)}</p></article>'
         )
         record = {
             "key": key,
@@ -626,6 +1094,7 @@ def build_referents(number: int, section: base.Section, assets: Path, legacy_ass
             "file": f"assets/{target.name}" if target else "",
             "sha256": sha(target) if target else "",
             "rights_status": status,
+            "primary_reference": primary_reference,
         }
         if approved_source:
             record.update({
@@ -640,7 +1109,7 @@ def build_referents(number: int, section: base.Section, assets: Path, legacy_ass
         records.append(record)
     page = (
         f'<section class="front-page authors-page" id="referentes"><header><span>METSI · FCE-UBA</span>'
-        f'<h2>Referentes</h2><p>Seis voces para ampliar, contrastar y discutir N{number:02d}.</p></header>'
+        f'<h2>Referentes</h2><p>Seis referentes y las obras principales utilizadas para construir N{number:02d}.</p></header>'
         f'<div class="contributors-grid">{"".join(cards)}</div>'
         f'<blockquote>N{number:02d} no resume estas fuentes ni las convierte en receta. Las pone en tensión para construir juicio profesional.</blockquote></section>'
     )
@@ -668,6 +1137,16 @@ def build_hotel_voices(number: int, assets: Path) -> str:
         '<p>El episodio cambia según la promesa, la operación, el dato y la autoridad que cada rol debe sostener.</p></header>'
         f'<div class="hotel-voices-grid">{"".join(cards)}</div></aside>'
     )
+
+
+def apply_premium_color_overrides(number: int, panels: list[Path]) -> list[Path]:
+    for index, source in PREMIUM_COLOR_OVERRIDES.get(number, {}).items():
+        if not valid_raster(source):
+            raise FileNotFoundError(f"Fotografía editorial color inválida para N{number:02d}: {source}")
+        target = panels[index]
+        with Image.open(source) as image:
+            ImageOps.exif_transpose(image).convert("RGB").save(target, format="PNG", optimize=True)
+    return panels
 
 
 def support_assets(number: int, legacy_assets: Path, assets: Path) -> list[Path]:
@@ -702,7 +1181,7 @@ def support_assets(number: int, legacy_assets: Path, assets: Path) -> list[Path]
                 target = assets / f"editorial-{index + 1:02d}.png"
                 crop.save(target, format="PNG", optimize=True)
                 panels.append(target)
-        return panels
+        return apply_premium_color_overrides(number, panels)
 
     fallbacks = [
         legacy_assets / "cover-source-premium-bw-v1.png",
@@ -730,7 +1209,7 @@ def support_assets(number: int, legacy_assets: Path, assets: Path) -> list[Path]
         target = assets / f"editorial-{index:02d}{source.suffix.lower()}"
         shutil.copy2(source, target)
         copied.append(target)
-    return copied
+    return apply_premium_color_overrides(number, copied)
 
 
 def photo_band(path: Path, alt: str, caption: str, extra_class: str = "") -> str:
@@ -1204,16 +1683,28 @@ def build(number: int) -> dict:
     if not valid_raster(MATCHES):
         raise FileNotFoundError(f"Cierre canónico inválido: {MATCHES}")
     shutil.copy2(MATCHES, assets / "matches-close.png")
+    if not valid_raster(HOTEL_HORIZONTE):
+        raise FileNotFoundError(f"Ancla canónica de Hotel Horizonte inválida: {HOTEL_HORIZONTE}")
+    hotel_horizonte_asset = assets / "hotel-horizonte-canonical.png"
+    shutil.copy2(HOTEL_HORIZONTE, hotel_horizonte_asset)
     legacy_cover = legacy_assets / "cover-source-premium-bw-v1.png"
     if not valid_raster(legacy_cover):
         raise FileNotFoundError(legacy_cover)
     cover = assets / legacy_cover.name
     shutil.copy2(legacy_cover, cover)
-    for name in ("pause-01.png", "pause-02.png"):
-        source_pause = legacy_assets / name
+    for pause_index, name in enumerate(("pause-01.png", "pause-02.png"), 1):
+        source_pause = PREMIUM_PAUSE_OVERRIDES.get(number, {}).get(pause_index, legacy_assets / name)
         if not valid_raster(source_pause):
             raise FileNotFoundError(source_pause)
-        shutil.copy2(source_pause, assets / name)
+        target_pause = assets / name
+        if pause_index in PREMIUM_PAUSE_OVERRIDES.get(number, {}):
+            with Image.open(source_pause) as image:
+                prepared = ImageOps.exif_transpose(image).convert("RGB")
+                prepared = ImageEnhance.Color(prepared).enhance(0.42)
+                prepared = ImageEnhance.Contrast(prepared).enhance(1.03)
+                prepared.save(target_pause, format="PNG", optimize=True)
+        else:
+            shutil.copy2(source_pause, target_pause)
     support = support_assets(number, legacy_assets, assets)
     story_asset: Path | None = None
     story_alt = "Una profesional argentina contrasta un cronograma cumplido con evidencia de una operación que exige revisar el plan."
@@ -1225,7 +1716,10 @@ def build(number: int) -> dict:
         shutil.copy2(story_source, story_asset)
 
     referents_section = next(s for s in all_sections if s.title == "Referentes")
-    referents_page, portrait_records = build_referents(number, referents_section, assets, legacy_assets)
+    references_section = next(s for s in all_sections if s.title == "Referencias base")
+    referents_page, portrait_records = build_referents(
+        number, referents_section, references_section, assets, legacy_assets
+    )
     sections = [s for s in all_sections if s.title != "Referentes"]
     references = base.references(all_sections)
     thesis_section = next(s for s in sections if s.title == "Tesis")
@@ -1235,16 +1729,44 @@ def build(number: int) -> dict:
     # need.  N30 adds one different, source-grounded sequence because its
     # observability argument requires both the system map and the action chain.
     # The former quota of three ornamental diagrams remains retired.
-    diagram_title, diagram_labels = DIAGRAMS[number][0]
     diagram_target = diagrams / f"N{number:02d}-mapa-01.svg"
-    diagram_records = [diagram_svg(
-        number,
-        1,
-        diagram_title,
-        diagram_labels,
-        diagram_target,
-        forced_family=DOCUMENT_DIAGRAM_FAMILIES[number],
-    )]
+    if number in APPROVED_INFOGRAPHICS:
+        approved_spec = APPROVED_INFOGRAPHICS[number]
+        approved_root = APPROVED_INFOGRAPHIC_ROOT / f"N{number:02d}"
+        approved_svg = approved_root / approved_spec["file"]
+        approved_manifest_path = approved_root / "content-manifest.json"
+        approved_alt_path = approved_root / "alt-text.md"
+        for required in (approved_svg, approved_manifest_path, approved_alt_path):
+            if not required.is_file():
+                raise FileNotFoundError(f"Activo editorial aprobado ausente: {required}")
+        shutil.copy2(approved_svg, diagram_target)
+        manifest_target = diagrams / f"N{number:02d}-mapa-01-content-manifest.json"
+        alt_target = diagrams / f"N{number:02d}-mapa-01-alt-text.md"
+        shutil.copy2(approved_manifest_path, manifest_target)
+        shutil.copy2(approved_alt_path, alt_target)
+        approved_manifest = json.loads(approved_manifest_path.read_text(encoding="utf-8"))
+        diagram_records = [{
+            "file": f"diagrams/{diagram_target.name}",
+            "title": approved_manifest["title"],
+            "labels": [node["label"] for node in approved_manifest["nodes"]],
+            "claim": approved_manifest["claim"],
+            "caption": approved_spec["caption"],
+            "family": approved_spec["family"],
+            "sha256": sha(diagram_target),
+            "approved": True,
+            "source_manifest": f"diagrams/{manifest_target.name}",
+            "alt_text": f"diagrams/{alt_target.name}",
+        }]
+    else:
+        diagram_title, diagram_labels = DIAGRAMS[number][0]
+        diagram_records = [diagram_svg(
+            number,
+            1,
+            diagram_title,
+            diagram_labels,
+            diagram_target,
+            forced_family=DOCUMENT_DIAGRAM_FAMILIES[number],
+        )]
     if number == 30:
         diagram_records.append(diagram_svg(
             number,
@@ -1309,6 +1831,8 @@ def build(number: int) -> dict:
             classes += ["two-column", "block-c-synthesis"]
         if section.title == "Tesis":
             classes += ["block-c-thesis"]
+            if number in APPROVED_INFOGRAPHICS:
+                classes += ["thesis-with-approved-plate"]
         if section.title == "Errores frecuentes":
             classes += ["block-c-errors"]
             section_body = wrap_error_cards(section_body)
@@ -1350,10 +1874,18 @@ def build(number: int) -> dict:
         if section.title == "Tesis":
             if diagram_cursor < len(diagram_records):
                 diagram = diagram_records[diagram_cursor]
-                after_body += (
-                    f'<figure class="infographic block-c-infographic thesis-map"><img src="{diagram["file"]}" alt="{html.escape(diagram["claim"])}">'
-                    f'<figcaption>{html.escape(diagram["claim"])}</figcaption></figure>'
-                )
+                if number in APPROVED_INFOGRAPHICS:
+                    after_section += (
+                        '<section class="approved-infographic-page">'
+                        f'<figure><img src="{diagram["file"]}" alt="{html.escape(diagram["claim"])}">'
+                        f'<figcaption>{html.escape(diagram.get("caption", diagram["claim"]))}</figcaption>'
+                        '</figure></section>'
+                    )
+                else:
+                    after_body += (
+                        f'<figure class="infographic block-c-infographic thesis-map"><img src="{diagram["file"]}" alt="{html.escape(diagram["claim"])}">'
+                        f'<figcaption>{html.escape(diagram.get("caption", diagram["claim"]))}</figcaption></figure>'
+                    )
                 diagram_cursor += 1
         if index == 2 and number >= 26:
             after_body += photo_band(
@@ -1365,16 +1897,11 @@ def build(number: int) -> dict:
             diagram = diagram_records[diagram_cursor]
             before_body += (
                 f'<figure class="infographic block-c-infographic"><img src="{diagram["file"]}" alt="{html.escape(diagram["claim"])}">'
-                f'<figcaption>{html.escape(diagram["claim"])}</figcaption></figure>'
+                f'<figcaption>{html.escape(diagram.get("caption", diagram["claim"]))}</figcaption></figure>'
             )
             diagram_cursor += 1
-        if section.title == "Preguntas de preparación":
-            after_body += photo_band(
-                support[7],
-                SUPPORT_ALTS[number][7],
-                "La preparación transforma la lectura individual en una contribución discutible durante el encuentro.",
-                "preparation-photo",
-            )
+        # The preparation page is a stable typographic apparatus. Photography
+        # belongs to the full-page pauses, not inside the questions panel.
         section_styles: list[str] = []
         if section.title == "Glosario esencial":
             glossary_entries = sum(1 for line in section.lines if line.strip().startswith("**"))
@@ -1448,9 +1975,10 @@ def build(number: int) -> dict:
                 section_body = remaining_body
             hotel_bridge = "".join(hotel_bridge_parts)
             before_body += photo_band(
-                support[1], SUPPORT_ALTS[number][1],
-                "La escena inicial sitúa la promesa que el caso debe sostener en condiciones reales de operación.",
-                "hotel-primary-photo",
+                hotel_horizonte_asset,
+                "Cartel luminoso de HOTEL recortado en diagonal sobre una fachada oscura.",
+                "Hotel Horizonte conserva una misma escena para que cambie el análisis y no el caso.",
+                "hotel-primary-photo hotel-canonical-anchor",
             )
             if hotel_bridge:
                 hotel_bridge_html = f'<div class="section-body hotel-bridge">{hotel_bridge}</div>'
@@ -1570,7 +2098,7 @@ def build(number: int) -> dict:
         '<!doctype html><html lang="es-AR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
         f'<meta name="description" content="Lectura previa METSI N{number:02d}, FCE UBA"><title>{html.escape(title)}</title>'
         '<link rel="stylesheet" href="magazine.css"></head>'
-        f'<body class="premium-magazine document-n{number:02d} block-c"><main>'
+        f'<body class="premium-magazine document-n{number:02d} block-c editorial-variant-{((number - 11) % 6) + 1}"><main>'
         f'{cover_markup}{contents}{referents_page}'
         f'{"".join(body_chunks)}'
         f'<section class="full-bleed closing-image"><img src="assets/matches-close.png" alt="{html.escape(closing_alt)}">'
@@ -1602,15 +2130,18 @@ def build(number: int) -> dict:
         "source_words": len(re.findall(r"\b[\wÁÉÍÓÚÜÑáéíóúüñ'-]+\b", source.read_text(encoding="utf-8"))),
         "content_audit": "canonical-v2-under-exhaustive-audit",
         "cover": {"file": cover.name, "source": f"assets/{cover.name}", "sha256": sha(cover), "alt": COVER_ALTS[number], "photographic_origin": "native_black_and_white", "render_treatment": "no_grayscale_conversion"},
-        "internal_images": ["pause-01.png", "pause-02.png"] + sorted({path.name for path in support}) + ([story_asset.name] if story_asset else []),
+        "internal_images": ["pause-01.png", "pause-02.png", hotel_horizonte_asset.name] + sorted({path.name for path in support}) + ([story_asset.name] if story_asset else []),
         "image_manifest": [
-            {"file": f"assets/pause-01.png", "sha256": sha(assets / "pause-01.png"), "alt": PHOTO_ALTS[number][1], "role": "full_page_pause", "rights_status": "project_bound_generated_media"},
-            {"file": f"assets/pause-02.png", "sha256": sha(assets / "pause-02.png"), "alt": PHOTO_ALTS[number][2], "role": "full_page_pause", "rights_status": "project_bound_generated_media"},
+            {"file": f"assets/pause-01.png", "sha256": sha(assets / "pause-01.png"), "alt": PHOTO_ALTS[number][1], "role": "full_page_pause", "saturation_review": "neutral", "treatment": "none", "rights_status": "project_bound_generated_media"},
+            {"file": f"assets/pause-02.png", "sha256": sha(assets / "pause-02.png"), "alt": PHOTO_ALTS[number][2], "role": "full_page_pause", "saturation_review": "restrained-accent" if 2 in PREMIUM_PAUSE_OVERRIDES.get(number, {}) else "neutral", "treatment": "natural_desaturated_color" if 2 in PREMIUM_PAUSE_OVERRIDES.get(number, {}) else "none", "rights_status": "project_bound_generated_media"},
+            {"file": f"assets/{hotel_horizonte_asset.name}", "sha256": sha(hotel_horizonte_asset), "alt": "Cartel luminoso de HOTEL recortado en diagonal sobre una fachada oscura.", "role": "hotel_horizonte_canonical_anchor", "saturation_review": "neutral", "treatment": "none", "rights_status": "project_authorized_fixed_asset"},
         ] + ([{
             "file": f"assets/{story_asset.name}",
             "sha256": sha(story_asset),
             "alt": story_alt,
             "role": "story_resolution",
+            "saturation_review": "neutral",
+            "treatment": "none",
             "rights_status": "project_bound_generated_media",
         }] if story_asset else []) + [
             {
@@ -1618,6 +2149,8 @@ def build(number: int) -> dict:
                 "sha256": sha(assets / f"hotel-{filename}"),
                 "alt": "",
                 "role": "hotel_horizonte_character",
+                "saturation_review": "neutral",
+                "treatment": "grayscale",
                 "rights_status": "project_authorized_character_asset",
             }
             for name, _role, filename in HOTEL_CHARACTERS
@@ -1636,6 +2169,8 @@ def build(number: int) -> dict:
                     "synthesis_evidence",
                     "preparation",
                 )[index - 1],
+                "saturation_review": "restrained-accent" if (index - 1) in PREMIUM_COLOR_OVERRIDES.get(number, {}) else "neutral",
+                "treatment": "natural_restrained_color" if (index - 1) in PREMIUM_COLOR_OVERRIDES.get(number, {}) else "none",
                 "rights_status": "project_bound_generated_media" if valid_raster(SUPPORT_ROOT / f"N{number:02d}-support-sheet.png") or any(valid_raster(candidate) for candidate in SUPPORT_ROOT.glob(f"N{number:02d}-support-{index:02d}.*")) else "layout_fallback_not_for_release",
                 "contact_sheet_panel": index if path.name == "editorial-support-sheet.png" else None,
             }
@@ -2053,6 +2588,191 @@ body.block-c .questions .section-body{font-size:11.2pt;line-height:1.4}
 body.block-c .questions .section-body ol{min-height:0!important;height:auto!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-template-rows:repeat(3,auto)!important;grid-auto-flow:column!important;align-content:start!important;gap:9mm 12mm!important;margin:3mm 0 0!important;padding-left:7mm!important;columns:auto!important;column-count:auto!important}
 body.block-c .questions .section-body li{margin:0!important;padding-right:2mm;break-inside:avoid-page;page-break-inside:avoid}
 body.block-c .questions .section-body>p:last-child{margin:8mm 0 0;padding:4mm;border-top:.6mm solid #171917;border-left:1.5mm solid #CFFF00;background:#FAFAF8;font:8.8pt/1.3 Avenir,sans-serif}
+body.document-n12.block-c .questions .section-body{font-size:12pt!important;line-height:1.45!important}
+body.document-n12.block-c .questions .section-body ol{gap:11mm 12mm!important}
+body.document-n12.block-c .questions .section-body>p:last-child{margin-top:11mm!important;font-size:9.1pt!important}
+body.document-n13.block-c .questions .section-body{font-size:12.2pt!important;line-height:1.48!important}
+body.document-n13.block-c .questions .section-body ol{gap:11mm 12mm!important}
+body.document-n13.block-c .questions .section-body>p:last-child{margin-top:11mm!important;font-size:9.1pt!important;line-height:1.4!important}
+body.document-n14.block-c .thesis-with-approved-plate .section-lead p{font-size:17.5pt!important;line-height:1.34!important}
+body.document-n14.block-c .thesis-with-approved-plate .section-body:not(.section-lead){font-size:11.8pt!important;line-height:1.46!important}
+body.document-n14.block-c .questions .section-body{font-size:12.2pt!important;line-height:1.48!important}
+body.document-n14.block-c .questions .section-body ol{gap:11mm 12mm!important}
+body.document-n14.block-c .questions .section-body>p:last-child{margin-top:11mm!important;font-size:9.1pt!important;line-height:1.4!important}
+body.document-n15.block-c .thesis-with-approved-plate .section-lead p{font-size:18pt!important;line-height:1.36!important}
+body.document-n15.block-c .thesis-with-approved-plate .section-body:not(.section-lead){font-size:12pt!important;line-height:1.5!important}
+body.document-n15.block-c .questions .section-body{font-size:12.4pt!important;line-height:1.5!important}
+body.document-n15.block-c .questions .section-body ol{gap:14mm 12mm!important}
+body.document-n15.block-c .questions .section-body>p:last-child{margin-top:15mm!important;font-size:9.2pt!important;line-height:1.42!important}
+body.document-n16.block-c .thesis-with-approved-plate .section-lead p{font-size:18pt!important;line-height:1.36!important}
+body.document-n16.block-c .thesis-with-approved-plate .section-body:not(.section-lead){font-size:12pt!important;line-height:1.5!important}
+body.document-n16.block-c .questions .section-body{font-size:12.4pt!important;line-height:1.5!important}
+body.document-n16.block-c .questions .section-body ol{gap:14mm 12mm!important}
+body.document-n16.block-c .questions .section-body>p:last-child{margin-top:15mm!important;font-size:9.2pt!important;line-height:1.42!important}
+body.document-n17.block-c .thesis-with-approved-plate .section-lead p{font-size:22.5pt!important;line-height:1.38!important}
+body.document-n17.block-c .questions .section-body{font-size:12.4pt!important;line-height:1.5!important}
+body.document-n17.block-c .questions .section-body ol{gap:14mm 12mm!important}
+body.document-n17.block-c .questions .section-body>p:last-child{margin-top:15mm!important;font-size:9.2pt!important;line-height:1.42!important}
+body.document-n18.block-c .questions .section-body{font-size:12.4pt!important;line-height:1.5!important}
+body.document-n18.block-c .questions .section-body ol{gap:14mm 12mm!important}
+body.document-n18.block-c .questions .section-body>p:last-child{margin-top:15mm!important;font-size:9.2pt!important;line-height:1.42!important}
+body.document-n18.block-c .thesis-with-approved-plate .section-lead p{font-size:25pt!important;line-height:1.42!important}
+body.document-n19.block-c .thesis-with-approved-plate .section-lead p{font-size:27pt!important;line-height:1.45!important}
+body.document-n19.block-c .questions .section-body{font-size:12.4pt!important;line-height:1.5!important}
+body.document-n19.block-c .questions .section-body ol{gap:14mm 12mm!important}
+body.document-n19.block-c .questions .section-body>p:last-child{margin-top:15mm!important;font-size:9.2pt!important;line-height:1.42!important}
+body.document-n20.block-c .thesis-with-approved-plate .section-lead p{font-size:23.5pt!important;line-height:1.4!important}
+body.document-n20.block-c .questions .section-body{font-size:12.4pt!important;line-height:1.5!important}
+body.document-n20.block-c .questions .section-body ol{gap:14mm 12mm!important}
+body.document-n20.block-c .questions .section-body>p:last-child{margin-top:15mm!important;font-size:9.2pt!important;line-height:1.42!important}
+body.document-n21.block-c .thesis-with-approved-plate .section-lead p{font-size:23.5pt!important;line-height:1.4!important}
+body.document-n21.block-c .questions .section-body{font-size:12.4pt!important;line-height:1.5!important}
+body.document-n21.block-c .questions .section-body ol{gap:14mm 12mm!important}
+body.document-n21.block-c .questions .section-body>p:last-child{margin-top:15mm!important;font-size:9.2pt!important;line-height:1.42!important}
+body.document-n21.block-c .block-c-references .section-body{font-size:10.1pt!important;line-height:1.42!important}
+body.document-n21.block-c .block-c-references li{margin-bottom:4.4mm!important}
+body.document-n22.block-c .block-c-thesis .section-lead p{font-size:25pt!important;line-height:1.44!important}
+body.document-n22.block-c .questions .section-body{font-size:12.4pt!important;line-height:1.5!important}
+body.document-n22.block-c .questions .section-body ol{gap:20mm 12mm!important}
+body.document-n22.block-c .questions .section-body>p:last-child{margin-top:18mm!important;font-size:9.2pt!important;line-height:1.42!important}
+body.document-n23.block-c .block-c-thesis .section-lead p{font-size:25pt!important;line-height:1.44!important}
+body.document-n23.block-c .questions .section-body{font-size:12.4pt!important;line-height:1.5!important}
+body.document-n23.block-c .questions .section-body ol{gap:20mm 12mm!important}
+body.document-n23.block-c .questions .section-body>p:last-child{margin-top:18mm!important;font-size:9.2pt!important;line-height:1.42!important}
+body.document-n23.block-c .block-c-references .section-body{font-size:9.25pt!important;line-height:1.34!important}
+body.document-n23.block-c .block-c-references li{margin-bottom:4.4mm!important}
+body.document-n24.block-c .block-c-thesis .section-lead p{font-size:25pt!important;line-height:1.44!important}
+body.document-n24.block-c .questions .section-body{font-size:12.4pt!important;line-height:1.5!important}
+body.document-n24.block-c .questions .section-body ol{gap:20mm 12mm!important}
+body.document-n24.block-c .questions .section-body>p:last-child{margin-top:18mm!important;font-size:9.2pt!important;line-height:1.42!important}
+body.document-n25.block-c .block-c-thesis .section-lead p{font-size:25pt!important;line-height:1.44!important}
+body.document-n25.block-c .questions .section-body{font-size:12.4pt!important;line-height:1.5!important}
+body.document-n25.block-c .questions .section-body ol{gap:20mm 12mm!important}
+body.document-n25.block-c .questions .section-body>p:last-child{margin-top:18mm!important;font-size:9.2pt!important;line-height:1.42!important}
+body.document-n26.block-c .block-c-thesis .section-lead p{font-size:25pt!important;line-height:1.44!important}
+body.document-n26.block-c .questions .section-body{font-size:12.4pt!important;line-height:1.5!important}
+body.document-n26.block-c .questions .section-body ol{gap:20mm 12mm!important}
+body.document-n26.block-c .questions .section-body>p:last-child{margin-top:18mm!important;font-size:9.2pt!important;line-height:1.42!important}
+body.document-n27.block-c .block-c-thesis .section-lead p{font-size:25pt!important;line-height:1.44!important}
+body.document-n27.block-c .questions .section-body{font-size:12.4pt!important;line-height:1.5!important}
+body.document-n27.block-c .questions .section-body ol{gap:20mm 12mm!important}
+body.document-n27.block-c .questions .section-body>p:last-child{margin-top:18mm!important;font-size:9.2pt!important;line-height:1.42!important}
+body.document-n28.block-c .block-c-thesis .section-lead p{font-size:25pt!important;line-height:1.44!important}
+body.document-n28.block-c .questions .section-body{font-size:12.4pt!important;line-height:1.5!important}
+body.document-n28.block-c .questions .section-body ol{gap:20mm 12mm!important}
+body.document-n28.block-c .questions .section-body>p:last-child{margin-top:18mm!important;font-size:9.2pt!important;line-height:1.42!important}
+body.document-n29.block-c .block-c-thesis .section-lead p{font-size:25pt!important;line-height:1.44!important}
+body.document-n29.block-c .questions .section-body{font-size:12.4pt!important;line-height:1.5!important}
+body.document-n29.block-c .questions .section-body ol{gap:20mm 12mm!important}
+body.document-n29.block-c .questions .section-body>p:last-child{margin-top:18mm!important;font-size:9.2pt!important;line-height:1.42!important}
+body.document-n30.block-c .block-c-thesis .section-lead p{font-size:25pt!important;line-height:1.44!important}
+body.document-n30.block-c .questions .section-body{font-size:12.4pt!important;line-height:1.5!important}
+body.document-n30.block-c .questions .section-body ol{gap:20mm 12mm!important}
+body.document-n30.block-c .questions .section-body>p:last-child{margin-top:18mm!important;font-size:9.2pt!important;line-height:1.42!important}
+body.document-n31.block-c .block-c-thesis .section-lead p{font-size:25pt!important;line-height:1.44!important}
+body.document-n31.block-c .questions .section-body{font-size:12.4pt!important;line-height:1.5!important}
+body.document-n31.block-c .questions .section-body ol{gap:20mm 12mm!important}
+body.document-n31.block-c .questions .section-body>p:last-child{margin-top:18mm!important;font-size:9.2pt!important;line-height:1.42!important}
+body.document-n32.block-c .block-c-thesis .section-lead p{font-size:25pt!important;line-height:1.44!important}
+body.document-n32.block-c .questions .section-body{font-size:12.4pt!important;line-height:1.5!important}
+body.document-n32.block-c .questions .section-body ol{gap:20mm 12mm!important}
+body.document-n32.block-c .questions .section-body>p:last-child{margin-top:18mm!important;font-size:9.2pt!important;line-height:1.42!important}
+body.document-n33.block-c .block-c-thesis .section-lead p{font-size:25pt!important;line-height:1.44!important}
+body.document-n33.block-c .questions .section-body{font-size:12.4pt!important;line-height:1.5!important}
+body.document-n33.block-c .questions .section-body ol{gap:20mm 12mm!important}
+body.document-n33.block-c .questions .section-body>p:last-child{margin-top:18mm!important;font-size:9.2pt!important;line-height:1.42!important}
+body.document-n33.block-c .pills-glossary-page{
+  height:232mm!important;min-height:232mm!important;padding:5mm 6mm!important;gap:3.5mm!important
+}
+body.document-n33.block-c .pills-glossary-page .pill-summary{padding-bottom:3mm!important}
+body.document-n33.block-c .pills-glossary-page .pill-summary .section-body{
+  columns:auto!important;column-count:auto!important
+}
+body.document-n33.block-c .pills-glossary-page .pill-summary .section-heading h2,
+body.document-n33.block-c .pills-glossary-page .glossary-two-column .section-heading h2{
+  font-size:21pt!important;line-height:1!important;margin-bottom:2mm!important
+}
+body.document-n33.block-c .pills-glossary-page .pill-summary .section-body ol{
+  grid-template-columns:1fr!important;gap:1.2mm!important;margin-top:1mm!important;padding-left:6mm!important
+}
+body.document-n33.block-c .pills-glossary-page .pill-summary .section-body li{
+  font-size:9pt!important;line-height:1.22!important;font-weight:600!important
+}
+body.document-n33.block-c .pills-glossary-page .glossary-two-column .section-body{
+  font-size:8.25pt!important;line-height:1.17!important;gap:0 5mm!important
+}
+body.document-n33.block-c .pills-glossary-page .glossary-two-column .section-body p{
+  padding:1.35mm 0 1mm!important
+}
+body.document-n34.block-c .block-c-thesis .section-lead p{font-size:24pt!important;line-height:1.42!important}
+body.document-n34.block-c .questions .section-body{font-size:12.4pt!important;line-height:1.5!important}
+body.document-n34.block-c .questions .section-body ol{gap:20mm 12mm!important}
+body.document-n34.block-c .questions .section-body>p:last-child{margin-top:18mm!important;font-size:9.2pt!important;line-height:1.42!important}
+body.document-n34.block-c .pills-glossary-page{
+  height:232mm!important;min-height:232mm!important;padding:5mm 6mm!important;gap:3.5mm!important
+}
+body.document-n34.block-c .pills-glossary-page .pill-summary{padding-bottom:3mm!important}
+body.document-n34.block-c .pills-glossary-page .pill-summary .section-body{columns:auto!important;column-count:auto!important}
+body.document-n34.block-c .pills-glossary-page .pill-summary .section-heading h2,
+body.document-n34.block-c .pills-glossary-page .glossary-two-column .section-heading h2{
+  font-size:21pt!important;line-height:1!important;margin-bottom:2mm!important
+}
+body.document-n34.block-c .pills-glossary-page .pill-summary .section-body ol{
+  grid-template-columns:1fr!important;gap:1.2mm!important;margin-top:1mm!important;padding-left:6mm!important
+}
+body.document-n34.block-c .pills-glossary-page .pill-summary .section-body li{
+  font-size:9pt!important;line-height:1.22!important;font-weight:600!important
+}
+body.document-n34.block-c .pills-glossary-page .glossary-two-column .section-body{
+  font-size:8.25pt!important;line-height:1.17!important;gap:0 5mm!important
+}
+body.document-n34.block-c .pills-glossary-page .glossary-two-column .section-body p{padding:1.35mm 0 1mm!important}
+body.document-n35.block-c .block-c-thesis .section-lead p{font-size:24pt!important;line-height:1.42!important}
+body.document-n35.block-c .questions .section-body{font-size:12.4pt!important;line-height:1.5!important}
+body.document-n35.block-c .questions .section-body ol{gap:20mm 12mm!important}
+body.document-n35.block-c .questions .section-body>p:last-child{margin-top:18mm!important;font-size:9.2pt!important;line-height:1.42!important}
+body.document-n35.block-c .pills-glossary-page{
+  height:232mm!important;min-height:232mm!important;padding:5mm 6mm!important;gap:3.5mm!important
+}
+body.document-n35.block-c .pills-glossary-page .pill-summary{padding-bottom:3mm!important}
+body.document-n35.block-c .pills-glossary-page .pill-summary .section-body{columns:auto!important;column-count:auto!important}
+body.document-n35.block-c .pills-glossary-page .pill-summary .section-heading h2,
+body.document-n35.block-c .pills-glossary-page .glossary-two-column .section-heading h2{
+  font-size:21pt!important;line-height:1!important;margin-bottom:2mm!important
+}
+body.document-n35.block-c .pills-glossary-page .pill-summary .section-body ol{
+  grid-template-columns:1fr!important;gap:1.2mm!important;margin-top:1mm!important;padding-left:6mm!important
+}
+body.document-n35.block-c .pills-glossary-page .pill-summary .section-body li{
+  font-size:9pt!important;line-height:1.22!important;font-weight:600!important
+}
+body.document-n35.block-c .pills-glossary-page .glossary-two-column .section-body{
+  font-size:8.25pt!important;line-height:1.17!important;gap:0 5mm!important
+}
+body.document-n35.block-c .pills-glossary-page .glossary-two-column .section-body p{padding:1.35mm 0 1mm!important}
+body.document-n36.block-c .block-c-thesis .section-lead p{font-size:24pt!important;line-height:1.42!important}
+body.document-n36.block-c .questions .section-body{font-size:12.4pt!important;line-height:1.5!important}
+body.document-n36.block-c .questions .section-body ol{gap:20mm 12mm!important}
+body.document-n36.block-c .questions .section-body>p:last-child{margin-top:18mm!important;font-size:9.2pt!important;line-height:1.42!important}
+body.document-n36.block-c .pills-glossary-page{
+  height:232mm!important;min-height:232mm!important;padding:5mm 6mm!important;gap:3.5mm!important
+}
+body.document-n36.block-c .pills-glossary-page .pill-summary{padding-bottom:3mm!important}
+body.document-n36.block-c .pills-glossary-page .pill-summary .section-body{columns:auto!important;column-count:auto!important}
+body.document-n36.block-c .pills-glossary-page .pill-summary .section-heading h2,
+body.document-n36.block-c .pills-glossary-page .glossary-two-column .section-heading h2{
+  font-size:21pt!important;line-height:1!important;margin-bottom:2mm!important
+}
+body.document-n36.block-c .pills-glossary-page .pill-summary .section-body ol{
+  grid-template-columns:1fr!important;gap:1.2mm!important;margin-top:1mm!important;padding-left:6mm!important
+}
+body.document-n36.block-c .pills-glossary-page .pill-summary .section-body li{
+  font-size:9pt!important;line-height:1.22!important;font-weight:600!important
+}
+body.document-n36.block-c .pills-glossary-page .glossary-two-column .section-body{
+  font-size:8.25pt!important;line-height:1.17!important;gap:0 5mm!important
+}
+body.document-n36.block-c .pills-glossary-page .glossary-two-column .section-body p{padding:1.35mm 0 1mm!important}
 
 /* The closing study pages use the whole editorial box.  The extra area is
    carried by photography, never by inflated paragraph or list spacing. */
@@ -2129,6 +2849,25 @@ body.block-c .block-c-thesis .thesis-map img{
   min-height:0!important;max-height:none!important;object-fit:contain
 }
 body.block-c .block-c-thesis .thesis-map figcaption{font-size:6.7pt!important;line-height:1.22!important}
+body.block-c .thesis-with-approved-plate{justify-content:center!important}
+body.block-c .approved-infographic-page{
+  box-sizing:border-box!important;height:236mm!important;min-height:236mm!important;
+  break-before:page!important;page-break-before:always!important;
+  break-after:page!important;page-break-after:always!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  padding:14mm 8mm!important;background:#F7F7F4!important
+}
+body.block-c .approved-infographic-page figure{
+  width:100%!important;margin:0!important;display:flex!important;
+  flex-direction:column!important;align-items:stretch!important
+}
+body.block-c .approved-infographic-page img{
+  display:block!important;width:100%!important;height:auto!important;max-height:180mm!important;
+  object-fit:contain!important
+}
+body.block-c .approved-infographic-page figcaption{
+  margin:4mm 0 0!important;font:7.2pt/1.28 Avenir,sans-serif!important;color:#565956!important
+}
 
 body.block-c .block-c-movement .section-lead{margin-bottom:2mm}
 body.block-c .block-c-movement .section-body:not(.section-lead){
@@ -2145,6 +2884,7 @@ body.block-c .block-c-movement .section-body:not(.section-lead) h3{
 body.block-c .movement-two-photo .photo-viewport{height:62mm!important}
 body.block-c .movement-three-photo{margin:6mm 0 0!important}
 body.block-c .movement-three-photo .photo-viewport{height:62mm!important}
+body.block-c.document-n11 .movement-three-photo .photo-viewport{height:108mm!important}
 body.block-c:is(.document-n13,.document-n16) .movement-three-photo{margin-top:3mm!important}
 body.block-c.document-n13 .movement-three-photo .photo-viewport{height:24mm!important}
 body.block-c.document-n16 .movement-three-photo .photo-viewport{height:74mm!important}
@@ -2479,6 +3219,88 @@ body.block-c .pills-glossary-page .glossary-two-column .section-body{
 body.block-c .pills-glossary-page .glossary-two-column .section-body p{
   padding:2.2mm 0 1.8mm!important;margin:0!important
 }
+body.document-n18.block-c .pills-glossary-page{
+  height:232mm!important;min-height:232mm!important;padding:5mm 6mm!important;gap:3.5mm!important
+}
+body.document-n18.block-c .pills-glossary-page .pill-summary{
+  padding-bottom:3mm!important
+}
+body.document-n18.block-c .pills-glossary-page .pill-summary .section-heading h2,
+body.document-n18.block-c .pills-glossary-page .glossary-two-column .section-heading h2{
+  font-size:21pt!important;line-height:1!important;margin-bottom:2mm!important
+}
+body.document-n18.block-c .pills-glossary-page .pill-summary .section-body ol{
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:2mm 7mm!important;margin-top:1mm!important
+}
+body.document-n18.block-c .pills-glossary-page .pill-summary .section-body li{
+  font-size:8.8pt!important;line-height:1.2!important;font-weight:600!important
+}
+body.document-n18.block-c .pills-glossary-page .glossary-two-column .section-body{
+  font-size:8.25pt!important;line-height:1.17!important;gap:0 5mm!important
+}
+body.document-n18.block-c .pills-glossary-page .glossary-two-column .section-body p{
+  padding:1.35mm 0 1mm!important
+}
+body.document-n19.block-c .pills-glossary-page{
+  height:232mm!important;min-height:232mm!important;padding:5mm 6mm!important;gap:3.5mm!important
+}
+body.document-n19.block-c .pills-glossary-page .pill-summary{padding-bottom:3mm!important}
+body.document-n19.block-c .pills-glossary-page .pill-summary .section-heading h2,
+body.document-n19.block-c .pills-glossary-page .glossary-two-column .section-heading h2{
+  font-size:21pt!important;line-height:1!important;margin-bottom:2mm!important
+}
+body.document-n19.block-c .pills-glossary-page .pill-summary .section-body ol{
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:2mm 7mm!important;margin-top:1mm!important
+}
+body.document-n19.block-c .pills-glossary-page .pill-summary .section-body li{
+  font-size:8.8pt!important;line-height:1.2!important;font-weight:600!important
+}
+body.document-n19.block-c .pills-glossary-page .glossary-two-column .section-body{
+  font-size:8.25pt!important;line-height:1.17!important;gap:0 5mm!important
+}
+body.document-n19.block-c .pills-glossary-page .glossary-two-column .section-body p{
+  padding:1.35mm 0 1mm!important
+}
+body.document-n20.block-c .pills-glossary-page{
+  height:232mm!important;min-height:232mm!important;padding:5mm 6mm!important;gap:3.5mm!important
+}
+body.document-n20.block-c .pills-glossary-page .pill-summary{padding-bottom:3mm!important}
+body.document-n20.block-c .pills-glossary-page .pill-summary .section-heading h2,
+body.document-n20.block-c .pills-glossary-page .glossary-two-column .section-heading h2{
+  font-size:21pt!important;line-height:1!important;margin-bottom:2mm!important
+}
+body.document-n20.block-c .pills-glossary-page .pill-summary .section-body ol{
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:2mm 7mm!important;margin-top:1mm!important
+}
+body.document-n20.block-c .pills-glossary-page .pill-summary .section-body li{
+  font-size:8.8pt!important;line-height:1.2!important;font-weight:600!important
+}
+body.document-n20.block-c .pills-glossary-page .glossary-two-column .section-body{
+  font-size:8.25pt!important;line-height:1.17!important;gap:0 5mm!important
+}
+body.document-n20.block-c .pills-glossary-page .glossary-two-column .section-body p{
+  padding:1.35mm 0 1mm!important
+}
+body.document-n21.block-c .pills-glossary-page{
+  height:232mm!important;min-height:232mm!important;padding:5mm 6mm!important;gap:3.5mm!important
+}
+body.document-n21.block-c .pills-glossary-page .pill-summary{padding-bottom:3mm!important}
+body.document-n21.block-c .pills-glossary-page .pill-summary .section-heading h2,
+body.document-n21.block-c .pills-glossary-page .glossary-two-column .section-heading h2{
+  font-size:21pt!important;line-height:1!important;margin-bottom:2mm!important
+}
+body.document-n21.block-c .pills-glossary-page .pill-summary .section-body ol{
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:2mm 7mm!important;margin-top:1mm!important
+}
+body.document-n21.block-c .pills-glossary-page .pill-summary .section-body li{
+  font-size:8.8pt!important;line-height:1.2!important;font-weight:600!important
+}
+body.document-n21.block-c .pills-glossary-page .glossary-two-column .section-body{
+  font-size:8.25pt!important;line-height:1.17!important;gap:0 5mm!important
+}
+body.document-n21.block-c .pills-glossary-page .glossary-two-column .section-body p{
+  padding:1.35mm 0 1mm!important
+}
 
 body.block-c .block-c-handoff-out{
   box-sizing:border-box!important;height:auto!important;min-height:72mm!important;
@@ -2568,6 +3390,117 @@ body.block-c.document-n16 .block-c-handoff-out{
 }
 body.block-c.document-n16 .block-c-handoff-out .section-heading h2{font-size:16.5pt!important;line-height:.96!important}
 body.block-c.document-n16 .block-c-handoff-out .section-body p{font-size:7.4pt!important;line-height:1.14!important;margin-bottom:.8mm!important}
+
+/* METSI N11–N36 v5 · canonical editorial reconstruction
+   The stable grid and type system remain shared; hierarchy and photographic
+   mass return to the approved N02/N10 language. */
+body.block-c .block-c-contents .contents-layout{
+  grid-template-columns:minmax(0,1.48fr) minmax(0,.52fr)!important;
+  gap:8mm!important;height:205mm!important;align-items:stretch!important
+}
+body.block-c .block-c-contents .contents-layout figure{
+  align-self:stretch!important;height:205mm!important;background:transparent!important
+}
+body.block-c .block-c-contents .contents-photo-viewport{
+  height:178mm!important;background:#D5D7D4!important
+}
+body.block-c .block-c-contents .contents-photo-viewport>img{
+  width:100%!important;height:178mm!important;object-fit:cover!important;object-position:center!important
+}
+body.block-c .block-c-contents .contents-layout figure figcaption{
+  padding-top:3mm!important;font-size:7.15pt!important;line-height:1.32!important
+}
+
+body.block-c .authors-page{padding:15mm 17mm!important}
+body.block-c .authors-page .contributors-grid{
+  gap:5mm 7mm!important;margin-top:5mm!important
+}
+body.block-c .authors-page .contributor{
+  min-height:76mm!important;text-align:center!important;padding:0 1mm 4mm!important
+}
+body.block-c .authors-page .portrait-frame{
+  width:32mm!important;height:32mm!important;margin:0 auto 2.5mm!important;
+  border-radius:50%!important;overflow:hidden!important;background:#D8DAD7!important
+}
+body.block-c .authors-page .portrait-frame img{
+  width:100%!important;height:100%!important;object-fit:cover!important;
+  object-position:center 22%!important;border-radius:50%!important;filter:grayscale(1) contrast(1.03)!important
+}
+body.block-c .authors-page .portrait-unavailable{
+  width:100%!important;height:100%!important;border-radius:50%!important;overflow:hidden!important
+}
+body.block-c .authors-page .contributor>b{
+  display:block!important;margin:.5mm 0!important;font:400 13pt/1 Didot,serif!important;color:#777!important
+}
+body.block-c .authors-page .contributor h3{
+  margin:1mm 0 1.3mm!important;font:600 8.1pt/1.15 Avenir,sans-serif!important;text-transform:uppercase!important
+}
+body.block-c .authors-page .contributor-work{min-height:17mm!important;margin:0 0 1.5mm!important}
+body.block-c .authors-page .contributor-work cite{
+  display:block!important;font:italic 6.9pt/1.22 Baskerville,Georgia,serif!important;color:#30302E!important
+}
+body.block-c .authors-page .contributor-work small{
+  display:block!important;margin-top:1mm!important;font:5.9pt/1.2 Avenir,sans-serif!important;color:#666!important
+}
+body.block-c .authors-page .contributor p{
+  margin:0!important;text-align:left!important;font:6.75pt/1.28 Avenir,sans-serif!important;color:#555!important
+}
+body.block-c .authors-page blockquote{margin-top:4mm!important}
+
+body.block-c .hotel-canonical-anchor .photo-viewport{
+  height:56mm!important;background:#111!important
+}
+body.block-c .hotel-canonical-anchor img{
+  width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;filter:none!important
+}
+body.block-c .hotel-canonical-anchor figcaption{
+  padding:0 7mm!important;margin-top:1.6mm!important
+}
+
+body.block-c .pills-glossary-page .pill-summary .section-body li{
+  font-weight:600!important;font-size:9.6pt!important;line-height:1.3!important
+}
+body.block-c .pills-glossary-page .glossary-two-column .section-body{
+  font-size:9.15pt!important;line-height:1.28!important
+}
+body.block-c .block-c-references .section-body ul{
+  min-height:0!important;align-content:start!important;grid-auto-rows:auto!important;gap:5mm 9mm!important
+}
+body.block-c .block-c-references li{font-size:8.95pt!important;line-height:1.3!important}
+
+/* Six content-driven variants prevent the corpus from returning to a single
+   mechanical page sequence.  They alter mass and alignment, never body size. */
+body.block-c.editorial-variant-2 .block-c-contents .contents-layout{
+  grid-template-columns:minmax(0,.56fr) minmax(0,1.44fr)!important
+}
+body.block-c.editorial-variant-2 .block-c-contents .contents-layout ol{grid-column:2!important}
+body.block-c.editorial-variant-2 .block-c-contents .contents-layout figure{grid-column:1!important;grid-row:1!important}
+body.block-c.editorial-variant-3 .block-c-contents .contents-layout{
+  grid-template-columns:minmax(0,1.65fr) minmax(0,.35fr)!important;gap:6mm!important
+}
+body.block-c.editorial-variant-4 .block-c-contents .contents-layout{
+  grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr)!important
+}
+body.block-c.editorial-variant-5 .block-c-contents .contents-layout{
+  grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr)!important
+}
+body.block-c.editorial-variant-5 .block-c-contents .contents-layout ol{grid-column:2!important}
+body.block-c.editorial-variant-5 .block-c-contents .contents-layout figure{grid-column:1!important;grid-row:1!important}
+body.block-c.editorial-variant-6 .block-c-contents .contents-layout{
+  grid-template-columns:minmax(0,1.55fr) minmax(0,.45fr)!important
+}
+
+/* N11 preparation is deliberately image-free. A small typographic expansion
+   restores page balance without manufacturing decorative whitespace. */
+body.block-c.document-n11 .questions .section-body{
+  font-size:11.7pt!important;line-height:1.45!important
+}
+body.block-c.document-n11 .questions .section-body ol{
+  gap:11mm 12mm!important
+}
+body.block-c.document-n11 .questions .section-body>p:last-child{
+  margin-top:9mm!important
+}
 '''
 
 
