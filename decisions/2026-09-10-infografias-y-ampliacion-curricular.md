@@ -97,4 +97,12 @@ Las incorporaciones no funcionan como cuota ni como mención decorativa. Cada au
 4. Integrar las infografías aprobadas y resolver su deuda visual.
 5. Recompaginar, revisar los PDF y publicar una versión nueva.
 
-Hasta completar esa secuencia, los PDF actuales se preservan como línea de base y no contienen todavía esta ampliación curricular.
+## Estado de ejecución
+
+Las fichas de intervención quedaron consolidadas en `decisions/2026-09-10-fichas-de-intervencion-curricular-N02-N36.md`.
+
+La ampliación fue incorporada en fuentes Markdown v2 de N02, N03, N05, N06, N08, N09, N12, N14 a N21, N23 a N25, N27 a N33. N35 y N36 recibieron una copia v2 idéntica a la v1 para demostrar que las menciones de Paulo Freire fueron preservadas sin ampliación automática.
+
+La auditoría reproducible `scripts/audit_curricular_expansion.py` cerró en `PASS` y dejó evidencia en `audits/2026-09-10-curricular-expansion-audit.json`. El conjunto controlado suma 229.138 palabras bajo el contador del auditor, 10.562 más que las fuentes de base. No se detectaron estructuras incompletas, marcadores, rayas de inciso nuevas, pérdida de Hotel Horizonte ni párrafos extensos duplicados entre documentos.
+
+Los PDF actuales continúan preservados como línea de base y todavía no contienen esta ampliación curricular. Su recompaginación pertenece a la etapa siguiente.

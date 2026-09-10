@@ -24,16 +24,16 @@ La aprobación acepta por ahora proximidades y solapamientos puntuales de texto 
 
 La distribución de PMI, PMBOK, Scrum, Kanban, UI, UX, diseño, DevOps, DORA, APIs, Git, GitHub, BPM, BPMN y autores argentinos y latinoamericanos está aprobada en `decisions/2026-09-10-infografias-y-ampliacion-curricular.md`.
 
-El contenido nuevo todavía no fue escrito ni incorporado a los Markdown canónicos. Los PDF públicos y los paquetes v6 no contienen aún esta ampliación.
+La ampliación quedó escrita en fuentes Markdown v2 de 25 lecturas y auditada junto con N35 y N36, que se preservaron byte por byte. La evidencia reproducible está en `audits/2026-09-10-curricular-expansion-audit.json` y su ejecutor en `scripts/audit_curricular_expansion.py`. Resultado: `PASS`, 27 fuentes presentes, 229.138 palabras totales, 10.562 palabras incorporadas, estructura completa, anclajes temáticos presentes, continuidad de Hotel Horizonte, cero párrafos extensos duplicados y cero cambios de PDF.
+
+Las fuentes anteriores se conservan como línea de base. Los PDF públicos y los paquetes v6 todavía no contienen la ampliación.
 
 ## Próxima secuencia autorizada
 
-1. Preparar las fichas de intervención por N.
-2. Revisar las fuentes canónicas sin tocar PDF.
-3. Auditar contenido, continuidad y bibliografía.
-4. Resolver la deuda geométrica de las infografías e integrarlas.
-5. Recompaginar y superar la puerta exhaustiva.
-6. Recién entonces sustituir los PDF de la biblioteca.
+1. Resolver la deuda geométrica puntual de las infografías aprobadas.
+2. Integrar las fuentes v2 y las infografías en nuevos paquetes editoriales, sin sobrescribir las líneas de base.
+3. Recompaginar y superar la puerta exhaustiva de contenido, estructura, imágenes, densidad y accesibilidad.
+4. Sustituir los PDF de la biblioteca únicamente cuando el conjunto nuevo cierre en `PASS`.
 
 ## Condición de recuperación
 
