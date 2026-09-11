@@ -8,13 +8,14 @@ Este archivo define qué debe conservar Git para reconstruir el proyecto sin dep
 - Rama publicada: `main`.
 - Fuentes canónicas: carpetas `N00`, `N01`, `N02-content-final` a `N10-content-final` y `N11-content-canonical` a `N36-content-canonical`, junto con los planes y auditorías por bloque.
 - Paquetes editoriales vigentes del bloque inicial: `N00-v3-final`, `N01-v18-final`, `N02-v15-final`, `N03-v10-final`, `N04-v9-final`, `N05-v10-final`, `N06-v10-final`, `N07-v10-final`, `N08-v10-final`, `N09-v10-final` y `N10-v9-final`.
-- Paquetes editoriales vigentes de N11 a N36: `N11-v7-editorial` a `N36-v7-editorial`.
+- Paquetes editoriales vigentes de N11 a N36: `N11-v8-editorial` a `N36-v8-editorial`.
 - Sitio publicable: `site`.
 - Sistema editorial y skills recuperables: `editorial-standard`.
 - Decisiones autorales que condicionan trabajo futuro: `decisions`.
+- Sistema de producción pedagógica y paquetes de encuentro: `pedagogy`.
 - Selección académica vigente para la próxima reconstrucción de N11 a N36: `academic-content-revision-manifest-n11-n36.json`, acompañada por `ACADEMIC-CONTENT-AUDIT-N11-N36.md`.
 
-Los paquetes `N11-v7-editorial` a `N36-v7-editorial` siguen siendo la versión pública hasta que la nueva composición supere su auditoría visual y de PDF. El manifiesto académico selecciona las fuentes de la próxima versión, pero no autoriza por sí mismo reemplazar los PDF ni actualizar el sitio.
+Los paquetes `N11-v8-editorial` a `N36-v8-editorial` son la versión pública. Superaron la auditoría visual, la validación de PDF y la puerta de publicación. N00 a N10 permanecen protegidos por hash y no fueron alterados por esta promoción.
 
 ## Elementos que deben quedar versionados
 
@@ -25,6 +26,7 @@ Los paquetes `N11-v7-editorial` a `N36-v7-editorial` siguen siendo la versión p
 - Un PDF final por versión editorial conservada.
 - Catálogos de revisión necesarios para interpretar una aprobación del autor.
 - Copia completa y verificable de los seis skills METSI.
+- Plan maestro, preparación asincrónica, talleres, guiones docentes y rúbricas de la etapa pedagógica.
 
 ## Elementos regenerables que no se versionan
 
