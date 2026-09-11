@@ -1,6 +1,6 @@
 # Estado vigente de METSI
 
-Actualizado: 10 de septiembre de 2026.
+Actualizado: 11 de septiembre de 2026.
 
 Este archivo prevalece sobre auditorías anteriores cuando exista una diferencia de estado.
 
@@ -40,4 +40,4 @@ El repositorio debe contener este estado, las decisiones, los seis skills METSI,
 
 ## Producción pedagógica
 
-La etapa posterior a la colección editorial comenzó en `pedagogy/`. El plan maestro define preparación asincrónica, taller sincrónico, guion docente y rúbrica para cada N. Los bloques A, B, C, D, E y F, N01 a N30, ya cuentan con paquetes ejecutables y auditables. Funcionan como referencia de profundidad, no como plantillas mecánicas de dinámica.
+La etapa posterior a la colección editorial está completa en `pedagogy/`. Los bloques A a H, N01 a N36, cuentan con preparación asincrónica, taller sincrónico, guion docente y rúbrica ejecutables y auditables. La auditoría transversal registra 144 piezas, 288 actividades, 4.320 minutos, 360 pantallas, al menos 288 criterios y 36 secuencias distintas. El validador cerró en `PASS` sin problemas.

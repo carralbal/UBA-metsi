@@ -40,9 +40,19 @@ def main() -> int:
     if planned != expected:
         problems.append("El plan maestro no contiene exactamente N01 a N36.")
 
+    directories = sorted(path for path in ROOT.glob("N[0-9][0-9]") if path.is_dir())
+    package_names = [path.name for path in directories]
+    if package_names != expected:
+        missing = sorted(set(expected) - set(package_names))
+        extra = sorted(set(package_names) - set(expected))
+        problems.append(
+            "Los directorios de paquetes no coinciden con N01 a N36. "
+            f"Faltan: {missing or 'ninguno'}. Sobran: {extra or 'ninguno'}."
+        )
+
     packages: dict[str, dict[str, object]] = {}
     workshop_sequences: dict[tuple[str, ...], str] = {}
-    for directory in sorted(path for path in ROOT.glob("N[0-9][0-9]") if path.is_dir()):
+    for directory in directories:
         package_problems: list[str] = []
         package_texts: dict[str, str] = {}
         for filename, markers in REQUIRED.items():
@@ -57,6 +67,8 @@ def main() -> int:
                     package_problems.append(f"{filename} no contiene {marker}.")
             if re.search(r"\b(?:TODO|TBD|XXX)\b|lorem ipsum", text):
                 package_problems.append(f"{filename} contiene un marcador pendiente.")
+            if re.search(r"&(?:[a-zA-Z]+|#[0-9]+|#x[0-9a-fA-F]+);", text):
+                package_problems.append(f"{filename} contiene una entidad HTML residual.")
 
         workshop = package_texts.get("TALLER-SINCRONICO.md", "")
         activities = re.findall(

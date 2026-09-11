@@ -12,7 +12,7 @@ Este archivo define qué debe conservar Git para reconstruir el proyecto sin dep
 - Sitio publicable: `site`.
 - Sistema editorial y skills recuperables: `editorial-standard`.
 - Decisiones autorales que condicionan trabajo futuro: `decisions`.
-- Sistema de producción pedagógica y paquetes de encuentro: `pedagogy`. Los bloques A, B, C, D, E y F, N01 a N30, están completos y auditados; las auditorías `pedagogy/AUDIT-BLOCK-A.md` a `pedagogy/AUDIT-BLOCK-F.md` conservan la evidencia de cierre.
+- Sistema de producción pedagógica y paquetes de encuentro: `pedagogy`. Los bloques A a H, N01 a N36, están completos y auditados; `pedagogy/AUDIT-N01-N36.md` conserva el dictamen transversal y las auditorías por bloque conservan el detalle de cada cierre.
 - Selección académica vigente para la próxima reconstrucción de N11 a N36: `academic-content-revision-manifest-n11-n36.json`, acompañada por `ACADEMIC-CONTENT-AUDIT-N11-N36.md`.
 
 Los paquetes `N11-v8-editorial` a `N36-v8-editorial` son la versión pública. Superaron la auditoría visual, la validación de PDF y la puerta de publicación. N00 a N10 permanecen protegidos por hash y no fueron alterados por esta promoción.
@@ -42,6 +42,7 @@ Los paquetes `N11-v8-editorial` a `N36-v8-editorial` son la versión pública. S
 4. Ejecutar `python3 editorial-standard/metsi-publish-course/scripts/verify_publishable.py .` desde la raíz.
 5. Ejecutar `python3 site/validate_site.py --check-only --require-sources` para verificar la publicación local.
 6. Ejecutar `python3 scripts/audit_academic_content_revision.py` para comprobar la revisión académica seleccionada de N11 a N36 antes de cualquier nueva composición.
+7. Ejecutar `python3 pedagogy/validate_pedagogy.py` para comprobar los treinta y seis paquetes de encuentro.
 
 El cierre integrado de N00 a N36 se reproduce con `python3 scripts/build_block01_completion.py`, se sella con `python3 scripts/audit_integrated_collection.py` y se publica localmente con `python3 scripts/sync_block01_integrated_release.py`.
 
