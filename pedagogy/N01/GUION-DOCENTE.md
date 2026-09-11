@@ -15,8 +15,7 @@ Las pantallas coordinan la actividad. No reproducen el contenido de N01. Cada pa
 | 7 | Evidencia nueva | Entregar dos piezas por equipo. No anticipar cuál explicación debe ganar. | El equipo registra una revisión explícita. |
 | 8 | Protocolo de objeción | Exigir campo citado, relación débil y prueba propuesta. | La devolución puede usarse para modificar el memo. |
 | 9 | Defensa en cuatro frases | Cortar exposiciones descriptivas. Pedir decisión, límite y condición de revisión. | Cada equipo sostiene una posición revisable. |
-| 10 | Antes pensaba, ahora sostengo, cambié porque | Dar silencio individual. No cerrar con una moraleja colectiva. | Cada persona deja una huella de aprendizaje. |
-| 11 | Puente a N02 | Preguntar qué quedó fuera del sistema analizado. No desarrollar N02. | Surge una pregunta sobre frontera y relaciones. |
+| 10 | Antes pensaba, ahora sostengo y puente a N02 | Dar silencio individual. Pedir qué quedó fuera del sistema analizado sin desarrollar N02. | Cada persona deja una huella y una pregunta sobre frontera y relaciones. |
 
 ## Preguntas de sondeo
 

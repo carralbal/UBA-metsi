@@ -81,7 +81,7 @@ Cada persona completa:
 4. todavía podría cambiar si;
 5. para N02 necesito saber qué relaciones forman el sistema relevante.
 
-## Evidencias que conserva el portfolio
+## Evidencias para el portfolio
 
 - primera versión individual de HH-01;
 - segunda versión del equipo;

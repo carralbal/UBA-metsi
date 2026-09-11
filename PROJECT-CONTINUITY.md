@@ -12,7 +12,7 @@ Este archivo define qué debe conservar Git para reconstruir el proyecto sin dep
 - Sitio publicable: `site`.
 - Sistema editorial y skills recuperables: `editorial-standard`.
 - Decisiones autorales que condicionan trabajo futuro: `decisions`.
-- Sistema de producción pedagógica y paquetes de encuentro: `pedagogy`.
+- Sistema de producción pedagógica y paquetes de encuentro: `pedagogy`. Los bloques A y B, N01 a N10, están completos y auditados; `pedagogy/AUDIT-BLOCK-B.md` conserva la evidencia de cierre.
 - Selección académica vigente para la próxima reconstrucción de N11 a N36: `academic-content-revision-manifest-n11-n36.json`, acompañada por `ACADEMIC-CONTENT-AUDIT-N11-N36.md`.
 
 Los paquetes `N11-v8-editorial` a `N36-v8-editorial` son la versión pública. Superaron la auditoría visual, la validación de PDF y la puerta de publicación. N00 a N10 permanecen protegidos por hash y no fueron alterados por esta promoción.

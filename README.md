@@ -51,6 +51,6 @@ La rama `main` y GitHub Pages publican la colección completa N00 a N36. N00 a N
 
 ## Producción pedagógica
 
-[`pedagogy/`](pedagogy/) desarrolla el recorrido posterior a las lecturas: preparación asincrónica, talleres sincrónicos, guiones visuales con notas docentes, dinámicas, rúbricas y evidencia acumulativa. El plan maestro cubre N01 a N36 y el Bloque A, N01 a N04, ya cuenta con paquetes ejecutables completos.
+[`pedagogy/`](pedagogy/) desarrolla el recorrido posterior a las lecturas: preparación asincrónica, talleres sincrónicos, guiones visuales con notas docentes, dinámicas, rúbricas y evidencia acumulativa. El plan maestro cubre N01 a N36 y los bloques A y B, N01 a N10, ya cuentan con paquetes ejecutables completos.
 
 No se incorpora una licencia abierta. La disponibilidad pública del repositorio no constituye por sí sola una autorización de reutilización.

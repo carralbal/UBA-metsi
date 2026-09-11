@@ -1,6 +1,6 @@
 # N01 · Rúbrica y evidencias
 
-## Escala común
+## Escala
 
 Cada criterio se observa en cuatro niveles:
 
@@ -20,12 +20,13 @@ Cada criterio se observa en cuatro niveles:
 | Autoridad | ¿Está claro quién puede decidir, revisar, detener y reparar? | La distribución de autoridad forma parte del memo. |
 | Revisabilidad | ¿Existe evidencia adversa capaz de cambiar el camino? | La condición es concreta, observable y relevante para la decisión. |
 | Respuesta a objeciones | ¿La segunda versión utiliza la crítica recibida? | Mantiene o cambia con razones explícitas, no por obediencia. |
+| Aprendizaje | ¿Puede reconstruirse qué cambió entre versiones? | Relaciona revisión, evidencia u objeción y nueva decisión. |
 
 ## Uso formativo
 
 La primera versión no recibe nota numérica. La rúbrica orienta la revisión. La segunda versión puede registrarse como evidencia del portfolio, acompañada por un comentario breve del docente sobre la relación más sólida y la fisura más importante.
 
-## Control de aprendizaje individual
+## Evidencia de aprendizaje
 
 El registro final debe permitir comprobar:
 
@@ -36,3 +37,7 @@ El registro final debe permitir comprobar:
 - qué pregunta se traslada a N02.
 
 Una respuesta que sólo enumera conceptos de N01 no demuestra el resultado del encuentro.
+
+## Conexión acumulativa
+
+La segunda versión de HH-01 y su condición de revisión se conservan para N02. Allí se amplía el foco desde el pedido y el encuadre hacia las relaciones y la frontera del sistema que produce la promesa.
