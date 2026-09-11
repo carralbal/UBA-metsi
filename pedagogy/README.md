@@ -22,4 +22,4 @@ Una N no equivale mecánicamente a una clase. Los paquetes pueden combinarse seg
 - Cada actividad produce un artefacto breve que puede recuperarse en Núcleos posteriores.
 - La evaluación observa la calidad del razonamiento y su trazabilidad, no la repetición de definiciones.
 
-El plan maestro está en [`PLAN-MAESTRO.md`](PLAN-MAESTRO.md). El primer paquete ejecutable está en [`N01/`](N01/).
+El plan maestro está en [`PLAN-MAESTRO.md`](PLAN-MAESTRO.md). Los paquetes ejecutables ya disponibles son [`N01/`](N01/) y [`N02/`](N02/).
