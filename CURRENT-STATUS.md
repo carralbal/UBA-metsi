@@ -40,4 +40,4 @@ El repositorio debe contener este estado, las decisiones, los seis skills METSI,
 
 ## Producción pedagógica
 
-La etapa posterior a la colección editorial comenzó en `pedagogy/`. El plan maestro define preparación asincrónica, taller sincrónico, guion docente y rúbrica para cada N. Los bloques A, B, C y D, N01 a N20, ya cuentan con paquetes ejecutables y auditables. Funcionan como referencia de profundidad, no como plantillas mecánicas de dinámica.
+La etapa posterior a la colección editorial comenzó en `pedagogy/`. El plan maestro define preparación asincrónica, taller sincrónico, guion docente y rúbrica para cada N. Los bloques A, B, C, D y E, N01 a N25, ya cuentan con paquetes ejecutables y auditables. Funcionan como referencia de profundidad, no como plantillas mecánicas de dinámica.
