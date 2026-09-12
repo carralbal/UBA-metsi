@@ -1,6 +1,6 @@
 # Estado vigente de METSI
 
-Actualizado: 11 de septiembre de 2026.
+Actualizado: 12 de septiembre de 2026.
 
 Este archivo prevalece sobre auditorías anteriores cuando exista una diferencia de estado.
 
@@ -41,3 +41,9 @@ El repositorio debe contener este estado, las decisiones, los seis skills METSI,
 ## Producción pedagógica
 
 La etapa posterior a la colección editorial está completa en `pedagogy/`. Los bloques A a H, N01 a N36, cuentan con preparación asincrónica, taller sincrónico, guion docente y rúbrica ejecutables y auditables. La auditoría transversal registra 144 piezas, 288 actividades, 4.320 minutos, 360 pantallas, al menos 288 criterios y 36 secuencias distintas. El validador cerró en `PASS` sin problemas.
+
+Las 36 presentaciones de clase editables están en `pedagogy/presentations/`. Cada una contiene diez pantallas visibles para estudiantes y diez notas de orador que distinguen propósito, facilitación sincrónica, uso asincrónico, preguntas de sondeo y señal para avanzar. La auditoría estructural y el render de las 360 diapositivas cerraron en `PASS`.
+
+## Revalidación de los PDF
+
+La colección N00 a N36 fue revalidada el 12 de septiembre de 2026 sobre los archivos PDF finales, no sólo sobre sus fuentes. El resultado integrado permanece en `PASS`: 37 documentos, 1.041 páginas, 767 imágenes, 30 infografías específicas, continuidad de Hotel Horizonte y distribución curricular aprobada. La puerta v8 de N11 a N36 también cerró con 26 documentos en `PASS`; los PDF crudos continúan tratados como intermediarios regenerables opcionales.

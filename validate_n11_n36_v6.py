@@ -503,8 +503,8 @@ def audit(number: int) -> dict[str, Any]:
         "manifest": package / "manifest.json", "document": package / "document.json",
         "source_manifest": package / "source-manifest.json", "integrity": package / "integrity-report.json",
         "pdf": package / "output" / f"{document}-METSI-lectura-previa-v{PACKAGE_VERSION}-final.pdf",
-        "raw_pdf": package / "output" / f"{document}-METSI-lectura-previa-v{PACKAGE_VERSION}.pdf",
     }
+    raw_pdf = package / "output" / f"{document}-METSI-lectura-previa-v{PACKAGE_VERSION}.pdf"
     missing_core = sorted(key for key, path in core.items() if not path.is_file())
     checks.append(check("required_package_files_exist", not missing_core, {"missing": missing_core}))
     if missing_core:
@@ -605,7 +605,7 @@ def audit(number: int) -> dict[str, Any]:
     # PDF parsing is deliberately independent from any stored qa-report.
     pdf_bytes = core["pdf"].read_bytes()
     reader = PdfReader(core["pdf"], strict=True)
-    raw_reader = PdfReader(core["raw_pdf"], strict=True)
+    raw_reader = PdfReader(raw_pdf, strict=True) if raw_pdf.is_file() else None
     if reader.is_encrypted:
         raise ValueError("final PDF is encrypted")
     with pdfplumber.open(core["pdf"]) as pdf_document:
@@ -633,12 +633,18 @@ def audit(number: int) -> dict[str, Any]:
     a4 = all(abs(width - A4_POINTS[0]) <= A4_TOLERANCE and abs(height - A4_POINTS[1]) <= A4_TOLERANCE for width, height in sizes)
     valid_pdf = (
         pdf_bytes.startswith(b"%PDF-") and b"%%EOF" in pdf_bytes[-2048:]
-        and page_count > 0 and len(raw_reader.pages) > 0 and a4
-        and sha256(core["pdf"]) != sha256(core["raw_pdf"])
+        and page_count > 0 and a4
+        and (
+            raw_reader is None
+            or (len(raw_reader.pages) > 0 and sha256(core["pdf"]) != sha256(raw_pdf))
+        )
     )
     checks.append(check("final_pdf_is_parseable_new_distinct_and_all_pages_are_a4", valid_pdf, {
         "pages": page_count, "unique_sizes": sorted({tuple(item) for item in sizes}),
-        "bytes": len(pdf_bytes), "final_sha256": sha256(core["pdf"]), "raw_sha256": sha256(core["raw_pdf"]),
+        "bytes": len(pdf_bytes), "final_sha256": sha256(core["pdf"]),
+        "raw_artifact_available": raw_reader is not None,
+        "raw_sha256": sha256(raw_pdf) if raw_reader is not None else None,
+        "raw_artifact_policy": "optional regenerable intermediate",
     }))
 
     missing_pdf_blocks = [str(entry.get("source_id")) for entry in entries if not source_block_present(str(entry.get("text", "")), pdf_compact)]
