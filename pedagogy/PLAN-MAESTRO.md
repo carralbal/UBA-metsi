@@ -117,3 +117,7 @@ Un paquete no queda listo si ocurre cualquiera de estas condiciones:
 6. Auditoría transversal de carga, progresión, variedad de dinámicas y evidencia acumulativa.
 
 La implementación empieza con N01. Su paquete funciona como referencia para el nivel de detalle, pero las dinámicas posteriores deben variar según el objeto de aprendizaje.
+
+## Continuación del proyecto
+
+Las tareas posteriores al cierre de las lecturas y de la primera generación de paquetes docentes se mantienen en [`BACKLOG.md`](../BACKLOG.md). Allí se registran la revisión final de materiales sincrónicos y asincrónicos, el sistema de trabajo estudiantil para Hotel Horizonte y la publicación del programa con navegación adaptable.
