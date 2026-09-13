@@ -165,6 +165,15 @@ def body_paragraphs(markdown: str) -> tuple[str, list[str], int]:
         if line.startswith("# ") or line.startswith("<!--") or line.startswith("```"):
             flush()
             continue
+        if line.startswith("|") or re.match(r"^(?:[-+•]|\d+[.)])\s+", line):
+            # A table row or list item is an independent reading unit. Joining
+            # consecutive rows/items would report a fictitious giant paragraph.
+            flush()
+            if not exclude:
+                paragraph = clean_inline(line)
+                if paragraph:
+                    included.append(paragraph)
+            continue
         if not line:
             flush()
             continue

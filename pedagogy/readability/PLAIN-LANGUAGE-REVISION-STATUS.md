@@ -51,12 +51,14 @@ Además debe obtener señal automática `BAJA`, párrafo medio entre 35 y 55 pal
 | N23 | canónica v4 | cerrada en fuente | pasa |
 | N15 | canónica v3 | cerrada en fuente | pasa |
 | N29 | canónica v4 | cerrada en fuente | pasa |
+| N02 | canónica v1 | cerrada en fuente | pasa |
+| N10 | canónica v1 | cerrada en fuente | pasa |
 
-Resultado acumulado: trece fuentes cerradas con señal `BAJA`; ninguna conserva señal `ALTA`.
+Resultado acumulado: quince fuentes cerradas con señal `BAJA`; ninguna conserva señal `ALTA`.
 
 ## Orden restante
 
-1. N00, N02 y N10.
+1. N00.
 2. N11, N12, N14 y N16.
 3. N18, N19, N24, N25, N26 y N30.
 4. N01, N03, N04, N05, N06, N07, N08, N09, N13, N27 y N28, con intervención mínima y guarda estricta.

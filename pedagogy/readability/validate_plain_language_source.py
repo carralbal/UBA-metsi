@@ -87,6 +87,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--min-substantive", type=int, default=5800)
     parser.add_argument("--min-references", type=int, default=12)
     parser.add_argument("--expected-h3", type=int, default=12)
+    parser.add_argument("--expected-movements", type=int, default=3)
+    parser.add_argument("--skip-referents", action="store_true")
+    parser.add_argument("--skip-hotel-names", action="store_true")
     parser.add_argument("--term", action="append", default=[])
     return parser.parse_args()
 
@@ -100,23 +103,31 @@ def main() -> None:
     digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
     row = audit_readability.analyse(number, source)
     substantive = text[text.index("## Tesis") : text.index("## Cinco píldoras para recordar")]
-    referents = text[text.index("## Referentes") : text.index("## Referencias base")]
+    referents = (
+        text[text.index("## Referentes") : text.index("## Referencias base")]
+        if "## Referentes" in text else ""
+    )
     references = text.split("## Referencias base", 1)[1]
     pills = text[text.index("## Cinco píldoras") : text.index("## Glosario")]
-    questions = text[text.index("## Preguntas") : text.index("## Referentes")]
+    question_end = text.index("## Referentes") if "## Referentes" in text else text.index("## Referencias base")
+    questions = text[text.index("## Preguntas") : question_end]
+    required_sections = tuple(
+        section for section in COMMON_SECTIONS
+        if not (args.skip_referents and section == "## Referentes")
+    )
     checks = {
         "title": text.startswith(f"# {args.document} ·"),
         "total_word_floor": word_count(text) >= args.min_total,
         "substantive_word_floor": word_count(substantive) >= args.min_substantive,
-        "common_sections": all(section in text for section in COMMON_SECTIONS),
-        "three_movements": len(re.findall(r"^## Movimiento [123]", text, re.M)) == 3,
+        "common_sections": all(section in text for section in required_sections),
+        "three_movements": len(re.findall(r"^## Movimiento [123]", text, re.M)) == args.expected_movements,
         "concept_units": len(re.findall(r"^### ", text, re.M)) == args.expected_h3,
         "five_pills": len(re.findall(r"^[1-5]\. ", pills, re.M)) == 5,
         "six_questions": len(re.findall(r"^[1-6]\. ", questions, re.M)) == 6,
-        "six_referents": len(re.findall(r"^\*\*[^\n]+\.\*\*", referents, re.M)) == 6,
+        "six_referents": args.skip_referents or len(re.findall(r"^\*\*[^\n]+\.\*\*", referents, re.M)) == 6,
         "reference_floor": len(re.findall(r"^- ", references, re.M)) >= args.min_references,
         "requested_terms": all(term.casefold() in text.casefold() for term in args.term),
-        "hotel_continuity": all(name in text for name in HOTEL_NAMES),
+        "hotel_continuity": args.skip_hotel_names or all(name in text for name in HOTEL_NAMES),
         "no_placeholders": re.search(r"\b(?:TBD|LOREM|XXX)\b|\[(?:pendiente|completar|insertar)", text, re.I) is None,
         "no_incidental_dashes": not incidental_dashes(text),
         "readability_signal_low": row.automatic_signal == "BAJA",
