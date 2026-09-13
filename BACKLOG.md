@@ -4,6 +4,26 @@ Actualizado el 12 de septiembre de 2026.
 
 Este backlog comienza después del cierre editorial de las lecturas N00 a N36. Distingue lo que ya existe de la pasada de diseño, prueba y publicación que todavía debe realizarse.
 
+## P0. Reconstrucción visual y semántica de las lecturas N00–N36
+
+**Estado:** N34 v9 construido como patrón local y no publicado. La colección pública todavía no incorpora estas correcciones.
+
+### Trabajo pendiente
+
+- Auditar la escala efectiva de cada infografía dentro del PDF, no sólo su SVG aislado. Dar página completa o dividir toda lámina cuyo texto no alcance una lectura normal al 100 %.
+- Revisar cada tapa contra la pregunta profesional completa y eliminar asociaciones visuales literales o sesgadas producidas por una palabra del título.
+- Normalizar los marcadores de sección: círculo papel, número y borde negros, volt reservado a acentos.
+- Sustituir en N11–N36 el ancla inclinada de Hotel Horizonte por el archivo canónico de alta resolución y color desaturado.
+- Homologar el encuadre de los seis personajes de Hotel Horizonte y escribir una posición específica de cada rol frente al tema de cada N.
+- Auditar los seis Referentes de cada documento: retrato corto consistente, fuente verificable y presencia académicamente pertinente de voces argentinas o latinoamericanas.
+- Ejecutar la regresión completa de tapa, Contenido, Referentes, pregunta profesional, caso Hotel, infografías, síntesis, píldoras, glosario, preguntas, referencias, enlaces, paginación y densidad.
+
+### Criterio de cierre
+
+Los treinta y siete PDFs pasan la auditoría visual al 100 %, conservan todos sus bloques canónicos y ninguna decisión compartida del generador introduce monotonía, pérdida de legibilidad o una lectura semántica ajena al argumento.
+
+El diagnóstico y las guardas se conservan en [`audits/2026-09-12-N34-visual-semantic-audit-and-collection-gates.md`](audits/2026-09-12-N34-visual-semantic-audit-and-collection-gates.md).
+
 ## P1. Material docente para encuentros sincrónicos y asincrónicos
 
 ### Estado de partida

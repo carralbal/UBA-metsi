@@ -15,7 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 CHROME = Path("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
-PACKAGE_VERSION = 8
+PACKAGE_VERSION = 9
 
 
 def export(number: int) -> Path:

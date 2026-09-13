@@ -17,7 +17,7 @@ from reportlab.pdfgen import canvas
 
 ROOT = Path(__file__).resolve().parent
 LINKEDIN = "https://www.linkedin.com/in/carralbal"
-PACKAGE_VERSION = 8
+PACKAGE_VERSION = 9
 AVENIR = Path("/System/Library/Fonts/Avenir.ttc")
 
 

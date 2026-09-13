@@ -28,10 +28,14 @@ PORTRAIT_ROOT = ROOT / "assets" / "portraits-block-c"
 SHARED_PORTRAITS = ROOT / "assets" / "portraits"
 SUPPORT_ROOT = ROOT / "assets" / "rebuild-support"
 APPROVED_INFOGRAPHIC_ROOT = ROOT / "editorial-standard" / "approved-infographics"
-PACKAGE_VERSION = 8
+PACKAGE_VERSION = 9
+BASELINE_VERSION = 8
 ACADEMIC_REVISION_MANIFEST = ROOT / "academic-content-revision-manifest-n11-n36.json"
 MATCHES = ROOT / "N10-v9-final" / "assets" / "matches-close.png"
-HOTEL_HORIZONTE = SUPPORT_ROOT / "hotel-horizonte-canonical-v1.png"
+HOTEL_HORIZONTE = SUPPORT_ROOT / "hotel-horizonte-canonical-v2.png"
+SPECIAL_COVERS = {
+    34: SUPPORT_ROOT / "N34-cover-native-bw-v2.png",
+}
 
 APPROVED_INFOGRAPHICS = {
     11: {
@@ -219,7 +223,7 @@ APPROVED_INFOGRAPHICS = {
         ),
     },
     34: {
-        "file": "N34-cadena-en-ambos-sentidos.svg",
+        "file": "N34-cadena-en-ambos-sentidos-print.png",
         "family": "integrated-evidence-chain",
         "caption": (
             "La cadena se prueba desde la promesa hasta la consecuencia y desde un incidente "
@@ -459,6 +463,20 @@ HOTEL_RESPONSIBILITIES = [
     "Declara compromisos, demanda, canales y condiciones ofrecidas.",
 ]
 
+# Topic-specific positions turn the stable cast into an argumentative device.
+# N34 needs each role to state what it accepts, disputes and must preserve when
+# the complete intervention is reconstructed.
+HOTEL_POSITION_OVERRIDES = {
+    34: [
+        "Exige que la cadena conserve autoridad, riesgo aceptado y condición de reapertura. No aprueba el conjunto si un tramo carece de evidencia.",
+        "Prueba la cadena desde el episodio del huésped. Una traza sirve sólo si permite actuar, explicar la excepción y reparar.",
+        "Reclama coherencia entre promesa y capacidad operativa. Reabre la dependencia cuyo supuesto falla sin reiniciar toda la intervención.",
+        "Vincula fuentes, transformaciones, contratos y versiones. Debe mostrar qué afirmaciones cambian cuando una evidencia pierde vigencia.",
+        "Contrasta el expediente con turnos y habitaciones reales. Conserva discrepancias que los tableros agregados suelen ocultar.",
+        "Sostiene el compromiso comercial, pero explicita población y condiciones. Una promesa no puede usar evidencia de otra experiencia.",
+    ],
+}
+
 # The second approved documentary image now resolves a real editorial need
 # instead of being expelled from the Hotel case onto an isolated page.
 CONSEQUENCE_PHOTO_DOCS = {
@@ -541,7 +559,7 @@ REFERENTS = {
     31: ["stuart-russell", "peter-norvig", "judea-pearl", "virginia-dignum", "helen-nissenbaum", "ben-shneiderman"],
     32: ["joy-buolamwini", "timnit-gebru", "helen-nissenbaum", "ben-shneiderman", "cathy-oneil", "inioluwa-raji"],
     33: ["inioluwa-raji", "elham-tabassi", "timnit-gebru", "kate-crawford", "virginia-dignum", "cathy-oneil"],
-    34: ["david-snowden", "alistair-cockburn", "donald-schon", "karl-popper", "amy-edmondson", "peter-senge"],
+    34: ["david-snowden", "alistair-cockburn", "donald-schon", "karl-popper", "amy-edmondson", "paulo-freire"],
     35: ["karl-popper", "edward-tufte", "donald-schon", "amy-edmondson", "paulo-freire", "etienne-wenger"],
     36: ["donald-schon", "peter-senge", "john-dewey", "david-kolb", "amy-edmondson", "paulo-freire"],
 }
@@ -1096,6 +1114,19 @@ def build_referents(
                         for index, value in enumerate(crop_box)
                     )
                     portrait.crop(box).save(target, quality=94, optimize=True)
+            elif key == "david-snowden":
+                # The approved source documents a stage appearance. Preserve
+                # that source and derive a head-and-shoulders crop so the
+                # Referentes grid does not mix a long shot with five portraits.
+                crop_box = (.20, .30, .64, .60)
+                with Image.open(source) as portrait:
+                    portrait = ImageOps.exif_transpose(portrait).convert("RGB")
+                    width, height = portrait.size
+                    box = tuple(
+                        round(value * (width if index % 2 == 0 else height))
+                        for index, value in enumerate(crop_box)
+                    )
+                    portrait.crop(box).save(target, quality=94, optimize=True)
             else:
                 shutil.copy2(source, target)
             visual = f'<img src="assets/{target.name}" alt="Retrato documental de {html.escape(display)}">'
@@ -1143,8 +1174,9 @@ def build_referents(
 
 def build_hotel_voices(number: int, assets: Path) -> str:
     cards = []
+    positions = HOTEL_POSITION_OVERRIDES.get(number, HOTEL_RESPONSIBILITIES)
     for index, ((name, role, filename), responsibility) in enumerate(
-        zip(HOTEL_CHARACTERS, HOTEL_RESPONSIBILITIES), 1
+        zip(HOTEL_CHARACTERS, positions), 1
     ):
         source = HOTEL_ASSET_SOURCES[filename]
         if not valid_raster(source):
@@ -1694,9 +1726,9 @@ def icon_strip(section: base.Section) -> str:
 def build(number: int) -> dict:
     source = SOURCES[number]
     title, all_sections = base.parse_source(source)
-    # The approved v7 package is the immutable visual baseline. v8 receives
+    # The previous approved package is the immutable visual baseline. v9 receives
     # copies of its assets and never mutates the published package in place.
-    legacy = ROOT / f"N{number:02d}-v7-editorial"
+    legacy = ROOT / f"N{number:02d}-v{BASELINE_VERSION}-editorial"
     legacy_assets = legacy / "assets"
     out = ROOT / f"N{number:02d}-v{PACKAGE_VERSION}-editorial"
     assets, diagrams, output, source_dir = (out / "assets", out / "diagrams", out / "output", out / "source")
@@ -1716,11 +1748,11 @@ def build(number: int) -> dict:
         raise FileNotFoundError(f"Ancla canónica de Hotel Horizonte inválida: {HOTEL_HORIZONTE}")
     hotel_horizonte_asset = assets / "hotel-horizonte-canonical.png"
     shutil.copy2(HOTEL_HORIZONTE, hotel_horizonte_asset)
-    legacy_cover = legacy_assets / "cover-source-premium-bw-v1.png"
-    if not valid_raster(legacy_cover):
-        raise FileNotFoundError(legacy_cover)
-    cover = assets / legacy_cover.name
-    shutil.copy2(legacy_cover, cover)
+    cover_source = SPECIAL_COVERS.get(number, legacy_assets / "cover-source-premium-bw-v1.png")
+    if not valid_raster(cover_source):
+        raise FileNotFoundError(cover_source)
+    cover = assets / "cover-source-premium-bw-v2.png" if number in SPECIAL_COVERS else assets / cover_source.name
+    shutil.copy2(cover_source, cover)
     for pause_index, name in enumerate(("pause-01.png", "pause-02.png"), 1):
         source_pause = PREMIUM_PAUSE_OVERRIDES.get(number, {}).get(pause_index, legacy_assets / name)
         if not valid_raster(source_pause):
@@ -1772,13 +1804,14 @@ def build(number: int) -> dict:
     if number in APPROVED_INFOGRAPHICS:
         approved_spec = APPROVED_INFOGRAPHICS[number]
         approved_root = APPROVED_INFOGRAPHIC_ROOT / f"N{number:02d}"
-        approved_svg = approved_root / approved_spec["file"]
+        approved_asset = approved_root / approved_spec["file"]
+        diagram_target = diagrams / f"N{number:02d}-mapa-01{approved_asset.suffix.lower()}"
         approved_manifest_path = approved_root / "content-manifest.json"
         approved_alt_path = approved_root / "alt-text.md"
-        for required in (approved_svg, approved_manifest_path, approved_alt_path):
+        for required in (approved_asset, approved_manifest_path, approved_alt_path):
             if not required.is_file():
                 raise FileNotFoundError(f"Activo editorial aprobado ausente: {required}")
-        shutil.copy2(approved_svg, diagram_target)
+        shutil.copy2(approved_asset, diagram_target)
         manifest_target = diagrams / f"N{number:02d}-mapa-01-content-manifest.json"
         alt_target = diagrams / f"N{number:02d}-mapa-01-alt-text.md"
         shutil.copy2(approved_manifest_path, manifest_target)
@@ -1837,6 +1870,7 @@ def build(number: int) -> dict:
     pending_handoff_html = ""
     pending_consequences_html = ""
     pending_pills_html = ""
+    deferred_infographic_html = ""
 
     def open_article() -> None:
         nonlocal article_open
@@ -1917,8 +1951,8 @@ def build(number: int) -> dict:
             if diagram_cursor < len(diagram_records):
                 diagram = diagram_records[diagram_cursor]
                 if number in APPROVED_INFOGRAPHICS:
-                    after_section += (
-                        '<section class="approved-infographic-page">'
+                    infographic_markup = (
+                        f'<section class="approved-infographic-page{' n34-full-plate' if number == 34 else ''}">'
                         '<header>'
                         f'<span>METSI · N{number:02d} · MAPA DE DECISIÓN</span>'
                         f'<p>{html.escape(diagram["claim"])}</p>'
@@ -1927,6 +1961,14 @@ def build(number: int) -> dict:
                         f'<figcaption>{html.escape(diagram.get("caption", diagram["claim"]))}</figcaption>'
                         '</figure></section>'
                     )
+                    if number == 34:
+                        # The N34 plate carries more semantic density than a
+                        # compact thesis companion can sustain.  Let the thesis
+                        # share its page with the short bridge that follows and
+                        # give the diagram a true full-page reading surface.
+                        deferred_infographic_html = infographic_markup
+                    else:
+                        after_section += infographic_markup
                 else:
                     after_body += (
                         f'<figure class="infographic block-c-infographic thesis-map"><img src="{diagram["file"]}" alt="{html.escape(diagram["claim"])}">'
@@ -2048,6 +2090,9 @@ def build(number: int) -> dict:
             if section.title == "Tesis" and after_section
             else f'{section_core}{after_section}'
         )
+        if number == 34 and index == 5 and deferred_infographic_html:
+            section_html += deferred_infographic_html
+            deferred_infographic_html = ""
         if index == 1:
             close_article()
             body_chunks.append(section_html)
@@ -2101,7 +2146,7 @@ def build(number: int) -> dict:
                 f'<section class="full-bleed full-bleed-quote block-c-pause"><img src="assets/{file}" alt="{html.escape(alt)}">'
                 f'<p>{html.escape(quote)}</p></section>'
             )
-    for pending_html in (pending_consequences_html, pending_handoff_html, pending_pills_html):
+    for pending_html in (pending_consequences_html, pending_handoff_html, pending_pills_html, deferred_infographic_html):
         if pending_html:
             body_chunks.append(pending_html)
     close_article()
@@ -2144,7 +2189,7 @@ def build(number: int) -> dict:
     (out / "index.html").write_text(html_text, encoding="utf-8")
 
     stable_css = (ROOT / "N10-v9-final" / "magazine.css").read_text(encoding="utf-8")
-    css = stable_css + "\n\n" + BLOCK_C_CSS + "\n\n" + V8_EDITORIAL_CORRECTIONS
+    css = stable_css + "\n\n" + BLOCK_C_CSS + "\n\n" + V8_EDITORIAL_CORRECTIONS + "\n\n" + V9_N34_CORRECTIONS
     (out / "magazine.css").write_text(css, encoding="utf-8")
 
     rendered_ids = re.findall(r'data-source-id="([^"]+)"', html_text)
@@ -2171,7 +2216,7 @@ def build(number: int) -> dict:
         "image_manifest": [
             {"file": f"assets/pause-01.png", "sha256": sha(assets / "pause-01.png"), "alt": PHOTO_ALTS[number][1], "role": "full_page_pause", "saturation_review": "neutral", "treatment": "none", "rights_status": "project_bound_generated_media"},
             {"file": f"assets/pause-02.png", "sha256": sha(assets / "pause-02.png"), "alt": PHOTO_ALTS[number][2], "role": "full_page_pause", "saturation_review": "restrained-accent" if 2 in PREMIUM_PAUSE_OVERRIDES.get(number, {}) else "neutral", "treatment": "natural_desaturated_color" if 2 in PREMIUM_PAUSE_OVERRIDES.get(number, {}) else "none", "rights_status": "project_bound_generated_media"},
-            {"file": f"assets/{hotel_horizonte_asset.name}", "sha256": sha(hotel_horizonte_asset), "alt": "Cartel luminoso de HOTEL recortado en diagonal sobre una fachada oscura.", "role": "hotel_horizonte_canonical_anchor", "saturation_review": "neutral", "treatment": "none", "rights_status": "project_authorized_fixed_asset"},
+            {"file": f"assets/{hotel_horizonte_asset.name}", "sha256": sha(hotel_horizonte_asset), "alt": "Cartel luminoso de HOTEL recortado en diagonal sobre una fachada oscura.", "role": "hotel_horizonte_canonical_anchor", "saturation_review": "restrained-accent", "treatment": "natural_desaturated_color", "rights_status": "project_authorized_fixed_asset"},
         ] + ([{
             "file": f"assets/{story_asset.name}",
             "sha256": sha(story_asset),
@@ -3732,6 +3777,76 @@ body.block-c .block-c-references .section-body{
   font-size:9.2pt!important;line-height:1.34!important
 }
 body.block-c .block-c-references li{font-size:9.2pt!important;line-height:1.34!important}
+'''
+
+
+V9_N34_CORRECTIONS = r'''
+/* METSI N34 v9 candidate · visual and semantic regression repair. */
+
+/* Paper, black and volt keep separate functions. Volt never becomes small
+   text over paper inside the numbered section marker. */
+body.block-c .section-marker span,
+body.block-c .reading-section[data-section="01"] .section-marker span{
+  color:#171917!important;background:#FAFAF8!important;
+  border-color:#171917!important
+}
+
+/* The dense N34 decision map is a full-page plate.  Its own title and
+   hierarchy remain inside the artwork, so duplicate furniture is removed. */
+body.block-c.document-n34 .block-c-thesis{
+  height:auto!important;min-height:0!important;padding:6mm!important;
+  margin:0 0 4mm!important;break-inside:avoid-page!important
+}
+body.block-c.document-n34 .block-c-thesis .section-heading{
+  margin-bottom:2mm!important
+}
+body.block-c.document-n34 .block-c-thesis .section-heading h2{
+  font-size:25pt!important;line-height:1!important
+}
+body.block-c.document-n34 .block-c-thesis .section-lead p{
+  font-size:15pt!important;line-height:1.25!important
+}
+body.block-c.document-n34 .approved-infographic-page.n34-full-plate{
+  height:236mm!important;min-height:236mm!important;
+  padding:6mm!important;display:block!important;overflow:hidden!important;
+  break-before:page!important;break-after:page!important
+}
+body.block-c.document-n34 .approved-infographic-page.n34-full-plate header,
+body.block-c.document-n34 .approved-infographic-page.n34-full-plate figcaption{
+  display:none!important
+}
+body.block-c.document-n34 .approved-infographic-page.n34-full-plate figure{
+  width:100%!important;height:224mm!important;margin:0!important;
+  display:flex!important;align-items:center!important;justify-content:center!important
+}
+body.block-c.document-n34 .approved-infographic-page.n34-full-plate img{
+  width:168mm!important;height:224mm!important;max-width:none!important;
+  max-height:none!important;object-fit:contain!important
+}
+
+/* The stage photograph remains documentary evidence, but receives a close
+   portrait crop consistent with the other Referentes. */
+body.block-c.document-n34 .contributor-david-snowden .portrait-frame img{
+  transform:none!important;object-position:center 25%!important
+}
+
+/* Stable Hotel cast, normalized face scale and topic-specific readable copy. */
+body.block-c.document-n34 .hotel-tail-2 .hotel-voices-grid article{
+  min-height:48mm!important
+}
+body.block-c.document-n34 .hotel-tail-2 .hotel-voices-grid .hotel-portrait,
+body.block-c.document-n34 .hotel-tail-2 .hotel-voices-grid img{
+  height:48mm!important
+}
+body.block-c.document-n34 .hotel-voices-grid p{
+  font-size:7.05pt!important;line-height:1.27!important;color:#343734!important
+}
+body.block-c.document-n34 .hotel-voice-1 img{transform:scale(1.12)!important;transform-origin:50% 24%!important}
+body.block-c.document-n34 .hotel-voice-2 img{transform:scale(1.00)!important;transform-origin:50% 22%!important}
+body.block-c.document-n34 .hotel-voice-3 img{transform:scale(1.28)!important;transform-origin:50% 22%!important}
+body.block-c.document-n34 .hotel-voice-4 img{transform:scale(1.30)!important;transform-origin:50% 22%!important}
+body.block-c.document-n34 .hotel-voice-5 img{transform:scale(1.22)!important;transform-origin:50% 22%!important}
+body.block-c.document-n34 .hotel-voice-6 img{transform:scale(1.26)!important;transform-origin:50% 22%!important}
 '''
 
 
