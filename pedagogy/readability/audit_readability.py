@@ -103,7 +103,9 @@ def latest_canonical_source(number: int) -> Path | None:
 def source_paths() -> dict[int, Path]:
     paths: dict[int, Path] = {}
 
-    # N00-N10 use the exact package versions currently linked from the public site.
+    # N00-N10 use a newer content-only canonical source when one exists. The
+    # exact package linked from the public site remains the fallback until the
+    # source revision is approved for a later editorial rebuild.
     site_html = (ROOT / "site" / "index.html").read_text(encoding="utf-8")
     for number in range(0, 11):
         pattern = rf'href="[^"]*N{number:02d}-METSI-lectura-previa-v(\d+)-final\.pdf"'
@@ -112,7 +114,7 @@ def source_paths() -> dict[int, Path]:
             raise FileNotFoundError(f"No public-site package link for N{number:02d}")
         package = ROOT / f"N{number:02d}-v{match.group(1)}-final"
         sm = json.loads((package / "source-manifest.json").read_text(encoding="utf-8"))
-        paths[number] = package / sm["source"]
+        paths[number] = latest_canonical_source(number) or (package / sm["source"])
 
     # N11-N36 prefer the newest content-only canonical source. The public
     # release remains the fallback until a new canonical version is approved.
