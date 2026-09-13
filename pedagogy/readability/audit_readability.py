@@ -235,7 +235,11 @@ def analyse(number: int, path: Path) -> Row:
     load += 2 if abstract_rate > 52 else 1 if abstract_rate > 43 else 0
     load += 2 if avg_paragraph > 60 else 1 if avg_paragraph > 50 else 0
     load += 2 if h3_rate > 3.7 else 1 if h3_rate > 2.7 else 0
-    load += 2 if voice_rate < 1.5 else 1 if voice_rate < 3.0 else 0
+    # Quoted speech is one way to situate an argument, not a mandatory style.
+    # Do not penalize low dialogue when concrete narrative already carries the
+    # situatedness signal; otherwise the index rewards decorative quotation.
+    if narrative_pct < 20:
+        load += 2 if voice_rate < 1.5 else 1 if voice_rate < 3.0 else 0
     load += 2 if narrative_pct < 12 else 1 if narrative_pct < 20 else 0
     load += 1 if long_sentence_pct >= 6 else 0
     automatic_signal = "ALTA" if load >= 7 else "MEDIA" if load >= 4 else "BAJA"
