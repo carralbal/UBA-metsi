@@ -1,5 +1,9 @@
 # Handoff autosuficiente · METSI N12 · contenido canónico v1
 
+## Actualización vigente · contenido canónico v3
+
+La fuente vigente es `source/N12_eventos_estados_comandos_evidencia_y_autoridad-content-canonical-v3.md`. Tiene 8288 palabras totales, 6486 sustantivas, párrafo medio de 38,53 palabras, percentil 90 de párrafo de 59 y percentil 90 de oración de 21. No contiene párrafos de 85 palabras o más. Auditoría estructural y pedagógica: PASS. Señal: BAJA. Las secciones siguientes conservan el registro histórico de v1.
+
 ## Estado
 
 N12 quedó desarrollado y auditado únicamente como contenido. No existe PDF, HTML, CSS, fotografía, portada, infografía ni plan de maqueta dentro de este paquete.

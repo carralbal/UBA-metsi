@@ -1,5 +1,9 @@
 # Handoff autosuficiente · METSI N16 · contenido canónico v1
 
+## Actualización vigente · contenido canónico v3
+
+La fuente vigente es `source/N16_coherencia_contradicciones_productivas_y_ciclos_de_vida-content-canonical-v3.md`. Tiene 8858 palabras totales, 7329 sustantivas, párrafo medio de 35 palabras, percentil 90 de párrafo de 64 y percentil 90 de oración de 21. No contiene párrafos de 85 palabras o más. Auditoría estructural y pedagógica: PASS. Señal: BAJA. Las secciones siguientes conservan el registro histórico de v1.
+
 ## Estado
 
 N16 quedó desarrollado y auditado sólo como contenido. No hay PDF, HTML, CSS, imágenes ni decisiones de maqueta.

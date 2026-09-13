@@ -9,3 +9,9 @@
 - Se agregaron historia de apertura, tres aplicaciones a Hotel Horizonte, transferencia universitaria, contraejemplo, síntesis, cinco píldoras, glosario, seis preguntas, seis referentes y Referencias base.
 - Se creó una auditoría reproducible de integridad, profundidad, registro, referencias, singularidad transversal y ausencia de artefactos de diseño.
 - No se creó ni modificó ningún PDF, HTML, CSS, recurso fotográfico o decisión de maqueta.
+
+## content-canonical-v2 · 2026-09-13
+
+- Se revisó N11 en lenguaje llano sin reducir medición, procedencia, incertidumbre ni suficiencia.
+- Se convirtieron aplicaciones, instrumento, inteligencia artificial y transferencia en hitos de lectura visibles.
+- Se eliminaron los párrafos excesivos y la auditoría obtuvo resultado PASS con señal BAJA.

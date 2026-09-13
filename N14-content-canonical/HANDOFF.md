@@ -1,5 +1,9 @@
 # Handoff autosuficiente · METSI N14 · contenido canónico v1
 
+## Actualización vigente · contenido canónico v3
+
+La fuente vigente es `source/N14_procesos_end_to_end_handoffs_colas_y_excepciones-content-canonical-v3.md`. Tiene 8615 palabras totales, 6980 sustantivas, párrafo medio de 38,78 palabras, percentil 90 de párrafo de 64 y percentil 90 de oración de 20. No contiene párrafos de 85 palabras o más. Auditoría estructural y pedagógica: PASS. Señal: BAJA. Las secciones siguientes conservan el registro histórico de v1.
+
 ## Estado
 
 N14 quedó desarrollado y auditado sólo como contenido. No hay PDF, HTML, CSS, imágenes ni maqueta.

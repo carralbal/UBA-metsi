@@ -10,3 +10,9 @@
 - Se agregaron historia de apertura, tres aplicaciones a Hotel Horizonte, transferencia hospitalaria, contraejemplo, síntesis, cinco píldoras, glosario, seis preguntas, seis referentes y Referencias base.
 - Se creó una auditoría reproducible de integridad, profundidad, registro, referencias, singularidad transversal y ausencia de artefactos de diseño.
 - No se creó ni modificó ningún PDF, HTML, CSS, recurso fotográfico o decisión de maqueta.
+
+## content-canonical-v3 · 2026-09-13
+
+- Se revisó N12 en lenguaje llano sin reducir eventos, estados, comandos, evidencia, autoridad ni reparación.
+- Se convirtieron BPMN, aplicaciones, inteligencia artificial, instrumento, pruebas y transferencia en hitos de lectura visibles.
+- Se eliminaron los párrafos excesivos y la auditoría obtuvo resultado PASS con señal BAJA.

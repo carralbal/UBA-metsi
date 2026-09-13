@@ -1,5 +1,9 @@
 # Handoff autosuficiente · METSI N11 · contenido canónico v1
 
+## Actualización vigente · contenido canónico v2
+
+La fuente vigente es `source/N11_cuando_un_dato_sostiene_una_afirmacion-content-canonical-v2.md`. Tiene 8704 palabras totales, 6782 sustantivas, párrafo medio de 42,69 palabras, percentil 90 de párrafo de 65 y percentil 90 de oración de 25. No contiene párrafos de 85 palabras o más. Auditoría estructural y pedagógica: PASS. Señal: BAJA. Las secciones siguientes conservan el registro histórico de v1.
+
 ## Estado
 
 N11 quedó desarrollado y auditado únicamente como contenido. No existe PDF, HTML, CSS, fotografía, portada, infografía ni plan de maqueta dentro de este paquete.
