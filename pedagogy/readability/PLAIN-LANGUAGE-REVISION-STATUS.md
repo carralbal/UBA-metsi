@@ -78,6 +78,8 @@ Además debe obtener señal automática `BAJA`, percentil 90 de párrafo no mayo
 
 Resultado final: treinta y siete fuentes cerradas con señal `BAJA`; ninguna conserva señal `MEDIA` o `ALTA`.
 
+La auditoría de preservación contra las fuentes anteriores también termina en 37 de 37 `pass`: bibliografías completas, cobertura sustantiva íntegra, continuidad consecutiva y cero pérdidas de personajes del caso longitudinal.
+
 ## Cierre de la etapa
 
 No quedan fuentes pendientes en la revisión de lenguaje llano. El conjunto conserva las historias introductorias, la progresión conceptual, Hotel Horizonte, instrumentos, transferencia, síntesis, glosarios, preguntas y bibliografía.
