@@ -49,15 +49,16 @@ Además debe obtener señal automática `BAJA`, párrafo medio entre 35 y 55 pal
 | N21 | canónica v4 | cerrada en fuente | pasa |
 | N22 | canónica v3 | cerrada en fuente | pasa |
 | N23 | canónica v4 | cerrada en fuente | pasa |
+| N15 | canónica v3 | cerrada en fuente | pasa |
+| N29 | canónica v4 | cerrada en fuente | pasa |
 
-Resultado acumulado: once fuentes cerradas con señal `BAJA`; ninguna conserva señal `ALTA`.
+Resultado acumulado: trece fuentes cerradas con señal `BAJA`; ninguna conserva señal `ALTA`.
 
 ## Orden restante
 
-1. N29 y N15, por gobierno de despliegue y selección de modelos.
-2. N00, N02 y N10.
-3. N11, N12, N14 y N16.
-4. N18, N19, N24, N25, N26 y N30.
-5. N01, N03, N04, N05, N06, N07, N08, N09, N13, N27 y N28, con intervención mínima y guarda estricta.
+1. N00, N02 y N10.
+2. N11, N12, N14 y N16.
+3. N18, N19, N24, N25, N26 y N30.
+4. N01, N03, N04, N05, N06, N07, N08, N09, N13, N27 y N28, con intervención mínima y guarda estricta.
 
 La regeneración editorial comienza sólo cuando las 37 fuentes hayan cerrado esta revisión.

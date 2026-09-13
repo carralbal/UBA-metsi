@@ -8,3 +8,8 @@
 - Se integraron familias de estructura, comportamiento, decisión, causalidad y experiencia.
 - Se verificaron profundidad, referencias, trazabilidad y singularidad frente a N01 a N14.
 - No se creó ni modificó ningún artefacto de diseño o publicación.
+
+## content-canonical-v3 · 2026-09-13
+
+- Se revisó en lenguaje llano la selección de modelos, audiencias y costos.
+- Se redujeron subtítulos repetitivos y se conservaron las familias de representación, la profundidad y HH-15.

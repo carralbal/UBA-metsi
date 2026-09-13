@@ -4,9 +4,11 @@
 
 N15 quedó desarrollado y auditado sólo como contenido. No hay PDF, HTML, CSS, imágenes ni decisiones de maqueta.
 
+La fuente canónica v3 queda aprobada en lenguaje llano con 8692 palabras totales y 6986 sustantivas. Conserva 21 unidades conceptuales, HH-15, seis referentes y diecinueve referencias. Auditoría estructural y pedagógica: PASS. Señal de carga: BAJA.
+
 Fuente autorizada:
 
-`N15-content-canonical/source/N15_seleccionar_modelos_segun_pregunta_audiencia_y_costo-content-canonical-v1.md`
+`N15-content-canonical/source/N15_seleccionar_modelos_segun_pregunta_audiencia_y_costo-content-canonical-v3.md`
 
 ## Función y artefacto
 
