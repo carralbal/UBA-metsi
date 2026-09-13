@@ -85,8 +85,19 @@ class Row:
 
 
 def natural_version(path: Path) -> tuple[int, str]:
-    match = re.search(r"-v(\d+)-editorial$", path.name)
+    match = re.search(r"(?:-v|v)(\d+)(?:\D|$)", path.name)
     return (int(match.group(1)) if match else -1, path.name)
+
+
+def latest_canonical_source(number: int) -> Path | None:
+    """Return the newest content-only canonical source when one exists."""
+    package = ROOT / f"N{number:02d}-content-canonical" / "source"
+    if not package.is_dir():
+        return None
+    candidates = list(package.glob("*.md"))
+    if not candidates:
+        return None
+    return max(candidates, key=natural_version)
 
 
 def source_paths() -> dict[int, Path]:
@@ -103,11 +114,12 @@ def source_paths() -> dict[int, Path]:
         sm = json.loads((package / "source-manifest.json").read_text(encoding="utf-8"))
         paths[number] = package / sm["source"]
 
-    # N11-N36 use the package source recorded by the public release manifest.
+    # N11-N36 prefer the newest content-only canonical source. The public
+    # release remains the fallback until a new canonical version is approved.
     course_manifest = json.loads((ROOT / "site" / "course-manifest.json").read_text(encoding="utf-8"))
     for item in course_manifest["publication"]["readings"]:
         number = int(item["code"][1:])
-        paths[number] = ROOT / item["package_source"]
+        paths[number] = latest_canonical_source(number) or (ROOT / item["package_source"])
     return paths
 
 
@@ -250,7 +262,7 @@ def main() -> None:
     rows = [analyse(number, paths[number]) for number in range(37)]
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     with (OUT_DIR / "metrics.csv").open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(asdict(rows[0]).keys()))
+        writer = csv.DictWriter(handle, fieldnames=list(asdict(rows[0]).keys()), lineterminator="\n")
         writer.writeheader()
         writer.writerows(asdict(row) for row in rows)
     (OUT_DIR / "metrics.json").write_text(
