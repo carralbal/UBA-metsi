@@ -23,3 +23,5 @@ Una N no equivale mecánicamente a una clase. Los paquetes pueden combinarse seg
 - La evaluación observa la calidad del razonamiento y su trazabilidad, no la repetición de definiciones.
 
 El plan maestro está en [`PLAN-MAESTRO.md`](PLAN-MAESTRO.md). Los bloques A a H disponen de los treinta y seis paquetes ejecutables, desde [`N01/`](N01/) hasta [`N36/`](N36/). La auditoría transversal se conserva en [`AUDIT-N01-N36.md`](AUDIT-N01-N36.md).
+
+El sistema acumulativo del caso, con dossier, cuaderno, bitácora, revisión entre pares, rúbrica y ocho hitos, está en [`hotel-horizonte/`](hotel-horizonte/).

@@ -35,6 +35,8 @@ Cada encuentro puede ser facilitado por otra persona del equipo docente sin depe
 
 ## P2. Sistema de trabajo estudiantil para Hotel Horizonte
 
+**Estado:** sistema candidato construido el 12 de septiembre de 2026. Pendiente de prueba piloto con el equipo docente.
+
 ### Decisión pedagógica recomendada
 
 Hotel Horizonte debe trabajarse como un caso longitudinal y no como treinta y seis ejercicios aislados.
@@ -61,13 +63,15 @@ Cada hito conserva versiones anteriores, objeciones recibidas, decisiones revisa
 
 ### Documentos por construir
 
-- Dossier maestro editable del caso.
-- Cuaderno de trabajo del equipo.
-- Registro individual de revisión.
-- Plantillas específicas para los ocho hitos.
-- Protocolo de revisión entre pares.
-- Rúbrica acumulativa y reglas de recuperación.
-- Guía docente para introducir episodios, evidencia nueva y perturbaciones sin convertir el caso en una receta.
+- [x] Dossier maestro editable del caso.
+- [x] Cuaderno de trabajo del equipo.
+- [x] Registro individual de revisión.
+- [x] Plantillas específicas para los ocho hitos.
+- [x] Protocolo de revisión entre pares.
+- [x] Rúbrica acumulativa y reglas de recuperación.
+- [x] Guía docente para introducir episodios, evidencia nueva y perturbaciones sin convertir el caso en una receta.
+
+Los materiales están en [`pedagogy/hotel-horizonte/`](pedagogy/hotel-horizonte/).
 
 ### Criterio de cierre
 
@@ -100,4 +104,3 @@ El sitio publica el programa canónico vigente, permite localizarlo desde la nav
 3. Consolidar el programa canónico y publicarlo en el sitio personal.
 4. Implementar y auditar el menú adaptable.
 5. Ejecutar una prueba piloto integral con ayudantes y registrar ajustes antes de la primera cohorte.
-
