@@ -1,1195 +1,1328 @@
 {
   "document": "N27",
-  "stage": "content-canonical-v1",
-  "source": "source/N27_contratos_sintacticos_semanticos_temporales_y_operacionales-content-canonical-v1.md",
-  "source_sha256": "819102f81b27ba8a3cd05bc8ae6111d7eabb1ec6409dc62a11c5eeea59ff00a3",
+  "stage": "plain-language-v4",
+  "source": "source/N27_contratos_sintacticos_semanticos_temporales_y_operacionales-content-canonical-v4.md",
+  "source_sha256": "bbceffe8c9a89d6080fc22fef064e9841da44a23775c25425e0832ef36782f91",
   "eligible_blocks": [
     {
-      "source_id": "src-0001",
       "kind": "heading",
-      "text": "# N27 · Contratos sintácticos, semánticos, temporales y operacionales"
+      "text": "# N27 · Contratos sintácticos, semánticos, temporales y operacionales",
+      "source_id": "src-0001"
     },
     {
-      "source_id": "src-0002",
       "kind": "heading",
-      "text": "## Pregunta profesional"
+      "text": "## Pregunta profesional",
+      "source_id": "src-0002"
     },
     {
-      "source_id": "src-0003",
       "kind": "paragraph",
-      "text": "¿Qué debe acordarse para que dos partes no sólo intercambien datos válidos, sino que produzcan la misma consecuencia bajo tiempos y fallas reales?"
+      "text": "¿Qué debe acordarse para que dos partes no sólo intercambien datos válidos, sino que produzcan la misma consecuencia bajo tiempos y fallas reales?",
+      "source_id": "src-0003"
     },
     {
-      "source_id": "src-0004",
       "kind": "heading",
-      "text": "## El mensaje era válido y la habitación seguía bloqueada"
+      "text": "## La vacante estaba confirmada y la inscripción no existía",
+      "source_id": "src-0004"
     },
     {
-      "source_id": "src-0005",
       "kind": "paragraph",
-      "text": "El canal externo envía al Hotel Horizonte un mensaje válido: la reserva quedó confirmada. El sistema de gestión hotelera (PMS) acepta el esquema, registra el identificador y responde con éxito. Minutos después, Recepción descubre que la habitación accesible fue reasignada porque ambos sistemas interpretaban confirmada de manera distinta."
+      "text": "Una universidad publica el resultado de una asignación de vacantes. El portal de ingreso envía una respuesta válida al sistema académico: identificador de estudiante, código de carrera, período y estado `confirmed`. La interfaz muestra “inscripción confirmada” y genera un comprobante. Dos días después, al intentar acceder al campus virtual, la estudiante descubre que no figura en la nómina y que el cupo ya fue ocupado.",
+      "source_id": "src-0005"
     },
     {
-      "source_id": "src-0006",
       "kind": "paragraph",
-      "text": "La sintaxis coincidía. La semántica no. Además, el canal esperaba respuesta en cinco segundos, el PMS conciliaba cada diez minutos y Operaciones no sabía quién debía intervenir cuando llegaban eventos fuera de orden. El contrato visible cubría campos; el contrato real incluía significado, tiempo y trabajo."
+      "text": "El equipo técnico comprueba que la API respondió con éxito y que todos los campos respetaron el esquema. La primera explicación es una falla del consumidor: quizá descartó un mensaje. La segunda es temporal: la confirmación vencía si la documentación no era validada dentro de una ventana que el portal nunca mostró.",
+      "source_id": "src-0006"
     },
     {
-      "source_id": "src-0007",
       "kind": "paragraph",
-      "text": "Un contrato operativo expresa qué puede enviarse, qué significa, cuándo conserva validez, qué estado cambia, qué error puede ocurrir, quién repara y cómo evoluciona. No elimina desacuerdos, pero los vuelve detectables antes de trasladarlos a una persona."
+      "text": "La tercera es semántica: para Admisiones, `confirmed` significaba vacante reservada; para el sistema académico, significaba inscripción definitiva. Una cuarta explicación aparece cuando Operaciones reconstruye el trabajo: un rechazo podía revertirse, pero nadie había definido quién debía reparar el acceso y restaurar el cupo.",
+      "source_id": "src-0007"
     },
     {
-      "source_id": "src-0008",
       "kind": "paragraph",
-      "text": "El equipo toma el episodio y separa cuatro capas. Define estructura y tipos, glosario de estados, ventanas temporales, precondiciones, idempotencia, errores, seguridad, versión y procedimiento de contingencia. Cada capa tiene una prueba distinta."
+      "text": "El caso no se resuelve agregando un campo ni publicando una descripción más extensa. Un contrato real abarca al menos cuatro capas. La capa sintáctica establece estructura, tipos y valores permitidos. La semántica define qué afirma cada estado y bajo qué condiciones. La dimensión temporal fija vigencia, orden, repetición y vencimiento. La operacional asigna efectos, errores, autoridad y reparación. Una coincidencia en la primera capa puede convivir con desacuerdos graves en las otras tres.",
+      "source_id": "src-0008"
     },
     {
-      "source_id": "src-0009",
       "kind": "paragraph",
-      "text": "La documentación deja de ser una promesa abstracta de integración. Se convierte en un acuerdo verificable entre productores, consumidores, operadores y responsables de la consecuencia."
+      "text": "El equipo construye una línea temporal y encuentra dos mensajes idénticos enviados con la misma intención, pero con identificadores diferentes. También descubre que el sistema receptor responde “aceptado” antes de completar la inscripción. Esa respuesta sólo confirma recepción técnica, aunque el portal la interpreta como resultado de negocio. Cuando la validación posterior falla, el consumidor no recibe un evento de retractación y conserva una promesa que ya no puede sostenerse.",
+      "source_id": "src-0009"
     },
     {
-      "source_id": "src-0010",
       "kind": "paragraph",
-      "text": "N27 recibe de HH-26 dependencias críticas y transforma cada vínculo en un contrato completo. El objetivo no es producir más especificaciones, sino impedir que una coincidencia técnica oculte una contradicción operativa."
+      "text": "La discusión enfrenta dos diseños. Uno propone hacer sincrónico todo el recorrido para devolver una respuesta final. Reduce ciertos estados intermedios, pero acopla sistemas y puede dejar a miles de personas sin respuesta durante un pico. El otro conserva intercambio asincrónico y distingue recibido, reservado, validado, confirmado y rechazado. Exige más estados y una experiencia capaz de explicar espera, pero vuelve visible la incertidumbre y permite reparar.",
+      "source_id": "src-0010"
     },
     {
-      "source_id": "src-0011",
+      "kind": "paragraph",
+      "text": "La decisión provisional adopta el segundo diseño. Cada intención conserva una clave estable para impedir duplicados. La confirmación sólo se emite después de validar cupo y documentación. Las respuestas técnicas no se muestran como decisiones académicas. Todo rechazo incluye razón, autoridad, próxima acción y plazo; una retractación restituye cupo o crea una revisión visible. El equipo prueba duplicación, demora, desorden, vencimiento y cambio de versión, no sólo el camino feliz.",
+      "source_id": "src-0011"
+    },
+    {
+      "kind": "paragraph",
+      "text": "La estudiante recupera la vacante, pero ese resultado individual no cierra el contrato. Durante el siguiente período se observan inscripciones completas, retractaciones y reparaciones. Si dos áreas pueden leer el mismo mensaje y anticipar consecuencias distintas, el contrato sigue incompleto aunque la API sea válida y esté documentada.",
+      "source_id": "src-0012"
+    },
+    {
+      "kind": "paragraph",
+      "text": "N27 recibe de N26 dependencias críticas y transforma cada vínculo en un compromiso verificable. Su objetivo no es producir especificaciones más voluminosas, sino impedir que la interoperabilidad técnica oculte diferencias de significado, tiempo y autoridad que luego recaen sobre personas concretas.",
+      "source_id": "src-0013"
+    },
+    {
       "kind": "heading",
-      "text": "## Hotel Horizonte: «liberada» no significaba lo mismo para todos"
+      "text": "## Hotel Horizonte: «liberada» no significaba lo mismo para todos",
+      "source_id": "src-0014"
     },
     {
-      "source_id": "src-0012",
       "kind": "paragraph",
-      "text": "HH-27 retoma una deuda declarada en HH-23 y situada dentro del ecosistema por HH-26. El corte de HH-23 había creado una proyección compuesta y provisoria para completar una llegada, sin cerrar el significado compartido. Ahora Mariela Benítez muestra que Housekeeping emite `liberada` cuando termina la limpieza; Lucía Ferreyra necesita además que la habitación esté asignable, que la cerradura responda y que no exista una restricción de mantenimiento. Federico Müller descubre que el mensaje es sintácticamente válido en todos los casos. El defecto pendiente está en el significado, el momento y la consecuencia que cada consumidor atribuye al mismo estado."
+      "text": "HH-27 retoma una deuda declarada en HH-23 y situada dentro del ecosistema por HH-26. El corte de HH-23 había creado una proyección compuesta y provisoria para completar una llegada, sin cerrar el significado compartido. Ahora Mariela Benítez muestra que Housekeeping emite `liberada` cuando termina la limpieza; Lucía Ferreyra necesita además que la habitación esté asignable, que la cerradura responda y que no exista una restricción de mantenimiento.",
+      "source_id": "src-0015"
     },
     {
-      "source_id": "src-0013",
       "kind": "paragraph",
-      "text": "El equipo reúne mensajes del PMS, la bitácora de cerraduras, la planilla de Housekeeping y tres episodios de Recepción. Uno contiene un evento repetido, otro llega diecisiete minutos tarde y el tercero conserva el estado anterior después de una reasignación. Ricardo Sosa señala que un tiempo máximo de espera, o *timeout*, no puede decidir por sí solo si se entrega una llave. Camila Duarte advierte que la web ya promete disponibilidad inmediata, aun cuando la operación no dispone de esa garantía."
+      "text": "Federico Müller descubre que el mensaje es sintácticamente válido en todos los casos. El defecto pendiente está en el significado, el momento y la consecuencia que cada consumidor atribuye al mismo estado.",
+      "source_id": "src-0016"
     },
     {
-      "source_id": "src-0014",
       "kind": "paragraph",
-      "text": "La ficha HH-27 define productor, consumidores, precondiciones, transición permitida, vigencia temporal, clave de idempotencia y contrato de error. La decisión es reservar `liberada` para limpieza terminada y crear `asignable` como estado operacional compuesto. Recepción sólo entrega cuando puede reconstruir las condiciones que lo produjeron. Ante duplicados mantiene una única transición; ante demora conserva el estado previo y abre una verificación visible, en vez de inventar éxito."
+      "text": "El equipo reúne mensajes del PMS, la bitácora de cerraduras, la planilla de Housekeeping y tres episodios de Recepción. Uno contiene un evento repetido, otro llega diecisiete minutos tarde y el tercero conserva el estado anterior después de una reasignación. Ricardo Sosa señala que un tiempo máximo de espera, o *timeout*, no puede decidir por sí solo si se entrega una llave. Camila Duarte advierte que la web ya promete disponibilidad inmediata, aun cuando la operación no dispone de esa garantía.",
+      "source_id": "src-0017"
     },
     {
-      "source_id": "src-0015",
       "kind": "paragraph",
-      "text": "La medida se revisará tras treinta transiciones o ante una habitación entregada incorrectamente. Si el contrato reduce inconsistencias pero aumenta esperas sin explicación, no habrá cumplido su propósito. HH-28 usará esos mismos episodios para discutir qué evidencia de calidad alcanza cuando confiabilidad, desempeño, accesibilidad y capacidad de recuperación entran en tensión."
+      "text": "La ficha HH-27 define productor, consumidores, precondiciones, transición permitida, vigencia temporal, clave de idempotencia y contrato de error. La decisión es reservar `liberada` para limpieza terminada y crear `asignable` como estado operacional compuesto. Recepción sólo entrega cuando puede reconstruir las condiciones que lo produjeron. Ante duplicados mantiene una única transición; ante demora conserva el estado previo y abre una verificación visible, en vez de inventar éxito.",
+      "source_id": "src-0018"
     },
     {
-      "source_id": "src-0016",
+      "kind": "paragraph",
+      "text": "La medida se revisará tras treinta transiciones o ante una habitación entregada incorrectamente. Si el contrato reduce inconsistencias pero aumenta esperas sin explicación, no habrá cumplido su propósito. HH-28 usará esos mismos episodios para discutir qué evidencia de calidad alcanza cuando confiabilidad, desempeño, accesibilidad y capacidad de recuperación entran en tensión.",
+      "source_id": "src-0019"
+    },
+    {
       "kind": "heading",
-      "text": "## Tesis"
+      "text": "## Tesis",
+      "source_id": "src-0020"
     },
     {
-      "source_id": "src-0017",
       "kind": "paragraph",
-      "text": "Dos sistemas no están integrados porque intercambien mensajes válidos, sino cuando comparten o traducen de manera explícita significado, vigencia, efecto y manejo de la indeterminación. Un contrato que omite cualquiera de esas capas puede pasar pruebas sintácticas y producir decisiones incompatibles ante demora, duplicación o falla parcial; por eso debe probarse sobre la consecuencia operacional y conservar quién puede detener y reparar."
+      "text": "Dos sistemas no están integrados sólo porque intercambien mensajes válidos. La integración comienza cuando quienes producen, consumen y operan esos mensajes pueden explicar su significado, su vigencia, sus efectos y qué harán ante un resultado incierto. Un contrato completo relaciona la estructura con las condiciones previas, los estados, el orden, los errores, la autoridad y la reparación. También declara qué no garantiza.",
+      "source_id": "src-0021"
     },
     {
-      "source_id": "src-0018",
+      "kind": "paragraph",
+      "text": "Si omite una de esas capas, puede superar las validaciones automáticas y producir decisiones incompatibles ante una demora, una duplicación, un cambio de versión o una falla parcial. Por eso el contrato debe probarse sobre consecuencias operativas y poblaciones reales. También debe conservar evidencia de la transición y permitir detener o reparar sin fingir que nunca hubo incertidumbre.",
+      "source_id": "src-0022"
+    },
+    {
       "kind": "heading",
-      "text": "## Del cierre anterior al nuevo avance"
+      "text": "## Del cierre anterior al nuevo avance",
+      "source_id": "src-0023"
     },
     {
-      "source_id": "src-0019",
       "kind": "paragraph",
-      "text": "El mapa HH-26 mostró dependencias, fronteras de confianza y responsables, pero cada flecha todavía podía ocultar un desacuerdo. N27 toma esos vínculos y pregunta qué reciben realmente productor, consumidor y operación cuando circula un mensaje."
+      "text": "El mapa HH-26 mostró dependencias, fronteras de confianza y responsables, pero cada flecha todavía podía ocultar un desacuerdo. N27 toma esos vínculos y pregunta qué reciben realmente productor, consumidor y operación cuando circula un mensaje.",
+      "source_id": "src-0024"
     },
     {
-      "source_id": "src-0020",
       "kind": "paragraph",
-      "text": "La progresión va de la dependencia reconocida al compromiso verificable. La forma del dato es sólo una capa: significado, vigencia, efecto, error y reparación deben permitir que las partes anticipen la misma consecuencia antes de discutir si la calidad alcanzada resulta suficiente."
+      "text": "La progresión va de la dependencia reconocida al compromiso verificable. La forma del dato es sólo una capa: significado, vigencia, efecto, error y reparación deben permitir que las partes anticipen la misma consecuencia antes de discutir si la calidad alcanzada resulta suficiente.",
+      "source_id": "src-0025"
     },
     {
-      "source_id": "src-0021",
       "kind": "heading",
-      "text": "## Tradiciones y marcos utilizados en el argumento"
+      "text": "## Tradiciones y marcos utilizados en el argumento",
+      "source_id": "src-0026"
     },
     {
-      "source_id": "src-0022",
       "kind": "paragraph",
-      "text": "Fielding, R. T., Nottingham, M. y Reschke, J. definen semántica, mensajes y comportamiento de HTTP."
+      "text": "Fielding, R. T., Nottingham, M. y Reschke, J. definen semántica, mensajes y comportamiento de HTTP.",
+      "source_id": "src-0027"
     },
     {
-      "source_id": "src-0023",
       "kind": "paragraph",
-      "text": "OpenAPI Initiative estandariza descripciones legibles por personas y máquinas."
+      "text": "OpenAPI Initiative estandariza descripciones legibles por personas y máquinas.",
+      "source_id": "src-0028"
     },
     {
-      "source_id": "src-0024",
       "kind": "paragraph",
-      "text": "JSON Schema define vocabularios para describir y validar estructuras JSON."
+      "text": "JSON Schema define vocabularios para describir y validar estructuras JSON.",
+      "source_id": "src-0029"
     },
     {
-      "source_id": "src-0025",
       "kind": "paragraph",
-      "text": "Evans, E. vincula lenguaje compartido con modelos y fronteras de dominio."
+      "text": "Evans, E. vincula lenguaje compartido con modelos y fronteras de dominio.",
+      "source_id": "src-0030"
     },
     {
-      "source_id": "src-0026",
       "kind": "paragraph",
-      "text": "Kleppmann, M. analiza tiempo, distribución, consistencia y fallas en sistemas de datos."
+      "text": "Kleppmann, M. analiza tiempo, distribución, consistencia y fallas en sistemas de datos.",
+      "source_id": "src-0031"
     },
     {
-      "source_id": "src-0027",
       "kind": "paragraph",
-      "text": "Hohpe, G. y Woolf, B. aportan patrones para explicitar canales, mensajes, correlación, idempotencia y manejo de errores dentro de contratos operacionales."
+      "text": "Hohpe, G. y Woolf, B. aportan patrones para explicitar canales, mensajes, correlación, idempotencia y manejo de errores dentro de contratos operacionales.",
+      "source_id": "src-0032"
     },
     {
-      "source_id": "src-0028",
       "kind": "paragraph",
-      "text": "Fowler, M. aporta patrones para discutir integración y evolución sin reducirlas a conectividad."
+      "text": "Fowler, M. aporta patrones para discutir integración y evolución sin reducirlas a conectividad.",
+      "source_id": "src-0033"
     },
     {
-      "source_id": "src-0029",
       "kind": "paragraph",
-      "text": "AsyncAPI Initiative extiende contratos a interacciones asincrónicas y orientadas a eventos."
+      "text": "AsyncAPI Initiative extiende contratos a interacciones asincrónicas y orientadas a eventos.",
+      "source_id": "src-0034"
     },
     {
-      "source_id": "src-0030",
       "kind": "paragraph",
-      "text": "W3C Provenance Working Group fundamenta procedencia mediante entidades, actividades y agentes."
+      "text": "W3C Provenance Working Group fundamenta procedencia mediante entidades, actividades y agentes.",
+      "source_id": "src-0035"
     },
     {
-      "source_id": "src-0031",
       "kind": "paragraph",
-      "text": "Fielding, R. T. muestra que una interfaz distribuida adquiere propiedades por sus restricciones y semántica de interacción, no por adoptar una etiqueta tecnológica."
+      "text": "Fielding, R. T. muestra que una interfaz distribuida adquiere propiedades por sus restricciones y semántica de interacción, no por adoptar una etiqueta tecnológica.",
+      "source_id": "src-0036"
     },
     {
-      "source_id": "src-0032",
       "kind": "paragraph",
-      "text": "Rose, S., Borchert, O., Mitchell, S. y Connelly, S. permiten definir identidad, autorización y evidencia de acceso como obligaciones verificables del contrato, y no como supuestos externos a la interfaz."
+      "text": "Rose, S., Borchert, O., Mitchell, S. y Connelly, S. permiten definir identidad, autorización y evidencia de acceso como obligaciones verificables del contrato, y no como supuestos externos a la interfaz.",
+      "source_id": "src-0037"
     },
     {
-      "source_id": "src-0033",
       "kind": "paragraph",
-      "text": "Pact Foundation prueba expectativas de consumidores contra productores."
+      "text": "Pact Foundation prueba expectativas de consumidores contra productores.",
+      "source_id": "src-0038"
     },
     {
-      "source_id": "src-0034",
       "kind": "paragraph",
-      "text": "Parnas, D. L. permite delimitar módulos por decisiones que conviene ocultar; Lamport, L. vuelve examinable el orden causal cuando no existe un reloj global; Vogels, W. explicita los compromisos de la consistencia eventual; Gray, J. aporta el vocabulario transaccional necesario para razonar sobre estados, fallas y recuperación."
+      "text": "Parnas, D. L. permite delimitar módulos por decisiones que conviene ocultar; Lamport, L. vuelve examinable el orden causal cuando no existe un reloj global; Vogels, W. explicita los compromisos de la consistencia eventual; Gray, J. aporta el vocabulario transaccional necesario para razonar sobre estados, fallas y recuperación.",
+      "source_id": "src-0039"
     },
     {
-      "source_id": "src-0035",
       "kind": "heading",
-      "text": "## Movimiento 1 · Acordar forma, significado, tiempo y efecto"
+      "text": "## Movimiento 1 · Acordar forma, significado, tiempo y efecto",
+      "source_id": "src-0040"
     },
     {
-      "source_id": "src-0036",
       "kind": "heading",
-      "text": "### Contrato sintáctico"
+      "text": "### Contrato sintáctico",
+      "source_id": "src-0041"
     },
     {
-      "source_id": "src-0037",
       "kind": "paragraph",
-      "text": "Un contrato sintáctico define estructura, tipos, obligatoriedad y formato de un intercambio. Permite detectar mensajes incompletos o incompatibles antes de procesarlos, pero no garantiza que productor y consumidor compartan significado, oportunidad ni efecto."
+      "text": "Un contrato sintáctico define estructura, tipos, obligatoriedad y formato de un intercambio. Permite detectar mensajes incompletos o incompatibles antes de procesarlos, pero no garantiza que productor y consumidor compartan significado, oportunidad ni efecto.",
+      "source_id": "src-0042"
     },
     {
-      "source_id": "src-0038",
       "kind": "paragraph",
-      "text": "En HH-27, una reserva debe declarar identificador, fecha, categoría y estado con tipos precisos. Esquemas, ejemplos válidos y casos que deben rechazarse forman una especificación ejecutable. La prueba conserva versión y consumidor, porque una estructura aceptada por un canal puede quebrar otro."
+      "text": "En HH-27, una reserva debe declarar identificador, fecha, categoría y estado con tipos precisos. Esquemas, ejemplos válidos y casos que deben rechazarse forman una especificación ejecutable. La prueba conserva versión y consumidor, porque una estructura aceptada por un canal puede quebrar otro.",
+      "source_id": "src-0043"
     },
     {
-      "source_id": "src-0039",
       "kind": "paragraph",
-      "text": "Dos mensajes sintácticamente válidos pueden inducir decisiones opuestas. Por eso el cierre no dice «la API funciona», sino qué formas se aceptan, cómo se versionan y qué ocurre con un mensaje dudoso. La sintaxis es una condición necesaria dentro de un contrato más amplio."
+      "text": "Dos mensajes sintácticamente válidos pueden inducir decisiones opuestas. Por eso el cierre no dice «la API funciona», sino qué formas se aceptan, cómo se versionan y qué ocurre con un mensaje dudoso. La sintaxis es una condición necesaria dentro de un contrato más amplio.",
+      "source_id": "src-0044"
     },
     {
-      "source_id": "src-0040",
       "kind": "paragraph",
-      "text": "La precisión sintáctica evita trasladar ambigüedad a valores especiales. Un campo ausente no necesariamente equivale a cero, falso o desconocido; una fecha sin zona horaria no permite ordenar eventos entre sedes; un identificador libre puede perder ceros o cambiar de codificación. La ficha declara diferencias entre obligatorio, opcional y anulable, además de unidades, zonas horarias, cardinalidad y vocabularios permitidos. Los ejemplos incluyen límites y rechazos esperados, no sólo un mensaje ideal. Así, la validación detecta una incompatibilidad antes de que un consumidor complete silenciosamente lo que el productor nunca afirmó."
+      "text": "La precisión sintáctica evita trasladar ambigüedad a valores especiales. Un campo ausente no necesariamente equivale a cero, falso o desconocido; una fecha sin zona horaria no permite ordenar eventos entre sedes; un identificador libre puede perder ceros o cambiar de codificación. La ficha declara diferencias entre obligatorio, opcional y anulable, además de unidades, zonas horarias, cardinalidad y vocabularios permitidos.",
+      "source_id": "src-0045"
     },
     {
-      "source_id": "src-0041",
       "kind": "paragraph",
-      "text": "JSON Schema Draft 2020-12 permite expresar restricciones estructurales y OpenAPI 3.2.0 vincula esquemas con operaciones documentadas (JSON Schema, 2022; OpenAPI Initiative, 2025). Ninguno de los dos artefactos garantiza por sí mismo que `liberada` habilite la misma decisión para Housekeeping y Recepción. La ficha usa esas fuentes para anclar forma y ejemplos y reserva el acuerdo semántico para reglas, episodios y autoridad del dominio."
+      "text": "Los ejemplos incluyen límites y rechazos esperados, no sólo un mensaje ideal. Así, la validación detecta una incompatibilidad antes de que un consumidor complete silenciosamente lo que el productor nunca afirmó.",
+      "source_id": "src-0046"
     },
     {
-      "source_id": "src-0042",
       "kind": "paragraph",
-      "text": "La prueba sintáctica se ejecuta sobre el artefacto que llegará a producción. Una especificación correcta no alcanza si el serializador emite otra estructura o una pasarela elimina campos. Se conservan versión, huella del esquema y muestra de intercambio para vincular el resultado con la liberación. Cuando el contrato cambia, una comparación identifica adiciones compatibles, restricciones nuevas y transformaciones que exigen migración. La decisión no es aprobar toda diferencia automática, sino distinguir qué variación puede consumir cada actor sin inventar valores."
+      "text": "JSON Schema Draft 2020-12 permite expresar restricciones estructurales y OpenAPI 3.2.0 vincula esquemas con operaciones documentadas (JSON Schema, 2022; OpenAPI Initiative, 2025). Ninguno de los dos artefactos garantiza por sí mismo que `liberada` habilite la misma decisión para Housekeeping y Recepción. La ficha usa esas fuentes para anclar forma y ejemplos y reserva el acuerdo semántico para reglas, episodios y autoridad del dominio.",
+      "source_id": "src-0047"
     },
     {
-      "source_id": "src-0043",
+      "kind": "paragraph",
+      "text": "La prueba sintáctica se ejecuta sobre el artefacto que llegará a producción. Una especificación correcta no alcanza si el serializador emite otra estructura o una pasarela elimina campos. Se conservan versión, huella del esquema y muestra de intercambio para vincular el resultado con la liberación. Cuando el contrato cambia, una comparación identifica adiciones compatibles, restricciones nuevas y transformaciones que exigen migración. La decisión no es aprobar toda diferencia automática, sino distinguir qué variación puede consumir cada actor sin inventar valores.",
+      "source_id": "src-0048"
+    },
+    {
       "kind": "heading",
-      "text": "### Contrato semántico"
+      "text": "### API como contrato parcial y verificable",
+      "source_id": "src-0049"
     },
     {
-      "source_id": "src-0044",
       "kind": "paragraph",
-      "text": "Un contrato semántico acuerda qué significa cada dato, estado y transición en un contexto de decisión. No es un glosario aislado: vincula términos con reglas, autoridad, población y consecuencias observables."
+      "text": "Una API ofrece una frontera para que dos capacidades interactúen sin compartir toda su implementación. Su valor no reside en ocultar cualquier diferencia, sino en hacer explícitas las diferencias que el consumidor necesita conocer: operaciones disponibles, datos aceptados, resultados posibles, identidad, autoridad, versiones, límites y tratamiento de fallas. La interfaz es estable cuando conserva esas obligaciones relevantes, no cuando permanece inmóvil.",
+      "source_id": "src-0050"
     },
     {
-      "source_id": "src-0045",
       "kind": "paragraph",
-      "text": "Para Hotel Horizonte, «confirmada» debe distinguir mensaje recibido, pago autorizado y capacidad efectivamente reservada. Episodios límite y tablas de decisión revelan ambigüedades que una definición general no muestra. Lucía y Federico deben poder anticipar la misma próxima acción al leer el estado."
+      "text": "OpenAPI 3.2.0 permite describir interfaces HTTP mediante rutas, operaciones, parámetros, cuerpos, respuestas, seguridad y esquemas reutilizables. AsyncAPI 3.1.0 describe interacciones dirigidas por mensajes mediante canales, operaciones, mensajes y correlación. Los dos estándares producen artefactos que pueden revisarse y utilizarse para generar documentación, validadores o pruebas. Sin embargo, describir una interfaz no demuestra que la implementación respete el contrato ni que el contrato represente correctamente la decisión del dominio.",
+      "source_id": "src-0051"
     },
     {
-      "source_id": "src-0046",
       "kind": "paragraph",
-      "text": "El significado cambia con contexto y necesita gobierno. Cada término conserva ejemplos positivos, contraejemplos, responsable y condición de revisión. Si la operación crea una excepción nueva, el contrato se actualiza sin reescribir retrospectivamente qué significaba el estado durante el episodio anterior."
+      "text": "HH-27 distingue cuatro interacciones. Consultar disponibilidad solicita una representación sin autorizar una transición. Solicitar una reserva expresa un comando que puede aceptarse, rechazarse o quedar indeterminado. Informar que una habitación quedó lista publica un evento sobre algo que ocurrió. Autorizar una excepción crea una decisión institucional que no debería inferirse de un código técnico. Reunirlas bajo la etiqueta genérica `API de reservas` borraría diferencias de efecto, autoridad y reparación.",
+      "source_id": "src-0052"
     },
     {
-      "source_id": "src-0047",
       "kind": "paragraph",
-      "text": "Una definición semántica resulta útil cuando permite clasificar un episodio y anticipar una acción. «Disponible» puede referirse a inventario comercial, habitación limpia, cerradura operativa o capacidad de recibir a una persona con determinadas necesidades. El contrato indica cuál de esas afirmaciones expresa el campo, quién tiene autoridad para producirla y qué evidencia la respalda. También nombra lo que no afirma. Esta delimitación impide que un consumidor extienda el significado por conveniencia y permite que otra fuente contradiga el dato sin ser descartada como error técnico."
+      "text": "Cada interacción conserva una identidad de episodio. Una clave de idempotencia vincula reintentos del mismo comando; un identificador de correlación conecta la solicitud con respuestas y eventos posteriores; una versión evita que una escritura basada en un estado anterior revoque una decisión más reciente. Estos mecanismos no son equivalentes. La misma cadena puede implementarlos, pero la especificación debe decir qué relación prueba y durante cuánto tiempo se conserva.",
+      "source_id": "src-0053"
     },
     {
-      "source_id": "src-0048",
       "kind": "paragraph",
-      "text": "Las tablas de transición ayudan a verificar la semántica, pero no sustituyen la conversación con quienes usan los estados. Lucía aporta episodios en los que una categoría formal no alcanza; Mariela explica qué condición operacional todavía falta; Camila muestra cómo se comunica al mercado. El equipo conserva el desacuerdo hasta localizar el mecanismo. Después agrega un ejemplo, separa estados o limita el uso. La definición se considera estable sólo para una población y una decisión concretas, con una fecha de revisión ante nuevas excepciones."
+      "text": "El contrato de errores evita dos extremos: respuestas tan técnicas que la operación no puede actuar y categorías tan generales que ocultan estados distintos. HH-27 separa rechazo por regla, conflicto con una transición concurrente, demora, indisponibilidad e incertidumbre sobre el efecto. Para cada clase define una acción segura: corregir datos, volver a leer, reintentar con la misma identidad, escalar o detener. Un código de estado o una excepción de software es evidencia de una condición, no la decisión completa.",
+      "source_id": "src-0054"
     },
     {
-      "source_id": "src-0049",
       "kind": "paragraph",
-      "text": "Evans (2003) vincula lenguaje compartido y fronteras de dominio. N27 toma esa referencia de manera operacional: el vocabulario común debe permitir que dos actores anticipen la misma transición relevante, pero no obliga a borrar diferencias legítimas. `liberada` conserva el sentido de limpieza terminada en Housekeeping; `asignable` se crea para la condición compuesta que habilita la decisión de Recepción. La traducción entre ambos estados queda explícita y no se resuelve declarando sinónimos."
+      "text": "La evolución se examina desde consumidores concretos. Agregar un campo opcional puede ser compatible para un validador y quebrar una interfaz que rechaza propiedades desconocidas. Cambiar una enumeración puede conservar sintaxis y alterar una regla. Retirar una operación exige conocer quién la usa, qué alternativa existe y cuánto dura la convivencia. La política combina comparación de especificaciones, pruebas de contrato, telemetría de uso y fecha de retiro. Git puede conservar versiones del artefacto; no sustituye la investigación sobre sus consumidores.",
+      "source_id": "src-0055"
     },
     {
-      "source_id": "src-0050",
+      "kind": "paragraph",
+      "text": "La seguridad también forma parte del significado. Autenticar una aplicación no demuestra que la persona posea autoridad para ejecutar la acción. El contrato declara identidad, alcance, datos expuestos, propósito, registro de acceso y conducta ante autorización insuficiente. Los ejemplos no incluyen secretos ni datos personales reales. Una API correctamente protegida puede sostener una decisión ilegítima si la organización modeló mal la autoridad.",
+      "source_id": "src-0056"
+    },
+    {
+      "kind": "paragraph",
+      "text": "La prueba final atraviesa descripción, implementación y operación. Se valida la forma, se ejecutan ejemplos de éxito y error, se simulan duplicados y demoras, se comprueba la autorización y se observa la reparación. La evidencia se asocia con una versión desplegada. Así, OpenAPI y AsyncAPI dejan de ser catálogos decorativos y se convierten en partes examinables de un contrato que continúa siendo sintáctico, semántico, temporal y operacional.",
+      "source_id": "src-0057"
+    },
+    {
+      "kind": "paragraph",
+      "text": "Flores y Winograd permiten reconocer que una interfaz puede mediar actos que crean compromisos. Una solicitud, una promesa, una declaración de cumplimiento y una aceptación no son sinónimos de petición, respuesta y evento. El protocolo transporta expresiones; la organización define quién puede comprometerla, bajo qué condiciones y con qué posibilidad de cuestionamiento.",
+      "source_id": "src-0058"
+    },
+    {
+      "kind": "paragraph",
+      "text": "En Hotel Horizonte, una respuesta exitosa del PMS puede afirmar que una reserva fue registrada sin prometer que una habitación adecuada estará disponible. El contrato evita que una confirmación técnica extienda su fuerza institucional sin evidencia ni autoridad.",
+      "source_id": "src-0059"
+    },
+    {
       "kind": "heading",
-      "text": "### Contrato temporal"
+      "text": "### Contrato semántico",
+      "source_id": "src-0060"
     },
     {
-      "source_id": "src-0051",
       "kind": "paragraph",
-      "text": "Un contrato temporal define ventanas, orden, vigencia, latencia y tratamiento de demora. No se reduce a un tiempo máximo de espera, conocido como *timeout*. Establece cuándo una afirmación puede usarse y qué decisión corresponde si llega tarde, duplicada o fuera de secuencia."
+      "text": "Un contrato semántico acuerda qué significa cada dato, estado y transición en un contexto de decisión. No es un glosario aislado: vincula términos con reglas, autoridad, población y consecuencias observables.",
+      "source_id": "src-0061"
     },
     {
-      "source_id": "src-0052",
       "kind": "paragraph",
-      "text": "HH-27 prueba un estado de habitación que arriba después de una reasignación. Relojes, trazas y versiones permiten reconstruir qué sabía cada sistema al actuar. La regla distingue ausencia de respuesta, rechazo y resultado indeterminado para impedir que el vencimiento invente una certeza."
+      "text": "Para Hotel Horizonte, «confirmada» debe distinguir mensaje recibido, pago autorizado y capacidad efectivamente reservada. Episodios límite y tablas de decisión revelan ambigüedades que una definición general no muestra. Lucía y Federico deben poder anticipar la misma próxima acción al leer el estado.",
+      "source_id": "src-0062"
     },
     {
-      "source_id": "src-0053",
       "kind": "paragraph",
-      "text": "Los relojes no son perfectos y la operación necesita tolerancias explícitas. El contrato declara qué orden importa, cuánto dura una afirmación y cómo se reconcilian eventos atrasados. Esas condiciones se revisan con transiciones reales, no sólo con latencia promedio."
+      "text": "El significado cambia con contexto y necesita gobierno. Cada término conserva ejemplos positivos, contraejemplos, responsable y condición de revisión. Si la operación crea una excepción nueva, el contrato se actualiza sin reescribir retrospectivamente qué significaba el estado durante el episodio anterior.",
+      "source_id": "src-0063"
     },
     {
-      "source_id": "src-0054",
       "kind": "paragraph",
-      "text": "El análisis diferencia tiempo del evento, tiempo de recepción y tiempo de procesamiento. Una habitación puede haberse liberado a las 14.02, llegar al PMS a las 14.07 y ser procesada a las 14.09; usar sólo el último sello borra la demora que condicionó la decisión. Cuando no existe un reloj común, se preservan identificadores de secuencia y relaciones causales suficientes. La operación define qué comparación necesita exactitud y cuál admite una ventana. La meta no es ordenar universalmente todos los sucesos, sino evitar que una llegada tardía revoque una decisión más reciente."
+      "text": "Una definición semántica resulta útil cuando permite clasificar un episodio y anticipar una acción. «Disponible» puede referirse a inventario comercial, habitación limpia, cerradura operativa o capacidad de recibir a una persona con determinadas necesidades. El contrato indica cuál de esas afirmaciones expresa el campo, quién tiene autoridad para producirla y qué evidencia la respalda. También nombra lo que no afirma.",
+      "source_id": "src-0064"
     },
     {
-      "source_id": "src-0055",
       "kind": "paragraph",
-      "text": "Lamport (1978) muestra por qué el orden causal no se deduce de un reloj global perfecto en un sistema distribuido. HH-27 no intenta resolver sincronización en abstracto: exige identificador de intención, versión del estado, tiempo del evento y relación con la transición anterior cuando la decisión lo necesita. Un mensaje más reciente por hora de recepción no puede revocar automáticamente una reasignación causalmente posterior."
+      "text": "Esta delimitación impide que un consumidor extienda el significado por conveniencia y permite que otra fuente contradiga el dato sin ser descartada como error técnico.",
+      "source_id": "src-0065"
     },
     {
-      "source_id": "src-0056",
       "kind": "paragraph",
-      "text": "La vigencia también depende del propósito. Un estado puede servir para informar una estimación y no para entregar una llave. HH-27 asigna a cada afirmación un tiempo máximo y una conducta al vencimiento: volver a consultar, pasar a indeterminado, solicitar verificación humana o detener. El vencimiento no destruye el registro anterior, porque todavía puede explicar una acción. En la conciliación se compara lo conocido por cada actor en ese momento y se repara el estado sin acusar retrospectivamente a quien decidió con información válida pero incompleta."
+      "text": "Las tablas de transición ayudan a verificar la semántica, pero no sustituyen la conversación con quienes usan los estados. Lucía aporta episodios en los que una categoría formal no alcanza; Mariela explica qué condición operacional todavía falta; Camila muestra cómo se comunica al mercado. El equipo conserva el desacuerdo hasta localizar el mecanismo. Después agrega un ejemplo, separa estados o limita el uso. La definición se considera estable sólo para una población y una decisión concretas, con una fecha de revisión ante nuevas excepciones.",
+      "source_id": "src-0066"
     },
     {
-      "source_id": "src-0057",
+      "kind": "paragraph",
+      "text": "Evans (2003) vincula lenguaje compartido y fronteras de dominio. N27 toma esa referencia de manera operacional: el vocabulario común debe permitir que dos actores anticipen la misma transición relevante, pero no obliga a borrar diferencias legítimas. `liberada` conserva el sentido de limpieza terminada en Housekeeping; `asignable` se crea para la condición compuesta que habilita la decisión de Recepción. La traducción entre ambos estados queda explícita y no se resuelve declarando sinónimos.",
+      "source_id": "src-0067"
+    },
+    {
       "kind": "heading",
-      "text": "### Contrato operacional"
+      "text": "### Contrato temporal",
+      "source_id": "src-0068"
     },
     {
-      "source_id": "src-0058",
       "kind": "paragraph",
-      "text": "Un contrato operacional define efectos, errores, observación, escalamiento y reparación alrededor de una interfaz. No es un SLA ni una página de soporte. Traduce comportamiento técnico en acciones posibles para quienes sostienen el servicio."
+      "text": "Un contrato temporal define ventanas, orden, vigencia, latencia y tratamiento de demora. No se reduce a un tiempo máximo de espera, conocido como *timeout*. Establece cuándo una afirmación puede usarse y qué decisión corresponde si llega tarde, duplicada o fuera de secuencia.",
+      "source_id": "src-0069"
     },
     {
-      "source_id": "src-0059",
       "kind": "paragraph",
-      "text": "En HH-27, Recepción necesita saber cómo continuar cuando la confirmación queda indeterminada. La ficha especifica quién diagnostica, quién decide, qué evidencia recibe el turno y cómo se informa al huésped. Un error sin próxima acción segura deja la integración técnicamente descripta y operacionalmente incompleta."
+      "text": "HH-27 prueba un estado de habitación que arriba después de una reasignación. Relojes, trazas y versiones permiten reconstruir qué sabía cada sistema al actuar. La regla distingue ausencia de respuesta, rechazo y resultado indeterminado para impedir que el vencimiento invente una certeza.",
+      "source_id": "src-0070"
     },
     {
-      "source_id": "src-0060",
       "kind": "paragraph",
-      "text": "El contrato se prueba con una falla parcial y con la ausencia de la persona experta. Si el procedimiento depende de conocimiento privado, no constituye una capacidad organizacional. El cierre exige una ruta ejecutable, autoridad identificada y señal de que la reparación produjo el efecto esperado."
+      "text": "Los relojes no son perfectos y la operación necesita tolerancias explícitas. El contrato declara qué orden importa, cuánto dura una afirmación y cómo se reconcilian eventos atrasados. Esas condiciones se revisan con transiciones reales, no sólo con latencia promedio.",
+      "source_id": "src-0071"
     },
     {
-      "source_id": "src-0061",
       "kind": "paragraph",
-      "text": "El acuerdo operacional debe distinguir diagnóstico, decisión y comunicación. Tecnología puede localizar la causa sin tener autoridad para alojar al huésped; Recepción puede decidir una contingencia sin poder corregir el dato; Comercial debe detener una promesa que ya no puede cumplirse. La ficha relaciona cada clase de situación con un destinatario, una ventana y una primera acción segura. Esta distribución evita que una alerta general convoque a muchas personas y no habilite a ninguna. También protege al turno de recibir detalles técnicos que no modifican su decisión."
+      "text": "El análisis diferencia tiempo del evento, tiempo de recepción y tiempo de procesamiento. Una habitación puede haberse liberado a las 14.02, llegar al PMS a las 14.07 y ser procesada a las 14.09; usar sólo el último sello borra la demora que condicionó la decisión. Cuando no existe un reloj común, se preservan identificadores de secuencia y relaciones causales suficientes.",
+      "source_id": "src-0072"
     },
     {
-      "source_id": "src-0062",
       "kind": "paragraph",
-      "text": "La reparación forma parte del contrato y no de una etapa posterior. Incluye reconciliar reservas, restituir capacidad, informar a la persona afectada y conservar evidencia del cambio. El equipo ensaya el procedimiento con herramientas y permisos reales. Si una instrucción indica modificar una tabla a la que el turno no accede o depende de un contacto disponible sólo en horario comercial, la prueba falla. El resultado esperado es una capacidad repetible, no la demostración heroica de que una persona experta puede resolver el caso."
+      "text": "La operación define qué comparación necesita exactitud y cuál admite una ventana. La meta no es ordenar universalmente todos los sucesos, sino evitar que una llegada tardía revoque una decisión más reciente.",
+      "source_id": "src-0073"
     },
     {
-      "source_id": "src-0063",
+      "kind": "paragraph",
+      "text": "Lamport (1978) muestra por qué el orden causal no se deduce de un reloj global perfecto en un sistema distribuido. HH-27 no intenta resolver sincronización en abstracto: exige identificador de intención, versión del estado, tiempo del evento y relación con la transición anterior cuando la decisión lo necesita. Un mensaje más reciente por hora de recepción no puede revocar automáticamente una reasignación causalmente posterior.",
+      "source_id": "src-0074"
+    },
+    {
+      "kind": "paragraph",
+      "text": "La vigencia también depende del propósito. Un estado puede servir para informar una estimación y no para entregar una llave. HH-27 asigna a cada afirmación un tiempo máximo y una conducta al vencimiento: volver a consultar, pasar a indeterminado, solicitar verificación humana o detener. El vencimiento no destruye el registro anterior, porque todavía puede explicar una acción.",
+      "source_id": "src-0075"
+    },
+    {
+      "kind": "paragraph",
+      "text": "En la conciliación se compara lo conocido por cada actor en ese momento y se repara el estado sin acusar retrospectivamente a quien decidió con información válida pero incompleta.",
+      "source_id": "src-0076"
+    },
+    {
       "kind": "heading",
-      "text": "## Movimiento 2 · Proteger invariantes frente a duplicados, demoras y errores"
+      "text": "### Contrato operacional",
+      "source_id": "src-0077"
     },
     {
-      "source_id": "src-0064",
+      "kind": "paragraph",
+      "text": "Un contrato operacional define efectos, errores, observación, escalamiento y reparación alrededor de una interfaz. No es un SLA ni una página de soporte. Traduce comportamiento técnico en acciones posibles para quienes sostienen el servicio.",
+      "source_id": "src-0078"
+    },
+    {
+      "kind": "paragraph",
+      "text": "En HH-27, Recepción necesita saber cómo continuar cuando la confirmación queda indeterminada. La ficha especifica quién diagnostica, quién decide, qué evidencia recibe el turno y cómo se informa al huésped. Un error sin próxima acción segura deja la integración técnicamente descripta y operacionalmente incompleta.",
+      "source_id": "src-0079"
+    },
+    {
+      "kind": "paragraph",
+      "text": "El contrato se prueba con una falla parcial y con la ausencia de la persona experta. Si el procedimiento depende de conocimiento privado, no constituye una capacidad organizacional. El cierre exige una ruta ejecutable, autoridad identificada y señal de que la reparación produjo el efecto esperado.",
+      "source_id": "src-0080"
+    },
+    {
+      "kind": "paragraph",
+      "text": "El acuerdo operacional debe distinguir diagnóstico, decisión y comunicación. Tecnología puede localizar la causa sin tener autoridad para alojar al huésped; Recepción puede decidir una contingencia sin poder corregir el dato; Comercial debe detener una promesa que ya no puede cumplirse. La ficha relaciona cada clase de situación con un destinatario, una ventana y una primera acción segura.",
+      "source_id": "src-0081"
+    },
+    {
+      "kind": "paragraph",
+      "text": "Esta distribución evita que una alerta general convoque a muchas personas y no habilite a ninguna. También protege al turno de recibir detalles técnicos que no modifican su decisión.",
+      "source_id": "src-0082"
+    },
+    {
+      "kind": "paragraph",
+      "text": "La reparación forma parte del contrato y no de una etapa posterior. Incluye reconciliar reservas, restituir capacidad, informar a la persona afectada y conservar evidencia del cambio. El equipo ensaya el procedimiento con herramientas y permisos reales. Si una instrucción indica modificar una tabla a la que el turno no accede o depende de un contacto disponible sólo en horario comercial, la prueba falla. El resultado esperado es una capacidad repetible, no la demostración heroica de que una persona experta puede resolver el caso.",
+      "source_id": "src-0083"
+    },
+    {
       "kind": "heading",
-      "text": "### Precondición y poscondición"
+      "text": "## Movimiento 2 · Proteger invariantes frente a duplicados, demoras y errores",
+      "source_id": "src-0084"
     },
     {
-      "source_id": "src-0065",
-      "kind": "paragraph",
-      "text": "Las precondiciones y poscondiciones declaran qué debe ser cierto antes y después de una operación. No son comentarios sobre el camino feliz: limitan estados válidos y vuelven comprobable el efecto prometido."
-    },
-    {
-      "source_id": "src-0066",
-      "kind": "paragraph",
-      "text": "Para asignar una habitación, HH-27 exige disponibilidad vigente, restricciones satisfechas y autoridad. Después, la reserva debe quedar vinculada con la habitación y conservar trazabilidad. Pruebas de transición e invariantes verifican ambas condiciones, incluidos rechazo y resultado indeterminado."
-    },
-    {
-      "source_id": "src-0067",
-      "kind": "paragraph",
-      "text": "La concurrencia puede invalidar una precondición entre lectura y escritura. Por eso la especificación incluye momento de evaluación, mecanismo de exclusión o compensación y evidencia persistida. La corrección se juzga sobre el estado material, no sobre la respuesta que vio un único componente."
-    },
-    {
-      "source_id": "src-0068",
-      "kind": "paragraph",
-      "text": "Una precondición debe poder observarse con la información disponible para quien decide. Exigir «que no exista otra reserva concurrente» resulta inútil si ningún componente puede comprobarlo de forma atómica. El contrato traduce esa intención en un control implementable, como una versión esperada, una reserva temporal o una operación condicional. Si el control falla, la respuesta conserva qué condición dejó de cumplirse. Así el consumidor puede volver a leer o escalar sin repetir una acción cuyo efecto anterior sigue siendo desconocido."
-    },
-    {
-      "source_id": "src-0069",
-      "kind": "paragraph",
-      "text": "Las poscondiciones abarcan efectos externos y obligaciones pendientes. Una respuesta exitosa puede haber asignado habitación sin emitir el aviso, actualizado el PMS sin la cerradura o iniciado un cobro todavía reversible. HH-27 enumera estados confirmados, efectos en curso y tareas de compensación. La prueba interrumpe la secuencia después de cada paso para observar qué queda. El contrato sólo promete aquello que puede demostrar en esos cortes; los demás resultados se expresan como pendientes o indeterminados en lugar de ocultarse detrás de un código de éxito."
-    },
-    {
-      "source_id": "src-0070",
       "kind": "heading",
-      "text": "### Invariante"
+      "text": "### Precondición y poscondición",
+      "source_id": "src-0085"
     },
     {
-      "source_id": "src-0071",
       "kind": "paragraph",
-      "text": "Una invariante es una condición que debe preservarse a través de operaciones, versiones y fallas. Se diferencia de una preferencia porque violarla vuelve inaceptable el estado, aunque una métrica agregada mejore."
+      "text": "Las precondiciones y poscondiciones declaran qué debe ser cierto antes y después de una operación. No son comentarios sobre el camino feliz: limitan estados válidos y vuelven comprobable el efecto prometido.",
+      "source_id": "src-0086"
     },
     {
-      "source_id": "src-0072",
       "kind": "paragraph",
-      "text": "Una habitación accesible prometida no puede reasignarse sin decisión autorizada. HH-27 busca violaciones mediante secuencias concurrentes, reintentos y cambios de versión. El registro debe mostrar cuándo se evaluó la condición y quién pudo detener o reparar la transición."
+      "text": "Para asignar una habitación, HH-27 exige disponibilidad vigente, restricciones satisfechas y autoridad. Después, la reserva debe quedar vinculada con la habitación y conservar trazabilidad. Pruebas de transición e invariantes verifican ambas condiciones, incluidos rechazo y resultado indeterminado.",
+      "source_id": "src-0087"
     },
     {
-      "source_id": "src-0073",
       "kind": "paragraph",
-      "text": "Dos invariantes pueden entrar en tensión, por ejemplo continuidad de atención y protección de datos. La prioridad no se resuelve en el código: requiere decisión institucional, alcance y contingencia. El contrato conserva ese criterio para que la excepción no dependa del turno."
+      "text": "La concurrencia puede invalidar una precondición entre lectura y escritura. Por eso la especificación incluye momento de evaluación, mecanismo de exclusión o compensación y evidencia persistida. La corrección se juzga sobre el estado material, no sobre la respuesta que vio un único componente.",
+      "source_id": "src-0088"
     },
     {
-      "source_id": "src-0074",
       "kind": "paragraph",
-      "text": "La formulación de una invariante necesita alcance y lenguaje comprobable. «Nunca perder una reserva» puede ser imposible frente a datos corruptos; «toda confirmación aceptada conserva un identificador, una fuente y una ruta de reparación» define una obligación verificable. El equipo busca secuencias mínimas que la rompan y registra si el defecto surge de la especificación, de una implementación o de una operación manual. Esa distinción orienta la corrección y evita declarar invariante una aspiración que nadie puede controlar."
+      "text": "Una precondición debe poder observarse con la información disponible para quien decide. Exigir «que no exista otra reserva concurrente» resulta inútil si ningún componente puede comprobarlo de forma atómica. El contrato traduce esa intención en un control implementable, como una versión esperada, una reserva temporal o una operación condicional. Si el control falla, la respuesta conserva qué condición dejó de cumplirse. Así el consumidor puede volver a leer o escalar sin repetir una acción cuyo efecto anterior sigue siendo desconocido.",
+      "source_id": "src-0089"
     },
     {
-      "source_id": "src-0075",
       "kind": "paragraph",
-      "text": "Las pruebas basadas en propiedades complementan ejemplos conocidos al generar órdenes, duplicados y combinaciones no anticipadas. Sin embargo, una propiedad formalmente satisfecha puede proteger la condición equivocada. Lucía y Mariela revisan si la regla preserva la experiencia que se pretende sostener. Cuando dos invariantes chocan, Elena define prioridad, excepción autorizada y evidencia posterior. La decisión se registra porque el software sólo ejecutará una elección institucional que debe poder discutirse y revisarse."
+      "text": "Las poscondiciones abarcan efectos externos y obligaciones pendientes. Una respuesta exitosa puede haber asignado habitación sin emitir el aviso, actualizado el PMS sin la cerradura o iniciado un cobro todavía reversible. HH-27 enumera estados confirmados, efectos en curso y tareas de compensación. La prueba interrumpe la secuencia después de cada paso para observar qué queda.",
+      "source_id": "src-0090"
     },
     {
-      "source_id": "src-0076",
+      "kind": "paragraph",
+      "text": "El contrato sólo promete aquello que puede demostrar en esos cortes; los demás resultados se expresan como pendientes o indeterminados en lugar de ocultarse detrás de un código de éxito.",
+      "source_id": "src-0091"
+    },
+    {
       "kind": "heading",
-      "text": "### Idempotencia"
+      "text": "### Invariante",
+      "source_id": "src-0092"
     },
     {
-      "source_id": "src-0077",
       "kind": "paragraph",
-      "text": "La idempotencia permite repetir una operación sin multiplicar su efecto material. No exige respuestas textuales idénticas ni elimina el costo del reintento. Su propósito es preservar la consecuencia cuando la comunicación deja incierto el resultado anterior."
+      "text": "Una invariante es una condición que debe preservarse a través de operaciones, versiones y fallas. Se diferencia de una preferencia porque violarla vuelve inaceptable el estado, aunque una métrica agregada mejore.",
+      "source_id": "src-0093"
     },
     {
-      "source_id": "src-0078",
       "kind": "paragraph",
-      "text": "En HH-27, reenviar una confirmación no debe crear dos reservas ni duplicar un cobro. Claves, estados y deduplicación sostienen la garantía, que se prueba perdiendo respuestas y repitiendo mensajes. La evidencia incluye el estado final y los efectos externos."
+      "text": "Una habitación accesible prometida no puede reasignarse sin decisión autorizada. HH-27 busca violaciones mediante secuencias concurrentes, reintentos y cambios de versión. El registro debe mostrar cuándo se evaluó la condición y quién pudo detener o reparar la transición.",
+      "source_id": "src-0094"
     },
     {
-      "source_id": "src-0079",
       "kind": "paragraph",
-      "text": "La irreversibilidad no impide por sí sola un tratamiento idempotente. Una solicitud que produce un cobro o envía una orden irreversible puede aceptar reintentos sin repetir el efecto si conserva una identidad estable y deduplica dentro de una ventana adecuada. Cuando un efecto externo no puede controlarse o la ventana ya venció, hace falta conciliación y, si existe una acción legítima que compense la consecuencia, compensación. Gray, J. y Reuter, A. (1992) aportan el vocabulario transaccional para separar ejecución, recuperación y efectos; RFC 9110, sección 9.2.2, delimita la idempotencia de métodos HTTP (Fielding, Nottingham y Reschke, 2022)."
+      "text": "Dos invariantes pueden entrar en tensión, por ejemplo continuidad de atención y protección de datos. La prioridad no se resuelve en el código: requiere decisión institucional, alcance y contingencia. El contrato conserva ese criterio para que la excepción no dependa del turno.",
+      "source_id": "src-0095"
     },
     {
-      "source_id": "src-0080",
       "kind": "paragraph",
-      "text": "La garantía requiere una identidad estable de la intención. Si cada reintento genera una clave nueva, el productor no puede distinguir repetición de otra solicitud legítima. El contrato define quién crea la clave, cuánto tiempo conserva deduplicación y qué respuesta recibe el consumidor ante una repetición. Esa ventana debe cubrir demoras reales y no sólo el tiempo habitual. También se decide qué ocurre cuando dos solicitudes iguales son en verdad decisiones distintas, para que la deduplicación no elimine una acción válida."
+      "text": "La formulación de una invariante necesita alcance y lenguaje comprobable. «Nunca perder una reserva» puede ser imposible frente a datos corruptos; «toda confirmación aceptada conserva un identificador, una fuente y una ruta de reparación» define una obligación verificable. El equipo busca secuencias mínimas que la rompan y registra si el defecto surge de la especificación, de una implementación o de una operación manual. Esa distinción orienta la corrección y evita declarar invariante una aspiración que nadie puede controlar.",
+      "source_id": "src-0096"
     },
     {
-      "source_id": "src-0081",
       "kind": "paragraph",
-      "text": "Los efectos laterales se revisan por separado. Una asignación puede ser idempotente en el PMS y duplicar un correo, un cobro o una orden a cerraduras. HH-27 sigue la misma intención a través de sus participantes y comprueba el estado final en cada uno. Cuando la coordinación no admite atomicidad, se definen compensaciones y señales de conciliación. El término idempotente no se usa como garantía absoluta del recorrido; describe una propiedad precisa de una operación bajo condiciones y ventanas declaradas."
+      "text": "Las pruebas basadas en propiedades complementan ejemplos conocidos al generar órdenes, duplicados y combinaciones no anticipadas. Sin embargo, una propiedad formalmente satisfecha puede proteger la condición equivocada. Lucía y Mariela revisan si la regla preserva la experiencia que se pretende sostener. Cuando dos invariantes chocan, Elena define prioridad, excepción autorizada y evidencia posterior. La decisión se registra porque el software sólo ejecutará una elección institucional que debe poder discutirse y revisarse.",
+      "source_id": "src-0097"
     },
     {
-      "source_id": "src-0082",
       "kind": "heading",
-      "text": "### Contrato de error"
+      "text": "### Idempotencia",
+      "source_id": "src-0098"
     },
     {
-      "source_id": "src-0083",
       "kind": "paragraph",
-      "text": "Un contrato de error clasifica fallas, incertidumbre y respuestas que productores, consumidores y operación pueden manejar. No es una lista genérica de códigos: distingue rechazo, demora, duplicación, resultado indeterminado y degradación."
+      "text": "La idempotencia permite repetir una operación sin multiplicar su efecto material. No exige respuestas textuales idénticas ni elimina el costo del reintento. Su propósito es preservar la consecuencia cuando la comunicación deja incierto el resultado anterior.",
+      "source_id": "src-0099"
     },
     {
-      "source_id": "src-0084",
       "kind": "paragraph",
-      "text": "El PMS debe informar si la reserva fue rechazada o si todavía se desconoce el estado. HH-27 asocia cada clase con una acción segura, evidencia mínima y autoridad de escalamiento. Pruebas negativas verifican que un consumidor no interprete silencio como éxito ni como fracaso definitivo."
+      "text": "En HH-27, reenviar una confirmación no debe crear dos reservas ni duplicar un cobro. Claves, estados y deduplicación sostienen la garantía, que se prueba perdiendo respuestas y repitiendo mensajes. La evidencia incluye el estado final y los efectos externos.",
+      "source_id": "src-0100"
     },
     {
-      "source_id": "src-0085",
       "kind": "paragraph",
-      "text": "El detalle necesita equilibrio. Un mensaje opaco impide reparar; uno excesivo puede exponer información o acoplar consumidores a la implementación. El contrato publica lo necesario para decidir y conserva trazas protegidas para investigar sin trasladar el riesgo a quien espera."
+      "text": "La irreversibilidad no impide por sí sola un tratamiento idempotente. Una solicitud que produce un cobro o envía una orden irreversible puede aceptar reintentos sin repetir el efecto si conserva una identidad estable y deduplica dentro de una ventana adecuada. Cuando un efecto externo no puede controlarse o la ventana ya venció, hace falta conciliación y, si existe una acción legítima que compense la consecuencia, compensación.",
+      "source_id": "src-0101"
     },
     {
-      "source_id": "src-0086",
       "kind": "paragraph",
-      "text": "La taxonomía separa condiciones permanentes, transitorias e indeterminadas. Las primeras suelen exigir corregir la solicitud; las segundas pueden admitir espera o reintento; las terceras obligan a consultar el estado antes de actuar otra vez. Esa clasificación no se deriva sólo del código numérico. Incluye si el efecto pudo ocurrir, cuándo conviene volver a intentar y qué autoridad puede resolver. Un consumidor que recibe «error» sin estas dimensiones queda forzado a adivinar, y cada adivinación se convierte en una nueva fuente de inconsistencia."
+      "text": "Gray, J. y Reuter, A. (1992) aportan el vocabulario transaccional para separar ejecución, recuperación y efectos; RFC 9110, sección 9.2.2, delimita la idempotencia de métodos HTTP (Fielding, Nottingham y Reschke, 2022).",
+      "source_id": "src-0102"
     },
     {
-      "source_id": "src-0087",
       "kind": "paragraph",
-      "text": "El mensaje dirigido a la operación traduce la clase técnica sin prometer una causa no demostrada. «No se pudo confirmar» conserva incertidumbre; «reserva inexistente» afirma un hecho más fuerte. HH-27 prueba qué ve Lucía y qué decisión toma con cada mensaje. Federico conserva detalles protegidos para investigar y correlacionar. Si la interfaz induce a repetir una operación peligrosa o a negar una reserva válida, el contrato de error falló aunque el registro técnico contenga información suficiente."
+      "text": "La garantía requiere una identidad estable de la intención. Si cada reintento genera una clave nueva, el productor no puede distinguir repetición de otra solicitud legítima. El contrato define quién crea la clave, cuánto tiempo conserva deduplicación y qué respuesta recibe el consumidor ante una repetición. Esa ventana debe cubrir demoras reales y no sólo el tiempo habitual. También se decide qué ocurre cuando dos solicitudes iguales son en verdad decisiones distintas, para que la deduplicación no elimine una acción válida.",
+      "source_id": "src-0103"
     },
     {
-      "source_id": "src-0088",
+      "kind": "paragraph",
+      "text": "Los efectos laterales se revisan por separado. Una asignación puede ser idempotente en el PMS y duplicar un correo, un cobro o una orden a cerraduras. HH-27 sigue la misma intención a través de sus participantes y comprueba el estado final en cada uno. Cuando la coordinación no admite atomicidad, se definen compensaciones y señales de conciliación. El término idempotente no se usa como garantía absoluta del recorrido; describe una propiedad precisa de una operación bajo condiciones y ventanas declaradas.",
+      "source_id": "src-0104"
+    },
+    {
       "kind": "heading",
-      "text": "## Movimiento 3 · Evolucionar y probar contratos sin quebrar consumidores"
+      "text": "### Contrato de error",
+      "source_id": "src-0105"
     },
     {
-      "source_id": "src-0089",
+      "kind": "paragraph",
+      "text": "Un contrato de error clasifica fallas, incertidumbre y respuestas que productores, consumidores y operación pueden manejar. No es una lista genérica de códigos: distingue rechazo, demora, duplicación, resultado indeterminado y degradación.",
+      "source_id": "src-0106"
+    },
+    {
+      "kind": "paragraph",
+      "text": "El PMS debe informar si la reserva fue rechazada o si todavía se desconoce el estado. HH-27 asocia cada clase con una acción segura, evidencia mínima y autoridad de escalamiento. Pruebas negativas verifican que un consumidor no interprete silencio como éxito ni como fracaso definitivo.",
+      "source_id": "src-0107"
+    },
+    {
+      "kind": "paragraph",
+      "text": "El detalle necesita equilibrio. Un mensaje opaco impide reparar; uno excesivo puede exponer información o acoplar consumidores a la implementación. El contrato publica lo necesario para decidir y conserva trazas protegidas para investigar sin trasladar el riesgo a quien espera.",
+      "source_id": "src-0108"
+    },
+    {
+      "kind": "paragraph",
+      "text": "La taxonomía separa condiciones permanentes, transitorias e indeterminadas. Las primeras suelen exigir corregir la solicitud; las segundas pueden admitir espera o reintento; las terceras obligan a consultar el estado antes de actuar otra vez. Esa clasificación no se deriva sólo del código numérico. Incluye si el efecto pudo ocurrir, cuándo conviene volver a intentar y qué autoridad puede resolver. Un consumidor que recibe «error» sin estas dimensiones queda forzado a adivinar, y cada adivinación se convierte en una nueva fuente de inconsistencia.",
+      "source_id": "src-0109"
+    },
+    {
+      "kind": "paragraph",
+      "text": "El mensaje dirigido a la operación traduce la clase técnica sin prometer una causa no demostrada. «No se pudo confirmar» conserva incertidumbre; «reserva inexistente» afirma un hecho más fuerte. HH-27 prueba qué ve Lucía y qué decisión toma con cada mensaje. Federico conserva detalles protegidos para investigar y correlacionar. Si la interfaz induce a repetir una operación peligrosa o a negar una reserva válida, el contrato de error falló aunque el registro técnico contenga información suficiente.",
+      "source_id": "src-0110"
+    },
+    {
       "kind": "heading",
-      "text": "### Evolución compatible"
+      "text": "## Movimiento 3 · Evolucionar y probar contratos sin quebrar consumidores",
+      "source_id": "src-0111"
     },
     {
-      "source_id": "src-0090",
-      "kind": "paragraph",
-      "text": "La evolución compatible permite cambiar un contrato sin quebrar consumidores existentes ni congelar el servicio. No se resuelve incrementando un número de versión. Requiere declarar qué se conserva, qué se depreca y durante cuánto tiempo convivirán interpretaciones."
-    },
-    {
-      "source_id": "src-0091",
-      "kind": "paragraph",
-      "text": "HH-27 incorpora un estado nuevo mientras algunos canales sólo comprenden el vocabulario anterior. Pruebas con consumidores reales y telemetría de uso muestran quién sigue expuesto. La migración tiene responsable, fecha y condición de retiro, además de una traducción segura durante la convivencia."
-    },
-    {
-      "source_id": "src-0092",
-      "kind": "paragraph",
-      "text": "Mantener compatibilidad indefinida acumula complejidad y puede impedir una mejora necesaria. El gobierno compara costo de migración, riesgo de ruptura y valor del cambio. El cierre ocurre cuando la evidencia demuestra adopción suficiente y existe reparación para quien todavía envíe una versión antigua."
-    },
-    {
-      "source_id": "src-0093",
-      "kind": "paragraph",
-      "text": "La compatibilidad se evalúa por comportamiento y no sólo por lectura del esquema. Agregar un estado puede ser sintácticamente aditivo y quebrar un consumidor que trata todo valor desconocido como error. Cambiar una regla de orden puede conservar campos y producir otro efecto. El equipo construye una matriz de consumidores, supuestos y versiones observadas. Las pruebas se ejecutan con muestras reales y la telemetría muestra qué variante sigue activa. Así la decisión de retirar no depende de que todos declaren haber migrado."
-    },
-    {
-      "source_id": "src-0094",
-      "kind": "paragraph",
-      "text": "Una estrategia de evolución incluye aviso, período de convivencia, traducción, soporte y salida. Cada excepción tiene fecha y responsable; de otro modo la compatibilidad se convierte en deuda permanente. Para un consumidor que no puede actualizarse, el hotel puede mantener un adaptador limitado o restringir la capacidad ofrecida. La elección se compara con el daño y el costo de sostener dos significados. Retirar una versión es una decisión operacional que necesita evidencia de uso y contingencia, no un acto administrativo del productor."
-    },
-    {
-      "source_id": "src-0095",
       "kind": "heading",
-      "text": "### Contrato de datos"
+      "text": "### Evolución compatible",
+      "source_id": "src-0112"
     },
     {
-      "source_id": "src-0096",
       "kind": "paragraph",
-      "text": "Un contrato de datos acuerda significado, calidad, responsabilidad, privacidad y cambio de un producto de datos. No es sólo un esquema de tabla ni un acuerdo entre equipos técnicos. Explica qué usos habilita una observación y qué límites conserva."
+      "text": "La evolución compatible permite cambiar un contrato sin quebrar consumidores existentes ni congelar el servicio. No se resuelve incrementando un número de versión. Requiere declarar qué se conserva, qué se depreca y durante cuánto tiempo convivirán interpretaciones.",
+      "source_id": "src-0113"
     },
     {
-      "source_id": "src-0097",
       "kind": "paragraph",
-      "text": "La disponibilidad de habitación registra fuente, frescura, reglas de corrección y población. HH-27 sigue su linaje desde Housekeeping hasta el canal y contrasta consultas reales. Un valor estructuralmente válido puede ser inadecuado si perdió vigencia o si omite una restricción relevante."
+      "text": "HH-27 incorpora un estado nuevo mientras algunos canales sólo comprenden el vocabulario anterior. Pruebas con consumidores reales y telemetría de uso muestran quién sigue expuesto. La migración tiene responsable, fecha y condición de retiro, además de una traducción segura durante la convivencia.",
+      "source_id": "src-0114"
     },
     {
-      "source_id": "src-0098",
       "kind": "paragraph",
-      "text": "El contrato también hace visible quién corrige y quién responde por el uso. Puede formalizar una definición injusta si ninguna persona afectada interviene en su revisión. Por eso combina controles automáticos con episodios, consecuencias y una regla de cambio verificable."
+      "text": "Mantener compatibilidad indefinida acumula complejidad y puede impedir una mejora necesaria. El gobierno compara costo de migración, riesgo de ruptura y valor del cambio. El cierre ocurre cuando la evidencia demuestra adopción suficiente y existe reparación para quien todavía envíe una versión antigua.",
+      "source_id": "src-0115"
     },
     {
-      "source_id": "src-0099",
       "kind": "paragraph",
-      "text": "Los compromisos de calidad se vinculan con usos declarados. Completitud, oportunidad o exactitud no tienen un umbral universal: una ausencia tolerable para análisis mensual puede impedir entregar una habitación. La ficha registra población, cálculo, ventana y acción ante incumplimiento. Los productores no prometen aquello que no observan, y los consumidores no reutilizan el dato para decisiones no evaluadas. Cuando aparece un nuevo uso, se reabre el contrato en lugar de asumir que la disponibilidad técnica equivale a aptitud."
+      "text": "La compatibilidad se evalúa por comportamiento y no sólo por lectura del esquema. Agregar un estado puede ser sintácticamente aditivo y quebrar un consumidor que trata todo valor desconocido como error. Cambiar una regla de orden puede conservar campos y producir otro efecto. El equipo construye una matriz de consumidores, supuestos y versiones observadas. Las pruebas se ejecutan con muestras reales y la telemetría muestra qué variante sigue activa. Así la decisión de retirar no depende de que todos declaren haber migrado.",
+      "source_id": "src-0116"
     },
     {
-      "source_id": "src-0100",
       "kind": "paragraph",
-      "text": "El linaje permite localizar dónde cambió una afirmación y quién puede corregirla. HH-27 conserva fuente original, transformaciones, reglas manuales y momento de cada versión. Si un valor se deriva, el contrato expresa qué parte es observación y qué parte es inferencia. Esta separación es esencial para disputar un resultado y para cumplir una rectificación. La responsabilidad asignada incluye capacidad de modificar el dato, notificar consumidores y verificar que la corrección llegó a las copias relevantes."
+      "text": "Una estrategia de evolución incluye aviso, período de convivencia, traducción, soporte y salida. Cada excepción tiene fecha y responsable; de otro modo la compatibilidad se convierte en deuda permanente. Para un consumidor que no puede actualizarse, el hotel puede mantener un adaptador limitado o restringir la capacidad ofrecida. La elección se compara con el daño y el costo de sostener dos significados. Retirar una versión es una decisión operacional que necesita evidencia de uso y contingencia, no un acto administrativo del productor.",
+      "source_id": "src-0117"
     },
     {
-      "source_id": "src-0101",
-      "kind": "paragraph",
-      "text": "El modelo PROV de W3C distingue entidades, actividades y agentes y ofrece un anclaje para registrar procedencia sin prescribir el dominio (W3C Provenance Working Group, 2013). En HH-27, la observación material de Housekeeping, la regla que calcula `asignable` y el actor que autoriza una corrección quedan relacionados. Esa procedencia permite explicar por qué un estado cambió y localizar qué consumidores recibieron la versión anterior."
-    },
-    {
-      "source_id": "src-0102",
       "kind": "heading",
-      "text": "### Contrato de seguridad"
+      "text": "### Contrato de datos",
+      "source_id": "src-0118"
     },
     {
-      "source_id": "src-0103",
       "kind": "paragraph",
-      "text": "Un contrato de seguridad define identidad, autorización, confidencialidad, integridad y evidencia de acceso. No consiste en agregar autenticación al final. Distribuye controles según fronteras de confianza, propósito y daño posible."
+      "text": "Un contrato de datos acuerda significado, calidad, responsabilidad, privacidad y cambio de un producto de datos. No es sólo un esquema de tabla ni un acuerdo entre equipos técnicos. Explica qué usos habilita una observación y qué límites conserva.",
+      "source_id": "src-0119"
     },
     {
-      "source_id": "src-0104",
       "kind": "paragraph",
-      "text": "El canal puede consultar una categoría sin acceder a datos innecesarios del huésped. HH-27 prueba permisos mínimos, intentos indebidos, trazabilidad y revocación. También verifica la contingencia, porque un control que bloquea toda atención durante una falla puede producir otro daño."
+      "text": "La disponibilidad de habitación registra fuente, frescura, reglas de corrección y población. HH-27 sigue su linaje desde Housekeeping hasta el canal y contrasta consultas reales. Un valor estructuralmente válido puede ser inadecuado si perdió vigencia o si omite una restricción relevante.",
+      "source_id": "src-0120"
     },
     {
-      "source_id": "src-0105",
       "kind": "paragraph",
-      "text": "Seguridad, continuidad y accesibilidad pueden entrar en tensión. La decisión debe declarar qué riesgo se acepta, quién lo autoriza y qué señal obliga a revisar. El contrato protege tanto la información como la posibilidad de explicar y reparar una acción."
+      "text": "El contrato también hace visible quién corrige y quién responde por el uso. Puede formalizar una definición injusta si ninguna persona afectada interviene en su revisión. Por eso combina controles automáticos con episodios, consecuencias y una regla de cambio verificable.",
+      "source_id": "src-0121"
     },
     {
-      "source_id": "src-0106",
       "kind": "paragraph",
-      "text": "Autenticar un sistema no autoriza todos sus usos. El contrato relaciona identidad con propósito, operación, población y campos mínimos. Un canal autenticado puede consultar disponibilidad agregada sin recibir notas sensibles de accesibilidad. La decisión se aplica en cada frontera y se prueba con identidades válidas que intentan acciones fuera de alcance. Este escenario detecta permisos excesivos que una prueba de credenciales correctas no revela. También se comprueba revocación, porque retirar acceso tarde puede prolongar un daño después del cambio contractual."
+      "text": "Los compromisos de calidad se vinculan con usos declarados. Completitud, oportunidad o exactitud no tienen un umbral universal: una ausencia tolerable para análisis mensual puede impedir entregar una habitación. La ficha registra población, cálculo, ventana y acción ante incumplimiento. Los productores no prometen aquello que no observan, y los consumidores no reutilizan el dato para decisiones no evaluadas. Cuando aparece un nuevo uso, se reabre el contrato en lugar de asumir que la disponibilidad técnica equivale a aptitud.",
+      "source_id": "src-0122"
     },
     {
-      "source_id": "src-0107",
       "kind": "paragraph",
-      "text": "La evidencia de seguridad debe ser suficiente para investigar sin convertirse en otra exposición. Se registra quién solicitó, qué regla autorizó, qué versión respondió y qué campos fueron afectados, con retención y acceso acordes al riesgo. Durante una contingencia, los permisos excepcionales tienen duración, justificación y reconciliación posterior. Si el modo degradado exige compartir cuentas o exportar datos innecesarios, no es una alternativa segura. El contrato obliga a diseñar continuidad y protección como una misma decisión."
+      "text": "El linaje permite localizar dónde cambió una afirmación y quién puede corregirla. HH-27 conserva fuente original, transformaciones, reglas manuales y momento de cada versión. Si un valor se deriva, el contrato expresa qué parte es observación y qué parte es inferencia. Esta separación es esencial para disputar un resultado y para cumplir una rectificación. La responsabilidad asignada incluye capacidad de modificar el dato, notificar consumidores y verificar que la corrección llegó a las copias relevantes.",
+      "source_id": "src-0123"
     },
     {
-      "source_id": "src-0108",
+      "kind": "paragraph",
+      "text": "El modelo PROV de W3C distingue entidades, actividades y agentes y ofrece un anclaje para registrar procedencia sin prescribir el dominio (W3C Provenance Working Group, 2013). En HH-27, la observación material de Housekeeping, la regla que calcula `asignable` y el actor que autoriza una corrección quedan relacionados. Esa procedencia permite explicar por qué un estado cambió y localizar qué consumidores recibieron la versión anterior.",
+      "source_id": "src-0124"
+    },
+    {
       "kind": "heading",
-      "text": "### Prueba de contrato"
+      "text": "### Contrato de seguridad",
+      "source_id": "src-0125"
     },
     {
-      "source_id": "src-0109",
       "kind": "paragraph",
-      "text": "Una prueba de contrato verifica acuerdos relevantes desde las perspectivas del productor, el consumidor y la operación. No reemplaza pruebas de punta a punta ni evidencia del resultado observable; localiza incompatibilidades antes de exponer el recorrido completo."
+      "text": "Un contrato de seguridad define identidad, autorización, confidencialidad, integridad y evidencia de acceso. No consiste en agregar autenticación al final. Distribuye controles según fronteras de confianza, propósito y daño posible.",
+      "source_id": "src-0126"
     },
     {
-      "source_id": "src-0110",
       "kind": "paragraph",
-      "text": "En HH-27, el consumidor publica expectativas y el productor las ejecuta antes de desplegar. La suite cubre estructura, significado, orden, duplicados, demora, errores, permisos y versiones. Cada resultado conserva la especificación y el artefacto que efectivamente se probó."
+      "text": "El canal puede consultar una categoría sin acceder a datos innecesarios del huésped. HH-27 prueba permisos mínimos, intentos indebidos, trazabilidad y revocación. También verifica la contingencia, porque un control que bloquea toda atención durante una falla puede producir otro daño.",
+      "source_id": "src-0127"
     },
     {
-      "source_id": "src-0111",
       "kind": "paragraph",
-      "text": "Una suite verde puede omitir contratos humanos, temporales o regulatorios. Por eso se complementa con una transición realista y una persona de turno que interpreta el resultado. La prueba aporta confianza cuando discrimina una falla relevante y habilita una decisión concreta, no cuando sólo aumenta cobertura."
+      "text": "Seguridad, continuidad y accesibilidad pueden entrar en tensión. La decisión debe declarar qué riesgo se acepta, quién lo autoriza y qué señal obliga a revisar. El contrato protege tanto la información como la posibilidad de explicar y reparar una acción.",
+      "source_id": "src-0128"
     },
     {
-      "source_id": "src-0112",
       "kind": "paragraph",
-      "text": "Las pruebas se distribuyen por alcance. Un esquema valida forma; una prueba de productor confirma comportamiento local; una expectativa del consumidor verifica el uso que realmente realiza; una prueba operacional observa interpretación y reparación. Ningún nivel reemplaza al siguiente. Si todas las combinaciones se trasladan a una prueba integral, el diagnóstico se vuelve lento y frágil; si sólo se prueban componentes, la promesa queda sin evidencia. La estrategia elige el nivel más pequeño capaz de detectar cada incumplimiento y conserva algunos escenarios completos para verificar la cadena."
+      "text": "Autenticar un sistema no autoriza todos sus usos. El contrato relaciona identidad con propósito, operación, población y campos mínimos. Un canal autenticado puede consultar disponibilidad agregada sin recibir notas sensibles de accesibilidad. La decisión se aplica en cada frontera y se prueba con identidades válidas que intentan acciones fuera de alcance. Este escenario detecta permisos excesivos que una prueba de credenciales correctas no revela. También se comprueba revocación, porque retirar acceso tarde puede prolongar un daño después del cambio contractual.",
+      "source_id": "src-0129"
     },
     {
-      "source_id": "src-0113",
       "kind": "paragraph",
-      "text": "Una expectativa del consumidor también puede estar equivocada o exigir una implementación particular. El gobierno revisa si expresa una necesidad legítima y una consecuencia, no si coincide con el código actual. Productor y consumidor negocian el contrato con Operaciones cuando la diferencia afecta el turno. Cada falla indica qué acuerdo se rompió y bloquea sólo el cambio pertinente. La prueba deja de ser un rito de integración y se convierte en un mecanismo de coordinación que hace visible el costo de evolucionar."
+      "text": "La evidencia de seguridad debe ser suficiente para investigar sin convertirse en otra exposición. Se registra quién solicitó, qué regla autorizó, qué versión respondió y qué campos fueron afectados, con retención y acceso acordes al riesgo. Durante una contingencia, los permisos excepcionales tienen duración, justificación y reconciliación posterior. Si el modo degradado exige compartir cuentas o exportar datos innecesarios, no es una alternativa segura. El contrato obliga a diseñar continuidad y protección como una misma decisión.",
+      "source_id": "src-0130"
     },
     {
-      "source_id": "src-0114",
-      "kind": "paragraph",
-      "text": "Pact documenta pruebas dirigidas por expectativas de consumidores y resulta pertinente para verificar compatibilidad observable entre productor y consumidor (Pact Foundation, 2026). N27 limita su alcance: una expectativa ejecutable puede comprobar formato y comportamiento acordado, pero no reemplaza la decisión institucional sobre significado, privacidad o reparación. AsyncAPI 3.1.0 aporta una descripción actual de interacciones asincrónicas; la ficha agrega orden, vigencia e indeterminación porque un documento de interfaz no decide por sí solo qué debe hacer el turno."
-    },
-    {
-      "source_id": "src-0115",
       "kind": "heading",
-      "text": "### Instrumento HH-27: ficha de contrato verificable"
+      "text": "### Prueba de contrato",
+      "source_id": "src-0131"
     },
     {
-      "source_id": "src-0116",
       "kind": "paragraph",
-      "text": "HH-27 vuelve verificable un intercambio desde la intención hasta la reparación. La ficha se completa entre productor, consumidor y operación; ningún equipo puede declarar unilateralmente que el contrato está cerrado."
+      "text": "Una prueba de contrato verifica acuerdos relevantes desde las perspectivas del productor, el consumidor y la operación. No reemplaza pruebas de punta a punta ni evidencia del resultado observable; localiza incompatibilidades antes de exponer el recorrido completo.",
+      "source_id": "src-0132"
     },
     {
-      "source_id": "src-0117",
+      "kind": "paragraph",
+      "text": "En HH-27, el consumidor publica expectativas y el productor las ejecuta antes de desplegar. La suite cubre estructura, significado, orden, duplicados, demora, errores, permisos y versiones. Cada resultado conserva la especificación y el artefacto que efectivamente se probó.",
+      "source_id": "src-0133"
+    },
+    {
+      "kind": "paragraph",
+      "text": "Una suite verde puede omitir contratos humanos, temporales o regulatorios. Por eso se complementa con una transición realista y una persona de turno que interpreta el resultado. La prueba aporta confianza cuando discrimina una falla relevante y habilita una decisión concreta, no cuando sólo aumenta cobertura.",
+      "source_id": "src-0134"
+    },
+    {
+      "kind": "paragraph",
+      "text": "Las pruebas se distribuyen por alcance. Un esquema valida forma; una prueba de productor confirma comportamiento local; una expectativa del consumidor verifica el uso que realmente realiza; una prueba operacional observa interpretación y reparación. Ningún nivel reemplaza al siguiente. Si todas las combinaciones se trasladan a una prueba integral, el diagnóstico se vuelve lento y frágil; si sólo se prueban componentes, la promesa queda sin evidencia.",
+      "source_id": "src-0135"
+    },
+    {
+      "kind": "paragraph",
+      "text": "La estrategia elige el nivel más pequeño capaz de detectar cada incumplimiento y conserva algunos escenarios completos para verificar la cadena.",
+      "source_id": "src-0136"
+    },
+    {
+      "kind": "paragraph",
+      "text": "Una expectativa del consumidor también puede estar equivocada o exigir una implementación particular. El gobierno revisa si expresa una necesidad legítima y una consecuencia, no si coincide con el código actual. Productor y consumidor negocian el contrato con Operaciones cuando la diferencia afecta el turno. Cada falla indica qué acuerdo se rompió y bloquea sólo el cambio pertinente. La prueba deja de ser un rito de integración y se convierte en un mecanismo de coordinación que hace visible el costo de evolucionar.",
+      "source_id": "src-0137"
+    },
+    {
+      "kind": "paragraph",
+      "text": "Pact documenta pruebas dirigidas por expectativas de consumidores y resulta pertinente para verificar compatibilidad observable entre productor y consumidor (Pact Foundation, 2026). N27 limita su alcance: una expectativa ejecutable puede comprobar formato y comportamiento acordado, pero no reemplaza la decisión institucional sobre significado, privacidad o reparación. AsyncAPI 3.1.0 aporta una descripción actual de interacciones asincrónicas; la ficha agrega orden, vigencia e indeterminación porque un documento de interfaz no decide por sí solo qué debe hacer el turno.",
+      "source_id": "src-0138"
+    },
+    {
+      "kind": "heading",
+      "text": "### Instrumento HH-27: ficha de contrato verificable",
+      "source_id": "src-0139"
+    },
+    {
+      "kind": "paragraph",
+      "text": "HH-27 vuelve verificable un intercambio desde la intención hasta la reparación. La ficha se completa entre productor, consumidor y operación; ningún equipo puede declarar unilateralmente que el contrato está cerrado.",
+      "source_id": "src-0140"
+    },
+    {
       "kind": "list-item",
-      "text": "1. **Propósito y consecuencia.** Indicar qué decisión habilita el mensaje y qué daño aparece si se interpreta mal."
+      "text": "1. **Propósito y consecuencia.** Indicar qué decisión habilita el mensaje y qué daño aparece si se interpreta mal.",
+      "source_id": "src-0141"
     },
     {
-      "source_id": "src-0118",
       "kind": "list-item",
-      "text": "2. **Productor y consumidor.** Nombrar sistemas y roles, incluyendo quién corrige cada extremo durante la operación."
+      "text": "2. **Productor y consumidor.** Nombrar sistemas y roles, incluyendo quién corrige cada extremo durante la operación.",
+      "source_id": "src-0142"
     },
     {
-      "source_id": "src-0119",
       "kind": "list-item",
-      "text": "3. **Sintaxis.** Fijar campos, tipos, obligatoriedad, formato y reglas para valores ausentes o desconocidos."
+      "text": "3. **Sintaxis.** Fijar campos, tipos, obligatoriedad, formato y reglas para valores ausentes o desconocidos.",
+      "source_id": "src-0143"
     },
     {
-      "source_id": "src-0120",
       "kind": "list-item",
-      "text": "4. **Semántica.** Definir estados y términos mediante decisiones observables, no sólo mediante palabras equivalentes."
+      "text": "4. **Semántica.** Definir estados y términos mediante decisiones observables, no sólo mediante palabras equivalentes.",
+      "source_id": "src-0144"
     },
     {
-      "source_id": "src-0121",
       "kind": "list-item",
-      "text": "5. **Temporalidad.** Declarar vigencia, orden, latencia admitida y tratamiento de mensajes tardíos o duplicados."
+      "text": "5. **Temporalidad.** Declarar vigencia, orden, latencia admitida y tratamiento de mensajes tardíos o duplicados.",
+      "source_id": "src-0145"
     },
     {
-      "source_id": "src-0122",
       "kind": "list-item",
-      "text": "6. **Precondiciones.** Explicitar qué debe ser verdadero antes de aceptar la transición solicitada."
+      "text": "6. **Precondiciones.** Explicitar qué debe ser verdadero antes de aceptar la transición solicitada.",
+      "source_id": "src-0146"
     },
     {
-      "source_id": "src-0123",
       "kind": "list-item",
-      "text": "7. **Poscondiciones.** Indicar qué estado, evidencia y obligación de comunicación quedan después de ejecutarla."
+      "text": "7. **Poscondiciones.** Indicar qué estado, evidencia y obligación de comunicación quedan después de ejecutarla.",
+      "source_id": "src-0147"
     },
     {
-      "source_id": "src-0124",
       "kind": "list-item",
-      "text": "8. **Invariantes.** Formular las condiciones que ninguna secuencia válida puede quebrar, como evitar doble asignación."
+      "text": "8. **Invariantes.** Formular las condiciones que ninguna secuencia válida puede quebrar, como evitar doble asignación.",
+      "source_id": "src-0148"
     },
     {
-      "source_id": "src-0125",
       "kind": "list-item",
-      "text": "9. **Errores y reintentos.** Distinguir rechazo, indisponibilidad e indeterminación, y asociar a cada estado una acción segura."
+      "text": "9. **Errores y reintentos.** Distinguir rechazo, indisponibilidad e indeterminación, y asociar a cada estado una acción segura.",
+      "source_id": "src-0149"
     },
     {
-      "source_id": "src-0126",
       "kind": "list-item",
-      "text": "10. **Seguridad.** Limitar datos, identidades y permisos al propósito acordado y registrar los accesos relevantes."
+      "text": "10. **Seguridad.** Limitar datos, identidades y permisos al propósito acordado y registrar los accesos relevantes.",
+      "source_id": "src-0150"
     },
     {
-      "source_id": "src-0127",
       "kind": "list-item",
-      "text": "11. **Evolución.** Definir compatibilidad, período de convivencia, migración y retiro de cada versión."
+      "text": "11. **Evolución.** Definir compatibilidad, período de convivencia, migración y retiro de cada versión.",
+      "source_id": "src-0151"
     },
     {
-      "source_id": "src-0128",
       "kind": "list-item",
-      "text": "12. **Operación y reparación.** Asignar señales, escalamiento, conciliación y compensación cuando el acuerdo falla."
+      "text": "12. **Operación y reparación.** Asignar señales, escalamiento, conciliación y compensación cuando el acuerdo falla.",
+      "source_id": "src-0152"
     },
     {
-      "source_id": "src-0129",
       "kind": "paragraph",
-      "text": "La ficha se prueba enviando dos veces la misma reserva y retrasando la confirmación hasta después del cambio de turno. El contrato sólo es defendible si el segundo consumo no duplica la habitación y si Lucía puede distinguir demora de rechazo."
+      "text": "La ficha se prueba enviando dos veces la misma reserva y retrasando la confirmación hasta después del cambio de turno. El contrato sólo es defendible si el segundo consumo no duplica la habitación y si Lucía puede distinguir demora de rechazo.",
+      "source_id": "src-0153"
     },
     {
-      "source_id": "src-0130",
       "kind": "paragraph",
-      "text": "El instrumento se completa desde un episodio y no desde la documentación existente. Primero se identifica qué decisión produjo el intercambio y qué consecuencia tuvo; después se reconstruyen forma, significado, temporalidad y efecto. Ese orden evita formalizar una interfaz que nadie necesita o legitimar como contrato una práctica accidental. Cada campo señala evidencia y una persona capaz de revisarla. Las contradicciones no se resuelven con una definición de compromiso: se prueban mediante transiciones y permanecen abiertas si falta autoridad para elegir."
+      "text": "El instrumento se completa desde un episodio y no desde la documentación existente. Primero se identifica qué decisión produjo el intercambio y qué consecuencia tuvo; después se reconstruyen forma, significado, temporalidad y efecto. Ese orden evita formalizar una interfaz que nadie necesita o legitimar como contrato una práctica accidental. Cada campo señala evidencia y una persona capaz de revisarla. Las contradicciones no se resuelven con una definición de compromiso: se prueban mediante transiciones y permanecen abiertas si falta autoridad para elegir.",
+      "source_id": "src-0154"
     },
     {
-      "source_id": "src-0131",
       "kind": "paragraph",
-      "text": "La versión final vincula especificación, pruebas y procedimiento operacional. Una modificación semántica debe reflejarse en los casos ejecutables, en el mensaje que recibe el turno y en la regla de conciliación. Si alguno conserva el acuerdo anterior, la migración no terminó. Ricardo aprueba el cierre cuando un consumidor antiguo, uno actualizado y una persona de Recepción pueden actuar sin producir estados incompatibles. La ficha incluye fecha de revisión porque nuevos episodios pueden mostrar un supuesto que ningún ejemplo inicial había representado."
+      "text": "La versión final vincula especificación, pruebas y procedimiento operacional. Una modificación semántica debe reflejarse en los casos ejecutables, en el mensaje que recibe el turno y en la regla de conciliación. Si alguno conserva el acuerdo anterior, la migración no terminó. Ricardo aprueba el cierre cuando un consumidor antiguo, uno actualizado y una persona de Recepción pueden actuar sin producir estados incompatibles. La ficha incluye fecha de revisión porque nuevos episodios pueden mostrar un supuesto que ningún ejemplo inicial había representado.",
+      "source_id": "src-0155"
     },
     {
-      "source_id": "src-0132",
       "kind": "paragraph",
-      "text": "La versión completada de HH-27 define al productor como Housekeeping y al PMS como responsable de derivar la condición compuesta. Los consumidores son Recepción, el canal comercial y cerraduras. `liberada` afirma únicamente limpieza terminada, con identificador de habitación, fuente, versión y tiempo del evento. `asignable` afirma que existe reserva compatible, condición material vigente, cerradura operativa y ausencia de bloqueo de mantenimiento para una decisión de ingreso determinada. No afirma que el huésped ya recibió la habitación ni que cualquier canal pueda prometer disponibilidad futura."
+      "text": "La versión completada de HH-27 define al productor como Housekeeping y al PMS como responsable de derivar la condición compuesta. Los consumidores son Recepción, el canal comercial y cerraduras. `liberada` afirma únicamente limpieza terminada, con identificador de habitación, fuente, versión y tiempo del evento. `asignable` afirma que existe reserva compatible, condición material vigente, cerradura operativa y ausencia de bloqueo de mantenimiento para una decisión de ingreso determinada. No afirma que el huésped ya recibió la habitación ni que cualquier canal pueda prometer disponibilidad futura.",
+      "source_id": "src-0156"
     },
     {
-      "source_id": "src-0133",
       "kind": "paragraph",
-      "text": "La transición hacia `asignable` requiere las cuatro precondiciones y deja como poscondición una decisión reconstruible. La invariante impide asignar simultáneamente una habitación a dos reservas y prohíbe perder una restricción accesible. La vigencia termina ante reasignación, bloqueo de mantenimiento o cambio material informado por Housekeeping. Un mensaje tardío no restaura el estado anterior; abre conciliación. Un duplicado con la misma identidad no repite asignación, correo, cobro ni orden de cerradura. Un resultado indeterminado mantiene el estado previo y ofrece al turno una acción segura."
+      "text": "La transición hacia `asignable` requiere las cuatro precondiciones y deja como poscondición una decisión reconstruible. La invariante impide asignar simultáneamente una habitación a dos reservas y prohíbe perder una restricción accesible. La vigencia termina ante reasignación, bloqueo de mantenimiento o cambio material informado por Housekeeping. Un mensaje tardío no restaura el estado anterior; abre conciliación. Un duplicado con la misma identidad no repite asignación, correo, cobro ni orden de cerradura. Un resultado indeterminado mantiene el estado previo y ofrece al turno una acción segura.",
+      "source_id": "src-0157"
     },
     {
-      "source_id": "src-0134",
       "kind": "paragraph",
-      "text": "La evolución convive durante treinta transiciones con consumidores antiguos. Un adaptador traduce `asignable` a la señal anterior sólo para usos que no amplían significado; el canal que interpreta todo valor desconocido como error recibe una versión controlada y una fecha de migración. La prueba ejecuta mensaje válido, campo ausente, duplicado, inversión de orden, demora de diecisiete minutos, revocación de permiso y ausencia de Federico. Cada resultado vincula versión de OpenAPI o AsyncAPI, esquema JSON, expectativa del consumidor, traza de procedencia y procedimiento operacional. El cierre exige que Lucía distinga rechazo, demora e indeterminación sin llamada privada."
+      "text": "La evolución convive durante treinta transiciones con consumidores antiguos. Un adaptador traduce `asignable` a la señal anterior sólo para usos que no amplían significado; el canal que interpreta todo valor desconocido como error recibe una versión controlada y una fecha de migración. La prueba ejecuta mensaje válido, campo ausente, duplicado, inversión de orden, demora de diecisiete minutos, revocación de permiso y ausencia de Federico.",
+      "source_id": "src-0158"
     },
     {
-      "source_id": "src-0135",
       "kind": "paragraph",
-      "text": "Este artefacto resuelve la continuidad del caso. HH-23 había usado una proyección local para aprender sin bloquear el corte; HH-27 establece ahora nombres, productores, consumidores, temporalidad, invariantes, errores y migración comunes. La diferencia entre ambos pasos queda preservada como decisión: una solución provisoria puede habilitar evidencia limitada, pero no se convierte en contrato institucional hasta que quienes producen, consumen y reparan pueden verificar la misma consecuencia."
+      "text": "Cada resultado vincula versión de OpenAPI o AsyncAPI, esquema JSON, expectativa del consumidor, traza de procedencia y procedimiento operacional. El cierre exige que Lucía distinga rechazo, demora e indeterminación sin llamada privada.",
+      "source_id": "src-0159"
     },
     {
-      "source_id": "src-0136",
+      "kind": "paragraph",
+      "text": "Este artefacto resuelve la continuidad del caso. HH-23 había usado una proyección local para aprender sin bloquear el corte; HH-27 establece ahora nombres, productores, consumidores, temporalidad, invariantes, errores y migración comunes. La diferencia entre ambos pasos queda preservada como decisión: una solución provisoria puede habilitar evidencia limitada, pero no se convierte en contrato institucional hasta que quienes producen, consumen y reparan pueden verificar la misma consecuencia.",
+      "source_id": "src-0160"
+    },
+    {
       "kind": "heading",
-      "text": "### Caso de transferencia: resultados de laboratorio"
+      "text": "### Caso de transferencia: resultados de laboratorio",
+      "source_id": "src-0161"
     },
     {
-      "source_id": "src-0137",
       "kind": "paragraph",
-      "text": "Un laboratorio externo envía resultados a una historia clínica. El esquema es válido, pero urgente, preliminar y corregido no significan lo mismo para todos los actores."
+      "text": "Un laboratorio externo envía resultados a una historia clínica. El esquema es válido, pero urgente, preliminar y corregido no significan lo mismo para todos los actores.",
+      "source_id": "src-0162"
     },
     {
-      "source_id": "src-0138",
       "kind": "paragraph",
-      "text": "El contrato incorpora significado, orden, vigencia, confirmación, corrección y escalamiento clínico. Una prueba técnica no reemplaza la responsabilidad profesional sobre el resultado."
+      "text": "El contrato incorpora significado, orden, vigencia, confirmación, corrección y escalamiento clínico. Una prueba técnica no reemplaza la responsabilidad profesional sobre el resultado.",
+      "source_id": "src-0163"
     },
     {
-      "source_id": "src-0139",
       "kind": "paragraph",
-      "text": "Una corrección recibida después de una decisión clínica no borra el valor anterior. El sistema conserva ambas versiones, identifica cuál vio cada profesional y activa una comunicación proporcional al daño posible. Si «preliminar» se muestra con el mismo tratamiento que «validado», la sintaxis puede ser perfecta y la interfaz inducir una decisión equivocada. La prueba incluye un resultado urgente tardío, una corrección y la ausencia del profesional solicitante para verificar que significado, tiempo y escalamiento forman un único compromiso operacional."
+      "text": "Una corrección recibida después de una decisión clínica no borra el valor anterior. El sistema conserva ambas versiones, identifica cuál vio cada profesional y activa una comunicación proporcional al daño posible. Si «preliminar» se muestra con el mismo tratamiento que «validado», la sintaxis puede ser perfecta y la interfaz inducir una decisión equivocada. La prueba incluye un resultado urgente tardío, una corrección y la ausencia del profesional solicitante para verificar que significado, tiempo y escalamiento forman un único compromiso operacional.",
+      "source_id": "src-0164"
     },
     {
-      "source_id": "src-0140",
       "kind": "paragraph",
-      "text": "HH-27 permite separar interoperabilidad estructural de interoperabilidad operativa."
+      "text": "HH-27 permite separar interoperabilidad estructural de interoperabilidad operativa.",
+      "source_id": "src-0165"
     },
     {
-      "source_id": "src-0141",
       "kind": "heading",
-      "text": "### Contraejemplo: una API documentada"
+      "text": "### Contraejemplo: una API documentada",
+      "source_id": "src-0166"
     },
     {
-      "source_id": "src-0142",
       "kind": "paragraph",
-      "text": "Una organización publica OpenAPI, genera clientes y declara resuelta la integración."
+      "text": "Una organización publica OpenAPI, genera clientes y declara resuelta la integración.",
+      "source_id": "src-0167"
     },
     {
-      "source_id": "src-0143",
       "kind": "paragraph",
-      "text": "Los campos validan, pero nadie acuerda significado, orden, resultado indeterminado ni reparación. La documentación describe la superficie y no el compromiso."
+      "text": "Los campos validan, pero nadie acuerda significado, orden, resultado indeterminado ni reparación. La documentación describe la superficie y no el compromiso.",
+      "source_id": "src-0168"
     },
     {
-      "source_id": "src-0144",
       "kind": "paragraph",
-      "text": "El contrato se completa cuando una falla puede interpretarse y tratarse sin improvisación."
+      "text": "El contrato se completa cuando una falla puede interpretarse y tratarse sin improvisación.",
+      "source_id": "src-0169"
     },
     {
-      "source_id": "src-0145",
       "kind": "heading",
-      "text": "### Prueba integral antes de ampliar compromiso"
+      "text": "### Prueba integral antes de ampliar compromiso",
+      "source_id": "src-0170"
     },
     {
-      "source_id": "src-0146",
       "kind": "paragraph",
-      "text": "La prueba envía una reserva válida, duplica el mensaje, invierte el orden de dos transiciones y demora la confirmación hasta el turno siguiente. Productor y consumidor deben acordar no sólo qué estructura aceptan, sino qué estado queda y qué acción corresponde en cada resultado."
+      "text": "La prueba envía una reserva válida, duplica el mensaje, invierte el orden de dos transiciones y demora la confirmación hasta el turno siguiente. Productor y consumidor deben acordar no sólo qué estructura aceptan, sino qué estado queda y qué acción corresponde en cada resultado.",
+      "source_id": "src-0171"
     },
     {
-      "source_id": "src-0147",
       "kind": "paragraph",
-      "text": "Lucía intenta entregar la habitación mientras Federico observa trazas y Ricardo evalúa la continuidad operacional. La prueba verifica que un tiempo de espera agotado no se convierta en rechazo, que el reintento no duplique capacidad y que una versión nueva conviva con la anterior durante la migración."
+      "text": "Lucía intenta entregar la habitación mientras Federico observa trazas y Ricardo evalúa la continuidad operacional. La prueba verifica que un tiempo de espera agotado no se convierta en rechazo, que el reintento no duplique capacidad y que una versión nueva conviva con la anterior durante la migración.",
+      "source_id": "src-0172"
     },
     {
-      "source_id": "src-0148",
       "kind": "paragraph",
-      "text": "N27 aprueba cuando la operación puede distinguir error, espera e indeterminación y puede reconciliar sin inventar el significado. Una API documentada que deja esa decisión en una llamada privada no constituye un contrato completo."
+      "text": "N27 aprueba cuando la operación puede distinguir error, espera e indeterminación y puede reconciliar sin inventar el significado. Una API documentada que deja esa decisión en una llamada privada no constituye un contrato completo.",
+      "source_id": "src-0173"
     },
     {
-      "source_id": "src-0149",
       "kind": "heading",
-      "text": "## Errores frecuentes"
+      "text": "## Errores frecuentes",
+      "source_id": "src-0174"
     },
     {
-      "source_id": "src-0150",
       "kind": "heading",
-      "text": "### Confundir sintaxis con acuerdo"
+      "text": "### Confundir sintaxis con acuerdo",
+      "source_id": "src-0175"
     },
     {
-      "source_id": "src-0151",
       "kind": "paragraph",
-      "text": "Dos sistemas pueden validar el mismo JSON y asignar consecuencias distintas a «confirmada». La conformidad estructural es necesaria, pero no prueba un entendimiento común."
+      "text": "Dos sistemas pueden validar el mismo JSON y asignar consecuencias distintas a «confirmada». La conformidad estructural es necesaria, pero no prueba un entendimiento común.",
+      "source_id": "src-0176"
     },
     {
-      "source_id": "src-0152",
       "kind": "heading",
-      "text": "### Definir estados sin transición"
+      "text": "### Definir estados sin transición",
+      "source_id": "src-0177"
     },
     {
-      "source_id": "src-0153",
       "kind": "paragraph",
-      "text": "Una lista de estados no explica quién puede moverlos, desde dónde ni con qué efecto. El contrato debe impedir transiciones imposibles y hacer visibles las indeterminadas."
+      "text": "Una lista de estados no explica quién puede moverlos, desde dónde ni con qué efecto. El contrato debe impedir transiciones imposibles y hacer visibles las indeterminadas.",
+      "source_id": "src-0178"
     },
     {
-      "source_id": "src-0154",
       "kind": "heading",
-      "text": "### Ignorar tiempo y orden"
+      "text": "### Ignorar tiempo y orden",
+      "source_id": "src-0179"
     },
     {
-      "source_id": "src-0155",
       "kind": "paragraph",
-      "text": "Un mensaje correcto que llega tarde puede invalidar una decisión ya ejecutada. La ventana temporal y el orden forman parte del significado operacional."
+      "text": "Un mensaje correcto que llega tarde puede invalidar una decisión ya ejecutada. La ventana temporal y el orden forman parte del significado operacional.",
+      "source_id": "src-0180"
     },
     {
-      "source_id": "src-0156",
       "kind": "heading",
-      "text": "### Usar el tiempo máximo de espera como decisión"
+      "text": "### Usar el tiempo máximo de espera como decisión",
+      "source_id": "src-0181"
     },
     {
-      "source_id": "src-0157",
       "kind": "paragraph",
-      "text": "El vencimiento sólo indica ausencia de respuesta a tiempo, no rechazo ni éxito. Traducirlo automáticamente a una decisión crea estados falsos difíciles de reconciliar."
+      "text": "El vencimiento sólo indica ausencia de respuesta a tiempo, no rechazo ni éxito. Traducirlo automáticamente a una decisión crea estados falsos difíciles de reconciliar.",
+      "source_id": "src-0182"
     },
     {
-      "source_id": "src-0158",
       "kind": "heading",
-      "text": "### Reintentar sin idempotencia"
+      "text": "### Reintentar sin idempotencia",
+      "source_id": "src-0183"
     },
     {
-      "source_id": "src-0159",
       "kind": "paragraph",
-      "text": "Repetir una operación después de una respuesta perdida puede cobrar, reservar o notificar dos veces. El consumidor necesita una clave y una garantía verificable."
+      "text": "Repetir una operación después de una respuesta perdida puede cobrar, reservar o notificar dos veces. El consumidor necesita una clave y una garantía verificable.",
+      "source_id": "src-0184"
     },
     {
-      "source_id": "src-0160",
       "kind": "heading",
-      "text": "### Devolver errores ambiguos"
+      "text": "### Devolver errores ambiguos",
+      "source_id": "src-0185"
     },
     {
-      "source_id": "src-0161",
       "kind": "paragraph",
-      "text": "«Falló» no permite distinguir rechazo, espera, reintento o escalamiento. Los errores deben expresar estado conocido y próxima acción segura."
+      "text": "«Falló» no permite distinguir rechazo, espera, reintento o escalamiento. Los errores deben expresar estado conocido y próxima acción segura.",
+      "source_id": "src-0186"
     },
     {
-      "source_id": "src-0162",
       "kind": "heading",
-      "text": "### Versionar sin migración"
+      "text": "### Versionar sin migración",
+      "source_id": "src-0187"
     },
     {
-      "source_id": "src-0163",
       "kind": "paragraph",
-      "text": "Publicar una versión nueva sin período de convivencia traslada la coordinación a cada consumidor. La evolución requiere compatibilidad, migración observada y fecha de retiro."
+      "text": "Publicar una versión nueva sin período de convivencia traslada la coordinación a cada consumidor. La evolución requiere compatibilidad, migración observada y fecha de retiro.",
+      "source_id": "src-0188"
     },
     {
-      "source_id": "src-0164",
       "kind": "heading",
-      "text": "### Ocultar trabajo operacional"
+      "text": "### Ocultar trabajo operacional",
+      "source_id": "src-0189"
     },
     {
-      "source_id": "src-0165",
       "kind": "paragraph",
-      "text": "Un contrato puede funcionar porque Lucía corrige a mano los mensajes dudosos. Si esa intervención no se registra, la interfaz parece más confiable de lo que es."
+      "text": "Un contrato puede funcionar porque Lucía corrige a mano los mensajes dudosos. Si esa intervención no se registra, la interfaz parece más confiable de lo que es.",
+      "source_id": "src-0190"
     },
     {
-      "source_id": "src-0166",
       "kind": "heading",
-      "text": "### Probar sólo el camino feliz"
+      "text": "### Probar sólo el camino feliz",
+      "source_id": "src-0191"
     },
     {
-      "source_id": "src-0167",
       "kind": "paragraph",
-      "text": "La conformidad ordinaria no revela duplicados, demora, caída parcial ni cambio de versión. Esos escenarios prueban las garantías que más necesita la operación."
+      "text": "La conformidad ordinaria no revela duplicados, demora, caída parcial ni cambio de versión. Esos escenarios prueban las garantías que más necesita la operación.",
+      "source_id": "src-0192"
     },
     {
-      "source_id": "src-0168",
       "kind": "heading",
-      "text": "### Formalizar significado sin actores"
+      "text": "### Formalizar significado sin actores",
+      "source_id": "src-0193"
     },
     {
-      "source_id": "src-0169",
       "kind": "paragraph",
-      "text": "Una ontología no resuelve desacuerdos si quienes deciden y reparan no participaron. El significado se sostiene en prácticas, autoridad y consecuencias compartidas."
+      "text": "Una ontología no resuelve desacuerdos si quienes deciden y reparan no participaron. El significado se sostiene en prácticas, autoridad y consecuencias compartidas.",
+      "source_id": "src-0194"
     },
     {
-      "source_id": "src-0170",
       "kind": "heading",
-      "text": "## Consecuencias profesionales"
+      "text": "## Consecuencias profesionales",
+      "source_id": "src-0195"
     },
     {
-      "source_id": "src-0171",
       "kind": "paragraph",
-      "text": "N27 convierte una interfaz en compromiso verificable entre productores, consumidores y operación. La competencia profesional no se agota en publicar un esquema: incluye acordar significado, tiempo, efecto, error, evolución y reparación."
+      "text": "N27 convierte una interfaz en compromiso verificable entre productores, consumidores y operación. La competencia profesional no se agota en publicar un esquema: incluye acordar significado, tiempo, efecto, error, evolución y reparación.",
+      "source_id": "src-0196"
     },
     {
-      "source_id": "src-0172",
       "kind": "paragraph",
-      "text": "Esta competencia obliga a diseñar desde el consumidor real. Una respuesta válida para el productor puede llegar tarde, duplicarse o carecer del estado que el turno necesita para decidir. El análisis recorre la cadena completa y pregunta qué interpretación hará cada participante bajo condiciones ordinarias y adversas. En HH-27, el valor `liberada` no se aprueba hasta que Housekeeping, PMS, cerraduras y Recepción puedan reconocer el mismo compromiso o traducir explícitamente sus diferencias. La semántica se prueba mediante decisiones, no mediante definiciones aisladas."
+      "text": "Esta competencia obliga a diseñar desde el consumidor real. Una respuesta válida para el productor puede llegar tarde, duplicarse o carecer del estado que el turno necesita para decidir. El análisis recorre la cadena completa y pregunta qué interpretación hará cada participante bajo condiciones ordinarias y adversas. En HH-27, el valor `liberada` no se aprueba hasta que Housekeeping, PMS, cerraduras y Recepción puedan reconocer el mismo compromiso o traducir explícitamente sus diferencias. La semántica se prueba mediante decisiones, no mediante definiciones aisladas.",
+      "source_id": "src-0197"
     },
     {
-      "source_id": "src-0173",
       "kind": "paragraph",
-      "text": "Los contratos también vuelven visible el costo del cambio. Agregar un campo opcional puede parecer compatible y, sin embargo, alterar una regla de negocio, una firma o una expectativa temporal. La evolución responsable identifica consumidores, versiones y ventanas, mantiene traducciones seguras y conserva evidencia de quién sigue expuesto. Retirar la versión anterior es una decisión operacional que requiere telemetría y autoridad. Si un consumidor desconocido todavía actúa sobre el contrato viejo, declarar finalizada la migración sólo desplaza el incidente."
+      "text": "Los contratos también vuelven visible el costo del cambio. Agregar un campo opcional puede parecer compatible y, sin embargo, alterar una regla de negocio, una firma o una expectativa temporal. La evolución responsable identifica consumidores, versiones y ventanas, mantiene traducciones seguras y conserva evidencia de quién sigue expuesto. Retirar la versión anterior es una decisión operacional que requiere telemetría y autoridad. Si un consumidor desconocido todavía actúa sobre el contrato viejo, declarar finalizada la migración sólo desplaza el incidente.",
+      "source_id": "src-0198"
     },
     {
-      "source_id": "src-0174",
       "kind": "paragraph",
-      "text": "La prueba deja de ser una actividad exclusivamente técnica. Operaciones aporta estados posibles, Recepción muestra decisiones bajo presión y las personas afectadas permiten verificar si el resultado conserva la promesa. Un simulador puede validar formato y secuencia; un episodio real revela autoridad, excepción y reparación. La combinación evita dos falsos positivos: una interfaz que compila pero no coordina significado y una práctica manual que oculta la incompatibilidad mientras una persona experta permanece disponible."
+      "text": "La prueba deja de ser una actividad exclusivamente técnica. Operaciones aporta estados posibles, Recepción muestra decisiones bajo presión y las personas afectadas permiten verificar si el resultado conserva la promesa. Un simulador puede validar formato y secuencia; un episodio real revela autoridad, excepción y reparación. La combinación evita dos falsos positivos: una interfaz que compila pero no coordina significado y una práctica manual que oculta la incompatibilidad mientras una persona experta permanece disponible.",
+      "source_id": "src-0199"
     },
     {
-      "source_id": "src-0175",
       "kind": "heading",
-      "text": "## Límites y tensiones"
+      "text": "## Límites y tensiones",
+      "source_id": "src-0200"
     },
     {
-      "source_id": "src-0176",
       "kind": "paragraph",
-      "text": "Formalizar un contrato reduce ambigüedad, pero también puede congelar un significado inadecuado o imponer al consumidor el costo de evolución. Los acuerdos se revisan cuando cambian prácticas, poblaciones o consecuencias, aun si la interfaz mantiene compatibilidad técnica."
+      "text": "Formalizar un contrato reduce ambigüedad, pero también puede congelar un significado inadecuado o imponer al consumidor el costo de evolución. Los acuerdos se revisan cuando cambian prácticas, poblaciones o consecuencias, aun si la interfaz mantiene compatibilidad técnica.",
+      "source_id": "src-0201"
     },
     {
-      "source_id": "src-0177",
       "kind": "paragraph",
-      "text": "No toda relación necesita el mismo grado de formalidad. Un intercambio exploratorio, reversible y de bajo impacto puede comenzar con ejemplos y observación; una decisión financiera, clínica o de acceso requiere invariantes explícitas, procedencia y manejo de indeterminación. Sobredocumentar una conexión menor puede distraer de contratos críticos, mientras dejar implícita una obligación severa vuelve imposible atribuir responsabilidad. La proporcionalidad se justifica por consecuencia, frecuencia de cambio y dificultad de reparación, no por prestigio de la tecnología utilizada."
+      "text": "No toda relación necesita el mismo grado de formalidad. Un intercambio exploratorio, reversible y de bajo impacto puede comenzar con ejemplos y observación; una decisión financiera, clínica o de acceso requiere invariantes explícitas, procedencia y manejo de indeterminación. Sobredocumentar una conexión menor puede distraer de contratos críticos, mientras dejar implícita una obligación severa vuelve imposible atribuir responsabilidad. La proporcionalidad se justifica por consecuencia, frecuencia de cambio y dificultad de reparación, no por prestigio de la tecnología utilizada.",
+      "source_id": "src-0202"
     },
     {
-      "source_id": "src-0178",
       "kind": "paragraph",
-      "text": "La consistencia presenta una tensión particular. Exigir sincronía total puede reducir disponibilidad y aumentar fragilidad; aceptar estados temporales distintos puede confundir una promesa irreversible. El contrato debe nombrar qué discrepancias son tolerables, durante cuánto tiempo y para qué decisiones. En el hotel, inventario y limpieza pueden converger, pero una llave no debe emitirse mientras la autoridad permanezca indeterminada. El criterio no es uniformidad absoluta, sino preservar invariantes capaces de proteger a la persona durante la transición."
+      "text": "La consistencia presenta una tensión particular. Exigir sincronía total puede reducir disponibilidad y aumentar fragilidad; aceptar estados temporales distintos puede confundir una promesa irreversible. El contrato debe nombrar qué discrepancias son tolerables, durante cuánto tiempo y para qué decisiones. En el hotel, inventario y limpieza pueden converger, pero una llave no debe emitirse mientras la autoridad permanezca indeterminada. El criterio no es uniformidad absoluta, sino preservar invariantes capaces de proteger a la persona durante la transición.",
+      "source_id": "src-0203"
     },
     {
-      "source_id": "src-0179",
       "kind": "paragraph",
-      "text": "La reparación atraviesa fronteras organizacionales. Un productor puede corregir su dato sin deshacer una decisión que el consumidor ya tomó. Por eso el acuerdo incluye identificadores, trazas, compensaciones y comunicación, además del mensaje correcto. Cuando no se sabe si una operación ocurrió, repetir sin idempotencia puede duplicar un cargo y asumir éxito puede abandonar al huésped. Un estado explícito de indeterminación permite detener, investigar y resolver. Negar esa posibilidad sólo la traslada al trabajo informal de quienes atienden la excepción."
+      "text": "La reparación atraviesa fronteras organizacionales. Un productor puede corregir su dato sin deshacer una decisión que el consumidor ya tomó. Por eso el acuerdo incluye identificadores, trazas, compensaciones y comunicación, además del mensaje correcto. Cuando no se sabe si una operación ocurrió, repetir sin idempotencia puede duplicar un cargo y asumir éxito puede abandonar al huésped. Un estado explícito de indeterminación permite detener, investigar y resolver. Negar esa posibilidad sólo la traslada al trabajo informal de quienes atienden la excepción.",
+      "source_id": "src-0204"
     },
     {
-      "source_id": "src-0180",
       "kind": "paragraph",
-      "text": "Finalmente, el lenguaje compartido nunca queda cerrado de una vez. Nuevos productos, regulaciones y prácticas crean casos que los términos originales no anticiparon. La gobernanza semántica conserva ejemplos, decisiones y fecha, y distingue cambiar una definición de corregir un dato. Una versión nueva no reescribe el significado histórico, porque hacerlo impediría comprender incidentes anteriores. Aprender exige saber con qué contrato actuó cada participante y cómo la organización transformó ese acuerdo después de observar sus límites."
+      "text": "Finalmente, el lenguaje compartido nunca queda cerrado de una vez. Nuevos productos, regulaciones y prácticas crean casos que los términos originales no anticiparon. La gobernanza semántica conserva ejemplos, decisiones y fecha, y distingue cambiar una definición de corregir un dato. Una versión nueva no reescribe el significado histórico, porque hacerlo impediría comprender incidentes anteriores. Aprender exige saber con qué contrato actuó cada participante y cómo la organización transformó ese acuerdo después de observar sus límites.",
+      "source_id": "src-0205"
     },
     {
-      "source_id": "src-0181",
       "kind": "heading",
-      "text": "## De N27 a N28"
+      "text": "## De N27 a N28",
+      "source_id": "src-0206"
     },
     {
-      "source_id": "src-0182",
       "kind": "paragraph",
-      "text": "Un contrato verificable delimita comportamiento, pero no decide por sí solo si ese comportamiento ofrece calidad suficiente para todas las poblaciones y consecuencias. N28 transformará las garantías de N27 en escenarios, riesgos, atributos y evidencia de aceptación."
+      "text": "Un contrato verificable delimita comportamiento, pero no decide por sí solo si ese comportamiento ofrece calidad suficiente para todas las poblaciones y consecuencias. N28 transformará las garantías de N27 en escenarios, riesgos, atributos y evidencia de aceptación.",
+      "source_id": "src-0207"
     },
     {
-      "source_id": "src-0183",
       "kind": "heading",
-      "text": "## Síntesis"
+      "text": "## Síntesis",
+      "source_id": "src-0208"
     },
     {
-      "source_id": "src-0184",
       "kind": "paragraph",
-      "text": "Un contrato completo define qué puede circular, qué significa, cuándo sigue vigente y qué ocurre cuando no puede cumplirse. Cada dimensión impide convertir una respuesta técnica en una falsa promesa operacional."
+      "text": "Un contrato completo define qué puede circular, qué significa, cuándo sigue vigente y qué ocurre cuando no puede cumplirse. Cada dimensión impide convertir una respuesta técnica en una falsa promesa operacional.",
+      "source_id": "src-0209"
     },
     {
-      "source_id": "src-0185",
       "kind": "paragraph",
-      "text": "La prueba del acuerdo no es que ambos extremos compilen, sino que puedan manejar duplicados, demora, indeterminación y cambio sin perder invariantes ni capacidad de reparación."
+      "text": "La prueba del acuerdo no es que ambos extremos compilen, sino que puedan manejar duplicados, demora, indeterminación y cambio sin perder invariantes ni capacidad de reparación.",
+      "source_id": "src-0210"
     },
     {
-      "source_id": "src-0186",
       "kind": "paragraph",
-      "text": "Un contrato defendible une especificación y práctica. Define mensajes y estados, pero también quién puede interpretar una excepción, qué evidencia queda y cómo se corrige una consecuencia. Su prueba más exigente combina una versión anterior, demora, repetición y una persona que necesita decidir antes de que el sistema converja. Si productor y consumidor preservan el invariante y la operación puede reconocer la indeterminación, el acuerdo coordina. Si el éxito depende de que alguien conozca una convención no escrita, existe conocimiento local y no contrato. El objetivo no es eliminar toda ambigüedad futura, sino volverla localizable, discutible y reparable antes de que una diferencia semántica se convierta en una promesa falsa."
+      "text": "Un contrato defendible une especificación y práctica. Define mensajes y estados, pero también quién puede interpretar una excepción, qué evidencia queda y cómo se corrige una consecuencia. Su prueba más exigente combina una versión anterior, demora, repetición y una persona que necesita decidir antes de que el sistema converja. Si productor y consumidor preservan el invariante y la operación puede reconocer la indeterminación, el acuerdo coordina.",
+      "source_id": "src-0211"
     },
     {
-      "source_id": "src-0187",
+      "kind": "paragraph",
+      "text": "Si el éxito depende de que alguien conozca una convención no escrita, existe conocimiento local y no contrato. El objetivo no es eliminar toda ambigüedad futura, sino volverla localizable, discutible y reparable antes de que una diferencia semántica se convierta en una promesa falsa.",
+      "source_id": "src-0212"
+    },
+    {
       "kind": "heading",
-      "text": "## Cinco píldoras para recordar"
+      "text": "## Cinco píldoras para recordar",
+      "source_id": "src-0213"
     },
     {
-      "source_id": "src-0188",
       "kind": "list-item",
-      "text": "1. Un mensaje válido puede producir una decisión equivocada cuando las partes no comparten significado."
+      "text": "1. Un mensaje válido puede producir una decisión equivocada cuando las partes no comparten significado.",
+      "source_id": "src-0214"
     },
     {
-      "source_id": "src-0189",
       "kind": "list-item",
-      "text": "2. Orden, demora, duplicación y vencimiento forman parte del contrato aunque no aparezcan en el esquema."
+      "text": "2. Orden, demora, duplicación y vencimiento forman parte del contrato aunque no aparezcan en el esquema.",
+      "source_id": "src-0215"
     },
     {
-      "source_id": "src-0190",
       "kind": "list-item",
-      "text": "3. Un tiempo máximo de espera informa incertidumbre; no autoriza por sí solo a declarar éxito ni fracaso."
+      "text": "3. Un tiempo máximo de espera informa incertidumbre; no autoriza por sí solo a declarar éxito ni fracaso.",
+      "source_id": "src-0216"
     },
     {
-      "source_id": "src-0191",
       "kind": "list-item",
-      "text": "4. La invariante protege la consecuencia que ninguna repetición, reintento o falla parcial puede quebrar."
+      "text": "4. La invariante protege la consecuencia que ninguna repetición, reintento o falla parcial puede quebrar.",
+      "source_id": "src-0217"
     },
     {
-      "source_id": "src-0192",
       "kind": "list-item",
-      "text": "5. Evolucionar un contrato exige probar convivencia, observación y reparación, no sólo compatibilidad de formato."
+      "text": "5. Evolucionar un contrato exige probar convivencia, observación y reparación, no sólo compatibilidad de formato.",
+      "source_id": "src-0218"
     },
     {
-      "source_id": "src-0193",
       "kind": "heading",
-      "text": "## Glosario esencial"
+      "text": "## Glosario esencial",
+      "source_id": "src-0219"
     },
     {
-      "source_id": "src-0194",
       "kind": "paragraph",
-      "text": "**Contrato sintáctico:** un contrato sintáctico define estructura, tipos, obligatoriedad y formato de un intercambio."
+      "text": "**Contrato sintáctico:** un contrato sintáctico define estructura, tipos, obligatoriedad y formato de un intercambio.",
+      "source_id": "src-0220"
     },
     {
-      "source_id": "src-0195",
       "kind": "paragraph",
-      "text": "**Contrato semántico:** un contrato semántico acuerda qué significa cada dato, estado y transición en un contexto de decisión."
+      "text": "**Contrato semántico:** un contrato semántico acuerda qué significa cada dato, estado y transición en un contexto de decisión.",
+      "source_id": "src-0221"
     },
     {
-      "source_id": "src-0196",
       "kind": "paragraph",
-      "text": "**Contrato temporal:** un contrato temporal define ventanas, orden, vigencia, latencia y tratamiento de demora."
+      "text": "**Contrato temporal:** un contrato temporal define ventanas, orden, vigencia, latencia y tratamiento de demora.",
+      "source_id": "src-0222"
     },
     {
-      "source_id": "src-0197",
       "kind": "paragraph",
-      "text": "**Contrato operacional:** un contrato operacional define efectos, errores, escalamiento, observación y reparación alrededor de una interfaz."
+      "text": "**Contrato operacional:** un contrato operacional define efectos, errores, escalamiento, observación y reparación alrededor de una interfaz.",
+      "source_id": "src-0223"
     },
     {
-      "source_id": "src-0198",
       "kind": "paragraph",
-      "text": "**Precondición y poscondición:** precondición y poscondición declaran qué debe ser cierto antes y después de una operación."
+      "text": "**Precondición y poscondición:** precondición y poscondición declaran qué debe ser cierto antes y después de una operación.",
+      "source_id": "src-0224"
     },
     {
-      "source_id": "src-0199",
       "kind": "paragraph",
-      "text": "**Invariante:** una invariante es una condición que debe preservarse a través de operaciones y fallas."
+      "text": "**Invariante:** una invariante es una condición que debe preservarse a través de operaciones y fallas.",
+      "source_id": "src-0225"
     },
     {
-      "source_id": "src-0200",
       "kind": "paragraph",
-      "text": "**Idempotencia:** idempotencia permite repetir una operación sin multiplicar su efecto material."
+      "text": "**Idempotencia:** idempotencia permite repetir una operación sin multiplicar su efecto material.",
+      "source_id": "src-0226"
     },
     {
-      "source_id": "src-0201",
       "kind": "paragraph",
-      "text": "**Contrato de error:** un contrato de error clasifica fallas, incertidumbre y respuestas que productores y consumidores pueden manejar."
+      "text": "**Contrato de error:** un contrato de error clasifica fallas, incertidumbre y respuestas que productores y consumidores pueden manejar.",
+      "source_id": "src-0227"
     },
     {
-      "source_id": "src-0202",
       "kind": "paragraph",
-      "text": "**Evolución compatible:** evolución compatible permite cambiar un contrato sin quebrar consumidores existentes ni congelar el servicio."
+      "text": "**Evolución compatible:** evolución compatible permite cambiar un contrato sin quebrar consumidores existentes ni congelar el servicio.",
+      "source_id": "src-0228"
     },
     {
-      "source_id": "src-0203",
       "kind": "paragraph",
-      "text": "**Contrato de datos:** un contrato de datos acuerda significado, calidad, responsabilidad, privacidad y cambio de un producto de datos."
+      "text": "**Contrato de datos:** un contrato de datos acuerda significado, calidad, responsabilidad, privacidad y cambio de un producto de datos.",
+      "source_id": "src-0229"
     },
     {
-      "source_id": "src-0204",
       "kind": "paragraph",
-      "text": "**Contrato de seguridad:** un contrato de seguridad define identidad, autorización, confidencialidad, integridad y evidencia de acceso."
+      "text": "**Contrato de seguridad:** un contrato de seguridad define identidad, autorización, confidencialidad, integridad y evidencia de acceso.",
+      "source_id": "src-0230"
     },
     {
-      "source_id": "src-0205",
       "kind": "paragraph",
-      "text": "**Prueba de contrato:** una prueba de contrato verifica acuerdos relevantes desde la perspectiva del productor, del consumidor y de la operación."
+      "text": "**Prueba de contrato:** una prueba de contrato verifica acuerdos relevantes desde la perspectiva del productor, del consumidor y de la operación.",
+      "source_id": "src-0231"
     },
     {
-      "source_id": "src-0206",
       "kind": "heading",
-      "text": "## Preguntas de preparación"
+      "text": "## Preguntas de preparación",
+      "source_id": "src-0232"
     },
     {
-      "source_id": "src-0207",
       "kind": "list-item",
-      "text": "1. ¿Qué parte de un intercambio actual está definida sólo por costumbre y no por un contrato verificable?"
+      "text": "1. ¿Qué parte de un intercambio actual está definida sólo por costumbre y no por un contrato verificable?",
+      "source_id": "src-0233"
     },
     {
-      "source_id": "src-0208",
       "kind": "list-item",
-      "text": "2. ¿Qué estado comparte nombre entre dos áreas pero habilita decisiones diferentes?"
+      "text": "2. ¿Qué estado comparte nombre entre dos áreas pero habilita decisiones diferentes?",
+      "source_id": "src-0234"
     },
     {
-      "source_id": "src-0209",
       "kind": "list-item",
-      "text": "3. ¿Qué debería ocurrir cuando un mensaje correcto llega después de que la operación tomó otra decisión?"
+      "text": "3. ¿Qué debería ocurrir cuando un mensaje correcto llega después de que la operación tomó otra decisión?",
+      "source_id": "src-0235"
     },
     {
-      "source_id": "src-0210",
       "kind": "list-item",
-      "text": "4. ¿Cómo distingue el consumidor rechazo, demora e indeterminación, y qué acción segura asocia a cada caso?"
+      "text": "4. ¿Cómo distingue el consumidor rechazo, demora e indeterminación, y qué acción segura asocia a cada caso?",
+      "source_id": "src-0236"
     },
     {
-      "source_id": "src-0211",
       "kind": "list-item",
-      "text": "5. ¿Qué invariante no puede quebrarse aunque una operación se repita o falle a mitad de camino?"
+      "text": "5. ¿Qué invariante no puede quebrarse aunque una operación se repita o falle a mitad de camino?",
+      "source_id": "src-0237"
     },
     {
-      "source_id": "src-0212",
       "kind": "list-item",
-      "text": "6. ¿Cómo se probará una nueva versión mientras convive con consumidores que todavía usan la anterior?"
+      "text": "6. ¿Cómo se probará una nueva versión mientras convive con consumidores que todavía usan la anterior?",
+      "source_id": "src-0238"
     },
     {
-      "source_id": "src-0213",
       "kind": "paragraph",
-      "text": "Para el encuentro, elegir un intercambio real o utilizar el contrato `asignable` completado en HH-27. Revisar sintaxis, semántica, temporalidad y error, y preparar un caso duplicado o tardío que permita comprobar la garantía operacional."
+      "text": "Para el encuentro, elegir un intercambio real o utilizar el contrato `asignable` completado en HH-27. Revisar sintaxis, semántica, temporalidad y error, y preparar un caso duplicado o tardío que permita comprobar la garantía operacional.",
+      "source_id": "src-0239"
     },
     {
-      "source_id": "src-0214",
       "kind": "heading",
-      "text": "## Referentes"
+      "text": "## Referentes",
+      "source_id": "src-0240"
     },
     {
-      "source_id": "src-0215",
       "kind": "paragraph",
-      "text": "**Roy T. Fielding.** Fundamenta las restricciones de REST y la semántica de las interacciones distribuidas más allá del formato de un mensaje."
+      "text": "**Roy T. Fielding.** Fundamenta las restricciones de REST y la semántica de las interacciones distribuidas más allá del formato de un mensaje.",
+      "source_id": "src-0241"
     },
     {
-      "source_id": "src-0216",
       "kind": "paragraph",
-      "text": "**Martin Fowler.** Conecta contratos de aplicación, transacciones y evolución de interfaces con consecuencias operativas."
+      "text": "**Martin Fowler.** Conecta contratos de aplicación, transacciones y evolución de interfaces con consecuencias operativas.",
+      "source_id": "src-0242"
     },
     {
-      "source_id": "src-0217",
       "kind": "paragraph",
-      "text": "**David Parnas.** Muestra que una frontera modular debe proteger decisiones de diseño y reducir el alcance de los cambios."
+      "text": "**David Parnas.** Muestra que una frontera modular debe proteger decisiones de diseño y reducir el alcance de los cambios.",
+      "source_id": "src-0243"
     },
     {
-      "source_id": "src-0218",
       "kind": "paragraph",
-      "text": "**Leslie Lamport.** Establece bases para razonar sobre tiempo, orden causal y coordinación en sistemas distribuidos."
+      "text": "**Leslie Lamport.** Establece bases para razonar sobre tiempo, orden causal y coordinación en sistemas distribuidos.",
+      "source_id": "src-0244"
     },
     {
-      "source_id": "src-0219",
       "kind": "paragraph",
-      "text": "**Werner Vogels.** Expone los compromisos prácticos de consistencia, disponibilidad y evolución en servicios distribuidos."
+      "text": "**Werner Vogels.** Expone los compromisos prácticos de consistencia, disponibilidad y evolución en servicios distribuidos.",
+      "source_id": "src-0245"
     },
     {
-      "source_id": "src-0220",
       "kind": "paragraph",
-      "text": "**Jim Gray.** Sistematiza transacciones, recuperación y garantías que permiten distinguir un mensaje recibido de una operación concluida."
+      "text": "**Jim Gray.** Sistematiza transacciones, recuperación y garantías que permiten distinguir un mensaje recibido de una operación concluida.",
+      "source_id": "src-0246"
     },
     {
-      "source_id": "src-0221",
       "kind": "heading",
-      "text": "## Referencias base"
+      "text": "## Referencias base",
+      "source_id": "src-0247"
     },
     {
-      "source_id": "src-0222",
       "kind": "list-item",
-      "text": "- Fielding, R. T., Nottingham, M. y Reschke, J. (2022). *RFC 9110: HTTP Semantics*. RFC Editor. https://www.rfc-editor.org/rfc/rfc9110.html"
+      "text": "- Fielding, R. T., Nottingham, M. y Reschke, J. (2022). *RFC 9110: HTTP Semantics*. RFC Editor. https://www.rfc-editor.org/rfc/rfc9110.html",
+      "source_id": "src-0248"
     },
     {
-      "source_id": "src-0223",
       "kind": "list-item",
-      "text": "- OpenAPI Initiative (2025). *OpenAPI Specification 3.2.0*. https://spec.openapis.org/oas/v3.2.0.html"
+      "text": "- OpenAPI Initiative (2025). *OpenAPI Specification 3.2.0*. https://spec.openapis.org/oas/v3.2.0.html",
+      "source_id": "src-0249"
     },
     {
-      "source_id": "src-0224",
       "kind": "list-item",
-      "text": "- JSON Schema (2022). *Draft 2020-12*. https://json-schema.org/draft/2020-12"
+      "text": "- JSON Schema (2022). *Draft 2020-12*. https://json-schema.org/draft/2020-12",
+      "source_id": "src-0250"
     },
     {
-      "source_id": "src-0225",
       "kind": "list-item",
-      "text": "- Evans, E. (2003). *Domain-Driven Design: Tackling Complexity in the Heart of Software*. Addison-Wesley."
+      "text": "- Evans, E. (2003). *Domain-Driven Design: Tackling Complexity in the Heart of Software*. Addison-Wesley.",
+      "source_id": "src-0251"
     },
     {
-      "source_id": "src-0226",
       "kind": "list-item",
-      "text": "- Kleppmann, M. (2017). *Designing Data-Intensive Applications*. O’Reilly Media."
+      "text": "- Kleppmann, M. (2017). *Designing Data-Intensive Applications*. O’Reilly Media.",
+      "source_id": "src-0252"
     },
     {
-      "source_id": "src-0227",
       "kind": "list-item",
-      "text": "- Hohpe, G. y Woolf, B. (2003). *Enterprise Integration Patterns*. Addison-Wesley."
+      "text": "- Hohpe, G. y Woolf, B. (2003). *Enterprise Integration Patterns*. Addison-Wesley.",
+      "source_id": "src-0253"
     },
     {
-      "source_id": "src-0228",
       "kind": "list-item",
-      "text": "- Fowler, M. (2002). *Patterns of Enterprise Application Architecture*. Addison-Wesley."
+      "text": "- Fowler, M. (2002). *Patterns of Enterprise Application Architecture*. Addison-Wesley.",
+      "source_id": "src-0254"
     },
     {
-      "source_id": "src-0229",
       "kind": "list-item",
-      "text": "- AsyncAPI Initiative (2026). *AsyncAPI Specification, Version 3.1.0*. https://www.asyncapi.com/docs/reference/specification/v3.1.0"
+      "text": "- AsyncAPI Initiative (2026). *AsyncAPI Specification, Version 3.1.0*. https://www.asyncapi.com/docs/reference/specification/v3.1.0",
+      "source_id": "src-0255"
     },
     {
-      "source_id": "src-0230",
       "kind": "list-item",
-      "text": "- W3C Provenance Working Group (2013). *PROV-Overview: An Overview of the PROV Family of Documents*. https://www.w3.org/TR/prov-overview/"
+      "text": "- W3C Provenance Working Group (2013). *PROV-Overview: An Overview of the PROV Family of Documents*. https://www.w3.org/TR/prov-overview/",
+      "source_id": "src-0256"
     },
     {
-      "source_id": "src-0231",
       "kind": "list-item",
-      "text": "- Fielding, R. T. (2000). *Architectural Styles and the Design of Network-based Software Architectures*. University of California, Irvine. https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm"
+      "text": "- Fielding, R. T. (2000). *Architectural Styles and the Design of Network-based Software Architectures*. University of California, Irvine. https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm",
+      "source_id": "src-0257"
     },
     {
-      "source_id": "src-0232",
       "kind": "list-item",
-      "text": "- Rose, S., Borchert, O., Mitchell, S. y Connelly, S. (2020). *Zero Trust Architecture*. NIST SP 800-207. https://doi.org/10.6028/NIST.SP.800-207"
+      "text": "- Rose, S., Borchert, O., Mitchell, S. y Connelly, S. (2020). *Zero Trust Architecture*. NIST SP 800-207. https://doi.org/10.6028/NIST.SP.800-207",
+      "source_id": "src-0258"
     },
     {
-      "source_id": "src-0233",
       "kind": "list-item",
-      "text": "- Pact Foundation (2026). *Consumer Driven Contract Testing*. https://docs.pact.io/"
+      "text": "- Pact Foundation (2026). *Consumer Driven Contract Testing*. https://docs.pact.io/",
+      "source_id": "src-0259"
     },
     {
-      "source_id": "src-0234",
       "kind": "list-item",
-      "text": "- Parnas, D. L. (1972). “On the Criteria to Be Used in Decomposing Systems into Modules”. *Communications of the ACM*, 15(12), 1053–1058. https://doi.org/10.1145/361598.361623"
+      "text": "- Parnas, D. L. (1972). “On the Criteria to Be Used in Decomposing Systems into Modules”. *Communications of the ACM*, 15(12), 1053-1058. https://doi.org/10.1145/361598.361623",
+      "source_id": "src-0260"
     },
     {
-      "source_id": "src-0235",
       "kind": "list-item",
-      "text": "- Lamport, L. (1978). “Time, Clocks, and the Ordering of Events in a Distributed System”. *Communications of the ACM*, 21(7), 558–565. https://doi.org/10.1145/359545.359563"
+      "text": "- Lamport, L. (1978). “Time, Clocks, and the Ordering of Events in a Distributed System”. *Communications of the ACM*, 21(7), 558-565. https://doi.org/10.1145/359545.359563",
+      "source_id": "src-0261"
     },
     {
-      "source_id": "src-0236",
       "kind": "list-item",
-      "text": "- Vogels, W. (2009). “Eventually Consistent”. *Communications of the ACM*, 52(1), 40–44. https://doi.org/10.1145/1435417.1435432"
+      "text": "- Vogels, W. (2009). “Eventually Consistent”. *Communications of the ACM*, 52(1), 40-44. https://doi.org/10.1145/1435417.1435432",
+      "source_id": "src-0262"
     },
     {
-      "source_id": "src-0237",
       "kind": "list-item",
-      "text": "- Gray, J. y Reuter, A. (1992). *Transaction Processing: Concepts and Techniques*. Morgan Kaufmann."
+      "text": "- Gray, J. y Reuter, A. (1992). *Transaction Processing: Concepts and Techniques*. Morgan Kaufmann.",
+      "source_id": "src-0263"
+    },
+    {
+      "kind": "list-item",
+      "text": "- Winograd, T. y Flores, F. (1986). *Understanding Computers and Cognition: A New Foundation for Design*. Ablex.",
+      "source_id": "src-0264"
     }
-  ],
-  "block_count": 237,
-  "word_count": 7740
+  ]
 }

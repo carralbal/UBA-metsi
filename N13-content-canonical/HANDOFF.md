@@ -2,11 +2,11 @@
 
 ## Estado
 
-N13 quedó desarrollado y auditado sólo como contenido. No hay PDF, HTML, CSS, imágenes ni decisiones de maqueta.
+N13 quedó desarrollado y auditado sólo como contenido. La revisión de lenguaje llano cerró en la versión v2. No hay cambios en PDF, HTML, CSS, imágenes ni decisiones de maqueta.
 
 Fuente autorizada:
 
-`N13-content-canonical/source/N13_demoras_concurrencia_consistencia_idempotencia_y_reconciliacion-content-canonical-v1.md`
+`N13-content-canonical/source/N13_demoras_concurrencia_consistencia_idempotencia_y_reconciliacion-content-canonical-v2.md`
 
 ## Función y artefacto
 

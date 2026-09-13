@@ -101,6 +101,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--expected-h3", type=int, default=12)
     parser.add_argument("--expected-movements", type=int, default=3)
     parser.add_argument("--expected-questions", type=int, default=6)
+    parser.add_argument("--min-paragraph-mean", type=float, default=35)
     parser.add_argument("--skip-referents", action="store_true")
     parser.add_argument("--skip-hotel-names", action="store_true")
     parser.add_argument("--term", action="append", default=[])
@@ -145,7 +146,7 @@ def main() -> None:
         "no_placeholders": re.search(r"\b(?:TBD|LOREM|XXX)\b|\[(?:pendiente|completar|insertar)", text, re.I) is None,
         "no_incidental_dashes": not incidental_dashes(text),
         "readability_signal_low": row.automatic_signal == "BAJA",
-        "paragraph_mean": 35 <= row.avg_paragraph_words <= 55,
+        "paragraph_mean": args.min_paragraph_mean <= row.avg_paragraph_words <= 55,
         "paragraph_p90": row.p90_paragraph_words <= 85,
         "sentence_p90": row.p90_sentence_words <= 30,
         "very_long_paragraphs_absent": row.very_long_paragraphs_pct == 0,
