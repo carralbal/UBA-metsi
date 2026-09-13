@@ -44,17 +44,18 @@ Además debe obtener señal automática `BAJA`, párrafo medio entre 35 y 55 pal
 | N34 | canónica v4 | cerrada en fuente | pasa |
 | N35 | canónica v4 | cerrada en fuente | pasa |
 | N36 | canónica v5 | patrón aprobado | pasa |
+| N20 | canónica v4 | cerrada en fuente | pasa |
+| N17 | canónica v4 | cerrada en fuente | pasa |
 
-Resultado del tramo N31 a N36: seis de seis fuentes con señal `BAJA`; ninguna conserva señal `ALTA`.
+Resultado acumulado: ocho fuentes cerradas con señal `BAJA`; ninguna conserva señal `ALTA`.
 
 ## Orden restante
 
-1. N20 y N17, porque acumulan marcos y decisiones metodológicas.
-2. N21, N22 y N23, para cuidar la secuencia proyecto, hipótesis y capacidad.
-3. N29 y N15, por gobierno de despliegue y selección de modelos.
-4. N00, N02 y N10.
-5. N11, N12, N14 y N16.
-6. N18, N19, N24, N25, N26 y N30.
-7. N01, N03, N04, N05, N06, N07, N08, N09, N13, N27 y N28, con intervención mínima y guarda estricta.
+1. N21, N22 y N23, para cuidar la secuencia proyecto, hipótesis y capacidad.
+2. N29 y N15, por gobierno de despliegue y selección de modelos.
+3. N00, N02 y N10.
+4. N11, N12, N14 y N16.
+5. N18, N19, N24, N25, N26 y N30.
+6. N01, N03, N04, N05, N06, N07, N08, N09, N13, N27 y N28, con intervención mínima y guarda estricta.
 
 La regeneración editorial comienza sólo cuando las 37 fuentes hayan cerrado esta revisión.
