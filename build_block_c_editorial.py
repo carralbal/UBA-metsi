@@ -248,6 +248,11 @@ APPROVED_INFOGRAPHICS = {
     },
 }
 
+# Exceptionally dense maps need an independent reading surface. N34 keeps the
+# deferred placement for its unusually dense vertical plate; N11 remains a
+# readable thesis companion after its candidate-specific scale correction.
+DEFERRED_INFOGRAPHIC_DOCS = {34}
+
 # N11 is the first reconstruction pilot. Colour is reserved for source-relevant
 # evidence on a white surface and for one full-page reading pause. Contents and
 # recurring apparatus remain neutral, matching the approved N00–N10 language.
@@ -498,31 +503,63 @@ HOTEL_ASSET_SOURCES = {
 }
 
 def canonical_source(number: int) -> Path:
-    """Resolve the exact academically approved source and verify its digest.
+    """Resolve the current audited canonical source and verify its digest.
 
-    Editorial version numbers and content version numbers are intentionally
-    independent. Selecting the largest filename suffix silently skipped the
-    audited v3 sources, so v8 is pinned to the collection-level approval
-    manifest instead of relying on glob order.
+    Each canonical package owns the authoritative pointer to its current
+    source.  This keeps editorial version numbers independent from content
+    version numbers and, unlike filename ordering or the historical v8
+    approval manifest, follows the completed plain-language revision.
     """
-    if not ACADEMIC_REVISION_MANIFEST.is_file():
-        raise FileNotFoundError(ACADEMIC_REVISION_MANIFEST)
-    approval = json.loads(ACADEMIC_REVISION_MANIFEST.read_text(encoding="utf-8"))
-    records = {item["code"]: item for item in approval["documents"]}
     code = f"N{number:02d}"
-    if code not in records:
-        raise RuntimeError(f"La aprobación académica no contiene {code}")
-    record = records[code]
-    source = ROOT / record["source"]
+    package_root = ROOT / f"{code}-content-canonical"
+    source_manifest = package_root / "source-manifest.json"
+    if not source_manifest.is_file():
+        raise FileNotFoundError(source_manifest)
+    record = json.loads(source_manifest.read_text(encoding="utf-8"))
+    if record.get("document") != code:
+        raise RuntimeError(f"El manifiesto canónico no corresponde a {code}")
+    source = package_root / record["source"]
     if not source.is_file():
         raise FileNotFoundError(source)
     digest = hashlib.sha256(source.read_bytes()).hexdigest()
-    if digest != record["sha256"]:
-        raise RuntimeError(f"La fuente {code} cambió después de la auditoría académica")
+    expected_digest = record.get("source_sha256") or record.get("sha256")
+    if not expected_digest:
+        raise RuntimeError(f"El manifiesto canónico de {code} no declara SHA-256")
+    if digest != expected_digest:
+        raise RuntimeError(f"La fuente {code} cambió después de la auditoría canónica")
     return source
 
 
 SOURCES = {n: canonical_source(n) for n in range(11, 37)}
+
+
+def editorial_primary_titles(number: int) -> set[str]:
+    """Return the approved top-level section titles for the editorial system.
+
+    The plain-language pass promoted a few pedagogical signposts from level
+    three to level two so they stand out in Markdown.  They remain subsections
+    in the magazine: treating every promoted signpost as a new numbered
+    section creates isolated pages and breaks the established N00-N10 rhythm.
+    The last approved academic source provides the stable section spine.
+    """
+    approval = json.loads(ACADEMIC_REVISION_MANIFEST.read_text(encoding="utf-8"))
+    records = {item["code"]: item for item in approval["documents"]}
+    code = f"N{number:02d}"
+    source = ROOT / records[code]["source"]
+    _title, sections = base.parse_source(source)
+    return {section.title for section in sections}
+
+
+def coalesce_editorial_sections(number: int, sections: list[base.Section]) -> list[base.Section]:
+    """Keep the canonical section spine while preserving every source heading."""
+    primary = editorial_primary_titles(number)
+    result: list[base.Section] = []
+    for section in sections:
+        if section.title in primary or not result:
+            result.append(base.Section(section.title, list(section.lines)))
+            continue
+        result[-1].lines.extend(["", f"### {section.title}", *section.lines])
+    return result
 
 # Movement prose normally flows as continuous magazine text.  Five measured
 # endings are long enough to constitute a complete final argument but too short
@@ -1725,7 +1762,8 @@ def icon_strip(section: base.Section) -> str:
 
 def build(number: int) -> dict:
     source = SOURCES[number]
-    title, all_sections = base.parse_source(source)
+    title, parsed_sections = base.parse_source(source)
+    all_sections = coalesce_editorial_sections(number, parsed_sections)
     # The previous approved package is the immutable visual baseline. v9 receives
     # copies of its assets and never mutates the published package in place.
     legacy = ROOT / f"N{number:02d}-v{BASELINE_VERSION}-editorial"
@@ -1961,7 +1999,7 @@ def build(number: int) -> dict:
                         f'<figcaption>{html.escape(diagram.get("caption", diagram["claim"]))}</figcaption>'
                         '</figure></section>'
                     )
-                    if number == 34:
+                    if number in DEFERRED_INFOGRAPHIC_DOCS:
                         # The N34 plate carries more semantic density than a
                         # compact thesis companion can sustain.  Let the thesis
                         # share its page with the short bridge that follows and
@@ -2090,7 +2128,7 @@ def build(number: int) -> dict:
             if section.title == "Tesis" and after_section
             else f'{section_core}{after_section}'
         )
-        if number == 34 and index == 5 and deferred_infographic_html:
+        if number in DEFERRED_INFOGRAPHIC_DOCS and index == 5 and deferred_infographic_html:
             section_html += deferred_infographic_html
             deferred_infographic_html = ""
         if index == 1:
@@ -2210,7 +2248,8 @@ def build(number: int) -> dict:
         "source": f"source/{source.name}",
         "source_sha256": sha(source),
         "source_words": len(re.findall(r"\b[\wÁÉÍÓÚÜÑáéíóúüñ'-]+\b", source.read_text(encoding="utf-8"))),
-        "content_audit": "academic-content-revision-n11-n36-audited-pass",
+        "content_audit": "plain-language-canonical-source-audited-pass",
+        "editorial_spine": "academic-content-revision-n11-n36-audited-pass",
         "cover": {"file": cover.name, "source": f"assets/{cover.name}", "sha256": sha(cover), "alt": COVER_ALTS[number], "photographic_origin": "native_black_and_white", "render_treatment": "no_grayscale_conversion"},
         "internal_images": ["pause-01.png", "pause-02.png", hotel_horizonte_asset.name] + sorted({path.name for path in support}) + ([story_asset.name] if story_asset else []),
         "image_manifest": [
@@ -3728,6 +3767,43 @@ body.block-c .thesis-infographic-page .approved-infographic-page img{
   flex:1 1 auto!important;height:100%!important;max-height:118mm!important
 }
 body.block-c .thesis-infographic-page .approved-infographic-page figcaption{margin-top:2mm!important}
+
+/* N11 is the editorial master for the readable rebuild.  Keep its compact
+   thesis and decision map on one page, but give the map enough physical width
+   for labels to remain legible in print. */
+body.block-c.document-n11 .thesis-infographic-page{
+  grid-template-rows:128mm minmax(0,1fr)!important;gap:3mm!important
+}
+body.block-c.document-n11 .thesis-infographic-page .block-c-thesis{
+  height:128mm!important;padding:4mm 6mm!important
+}
+body.block-c.document-n11 .thesis-infographic-page .block-c-thesis .section-heading{
+  margin-bottom:2mm!important
+}
+body.block-c.document-n11 .thesis-infographic-page .block-c-thesis .section-lead p{
+  font-size:14.6pt!important;line-height:1.2!important
+}
+body.block-c.document-n11 .thesis-infographic-page .block-c-thesis .section-body:not(.section-lead){
+  font-size:9.7pt!important;line-height:1.28!important
+}
+body.block-c.document-n11 .thesis-infographic-page .approved-infographic-page{
+  padding:3mm 5mm 4mm!important
+}
+body.block-c.document-n11 .thesis-infographic-page .approved-infographic-page header{
+  padding-top:2mm!important
+}
+body.block-c.document-n11 .thesis-infographic-page .approved-infographic-page header p{
+  margin-top:2mm!important;font-size:11.8pt!important;line-height:1.14!important
+}
+body.block-c.document-n11 .thesis-infographic-page .approved-infographic-page figure{
+  margin-top:2mm!important;align-items:center!important
+}
+body.block-c.document-n11 .thesis-infographic-page .approved-infographic-page img{
+  flex:none!important;width:128mm!important;height:auto!important;max-height:79mm!important
+}
+body.block-c.document-n11 .thesis-infographic-page .approved-infographic-page figcaption{
+  margin-top:1.5mm!important;font-size:6.7pt!important;line-height:1.18!important
+}
 
 /* Recurring study apparatus uses content-driven height. No page is filled by
    enlarged gaps, a forced 236 mm card or a decorative photograph. */

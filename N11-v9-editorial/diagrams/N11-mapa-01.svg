@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100" role="img" aria-labelledby="title desc">
+  <title id="title">N11, la fuerza del dato depende del expediente</title>
+  <desc id="desc">Un dato disponible entra en un expediente de sostén de tres capas: afirmación, rastro y límite. El expediente conduce a una puerta de decisión que distingue lo que la evidencia autoriza de lo que todavía exige revisar. Un retorno inferior muestra que la nueva evidencia vuelve al expediente.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#6F716E"/>
+    </marker>
+    <style>
+      .sans{font-family:Inter,Arial,Helvetica,sans-serif;fill:#202020}
+      .serif{font-family:Georgia,'Times New Roman',serif;fill:#202020}
+      .eyebrow{font-size:25px;font-weight:700;letter-spacing:7px}
+      .title{font-size:60px;letter-spacing:-1.6px}
+      .subtitle{font-size:27px;fill:#5F615E}
+      .section{font-size:25px;font-weight:700;letter-spacing:4px}
+      .label{font-size:29px;font-weight:700}
+      .body{font-size:24px;fill:#4F514E}
+      .small{font-size:20px;fill:#666864}
+      .number{font-size:22px;font-weight:700;letter-spacing:3px}
+      .outline{fill:none;stroke:#777A76;stroke-width:2.2}
+      .rule{stroke:#A9ABA7;stroke-width:2}
+      .route{fill:none;stroke:#6F716E;stroke-width:3;marker-end:url(#arrow)}
+      .return{fill:none;stroke:#8A8C88;stroke-width:2.5;stroke-dasharray:7 10;marker-end:url(#arrow)}
+    </style>
+  </defs>
+
+  <rect width="1800" height="1100" fill="#F7F7F4"/>
+  <rect x="36" y="36" width="1728" height="1028" rx="20" fill="none" stroke="#C6C8C4" stroke-width="2"/>
+
+  <path d="M72 74 H210 L196 94 H58 Z" fill="#CFFF00"/>
+  <text x="238" y="94" class="sans eyebrow">N11 · INSTRUMENTO DE DECISIÓN</text>
+  <text x="72" y="170" class="serif title">La fuerza del dato depende del expediente</text>
+  <text x="74" y="214" class="sans subtitle">La evidencia no es una cifra aislada: es una relación reconstruible entre afirmación, rastro, límite y decisión.</text>
+  <line x1="72" y1="248" x2="1728" y2="248" class="rule"/>
+
+  <text x="86" y="306" class="sans section">DATO DISPONIBLE</text>
+  <g aria-label="Dato disponible">
+    <path d="M92 380 L206 330 L322 380 L208 432 Z" fill="#FFFFFF" stroke="#777A76" stroke-width="2.2"/>
+    <path d="M92 380 L208 432 L208 548 L92 496 Z" fill="#ECEDEA" stroke="#777A76" stroke-width="2.2"/>
+    <path d="M208 432 L322 380 L322 496 L208 548 Z" fill="#DADCD8" stroke="#777A76" stroke-width="2.2"/>
+    <circle cx="322" cy="436" r="10" fill="#CFFF00" stroke="#202020" stroke-width="2"/>
+    <text x="92" y="595" class="sans label">Valor, estado o tasa</text>
+    <text x="92" y="630" class="sans body">todavía no es evidencia</text>
+  </g>
+
+  <path d="M336 436 H430" class="route"/>
+
+  <text x="448" y="306" class="sans section">EXPEDIENTE DE SOSTÉN</text>
+  <g aria-label="Expediente de sostén">
+    <path d="M448 340 H1194 L1228 374 V790 H448 Z" fill="#FFFFFF" stroke="#777A76" stroke-width="2.2"/>
+    <path d="M1194 340 V374 H1228" fill="none" stroke="#777A76" stroke-width="2.2"/>
+
+    <g aria-label="Capa de afirmación">
+      <path d="M486 392 H1168 L1190 414 V500 H486 Z" fill="#F1F2EF" stroke="#9A9C98" stroke-width="1.8"/>
+      <rect x="486" y="392" width="10" height="108" fill="#CFFF00"/>
+      <text x="520" y="427" class="sans number">01</text>
+      <text x="586" y="430" class="sans label">AFIRMACIÓN</text>
+      <text x="586" y="469" class="sans body">fenómeno · población · período</text>
+    </g>
+
+    <g aria-label="Capa de rastro">
+      <path d="M486 532 H1168 L1190 554 V640 H486 Z" fill="#E4E6E3" stroke="#9A9C98" stroke-width="1.8"/>
+      <text x="520" y="567" class="sans number">02</text>
+      <text x="586" y="570" class="sans label">RASTRO</text>
+      <text x="586" y="609" class="sans body">procedencia · transformación · ausencias</text>
+    </g>
+
+    <g aria-label="Capa de límite">
+      <path d="M486 672 H1168 L1190 694 V780 H486 Z" fill="#F1F2EF" stroke="#9A9C98" stroke-width="1.8"/>
+      <text x="520" y="707" class="sans number">03</text>
+      <text x="586" y="710" class="sans label">LÍMITE</text>
+      <text x="586" y="749" class="sans body">incertidumbre · uso · condición de revisión</text>
+    </g>
+
+    <circle cx="1228" cy="566" r="10" fill="#CFFF00" stroke="#202020" stroke-width="2"/>
+  </g>
+
+  <text x="1280" y="306" class="sans section">PUERTA DE DECISIÓN</text>
+  <path d="M1248 566 H1310" class="route"/>
+  <g aria-label="Puerta de decisión">
+    <path d="M1312 340 H1688 L1720 372 V790 H1312 Z" fill="#F1F2EF" stroke="#777A76" stroke-width="2.2"/>
+    <g aria-label="Pregunta de suficiencia">
+      <path d="M1370 394 H1656 L1680 418 V540 H1370 Z" fill="#FFFFFF" stroke="#777A76" stroke-width="2.2"/>
+      <path d="M1370 394 H1490 L1478 410 H1358 Z" fill="#CFFF00"/>
+      <text x="1398" y="452" class="sans label">¿Alcanza para</text>
+      <text x="1398" y="491" class="sans label">esta decisión?</text>
+    </g>
+
+    <g aria-label="Salida autorizada">
+      <line x1="1352" y1="582" x2="1680" y2="582" class="rule"/>
+      <text x="1368" y="615" class="sans number">AUTORIZA</text>
+      <text x="1368" y="648" class="sans small">acción proporcional</text>
+    </g>
+    <line x1="1352" y1="666" x2="1680" y2="666" class="rule"/>
+    <g aria-label="Límite de autorización">
+      <text x="1368" y="700" class="sans number">NO AUTORIZA</text>
+      <text x="1368" y="733" class="sans small">exceder el alcance</text>
+      <line x1="1352" y1="748" x2="1680" y2="748" class="rule"/>
+      <circle cx="1680" cy="714" r="10" fill="#CFFF00" stroke="#202020" stroke-width="2"/>
+    </g>
+  </g>
+
+  <g aria-label="Ejemplo Hotel Horizonte">
+    <line x1="72" y1="850" x2="1728" y2="850" class="rule"/>
+    <text x="88" y="900" class="sans number">HH-11</text>
+    <text x="208" y="900" class="sans label">La demora por canal permite revisar integraciones.</text>
+    <text x="208" y="938" class="sans body">No autoriza atribuir una causa a todos los terceros.</text>
+  </g>
+
+  <path d="M1680 724 V984 H884 V956" class="return"/>
+  <circle cx="1680" cy="984" r="7" fill="#CFFF00" stroke="#202020" stroke-width="2"/>
+  <text x="1030" y="1022" class="sans small">NUEVA EVIDENCIA · VOLVER AL EXPEDIENTE</text>
+  <text x="1670" y="1024" class="sans small" text-anchor="end">N11 · METSI</text>
+</svg>
