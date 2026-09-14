@@ -1,0 +1,802 @@
+{
+  "audit": "METSI recurring errors-page text-overlap audit",
+  "scope": "N00-N36",
+  "status": "PASS",
+  "historical_visible_findings_before_repair": [
+    "N17",
+    "N20",
+    "N21",
+    "N22",
+    "N23",
+    "N29",
+    "N31",
+    "N32",
+    "N33",
+    "N34",
+    "N35"
+  ],
+  "historical_structural_findings_before_repair": [
+    "N15",
+    "N17",
+    "N20",
+    "N21",
+    "N22",
+    "N23",
+    "N29",
+    "N31",
+    "N32",
+    "N33",
+    "N34",
+    "N35",
+    "N36"
+  ],
+  "documents": [
+    {
+      "document": "N00",
+      "pdf": "N00/output/N00-METSI-lectura-previa-final.pdf",
+      "pdf_sha256": "1b4a1ab42665246349ed240659585a2e33766fe72157032bfbefc03cc7127f64",
+      "errors_pages": [
+        {
+          "page": 34,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": null,
+      "status": "PASS"
+    },
+    {
+      "document": "N01",
+      "pdf": "N01-v18-final/output/N01-METSI-lectura-previa-v18-final.pdf",
+      "pdf_sha256": "73e8995918ec396f65665561150d04f6b5eb4525c9c8dcd89cc851f34125a8a3",
+      "errors_pages": [],
+      "structure": null,
+      "status": "PASS"
+    },
+    {
+      "document": "N02",
+      "pdf": "N02-v15-final/output/N02-METSI-lectura-previa-v15-final.pdf",
+      "pdf_sha256": "88e62118f8db40dcc9f6f92ca274b400618891ccebb8844d3470919ed9b2cb9b",
+      "errors_pages": [],
+      "structure": null,
+      "status": "PASS"
+    },
+    {
+      "document": "N03",
+      "pdf": "N03-v10-final/output/N03-METSI-lectura-previa-v10-final.pdf",
+      "pdf_sha256": "d6d5d3955178a9371d9d6bcc9891fb29de58b30cf1698b1946919bd06bab9b62",
+      "errors_pages": [
+        {
+          "page": 26,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": null,
+      "status": "PASS"
+    },
+    {
+      "document": "N04",
+      "pdf": "N04-v9-final/output/N04-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "2a720656dfbf6d7294510b3051eb3255a025b524e9772c32f58945238a048d6f",
+      "errors_pages": [
+        {
+          "page": 29,
+          "column_microgap_counts": [
+            1,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": null,
+      "status": "PASS"
+    },
+    {
+      "document": "N05",
+      "pdf": "N05-v10-final/output/N05-METSI-lectura-previa-v10-final.pdf",
+      "pdf_sha256": "89864f31bf625c2f8b0a515ce911ae4f0625db1f7f594012f90c4d1e7149e196",
+      "errors_pages": [
+        {
+          "page": 24,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": null,
+      "status": "PASS"
+    },
+    {
+      "document": "N06",
+      "pdf": "N06-v10-final/output/N06-METSI-lectura-previa-v10-final.pdf",
+      "pdf_sha256": "9b1bda2535587fa8683b2e6edd7a11bf46e2e8b4887627fb608f82491163dc31",
+      "errors_pages": [
+        {
+          "page": 25,
+          "column_microgap_counts": [
+            4,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": null,
+      "status": "PASS"
+    },
+    {
+      "document": "N07",
+      "pdf": "N07-v10-final/output/N07-METSI-lectura-previa-v10-final.pdf",
+      "pdf_sha256": "ecc3ce39ca899cbd4dba87de3a88a4c0fd5a001fdc136338f8b436581ac4d5c2",
+      "errors_pages": [
+        {
+          "page": 29,
+          "column_microgap_counts": [
+            2,
+            5
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": null,
+      "status": "PASS"
+    },
+    {
+      "document": "N08",
+      "pdf": "N08-v10-final/output/N08-METSI-lectura-previa-v10-final.pdf",
+      "pdf_sha256": "b4858d8cfcf6581608b5b177c4b699db55771ca6640cbfdab277a61d44e79330",
+      "errors_pages": [
+        {
+          "page": 25,
+          "column_microgap_counts": [
+            2,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": null,
+      "status": "PASS"
+    },
+    {
+      "document": "N09",
+      "pdf": "N09-v10-final/output/N09-METSI-lectura-previa-v10-final.pdf",
+      "pdf_sha256": "29faefce1bfd2c6b786e4c7d0f4e69bf2225a5feb273581e7fcea1d84cd52d0a",
+      "errors_pages": [
+        {
+          "page": 28,
+          "column_microgap_counts": [
+            4,
+            2
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": null,
+      "status": "PASS"
+    },
+    {
+      "document": "N10",
+      "pdf": "N10-v9-final/output/N10-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "532f854e9097130560a0636a8cbc9f9434af24ae611e96da23b05e16dbb0fbc5",
+      "errors_pages": [
+        {
+          "page": 27,
+          "column_microgap_counts": [
+            3,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": null,
+      "status": "PASS"
+    },
+    {
+      "document": "N11",
+      "pdf": "N11-v9-editorial/output/N11-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "949983aef8ac4f2a784df937ee2342030554e27b9a67ee2f16fa7c2a8005e915",
+      "errors_pages": [
+        {
+          "page": 21,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 9,
+        "labels": 9,
+        "declared_rows": 5,
+        "expected_rows": 5
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N12",
+      "pdf": "N12-v9-editorial/output/N12-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "79449864ef5ef5e2a7b43edd3c367e77e6219c781ea77faf1c48aa13b633ed94",
+      "errors_pages": [
+        {
+          "page": 20,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 9,
+        "labels": 9,
+        "declared_rows": 5,
+        "expected_rows": 5
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N13",
+      "pdf": "N13-v9-editorial/output/N13-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "9de29c1626526a6d08fb7f6cf608a7302e17c110d4b33b30f2fc98b2ea74a191",
+      "errors_pages": [
+        {
+          "page": 20,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 9,
+        "labels": 9,
+        "declared_rows": 5,
+        "expected_rows": 5
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N14",
+      "pdf": "N14-v9-editorial/output/N14-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "a6e9e717367a19b6d45fc97789e05824abb1587df8525912223b046d16750255",
+      "errors_pages": [
+        {
+          "page": 22,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 9,
+        "labels": 9,
+        "declared_rows": 5,
+        "expected_rows": 5
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N15",
+      "pdf": "N15-v9-editorial/output/N15-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "1640e5fd5ab0f18f6fc4e0eb02f39a06412e5caae252f92902adf57fe97f684c",
+      "errors_pages": [
+        {
+          "page": 22,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 9,
+        "labels": 9,
+        "declared_rows": 5,
+        "expected_rows": 5
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N16",
+      "pdf": "N16-v9-editorial/output/N16-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "42cd41a5bb39c55bdd1d8b6539498e478485c99eb1ecbb8050b330a58cee5e6b",
+      "errors_pages": [
+        {
+          "page": 22,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 9,
+        "labels": 9,
+        "declared_rows": 5,
+        "expected_rows": 5
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N17",
+      "pdf": "N17-v9-editorial/output/N17-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "07932c21849071e82b10c45d923dd9da5a34c092cdf8f38da9b70dcae4479993",
+      "errors_pages": [
+        {
+          "page": 22,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 10,
+        "labels": 10,
+        "declared_rows": 5,
+        "expected_rows": 5
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N18",
+      "pdf": "N18-v9-editorial/output/N18-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "4f2f69d1ec46fde13053d889101bf0ac177b7daba858a728f69d29d193585025",
+      "errors_pages": [
+        {
+          "page": 22,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 10,
+        "labels": 10,
+        "declared_rows": 5,
+        "expected_rows": 5
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N19",
+      "pdf": "N19-v9-editorial/output/N19-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "ca8008b1d3b32a8ee4530154d5741e0094749d1846cac210dab5fc829ff95e81",
+      "errors_pages": [
+        {
+          "page": 22,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 10,
+        "labels": 10,
+        "declared_rows": 5,
+        "expected_rows": 5
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N20",
+      "pdf": "N20-v9-editorial/output/N20-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "6faf129190d955cf814a937d435d07839b3dc15674054cd2a072afab43a172c5",
+      "errors_pages": [
+        {
+          "page": 22,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 10,
+        "labels": 10,
+        "declared_rows": 5,
+        "expected_rows": 5
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N21",
+      "pdf": "N21-v9-editorial/output/N21-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "dab5c51c34aa5038b589b02d944e7239e2136b892768d694491ca27cd3679f2b",
+      "errors_pages": [
+        {
+          "page": 22,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 10,
+        "labels": 10,
+        "declared_rows": 5,
+        "expected_rows": 5
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N22",
+      "pdf": "N22-v9-editorial/output/N22-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "fcb570ec8c83ce542a1dd8e837c0dff7178ec79838ff1ed8b8424b4064091525",
+      "errors_pages": [
+        {
+          "page": 20,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 10,
+        "labels": 10,
+        "declared_rows": 5,
+        "expected_rows": 5
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N23",
+      "pdf": "N23-v9-editorial/output/N23-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "f87e6c10805c307c4bd0fbbfc1cc44d310da6a7518d5d7110ae472c5be00b0b7",
+      "errors_pages": [
+        {
+          "page": 24,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 10,
+        "labels": 10,
+        "declared_rows": 5,
+        "expected_rows": 5
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N24",
+      "pdf": "N24-v9-editorial/output/N24-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "a55d49391116667962c5d3e46ca22eb259c1d489639d59c5239cf98d9df759d3",
+      "errors_pages": [
+        {
+          "page": 22,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 10,
+        "labels": 10,
+        "declared_rows": 5,
+        "expected_rows": 5
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N25",
+      "pdf": "N25-v9-editorial/output/N25-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "636acd56907ba3aaf7cfd8027a18d5382ae4bd178a21dde75f3c4ebf91e03699",
+      "errors_pages": [
+        {
+          "page": 23,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 10,
+        "labels": 10,
+        "declared_rows": 5,
+        "expected_rows": 5
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N26",
+      "pdf": "N26-v9-editorial/output/N26-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "9385fd20a81597f2ff275e3aa86c8a010b693eba71921058e019b9d48edae1c9",
+      "errors_pages": [
+        {
+          "page": 20,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 10,
+        "labels": 10,
+        "declared_rows": 5,
+        "expected_rows": 5
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N27",
+      "pdf": "N27-v9-editorial/output/N27-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "f1efc643aafde9b82ebc4af4f8114419c5e1f3e368b3947b7f731c6360a4f3f0",
+      "errors_pages": [
+        {
+          "page": 21,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 10,
+        "labels": 10,
+        "declared_rows": 5,
+        "expected_rows": 5
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N28",
+      "pdf": "N28-v9-editorial/output/N28-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "834412f9afc18688abf46e747af279c8ecb108b2628f8df4b12edb7736af5337",
+      "errors_pages": [
+        {
+          "page": 21,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 10,
+        "labels": 10,
+        "declared_rows": 5,
+        "expected_rows": 5
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N29",
+      "pdf": "N29-v9-editorial/output/N29-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "0564621112935945a5b0370e779e944e9a25386ebe00bfe989090a0e575e169e",
+      "errors_pages": [
+        {
+          "page": 21,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 10,
+        "labels": 10,
+        "declared_rows": 5,
+        "expected_rows": 5
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N30",
+      "pdf": "N30-v9-editorial/output/N30-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "8b41ae006468262b9c84d53f4b1ef830fcd27c81a69127d6ef089cab25470dd0",
+      "errors_pages": [
+        {
+          "page": 22,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 10,
+        "labels": 10,
+        "declared_rows": 5,
+        "expected_rows": 5
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N31",
+      "pdf": "N31-v9-editorial/output/N31-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "7de5d540e3af7473699f829cb6e0546ccd9bc87eaad4f48cca833dab9214b446",
+      "errors_pages": [
+        {
+          "page": 20,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 12,
+        "labels": 12,
+        "declared_rows": 6,
+        "expected_rows": 6
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N32",
+      "pdf": "N32-v9-editorial/output/N32-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "81bc2255b31bc44dc2e8307eaec59b16731c38d18a849aee501502cb1e88b6d3",
+      "errors_pages": [
+        {
+          "page": 20,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 12,
+        "labels": 12,
+        "declared_rows": 6,
+        "expected_rows": 6
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N33",
+      "pdf": "N33-v9-editorial/output/N33-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "53e05ce9a1bba8d2b5bac9ffec05038dc9afa8988192a0a759484e6bb7a96057",
+      "errors_pages": [
+        {
+          "page": 21,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 12,
+        "labels": 12,
+        "declared_rows": 6,
+        "expected_rows": 6
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N34",
+      "pdf": "N34-v9-editorial/output/N34-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "059d277f99273b40397113f5dbab9760a363f12be48a0a1fed9684b04ee0b3f9",
+      "errors_pages": [
+        {
+          "page": 21,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 12,
+        "labels": 12,
+        "declared_rows": 6,
+        "expected_rows": 6
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N35",
+      "pdf": "N35-v9-editorial/output/N35-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "af63be9073452cc7356e751b2bf8ae2d54f29a05aad335e814f31b2e48afa745",
+      "errors_pages": [
+        {
+          "page": 20,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 12,
+        "labels": 12,
+        "declared_rows": 6,
+        "expected_rows": 6
+      },
+      "status": "PASS"
+    },
+    {
+      "document": "N36",
+      "pdf": "N36-v9-editorial/output/N36-METSI-lectura-previa-v9-final.pdf",
+      "pdf_sha256": "76f1f48d89bfc0aa4465f83e9cc50862899275446c1f5b789149107d47de6e78",
+      "errors_pages": [
+        {
+          "page": 20,
+          "column_microgap_counts": [
+            0,
+            0
+          ],
+          "collision_signal": false
+        }
+      ],
+      "structure": {
+        "passed": true,
+        "cards": 8,
+        "labels": 8,
+        "declared_rows": 4,
+        "expected_rows": 4
+      },
+      "status": "PASS"
+    }
+  ]
+}

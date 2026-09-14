@@ -595,6 +595,36 @@ def audit(number: int) -> dict[str, Any]:
     repeated_blocks = sorted(ids for ids in block_groups.values() if len(ids) > 1)
     checks.append(check("no_exact_repeated_source_blocks", not repeated_blocks, repeated_blocks))
 
+    error_sections = re.findall(
+        r'(<section\b(?=[^>]*class=["\'][^"\']*\bblock-c-errors\b[^"\']*["\'])[^>]*>.*?</section>)',
+        html,
+        re.S,
+    )
+    error_layouts: list[dict[str, Any]] = []
+    for section_html in error_sections:
+        card_count = section_html.count('class="error-card"')
+        label_count = len(re.findall(r'<h3\b', section_html)) + len(re.findall(
+            r'<p\b[^>]*>\s*<strong\b', section_html, re.S
+        ))
+        declared_match = re.search(r'--error-rows:(\d+)', section_html)
+        declared_rows = int(declared_match.group(1)) if declared_match else None
+        naked_pairs = max(0, label_count - card_count)
+        expected_rows = (card_count + 1) // 2 if card_count else None
+        error_layouts.append({
+            "cards": card_count,
+            "labels": label_count,
+            "declared_rows": declared_rows,
+            "expected_rows": expected_rows,
+            "naked_pairs": naked_pairs,
+        })
+    error_grid_ok = (
+        len(error_layouts) == 1
+        and error_layouts[0]["cards"] > 0
+        and error_layouts[0]["naked_pairs"] == 0
+        and error_layouts[0]["declared_rows"] == error_layouts[0]["expected_rows"]
+    )
+    checks.append(check("errors_grid_groups_each_label_with_its_explanation", error_grid_ok, error_layouts))
+
     forbidden_files: list[str] = []
     private_hits: list[dict[str, Any]] = []
     placeholder_hits: list[dict[str, Any]] = []

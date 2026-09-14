@@ -1486,8 +1486,26 @@ def add_breaks_to_encoded_url_segments(body: str) -> str:
 
 def wrap_error_cards(body: str) -> str:
     """Group each error heading with its explanation for a stable card grid."""
-    pattern = re.compile(r"(<h3\b[^>]*>.*?</h3>\s*<p\b[^>]*>.*?</p>)", re.S)
-    return pattern.sub(r'<article class="error-card">\1</article>', body)
+    # Canonical sources have used both a markdown heading and a bold-only
+    # paragraph for the error label.  The latter renders as
+    # ``<p><strong>…</strong></p>``.  Supporting both forms is essential:
+    # without the wrapper, the label and explanation become independent grid
+    # items and long pages can place several paragraphs in the same row.
+    heading_pair = re.compile(r"(<h3\b[^>]*>.*?</h3>\s*<p\b[^>]*>.*?</p>)", re.S)
+    strong_pair = re.compile(
+        r"(<p\b[^>]*>\s*<strong\b[^>]*>.*?</strong>\s*</p>\s*"
+        r"<p\b[^>]*>.*?</p>)",
+        re.S,
+    )
+    inline_strong = re.compile(
+        r"(<p\b[^>]*>\s*<strong\b[^>]*>.*?</strong>\s*[^<\s].*?</p>)",
+        re.S,
+    )
+    # Keep the operation idempotent for targeted editorial repairs.
+    body = body.replace('<article class="error-card">', "").replace("</article>", "")
+    body = heading_pair.sub(r'<article class="error-card">\1</article>', body)
+    body = strong_pair.sub(r'<article class="error-card">\1</article>', body)
+    return inline_strong.sub(r'<article class="error-card">\1</article>', body)
 
 
 def wrap_subsection_units(body: str) -> str:
