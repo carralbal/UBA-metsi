@@ -54,6 +54,9 @@ h2 em{font-style:italic;color:var(--muted)}
 .eyebrow{margin:0 0 1.8rem;font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;display:flex;align-items:center;gap:1rem}.eyebrow::before{content:"";flex:0 0 3.8rem;height:.58rem;background:var(--volt);clip-path:polygon(8% 0,100% 0,92% 100%,0 100%)}
 h1{margin:0;max-width:13ch;font-size:clamp(3.7rem,7.2vw,8rem);line-height:.88;letter-spacing:-.055em}
 .hero-deck{max-width:44rem;margin:2rem 0 0;color:#d6d7d1;font:400 clamp(1rem,1.45vw,1.3rem)/1.55 var(--sans)}
+.hero-identity{max-width:52rem;margin:1.35rem 0 0;padding-top:1rem;border-top:1px solid rgba(255,255,255,.28);font-size:.72rem;line-height:1.55;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.82)}
+.hero-identity b{color:var(--volt);letter-spacing:.16em}
+.hero-identity a{color:var(--white);text-underline-offset:.22em}
 .hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
 .button{display:inline-flex;align-items:center;justify-content:center;min-height:3rem;padding:.8rem 1.15rem;font-size:.68rem;font-weight:700;letter-spacing:.11em;text-decoration:none;text-transform:uppercase;transition:transform .18s ease,background .18s ease,color .18s ease}.button:hover,.button:focus-visible{transform:translateY(-2px)}
 .button-primary{background:var(--volt);color:var(--ink)}.button-primary:hover{background:#dcff4d}

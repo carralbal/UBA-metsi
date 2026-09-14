@@ -566,6 +566,11 @@ def build_report(require_sources: bool = False) -> dict[str, Any]:
         "keyboard_tabs_implemented": "ArrowLeft" in script and "ArrowRight" in script and "tabIndex" in script,
         "social_metadata_complete": all(parser.meta.get(("meta", key), "") for key in ("og:title", "og:description", "og:image", "twitter:card", "twitter:image")),
         "no_placeholders": not re.search(r"\b(?:TBD|TODO|Lorem|XXX)\b", html, flags=re.I),
+        "identity_and_author_visible": (
+            "Metodología del Estudio de Sistemas de Información" in html
+            and html.count("Diego Carralbal") >= 2
+            and html.count("https://www.linkedin.com/in/carralbal/") >= 2
+        ),
         "program_source_and_pdf_present": (
             program_source.is_file()
             and program_pdf.is_file()
