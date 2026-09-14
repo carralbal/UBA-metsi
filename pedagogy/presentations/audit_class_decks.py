@@ -3,6 +3,7 @@
 import argparse
 import json
 import os
+import re
 import subprocess
 import zipfile
 from datetime import datetime
@@ -19,6 +20,22 @@ RUNTIME_PYTHON = Path("/Users/diegocarralbal/.cache/codex-runtimes/codex-primary
 RUNTIME_NODE = Path("/Users/diegocarralbal/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node")
 RUNTIME_MODULES = Path("/Users/diegocarralbal/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules")
 NS = {"a": "http://schemas.openxmlformats.org/drawingml/2006/main"}
+
+
+def clean_markdown(value: str) -> str:
+    value = re.sub(r"`([^`]+)`", r"\1", value)
+    value = re.sub(r"\*\*([^*]+)\*\*", r"\1", value)
+    return value.strip()
+
+
+def expected_workshop_steps(n: str) -> list[dict]:
+    workshop = ROOT / "pedagogy" / n / "TALLER-SINCRONICO.md"
+    content = workshop.read_text(encoding="utf-8")
+    matches = re.findall(r"^###\s+(\d+)\.\s+(.+?),\s+(\d+)\s+minutos\s*$", content, re.MULTILINE)
+    return [
+        {"number": int(number), "title": clean_markdown(title), "minutes": int(minutes)}
+        for number, title, minutes in matches
+    ]
 
 
 def natural_key(path: str) -> int:
@@ -51,6 +68,8 @@ def make_montage(render_dir: Path, output: Path) -> None:
 
 
 def inspect_deck(deck: Path) -> dict:
+    n = deck.parent.name
+    expected_steps = expected_workshop_steps(n)
     with zipfile.ZipFile(deck) as archive:
         names = archive.namelist()
         slide_names = sorted(
@@ -69,15 +88,38 @@ def inspect_deck(deck: Path) -> dict:
             "RESULTADO DEL ENCUENTRO",
         ]
         missing = [heading for heading in required if any(heading not in note for note in notes)]
+        activity_notes_missing = [
+            index + 1
+            for index, note in enumerate(notes)
+            if 2 <= index + 1 <= 9 and "CONSIGNA VISIBLE Y TIEMPO" not in note
+        ]
         visible_text = [xml_text(archive, name) for name in slide_names]
+        activity_title_mismatches = [
+            {"slide": index + 2, "expected": step["title"]}
+            for index, step in enumerate(expected_steps)
+            if index + 1 >= len(visible_text) or step["title"] not in visible_text[index + 1]
+        ]
     return {
         "file": str(deck.relative_to(ROOT)),
         "bytes": deck.stat().st_size,
         "slides": len(slide_names),
         "notes": len(note_names),
         "notes_missing_headings": missing,
+        "activity_notes_missing": activity_notes_missing,
+        "workshop_steps": len(expected_steps),
+        "workshop_minutes": sum(step["minutes"] for step in expected_steps),
+        "activity_title_mismatches": activity_title_mismatches,
         "empty_visible_slides": [index + 1 for index, text in enumerate(visible_text) if not text],
-        "pass": len(slide_names) == 10 and len(note_names) == 10 and not missing and all(visible_text),
+        "pass": (
+            len(slide_names) == 10
+            and len(note_names) == 10
+            and not missing
+            and not activity_notes_missing
+            and len(expected_steps) == 8
+            and sum(step["minutes"] for step in expected_steps) == 120
+            and not activity_title_mismatches
+            and all(visible_text)
+        ),
     }
 
 
@@ -108,10 +150,11 @@ def render_deck(deck: Path, render_root: Path) -> Path:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--render-root", type=Path)
+    parser.add_argument("--revision", default="v3")
     args = parser.parse_args()
 
     decks = [
-        PRESENTATIONS / f"N{index:02d}" / f"N{index:02d}-METSI-material-de-clase-v2.pptx"
+        PRESENTATIONS / f"N{index:02d}" / f"N{index:02d}-METSI-material-de-clase-{args.revision}.pptx"
         for index in range(1, 37)
     ]
     results = []
@@ -128,6 +171,7 @@ def main() -> None:
     passed = sum(1 for result in results if result.get("pass"))
     report = {
         "generated_at": datetime.now().astimezone().isoformat(timespec="seconds"),
+        "revision": args.revision,
         "status": "PASS" if passed == 36 else "FAIL",
         "documents": 36,
         "passed": passed,
@@ -144,11 +188,12 @@ def main() -> None:
         for index, result in enumerate(results, start=1)
     )
     md_path.write_text(
-        "# Auditoría de presentaciones N01 a N36\n\n"
+        f"# Auditoría de presentaciones N01 a N36 · {args.revision}\n\n"
         f"Resultado: **{report['status']}**.\n\n"
         f"Se verificaron {report['documents']} presentaciones, {report['slides']} pantallas visibles y "
         f"{report['speaker_notes']} bloques de notas de orador. Cada nota distingue propósito, facilitación "
-        "sincrónica, uso asincrónico y resultado del encuentro.\n\n"
+        "sincrónica, uso asincrónico y resultado del encuentro; las pantallas 02 a 09 también conservan la "
+        "consigna real y el tiempo del taller correspondiente.\n\n"
         "| N | Pantallas | Notas | Estado |\n|---:|---:|---:|---|\n"
         f"{rows}\n",
         encoding="utf-8",

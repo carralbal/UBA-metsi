@@ -1,22 +1,19 @@
 # Backlog de cierre y puesta en marcha de METSI
 
-Actualizado el 12 de septiembre de 2026.
+Actualizado el 14 de septiembre de 2026.
 
 Este backlog comienza después del cierre editorial de las lecturas N00 a N36. Distingue lo que ya existe de la pasada de diseño, prueba y publicación que todavía debe realizarse.
 
 ## P0. Reconstrucción visual y semántica de las lecturas N00–N36
 
-**Estado:** N34 v9 construido como patrón local y no publicado. La colección pública todavía no incorpora estas correcciones.
+**Estado:** completado. N11 a N36 v9 fueron reconstruidos, auditados, integrados en `main` y publicados en GitHub Pages el 14 de septiembre de 2026.
 
-### Trabajo pendiente
+### Trabajo realizado
 
-- Auditar la escala efectiva de cada infografía dentro del PDF, no sólo su SVG aislado. Dar página completa o dividir toda lámina cuyo texto no alcance una lectura normal al 100 %.
-- Revisar cada tapa contra la pregunta profesional completa y eliminar asociaciones visuales literales o sesgadas producidas por una palabra del título.
-- Normalizar los marcadores de sección: círculo papel, número y borde negros, volt reservado a acentos.
-- Sustituir en N11–N36 el ancla inclinada de Hotel Horizonte por el archivo canónico de alta resolución y color desaturado.
-- Homologar el encuadre de los seis personajes de Hotel Horizonte y escribir una posición específica de cada rol frente al tema de cada N.
-- Auditar los seis Referentes de cada documento: retrato corto consistente, fuente verificable y presencia académicamente pertinente de voces argentinas o latinoamericanas.
-- Ejecutar la regresión completa de tapa, Contenido, Referentes, pregunta profesional, caso Hotel, infografías, síntesis, píldoras, glosario, preguntas, referencias, enlaces, paginación y densidad.
+- Se auditó la escala efectiva de las infografías dentro de cada PDF.
+- Se revisaron tapas, marcadores, ancla de Hotel Horizonte, personajes, Referentes y presencia regional.
+- Se ejecutó la regresión integrada de los treinta y siete documentos.
+- Se publicó la colección vigente con fuentes canónicas, PDFs, manifiestos y auditorías trazables.
 
 ### Criterio de cierre
 
@@ -26,19 +23,19 @@ El diagnóstico y las guardas se conservan en [`audits/2026-09-12-N34-visual-sem
 
 ## P1. Material docente para encuentros sincrónicos y asincrónicos
 
-### Estado de partida
+### Estado
 
-Ya existen treinta y seis paquetes pedagógicos, uno por cada N, y treinta y seis presentaciones editables. En conjunto contienen 360 pantallas y 360 notas de orador, además de preparación asincrónica, taller sincrónico, guion docente y rúbrica por cada Núcleo.
+Paquete docente v3 construido y auditado. Existen treinta y seis paquetes pedagógicos, uno por cada N, y treinta y seis presentaciones editables. En conjunto contienen 360 pantallas y 360 notas de orador, además de preparación asincrónica, taller sincrónico, guion docente y rúbrica por cada Núcleo.
 
-### Trabajo pendiente
+### Trabajo realizado
 
-- Realizar una revisión humana pantalla por pantalla y nota por nota.
-- Separar con claridad lo que ve el estudiantado de lo que utiliza quien facilita.
-- Asegurar que las presentaciones no resuman la lectura, sino que organicen decisiones, producción, contraste y revisión.
-- Incorporar en cada encuentro propósito, tiempo, consigna, agrupamiento, materiales, evidencia disponible, perturbación, puesta en común y condición de salida.
-- Preparar una variante asincrónica equivalente, con instrucciones autosuficientes, puntos de intercambio y devolución.
-- Diversificar las dinámicas para que el recurso didáctico responda al objeto de aprendizaje de cada N.
-- Probar los materiales con ayudantes antes de considerarlos definitivos.
+- [x] Se revisó la estructura de las 360 pantallas y las 360 notas.
+- [x] Se separó la capa visible para estudiantes de la capa de facilitación.
+- [x] Cada presentación usa la pregunta profesional canónica y las ocho actividades específicas de su N.
+- [x] Cada encuentro declara propósito, tiempos, consignas, agrupamiento, materiales, evidencia, perturbación, puesta en común y salida.
+- [x] Cada N incluye preparación y recorrido asincrónico equivalente.
+- [x] Las dinámicas se vinculan con el objeto de aprendizaje y con Hotel Horizonte.
+- [ ] Realizar una prueba piloto con ayudantes y registrar ajustes de uso real.
 
 ### Entregables
 
@@ -52,6 +49,8 @@ Ya existen treinta y seis paquetes pedagógicos, uno por cada N, y treinta y sei
 ### Criterio de cierre
 
 Cada encuentro puede ser facilitado por otra persona del equipo docente sin depender de explicaciones orales del autor, y reserva más tiempo para producir, contrastar y revisar que para exponer conceptos ya leídos.
+
+El criterio técnico está cumplido. La prueba piloto con ayudantes queda como validación situada previa a declarar versión de cohorte.
 
 ## P2. Sistema de trabajo estudiantil para Hotel Horizonte
 

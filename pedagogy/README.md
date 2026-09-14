@@ -25,3 +25,5 @@ Una N no equivale mecánicamente a una clase. Los paquetes pueden combinarse seg
 El plan maestro está en [`PLAN-MAESTRO.md`](PLAN-MAESTRO.md). Los bloques A a H disponen de los treinta y seis paquetes ejecutables, desde [`N01/`](N01/) hasta [`N36/`](N36/). La auditoría transversal se conserva en [`AUDIT-N01-N36.md`](AUDIT-N01-N36.md).
 
 El sistema acumulativo del caso, con dossier, cuaderno, bitácora, revisión entre pares, rúbrica y ocho hitos, está en [`hotel-horizonte/`](hotel-horizonte/).
+
+Las treinta y seis presentaciones editables v3, con capa visible y notas de orador, están en [`presentations/INDEX.md`](presentations/INDEX.md). El cierre técnico y pedagógico del paquete se documenta en [`FINAL-TEACHING-PACKAGE-AUDIT.md`](FINAL-TEACHING-PACKAGE-AUDIT.md).

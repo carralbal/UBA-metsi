@@ -1,8 +1,8 @@
-# Auditoría de presentaciones N01 a N36
+# Auditoría de presentaciones N01 a N36 · v3
 
 Resultado: **PASS**.
 
-Se verificaron 36 presentaciones, 360 pantallas visibles y 360 bloques de notas de orador. Cada nota distingue propósito, facilitación sincrónica, uso asincrónico y resultado del encuentro.
+Se verificaron 36 presentaciones, 360 pantallas visibles y 360 bloques de notas de orador. Cada nota distingue propósito, facilitación sincrónica, uso asincrónico y resultado del encuentro; las pantallas 02 a 09 también conservan la consigna real y el tiempo del taller correspondiente.
 
 | N | Pantallas | Notas | Estado |
 |---:|---:|---:|---|

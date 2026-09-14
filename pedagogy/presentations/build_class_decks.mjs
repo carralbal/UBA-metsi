@@ -75,25 +75,54 @@ function tableRows(md) {
 }
 
 async function findCanonicalSource(n) {
-  const entries = await fs.readdir(workspaceDir, { withFileTypes: true });
-  const candidates = [];
-  for (const entry of entries) {
-    if (!entry.isDirectory() || !entry.name.startsWith(`${n}-`)) continue;
-    const sourceDir = path.join(workspaceDir, entry.name, "source");
-    try {
-      for (const file of await fs.readdir(sourceDir)) {
-        if (file.endsWith(".md") && /content|canonical|final/i.test(file)) {
-          candidates.push(path.join(sourceDir, file));
-        }
-      }
-    } catch {}
+  const manifest = JSON.parse(await fs.readFile(path.join(workspaceDir, "course-manifest.json"), "utf8"));
+  const record = manifest.documents.find((item) => item.code === n);
+  if (!record) throw new Error(`No se encontró ${n} en course-manifest.json`);
+  if (record.canonical_source) return path.join(workspaceDir, record.canonical_source);
+
+  const packageDir = path.dirname(path.dirname(path.join(workspaceDir, record.pdf)));
+  const sourceDir = path.join(packageDir, "source");
+  const candidates = (await fs.readdir(sourceDir))
+    .filter((file) => file.endsWith(".md"))
+    .map((file) => path.join(sourceDir, file));
+  const preferred = candidates.filter((file) => /-v2\.md$/.test(file));
+  if (preferred.length === 1) return preferred[0];
+  if (candidates.length !== 1) {
+    throw new Error(`${n}: no se pudo resolver una fuente canónica única en ${path.relative(workspaceDir, sourceDir)}`);
   }
-  const preferred = candidates.sort((a, b) => {
-    const score = (p) => (p.includes("v8-editorial") ? 30 : 0) + (p.includes("v18-final") ? 20 : 0) + (p.includes("content-final") ? 10 : 0);
-    return score(b) - score(a) || a.localeCompare(b);
-  })[0];
-  if (!preferred) throw new Error(`No se encontró fuente canónica para ${n}`);
-  return preferred;
+  return candidates[0];
+}
+
+function workshopSteps(md) {
+  const matches = [...md.matchAll(/^###\s+(\d+)\.\s+(.+?),\s+(\d+)\s+minutos\s*$/gm)];
+  const steps = matches.map((match, index) => {
+    const end = matches[index + 1]?.index ?? md.indexOf("\n## ", match.index + match[0].length);
+    const raw = md.slice(match.index + match[0].length, end >= 0 ? end : undefined).trim();
+    const body = cleanMd(raw.replace(/^[-*]\s+/gm, "").replace(/\n+/g, " "));
+    return { number: Number(match[1]), title: cleanMd(match[2]), minutes: Number(match[3]), body };
+  });
+  if (steps.length !== 8) throw new Error(`Se esperaban 8 momentos de taller y se encontraron ${steps.length}`);
+  return steps;
+}
+
+function compactInstruction(value, maximum = 290) {
+  if (value.length <= maximum) return value;
+  const clipped = value.slice(0, maximum);
+  const sentence = clipped.lastIndexOf(". ");
+  const space = clipped.lastIndexOf(" ");
+  return `${clipped.slice(0, sentence > maximum * 0.55 ? sentence + 1 : space)}…`;
+}
+
+function blockFor(n) {
+  const number = Number(n.slice(1));
+  if (number <= 4) return "BLOQUE A · ENCUADRE";
+  if (number <= 10) return "BLOQUE B · INVESTIGACIÓN";
+  if (number <= 16) return "BLOQUE C · MODELADO";
+  if (number <= 20) return "BLOQUE D · ESTRATEGIA";
+  if (number <= 25) return "BLOQUE E · PRODUCTO Y FLUJO";
+  if (number <= 30) return "BLOQUE F · OPERACIÓN";
+  if (number <= 33) return "BLOQUE G · IA";
+  return "BLOQUE H · INTEGRACIÓN";
 }
 
 function addRect(slide, left, top, width, height, fill, line = "none", radius = false) {
@@ -131,7 +160,7 @@ function addFrame(slide, n, number, stage = "ENCUENTRO") {
   addRect(slide, 0, 0, 18, 720, C.volt);
   addText(slide, `${n}  ·  METSI`, 54, 34, 250, 28, { size: 16, bold: true, color: C.muted });
   addText(slide, String(number).padStart(2, "0"), 1140, 31, 70, 32, { size: 18, bold: true, align: "right" });
-  addText(slide, stage, 960, 37, 155, 22, { size: 11, bold: true, color: C.muted, align: "right" });
+  addText(slide, `${blockFor(n)}  ·  ${stage}`, 760, 37, 355, 22, { size: 11, bold: true, color: C.muted, align: "right" });
   addRect(slide, 54, 82, 1160, 2, C.ink);
   addRect(slide, 54, 681, 1160, 1, C.line);
   addText(slide, "Metodología de Sistemas de Información · FCE UBA", 54, 688, 560, 20, { size: 11, color: C.muted });
@@ -152,89 +181,102 @@ function titleCase(value) {
 }
 
 function renderSlide(slide, row, context) {
-  const { n, question, workshopResult } = context;
+  const { n, h1, question, workshopResult } = context;
   addFrame(slide, n, row.number, row.number === 10 ? "CIERRE" : "ENCUENTRO");
-  const title = titleCase(row.visible);
+  const activity = row.number >= 2 && row.number <= 9 ? context.steps[row.number - 2] : null;
+  const title = activity?.title ?? titleCase(row.visible);
+  const instruction = activity ? compactInstruction(activity.body) : "";
 
   if (row.number === 1) {
     addText(slide, "PREGUNTA PROFESIONAL", 74, 118, 500, 28, { size: 15, bold: true, color: C.muted });
-    addText(slide, question || title, 74, 160, 1040, 290, { font: FONT_SERIF, size: 48 });
+    addText(slide, h1.replace(/^N\d+\s*·\s*/, ""), 760, 118, 385, 42, { size: 15, bold: true, color: C.muted, align: "right" });
+    addText(slide, question || title, 74, 170, 1040, 280, { font: FONT_SERIF, size: 46 });
     addRect(slide, 74, 514, 88, 10, C.volt);
     addText(slide, "Respondé antes de explicar. La primera posición queda registrada para revisarla al cierre.", 74, 548, 910, 74, { size: 22, color: C.muted });
     return;
   }
 
-  addText(slide, title, 74, 118, 1080, 88, { font: FONT_SERIF, size: 42 });
+  addText(slide, title, 74, 112, 920, 84, { font: FONT_SERIF, size: 40 });
+  if (activity) {
+    addRect(slide, 1050, 126, 130, 54, C.gray, C.line, true);
+    addText(slide, `${activity.minutes} MIN`, 1050, 139, 130, 26, { size: 15, bold: true, align: "center" });
+  }
 
   if (row.number === 2) {
-    addRect(slide, 74, 240, 1130, 250, C.gray);
+    addText(slide, instruction, 74, 205, 1080, 82, { size: 20, color: C.muted });
+    addRect(slide, 74, 305, 1130, 218, C.gray);
     const prompts = ["POSICIÓN", "RAZÓN", "EVIDENCIA FALTANTE"];
     prompts.forEach((prompt, index) => {
       const left = 112 + index * 355;
-      addText(slide, prompt, left, 280, 300, 28, { size: 15, bold: true, color: C.muted });
-      addRect(slide, left, 332, 295, 2, index === 2 ? C.volt : C.ink);
-      addText(slide, index === 0 ? "Tomá una posición antes de escuchar la explicación." : "Dejala escrita en una frase verificable.", left, 362, 292, 82, { size: 20 });
+      addText(slide, prompt, left, 340, 300, 28, { size: 15, bold: true, color: C.muted });
+      addRect(slide, left, 390, 295, 2, index === 2 ? C.volt : C.ink);
+      addText(slide, index === 0 ? "Una frase antes de debatir." : "Una relación que otra persona pueda revisar.", left, 416, 292, 70, { size: 19 });
     });
     return;
   }
 
   if (row.number === 3) {
+    addText(slide, instruction, 74, 205, 1080, 72, { size: 20, color: C.muted });
     const labels = splitLabels(row.visible);
     const shown = labels.length >= 3 ? labels.slice(0, 3) : ["Primera lectura", "Tensión", "Decisión"];
     shown.forEach((label, i) => {
       const left = 74 + i * 380;
-      addText(slide, `0${i + 1}`, left, 246, 70, 30, { size: 16, bold: true, color: C.muted });
-      addRect(slide, left, 286, 330, 3, i === 1 ? C.volt : C.ink);
-      addText(slide, label, left, 312, 330, 105, { font: FONT_SERIF, size: 30 });
-      addText(slide, "¿Qué cambia si esta distinción se formula de otro modo?", left, 448, 320, 80, { size: 18, color: C.muted });
+      addText(slide, `0${i + 1}`, left, 306, 70, 30, { size: 16, bold: true, color: C.muted });
+      addRect(slide, left, 346, 330, 3, i === 1 ? C.volt : C.ink);
+      addText(slide, label, left, 372, 330, 90, { font: FONT_SERIF, size: 28 });
+      addText(slide, "¿Qué diferencia cambia la decisión?", left, 480, 320, 58, { size: 18, color: C.muted });
     });
     return;
   }
 
   if (row.number === 4) {
-    addText(slide, "A", 88, 260, 60, 60, { font: FONT_SERIF, size: 46 });
-    addText(slide, "Primera evidencia o formulación", 150, 260, 410, 80, { size: 28, bold: true });
-    addRect(slide, 634, 226, 2, 330, C.line);
-    addText(slide, "B", 690, 260, 60, 60, { font: FONT_SERIF, size: 46 });
-    addText(slide, "Evidencia o formulación contrastante", 752, 260, 410, 80, { size: 28, bold: true });
-    addText(slide, "¿Qué diferencia modifica una decisión concreta?", 150, 430, 980, 62, { font: FONT_SERIF, size: 32, color: C.muted, align: "center" });
+    addText(slide, instruction, 74, 205, 1080, 76, { size: 20, color: C.muted });
+    addText(slide, "A", 88, 330, 60, 60, { font: FONT_SERIF, size: 46 });
+    addText(slide, "Lo que el artefacto afirma", 150, 330, 410, 80, { size: 27, bold: true });
+    addRect(slide, 634, 296, 2, 276, C.line);
+    addText(slide, "B", 690, 330, 60, 60, { font: FONT_SERIF, size: 46 });
+    addText(slide, "Lo que la evidencia permite afirmar", 752, 330, 410, 80, { size: 27, bold: true });
+    addText(slide, "La diferencia debe conducir a una revisión observable.", 150, 488, 980, 62, { font: FONT_SERIF, size: 29, color: C.muted, align: "center" });
     return;
   }
 
   if (row.number === 5) {
+    addText(slide, instruction, 74, 205, 1080, 68, { size: 20, color: C.muted });
     const labels = splitLabels(row.visible);
     const items = labels.length >= 3 ? labels : ["Qué se intenta sostener", "Qué evidencia existe", "Qué falta distinguir", "Qué decisión cambia"];
     items.slice(0, 4).forEach((label, i) => {
-      const top = 230 + i * 90;
+      const top = 300 + i * 72;
       addText(slide, String(i + 1).padStart(2, "0"), 88, top, 70, 34, { size: 16, bold: true, color: C.muted });
-      addText(slide, label, 170, top - 4, 930, 48, { size: 27, bold: i === 0 });
-      addRect(slide, 170, top + 48, 930, 1, C.line);
+      addText(slide, label, 170, top - 4, 930, 42, { size: 24, bold: i === 0 });
+      addRect(slide, 170, top + 42, 930, 1, C.line);
     });
     return;
   }
 
   if (row.number === 6) {
-    addRect(slide, 74, 222, 1130, 338, C.gray);
+    addRect(slide, 74, 222, 1130, 354, C.gray);
     addText(slide, "TRABAJO DE EQUIPO", 104, 248, 300, 24, { size: 15, bold: true, color: C.muted });
-    addText(slide, "Artefacto en construcción", 104, 294, 820, 70, { font: FONT_SERIF, size: 36 });
-    addText(slide, "Dejen visible la hipótesis, la evidencia usada, la decisión que habilita y la condición que podría revisarla.", 104, 410, 880, 100, { size: 23 });
+    addText(slide, cleanMd(row.visible), 104, 294, 820, 60, { font: FONT_SERIF, size: 34 });
+    addText(slide, instruction, 104, 382, 850, 142, { size: 21 });
     addText(slide, "TIEMPO", 1010, 258, 120, 24, { size: 14, bold: true, color: C.muted, align: "center" });
-    addText(slide, "en pantalla", 1008, 308, 125, 60, { font: FONT_SERIF, size: 26, align: "center" });
+    addText(slide, `${activity.minutes}\nminutos`, 1008, 308, 125, 76, { font: FONT_SERIF, size: 24, align: "center" });
     return;
   }
 
   if (row.number === 7) {
-    addText(slide, "EVIDENCIA NUEVA", 74, 245, 1090, 70, { size: 54, bold: true });
-    addRect(slide, 74, 340, 112, 12, C.volt);
-    addText(slide, "No la usen para defender la primera respuesta. Úsenla para localizar qué parte del razonamiento debe cambiar y qué parte todavía se sostiene.", 74, 390, 1020, 150, { font: FONT_SERIF, size: 33 });
+    addText(slide, "EVIDENCIA NUEVA", 74, 235, 1090, 64, { size: 48, bold: true });
+    addRect(slide, 74, 324, 112, 12, C.volt);
+    addText(slide, instruction, 74, 370, 1050, 150, { font: FONT_SERIF, size: 30 });
+    addText(slide, "Localicen qué cambia, qué se sostiene y qué todavía falta probar.", 74, 542, 1050, 52, { size: 20, color: C.muted });
     return;
   }
 
   if (row.number === 8) {
+    addText(slide, instruction, 74, 205, 1080, 70, { size: 20, color: C.muted });
     const items = ["Citar el punto observado", "Nombrar la relación débil", "Proponer una prueba", "Evitar resolver por el otro equipo"];
     items.forEach((item, i) => {
       const left = 74 + (i % 2) * 565;
-      const top = 235 + Math.floor(i / 2) * 160;
+      const top = 315 + Math.floor(i / 2) * 130;
       addText(slide, String(i + 1).padStart(2, "0"), left, top, 56, 30, { size: 15, bold: true, color: C.muted });
       addText(slide, item, left + 64, top - 6, 450, 74, { size: 27, bold: true });
       addRect(slide, left + 64, top + 78, 420, 2, i === 2 ? C.volt : C.line);
@@ -243,11 +285,12 @@ function renderSlide(slide, row, context) {
   }
 
   if (row.number === 9) {
+    addText(slide, instruction, 74, 205, 1080, 68, { size: 20, color: C.muted });
     const items = ["Qué sostenemos", "Qué evidencia usamos", "Qué decidimos", "Qué podría hacernos revisar"];
     items.forEach((item, i) => {
-      addText(slide, `0${i + 1}`, 80, 224 + i * 92, 65, 36, { size: 18, bold: true, color: C.muted });
-      addText(slide, item, 165, 217 + i * 92, 840, 54, { font: FONT_SERIF, size: 30 });
-      addRect(slide, 1015, 238 + i * 92, 130, 3, i === 3 ? C.volt : C.ink);
+      addText(slide, `0${i + 1}`, 80, 300 + i * 72, 65, 32, { size: 16, bold: true, color: C.muted });
+      addText(slide, item, 165, 293 + i * 72, 840, 48, { font: FONT_SERIF, size: 27 });
+      addRect(slide, 1015, 314 + i * 72, 130, 3, i === 3 ? C.volt : C.ink);
     });
     return;
   }
@@ -271,10 +314,15 @@ function buildNotes(row, context) {
     const index = (row.number - 1 + offset) % context.probes.length;
     return `• ${context.probes[index]}`;
   }).join("\n");
+  const activity = row.number >= 2 && row.number <= 9 ? context.steps[row.number - 2] : null;
+  const activityNote = activity
+    ? `CONSIGNA VISIBLE Y TIEMPO\n${activity.title} · ${activity.minutes} minutos\n${activity.body}`
+    : "";
   return [
     `PROPÓSITO DE LA PANTALLA\n${row.visible}`,
+    activityNote,
     `FACILITACIÓN SINCRÓNICA\n${row.note}\nSeñal para avanzar: ${row.advance}`,
-    `USO ASINCRÓNICO\nPresentar la pantalla como consigna de pausa. Pedir una respuesta breve o una marca sobre el artefacto antes de habilitar la pantalla siguiente. No convertirla en explicación grabada del texto ya leído.`,
+    `USO ASINCRÓNICO\n${context.prepPurpose}\nPresentar esta pantalla como una estación de trabajo. Pedir evidencia visible antes de habilitar la siguiente y abrir una devolución breve entre pares. No convertirla en explicación grabada del texto ya leído.`,
     probes ? `PREGUNTAS DE SONDEO POSIBLES\n${probes}` : "",
     `RESULTADO DEL ENCUENTRO\n${context.workshopResult}`,
   ].filter(Boolean).join("\n\n");
@@ -297,8 +345,9 @@ async function buildDeck(n) {
   const workshopResult = firstParagraph(taller, "Resultado del encuentro");
   const prepPurpose = firstParagraph(prep, "Propósito");
   const rows = tableRows(guion);
+  const steps = workshopSteps(taller);
   const probes = listItems(guion, "Preguntas de sondeo");
-  const context = { n, h1, question, workshopResult, prepPurpose, probes };
+  const context = { n, h1, question, workshopResult, prepPurpose, probes, steps };
 
   const presentation = Presentation.create({ slideSize });
   presentation.title = `${n} · METSI · Material de clase`;
