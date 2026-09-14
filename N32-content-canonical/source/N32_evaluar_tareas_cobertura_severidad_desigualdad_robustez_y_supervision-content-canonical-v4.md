@@ -36,9 +36,17 @@ La evaluación se reabrirá cuando cambien modelo, fuentes, permisos o població
 
 ## Tesis
 
-Evaluar un sistema de IA exige mirar una tarea completa y el sistema de personas y tecnologías que la realiza, no sólo la respuesta del modelo. Antes de interpretar un resultado hay que definir qué se mide, sobre qué población, contra qué alternativa y con qué validez. Luego se revisan cobertura, gravedad de los errores, diferencias entre grupos, robustez y carga real de supervisión.
+Evaluar un sistema de IA exige mirar una tarea completa y el sistema de personas y tecnologías que la realiza, no sólo la respuesta del modelo. Antes de interpretar un resultado hay que definir qué se mide, sobre qué población, contra qué alternativa y con qué validez. Luego se revisan cobertura, gravedad de los errores, diferencias entre grupos, robustez y carga real de supervisión. Si un buen promedio oculta fallas concentradas, daños difíciles de reparar o un control humano que no puede sostenerse, la evidencia no autoriza más autonomía. Toda aprobación queda limitada a un uso y una configuración concretos, y debe volver a evaluarse durante la operación.
 
-Si un buen promedio oculta fallas concentradas, daños difíciles de reparar o un control humano que no puede sostenerse, la evidencia no autoriza más autonomía. Toda aprobación queda limitada a un uso y una configuración concretos, y debe volver a evaluarse durante la operación.
+En términos prácticos, el mecanismo consiste en evaluar tareas y poblaciones reales con criterios de cobertura, severidad, robustez y supervisión, no sólo con promedios de laboratorio. Cada parte cumple una función distinta y evita que una herramienta o una métrica reemplace al razonamiento que debería sostenerla. Lo importante es poder explicar por qué esa secuencia resulta adecuada para este problema.
+
+Puede verse en una situación cotidiana: un modelo acierta 95 por ciento pero concentra errores graves en casos accesibles; el promedio oculta la desigualdad relevante. La escena comienza simple y gana complejidad cuando aparecen población, tiempo, dependencias y consecuencias. Esa progresión permite aprender sin saltar directamente a una solución total.
+
+Un contraejemplo marca la frontera de la tesis: optimizar un benchmark desconectado del uso o probar sólo ejemplos fáciles que el equipo ya conoce y puede corregir. La misma práctica deja de ser defendible cuando ya no produce evidencia, desplaza daño o impide revisar el compromiso. Nombrar el límite es parte de comprender, no una nota marginal.
+
+Hotel Horizonte vuelve concreta la distinción: la asistencia se evalúa con llegadas y excepciones reales, comparando daño, tiempo de reparación y capacidad humana de detectar el error. Las voces del caso no ilustran una respuesta predeterminada; muestran cómo una decisión cambia según quién sostiene la promesa, quién opera y quién recibe las consecuencias.
+
+Para la práctica profesional, esto implica vincular evaluación con una decisión de uso y expansión; N33 sostendrá gobierno vivo durante cambios e incidentes. El documento ofrece un paso acumulativo del recorrido, pero conserva abierta la evidencia que podría obligar a corregirlo en el núcleo siguiente.
 
 ## Del cierre anterior al nuevo avance
 

@@ -30,9 +30,17 @@ La historia del puente importa porque muchos sistemas de información se describ
 
 ## Tesis
 
-Un procedimiento describe trabajo esperado; no contiene todo el trabajo necesario para producir un resultado bajo condiciones concretas. La operación real incorpora variación, interrupciones, coordinación, memoria, interpretación, cuidado y reparación. La diferencia entre ambos no es automáticamente un error ni una virtud: puede ser adaptación experta, defensa informal, restricción de diseño, incumplimiento peligroso o una combinación de esas posibilidades.
+Un procedimiento describe trabajo esperado; no contiene todo el trabajo necesario para producir un resultado bajo condiciones concretas. La operación real incorpora variación, interrupciones, coordinación, memoria, interpretación, cuidado y reparación. La diferencia entre ambos no es automáticamente un error ni una virtud: puede ser adaptación experta, defensa informal, restricción de diseño, incumplimiento peligroso o una combinación de esas posibilidades. Observar profesionalmente consiste en reconstruir qué función cumple cada acción, qué incertidumbre administra, qué evidencia utiliza, qué autoridad requiere y qué consecuencias produce. El propósito no es congelar la práctica actual, sino cambiarla sin destruir las capacidades que hoy mantienen vivo el sistema y sin perpetuar arreglos frágiles o injustos.
 
-Observar profesionalmente consiste en reconstruir qué función cumple cada acción, qué incertidumbre administra, qué evidencia utiliza, qué autoridad requiere y qué consecuencias produce. El propósito no es congelar la práctica actual, sino cambiarla sin destruir las capacidades que hoy mantienen vivo el sistema y sin perpetuar arreglos frágiles o injustos.
+En términos prácticos, el mecanismo consiste en elegir episodios, registrar secuencias y separar descripción de interpretación para hacer visible coordinación, atajos, esperas y reparación. Cada parte cumple una función distinta y evita que una herramienta o una métrica reemplace al razonamiento que debería sostenerla. Lo importante es poder explicar por qué esa secuencia resulta adecuada para este problema.
+
+Puede verse en una situación cotidiana: la aprobación formal tiene tres pasos, pero una observación descubre capturas por mensajería, planillas paralelas y llamadas para destrabar códigos. La escena comienza simple y gana complejidad cuando aparecen población, tiempo, dependencias y consecuencias. Esa progresión permite aprender sin saltar directamente a una solución total.
+
+Un contraejemplo marca la frontera de la tesis: observar un día extraordinario y presentarlo como funcionamiento habitual, sin declarar período, participantes ni efecto de la propia presencia. La misma práctica deja de ser defendible cuando ya no produce evidencia, desplaza daño o impide revisar el compromiso. Nombrar el límite es parte de comprender, no una nota marginal.
+
+Hotel Horizonte vuelve concreta la distinción: seguir un turno muestra cómo Lucía combina pantallas, llamadas y notas porque un estado correcto puede llegar tarde para su decisión. Las voces del caso no ilustran una respuesta predeterminada; muestran cómo una decisión cambia según quién sostiene la promesa, quién opera y quién recibe las consecuencias.
+
+Para la práctica profesional, esto implica conectar conducta, contexto y consecuencia sin atribuir motivos apresurados; N09 evaluará experiencia, acceso y adopción. El documento ofrece un paso acumulativo del recorrido, pero conserva abierta la evidencia que podría obligar a corregirlo en el núcleo siguiente.
 
 ## De N07 a N08: de lo dicho a lo realizado
 

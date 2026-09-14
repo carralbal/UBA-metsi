@@ -40,11 +40,17 @@ HH-14 reconstruirá el servicio desde la promesa “poder ingresar a una habitac
 
 ## Tesis
 
-Un proceso end-to-end conecta trabajo, decisiones, esperas y reparaciones para transformar una necesidad en un outcome observable. Su frontera se define por la promesa hecha a una persona o actor, no por un área, una aplicación ni una ceremonia.
+Un proceso end-to-end conecta trabajo, decisiones, esperas y reparaciones para transformar una necesidad en un outcome observable. Su frontera se define por la promesa hecha a una persona o actor, no por un área, una aplicación ni una ceremonia. Los handoffs trasladan información, trabajo y responsabilidad. Las colas convierten capacidad, variabilidad y prioridad en tiempo de espera. Las excepciones revelan condiciones que el camino ordinario no representa. Ignorar cualquiera de las tres dimensiones produce procesos localmente eficientes y globalmente incapaces de cumplir. Modelar un proceso no equivale a describir cómo debería funcionar. Exige contrastar procedimiento, evidencia de ejecución y experiencia. La mejora no se evalúa por cantidad de pasos eliminados, sino por tiempo total, calidad, riesgo, equidad, carga y capacidad de reparación.
 
-Los handoffs trasladan información, trabajo y responsabilidad. Las colas convierten capacidad, variabilidad y prioridad en tiempo de espera. Las excepciones revelan condiciones que el camino ordinario no representa. Ignorar cualquiera de las tres dimensiones produce procesos localmente eficientes y globalmente incapaces de cumplir.
+En términos prácticos, el mecanismo consiste en seguir la capacidad completa desde el pedido hasta el resultado y localizar esperas, pérdidas de información y decisiones sin responsable. Cada parte cumple una función distinta y evita que una herramienta o una métrica reemplace al razonamiento que debería sostenerla. Lo importante es poder explicar por qué esa secuencia resulta adecuada para este problema.
 
-Modelar un proceso no equivale a describir cómo debería funcionar. Exige contrastar procedimiento, evidencia de ejecución y experiencia. La mejora no se evalúa por cantidad de pasos eliminados, sino por tiempo total, calidad, riesgo, equidad, carga y capacidad de reparación.
+Puede verse en una situación cotidiana: seis áreas cumplen sus tiempos internos y el caso llega tarde porque los días de cola no pertenecen a ningún indicador local. La escena comienza simple y gana complejidad cuando aparecen población, tiempo, dependencias y consecuencias. Esa progresión permite aprender sin saltar directamente a una solución total.
+
+Un contraejemplo marca la frontera de la tesis: dibujar el caso feliz con cajas y flechas sin representar devoluciones, urgencias, trabajos incompletos ni criterios de aceptación. La misma práctica deja de ser defendible cuando ya no produce evidencia, desplaza daño o impide revisar el compromiso. Nombrar el límite es parte de comprender, no una nota marginal.
+
+Hotel Horizonte vuelve concreta la distinción: la llegada atraviesa reserva, preparación, asignación, acceso y reparación; ninguna área tiene éxito si el huésped espera. Las voces del caso no ilustran una respuesta predeterminada; muestran cómo una decisión cambia según quién sostiene la promesa, quién opera y quién recibe las consecuencias.
+
+Para la práctica profesional, esto implica medir flujo desde una promesa compartida sin borrar responsabilidades; N15 comparará modelos según la decisión que ayudan a tomar. El documento ofrece un paso acumulativo del recorrido, pero conserva abierta la evidencia que podría obligar a corregirlo en el núcleo siguiente.
 
 ## De N13 a N14: de transiciones confiables a un servicio completo
 

@@ -34,9 +34,17 @@ La puerta se revisará después de dos ciclos operativos o ante cualquier discre
 
 ## Tesis
 
-Tener muchos documentos correctos no alcanza para tener una intervención coherente. Cada afirmación importante debe poder seguirse desde el problema y la evidencia hasta la explicación, la alternativa elegida, la persona que autorizó, la operación, la consecuencia y la revisión. La cadena no borra las contradicciones. Permite ver qué supuesto, decisión o control depende de ellas.
+Tener muchos documentos correctos no alcanza para tener una intervención coherente. Cada afirmación importante debe poder seguirse desde el problema y la evidencia hasta la explicación, la alternativa elegida, la persona que autorizó, la operación, la consecuencia y la revisión. La cadena no borra las contradicciones. Permite ver qué supuesto, decisión o control depende de ellas. Si falta un enlace, una métrica no responde a la pregunta o un resultado admite varias explicaciones, hay que revisar la parte afectada. Acumular archivos no resuelve el problema. Integrar es mostrar relaciones y límites, no apilar piezas.
 
-Si falta un enlace, una métrica no responde a la pregunta o un resultado admite varias explicaciones, hay que revisar la parte afectada. Acumular archivos no resuelve el problema. Integrar es mostrar relaciones y límites, no apilar piezas.
+La tesis se vuelve operativa al recorrer en ambos sentidos problema, explicación, evidencia, alternativa, decisión, realización, operación y gobierno para probar coherencia sin borrar contradicciones. Esa secuencia obliga a declarar qué cambia, qué permanece abierto y qué evidencia podría modificar la decisión. El rigor no proviene de agregar términos, sino de hacer reconstruible el paso entre una observación, una explicación y una acción.
+
+Un ejemplo sencillo permite verlo: desde una promesa puede seguirse cada decisión hasta su consecuencia y, desde un incidente, volver a la evidencia y al encuadre que lo habilitaron. El caso muestra por qué una misma señal admite explicaciones e intervenciones diferentes. Antes de ampliar alcance conviene precisar población, condición de éxito y fuente de evidencia.
+
+El límite también importa: reunir entregables correctos en un archivo y llamarlo intervención coherente aunque usen poblaciones, conceptos o versiones incompatibles. Ese contraejemplo evita convertir una idea útil en receta universal. Una decisión puede ser provisional, pero debe decir qué protege ahora y cuándo volverá a examinarse.
+
+En Hotel Horizonte, cada rol conserva artefactos válidos en su marco, pero el expediente sólo sirve si explica la llegada completa y sus desacuerdos. El caso longitudinal obliga a sostener la misma promesa mientras cambian el modelo y la evidencia; así puede verse qué aprendió realmente el equipo.
+
+La consecuencia profesional es hacer auditable la cadena y sus puertas; N35 enseñará a comunicarla, defenderla y transferir criterio. La tesis no cierra la discusión: fija un criterio común para que el encuentro pueda comparar argumentos, producir evidencia y decidir sin ocultar incertidumbre.
 
 ## Del cierre anterior al nuevo avance
 

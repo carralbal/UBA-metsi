@@ -44,11 +44,17 @@ El equipo formula un criterio de salida. La cartera estará lista cuando Elena p
 
 ## Tesis
 
-Un modelo selecciona una parte de la realidad para responder una pregunta y ayudar a tomar una decisión. Su valor depende tanto de lo que muestra como de lo que deja afuera. Más detalle no siempre mejora el modelo. Puede mezclar niveles, dificultar la lectura y exigir mantenimiento sin mejorar la decisión.
+Un modelo selecciona una parte de la realidad para responder una pregunta y ayudar a tomar una decisión. Su valor depende tanto de lo que muestra como de lo que deja afuera. Más detalle no siempre mejora el modelo. Puede mezclar niveles, dificultar la lectura y exigir mantenimiento sin mejorar la decisión. La selección debe considerar objeto, relaciones, dinámica, audiencia, evidencia, notación, costo y vigencia. Diferentes modelos pueden ser simultáneamente válidos porque responden preguntas distintas. La coherencia no exige identidad, sino conceptos y límites compatibles. Una cartera mínima supera al modelo total. Combina sólo las vistas necesarias, conserva trazabilidad y declara contradicciones. La notación sirve al razonamiento; no lo reemplaza.
 
-La selección debe considerar objeto, relaciones, dinámica, audiencia, evidencia, notación, costo y vigencia. Diferentes modelos pueden ser simultáneamente válidos porque responden preguntas distintas. La coherencia no exige identidad, sino conceptos y límites compatibles.
+Para pasar de la idea a una decisión hace falta seleccionar qué aspecto representar según pregunta, audiencia, costo de mantenimiento y aquello que el modelo deja deliberadamente afuera. Así se distinguen descripción, explicación y compromiso, tres movimientos que suelen mezclarse. El resultado es una argumentación que otra persona puede revisar sin tener que aceptar la autoridad de quien la produjo.
 
-Una cartera mínima supera al modelo total. Combina sólo las vistas necesarias, conserva trazabilidad y declara contradicciones. La notación sirve al razonamiento; no lo reemplaza.
+Consideremos un ejemplo de baja escala: experiencia muestra barreras, BPMN eventos y responsabilidades, C4 relaciones de software; superponerlos no produce automáticamente una mejor explicación. Seguirlo de punta a punta permite reconocer primero el fenómeno simple y luego las relaciones que vuelven insuficiente la explicación inicial. Esa es la progresión de lo general a lo particular que propone la colección.
+
+La tesis no autoriza cualquier uso. Su contraejemplo es usar UML, BPMN o una plantilla porque es estándar, aunque su precisión no sirva a la conversación o decisión presente. Allí se vuelve visible que una técnica correcta puede ser inadecuada para cierto riesgo, población o momento. La calidad depende del uso, no del prestigio de la herramienta.
+
+Aplicado a Hotel Horizonte, Lucía sigue el episodio, Federico los contratos y Elena autoridad y riesgo; los modelos comparten objetos pero no escala. La continuidad del caso permite comparar la nueva lectura con las anteriores y evita inventar una situación distinta para confirmar cada concepto.
+
+De aquí se desprende una responsabilidad concreta: justificar utilidad y límite de cada representación; N16 gobernará versiones, vínculos y contradicciones durante el ciclo de vida. Profesores y estudiantes pueden discutirla con ejemplos, objeciones y evidencia; no necesitan memorizar una definición aislada ni aceptar una receta cerrada.
 
 ## De N14 a N15: del proceso real a la representación adecuada
 

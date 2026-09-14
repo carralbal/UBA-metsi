@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "c784e6286b6846e8810937b224bc819a8b6f16c040ca0449a7cbbcb8d0cc8326",
-        "declared_sha256": "c784e6286b6846e8810937b224bc819a8b6f16c040ca0449a7cbbcb8d0cc8326",
+        "actual_sha256": "3d997dfffc4379ba3fd0d8b657462f72278601117d22049633f6fd8f456d597f",
+        "declared_sha256": "3d997dfffc4379ba3fd0d8b657462f72278601117d22049633f6fd8f456d597f",
         "document_json_matches": true,
         "source": "source/N19_alternativas_de_realizacion_configurar_integrar_construir_y_no_automatizar-content-canonical-v3.md",
         "source_exists": true,
@@ -28,17 +28,17 @@
       "check": "source_ids_have_exact_one_to_one_ordered_coverage",
       "evidence": {
         "first_sequence_difference": null,
-        "html_count": 267,
-        "html_unique": 267,
+        "html_count": 272,
+        "html_unique": 272,
         "integrity": {
           "missing_source_ids": [],
-          "rendered_source_id_count": 267,
-          "source_block_count": 267,
+          "rendered_source_id_count": 272,
+          "source_block_count": 272,
           "status": "PASS",
           "unexpected_source_ids": []
         },
-        "manifest_count": 267,
-        "manifest_unique": 267
+        "manifest_count": 272,
+        "manifest_unique": 272
       },
       "status": "PASS"
     },
@@ -67,12 +67,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 20414853,
-        "final_sha256": "a941a16e12df22e3788f2d99a3094923528fb74388d9e2e191d16fe48fbe7b85",
-        "pages": 27,
+        "bytes": 20491682,
+        "final_sha256": "ca8008b1d3b32a8ee4530154d5741e0094749d1846cac210dab5fc829ff95e81",
+        "pages": 28,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "30f3735114428933e42c2f295cfdf1b16e7ed98366819ac6240ec4464f0d65c7",
+        "raw_sha256": "62a6d92633a54c5cadce0d2066c897cd574a579a9b2a844be831145695bf7fdd",
         "unique_sizes": [
           [
             594.96,
@@ -85,7 +85,7 @@
     {
       "check": "every_source_block_has_verifiable_pdf_text",
       "evidence": {
-        "checked": 267,
+        "checked": 272,
         "missing_source_ids": []
       },
       "status": "PASS"
@@ -93,6 +93,10 @@
     {
       "check": "contents_index_titles_sections_and_routes_are_complete",
       "evidence": {
+        "has_contents_label": true,
+        "has_core_reading": true,
+        "has_extensions": true,
+        "has_prioritized_route": true,
         "heading_count": 18,
         "html_routes": [
           "PROBLEMA",
@@ -115,6 +119,7 @@
           "PREPARACIÓN"
         ],
         "missing_from_contents": [],
+        "ordered_contents_positions": true,
         "pdf_routes": [
           "PROBLEMA",
           "PROBLEMA",
@@ -135,6 +140,7 @@
           "PREPARACIÓN",
           "PREPARACIÓN"
         ],
+        "route_set_complete": true,
         "section_numbers": [
           1,
           2,
@@ -154,7 +160,8 @@
           16,
           17,
           18
-        ]
+        ],
+        "section_titles_match_source": true
       },
       "status": "PASS"
     },
@@ -164,7 +171,7 @@
         "candidate_pages": [
           {
             "first_item_position": 36,
-            "page": 24,
+            "page": 25,
             "title_position": 10
           }
         ],
@@ -192,7 +199,7 @@
         "html_count": 2,
         "pdf_pages": [
           5,
-          20
+          21
         ]
       },
       "status": "PASS"
@@ -263,7 +270,7 @@
               "width_px": 595
             }
           },
-          "20": {
+          "21": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -287,14 +294,14 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.98566,
-              "page": 20,
-              "pixel_sha256": "1b4e7c58d87ba35cadc2a2753ffe9cf7a922539cb5cb9935b1233ec2e2c4711b",
+              "page": 21,
+              "pixel_sha256": "30f0d97e90294b16c69bbcd3b3d96a3740e2defd3ff1c9572f12c3eee05d0c8b",
               "vertical_density": 0.8955,
               "white_gutters": [],
               "width_px": 595
             }
           },
-          "27": {
+          "28": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -318,8 +325,8 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.999944,
-              "page": 27,
-              "pixel_sha256": "b547885d2404ded1d17cd83433a74d7e8654d1b7261ae19ad81898d350d11d2a",
+              "page": 28,
+              "pixel_sha256": "b963ffae3abd791675d61555611b86f68a53a0bf9fe87d5a0f9307bd0032e12e",
               "vertical_density": 0.6663,
               "white_gutters": [],
               "width_px": 595
@@ -1038,6 +1045,7 @@
           1,
           1,
           1,
+          1,
           1
         ],
         "missing_folio_footer_pages": []
@@ -1072,11 +1080,11 @@
           "https://www.ntia.gov/page/software-bill-materials"
         ],
         "external_link_pages": [
-          26
+          27
         ],
         "missing_printed": [],
         "reference_pages": [
-          26
+          27
         ]
       },
       "status": "PASS"
@@ -1093,9 +1101,9 @@
           3,
           4,
           5,
-          20,
-          26,
-          27
+          21,
+          27,
+          28
         ],
         "underfilled": {}
       },
@@ -1122,14 +1130,14 @@
   "failed_checks": [],
   "metrics": {
     "minimum_ordinary_vertical_density": 0.5962,
-    "pages": 27,
+    "pages": 28,
     "pause_pages": [
       5,
-      20
+      21
     ],
-    "pdf_bytes": 20414853,
-    "pdf_sha256": "a941a16e12df22e3788f2d99a3094923528fb74388d9e2e191d16fe48fbe7b85",
-    "source_blocks": 267
+    "pdf_bytes": 20491682,
+    "pdf_sha256": "ca8008b1d3b32a8ee4530154d5741e0094749d1846cac210dab5fc829ff95e81",
+    "source_blocks": 272
   },
   "mode": "read-only",
   "package": "N19-v9-editorial",

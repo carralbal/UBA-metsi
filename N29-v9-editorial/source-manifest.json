@@ -100,12 +100,32 @@
     {
       "source_id": "N29-s04-b001",
       "kind": "paragraph",
-      "text": "Liberar un cambio es gobernable cuando el artefacto, la configuración, la infraestructura, los datos, la autoridad y la población expuesta avanzan como una unidad que puede reconstruirse. La integración continua y la automatización reducen variaciones, pero no deciden qué se expone, a quién ni con qué riesgo. Volver el código no recupera el servicio si los datos, los terceros o la operación ya cambiaron."
+      "text": "Liberar un cambio es gobernable cuando el artefacto, la configuración, la infraestructura, los datos, la autoridad y la población expuesta avanzan como una unidad que puede reconstruirse. La integración continua y la automatización reducen variaciones, pero no deciden qué se expone, a quién ni con qué riesgo. Volver el código no recupera el servicio si los datos, los terceros o la operación ya cambiaron. La capacidad profesional aparece cuando la organización puede volver o reparar de forma ensayada, conservar lo ocurrido y aprender sin trasladar el riesgo en silencio."
     },
     {
       "source_id": "N29-s04-b002",
       "kind": "paragraph",
-      "text": "La capacidad profesional aparece cuando la organización puede volver o reparar de forma ensayada, conservar lo ocurrido y aprender sin trasladar el riesgo en silencio."
+      "text": "En términos prácticos, el mecanismo consiste en conectar cambio de código, integración, infraestructura, autorización, despliegue y recuperación mediante evidencia y responsabilidades observables. Cada parte cumple una función distinta y evita que una herramienta o una métrica reemplace al razonamiento que debería sostenerla. Lo importante es poder explicar por qué esa secuencia resulta adecuada para este problema."
+    },
+    {
+      "source_id": "N29-s04-b003",
+      "kind": "paragraph",
+      "text": "Puede verse en una situación cotidiana: CI puede verificar cada cambio y CD dejarlo listo, pero producción sólo se actualiza cuando riesgos, datos y operación cumplen la puerta acordada. La escena comienza simple y gana complejidad cuando aparecen población, tiempo, dependencias y consecuencias. Esa progresión permite aprender sin saltar directamente a una solución total."
+    },
+    {
+      "source_id": "N29-s04-b004",
+      "kind": "paragraph",
+      "text": "Un contraejemplo marca la frontera de la tesis: confundir automatización del pipeline con gobierno completo o convertir toda aprobación en espera manual sin criterio. La misma práctica deja de ser defendible cuando ya no produce evidencia, desplaza daño o impide revisar el compromiso. Nombrar el límite es parte de comprender, no una nota marginal."
+    },
+    {
+      "source_id": "N29-s04-b005",
+      "kind": "paragraph",
+      "text": "Hotel Horizonte vuelve concreta la distinción: Federico despliega una regla, Ricardo protege continuidad y Elena acepta expansión; rollback técnico no basta si ya hubo huéspedes afectados. Las voces del caso no ilustran una respuesta predeterminada; muestran cómo una decisión cambia según quién sostiene la promesa, quién opera y quién recibe las consecuencias."
+    },
+    {
+      "source_id": "N29-s04-b006",
+      "kind": "paragraph",
+      "text": "Para la práctica profesional, esto implica hacer cada cambio trazable y recuperable en lo técnico y operativo; N30 observará señales e incidentes. El documento ofrece un paso acumulativo del recorrido, pero conserva abierta la evidencia que podría obligar a corregirlo en el núcleo siguiente."
     },
     {
       "source_id": "N29-s05-h2",

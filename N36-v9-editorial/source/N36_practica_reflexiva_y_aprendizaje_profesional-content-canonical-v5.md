@@ -28,6 +28,16 @@ N36 cierra el curso con esa disciplina. La experiencia se vuelve aprendizaje cua
 
 Que algo haya salido bien no demuestra que se entienda por qué salió bien. Aprender de una intervención exige volver a lo ocurrido: qué se sabía, qué se eligió, qué sorprendió y qué pasó después. El aprendizaje se vuelve real cuando cambia la manera de actuar o decidir y cuando ese cambio puede probarse en otra situación. La inteligencia artificial puede ayudar a encontrar preguntas y comparar relatos, pero las personas deben comprobar los hechos, elegir un camino y hacerse cargo del resultado.
 
+Para pasar de la idea a una decisión hace falta reconstruir qué se esperaba, qué ocurrió, qué sorprendió, qué marco se usó y qué decisión futura cambia, incluyendo el papel real de la asistencia de IA. Así se distinguen descripción, explicación y compromiso, tres movimientos que suelen mezclarse. El resultado es una argumentación que otra persona puede revisar sin tener que aceptar la autoridad de quien la produjo.
+
+Consideremos un ejemplo de baja escala: un incidente no enseña por existir: aprende el equipo que compara hipótesis, evidencia y acciones y modifica una práctica verificable. Seguirlo de punta a punta permite reconocer primero el fenómeno simple y luego las relaciones que vuelven insuficiente la explicación inicial. Esa es la progresión de lo general a lo particular que propone la colección.
+
+La tesis no autoriza cualquier uso. Su contraejemplo es convertir retrospectivas en culpabilización o celebración, o registrar lecciones tan generales que ninguna decisión posterior puede aplicarlas. Allí se vuelve visible que una técnica correcta puede ser inadecuada para cierto riesgo, población o momento. La calidad depende del uso, no del prestigio de la herramienta.
+
+Aplicado a Hotel Horizonte, el historial de llegadas permite revisar promesas, estados, excepciones y gobierno; el caso termina abierto porque la operación seguirá produciendo evidencia. La continuidad del caso permite comparar la nueva lectura con las anteriores y evita inventar una situación distinta para confirmar cada concepto.
+
+De aquí se desprende una responsabilidad concreta: sostener aprendizaje reflexivo, responsabilidad y revisión; N36 cierra la colección sin presentar el juicio profesional como receta terminada. Profesores y estudiantes pueden discutirla con ejemplos, objeciones y evidencia; no necesitan memorizar una definición aislada ni aceptar una receta cerrada.
+
 ## Del cierre anterior al nuevo avance
 
 N35 terminó con una expectativa concreta: otras personas debían poder actuar sin depender del equipo original. N36 mira qué pasa cuando llega ese momento. El último paso del curso no agrega otro documento ni otra plantilla. Enseña a revisar una decisión cuando la realidad confirma, contradice o complica lo que creíamos.

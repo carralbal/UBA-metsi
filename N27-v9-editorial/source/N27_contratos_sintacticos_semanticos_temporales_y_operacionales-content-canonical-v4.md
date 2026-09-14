@@ -38,9 +38,17 @@ La medida se revisará tras treinta transiciones o ante una habitación entregad
 
 ## Tesis
 
-Dos sistemas no están integrados sólo porque intercambien mensajes válidos. La integración comienza cuando quienes producen, consumen y operan esos mensajes pueden explicar su significado, su vigencia, sus efectos y qué harán ante un resultado incierto. Un contrato completo relaciona la estructura con las condiciones previas, los estados, el orden, los errores, la autoridad y la reparación. También declara qué no garantiza.
+Dos sistemas no están integrados sólo porque intercambien mensajes válidos. La integración comienza cuando quienes producen, consumen y operan esos mensajes pueden explicar su significado, su vigencia, sus efectos y qué harán ante un resultado incierto. Un contrato completo relaciona la estructura con las condiciones previas, los estados, el orden, los errores, la autoridad y la reparación. También declara qué no garantiza. Si omite una de esas capas, puede superar las validaciones automáticas y producir decisiones incompatibles ante una demora, una duplicación, un cambio de versión o una falla parcial. Por eso el contrato debe probarse sobre consecuencias operativas y poblaciones reales. También debe conservar evidencia de la transición y permitir detener o reparar sin fingir que nunca hubo incertidumbre.
 
-Si omite una de esas capas, puede superar las validaciones automáticas y producir decisiones incompatibles ante una demora, una duplicación, un cambio de versión o una falla parcial. Por eso el contrato debe probarse sobre consecuencias operativas y poblaciones reales. También debe conservar evidencia de la transición y permitir detener o reparar sin fingir que nunca hubo incertidumbre.
+Para pasar de la idea a una decisión hace falta distinguir forma del mensaje, significado, expectativas de tiempo y obligaciones de operación para que una integración conserve el propósito del servicio. Así se distinguen descripción, explicación y compromiso, tres movimientos que suelen mezclarse. El resultado es una argumentación que otra persona puede revisar sin tener que aceptar la autoridad de quien la produjo.
+
+Consideremos un ejemplo de baja escala: dos APIs aceptan el mismo campo «disponible», pero una informa limpieza y otra posibilidad efectiva de asignación. Seguirlo de punta a punta permite reconocer primero el fenómeno simple y luego las relaciones que vuelven insuficiente la explicación inicial. Esa es la progresión de lo general a lo particular que propone la colección.
+
+La tesis no autoriza cualquier uso. Su contraejemplo es considerar exitosa una integración porque responde 200 o porque GitHub muestra una versión desplegada, sin probar significado ni recuperación. Allí se vuelve visible que una técnica correcta puede ser inadecuada para cierto riesgo, población o momento. La calidad depende del uso, no del prestigio de la herramienta.
+
+Aplicado a Hotel Horizonte, PMS y cerraduras intercambian estados correctos en sintaxis pero incompatibles para la decisión de Lucía; el contrato debe incluir tiempo y reparación. La continuidad del caso permite comparar la nueva lectura con las anteriores y evita inventar una situación distinta para confirmar cada concepto.
+
+De aquí se desprende una responsabilidad concreta: hacer verificable la promesa entre equipos y terceros; N28 graduará evidencia de calidad según riesgo. Profesores y estudiantes pueden discutirla con ejemplos, objeciones y evidencia; no necesitan memorizar una definición aislada ni aceptar una receta cerrada.
 
 ## Del cierre anterior al nuevo avance
 

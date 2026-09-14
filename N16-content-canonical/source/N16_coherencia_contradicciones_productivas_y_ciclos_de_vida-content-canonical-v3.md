@@ -38,11 +38,17 @@ HH-16 no impondrá una definición única por decreto. Construirá correspondenc
 
 ## Tesis
 
-La coherencia entre modelos no exige que todos contengan lo mismo ni que usen exactamente las mismas palabras. Exige que sus afirmaciones sean compatibles con su propósito, alcance, nivel, tiempo, evidencia y decisión. Dos vistas pueden diferir y, aun así, formar una cartera íntegra.
+La coherencia entre modelos no exige que todos contengan lo mismo ni que usen exactamente las mismas palabras. Exige que sus afirmaciones sean compatibles con su propósito, alcance, nivel, tiempo, evidencia y decisión. Dos vistas pueden diferir y, aun así, formar una cartera íntegra. Una contradicción es productiva cuando vuelve visible un supuesto, una frontera, una regla o una transición no resuelta. Deja de ser productiva si permanece sin dueño, efecto ni plazo. La auditoría debe clasificarla y convertirla en corrección, decisión, investigación o riesgo aceptado. Los modelos poseen ciclo de vida. Se proponen, validan, usan, revisan, reemplazan y retiran. Mantener coherencia significa gobernar conceptos y relaciones a través del cambio, no congelar documentos. La trazabilidad conecta evidencia, decisión, versión y consecuencia.
 
-Una contradicción es productiva cuando vuelve visible un supuesto, una frontera, una regla o una transición no resuelta. Deja de ser productiva si permanece sin dueño, efecto ni plazo. La auditoría debe clasificarla y convertirla en corrección, decisión, investigación o riesgo aceptado.
+La tesis se vuelve operativa al conservar propósito, vigencia, responsable y vínculos entre modelos sin exigir que perspectivas legítimamente distintas digan lo mismo. Esa secuencia obliga a declarar qué cambia, qué permanece abierto y qué evidencia podría modificar la decisión. El rigor no proviene de agregar términos, sino de hacer reconstruible el paso entre una observación, una explicación y una acción.
 
-Los modelos poseen ciclo de vida. Se proponen, validan, usan, revisan, reemplazan y retiran. Mantener coherencia significa gobernar conceptos y relaciones a través del cambio, no congelar documentos. La trazabilidad conecta evidencia, decisión, versión y consecuencia.
+Un ejemplo sencillo permite verlo: «cliente» puede significar quien paga en un catálogo y quien recibe el servicio en un mapa de experiencia; combinar métricas vuelve crítica la diferencia. El caso muestra por qué una misma señal admite explicaciones e intervenciones diferentes. Antes de ampliar alcance conviene precisar población, condición de éxito y fuente de evidencia.
+
+El límite también importa: centralizar archivos y llamarlo fuente única de verdad, o aceptar contradicciones que activan acciones incompatibles como simple riqueza interpretativa. Ese contraejemplo evita convertir una idea útil en receta universal. Una decisión puede ser provisional, pero debe decir qué protege ahora y cuándo volverá a examinarse.
+
+En Hotel Horizonte, Comercial, Recepción y Housekeeping usan «disponible» para decisiones diferentes y deben declarar cuándo cada sentido vale. El caso longitudinal obliga a sostener la misma promesa mientras cambian el modelo y la evidencia; así puede verse qué aprendió realmente el equipo.
+
+La consecuencia profesional es tratar modelos como activos vivos; N17 elegirá lógicas de intervención según incertidumbre, reversibilidad y consecuencia. La tesis no cierra la discusión: fija un criterio común para que el encuentro pueda comparar argumentos, producir evidencia y decidir sin ocultar incertidumbre.
 
 ## De N15 a N16: de la cartera mínima a una conversación entre vistas
 

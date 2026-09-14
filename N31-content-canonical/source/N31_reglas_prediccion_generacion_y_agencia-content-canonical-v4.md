@@ -36,9 +36,17 @@ La decisión se revisará al acumular cien conversaciones, ante la primera acci�
 
 ## Tesis
 
-La IA es pertinente cuando una capacidad concreta mejora una alternativa conocida y sus dudas pueden manejarse según la consecuencia. Una regla, una predicción, un texto generado y un agente no son versiones cada vez más sofisticadas de lo mismo. Producen efectos distintos y necesitan fuentes, pruebas, límites y autoridades diferentes. Una demostración fluida no prueba que la herramienta sea necesaria ni que tenga permiso para actuar.
+La IA es pertinente cuando una capacidad concreta mejora una alternativa conocida y sus dudas pueden manejarse según la consecuencia. Una regla, una predicción, un texto generado y un agente no son versiones cada vez más sofisticadas de lo mismo. Producen efectos distintos y necesitan fuentes, pruebas, límites y autoridades diferentes. Una demostración fluida no prueba que la herramienta sea necesaria ni que tenga permiso para actuar. Hay que comparar la ruta con IA con la mejor ruta disponible sin IA, decidir qué juicio debe quedar en personas capaces de ejercerlo y conservar una salida practicable. Si el análisis empieza por el modelo, puede terminar automatizando una decisión que la organización todavía no entiende.
 
-Hay que comparar la ruta con IA con la mejor ruta disponible sin IA, decidir qué juicio debe quedar en personas capaces de ejercerlo y conservar una salida practicable. Si el análisis empieza por el modelo, puede terminar automatizando una decisión que la organización todavía no entiende.
+La tesis se vuelve operativa al separar reglas, predicción, generación y agencia, y comparar cada alternativa con una solución más simple según error, supervisión y reversibilidad. Esa secuencia obliga a declarar qué cambia, qué permanece abierto y qué evidencia podría modificar la decisión. El rigor no proviene de agregar términos, sino de hacer reconstruible el paso entre una observación, una explicación y una acción.
+
+Un ejemplo sencillo permite verlo: clasificar texto puede requerir reglas o modelo; redactar una respuesta admite generación; ejecutar una acción agrega autoridad y riesgo distintos. El caso muestra por qué una misma señal admite explicaciones e intervenciones diferentes. Antes de ampliar alcance conviene precisar población, condición de éxito y fuente de evidencia.
+
+El límite también importa: usar IA por novedad en una decisión determinista o llamarla asistente cuando actúa sin confirmación y produce consecuencias reales. Ese contraejemplo evita convertir una idea útil en receta universal. Una decisión puede ser provisional, pero debe decir qué protege ahora y cuándo volverá a examinarse.
+
+En Hotel Horizonte, un modelo puede sugerir reparación, pero Lucía conserva autoridad y evidencia; automatizar compensaciones exige límites mucho más estrictos. El caso longitudinal obliga a sostener la misma promesa mientras cambian el modelo y la evidencia; así puede verse qué aprendió realmente el equipo.
+
+La consecuencia profesional es elegir IA por pertinencia y no por moda; N32 diseñará evaluación de tareas, cobertura, severidad y desigualdad. La tesis no cierra la discusión: fija un criterio común para que el encuentro pueda comparar argumentos, producir evidencia y decidir sin ocultar incertidumbre.
 
 ## Del cierre anterior al nuevo avance
 

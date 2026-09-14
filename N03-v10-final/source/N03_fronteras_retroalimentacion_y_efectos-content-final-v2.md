@@ -31,6 +31,16 @@ HH-03 acompañará toda la lectura porque permite observar tres movimientos dife
 
 Toda frontera es una decisión analítica, operativa y política. Permite concentrar la intervención, pero también determina qué mecanismos se estudian, qué resultados cuentan, quién participa y dónde puede desplazarse trabajo o daño. Una frontera rigurosa se define para una pregunta, declara exclusiones, examina retroalimentaciones y se revisa cuando la evidencia muestra que optimizar lo incluido deteriora el sistema mayor.
 
+Para pasar de la idea a una decisión hace falta describir qué cambia, en qué dirección, con qué demora y qué circuitos refuerzan o compensan el efecto observado. Así se distinguen descripción, explicación y compromiso, tres movimientos que suelen mezclarse. El resultado es una argumentación que otra persona puede revisar sin tener que aceptar la autoridad de quien la produjo.
+
+Consideremos un ejemplo de baja escala: agregar personal reduce una cola, pero el apuro puede aumentar errores que regresan como retrabajo y eliminan la mejora inicial. Seguirlo de punta a punta permite reconocer primero el fenómeno simple y luego las relaciones que vuelven insuficiente la explicación inicial. Esa es la progresión de lo general a lo particular que propone la colección.
+
+La tesis no autoriza cualquier uso. Su contraejemplo es atribuir cualquier sorpresa a la complejidad cuando una regla mal configurada explica de manera directa todos los fallos. Allí se vuelve visible que una técnica correcta puede ser inadecuada para cierto riesgo, población o momento. La calidad depende del uso, no del prestigio de la herramienta.
+
+Aplicado a Hotel Horizonte, la llegada anticipada reordena Housekeeping, demora otras habitaciones y crea compensaciones que retroalimentan la presión operativa. La continuidad del caso permite comparar la nueva lectura con las anteriores y evita inventar una situación distinta para confirmar cada concepto.
+
+De aquí se desprende una responsabilidad concreta: intervenir sobre una relación explicada y observar efectos previstos y no previstos; N04 separará hechos, síntomas e hipótesis. Profesores y estudiantes pueden discutirla con ejemplos, objeciones y evidencia; no necesitan memorizar una definición aislada ni aceptar una receta cerrada.
+
 ## De N02 a N03: del mapa a sus consecuencias
 
 N02 mostró que el sistema de información no cabe en una aplicación y propuso construir una frontera móvil alrededor de la capacidad que se desea sostener. N03 recibe ese mapa como una hipótesis, no como una conclusión. Una vez elegidos los elementos y relaciones relevantes, todavía falta preguntar qué consecuencias produce el recorte, qué efectos pueden regresar y qué obligación conserva la intervención sobre aquello que dejó afuera.

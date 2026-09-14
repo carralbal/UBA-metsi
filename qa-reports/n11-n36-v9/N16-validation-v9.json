@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "39e1e6501ed46e01bc0a1b598616c0d23eaba1d0582d1179ee0224a675b33119",
-        "declared_sha256": "39e1e6501ed46e01bc0a1b598616c0d23eaba1d0582d1179ee0224a675b33119",
+        "actual_sha256": "1a30132ae8bb5bc4f2a26444f396a2a80b0dda76cea319e8d8a4982824ad70c4",
+        "declared_sha256": "1a30132ae8bb5bc4f2a26444f396a2a80b0dda76cea319e8d8a4982824ad70c4",
         "document_json_matches": true,
         "source": "source/N16_coherencia_contradicciones_productivas_y_ciclos_de_vida-content-canonical-v3.md",
         "source_exists": true,
@@ -28,17 +28,17 @@
       "check": "source_ids_have_exact_one_to_one_ordered_coverage",
       "evidence": {
         "first_sequence_difference": null,
-        "html_count": 307,
-        "html_unique": 307,
+        "html_count": 310,
+        "html_unique": 310,
         "integrity": {
           "missing_source_ids": [],
-          "rendered_source_id_count": 307,
-          "source_block_count": 307,
+          "rendered_source_id_count": 310,
+          "source_block_count": 310,
           "status": "PASS",
           "unexpected_source_ids": []
         },
-        "manifest_count": 307,
-        "manifest_unique": 307
+        "manifest_count": 310,
+        "manifest_unique": 310
       },
       "status": "PASS"
     },
@@ -67,12 +67,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 17345129,
-        "final_sha256": "abedc48ccbf8d1565f4d9badb3004b8dca3d1739e5077621ddf97efef5e556ee",
-        "pages": 28,
+        "bytes": 17406372,
+        "final_sha256": "42cd41a5bb39c55bdd1d8b6539498e478485c99eb1ecbb8050b330a58cee5e6b",
+        "pages": 29,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "c916006d755c3f55c382be355210902ad8c238813f91cbf0c9bd2aed620b4771",
+        "raw_sha256": "5d42d65558e7f443d298e7771cf1cf45d0d3b29bc62a9fe80cb1b4584e7bc2af",
         "unique_sizes": [
           [
             594.96,
@@ -85,7 +85,7 @@
     {
       "check": "every_source_block_has_verifiable_pdf_text",
       "evidence": {
-        "checked": 307,
+        "checked": 310,
         "missing_source_ids": []
       },
       "status": "PASS"
@@ -93,6 +93,10 @@
     {
       "check": "contents_index_titles_sections_and_routes_are_complete",
       "evidence": {
+        "has_contents_label": true,
+        "has_core_reading": true,
+        "has_extensions": true,
+        "has_prioritized_route": true,
         "heading_count": 17,
         "html_routes": [
           "PROBLEMA",
@@ -114,6 +118,7 @@
           "PREPARACIÓN"
         ],
         "missing_from_contents": [],
+        "ordered_contents_positions": true,
         "pdf_routes": [
           "PROBLEMA",
           "PROBLEMA",
@@ -133,6 +138,7 @@
           "PREPARACIÓN",
           "PREPARACIÓN"
         ],
+        "route_set_complete": true,
         "section_numbers": [
           1,
           2,
@@ -151,7 +157,8 @@
           15,
           16,
           17
-        ]
+        ],
+        "section_titles_match_source": true
       },
       "status": "PASS"
     },
@@ -161,7 +168,7 @@
         "candidate_pages": [
           {
             "first_item_position": 36,
-            "page": 25,
+            "page": 26,
             "title_position": 10
           }
         ],
@@ -189,7 +196,7 @@
         "html_count": 2,
         "pdf_pages": [
           5,
-          22
+          23
         ]
       },
       "status": "PASS"
@@ -260,7 +267,7 @@
               "width_px": 595
             }
           },
-          "22": {
+          "23": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -284,14 +291,14 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.997727,
-              "page": 22,
-              "pixel_sha256": "36fb766e6271546c16d019dae3e8ebb318186dc28a37ad3e32d702f00651f6e4",
+              "page": 23,
+              "pixel_sha256": "7e500de384de90ccd20a29b7ebbe08afc058c81da1fcec29c325f923fda8d643",
               "vertical_density": 0.8955,
               "white_gutters": [],
               "width_px": 595
             }
           },
-          "28": {
+          "29": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -315,8 +322,8 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.999944,
-              "page": 28,
-              "pixel_sha256": "b963ffae3abd791675d61555611b86f68a53a0bf9fe87d5a0f9307bd0032e12e",
+              "page": 29,
+              "pixel_sha256": "c5ebe18e04117d38c8eb08cc7170fb250279ac2cd899c3bb6386d80a960e488f",
               "vertical_density": 0.6663,
               "white_gutters": [],
               "width_px": 595
@@ -1034,6 +1041,7 @@
           1,
           1,
           1,
+          1,
           1
         ],
         "missing_folio_footer_pages": []
@@ -1066,11 +1074,11 @@
           "https://www.opengroup.org/togaf-standard-10th-edition-downloads"
         ],
         "external_link_pages": [
-          27
+          28
         ],
         "missing_printed": [],
         "reference_pages": [
-          27
+          28
         ]
       },
       "status": "PASS"
@@ -1087,9 +1095,9 @@
           3,
           4,
           5,
-          22,
-          27,
-          28
+          23,
+          28,
+          29
         ],
         "underfilled": {}
       },
@@ -1116,14 +1124,14 @@
   "failed_checks": [],
   "metrics": {
     "minimum_ordinary_vertical_density": 0.5796,
-    "pages": 28,
+    "pages": 29,
     "pause_pages": [
       5,
-      22
+      23
     ],
-    "pdf_bytes": 17345129,
-    "pdf_sha256": "abedc48ccbf8d1565f4d9badb3004b8dca3d1739e5077621ddf97efef5e556ee",
-    "source_blocks": 307
+    "pdf_bytes": 17406372,
+    "pdf_sha256": "42cd41a5bb39c55bdd1d8b6539498e478485c99eb1ecbb8050b330a58cee5e6b",
+    "source_blocks": 310
   },
   "mode": "read-only",
   "package": "N16-v9-editorial",

@@ -52,6 +52,16 @@ La elección se revisará con incidentes, tiempos de reparación, costo operacio
 
 Elegir cómo realizar una capacidad también es diseñar el sistema de trabajo. La decisión debe comparar alternativas por capacidad, costo total, control, dependencia, seguridad, evidencia, reversibilidad y reparación durante todo el ciclo de vida. El resultado no es un ranking universal de productos. Es una propuesta provisional que deja claras las responsabilidades, las dependencias y las salidas, sin transferir obligaciones de manera implícita.
 
+La tesis se vuelve operativa al comparar configurar, integrar, construir y conservar trabajo humano según capacidad, costo total, control, dependencia y posibilidad de cambio. Esa secuencia obliga a declarar qué cambia, qué permanece abierto y qué evidencia podría modificar la decisión. El rigor no proviene de agregar términos, sino de hacer reconstruible el paso entre una observación, una explicación y una acción.
+
+Un ejemplo sencillo permite verlo: una regla común puede configurarse, una coordinación exigir API, una diferencia justificar desarrollo y un caso raro conservar revisión humana. El caso muestra por qué una misma señal admite explicaciones e intervenciones diferentes. Antes de ampliar alcance conviene precisar población, condición de éxito y fuente de evidencia.
+
+El límite también importa: construir para evitar adaptar el trabajo o comprar para trasladar al proveedor la responsabilidad por integración, operación y gobierno. Ese contraejemplo evita convertir una idea útil en receta universal. Una decisión puede ser provisional, pero debe decir qué protege ahora y cuándo volverá a examinarse.
+
+En Hotel Horizonte, la llegada anticipada admite PMS, integración, servicio propio o circuito asistido; cada alternativa debe preservar estados y reparación. El caso longitudinal obliga a sostener la misma promesa mientras cambian el modelo y la evidencia; así puede verse qué aprendió realmente el equipo.
+
+La consecuencia profesional es convertir preferencia tecnológica en decisión trazable; N20 organizará pruebas, hitos y condiciones de salida. La tesis no cierra la discusión: fija un criterio común para que el encuentro pueda comparar argumentos, producir evidencia y decidir sin ocultar incertidumbre.
+
 ## De N18 a N19: de la obligación y el legado a las opciones de realización
 
 N18 entrega un expediente que distingue compromisos verificados, obligaciones validadas o pendientes, práctica heredada, decisión de diseño, valor conservado y condición de retiro. N19 lo convierte en criterios para comparar configurar, integrar, construir, tercerizar, mantener trabajo manual o no automatizar sin perder protecciones ni memoria operativa.

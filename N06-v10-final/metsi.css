@@ -1811,6 +1811,9 @@ body.premium-magazine {
 .cover-n06>img{filter:none}
 .cover-n06 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.46) 0,rgba(5,7,6,.14) 18%,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 62%,rgba(8,9,8,.55) 100%)}
 
+/* METSI section-marker contrast 2026-09-14 */
+.premium-magazine:not(.document-n00) .reading-section[data-section="01"] .section-marker span{color:#171917!important;background:#FAFAF8!important;border-color:#171917!important}
+
 /* METSI prioritized reading route: canonical v1 */
 .premium-magazine:not(.document-n00) .contents-page .contents-route{
   max-width:170mm;margin:2mm 0 0;padding-left:3mm;border-left:1.4mm solid #CFFF00;
@@ -1821,4 +1824,116 @@ body.premium-magazine {
 .premium-magazine:not(.document-n00) .contents-layout li.contents-extension{border-left:1mm solid transparent}
 .premium-magazine:not(.document-n00) .contents-layout li small{
   display:inline-block;margin-left:1mm;font-size:6pt;line-height:1;letter-spacing:.06em;color:#666
+}
+
+/* METSI section-marker contrast 2026-09-14.
+   On the dark professional-question opener, the white disc carries an ink
+   numeral. Volt remains in the adjacent accent and label, never as small text
+   over paper. */
+.premium-magazine:not(.document-n00) .reading-section[data-section="01"] .section-marker span{
+  color:#171917!important;
+  background:#FAFAF8!important;
+  border-color:#171917!important
+}
+
+/* N00 is the editorial and pedagogical reference for every thesis. */
+.premium-magazine:not(.document-n00) .thesis-standard{
+  box-sizing:border-box;min-height:246mm;padding:8mm 9mm;
+  break-before:page;page-break-before:always;
+  break-after:page;page-break-after:always;
+  break-inside:avoid-page;page-break-inside:avoid;
+  background:#FAFAF8;border-left:1.5mm solid #CFFF00
+}
+.premium-magazine:not(.document-n00) .thesis-standard .section-heading{margin-bottom:5mm}
+.premium-magazine:not(.document-n00) .thesis-standard .section-heading h2{font-size:34pt;line-height:1}
+.premium-magazine:not(.document-n00) .thesis-standard .section-body{
+  columns:2;column-count:2;column-gap:9mm;column-rule:.2mm solid #C5C7C5;
+  font:400 10.7pt/1.42 Baskerville,Georgia,serif;orphans:3;widows:3
+}
+.premium-magazine:not(.document-n00) .thesis-standard .section-body p{
+  margin:0 0 4mm;break-inside:avoid-column
+}
+
+/* METSI section-marker contrast 2026-09-14.
+   On the dark professional-question opener, the white disc carries an ink
+   numeral. Volt remains in the adjacent accent and label, never as small text
+   over paper. */
+.premium-magazine:not(.document-n00) .reading-section[data-section="01"] .section-marker span{
+  color:#171917!important;
+  background:#FAFAF8!important;
+  border-color:#171917!important
+}
+
+/* N00 is the editorial and pedagogical reference for every thesis. */
+.premium-magazine:not(.document-n00) .thesis-standard{
+  box-sizing:border-box;min-height:246mm;padding:8mm 9mm;
+  break-before:page;page-break-before:always;
+  break-after:page;page-break-after:always;
+  break-inside:avoid-page;page-break-inside:avoid;
+  background:#FAFAF8;border-left:1.5mm solid #CFFF00
+}
+.premium-magazine:not(.document-n00) .thesis-standard .section-heading{margin-bottom:5mm}
+.premium-magazine:not(.document-n00) .thesis-standard .section-heading h2{font-size:34pt;line-height:1}
+.premium-magazine:not(.document-n00) .thesis-standard .section-body{
+  columns:2;column-count:2;column-gap:9mm;column-rule:.2mm solid #C5C7C5;
+  font:400 10.7pt/1.42 Baskerville,Georgia,serif;orphans:3;widows:3
+}
+.premium-magazine:not(.document-n00) .thesis-standard .section-body p{
+  margin:0 0 4mm;break-inside:avoid-column
+}
+
+/* METSI section-marker contrast 2026-09-14.
+   On the dark professional-question opener, the white disc carries an ink
+   numeral. Volt remains in the adjacent accent and label, never as small text
+   over paper. */
+.premium-magazine:not(.document-n00) .reading-section[data-section="01"] .section-marker span{
+  color:#171917!important;
+  background:#FAFAF8!important;
+  border-color:#171917!important
+}
+
+/* N00 is the editorial and pedagogical reference for every thesis. */
+.premium-magazine:not(.document-n00) .thesis-standard{
+  box-sizing:border-box;min-height:246mm;padding:8mm 9mm;
+  break-before:page;page-break-before:always;
+  break-after:page;page-break-after:always;
+  break-inside:avoid-page;page-break-inside:avoid;
+  background:#FAFAF8;border-left:1.5mm solid #CFFF00
+}
+.premium-magazine:not(.document-n00) .thesis-standard .section-heading{margin-bottom:5mm}
+.premium-magazine:not(.document-n00) .thesis-standard .section-heading h2{font-size:34pt;line-height:1}
+.premium-magazine:not(.document-n00) .thesis-standard .section-body{
+  columns:2;column-count:2;column-gap:9mm;column-rule:.2mm solid #C5C7C5;
+  font:400 10.7pt/1.42 Baskerville,Georgia,serif;orphans:3;widows:3
+}
+.premium-magazine:not(.document-n00) .thesis-standard .section-body p{
+  margin:0 0 4mm;break-inside:avoid-column
+}
+
+/* METSI section-marker contrast 2026-09-14.
+   On the dark professional-question opener, the white disc carries an ink
+   numeral. Volt remains in the adjacent accent and label, never as small text
+   over paper. */
+.premium-magazine:not(.document-n00) .reading-section[data-section="01"] .section-marker span{
+  color:#171917!important;
+  background:#FAFAF8!important;
+  border-color:#171917!important
+}
+
+/* N00 is the editorial and pedagogical reference for every thesis. */
+.premium-magazine:not(.document-n00) .thesis-standard{
+  box-sizing:border-box;min-height:246mm;padding:8mm 9mm;
+  break-before:page;page-break-before:always;
+  break-after:page;page-break-after:always;
+  break-inside:avoid-page;page-break-inside:avoid;
+  background:#FAFAF8;border-left:1.5mm solid #CFFF00
+}
+.premium-magazine:not(.document-n00) .thesis-standard .section-heading{margin-bottom:5mm}
+.premium-magazine:not(.document-n00) .thesis-standard .section-heading h2{font-size:34pt;line-height:1}
+.premium-magazine:not(.document-n00) .thesis-standard .section-body{
+  columns:2;column-count:2;column-gap:9mm;column-rule:.2mm solid #C5C7C5;
+  font:400 10.7pt/1.42 Baskerville,Georgia,serif;orphans:3;widows:3
+}
+.premium-magazine:not(.document-n00) .thesis-standard .section-body p{
+  margin:0 0 4mm;break-inside:avoid-column
 }

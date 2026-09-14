@@ -1,6 +1,6 @@
 # Auditoría final N11 a N36, candidatos editoriales v9
 
-Fecha de cierre: 2026-09-13.
+Fecha de cierre: 2026-09-14.
 
 ## Dictamen
 
@@ -9,8 +9,8 @@ Los 26 documentos aprobaron la auditoría de contenido, conservación de fuente 
 ## Resumen
 
 - Documentos: 26.
-- Páginas: 700.
-- Tamaño total de PDF: 498,669,917 bytes.
+- Páginas: 726.
+- Tamaño total de PDF: 501,981,442 bytes.
 - Controles deterministas: 676 de 676 aprobados.
 - Menor densidad ordinaria: 56.06 % en N13.
 - Conservación textual: PASS en los 26 documentos.
@@ -20,29 +20,29 @@ Los 26 documentos aprobaron la auditoría de contenido, conservación de fuente 
 
 | Documento | Páginas | Controles | Densidad mínima | Fuente | Visual | Bytes | SHA-256 |
 |---|---:|---:|---:|---|---|---:|---|
-| N11 | 27 | 26/26 | 56.77 % | PASS | PASS | 17,176,212 | `efa0f37812cf0b16ec5291b7304aceb3d774ffff83a1630d1b88f025c9205cd9` |
-| N12 | 26 | 26/26 | 64.73 % | PASS | PASS | 19,251,595 | `1a98500f186d8fb6ff3a932ea4c5cd80d4a01ec64344cfc265a3a36564b8b50d` |
-| N13 | 26 | 26/26 | 56.06 % | PASS | PASS | 18,446,324 | `287430fa6a309224579cfd338285697a6e417dd5e1f7bf4b507c3f81d04da4e7` |
-| N14 | 28 | 26/26 | 56.29 % | PASS | PASS | 20,405,383 | `934b6bfd19a012f93f1f9102cfa31a472ac1c7f8079fade8be469a5567d85029` |
-| N15 | 28 | 26/26 | 57.84 % | PASS | PASS | 17,116,630 | `af1cb6483e8b6f9c7864460ca943379af0930230a4e801c6446a5ff760dcdc50` |
-| N16 | 28 | 26/26 | 57.96 % | PASS | PASS | 17,283,214 | `50a736f7651bbc456ecdc73d2ad0043fba442540933707a88c8595f1a555b7c7` |
-| N17 | 28 | 26/26 | 57.96 % | PASS | PASS | 18,674,563 | `db15ea5d59ea40f088e9ea5f79756f8ff3a6b99e09b5888841c3720336c6cde2` |
-| N18 | 27 | 26/26 | 59.62 % | PASS | PASS | 19,797,173 | `d50a5cb8ea256ec03ac60acb256ac5fe053d7a3179f1f7294fa2d4bad06e0532` |
-| N19 | 27 | 26/26 | 59.62 % | PASS | PASS | 20,353,354 | `12102a0358072b88e3a0ee3fb334a3ef232a0f9d3e5bfff7b2ea7838cfd40b4d` |
-| N20 | 28 | 26/26 | 63.54 % | PASS | PASS | 19,900,210 | `70be0a738612deeb22adbca5cb0e9a5cc15f79aec5e93560371ad96a04207cd4` |
-| N21 | 28 | 26/26 | 60.57 % | PASS | PASS | 18,886,824 | `44fb22ecede0cb86d50e45655595e2ab44e991c89c049e36a544076bb5062f24` |
-| N22 | 26 | 26/26 | 65.80 % | PASS | PASS | 19,395,752 | `4c7ae55779148e73ce768a043942f6ddcef30a42f54c14486c5b77cedcfb93cf` |
-| N23 | 30 | 26/26 | 63.06 % | PASS | PASS | 19,822,490 | `8f6362c00bdc14e12da7e7c13a8e91a6ad7a5eabfd1fa7676439c5acd7288ad9` |
-| N24 | 27 | 26/26 | 58.08 % | PASS | PASS | 19,660,395 | `beb9888c76fb8a3e094180ca73c116bbe5a6e7ddc89abf002c023de6bc61c5bc` |
-| N25 | 28 | 26/26 | 60.69 % | PASS | PASS | 20,290,496 | `74df2b9a3bf0056653993809e257761e7a753a81a82fdb50a777379b26719787` |
-| N26 | 25 | 26/26 | 58.91 % | PASS | PASS | 19,022,586 | `987ccc49cd0add1afc4623d15ab00ada1dceed461506999f2c10a390d64eaeae` |
-| N27 | 26 | 26/26 | 59.26 % | PASS | PASS | 18,397,887 | `7a9adf4c14984da91eba782b121ee77f3f03958fe1407cd3bc31a6f9e9c63792` |
-| N28 | 26 | 26/26 | 57.84 % | PASS | PASS | 19,211,671 | `39cef4a3d6665738c4200116305216e3a35f3e4aeeb578e7a1a8fc017a185b1c` |
-| N29 | 27 | 26/26 | 56.29 % | PASS | PASS | 19,426,479 | `bad06690b723bccc8a48936b137a328139501e18e792931e8a9ae9cf753e46ad` |
-| N30 | 27 | 26/26 | 56.53 % | PASS | PASS | 18,290,313 | `51df121252ea5beff86092305cf8e4636b543af8024b72caa8a2cfcf5149ba3d` |
-| N31 | 26 | 26/26 | 57.84 % | PASS | PASS | 18,682,721 | `2ec615c0103364491809d10a1f4140f079116c489e5b3e59bf0cc539351b7f55` |
-| N32 | 26 | 26/26 | 56.53 % | PASS | PASS | 19,558,626 | `e59507cc972ec0b7b90ad19e38b406c98f69e8f483e4b33f4b0efd86151091ed` |
-| N33 | 27 | 26/26 | 57.84 % | PASS | PASS | 19,547,583 | `875676a8e2ead40eaa7b426dcd801c89152cf3a67935fe0862d0d3e87cd4eddd` |
-| N34 | 27 | 26/26 | 63.66 % | PASS | PASS | 21,155,419 | `2af31c97a8eeb170566cd4025af80ace23e13f332725ee4284372168010a017f` |
-| N35 | 26 | 26/26 | 59.26 % | PASS | PASS | 18,607,440 | `01b31cb3336d1f39fbe82fc66d43be6c45e0009b99679269c3e9d28fd3720858` |
-| N36 | 25 | 26/26 | 58.08 % | PASS | PASS | 20,308,577 | `0f10d573221a915bae4e870a0d028dbcdceb6ebffe3c274a84b6a1e6fa1d2657` |
+| N11 | 28 | 26/26 | 56.77 % | PASS | PASS | 17,300,494 | `949983aef8ac4f2a784df937ee2342030554e27b9a67ee2f16fa7c2a8005e915` |
+| N12 | 27 | 26/26 | 64.73 % | PASS | PASS | 19,378,222 | `79449864ef5ef5e2a7b43edd3c367e77e6219c781ea77faf1c48aa13b633ed94` |
+| N13 | 27 | 26/26 | 56.06 % | PASS | PASS | 18,576,055 | `9de29c1626526a6d08fb7f6cf608a7302e17c110d4b33b30f2fc98b2ea74a191` |
+| N14 | 29 | 26/26 | 56.29 % | PASS | PASS | 20,530,813 | `a6e9e717367a19b6d45fc97789e05824abb1587df8525912223b046d16750255` |
+| N15 | 29 | 26/26 | 57.84 % | PASS | PASS | 17,243,258 | `7dadb0f50fc90552ece0762dfbf10d047e6994f55b624c877a92c50fb442aef1` |
+| N16 | 29 | 26/26 | 57.96 % | PASS | PASS | 17,406,372 | `42cd41a5bb39c55bdd1d8b6539498e478485c99eb1ecbb8050b330a58cee5e6b` |
+| N17 | 29 | 26/26 | 57.96 % | PASS | PASS | 18,807,083 | `9a55e733a7613ae11846774aac4776e6d09c80a0d15ea1303a3d423669e25c68` |
+| N18 | 28 | 26/26 | 59.62 % | PASS | PASS | 19,926,947 | `4f2f69d1ec46fde13053d889101bf0ac177b7daba858a728f69d29d193585025` |
+| N19 | 28 | 26/26 | 59.62 % | PASS | PASS | 20,491,682 | `ca8008b1d3b32a8ee4530154d5741e0094749d1846cac210dab5fc829ff95e81` |
+| N20 | 29 | 26/26 | 63.54 % | PASS | PASS | 20,029,045 | `829edd72b51ceb069a3aca3120d2363f2e12a26afa036f60408f6f29d094f38d` |
+| N21 | 29 | 26/26 | 60.57 % | PASS | PASS | 19,020,732 | `7aa35e0939af1d0744a28eac917b5ffbf1f2edf0fc939fb3ddf84a0088f4f2db` |
+| N22 | 27 | 26/26 | 65.80 % | PASS | PASS | 19,534,131 | `68a31658dd12f20b0b0862d87da0d888762a4ae3bbc06a08cccaf2c717809b4c` |
+| N23 | 31 | 26/26 | 63.06 % | PASS | PASS | 19,967,569 | `562aadad1ec679e76771e7dc24c843fc7cfa2b43f4eb2953474160913b0ab1a0` |
+| N24 | 28 | 26/26 | 58.08 % | PASS | PASS | 19,803,856 | `a55d49391116667962c5d3e46ca22eb259c1d489639d59c5239cf98d9df759d3` |
+| N25 | 29 | 26/26 | 60.69 % | PASS | PASS | 20,435,812 | `636acd56907ba3aaf7cfd8027a18d5382ae4bd178a21dde75f3c4ebf91e03699` |
+| N26 | 26 | 26/26 | 58.91 % | PASS | PASS | 19,175,116 | `9385fd20a81597f2ff275e3aa86c8a010b693eba71921058e019b9d48edae1c9` |
+| N27 | 27 | 26/26 | 59.26 % | PASS | PASS | 18,530,419 | `f1efc643aafde9b82ebc4af4f8114419c5e1f3e368b3947b7f731c6360a4f3f0` |
+| N28 | 27 | 26/26 | 57.84 % | PASS | PASS | 19,342,821 | `834412f9afc18688abf46e747af279c8ecb108b2628f8df4b12edb7736af5337` |
+| N29 | 28 | 26/26 | 56.29 % | PASS | PASS | 19,557,045 | `b1bed5ce71d5d545a5e9931ae4019455319e5b1e0fad9f5f25fcf8179724a7a9` |
+| N30 | 28 | 26/26 | 56.53 % | PASS | PASS | 18,422,135 | `8b41ae006468262b9c84d53f4b1ef830fcd27c81a69127d6ef089cab25470dd0` |
+| N31 | 27 | 26/26 | 57.84 % | PASS | PASS | 18,810,230 | `00c656b552318c582a8afd3cdea08385a778f59e842cba1c30a077f6e750e92e` |
+| N32 | 27 | 26/26 | 56.53 % | PASS | PASS | 19,656,434 | `1b38f6b317fbc3f244464f907b23be94d609b331f867006934b10896bca8dc40` |
+| N33 | 28 | 26/26 | 57.84 % | PASS | PASS | 19,647,283 | `da91756c092d6d086a37426f7eb5df65d99386abd586a8b1048e4b9e51ba721c` |
+| N34 | 28 | 26/26 | 63.66 % | PASS | PASS | 21,273,209 | `1e02e9eb90c80e8f691a03d593518eacc96ae60babd960e42c7abefc2e88b122` |
+| N35 | 27 | 26/26 | 59.26 % | PASS | PASS | 18,710,427 | `01d53b6ad470d0a085044ff562de677ab858305501ac6abce01e34fb3a89e5bd` |
+| N36 | 26 | 26/26 | 58.08 % | PASS | PASS | 20,404,252 | `e9e22dc470d5b4060faee45999a9267dd3892bf2b29c010abc2efc101592a89f` |

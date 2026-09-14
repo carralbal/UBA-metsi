@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "08e26ec9a81d987225b0185ec44c9eb9fcb5cedf20305648a30d7cd3300268ff",
-        "declared_sha256": "08e26ec9a81d987225b0185ec44c9eb9fcb5cedf20305648a30d7cd3300268ff",
+        "actual_sha256": "cb72967a685128b29e73ac0d269f1d346bfc332985dec6a50499140af421885f",
+        "declared_sha256": "cb72967a685128b29e73ac0d269f1d346bfc332985dec6a50499140af421885f",
         "document_json_matches": true,
         "source": "source/N22_iniciativas_como_hipotesis_que_pueden_refutarse-content-canonical-v3.md",
         "source_exists": true,
@@ -28,17 +28,17 @@
       "check": "source_ids_have_exact_one_to_one_ordered_coverage",
       "evidence": {
         "first_sequence_difference": null,
-        "html_count": 266,
-        "html_unique": 266,
+        "html_count": 271,
+        "html_unique": 271,
         "integrity": {
           "missing_source_ids": [],
-          "rendered_source_id_count": 266,
-          "source_block_count": 266,
+          "rendered_source_id_count": 271,
+          "source_block_count": 271,
           "status": "PASS",
           "unexpected_source_ids": []
         },
-        "manifest_count": 266,
-        "manifest_unique": 266
+        "manifest_count": 271,
+        "manifest_unique": 271
       },
       "status": "PASS"
     },
@@ -67,12 +67,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 19395752,
-        "final_sha256": "4c7ae55779148e73ce768a043942f6ddcef30a42f54c14486c5b77cedcfb93cf",
-        "pages": 26,
+        "bytes": 19534131,
+        "final_sha256": "68a31658dd12f20b0b0862d87da0d888762a4ae3bbc06a08cccaf2c717809b4c",
+        "pages": 27,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "b3697128d4f411946e46a41bb2268a9414ff461defda14a8a8e624daa134459c",
+        "raw_sha256": "26d443a62ec1966aa4c338a331d6a40fb0b4a8fc55f94cb5119bf251719493ae",
         "unique_sizes": [
           [
             594.96,
@@ -85,7 +85,7 @@
     {
       "check": "every_source_block_has_verifiable_pdf_text",
       "evidence": {
-        "checked": 266,
+        "checked": 271,
         "missing_source_ids": []
       },
       "status": "PASS"
@@ -93,6 +93,10 @@
     {
       "check": "contents_index_titles_sections_and_routes_are_complete",
       "evidence": {
+        "has_contents_label": true,
+        "has_core_reading": true,
+        "has_extensions": true,
+        "has_prioritized_route": true,
         "heading_count": 17,
         "html_routes": [
           "PROBLEMA",
@@ -114,6 +118,7 @@
           "PREPARACIÓN"
         ],
         "missing_from_contents": [],
+        "ordered_contents_positions": true,
         "pdf_routes": [
           "PROBLEMA",
           "PROBLEMA",
@@ -133,6 +138,7 @@
           "PREPARACIÓN",
           "PREPARACIÓN"
         ],
+        "route_set_complete": true,
         "section_numbers": [
           1,
           2,
@@ -151,7 +157,8 @@
           15,
           16,
           17
-        ]
+        ],
+        "section_titles_match_source": true
       },
       "status": "PASS"
     },
@@ -161,7 +168,7 @@
         "candidate_pages": [
           {
             "first_item_position": 36,
-            "page": 23,
+            "page": 24,
             "title_position": 10
           }
         ],
@@ -189,7 +196,7 @@
         "html_count": 2,
         "pdf_pages": [
           5,
-          20
+          21
         ]
       },
       "status": "PASS"
@@ -260,7 +267,7 @@
               "width_px": 595
             }
           },
-          "20": {
+          "21": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -284,14 +291,14 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.99695,
-              "page": 20,
-              "pixel_sha256": "93cb33ed86b7d446df89a72cdc9db009d80a87d26396e1c0be51cf3bfb407700",
+              "page": 21,
+              "pixel_sha256": "38095435603b384bff7654f4f50403c476ab8ef09634314f2443bf20b6a4b1c5",
               "vertical_density": 0.8955,
               "white_gutters": [],
               "width_px": 595
             }
           },
-          "26": {
+          "27": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -315,8 +322,8 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.999944,
-              "page": 26,
-              "pixel_sha256": "4760cc7d1a32aca68ae6cbbe84e449499a76c2a44a5265061fee8cef2113b2f7",
+              "page": 27,
+              "pixel_sha256": "b547885d2404ded1d17cd83433a74d7e8654d1b7261ae19ad81898d350d11d2a",
               "vertical_density": 0.6663,
               "white_gutters": [],
               "width_px": 595
@@ -1032,6 +1039,7 @@
           1,
           1,
           1,
+          1,
           1
         ],
         "missing_folio_footer_pages": []
@@ -1056,11 +1064,11 @@
           "https://www.w3.org/TR/ethical-web-principles/"
         ],
         "external_link_pages": [
-          25
+          26
         ],
         "missing_printed": [],
         "reference_pages": [
-          25
+          26
         ]
       },
       "status": "PASS"
@@ -1077,9 +1085,9 @@
           3,
           4,
           5,
-          20,
-          25,
-          26
+          21,
+          26,
+          27
         ],
         "underfilled": {}
       },
@@ -1106,14 +1114,14 @@
   "failed_checks": [],
   "metrics": {
     "minimum_ordinary_vertical_density": 0.658,
-    "pages": 26,
+    "pages": 27,
     "pause_pages": [
       5,
-      20
+      21
     ],
-    "pdf_bytes": 19395752,
-    "pdf_sha256": "4c7ae55779148e73ce768a043942f6ddcef30a42f54c14486c5b77cedcfb93cf",
-    "source_blocks": 266
+    "pdf_bytes": 19534131,
+    "pdf_sha256": "68a31658dd12f20b0b0862d87da0d888762a4ae3bbc06a08cccaf2c717809b4c",
+    "source_blocks": 271
   },
   "mode": "read-only",
   "package": "N22-v9-editorial",

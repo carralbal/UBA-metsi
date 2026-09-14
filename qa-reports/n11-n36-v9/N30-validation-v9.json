@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "5f9fbbd8948fd21233642146f45ab87d135a7d3b5bf7fb9ab7d64c8ccb1e646b",
-        "declared_sha256": "5f9fbbd8948fd21233642146f45ab87d135a7d3b5bf7fb9ab7d64c8ccb1e646b",
+        "actual_sha256": "0fb35a6675522567ae04625b2b3fa3700dabd91f90aa31542627edc99abbc2fc",
+        "declared_sha256": "0fb35a6675522567ae04625b2b3fa3700dabd91f90aa31542627edc99abbc2fc",
         "document_json_matches": true,
         "source": "source/N30_observabilidad_senales_sli_slo_incidentes_y_aprendizaje-content-canonical-v4.md",
         "source_exists": true,
@@ -28,17 +28,17 @@
       "check": "source_ids_have_exact_one_to_one_ordered_coverage",
       "evidence": {
         "first_sequence_difference": null,
-        "html_count": 252,
-        "html_unique": 252,
+        "html_count": 256,
+        "html_unique": 256,
         "integrity": {
           "missing_source_ids": [],
-          "rendered_source_id_count": 252,
-          "source_block_count": 252,
+          "rendered_source_id_count": 256,
+          "source_block_count": 256,
           "status": "PASS",
           "unexpected_source_ids": []
         },
-        "manifest_count": 252,
-        "manifest_unique": 252
+        "manifest_count": 256,
+        "manifest_unique": 256
       },
       "status": "PASS"
     },
@@ -67,12 +67,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 18352516,
-        "final_sha256": "b2018d3dc6f18765cb086e613496993cfea46bd26382351b46e8a64127f71848",
-        "pages": 27,
+        "bytes": 18422135,
+        "final_sha256": "8b41ae006468262b9c84d53f4b1ef830fcd27c81a69127d6ef089cab25470dd0",
+        "pages": 28,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "d0d6e10e94e395f95239ffd027366104891310d93f0c53e72519e11c61852b7c",
+        "raw_sha256": "368561cfc323897f35f7a69cd46d64ea6397edf4a1e5827f9a3a50313f80cb89",
         "unique_sizes": [
           [
             594.96,
@@ -85,7 +85,7 @@
     {
       "check": "every_source_block_has_verifiable_pdf_text",
       "evidence": {
-        "checked": 252,
+        "checked": 256,
         "missing_source_ids": []
       },
       "status": "PASS"
@@ -93,6 +93,10 @@
     {
       "check": "contents_index_titles_sections_and_routes_are_complete",
       "evidence": {
+        "has_contents_label": true,
+        "has_core_reading": true,
+        "has_extensions": true,
+        "has_prioritized_route": true,
         "heading_count": 18,
         "html_routes": [
           "PROBLEMA",
@@ -115,6 +119,7 @@
           "PREPARACIÓN"
         ],
         "missing_from_contents": [],
+        "ordered_contents_positions": true,
         "pdf_routes": [
           "PROBLEMA",
           "PROBLEMA",
@@ -135,6 +140,7 @@
           "PREPARACIÓN",
           "PREPARACIÓN"
         ],
+        "route_set_complete": true,
         "section_numbers": [
           1,
           2,
@@ -154,7 +160,8 @@
           16,
           17,
           18
-        ]
+        ],
+        "section_titles_match_source": true
       },
       "status": "PASS"
     },
@@ -164,7 +171,7 @@
         "candidate_pages": [
           {
             "first_item_position": 36,
-            "page": 24,
+            "page": 25,
             "title_position": 10
           }
         ],
@@ -192,7 +199,7 @@
         "html_count": 2,
         "pdf_pages": [
           5,
-          20
+          21
         ]
       },
       "status": "PASS"
@@ -263,7 +270,7 @@
               "width_px": 595
             }
           },
-          "20": {
+          "21": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -287,14 +294,14 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.997623,
-              "page": 20,
-              "pixel_sha256": "97094a71a38c9618bd88cb07794c4f3c22ce5d423760159b2a7bc55d0fa71f07",
+              "page": 21,
+              "pixel_sha256": "6c73beca33d08ac2ebcb44a81f51c39489078a856589e0b18579c503491a16f4",
               "vertical_density": 0.8955,
               "white_gutters": [],
               "width_px": 595
             }
           },
-          "27": {
+          "28": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -318,8 +325,8 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.999944,
-              "page": 27,
-              "pixel_sha256": "b547885d2404ded1d17cd83433a74d7e8654d1b7261ae19ad81898d350d11d2a",
+              "page": 28,
+              "pixel_sha256": "b963ffae3abd791675d61555611b86f68a53a0bf9fe87d5a0f9307bd0032e12e",
               "vertical_density": 0.6663,
               "white_gutters": [],
               "width_px": 595
@@ -1073,6 +1080,7 @@
           1,
           1,
           1,
+          1,
           1
         ],
         "missing_folio_footer_pages": []
@@ -1113,11 +1121,11 @@
           "https://www.lu.se/lup/publication/8084520"
         ],
         "external_link_pages": [
-          26
+          27
         ],
         "missing_printed": [],
         "reference_pages": [
-          26
+          27
         ]
       },
       "status": "PASS"
@@ -1134,9 +1142,9 @@
           3,
           4,
           5,
-          20,
-          26,
-          27
+          21,
+          27,
+          28
         ],
         "underfilled": {}
       },
@@ -1163,14 +1171,14 @@
   "failed_checks": [],
   "metrics": {
     "minimum_ordinary_vertical_density": 0.5653,
-    "pages": 27,
+    "pages": 28,
     "pause_pages": [
       5,
-      20
+      21
     ],
-    "pdf_bytes": 18352516,
-    "pdf_sha256": "b2018d3dc6f18765cb086e613496993cfea46bd26382351b46e8a64127f71848",
-    "source_blocks": 252
+    "pdf_bytes": 18422135,
+    "pdf_sha256": "8b41ae006468262b9c84d53f4b1ef830fcd27c81a69127d6ef089cab25470dd0",
+    "source_blocks": 256
   },
   "mode": "read-only",
   "package": "N30-v9-editorial",

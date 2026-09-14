@@ -3543,3 +3543,38 @@ body.block-c.document-n34 .hotel-voice-6 img{transform:scale(1.26)!important;tra
 .premium-magazine:not(.document-n00) .contents-layout li small{
   display:inline-block;margin-left:1mm;font-size:6pt;line-height:1;letter-spacing:.06em;color:#666
 }
+
+/* N00 thesis standard: developed argument, readable scale, separate plate. */
+body.block-c .block-c-thesis,
+body.block-c.document-n34 .block-c-thesis{
+  box-sizing:border-box!important;height:246mm!important;min-height:246mm!important;
+  display:block!important;padding:8mm 9mm!important;margin:0!important;
+  break-before:page!important;page-break-before:always!important;
+  break-after:page!important;page-break-after:always!important;
+  break-inside:avoid-page!important;page-break-inside:avoid!important;
+  background:#FAFAF8!important;border-left:1.5mm solid #CFFF00!important
+}
+body.block-c .block-c-thesis .section-heading{margin-bottom:5mm!important}
+body.block-c .block-c-thesis .section-heading h2{font-size:34pt!important;line-height:1!important}
+body.block-c .block-c-thesis .section-lead{display:none!important}
+body.block-c .block-c-thesis .section-body:not(.section-lead){
+  display:block!important;columns:2!important;column-count:2!important;
+  column-gap:9mm!important;column-rule:.2mm solid #C5C7C5!important;
+  font:400 10.7pt/1.42 Baskerville,Georgia,serif!important;
+  orphans:3!important;widows:3!important
+}
+body.block-c .block-c-thesis .section-body p{
+  margin:0 0 4mm!important;break-inside:auto!important
+}
+/* The two most text-dense theses keep N00's hierarchy while using its
+   compact body rhythm so the complete argument remains on one page. */
+body.block-c.document-n15 .block-c-thesis .section-body:not(.section-lead),
+body.block-c.document-n16 .block-c-thesis .section-body:not(.section-lead){
+  font-size:9.6pt!important;line-height:1.34!important
+}
+body.block-c.document-n15 .block-c-thesis .section-body p,
+body.block-c.document-n16 .block-c-thesis .section-body p{margin-bottom:3mm!important}
+body.block-c .approved-infographic-page{
+  break-before:page!important;page-break-before:always!important;
+  break-after:page!important;page-break-after:always!important
+}

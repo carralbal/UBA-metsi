@@ -31,6 +31,16 @@ HH-04 acompañará la lectura para mostrar tres movimientos. Primero se desarma 
 
 Intervenir exige conservar el estatus epistemológico de cada afirmación: qué fue observado, quién lo relató, cómo se midió, qué se infiere, qué se supone y qué se decidió. La evidencia no habla sin interpretación, pero no todas las interpretaciones tienen el mismo sustento. La trazabilidad epistemológica permite cuestionar, triangular y revisar sin borrar incertidumbre ni paralizar la acción.
 
+La tesis se vuelve operativa al distinguir observación, diferencia relevante, relato situado e hipótesis causal, y declarar qué evidencia autoriza cada afirmación. Esa secuencia obliga a declarar qué cambia, qué permanece abierto y qué evidencia podría modificar la decisión. El rigor no proviene de agregar términos, sino de hacer reconstruible el paso entre una observación, una explicación y una acción.
+
+Un ejemplo sencillo permite verlo: que el abandono sea doce por ciento no prueba que la interfaz sea difícil: hacen falta recorridos, poblaciones y cambios simultáneos. El caso muestra por qué una misma señal admite explicaciones e intervenciones diferentes. Antes de ampliar alcance conviene precisar población, condición de éxito y fuente de evidencia.
+
+El límite también importa: exigir evidencia perfecta antes de contener un error urgente, confundiendo una acción prudente con una explicación ya demostrada. Ese contraejemplo evita convertir una idea útil en receta universal. Una decisión puede ser provisional, pero debe decir qué protege ahora y cuándo volverá a examinarse.
+
+En Hotel Horizonte, «habitación liberada» es un registro, no prueba de alojamiento; áreas y cerraduras usan estados con alcances diferentes. El caso longitudinal obliga a sostener la misma promesa mientras cambian el modelo y la evidencia; así puede verse qué aprendió realmente el equipo.
+
+La consecuencia profesional es unir afirmación, observación y decisión sin borrar perspectivas; N05 incorporará poder, afectados y autoridad. La tesis no cierra la discusión: fija un criterio común para que el encuentro pueda comparar argumentos, producir evidencia y decidir sin ocultar incertidumbre.
+
 ## De N03 a N04: del mapa a la justificación
 
 N03 convirtió la frontera en una hipótesis y mostró que un efecto puede regresar como causa, carga o daño. Para revisar ese mapa se necesitan afirmaciones capaces de conservar su historia. N04 recibe relaciones provisionales, señales y explicaciones rivales; enseña a preguntar qué rastro sostiene cada una, qué inferencia las conecta y qué decisión puede tomarse sin atribuirles una certeza que no poseen.

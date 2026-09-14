@@ -1087,6 +1087,11 @@ body.premium-magazine {
 .document-n00 .contents-page-text-only .contents-layout ol{width:100%;columns:2;column-count:2;column-gap:9mm;column-rule:.2mm solid #D0D1CE}
 .document-n00 .contents-page-text-only .contents-layout li{font-size:8.1pt;line-height:1.18;padding:1mm 1.8mm 1mm 0}
 .document-n00 .contents-page-text-only .contents-layout li small{font-size:6.5pt}
+.premium-magazine:not(.document-n00) .contents-page .contents-route{max-width:170mm;margin:2mm 0 0;padding-left:3mm;border-left:1.4mm solid #CFFF00;font:7.7pt/1.24 Avenir,sans-serif;color:#30322f}
+.premium-magazine:not(.document-n00) .contents-layout li.contents-item{padding-left:1.2mm}
+.premium-magazine:not(.document-n00) .contents-layout li.contents-core{border-left:1mm solid #CFFF00}
+.premium-magazine:not(.document-n00) .contents-layout li.contents-extension{border-left:1mm solid transparent}
+.premium-magazine:not(.document-n00) .contents-layout li small{display:inline-block;margin-left:1mm;font-size:6pt;line-height:1;letter-spacing:.06em;color:#666}
 .document-n00 section[data-section="09"] .photo-band img{height:118mm;object-position:center 48%}
 .authors-page{background:linear-gradient(90deg,#FAFAF8 0 33.333%,#E8E9E8 33.333% 66.666%,#FAFAF8 66.666%)}.authors-page header{text-align:center}.authors-page header p{margin-left:auto;margin-right:auto}.contributors-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6mm 5mm;margin-top:8mm}.contributor{text-align:center;min-height:78mm;padding:2mm 3mm;border-bottom:.2mm solid #aaa}.contributor>b{display:block;margin-bottom:2mm;font-family:Didot,serif;font-size:13pt;color:#666}.contributor-portrait{display:block;width:25mm;height:25mm;margin:0 auto 3mm;object-fit:cover;border-radius:50%;filter:grayscale(1);background:#dedede;border:.25mm solid #555}.contributor h3{margin:1mm 0;font-family:Avenir,sans-serif;font-size:9.4pt;font-weight:700;text-transform:uppercase}.contributor span{display:block;color:#202020;font-family:Avenir,sans-serif;font-size:6pt;font-weight:700;letter-spacing:.08em}.contributor cite{display:block;min-height:11mm;margin-top:2.2mm;font-family:Baskerville,serif;font-size:8.2pt;line-height:1.24;font-style:italic;text-align:left}.contributor p{margin-top:1.2mm;font-family:Avenir,sans-serif;font-size:6.8pt;line-height:1.24;text-align:left;color:#565855}.authors-page blockquote{margin:6mm 8mm 0;padding-top:4mm;border-top:.25mm solid #999;text-align:center;font-family:Didot,serif;font-size:14pt;line-height:1.12;font-style:italic}
 .document-n00 .authors-page .contributors-grid{column-gap:8mm;row-gap:6mm}
@@ -1925,6 +1930,8 @@ body.premium-magazine {
 .references-image-full::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.72) 100%)}
 .references-image-full p{position:absolute;z-index:3;left:18mm;right:18mm;bottom:22mm;margin:0;color:#fff;font-family:Didot,"Bodoni 72",serif;font-size:21pt;line-height:1.05}
 .premium-magazine .full-bleed{break-before:auto;break-after:auto;page-break-before:auto;page-break-after:auto}
+.premium-magazine.document-n00 .infographic-boundaries{column-span:all;width:158mm;max-width:158mm;max-height:121mm;margin:4mm auto 6mm;break-inside:avoid-page;page-break-inside:avoid}
+.premium-magazine.document-n00 .infographic-boundaries img{display:block;width:158mm;max-width:158mm;height:auto;max-height:112mm;margin:0 auto;filter:none}
 @media screen and (max-width:760px){
   body.premium-magazine{width:auto;min-width:0;margin:0;background:#FAFAF8}
   .premium-magazine main{width:100%;max-width:100%;overflow:hidden}
@@ -1943,14 +1950,30 @@ body.premium-magazine {
   .premium-magazine.document-n00 .n00-nuclei-index{min-height:0}
 }
 
-/* METSI prioritized reading route: canonical v1 */
-.premium-magazine:not(.document-n00) .contents-page .contents-route{
-  max-width:170mm;margin:2mm 0 0;padding-left:3mm;border-left:1.4mm solid #CFFF00;
-  font:7.7pt/1.24 Avenir,sans-serif;color:#30322f
+/* METSI section-marker contrast 2026-09-14.
+   On the dark professional-question opener, the white disc carries an ink
+   numeral. Volt remains in the adjacent accent and label, never as small text
+   over paper. */
+.premium-magazine:not(.document-n00) .reading-section[data-section="01"] .section-marker span{
+  color:#171917!important;
+  background:#FAFAF8!important;
+  border-color:#171917!important
 }
-.premium-magazine:not(.document-n00) .contents-layout li.contents-item{padding-left:1.2mm}
-.premium-magazine:not(.document-n00) .contents-layout li.contents-core{border-left:1mm solid #CFFF00}
-.premium-magazine:not(.document-n00) .contents-layout li.contents-extension{border-left:1mm solid transparent}
-.premium-magazine:not(.document-n00) .contents-layout li small{
-  display:inline-block;margin-left:1mm;font-size:6pt;line-height:1;letter-spacing:.06em;color:#666
+
+/* N00 is the editorial and pedagogical reference for every thesis. */
+.premium-magazine:not(.document-n00) .thesis-standard{
+  box-sizing:border-box;min-height:246mm;padding:8mm 9mm;
+  break-before:page;page-break-before:always;
+  break-after:page;page-break-after:always;
+  break-inside:avoid-page;page-break-inside:avoid;
+  background:#FAFAF8;border-left:1.5mm solid #CFFF00
+}
+.premium-magazine:not(.document-n00) .thesis-standard .section-heading{margin-bottom:5mm}
+.premium-magazine:not(.document-n00) .thesis-standard .section-heading h2{font-size:34pt;line-height:1}
+.premium-magazine:not(.document-n00) .thesis-standard .section-body{
+  columns:2;column-count:2;column-gap:9mm;column-rule:.2mm solid #C5C7C5;
+  font:400 10.7pt/1.42 Baskerville,Georgia,serif;orphans:3;widows:3
+}
+.premium-magazine:not(.document-n00) .thesis-standard .section-body p{
+  margin:0 0 4mm;break-inside:avoid-column
 }

@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "0e877b1aceb5b1b42b3cfb7b8834246f4ca40ec4a2612d73a3d26b9ffc2a0d7a",
-        "declared_sha256": "0e877b1aceb5b1b42b3cfb7b8834246f4ca40ec4a2612d73a3d26b9ffc2a0d7a",
+        "actual_sha256": "68d4147b6cc273e591d1d12a6bb1ba04db3291d2478674bcecd00a255c54a9c9",
+        "declared_sha256": "68d4147b6cc273e591d1d12a6bb1ba04db3291d2478674bcecd00a255c54a9c9",
         "document_json_matches": true,
         "source": "source/N13_demoras_concurrencia_consistencia_idempotencia_y_reconciliacion-content-canonical-v2.md",
         "source_exists": true,
@@ -28,17 +28,17 @@
       "check": "source_ids_have_exact_one_to_one_ordered_coverage",
       "evidence": {
         "first_sequence_difference": null,
-        "html_count": 256,
-        "html_unique": 256,
+        "html_count": 259,
+        "html_unique": 259,
         "integrity": {
           "missing_source_ids": [],
-          "rendered_source_id_count": 256,
-          "source_block_count": 256,
+          "rendered_source_id_count": 259,
+          "source_block_count": 259,
           "status": "PASS",
           "unexpected_source_ids": []
         },
-        "manifest_count": 256,
-        "manifest_unique": 256
+        "manifest_count": 259,
+        "manifest_unique": 259
       },
       "status": "PASS"
     },
@@ -67,12 +67,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 18506985,
-        "final_sha256": "c8ab818724b7120cd58fb08ca855fd4bce8c86978f2de42e2a3bec2005904904",
-        "pages": 26,
+        "bytes": 18576055,
+        "final_sha256": "9de29c1626526a6d08fb7f6cf608a7302e17c110d4b33b30f2fc98b2ea74a191",
+        "pages": 27,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "d86c02b065a83bfe9efc6db4361a9625a9e1380d23d8b061ea346dd43e72c0ea",
+        "raw_sha256": "19380d1e517a69f4bd72455a822cb5f901aff3ab9a5bce134163cc832757a457",
         "unique_sizes": [
           [
             594.96,
@@ -85,7 +85,7 @@
     {
       "check": "every_source_block_has_verifiable_pdf_text",
       "evidence": {
-        "checked": 256,
+        "checked": 259,
         "missing_source_ids": []
       },
       "status": "PASS"
@@ -93,6 +93,10 @@
     {
       "check": "contents_index_titles_sections_and_routes_are_complete",
       "evidence": {
+        "has_contents_label": true,
+        "has_core_reading": true,
+        "has_extensions": true,
+        "has_prioritized_route": true,
         "heading_count": 17,
         "html_routes": [
           "PROBLEMA",
@@ -114,6 +118,7 @@
           "PREPARACIÓN"
         ],
         "missing_from_contents": [],
+        "ordered_contents_positions": true,
         "pdf_routes": [
           "PROBLEMA",
           "PROBLEMA",
@@ -133,6 +138,7 @@
           "PREPARACIÓN",
           "PREPARACIÓN"
         ],
+        "route_set_complete": true,
         "section_numbers": [
           1,
           2,
@@ -151,7 +157,8 @@
           15,
           16,
           17
-        ]
+        ],
+        "section_titles_match_source": true
       },
       "status": "PASS"
     },
@@ -161,7 +168,7 @@
         "candidate_pages": [
           {
             "first_item_position": 36,
-            "page": 23,
+            "page": 24,
             "title_position": 10
           }
         ],
@@ -189,7 +196,7 @@
         "html_count": 2,
         "pdf_pages": [
           5,
-          20
+          21
         ]
       },
       "status": "PASS"
@@ -260,7 +267,7 @@
               "width_px": 595
             }
           },
-          "20": {
+          "21": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -284,14 +291,14 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.99698,
-              "page": 20,
-              "pixel_sha256": "95ba5d3be6764eed0774c92ec160f0ec5d43a65c89fd738d660a36a2335a35c8",
+              "page": 21,
+              "pixel_sha256": "12fc14472b8b3886ba885d82b14a5c2c525ff47a901b48d9c9478566efc1d17d",
               "vertical_density": 0.8955,
               "white_gutters": [],
               "width_px": 595
             }
           },
-          "26": {
+          "27": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -315,8 +322,8 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.999944,
-              "page": 26,
-              "pixel_sha256": "4760cc7d1a32aca68ae6cbbe84e449499a76c2a44a5265061fee8cef2113b2f7",
+              "page": 27,
+              "pixel_sha256": "b547885d2404ded1d17cd83433a74d7e8654d1b7261ae19ad81898d350d11d2a",
               "vertical_density": 0.6663,
               "white_gutters": [],
               "width_px": 595
@@ -1032,6 +1039,7 @@
           1,
           1,
           1,
+          1,
           1
         ],
         "missing_folio_footer_pages": []
@@ -1070,11 +1078,11 @@
           "https://www.rfc-editor.org/rfc/rfc9110.html"
         ],
         "external_link_pages": [
-          25
+          26
         ],
         "missing_printed": [],
         "reference_pages": [
-          25
+          26
         ]
       },
       "status": "PASS"
@@ -1091,9 +1099,9 @@
           3,
           4,
           5,
-          20,
-          25,
-          26
+          21,
+          26,
+          27
         ],
         "underfilled": {}
       },
@@ -1120,14 +1128,14 @@
   "failed_checks": [],
   "metrics": {
     "minimum_ordinary_vertical_density": 0.5606,
-    "pages": 26,
+    "pages": 27,
     "pause_pages": [
       5,
-      20
+      21
     ],
-    "pdf_bytes": 18506985,
-    "pdf_sha256": "c8ab818724b7120cd58fb08ca855fd4bce8c86978f2de42e2a3bec2005904904",
-    "source_blocks": 256
+    "pdf_bytes": 18576055,
+    "pdf_sha256": "9de29c1626526a6d08fb7f6cf608a7302e17c110d4b33b30f2fc98b2ea74a191",
+    "source_blocks": 259
   },
   "mode": "read-only",
   "package": "N13-v9-editorial",

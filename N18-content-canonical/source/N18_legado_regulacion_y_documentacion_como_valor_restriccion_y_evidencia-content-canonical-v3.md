@@ -48,6 +48,16 @@ HH-18 queda revisable mediante dos registros vinculados y no intercambiables: co
 
 El legado, la regulación y la documentación pueden conservar valor, imponer restricciones y aportar evidencia. Modernizar no significa reemplazar todo de manera automática. Exige decidir qué debe continuar, qué necesita cambiar y qué puede retirarse sin perder una capacidad importante. Para hacerlo, hay que separar compromisos verificados, obligaciones normativas validadas e interpretaciones todavía pendientes. La antigüedad de una práctica, por sí sola, no le da autoridad.
 
+Para pasar de la idea a una decisión hace falta examinar qué capacidad, derecho, riesgo o memoria sostiene cada tecnología, norma o documento antes de conservarlo, sustituirlo o retirarlo. Así se distinguen descripción, explicación y compromiso, tres movimientos que suelen mezclarse. El resultado es una argumentación que otra persona puede revisar sin tener que aceptar la autoridad de quien la produjo.
+
+Consideremos un ejemplo de baja escala: una planilla duplica trabajo pero registra excepciones que el sistema nuevo ignora; eliminarla sin capturar ese conocimiento debilita la operación. Seguirlo de punta a punta permite reconocer primero el fenómeno simple y luego las relaciones que vuelven insuficiente la explicación inicial. Esa es la progresión de lo general a lo particular que propone la colección.
+
+La tesis no autoriza cualquier uso. Su contraejemplo es usar cumplimiento para clausurar toda alternativa o tratar documentación como burocracia hasta que un incidente exige explicar decisiones y versiones. Allí se vuelve visible que una técnica correcta puede ser inadecuada para cierto riesgo, población o momento. La calidad depende del uso, no del prestigio de la herramienta.
+
+Aplicado a Hotel Horizonte, registros de llaves, contratos de canal y procedimientos de emergencia se revisan por la protección que conservan, no por su antigüedad. La continuidad del caso permite comparar la nueva lectura con las anteriores y evita inventar una situación distinta para confirmar cada concepto.
+
+De aquí se desprende una responsabilidad concreta: modernizar con hipótesis de retiro, prueba y reversión; N19 comparará configurar, integrar, construir y no automatizar. Profesores y estudiantes pueden discutirla con ejemplos, objeciones y evidencia; no necesitan memorizar una definición aislada ni aceptar una receta cerrada.
+
 ## De N17 a N18: de la lógica de intervención a la realidad instalada
 
 N17 entrega un mapa de decisiones que separa compromisos predictivos, iterativos, incrementales, adaptativos y experimentales, junto con sus puertas de evidencia. N18 usa ese mapa para distinguir qué restricciones provienen de obligaciones vigentes, qué capacidades heredadas conservan valor y qué documentación debe acompañar cualquier sustitución.

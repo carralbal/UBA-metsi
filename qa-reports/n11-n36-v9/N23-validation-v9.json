@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "c569b92ed1cd4c5ab97d16351d4d9a918863e3aded50613e20f26aee4225e4f5",
-        "declared_sha256": "c569b92ed1cd4c5ab97d16351d4d9a918863e3aded50613e20f26aee4225e4f5",
+        "actual_sha256": "a6bf45c2377a4ffa8c0bf68f47384aa458e7f555bc50d41ce2b8dac0dc0b6a20",
+        "declared_sha256": "a6bf45c2377a4ffa8c0bf68f47384aa458e7f555bc50d41ce2b8dac0dc0b6a20",
         "document_json_matches": true,
         "source": "source/N23_capacidad_y_aprendizaje_cortar_entregas_por_outcome-content-canonical-v4.md",
         "source_exists": true,
@@ -28,17 +28,17 @@
       "check": "source_ids_have_exact_one_to_one_ordered_coverage",
       "evidence": {
         "first_sequence_difference": null,
-        "html_count": 279,
-        "html_unique": 279,
+        "html_count": 284,
+        "html_unique": 284,
         "integrity": {
           "missing_source_ids": [],
-          "rendered_source_id_count": 279,
-          "source_block_count": 279,
+          "rendered_source_id_count": 284,
+          "source_block_count": 284,
           "status": "PASS",
           "unexpected_source_ids": []
         },
-        "manifest_count": 279,
-        "manifest_unique": 279
+        "manifest_count": 284,
+        "manifest_unique": 284
       },
       "status": "PASS"
     },
@@ -67,12 +67,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 19883611,
-        "final_sha256": "9c7ac8750df805cf62c1acab90262ea554766707ab646a6f02d37c0aba1f8c71",
-        "pages": 30,
+        "bytes": 19967569,
+        "final_sha256": "562aadad1ec679e76771e7dc24c843fc7cfa2b43f4eb2953474160913b0ab1a0",
+        "pages": 31,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "85209b699220606e980e6df23d811ef99bbe64c51ee18723f54d1374e4e391ef",
+        "raw_sha256": "a8f37bee6f6fe956385ba808f5199cecf0e3c2b59f5bb36f22127c1eb819d50f",
         "unique_sizes": [
           [
             594.96,
@@ -85,7 +85,7 @@
     {
       "check": "every_source_block_has_verifiable_pdf_text",
       "evidence": {
-        "checked": 279,
+        "checked": 284,
         "missing_source_ids": []
       },
       "status": "PASS"
@@ -93,6 +93,10 @@
     {
       "check": "contents_index_titles_sections_and_routes_are_complete",
       "evidence": {
+        "has_contents_label": true,
+        "has_core_reading": true,
+        "has_extensions": true,
+        "has_prioritized_route": true,
         "heading_count": 17,
         "html_routes": [
           "PROBLEMA",
@@ -114,6 +118,7 @@
           "PREPARACIÓN"
         ],
         "missing_from_contents": [],
+        "ordered_contents_positions": true,
         "pdf_routes": [
           "PROBLEMA",
           "PROBLEMA",
@@ -133,6 +138,7 @@
           "PREPARACIÓN",
           "PREPARACIÓN"
         ],
+        "route_set_complete": true,
         "section_numbers": [
           1,
           2,
@@ -151,7 +157,8 @@
           15,
           16,
           17
-        ]
+        ],
+        "section_titles_match_source": true
       },
       "status": "PASS"
     },
@@ -161,7 +168,7 @@
         "candidate_pages": [
           {
             "first_item_position": 36,
-            "page": 27,
+            "page": 28,
             "title_position": 10
           }
         ],
@@ -189,7 +196,7 @@
         "html_count": 2,
         "pdf_pages": [
           5,
-          24
+          25
         ]
       },
       "status": "PASS"
@@ -260,7 +267,7 @@
               "width_px": 595
             }
           },
-          "24": {
+          "25": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -284,14 +291,14 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.997245,
-              "page": 24,
-              "pixel_sha256": "bc99a891379da4f9a5d015311b855161727ff5a6fe178775a8a73941c3492d16",
+              "page": 25,
+              "pixel_sha256": "781ec7892e4152fce0a0b875211b983e39fb284df857d866e5c87cf981129504",
               "vertical_density": 0.8955,
               "white_gutters": [],
               "width_px": 595
             }
           },
-          "30": {
+          "31": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -315,8 +322,8 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.999944,
-              "page": 30,
-              "pixel_sha256": "38522c92fa968d8d9a6be505bc2af6426db33541bed305d799aef65262bdd595",
+              "page": 31,
+              "pixel_sha256": "34ad5c53d82e5b01039543c6f9b99a1f678808f84a6e6dcbffd05355a713b39d",
               "vertical_density": 0.6663,
               "white_gutters": [],
               "width_px": 595
@@ -1035,6 +1042,7 @@
           1,
           1,
           1,
+          1,
           1
         ],
         "missing_folio_footer_pages": []
@@ -1061,11 +1069,11 @@
           "https://www.w3.org/TR/WCAG22/"
         ],
         "external_link_pages": [
-          29
+          30
         ],
         "missing_printed": [],
         "reference_pages": [
-          29
+          30
         ]
       },
       "status": "PASS"
@@ -1082,9 +1090,9 @@
           3,
           4,
           5,
-          24,
-          29,
-          30
+          25,
+          30,
+          31
         ],
         "underfilled": {}
       },
@@ -1111,14 +1119,14 @@
   "failed_checks": [],
   "metrics": {
     "minimum_ordinary_vertical_density": 0.6306,
-    "pages": 30,
+    "pages": 31,
     "pause_pages": [
       5,
-      24
+      25
     ],
-    "pdf_bytes": 19883611,
-    "pdf_sha256": "9c7ac8750df805cf62c1acab90262ea554766707ab646a6f02d37c0aba1f8c71",
-    "source_blocks": 279
+    "pdf_bytes": 19967569,
+    "pdf_sha256": "562aadad1ec679e76771e7dc24c843fc7cfa2b43f4eb2953474160913b0ab1a0",
+    "source_blocks": 284
   },
   "mode": "read-only",
   "package": "N23-v9-editorial",

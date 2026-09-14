@@ -52,6 +52,16 @@ La prioridad no se vuelve correcta por puntaje. Se vuelve defendible cuando otra
 
 Una prioridad se puede defender cuando hace explícito a qué se renuncia, separa obligaciones y protecciones de las apuestas, y considera el costo de demora, la capacidad disponible y las consecuencias. Falla cuando un puntaje trata como equivalentes daños, oportunidades y dependencias, o cuando la urgencia oculta quién deberá esperar. Por eso hay que limitar el trabajo activo, asignar autoridad y fijar una fecha de revisión. Decir que no debe ser una decisión trazable, no una omisión silenciosa.
 
+Para pasar de la idea a una decisión hace falta decidir qué recibe capacidad ahora, qué espera y qué no se hará, declarando criterio, restricción, costo de demora y población afectada. Así se distinguen descripción, explicación y compromiso, tres movimientos que suelen mezclarse. El resultado es una argumentación que otra persona puede revisar sin tener que aceptar la autoridad de quien la produjo.
+
+Consideremos un ejemplo de baja escala: una obligación próxima y una mejora de conversión parecen ambas valiosas, pero fecha, reversibilidad y daño cambian el orden razonable. Seguirlo de punta a punta permite reconocer primero el fenómeno simple y luego las relaciones que vuelven insuficiente la explicación inicial. Esa es la progresión de lo general a lo particular que propone la colección.
+
+La tesis no autoriza cualquier uso. Su contraejemplo es usar una fórmula de puntaje como autoridad neutral o mantener tantas prioridades que el WIP impide terminar cualquiera. Allí se vuelve visible que una técnica correcta puede ser inadecuada para cierto riesgo, población o momento. La calidad depende del uso, no del prestigio de la herramienta.
+
+Aplicado a Hotel Horizonte, accesibilidad, eventos y canales externos compiten por capacidad; Elena, Camila y Lucía deben hacer explícitas renuncias y revisiones. La continuidad del caso permite comparar la nueva lectura con las anteriores y evita inventar una situación distinta para confirmar cada concepto.
+
+De aquí se desprende una responsabilidad concreta: convertir postergación en decisión visible; N25 examinará WIP, colas, lote, espera y feedback. Profesores y estudiantes pueden discutirla con ejemplos, objeciones y evidencia; no necesitan memorizar una definición aislada ni aceptar una receta cerrada.
+
 ## Del cierre anterior al nuevo avance
 
 N23 entrega capacidades utilizables, incertidumbres reducidas, dependencias todavía abiertas y poblaciones excluidas del primer corte. N24 convierte ese conjunto en opciones comparables y obliga a registrar qué se posterga, qué se protege y quién asume cada demora.

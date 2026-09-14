@@ -57,6 +57,26 @@ SECTION_MARKER_CONTRAST_CSS = r'''
 }
 '''
 
+THESIS_N00_STANDARD_CSS = r'''
+/* N00 is the editorial and pedagogical reference for every thesis. */
+.premium-magazine:not(.document-n00) .thesis-standard{
+  box-sizing:border-box;min-height:246mm;padding:8mm 9mm;
+  break-before:page;page-break-before:always;
+  break-after:page;page-break-after:always;
+  break-inside:avoid-page;page-break-inside:avoid;
+  background:#FAFAF8;border-left:1.5mm solid #CFFF00
+}
+.premium-magazine:not(.document-n00) .thesis-standard .section-heading{margin-bottom:5mm}
+.premium-magazine:not(.document-n00) .thesis-standard .section-heading h2{font-size:34pt;line-height:1}
+.premium-magazine:not(.document-n00) .thesis-standard .section-body{
+  columns:2;column-count:2;column-gap:9mm;column-rule:.2mm solid #C5C7C5;
+  font:400 10.7pt/1.42 Baskerville,Georgia,serif;orphans:3;widows:3
+}
+.premium-magazine:not(.document-n00) .thesis-standard .section-body p{
+  margin:0 0 4mm;break-inside:avoid-column
+}
+'''
+
 
 HOTEL_VOICES = {
     0: {
@@ -1667,6 +1687,8 @@ def section_classes(number: int, index: int, title: str) -> list[str]:
     if title=="Referencias base": classes.append("references")
     if title=="Cinco píldoras para recordar": classes.append("pill-summary")
     if title=="Glosario esencial": classes.append("glossary-two-column")
+    if title=="Tesis" and number != 0:
+        classes = ["reading-section", "family-4", "two-column", "thesis-standard"]
     if number == 1 and title == "Planificar no es predecir": classes.append("n01-keep-together")
     if title=="Índice comentado de los 36 Núcleos": classes.append("n00-nuclei-index")
     if number == 0 and title=="El mapa de la materia: ocho bloques, una capacidad acumulativa":
@@ -3284,7 +3306,7 @@ def build_document(number:int)->dict:
             stable_css = (HERE / "N01-v18-final" / "magazine.css").read_text(encoding="utf-8")
             base_css = stable_css.split("/* METSI collection extensions:", 1)[0].rstrip()
             css_text = base_css + "\n\n" + COLLECTION_CSS
-    css_text = css_text.rstrip() + "\n\n" + SECTION_MARKER_CONTRAST_CSS.strip() + "\n"
+    css_text = css_text.rstrip() + "\n\n" + SECTION_MARKER_CONTRAST_CSS.strip() + "\n\n" + THESIS_N00_STANDARD_CSS.strip() + "\n"
     packaged_css.write_text(css_text,encoding="utf-8")
     if number in {5, 6, 7, 8, 9, 10}:
         (out / "metsi.css").write_text(css_text, encoding="utf-8")

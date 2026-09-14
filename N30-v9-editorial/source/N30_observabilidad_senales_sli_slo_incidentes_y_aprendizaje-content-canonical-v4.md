@@ -34,9 +34,17 @@ La revisión posterior conserva hipótesis rivales: capacidad insuficiente, cont
 
 ## Tesis
 
-Un servicio es observable cuando conecta señales técnicas, de negocio, experiencia y operación con una promesa, una población y una decisión posible. La telemetría y los tableros no garantizan comprensión. Sirven cuando ayudan a seguir recorridos, comparar explicaciones y reconocer un deterioro antes de que se vuelva costumbre.
+Un servicio es observable cuando conecta señales técnicas, de negocio, experiencia y operación con una promesa, una población y una decisión posible. La telemetría y los tableros no garantizan comprensión. Sirven cuando ayudan a seguir recorridos, comparar explicaciones y reconocer un deterioro antes de que se vuelva costumbre. Los SLI delimitan qué se observa. Los SLO hacen explícito un compromiso. Las alertas asignan una acción y la revisión posterior devuelve aprendizaje al sistema. Si esos elementos no nombran la consecuencia, la autoridad y el límite de exposición, los componentes pueden permanecer verdes mientras el servicio real falla.
 
-Los SLI delimitan qué se observa. Los SLO hacen explícito un compromiso. Las alertas asignan una acción y la revisión posterior devuelve aprendizaje al sistema. Si esos elementos no nombran la consecuencia, la autoridad y el límite de exposición, los componentes pueden permanecer verdes mientras el servicio real falla.
+Para pasar de la idea a una decisión hace falta relacionar señales técnicas y de negocio con SLI, SLO, alertas, episodios e impacto para detectar no sólo fallos sino promesas degradadas. Así se distinguen descripción, explicación y compromiso, tres movimientos que suelen mezclarse. El resultado es una argumentación que otra persona puede revisar sin tener que aceptar la autoridad de quien la produjo.
+
+Consideremos un ejemplo de baja escala: latencia normal convive con abandonos porque una regla devuelve respuestas correctas pero inútiles; la señal de negocio completa el diagnóstico. Seguirlo de punta a punta permite reconocer primero el fenómeno simple y luego las relaciones que vuelven insuficiente la explicación inicial. Esa es la progresión de lo general a lo particular que propone la colección.
+
+La tesis no autoriza cualquier uso. Su contraejemplo es medir todo sin hipótesis ni responsable, crear paneles que nadie usa o convertir un SLO en garantía absoluta fuera de su población. Allí se vuelve visible que una técnica correcta puede ser inadecuada para cierto riesgo, población o momento. La calidad depende del uso, no del prestigio de la herramienta.
+
+Aplicado a Hotel Horizonte, servidores saludables no prueban una llegada saludable; tiempos, reasignaciones, compensaciones y excepciones revelan la experiencia operativa. La continuidad del caso permite comparar la nueva lectura con las anteriores y evita inventar una situación distinta para confirmar cada concepto.
+
+De aquí se desprende una responsabilidad concreta: usar observabilidad para decidir y aprender, no para decorar; N31 evaluará cuándo la IA agrega una capacidad pertinente. Profesores y estudiantes pueden discutirla con ejemplos, objeciones y evidencia; no necesitan memorizar una definición aislada ni aceptar una receta cerrada.
 
 ## Del cierre anterior al nuevo avance
 

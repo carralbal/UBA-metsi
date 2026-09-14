@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "74d4234f09ad8336c12bf42acc2277c51bd0e0cad8a33b7c922768a36025d69e",
-        "declared_sha256": "74d4234f09ad8336c12bf42acc2277c51bd0e0cad8a33b7c922768a36025d69e",
+        "actual_sha256": "3e297462a0e38b87dece58c9b4c5671b5f5b6759227dc7abda7eb9fc1d1b0def",
+        "declared_sha256": "3e297462a0e38b87dece58c9b4c5671b5f5b6759227dc7abda7eb9fc1d1b0def",
         "document_json_matches": true,
         "source": "source/N34_reconstruir_la_cadena_completa_del_problema_al_gobierno-content-canonical-v4.md",
         "source_exists": true,
@@ -28,17 +28,17 @@
       "check": "source_ids_have_exact_one_to_one_ordered_coverage",
       "evidence": {
         "first_sequence_difference": null,
-        "html_count": 250,
-        "html_unique": 250,
+        "html_count": 254,
+        "html_unique": 254,
         "integrity": {
           "missing_source_ids": [],
-          "rendered_source_id_count": 250,
-          "source_block_count": 250,
+          "rendered_source_id_count": 254,
+          "source_block_count": 254,
           "status": "PASS",
           "unexpected_source_ids": []
         },
-        "manifest_count": 250,
-        "manifest_unique": 250
+        "manifest_count": 254,
+        "manifest_unique": 254
       },
       "status": "PASS"
     },
@@ -67,12 +67,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 21155419,
-        "final_sha256": "2af31c97a8eeb170566cd4025af80ace23e13f332725ee4284372168010a017f",
-        "pages": 27,
+        "bytes": 21273209,
+        "final_sha256": "1e02e9eb90c80e8f691a03d593518eacc96ae60babd960e42c7abefc2e88b122",
+        "pages": 28,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "6a641d87b00c8fca6e435a5373ae2a8ceb2a6a9b4038faacbc58babdb82cb661",
+        "raw_sha256": "8414f4f80c5d9f88b80cee04e3d80903565a0e9e81ef3ff87cf2bcc19b77bfd6",
         "unique_sizes": [
           [
             594.96,
@@ -85,7 +85,7 @@
     {
       "check": "every_source_block_has_verifiable_pdf_text",
       "evidence": {
-        "checked": 250,
+        "checked": 254,
         "missing_source_ids": []
       },
       "status": "PASS"
@@ -93,6 +93,10 @@
     {
       "check": "contents_index_titles_sections_and_routes_are_complete",
       "evidence": {
+        "has_contents_label": true,
+        "has_core_reading": true,
+        "has_extensions": true,
+        "has_prioritized_route": true,
         "heading_count": 17,
         "html_routes": [
           "PROBLEMA",
@@ -114,6 +118,7 @@
           "PREPARACIÓN"
         ],
         "missing_from_contents": [],
+        "ordered_contents_positions": true,
         "pdf_routes": [
           "PROBLEMA",
           "PROBLEMA",
@@ -133,6 +138,7 @@
           "PREPARACIÓN",
           "PREPARACIÓN"
         ],
+        "route_set_complete": true,
         "section_numbers": [
           1,
           2,
@@ -151,7 +157,8 @@
           15,
           16,
           17
-        ]
+        ],
+        "section_titles_match_source": true
       },
       "status": "PASS"
     },
@@ -161,7 +168,7 @@
         "candidate_pages": [
           {
             "first_item_position": 36,
-            "page": 24,
+            "page": 25,
             "title_position": 10
           }
         ],
@@ -189,7 +196,7 @@
         "html_count": 2,
         "pdf_pages": [
           5,
-          21
+          22
         ]
       },
       "status": "PASS"
@@ -260,7 +267,7 @@
               "width_px": 595
             }
           },
-          "21": {
+          "22": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -284,14 +291,14 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.996992,
-              "page": 21,
-              "pixel_sha256": "62cba919c09a46d778041db57c713fead8a1627baafcaf4f1b15eb77a60a72c8",
+              "page": 22,
+              "pixel_sha256": "e92f5cc941526c48a47fdd51cf35b7576bf98e3d355ccb70e0d15699a8e76b92",
               "vertical_density": 0.8955,
               "white_gutters": [],
               "width_px": 595
             }
           },
-          "27": {
+          "28": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -315,8 +322,8 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.999944,
-              "page": 27,
-              "pixel_sha256": "b547885d2404ded1d17cd83433a74d7e8654d1b7261ae19ad81898d350d11d2a",
+              "page": 28,
+              "pixel_sha256": "b963ffae3abd791675d61555611b86f68a53a0bf9fe87d5a0f9307bd0032e12e",
               "vertical_density": 0.6663,
               "white_gutters": [],
               "width_px": 595
@@ -1038,6 +1045,7 @@
           1,
           1,
           1,
+          1,
           1
         ],
         "missing_folio_footer_pages": []
@@ -1066,11 +1074,11 @@
           "https://www.pmi.org/standards/pmbok"
         ],
         "external_link_pages": [
-          26
+          27
         ],
         "missing_printed": [],
         "reference_pages": [
-          26
+          27
         ]
       },
       "status": "PASS"
@@ -1087,9 +1095,9 @@
           3,
           4,
           5,
-          21,
-          26,
-          27
+          22,
+          27,
+          28
         ],
         "underfilled": {}
       },
@@ -1116,14 +1124,14 @@
   "failed_checks": [],
   "metrics": {
     "minimum_ordinary_vertical_density": 0.6366,
-    "pages": 27,
+    "pages": 28,
     "pause_pages": [
       5,
-      21
+      22
     ],
-    "pdf_bytes": 21155419,
-    "pdf_sha256": "2af31c97a8eeb170566cd4025af80ace23e13f332725ee4284372168010a017f",
-    "source_blocks": 250
+    "pdf_bytes": 21273209,
+    "pdf_sha256": "1e02e9eb90c80e8f691a03d593518eacc96ae60babd960e42c7abefc2e88b122",
+    "source_blocks": 254
   },
   "mode": "read-only",
   "package": "N34-v9-editorial",

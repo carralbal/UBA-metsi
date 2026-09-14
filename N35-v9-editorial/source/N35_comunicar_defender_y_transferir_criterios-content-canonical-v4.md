@@ -46,9 +46,17 @@ El registro muestra dónde pidió ayuda, qué criterio modificó y qué informac
 
 ## Tesis
 
-Una comunicación es fiel cuando mantiene unidos cuatro elementos: lo que afirma, la evidencia que lo sostiene, sus límites y la señal que obligaría a revisarlo. La forma y el nivel de detalle pueden cambiar según la decisión de cada audiencia. Defender una propuesta no es vencer objeciones. Es usarlas para encontrar supuestos débiles, costos que recaen sobre otros y decisiones sin responsable. Entregar un documento o repetir una frase tampoco demuestra transferencia.
+Una comunicación es fiel cuando mantiene unidos cuatro elementos: lo que afirma, la evidencia que lo sostiene, sus límites y la señal que obligaría a revisarlo. La forma y el nivel de detalle pueden cambiar según la decisión de cada audiencia. Defender una propuesta no es vencer objeciones. Es usarlas para encontrar supuestos débiles, costos que recaen sobre otros y decisiones sin responsable. Entregar un documento o repetir una frase tampoco demuestra transferencia. Hay transferencia cuando otra persona puede explicar el criterio, cuestionarlo y usarlo en un caso nuevo sin copiar la solución ni depender del equipo original. El diseño visual ayuda cuando vuelve visible el razonamiento. Falla cuando consigue adhesión sin comprensión.
 
-Hay transferencia cuando otra persona puede explicar el criterio, cuestionarlo y usarlo en un caso nuevo sin copiar la solución ni depender del equipo original. El diseño visual ayuda cuando vuelve visible el razonamiento. Falla cuando consigue adhesión sin comprensión.
+En términos prácticos, el mecanismo consiste en comunicar problema, evidencia, alternativas, decisión, límites y condición de revisión de modo que otra persona pueda comprender y objetar el razonamiento. Cada parte cumple una función distinta y evita que una herramienta o una métrica reemplace al razonamiento que debería sostenerla. Lo importante es poder explicar por qué esa secuencia resulta adecuada para este problema.
+
+Puede verse en una situación cotidiana: una recomendación ejecutiva puede ser breve si enlaza anexos y evidencia; una defensa técnica puede ser detallada sin perder la decisión central. La escena comienza simple y gana complejidad cuando aparecen población, tiempo, dependencias y consecuencias. Esa progresión permite aprender sin saltar directamente a una solución total.
+
+Un contraejemplo marca la frontera de la tesis: copiar una solución como plantilla sin transferir criterios o usar jerga y volumen para ocultar supuestos débiles. La misma práctica deja de ser defendible cuando ya no produce evidencia, desplaza daño o impide revisar el compromiso. Nombrar el límite es parte de comprender, no una nota marginal.
+
+Hotel Horizonte vuelve concreta la distinción: Lucía, Federico y Elena necesitan versiones distintas del relato, pero todas deben conservar promesa, población, riesgo y reparación. Las voces del caso no ilustran una respuesta predeterminada; muestran cómo una decisión cambia según quién sostiene la promesa, quién opera y quién recibe las consecuencias.
+
+Para la práctica profesional, esto implica transferir capacidad de juicio y no dependencia del autor; N36 cerrará con práctica reflexiva y aprendizaje sobre decisiones. El documento ofrece un paso acumulativo del recorrido, pero conserva abierta la evidencia que podría obligar a corregirlo en el núcleo siguiente.
 
 ## Del cierre anterior al nuevo avance
 

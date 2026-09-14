@@ -711,6 +711,13 @@ def audit(number: int) -> dict[str, Any]:
         "heading_count": len(headings), "section_numbers": section_numbers,
         "html_routes": html_routes, "pdf_routes": pdf_routes,
         "missing_from_contents": [heading for heading, position in zip(headings, contents_positions) if position < 0],
+        "ordered_contents_positions": contents_positions == sorted(contents_positions),
+        "section_titles_match_source": [compact(title) for _, _, title in sections] == [compact(title) for title in headings],
+        "route_set_complete": set(html_routes) == ROUTES,
+        "has_contents_label": "contenido" in (page_texts[1].casefold() if page_count >= 2 else ""),
+        "has_prioritized_route": "ruta priorizada" in (page_texts[1].casefold() if page_count >= 2 else ""),
+        "has_core_reading": "núcleo de lectura" in (page_texts[1].casefold() if page_count >= 2 else ""),
+        "has_extensions": "extensiones" in (page_texts[1].casefold() if page_count >= 2 else ""),
     }))
 
     pills_match = re.search(

@@ -36,9 +36,17 @@ El resultado se revisará ante el primer incumplimiento severo o después de dos
 
 ## Tesis
 
-La calidad no es una propiedad absoluta de un sistema ni el resultado de sumar pruebas aprobadas. Es una afirmación concreta sobre la adecuación del sistema para una población, un escenario y una consecuencia, respaldada por evidencia proporcional al riesgo. Cada afirmación debe declarar qué atributo evalúa, qué umbral usa, qué incertidumbre conserva y qué cede frente a otros atributos. Un promedio favorable no alcanza para prometer calidad cuando oculta un daño severo, una exclusión o la falta de una alternativa.
+La calidad no es una propiedad absoluta de un sistema ni el resultado de sumar pruebas aprobadas. Es una afirmación concreta sobre la adecuación del sistema para una población, un escenario y una consecuencia, respaldada por evidencia proporcional al riesgo. Cada afirmación debe declarar qué atributo evalúa, qué umbral usa, qué incertidumbre conserva y qué cede frente a otros atributos. Un promedio favorable no alcanza para prometer calidad cuando oculta un daño severo, una exclusión o la falta de una alternativa. La decisión profesional consiste en limitar la exposición, combinar fuentes de evidencia y conservar capacidad de recuperación hasta demostrar que el servicio puede sostener su propósito en las condiciones que más importan, no sólo en las más fáciles de medir.
 
-La decisión profesional consiste en limitar la exposición, combinar fuentes de evidencia y conservar capacidad de recuperación hasta demostrar que el servicio puede sostener su propósito en las condiciones que más importan, no sólo en las más fáciles de medir.
+La tesis se vuelve operativa al seleccionar atributos y evidencia según consecuencias, poblaciones y tensiones, reconociendo que velocidad, seguridad, accesibilidad y costo pueden competir. Esa secuencia obliga a declarar qué cambia, qué permanece abierto y qué evidencia podría modificar la decisión. El rigor no proviene de agregar términos, sino de hacer reconstruible el paso entre una observación, una explicación y una acción.
+
+Un ejemplo sencillo permite verlo: una función rápida en promedio puede ser inaceptable si falla en el caso crítico o deja sin alternativa a una población pequeña. El caso muestra por qué una misma señal admite explicaciones e intervenciones diferentes. Antes de ampliar alcance conviene precisar población, condición de éxito y fuente de evidencia.
+
+El límite también importa: declarar calidad total mediante una única cobertura, encuesta o checklist y ocultar qué riesgo o escenario quedó sin examinar. Ese contraejemplo evita convertir una idea útil en receta universal. Una decisión puede ser provisional, pero debe decir qué protege ahora y cuándo volverá a examinarse.
+
+En Hotel Horizonte, la llegada debe ser usable, segura, accesible y reparable; probar el caso feliz no cubre cerradura caída ni habitación adaptada. El caso longitudinal obliga a sostener la misma promesa mientras cambian el modelo y la evidencia; así puede verse qué aprendió realmente el equipo.
+
+La consecuencia profesional es argumentar suficiencia de prueba, no acumular controles; N29 gobernará integración, despliegue, aprobación y recuperación. La tesis no cierra la discusión: fija un criterio común para que el encuentro pueda comparar argumentos, producir evidencia y decidir sin ocultar incertidumbre.
 
 ## Del cierre anterior al nuevo avance
 

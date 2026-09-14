@@ -472,9 +472,30 @@ def update_manifests(records: list[dict[str, Any]]) -> tuple[dict[str, Any], dic
     root_manifest["site_publication"] = contract
 
     published = site_manifest.get("published_readings")
+    if published is None:
+        readings = site_manifest.get("readings")
+        if isinstance(readings, list):
+            published = [
+                item.get("code")
+                for item in readings
+                if isinstance(item, dict)
+            ]
     expected_published = [f"N{number:02d}" for number in range(0, LAST + 1)]
     if published != expected_published:
-        raise PublicationError("site/course-manifest.json: published_readings no enumera exactamente N00-N36")
+        raise PublicationError("site/course-manifest.json no enumera exactamente N00-N36")
+    readings = site_manifest.get("readings")
+    if isinstance(readings, list):
+        public_by_code = {
+            str(item.get("code")): item
+            for item in readings
+            if isinstance(item, dict) and item.get("code")
+        }
+        for record in records:
+            public = public_by_code.get(record["code"])
+            if public is None:
+                raise PublicationError(f"site/course-manifest.json no contiene {record['code']}")
+            public["pages"] = record["pages"]
+            public["pdf"] = record["public_pdf"]
     # El manifiesto público sólo conserva datos académicos y rutas de descarga.
     # La procedencia técnica, los hashes y los informes QA quedan en el manifiesto
     # interno de la raíz del repositorio.

@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "5532ffba63b8ec503db1d94143b3072dbd7659f15527d7c8f46724846d651b57",
-        "declared_sha256": "5532ffba63b8ec503db1d94143b3072dbd7659f15527d7c8f46724846d651b57",
+        "actual_sha256": "355da2257c741ffd6ef427a241228ab4c5abf64314e0a2247fd18cabf8685d50",
+        "declared_sha256": "355da2257c741ffd6ef427a241228ab4c5abf64314e0a2247fd18cabf8685d50",
         "document_json_matches": true,
         "source": "source/N26_ecosistema_de_servicios_plataformas_y_terceros-content-canonical-v3.md",
         "source_exists": true,
@@ -28,17 +28,17 @@
       "check": "source_ids_have_exact_one_to_one_ordered_coverage",
       "evidence": {
         "first_sequence_difference": null,
-        "html_count": 247,
-        "html_unique": 247,
+        "html_count": 251,
+        "html_unique": 251,
         "integrity": {
           "missing_source_ids": [],
-          "rendered_source_id_count": 247,
-          "source_block_count": 247,
+          "rendered_source_id_count": 251,
+          "source_block_count": 251,
           "status": "PASS",
           "unexpected_source_ids": []
         },
-        "manifest_count": 247,
-        "manifest_unique": 247
+        "manifest_count": 251,
+        "manifest_unique": 251
       },
       "status": "PASS"
     },
@@ -67,12 +67,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 19022586,
-        "final_sha256": "987ccc49cd0add1afc4623d15ab00ada1dceed461506999f2c10a390d64eaeae",
-        "pages": 25,
+        "bytes": 19175116,
+        "final_sha256": "9385fd20a81597f2ff275e3aa86c8a010b693eba71921058e019b9d48edae1c9",
+        "pages": 26,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "efb0b748080693532d97ebfcec6a1f9b5e33e2ea05bdebb3eecd4e6b2292279b",
+        "raw_sha256": "45e9dca7c4e102c118ed5acb804c36d94793d0b29fb58c422228e632458d7cbf",
         "unique_sizes": [
           [
             594.96,
@@ -85,7 +85,7 @@
     {
       "check": "every_source_block_has_verifiable_pdf_text",
       "evidence": {
-        "checked": 247,
+        "checked": 251,
         "missing_source_ids": []
       },
       "status": "PASS"
@@ -93,6 +93,10 @@
     {
       "check": "contents_index_titles_sections_and_routes_are_complete",
       "evidence": {
+        "has_contents_label": true,
+        "has_core_reading": true,
+        "has_extensions": true,
+        "has_prioritized_route": true,
         "heading_count": 18,
         "html_routes": [
           "PROBLEMA",
@@ -115,6 +119,7 @@
           "PREPARACIÓN"
         ],
         "missing_from_contents": [],
+        "ordered_contents_positions": true,
         "pdf_routes": [
           "PROBLEMA",
           "PROBLEMA",
@@ -135,6 +140,7 @@
           "PREPARACIÓN",
           "PREPARACIÓN"
         ],
+        "route_set_complete": true,
         "section_numbers": [
           1,
           2,
@@ -154,7 +160,8 @@
           16,
           17,
           18
-        ]
+        ],
+        "section_titles_match_source": true
       },
       "status": "PASS"
     },
@@ -164,7 +171,7 @@
         "candidate_pages": [
           {
             "first_item_position": 36,
-            "page": 22,
+            "page": 23,
             "title_position": 10
           }
         ],
@@ -192,7 +199,7 @@
         "html_count": 2,
         "pdf_pages": [
           5,
-          18
+          19
         ]
       },
       "status": "PASS"
@@ -263,7 +270,7 @@
               "width_px": 595
             }
           },
-          "18": {
+          "19": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -287,14 +294,14 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.995223,
-              "page": 18,
-              "pixel_sha256": "b37c5ae1e3ad355d10124583d4a44c59ff22f3ad40407c5c4c8f3b1e0957e4cc",
+              "page": 19,
+              "pixel_sha256": "d81cae0085936b028d99a3776f553339633270d1f72f6def79dad3d9853ba78b",
               "vertical_density": 0.8955,
               "white_gutters": [],
               "width_px": 595
             }
           },
-          "25": {
+          "26": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -318,8 +325,8 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.999944,
-              "page": 25,
-              "pixel_sha256": "fcf763dce3500c8836b239628aeec5b9874d9559b52d18a1448edceff0f6fa82",
+              "page": 26,
+              "pixel_sha256": "4760cc7d1a32aca68ae6cbbe84e449499a76c2a44a5265061fee8cef2113b2f7",
               "vertical_density": 0.6663,
               "white_gutters": [],
               "width_px": 595
@@ -1032,6 +1039,7 @@
           1,
           1,
           1,
+          1,
           1
         ],
         "missing_folio_footer_pages": []
@@ -1060,11 +1068,11 @@
           "https://www.iso.org/standard/70636.html"
         ],
         "external_link_pages": [
-          24
+          25
         ],
         "missing_printed": [],
         "reference_pages": [
-          24
+          25
         ]
       },
       "status": "PASS"
@@ -1081,9 +1089,9 @@
           3,
           4,
           5,
-          18,
-          24,
-          25
+          19,
+          25,
+          26
         ],
         "underfilled": {}
       },
@@ -1110,14 +1118,14 @@
   "failed_checks": [],
   "metrics": {
     "minimum_ordinary_vertical_density": 0.5891,
-    "pages": 25,
+    "pages": 26,
     "pause_pages": [
       5,
-      18
+      19
     ],
-    "pdf_bytes": 19022586,
-    "pdf_sha256": "987ccc49cd0add1afc4623d15ab00ada1dceed461506999f2c10a390d64eaeae",
-    "source_blocks": 247
+    "pdf_bytes": 19175116,
+    "pdf_sha256": "9385fd20a81597f2ff275e3aa86c8a010b693eba71921058e019b9d48edae1c9",
+    "source_blocks": 251
   },
   "mode": "read-only",
   "package": "N26-v9-editorial",

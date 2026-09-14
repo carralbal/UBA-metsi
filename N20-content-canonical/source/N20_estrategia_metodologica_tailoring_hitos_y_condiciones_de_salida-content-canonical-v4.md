@@ -52,6 +52,16 @@ HH-20 termina cuando Operaciones sostiene la capacidad y puede revisar sus supue
 
 Una estrategia metodológica es defendible cuando cada práctica cumple una función necesaria y su intensidad responde al riesgo. Un hito sólo sirve si reúne evidencia, una persona con autoridad y una decisión posible. El calendario o el nombre de un marco no pueden reemplazar las condiciones para avanzar, detener, transferir o cerrar. El trabajo profesional consiste en diseñar una secuencia que pueda cambiar cuando cambia la evidencia y que termine con una operación capaz de sostenerse sin ayuda extraordinaria.
 
+En términos prácticos, el mecanismo consiste en unir preguntas, incertidumbres, decisiones, evidencia, hitos y puertas para saber por qué se avanza y qué señal obliga a revisar. Cada parte cumple una función distinta y evita que una herramienta o una métrica reemplace al razonamiento que debería sostenerla. Lo importante es poder explicar por qué esa secuencia resulta adecuada para este problema.
+
+Puede verse en una situación cotidiana: antes de contratar todo se demuestra una llegada operable con datos reales, excepciones reparables y riesgo dentro del límite acordado. La escena comienza simple y gana complejidad cuando aparecen población, tiempo, dependencias y consecuencias. Esa progresión permite aprender sin saltar directamente a una solución total.
+
+Un contraejemplo marca la frontera de la tesis: cambiar el plan ante cada dificultad sin conservar rumbo, evidencia ni autoridad, confundiendo flexibilidad con ausencia de compromiso. La misma práctica deja de ser defendible cuando ya no produce evidencia, desplaza daño o impide revisar el compromiso. Nombrar el límite es parte de comprender, no una nota marginal.
+
+Hotel Horizonte vuelve concreta la distinción: contratos, prueba de estados, slice de dos pisos y expansión comercial tienen puertas distintas; terminar tareas no abre por sí solo ninguna. Las voces del caso no ilustran una respuesta predeterminada; muestran cómo una decisión cambia según quién sostiene la promesa, quién opera y quién recibe las consecuencias.
+
+Para la práctica profesional, esto implica hacer visible la lógica entre trabajo y decisión; N21 distinguirá proyecto, producto, servicio y plataforma. El documento ofrece un paso acumulativo del recorrido, pero conserva abierta la evidencia que podría obligar a corregirlo en el núcleo siguiente.
+
 ## Del cierre anterior al nuevo avance
 
 N19 entrega una arquitectura de realización con alternativas descartadas, dependencias, costos de salida y mecanismos de reparación. N20 la transforma en una secuencia de compromisos gobernados, con puertas que vinculan evidencia, autoridad y decisión.

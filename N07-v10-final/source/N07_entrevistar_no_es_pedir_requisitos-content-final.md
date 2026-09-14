@@ -29,6 +29,16 @@ Esta historia contiene el problema metodológico de N07. Entrevistar no es abrir
 
 Una entrevista de investigación busca episodios, mecanismos, decisiones, excepciones y significados. La persona entrevistada aporta experiencia situada; el analista conserva responsabilidad por interpretar, contrastar y no generalizar más allá de la evidencia. Preguntar qué función desea alguien puede ser un comienzo, pero no reemplaza comprender qué intenta lograr, qué ocurre y qué riesgo gestiona.
 
+La tesis se vuelve operativa al reconstruir episodios y separar lo ocurrido de la interpretación, recordando que el testimonio produce hipótesis pero rara vez las verifica solo. Esa secuencia obliga a declarar qué cambia, qué permanece abierto y qué evidencia podría modificar la decisión. El rigor no proviene de agregar términos, sino de hacer reconstruible el paso entre una observación, una explicación y una acción.
+
+Un ejemplo sencillo permite verlo: preguntar por la última demora revela señal, momento y decisión; preguntar si necesita una alerta induce una solución. El caso muestra por qué una misma señal admite explicaciones e intervenciones diferentes. Antes de ampliar alcance conviene precisar población, condición de éxito y fuente de evidencia.
+
+El límite también importa: descartar todo relato por subjetivo, perdiendo reglas informales, temores y criterios que ningún registro técnico conserva. Ese contraejemplo evita convertir una idea útil en receta universal. Una decisión puede ser provisional, pero debe decir qué protege ahora y cuándo volverá a examinarse.
+
+En Hotel Horizonte, Lucía dice que Housekeeping avisa tarde y Mariela que Recepción cambia prioridades; horarios y casos permiten examinar ambas versiones. El caso longitudinal obliga a sostener la misma promesa mientras cambian el modelo y la evidencia; así puede verse qué aprendió realmente el equipo.
+
+La consecuencia profesional es terminar con mejores distinciones y próximos pasos, no con una lista de pedidos; N08 observará el trabajo que el relato no captura. La tesis no cierra la discusión: fija un criterio común para que el encuentro pueda comparar argumentos, producir evidencia y decidir sin ocultar incertidumbre.
+
 ## De N06 a N07: de la misión de evidencia a la conversación
 
 N06 cerró con una estrategia situada para Hotel Horizonte y una misión de evidencia concreta: reconstruir episodios en los que un mismo estado produjo decisiones diferentes. N07 recibe esa misión. No vuelve a decidir qué conviene investigar, cuánto vale saberlo ni cuándo detener la indagación. Su problema específico es otro: diseñar conversaciones capaces de producir relatos contrastables sin fabricar la respuesta que la estrategia espera.

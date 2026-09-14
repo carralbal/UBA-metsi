@@ -36,9 +36,17 @@ La consecuencia aceptada es más trabajo durante la contingencia a cambio de no 
 
 ## Tesis
 
-Una promesa distribuida se puede gobernar cuando las dependencias se tratan como compromisos entre capacidades autónomas, no como flechas neutras entre componentes. Cada vínculo necesita una frontera de confianza, evidencia observable, un responsable capaz de actuar, un modo de degradación y una salida verificable.
+Una promesa distribuida se puede gobernar cuando las dependencias se tratan como compromisos entre capacidades autónomas, no como flechas neutras entre componentes. Cada vínculo necesita una frontera de confianza, evidencia observable, un responsable capaz de actuar, un modo de degradación y una salida verificable. El ecosistema no elimina la autonomía ni la incertidumbre. Permite discutir qué controla cada actor, qué consecuencia queda sin dueño y qué alternativa sigue disponible. Si el gobierno se reduce a disponibilidad técnica o contratos de compra, todas las partes pueden cumplir localmente mientras el servicio completo falla. Por eso la coordinación, la contingencia y la reparación deben diseñarse antes del incidente y probarse sobre un recorrido real.
 
-El ecosistema no elimina la autonomía ni la incertidumbre. Permite discutir qué controla cada actor, qué consecuencia queda sin dueño y qué alternativa sigue disponible. Si el gobierno se reduce a disponibilidad técnica o contratos de compra, todas las partes pueden cumplir localmente mientras el servicio completo falla. Por eso la coordinación, la contingencia y la reparación deben diseñarse antes del incidente y probarse sobre un recorrido real.
+En términos prácticos, el mecanismo consiste en mapear capacidades, dependencias, contratos y responsabilidades entre servicios internos, plataformas y proveedores que producen una misma promesa. Cada parte cumple una función distinta y evita que una herramienta o una métrica reemplace al razonamiento que debería sostenerla. Lo importante es poder explicar por qué esa secuencia resulta adecuada para este problema.
+
+Puede verse en una situación cotidiana: un pago depende de identidad, red, antifraude y banco; que cada componente esté disponible no garantiza completar la operación. La escena comienza simple y gana complejidad cuando aparecen población, tiempo, dependencias y consecuencias. Esa progresión permite aprender sin saltar directamente a una solución total.
+
+Un contraejemplo marca la frontera de la tesis: dibujar un ecosistema como catálogo de logos sin mostrar qué capacidad se pierde, quién responde y cómo se opera una degradación. La misma práctica deja de ser defendible cuando ya no produce evidencia, desplaza daño o impide revisar el compromiso. Nombrar el límite es parte de comprender, no una nota marginal.
+
+Hotel Horizonte vuelve concreta la distinción: PMS, channel manager, cerraduras y mensajería participan de la llegada; Recepción necesita una salida aunque un tercero falle. Las voces del caso no ilustran una respuesta predeterminada; muestran cómo una decisión cambia según quién sostiene la promesa, quién opera y quién recibe las consecuencias.
+
+Para la práctica profesional, esto implica gobernar el servicio por dependencia y consecuencia; N27 precisará contratos sintácticos, semánticos, temporales y operacionales. El documento ofrece un paso acumulativo del recorrido, pero conserva abierta la evidencia que podría obligar a corregirlo en el núcleo siguiente.
 
 ## Del cierre anterior al nuevo avance
 

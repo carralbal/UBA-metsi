@@ -2055,7 +2055,7 @@ def build(number: int) -> dict:
         section_attrs = f' style="{";".join(section_styles)}"' if section_styles else ""
         lead_body = ""
         movement_close_html = ""
-        if is_hotel_case or section.title == "Tesis" or section.title.startswith("Movimiento") or section.title == "Consecuencias profesionales":
+        if is_hotel_case or section.title.startswith("Movimiento") or section.title == "Consecuencias profesionales":
             lead_body, section_body = split_lead_html(section_body)
         if (number, movement_number) in MOVEMENT_EDITORIAL_CLOSES:
             section_body, movement_close_html = split_last_subsection_as_editorial_close(
@@ -2162,11 +2162,9 @@ def build(number: int) -> dict:
             f'<div class="section-heading">{marker}{heading_icon}<h2 data-source-id="{heading_id}">{html.escape(section.title)}</h2></div>'
             f'{lead_html}{body_html}{after_body}</section>'
         )
-        section_html = (
-            f'<div class="thesis-infographic-page">{section_core}{after_section}</div>'
-            if section.title == "Tesis" and after_section
-            else f'{section_core}{after_section}'
-        )
+        # N00 defines the collection standard: thesis and infographic are two
+        # complete editorial moments, never two compressed bands on one page.
+        section_html = f'{section_core}{after_section}'
         if number in DEFERRED_INFOGRAPHIC_DOCS and index == 5 and deferred_infographic_html:
             section_html += deferred_infographic_html
             deferred_infographic_html = ""
@@ -2274,7 +2272,7 @@ def build(number: int) -> dict:
     (out / "index.html").write_text(html_text, encoding="utf-8")
 
     stable_css = (ROOT / "N10-v9-final" / "magazine.css").read_text(encoding="utf-8")
-    css = stable_css + "\n\n" + BLOCK_C_CSS + "\n\n" + V8_EDITORIAL_CORRECTIONS + "\n\n" + V9_N34_CORRECTIONS
+    css = stable_css + "\n\n" + BLOCK_C_CSS + "\n\n" + V8_EDITORIAL_CORRECTIONS + "\n\n" + V9_N34_CORRECTIONS + "\n\n" + THESIS_N00_STANDARD_CSS
     (out / "magazine.css").write_text(css, encoding="utf-8")
 
     rendered_ids = re.findall(r'data-source-id="([^"]+)"', html_text)
@@ -4042,6 +4040,43 @@ body.block-c.document-n34 .hotel-voice-3 img{transform:scale(1.28)!important;tra
 body.block-c.document-n34 .hotel-voice-4 img{transform:scale(1.30)!important;transform-origin:50% 22%!important}
 body.block-c.document-n34 .hotel-voice-5 img{transform:scale(1.22)!important;transform-origin:50% 22%!important}
 body.block-c.document-n34 .hotel-voice-6 img{transform:scale(1.26)!important;transform-origin:50% 22%!important}
+'''
+
+THESIS_N00_STANDARD_CSS = r'''
+/* N00 thesis standard: developed argument, readable scale, separate plate. */
+body.block-c .block-c-thesis,
+body.block-c.document-n34 .block-c-thesis{
+  box-sizing:border-box!important;height:246mm!important;min-height:246mm!important;
+  display:block!important;padding:8mm 9mm!important;margin:0!important;
+  break-before:page!important;page-break-before:always!important;
+  break-after:page!important;page-break-after:always!important;
+  break-inside:avoid-page!important;page-break-inside:avoid!important;
+  background:#FAFAF8!important;border-left:1.5mm solid #CFFF00!important
+}
+body.block-c .block-c-thesis .section-heading{margin-bottom:5mm!important}
+body.block-c .block-c-thesis .section-heading h2{font-size:34pt!important;line-height:1!important}
+body.block-c .block-c-thesis .section-lead{display:none!important}
+body.block-c .block-c-thesis .section-body:not(.section-lead){
+  display:block!important;columns:2!important;column-count:2!important;
+  column-gap:9mm!important;column-rule:.2mm solid #C5C7C5!important;
+  font:400 10.7pt/1.42 Baskerville,Georgia,serif!important;
+  orphans:3!important;widows:3!important
+}
+body.block-c .block-c-thesis .section-body p{
+  margin:0 0 4mm!important;break-inside:auto!important
+}
+/* The two most text-dense theses keep N00's hierarchy while using its
+   compact body rhythm so the complete argument remains on one page. */
+body.block-c.document-n15 .block-c-thesis .section-body:not(.section-lead),
+body.block-c.document-n16 .block-c-thesis .section-body:not(.section-lead){
+  font-size:9.6pt!important;line-height:1.34!important
+}
+body.block-c.document-n15 .block-c-thesis .section-body p,
+body.block-c.document-n16 .block-c-thesis .section-body p{margin-bottom:3mm!important}
+body.block-c .approved-infographic-page{
+  break-before:page!important;page-break-before:always!important;
+  break-after:page!important;page-break-after:always!important
+}
 '''
 
 

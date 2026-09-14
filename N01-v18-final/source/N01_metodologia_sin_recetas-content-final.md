@@ -28,6 +28,16 @@ La historia deja una idea que recorrerá toda la materia: avanzar no siempre sig
 
 Una metodología profesional organiza el juicio sin sustituirlo. Ayuda a formular preguntas, cuestionar evidencia y hacer visibles los supuestos que orientan una decisión. También coordina el aprendizaje y limita riesgos. Su rigor surge de conservar una relación defendible entre el contexto, el propósito, las prácticas elegidas y las decisiones revisables, no de repetir una secuencia universal.
 
+La tesis se vuelve operativa al separar el pedido de la situación, construir explicaciones rivales y buscar evidencia capaz de debilitarlas antes de comprometer una solución. Esa secuencia obliga a declarar qué cambia, qué permanece abierto y qué evidencia podría modificar la decisión. El rigor no proviene de agregar términos, sino de hacer reconstruible el paso entre una observación, una explicación y una acción.
+
+Un ejemplo sencillo permite verlo: una facultad pide un chatbot; observar consultas y abandonos puede revelar que hace falta información accesible o un cambio de proceso, no necesariamente conversación automática. El caso muestra por qué una misma señal admite explicaciones e intervenciones diferentes. Antes de ampliar alcance conviene precisar población, condición de éxito y fuente de evidencia.
+
+El límite también importa: usar la complejidad como excusa para no decidir: una reparación urgente puede hacerse mientras la explicación completa permanece abierta. Ese contraejemplo evita convertir una idea útil en receta universal. Una decisión puede ser provisional, pero debe decir qué protege ahora y cuándo volverá a examinarse.
+
+En Hotel Horizonte, «integrar todo» se desarma en episodios, actores y consecuencias; Recepción, Housekeeping, Comercial y Tecnología no describen el mismo problema. El caso longitudinal obliga a sostener la misma promesa mientras cambian el modelo y la evidencia; así puede verse qué aprendió realmente el equipo.
+
+La consecuencia profesional es cambiar la pregunta de qué solución implementar por qué intervención puede justificarse y revisarse; ese criterio orienta el resto de la colección. La tesis no cierra la discusión: fija un criterio común para que el encuentro pueda comparar argumentos, producir evidencia y decidir sin ocultar incertidumbre.
+
 ## Cómo leer este mapa: N01 abre el recorrido N02 a N10
 
 N01 funciona como puerta de entrada y no como resumen anticipado de todo el bloque. Presenta una arquitectura de juicio que los números siguientes vuelven más precisa. Por eso nombra frontera, evidencia, poder, incertidumbre y experiencia sin pretender agotarlos. El criterio de lectura es sencillo: cada concepto que acá aparece como pregunta se convierte después en una capacidad profesional específica.

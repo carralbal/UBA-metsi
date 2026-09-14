@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "e3e55ff4f8beb1b4e785113c3593a3822da6e5028e1702c884841f6f403e22ca",
-        "declared_sha256": "e3e55ff4f8beb1b4e785113c3593a3822da6e5028e1702c884841f6f403e22ca",
+        "actual_sha256": "7143f29de5879ade939edca87fc5fa8abcccf69ecc8d0dc0d2c2aad837cb930b",
+        "declared_sha256": "7143f29de5879ade939edca87fc5fa8abcccf69ecc8d0dc0d2c2aad837cb930b",
         "document_json_matches": true,
         "source": "source/N12_eventos_estados_comandos_evidencia_y_autoridad-content-canonical-v3.md",
         "source_exists": true,
@@ -28,17 +28,17 @@
       "check": "source_ids_have_exact_one_to_one_ordered_coverage",
       "evidence": {
         "first_sequence_difference": null,
-        "html_count": 278,
-        "html_unique": 278,
+        "html_count": 281,
+        "html_unique": 281,
         "integrity": {
           "missing_source_ids": [],
-          "rendered_source_id_count": 278,
-          "source_block_count": 278,
+          "rendered_source_id_count": 281,
+          "source_block_count": 281,
           "status": "PASS",
           "unexpected_source_ids": []
         },
-        "manifest_count": 278,
-        "manifest_unique": 278
+        "manifest_count": 281,
+        "manifest_unique": 281
       },
       "status": "PASS"
     },
@@ -67,12 +67,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 19313886,
-        "final_sha256": "88f3fbff1e35277872594026ed0ee3c18cb6c935580c26ca04e63c58cde79223",
-        "pages": 26,
+        "bytes": 19378222,
+        "final_sha256": "79449864ef5ef5e2a7b43edd3c367e77e6219c781ea77faf1c48aa13b633ed94",
+        "pages": 27,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "a907750277764d79c60fee3439b4796f47ac50e99bda47f05dfe1f546a4bb3d6",
+        "raw_sha256": "6de1c60b5143efeb7c36b475e001e7e742186a1cb71ccb18daccc2439253a978",
         "unique_sizes": [
           [
             594.96,
@@ -85,7 +85,7 @@
     {
       "check": "every_source_block_has_verifiable_pdf_text",
       "evidence": {
-        "checked": 278,
+        "checked": 281,
         "missing_source_ids": []
       },
       "status": "PASS"
@@ -93,6 +93,10 @@
     {
       "check": "contents_index_titles_sections_and_routes_are_complete",
       "evidence": {
+        "has_contents_label": true,
+        "has_core_reading": true,
+        "has_extensions": true,
+        "has_prioritized_route": true,
         "heading_count": 17,
         "html_routes": [
           "PROBLEMA",
@@ -114,6 +118,7 @@
           "PREPARACIÓN"
         ],
         "missing_from_contents": [],
+        "ordered_contents_positions": true,
         "pdf_routes": [
           "PROBLEMA",
           "PROBLEMA",
@@ -133,6 +138,7 @@
           "PREPARACIÓN",
           "PREPARACIÓN"
         ],
+        "route_set_complete": true,
         "section_numbers": [
           1,
           2,
@@ -151,7 +157,8 @@
           15,
           16,
           17
-        ]
+        ],
+        "section_titles_match_source": true
       },
       "status": "PASS"
     },
@@ -161,7 +168,7 @@
         "candidate_pages": [
           {
             "first_item_position": 36,
-            "page": 23,
+            "page": 24,
             "title_position": 10
           }
         ],
@@ -189,7 +196,7 @@
         "html_count": 2,
         "pdf_pages": [
           5,
-          20
+          21
         ]
       },
       "status": "PASS"
@@ -260,7 +267,7 @@
               "width_px": 595
             }
           },
-          "20": {
+          "21": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -284,14 +291,14 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.997229,
-              "page": 20,
-              "pixel_sha256": "3dc44961e96ebc8fe896775b65d422ea3b3866b58f86c332c9bdff7aebdd144e",
+              "page": 21,
+              "pixel_sha256": "e0e5ae4655cd46996e275fda11cee816c475ba0a7ec536e7294f00fea054ea40",
               "vertical_density": 0.8955,
               "white_gutters": [],
               "width_px": 595
             }
           },
-          "26": {
+          "27": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -315,8 +322,8 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.999944,
-              "page": 26,
-              "pixel_sha256": "4760cc7d1a32aca68ae6cbbe84e449499a76c2a44a5265061fee8cef2113b2f7",
+              "page": 27,
+              "pixel_sha256": "b547885d2404ded1d17cd83433a74d7e8654d1b7261ae19ad81898d350d11d2a",
               "vertical_density": 0.6663,
               "white_gutters": [],
               "width_px": 595
@@ -1033,6 +1040,7 @@
           1,
           1,
           1,
+          1,
           1
         ],
         "missing_folio_footer_pages": []
@@ -1073,11 +1081,11 @@
           "https://www.omg.org/spec/UML/2.5.1"
         ],
         "external_link_pages": [
-          25
+          26
         ],
         "missing_printed": [],
         "reference_pages": [
-          25
+          26
         ]
       },
       "status": "PASS"
@@ -1094,9 +1102,9 @@
           3,
           4,
           5,
-          20,
-          25,
-          26
+          21,
+          26,
+          27
         ],
         "underfilled": {}
       },
@@ -1123,14 +1131,14 @@
   "failed_checks": [],
   "metrics": {
     "minimum_ordinary_vertical_density": 0.6473,
-    "pages": 26,
+    "pages": 27,
     "pause_pages": [
       5,
-      20
+      21
     ],
-    "pdf_bytes": 19313886,
-    "pdf_sha256": "88f3fbff1e35277872594026ed0ee3c18cb6c935580c26ca04e63c58cde79223",
-    "source_blocks": 278
+    "pdf_bytes": 19378222,
+    "pdf_sha256": "79449864ef5ef5e2a7b43edd3c367e77e6219c781ea77faf1c48aa13b633ed94",
+    "source_blocks": 281
   },
   "mode": "read-only",
   "package": "N12-v9-editorial",

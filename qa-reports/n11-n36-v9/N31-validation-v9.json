@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "f1770f514730fb8bca2584dd12954e9dbe4f93647e3f63cdb50b77bb0a70a166",
-        "declared_sha256": "f1770f514730fb8bca2584dd12954e9dbe4f93647e3f63cdb50b77bb0a70a166",
+        "actual_sha256": "486ed440d09096916b91199082da6595bf455aaa932a0ff523487e57eaec60bf",
+        "declared_sha256": "486ed440d09096916b91199082da6595bf455aaa932a0ff523487e57eaec60bf",
         "document_json_matches": true,
         "source": "source/N31_reglas_prediccion_generacion_y_agencia-content-canonical-v4.md",
         "source_exists": true,
@@ -28,17 +28,17 @@
       "check": "source_ids_have_exact_one_to_one_ordered_coverage",
       "evidence": {
         "first_sequence_difference": null,
-        "html_count": 236,
-        "html_unique": 236,
+        "html_count": 240,
+        "html_unique": 240,
         "integrity": {
           "missing_source_ids": [],
-          "rendered_source_id_count": 236,
-          "source_block_count": 236,
+          "rendered_source_id_count": 240,
+          "source_block_count": 240,
           "status": "PASS",
           "unexpected_source_ids": []
         },
-        "manifest_count": 236,
-        "manifest_unique": 236
+        "manifest_count": 240,
+        "manifest_unique": 240
       },
       "status": "PASS"
     },
@@ -67,12 +67,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 18741859,
-        "final_sha256": "6fed720e3ae7b46e65fe1f47024ac0c81858dc9a8b775f44555ffc3c40b7b626",
-        "pages": 26,
+        "bytes": 18810230,
+        "final_sha256": "00c656b552318c582a8afd3cdea08385a778f59e842cba1c30a077f6e750e92e",
+        "pages": 27,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "6d98a4e054bf2164f44ae6cc0fee748b468d3adadc54f46a6d625da6c211ce24",
+        "raw_sha256": "2b8cb0765e920643ac210208a23ea2c55e4f4639f6164ffaeabdea0ccddb2aa9",
         "unique_sizes": [
           [
             594.96,
@@ -85,7 +85,7 @@
     {
       "check": "every_source_block_has_verifiable_pdf_text",
       "evidence": {
-        "checked": 236,
+        "checked": 240,
         "missing_source_ids": []
       },
       "status": "PASS"
@@ -93,6 +93,10 @@
     {
       "check": "contents_index_titles_sections_and_routes_are_complete",
       "evidence": {
+        "has_contents_label": true,
+        "has_core_reading": true,
+        "has_extensions": true,
+        "has_prioritized_route": true,
         "heading_count": 17,
         "html_routes": [
           "PROBLEMA",
@@ -114,6 +118,7 @@
           "PREPARACIÓN"
         ],
         "missing_from_contents": [],
+        "ordered_contents_positions": true,
         "pdf_routes": [
           "PROBLEMA",
           "PROBLEMA",
@@ -133,6 +138,7 @@
           "PREPARACIÓN",
           "PREPARACIÓN"
         ],
+        "route_set_complete": true,
         "section_numbers": [
           1,
           2,
@@ -151,7 +157,8 @@
           15,
           16,
           17
-        ]
+        ],
+        "section_titles_match_source": true
       },
       "status": "PASS"
     },
@@ -161,7 +168,7 @@
         "candidate_pages": [
           {
             "first_item_position": 36,
-            "page": 23,
+            "page": 24,
             "title_position": 10
           }
         ],
@@ -189,7 +196,7 @@
         "html_count": 2,
         "pdf_pages": [
           5,
-          20
+          21
         ]
       },
       "status": "PASS"
@@ -260,7 +267,7 @@
               "width_px": 595
             }
           },
-          "20": {
+          "21": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -284,14 +291,14 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.995339,
-              "page": 20,
-              "pixel_sha256": "ff9503620e2884181e261ce58bfe8a8bd94150c3d433b704b611b9ca201cea39",
+              "page": 21,
+              "pixel_sha256": "55389f912db230d137c48b06276c782e044b90bf74652860bfdf6dfa421ce5d5",
               "vertical_density": 0.8955,
               "white_gutters": [],
               "width_px": 595
             }
           },
-          "26": {
+          "27": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -315,8 +322,8 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.999944,
-              "page": 26,
-              "pixel_sha256": "4760cc7d1a32aca68ae6cbbe84e449499a76c2a44a5265061fee8cef2113b2f7",
+              "page": 27,
+              "pixel_sha256": "b547885d2404ded1d17cd83433a74d7e8654d1b7261ae19ad81898d350d11d2a",
               "vertical_density": 0.6663,
               "white_gutters": [],
               "width_px": 595
@@ -1031,6 +1038,7 @@
           1,
           1,
           1,
+          1,
           1
         ],
         "missing_folio_footer_pages": []
@@ -1063,11 +1071,11 @@
           "https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research"
         ],
         "external_link_pages": [
-          25
+          26
         ],
         "missing_printed": [],
         "reference_pages": [
-          25
+          26
         ]
       },
       "status": "PASS"
@@ -1084,9 +1092,9 @@
           3,
           4,
           5,
-          20,
-          25,
-          26
+          21,
+          26,
+          27
         ],
         "underfilled": {}
       },
@@ -1113,14 +1121,14 @@
   "failed_checks": [],
   "metrics": {
     "minimum_ordinary_vertical_density": 0.5784,
-    "pages": 26,
+    "pages": 27,
     "pause_pages": [
       5,
-      20
+      21
     ],
-    "pdf_bytes": 18741859,
-    "pdf_sha256": "6fed720e3ae7b46e65fe1f47024ac0c81858dc9a8b775f44555ffc3c40b7b626",
-    "source_blocks": 236
+    "pdf_bytes": 18810230,
+    "pdf_sha256": "00c656b552318c582a8afd3cdea08385a778f59e842cba1c30a077f6e750e92e",
+    "source_blocks": 240
   },
   "mode": "read-only",
   "package": "N31-v9-editorial",

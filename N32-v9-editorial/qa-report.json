@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "df8778e665d8c7584965778ea5c7d1b523563628ff168e84e0dbe35ba731b970",
-        "declared_sha256": "df8778e665d8c7584965778ea5c7d1b523563628ff168e84e0dbe35ba731b970",
+        "actual_sha256": "758c9153d75c6d5dca64c30462f0f66855e0e02d276db79f8e16b26ad576eb2f",
+        "declared_sha256": "758c9153d75c6d5dca64c30462f0f66855e0e02d276db79f8e16b26ad576eb2f",
         "document_json_matches": true,
         "source": "source/N32_evaluar_tareas_cobertura_severidad_desigualdad_robustez_y_supervision-content-canonical-v4.md",
         "source_exists": true,
@@ -28,17 +28,17 @@
       "check": "source_ids_have_exact_one_to_one_ordered_coverage",
       "evidence": {
         "first_sequence_difference": null,
-        "html_count": 248,
-        "html_unique": 248,
+        "html_count": 252,
+        "html_unique": 252,
         "integrity": {
           "missing_source_ids": [],
-          "rendered_source_id_count": 248,
-          "source_block_count": 248,
+          "rendered_source_id_count": 252,
+          "source_block_count": 252,
           "status": "PASS",
           "unexpected_source_ids": []
         },
-        "manifest_count": 248,
-        "manifest_unique": 248
+        "manifest_count": 252,
+        "manifest_unique": 252
       },
       "status": "PASS"
     },
@@ -67,12 +67,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 19558626,
-        "final_sha256": "e59507cc972ec0b7b90ad19e38b406c98f69e8f483e4b33f4b0efd86151091ed",
-        "pages": 26,
+        "bytes": 19656434,
+        "final_sha256": "1b38f6b317fbc3f244464f907b23be94d609b331f867006934b10896bca8dc40",
+        "pages": 27,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "eb6489e5786f7e1fa3dc2333afcf9ad0542128203aadfc3fcb9a46bf70a86a10",
+        "raw_sha256": "488f645a837d7506f2089fdd86fa3898f12e98b90a38595c91cd28e3eecded30",
         "unique_sizes": [
           [
             594.96,
@@ -85,7 +85,7 @@
     {
       "check": "every_source_block_has_verifiable_pdf_text",
       "evidence": {
-        "checked": 248,
+        "checked": 252,
         "missing_source_ids": []
       },
       "status": "PASS"
@@ -93,6 +93,10 @@
     {
       "check": "contents_index_titles_sections_and_routes_are_complete",
       "evidence": {
+        "has_contents_label": true,
+        "has_core_reading": true,
+        "has_extensions": true,
+        "has_prioritized_route": true,
         "heading_count": 17,
         "html_routes": [
           "PROBLEMA",
@@ -114,6 +118,7 @@
           "PREPARACIÓN"
         ],
         "missing_from_contents": [],
+        "ordered_contents_positions": true,
         "pdf_routes": [
           "PROBLEMA",
           "PROBLEMA",
@@ -133,6 +138,7 @@
           "PREPARACIÓN",
           "PREPARACIÓN"
         ],
+        "route_set_complete": true,
         "section_numbers": [
           1,
           2,
@@ -151,7 +157,8 @@
           15,
           16,
           17
-        ]
+        ],
+        "section_titles_match_source": true
       },
       "status": "PASS"
     },
@@ -161,7 +168,7 @@
         "candidate_pages": [
           {
             "first_item_position": 36,
-            "page": 23,
+            "page": 24,
             "title_position": 10
           }
         ],
@@ -189,7 +196,7 @@
         "html_count": 2,
         "pdf_pages": [
           5,
-          20
+          21
         ]
       },
       "status": "PASS"
@@ -260,7 +267,7 @@
               "width_px": 595
             }
           },
-          "20": {
+          "21": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -284,14 +291,14 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.994497,
-              "page": 20,
-              "pixel_sha256": "caad2e3e0341c6f9f9bc94296c0565583a4973c4b9790cf8f341f24b99eb1129",
+              "page": 21,
+              "pixel_sha256": "0032a8b803e41bc3666d88a86a2adfe3260bd641518425e9c0cfbf214769eb19",
               "vertical_density": 0.8955,
               "white_gutters": [],
               "width_px": 595
             }
           },
-          "26": {
+          "27": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -315,8 +322,8 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.999944,
-              "page": 26,
-              "pixel_sha256": "4760cc7d1a32aca68ae6cbbe84e449499a76c2a44a5265061fee8cef2113b2f7",
+              "page": 27,
+              "pixel_sha256": "b547885d2404ded1d17cd83433a74d7e8654d1b7261ae19ad81898d350d11d2a",
               "vertical_density": 0.6663,
               "white_gutters": [],
               "width_px": 595
@@ -1030,6 +1037,7 @@
           1,
           1,
           1,
+          1,
           1
         ],
         "missing_folio_footer_pages": []
@@ -1066,11 +1074,11 @@
           "https://www.iso.org/standard/77607.html"
         ],
         "external_link_pages": [
-          25
+          26
         ],
         "missing_printed": [],
         "reference_pages": [
-          25
+          26
         ]
       },
       "status": "PASS"
@@ -1087,9 +1095,9 @@
           3,
           4,
           5,
-          20,
-          25,
-          26
+          21,
+          26,
+          27
         ],
         "underfilled": {}
       },
@@ -1116,14 +1124,14 @@
   "failed_checks": [],
   "metrics": {
     "minimum_ordinary_vertical_density": 0.5653,
-    "pages": 26,
+    "pages": 27,
     "pause_pages": [
       5,
-      20
+      21
     ],
-    "pdf_bytes": 19558626,
-    "pdf_sha256": "e59507cc972ec0b7b90ad19e38b406c98f69e8f483e4b33f4b0efd86151091ed",
-    "source_blocks": 248
+    "pdf_bytes": 19656434,
+    "pdf_sha256": "1b38f6b317fbc3f244464f907b23be94d609b331f867006934b10896bca8dc40",
+    "source_blocks": 252
   },
   "mode": "read-only",
   "package": "N32-v9-editorial",

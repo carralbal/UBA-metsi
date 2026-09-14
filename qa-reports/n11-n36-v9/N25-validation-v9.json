@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "aaf255115da2b547ad84ccfb6746e5fd3b9cc4745bdfdea3e8ea131c11dd6fd3",
-        "declared_sha256": "aaf255115da2b547ad84ccfb6746e5fd3b9cc4745bdfdea3e8ea131c11dd6fd3",
+        "actual_sha256": "2d3ead06cc2b700aaaa0537a9ad51c0e437b3660ac5b97370fdd4014eda98601",
+        "declared_sha256": "2d3ead06cc2b700aaaa0537a9ad51c0e437b3660ac5b97370fdd4014eda98601",
         "document_json_matches": true,
         "source": "source/N25_flujo_mas_alla_de_las_ceremonias_colas_lote_espera_y_feedback-content-canonical-v4.md",
         "source_exists": true,
@@ -28,17 +28,17 @@
       "check": "source_ids_have_exact_one_to_one_ordered_coverage",
       "evidence": {
         "first_sequence_difference": null,
-        "html_count": 358,
-        "html_unique": 358,
+        "html_count": 362,
+        "html_unique": 362,
         "integrity": {
           "missing_source_ids": [],
-          "rendered_source_id_count": 358,
-          "source_block_count": 358,
+          "rendered_source_id_count": 362,
+          "source_block_count": 362,
           "status": "PASS",
           "unexpected_source_ids": []
         },
-        "manifest_count": 358,
-        "manifest_unique": 358
+        "manifest_count": 362,
+        "manifest_unique": 362
       },
       "status": "PASS"
     },
@@ -67,12 +67,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 20352077,
-        "final_sha256": "d04dee9fbd44d6ad5d6045d270f93dd37dbf2d2d4d3c430184b210650c9cf7ba",
-        "pages": 28,
+        "bytes": 20435812,
+        "final_sha256": "636acd56907ba3aaf7cfd8027a18d5382ae4bd178a21dde75f3c4ebf91e03699",
+        "pages": 29,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "d2582146fa9efc66aa6c9abd032fd4aa8f7f0a2c224fa7d24b0e3d6c4f4f0c35",
+        "raw_sha256": "3c587878669b018ce9bfdf75d393707cbb245a45a791705b4fd3a2ae9ed8a5f1",
         "unique_sizes": [
           [
             594.96,
@@ -85,7 +85,7 @@
     {
       "check": "every_source_block_has_verifiable_pdf_text",
       "evidence": {
-        "checked": 358,
+        "checked": 362,
         "missing_source_ids": []
       },
       "status": "PASS"
@@ -93,6 +93,10 @@
     {
       "check": "contents_index_titles_sections_and_routes_are_complete",
       "evidence": {
+        "has_contents_label": true,
+        "has_core_reading": true,
+        "has_extensions": true,
+        "has_prioritized_route": true,
         "heading_count": 18,
         "html_routes": [
           "PROBLEMA",
@@ -115,6 +119,7 @@
           "PREPARACIÓN"
         ],
         "missing_from_contents": [],
+        "ordered_contents_positions": true,
         "pdf_routes": [
           "PROBLEMA",
           "PROBLEMA",
@@ -135,6 +140,7 @@
           "PREPARACIÓN",
           "PREPARACIÓN"
         ],
+        "route_set_complete": true,
         "section_numbers": [
           1,
           2,
@@ -154,7 +160,8 @@
           16,
           17,
           18
-        ]
+        ],
+        "section_titles_match_source": true
       },
       "status": "PASS"
     },
@@ -164,7 +171,7 @@
         "candidate_pages": [
           {
             "first_item_position": 36,
-            "page": 25,
+            "page": 26,
             "title_position": 10
           }
         ],
@@ -192,7 +199,7 @@
         "html_count": 2,
         "pdf_pages": [
           5,
-          21
+          22
         ]
       },
       "status": "PASS"
@@ -263,7 +270,7 @@
               "width_px": 595
             }
           },
-          "21": {
+          "22": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -287,14 +294,14 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.998116,
-              "page": 21,
-              "pixel_sha256": "410e50d294c19bf35959b9db86b9024e6e2004d4cd88b5f0f415eb24198ecf5b",
+              "page": 22,
+              "pixel_sha256": "b27a54bd9ad00f69d73ee6c5e3f75e28756a3b91de72d3632e2905002d42b453",
               "vertical_density": 0.8955,
               "white_gutters": [],
               "width_px": 595
             }
           },
-          "28": {
+          "29": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -318,8 +325,8 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.999944,
-              "page": 28,
-              "pixel_sha256": "b963ffae3abd791675d61555611b86f68a53a0bf9fe87d5a0f9307bd0032e12e",
+              "page": 29,
+              "pixel_sha256": "c5ebe18e04117d38c8eb08cc7170fb250279ac2cd899c3bb6386d80a960e488f",
               "vertical_density": 0.6663,
               "white_gutters": [],
               "width_px": 595
@@ -1036,6 +1043,7 @@
           1,
           1,
           1,
+          1,
           1
         ],
         "missing_folio_footer_pages": []
@@ -1072,11 +1080,11 @@
           "https://www.iso.org/standard/70636.html"
         ],
         "external_link_pages": [
-          27
+          28
         ],
         "missing_printed": [],
         "reference_pages": [
-          27
+          28
         ]
       },
       "status": "PASS"
@@ -1093,9 +1101,9 @@
           3,
           4,
           5,
-          21,
-          27,
-          28
+          22,
+          28,
+          29
         ],
         "underfilled": {}
       },
@@ -1122,14 +1130,14 @@
   "failed_checks": [],
   "metrics": {
     "minimum_ordinary_vertical_density": 0.6069,
-    "pages": 28,
+    "pages": 29,
     "pause_pages": [
       5,
-      21
+      22
     ],
-    "pdf_bytes": 20352077,
-    "pdf_sha256": "d04dee9fbd44d6ad5d6045d270f93dd37dbf2d2d4d3c430184b210650c9cf7ba",
-    "source_blocks": 358
+    "pdf_bytes": 20435812,
+    "pdf_sha256": "636acd56907ba3aaf7cfd8027a18d5382ae4bd178a21dde75f3c4ebf91e03699",
+    "source_blocks": 362
   },
   "mode": "read-only",
   "package": "N25-v9-editorial",

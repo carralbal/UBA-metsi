@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "64e09fa29fee9e83e389dcb71c9b73710630fd6cd12c52465b57cb3fa41179eb",
-        "declared_sha256": "64e09fa29fee9e83e389dcb71c9b73710630fd6cd12c52465b57cb3fa41179eb",
+        "actual_sha256": "a805d93818f051c28b3990ea56d312d7b4748c9abf147fe24f4eacb0fe4f172f",
+        "declared_sha256": "a805d93818f051c28b3990ea56d312d7b4748c9abf147fe24f4eacb0fe4f172f",
         "document_json_matches": true,
         "source": "source/N21_proyecto_producto_servicio_y_plataforma-content-canonical-v4.md",
         "source_exists": true,
@@ -28,17 +28,17 @@
       "check": "source_ids_have_exact_one_to_one_ordered_coverage",
       "evidence": {
         "first_sequence_difference": null,
-        "html_count": 269,
-        "html_unique": 269,
+        "html_count": 274,
+        "html_unique": 274,
         "integrity": {
           "missing_source_ids": [],
-          "rendered_source_id_count": 269,
-          "source_block_count": 269,
+          "rendered_source_id_count": 274,
+          "source_block_count": 274,
           "status": "PASS",
           "unexpected_source_ids": []
         },
-        "manifest_count": 269,
-        "manifest_unique": 269
+        "manifest_count": 274,
+        "manifest_unique": 274
       },
       "status": "PASS"
     },
@@ -67,12 +67,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 18947060,
-        "final_sha256": "b5535172c0b50837ba62b660afd54448f0ef91d5d48b969bc23116adf17b4ea3",
-        "pages": 28,
+        "bytes": 19020732,
+        "final_sha256": "7aa35e0939af1d0744a28eac917b5ffbf1f2edf0fc939fb3ddf84a0088f4f2db",
+        "pages": 29,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "f1e9019f1981f8ec6c3cdc9d1099bc4f7a765b740bbd4102d227c2a1029d0640",
+        "raw_sha256": "532703d6b18f1d8d6da8a9b69dca53be7c9ee52a5c2b83ac1bf741c1b7b89c94",
         "unique_sizes": [
           [
             594.96,
@@ -85,7 +85,7 @@
     {
       "check": "every_source_block_has_verifiable_pdf_text",
       "evidence": {
-        "checked": 269,
+        "checked": 274,
         "missing_source_ids": []
       },
       "status": "PASS"
@@ -93,6 +93,10 @@
     {
       "check": "contents_index_titles_sections_and_routes_are_complete",
       "evidence": {
+        "has_contents_label": true,
+        "has_core_reading": true,
+        "has_extensions": true,
+        "has_prioritized_route": true,
         "heading_count": 17,
         "html_routes": [
           "PROBLEMA",
@@ -114,6 +118,7 @@
           "PREPARACIÓN"
         ],
         "missing_from_contents": [],
+        "ordered_contents_positions": true,
         "pdf_routes": [
           "PROBLEMA",
           "PROBLEMA",
@@ -133,6 +138,7 @@
           "PREPARACIÓN",
           "PREPARACIÓN"
         ],
+        "route_set_complete": true,
         "section_numbers": [
           1,
           2,
@@ -151,7 +157,8 @@
           15,
           16,
           17
-        ]
+        ],
+        "section_titles_match_source": true
       },
       "status": "PASS"
     },
@@ -161,7 +168,7 @@
         "candidate_pages": [
           {
             "first_item_position": 36,
-            "page": 25,
+            "page": 26,
             "title_position": 10
           }
         ],
@@ -189,7 +196,7 @@
         "html_count": 2,
         "pdf_pages": [
           5,
-          22
+          23
         ]
       },
       "status": "PASS"
@@ -260,7 +267,7 @@
               "width_px": 595
             }
           },
-          "22": {
+          "23": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -284,14 +291,14 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.997443,
-              "page": 22,
-              "pixel_sha256": "5c38851948876915ec21af6d44ee625958d9c8bbb48fc496140872622355f820",
+              "page": 23,
+              "pixel_sha256": "bed8e612cf7fee6b46047fa190746350ca13dd83c9d8f9f6e2ae36d36cbad881",
               "vertical_density": 0.8955,
               "white_gutters": [],
               "width_px": 595
             }
           },
-          "28": {
+          "29": {
             "pdf_geometry": {
               "candidates": [
                 {
@@ -315,8 +322,8 @@
               },
               "height_px": 842,
               "nonwhite_fraction": 0.999944,
-              "page": 28,
-              "pixel_sha256": "b963ffae3abd791675d61555611b86f68a53a0bf9fe87d5a0f9307bd0032e12e",
+              "page": 29,
+              "pixel_sha256": "c5ebe18e04117d38c8eb08cc7170fb250279ac2cd899c3bb6386d80a960e488f",
               "vertical_density": 0.6663,
               "white_gutters": [],
               "width_px": 595
@@ -1032,6 +1039,7 @@
           1,
           1,
           1,
+          1,
           1
         ],
         "missing_folio_footer_pages": []
@@ -1054,11 +1062,11 @@
           "https://www.pmi.org/standards/pmbok"
         ],
         "external_link_pages": [
-          27
+          28
         ],
         "missing_printed": [],
         "reference_pages": [
-          27
+          28
         ]
       },
       "status": "PASS"
@@ -1075,9 +1083,9 @@
           3,
           4,
           5,
-          22,
-          27,
-          28
+          23,
+          28,
+          29
         ],
         "underfilled": {}
       },
@@ -1104,14 +1112,14 @@
   "failed_checks": [],
   "metrics": {
     "minimum_ordinary_vertical_density": 0.6057,
-    "pages": 28,
+    "pages": 29,
     "pause_pages": [
       5,
-      22
+      23
     ],
-    "pdf_bytes": 18947060,
-    "pdf_sha256": "b5535172c0b50837ba62b660afd54448f0ef91d5d48b969bc23116adf17b4ea3",
-    "source_blocks": 269
+    "pdf_bytes": 19020732,
+    "pdf_sha256": "7aa35e0939af1d0744a28eac917b5ffbf1f2edf0fc939fb3ddf84a0088f4f2db",
+    "source_blocks": 274
   },
   "mode": "read-only",
   "package": "N21-v9-editorial",

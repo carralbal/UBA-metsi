@@ -36,6 +36,16 @@ La decisión es revisable porque cada lógica tiene propósito, autoridad y sali
 
 N17 distingue cinco lógicas por la forma en que permiten conocer, decidir y comprometer recursos. Una estrategia puede combinarlas, pero debe explicar para qué usa cada una, qué evidencia espera y quién puede decidir. El mapa ayuda a tomar decisiones concretas. No reemplaza la estrategia completa, los hitos ni la secuencia que desarrollará N20.
 
+En términos prácticos, el mecanismo consiste en asignar a cada tramo una lógica explícita: anticipar obligaciones, iterar representaciones, entregar capacidad, adaptar con señales o experimentar hipótesis. Cada parte cumple una función distinta y evita que una herramienta o una métrica reemplace al razonamiento que debería sostenerla. Lo importante es poder explicar por qué esa secuencia resulta adecuada para este problema.
+
+Puede verse en una situación cotidiana: una migración planifica respaldos, itera interfaz, libera incrementos y prueba un mensaje; la combinación vale si cada tramo espera evidencia distinta. La escena comienza simple y gana complejidad cuando aparecen población, tiempo, dependencias y consecuencias. Esa progresión permite aprender sin saltar directamente a una solución total.
+
+Un contraejemplo marca la frontera de la tesis: llamar ágil a cualquier cambio tardío o predictivo a cualquier plan, sin distinguir aprendizaje, compromiso ni criterio de revisión. La misma práctica deja de ser defendible cuando ya no produce evidencia, desplaza daño o impide revisar el compromiso. Nombrar el límite es parte de comprender, no una nota marginal.
+
+Hotel Horizonte vuelve concreta la distinción: contratos requieren anticipación, estados iteración, dos pisos un incremento y la llegada anticipada un experimento limitado. Las voces del caso no ilustran una respuesta predeterminada; muestran cómo una decisión cambia según quién sostiene la promesa, quién opera y quién recibe las consecuencias.
+
+Para la práctica profesional, esto implica componer una estrategia situada en vez de elegir identidad metodológica; N18 incorporará legado, regulación y memoria documental. El documento ofrece un paso acumulativo del recorrido, pero conserva abierta la evidencia que podría obligar a corregirlo en el núcleo siguiente.
+
 ## De N16 a N17: de la coherencia de modelos a la lógica de intervención
 
 N16 entrega una cartera de modelos con contradicciones clasificadas, responsables y condiciones de revisión. N17 toma esa evidencia para decidir qué compromisos conviene anticipar, qué partes pueden entregarse y dónde hace falta aprender antes de ampliar.
