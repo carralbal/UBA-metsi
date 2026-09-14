@@ -3772,47 +3772,58 @@ body.block-c .thesis-infographic-page .approved-infographic-page figcaption{marg
    but gives the map enough physical width for labels to remain legible in
    print.  Documents enter this selector only after individual visual QA. */
 body.block-c.document-n11 .thesis-infographic-page,
-body.block-c.document-n12 .thesis-infographic-page{
+body.block-c.document-n12 .thesis-infographic-page,
+body.block-c.document-n13 .thesis-infographic-page{
   grid-template-rows:128mm minmax(0,1fr)!important;gap:3mm!important
 }
 body.block-c.document-n11 .thesis-infographic-page .block-c-thesis,
-body.block-c.document-n12 .thesis-infographic-page .block-c-thesis{
+body.block-c.document-n12 .thesis-infographic-page .block-c-thesis,
+body.block-c.document-n13 .thesis-infographic-page .block-c-thesis{
   height:128mm!important;padding:4mm 6mm!important
 }
 body.block-c.document-n11 .thesis-infographic-page .block-c-thesis .section-heading,
-body.block-c.document-n12 .thesis-infographic-page .block-c-thesis .section-heading{
+body.block-c.document-n12 .thesis-infographic-page .block-c-thesis .section-heading,
+body.block-c.document-n13 .thesis-infographic-page .block-c-thesis .section-heading{
   margin-bottom:2mm!important
 }
 body.block-c.document-n11 .thesis-infographic-page .block-c-thesis .section-lead p,
-body.block-c.document-n12 .thesis-infographic-page .block-c-thesis .section-lead p{
+body.block-c.document-n12 .thesis-infographic-page .block-c-thesis .section-lead p,
+body.block-c.document-n13 .thesis-infographic-page .block-c-thesis .section-lead p{
   font-size:14.6pt!important;line-height:1.2!important
 }
 body.block-c.document-n11 .thesis-infographic-page .block-c-thesis .section-body:not(.section-lead),
-body.block-c.document-n12 .thesis-infographic-page .block-c-thesis .section-body:not(.section-lead){
+body.block-c.document-n12 .thesis-infographic-page .block-c-thesis .section-body:not(.section-lead),
+body.block-c.document-n13 .thesis-infographic-page .block-c-thesis .section-body:not(.section-lead){
   font-size:9.7pt!important;line-height:1.28!important
 }
 body.block-c.document-n11 .thesis-infographic-page .approved-infographic-page,
-body.block-c.document-n12 .thesis-infographic-page .approved-infographic-page{
+body.block-c.document-n12 .thesis-infographic-page .approved-infographic-page,
+body.block-c.document-n13 .thesis-infographic-page .approved-infographic-page{
   padding:3mm 5mm 4mm!important
 }
 body.block-c.document-n11 .thesis-infographic-page .approved-infographic-page header,
-body.block-c.document-n12 .thesis-infographic-page .approved-infographic-page header{
+body.block-c.document-n12 .thesis-infographic-page .approved-infographic-page header,
+body.block-c.document-n13 .thesis-infographic-page .approved-infographic-page header{
   padding-top:2mm!important
 }
 body.block-c.document-n11 .thesis-infographic-page .approved-infographic-page header p,
-body.block-c.document-n12 .thesis-infographic-page .approved-infographic-page header p{
+body.block-c.document-n12 .thesis-infographic-page .approved-infographic-page header p,
+body.block-c.document-n13 .thesis-infographic-page .approved-infographic-page header p{
   margin-top:2mm!important;font-size:11.8pt!important;line-height:1.14!important
 }
 body.block-c.document-n11 .thesis-infographic-page .approved-infographic-page figure,
-body.block-c.document-n12 .thesis-infographic-page .approved-infographic-page figure{
+body.block-c.document-n12 .thesis-infographic-page .approved-infographic-page figure,
+body.block-c.document-n13 .thesis-infographic-page .approved-infographic-page figure{
   margin-top:2mm!important;align-items:center!important
 }
 body.block-c.document-n11 .thesis-infographic-page .approved-infographic-page img,
-body.block-c.document-n12 .thesis-infographic-page .approved-infographic-page img{
+body.block-c.document-n12 .thesis-infographic-page .approved-infographic-page img,
+body.block-c.document-n13 .thesis-infographic-page .approved-infographic-page img{
   flex:none!important;width:128mm!important;height:auto!important;max-height:79mm!important
 }
 body.block-c.document-n11 .thesis-infographic-page .approved-infographic-page figcaption,
-body.block-c.document-n12 .thesis-infographic-page .approved-infographic-page figcaption{
+body.block-c.document-n12 .thesis-infographic-page .approved-infographic-page figcaption,
+body.block-c.document-n13 .thesis-infographic-page .approved-infographic-page figcaption{
   margin-top:1.5mm!important;font-size:6.7pt!important;line-height:1.18!important
 }
 
