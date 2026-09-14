@@ -112,6 +112,36 @@ def publication_digest(records: list[dict[str, Any]]) -> str:
     return json_digest(canonical)
 
 
+def dynamic_record_from_root(record: dict[str, Any], title: str) -> dict[str, Any]:
+    code = str(record.get("code", ""))
+    canonical_name = Path(str(record.get("canonical_source", ""))).name
+    return {
+        "code": code,
+        "title": f"{code} · {title}",
+        "canonical_source": record.get("canonical_source"),
+        "canonical_sha256": record.get("canonical_sha256"),
+        "package_source": f"{code}-{DYNAMIC_SOURCE_VERSION}/source/{canonical_name}",
+        "package_source_sha256": record.get("canonical_sha256"),
+        "package_sha256": record.get("package_sha256"),
+        "package_files": record.get("package_files"),
+        "source_pdf": record.get("pdf"),
+        "public_pdf": str(record.get("public_pdf", "")).removeprefix("site/"),
+        "cover": str(record.get("cover", "")).removeprefix("site/"),
+        "pages": record.get("pages"),
+        "bytes": record.get("bytes"),
+        "sha256": record.get("sha256"),
+        "qa_validator": record.get("qa_validator"),
+        "qa_validator_sha256": record.get("qa_validator_sha256"),
+        "qa_report": record.get("qa_report"),
+        "qa_status": "PASS",
+        "qa_checks": 26,
+        "qa_report_sha256": record.get("qa_report_sha256"),
+        "cover_sha256": record.get("cover_sha256"),
+        "cover_renderer": "pdftoppm version 26.05.0",
+        "cover_dpi": 120,
+    }
+
+
 class SiteParser(HTMLParser):
     def __init__(self) -> None:
         super().__init__()
@@ -189,6 +219,56 @@ def safe_pages(path: Path) -> tuple[int | None, str | None]:
         return len(PdfReader(str(path)).pages), None
     except Exception as error:
         return None, f"{type(error).__name__}: {error}"
+
+
+def pdf_text_and_geometry_signature(path: Path) -> str | None:
+    """Compare public and source PDFs while intentionally ignoring document metadata."""
+    if not path.is_file():
+        return None
+    try:
+        digest = hashlib.sha256()
+        reader = PdfReader(str(path), strict=False)
+        for page in reader.pages:
+            digest.update((page.extract_text() or "").encode("utf-8"))
+            digest.update(b"\x00PAGE\x00")
+            for box_name in ("mediabox", "cropbox", "trimbox", "bleedbox", "artbox"):
+                digest.update(repr(tuple(float(value) for value in getattr(page, box_name))).encode("ascii"))
+            digest.update(str(len(page.get("/Annots", []))).encode("ascii"))
+        return digest.hexdigest()
+    except Exception:
+        return None
+
+
+def public_pdf_hygiene(path: Path) -> list[str]:
+    problems: list[str] = []
+    try:
+        reader = PdfReader(str(path), strict=False)
+        root = reader.trailer["/Root"]
+        if reader.metadata:
+            problems.append("document_info")
+        if "/Metadata" in root:
+            problems.append("metadata_stream")
+        if "/ID" in reader.trailer:
+            problems.append("trailer_id")
+        for key in ("/OpenAction", "/AA", "/Collection"):
+            if key in root:
+                problems.append(key.removeprefix("/").lower())
+        if "/Names" in root:
+            names = root["/Names"].get_object()
+            if "/EmbeddedFiles" in names:
+                problems.append("embedded_files")
+            if "/JavaScript" in names:
+                problems.append("javascript")
+        forbidden = re.compile(r"(?i)(?:markdown|\.md\b|canonical[_ -]?source|package[_ -]?source|qa[_ -]?(?:report|validator))")
+        for page_number, page in enumerate(reader.pages, 1):
+            if forbidden.search(page.extract_text() or ""):
+                problems.append(f"visible_internal_reference_page_{page_number}")
+            for reference in page.get("/Annots", []):
+                if forbidden.search(str(reference.get_object())):
+                    problems.append(f"annotation_internal_reference_page_{page_number}")
+    except Exception as error:
+        problems.append(f"read_error:{type(error).__name__}")
+    return sorted(set(problems))
 
 
 def load_json(path: Path) -> tuple[dict[str, Any], str | None]:
@@ -319,15 +399,31 @@ def build_report(require_sources: bool = False) -> dict[str, Any]:
     program_pages, program_pdf_error = safe_pages(program_pdf)
 
     site_manifest, site_manifest_error = load_json(ROOT / "course-manifest.json")
+    public_manifest, public_manifest_error = site_manifest, site_manifest_error
     root_manifest, root_manifest_error = load_json(REPO / "course-manifest.json")
     approval, approval_error = load_json(REPO / "BLOCK-01-integrated-release-current" / "approval.json")
     cover_audit, cover_audit_error = load_json(REPO / "BLOCK-01-cover-review-current" / "audit.json")
 
-    publication = site_manifest.get("publication", {}) if isinstance(site_manifest.get("publication"), dict) else {}
-    raw_records = publication.get("readings", []) if isinstance(publication, dict) else []
-    records = [item for item in raw_records if isinstance(item, dict)] if isinstance(raw_records, list) else []
-    record_by_code = {str(item.get("code")): item for item in records if item.get("code")}
+    root_documents = root_manifest.get("documents", [])
+    root_records = {
+        str(item.get("code")): item
+        for item in root_documents
+        if isinstance(root_documents, list) and isinstance(item, dict) and item.get("code")
+    }
+    public_readings = public_manifest.get("readings", [])
+    public_record_by_code = {
+        str(item.get("code")): item
+        for item in public_readings
+        if isinstance(public_readings, list) and isinstance(item, dict) and item.get("code")
+    }
     dynamic_codes = [f"N{number:02d}" for number in range(FIRST_DYNAMIC, LAST_DYNAMIC + 1)]
+    records = [
+        dynamic_record_from_root(root_records.get(code, {}), str(public_record_by_code.get(code, {}).get("title", "")))
+        for code in dynamic_codes
+    ]
+    publication = dict(root_manifest.get("site_publication", {}))
+    publication["readings"] = records
+    record_by_code = {str(item.get("code")): item for item in records if item.get("code")}
     records_complete = (
         len(records) == len(dynamic_codes)
         and set(record_by_code) == set(dynamic_codes)
@@ -422,6 +518,9 @@ def build_report(require_sources: bool = False) -> dict[str, Any]:
             source_contract_problems.append(f"{code}.qa_report.route")
         qa_report_path = REPO / expected_qa_report
         qa_report_hash = safe_hash(qa_report_path)
+        source_pdf_hash = safe_hash(source) if confined["source_pdf"] else None
+        source_pdf_bytes = source.stat().st_size if confined["source_pdf"] and source.is_file() else None
+        source_pdf_pages = safe_pages(source)[0] if confined["source_pdf"] else None
         if not qa_report_path.is_file() or qa_report_hash != record.get("qa_report_sha256"):
             source_contract_problems.append(f"{code}.qa_report_sha256")
         else:
@@ -433,9 +532,9 @@ def build_report(require_sources: bool = False) -> dict[str, Any]:
                 or qa_report.get("status") != "PASS"
                 or qa_report.get("validator") != record.get("qa_validator")
                 or qa_report.get("total_checks") != record.get("qa_checks")
-                or qa_metrics.get("pages") != record.get("pages")
-                or qa_metrics.get("pdf_bytes") != record.get("bytes")
-                or qa_metrics.get("pdf_sha256") != record.get("sha256")
+                or qa_metrics.get("pages") != source_pdf_pages
+                or qa_metrics.get("pdf_bytes") != source_pdf_bytes
+                or qa_metrics.get("pdf_sha256") != source_pdf_hash
             ):
                 source_contract_problems.append(f"{code}.qa_report.content")
         if require_sources:
@@ -443,12 +542,6 @@ def build_report(require_sources: bool = False) -> dict[str, Any]:
             if not validator_path.is_file() or safe_hash(validator_path) != record.get("qa_validator_sha256"):
                 source_file_problems.append(f"{code}.qa_validator_sha256")
 
-    root_documents = root_manifest.get("documents", [])
-    root_records = {
-        str(item.get("code")): item
-        for item in root_documents
-        if isinstance(root_documents, list) and isinstance(item, dict) and item.get("code")
-    }
     manifest_mismatches: list[str] = []
     for code in dynamic_codes:
         site_record = record_by_code.get(code, {})
@@ -476,6 +569,12 @@ def build_report(require_sources: bool = False) -> dict[str, Any]:
                 manifest_mismatches.append(f"{code}.{key}")
         if root_record.get("status") != "closed":
             manifest_mismatches.append(f"{code}.status")
+    for code, root_record in root_records.items():
+        public_record = public_record_by_code.get(code, {})
+        if public_record.get("pages") != root_record.get("pages"):
+            manifest_mismatches.append(f"{code}.public_pages")
+        if public_record.get("pdf") != str(root_record.get("public_pdf", "")).removeprefix("site/"):
+            manifest_mismatches.append(f"{code}.public_pdf")
 
     local_checked, local_problems = local_reference_problems(parser, css)
     pdf_downloads = {
@@ -493,7 +592,8 @@ def build_report(require_sources: bool = False) -> dict[str, Any]:
     )
     source_hashes_match = require_sources and records_complete and all(
         source_exists[code]
-        and source_hashes[code] == actual_pdf_hashes[code] == record_by_code[code].get("sha256")
+        and pdf_text_and_geometry_signature(REPO / str(record_by_code[code].get("source_pdf", "")))
+        == pdf_text_and_geometry_signature(ROOT / str(record_by_code[code].get("public_pdf", "")))
         for code in dynamic_codes
     )
     page_labels_match = records_complete and all(
@@ -529,8 +629,19 @@ def build_report(require_sources: bool = False) -> dict[str, Any]:
     )
 
     approved_pdf_hashes = approval.get("pdf_sha256", {}) if isinstance(approval.get("pdf_sha256"), dict) else {}
+    public_pdf_hygiene_problems = {
+        code: problems
+        for code, relative in PDF_FILES.items()
+        if (problems := public_pdf_hygiene(ROOT / "pdf" / relative))
+    }
+    program_pdf_hygiene_problems = public_pdf_hygiene(deployed_program_pdf)
+    public_manifest_text = json.dumps(public_manifest, ensure_ascii=False)
+    public_manifest_forbidden = re.findall(
+        r"(?i)(?:\.md\b|markdown|canonical[_ -]?source|package[_ -]?source|qa[_ -]?(?:report|validator)|sha256|prompt|openai|chatgpt|codex)",
+        public_manifest_text,
+    )
     checks = {
-        "manifests_parse": not any((site_manifest_error, root_manifest_error, approval_error, cover_audit_error)),
+        "manifests_parse": not any((site_manifest_error, public_manifest_error, root_manifest_error, approval_error, cover_audit_error)),
         "n11_n36_publication_contract_complete": records_complete,
         "n11_n36_source_contract_well_formed": records_complete and not source_contract_problems,
         "n11_n36_sources_match_current_canonicals": not require_sources or (records_complete and not source_file_problems),
@@ -614,6 +725,14 @@ def build_report(require_sources: bool = False) -> dict[str, Any]:
             and "background-position:56% center" in css
             and "background-position:62% center" in css
         ),
+        "public_manifest_contains_no_internal_provenance": (
+            not public_manifest_forbidden
+            and len(public_manifest.get("readings", [])) == 37
+            and public_manifest.get("course") == "Metodología del Estudio de Sistemas de Información"
+        ),
+        "published_pdfs_have_no_production_metadata_or_internal_references": (
+            not public_pdf_hygiene_problems and not program_pdf_hygiene_problems
+        ),
     }
 
     return {
@@ -621,7 +740,7 @@ def build_report(require_sources: bool = False) -> dict[str, Any]:
         "status": "PASS" if all(checks.values()) else "FAIL",
         "checks": checks,
         "facts": {
-            "manifest_errors": [error for error in (site_manifest_error, root_manifest_error, approval_error, cover_audit_error) if error],
+            "manifest_errors": [error for error in (site_manifest_error, public_manifest_error, root_manifest_error, approval_error, cover_audit_error) if error],
             "manifest_mismatches": sorted(manifest_mismatches),
             "source_contract_problems": sorted(set(source_contract_problems)),
             "source_files_required": require_sources,
@@ -642,6 +761,9 @@ def build_report(require_sources: bool = False) -> dict[str, Any]:
             "program_pdf_bytes": program_pdf.stat().st_size if program_pdf.is_file() else None,
             "program_pdf_sha256": safe_hash(program_pdf),
             "program_source_sha256": safe_hash(program_source),
+            "public_manifest_forbidden_values": public_manifest_forbidden,
+            "public_pdf_hygiene_problems": public_pdf_hygiene_problems,
+            "program_pdf_hygiene_problems": program_pdf_hygiene_problems,
         },
     }
 

@@ -178,7 +178,7 @@ La bibliografía se organiza por unidad y función pedagógica. Separa:
 - marcos y guías profesionales;
 - casos y materiales docentes propios.
 
-Cada referencia registra edición o versión, fecha de consulta, vigencia, fragmento requerido y razón de inclusión. Se evita usar manuales de herramientas comerciales como base conceptual. La matriz completa se encuentra en `20_bibliografia_y_matriz_de_vigencia.md`.
+Cada referencia registra edición o versión, fecha de consulta, vigencia, fragmento requerido y razón de inclusión. Se evita usar manuales de herramientas comerciales como base conceptual. La matriz completa forma parte del registro interno de revisión docente.
 
 ## Revisión y actualización
 
