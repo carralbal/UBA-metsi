@@ -703,7 +703,9 @@ def audit(number: int) -> dict[str, Any]:
         and all(position >= 0 for position in contents_positions)
         and contents_positions == sorted(contents_positions)
         and "contenido" in (page_texts[1].casefold() if page_count >= 2 else "")
-        and "ruta de lectura" in (page_texts[1].casefold() if page_count >= 2 else "")
+        and "ruta priorizada" in (page_texts[1].casefold() if page_count >= 2 else "")
+        and "núcleo de lectura" in (page_texts[1].casefold() if page_count >= 2 else "")
+        and "extensiones" in (page_texts[1].casefold() if page_count >= 2 else "")
     )
     checks.append(check("contents_index_titles_sections_and_routes_are_complete", navigation_ok, {
         "heading_count": len(headings), "section_numbers": section_numbers,

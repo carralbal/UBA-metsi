@@ -69,15 +69,11 @@ def finalize(number: int) -> Path:
         overlay = footer_page(width, height, index + 1, total, is_dark_or_photo).pages[0]
         page.merge_page(overlay, over=True)
     visual.close()
-    metadata = dict(reader.metadata or {})
-    metadata.update({
-        "/Title": f"N{number:02d} · METSI · Lectura previa",
-        "/Author": "Diego Carralbal",
-        "/Subject": "Metodología de Sistemas de Información, FCE UBA",
-        "/Keywords": "METSI, sistemas de información, FCE UBA, lectura previa",
-        "/Creator": "METSI editorial system",
-    })
-    writer.add_metadata(metadata)
+    # La edición pública no expone software, fechas ni metadatos de producción.
+    # La identidad autoral permanece visible en los folios de todas las páginas.
+    writer._info = None
+    writer._ID = None
+    writer.root_object.pop(NameObject("/Metadata"), None)
     writer._root_object.update({NameObject("/Lang"): TextStringObject("es-AR")})
     with target.open("wb") as handle:
         writer.write(handle)

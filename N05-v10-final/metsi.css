@@ -1717,3 +1717,15 @@ body.premium-magazine {
 /* METSI cover audit 2026-09-04 */
 .cover-n05>img{filter:none}
 .cover-n05 .cover-shade{background:linear-gradient(180deg,rgba(5,7,6,.18) 0,rgba(5,7,6,0) 30%,rgba(5,7,6,0) 61%,rgba(8,9,8,.58) 100%)}
+
+/* METSI prioritized reading route: canonical v1 */
+.premium-magazine:not(.document-n00) .contents-page .contents-route{
+  max-width:170mm;margin:2mm 0 0;padding-left:3mm;border-left:1.4mm solid #CFFF00;
+  font:7.7pt/1.24 Avenir,sans-serif;color:#30322f
+}
+.premium-magazine:not(.document-n00) .contents-layout li.contents-item{padding-left:1.2mm}
+.premium-magazine:not(.document-n00) .contents-layout li.contents-core{border-left:1mm solid #CFFF00}
+.premium-magazine:not(.document-n00) .contents-layout li.contents-extension{border-left:1mm solid transparent}
+.premium-magazine:not(.document-n00) .contents-layout li small{
+  display:inline-block;margin-left:1mm;font-size:6pt;line-height:1;letter-spacing:.06em;color:#666
+}

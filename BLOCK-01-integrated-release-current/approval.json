@@ -1,6 +1,6 @@
 {
   "schema": "metsi-block01-integrated-release/v1",
-  "generated_at": "2026-09-10T17:26:55.542737+00:00",
+  "generated_at": "2026-09-14T17:46:50.213883+00:00",
   "status": "approved",
   "scope": [
     "N00",
@@ -17,31 +17,30 @@
   ],
   "changed": [
     "N00",
+    "N01",
     "N02",
     "N03",
+    "N04",
     "N05",
     "N06",
     "N07",
     "N08",
-    "N09"
-  ],
-  "preserved": [
-    "N01",
-    "N04",
+    "N09",
     "N10"
   ],
+  "preserved": [],
   "pdf_sha256": {
     "N00": "0e2ddac86cd3fe5aa1a9a68de02e41390914bb13ddad13db4af6d091794d3e78",
-    "N01": "c58f76f680bf14328d6765e756edc3efd3a8e2839863f9d93bae7838cf4cb205",
-    "N02": "362f11774b86e3bbc9a77f4b8e3187b0aaf4ba31e3eb04f0dd914f5749390d68",
-    "N03": "feb1db90114031f20f6aab64f2e6366b46f4ff419942d6e9a135913810356a00",
-    "N04": "e92cf91dc7676aba933c7c6f0b40867d4c3d4036e6808fdadc63460adf1d3929",
-    "N05": "e075ce756df99c62f09f7c8d8dbb3e1d8cdd83b9ce84fb0f17b9b2c167633421",
-    "N06": "0c0cd34b895381f6262152f319b0c977b14d53ec0f1dc35bcd41ccab311aa9a1",
-    "N07": "97ac30da311ac3f99caa3ba2e1c229109490031623241d3ab23a049d186f000e",
-    "N08": "d25af972fa37c035d31db44a892f25b9e83c9ecd50c43cbe70a1bf44f6b01814",
-    "N09": "beaa6155b37219f52eed9e12f44fceef5e5f320374aa871f296fac8fb6fa1d1e",
-    "N10": "3239429d0812c467b7ba5e6c585a307fcb0039122feb74aebe2a3c0c6872d97e"
+    "N01": "9aefb05f3edb1bc7a5e1d1788dfe49853643db402900a4cfedb54fdfd173e16b",
+    "N02": "b7273d9902f71b82caef955b4ca8d999f7ca198388a36f64f6f72637d9165dec",
+    "N03": "5930a93cbc19fdfcef8e56bb0422fbb3ce98fb33ec8e037bdcb2075699d92beb",
+    "N04": "8d57ff01066d27be2076e59ee69414706efa01d84f6634feaaadccb9ccb304bb",
+    "N05": "e4eda0f8b85786e863d17bdaae91415412c47790de68589b68d59fdccc10a7fe",
+    "N06": "5d32ab35698170101f48d86b5f11abada7122fc9af9fb0be62529e0c8b6be6a8",
+    "N07": "c9f6d4848b8ad9e19089e887a606a3ad66e8167f196676737970db9930c8078e",
+    "N08": "222da69c5d9fed79346549e63afeeede4c8016166a1f5b6163673adc4f16c164",
+    "N09": "a3470a7225a0766c37e64f7507290ed1a1a34bb22675a9a5f856c8bdc78c51c2",
+    "N10": "ffeaa9b2c4e71d3db461ba460f67b86b5739086f3e2879c7a4f12676c3b923db"
   },
   "published": {
     "N00": {
@@ -51,60 +50,75 @@
       "sha256": "0e2ddac86cd3fe5aa1a9a68de02e41390914bb13ddad13db4af6d091794d3e78",
       "cover_sha256": "b8f41c2bc723a1e9151a444f40f0292f267019c23d1fde828082d20bdf9a620b"
     },
+    "N01": {
+      "source": "N01-v18-final/output/N01-METSI-lectura-previa-v18-final.pdf",
+      "public": "site/pdf/N01-METSI-lectura-previa-v18-final.pdf",
+      "bytes": 25120448,
+      "sha256": "9aefb05f3edb1bc7a5e1d1788dfe49853643db402900a4cfedb54fdfd173e16b",
+      "cover_sha256": "ffbee4ef002a9db391fe82e292ff837d6b18dd10710a40c03d182b9069ca23ee"
+    },
     "N02": {
       "source": "N02-v15-final/output/N02-METSI-lectura-previa-v15-final.pdf",
       "public": "site/pdf/N02-METSI-lectura-previa-v15-final.pdf",
-      "bytes": 24049850,
-      "sha256": "362f11774b86e3bbc9a77f4b8e3187b0aaf4ba31e3eb04f0dd914f5749390d68",
+      "bytes": 24084810,
+      "sha256": "b7273d9902f71b82caef955b4ca8d999f7ca198388a36f64f6f72637d9165dec",
       "cover_sha256": "dfeea0dd26d50bcc48d0406c02e7600ccf4bd45e3321b5b8769bfc51e21d39c1"
     },
     "N03": {
       "source": "N03-v10-final/output/N03-METSI-lectura-previa-v10-final.pdf",
       "public": "site/pdf/N03-METSI-lectura-previa-v10-final.pdf",
-      "bytes": 13281814,
-      "sha256": "feb1db90114031f20f6aab64f2e6366b46f4ff419942d6e9a135913810356a00",
+      "bytes": 13313531,
+      "sha256": "5930a93cbc19fdfcef8e56bb0422fbb3ce98fb33ec8e037bdcb2075699d92beb",
       "cover_sha256": "a91cb96bb2555647faf485862f59be2154ada7750f929932f86bf26228f766cb"
+    },
+    "N04": {
+      "source": "N04-v9-final/output/N04-METSI-lectura-previa-v9-final.pdf",
+      "public": "site/pdf/N04-METSI-lectura-previa-v9-final.pdf",
+      "bytes": 25399750,
+      "sha256": "8d57ff01066d27be2076e59ee69414706efa01d84f6634feaaadccb9ccb304bb",
+      "cover_sha256": "3fdb321831308187734174a5cddcb11b8095f50bb4578854f1ad60589f1b0dc4"
     },
     "N05": {
       "source": "N05-v10-final/output/N05-METSI-lectura-previa-v10-final.pdf",
       "public": "site/pdf/N05-METSI-lectura-previa-v10-final.pdf",
-      "bytes": 14188478,
-      "sha256": "e075ce756df99c62f09f7c8d8dbb3e1d8cdd83b9ce84fb0f17b9b2c167633421",
+      "bytes": 14216081,
+      "sha256": "e4eda0f8b85786e863d17bdaae91415412c47790de68589b68d59fdccc10a7fe",
       "cover_sha256": "cb96901ffd99c00f6a95a0af1fa2f7f2f0703643c0301e6e25463e1de74950aa"
     },
     "N06": {
       "source": "N06-v10-final/output/N06-METSI-lectura-previa-v10-final.pdf",
       "public": "site/pdf/N06-METSI-lectura-previa-v10-final.pdf",
-      "bytes": 17877781,
-      "sha256": "0c0cd34b895381f6262152f319b0c977b14d53ec0f1dc35bcd41ccab311aa9a1",
+      "bytes": 17908731,
+      "sha256": "5d32ab35698170101f48d86b5f11abada7122fc9af9fb0be62529e0c8b6be6a8",
       "cover_sha256": "589101c9ff1417c5de44f3f5301ee55c97d17c20e62a77ca44882bff3a6a5dc4"
     },
     "N07": {
       "source": "N07-v10-final/output/N07-METSI-lectura-previa-v10-final.pdf",
       "public": "site/pdf/N07-METSI-lectura-previa-v10-final.pdf",
-      "bytes": 18589650,
-      "sha256": "97ac30da311ac3f99caa3ba2e1c229109490031623241d3ab23a049d186f000e",
+      "bytes": 18619410,
+      "sha256": "c9f6d4848b8ad9e19089e887a606a3ad66e8167f196676737970db9930c8078e",
       "cover_sha256": "d1ef6b845cbf20933e4ca94d4b6fdefa1efd5e767b07cc0646fa0219c0487844"
     },
     "N08": {
       "source": "N08-v10-final/output/N08-METSI-lectura-previa-v10-final.pdf",
       "public": "site/pdf/N08-METSI-lectura-previa-v10-final.pdf",
-      "bytes": 17633895,
-      "sha256": "d25af972fa37c035d31db44a892f25b9e83c9ecd50c43cbe70a1bf44f6b01814",
+      "bytes": 17664239,
+      "sha256": "222da69c5d9fed79346549e63afeeede4c8016166a1f5b6163673adc4f16c164",
       "cover_sha256": "b70707ec582464ec1ed667b38d97e97e4c7fb0a6dd84c7dbc866ec536e543549"
     },
     "N09": {
       "source": "N09-v10-final/output/N09-METSI-lectura-previa-v10-final.pdf",
       "public": "site/pdf/N09-METSI-lectura-previa-v10-final.pdf",
-      "bytes": 18084278,
-      "sha256": "beaa6155b37219f52eed9e12f44fceef5e5f320374aa871f296fac8fb6fa1d1e",
+      "bytes": 18114800,
+      "sha256": "a3470a7225a0766c37e64f7507290ed1a1a34bb22675a9a5f856c8bdc78c51c2",
       "cover_sha256": "e7d2809295f4ec3486f978a4c6eb6b60e530e070a44a1136549243640d1243a8"
+    },
+    "N10": {
+      "source": "N10-v9-final/output/N10-METSI-lectura-previa-v9-final.pdf",
+      "public": "site/pdf/N10-METSI-lectura-previa-v9-final.pdf",
+      "bytes": 19329987,
+      "sha256": "ffeaa9b2c4e71d3db461ba460f67b86b5739086f3e2879c7a4f12676c3b923db",
+      "cover_sha256": "a9cc202d92011acb61f0f044318a7c177e190e7feb9ac7cf96277bd8981ebcc3"
     }
-  },
-  "public_release_sanitization": {
-    "status": "approved",
-    "scope": "N00-N10",
-    "content_and_layout_preserved": true,
-    "production_metadata_removed": true
   }
 }

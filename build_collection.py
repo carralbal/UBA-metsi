@@ -1755,6 +1755,25 @@ def cover_html(number: int, title: str, thesis: str, file: str, title_source_id:
     return f'''<section class="collection-cover cover-variant-{variant} cover-n{number:02d}"><img src="assets/{esc(file)}" alt="{esc(cover_alt)}"><div class="cover-shade"></div><div class="cover-meta cover-meta-left cover-meta-eyebrow">{cover_eyebrow}</div><div class="cover-meta cover-meta-right">N{number:02d}<br>FCE · UBA</div><div class="collection-masthead">METSI</div><div class="cover-title"><i></i><span>METODOLOGÍA DE SISTEMAS DE INFORMACIÓN</span><h1 data-source-id="{title_source_id}">{cover_title}</h1></div><div class="cover-thesis"><b>N{number:02d}</b><p>{esc(cover_thesis)}</p></div><div class="cover-parallelogram"></div></section>'''
 
 
+PRIORITIZED_CORE_OVERRIDES = {
+    1: {1, 2, 3, 4, 8, 9, 13, 14, 16, 18, 21, 25, 28},
+    2: {1, 2, 3, 4, 7, 9, 10, 12, 15, 16, 18, 21, 24},
+}
+
+
+def prioritized_contents_core(number: int, index: int, title: str) -> bool:
+    if number in PRIORITIZED_CORE_OVERRIDES:
+        return index in PRIORITIZED_CORE_OVERRIDES[number]
+    normalized_title = title.casefold()
+    return (
+        index <= 4
+        or "hotel horizonte" in normalized_title
+        or normalized_title.startswith("movimiento ")
+        or normalized_title == "síntesis"
+        or normalized_title == "preguntas de preparación"
+    )
+
+
 def contents_html(
     number: int,
     title: str,
@@ -1806,10 +1825,19 @@ def contents_html(
                     '<span style="white-space:nowrap">del Bloque 1: un encuadre&#160;</span><br>'
                     '<span style="white-space:nowrap">listo para ser refutado</span>'
                 )
-            item_html.append(f'<li><b>{counter:02d}</b><span>{item_label}</span></li>')
+            route = "core" if prioritized_contents_core(number, counter, section.title) else "extension"
+            label = "NÚCLEO" if route == "core" else "EXT."
+            item_html.append(
+                f'<li class="contents-item contents-{route}"><b>{counter:02d}</b>'
+                f'<span>{item_label} <small>{label}</small></span></li>'
+            )
         items = ''.join(item_html)
         destination = {1: "N02", 2: "N03", 3: "N04", 4: "N05", 5: "N06", 6: "N07", 7: "N08", 8: "N09", 9: "N10", 10: "Bloque 2"}[number]
-        route_note = f'<p class="contents-route"><b>Ruta de lectura:</b> problema, distinciones, decisiones, prueba, transferencia y preparación para {destination}.</p>'
+        route_note = (
+            '<p class="contents-route"><b>Ruta priorizada: 1 h 20 min a 1 h 40 min.</b> '
+            'Núcleo de lectura: 60 a 75 min; preparación: 20 a 25 min. '
+            'Las extensiones agregan 30 a 45 min y profundizan el recorrido.</p>'
+        )
         sin_num_note = '<p class="contents-sinnum-note"><b>Nota.</b> <b>SIN NUM.</b> identifica los aparatos de orientación y referencia que no integran la secuencia argumental.</p>'
         if number == 10:
             # El corte explícito coincide con la maqueta y preserva la
@@ -3263,10 +3291,25 @@ def build_document(number:int)->dict:
     cover_source_label = f"assets/{cover_source.name}"
     hotel_source_label = f"assets/{hotel_file}" if hotel_source is not None else ""
     clean_title = title.replace(f"N{number:02d} — ", "").replace(f"N{number:02d} · ", "")
+    prioritized_sections = [section for section in sections if section.title != "Referencias base" and not is_part_section(section.title)]
+    prioritized_core_count = sum(
+        prioritized_contents_core(number, index, section.title)
+        for index, section in enumerate(prioritized_sections, 1)
+    ) if number else 0
     manifest={
         "number":number,"title":title,"module":module_for(number)[1],"source":source_label,
         "edition":PACKAGE_VERSION_LABELS.get(number, "current"),
         "source_words":len(source.read_text(encoding='utf-8').split()),
+        **({"prioritized_reading_route": {
+            "contract": "metsi-prioritized-reading/v1",
+            "total": "80–100 min",
+            "core_reading": "60–75 min",
+            "preparation": "20–25 min",
+            "optional_extensions": "30–45 min adicionales",
+            "core_section_count": prioritized_core_count,
+            "extension_section_count": len(prioritized_sections) - prioritized_core_count,
+            "visual_signal": "volt-left-rule",
+        }} if number else {}),
         "cover":{
             "file":cover_file,
             "source":cover_source_label,
@@ -3474,6 +3517,11 @@ COLLECTION_CSS=r'''
 .document-n00 .contents-page-text-only .contents-layout ol{width:100%;columns:2;column-count:2;column-gap:9mm;column-rule:.2mm solid #D0D1CE}
 .document-n00 .contents-page-text-only .contents-layout li{font-size:8.1pt;line-height:1.18;padding:1mm 1.8mm 1mm 0}
 .document-n00 .contents-page-text-only .contents-layout li small{font-size:6.5pt}
+.premium-magazine:not(.document-n00) .contents-page .contents-route{max-width:170mm;margin:2mm 0 0;padding-left:3mm;border-left:1.4mm solid #CFFF00;font:7.7pt/1.24 Avenir,sans-serif;color:#30322f}
+.premium-magazine:not(.document-n00) .contents-layout li.contents-item{padding-left:1.2mm}
+.premium-magazine:not(.document-n00) .contents-layout li.contents-core{border-left:1mm solid #CFFF00}
+.premium-magazine:not(.document-n00) .contents-layout li.contents-extension{border-left:1mm solid transparent}
+.premium-magazine:not(.document-n00) .contents-layout li small{display:inline-block;margin-left:1mm;font-size:6pt;line-height:1;letter-spacing:.06em;color:#666}
 .document-n00 section[data-section="09"] .photo-band img{height:118mm;object-position:center 48%}
 .authors-page{background:linear-gradient(90deg,#FAFAF8 0 33.333%,#E8E9E8 33.333% 66.666%,#FAFAF8 66.666%)}.authors-page header{text-align:center}.authors-page header p{margin-left:auto;margin-right:auto}.contributors-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6mm 5mm;margin-top:8mm}.contributor{text-align:center;min-height:78mm;padding:2mm 3mm;border-bottom:.2mm solid #aaa}.contributor>b{display:block;margin-bottom:2mm;font-family:Didot,serif;font-size:13pt;color:#666}.contributor-portrait{display:block;width:25mm;height:25mm;margin:0 auto 3mm;object-fit:cover;border-radius:50%;filter:grayscale(1);background:#dedede;border:.25mm solid #555}.contributor h3{margin:1mm 0;font-family:Avenir,sans-serif;font-size:9.4pt;font-weight:700;text-transform:uppercase}.contributor span{display:block;color:#202020;font-family:Avenir,sans-serif;font-size:6pt;font-weight:700;letter-spacing:.08em}.contributor cite{display:block;min-height:11mm;margin-top:2.2mm;font-family:Baskerville,serif;font-size:8.2pt;line-height:1.24;font-style:italic;text-align:left}.contributor p{margin-top:1.2mm;font-family:Avenir,sans-serif;font-size:6.8pt;line-height:1.24;text-align:left;color:#565855}.authors-page blockquote{margin:6mm 8mm 0;padding-top:4mm;border-top:.25mm solid #999;text-align:center;font-family:Didot,serif;font-size:14pt;line-height:1.12;font-style:italic}
 .document-n00 .authors-page .contributors-grid{column-gap:8mm;row-gap:6mm}

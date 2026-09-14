@@ -1001,12 +1001,11 @@ def finalize(number: int) -> dict:
     if number == 6:
         set_structure_figure_alt(writer, 2, "Imagen editorial asociada al contenido de N06")
     outline_report = add_n00_outline(writer, source, final_page_texts) if number == 0 else {"added": 0, "missing": []}
-    writer.add_metadata({
-        "/Title": manifest["title"],
-        "/Author": "Diego Carralbal",
-        "/Subject": "Metodología de Sistemas de Información · FCE · UBA",
-        "/Keywords": f"METSI, UBA, lectura previa, {manifest['module']}",
-    })
+    # La edición pública no expone software, fechas ni metadatos de producción.
+    # La identidad autoral permanece visible en los folios de todas las páginas.
+    writer._info = None
+    writer._ID = None
+    writer.root_object.pop(NameObject("/Metadata"), None)
     with final.open("wb") as stream:
         writer.write(stream)
 

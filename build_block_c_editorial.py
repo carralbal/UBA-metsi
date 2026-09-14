@@ -2232,12 +2232,19 @@ def build(number: int) -> dict:
     visible_sections = [s for s in sections if s.title != "Referencias base"]
     content_items = ['<li class="contents-unnumbered"><b>•</b><span>Referentes <small>SIN NUM.</small></span></li>']
     for index, section in enumerate(visible_sections, 1):
-        content_items.append(f'<li><b>{index:02d}</b><span>{html.escape(section.title)}</span></li>')
+        reading_route = "core" if base.prioritized_contents_core(number, index, section.title) else "extension"
+        reading_label = "NÚCLEO" if reading_route == "core" else "EXT."
+        content_items.append(
+            f'<li class="contents-item contents-{reading_route}"><b>{index:02d}</b>'
+            f'<span>{html.escape(section.title)} <small>{reading_label}</small></span></li>'
+        )
     content_items.append('<li class="contents-unnumbered"><b>•</b><span>Referencias base <small>SIN NUM.</small></span></li>')
     contents = (
         f'<section class="front-page contents-page contents-page-text-only block-c-contents"><header><span>METSI · N{number:02d}</span>'
         f'<h2>Contenido</h2><p>{html.escape(clean_title(number, title))}</p>'
-        f'<p class="contents-route"><b>Ruta de lectura:</b> problema, distinciones, decisiones, prueba, transferencia y preparación.</p></header>'
+        f'<p class="contents-route"><b>Ruta priorizada: 1 h 20 min a 1 h 40 min.</b> '
+        'Núcleo de lectura: 60 a 75 min; preparación: 20 a 25 min. '
+        'Las extensiones agregan 30 a 45 min y profundizan el recorrido.</p></header>'
         f'<div class="contents-layout"><ol>{"".join(content_items)}</ol>'
         f'<figure class="contents-photo"><div class="contents-photo-viewport"><img'
         f'{" class=\"editorial-contact-sheet\"" if support[0].name == "editorial-support-sheet.png" else ""}'
@@ -2290,6 +2297,22 @@ def build(number: int) -> dict:
         "source_words": len(re.findall(r"\b[\wÁÉÍÓÚÜÑáéíóúüñ'-]+\b", source.read_text(encoding="utf-8"))),
         "content_audit": "plain-language-canonical-source-audited-pass",
         "editorial_spine": "academic-content-revision-n11-n36-audited-pass",
+        "prioritized_reading_route": {
+            "contract": "metsi-prioritized-reading/v1",
+            "total": "80–100 min",
+            "core_reading": "60–75 min",
+            "preparation": "20–25 min",
+            "optional_extensions": "30–45 min adicionales",
+            "core_section_count": sum(
+                base.prioritized_contents_core(number, index, section.title)
+                for index, section in enumerate(visible_sections, 1)
+            ),
+            "extension_section_count": len(visible_sections) - sum(
+                base.prioritized_contents_core(number, index, section.title)
+                for index, section in enumerate(visible_sections, 1)
+            ),
+            "visual_signal": "volt-left-rule",
+        },
         "cover": {"file": cover.name, "source": f"assets/{cover.name}", "sha256": sha(cover), "alt": COVER_ALTS[number], "photographic_origin": "native_black_and_white", "render_treatment": "no_grayscale_conversion"},
         "internal_images": ["pause-01.png", "pause-02.png", hotel_horizonte_asset.name] + sorted({path.name for path in support}) + ([story_asset.name] if story_asset else []),
         "image_manifest": [

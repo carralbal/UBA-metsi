@@ -15,13 +15,16 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "site"
 RELEASES = {
     "N00": ("N00-v3-final/output/N00-METSI-lectura-previa-v3-final.pdf", "N00-METSI-lectura-previa-v3-final.pdf"),
+    "N01": ("N01-v18-final/output/N01-METSI-lectura-previa-v18-final.pdf", "N01-METSI-lectura-previa-v18-final.pdf"),
     "N02": ("N02-v15-final/output/N02-METSI-lectura-previa-v15-final.pdf", "N02-METSI-lectura-previa-v15-final.pdf"),
     "N03": ("N03-v10-final/output/N03-METSI-lectura-previa-v10-final.pdf", "N03-METSI-lectura-previa-v10-final.pdf"),
+    "N04": ("N04-v9-final/output/N04-METSI-lectura-previa-v9-final.pdf", "N04-METSI-lectura-previa-v9-final.pdf"),
     "N05": ("N05-v10-final/output/N05-METSI-lectura-previa-v10-final.pdf", "N05-METSI-lectura-previa-v10-final.pdf"),
     "N06": ("N06-v10-final/output/N06-METSI-lectura-previa-v10-final.pdf", "N06-METSI-lectura-previa-v10-final.pdf"),
     "N07": ("N07-v10-final/output/N07-METSI-lectura-previa-v10-final.pdf", "N07-METSI-lectura-previa-v10-final.pdf"),
     "N08": ("N08-v10-final/output/N08-METSI-lectura-previa-v10-final.pdf", "N08-METSI-lectura-previa-v10-final.pdf"),
     "N09": ("N09-v10-final/output/N09-METSI-lectura-previa-v10-final.pdf", "N09-METSI-lectura-previa-v10-final.pdf"),
+    "N10": ("N10-v9-final/output/N10-METSI-lectura-previa-v9-final.pdf", "N10-METSI-lectura-previa-v9-final.pdf"),
 }
 OBSOLETE = (
     "N00-METSI-lectura-previa-v2-final.pdf",
@@ -89,7 +92,7 @@ def main() -> int:
         "status": "approved",
         "scope": [f"N{number:02d}" for number in range(11)],
         "changed": sorted(RELEASES),
-        "preserved": ["N01", "N04", "N10"],
+        "preserved": [],
         "pdf_sha256": pdf_hashes,
         "published": published,
     }

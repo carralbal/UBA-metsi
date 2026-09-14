@@ -475,7 +475,10 @@ def update_manifests(records: list[dict[str, Any]]) -> tuple[dict[str, Any], dic
     expected_published = [f"N{number:02d}" for number in range(0, LAST + 1)]
     if published != expected_published:
         raise PublicationError("site/course-manifest.json: published_readings no enumera exactamente N00-N36")
-    site_manifest["publication"] = {**contract, "readings": records}
+    # El manifiesto público sólo conserva datos académicos y rutas de descarga.
+    # La procedencia técnica, los hashes y los informes QA quedan en el manifiesto
+    # interno de la raíz del repositorio.
+    site_manifest.pop("publication", None)
     return root_manifest, site_manifest, release
 
 
