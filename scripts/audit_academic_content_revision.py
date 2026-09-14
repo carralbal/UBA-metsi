@@ -30,8 +30,13 @@ def segment(text: str, start: str, stop: str) -> str:
 
 def opening_segment(text: str) -> str:
     headings = list(re.finditer(r"^##\s+(.+)$", text, re.MULTILINE))
-    hotel = next(match for match in headings if match.group(1).startswith("Hotel Horizonte"))
-    return text[headings[1].start() : hotel.start()]
+    start = headings[1].start()
+    stops = [
+        match.start()
+        for match in headings[2:]
+        if match.group(1) == "Tesis" or match.group(1).startswith("Hotel Horizonte")
+    ]
+    return text[start : min(stops)]
 
 
 def audit_document(entry: dict[str, object]) -> dict[str, object]:
@@ -122,8 +127,8 @@ def main() -> int:
     expected = [f"N{number:02d}" for number in range(11, 37)]
     collection_checks = {
         "scope_complete_and_ordered": codes == expected,
-        "status_content_only": manifest["status"] == "content-approved-editorial-pending",
-        "publication_frozen": "Do not replace public PDFs" in manifest["publication_policy"],
+        "status_publication_authorized": manifest["status"] == "content-and-editorial-approved-publication-authorized",
+        "publication_authorized": "authorized for main publication" in manifest["publication_policy"],
     }
     results = [audit_document(entry) for entry in documents]
     overall = all(collection_checks.values()) and all(item["result"] == "PASS" for item in results)

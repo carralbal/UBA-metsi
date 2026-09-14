@@ -26,9 +26,9 @@ ROOT = Path(__file__).resolve().parent
 REPO = ROOT.parent
 FIRST_DYNAMIC = 11
 LAST_DYNAMIC = 36
-DYNAMIC_SOURCE_VERSION = "v8-editorial"
-DYNAMIC_SOURCE_VERSION_SHORT = "v8"
-DYNAMIC_QA_ROOT = "qa-reports/n11-n36-v8"
+DYNAMIC_SOURCE_VERSION = "v9-editorial"
+DYNAMIC_SOURCE_VERSION_SHORT = "v9"
+DYNAMIC_QA_ROOT = "qa-reports/n11-n36-v9"
 DYNAMIC_QA_VALIDATOR = "validate_n11_n36_v6.py"
 
 PDF_FILES = {
@@ -202,7 +202,7 @@ def load_json(path: Path) -> tuple[dict[str, Any], str | None]:
 
 
 def package_file_problems(code: str, record: dict[str, Any]) -> list[str]:
-    """Lightweight clone/CI proof that the lean v8 package is complete."""
+    """Lightweight clone/CI proof that the lean v9 package is complete."""
     number = int(code[1:])
     package = REPO / f"{code}-{DYNAMIC_SOURCE_VERSION}"
     canonical_name = Path(str(record.get("canonical_source", ""))).name
@@ -536,7 +536,7 @@ def build_report(require_sources: bool = False) -> dict[str, Any]:
         "all_images_have_alt": bool(parser.images) and all("alt" in image and image["alt"].strip() for image in parser.images),
         "thirty_seven_exact_pdf_downloads": pdf_downloads == set(PDF_FILES.values()) and len(list((ROOT / "pdf").rglob("*.pdf"))) == 37,
         "approved_pdfs_remain_unchanged": bool(approved_pdf_hashes) and {code: actual_pdf_hashes.get(code) for code in approved_pdf_hashes} == approved_pdf_hashes,
-        "n11_n36_pdfs_match_v8_sources_and_manifest": declared_hashes_match and (not require_sources or source_hashes_match),
+        "n11_n36_pdfs_match_v9_sources_and_manifest": declared_hashes_match and (not require_sources or source_hashes_match),
         "pdf_page_counts_match_manifests": len(expected_pages) == 37 and page_counts == expected_pages and not pdf_errors,
         "approved_covers_remain_unchanged": bool(expected_cover_hashes) and {code: actual_cover_hashes.get(code) for code in expected_cover_hashes} == expected_cover_hashes,
         "n11_n36_covers_match_manifest": records_complete and all(

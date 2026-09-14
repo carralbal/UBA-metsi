@@ -1,36 +1,244 @@
 {
   "schema_version": 1,
-  "created_at": "2026-09-10",
-  "scope": "N11-N36 content only",
-  "status": "content-and-editorial-approved-prepublication",
+  "created_at": "2026-09-14",
+  "scope": "N11-N36 canonical content and v9 editorial packages",
+  "status": "content-and-editorial-approved-publication-authorized",
   "audit": "ACADEMIC-CONTENT-AUDIT-N11-N36.md",
-  "publication_policy": "The v8 editorial packages passed visual and PDF QA. Keep the site candidate on its review branch until main publication is explicitly authorized.",
+  "publication_policy": "The v9 editorial packages passed content, readability, visual and PDF QA and are authorized for main publication on 2026-09-14.",
   "documents": [
-    {"code":"N11","source":"N11-content-canonical/source/N11_cuando_un_dato_sostiene_una_afirmacion-content-canonical-v1.md","sha256":"a0a225d6d8740f4ab58da9591c44accf8b2fb6f64480fd1949d1274ccaf18e9b","words_total":8724,"words_substantive":7732,"words_opening":668,"audit_score":39},
-    {"code":"N12","source":"N12-content-canonical/source/N12_eventos_estados_comandos_evidencia_y_autoridad-content-canonical-v2.md","sha256":"7f5e5bfadd1a8c1daaf441d169fabfe46c5200d63f4b3f72a96f45ac3b83336b","words_total":8290,"words_substantive":7408,"words_opening":683,"audit_score":39},
-    {"code":"N13","source":"N13-content-canonical/source/N13_demoras_concurrencia_consistencia_idempotencia_y_reconciliacion-content-canonical-v1.md","sha256":"f724740e79a5e88ec16781f961f81bce97844c9741d3bb8168080b10f22fa96b","words_total":7963,"words_substantive":7120,"words_opening":564,"audit_score":38},
-    {"code":"N14","source":"N14-content-canonical/source/N14_procesos_end_to_end_handoffs_colas_y_excepciones-content-canonical-v2.md","sha256":"6defcf529b04e7d46085311a892d6cb731094727bc3a5ab3484c0a77175dfd88","words_total":8619,"words_substantive":7832,"words_opening":633,"audit_score":39},
-    {"code":"N15","source":"N15-content-canonical/source/N15_seleccionar_modelos_segun_pregunta_audiencia_y_costo-content-canonical-v2.md","sha256":"3d3aa76e3bee402cabeb6091b5b3ffc679005254a97d84a2655ccdff71882ee7","words_total":8685,"words_substantive":7957,"words_opening":601,"audit_score":39},
-    {"code":"N16","source":"N16-content-canonical/source/N16_coherencia_contradicciones_productivas_y_ciclos_de_vida-content-canonical-v2.md","sha256":"b7c9587d9249fa6872be01b61ea5c7bfe8e1e5af174027332320247fed2448a3","words_total":8855,"words_substantive":8125,"words_opening":470,"audit_score":36},
-    {"code":"N17","source":"N17-content-canonical/source/N17_logicas_predictivas_iterativas_incrementales_adaptativas_y_experimentales-content-canonical-v3.md","sha256":"db4731bc230a01367a12bb7f9dde05684ed15ce5101b70e91bccc1f1c6908794","words_total":8938,"words_substantive":8224,"words_opening":488,"audit_score":39},
-    {"code":"N18","source":"N18-content-canonical/source/N18_legado_regulacion_y_documentacion_como_valor_restriccion_y_evidencia-content-canonical-v2.md","sha256":"67b19f6da19355338c15c50b8d1146a6a426f50f8d99614ce53e0320284e58e7","words_total":8613,"words_substantive":7626,"words_opening":469,"audit_score":37},
-    {"code":"N19","source":"N19-content-canonical/source/N19_alternativas_de_realizacion_configurar_integrar_construir_y_no_automatizar-content-canonical-v2.md","sha256":"54a6cfd6135a18f5f410f24f50eefa059cf7791300027aafc25237e5864daee1","words_total":8650,"words_substantive":7705,"words_opening":465,"audit_score":38},
-    {"code":"N20","source":"N20-content-canonical/source/N20_estrategia_metodologica_tailoring_hitos_y_condiciones_de_salida-content-canonical-v3.md","sha256":"c0484789c64f71a7529f0b3a2a86df504cb14708c8de812e87d4ff3fa51460e2","words_total":8911,"words_substantive":8072,"words_opening":541,"audit_score":39},
-    {"code":"N21","source":"N21-content-canonical/source/N21_proyecto_producto_servicio_y_plataforma-content-canonical-v3.md","sha256":"180c52f8112e18c23355300fbe29aace41b1dd3a27475d92368c3a9ff28ae9f7","words_total":8800,"words_substantive":8035,"words_opening":521,"audit_score":39},
-    {"code":"N22","source":"N22-content-canonical/source/N22_iniciativas_como_hipotesis_que_pueden_refutarse-content-canonical-v2.md","sha256":"0f253fccc785dad94bcfb1ce92d44a098e6604c43ce9c5086a72ed74481298c3","words_total":8199,"words_substantive":7447,"words_opening":509,"audit_score":39},
-    {"code":"N23","source":"N23-content-canonical/source/N23_capacidad_y_aprendizaje_cortar_entregas_por_outcome-content-canonical-v3.md","sha256":"80a9a75ce9ef303d6ce9021be283484352a23ca0ded11166bd21b813712eef04","words_total":8848,"words_substantive":8088,"words_opening":539,"audit_score":39},
-    {"code":"N24","source":"N24-content-canonical/source/N24_priorizar_es_renunciar_valor_costo_de_demora_y_limites-content-canonical-v3.md","sha256":"42b3a1e3f1d0d5e97926825f8b35044f4aedf9da9aafe5f5f3287874db5dbc11","words_total":8877,"words_substantive":7969,"words_opening":504,"audit_score":39},
-    {"code":"N25","source":"N25-content-canonical/source/N25_flujo_mas_alla_de_las_ceremonias_colas_lote_espera_y_feedback-content-canonical-v3.md","sha256":"36c7a44afbd27d12d0f9f115e3a48137dd9c4147ab5e1330006be23174d1512a","words_total":9348,"words_substantive":8362,"words_opening":536,"audit_score":39},
-    {"code":"N26","source":"N26-content-canonical/source/N26_ecosistema_de_servicios_plataformas_y_terceros-content-canonical-v2.md","sha256":"de51be27db77400b172e0c7bac8bc54c7b4d1122e019829588201f700da4a8ef","words_total":8198,"words_substantive":7326,"words_opening":575,"audit_score":39},
-    {"code":"N27","source":"N27-content-canonical/source/N27_contratos_sintacticos_semanticos_temporales_y_operacionales-content-canonical-v3.md","sha256":"36ca46709912d267d1c60670622e908a221df8e080ba192102731c2b996e98b8","words_total":8808,"words_substantive":7944,"words_opening":539,"audit_score":39},
-    {"code":"N28","source":"N28-content-canonical/source/N28_evidencia_de_calidad_segun_riesgo_y_atributos_en_tension-content-canonical-v3.md","sha256":"3474239f4a593633248b95b45ce4cd4dfd5a9dbce14f0880d3081087619a6fa0","words_total":8544,"words_substantive":7567,"words_opening":554,"audit_score":39},
-    {"code":"N29","source":"N29-content-canonical/source/N29_gobierno_de_integracion_despliegue_infraestructura_aprobacion_y_rollback-content-canonical-v3.md","sha256":"fcd2699af7e528f3b52eea7c7c4989f83a0e95f4762cba6da4e2b05db2e73251","words_total":8657,"words_substantive":7752,"words_opening":510,"audit_score":40},
-    {"code":"N30","source":"N30-content-canonical/source/N30_observabilidad_senales_sli_slo_incidentes_y_aprendizaje-content-canonical-v3.md","sha256":"ce0bf90d2ae6bc4544f82b7beeca195110180086b70d236971e5b8d0e862c863","words_total":8673,"words_substantive":7761,"words_opening":540,"audit_score":40},
-    {"code":"N31","source":"N31-content-canonical/source/N31_reglas_prediccion_generacion_y_agencia-content-canonical-v3.md","sha256":"04b47549ec1ca930fd4d6e71399c2e81ee3ddbdb3a746e96e5e3a33bbd781ee5","words_total":8112,"words_substantive":7283,"words_opening":515,"audit_score":40},
-    {"code":"N32","source":"N32-content-canonical/source/N32_evaluar_tareas_cobertura_severidad_desigualdad_robustez_y_supervision-content-canonical-v3.md","sha256":"4dfa9602b11779b50749b770e6c3b13bfd5ec21f099f4ba64b78a084777f052d","words_total":8265,"words_substantive":7378,"words_opening":516,"audit_score":40},
-    {"code":"N33","source":"N33-content-canonical/source/N33_gobierno_vivo_de_inteligencia_artificial-content-canonical-v3.md","sha256":"76cf5a8ab1b43146fe957af897b270f43c2765470cc1a5fb19e9264cc027ed76","words_total":8561,"words_substantive":7673,"words_opening":520,"audit_score":40},
-    {"code":"N34","source":"N34-content-canonical/source/N34_reconstruir_la_cadena_completa_del_problema_al_gobierno-content-canonical-v3.md","sha256":"9e4734540c7eb6c3a1d3d03a63f30bd53086466f4db974fef0acb2c13f23785a","words_total":8100,"words_substantive":7300,"words_opening":519,"audit_score":39},
-    {"code":"N35","source":"N35-content-canonical/source/N35_comunicar_defender_y_transferir_criterios-content-canonical-v3.md","sha256":"cf855e9396cc1ac86031dd8d13bb50554efc8cd42188ad362012f5c4d7cc4a17","words_total":8229,"words_substantive":7535,"words_opening":501,"audit_score":39},
-    {"code":"N36","source":"N36-content-canonical/source/N36_practica_reflexiva_y_aprendizaje_profesional-content-canonical-v3.md","sha256":"d9f67ff0e6f6b321d41d5df981316084d30c6143dad67f5476b855864d4a6ffc","words_total":8455,"words_substantive":7760,"words_opening":551,"audit_score":40}
+    {
+      "code": "N11",
+      "source": "N11-content-canonical/source/N11_cuando_un_dato_sostiene_una_afirmacion-content-canonical-v2.md",
+      "sha256": "f57b9864966c8957336093030718b4809d4e721e7d598addb8975e4ac97657b1",
+      "words_total": 8704,
+      "words_substantive": 7715,
+      "words_opening": 668,
+      "audit_score": 39
+    },
+    {
+      "code": "N12",
+      "source": "N12-content-canonical/source/N12_eventos_estados_comandos_evidencia_y_autoridad-content-canonical-v3.md",
+      "sha256": "e3e55ff4f8beb1b4e785113c3593a3822da6e5028e1702c884841f6f403e22ca",
+      "words_total": 8288,
+      "words_substantive": 7408,
+      "words_opening": 683,
+      "audit_score": 39
+    },
+    {
+      "code": "N13",
+      "source": "N13-content-canonical/source/N13_demoras_concurrencia_consistencia_idempotencia_y_reconciliacion-content-canonical-v2.md",
+      "sha256": "0e877b1aceb5b1b42b3cfb7b8834246f4ca40ec4a2612d73a3d26b9ffc2a0d7a",
+      "words_total": 7980,
+      "words_substantive": 7137,
+      "words_opening": 564,
+      "audit_score": 38
+    },
+    {
+      "code": "N14",
+      "source": "N14-content-canonical/source/N14_procesos_end_to_end_handoffs_colas_y_excepciones-content-canonical-v3.md",
+      "sha256": "74d87c2ebfb0fee408109a46056ebee6017dfed56cb2e8bef0e4ba76da75b3bf",
+      "words_total": 8615,
+      "words_substantive": 7828,
+      "words_opening": 633,
+      "audit_score": 39
+    },
+    {
+      "code": "N15",
+      "source": "N15-content-canonical/source/N15_seleccionar_modelos_segun_pregunta_audiencia_y_costo-content-canonical-v3.md",
+      "sha256": "af93cb05b93e81b75637dade5fcdf6a4578702612fa52a261f852f0346de4c77",
+      "words_total": 8692,
+      "words_substantive": 7963,
+      "words_opening": 601,
+      "audit_score": 39
+    },
+    {
+      "code": "N16",
+      "source": "N16-content-canonical/source/N16_coherencia_contradicciones_productivas_y_ciclos_de_vida-content-canonical-v3.md",
+      "sha256": "39e1e6501ed46e01bc0a1b598616c0d23eaba1d0582d1179ee0224a675b33119",
+      "words_total": 8858,
+      "words_substantive": 8129,
+      "words_opening": 470,
+      "audit_score": 36
+    },
+    {
+      "code": "N17",
+      "source": "N17-content-canonical/source/N17_logicas_predictivas_iterativas_incrementales_adaptativas_y_experimentales-content-canonical-v4.md",
+      "sha256": "373957685ccc7eb31f5e2010fc061fb00883104ad9337c5513592fec677e1e1c",
+      "words_total": 8925,
+      "words_substantive": 8208,
+      "words_opening": 495,
+      "audit_score": 39
+    },
+    {
+      "code": "N18",
+      "source": "N18-content-canonical/source/N18_legado_regulacion_y_documentacion_como_valor_restriccion_y_evidencia-content-canonical-v3.md",
+      "sha256": "c0398398a612edc632989b7b78220eb33f4315ed1563544f12c8ee8240757a8a",
+      "words_total": 8623,
+      "words_substantive": 7636,
+      "words_opening": 469,
+      "audit_score": 37
+    },
+    {
+      "code": "N19",
+      "source": "N19-content-canonical/source/N19_alternativas_de_realizacion_configurar_integrar_construir_y_no_automatizar-content-canonical-v3.md",
+      "sha256": "c784e6286b6846e8810937b224bc819a8b6f16c040ca0449a7cbbcb8d0cc8326",
+      "words_total": 8663,
+      "words_substantive": 7719,
+      "words_opening": 465,
+      "audit_score": 38
+    },
+    {
+      "code": "N20",
+      "source": "N20-content-canonical/source/N20_estrategia_metodologica_tailoring_hitos_y_condiciones_de_salida-content-canonical-v4.md",
+      "sha256": "1c5f6f542c9c34b0781229cde7dc6d952cbf5e135794a4479995147ae287d7ce",
+      "words_total": 8989,
+      "words_substantive": 8151,
+      "words_opening": 559,
+      "audit_score": 39
+    },
+    {
+      "code": "N21",
+      "source": "N21-content-canonical/source/N21_proyecto_producto_servicio_y_plataforma-content-canonical-v4.md",
+      "sha256": "64e09fa29fee9e83e389dcb71c9b73710630fd6cd12c52465b57cb3fa41179eb",
+      "words_total": 8870,
+      "words_substantive": 8100,
+      "words_opening": 532,
+      "audit_score": 39
+    },
+    {
+      "code": "N22",
+      "source": "N22-content-canonical/source/N22_iniciativas_como_hipotesis_que_pueden_refutarse-content-canonical-v3.md",
+      "sha256": "08e26ec9a81d987225b0185ec44c9eb9fcb5cedf20305648a30d7cd3300268ff",
+      "words_total": 8284,
+      "words_substantive": 7531,
+      "words_opening": 522,
+      "audit_score": 39
+    },
+    {
+      "code": "N23",
+      "source": "N23-content-canonical/source/N23_capacidad_y_aprendizaje_cortar_entregas_por_outcome-content-canonical-v4.md",
+      "sha256": "c569b92ed1cd4c5ab97d16351d4d9a918863e3aded50613e20f26aee4225e4f5",
+      "words_total": 8921,
+      "words_substantive": 8162,
+      "words_opening": 541,
+      "audit_score": 39
+    },
+    {
+      "code": "N24",
+      "source": "N24-content-canonical/source/N24_priorizar_es_renunciar_valor_costo_de_demora_y_limites-content-canonical-v4.md",
+      "sha256": "35735191a9e6e84716088573fe6fd16308cd3d4a5948fc7be881f83971f5d2d1",
+      "words_total": 8878,
+      "words_substantive": 7971,
+      "words_opening": 504,
+      "audit_score": 39
+    },
+    {
+      "code": "N25",
+      "source": "N25-content-canonical/source/N25_flujo_mas_alla_de_las_ceremonias_colas_lote_espera_y_feedback-content-canonical-v4.md",
+      "sha256": "aaf255115da2b547ad84ccfb6746e5fd3b9cc4745bdfdea3e8ea131c11dd6fd3",
+      "words_total": 9351,
+      "words_substantive": 8365,
+      "words_opening": 536,
+      "audit_score": 39
+    },
+    {
+      "code": "N26",
+      "source": "N26-content-canonical/source/N26_ecosistema_de_servicios_plataformas_y_terceros-content-canonical-v3.md",
+      "sha256": "5532ffba63b8ec503db1d94143b3072dbd7659f15527d7c8f46724846d651b57",
+      "words_total": 8198,
+      "words_substantive": 7326,
+      "words_opening": 575,
+      "audit_score": 39
+    },
+    {
+      "code": "N27",
+      "source": "N27-content-canonical/source/N27_contratos_sintacticos_semanticos_temporales_y_operacionales-content-canonical-v4.md",
+      "sha256": "bbceffe8c9a89d6080fc22fef064e9841da44a23775c25425e0832ef36782f91",
+      "words_total": 8828,
+      "words_substantive": 7964,
+      "words_opening": 539,
+      "audit_score": 39
+    },
+    {
+      "code": "N28",
+      "source": "N28-content-canonical/source/N28_evidencia_de_calidad_segun_riesgo_y_atributos_en_tension-content-canonical-v4.md",
+      "sha256": "3a4b9e29f851bfda2846bc640507aed1852e23cb3d404001ac1a6d9869169f65",
+      "words_total": 8561,
+      "words_substantive": 7584,
+      "words_opening": 554,
+      "audit_score": 39
+    },
+    {
+      "code": "N29",
+      "source": "N29-content-canonical/source/N29_gobierno_de_integracion_despliegue_infraestructura_aprobacion_y_rollback-content-canonical-v4.md",
+      "sha256": "8eabd9227e628ec4d05850a37c2e160246d153f851da1ece0c9e2380ea6138eb",
+      "words_total": 8701,
+      "words_substantive": 7793,
+      "words_opening": 510,
+      "audit_score": 40
+    },
+    {
+      "code": "N30",
+      "source": "N30-content-canonical/source/N30_observabilidad_senales_sli_slo_incidentes_y_aprendizaje-content-canonical-v4.md",
+      "sha256": "5f9fbbd8948fd21233642146f45ab87d135a7d3b5bf7fb9ab7d64c8ccb1e646b",
+      "words_total": 8676,
+      "words_substantive": 7766,
+      "words_opening": 540,
+      "audit_score": 40
+    },
+    {
+      "code": "N31",
+      "source": "N31-content-canonical/source/N31_reglas_prediccion_generacion_y_agencia-content-canonical-v4.md",
+      "sha256": "f1770f514730fb8bca2584dd12954e9dbe4f93647e3f63cdb50b77bb0a70a166",
+      "words_total": 8123,
+      "words_substantive": 7291,
+      "words_opening": 508,
+      "audit_score": 40
+    },
+    {
+      "code": "N32",
+      "source": "N32-content-canonical/source/N32_evaluar_tareas_cobertura_severidad_desigualdad_robustez_y_supervision-content-canonical-v4.md",
+      "sha256": "df8778e665d8c7584965778ea5c7d1b523563628ff168e84e0dbe35ba731b970",
+      "words_total": 8345,
+      "words_substantive": 7448,
+      "words_opening": 512,
+      "audit_score": 40
+    },
+    {
+      "code": "N33",
+      "source": "N33-content-canonical/source/N33_gobierno_vivo_de_inteligencia_artificial-content-canonical-v4.md",
+      "sha256": "4512431dc84e67fa492d63a9093948a0b6d089e5da3076aa35acd2de9cebbb9d",
+      "words_total": 8707,
+      "words_substantive": 7810,
+      "words_opening": 543,
+      "audit_score": 40
+    },
+    {
+      "code": "N34",
+      "source": "N34-content-canonical/source/N34_reconstruir_la_cadena_completa_del_problema_al_gobierno-content-canonical-v4.md",
+      "sha256": "74d4234f09ad8336c12bf42acc2277c51bd0e0cad8a33b7c922768a36025d69e",
+      "words_total": 8121,
+      "words_substantive": 7314,
+      "words_opening": 520,
+      "audit_score": 39
+    },
+    {
+      "code": "N35",
+      "source": "N35-content-canonical/source/N35_comunicar_defender_y_transferir_criterios-content-canonical-v4.md",
+      "sha256": "f93eb27d237b5717a53b836bff15ddfb99b059c3db83abf4bee49aa98e75a8fc",
+      "words_total": 8289,
+      "words_substantive": 7592,
+      "words_opening": 520,
+      "audit_score": 39
+    },
+    {
+      "code": "N36",
+      "source": "N36-content-canonical/source/N36_practica_reflexiva_y_aprendizaje_profesional-content-canonical-v5.md",
+      "sha256": "4a2893b561beef45f224a9c0831a09f5eba865094bdae9c6a04b02e4f9384c43",
+      "words_total": 7848,
+      "words_substantive": 7133,
+      "words_opening": 528,
+      "audit_score": 40
+    }
   ]
 }

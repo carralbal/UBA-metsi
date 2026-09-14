@@ -1,0 +1,1129 @@
+{
+  "checks": [
+    {
+      "check": "required_package_files_exist",
+      "evidence": {
+        "missing": []
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "html_css_paths_are_local_safe_and_resolve",
+      "evidence": [],
+      "status": "PASS"
+    },
+    {
+      "check": "source_manifest_and_package_identity_are_hash_locked",
+      "evidence": {
+        "actual_sha256": "5532ffba63b8ec503db1d94143b3072dbd7659f15527d7c8f46724846d651b57",
+        "declared_sha256": "5532ffba63b8ec503db1d94143b3072dbd7659f15527d7c8f46724846d651b57",
+        "document_json_matches": true,
+        "source": "source/N26_ecosistema_de_servicios_plataformas_y_terceros-content-canonical-v3.md",
+        "source_exists": true,
+        "source_path_error": null
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "source_ids_have_exact_one_to_one_ordered_coverage",
+      "evidence": {
+        "first_sequence_difference": null,
+        "html_count": 247,
+        "html_unique": 247,
+        "integrity": {
+          "missing_source_ids": [],
+          "rendered_source_id_count": 247,
+          "source_block_count": 247,
+          "status": "PASS",
+          "unexpected_source_ids": []
+        },
+        "manifest_count": 247,
+        "manifest_unique": 247
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "no_exact_repeated_source_blocks",
+      "evidence": [],
+      "status": "PASS"
+    },
+    {
+      "check": "no_lfs_pointers_private_paths_or_placeholders",
+      "evidence": {
+        "lfs_pointers": [],
+        "placeholders": [],
+        "private_paths": []
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "source_register_is_impersonal_and_has_no_incident_dashes",
+      "evidence": {
+        "direct_address": [],
+        "incident_dashes": []
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
+      "evidence": {
+        "bytes": 19022586,
+        "final_sha256": "987ccc49cd0add1afc4623d15ab00ada1dceed461506999f2c10a390d64eaeae",
+        "pages": 25,
+        "raw_artifact_available": true,
+        "raw_artifact_policy": "optional regenerable intermediate",
+        "raw_sha256": "efb0b748080693532d97ebfcec6a1f9b5e33e2ea05bdebb3eecd4e6b2292279b",
+        "unique_sizes": [
+          [
+            594.96,
+            841.92
+          ]
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "every_source_block_has_verifiable_pdf_text",
+      "evidence": {
+        "checked": 247,
+        "missing_source_ids": []
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "contents_index_titles_sections_and_routes_are_complete",
+      "evidence": {
+        "heading_count": 18,
+        "html_routes": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "TRANSFERENCIA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ],
+        "missing_from_contents": [],
+        "pdf_routes": [
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "PROBLEMA",
+          "DISTINCIONES",
+          "DISTINCIONES",
+          "DECISIONES",
+          "PRUEBA",
+          "TRANSFERENCIA",
+          "TRANSFERENCIA",
+          "TRANSFERENCIA",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN",
+          "PREPARACIÓN"
+        ],
+        "section_numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "pill_summary_heading_precedes_items_in_pdf_reading_order",
+      "evidence": {
+        "candidate_pages": [
+          {
+            "first_item_position": 36,
+            "page": 22,
+            "title_position": 10
+          }
+        ],
+        "first_item": "Una promesa que atraviesa organizaciones sigue necesitando una autoridad capaz de responder por el resultado completo.",
+        "found_in_html": true,
+        "title": "Cinco píldoras para recordar"
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "all_source_titles_keep_body_on_the_same_page",
+      "evidence": [],
+      "status": "PASS"
+    },
+    {
+      "check": "hotel_horizonte_and_document_hh_artifact_are_present",
+      "evidence": {
+        "expected_artifact": "HH-26"
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "exactly_two_internal_pauses_with_first_on_page_5",
+      "evidence": {
+        "html_count": 2,
+        "pdf_pages": [
+          5,
+          18
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "cover_page4_pauses_and_closing_are_true_pdf_and_raster_bleeds",
+      "evidence": {
+        "image_pages": {
+          "1": {
+            "pdf_geometry": {
+              "candidates": [
+                {
+                  "gaps_pt": {
+                    "bottom": 0.0,
+                    "left": 0.0,
+                    "right": 0.0,
+                    "top": 0.0
+                  }
+                }
+              ],
+              "passed": true
+            },
+            "raster": {
+              "edge_mean": 47.31,
+              "edge_nonwhite": {
+                "bottom": 1.0,
+                "left": 1.0,
+                "right": 1.0,
+                "top": 1.0
+              },
+              "height_px": 842,
+              "nonwhite_fraction": 0.994012,
+              "page": 1,
+              "pixel_sha256": "467b6577e0aa28846bed5ceb280912e727fae5bfc4fd6fe89705a58c437bc4a4",
+              "vertical_density": 0.8955,
+              "white_gutters": [],
+              "width_px": 595
+            }
+          },
+          "5": {
+            "pdf_geometry": {
+              "candidates": [
+                {
+                  "gaps_pt": {
+                    "bottom": 0.0,
+                    "left": 0.0,
+                    "right": 0.0,
+                    "top": 0.0
+                  }
+                }
+              ],
+              "passed": true
+            },
+            "raster": {
+              "edge_mean": 67.89,
+              "edge_nonwhite": {
+                "bottom": 1.0,
+                "left": 1.0,
+                "right": 1.0,
+                "top": 1.0
+              },
+              "height_px": 842,
+              "nonwhite_fraction": 0.996978,
+              "page": 5,
+              "pixel_sha256": "f61677ae7fb1acfe65c0bd89731661a32d4d8341c4383619033279d07d660e8e",
+              "vertical_density": 0.8955,
+              "white_gutters": [],
+              "width_px": 595
+            }
+          },
+          "18": {
+            "pdf_geometry": {
+              "candidates": [
+                {
+                  "gaps_pt": {
+                    "bottom": 0.0,
+                    "left": 0.0,
+                    "right": 0.0,
+                    "top": 0.0
+                  }
+                }
+              ],
+              "passed": true
+            },
+            "raster": {
+              "edge_mean": 51.02,
+              "edge_nonwhite": {
+                "bottom": 1.0,
+                "left": 1.0,
+                "right": 1.0,
+                "top": 0.99979
+              },
+              "height_px": 842,
+              "nonwhite_fraction": 0.995223,
+              "page": 18,
+              "pixel_sha256": "b37c5ae1e3ad355d10124583d4a44c59ff22f3ad40407c5c4c8f3b1e0957e4cc",
+              "vertical_density": 0.8955,
+              "white_gutters": [],
+              "width_px": 595
+            }
+          },
+          "25": {
+            "pdf_geometry": {
+              "candidates": [
+                {
+                  "gaps_pt": {
+                    "bottom": 0.0,
+                    "left": 0.0,
+                    "right": 0.0,
+                    "top": 0.0
+                  }
+                }
+              ],
+              "passed": true
+            },
+            "raster": {
+              "edge_mean": 239.01,
+              "edge_nonwhite": {
+                "bottom": 1.0,
+                "left": 0.99807,
+                "right": 1.0,
+                "top": 0.99979
+              },
+              "height_px": 842,
+              "nonwhite_fraction": 0.999944,
+              "page": 25,
+              "pixel_sha256": "fcf763dce3500c8836b239628aeec5b9874d9559b52d18a1448edceff0f6fa82",
+              "vertical_density": 0.6663,
+              "white_gutters": [],
+              "width_px": 595
+            }
+          }
+        },
+        "page4": {
+          "dark_geometry": true,
+          "geometry": {
+            "candidates": [
+              {
+                "color": [
+                  0.098,
+                  0.098,
+                  0.098
+                ],
+                "gaps_pt": {
+                  "bottom": 0.0,
+                  "left": 0.0,
+                  "right": 0.0,
+                  "top": 0.0
+                }
+              },
+              {
+                "color": [
+                  0.9804,
+                  0.9804,
+                  0.9725
+                ],
+                "gaps_pt": {
+                  "bottom": 0.0,
+                  "left": 0.0,
+                  "right": 0.0,
+                  "top": 0.0
+                }
+              },
+              {
+                "color": [
+                  0.098,
+                  0.098,
+                  0.098
+                ],
+                "gaps_pt": {
+                  "bottom": 0.0,
+                  "left": 0.0,
+                  "right": 0.0,
+                  "top": 0.0
+                }
+              }
+            ],
+            "passed": true
+          },
+          "raster": {
+            "edge_mean": 25.0,
+            "edge_nonwhite": {
+              "bottom": 1.0,
+              "left": 1.0,
+              "right": 1.0,
+              "top": 1.0
+            },
+            "height_px": 842,
+            "nonwhite_fraction": 0.999469,
+            "page": 4,
+            "pixel_sha256": "1d8bdc8baf1e10792fac341c9fc6f4c831e8cfcd344475018bc88d89bd143f4b",
+            "vertical_density": 0.8955,
+            "white_gutters": [],
+            "width_px": 595
+          }
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "last_page_is_the_structured_matches_closing",
+      "evidence": {
+        "file": "assets/matches-close.png",
+        "manifest": {
+          "alt": "Diez fósforos dispuestos en secuencia vertical, desde intactos hasta consumidos y convertidos en ceniza.",
+          "caption": "La secuencia vuelve visible que toda intervención consume recursos, deja huellas y necesita un criterio de cierre.",
+          "file": "matches-close.png",
+          "folio": true,
+          "footer": true,
+          "sha256": "06318b951ef619692a236027ed07ec7a4a1bb9b66cc875a916c40f060e47ecde"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "all_visible_media_are_decodable_alt_texted_manifested_and_hash_locked",
+      "evidence": {
+        "html_manifest_alt_mismatches": [],
+        "media": [
+          {
+            "declared_sha256": [
+              "3842ccae1092d907017ed29a475ff05cc1b9361c46d6ba3f894b742dc49d52b1"
+            ],
+            "decode": {
+              "format": "PNG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                512,
+                384
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/contents-neutral.png",
+            "hash_ok": true,
+            "sha256": "3842ccae1092d907017ed29a475ff05cc1b9361c46d6ba3f894b742dc49d52b1"
+          },
+          {
+            "declared_sha256": [
+              "a1ac3d408969858bd233c28082277a10fa692462cb1a04b6ed88209e1188d3a8"
+            ],
+            "decode": {
+              "format": "PNG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                1055,
+                1491
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/cover-source-premium-bw-v1.png",
+            "hash_ok": true,
+            "sha256": "a1ac3d408969858bd233c28082277a10fa692462cb1a04b6ed88209e1188d3a8"
+          },
+          {
+            "declared_sha256": [
+              "a3df27e6802fa80733b9dbd08307c0b4ddacc54c46011364f8395bab177a0f3f"
+            ],
+            "decode": {
+              "format": "PNG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                512,
+                384
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/editorial-02.png",
+            "hash_ok": true,
+            "sha256": "a3df27e6802fa80733b9dbd08307c0b4ddacc54c46011364f8395bab177a0f3f"
+          },
+          {
+            "declared_sha256": [
+              "3c3e3a66317daa3bad1cbbf1237467a97b1581599ecf18f6e9679d4302e3cff2"
+            ],
+            "decode": {
+              "format": "PNG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                512,
+                384
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/editorial-03.png",
+            "hash_ok": true,
+            "sha256": "3c3e3a66317daa3bad1cbbf1237467a97b1581599ecf18f6e9679d4302e3cff2"
+          },
+          {
+            "declared_sha256": [
+              "5b6d8d50a5c0bac0544f4d31f51589647be5ccc32dd26159960d27b3013abe5e"
+            ],
+            "decode": {
+              "format": "PNG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                1672,
+                941
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/editorial-04.png",
+            "hash_ok": true,
+            "sha256": "5b6d8d50a5c0bac0544f4d31f51589647be5ccc32dd26159960d27b3013abe5e"
+          },
+          {
+            "declared_sha256": [
+              "1d5eadc948479157fa573b45d16a7803befb27843de02bbd6ce11d026a760cf3"
+            ],
+            "decode": {
+              "format": "PNG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                512,
+                384
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/editorial-05.png",
+            "hash_ok": true,
+            "sha256": "1d5eadc948479157fa573b45d16a7803befb27843de02bbd6ce11d026a760cf3"
+          },
+          {
+            "declared_sha256": [
+              "ecdfdede1a554d425ba91016bee7ca3be5d5336483a952ff322831e4ae2bd329"
+            ],
+            "decode": {
+              "format": "PNG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                512,
+                384
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/editorial-06.png",
+            "hash_ok": true,
+            "sha256": "ecdfdede1a554d425ba91016bee7ca3be5d5336483a952ff322831e4ae2bd329"
+          },
+          {
+            "declared_sha256": [
+              "2f45f5baba6da42b299412657c6fed6ce5d19892dc5878780ace68ad256cdefc"
+            ],
+            "decode": {
+              "format": "PNG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                512,
+                384
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/editorial-07.png",
+            "hash_ok": true,
+            "sha256": "2f45f5baba6da42b299412657c6fed6ce5d19892dc5878780ace68ad256cdefc"
+          },
+          {
+            "declared_sha256": [
+              "0e73e3794d83f9bf479f10ea78c776e082b4e4402973033ba0e6ed7775fd27d5"
+            ],
+            "decode": {
+              "format": "PNG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                512,
+                384
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/editorial-08.png",
+            "hash_ok": true,
+            "sha256": "0e73e3794d83f9bf479f10ea78c776e082b4e4402973033ba0e6ed7775fd27d5"
+          },
+          {
+            "declared_sha256": [
+              "8c7d51cf105ec25743ab926c62efe81d6d7db641e1a0b1afabfc6bb15a71809b"
+            ],
+            "decode": {
+              "format": "PNG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                1122,
+                1402
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/hotel-camila-duarte-v2.png",
+            "hash_ok": true,
+            "sha256": "8c7d51cf105ec25743ab926c62efe81d6d7db641e1a0b1afabfc6bb15a71809b"
+          },
+          {
+            "declared_sha256": [
+              "cbdc3fbb0c472ffb71b9f308a4f8ca28f48328a9fccd8c1801e18b691e5cb68f"
+            ],
+            "decode": {
+              "format": "JPEG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                720,
+                820
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/hotel-elena.jpg",
+            "hash_ok": true,
+            "sha256": "cbdc3fbb0c472ffb71b9f308a4f8ca28f48328a9fccd8c1801e18b691e5cb68f"
+          },
+          {
+            "declared_sha256": [
+              "354e828c3d8f790c20baff3ecc18f24d44dd7f619a6b1e3cb768a2c216cf9b63"
+            ],
+            "decode": {
+              "format": "JPEG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                1254,
+                1254
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/hotel-federico.jpg",
+            "hash_ok": true,
+            "sha256": "354e828c3d8f790c20baff3ecc18f24d44dd7f619a6b1e3cb768a2c216cf9b63"
+          },
+          {
+            "declared_sha256": [
+              "33cde1c1bc6ec8b5ca0f9a1f72a6b402142274e40d0ef566504dba933ba7b3d7"
+            ],
+            "decode": {
+              "format": "PNG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                2172,
+                724
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/hotel-horizonte-canonical.png",
+            "hash_ok": true,
+            "sha256": "33cde1c1bc6ec8b5ca0f9a1f72a6b402142274e40d0ef566504dba933ba7b3d7"
+          },
+          {
+            "declared_sha256": [
+              "e0f1e862fe8b8117d269d46e8b5373b874baebf8ce125d7e2cb2d7114b424ed1"
+            ],
+            "decode": {
+              "format": "JPEG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                720,
+                820
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/hotel-lucia.jpg",
+            "hash_ok": true,
+            "sha256": "e0f1e862fe8b8117d269d46e8b5373b874baebf8ce125d7e2cb2d7114b424ed1"
+          },
+          {
+            "declared_sha256": [
+              "f7972b4fca32393893f06672fe240d64d1f2c157d4e0a56a959fb0cadeccb0cb"
+            ],
+            "decode": {
+              "format": "PNG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                1254,
+                1254
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/hotel-mariela-benitez-v1.png",
+            "hash_ok": true,
+            "sha256": "f7972b4fca32393893f06672fe240d64d1f2c157d4e0a56a959fb0cadeccb0cb"
+          },
+          {
+            "declared_sha256": [
+              "52a07a9be54c05d7152bb218d240fb3ef3ea9d1b6974f5aee085486d2ae389e3"
+            ],
+            "decode": {
+              "format": "JPEG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                1254,
+                1254
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/hotel-ricardo.jpg",
+            "hash_ok": true,
+            "sha256": "52a07a9be54c05d7152bb218d240fb3ef3ea9d1b6974f5aee085486d2ae389e3"
+          },
+          {
+            "declared_sha256": [
+              "06318b951ef619692a236027ed07ec7a4a1bb9b66cc875a916c40f060e47ecde"
+            ],
+            "decode": {
+              "format": "PNG",
+              "kind": "raster",
+              "mode": "RGBA",
+              "size": [
+                2481,
+                3510
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/matches-close.png",
+            "hash_ok": true,
+            "sha256": "06318b951ef619692a236027ed07ec7a4a1bb9b66cc875a916c40f060e47ecde"
+          },
+          {
+            "declared_sha256": [
+              "307cc7be86221ec2d1af2ec2082dbc2c2b18e0ce23921a309a3181a64274562c"
+            ],
+            "decode": {
+              "format": "PNG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                1055,
+                1491
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/pause-01.png",
+            "hash_ok": true,
+            "sha256": "307cc7be86221ec2d1af2ec2082dbc2c2b18e0ce23921a309a3181a64274562c"
+          },
+          {
+            "declared_sha256": [
+              "c4c569bff22a02930c42fbf0ac08d04396eae77741f663200a7c532b30d1a440"
+            ],
+            "decode": {
+              "format": "PNG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                1054,
+                1492
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/pause-02.png",
+            "hash_ok": true,
+            "sha256": "c4c569bff22a02930c42fbf0ac08d04396eae77741f663200a7c532b30d1a440"
+          },
+          {
+            "declared_sha256": [
+              "5658cecff5e91b4814eaa046aa5ed70324768bcf501bf62e3f6a43e385cd78f3"
+            ],
+            "decode": {
+              "format": "JPEG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                734,
+                1024
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/referent-alistair-cockburn.jpg",
+            "hash_ok": true,
+            "sha256": "5658cecff5e91b4814eaa046aa5ed70324768bcf501bf62e3f6a43e385cd78f3"
+          },
+          {
+            "declared_sha256": [
+              "b1670205d125c12c2414caf897c3a52df963cd7959ff3f855b17f059409ab784"
+            ],
+            "decode": {
+              "format": "JPEG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                1200,
+                1680
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/referent-geoffrey-g-parker.jpg",
+            "hash_ok": true,
+            "sha256": "b1670205d125c12c2414caf897c3a52df963cd7959ff3f855b17f059409ab784"
+          },
+          {
+            "declared_sha256": [
+              "ad572e0341fc229448e9d522527a8939b0061619fbec3c8e6ac89d02df68cd47"
+            ],
+            "decode": {
+              "format": "JPEG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                300,
+                340
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/referent-henry-mintzberg.jpg",
+            "hash_ok": true,
+            "sha256": "ad572e0341fc229448e9d522527a8939b0061619fbec3c8e6ac89d02df68cd47"
+          },
+          {
+            "declared_sha256": [
+              "ca65e113f7d4a9f486cbe2e1d6ac1debe90e59c7e05f18c593ba33d04908fa5d"
+            ],
+            "decode": {
+              "format": "JPEG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                1200,
+                800
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/referent-marshall-w-van-alstyne.jpg",
+            "hash_ok": true,
+            "sha256": "ca65e113f7d4a9f486cbe2e1d6ac1debe90e59c7e05f18c593ba33d04908fa5d"
+          },
+          {
+            "declared_sha256": [
+              "7e16c41ef7364ebaae88f5b6d6869d93673c0f54b42d4a011f2fcc5281fa6109"
+            ],
+            "decode": {
+              "format": "JPEG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                1200,
+                1504
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/referent-ronald-coase.jpg",
+            "hash_ok": true,
+            "sha256": "7e16c41ef7364ebaae88f5b6d6869d93673c0f54b42d4a011f2fcc5281fa6109"
+          },
+          {
+            "declared_sha256": [
+              "cf7f9acbffe20369553a8f274faf244d044f3340e3e6ac3bd6ff64f845cd7f21"
+            ],
+            "decode": {
+              "format": "JPEG",
+              "kind": "raster",
+              "mode": "RGB",
+              "size": [
+                5184,
+                3456
+              ]
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "assets/referent-sangeet-paul-choudary.jpg",
+            "hash_ok": true,
+            "sha256": "cf7f9acbffe20369553a8f274faf244d044f3340e3e6ac3bd6ff64f845cd7f21"
+          },
+          {
+            "declared_sha256": [
+              "f8308b7bbf77225581c9e71070b790f6a2edcb219c265167de5bc0ad922534c0"
+            ],
+            "decode": {
+              "kind": "svg",
+              "root": "{http://www.w3.org/2000/svg}svg"
+            },
+            "decoded": true,
+            "exists": true,
+            "file": "diagrams/N26-mapa-01.svg",
+            "hash_ok": true,
+            "sha256": "f8308b7bbf77225581c9e71070b790f6a2edcb219c265167de5bc0ad922534c0"
+          }
+        ],
+        "missing_html_alts": [],
+        "unmanifested_html_images": []
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "no_exact_visual_reuse_contact_sheets_visible_templates_or_duplicate_pages",
+      "evidence": {
+        "duplicate_media_hashes": {},
+        "duplicate_rendered_pages": [],
+        "repeated_image_sources": {},
+        "template_artifacts": []
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "six_real_people_have_six_unique_decodable_raster_portraits_credits_and_approved_rights",
+      "evidence": {
+        "failures": [],
+        "html_contributors": [
+          {
+            "fallback": false,
+            "file": "assets/referent-geoffrey-g-parker.jpg",
+            "name": "Geoffrey G. Parker"
+          },
+          {
+            "fallback": false,
+            "file": "assets/referent-marshall-w-van-alstyne.jpg",
+            "name": "Marshall W. Van Alstyne"
+          },
+          {
+            "fallback": false,
+            "file": "assets/referent-sangeet-paul-choudary.jpg",
+            "name": "Sangeet Paul Choudary"
+          },
+          {
+            "fallback": false,
+            "file": "assets/referent-ronald-coase.jpg",
+            "name": "Ronald Coase"
+          },
+          {
+            "fallback": false,
+            "file": "assets/referent-henry-mintzberg.jpg",
+            "name": "Henry Mintzberg"
+          },
+          {
+            "fallback": false,
+            "file": "assets/referent-alistair-cockburn.jpg",
+            "name": "Alistair Cockburn"
+          }
+        ],
+        "manifest_count": 6,
+        "unique_portrait_hashes": 6
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "one_or_two_semantically_selected_infographics_are_unique_and_layout_safe",
+      "evidence": {
+        "audits": [
+          {
+            "duplicate_shapes": [],
+            "file": "diagrams/N26-mapa-01.svg",
+            "label_token_coverage": {
+              "Capacidades del hotel": 1.0,
+              "Degradación diseñada": 0.5,
+              "Frontera de confianza": 1.0,
+              "Ingreso confirmado": 1.0,
+              "Responsabilidad de punta a punta": 0.5,
+              "Tres participantes autónomos": 0.667
+            },
+            "missing_labels": [],
+            "passed": true,
+            "problems": [],
+            "text_collisions": [],
+            "viewBox": [
+              0.0,
+              0.0,
+              1200.0,
+              1600.0
+            ]
+          }
+        ],
+        "families": [
+          "service-ecosystem-map"
+        ],
+        "hashes": [
+          "f8308b7bbf77225581c9e71070b790f6a2edcb219c265167de5bc0ad922534c0"
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "pdf_is_tagged_es_ar_and_visible_images_have_semantic_alts",
+      "evidence": {
+        "lang": "es-AR",
+        "marked": true,
+        "missing_semantic_alts": [],
+        "struct_tree": true
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "every_page_has_exact_folio_footer_and_link_annotation",
+      "evidence": {
+        "footer_annotation_counts": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "missing_folio_footer_pages": []
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "all_source_urls_are_complete_printed_exactly_annotated_and_confined_to_references",
+      "evidence": {
+        "annotated": [
+          "https://doi.org/10.1111/j.1468-0335.1937.tb00002.x",
+          "https://doi.org/10.6028/NIST.SP.800-161r1-upd1",
+          "https://doi.org/10.6028/NIST.SP.800-207",
+          "https://eur-lex.europa.eu/eli/reg/2023/2854/oj",
+          "https://www.cisa.gov/resources-tools/resources/secure-by-design",
+          "https://www.finops.org/framework/",
+          "https://www.iso.org/standard/70636.html"
+        ],
+        "expected": [
+          "https://doi.org/10.1111/j.1468-0335.1937.tb00002.x",
+          "https://doi.org/10.6028/NIST.SP.800-161r1-upd1",
+          "https://doi.org/10.6028/NIST.SP.800-207",
+          "https://eur-lex.europa.eu/eli/reg/2023/2854/oj",
+          "https://www.cisa.gov/resources-tools/resources/secure-by-design",
+          "https://www.finops.org/framework/",
+          "https://www.iso.org/standard/70636.html"
+        ],
+        "external_link_pages": [
+          24
+        ],
+        "missing_printed": [],
+        "reference_pages": [
+          24
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "ordinary_raster_pages_reach_55_percent_vertical_density",
+      "evidence": {
+        "declared_exceptions": [],
+        "invalid_exception_declarations": [],
+        "minimum": 0.5891,
+        "structural_exceptions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          18,
+          24,
+          25
+        ],
+        "underfilled": {}
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "no_blank_pages_or_clipped_text_objects",
+      "evidence": {
+        "blank_raster_pages": [],
+        "blank_vector_pages": [],
+        "clipped_text": []
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "package_bytes_remained_stable_during_audit",
+      "evidence": {
+        "changed_files": []
+      },
+      "status": "PASS"
+    }
+  ],
+  "document": "N26",
+  "failed_checks": [],
+  "metrics": {
+    "minimum_ordinary_vertical_density": 0.5891,
+    "pages": 25,
+    "pause_pages": [
+      5,
+      18
+    ],
+    "pdf_bytes": 19022586,
+    "pdf_sha256": "987ccc49cd0add1afc4623d15ab00ada1dceed461506999f2c10a390d64eaeae",
+    "source_blocks": 247
+  },
+  "mode": "read-only",
+  "package": "N26-v9-editorial",
+  "passed_checks": 26,
+  "status": "PASS",
+  "total_checks": 26,
+  "validator": "validate_n11_n36_v6.py",
+  "version": "v9-editorial"
+}

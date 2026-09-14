@@ -2,7 +2,7 @@
 """Stage and, only with --apply, publish rebuilt N11-N36 into ``site``.
 
 The public ``v1-final`` filenames are stable compatibility routes. Their bytes
-come from the current v8 editorial packages. The default invocation is a dry
+come from the current v9 editorial packages. The default invocation is a dry
 run: it performs every source/gate/staging check but does not mutate ``site`` or
 either course manifest. The apply phase is guarded against concurrent changes
 and rolls back every replaced file if the final site validator fails.
@@ -34,9 +34,9 @@ SITE = REPO / "site"
 FIRST = 11
 LAST = 36
 COVER_DPI = 120
-SOURCE_VERSION = "v8-editorial"
-SOURCE_VERSION_SHORT = "v8"
-VALIDATOR_VERSION = 8
+SOURCE_VERSION = "v9-editorial"
+SOURCE_VERSION_SHORT = "v9"
+VALIDATOR_VERSION = 9
 PUBLIC_ROUTE_CONTRACT = "stable-v1-filename"
 ACADEMIC_REVISION_MANIFEST = REPO / "academic-content-revision-manifest-n11-n36.json"
 
@@ -340,7 +340,7 @@ def merge_gate(partial: list[dict[str, Any]], reports: dict[str, dict[str, Any]]
             {
                 "qa_validator": str(report.get("validator", "")),
                 "qa_validator_sha256": validator_hash,
-                "qa_report": f"qa-reports/n11-n36-v8/{code}-validation-v8.json",
+                "qa_report": f"qa-reports/n11-n36-v9/{code}-validation-v9.json",
                 "qa_status": str(report.get("status", "")),
                 "qa_checks": int(report.get("total_checks", 0)),
                 "qa_report_sha256": hashlib.sha256(rendered_json(report).encode("utf-8")).hexdigest(),
@@ -712,7 +712,7 @@ def main() -> int:
         protected_baseline = snapshot(protected_paths)
         target_relatives = [public_pdf_relative(n) for n in range(FIRST, LAST + 1)]
         target_relatives += [cover_relative(n) for n in range(FIRST, LAST + 1)]
-        target_relatives += [Path(f"qa-reports/n11-n36-v8/{code_for(n)}-validation-v8.json") for n in range(FIRST, LAST + 1)]
+        target_relatives += [Path(f"qa-reports/n11-n36-v9/{code_for(n)}-validation-v9.json") for n in range(FIRST, LAST + 1)]
         target_relatives += [Path("site/index.html"), Path("site/course-manifest.json"), Path("course-manifest.json"), Path("site/audit.json")]
         target_baseline = snapshot([REPO / relative for relative in target_relatives])
 
