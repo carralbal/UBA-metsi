@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "1a30132ae8bb5bc4f2a26444f396a2a80b0dda76cea319e8d8a4982824ad70c4",
-        "declared_sha256": "1a30132ae8bb5bc4f2a26444f396a2a80b0dda76cea319e8d8a4982824ad70c4",
+        "actual_sha256": "2d871428a3dbbd7ec13bbc2a41c0c745add09efe78b4b1cdbc85eb40ab11cf22",
+        "declared_sha256": "2d871428a3dbbd7ec13bbc2a41c0c745add09efe78b4b1cdbc85eb40ab11cf22",
         "document_json_matches": true,
         "source": "source/N16_coherencia_contradicciones_productivas_y_ciclos_de_vida-content-canonical-v3.md",
         "source_exists": true,
@@ -48,6 +48,19 @@
       "status": "PASS"
     },
     {
+      "check": "errors_grid_groups_each_label_with_its_explanation",
+      "evidence": [
+        {
+          "cards": 9,
+          "declared_rows": 5,
+          "expected_rows": 5,
+          "labels": 9,
+          "naked_pairs": 0
+        }
+      ],
+      "status": "PASS"
+    },
+    {
       "check": "no_lfs_pointers_private_paths_or_placeholders",
       "evidence": {
         "lfs_pointers": [],
@@ -67,12 +80,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 17406372,
-        "final_sha256": "42cd41a5bb39c55bdd1d8b6539498e478485c99eb1ecbb8050b330a58cee5e6b",
+        "bytes": 17396281,
+        "final_sha256": "e1ea14ced18e109eb12ee374243b3f1e0497d20e8f604dbb22fde36d0f499e96",
         "pages": 29,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "5d42d65558e7f443d298e7771cf1cf45d0d3b29bc62a9fe80cb1b4584e7bc2af",
+        "raw_sha256": "278ac047b4dc996734a92090c70860bd6e8c9177e69290c18060baee79216c3b",
         "unique_sizes": [
           [
             594.96,
@@ -1129,15 +1142,15 @@
       5,
       23
     ],
-    "pdf_bytes": 17406372,
-    "pdf_sha256": "42cd41a5bb39c55bdd1d8b6539498e478485c99eb1ecbb8050b330a58cee5e6b",
+    "pdf_bytes": 17396281,
+    "pdf_sha256": "e1ea14ced18e109eb12ee374243b3f1e0497d20e8f604dbb22fde36d0f499e96",
     "source_blocks": 310
   },
   "mode": "read-only",
   "package": "N16-v9-editorial",
-  "passed_checks": 26,
+  "passed_checks": 27,
   "status": "PASS",
-  "total_checks": 26,
+  "total_checks": 27,
   "validator": "validate_n11_n36_v6.py",
   "version": "v9-editorial"
 }

@@ -234,7 +234,7 @@ La reconciliación también produce información de mejora. Si las mismas diverg
 
 ### Compensación y sagas
 
-Cuando una transición cruza componentes con transacciones locales, no siempre puede revertirse de manera atómica. Una saga coordina una secuencia de pasos y define acciones compensatorias si no puede continuar. Puede utilizar coreografía entre participantes u orquestación mediante un coordinador.
+Cuando una operación tiene varios pasos y uno falla, no siempre existe un botón capaz de volver todo atrás. Una saga coordina esos pasos y una compensación repara lo posible; por ejemplo, cancelar una reserva y devolver el pago no borra el mensaje que ya recibió la persona. Cuando una transición cruza componentes con transacciones locales, no siempre puede revertirse de manera atómica. Una saga coordina una secuencia de pasos y define acciones compensatorias si no puede continuar. Puede utilizar coreografía entre participantes u orquestación mediante un coordinador.
 
 La guía actual del Azure Architecture Center advierte que las compensaciones no recrean necesariamente el estado inicial, pueden fallar y requieren seguimiento. Un reembolso no elimina la comunicación enviada; una reasignación no borra la espera. Deben distinguirse pasos compensables, reintentables e irreversibles.
 

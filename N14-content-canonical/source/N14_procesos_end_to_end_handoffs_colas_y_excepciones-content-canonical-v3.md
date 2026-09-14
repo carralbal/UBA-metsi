@@ -252,7 +252,7 @@ Una alternativa es un equipo estable alrededor de la capacidad en lugar de un co
 
 ## Automatización e inteligencia artificial dentro del proceso
 
-Automatizar una tarea no mejora necesariamente el flujo. Un clasificador puede derivar certificados a Equivalencias con rapidez y aumentar falsos desvíos. Un agente puede perseguir respuestas entre sistemas y repetir solicitudes. La evaluación debe observar tiempo total, errores, retrabajo y daño.
+Automatizar una tarea es darle parte del trabajo a una regla o herramienta; no garantiza mejorar el recorrido completo. Un clasificador puede ordenar casos más rápido y, si se equivoca de destino, crear una cola mayor en el área siguiente. Automatizar una tarea no mejora necesariamente el flujo. Un clasificador puede derivar certificados a Equivalencias con rapidez y aumentar falsos desvíos. Un agente puede perseguir respuestas entre sistemas y repetir solicitudes. La evaluación debe observar tiempo total, errores, retrabajo y daño.
 
 La inteligencia artificial puede ayudar a resumir expedientes, detectar variantes, proponer prioridad o reunir evidencia. No debe ocultar criterio ni autoridad. Una recomendación necesita señales, incertidumbre y posibilidad de revisión.
 

@@ -111,7 +111,7 @@ No estudiaremos estas palabras como un catálogo de definiciones. METSI pregunta
 
 ### Gestionar una intervención
 
-En la familia de gestión aparecen **PMI**, **PMBOK**, proyecto, programa, portfolio, **WBS**, riesgo y *tailoring*. Estos términos permiten organizar alcance, trabajo, dependencias, responsabilidades y decisiones. METSI agrega una pregunta previa: ¿el objeto que estamos gestionando representa suficientemente el problema y la capacidad que necesitamos transformar? Una WBS puede descomponer con precisión un proyecto equivocado; un registro de riesgos puede ser impecable y omitir el riesgo que quedó fuera de la frontera; un tailoring puede adaptar prácticas con rigor o simplemente eliminar controles incómodos.
+Gestionar una intervención es organizar el trabajo sin perder de vista el problema que se quiere cambiar. Por ejemplo, un cronograma puede estar completo y aun así conducir a construir una solución que nadie necesita. En la familia de gestión aparecen **PMI**, **PMBOK**, proyecto, programa, portfolio, **WBS**, riesgo y *tailoring*. Estos términos permiten organizar alcance, trabajo, dependencias, responsabilidades y decisiones. METSI agrega una pregunta previa: ¿el objeto que estamos gestionando representa suficientemente el problema y la capacidad que necesitamos transformar? Una WBS puede descomponer con precisión un proyecto equivocado; un registro de riesgos puede ser impecable y omitir el riesgo que quedó fuera de la frontera; un tailoring puede adaptar prácticas con rigor o simplemente eliminar controles incómodos.
 
 ### Trabajar con agilidad y flujo
 
@@ -342,7 +342,7 @@ La portada identifica el número, el título y la tesis breve del documento. La 
 
 ### Contenido
 
-La tabla de contenido permite anticipar el recorrido. Antes de comenzar, conviene recorrer sus títulos y formular una hipótesis: ¿qué camino parece proponer el documento?, ¿qué conceptos resultan conocidos?, ¿dónde podría estar la dificultad? Esa anticipación activa conocimiento previo y evita leer cada sección como un fragmento aislado.
+En palabras simples, esta página es el mapa de la lectura: muestra qué conviene leer primero, qué partes profundizan y cuánto tiempo reservar. Por ejemplo, una estudiante con noventa minutos puede seguir sólo la ruta marcada y volver luego a las extensiones. La tabla de contenido permite anticipar el recorrido. Antes de comenzar, conviene recorrer sus títulos y formular una hipótesis: ¿qué camino parece proponer el documento?, ¿qué conceptos resultan conocidos?, ¿dónde podría estar la dificultad? Esa anticipación activa conocimiento previo y evita leer cada sección como un fragmento aislado.
 
 ### Referentes
 
@@ -362,7 +362,7 @@ La tesis es la afirmación principal que el documento defenderá. Debe leerse co
 
 ### Desarrollo conceptual
 
-El desarrollo combina definiciones, distinciones, marcos, evidencia y discusión. Algunas secciones requieren dos velocidades. En una primera pasada se busca el argumento general. En una segunda se revisan términos, relaciones y ejemplos. Si un párrafo no se entiende, conviene preguntar qué función cumple dentro de la tesis antes de consultar cada palabra por separado.
+El desarrollo conceptual explica las ideas con más precisión después de presentar su sentido general. Por ejemplo, primero podemos entender que una frontera decide qué queda dentro del análisis y luego estudiar sus criterios, efectos y límites. El desarrollo combina definiciones, distinciones, marcos, evidencia y discusión. Algunas secciones requieren dos velocidades. En una primera pasada se busca el argumento general. En una segunda se revisan términos, relaciones y ejemplos. Si un párrafo no se entiende, conviene preguntar qué función cumple dentro de la tesis antes de consultar cada palabra por separado.
 
 ### Ejemplos intercalados
 
@@ -370,11 +370,11 @@ Los ejemplos reducen la distancia entre concepto y situación. No deben memoriza
 
 ### Infografías
 
-Una infografía aparece cuando una relación se comprende mejor visualmente. Puede mostrar partes, capas, secuencias, bucles, decisiones o integraciones. Debe leerse en dos sentidos: primero la estructura completa; luego cada componente y sus conexiones. Si el diagrama sólo se mira como ilustración, se pierde su valor. Si no agrega una relación que el texto no muestra con igual claridad, no debería estar.
+Una infografía es un dibujo que ayuda a ver relaciones difíciles de seguir sólo con palabras. Por ejemplo, una flecha entre Reserva y Recepción puede mostrar quién envía información, en qué dirección y antes de qué decisión. Una infografía aparece cuando una relación se comprende mejor visualmente. Puede mostrar partes, capas, secuencias, bucles, decisiones o integraciones. Debe leerse en dos sentidos: primero la estructura completa; luego cada componente y sus conexiones. Si el diagrama sólo se mira como ilustración, se pierde su valor. Si no agrega una relación que el texto no muestra con igual claridad, no debería estar.
 
 ### Pausas visuales
 
-Las páginas de imagen completa dan respiración al ritmo de lectura y condensan una frase potente. No reemplazan contenido. Invitan a detenerse y recuperar una idea antes de avanzar. El paralelogramo volt funciona como firma visual y no como señal de que la frase sea más verdadera. La página final conserva el sistema de compaginación y accesibilidad, pero omite la frase porque funciona como marca de cierre y no como condensación argumental.
+Una pausa visual es como levantar la vista después de varias páginas para ordenar lo aprendido. La fotografía y una frase breve no agregan otro tema: ayudan a relacionar la idea anterior antes de continuar. Las páginas de imagen completa dan respiración al ritmo de lectura y condensan una frase potente. No reemplazan contenido. Invitan a detenerse y recuperar una idea antes de avanzar. El paralelogramo volt funciona como firma visual y no como señal de que la frase sea más verdadera. La página final conserva el sistema de compaginación y accesibilidad, pero omite la frase porque funciona como marca de cierre y no como condensación argumental.
 
 ### Hotel Horizonte
 
@@ -382,7 +382,7 @@ El caso longitudinal traduce conceptos a una organización ficticia pero verosí
 
 ### Arquetipos del caso
 
-Elena Acosta, Lucía Ferreyra, Mariela Benítez, Ricardo Sosa, Federico Müller y Camila Duarte se presentan en N00 como arquetipos situados: tienen edad, responsabilidad, información disponible, necesidades, miedos, supuestos y puntos ciegos. No son estereotipos psicológicos ni voces que deban obedecerse. Sirven para anticipar por qué una misma escena puede producir interpretaciones legítimamente distintas. En los Núcleos siguientes sus intervenciones aparecerán entre comillas y deberán analizarse como posiciones: qué observan, qué controlan, qué arriesgan y qué permanece fuera de su campo de visión.
+Los arquetipos son personajes estables que permiten mirar el mismo problema desde lugares distintos. Por ejemplo, Lucía ve la llegada desde Recepción y Federico desde Tecnología; ninguno posee por sí solo toda la explicación. Elena Acosta, Lucía Ferreyra, Mariela Benítez, Ricardo Sosa, Federico Müller y Camila Duarte se presentan en N00 como arquetipos situados: tienen edad, responsabilidad, información disponible, necesidades, miedos, supuestos y puntos ciegos. No son estereotipos psicológicos ni voces que deban obedecerse. Sirven para anticipar por qué una misma escena puede producir interpretaciones legítimamente distintas. En los Núcleos siguientes sus intervenciones aparecerán entre comillas y deberán analizarse como posiciones: qué observan, qué controlan, qué arriesgan y qué permanece fuera de su campo de visión.
 
 ### Límites y tensiones
 

@@ -94,7 +94,7 @@ Estas distinciones no persiguen pureza terminológica. Evitan sustituciones frec
 
 ## La metodología como sistema de preguntas
 
-Una metodología situada debe ayudar a recorrer, al menos, seis familias de preguntas.
+En palabras simples, una metodología ayuda a preguntar antes de actuar. Si una facultad pide un chatbot, primero obliga a aclarar qué problema debe cambiar, para quién y qué dato mostraría una mejora. Una metodología situada debe ayudar a recorrer, al menos, seis familias de preguntas.
 
 Checkland y Poulter proponen trabajar con situaciones problemáticas antes que suponer que el problema ya viene definido. Esa diferencia es central: una metodología no recibe un objeto neutral, sino un conjunto de interpretaciones, intereses y relaciones que deben hacerse discutibles antes de decidir qué cambiar.
 
@@ -270,7 +270,7 @@ El equipo se define como ágil, lean, design thinking o data-driven y evalúa de
 
 ### La metodología como legitimación retrospectiva
 
-La solución se decidió antes. Después se producen artefactos y evidencia para justificarla. Las entrevistas buscan confirmación; las métricas se eligen por conveniencia; el piloto demuestra que el sistema ejecuta, no que mejora el outcome. La metodología ya no organiza aprendizaje: fabrica consentimiento.
+Este error ocurre cuando el equipo decide primero y arma después una explicación elegante para justificarlo. Por ejemplo, compra una herramienta y recién entonces selecciona métricas que hacen parecer inevitable esa elección. La solución se decidió antes. Después se producen artefactos y evidencia para justificarla. Las entrevistas buscan confirmación; las métricas se eligen por conveniencia; el piloto demuestra que el sistema ejecuta, no que mejora el outcome. La metodología ya no organiza aprendizaje: fabrica consentimiento.
 
 Reconocer estos patrones es difícil porque pueden producir entregables impecables. El criterio de revisabilidad permite detectarlos aun cuando la forma parezca correcta.
 

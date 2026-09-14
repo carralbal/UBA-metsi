@@ -462,6 +462,8 @@ def update_manifests(records: list[dict[str, Any]]) -> tuple[dict[str, Any], dic
                 "package_sha256": record["package_sha256"],
                 "package_files": record["package_files"],
                 "qa_report": record["qa_report"],
+                "qa_status": record["qa_status"],
+                "qa_checks": record["qa_checks"],
                 "qa_report_sha256": record["qa_report_sha256"],
                 "qa_validator": record["qa_validator"],
                 "qa_validator_sha256": record["qa_validator_sha256"],

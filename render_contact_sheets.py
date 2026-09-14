@@ -37,7 +37,7 @@ def pdf_path(number: int) -> Path:
     if number == 10:
         return ROOT / "N10-v9-final" / "output" / "N10-METSI-lectura-previa-v9-final.pdf"
     if 11 <= number <= 36:
-        return ROOT / f"N{number:02d}-v7-editorial" / "output" / f"N{number:02d}-METSI-lectura-previa-v7-final.pdf"
+        return ROOT / f"N{number:02d}-v9-editorial" / "output" / f"N{number:02d}-METSI-lectura-previa-v9-final.pdf"
     return ROOT / code / "output" / f"{code}-METSI-lectura-previa-final.pdf"
 
 

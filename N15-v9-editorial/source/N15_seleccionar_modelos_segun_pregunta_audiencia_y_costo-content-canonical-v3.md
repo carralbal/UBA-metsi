@@ -92,7 +92,7 @@ La pregunta debe poder refutarse o cerrarse provisionalmente. “Modelar el sist
 
 ### Partes interesadas, preocupaciones y puntos de vista
 
-ISO/IEC/IEEE 42010:2022 distingue arquitectura de descripción de arquitectura y organiza partes interesadas, preocupaciones, puntos de vista y vistas. En la terminología del estándar, un *viewpoint* especifica convenciones para construir una vista que responde a preocupaciones de ciertas audiencias.
+Personas distintas necesitan mirar aspectos distintos del mismo sistema. En un hotel, Seguridad pregunta quién accede, Operaciones cómo se repara una excepción y Dirección qué riesgo acepta; una sola vista rara vez responde bien a las tres. ISO/IEC/IEEE 42010:2022 distingue arquitectura de descripción de arquitectura y organiza partes interesadas, preocupaciones, puntos de vista y vistas. En la terminología del estándar, un *viewpoint* especifica convenciones para construir una vista que responde a preocupaciones de ciertas audiencias.
 
 La contribución es metodológica: no existe una vista neutral para todos. Seguridad necesita límites de confianza. Operaciones, dependencias y recuperación. Dirección, capacidades y riesgos. Desarrollo, estructura suficiente para cambiar.
 
@@ -192,7 +192,7 @@ El tiempo puede representarse como orden, duración, demora o frecuencia. Un dia
 
 ### Modelos de decisión y causalidad
 
-Una tabla de decisión representa combinaciones de condiciones y resultados. Un árbol muestra ramificación. Un modelo causal expresa mecanismos, retroalimentación y demoras. Un argumento vincula afirmación, evidencia y rivales.
+No todos los dibujos sirven para la misma pregunta. Un árbol ayuda a elegir entre caminos; un modelo causal ayuda a explicar por qué un cambio puede producir otro efecto más tarde. Una tabla de decisión representa combinaciones de condiciones y resultados. Un árbol muestra ramificación. Un modelo causal expresa mecanismos, retroalimentación y demoras. Un argumento vincula afirmación, evidencia y rivales.
 
 John Sterman muestra que los modelos de dinámica de sistemas permiten explorar cómo estructura y retroalimentación generan comportamiento. Peter Checkland utiliza modelos conceptuales en Soft Systems Methodology como dispositivos para aprender sobre situaciones, no como copias de la realidad.
 
@@ -252,7 +252,7 @@ La traducción también puede revelar desacuerdo. Si Tecnología llama “éxito
 
 ### Costo total de un modelo
 
-El costo incluye investigar, construir, explicar, validar, mantener, gobernar y retirar. También incluye decisiones equivocadas por ambigüedad o desactualización.
+Un modelo no cuesta sólo lo que tarda en dibujarse. También cuesta explicarlo, mantenerlo al día y corregir decisiones tomadas con una versión vieja; una lámina barata puede volverse cara si nadie entiende cuándo dejó de valer. El costo incluye investigar, construir, explicar, validar, mantener, gobernar y retirar. También incluye decisiones equivocadas por ambigüedad o desactualización.
 
 Un diagrama generado puede ser barato de actualizar y caro de comprender. Un taller participativo puede ser costoso y revelar una frontera decisiva. La comparación utiliza consecuencia evitada, frecuencia de uso y vida esperada.
 
@@ -323,7 +323,7 @@ También puede concluir “construir para una sola decisión”. No toda vista n
 
 ### Matriz pregunta modelo
 
-Se listan preguntas en filas y modelos candidatos en columnas. Cada cruce indica cobertura fuerte, parcial o nula, costo y audiencia. La matriz evita elegir por costumbre.
+Esta matriz es una tabla para comparar qué representación ayuda mejor a responder cada pregunta. Si necesitamos saber dónde espera una persona, un proceso puede servir más que un diagrama de software; si buscamos una dependencia técnica, puede ocurrir lo contrario. Se listan preguntas en filas y modelos candidatos en columnas. Cada cruce indica cobertura fuerte, parcial o nula, costo y audiencia. La matriz evita elegir por costumbre.
 
 Una pregunta puede requerir modelos complementarios. Cuando necesita muchas vistas, se revisan alcance, decisiones mezcladas y costo de comprensión; la cantidad no demuestra por sí sola que esté mal formulada. Una vista que cubre todo parcialmente puede no cubrir nada con suficiente precisión.
 

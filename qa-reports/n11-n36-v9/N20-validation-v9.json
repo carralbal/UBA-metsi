@@ -48,6 +48,19 @@
       "status": "PASS"
     },
     {
+      "check": "errors_grid_groups_each_label_with_its_explanation",
+      "evidence": [
+        {
+          "cards": 10,
+          "declared_rows": 5,
+          "expected_rows": 5,
+          "labels": 10,
+          "naked_pairs": 0
+        }
+      ],
+      "status": "PASS"
+    },
+    {
       "check": "no_lfs_pointers_private_paths_or_placeholders",
       "evidence": {
         "lfs_pointers": [],
@@ -67,12 +80,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 20029045,
-        "final_sha256": "829edd72b51ceb069a3aca3120d2363f2e12a26afa036f60408f6f29d094f38d",
+        "bytes": 19957202,
+        "final_sha256": "6faf129190d955cf814a937d435d07839b3dc15674054cd2a072afab43a172c5",
         "pages": 29,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "fe6cc0dd5602e351b3796c870a81c552737ab24aec07da4c7972cfd8eef98dc3",
+        "raw_sha256": "6970be99756e0ad9a07f487afede39e5db2f4e5b14f1b1168567439fc19ade7d",
         "unique_sizes": [
           [
             594.96,
@@ -1130,15 +1143,15 @@
       5,
       23
     ],
-    "pdf_bytes": 20029045,
-    "pdf_sha256": "829edd72b51ceb069a3aca3120d2363f2e12a26afa036f60408f6f29d094f38d",
+    "pdf_bytes": 19957202,
+    "pdf_sha256": "6faf129190d955cf814a937d435d07839b3dc15674054cd2a072afab43a172c5",
     "source_blocks": 284
   },
   "mode": "read-only",
   "package": "N20-v9-editorial",
-  "passed_checks": 26,
+  "passed_checks": 27,
   "status": "PASS",
-  "total_checks": 26,
+  "total_checks": 27,
   "validator": "validate_n11_n36_v6.py",
   "version": "v9-editorial"
 }

@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "502252ab9d6381f3527a0c27b1268524aed0c912ab484b70494427783d55beb8",
-        "declared_sha256": "502252ab9d6381f3527a0c27b1268524aed0c912ab484b70494427783d55beb8",
+        "actual_sha256": "ee7c4e5a7d980497445c7b5046c5c8632816c33ccd7f48bf96c208431653d04a",
+        "declared_sha256": "ee7c4e5a7d980497445c7b5046c5c8632816c33ccd7f48bf96c208431653d04a",
         "document_json_matches": true,
         "source": "source/N18_legado_regulacion_y_documentacion_como_valor_restriccion_y_evidencia-content-canonical-v3.md",
         "source_exists": true,
@@ -48,6 +48,19 @@
       "status": "PASS"
     },
     {
+      "check": "errors_grid_groups_each_label_with_its_explanation",
+      "evidence": [
+        {
+          "cards": 10,
+          "declared_rows": 5,
+          "expected_rows": 5,
+          "labels": 10,
+          "naked_pairs": 0
+        }
+      ],
+      "status": "PASS"
+    },
+    {
       "check": "no_lfs_pointers_private_paths_or_placeholders",
       "evidence": {
         "lfs_pointers": [],
@@ -67,12 +80,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 19926947,
-        "final_sha256": "4f2f69d1ec46fde13053d889101bf0ac177b7daba858a728f69d29d193585025",
+        "bytes": 19909166,
+        "final_sha256": "c1d4c4557ff811da3bb0cfef16e6d093dfb5ed975527c94332617764e7f9a3a1",
         "pages": 28,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "221b7992c536ba8de356c6c527a68c618ed69beba661c1ee8869d845f0f5e394",
+        "raw_sha256": "da911720cf1c40429e42435fa40aa3a0f6aa2084ec07cbe2f25c2fa69c235680",
         "unique_sizes": [
           [
             594.96,
@@ -1137,15 +1150,15 @@
       5,
       21
     ],
-    "pdf_bytes": 19926947,
-    "pdf_sha256": "4f2f69d1ec46fde13053d889101bf0ac177b7daba858a728f69d29d193585025",
+    "pdf_bytes": 19909166,
+    "pdf_sha256": "c1d4c4557ff811da3bb0cfef16e6d093dfb5ed975527c94332617764e7f9a3a1",
     "source_blocks": 264
   },
   "mode": "read-only",
   "package": "N18-v9-editorial",
-  "passed_checks": 26,
+  "passed_checks": 27,
   "status": "PASS",
-  "total_checks": 26,
+  "total_checks": 27,
   "validator": "validate_n11_n36_v6.py",
   "version": "v9-editorial"
 }

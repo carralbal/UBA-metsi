@@ -36,17 +36,9 @@ La pregunta metodológica no es todavía si el PMS debe reemplazarse. Es cuál e
 
 ## Tesis
 
-Un sistema de información organizacional no es un programa ni una suma de aplicaciones. Es una configuración de trabajo mediante la cual personas y tecnologías producen e interpretan información, aplican reglas, coordinan acciones y entregan productos o servicios a alguien. Sus resultados dependen de relaciones entre participantes, información, tecnologías, procesos, autoridad, infraestructura y entorno. Por eso una aplicación puede funcionar según su especificación mientras el sistema completo incumple su propósito. Esta tesis tiene una consecuencia práctica: antes de definir requisitos o seleccionar una solución, el profesional debe construir una representación provisional del sistema de trabajo relevante. Esa representación no intenta incluir toda la organización. Debe ser lo bastante amplia para explicar el resultado y lo bastante acotada para sostener una decisión. Su frontera se justifica mediante una pregunta y una promesa de servicio, no mediante el organigrama ni el inventario tecnológico.
+Un sistema de información organizacional no es un programa ni una suma de aplicaciones. Es una configuración de trabajo mediante la cual personas y tecnologías producen e interpretan información, aplican reglas, coordinan acciones y entregan productos o servicios a alguien. Sus resultados dependen de relaciones entre participantes, información, tecnologías, procesos, autoridad, infraestructura y entorno. Por eso una aplicación puede funcionar según su especificación mientras el sistema completo incumple su propósito.
 
-En términos prácticos, el mecanismo consiste en elegir la frontera según la pregunta e incluir reglas, conversaciones, terceros, excepciones y reparaciones capaces de cambiar el resultado. Cada parte cumple una función distinta y evita que una herramienta o una métrica reemplace al razonamiento que debería sostenerla. Lo importante es poder explicar por qué esa secuencia resulta adecuada para este problema.
-
-Puede verse en una situación cotidiana: una transferencia rechazada puede originarse en la pantalla, un límite antifraude, una demora de identidad o una regla diferente entre canales. La escena comienza simple y gana complejidad cuando aparecen población, tiempo, dependencias y consecuencias. Esa progresión permite aprender sin saltar directamente a una solución total.
-
-Un contraejemplo marca la frontera de la tesis: afirmar que todo está conectado y producir un inventario infinito que no cambia hipótesis, riesgos ni decisiones. La misma práctica deja de ser defendible cuando ya no produce evidencia, desplaza daño o impide revisar el compromiso. Nombrar el límite es parte de comprender, no una nota marginal.
-
-Hotel Horizonte vuelve concreta la distinción: una reserva confirmada falla aunque el PMS responda: la promesa atraviesa Comercial, Housekeeping, cerraduras, Recepción y reparación. Las voces del caso no ilustran una respuesta predeterminada; muestran cómo una decisión cambia según quién sostiene la promesa, quién opera y quién recibe las consecuencias.
-
-Para la práctica profesional, esto implica declarar para qué se dibuja una frontera y qué evidencia obligaría a moverla; N03 examinará relaciones y retroalimentaciones. El documento ofrece un paso acumulativo del recorrido, pero conserva abierta la evidencia que podría obligar a corregirlo en el núcleo siguiente.
+Esta tesis tiene una consecuencia práctica: antes de definir requisitos o seleccionar una solución, el profesional debe construir una representación provisional del sistema de trabajo relevante. Esa representación no intenta incluir toda la organización. Debe ser lo bastante amplia para explicar el resultado y lo bastante acotada para sostener una decisión. Su frontera se justifica mediante una pregunta y una promesa de servicio, no mediante el organigrama ni el inventario tecnológico.
 
 ## De HH-01 a HH-02: del pedido revisable al sistema relevante
 
@@ -99,10 +91,6 @@ La tradición socio-técnica agrega una tercera exigencia. Desde los estudios de
 La literatura reciente no reemplaza esas raíces; muestra por qué siguen siendo necesarias. Una revisión sistemática de Polojärvi (2023) encontró que “sistema socio-técnico” se usa con sentidos diferentes y que una definición superficial (“personas más tecnología”) no alcanza para explicar relaciones. Alter (2024) dio un paso adicional: en sistemas crecientemente automatizados, hablar de “uso” como una persona operando una interfaz resulta insuficiente. El usuario de una capacidad puede ser un sistema de trabajo completo que delega funciones y responsabilidades a dispositivos o agentes. Esta actualización importa porque obliga a mapear quién o qué realiza trabajo, no solamente quién toca la pantalla.
 
 Estas tres perspectivas no son idénticas. Alter ofrece un marco descriptivo relativamente concreto para analizar trabajo; Checkland subraya que la selección del sistema depende de la situación y del observador; la tradición socio-técnica introduce la interdependencia entre diseño técnico, organización del trabajo y participación. METSI las utiliza de forma complementaria: necesitamos un mapa suficientemente concreto para intervenir, pero debemos tratarlo como una hipótesis revisable y preguntar quién participó en su construcción.
-
-Rolando García aporta una formulación latinoamericana especialmente útil para este punto. Un sistema complejo no está dado antes de la investigación: se construye al seleccionar elementos, relaciones, escalas y condiciones según un problema. Esa construcción no autoriza arbitrariedad. Obliga a explicitar el recorte, articular disciplinas y revisar la frontera cuando la evidencia muestra interacciones que el modelo no puede explicar. En HH-02, el hotel, sus proveedores y sus prácticas no forman un sistema relevante por compartir un inventario, sino porque sus relaciones producen la capacidad y la contradicción que se investigan. El mapa debe justificar por qué cada elemento entra y qué explicación perdería si quedara afuera.
-
-La interdisciplina tampoco consiste en reunir especialistas para que cada uno describa su componente. Requiere construir preguntas comunes y relaciones que ninguna disciplina puede establecer sola. Operaciones, Sistemas, Comercial y quienes reciben el servicio contrastan el mismo episodio y revisan el recorte. La integración se reconoce cuando cambia la explicación o la decisión, no por la cantidad de voces convocadas.
 
 La distinción no exige ampliar siempre el análisis. Existen problemas cuya causa dominante sí está contenida en un componente: una consulta sin índice, una pérdida de memoria o un certificado vencido pueden diagnosticarse y corregirse técnicamente. El criterio es explicativo, no ideológico. Si la frontera técnica permite reconstruir el episodio, predecir la falla y corregirla sin trasladar consecuencias relevantes, agregar actores y procesos sería costo sin beneficio. La mirada socio-técnica se vuelve necesaria cuando el resultado depende de significados, decisiones, coordinación o condiciones que el componente no controla. Saber reducir la frontera es tan profesional como saber ampliarla.
 
@@ -249,11 +237,11 @@ No comenzar con “sistema de reservas”, porque ese nombre ya privilegia una s
 
 ### 2. Reconstruir un episodio completo
 
-Elegir un caso real desde la señal inicial hasta la resolución. Registrar participantes, decisiones, esperas, herramientas, información y reparaciones. El episodio impide que el mapa se apoye únicamente en procedimientos o entrevistas generales.
+Reconstruir un episodio es contar un caso real desde que empieza hasta que termina, sin saltar las esperas ni las reparaciones. Una reserva concreta permite ver quién actuó, qué información recibió y dónde cambió el resultado. Elegir un caso real desde la señal inicial hasta la resolución. Registrar participantes, decisiones, esperas, herramientas, información y reparaciones. El episodio impide que el mapa se apoye únicamente en procedimientos o entrevistas generales.
 
 ### 3. Dibujar relaciones con verbos y tiempos
 
-Mostrar quién promete, registra, interpreta, modifica, espera, autoriza, entrega y repara. Incorporar demoras y ventanas cuando cambian el comportamiento. Las flechas sin verbo suelen ocultar el mecanismo.
+Un mapa se entiende mejor cuando dice qué hace cada parte y cuándo lo hace. No alcanza con unir «Recepción» y «PMS»: conviene escribir «Recepción consulta el estado antes de asignar la habitación». Mostrar quién promete, registra, interpreta, modifica, espera, autoriza, entrega y repara. Incorporar demoras y ventanas cuando cambian el comportamiento. Las flechas sin verbo suelen ocultar el mecanismo.
 
 ### 4. Agregar lo informal y lo ausente
 
@@ -261,7 +249,7 @@ Preguntar qué ocurriría si desaparecieran planillas, llamadas, memoria local o
 
 ### 5. Formular al menos dos explicaciones rivales
 
-Cada una debe señalar relaciones distintas y exigir evidencia diferente. Si el mapa solo sostiene la hipótesis inicial, funciona como ilustración persuasiva, no como instrumento de investigación.
+Dos explicaciones rivales son respuestas diferentes que todavía podrían ser verdaderas. Por ejemplo, una habitación puede figurar ocupada porque el PMS recibió tarde un cambio o porque Recepción y Housekeeping usan palabras distintas para describir el mismo estado. Cada una debe señalar relaciones distintas y exigir evidencia diferente. Si el mapa solo sostiene la hipótesis inicial, funciona como ilustración persuasiva, no como instrumento de investigación.
 
 ### 6. Revisar frontera según la decisión
 
@@ -386,4 +374,3 @@ Para el encuentro, traer respondidas por escrito dos de las seis preguntas. Señ
 - Hofmann, P., Urbach, N., Lanzl, J., et al. (2024). “AI-enabled information systems: Teaming up with intelligent agents in networked business”. *Electronic Markets*, 34, 52. https://doi.org/10.1007/s12525-024-00734-y
 - Nguyen, T., & Elbanna, A. (2025). “Understanding Human-AI Augmentation in the Workplace: A Review and a Future Research Agenda”. *Information Systems Frontiers*. https://doi.org/10.1007/s10796-025-10591-5
 - NIST (2026). *AI Risk Management Framework: Critical Infrastructure Profile development and resources*. https://www.nist.gov/programs-projects/concept-note-ai-rmf-profile-trustworthy-ai-critical-infrastructure
-- García, R. (2006). *Sistemas complejos: conceptos, método y fundamentación epistemológica de la investigación interdisciplinaria*. Gedisa.

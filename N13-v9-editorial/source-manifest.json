@@ -595,7 +595,7 @@
     {
       "source_id": "N13-s08-b009",
       "kind": "paragraph",
-      "text": "Cuando una transición cruza componentes con transacciones locales, no siempre puede revertirse de manera atómica. Una saga coordina una secuencia de pasos y define acciones compensatorias si no puede continuar. Puede utilizar coreografía entre participantes u orquestación mediante un coordinador."
+      "text": "Cuando una operación tiene varios pasos y uno falla, no siempre existe un botón capaz de volver todo atrás. Una saga coordina esos pasos y una compensación repara lo posible; por ejemplo, cancelar una reserva y devolver el pago no borra el mensaje que ya recibió la persona. Cuando una transición cruza componentes con transacciones locales, no siempre puede revertirse de manera atómica. Una saga coordina una secuencia de pasos y define acciones compensatorias si no puede continuar. Puede utilizar coreografía entre participantes u orquestación mediante un coordinador."
     },
     {
       "source_id": "N13-s08-b010",
@@ -1297,5 +1297,7 @@
       "kind": "list-item",
       "text": "Ross, R., McEvilley, M. y Winstead, M. (2022). *Engineering Trustworthy Secure Systems*. NIST SP 800-160 Vol. 1 Rev. 1. https://doi.org/10.6028/NIST.SP.800-160v1r1"
     }
-  ]
+  ],
+  "source_sha256": "6dd7ee841181e3103cd388c22f37d728d9fdc9b3c9a9d996b233fd8f5da125ab",
+  "stage": "content-canonical-accessible-concept-layers"
 }

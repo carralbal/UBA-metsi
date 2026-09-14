@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "ea6bc5484798fe94985cdad8e9cd4ecd3ad01a50b43755d072cd4c8783ee95f9",
-        "declared_sha256": "ea6bc5484798fe94985cdad8e9cd4ecd3ad01a50b43755d072cd4c8783ee95f9",
+        "actual_sha256": "a55cac62fca2a559be4e6bbbd4570380b17ed38f8908222706e0b0fa9cb582ec",
+        "declared_sha256": "a55cac62fca2a559be4e6bbbd4570380b17ed38f8908222706e0b0fa9cb582ec",
         "document_json_matches": true,
         "source": "source/N15_seleccionar_modelos_segun_pregunta_audiencia_y_costo-content-canonical-v3.md",
         "source_exists": true,
@@ -48,6 +48,19 @@
       "status": "PASS"
     },
     {
+      "check": "errors_grid_groups_each_label_with_its_explanation",
+      "evidence": [
+        {
+          "cards": 9,
+          "declared_rows": 5,
+          "expected_rows": 5,
+          "labels": 9,
+          "naked_pairs": 0
+        }
+      ],
+      "status": "PASS"
+    },
+    {
       "check": "no_lfs_pointers_private_paths_or_placeholders",
       "evidence": {
         "lfs_pointers": [],
@@ -67,12 +80,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 17243258,
-        "final_sha256": "7dadb0f50fc90552ece0762dfbf10d047e6994f55b624c877a92c50fb442aef1",
+        "bytes": 17236697,
+        "final_sha256": "f925488c553f8e6a4fffbc80d185f06913b7c2d9710ab4de41ae0f96dd76db8b",
         "pages": 29,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "dfb6929b0ee3a362091c583b1ef48de5e0065475722de9bfc54cc18fc7d4ea5f",
+        "raw_sha256": "4c5927bc4906ef8f1dc00ddeffbdad17ec039d65926aca005eddbcf6c1cd2798",
         "unique_sizes": [
           [
             594.96,
@@ -1130,15 +1143,15 @@
       5,
       23
     ],
-    "pdf_bytes": 17243258,
-    "pdf_sha256": "7dadb0f50fc90552ece0762dfbf10d047e6994f55b624c877a92c50fb442aef1",
+    "pdf_bytes": 17236697,
+    "pdf_sha256": "f925488c553f8e6a4fffbc80d185f06913b7c2d9710ab4de41ae0f96dd76db8b",
     "source_blocks": 316
   },
   "mode": "read-only",
   "package": "N15-v9-editorial",
-  "passed_checks": 26,
+  "passed_checks": 27,
   "status": "PASS",
-  "total_checks": 26,
+  "total_checks": 27,
   "validator": "validate_n11_n36_v6.py",
   "version": "v9-editorial"
 }

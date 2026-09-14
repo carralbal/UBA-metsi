@@ -292,7 +292,7 @@ La autoridad final no elimina desacuerdo. Registra qué criterio prevaleció, qu
 
 ### Fecha de revisión
 
-Una fecha de revisión impide convertir la prioridad actual en verdad permanente. Indica cuándo y con qué evidencia volverán a contrastarse supuestos, outcomes y renuncias.
+Una prioridad no debería durar para siempre por simple costumbre. La fecha de revisión acuerda cuándo volver a mirar la decisión y con qué datos; por ejemplo, una mejora postergada por la temporada alta se reevalúa cuando baja la demanda. Una fecha de revisión impide convertir la prioridad actual en verdad permanente. Indica cuándo y con qué evidencia volverán a contrastarse supuestos, outcomes y renuncias.
 
 Revisar demasiado seguido crea volatilidad; hacerlo tarde convierte postergación en abandono. La cadencia se ajusta a velocidad del cambio y costo de demora.
 

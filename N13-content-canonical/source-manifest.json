@@ -1,8 +1,8 @@
 {
   "document": "N13",
-  "stage": "content-canonical-thesis-n00-standard",
+  "stage": "content-canonical-accessible-concept-layers",
   "source": "source/N13_demoras_concurrencia_consistencia_idempotencia_y_reconciliacion-content-canonical-v2.md",
-  "source_sha256": "68d4147b6cc273e591d1d12a6bb1ba04db3291d2478674bcecd00a255c54a9c9",
+  "source_sha256": "6dd7ee841181e3103cd388c22f37d728d9fdc9b3c9a9d996b233fd8f5da125ab",
   "eligible_blocks": [
     {
       "kind": "heading",
@@ -596,7 +596,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "Cuando una transición cruza componentes con transacciones locales, no siempre puede revertirse de manera atómica. Una saga coordina una secuencia de pasos y define acciones compensatorias si no puede continuar. Puede utilizar coreografía entre participantes u orquestación mediante un coordinador.",
+      "text": "Cuando una operación tiene varios pasos y uno falla, no siempre existe un botón capaz de volver todo atrás. Una saga coordina esos pasos y una compensación repara lo posible; por ejemplo, cancelar una reserva y devolver el pago no borra el mensaje que ya recibió la persona. Cuando una transición cruza componentes con transacciones locales, no siempre puede revertirse de manera atómica. Una saga coordina una secuencia de pasos y define acciones compensatorias si no puede continuar. Puede utilizar coreografía entre participantes u orquestación mediante un coordinador.",
       "source_id": "src-0119"
     },
     {

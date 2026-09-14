@@ -371,7 +371,7 @@ También puede ser correcto separar problemas. Si la sobreventa proviene de pol�
 
 ### Límites del encuadre
 
-Un buen encuadre no garantiza una intervención correcta. Los mecanismos pueden cambiar, la evidencia puede estar sesgada y los actores pueden manipular métricas. La formulación escrita tiende a congelarse cuando ingresa a un contrato o registro de pendientes. Por eso necesita responsable, versión, fecha, evidencia nueva y condición de revisión.
+Un encuadre funciona como el marco de una foto: ayuda a mirar algo y deja otras cosas afuera. Si el equipo define el problema sólo como demora, puede mejorar minutos y seguir sin atender accesibilidad, reparación o carga de trabajo. Un buen encuadre no garantiza una intervención correcta. Los mecanismos pueden cambiar, la evidencia puede estar sesgada y los actores pueden manipular métricas. La formulación escrita tiende a congelarse cuando ingresa a un contrato o registro de pendientes. Por eso necesita responsable, versión, fecha, evidencia nueva y condición de revisión.
 
 ## Errores frecuentes
 

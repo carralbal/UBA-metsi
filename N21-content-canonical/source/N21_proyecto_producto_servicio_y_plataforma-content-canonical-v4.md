@@ -220,7 +220,7 @@ La formulación también debe resistir un caso adverso. Si el resultado aumenta 
 
 ### Responsabilidad persistente
 
-La responsabilidad persistente, denominada *ownership* en parte de la bibliografía profesional, combina autoridad, información, presupuesto y responsabilidad durante el ciclo del objeto. Nombrar a una persona sin esas condiciones sólo personaliza una carencia institucional.
+La responsabilidad persistente significa que alguien conserva capacidad real de cuidar una decisión después de la entrega. No alcanza con poner un nombre: esa persona necesita información, autoridad y recursos para atender incidentes y decidir cambios. La responsabilidad persistente, denominada *ownership* en parte de la bibliografía profesional, combina autoridad, información, presupuesto y responsabilidad durante el ciclo del objeto. Nombrar a una persona sin esas condiciones sólo personaliza una carencia institucional.
 
 La responsabilidad no equivale a propiedad personal ni a disponibilidad permanente. Designa una función institucional capaz de priorizar, explicar una decisión, convocar a quienes poseen otras competencias y asegurar que la consecuencia tenga reparación.
 

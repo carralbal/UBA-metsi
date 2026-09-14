@@ -129,7 +129,7 @@ Representación codificada producida por un proceso. Un valor de 37 segundos, un
 
 #### Síntoma
 
-Manifestación de una situación: espera, queja, error, reapertura, diferencia contable. Un síntoma orienta investigación, pero no identifica causa. El mismo síntoma puede surgir de mecanismos distintos.
+Un síntoma es una señal de que algo merece investigarse, no la explicación de su causa. Que aumenten los reclamos muestra un problema, pero todavía no dice si lo produjo la interfaz, una regla, una demora o una promesa imposible. Manifestación de una situación: espera, queja, error, reapertura, diferencia contable. Un síntoma orienta investigación, pero no identifica causa. El mismo síntoma puede surgir de mecanismos distintos.
 
 #### Interpretación
 
@@ -141,7 +141,7 @@ Proposición sobre un mecanismo: “Cuando la garantía llega sin identificador 
 
 #### Supuesto
 
-Afirmación aceptada provisionalmente para actuar sin verificación suficiente. Su legitimidad depende del costo de error, reversibilidad y condición de revisión. Suponer que una API estará disponible puede ser aceptable para un boceto y peligroso para firmar un contrato.
+Un supuesto es algo que el equipo está dando por cierto sin haberlo comprobado todavía. Por ejemplo, puede asumir que toda persona que abandona un formulario tuvo una dificultad de uso, aunque quizá encontró otra vía o cambió de decisión. Afirmación aceptada provisionalmente para actuar sin verificación suficiente. Su legitimidad depende del costo de error, reversibilidad y condición de revisión. Suponer que una API estará disponible puede ser aceptable para un boceto y peligroso para firmar un contrato.
 
 #### Decisión
 
@@ -149,7 +149,7 @@ Compromiso de actuar, no conclusión verdadera. “Realizaremos un piloto en un 
 
 #### Restricción
 
-Condición que limita opciones: fecha legal, presupuesto, contrato, política, capacidad. Algunas son duras; otras son preferencias presentadas como inevitables. La metodología debe verificar su autoridad y posibilidad de negociación.
+Una restricción marca un límite que la intervención debe respetar o discutir con la autoridad adecuada. Si una norma exige conservar cierto registro, el equipo no puede borrarlo sólo porque simplifica el diseño. Condición que limita opciones: fecha legal, presupuesto, contrato, política, capacidad. Algunas son duras; otras son preferencias presentadas como inevitables. La metodología debe verificar su autoridad y posibilidad de negociación.
 
 ### Los datos no son hechos puros
 
@@ -257,7 +257,7 @@ La procedencia también importa en IA. Una respuesta fluida puede combinar docum
 
 ### Triangulación
 
-Triangular no significa acumular tres fuentes que dicen lo mismo. Significa combinar perspectivas o métodos con errores distintos.
+Triangular es mirar el mismo hecho desde fuentes que pueden equivocarse de maneras distintas. Por ejemplo, para entender una demora se puede comparar lo que relata una persona, lo que registra el sistema y lo que muestra la observación directa. Triangular no significa acumular tres fuentes que dicen lo mismo. Significa combinar perspectivas o métodos con errores distintos.
 
 Para investigar demora de check-in:
 
@@ -527,7 +527,7 @@ En 2026, esta distinción resulta central para sistemas que combinan búsqueda, 
 
 ### Regla de trazabilidad mínima
 
-Toda recomendación importante debe poder reconstruirse hacia atrás:
+La trazabilidad mínima permite volver desde una decisión hasta las pruebas y supuestos que la sostuvieron. Como en un trabajo escolar bien citado, otra persona debe poder comprobar de dónde salió una afirmación sin reconstruir todo desde cero. Toda recomendación importante debe poder reconstruirse hacia atrás:
 
 **recomendación → decisión → criterio → hipótesis o interpretación → evidencia → fuente**.
 

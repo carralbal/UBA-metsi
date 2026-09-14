@@ -178,7 +178,7 @@ Cuando la ciudad modifica el régimen de agua, también cambia el comportamiento
 
 ### Desplazamiento del problema
 
-Una intervención puede mejorar la métrica donde se aplica y mover la dificultad a otro lugar.
+Desplazar un problema es mejorarlo en un lugar y hacerlo reaparecer en otro. Por ejemplo, acelerar la confirmación puede reducir la espera comercial y aumentar luego las reasignaciones que debe resolver Recepción. Una intervención puede mejorar la métrica donde se aplica y mover la dificultad a otro lugar.
 
 - El chatbot reduce llamadas y aumenta correos de reclamo.
 - La aplicación acelera llegada y traslada carga de datos al huésped.
@@ -319,7 +319,7 @@ No se trata de oponerse a toda intervención. La adversarialidad mejora diseño:
 
 ### Cuándo reducir y cuándo ampliar
 
-Ampliar siempre no es más sistémico. Una frontera debe crecer cuando una exclusión cambia la explicación causal, impide evaluar el outcome, oculta un afectado significativo o vuelve inoperable la responsabilidad. Debe reducirse cuando el detalle no puede modificar la decisión actual, mezcla horizontes o diluye la capacidad de experimentar.
+Reducir la frontera sirve para poder actuar; ampliarla sirve cuando algo importante quedó afuera. Si una demora se explica por una sola regla, no hace falta mapear toda la empresa; si esa regla depende de un tercero, excluirlo impide decidir. Ampliar siempre no es más sistémico. Una frontera debe crecer cuando una exclusión cambia la explicación causal, impide evaluar el outcome, oculta un afectado significativo o vuelve inoperable la responsabilidad. Debe reducirse cuando el detalle no puede modificar la decisión actual, mezcla horizontes o diluye la capacidad de experimentar.
 
 Puede trabajarse con fronteras simultáneas. Una pequeña para un piloto reversible; otra mayor para evaluar impacto y condiciones de escala; una tercera para responsabilidad y contingencia. Exigir que un solo diagrama responda todas las preguntas produce complejidad sin claridad.
 

@@ -77,7 +77,7 @@ Copiar el pedido traslada al entrevistado la responsabilidad de diseño y conser
 
 ### Del discurso general al episodio
 
-Las personas describen el trabajo según procedimiento, identidad profesional, caso reciente o expectativa del entrevistador. Los episodios concretos reducen idealización.
+Pasar al episodio significa pedir una historia concreta en lugar de aceptar frases generales. Ante «el sistema siempre falla», conviene preguntar por la última vez: qué intentaba hacer la persona, qué vio y qué ocurrió después. Las personas describen el trabajo según procedimiento, identidad profesional, caso reciente o expectativa del entrevistador. Los episodios concretos reducen idealización.
 
 Preguntas útiles:
 
@@ -354,7 +354,7 @@ Debe comunicarse qué cambió y qué no, para evitar participación extractiva. 
 
 ### Calidad de una entrevista
 
-No se evalúa por duración ni cantidad de citas. Una buena entrevista:
+Una buena entrevista no se mide por su duración ni por la cantidad de frases anotadas. Es útil cuando deja un episodio claro, distingue hechos de interpretaciones y abre preguntas que pueden contrastarse con otras fuentes. No se evalúa por duración ni cantidad de citas. Una buena entrevista:
 
 - produce episodios reconstruibles;
 - hace visibles criterios y autoridad;

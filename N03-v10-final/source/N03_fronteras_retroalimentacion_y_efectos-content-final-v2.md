@@ -31,16 +31,6 @@ HH-03 acompañará toda la lectura porque permite observar tres movimientos dife
 
 Toda frontera es una decisión analítica, operativa y política. Permite concentrar la intervención, pero también determina qué mecanismos se estudian, qué resultados cuentan, quién participa y dónde puede desplazarse trabajo o daño. Una frontera rigurosa se define para una pregunta, declara exclusiones, examina retroalimentaciones y se revisa cuando la evidencia muestra que optimizar lo incluido deteriora el sistema mayor.
 
-Para pasar de la idea a una decisión hace falta describir qué cambia, en qué dirección, con qué demora y qué circuitos refuerzan o compensan el efecto observado. Así se distinguen descripción, explicación y compromiso, tres movimientos que suelen mezclarse. El resultado es una argumentación que otra persona puede revisar sin tener que aceptar la autoridad de quien la produjo.
-
-Consideremos un ejemplo de baja escala: agregar personal reduce una cola, pero el apuro puede aumentar errores que regresan como retrabajo y eliminan la mejora inicial. Seguirlo de punta a punta permite reconocer primero el fenómeno simple y luego las relaciones que vuelven insuficiente la explicación inicial. Esa es la progresión de lo general a lo particular que propone la colección.
-
-La tesis no autoriza cualquier uso. Su contraejemplo es atribuir cualquier sorpresa a la complejidad cuando una regla mal configurada explica de manera directa todos los fallos. Allí se vuelve visible que una técnica correcta puede ser inadecuada para cierto riesgo, población o momento. La calidad depende del uso, no del prestigio de la herramienta.
-
-Aplicado a Hotel Horizonte, la llegada anticipada reordena Housekeeping, demora otras habitaciones y crea compensaciones que retroalimentan la presión operativa. La continuidad del caso permite comparar la nueva lectura con las anteriores y evita inventar una situación distinta para confirmar cada concepto.
-
-De aquí se desprende una responsabilidad concreta: intervenir sobre una relación explicada y observar efectos previstos y no previstos; N04 separará hechos, síntomas e hipótesis. Profesores y estudiantes pueden discutirla con ejemplos, objeciones y evidencia; no necesitan memorizar una definición aislada ni aceptar una receta cerrada.
-
 ## De N02 a N03: del mapa a sus consecuencias
 
 N02 mostró que el sistema de información no cabe en una aplicación y propuso construir una frontera móvil alrededor de la capacidad que se desea sostener. N03 recibe ese mapa como una hipótesis, no como una conclusión. Una vez elegidos los elementos y relaciones relevantes, todavía falta preguntar qué consecuencias produce el recorte, qué efectos pueden regresar y qué obligación conserva la intervención sobre aquello que dejó afuera.
@@ -125,10 +115,6 @@ C. West Churchman formuló una advertencia decisiva para el enfoque de sistemas:
 
 Esta tradición agrega una prueba al mapa técnico. No alcanza con preguntar si la frontera contiene los componentes que explican el flujo. También debe preguntarse quién gana capacidad de definir el resultado, quién queda representado como excepción y qué consecuencia se vuelve responsabilidad de otro. Dos mapas pueden contener las mismas aplicaciones y diferir en su tratamiento de una persona sin conectividad, de una trabajadora que absorbe excepciones o de un proveedor que controla una dependencia crítica.
 
-Rolando García permite precisar cómo se revisa ese recorte. El sistema investigado es una construcción fundada en preguntas y evidencia, no una porción natural del mundo que espera ser descubierta. Sus niveles y relaciones deben mostrar por qué un cambio local produce consecuencias en otra escala. Para HH-03, una frontera que contiene PMS, Recepción y Housekeeping puede explicar una transición operacional y todavía resultar insuficiente para estudiar contratos de canal, condiciones laborales o efectos acumulados sobre una población. Ampliar no significa sumar contexto indefinido, sino incorporar la relación cuya ausencia impide distinguir explicaciones o asignar responsabilidad.
-
-La escala es parte de la hipótesis. Un patrón visible por turno puede desaparecer en el promedio mensual; una mejora observada en una sede puede depender de recursos que la red completa no posee. García permite tratar esos cambios de nivel como decisiones epistemológicas que deben justificarse. HH-03 registra qué relación se conserva al pasar de episodio a población y qué conclusión deja de ser válida.
-
 **Ejemplo breve: una bicisenda.** Una bicisenda reduce conflictos en una avenida y traslada estacionamiento y carga a calles laterales. Medir sólo la avenida permite declarar éxito antes de observar el nuevo cuello de botella.
 
 ### Primera pasada por HH-03: qué frontera permitió declarar éxito
@@ -192,7 +178,7 @@ Cuando la ciudad modifica el régimen de agua, también cambia el comportamiento
 
 ### Desplazamiento del problema
 
-Una intervención puede mejorar la métrica donde se aplica y mover la dificultad a otro lugar.
+Desplazar un problema es mejorarlo en un lugar y hacerlo reaparecer en otro. Por ejemplo, acelerar la confirmación puede reducir la espera comercial y aumentar luego las reasignaciones que debe resolver Recepción. Una intervención puede mejorar la métrica donde se aplica y mover la dificultad a otro lugar.
 
 - El chatbot reduce llamadas y aumenta correos de reclamo.
 - La aplicación acelera llegada y traslada carga de datos al huésped.
@@ -333,7 +319,7 @@ No se trata de oponerse a toda intervención. La adversarialidad mejora diseño:
 
 ### Cuándo reducir y cuándo ampliar
 
-Ampliar siempre no es más sistémico. Una frontera debe crecer cuando una exclusión cambia la explicación causal, impide evaluar el outcome, oculta un afectado significativo o vuelve inoperable la responsabilidad. Debe reducirse cuando el detalle no puede modificar la decisión actual, mezcla horizontes o diluye la capacidad de experimentar.
+Reducir la frontera sirve para poder actuar; ampliarla sirve cuando algo importante quedó afuera. Si una demora se explica por una sola regla, no hace falta mapear toda la empresa; si esa regla depende de un tercero, excluirlo impide decidir. Ampliar siempre no es más sistémico. Una frontera debe crecer cuando una exclusión cambia la explicación causal, impide evaluar el outcome, oculta un afectado significativo o vuelve inoperable la responsabilidad. Debe reducirse cuando el detalle no puede modificar la decisión actual, mezcla horizontes o diluye la capacidad de experimentar.
 
 Puede trabajarse con fronteras simultáneas. Una pequeña para un piloto reversible; otra mayor para evaluar impacto y condiciones de escala; una tercera para responsabilidad y contingencia. Exigir que un solo diagrama responda todas las preguntas produce complejidad sin claridad.
 
@@ -539,4 +525,3 @@ Para el encuentro, traer respondidas por escrito dos de las seis preguntas. Indi
 - Unión Europea (2024). *Reglamento (UE) 2024/1689 por el que se establecen normas armonizadas en materia de inteligencia artificial*. https://eur-lex.europa.eu/eli/reg/2024/1689/oj
 - Polojärvi, D. (2023). “A systematic literature review of sociotechnical systems in systems engineering”. *Systems Engineering*, 26(4), 482–504. https://doi.org/10.1002/sys.21664
 - ISO/IEC/IEEE (2023). *15288:2023 Systems and software engineering — System life cycle processes*. https://www.iso.org/standard/81702.html
-- García, R. (2006). *Sistemas complejos: conceptos, método y fundamentación epistemológica de la investigación interdisciplinaria*. Gedisa.

@@ -59,11 +59,11 @@ Las tres familias se relacionan. Saber que una demora se concentra en reservas c
 
 #### Incertidumbre del problema
 
-No se conoce qué situación merece intervención, quién está afectado, qué mecanismos operan o qué resultado esperado importa. Técnicas útiles: reconstrucción de episodios, observación, análisis de actores, datos y contradicciones.
+Hay incertidumbre del problema cuando todavía no sabemos qué situación necesita cambiar. Si pocas personas usan un portal, la causa podría ser dificultad de uso, falta de necesidad, una regla externa o una alternativa más conveniente. No se conoce qué situación merece intervención, quién está afectado, qué mecanismos operan o qué resultado esperado importa. Técnicas útiles: reconstrucción de episodios, observación, análisis de actores, datos y contradicciones.
 
 #### Incertidumbre de solución
 
-Se conoce razonablemente la situación, pero no si una alternativa producirá el cambio. Técnicas: prototipo, simulación, prueba de concepto, experimento, comparación y piloto.
+Hay incertidumbre de solución cuando entendemos el problema, pero todavía no sabemos qué alternativa funcionará. Por ejemplo, sabemos que un formulario provoca abandonos, aunque falta probar si conviene cambiar las preguntas, el orden o el canal. Se conoce razonablemente la situación, pero no si una alternativa producirá el cambio. Técnicas: prototipo, simulación, prueba de concepto, experimento, comparación y piloto.
 
 #### Incertidumbre de ejecución
 
@@ -71,11 +71,11 @@ La alternativa parece útil, pero hay dudas sobre capacidad, plazo, integración
 
 #### Incertidumbre de adopción y trabajo
 
-No se sabe cómo cambiarán tareas, autoridad, incentivos o accesibilidad. Técnicas: observación, codiseño, prototipo en contexto, simulación de roles y análisis de carga.
+Esta incertidumbre pregunta si las personas podrán y querrán incorporar el cambio en su tarea real. Una función puede operar bien y fracasar porque agrega pasos, quita autonomía o no contempla el turno nocturno. No se sabe cómo cambiarán tareas, autoridad, incentivos o accesibilidad. Técnicas: observación, codiseño, prototipo en contexto, simulación de roles y análisis de carga.
 
 #### Incertidumbre de efectos
 
-Se desconocen daños, desplazamientos y respuestas del sistema. Técnicas: análisis anticipado de fallas, análisis sistémico, evaluación de impacto, prueba adversarial, monitoreo y participación de afectados.
+Esta incertidumbre aparece cuando no sabemos qué consecuencias producirá una intervención además de su resultado buscado. Un recordatorio puede reducir olvidos y, al mismo tiempo, saturar de mensajes a quienes ya habían cumplido. Se desconocen daños, desplazamientos y respuestas del sistema. Técnicas: análisis anticipado de fallas, análisis sistémico, evaluación de impacto, prueba adversarial, monitoreo y participación de afectados.
 
 #### Incertidumbre de medición
 
@@ -254,7 +254,7 @@ La lógica de opciones reales resulta especialmente útil con IA. Conectar un as
 
 ### Cartera priorizada de investigación
 
-Las preguntas compiten por tiempo igual que las funcionalidades. Una cartera priorizada evita que el discovery quede gobernado por curiosidad o por quien habla más fuerte. Cada elemento puede expresar:
+Una cartera priorizada de investigación ordena qué dudas conviene resolver primero. Por ejemplo, antes de probar colores de una pantalla puede ser más valioso averiguar por qué muchas personas nunca llegan a verla. Las preguntas compiten por tiempo igual que las funcionalidades. Una cartera priorizada evita que el discovery quede gobernado por curiosidad o por quien habla más fuerte. Cada elemento puede expresar:
 
 - decisión y fecha;
 - hipótesis o incertidumbre;
@@ -429,7 +429,7 @@ La suficiencia se alcanza porque la evidencia discrimina alternativas y el compr
 
 ### En 2026: la IA abarata producir respuestas, no necesariamente aprender
 
-DORA (2025) describe la IA como amplificador del sistema organizacional: puede acelerar síntesis y prototipos, pero también multiplicar trabajo equivocado. El marco de gestión de riesgos de IA de NIST (Tabassi, 2023) exige mapear contexto e impactos antes de medir y gestionar riesgos. Ambos aportes convergen en un criterio: una herramienta más veloz amplifica la calidad o la fragilidad del sistema en el que se incorpora.
+Una herramienta de IA puede producir muchas respuestas rápidas sin demostrar que sean útiles o correctas. Por ejemplo, generar diez prototipos en una tarde no reduce la incertidumbre si ninguno se prueba con personas ni con datos reales. DORA (2025) describe la IA como amplificador del sistema organizacional: puede acelerar síntesis y prototipos, pero también multiplicar trabajo equivocado. El marco de gestión de riesgos de IA de NIST (Tabassi, 2023) exige mapear contexto e impactos antes de medir y gestionar riesgos. Ambos aportes convergen en un criterio: una herramienta más veloz amplifica la calidad o la fragilidad del sistema en el que se incorpora.
 
 En discovery, una IA puede ampliar hipótesis, agrupar material o crear variantes. Eso reduce costo de generación, no garantiza valor de información. El control profesional consiste en registrar qué salida podría contradecir la hipótesis, verificar fuentes, muestrear casos reales y comparar contra una línea de base. Si ninguna evidencia posible cambiaría la decisión, la actividad no investiga: justifica.
 

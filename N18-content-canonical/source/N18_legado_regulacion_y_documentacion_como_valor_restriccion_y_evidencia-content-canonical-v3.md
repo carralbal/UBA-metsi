@@ -246,7 +246,7 @@ La reconciliación combina controles agregados y episodios. Igualar cantidades n
 
 ### Excepciones heredadas
 
-Una excepción heredada es una desviación estabilizada que puede contener conocimiento, privilegio o daño. Su frecuencia no la vuelve correcta y su rareza no la vuelve irrelevante.
+Una excepción heredada es una salida especial creada en el pasado que todavía resuelve algún caso. Antes de eliminarla conviene saber a quién protege: una planilla incómoda puede ser la única vía para atender una situación que el sistema nuevo no reconoce. Una excepción heredada es una desviación estabilizada que puede contener conocimiento, privilegio o daño. Su frecuencia no la vuelve correcta y su rareza no la vuelve irrelevante.
 
 Antes de formalizarla o eliminarla se reconstruyen origen, población, autoridad y consecuencia. Algunas excepciones protegen accesibilidad; otras compensan una falla de diseño o reservan discrecionalidad para un actor poderoso.
 
@@ -260,7 +260,7 @@ Los datos de excepción son valiosos y peligrosos. Permiten conocer dónde falla
 
 ### Seguridad y mantenibilidad
 
-Mantenibilidad es la capacidad de cambiar con comprensión, prueba y recuperación; seguridad limita exposición, abuso y pérdida de control. Ambas se deterioran cuando dependencias, conocimiento o configuraciones quedan invisibles.
+Seguridad y mantenibilidad deben pensarse juntas: hay que proteger hoy sin volver imposible cambiar mañana. Un control copiado en muchos lugares puede frenar un ataque y también hacer que una corrección urgente tarde semanas en aplicarse. Mantenibilidad es la capacidad de cambiar con comprensión, prueba y recuperación; seguridad limita exposición, abuso y pérdida de control. Ambas se deterioran cuando dependencias, conocimiento o configuraciones quedan invisibles.
 
 Actualizar por calendario puede introducir una falla; postergar indefinidamente puede ampliar vulnerabilidad. La decisión combina criticidad, soporte, pruebas, ventana operacional y plan de reversión.
 

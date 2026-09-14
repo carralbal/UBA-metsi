@@ -27,16 +27,6 @@ Discovery funciona de la misma manera. Cada actividad debe comprar información:
 
 Discovery no es una fase preliminar ni una colección fija de entrevistas y prototipos. Es una estrategia continua para reducir la incertidumbre que puede cambiar una decisión. Se diseña desde riesgos, alternativas, reversibilidad y costo de equivocarse. Alcanza suficiencia provisional cuando existe evidencia adecuada para asumir el próximo compromiso sin ocultar lo que todavía no se sabe.
 
-Para pasar de la idea a una decisión hace falta identificar la incertidumbre que más puede cambiar la decisión y elegir entrevista, observación, medición o prueba según esa necesidad. Así se distinguen descripción, explicación y compromiso, tres movimientos que suelen mezclarse. El resultado es una argumentación que otra persona puede revisar sin tener que aceptar la autoridad de quien la produjo.
-
-Consideremos un ejemplo de baja escala: antes de construir un portal conviene saber si el problema es carga duplicada, reglas contradictorias o falta de autoridad para aprobar. Seguirlo de punta a punta permite reconocer primero el fenómeno simple y luego las relaciones que vuelven insuficiente la explicación inicial. Esa es la progresión de lo general a lo particular que propone la colección.
-
-La tesis no autoriza cualquier uso. Su contraejemplo es acumular talleres y hallazgos sin una puerta que indique cuándo avanzar, cambiar o detener la inversión. Allí se vuelve visible que una técnica correcta puede ser inadecuada para cierto riesgo, población o momento. La calidad depende del uso, no del prestigio de la herramienta.
-
-Aplicado a Hotel Horizonte, investigar llegada anticipada exige probar estados, excepciones y reparación en dos pisos, no preguntar si gustaría una app. La continuidad del caso permite comparar la nueva lectura con las anteriores y evita inventar una situación distinta para confirmar cada concepto.
-
-De aquí se desprende una responsabilidad concreta: administrar aprendizaje como inversión con pregunta, método, población y decisión; N07 y N08 profundizarán entrevista y observación. Profesores y estudiantes pueden discutirla con ejemplos, objeciones y evidencia; no necesitan memorizar una definición aislada ni aceptar una receta cerrada.
-
 ## De N05 a N06: de los actores a una estrategia de aprendizaje
 
 N05 dejó un mapa de actores, decisiones y afirmaciones discutibles. Ese registro impide que el problema vuelva a reducirse a “necesidades del usuario” o a una lista de pedidos. N06 recibe ese mapa y pregunta dónde una falta de conocimiento, una dificultad para actuar o una coordinación frágil podrían hacer fracasar la próxima decisión. La unidad de trabajo ya no es el actor aislado, sino la relación entre una incertidumbre, la evidencia capaz de reducirla y el compromiso que esa evidencia habilitaría o impediría.
@@ -69,11 +59,11 @@ Las tres familias se relacionan. Saber que una demora se concentra en reservas c
 
 #### Incertidumbre del problema
 
-No se conoce qué situación merece intervención, quién está afectado, qué mecanismos operan o qué resultado esperado importa. Técnicas útiles: reconstrucción de episodios, observación, análisis de actores, datos y contradicciones.
+Hay incertidumbre del problema cuando todavía no sabemos qué situación necesita cambiar. Si pocas personas usan un portal, la causa podría ser dificultad de uso, falta de necesidad, una regla externa o una alternativa más conveniente. No se conoce qué situación merece intervención, quién está afectado, qué mecanismos operan o qué resultado esperado importa. Técnicas útiles: reconstrucción de episodios, observación, análisis de actores, datos y contradicciones.
 
 #### Incertidumbre de solución
 
-Se conoce razonablemente la situación, pero no si una alternativa producirá el cambio. Técnicas: prototipo, simulación, prueba de concepto, experimento, comparación y piloto.
+Hay incertidumbre de solución cuando entendemos el problema, pero todavía no sabemos qué alternativa funcionará. Por ejemplo, sabemos que un formulario provoca abandonos, aunque falta probar si conviene cambiar las preguntas, el orden o el canal. Se conoce razonablemente la situación, pero no si una alternativa producirá el cambio. Técnicas: prototipo, simulación, prueba de concepto, experimento, comparación y piloto.
 
 #### Incertidumbre de ejecución
 
@@ -81,11 +71,11 @@ La alternativa parece útil, pero hay dudas sobre capacidad, plazo, integración
 
 #### Incertidumbre de adopción y trabajo
 
-No se sabe cómo cambiarán tareas, autoridad, incentivos o accesibilidad. Técnicas: observación, codiseño, prototipo en contexto, simulación de roles y análisis de carga.
+Esta incertidumbre pregunta si las personas podrán y querrán incorporar el cambio en su tarea real. Una función puede operar bien y fracasar porque agrega pasos, quita autonomía o no contempla el turno nocturno. No se sabe cómo cambiarán tareas, autoridad, incentivos o accesibilidad. Técnicas: observación, codiseño, prototipo en contexto, simulación de roles y análisis de carga.
 
 #### Incertidumbre de efectos
 
-Se desconocen daños, desplazamientos y respuestas del sistema. Técnicas: análisis anticipado de fallas, análisis sistémico, evaluación de impacto, prueba adversarial, monitoreo y participación de afectados.
+Esta incertidumbre aparece cuando no sabemos qué consecuencias producirá una intervención además de su resultado buscado. Un recordatorio puede reducir olvidos y, al mismo tiempo, saturar de mensajes a quienes ya habían cumplido. Se desconocen daños, desplazamientos y respuestas del sistema. Técnicas: análisis anticipado de fallas, análisis sistémico, evaluación de impacto, prueba adversarial, monitoreo y participación de afectados.
 
 #### Incertidumbre de medición
 
@@ -264,7 +254,7 @@ La lógica de opciones reales resulta especialmente útil con IA. Conectar un as
 
 ### Cartera priorizada de investigación
 
-Las preguntas compiten por tiempo igual que las funcionalidades. Una cartera priorizada evita que el discovery quede gobernado por curiosidad o por quien habla más fuerte. Cada elemento puede expresar:
+Una cartera priorizada de investigación ordena qué dudas conviene resolver primero. Por ejemplo, antes de probar colores de una pantalla puede ser más valioso averiguar por qué muchas personas nunca llegan a verla. Las preguntas compiten por tiempo igual que las funcionalidades. Una cartera priorizada evita que el discovery quede gobernado por curiosidad o por quien habla más fuerte. Cada elemento puede expresar:
 
 - decisión y fecha;
 - hipótesis o incertidumbre;
@@ -295,16 +285,6 @@ Un experimento no es mostrar un prototipo a personas y preguntar si gusta. Debe 
 En el hotel, un piloto de preparación previa podría medir correcciones evitables y carga, manteniendo el canal actual. Si la tasa de completitud sube pero los casos de accesibilidad empeoran, el resultado esperado no se alcanzó. Si el equipo no define antes qué resultado hace continuar, tenderá a racionalizar cualquier dato. El ciclo de construir, medir y aprender de Ries (2011) ayuda a mantener pequeño el compromiso inicial, pero no vuelve válido cualquier experimento. Sin pregunta decisional, comparación y salvaguarda, la velocidad sólo acelera una demostración.
 
 Los experimentos organizacionales rara vez aíslan todas las variables. El equipo debe declarar limitaciones y evitar lenguaje causal excesivo. Su valor puede consistir en descubrir una falla o refinar mecanismo.
-
-### Investigación de diseño antes de validar una interfaz
-
-La investigación de diseño estudia personas, actividades, entornos, artefactos y relaciones para orientar una intervención. No comienza necesariamente con una pantalla ni termina cuando aparece un prototipo. ISO 9241-210:2019 exige comprender el contexto de uso, involucrar a las personas, producir soluciones y evaluarlas de manera iterativa. N06 ubica esas actividades dentro de una cartera de incertidumbres: cada una debe explicar qué decisión podría cambiar y qué riesgo reduce.
-
-Una entrevista puede explorar expectativas y lenguaje; la observación puede revelar secuencias y trabajo invisible; un prototipo puede hacer discutible una interacción; una simulación de servicio puede exponer transferencias y autoridad. Los métodos no son intercambiables. Preguntar si una persona prefiere una confirmación no demuestra que la comprenda bajo presión. Observar un episodio actual no prueba que una alternativa futura funcione. Un prototipo de alta fidelidad puede producir comentarios visuales y ocultar que la promesa depende de procesos todavía inexistentes.
-
-En Hotel Horizonte, comparar dos pantallas de llegada responde una incertidumbre sobre interpretación. Recorrer una llegada anticipada con Recepción, Housekeeping y una huésped responde otra sobre coordinación y capacidad. Si el problema puede estar en autoridad, estado o reparación, validar solamente la interfaz selecciona una explicación antes de investigar. La cartera conserva ambas pruebas y ordena primero la que podría descartar la solución completa.
-
-La investigación termina provisionalmente cuando la evidencia permite elegir entre alternativas con un riesgo residual explícito. No necesita describir a todas las personas ni resolver cada preferencia. Necesita cubrir las diferencias capaces de cambiar la decisión y conservar contradicciones relevantes. Un resultado de diseño es sólido cuando reduce una incertidumbre sin fabricar certeza sobre las demás.
 
 ### Discovery en una cartera de decisiones
 
@@ -449,7 +429,7 @@ La suficiencia se alcanza porque la evidencia discrimina alternativas y el compr
 
 ### En 2026: la IA abarata producir respuestas, no necesariamente aprender
 
-DORA (2025) describe la IA como amplificador del sistema organizacional: puede acelerar síntesis y prototipos, pero también multiplicar trabajo equivocado. El marco de gestión de riesgos de IA de NIST (Tabassi, 2023) exige mapear contexto e impactos antes de medir y gestionar riesgos. Ambos aportes convergen en un criterio: una herramienta más veloz amplifica la calidad o la fragilidad del sistema en el que se incorpora.
+Una herramienta de IA puede producir muchas respuestas rápidas sin demostrar que sean útiles o correctas. Por ejemplo, generar diez prototipos en una tarde no reduce la incertidumbre si ninguno se prueba con personas ni con datos reales. DORA (2025) describe la IA como amplificador del sistema organizacional: puede acelerar síntesis y prototipos, pero también multiplicar trabajo equivocado. El marco de gestión de riesgos de IA de NIST (Tabassi, 2023) exige mapear contexto e impactos antes de medir y gestionar riesgos. Ambos aportes convergen en un criterio: una herramienta más veloz amplifica la calidad o la fragilidad del sistema en el que se incorpora.
 
 En discovery, una IA puede ampliar hipótesis, agrupar material o crear variantes. Eso reduce costo de generación, no garantiza valor de información. El control profesional consiste en registrar qué salida podría contradecir la hipótesis, verificar fuentes, muestrear casos reales y comparar contra una línea de base. Si ninguna evidencia posible cambiaría la decisión, la actividad no investiga: justifica.
 
@@ -546,7 +526,6 @@ Para el encuentro, traer respondidas por escrito dos de las seis preguntas. Una 
 - DORA. (2025). *State of AI-assisted Software Development*. https://dora.dev/research/2025/dora-report/
 - Hubbard, D. W. (2014). *How to Measure Anything: Finding the Value of Intangibles in Business* (3.ª ed.). Wiley. ISBN 978-1-118-53927-9.
 - International Organization for Standardization. (2019). *ISO 9241-210:2019. Ergonomics of human-system interaction, Part 210: Human-centred design for interactive systems*. https://www.iso.org/standard/77520.html
-- Goodman, E., Kuniavsky, M. y Moed, A. (2012). *Observing the User Experience: A Practitioner’s Guide to User Research*, Second Edition. Morgan Kaufmann.
 - March, J. G. (1991). “Exploration and Exploitation in Organizational Learning”. *Organization Science*, 2(1), 71–87. https://doi.org/10.1287/orsc.2.1.71
 - Patton, M. Q. (2015). *Qualitative Research & Evaluation Methods: Integrating Theory and Practice* (4.ª ed.). SAGE.
 - Ries, E. (2011). *The Lean Startup*. Crown Business.

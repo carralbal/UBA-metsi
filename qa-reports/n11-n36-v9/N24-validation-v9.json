@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "b4938b1b7a9007473d0946e6a877036f8880f8c2559a9e7ecb40034086811fb7",
-        "declared_sha256": "b4938b1b7a9007473d0946e6a877036f8880f8c2559a9e7ecb40034086811fb7",
+        "actual_sha256": "eae28199ed6368c961aa2b48646f67f8bdb098bc6d380d3c73a51a6f340df2cb",
+        "declared_sha256": "eae28199ed6368c961aa2b48646f67f8bdb098bc6d380d3c73a51a6f340df2cb",
         "document_json_matches": true,
         "source": "source/N24_priorizar_es_renunciar_valor_costo_de_demora_y_limites-content-canonical-v4.md",
         "source_exists": true,
@@ -48,6 +48,19 @@
       "status": "PASS"
     },
     {
+      "check": "errors_grid_groups_each_label_with_its_explanation",
+      "evidence": [
+        {
+          "cards": 10,
+          "declared_rows": 5,
+          "expected_rows": 5,
+          "labels": 10,
+          "naked_pairs": 0
+        }
+      ],
+      "status": "PASS"
+    },
+    {
       "check": "no_lfs_pointers_private_paths_or_placeholders",
       "evidence": {
         "lfs_pointers": [],
@@ -67,12 +80,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 19803856,
-        "final_sha256": "a55d49391116667962c5d3e46ca22eb259c1d489639d59c5239cf98d9df759d3",
+        "bytes": 19781266,
+        "final_sha256": "1875085d4cb7113564ef1e1b0a96dfe3c2811eb651cbc03aaccd7798b0565030",
         "pages": 28,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "1c7ad99ad2e6597d3b1ef179e4488323342d003fa3cd19d2ed3ef301784707c4",
+        "raw_sha256": "975fb3dabcc6f9b2d82e959af63c47460f5e02e73515ad5eafa808696d8a1bfb",
         "unique_sizes": [
           [
             594.96,
@@ -1130,15 +1143,15 @@
       5,
       21
     ],
-    "pdf_bytes": 19803856,
-    "pdf_sha256": "a55d49391116667962c5d3e46ca22eb259c1d489639d59c5239cf98d9df759d3",
+    "pdf_bytes": 19781266,
+    "pdf_sha256": "1875085d4cb7113564ef1e1b0a96dfe3c2811eb651cbc03aaccd7798b0565030",
     "source_blocks": 292
   },
   "mode": "read-only",
   "package": "N24-v9-editorial",
-  "passed_checks": 26,
+  "passed_checks": 27,
   "status": "PASS",
-  "total_checks": 26,
+  "total_checks": 27,
   "validator": "validate_n11_n36_v6.py",
   "version": "v9-editorial"
 }

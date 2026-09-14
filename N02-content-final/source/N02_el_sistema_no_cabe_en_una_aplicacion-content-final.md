@@ -237,11 +237,11 @@ No comenzar con “sistema de reservas”, porque ese nombre ya privilegia una s
 
 ### 2. Reconstruir un episodio completo
 
-Elegir un caso real desde la señal inicial hasta la resolución. Registrar participantes, decisiones, esperas, herramientas, información y reparaciones. El episodio impide que el mapa se apoye únicamente en procedimientos o entrevistas generales.
+Reconstruir un episodio es contar un caso real desde que empieza hasta que termina, sin saltar las esperas ni las reparaciones. Una reserva concreta permite ver quién actuó, qué información recibió y dónde cambió el resultado. Elegir un caso real desde la señal inicial hasta la resolución. Registrar participantes, decisiones, esperas, herramientas, información y reparaciones. El episodio impide que el mapa se apoye únicamente en procedimientos o entrevistas generales.
 
 ### 3. Dibujar relaciones con verbos y tiempos
 
-Mostrar quién promete, registra, interpreta, modifica, espera, autoriza, entrega y repara. Incorporar demoras y ventanas cuando cambian el comportamiento. Las flechas sin verbo suelen ocultar el mecanismo.
+Un mapa se entiende mejor cuando dice qué hace cada parte y cuándo lo hace. No alcanza con unir «Recepción» y «PMS»: conviene escribir «Recepción consulta el estado antes de asignar la habitación». Mostrar quién promete, registra, interpreta, modifica, espera, autoriza, entrega y repara. Incorporar demoras y ventanas cuando cambian el comportamiento. Las flechas sin verbo suelen ocultar el mecanismo.
 
 ### 4. Agregar lo informal y lo ausente
 
@@ -249,7 +249,7 @@ Preguntar qué ocurriría si desaparecieran planillas, llamadas, memoria local o
 
 ### 5. Formular al menos dos explicaciones rivales
 
-Cada una debe señalar relaciones distintas y exigir evidencia diferente. Si el mapa solo sostiene la hipótesis inicial, funciona como ilustración persuasiva, no como instrumento de investigación.
+Dos explicaciones rivales son respuestas diferentes que todavía podrían ser verdaderas. Por ejemplo, una habitación puede figurar ocupada porque el PMS recibió tarde un cambio o porque Recepción y Housekeeping usan palabras distintas para describir el mismo estado. Cada una debe señalar relaciones distintas y exigir evidencia diferente. Si el mapa solo sostiene la hipótesis inicial, funciona como ilustración persuasiva, no como instrumento de investigación.
 
 ### 6. Revisar frontera según la decisión
 

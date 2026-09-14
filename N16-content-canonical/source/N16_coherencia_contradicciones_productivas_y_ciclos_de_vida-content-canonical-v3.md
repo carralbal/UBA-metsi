@@ -96,7 +96,7 @@ La prueba utiliza una conclusión que atraviese la frontera. En Hotel Horizonte,
 
 #### Contradicción temporal
 
-Un modelo actual y uno objetivo pueden diferir correctamente. El defecto es ocultar el tiempo. Fecha de captura no equivale a período de validez; un documento reciente puede describir futuro.
+Dos documentos pueden decir cosas distintas porque describen momentos diferentes. Un plano futuro y un sistema actual no se contradicen por estar desalineados; el problema aparece cuando nadie indica cuál rige hoy ni cómo se pasará de uno al otro. Un modelo actual y uno objetivo pueden diferir correctamente. El defecto es ocultar el tiempo. Fecha de captura no equivale a período de validez; un documento reciente puede describir futuro.
 
 Se distinguen actual, transitorio, objetivo, histórico y escenario. Cada uno necesita condición de entrada y salida. La transición entre modelos también se planifica.
 
@@ -108,7 +108,7 @@ El expediente vincula cada versión con una decisión y una población. Una vist
 
 #### Contradicción normativa y operacional
 
-Una norma puede otorgar autoridad y la operación no ofrecer mecanismo. Un procedimiento puede exigir revisión y la cola no tener responsable. La diferencia representa incumplimiento, transición o imposibilidad.
+Esta contradicción aparece cuando una regla pide algo que el trabajo real no permite cumplir. Por ejemplo, un procedimiento puede exigir una aprobación en treinta minutos aunque durante la noche no exista nadie con autoridad para darla. Una norma puede otorgar autoridad y la operación no ofrecer mecanismo. Un procedimiento puede exigir revisión y la cola no tener responsable. La diferencia representa incumplimiento, transición o imposibilidad.
 
 La autoridad normativa no crea capacidad. La ejecución frecuente tampoco deroga automáticamente la norma. Se necesitan responsables para decidir si implementar, modificar política o aceptar riesgo temporal.
 
@@ -202,7 +202,7 @@ El contrato también declara qué ocurre cuando la relación no puede sostenerse
 
 #### Registro de contradicciones
 
-Cada contradicción recibe identificador, modelos, afirmaciones, tipo, evidencia, consecuencia, responsable, decisión y plazo. Se evita resolverla en comentarios dispersos.
+Este registro es una lista de desacuerdos que necesitan decisión, no una colección de errores para ocultar. Si Comercial y Recepción usan «disponible» con sentidos distintos, se anota la consecuencia, quién debe resolverla y hasta cuándo puede tolerarse. Cada contradicción recibe identificador, modelos, afirmaciones, tipo, evidencia, consecuencia, responsable, decisión y plazo. Se evita resolverla en comentarios dispersos.
 
 La clasificación conduce a tratamiento. Error se corrige. Diferencia legítima se documenta. Brecha temporal se planifica. Incertidumbre se investiga. Conflicto normativo se escala. Riesgo puede aceptarse con autoridad.
 
@@ -345,7 +345,7 @@ La evidencia del recorrido queda adjunta al expediente para repetir la prueba de
 
 #### Prueba de cambio
 
-Se modifica deliberadamente una regla, actor o dependencia y se recorre impacto. El objetivo es evaluar mantenibilidad de la cartera.
+Una prueba de cambio consiste en modificar una parte del modelo y observar qué otras partes deberían ajustarse. Por ejemplo, si una aprobación deja de ser manual, hay que revisar quién controla la excepción, qué queda registrado y cómo se revierte un error. Se modifica deliberadamente una regla, actor o dependencia y se recorre impacto. El objetivo es evaluar mantenibilidad de la cartera.
 
 Si nadie puede encontrar vistas afectadas, la trazabilidad falla. Si deben actualizarse copias manuales idénticas, existe duplicación. Si una vista cambia automáticamente y otra requiere decisión, se coordinan ritmos.
 
@@ -369,7 +369,7 @@ La prueba concluye con una persona que no participó en el cambio. Debe poder el
 
 ### Revisión de contradicciones abiertas
 
-Las contradicciones se revisan por consecuencia y edad. Una investigación puede producir evidencia, cambiar una política o mostrar diferencia legítima.
+Revisar contradicciones abiertas es volver sobre desacuerdos que todavía tienen consecuencias. Por ejemplo, si dos áreas siguen usando definiciones distintas de «urgente», el equipo debe comprobar si la diferencia aún provoca demoras o decisiones incompatibles. Las contradicciones se revisan por consecuencia y edad. Una investigación puede producir evidencia, cambiar una política o mostrar diferencia legítima.
 
 Se evita usar cantidad abierta como indicador de mala calidad. Una cartera que no registra contradicciones puede ser menos honesta. Importan criticidad, tratamiento y aprendizaje.
 
