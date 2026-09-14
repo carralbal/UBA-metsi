@@ -45,6 +45,19 @@ PACKAGE_VERSION_LABELS: dict[int, str] = {}
 INFOGRAPHIC_PATH_OVERRIDES: dict[int, Path] = {}
 
 
+SECTION_MARKER_CONTRAST_CSS = r'''
+/* METSI section-marker contrast 2026-09-14.
+   On the dark professional-question opener, the white disc carries an ink
+   numeral. Volt remains in the adjacent accent and label, never as small text
+   over paper. */
+.premium-magazine:not(.document-n00) .reading-section[data-section="01"] .section-marker span{
+  color:#171917!important;
+  background:#FAFAF8!important;
+  border-color:#171917!important
+}
+'''
+
+
 HOTEL_VOICES = {
     0: {
         "Elena Acosta": "La lectura me sirve si llegamos al encuentro sabiendo qué decisión todavía no podemos tomar.",
@@ -3243,6 +3256,7 @@ def build_document(number:int)->dict:
             stable_css = (HERE / "N01-v18-final" / "magazine.css").read_text(encoding="utf-8")
             base_css = stable_css.split("/* METSI collection extensions:", 1)[0].rstrip()
             css_text = base_css + "\n\n" + COLLECTION_CSS
+    css_text = css_text.rstrip() + "\n\n" + SECTION_MARKER_CONTRAST_CSS.strip() + "\n"
     packaged_css.write_text(css_text,encoding="utf-8")
     if number in {5, 6, 7, 8, 9, 10}:
         (out / "metsi.css").write_text(css_text, encoding="utf-8")

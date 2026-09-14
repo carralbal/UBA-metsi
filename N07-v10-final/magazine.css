@@ -129,6 +129,9 @@ figcaption { display: flex; justify-content: space-between; gap: 8mm; margin-top
   p, li { orphans: 3; widows: 3; }
 }
 
+/* METSI section-marker contrast 2026-09-14 */
+.premium-magazine:not(.document-n00) .reading-section[data-section="01"] .section-marker span{color:#171917!important;background:#FAFAF8!important;border-color:#171917!important}
+
 /* N01 premium editorial proof — derived from the four supplied magazine references. */
 :root {
   --paper: #f8f7f3;
