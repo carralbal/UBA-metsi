@@ -18,8 +18,8 @@
   <meta name="twitter:description" content="Una experiencia académica, pedagógica y editorial de FCE UBA.">
   <meta name="twitter:image" content="https://carralbal.github.io/UBA-metsi/og.png">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preload" as="image" href="covers/hero-metsi-bw-v1.webp?v=20260912-2" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="metsi.css?v=20260912-2">
+  <link rel="preload" as="image" href="covers/hero-metsi-bw-v1.webp?v=20260914-2" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="metsi.css?v=20260914-1">
   <script src="metsi.js" defer></script>
 </head>
 <body>
@@ -27,11 +27,16 @@
 
   <header class="site-header" data-header>
     <a class="brand" href="#inicio" aria-label="METSI, inicio">METSI</a>
-    <nav aria-label="Recorrido principal">
+    <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-menu" data-menu aria-label="Recorrido principal">
       <a href="#propuesta">Propuesta</a>
       <a href="#mapa">Mapa</a>
       <a href="#experiencia">Experiencia</a>
       <a href="#biblioteca">Lecturas</a>
+      <a href="#programa">Programa</a>
+      <a class="mobile-collection-link" href="#biblioteca">Explorar la colección</a>
     </nav>
     <a class="header-cta" href="#biblioteca">Explorar la colección</a>
   </header>
@@ -45,6 +50,7 @@
         <div class="hero-actions">
           <a class="button button-primary" href="#propuesta">Comenzar el recorrido</a>
           <a class="button button-quiet" href="#biblioteca">Descargar las lecturas</a>
+          <a class="button button-quiet" href="#programa">Ver el programa</a>
         </div>
       </div>
 
@@ -311,8 +317,39 @@
       </div>
     </section>
 
+    <section class="program-summary section-pad" id="programa" aria-labelledby="program-summary-title">
+      <div class="section-marker"><span>08</span><p>Programa académico 2026</p></div>
+      <div class="section-intro two-up">
+        <h2 id="program-summary-title">Comprender, decidir,<br><em>intervenir y revisar.</em></h2>
+        <div>
+          <p>METSI forma profesionales capaces de estudiar sistemas sociotécnicos, construir evidencia, elegir enfoques metodológicos y diseñar intervenciones defendibles.</p>
+          <p>El programa articula 108 horas, 36 Núcleos, ocho unidades curriculares y el caso longitudinal Hotel Horizonte.</p>
+        </div>
+      </div>
+      <div class="program-facts" aria-label="Datos principales del programa">
+        <article><b>Asignatura</b><span>Metodología de los Sistemas de Información</span></article>
+        <article><b>Código</b><span>658</span></article>
+        <article><b>Carrera</b><span>Licenciatura en Sistemas de Información de las Organizaciones</span></article>
+        <article><b>Ciclo</b><span>Formación Profesional</span></article>
+      </div>
+      <div class="program-units" aria-label="Ocho unidades curriculares">
+        <article><b>A</b><span>Construir el problema</span></article>
+        <article><b>B</b><span>Investigar el sistema real</span></article>
+        <article><b>C</b><span>Representar y explicar</span></article>
+        <article><b>D</b><span>Elegir estrategia y alcance</span></article>
+        <article><b>E</b><span>Diseñar flujo e integración</span></article>
+        <article><b>F</b><span>Operar, observar y aprender</span></article>
+        <article><b>G</b><span>Intervenir con inteligencia artificial</span></article>
+        <article><b>H</b><span>Integrar y defender la intervención</span></article>
+      </div>
+      <div class="program-actions">
+        <a class="button button-primary" href="covers/programa/programa-metsi-2026.pdf" download>Descargar programa completo</a>
+        <p>Incluye encuadre, fundamentación, propósitos, resultados de aprendizaje, contenidos, estrategia de enseñanza, actividades, evaluación y bibliografía.</p>
+      </div>
+    </section>
+
     <section class="library section-pad" id="biblioteca" aria-labelledby="library-title">
-      <div class="section-marker"><span>08</span><p>La colección</p></div>
+      <div class="section-marker"><span>09</span><p>La colección</p></div>
       <div class="section-intro two-up">
         <h2 id="library-title">Treinta y siete puertas de entrada.<br>Un recorrido acumulativo.</h2>
         <div><p>Las treinta y siete lecturas cerradas se pueden descargar. Juntas presentan el contrato de trabajo de METSI y desarrollan los ocho bloques curriculares, de A a H.</p><p class="library-note">N00 es el mapa de viaje. N01 a N36 forman la colección completa, publicada y auditada.</p></div>
@@ -364,7 +401,7 @@
     </section>
 
     <section class="quality section-pad" id="calidad" aria-labelledby="quality-title">
-      <div class="section-marker inverse"><span>09</span><p>El estándar</p></div>
+      <div class="section-marker inverse"><span>10</span><p>El estándar</p></div>
       <div class="section-intro two-up"><h2 id="quality-title">Diseñar también es<br>hacerse responsable.</h2><p>La identidad visual no está separada de la propuesta académica. Orientación, legibilidad, procedencia, accesibilidad y control de pérdidas forman parte del mismo sistema de calidad.</p></div>
       <div class="quality-grid">
         <article><strong>37</strong><span>lecturas cerradas y descargables</span></article>
@@ -390,7 +427,7 @@
 
   <footer>
     <div><a class="brand" href="#inicio">METSI</a><p>Metodología de los Sistemas de Información</p></div>
-    <div><p>Facultad de Ciencias Económicas</p><p>Universidad de Buenos Aires</p></div>
+    <div><p>Facultad de Ciencias Económicas</p><p>Universidad de Buenos Aires</p><p><a href="#programa">Programa académico 2026</a></p></div>
     <div><p>Diego Carralbal · 2026</p><a href="https://linkedin.com/in/carralbal">linkedin.com/in/carralbal</a></div>
   </footer>
 </body>

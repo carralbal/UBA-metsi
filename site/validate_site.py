@@ -306,10 +306,17 @@ def package_file_problems(code: str, record: dict[str, Any]) -> list[str]:
 
 def build_report(require_sources: bool = False) -> dict[str, Any]:
     html = (ROOT / "index.html").read_text(encoding="utf-8")
+    program_html = (ROOT / "programa.html").read_text(encoding="utf-8")
     css = (ROOT / "metsi.css").read_text(encoding="utf-8")
     script = (ROOT / "metsi.js").read_text(encoding="utf-8")
     parser = SiteParser()
     parser.feed(html)
+    program_parser = SiteParser()
+    program_parser.feed(program_html)
+    program_pdf = ROOT / "programa" / "programa-metsi-2026.pdf"
+    deployed_program_pdf = ROOT / "covers" / "programa" / "programa-metsi-2026.pdf"
+    program_source = REPO / "programa" / "programa-metsi-2026.md"
+    program_pages, program_pdf_error = safe_pages(program_pdf)
 
     site_manifest, site_manifest_error = load_json(ROOT / "course-manifest.json")
     root_manifest, root_manifest_error = load_json(REPO / "course-manifest.json")
@@ -559,6 +566,49 @@ def build_report(require_sources: bool = False) -> dict[str, Any]:
         "keyboard_tabs_implemented": "ArrowLeft" in script and "ArrowRight" in script and "tabIndex" in script,
         "social_metadata_complete": all(parser.meta.get(("meta", key), "") for key in ("og:title", "og:description", "og:image", "twitter:card", "twitter:image")),
         "no_placeholders": not re.search(r"\b(?:TBD|TODO|Lorem|XXX)\b", html, flags=re.I),
+        "program_source_and_pdf_present": (
+            program_source.is_file()
+            and program_pdf.is_file()
+            and deployed_program_pdf.is_file()
+            and safe_hash(deployed_program_pdf) == safe_hash(program_pdf)
+            and program_pages == 7
+            and not program_pdf_error
+        ),
+        "public_program_integrated": (
+            'id="programa"' in html
+            and "Ocho unidades curriculares" in html
+            and "covers/programa/programa-metsi-2026.pdf" in html
+        ),
+        "program_page_complete": all(
+            token in program_html
+            for token in (
+                "Metodología de los Sistemas de Información",
+                "Resultados de aprendizaje",
+                "Ocho unidades",
+                "Hotel Horizonte",
+                "Instancias sumativas propuestas",
+                "Bibliografía y revisión",
+            )
+        ),
+        "program_navigation_accessible": (
+            len(program_parser.ids) == len(set(program_parser.ids))
+            and set(program_parser.controls).issubset(set(program_parser.ids))
+            and 'aria-current="page"' in program_html
+        ),
+        "hamburger_menu_implemented": (
+            html.count("data-menu-toggle") == 1
+            and program_html.count("data-menu-toggle") == 1
+            and "aria-expanded" in html
+            and "Escape" in script
+            and "menu-open" in script
+            and ".site-header.menu-open nav" in css
+        ),
+        "hero_background_asset_and_breakpoints": (
+            (ROOT / "covers" / "hero-metsi-bw-v1.webp").is_file()
+            and 'url("covers/hero-metsi-bw-v1.webp?v=20260914-2")' in css
+            and "background-position:56% center" in css
+            and "background-position:62% center" in css
+        ),
     }
 
     return {
@@ -583,6 +633,10 @@ def build_report(require_sources: bool = False) -> dict[str, Any]:
             "curricular_blocks": html.count('class="block"'),
             "local_references_checked": local_checked,
             "local_reference_problems": local_problems,
+            "program_pdf_pages": program_pages,
+            "program_pdf_bytes": program_pdf.stat().st_size if program_pdf.is_file() else None,
+            "program_pdf_sha256": safe_hash(program_pdf),
+            "program_source_sha256": safe_hash(program_source),
         },
     }
 
