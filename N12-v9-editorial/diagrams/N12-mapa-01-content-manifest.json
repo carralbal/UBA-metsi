@@ -1,0 +1,141 @@
+{
+  "title": "Lo pedido, lo ocurrido y lo vigente no son lo mismo",
+  "claim": "Una transición defendible separa el comando, el evento y el estado, y hace visibles la autoridad, la evidencia, el tiempo y la reparación que conectan esas representaciones.",
+  "source_sections": [
+    {
+      "id": "thesis",
+      "heading": "Tesis",
+      "summary": "Comando, evento, estado, evidencia y autoridad cumplen funciones diferentes dentro de una transición operacional."
+    },
+    {
+      "id": "transition",
+      "heading": "Transición: la unidad que conecta las cinco funciones",
+      "summary": "Una transición verificable conecta situación previa, comando, evaluación, evento, estado resultante, evidencia, autoridad y reparación."
+    },
+    {
+      "id": "instrument",
+      "heading": "Instrumento HH-12: mapa de transición verificable",
+      "summary": "HH-12 organiza propósito, estado previo, comando, autoridad, reglas, evento, estado, evidencia, tiempo, excepción y reparación."
+    },
+    {
+      "id": "hh12",
+      "heading": "Primera aplicación de HH-12: desarmar habitación disponible",
+      "summary": "Limpieza terminada, inspección aprobada, habitación asignable y acceso operativo son condiciones relacionadas, no sinónimos."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "previous_state",
+      "label": "Estado previo: qué se considera vigente",
+      "role": "evidence",
+      "source": ["transition", "instrument"],
+      "purpose": "Delimitar la situación reconocida antes del cambio."
+    },
+    {
+      "id": "command",
+      "label": "Comando: intención que puede aceptarse, rechazarse o quedar pendiente",
+      "role": "evidence",
+      "source": ["thesis", "transition"],
+      "purpose": "Separar lo solicitado de lo que efectivamente ocurre."
+    },
+    {
+      "id": "authority",
+      "label": "Autoridad: quién puede aceptar y asumir consecuencias",
+      "role": "authority",
+      "source": ["thesis", "instrument"],
+      "purpose": "Hacer explícita la capacidad legítima que reconoce la transición."
+    },
+    {
+      "id": "rule_gate",
+      "label": "Regla de resultado: aceptar, rechazar, esperar o escalar",
+      "role": "decision",
+      "source": ["instrument"],
+      "purpose": "Mostrar que una transición reconoce resultados alternativos y no sólo el camino feliz."
+    },
+    {
+      "id": "evidence_time",
+      "label": "Evidencia y tiempo: qué sostiene el resultado y cuándo estuvo disponible",
+      "role": "evidence",
+      "source": ["instrument"],
+      "purpose": "Volver auditable el reconocimiento del cambio."
+    },
+    {
+      "id": "event",
+      "label": "Evento: afirma qué ocurrió y conserva la historia",
+      "role": "outcome",
+      "source": ["thesis", "transition"],
+      "purpose": "Distinguir la ocurrencia reconocida de la intención previa."
+    },
+    {
+      "id": "resulting_state",
+      "label": "Estado: muestra qué se considera vigente para una audiencia",
+      "role": "outcome",
+      "source": ["thesis", "transition"],
+      "purpose": "Distinguir la proyección vigente de la historia completa."
+    },
+    {
+      "id": "repair",
+      "label": "Excepción y reparación: corregir sin borrar la historia",
+      "role": "constraint",
+      "source": ["instrument"],
+      "purpose": "Conservar una vía de impugnación, rectificación o compensación."
+    },
+    {
+      "id": "hh12_example",
+      "label": "Limpieza terminada no equivale a habitación entregable",
+      "role": "evidence",
+      "source": ["hh12"],
+      "purpose": "Aplicar la separación de funciones al caso longitudinal."
+    }
+  ],
+  "edges": [
+    {
+      "id": "request_change",
+      "from": "command",
+      "to": "rule_gate",
+      "relation": "transformation",
+      "source": ["transition"],
+      "meaning": "El comando solicita un cambio, pero no garantiza su ocurrencia."
+    },
+    {
+      "id": "authorize_change",
+      "from": "authority",
+      "to": "rule_gate",
+      "relation": "authority",
+      "source": ["transition", "instrument"],
+      "meaning": "La autoridad delimita quién puede reconocer el resultado."
+    },
+    {
+      "id": "support_result",
+      "from": "evidence_time",
+      "to": "rule_gate",
+      "relation": "evidence",
+      "source": ["instrument"],
+      "meaning": "La evidencia y el tiempo sostienen o impugnan el resultado."
+    },
+    {
+      "id": "record_occurrence",
+      "from": "rule_gate",
+      "to": "event",
+      "relation": "transformation",
+      "source": ["transition"],
+      "meaning": "El resultado reconocido se conserva como evento."
+    },
+    {
+      "id": "project_state",
+      "from": "event",
+      "to": "resulting_state",
+      "relation": "transformation",
+      "source": ["transition"],
+      "meaning": "El evento contribuye a la proyección del estado vigente."
+    },
+    {
+      "id": "repair_transition",
+      "from": "repair",
+      "to": "rule_gate",
+      "relation": "feedback",
+      "source": ["instrument"],
+      "meaning": "Una excepción vuelve sobre la transición para repararla sin eliminar lo ocurrido."
+    }
+  ]
+}
