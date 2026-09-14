@@ -1,0 +1,28 @@
+{
+  "title":"La alternativa se prueba contra la misma capacidad",
+  "claim":"La elección de realización compara opciones completas contra una misma capacidad, episodio adverso, reparación y salida.",
+  "source_sections":[
+    {"id":"thesis","heading":"Tesis","summary":"La adquisición se convierte en diseño sociotécnico y produce una arquitectura provisional de responsabilidades y salidas."},
+    {"id":"hh19","heading":"Hotel Horizonte: decidir qué configurar, integrar, construir o no automatizar","summary":"El hotel combina configuración, integración y revisión humana, con construcción condicionada por la portabilidad."},
+    {"id":"options","heading":"Movimiento 2 · Comparar configurar, integrar, construir y no automatizar","summary":"Las seis rutas se comparan con igual capacidad, horizonte y escenario adverso."},
+    {"id":"exit","heading":"Movimiento 3 · Gobernar dependencia, transición y salida","summary":"La dependencia se acepta sólo después de probar exportación, significado y continuidad operacional."}
+  ],
+  "nodes":[
+    {"id":"capability","label":"Confirmar una habitación accesible con corrección, interrupción y reparación","role":"capacity","source":["hh19"],"purpose":"Fijar el resultado común antes de nombrar productos."},
+    {"id":"configure","label":"Configurar","role":"option","source":["options"],"purpose":"Resolver el camino ordinario dentro del modelo del producto."},
+    {"id":"integrate","label":"Integrar","role":"option","source":["options"],"purpose":"Conservar estado, semántica y evidencia entre componentes."},
+    {"id":"build","label":"Construir","role":"conditional_option","source":["options"],"purpose":"Mantener control directo sólo cuando la restricción lo justifique."},
+    {"id":"contract","label":"Contratar","role":"option","source":["options"],"purpose":"Distribuir actividades sin borrar rendición de cuentas."},
+    {"id":"manual","label":"Operar manualmente","role":"option","source":["hh19","options"],"purpose":"Preservar juicio en excepciones de baja frecuencia y alto daño."},
+    {"id":"no_automation","label":"No automatizar","role":"boundary","source":["options"],"purpose":"Mantener abierta una alternativa profesional no tecnológica."},
+    {"id":"test","label":"Episodio, falla, reparación y salida","role":"evidence","source":["exit"],"purpose":"Comparar todas las alternativas con el mismo guion."},
+    {"id":"architecture","label":"Configurar, integrar y revisar humanamente","role":"decision","source":["hh19"],"purpose":"Producir una arquitectura provisional con opción condicionada."},
+    {"id":"portability","label":"Exportar, reconstruir, medir y aceptar dependencia","role":"governance","source":["exit"],"purpose":"Practicar salida antes de asumir el compromiso."}
+  ],
+  "edges":[
+    {"id":"open_options","from":"capability","to":"configure","relation":"alternative","source":["options"],"meaning":"La capacidad abre opciones comparables sin privilegiar un artefacto."},
+    {"id":"same_test","from":"manual","to":"test","relation":"evidence","source":["options","exit"],"meaning":"Cada ruta atraviesa el mismo episodio ordinario y adverso."},
+    {"id":"compose","from":"test","to":"architecture","relation":"decision","source":["hh19"],"meaning":"La evidencia produce una combinación y no un ranking universal."},
+    {"id":"govern_exit","from":"architecture","to":"portability","relation":"governance","source":["exit"],"meaning":"La decisión conserva portabilidad y condición de revisión."}
+  ]
+}

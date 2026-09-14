@@ -362,6 +362,28 @@ def svg_audit(path: Path, expected_labels: Iterable[str]) -> dict[str, Any]:
         return {"passed": False, "problems": [f"{type(error).__name__}: {error}"]}
 
 
+def infographic_audit(path: Path, expected_labels: Iterable[str]) -> dict[str, Any]:
+    """Validate editable SVG diagrams and approved high-resolution raster plates."""
+    if path.suffix.casefold() == ".svg":
+        return svg_audit(path, expected_labels)
+    decoded, detail = decode_media(path)
+    size = detail.get("size", [0, 0]) if decoded else [0, 0]
+    labels = [str(item).strip() for item in expected_labels if str(item).strip()]
+    problems: list[str] = []
+    if not decoded:
+        problems.append(detail.get("error", "raster does not decode"))
+    if len(size) != 2 or min(size) < 900:
+        problems.append("raster plate is below editorial resolution")
+    if not labels:
+        problems.append("manifest has no semantic labels")
+    return {
+        "passed": not problems,
+        "problems": problems,
+        "decode": detail,
+        "manifest_labels": labels,
+    }
+
+
 def markdown_portrait_evidence(root: Path) -> list[dict[str, str]]:
     records: list[dict[str, str]] = []
     candidates = sorted(set(root.glob("portrait-sources*.md")) | set(root.glob("assets/**/portrait-sources*.md")))
@@ -906,7 +928,7 @@ def audit(number: int) -> dict[str, Any]:
         if "/" not in relative:
             relative = f"diagrams/{relative}"
         path, error = safe_local_path(package, relative)
-        audit = svg_audit(path, record.get("labels", [])) if path and path.is_file() else {"passed": False, "problems": [error or "missing SVG"]}
+        audit = infographic_audit(path, record.get("labels", [])) if path and path.is_file() else {"passed": False, "problems": [error or "missing infographic"]}
         diagram_audits.append({"file": relative, **audit})
     diagram_ok = (
         1 <= len(diagrams) <= 2

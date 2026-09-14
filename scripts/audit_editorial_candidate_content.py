@@ -34,12 +34,14 @@ def sha256(path: Path) -> str:
 
 def tokens(value: str) -> list[str]:
     value = unicodedata.normalize("NFKC", value).strip()
+    if value in {"---", "***", "___"}:
+        return []
     value = re.sub(r"^#{1,6}\s*", "", value)
     value = re.sub(r"^[-*+]\s+", "", value)
     value = re.sub(r"^\d+[.)]\s+", "", value)
     value = re.sub(r"[*_`]", "", value)
     value = value.replace("|", " ")
-    return WORD_RE.findall(value.casefold())
+    return [token for token in WORD_RE.findall(value.casefold()) if token.strip("-'")]
 
 
 def audit(number: int, version: int) -> Path:
@@ -142,17 +144,31 @@ def audit(number: int, version: int) -> Path:
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"{result['status']} {code} v{version}: {target}")
-    if result["status"] != "PASS":
-        raise SystemExit(1)
-    return target
+    return target, result["status"] == "PASS"
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--number", type=int, required=True)
+    parser.add_argument("--number", type=int)
+    parser.add_argument("--start", type=int)
+    parser.add_argument("--end", type=int)
     parser.add_argument("--version", type=int, required=True)
     args = parser.parse_args()
-    audit(args.number, args.version)
+    if args.number is not None:
+        start = end = args.number
+    elif args.start is not None:
+        start = args.start
+        end = args.end if args.end is not None else start
+    else:
+        parser.error("use --number or --start/--end")
+    if start > end:
+        parser.error("--start must be less than or equal to --end")
+    all_passed = True
+    for number in range(start, end + 1):
+        _, passed = audit(number, args.version)
+        all_passed = all_passed and passed
+    if not all_passed:
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

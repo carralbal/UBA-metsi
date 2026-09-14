@@ -488,6 +488,12 @@ CONSEQUENCE_PHOTO_DOCS = {
     11, 12, 14, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
 }
 
+# Longer error catalogues need the complete editorial page.  Their decorative
+# band is reassigned to a nearby argumentative close when it contributes
+# semantic evidence, instead of forcing a weak continuation page.
+LONG_ERROR_DOCS = {17, 20, 21, 22, 23, 29, 31, 32, 33, 34, 35}
+MOVEMENT_TAIL_PHOTO_DOCS = {29, 33, 35}
+
 # These documents use one documentary band before Movimiento 2.  The second
 # image remains available for the full-page pause and is not repeated after
 # Movimiento 3, where it previously produced isolated image-only pages.
@@ -555,7 +561,16 @@ def coalesce_editorial_sections(number: int, sections: list[base.Section]) -> li
     primary = editorial_primary_titles(number)
     result: list[base.Section] = []
     for section in sections:
-        if section.title in primary or not result:
+        # Movements and the longitudinal Hotel Horizonte episode are part of
+        # the stable pedagogical spine even when a later plain-language
+        # revision promotes additional Markdown headings.  Keeping them as
+        # sections preserves the shared case treatment and the 17-part rhythm.
+        if (
+            section.title in primary
+            or section.title.startswith("Movimiento ")
+            or "Hotel Horizonte" in section.title
+            or not result
+        ):
             result.append(base.Section(section.title, list(section.lines)))
             continue
         result[-1].lines.extend(["", f"### {section.title}", *section.lines])
@@ -1726,14 +1741,16 @@ def diagram_svg(
 
 
 def route_for(number: int, index: int, title: str) -> str:
-    if index <= 5:
-        return "PROBLEMA"
-    if (number >= 17 and index == 6) or title.startswith("Movimiento 1"):
+    if title.startswith("Movimiento 1"):
         return "DISTINCIONES"
     if title.startswith("Movimiento 2"):
         return "DECISIONES"
     if title.startswith("Movimiento 3"):
         return "PRUEBA"
+    if index <= 5:
+        return "PROBLEMA"
+    if number >= 17 and index == 6:
+        return "DISTINCIONES"
     if index <= 12:
         return "TRANSFERENCIA"
     return "PREPARACIÓN"
@@ -2060,7 +2077,29 @@ def build(number: int) -> dict:
                     "Dos registros del trabajo real permiten contrastar la decisión con sus condiciones de operación.",
                     "movement-two-photo",
                 )
-        if section.title == "Errores frecuentes":
+        if section.title.startswith("Movimiento 3") and number in MOVEMENT_TAIL_PHOTO_DOCS:
+            movement_tail_photo = photo_band(
+                support[5], SUPPORT_ALTS[number][5],
+                "La escena documental devuelve la estrategia a una situación de operación, decisión y reparación.",
+                "movement-three-tail-photo",
+            )
+            if number in {29, 33}:
+                movement_close_html = movement_tail_photo + movement_close_html
+            else:
+                after_body += movement_tail_photo
+        if section.title.startswith("Movimiento 3") and number == 26:
+            after_body += photo_band(
+                support[2], SUPPORT_ALTS[number][2],
+                "El mapa se comprueba cuando una coordinación real puede operar, detenerse y repararse.",
+                "movement-three-tail-photo movement-tail-n26",
+            )
+        if section.title.startswith("Del cierre anterior") and number == 34:
+            after_body += photo_band(
+                support[5], SUPPORT_ALTS[number][5],
+                "Las tradiciones se vuelven útiles cuando permiten reconstruir una decisión situada y sus consecuencias.",
+                "traditions-evidence-photo",
+            )
+        if section.title == "Errores frecuentes" and number not in LONG_ERROR_DOCS:
             after_body += photo_band(
                 support[5], SUPPORT_ALTS[number][5],
                 "La escena de operación permite reconocer el error por sus efectos antes de convertirlo en una explicación cómoda.",
@@ -2181,6 +2220,7 @@ def build(number: int) -> dict:
             file, quote, alt = pause_map[index]
             close_article()
             body_chunks.append(
+                '<div class="block-c-fullbleed-anchor" aria-hidden="true"></div>'
                 f'<section class="full-bleed full-bleed-quote block-c-pause"><img src="assets/{file}" alt="{html.escape(alt)}">'
                 f'<p>{html.escape(quote)}</p></section>'
             )
@@ -2450,7 +2490,6 @@ BLOCK_C_CSS = r'''
 .block-c .closing-image>img{filter:none}
 .block-c.document-n11 .reading-section[data-section="09"]{break-before:page;page-break-before:always}
 .block-c.document-n16 [data-section="05"].block-c-handoff{min-height:246mm;display:flex;flex-direction:column;justify-content:center}
-.block-c.document-n17 article.reading + .block-c-pause{break-before:auto;page-break-before:auto}
 .block-c.document-n17 .questions,.block-c.document-n18 .questions,.block-c.document-n19 .questions,.block-c.document-n20 .questions,
 .block-c.document-n21 .questions,.block-c.document-n22 .questions,.block-c.document-n23 .questions,.block-c.document-n24 .questions,.block-c.document-n25 .questions,.block-c.document-n26 .questions,.block-c.document-n27 .questions,.block-c.document-n28 .questions,.block-c.document-n29 .questions,.block-c.document-n30 .questions{min-height:230mm;box-sizing:border-box;break-inside:avoid-page;page-break-inside:avoid}
 .block-c.document-n22 .reading-section[data-section="11"],
@@ -2986,8 +3025,23 @@ body.block-c .icon-strip{grid-template-columns:repeat(4,minmax(0,1fr));gap:4mm;m
 body.block-c .icon-strip div{grid-template-columns:10mm 1fr}
 body.block-c .icon-strip svg{width:9mm;height:9mm}
 body.block-c .block-c-pause{page:fullbleed!important;width:210mm!important;height:297mm!important;margin:0!important;break-before:page!important;page-break-before:always!important;break-after:page!important;page-break-after:always!important}
+body.block-c .block-c-fullbleed-anchor{page:fullbleed!important;display:block!important;width:0!important;height:0!important;margin:0!important;padding:0!important;break-before:page!important;page-break-before:always!important}
+body.block-c .block-c-fullbleed-anchor + .block-c-pause{break-before:auto!important;page-break-before:auto!important}
+body.block-c article.reading:has(+ .block-c-pause){break-after:page!important;page-break-after:always!important}
 body.block-c .block-c-pause::after{inset:0!important;height:100%!important;background:linear-gradient(180deg,rgba(0,0,0,.02) 42%,rgba(0,0,0,.56) 100%)}
 body.block-c .block-c-pause p{font-size:24pt;max-width:160mm}
+/* Chromium can round an exact 297 mm full-bleed box one device pixel beyond
+   the printable A4 height after a long preceding article.  The N17 second
+   pause exposed that edge case as a spurious residual page.  Keep the image
+   visually full page while reserving a sub-pixel pagination tolerance. */
+body.block-c.document-n17 .block-c-pause{
+  height:296mm!important;min-height:296mm!important;max-height:296mm!important;
+  break-inside:avoid-page!important;page-break-inside:avoid!important;contain:layout paint
+}
+body.block-c.document-n17 .block-c-pause p{
+  left:18mm!important;right:18mm!important;bottom:28mm!important;
+  max-width:none!important;font-size:18pt!important;line-height:1.12!important
+}
 body.block-c .closing-image{page:fullbleed!important;width:210mm!important;height:297mm!important;margin:0!important;break-before:page!important;page-break-before:always!important}
 
 /* Deliberate magazine pages for the short recurring apparatus.  Content is
@@ -3323,6 +3377,48 @@ body.block-c .block-c-errors .error-card h3{font-size:9.3pt!important;line-heigh
 body.block-c .block-c-errors .error-card p{font-size:8.45pt!important;line-height:1.2!important}
 body.block-c .block-c-errors .errors-photo{margin:3mm 0 0!important}
 body.block-c .block-c-errors .errors-photo .photo-viewport{height:34mm!important}
+/* N17 has ten comparatively long error pairs.  Give the argument the full
+   editorial page instead of letting a decorative band force four pairs onto
+   a weak continuation page immediately before the photographic pause. */
+body.block-c:is(.document-n17,.document-n20,.document-n21,.document-n22,.document-n23,.document-n29,.document-n31,.document-n32,.document-n33,.document-n34,.document-n35) .block-c-errors{height:246mm!important;min-height:246mm!important}
+body.block-c:is(.document-n17,.document-n20,.document-n21,.document-n22,.document-n23,.document-n29,.document-n31,.document-n32,.document-n33,.document-n34,.document-n35) .block-c-errors .errors-photo{display:none!important}
+body.block-c:is(.document-n17,.document-n20,.document-n21,.document-n22,.document-n23,.document-n29,.document-n31,.document-n32,.document-n33,.document-n34,.document-n35) .block-c-errors .section-body{
+  grid-template-rows:repeat(5,minmax(0,1fr))!important;gap:1.5mm 8mm!important
+}
+body.block-c:is(.document-n17,.document-n20,.document-n21,.document-n22,.document-n23,.document-n29,.document-n31,.document-n32,.document-n33,.document-n34,.document-n35) .block-c-errors .error-card{padding:1.2mm 0 .8mm!important}
+body.block-c:is(.document-n17,.document-n20,.document-n21,.document-n22,.document-n23,.document-n29,.document-n31,.document-n32,.document-n33,.document-n34,.document-n35) .block-c-errors .error-card h3{font-size:9.1pt!important;line-height:1.14!important}
+body.block-c:is(.document-n17,.document-n20,.document-n21,.document-n22,.document-n23,.document-n29,.document-n31,.document-n32,.document-n33,.document-n34,.document-n35) .block-c-errors .error-card p{font-size:8.25pt!important;line-height:1.16!important}
+
+/* When a long errors page relinquishes its decorative image, the image
+   remains in the argument as a semantic closing band on a nearby section. */
+body.block-c .movement-three-tail-photo,
+body.block-c .traditions-evidence-photo{
+  margin:5mm 0 0!important;break-inside:avoid-page!important;page-break-inside:avoid!important
+}
+body.block-c .movement-three-tail-photo .photo-viewport,
+body.block-c .traditions-evidence-photo .photo-viewport{height:70mm!important}
+body.block-c:is(.document-n29,.document-n33) .movement-three-tail-photo .photo-viewport{height:80mm!important}
+body.block-c.document-n26 .movement-tail-n26 .photo-viewport{height:45mm!important}
+
+/* Two longer Hotel continuations keep the complete six-voice panel on the
+   same page.  Only internal density changes; portraits and prose remain. */
+body.block-c:is(.document-n19,.document-n25) .hotel-voices-compact{
+  margin-bottom:2.5mm!important;padding-bottom:2mm!important
+}
+body.block-c:is(.document-n19,.document-n25) .hotel-voices-compact .hotel-voice-grid{gap:2mm 3mm!important}
+body.block-c:is(.document-n19,.document-n25) .hotel-voices-compact article{min-height:37mm!important}
+body.block-c:is(.document-n19,.document-n25) .hotel-voices-compact .portrait-frame,
+body.block-c:is(.document-n19,.document-n25) .hotel-voices-compact .portrait-frame img{height:37mm!important}
+body.block-c:is(.document-n19,.document-n25) .hotel-continuation{
+  columns:2!important;column-count:2!important;column-fill:balance!important;
+  font-size:8.25pt!important;line-height:1.16!important;padding-bottom:2mm!important
+}
+body.block-c:is(.document-n19,.document-n25) .hotel-continuation p{margin:0 0 1.25mm!important;break-inside:auto!important}
+body.block-c.document-n29 .hotel-continuation-body{padding-bottom:4mm!important}
+body.block-c.document-n29 .hotel-continuation{padding-bottom:3mm!important}
+body.block-c.document-n29 .hotel-continuation::after{
+  content:"";display:block;height:2mm;border-bottom:.25mm solid #777
+}
 
 body.block-c .consequences-limits-page{
   box-sizing:border-box!important;height:236mm!important;min-height:236mm!important;
@@ -3771,59 +3867,37 @@ body.block-c .thesis-infographic-page .approved-infographic-page figcaption{marg
 /* The readable rebuild keeps each compact thesis and decision map on one page,
    but gives the map enough physical width for labels to remain legible in
    print.  Documents enter this selector only after individual visual QA. */
-body.block-c.document-n11 .thesis-infographic-page,
-body.block-c.document-n12 .thesis-infographic-page,
-body.block-c.document-n13 .thesis-infographic-page{
+body.block-c:not(.document-n34) .thesis-infographic-page{
   grid-template-rows:128mm minmax(0,1fr)!important;gap:3mm!important
 }
-body.block-c.document-n11 .thesis-infographic-page .block-c-thesis,
-body.block-c.document-n12 .thesis-infographic-page .block-c-thesis,
-body.block-c.document-n13 .thesis-infographic-page .block-c-thesis{
+body.block-c:not(.document-n34) .thesis-infographic-page .block-c-thesis{
   height:128mm!important;padding:4mm 6mm!important
 }
-body.block-c.document-n11 .thesis-infographic-page .block-c-thesis .section-heading,
-body.block-c.document-n12 .thesis-infographic-page .block-c-thesis .section-heading,
-body.block-c.document-n13 .thesis-infographic-page .block-c-thesis .section-heading{
+body.block-c:not(.document-n34) .thesis-infographic-page .block-c-thesis .section-heading{
   margin-bottom:2mm!important
 }
-body.block-c.document-n11 .thesis-infographic-page .block-c-thesis .section-lead p,
-body.block-c.document-n12 .thesis-infographic-page .block-c-thesis .section-lead p,
-body.block-c.document-n13 .thesis-infographic-page .block-c-thesis .section-lead p{
+body.block-c:not(.document-n34) .thesis-infographic-page .block-c-thesis .section-lead p{
   font-size:14.6pt!important;line-height:1.2!important
 }
-body.block-c.document-n11 .thesis-infographic-page .block-c-thesis .section-body:not(.section-lead),
-body.block-c.document-n12 .thesis-infographic-page .block-c-thesis .section-body:not(.section-lead),
-body.block-c.document-n13 .thesis-infographic-page .block-c-thesis .section-body:not(.section-lead){
+body.block-c:not(.document-n34) .thesis-infographic-page .block-c-thesis .section-body:not(.section-lead){
   font-size:9.7pt!important;line-height:1.28!important
 }
-body.block-c.document-n11 .thesis-infographic-page .approved-infographic-page,
-body.block-c.document-n12 .thesis-infographic-page .approved-infographic-page,
-body.block-c.document-n13 .thesis-infographic-page .approved-infographic-page{
+body.block-c:not(.document-n34) .thesis-infographic-page .approved-infographic-page{
   padding:3mm 5mm 4mm!important
 }
-body.block-c.document-n11 .thesis-infographic-page .approved-infographic-page header,
-body.block-c.document-n12 .thesis-infographic-page .approved-infographic-page header,
-body.block-c.document-n13 .thesis-infographic-page .approved-infographic-page header{
+body.block-c:not(.document-n34) .thesis-infographic-page .approved-infographic-page header{
   padding-top:2mm!important
 }
-body.block-c.document-n11 .thesis-infographic-page .approved-infographic-page header p,
-body.block-c.document-n12 .thesis-infographic-page .approved-infographic-page header p,
-body.block-c.document-n13 .thesis-infographic-page .approved-infographic-page header p{
+body.block-c:not(.document-n34) .thesis-infographic-page .approved-infographic-page header p{
   margin-top:2mm!important;font-size:11.8pt!important;line-height:1.14!important
 }
-body.block-c.document-n11 .thesis-infographic-page .approved-infographic-page figure,
-body.block-c.document-n12 .thesis-infographic-page .approved-infographic-page figure,
-body.block-c.document-n13 .thesis-infographic-page .approved-infographic-page figure{
+body.block-c:not(.document-n34) .thesis-infographic-page .approved-infographic-page figure{
   margin-top:2mm!important;align-items:center!important
 }
-body.block-c.document-n11 .thesis-infographic-page .approved-infographic-page img,
-body.block-c.document-n12 .thesis-infographic-page .approved-infographic-page img,
-body.block-c.document-n13 .thesis-infographic-page .approved-infographic-page img{
+body.block-c:not(.document-n34) .thesis-infographic-page .approved-infographic-page img{
   flex:none!important;width:128mm!important;height:auto!important;max-height:79mm!important
 }
-body.block-c.document-n11 .thesis-infographic-page .approved-infographic-page figcaption,
-body.block-c.document-n12 .thesis-infographic-page .approved-infographic-page figcaption,
-body.block-c.document-n13 .thesis-infographic-page .approved-infographic-page figcaption{
+body.block-c:not(.document-n34) .thesis-infographic-page .approved-infographic-page figcaption{
   margin-top:1.5mm!important;font-size:6.7pt!important;line-height:1.18!important
 }
 
