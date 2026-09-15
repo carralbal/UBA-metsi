@@ -2,6 +2,14 @@
 
 Estas presentaciones v3 son el soporte visible de los encuentros. No resumen las lecturas: organizan decisiones, comparaciones, perturbaciones, producción de artefactos, revisión y cierre. Cada una se apoya en la fuente canónica publicada y en las ocho actividades reales de su taller. Las notas de orador permiten facilitar la misma secuencia en modalidad sincrónica o asincrónica.
 
+## Piloto audiovisual para validar
+
+- [N01 · material de clase v4 · video de fondo](N01/N01-METSI-material-de-clase-v4-video-pilot.pptx)
+
+El piloto v4 conserva el contenido operativo de N01 y lo presenta con video de fondo a página completa, una sola acción por pantalla y notas redactadas como discurso docente listo para leer. La versión v3 permanece disponible como base estática aprobada.
+
+## Base estática aprobada
+
 - [N01 · material de clase v3](N01/N01-METSI-material-de-clase-v3.pptx)
 - [N02 · material de clase v3](N02/N02-METSI-material-de-clase-v3.pptx)
 - [N03 · material de clase v3](N03/N03-METSI-material-de-clase-v3.pptx)
