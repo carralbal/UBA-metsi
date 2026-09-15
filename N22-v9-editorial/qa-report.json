@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "cb72967a685128b29e73ac0d269f1d346bfc332985dec6a50499140af421885f",
-        "declared_sha256": "cb72967a685128b29e73ac0d269f1d346bfc332985dec6a50499140af421885f",
+        "actual_sha256": "a90ab0af814ff9cb09aaff2906f58b39aa8795c1d72aec2f54dbb3ffc042eb11",
+        "declared_sha256": "a90ab0af814ff9cb09aaff2906f58b39aa8795c1d72aec2f54dbb3ffc042eb11",
         "document_json_matches": true,
         "source": "source/N22_iniciativas_como_hipotesis_que_pueden_refutarse-content-canonical-v3.md",
         "source_exists": true,
@@ -48,6 +48,19 @@
       "status": "PASS"
     },
     {
+      "check": "errors_grid_groups_each_label_with_its_explanation",
+      "evidence": [
+        {
+          "cards": 10,
+          "declared_rows": 5,
+          "expected_rows": 5,
+          "labels": 10,
+          "naked_pairs": 0
+        }
+      ],
+      "status": "PASS"
+    },
+    {
       "check": "no_lfs_pointers_private_paths_or_placeholders",
       "evidence": {
         "lfs_pointers": [],
@@ -67,12 +80,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 19534131,
-        "final_sha256": "68a31658dd12f20b0b0862d87da0d888762a4ae3bbc06a08cccaf2c717809b4c",
+        "bytes": 19482148,
+        "final_sha256": "2c336111ceaac60f7ea87be102e6b5cd0381622dc01d723f47d9c4af3e8dc75d",
         "pages": 27,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "26d443a62ec1966aa4c338a331d6a40fb0b4a8fc55f94cb5119bf251719493ae",
+        "raw_sha256": "4d900196aa8af38f4ae3a6c68c892058efd74fbe2781947b1e6e31c72f5520dc",
         "unique_sizes": [
           [
             594.96,
@@ -1078,7 +1091,7 @@
       "evidence": {
         "declared_exceptions": [],
         "invalid_exception_declarations": [],
-        "minimum": 0.658,
+        "minimum": 0.671,
         "structural_exceptions": [
           1,
           2,
@@ -1113,21 +1126,21 @@
   "document": "N22",
   "failed_checks": [],
   "metrics": {
-    "minimum_ordinary_vertical_density": 0.658,
+    "minimum_ordinary_vertical_density": 0.671,
     "pages": 27,
     "pause_pages": [
       5,
       21
     ],
-    "pdf_bytes": 19534131,
-    "pdf_sha256": "68a31658dd12f20b0b0862d87da0d888762a4ae3bbc06a08cccaf2c717809b4c",
+    "pdf_bytes": 19482148,
+    "pdf_sha256": "2c336111ceaac60f7ea87be102e6b5cd0381622dc01d723f47d9c4af3e8dc75d",
     "source_blocks": 271
   },
   "mode": "read-only",
   "package": "N22-v9-editorial",
-  "passed_checks": 26,
+  "passed_checks": 27,
   "status": "PASS",
-  "total_checks": 26,
+  "total_checks": 27,
   "validator": "validate_n11_n36_v6.py",
   "version": "v9-editorial"
 }

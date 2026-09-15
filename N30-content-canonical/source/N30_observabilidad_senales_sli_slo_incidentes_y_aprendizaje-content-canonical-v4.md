@@ -6,7 +6,7 @@
 
 ## El laboratorio respondía y la guardia seguía esperando
 
-Un hospital integra el laboratorio con la historia clínica y el tablero de guardia. Durante una madrugada, servidores, colas y bases mantienen disponibilidad dentro del objetivo. Los mensajes se procesan sin error y la latencia media parece normal. Sin embargo, tres resultados críticos no llegan a la pantalla desde la cual el equipo médico decide. El laboratorio terminó su trabajo; la guardia continúa esperando una información que el sistema técnico considera entregada.
+En simple, con un ejemplo: Un hospital integra el laboratorio con la historia clínica y el tablero de guardia. Durante una madrugada, servidores, colas y bases mantienen disponibilidad dentro del objetivo. Los mensajes se procesan sin error y la latencia media parece normal. Sin embargo, tres resultados críticos no llegan a la pantalla desde la cual el equipo médico decide. El laboratorio terminó su trabajo; la guardia continúa esperando una información que el sistema técnico considera entregada.
 
 La primera alerta aparece por teléfono. Una bioquímica advierte que una muestra crítica no recibió confirmación clínica y llama a la guardia. Tecnología consulta paneles verdes y no puede responder dónde quedó el resultado. Cada componente posee telemetría, pero no existe una señal que represente la promesa completa: resultado validado, disponible para la persona autorizada, reconocido a tiempo y vinculado con una acción clínica.
 
@@ -82,7 +82,7 @@ Snowden, D. J. y Boone, M. E. distinguen contextos que requieren analizar, exper
 
 ### Observabilidad
 
-La observabilidad es la capacidad de comprender estados y comportamientos internos mediante señales externas suficientes y contextualizadas. No es sinónimo de monitoreo, acumulación de registros ni compra de una plataforma. Requiere instrumentación y un modelo que permita formular preguntas nuevas.
+En simple, con un ejemplo: La observabilidad es la capacidad de comprender estados y comportamientos internos mediante señales externas suficientes y contextualizadas. No es sinónimo de monitoreo, acumulación de registros ni compra de una plataforma. Requiere instrumentación y un modelo que permita formular preguntas nuevas.
 
 En HH-30, una traza conecta la reserva externa con el estado intermedio, la cola manual y la decisión de Recepción. La evidencia debe reconstruir el episodio sin depender de quien diseñó el sistema. Correlación, procedencia y semántica importan más que volumen aislado.
 
@@ -94,9 +94,9 @@ La instrumentación se prueba como parte del servicio. Se introducen identificad
 
 ### Monitoreo
 
-El monitoreo compara señales conocidas con condiciones y umbrales previamente definidos. Detecta desviaciones esperadas y activa decisiones operativas, pero no explica por sí solo causalidad ni responde preguntas que nadie formuló.
+En simple: El monitoreo compara señales conocidas con condiciones y umbrales previamente definidos. Detecta desviaciones esperadas y activa decisiones operativas, pero no explica por sí solo causalidad ni responde preguntas que nadie formuló.
 
-Hotel Horizonte vigila ingresos logrados por minuto y estados indeterminados. HH-30 vincula cada indicador con población, ventana, responsable y primera acción. Cobertura, precisión y utilidad de las alertas muestran si el monitoreo protege la promesa o sólo produce mensajes.
+Ejemplo cercano: Hotel Horizonte vigila ingresos logrados por minuto y estados indeterminados. HH-30 vincula cada indicador con población, ventana, responsable y primera acción. Cobertura, precisión y utilidad de las alertas muestran si el monitoreo protege la promesa o sólo produce mensajes.
 
 Los umbrales estáticos pueden ignorar contexto o generar ruido. Se calibran con episodios y consecuencias, no sólo con distribución histórica. Cuando una alerta se silencia repetidamente o llega después del daño, se revisa la condición y la capacidad de respuesta.
 
@@ -106,9 +106,9 @@ La calibración compara errores de detección con consecuencias. Un umbral muy s
 
 ### Telemetría
 
-La telemetría reúne trazas, métricas, registros y contexto emitidos por componentes y recorridos. No se vuelve evidencia por existir en gran volumen. Correlación, semántica, integridad y procedencia permiten reconstruir actividad distribuida.
+En simple: La telemetría reúne trazas, métricas, registros y contexto emitidos por componentes y recorridos. No se vuelve evidencia por existir en gran volumen. Correlación, semántica, integridad y procedencia permiten reconstruir actividad distribuida.
 
-HH-30 utiliza un identificador de episodio a través del canal, el PMS y la cerradura. También registra decisiones manuales para evitar que el tramo sin software desaparezca. Muestreo y retención se prueban con una excepción, porque una traza incompleta puede sostener una explicación equivocada.
+Ejemplo cercano: HH-30 utiliza un identificador de episodio a través del canal, el PMS y la cerradura. También registra decisiones manuales para evitar que el tramo sin software desaparezca. Muestreo y retención se prueban con una excepción, porque una traza incompleta puede sostener una explicación equivocada.
 
 Más telemetría aumenta costo, exposición de datos y carga cognitiva. La selección parte de decisiones y preguntas concretas, minimiza información personal y fija plazos. Una señal se conserva cuando contribuye a detectar, explicar o reparar; no por la comodidad de capturarla.
 
@@ -118,9 +118,9 @@ El muestreo se diseña según riesgo. Conservar sólo recorridos rápidos puede 
 
 ### Señal de negocio
 
-Una señal de negocio representa una consecuencia operativa o de valor producida por el sistema. No se reduce a transacciones técnicas ni a un indicador financiero tardío. Conecta eventos del recorrido con población y resultado.
+En simple: Una señal de negocio representa una consecuencia operativa o de valor producida por el sistema. No se reduce a transacciones técnicas ni a un indicador financiero tardío. Conecta eventos del recorrido con población y resultado.
 
-Un ingreso logrado sin reasignación representa mejor la promesa que una respuesta HTTP exitosa. HH-30 reconcilia esa señal con evidencia de Recepción y Housekeeping. La definición incluye denominador, ventana, exclusiones y fuente para impedir que cambios de captura parezcan mejoras.
+Ejemplo cercano: Un ingreso logrado sin reasignación representa mejor la promesa que una respuesta HTTP exitosa. HH-30 reconcilia esa señal con evidencia de Recepción y Housekeeping. La definición incluye denominador, ventana, exclusiones y fuente para impedir que cambios de captura parezcan mejoras.
 
 Toda señal puede inducir atajos. Si sólo se premia velocidad, puede aumentar trabajo invisible o reducir verificación. Por eso se combina con salvaguardas de accesibilidad, integridad y reparación, y se revisa cuando deja de anticipar la experiencia real.
 
@@ -130,7 +130,7 @@ Las señales cualitativas también informan. Un reclamo, una observación de Luc
 
 ### Las cinco métricas DORA como sistema de preguntas
 
-DORA organiza en 2026 cinco métricas de desempeño de entrega de software. Tres describen el rendimiento del cambio: tiempo de entrega de cambios, frecuencia de despliegue y tasa de retrabajo del despliegue. Dos observan inestabilidad: tasa de fallas de cambio y tiempo de recuperación de un despliegue fallido. La unidad recomendada es una aplicación o servicio, porque agregar productos con dinámicas distintas puede fabricar una cifra que no representa a ninguno.
+En simple, con un ejemplo: DORA organiza en 2026 cinco métricas de desempeño de entrega de software. Tres describen el rendimiento del cambio: tiempo de entrega de cambios, frecuencia de despliegue y tasa de retrabajo del despliegue. Dos observan inestabilidad: tasa de fallas de cambio y tiempo de recuperación de un despliegue fallido. La unidad recomendada es una aplicación o servicio, porque agregar productos con dinámicas distintas puede fabricar una cifra que no representa a ninguno.
 
 El tiempo de entrega de cambios observa cuánto transcurre desde que una modificación queda registrada hasta que opera en producción. Puede revelar inventario, espera y lotes grandes. No mide por sí solo tiempo desde una necesidad hasta un resultado. Una idea puede esperar meses antes del primer commit, y una entrega rápida puede no producir valor. HH-30 lo vincula con la hipótesis de liberación y con el episodio que debía cambiar.
 
@@ -150,7 +150,7 @@ HH-30 construye una ficha por servicio con definición, fuente, ventana, cobertu
 
 ### Indicador de nivel de servicio
 
-Un indicador de nivel de servicio, SLI, cuantifica una dimensión observable de la capacidad que importa a quienes dependen de ella. No es cualquier métrica disponible. Define eventos válidos, población, ventana y método de cálculo.
+En simple, con un ejemplo: Un indicador de nivel de servicio, SLI, cuantifica una dimensión observable de la capacidad que importa a quienes dependen de ella. No es cualquier métrica disponible. Define eventos válidos, población, ventana y método de cálculo.
 
 HH-30 mide la proporción de ingresos completados dentro del umbral acordado. El numerador y el denominador deben incluir episodios degradados y no sólo respuestas exitosas. Comparar el indicador con casos reales permite saber si representa la promesa o excluye precisamente sus fallas.
 
@@ -162,7 +162,7 @@ La ventana condiciona interpretación y acción. Una media mensual puede ocultar
 
 ### Objetivo de nivel de servicio
 
-Un objetivo de nivel de servicio, SLO, establece el nivel esperado de un SLI durante una ventana y orienta decisiones. No es una promesa de perfección ni se convierte automáticamente en un acuerdo contractual.
+En simple, con un ejemplo: Un objetivo de nivel de servicio, SLO, establece el nivel esperado de un SLI durante una ventana y orienta decisiones. No es una promesa de perfección ni se convierte automáticamente en un acuerdo contractual.
 
 En Hotel Horizonte, el SLO crea un límite común para equilibrar confiabilidad, cambio y costo. HH-30 registra qué ocurre cuando se acerca o supera el umbral: limitar exposición, priorizar reparación o revisar la expectativa. Sin consecuencia, el objetivo es decorativo.
 
@@ -184,7 +184,7 @@ Beyer y sus coautores proponen partir de una experiencia que importe a quien usa
 
 ### Presupuesto de error
 
-El presupuesto de error es la fracción de eventos no buenos permitida por el SLO durante su ventana. Para un SLO de 99 %, equivale a 1 % de los eventos válidos. Vincula confiabilidad con ritmo de cambio porque permite acordar de antemano qué decisiones se restringen cuando el servicio consume ese margen. No autoriza daño ni vuelve aceptable cualquier falla incluida en el porcentaje.
+En simple, con un ejemplo: El presupuesto de error es la fracción de eventos no buenos permitida por el SLO durante su ventana. Para un SLO de 99 %, equivale a 1 % de los eventos válidos. Vincula confiabilidad con ritmo de cambio porque permite acordar de antemano qué decisiones se restringen cuando el servicio consume ese margen. No autoriza daño ni vuelve aceptable cualquier falla incluida en el porcentaje.
 
 HH-30 observa consumo y velocidad de consumo para decidir si continúa el despliegue o prioriza estabilidad. En la ventana global de 10.000 llegadas, cuatro eventos no buenos consumen cuatro de los cien admitidos, es decir, 4 % del presupuesto. Para la cohorte piloto se fija además un límite transitorio de cinco eventos no buenos sobre 500 llegadas.
 
@@ -204,7 +204,7 @@ El ejemplo permite distinguir tres preguntas. El SLI pregunta qué ocurrió; el 
 
 ### Alerta accionable
 
-Una alerta accionable comunica una condición relevante a alguien capaz de intervenir con contexto suficiente. No es cada anomalía ni un mensaje sin prioridad. Relaciona señal, impacto, urgencia, responsable y primera acción segura.
+En simple, con un ejemplo: Una alerta accionable comunica una condición relevante a alguien capaz de intervenir con contexto suficiente. No es cada anomalía ni un mensaje sin prioridad. Relaciona señal, impacto, urgencia, responsable y primera acción segura.
 
 Recepción recibe una alerta sobre estados indeterminados y activa contingencia. HH-30 prueba horario nocturno, ausencia de la persona habitual y datos parciales. Tiempo de reconocimiento, falsos positivos y decisiones tomadas permiten mejorarla.
 
@@ -222,7 +222,7 @@ Se exige además un mínimo de eventos o una señal cualitativa crítica para no
 
 ### Incidente
 
-Un incidente es una alteración no deseada de una capacidad o promesa que requiere coordinación y aprendizaje. No se define sólo por caída técnica ni por la severidad asignada al final. Incluye degradación, datos incorrectos y trabajo humano extraordinario.
+En simple, con un ejemplo: Un incidente es una alteración no deseada de una capacidad o promesa que requiere coordinación y aprendizaje. No se define sólo por caída técnica ni por la severidad asignada al final. Incluye degradación, datos incorrectos y trabajo humano extraordinario.
 
 HH-30 reconstruye un turno en que reservas válidas no se transforman en ingresos. La línea temporal conserva señales, decisiones, comunicaciones y consecuencias. La clasificación inicial puede cambiar con evidencia y no debe retrasar contención ni reparación.
 
@@ -234,7 +234,7 @@ Contener, recuperar y reparar son momentos distintos. Contener limita propagaci�
 
 ### Respuesta coordinada
 
-La respuesta coordinada distribuye autoridad y comunicación para limitar daño bajo presión. No depende de una persona heroica ni de una guía operativa inflexible. Define roles, prioridades, canales, escalamiento y vínculo con quienes están afectados.
+En simple, con un ejemplo: La respuesta coordinada distribuye autoridad y comunicación para limitar daño bajo presión. No depende de una persona heroica ni de una guía operativa inflexible. Define roles, prioridades, canales, escalamiento y vínculo con quienes están afectados.
 
 Tecnología repara estados mientras Operaciones sostiene atención y comunica. HH-30 ensaya esa división con datos incompletos y cambios de turno. La prueba observa si cada actor recibe lo necesario y si las decisiones contradictorias se resuelven sin abandonar la promesa completa.
 
@@ -246,7 +246,7 @@ La comunicación externa reconoce incertidumbre y ofrece una acción. Camila no 
 
 ### Revisión posterior
 
-Una revisión posterior reconstruye condiciones, decisiones y mecanismos para aprender sin reducir el incidente a culpa individual. No es una cronología ornamental ni una búsqueda automática de causa raíz única.
+En simple, con un ejemplo: Una revisión posterior reconstruye condiciones, decisiones y mecanismos para aprender sin reducir el incidente a culpa individual. No es una cronología ornamental ni una búsqueda automática de causa raíz única.
 
 HH-30 compara contrato temporal, alertas, modo degradado y capacidad real de Recepción. Evidencia de distintas fuentes permite sostener explicaciones rivales. El análisis conserva responsabilidad y reparación sin castigar la información necesaria para comprender.
 
@@ -262,7 +262,7 @@ La primera ayuda a reconstruir decisiones disponibles en el momento; la segunda 
 
 ### Bucle de aprendizaje operativo
 
-Un bucle de aprendizaje operativo devuelve evidencia de uso e incidentes a arquitectura, contratos, calidad y gobierno de liberación. No es una retrospectiva aislada ni una lista infinita de tareas. Prioriza cambios por mecanismo, riesgo y capacidad de contener recurrencia.
+En simple, con un ejemplo: Un bucle de aprendizaje operativo devuelve evidencia de uso e incidentes a arquitectura, contratos, calidad y gobierno de liberación. No es una retrospectiva aislada ni una lista infinita de tareas. Prioriza cambios por mecanismo, riesgo y capacidad de contener recurrencia.
 
 HH-30 actualiza HH-26 a HH-29 con evidencia del turno. Una falla puede modificar el mapa de dependencia, una garantía temporal, un escenario de calidad y una puerta de despliegue. Cada cambio conserva el vínculo con el episodio para evitar correcciones sin fundamento.
 

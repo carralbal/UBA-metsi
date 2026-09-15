@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "5e77f1eee940eed00ff89ae669ea10e8c1cc0f12b8bb305368ed3e7c01c79266",
-        "declared_sha256": "5e77f1eee940eed00ff89ae669ea10e8c1cc0f12b8bb305368ed3e7c01c79266",
+        "actual_sha256": "74b9398e6e06b631a0c8520a0843fbdc004c5fe1f16b1e2328de8aca5d1e06b0",
+        "declared_sha256": "74b9398e6e06b631a0c8520a0843fbdc004c5fe1f16b1e2328de8aca5d1e06b0",
         "document_json_matches": true,
         "source": "source/N28_evidencia_de_calidad_segun_riesgo_y_atributos_en_tension-content-canonical-v4.md",
         "source_exists": true,
@@ -48,6 +48,19 @@
       "status": "PASS"
     },
     {
+      "check": "errors_grid_groups_each_label_with_its_explanation",
+      "evidence": [
+        {
+          "cards": 10,
+          "declared_rows": 5,
+          "expected_rows": 5,
+          "labels": 10,
+          "naked_pairs": 0
+        }
+      ],
+      "status": "PASS"
+    },
+    {
       "check": "no_lfs_pointers_private_paths_or_placeholders",
       "evidence": {
         "lfs_pointers": [],
@@ -67,12 +80,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 19342821,
-        "final_sha256": "834412f9afc18688abf46e747af279c8ecb108b2628f8df4b12edb7736af5337",
+        "bytes": 19320787,
+        "final_sha256": "f0a7ec09eeb9255c9cf716fdba6ea5cd278ddbcc03525446317488772e9dc66c",
         "pages": 27,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "56c97ed6cc111468b1cf1106bf2a0fa5f464af8b5f1412d60cfccdc2e343046f",
+        "raw_sha256": "47c9b4b99a9f5153f5827b67e85e5caccc952122bb811dfb347777da13dc3c5a",
         "unique_sizes": [
           [
             594.96,
@@ -388,9 +401,9 @@
               "top": 1.0
             },
             "height_px": 842,
-            "nonwhite_fraction": 0.999469,
+            "nonwhite_fraction": 0.999473,
             "page": 4,
-            "pixel_sha256": "207346d09bd9cb6815d4bc9024e464a3967478251116d017277abbb5c206b415",
+            "pixel_sha256": "b550d225cae6b5c011bad664ab7565339f0a3774cee6e99f8c2b92cd921989be",
             "vertical_density": 0.8955,
             "white_gutters": [],
             "width_px": 595
@@ -1138,15 +1151,15 @@
       5,
       20
     ],
-    "pdf_bytes": 19342821,
-    "pdf_sha256": "834412f9afc18688abf46e747af279c8ecb108b2628f8df4b12edb7736af5337",
+    "pdf_bytes": 19320787,
+    "pdf_sha256": "f0a7ec09eeb9255c9cf716fdba6ea5cd278ddbcc03525446317488772e9dc66c",
     "source_blocks": 255
   },
   "mode": "read-only",
   "package": "N28-v9-editorial",
-  "passed_checks": 26,
+  "passed_checks": 27,
   "status": "PASS",
-  "total_checks": 26,
+  "total_checks": 27,
   "validator": "validate_n11_n36_v6.py",
   "version": "v9-editorial"
 }

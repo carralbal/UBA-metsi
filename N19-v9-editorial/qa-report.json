@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "3d997dfffc4379ba3fd0d8b657462f72278601117d22049633f6fd8f456d597f",
-        "declared_sha256": "3d997dfffc4379ba3fd0d8b657462f72278601117d22049633f6fd8f456d597f",
+        "actual_sha256": "fe38542d71bf617426b23d2a2d3bb7ff81560c921a9b14bc5da975a1d00066d5",
+        "declared_sha256": "fe38542d71bf617426b23d2a2d3bb7ff81560c921a9b14bc5da975a1d00066d5",
         "document_json_matches": true,
         "source": "source/N19_alternativas_de_realizacion_configurar_integrar_construir_y_no_automatizar-content-canonical-v3.md",
         "source_exists": true,
@@ -48,6 +48,19 @@
       "status": "PASS"
     },
     {
+      "check": "errors_grid_groups_each_label_with_its_explanation",
+      "evidence": [
+        {
+          "cards": 10,
+          "declared_rows": 5,
+          "expected_rows": 5,
+          "labels": 10,
+          "naked_pairs": 0
+        }
+      ],
+      "status": "PASS"
+    },
+    {
       "check": "no_lfs_pointers_private_paths_or_placeholders",
       "evidence": {
         "lfs_pointers": [],
@@ -67,12 +80,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 20491682,
-        "final_sha256": "ca8008b1d3b32a8ee4530154d5741e0094749d1846cac210dab5fc829ff95e81",
+        "bytes": 20469736,
+        "final_sha256": "8301801ff99848cd6f06874a8ad7e662335ee466c93089370423635a97084c16",
         "pages": 28,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "62a6d92633a54c5cadce0d2066c897cd574a579a9b2a844be831145695bf7fdd",
+        "raw_sha256": "383aa2722f40f7dccd3dd2d488b0451288e9b59ced6c7dcb9bad79443905b282",
         "unique_sizes": [
           [
             594.96,
@@ -1135,15 +1148,15 @@
       5,
       21
     ],
-    "pdf_bytes": 20491682,
-    "pdf_sha256": "ca8008b1d3b32a8ee4530154d5741e0094749d1846cac210dab5fc829ff95e81",
+    "pdf_bytes": 20469736,
+    "pdf_sha256": "8301801ff99848cd6f06874a8ad7e662335ee466c93089370423635a97084c16",
     "source_blocks": 272
   },
   "mode": "read-only",
   "package": "N19-v9-editorial",
-  "passed_checks": 26,
+  "passed_checks": 27,
   "status": "PASS",
-  "total_checks": 26,
+  "total_checks": 27,
   "validator": "validate_n11_n36_v6.py",
   "version": "v9-editorial"
 }

@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "2d3ead06cc2b700aaaa0537a9ad51c0e437b3660ac5b97370fdd4014eda98601",
-        "declared_sha256": "2d3ead06cc2b700aaaa0537a9ad51c0e437b3660ac5b97370fdd4014eda98601",
+        "actual_sha256": "13ecb4f001b71a27addd7d423f9e27b29cb54204b47257fcb39bfb36f95ccb99",
+        "declared_sha256": "13ecb4f001b71a27addd7d423f9e27b29cb54204b47257fcb39bfb36f95ccb99",
         "document_json_matches": true,
         "source": "source/N25_flujo_mas_alla_de_las_ceremonias_colas_lote_espera_y_feedback-content-canonical-v4.md",
         "source_exists": true,
@@ -48,6 +48,19 @@
       "status": "PASS"
     },
     {
+      "check": "errors_grid_groups_each_label_with_its_explanation",
+      "evidence": [
+        {
+          "cards": 10,
+          "declared_rows": 5,
+          "expected_rows": 5,
+          "labels": 10,
+          "naked_pairs": 0
+        }
+      ],
+      "status": "PASS"
+    },
+    {
       "check": "no_lfs_pointers_private_paths_or_placeholders",
       "evidence": {
         "lfs_pointers": [],
@@ -67,12 +80,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 20435812,
-        "final_sha256": "636acd56907ba3aaf7cfd8027a18d5382ae4bd178a21dde75f3c4ebf91e03699",
+        "bytes": 20415046,
+        "final_sha256": "fa74d7c02b47504e68d9eb6cecf5ad67abd257e406ad739cd06042b0eac2c3dc",
         "pages": 29,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "3c587878669b018ce9bfdf75d393707cbb245a45a791705b4fd3a2ae9ed8a5f1",
+        "raw_sha256": "466cb852f19614390d1509fef4833efbc320a8c42b7a3147d313e1188e32215c",
         "unique_sizes": [
           [
             594.96,
@@ -1135,15 +1148,15 @@
       5,
       22
     ],
-    "pdf_bytes": 20435812,
-    "pdf_sha256": "636acd56907ba3aaf7cfd8027a18d5382ae4bd178a21dde75f3c4ebf91e03699",
+    "pdf_bytes": 20415046,
+    "pdf_sha256": "fa74d7c02b47504e68d9eb6cecf5ad67abd257e406ad739cd06042b0eac2c3dc",
     "source_blocks": 362
   },
   "mode": "read-only",
   "package": "N25-v9-editorial",
-  "passed_checks": 26,
+  "passed_checks": 27,
   "status": "PASS",
-  "total_checks": 26,
+  "total_checks": 27,
   "validator": "validate_n11_n36_v6.py",
   "version": "v9-editorial"
 }

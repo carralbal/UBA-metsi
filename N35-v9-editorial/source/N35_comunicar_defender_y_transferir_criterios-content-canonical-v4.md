@@ -96,9 +96,9 @@ Karl Popper exige decir qué evidencia podría refutar una propuesta. Amy Edmond
 
 ### Audiencia y decisión
 
-Una audiencia profesional se define por la decisión que debe tomar, el conocimiento que posee, la responsabilidad que asume y la exposición que enfrenta. No es un segmento demográfico ni un nivel jerárquico. Las mismas evidencias cambian de función cuando se usan para asignar inversión, operar una contingencia o discutir una reparación.
+En simple: Una audiencia profesional se define por la decisión que debe tomar, el conocimiento que posee, la responsabilidad que asume y la exposición que enfrenta. No es un segmento demográfico ni un nivel jerárquico. Las mismas evidencias cambian de función cuando se usan para asignar inversión, operar una contingencia o discutir una reparación.
 
-En Hotel Horizonte, Dirección decide alcance y recursos, mientras Recepción decide cómo continuar un caso. Elena Acosta necesita alternativas, valor y riesgo residual; Lucía Ferreyra requiere estados, límites de autoridad y una ruta inmediata. Federico Müller necesita reproducibilidad técnica y Ricardo Sosa necesita capacidad operativa. Enviarles la misma presentación puede producir acuerdos aparentes y acciones incompatibles.
+Ejemplo cercano: En Hotel Horizonte, Dirección decide alcance y recursos, mientras Recepción decide cómo continuar un caso. Elena Acosta necesita alternativas, valor y riesgo residual; Lucía Ferreyra requiere estados, límites de autoridad y una ruta inmediata. Federico Müller necesita reproducibilidad técnica y Ricardo Sosa necesita capacidad operativa. Enviarles la misma presentación puede producir acuerdos aparentes y acciones incompatibles.
 
 Diseñar la comunicación comienza por formular qué debe poder decidir cada audiencia al terminar. Luego se seleccionan detalle, evidencia y lenguaje sin alterar la tesis. Adaptar no significa ocultar riesgos ni cambiar la conclusión para agradar. Si dos audiencias reciben recomendaciones incompatibles, el problema está en la intervención o en su gobierno, no en el estilo de las diapositivas.
 
@@ -108,9 +108,9 @@ La matriz registra qué pregunta razonable podría formular cada actor y qué de
 
 ### Tesis comunicable
 
-Una tesis comunicable expresa una afirmación central, el mecanismo que la sostiene, su alcance y la consecuencia práctica. Se diferencia de un eslogan porque puede ser discutida y refutada. También se diferencia de una lista de beneficios, que enumera resultados sin explicar por qué deberían ocurrir.
+En simple: Una tesis comunicable expresa una afirmación central, el mecanismo que la sostiene, su alcance y la consecuencia práctica. Se diferencia de un eslogan porque puede ser discutida y refutada. También se diferencia de una lista de beneficios, que enumera resultados sin explicar por qué deberían ocurrir.
 
-La propuesta del hotel conecta menor espera con reglas compartidas y capacidad de reparación. Esa formulación obliga a mostrar cómo los estados de Housekeeping, Recepción y Comercial se coordinan, qué casos quedan fuera y qué evidencia permite atribuir la mejora. «La plataforma mejora la experiencia» sería más breve, pero no orientaría ninguna decisión ni anticiparía un límite.
+Ejemplo cercano: La propuesta del hotel conecta menor espera con reglas compartidas y capacidad de reparación. Esa formulación obliga a mostrar cómo los estados de Housekeeping, Recepción y Comercial se coordinan, qué casos quedan fuera y qué evidencia permite atribuir la mejora. «La plataforma mejora la experiencia» sería más breve, pero no orientaría ninguna decisión ni anticiparía un límite.
 
 La tesis debe conservarse al cambiar de formato o audiencia. Puede ampliarse con arquitectura para Federico y con consecuencias operativas para Lucía, sin transformarse en otra promesa. Si necesita demasiadas excepciones para seguir siendo verdadera, corresponde reducir su alcance. Una tesis precisa permite defender, transferir y revisar la intervención.
 
@@ -120,9 +120,9 @@ En HH-35, «la coordinación reduce la espera en ingresos ordinarios cuando los 
 
 ### Afirmación, evidencia y garantía
 
-Un argumento vincula una afirmación con evidencia mediante una garantía explícita. La evidencia muestra qué ocurrió; la garantía explica por qué ese hecho respalda la conclusión. Afirmar que dos tiempos bajaron no demuestra que el sistema causó la mejora si al mismo tiempo cambió la dotación, la política o la población.
+En simple: Un argumento vincula una afirmación con evidencia mediante una garantía explícita. La evidencia muestra qué ocurrió; la garantía explica por qué ese hecho respalda la conclusión. Afirmar que dos tiempos bajaron no demuestra que el sistema causó la mejora si al mismo tiempo cambió la dotación, la política o la población.
 
-En Hotel Horizonte, un episodio y una traza sostienen la explicación. La reserva muestra la consecuencia para el huésped; el registro técnico reconstruye estados y decisiones. La garantía relaciona la coordinación semántica con la reducción de espera. También se conservan condiciones de excepción y explicaciones rivales, como una mejora producida por capacitación.
+Ejemplo cercano: En Hotel Horizonte, un episodio y una traza sostienen la explicación. La reserva muestra la consecuencia para el huésped; el registro técnico reconstruye estados y decisiones. La garantía relaciona la coordinación semántica con la reducción de espera. También se conservan condiciones de excepción y explicaciones rivales, como una mejora producida por capacitación.
 
 La fuerza del argumento depende del uso solicitado. Para explorar alcanza una señal provisional; para ampliar autonomía hacen falta contraste, repetición y reparación probada. Citar una fuente prestigiosa no reemplaza la garantía local. La audiencia debe poder señalar qué enlace cuestiona y qué evidencia adicional cambiaría la recomendación.
 
@@ -150,7 +150,7 @@ Finalmente, cada audiencia recibe una pregunta acorde con su autoridad. Federico
 
 ### Narrativa ejecutiva
 
-Una narrativa ejecutiva organiza contexto, decisión requerida, alternativas, valor, riesgo y compromiso. No simplifica mediante la eliminación de incertidumbre, sino mediante una jerarquía que permite reconocer primero lo decisivo y acceder después a sus fundamentos. La secuencia debe conducir a una elección, no exhibir el recorrido completo del equipo.
+En simple, con un ejemplo: Una narrativa ejecutiva organiza contexto, decisión requerida, alternativas, valor, riesgo y compromiso. No simplifica mediante la eliminación de incertidumbre, sino mediante una jerarquía que permite reconocer primero lo decisivo y acceder después a sus fundamentos. La secuencia debe conducir a una elección, no exhibir el recorrido completo del equipo.
 
 El comité del hotel ve el problema de la promesa incumplida, las opciones consideradas y la condición de salida. La recomendación se presenta junto con costo, población, riesgo residual y señales que habilitan ampliación o retiro. Un episodio concreto muestra la consecuencia antes de que los indicadores agregados expliquen escala y frecuencia.
 
@@ -164,7 +164,7 @@ Si la conclusión sólo resulta comprensible al conocer toda la historia del pro
 
 ### Defensa técnica
 
-La defensa técnica expone arquitectura, contratos, datos, pruebas, límites y operación de manera que otra persona pueda cuestionar y reproducir el razonamiento. No consiste en enumerar herramientas ni en aumentar el detalle hasta volver invisible la decisión. Cada elemento debe relacionarse con una afirmación o un riesgo material.
+En simple, con un ejemplo: La defensa técnica expone arquitectura, contratos, datos, pruebas, límites y operación de manera que otra persona pueda cuestionar y reproducir el razonamiento. No consiste en enumerar herramientas ni en aumentar el detalle hasta volver invisible la decisión. Cada elemento debe relacionarse con una afirmación o un riesgo material.
 
 En Hotel Horizonte, Tecnología reproduce una prueba adversa. Federico muestra versiones, fuentes, permisos, trazas y el estado final, y explica qué control impidió una modificación indebida. Ricardo verifica que la contingencia funcionó bajo carga y Lucía confirma que la interfaz permitió intervenir. La defensa integra esas perspectivas en lugar de privilegiar sólo el registro técnico.
 
@@ -176,7 +176,7 @@ Este procedimiento desplaza la autoridad desde la elocuencia del especialista ha
 
 ### Transferencia operativa
 
-Una transferencia operativa comunica capacidad para observar, decidir, actuar y reparar. No equivale a entregar documentación al final. Requiere que el equipo receptor pueda operar escenarios ordinarios y adversos sin depender del conocimiento privado de quienes construyeron la solución.
+En simple, con un ejemplo: Una transferencia operativa comunica capacidad para observar, decidir, actuar y reparar. No equivale a entregar documentación al final. Requiere que el equipo receptor pueda operar escenarios ordinarios y adversos sin depender del conocimiento privado de quienes construyeron la solución.
 
 El turno nocturno del hotel debe resolver una excepción sin llamar al proyecto. La transferencia incluye estados reconocibles, permisos, umbrales, contactos de escalamiento y una ruta manual. Se ensayan una política ambigua, una herramienta caída y una reserva que exige reparación. El resultado se mide en decisiones correctas, no en asistencia a una capacitación.
 
@@ -190,7 +190,7 @@ Los errores recurrentes se convierten en cambios de interfaz, reglas o capacitac
 
 ### Comunicación con personas afectadas
 
-La comunicación con personas afectadas explica qué ocurrió, qué consecuencia produce, qué opciones existen y cómo obtener revisión o reparación. No es marketing ni un descargo legal ilegible. Debe ser oportuna, accesible y proporcional al impacto, y evitar atribuir a la tecnología una autoridad que pertenece a la organización.
+En simple, con un ejemplo: La comunicación con personas afectadas explica qué ocurrió, qué consecuencia produce, qué opciones existen y cómo obtener revisión o reparación. No es marketing ni un descargo legal ilegible. Debe ser oportuna, accesible y proporcional al impacto, y evitar atribuir a la tecnología una autoridad que pertenece a la organización.
 
 El huésped de Hotel Horizonte necesita comprender por qué cambió su reserva y qué puede hacer. Lucía comunica el estado relevante, reconoce la promesa y ofrece alternativas concretas. No expone arquitectura innecesaria ni usa «lo decidió el sistema» como cierre. Si hubo un error, informa la corrección y el canal para cuestionarla.
 
@@ -214,9 +214,9 @@ De ese modo, la comunicación accesible no se limita a palabras sencillas: permi
 
 ### Objeción
 
-Una objeción cuestiona una afirmación, una evidencia, la garantía que las vincula, la consecuencia o la autoridad para decidir. No es resistencia que deba vencerse. Tratarla como una prueba del argumento permite descubrir supuestos y costos que una audiencia homogénea no había visto.
+En simple: Una objeción cuestiona una afirmación, una evidencia, la garantía que las vincula, la consecuencia o la autoridad para decidir. No es resistencia que deba vencerse. Tratarla como una prueba del argumento permite descubrir supuestos y costos que una audiencia homogénea no había visto.
 
-Operaciones objeta que la contingencia del hotel no funciona bajo carga. La afirmación puede ser cierta aunque el piloto técnico haya tenido éxito, porque faltaban simultaneidad, turno nocturno y ausencia de la persona experta. El equipo identifica qué parte del argumento cae, diseña una prueba y mantiene la decisión abierta hasta obtener evidencia.
+Ejemplo cercano: Operaciones objeta que la contingencia del hotel no funciona bajo carga. La afirmación puede ser cierta aunque el piloto técnico haya tenido éxito, porque faltaban simultaneidad, turno nocturno y ausencia de la persona experta. El equipo identifica qué parte del argumento cae, diseña una prueba y mantiene la decisión abierta hasta obtener evidencia.
 
 No todas las objeciones tienen el mismo peso. Deben distinguirse desacuerdo de valores, dato contradictorio, límite de alcance y preferencia personal. Responder requiere evidencia o una decisión explícita, no retórica defensiva. Una objeción documentada que no cambia la propuesta debe conservar la razón de su descarte.
 
@@ -228,9 +228,9 @@ En el hotel, la objeción de Lucía sobre el turno nocturno modifica la poblaci�
 
 ### Incertidumbre comunicada
 
-Comunicar incertidumbre distingue desconocimiento, variabilidad y desacuerdo, y los relaciona con una decisión. No consiste en agregar una advertencia genérica ni en presentar rangos sin interpretación. La audiencia necesita comprender qué puede variar, con qué consecuencias y qué evidencia modificaría la recomendación.
+En simple: Comunicar incertidumbre distingue desconocimiento, variabilidad y desacuerdo, y los relaciona con una decisión. No consiste en agregar una advertencia genérica ni en presentar rangos sin interpretación. La audiencia necesita comprender qué puede variar, con qué consecuencias y qué evidencia modificaría la recomendación.
 
-El equipo declara qué dato haría cambiar la propuesta para Hotel Horizonte. Puede aceptar una prueba limitada mientras faltan casos de alta demanda, pero no atribuir esa ausencia a seguridad. Elena conoce el riesgo residual; Lucía, los episodios que debe escalar; Federico, las señales que obligan a revisar el modelo o la fuente.
+Ejemplo cercano: El equipo declara qué dato haría cambiar la propuesta para Hotel Horizonte. Puede aceptar una prueba limitada mientras faltan casos de alta demanda, pero no atribuir esa ausencia a seguridad. Elena conoce el riesgo residual; Lucía, los episodios que debe escalar; Federico, las señales que obligan a revisar el modelo o la fuente.
 
 La forma importa. Un intervalo, un escenario o una frase calibrada deben conservar la misma prudencia. Exceso de precisión puede producir certeza ficticia y una lista indiscriminada de dudas puede paralizar. La comunicación es responsable cuando la incertidumbre se traduce en alcance, contingencia, fecha y autoridad.
 
@@ -242,9 +242,9 @@ De este modo, la prudencia no se convierte en evasión. Cada audiencia sabe qué
 
 ### Evidencia visual
 
-La evidencia visual organiza relaciones, cantidades o secuencias cuya estructura se comprende mejor al verla. No es decoración ni sustituto del argumento. La forma elegida debe corresponder al fenómeno: una serie para cambio temporal, una distribución para variabilidad, un mapa para dependencias y un flujo para secuencia.
+En simple: La evidencia visual organiza relaciones, cantidades o secuencias cuya estructura se comprende mejor al verla. No es decoración ni sustituto del argumento. La forma elegida debe corresponder al fenómeno: una serie para cambio temporal, una distribución para variabilidad, un mapa para dependencias y un flujo para secuencia.
 
-Un mapa de Hotel Horizonte conecta actores, estados y reparación. Permite observar dónde una promesa cruza Comercial, PMS, Housekeeping y Recepción, y qué rutas carecen de autoridad. Un gráfico de promedio no mostraría esa topología. Cada etiqueta usa términos del expediente y cada enlace puede rastrearse hasta evidencia.
+Ejemplo cercano: Un mapa de Hotel Horizonte conecta actores, estados y reparación. Permite observar dónde una promesa cruza Comercial, PMS, Housekeeping y Recepción, y qué rutas carecen de autoridad. Un gráfico de promedio no mostraría esa topología. Cada etiqueta usa términos del expediente y cada enlace puede rastrearse hasta evidencia.
 
 Una visualización debe revelar también límites. Escalas truncadas, categorías mezcladas o color sin alternativa pueden inducir una conclusión que los datos no sostienen. La fuente, el período y la población acompañan la imagen. Si el gráfico necesita una explicación oral para corregir una lectura previsible, el diseño todavía no comunica evidencia.
 
@@ -254,7 +254,7 @@ En HH-35, una distribución por turno reemplaza al único promedio porque muestr
 
 ### Transferencia por criterios
 
-Transferir por criterios consiste en conservar preguntas, mecanismos, condiciones y límites al cambiar de contexto. No implica copiar roles, pantallas o métricas del caso original. Una solución es contingente; el criterio permite decidir qué debe reconstruirse antes de adoptar algo equivalente.
+En simple, con un ejemplo: Transferir por criterios consiste en conservar preguntas, mecanismos, condiciones y límites al cambiar de contexto. No implica copiar roles, pantallas o métricas del caso original. Una solución es contingente; el criterio permite decidir qué debe reconstruirse antes de adoptar algo equivalente.
 
 Otro hotel puede usar los criterios de HH-35 y diseñar una contingencia distinta. Repite preguntas sobre promesa, evidencia, autoridad y reparación, pero adapta estados, canales y responsabilidades. Si su operación terceriza Housekeeping, la frontera cambia y también las pruebas necesarias, aunque el producto tecnológico sea el mismo.
 
@@ -284,9 +284,9 @@ Si la nueva solución contradice un artefacto de HH-35 pero conserva población,
 
 ### Comprobación por reexplicación
 
-La comprobación por reexplicación verifica apropiación pidiendo a quien recibe una capacidad que reconstruya el criterio con sus propias palabras y lo use en una situación nueva. No consiste en repetir una definición ni en aprobar una exposición. La evidencia está en la decisión, la justificación y la identificación de límites.
+En simple: La comprobación por reexplicación verifica apropiación pidiendo a quien recibe una capacidad que reconstruya el criterio con sus propias palabras y lo use en una situación nueva. No consiste en repetir una definición ni en aprobar una exposición. La evidencia está en la decisión, la justificación y la identificación de límites.
 
-Un equipo nuevo explica cuándo no usar el agente de Hotel Horizonte. Luego analiza un episodio con política contradictoria y demuestra cómo suspender, escalar y reparar. Quienes transfieren escuchan errores de interpretación y corrigen el material o el entrenamiento. Si sólo evalúan memoria, no pueden saber si el equipo operará bajo presión.
+Ejemplo cercano: Un equipo nuevo explica cuándo no usar el agente de Hotel Horizonte. Luego analiza un episodio con política contradictoria y demuestra cómo suspender, escalar y reparar. Quienes transfieren escuchan errores de interpretación y corrigen el material o el entrenamiento. Si sólo evalúan memoria, no pueden saber si el equipo operará bajo presión.
 
 La reexplicación también revela fallas de diseño. Cuando varias personas reconstruyen de forma distinta un mismo umbral, puede existir ambigüedad en el sistema y no déficit individual. La transferencia concluye cuando el equipo receptor puede cuestionar el criterio, adaptarlo con trazabilidad y enseñarlo a otra persona, sin depender de la autoridad de quien lo presentó.
 

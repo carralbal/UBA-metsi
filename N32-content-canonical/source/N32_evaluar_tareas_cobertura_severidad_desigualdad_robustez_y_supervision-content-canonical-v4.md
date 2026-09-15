@@ -6,7 +6,7 @@
 
 ## El modelo acertaba nueve de cada diez veces y fallaba cuando más importaba
 
-Una red de salud evalúa un sistema que prioriza mensajes enviados por pacientes. El informe presenta 92 por ciento de coincidencia con la clasificación histórica y una reducción considerable del tiempo medio de lectura. Sobre esa base se propone que los mensajes de baja prioridad esperen hasta el día siguiente. Durante el piloto, dos consultas poco frecuentes vinculadas con embarazo y una reacción adversa quedan en esa cola.
+En simple, con un ejemplo: Una red de salud evalúa un sistema que prioriza mensajes enviados por pacientes. El informe presenta 92 por ciento de coincidencia con la clasificación histórica y una reducción considerable del tiempo medio de lectura. Sobre esa base se propone que los mensajes de baja prioridad esperen hasta el día siguiente. Durante el piloto, dos consultas poco frecuentes vinculadas con embarazo y una reacción adversa quedan en esa cola.
 
 El promedio era correcto, pero respondía una pregunta demasiado pobre. La muestra repetía la frecuencia histórica y casi no incluía casos graves, mensajes con errores ni situaciones donde alguien describía síntomas sin vocabulario clínico. Además, la clasificación histórica no era una verdad neutral. También reflejaba decisiones anteriores, recursos disponibles y desigualdades de acceso.
 
@@ -86,7 +86,7 @@ Nissenbaum, H. permite evaluar si la información conserva las normas del contex
 
 ### Unidad de evaluación
 
-La unidad de evaluación reúne la tarea, la población, el contexto, la respuesta y la consecuencia que se quiere juzgar. Medir sólo el modelo deja afuera las decisiones que convierten una respuesta en una acción. El mismo componente puede servir para resumir una política y ser peligroso para modificar una reserva, aunque tenga las mismas métricas técnicas.
+En simple, con un ejemplo: La unidad de evaluación reúne la tarea, la población, el contexto, la respuesta y la consecuencia que se quiere juzgar. Medir sólo el modelo deja afuera las decisiones que convierten una respuesta en una acción. El mismo componente puede servir para resumir una política y ser peligroso para modificar una reserva, aunque tenga las mismas métricas técnicas.
 
 En Hotel Horizonte, cada respuesta del asistente se vincula con la decisión posterior de Recepción. El caso evaluable incluye la consulta del huésped, las fuentes disponibles, la respuesta, la aceptación o corrección de Lucía Ferreyra y el estado final en el PMS. Esa cadena permite distinguir una frase defectuosa sin efecto de otra que produce una promesa imposible de reparar.
 
@@ -96,7 +96,7 @@ Los límites de la unidad determinan qué efectos se atribuyen. Si se corta en l
 
 ### Cobertura
 
-La cobertura muestra qué parte del uso real está representada en la evaluación. No depende sólo de cuántos casos hay, sino de la variedad de situaciones, personas, condiciones y consecuencias incluidas. Diez mil consultas parecidas pueden cubrir menos que una muestra pequeña construida con los modos importantes de uso y de falla.
+En simple, con un ejemplo: La cobertura muestra qué parte del uso real está representada en la evaluación. No depende sólo de cuántos casos hay, sino de la variedad de situaciones, personas, condiciones y consecuencias incluidas. Diez mil consultas parecidas pueden cubrir menos que una muestra pequeña construida con los modos importantes de uso y de falla.
 
 El conjunto de Hotel Horizonte debe incluir temporadas altas, turnos con distinta dotación, canales, idiomas y excepciones de accesibilidad. Camila Duarte aporta variaciones de oferta comercial; Mariela Benítez, estados reales de habitación; Lucía, solicitudes que no caben en la taxonomía inicial. Cada estrato necesita una razón de inclusión y una cantidad suficiente para interpretar sus resultados.
 
@@ -112,9 +112,9 @@ ARIA combina pruebas de modelo, ejercicios adversos y evaluación de campo porqu
 
 ### Línea de base
 
-La línea de base es la mejor alternativa practicable contra la cual se atribuye una mejora. No equivale a ausencia de sistema ni a un desempeño humano idealizado. Puede ser la atención actual, una búsqueda guiada, una regla o un proceso rediseñado, siempre que esté disponible bajo condiciones comparables.
+En simple: La línea de base es la mejor alternativa practicable contra la cual se atribuye una mejora. No equivale a ausencia de sistema ni a un desempeño humano idealizado. Puede ser la atención actual, una búsqueda guiada, una regla o un proceso rediseñado, siempre que esté disponible bajo condiciones comparables.
 
-El hotel compara el asistente con búsqueda de políticas y con la atención vigente. Los mismos tipos de consultas se asignan de manera controlada y se observan tiempo, corrección, carga de revisión, reparación y experiencia del huésped. Si el equipo nuevo recibe más capacitación o mejores documentos, esas diferencias deben registrarse para no atribuirlas al modelo.
+Ejemplo cercano: El hotel compara el asistente con búsqueda de políticas y con la atención vigente. Los mismos tipos de consultas se asignan de manera controlada y se observan tiempo, corrección, carga de revisión, reparación y experiencia del huésped. Si el equipo nuevo recibe más capacitación o mejores documentos, esas diferencias deben registrarse para no atribuirlas al modelo.
 
 Una línea de base también cambia. Cuando Ricardo Sosa mejora el proceso o Federico actualiza el buscador, el valor incremental de la IA puede reducirse. La decisión sobre autonomía debe reabrirse frente a la alternativa vigente, porque una ventaja histórica no demuestra que el sistema continúe siendo la mejor opción.
 
@@ -122,9 +122,9 @@ La comparación registra asignación de casos, aprendizaje y cambios simultáneo
 
 ### Validez de constructo
 
-La validez de constructo pregunta si una medida representa realmente la capacidad que pretende evaluar. Una métrica fácil de calcular puede capturar semejanza textual, extensión o tono sin medir corrección, utilidad o seguridad. Nombrar una variable como calidad no resuelve la relación entre el indicador y el concepto.
+En simple: La validez de constructo pregunta si una medida representa realmente la capacidad que pretende evaluar. Una métrica fácil de calcular puede capturar semejanza textual, extensión o tono sin medir corrección, utilidad o seguridad. Nombrar una variable como calidad no resuelve la relación entre el indicador y el concepto.
 
-Una rúbrica del hotel distingue respuesta completa de respuesta persuasiva. Evalúa vigencia de la fuente, adecuación al caso, límites de autoridad, claridad y posibilidad de reparación. Casos deliberadamente convincentes pero incorrectos permiten verificar que la rúbrica no premie sólo fluidez. El acuerdo entre evaluadores aporta consistencia, aunque no sustituye la discusión conceptual sobre qué significa una buena respuesta.
+Ejemplo cercano: Una rúbrica del hotel distingue respuesta completa de respuesta persuasiva. Evalúa vigencia de la fuente, adecuación al caso, límites de autoridad, claridad y posibilidad de reparación. Casos deliberadamente convincentes pero incorrectos permiten verificar que la rúbrica no premie sólo fluidez. El acuerdo entre evaluadores aporta consistencia, aunque no sustituye la discusión conceptual sobre qué significa una buena respuesta.
 
 La validez depende del uso. Para un borrador interno puede importar cobertura de temas; para una promesa al huésped importan exactitud y autoridad. Elena Acosta debe rechazar una métrica que no pueda vincularse con la decisión de despliegue, aunque el resultado parezca comparable con una prueba de referencia externa.
 
@@ -134,7 +134,7 @@ La rúbrica se prueba con casos construidos para separar propiedades. Una respue
 
 ### Severidad
 
-La severidad caracteriza el daño posible según magnitud, alcance, duración, reversibilidad y población afectada. No es sinónimo de frecuencia: un evento infrecuente puede exigir controles estrictos si compromete seguridad, derechos o una promesa difícil de reparar. Tampoco debe confundirse con la confianza que el modelo asigna a su respuesta.
+En simple, con un ejemplo: La severidad caracteriza el daño posible según magnitud, alcance, duración, reversibilidad y población afectada. No es sinónimo de frecuencia: un evento infrecuente puede exigir controles estrictos si compromete seguridad, derechos o una promesa difícil de reparar. Tampoco debe confundirse con la confianza que el modelo asigna a su respuesta.
 
 Negar una habitación accesible tiene mayor severidad que cometer un error de estilo. El primer episodio puede impedir el uso del servicio, exponer información sensible y requerir una solución inmediata; el segundo admite una corrección simple antes de comunicar. El hotel necesita una escala con ejemplos concretos para que Comercial, Operaciones, Tecnología y Recepción clasifiquen de manera consistente.
 
@@ -144,9 +144,9 @@ La escala se ancla en episodios y respuestas concretas. Para cada nivel indica q
 
 ### Desempeño desagregado, disparidad y desigualdad
 
-El desempeño desagregado separa resultados por grupos, contextos y clases de caso capaces de experimentar efectos distintos. Su propósito no es producir una tabla infinita, sino comprobar si el resultado agregado oculta una falla sistemática. La selección de cortes debe apoyarse en el proceso, la población y una hipótesis de riesgo.
+En simple: El desempeño desagregado separa resultados por grupos, contextos y clases de caso capaces de experimentar efectos distintos. Su propósito no es producir una tabla infinita, sino comprobar si el resultado agregado oculta una falla sistemática. La selección de cortes debe apoyarse en el proceso, la población y una hipótesis de riesgo.
 
-Hotel Horizonte compara consultas por idioma, canal, turno y necesidad de accesibilidad. Para cada grupo observa corrección, abstención, escalamiento y reparación. Una mejora global puede convivir con más errores en mensajes de voz o en solicitudes nocturnas, cuando Lucía dispone de menos respaldo y la consecuencia de una sugerencia equivocada aumenta.
+Ejemplo cercano: Hotel Horizonte compara consultas por idioma, canal, turno y necesidad de accesibilidad. Para cada grupo observa corrección, abstención, escalamiento y reparación. Una mejora global puede convivir con más errores en mensajes de voz o en solicitudes nocturnas, cuando Lucía dispone de menos respaldo y la consecuencia de una sugerencia equivocada aumenta.
 
 La desagregación exige cuidado estadístico y de privacidad. Grupos pequeños pueden producir estimaciones inestables o revelar identidades; agruparlos sin criterio puede esconder daño. En esos casos se combinan evidencia cualitativa, pruebas dirigidas e intervalos de incertidumbre. La falta de precisión justifica cautela, no una conclusión de igualdad.
 
@@ -174,9 +174,9 @@ El informe conserva quién propuso cada corte y qué interpretación alternativa
 
 ### Robustez
 
-La robustez es la capacidad de mantener un comportamiento aceptable ante variaciones esperables del contexto. No significa inmunidad frente a cualquier cambio. La evaluación debe distinguir transformaciones irrelevantes, ante las cuales la respuesta debería conservarse, de cambios semánticos que justifican una salida diferente.
+En simple: La robustez es la capacidad de mantener un comportamiento aceptable ante variaciones esperables del contexto. No significa inmunidad frente a cualquier cambio. La evaluación debe distinguir transformaciones irrelevantes, ante las cuales la respuesta debería conservarse, de cambios semánticos que justifican una salida diferente.
 
-En las consultas del hotel se modifica la redacción, el orden de los datos y cierta información irrelevante. Si una paráfrasis altera la política citada o el nivel de compensación, el sistema es frágil. También se prueban errores de tipeo, mensajes incompletos y documentos recuperados en distinto orden, porque esas variaciones forman parte de la operación cotidiana.
+Ejemplo cercano: En las consultas del hotel se modifica la redacción, el orden de los datos y cierta información irrelevante. Si una paráfrasis altera la política citada o el nivel de compensación, el sistema es frágil. También se prueban errores de tipeo, mensajes incompletos y documentos recuperados en distinto orden, porque esas variaciones forman parte de la operación cotidiana.
 
 Una prueba robusta conserva versión, configuración y criterio de aceptación. El objetivo no es forzar siempre la misma frase, sino mantener la decisión y sus límites. Si la robustez sólo se logra rechazando todos los casos difíciles, la tasa de abstención debe incorporarse al juicio de utilidad.
 
@@ -184,7 +184,7 @@ Las variaciones se agrupan por aquello que deberían preservar. Cambiar puntuaci
 
 ### Prueba adversa
 
-Una prueba adversa busca de manera intencional modos de falla, abuso o evasión definidos por un modelo de amenaza. Se diferencia de acumular ejemplos extraños porque relaciona actores, capacidades, objetivos y consecuencias. Su valor reside en descubrir vulnerabilidades antes de que aparezcan bajo presión real.
+En simple, con un ejemplo: Una prueba adversa busca de manera intencional modos de falla, abuso o evasión definidos por un modelo de amenaza. Se diferencia de acumular ejemplos extraños porque relaciona actores, capacidades, objetivos y consecuencias. Su valor reside en descubrir vulnerabilidades antes de que aparezcan bajo presión real.
 
 El equipo intenta obtener descuentos, datos de otros huéspedes o cambios de reserva mediante instrucciones maliciosas. También introduce contenido que ordena ignorar la política recuperada y simula una conversación donde el atacante combina información verdadera con una solicitud indebida. La prueba registra no sólo si el modelo responde, sino si alguna herramienta ejecuta la acción.
 
@@ -196,9 +196,9 @@ El modelo de amenaza incluye actores externos, personas autorizadas que exceden 
 
 ### Confiabilidad y repetibilidad
 
-La confiabilidad describe la estabilidad del desempeño bajo condiciones equivalentes. En sistemas no deterministas, una única respuesta correcta no caracteriza el comportamiento. La repetibilidad requiere conservar versiones, parámetros, instrucciones, fuentes y entorno para poder explicar cuánto varía la salida y por qué.
+En simple: La confiabilidad describe la estabilidad del desempeño bajo condiciones equivalentes. En sistemas no deterministas, una única respuesta correcta no caracteriza el comportamiento. La repetibilidad requiere conservar versiones, parámetros, instrucciones, fuentes y entorno para poder explicar cuánto varía la salida y por qué.
 
-Hotel Horizonte repite la misma tarea con versiones y temperaturas controladas. No exige identidad literal, pero sí equivalencia en fuente citada, decisión recomendada y límites de autoridad. Si algunas ejecuciones ofrecen una compensación y otras escalan el caso, esa variación es material aunque todas estén bien redactadas.
+Ejemplo cercano: Hotel Horizonte repite la misma tarea con versiones y temperaturas controladas. No exige identidad literal, pero sí equivalencia en fuente citada, decisión recomendada y límites de autoridad. Si algunas ejecuciones ofrecen una compensación y otras escalan el caso, esa variación es material aunque todas estén bien redactadas.
 
 Una respuesta repetible puede ser sistemáticamente incorrecta, por lo que confiabilidad y validez deben evaluarse juntas. La dispersión define cuántas repeticiones hacen falta y qué usos toleran variabilidad. Para una exploración interna puede aceptarse diversidad; para una acción irreversible se necesita una salida más restringida o confirmación humana.
 
@@ -208,7 +208,7 @@ La repetición incluye el sistema alrededor del modelo. Un cambio en recuperaci�
 
 ### Desempeño del equipo formado por personas e IA
 
-La unidad sociotécnica relevante es el conjunto formado por personas, interfaz, reglas y sistema de IA. Una recomendación técnicamente mejor puede empeorar la decisión si induce confianza excesiva, distrae o desplaza información que antes era visible. Evaluar componentes por separado no permite inferir el resultado del equipo.
+En simple, con un ejemplo: La unidad sociotécnica relevante es el conjunto formado por personas, interfaz, reglas y sistema de IA. Una recomendación técnicamente mejor puede empeorar la decisión si induce confianza excesiva, distrae o desplaza información que antes era visible. Evaluar componentes por separado no permite inferir el resultado del equipo.
 
 El hotel observa cuándo Recepción acepta, corrige o ignora sugerencias. Compara decisiones con y sin asistencia, mide tiempo, corrección y reparación, y registra las razones de desacuerdo. Lucía puede detectar errores que la prueba de referencia no contempla; también puede aceptar una salida persuasiva por presión de la fila. Ambos mecanismos deben quedar en la evidencia.
 
@@ -218,7 +218,7 @@ La evaluación observa adaptaciones y aprendizaje. Al principio Lucía puede rev
 
 ### Supervisión real
 
-La supervisión es real cuando existe una persona competente, atenta, informada y autorizada para cambiar el curso antes de la consecuencia. No alcanza con incluir una aprobación formal. Deben probarse el tiempo disponible, la carga simultánea, los permisos y la alternativa operativa si la sugerencia se rechaza.
+En simple, con un ejemplo: La supervisión es real cuando existe una persona competente, atenta, informada y autorizada para cambiar el curso antes de la consecuencia. No alcanza con incluir una aprobación formal. Deben probarse el tiempo disponible, la carga simultánea, los permisos y la alternativa operativa si la sugerencia se rechaza.
 
 El turno nocturno de Hotel Horizonte debe detectar y revertir una compensación improcedente. La simulación incluye varias consultas, una política ambigua y ausencia del equipo técnico. Si la persona advierte el error pero no puede restaurar la reserva o teme incumplir un indicador de productividad, la supervisión no es significativa.
 
@@ -230,7 +230,7 @@ La prueba incluye la posibilidad de disentir. Si rechazar una sugerencia exige m
 
 ### Evaluación en operación
 
-La evaluación en operación continúa después del despliegue porque cambian poblaciones, políticas, modelos, interfaces y prácticas de trabajo. No se reduce a disponibilidad técnica ni a una auditoría anual. Combina señales continuas con revisiones periódicas y episodios que obligan a reabrir la decisión.
+En simple, con un ejemplo: La evaluación en operación continúa después del despliegue porque cambian poblaciones, políticas, modelos, interfaces y prácticas de trabajo. No se reduce a disponibilidad técnica ni a una auditoría anual. Combina señales continuas con revisiones periódicas y episodios que obligan a reabrir la decisión.
 
 Los cambios de temporada disparan nuevas muestras y umbrales en el hotel. Se observan corrección, abstención, reclamos, reparaciones y diferencias entre grupos, junto con versiones de fuentes y herramientas. Un aumento de escalamiento puede indicar prudencia del sistema o deterioro de cobertura; la interpretación requiere reconstruir casos.
 

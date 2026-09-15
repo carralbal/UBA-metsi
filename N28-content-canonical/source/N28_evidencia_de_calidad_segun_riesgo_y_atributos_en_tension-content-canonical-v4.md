@@ -86,9 +86,9 @@ Boehm, B. W. conecta decisiones de ingeniería con exposición al riesgo; Parnas
 
 ### Calidad situada
 
-La calidad situada expresa la adecuación de una capacidad para actores, propósitos y condiciones explícitas. No equivale a ausencia total de defectos ni a conformidad genérica con una lista. Una misma respuesta puede ser satisfactoria para una población y dañina para otra.
+En simple: La calidad situada expresa la adecuación de una capacidad para actores, propósitos y condiciones explícitas. No equivale a ausencia total de defectos ni a conformidad genérica con una lista. Una misma respuesta puede ser satisfactoria para una población y dañina para otra.
 
-En Hotel Horizonte, el ingreso puede ser rápido y aun así inaccesible, inseguro o imposible de reparar. HH-28 observa recorridos ordinarios y adversos, incluidos turnos, canales y habitaciones con restricciones específicas. La propiedad se juzga por la consecuencia en uso, no sólo por el comportamiento de un componente.
+Ejemplo cercano: En Hotel Horizonte, el ingreso puede ser rápido y aun así inaccesible, inseguro o imposible de reparar. HH-28 observa recorridos ordinarios y adversos, incluidos turnos, canales y habitaciones con restricciones específicas. La propiedad se juzga por la consecuencia en uso, no sólo por el comportamiento de un componente.
 
 Los propósitos compiten y requieren prioridades institucionales. El argumento declara qué población protege, qué nivel acepta y qué evidencia podría refutarlo. Así, «buena calidad» se transforma en una afirmación delimitada que una autoridad puede defender y revisar.
 
@@ -100,9 +100,9 @@ Las voces que definen calidad no son intercambiables. Camila puede valorar conve
 
 ### Atributo de calidad
 
-Un atributo de calidad nombra una propiedad evaluable que influye en el valor y el riesgo del sistema. No es una aspiración sin medida. Confiabilidad, recuperabilidad, desempeño o accesibilidad adquieren significado cuando se vinculan con un escenario y una decisión.
+En simple: Un atributo de calidad nombra una propiedad evaluable que influye en el valor y el riesgo del sistema. No es una aspiración sin medida. Confiabilidad, recuperabilidad, desempeño o accesibilidad adquieren significado cuando se vinculan con un escenario y una decisión.
 
-HH-28 observa recuperabilidad ante una reserva indeterminada: cuánto tarda en detectarse, qué capacidad continúa y qué estado queda después. La medición combina umbral, fuente, ventana y población. Una única cifra rara vez representa todo el atributo y puede ocultar colas o daños extremos.
+Ejemplo cercano: HH-28 observa recuperabilidad ante una reserva indeterminada: cuánto tarda en detectarse, qué capacidad continúa y qué estado queda después. La medición combina umbral, fuente, ventana y población. Una única cifra rara vez representa todo el atributo y puede ocultar colas o daños extremos.
 
 Elegir atributos también asigna atención y presupuesto. El expediente explica por qué una propiedad merece prioridad y qué tensión introduce sobre otras. Cuando cambia el uso, el riesgo o la población, la operacionalización debe revisarse aunque la métrica conserve el mismo nombre.
 
@@ -112,9 +112,9 @@ Las métricas indirectas necesitan una justificación explícita. Cobertura de p
 
 ### Escenario de calidad
 
-Un escenario de calidad describe estímulo, contexto, parte afectada, respuesta y medida esperada. Convierte una propiedad transversal en una situación comprobable. Se diferencia de un caso de uso ordinario porque incluye presión, falla y umbral de aceptación.
+En simple: Un escenario de calidad describe estímulo, contexto, parte afectada, respuesta y medida esperada. Convierte una propiedad transversal en una situación comprobable. Se diferencia de un caso de uso ordinario porque incluye presión, falla y umbral de aceptación.
 
-Durante un pico, identidad externa falla y Recepción debe mantener una vía segura dentro del tiempo acordado. HH-28 define antes de la prueba qué cuenta como continuidad, qué datos pueden omitirse y qué reparación se exige. Simulaciones y observación de turnos contrastan esa expectativa.
+Ejemplo cercano: Durante un pico, identidad externa falla y Recepción debe mantener una vía segura dentro del tiempo acordado. HH-28 define antes de la prueba qué cuenta como continuidad, qué datos pueden omitirse y qué reparación se exige. Simulaciones y observación de turnos contrastan esa expectativa.
 
 Un escenario no pretende representar todas las combinaciones futuras. Su selección se justifica por frecuencia, severidad, población y capacidad de aprendizaje. El conjunto necesita casos normales, límites y adversos para que la evidencia no dependa sólo de condiciones convenientes.
 
@@ -124,9 +124,9 @@ Cada escenario se vincula con una fuente: episodio, incidente, amenaza, obligaci
 
 ### Riesgo de calidad
 
-El riesgo de calidad combina incertidumbre y consecuencia sobre una promesa relevante. No se reduce a probabilidad técnica ni a severidad abstracta. Incorpora población expuesta, reversibilidad, duración, detectabilidad y capacidad de reparación.
+En simple: El riesgo de calidad combina incertidumbre y consecuencia sobre una promesa relevante. No se reduce a probabilidad técnica ni a severidad abstracta. Incorpora población expuesta, reversibilidad, duración, detectabilidad y capacidad de reparación.
 
-Una reasignación de habitación accesible puede ser poco frecuente y producir una consecuencia alta. HH-28 evita que el promedio de ingresos oculte ese episodio. Incidentes, amenazas y análisis de impacto informan la estimación, que conserva supuestos y rangos en lugar de una precisión ficticia.
+Ejemplo cercano: Una reasignación de habitación accesible puede ser poco frecuente y producir una consecuencia alta. HH-28 evita que el promedio de ingresos oculte ese episodio. Incidentes, amenazas y análisis de impacto informan la estimación, que conserva supuestos y rangos en lugar de una precisión ficticia.
 
 El riesgo prioriza qué evidencia y autoridad hacen falta. Una prueba reversible con población limitada admite incertidumbre distinta de un despliegue general. La estimación se revisa cuando aparece un modo de falla nuevo o cambia el contexto, y no se usa para convertir derechos en variables negociables.
 
@@ -138,9 +138,9 @@ El riesgo residual queda después de aplicar controles y debe ser aceptado por q
 
 ### Reclamo de calidad
 
-Un reclamo de calidad es una afirmación concreta sobre el comportamiento aceptable de una capacidad. Vincula escenario, atributo, umbral, evidencia y responsable. No es un eslogan de excelencia ni una certificación que se sostenga sin contexto.
+En simple: Un reclamo de calidad es una afirmación concreta sobre el comportamiento aceptable de una capacidad. Vincula escenario, atributo, umbral, evidencia y responsable. No es un eslogan de excelencia ni una certificación que se sostenga sin contexto.
 
-HH-28 formula que el servicio recupera una reserva indeterminada sin perder accesibilidad. La frase debe aclarar población, ventana y condición de carga. Cada elemento de evidencia apoya una parte del reclamo y deja visibles sus límites, para que otra persona pueda reconstruir la inferencia.
+Ejemplo cercano: HH-28 formula que el servicio recupera una reserva indeterminada sin perder accesibilidad. La frase debe aclarar población, ventana y condición de carga. Cada elemento de evidencia apoya una parte del reclamo y deja visibles sus límites, para que otra persona pueda reconstruir la inferencia.
 
 El reclamo puede quedar refutado por un incidente o una población no cubierta. La revisión no borra la afirmación anterior: registra qué cambió y qué decisión deja de autorizar. Esa trazabilidad evita que «cumple» se transforme en una propiedad permanente del producto.
 
@@ -150,9 +150,9 @@ Los calificadores hacen visible la incertidumbre sin vaciar la afirmación. «En
 
 ### Evidencia suficiente
 
-La evidencia suficiente reúne observaciones proporcionales para tomar una decisión bajo incertidumbre explícita. No significa acumular la mayor cantidad posible de pruebas ni alcanzar certeza absoluta. Su fuerza depende de pertinencia, diversidad, independencia y reproducibilidad.
+En simple: La evidencia suficiente reúne observaciones proporcionales para tomar una decisión bajo incertidumbre explícita. No significa acumular la mayor cantidad posible de pruebas ni alcanzar certeza absoluta. Su fuerza depende de pertinencia, diversidad, independencia y reproducibilidad.
 
-Pruebas automáticas, un ensayo operativo y una evaluación de accesibilidad pueden sostener el despliegue limitado de HH-28. Cada método cubre mecanismos distintos y conserva artefacto, versión y población. Resultados concordantes fortalecen la afirmación; discrepancias obligan a revisar el modelo, no a elegir el dato más cómodo.
+Ejemplo cercano: Pruebas automáticas, un ensayo operativo y una evaluación de accesibilidad pueden sostener el despliegue limitado de HH-28. Cada método cubre mecanismos distintos y conserva artefacto, versión y población. Resultados concordantes fortalecen la afirmación; discrepancias obligan a revisar el modelo, no a elegir el dato más cómodo.
 
 La suficiencia crece con el costo de equivocarse y la irreversibilidad. También reconoce cuándo una nueva prueba ya no reduce la incertidumbre relevante. El cierre declara qué decisión habilita, qué no permite afirmar y qué señal exigirá ampliar o detener la intervención.
 
@@ -170,7 +170,7 @@ La cadena objetivo, pregunta y medida de Basili, Caldiera y Rombach (1994) ayuda
 
 ### Evidencia de usabilidad, accesibilidad y experiencia
 
-La evidencia de usabilidad combina efectividad, eficiencia y satisfacción para personas, objetivos y contextos definidos. El éxito de tarea aporta una señal, pero necesita acompañarse con errores, tiempo, comprensión y asistencia. Una persona puede completar el ingreso porque otra resolvió cada paso. Contar solamente finalizaciones atribuye a la interfaz una capacidad que en realidad produjo el soporte humano.
+En simple, con un ejemplo: La evidencia de usabilidad combina efectividad, eficiencia y satisfacción para personas, objetivos y contextos definidos. El éxito de tarea aporta una señal, pero necesita acompañarse con errores, tiempo, comprensión y asistencia. Una persona puede completar el ingreso porque otra resolvió cada paso. Contar solamente finalizaciones atribuye a la interfaz una capacidad que en realidad produjo el soporte humano.
 
 La evidencia de accesibilidad no se limita a una inspección automática. WCAG 2.2 permite verificar propiedades del contenido web, mientras el uso con tecnologías de asistencia y los recorridos de personas diversas revelan barreras de interacción. El servicio completo agrega el entorno físico, el canal alternativo y la reparación. Una página puede cumplir criterios y conducir a una habitación incompatible; una habitación puede ser adecuada y quedar inaccesible por autenticación, señalización o espera.
 
@@ -180,9 +180,9 @@ El riesgo decide la intensidad del conjunto. Para un cambio reversible de conten
 
 ### Oráculo de prueba
 
-Un oráculo de prueba establece cómo reconocer un resultado aceptable o una desviación significativa. No siempre existe una salida exacta conocida de antemano. Puede apoyarse en invariantes, propiedades, comparación, juicio experto o evidencia histórica.
+En simple: Un oráculo de prueba establece cómo reconocer un resultado aceptable o una desviación significativa. No siempre existe una salida exacta conocida de antemano. Puede apoyarse en invariantes, propiedades, comparación, juicio experto o evidencia histórica.
 
-En HH-28, varias habitaciones pueden ser válidas, pero la asignación debe respetar accesibilidad, estado y autoridad. El oráculo verifica esas restricciones y registra los casos dudosos. Casos límite y desacuerdos entre fuentes prueban la calidad del criterio con la misma seriedad que la ejecución técnica.
+Ejemplo cercano: En HH-28, varias habitaciones pueden ser válidas, pero la asignación debe respetar accesibilidad, estado y autoridad. El oráculo verifica esas restricciones y registra los casos dudosos. Casos límite y desacuerdos entre fuentes prueban la calidad del criterio con la misma seriedad que la ejecución técnica.
 
 Un oráculo débil puede legitimar cualquier resultado. Por eso se define antes de observar la salida y se somete a revisión independiente. Si expertos razonables discrepan, el expediente conserva la incertidumbre y limita la decisión en lugar de forzar una etiqueta única.
 
@@ -192,9 +192,9 @@ La calidad del oráculo se evalúa con ejemplos límite, repetición y contraste
 
 ### Confiabilidad y recuperación
 
-Confiabilidad y recuperación abarcan continuidad, detección, restauración y aprendizaje ante fallas. No son sólo disponibilidad promedio ni tiempo de reinicio. Deben seguir la promesa completa y el estado material que queda después de reparar.
+En simple: Confiabilidad y recuperación abarcan continuidad, detección, restauración y aprendizaje ante fallas. No son sólo disponibilidad promedio ni tiempo de reinicio. Deben seguir la promesa completa y el estado material que queda después de reparar.
 
-El hotel necesita continuar el ingreso y reconciliar luego sin duplicar reservas ni perder una restricción accesible. HH-28 ensaya caídas, reintentos y retornos parciales. La medición incluye detección, degradación, intervención humana, restauración y verificación del resultado.
+Ejemplo cercano: El hotel necesita continuar el ingreso y reconciliar luego sin duplicar reservas ni perder una restricción accesible. HH-28 ensaya caídas, reintentos y retornos parciales. La medición incluye detección, degradación, intervención humana, restauración y verificación del resultado.
 
 Una recuperación veloz puede ocultar pérdida de integridad o trasladar trabajo a Recepción. La decisión compara tiempos con calidad del estado y consecuencias distribuidas. El cierre exige un modo seguro, una persona con autoridad y evidencia de que la causa y los efectos quedaron comprendidos.
 
@@ -206,9 +206,9 @@ Los ensayos introducen fallas en condiciones controladas y con una salida segura
 
 ### Desempeño y capacidad
 
-Desempeño y capacidad describen respuesta y sostenimiento bajo cargas y patrones concretos. No se reducen a velocidad de laboratorio. Incluyen volumen, concurrencia, colas, variabilidad, recursos y forma de degradación.
+En simple: Desempeño y capacidad describen respuesta y sostenimiento bajo cargas y patrones concretos. No se reducen a velocidad de laboratorio. Incluyen volumen, concurrencia, colas, variabilidad, recursos y forma de degradación.
 
-HH-28 concentra llegadas, mezcla canales e introduce tareas manuales. Mide el recorrido de punta a punta, no sólo latencia de una API. Percentiles, tamaños de cola y tiempos por población revelan comportamientos que el promedio oculta, especialmente cuando la carga afecta accesibilidad o reparación.
+Ejemplo cercano: HH-28 concentra llegadas, mezcla canales e introduce tareas manuales. Mide el recorrido de punta a punta, no sólo latencia de una API. Percentiles, tamaños de cola y tiempos por población revelan comportamientos que el promedio oculta, especialmente cuando la carga afecta accesibilidad o reparación.
 
 El umbral se define por la promesa y el daño, no por la capacidad disponible. Si aumentar velocidad reduce verificación o desplaza espera a otro actor, el argumento registra la tensión. La prueba se repite cuando cambia la mezcla de demanda o una dependencia crítica.
 
@@ -218,9 +218,9 @@ La capacidad se prueba hasta reconocer el modo de degradación, no para exhibir 
 
 ### Seguridad, privacidad y accesibilidad
 
-Seguridad, privacidad y accesibilidad protegen derechos y participación y, por lo tanto, forman parte de la calidad desde el diseño. No son controles finales independientes de la experiencia. Una medida que excluye a la población que busca proteger es una solución incompleta.
+En simple: Seguridad, privacidad y accesibilidad protegen derechos y participación y, por lo tanto, forman parte de la calidad desde el diseño. No son controles finales independientes de la experiencia. Una medida que excluye a la población que busca proteger es una solución incompleta.
 
-En HH-28, una confirmación debe minimizar datos, resistir acceso indebido y funcionar con tecnologías de asistencia. La evidencia combina revisión especializada, pruebas técnicas y participación de personas afectadas. Un resultado agregado no sustituye verificar recorridos concretos y modos alternativos.
+Ejemplo cercano: En HH-28, una confirmación debe minimizar datos, resistir acceso indebido y funcionar con tecnologías de asistencia. La evidencia combina revisión especializada, pruebas técnicas y participación de personas afectadas. Un resultado agregado no sustituye verificar recorridos concretos y modos alternativos.
 
 Los controles pueden entrar en tensión con continuidad o facilidad de uso. El expediente explica qué alternativa segura existe cuando un mecanismo falla y qué límites no son negociables. La autoridad debe justificar cualquier riesgo residual y abrir una vía efectiva de corrección.
 
@@ -234,7 +234,7 @@ Privacidad y seguridad aplican minimización y propósito, pero no deben utiliza
 
 ### Mantenibilidad y evolutividad
 
-Mantenibilidad y evolutividad expresan la capacidad de comprender, cambiar y verificar un sistema sin riesgo desproporcionado. No equivalen a código limpio ni a velocidad de entrega. Incluyen modularidad, dependencias, pruebas, documentación y conocimiento distribuido.
+En simple, con un ejemplo: Mantenibilidad y evolutividad expresan la capacidad de comprender, cambiar y verificar un sistema sin riesgo desproporcionado. No equivalen a código limpio ni a velocidad de entrega. Incluyen modularidad, dependencias, pruebas, documentación y conocimiento distribuido.
 
 Agregar un estado no debería obligar a coordinar simultáneamente todos los canales del hotel. HH-28 observa tiempo de cambio, tasa de falla, alcance de pruebas y capacidad de sustitución. Un ejercicio con ausencia de la persona experta muestra si el conocimiento pertenece al equipo.
 
@@ -246,9 +246,9 @@ La distribución de conocimiento se prueba mediante rotación y reconstrucción.
 
 ### Tensión entre atributos
 
-Una tensión entre atributos aparece cuando mejorar una propiedad altera costo, riesgo o desempeño de otra. No es una excusa para aceptar cualquier compromiso. El análisis identifica qué cambia, para quién y bajo qué escenario.
+En simple: Una tensión entre atributos aparece cuando mejorar una propiedad altera costo, riesgo o desempeño de otra. No es una excusa para aceptar cualquier compromiso. El análisis identifica qué cambia, para quién y bajo qué escenario.
 
-Más verificación puede proteger integridad y aumentar espera; mayor velocidad puede reducir revisión; más telemetría puede afectar privacidad. HH-28 compara alternativas sobre una misma población y conserva resultados desagregados. La renuncia se registra con autoridad y condición de revisión.
+Ejemplo cercano: Más verificación puede proteger integridad y aumentar espera; mayor velocidad puede reducir revisión; más telemetría puede afectar privacidad. HH-28 compara alternativas sobre una misma población y conserva resultados desagregados. La renuncia se registra con autoridad y condición de revisión.
 
 Algunos derechos y límites regulatorios no se negocian como preferencias. Dentro del espacio permitido, la decisión debe explicar prioridades y riesgo residual. Una tensión bien formulada no produce una respuesta automática, pero evita que un atributo se optimice ocultando el costo impuesto a otro actor.
 

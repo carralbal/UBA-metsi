@@ -6,7 +6,7 @@
 
 ## Seis diagramas correctos y ninguna respuesta
 
-Una universidad debe decidir si puede abrir la inscripción a exámenes durante una semana de alta demanda. El equipo técnico prepara seis diagramas. Uno muestra servidores y bases. Otro enumera servicios. Un tercero contiene clases y relaciones. Un cuarto representa el flujo de inscripción. El quinto describe estados de una solicitud. El último exhibe un mapa de capacidades institucionales.
+En simple, con un ejemplo: Una universidad debe decidir si puede abrir la inscripción a exámenes durante una semana de alta demanda. El equipo técnico prepara seis diagramas. Uno muestra servidores y bases. Otro enumera servicios. Un tercero contiene clases y relaciones. Un cuarto representa el flujo de inscripción. El quinto describe estados de una solicitud. El último exhibe un mapa de capacidades institucionales.
 
 Cada diagrama es prolijo y, dentro de su notación, correcto. Dirección pregunta si una caída del sistema puede producir inscripciones dobles, qué estudiantes quedarían afectados y quién puede suspender el proceso. La reunión dedica veinte minutos a explicar símbolos. Nadie puede responder con el conjunto presentado.
 
@@ -68,7 +68,7 @@ El producto será HH-15, cartera mínima de modelos. Recibe preguntas abiertas d
 
 ### Modelo: simplificación deliberada
 
-Un modelo conserva ciertas propiedades de un objeto para comprender, comunicar, predecir o decidir. George Box recordó que los modelos son incorrectos como reproducciones completas y útiles cuando su simplificación sirve. La frase no autoriza arbitrariedad: obliga a explicar para qué es útil y dónde deja de serlo.
+En simple, con un ejemplo: Un modelo conserva ciertas propiedades de un objeto para comprender, comunicar, predecir o decidir. George Box recordó que los modelos son incorrectos como reproducciones completas y útiles cuando su simplificación sirve. La frase no autoriza arbitrariedad: obliga a explicar para qué es útil y dónde deja de serlo.
 
 Un mapa de subte omite distancias y edificios para mostrar conexiones. Resulta excelente para elegir combinación y malo para calcular una caminata. Agregar calles puede empeorar su función principal.
 
@@ -80,7 +80,7 @@ La prueba negativa también importa. Si retirar una relación no cambia ninguna 
 
 ### Pregunta, decisión y carga de prueba
 
-La pregunta determina qué relaciones deben ser visibles. “¿Dónde espera el huésped?” requiere tiempo y recorrido. “¿Qué componente puede duplicar una asignación?” requiere frontera técnica y transición. “¿Quién absorbe el daño?” requiere actores, poder y reparación.
+En simple, con un ejemplo: La pregunta determina qué relaciones deben ser visibles. “¿Dónde espera el huésped?” requiere tiempo y recorrido. “¿Qué componente puede duplicar una asignación?” requiere frontera técnica y transición. “¿Quién absorbe el daño?” requiere actores, poder y reparación.
 
 La decisión define suficiente detalle. Para elegir entre dos canales puede bastar un flujo comparado. Para autorizar acceso se necesitan reglas, estados y autoridad. Modelar sin decisión conduce a acumular información por precaución.
 
@@ -92,7 +92,7 @@ La pregunta debe poder refutarse o cerrarse provisionalmente. “Modelar el sist
 
 ### Partes interesadas, preocupaciones y puntos de vista
 
-Personas distintas necesitan mirar aspectos distintos del mismo sistema. En un hotel, Seguridad pregunta quién accede, Operaciones cómo se repara una excepción y Dirección qué riesgo acepta; una sola vista rara vez responde bien a las tres. ISO/IEC/IEEE 42010:2022 distingue arquitectura de descripción de arquitectura y organiza partes interesadas, preocupaciones, puntos de vista y vistas. En la terminología del estándar, un *viewpoint* especifica convenciones para construir una vista que responde a preocupaciones de ciertas audiencias.
+En simple, con un ejemplo: Personas distintas necesitan mirar aspectos distintos del mismo sistema. En un hotel, Seguridad pregunta quién accede, Operaciones cómo se repara una excepción y Dirección qué riesgo acepta; una sola vista rara vez responde bien a las tres. ISO/IEC/IEEE 42010:2022 distingue arquitectura de descripción de arquitectura y organiza partes interesadas, preocupaciones, puntos de vista y vistas. En la terminología del estándar, un *viewpoint* especifica convenciones para construir una vista que responde a preocupaciones de ciertas audiencias.
 
 La contribución es metodológica: no existe una vista neutral para todos. Seguridad necesita límites de confianza. Operaciones, dependencias y recuperación. Dirección, capacidades y riesgos. Desarrollo, estructura suficiente para cambiar.
 
@@ -104,7 +104,7 @@ También se registran preocupaciones en tensión. Seguridad puede pedir más con
 
 ### Alcance, nivel y resolución
 
-Alcance define qué sistema, período y frontera entra. Nivel define tipo de elemento: organización, capacidad, sistema, contenedor, componente o código. Resolución define cuánto detalle se muestra dentro de ese nivel.
+En simple, con un ejemplo: Alcance define qué sistema, período y frontera entra. Nivel define tipo de elemento: organización, capacidad, sistema, contenedor, componente o código. Resolución define cuánto detalle se muestra dentro de ese nivel.
 
 Mezclar niveles crea relaciones ambiguas. Una flecha entre “Recepción” y “API” puede significar uso, responsabilidad, mensaje o dependencia. Separar vistas o etiquetar relaciones resta espectacularidad y agrega significado.
 
@@ -116,7 +116,7 @@ La resolución puede variar dentro de una cartera, no dentro de cada símbolo. U
 
 ### Tiempo y versión del modelo
 
-Un modelo puede describir situación actual, historia, escenario futuro o transición. Mezclarlos sin marca produce contradicción aparente. “El PMS envía a la cerradura” puede ser vigente, propuesto o deseado.
+En simple, con un ejemplo: Un modelo puede describir situación actual, historia, escenario futuro o transición. Mezclarlos sin marca produce contradicción aparente. “El PMS envía a la cerradura” puede ser vigente, propuesto o deseado.
 
 Toda vista necesita fecha o evento de validez, fuente y responsable. Un modelo sin vigencia se convierte en documento ceremonial. La actualización puede ser automática, periódica o disparada por cambio.
 
@@ -128,7 +128,7 @@ La versión debe vincularse con la decisión que utilizó el modelo. Corregir un
 
 ### Notación y semántica
 
-Una notación define elementos, relaciones y reglas de lectura. UML 2.5.1 ofrece múltiples diagramas; BPMN 2.0.2, semántica para procesos. ArchiMate 3.2 relaciona capas y aspectos de arquitectura empresarial. Ninguna es mejor en abstracto.
+En simple, con un ejemplo: Una notación define elementos, relaciones y reglas de lectura. UML 2.5.1 ofrece múltiples diagramas; BPMN 2.0.2, semántica para procesos. ArchiMate 3.2 relaciona capas y aspectos de arquitectura empresarial. Ninguna es mejor en abstracto.
 
 Daniel Moody propone principios para evaluar notaciones visuales, como discriminación perceptual, transparencia semántica, complejidad y manejo de diferencias cognitivas. Una notación puede ser formal y difícil para la audiencia.
 
@@ -154,7 +154,7 @@ Antes de aceptar la quinta vista, el equipo intenta resolver la ausencia mediant
 
 ### Modelo del problema antes que modelo de la solución
 
-Michael Jackson propone problem frames para separar fenómenos del mundo, requisitos y máquina. La distinción impide que la estructura de la solución capture demasiado pronto la pregunta. Un modelo de aplicaciones existentes puede hacer parecer inevitable conservarlas.
+En simple, con un ejemplo: Michael Jackson propone problem frames para separar fenómenos del mundo, requisitos y máquina. La distinción impide que la estructura de la solución capture demasiado pronto la pregunta. Un modelo de aplicaciones existentes puede hacer parecer inevitable conservarlas.
 
 Antes de diseñar, se representa el dominio y la discrepancia: dos promesas sobre una vacante, una regla sin autoridad suplente o una persona bloqueada antes del formulario. Luego se agregan componentes necesarios. La dirección del razonamiento va del problema a la solución, aunque la evidencia técnica informe restricciones.
 
@@ -166,7 +166,7 @@ La condición de borde es el cambio técnico acotado. Si la pregunta consiste en
 
 ### Modelos de estructura
 
-Los modelos de estructura muestran elementos relativamente persistentes y relaciones: datos, componentes, capacidades, organización o despliegue. Responden qué existe, cómo se compone y de qué depende.
+En simple, con un ejemplo: Los modelos de estructura muestran elementos relativamente persistentes y relaciones: datos, componentes, capacidades, organización o despliegue. Responden qué existe, cómo se compone y de qué depende.
 
 Una entidad relación ayuda a decidir integridad y correspondencia. C4 comunica estructura de software a distintos niveles. ArchiMate conecta negocio, aplicaciones y tecnología. El Business Architecture Core Metamodel de OMG, publicado en 2024, ofrece conceptos para arquitectura de negocio.
 
@@ -178,9 +178,9 @@ Marc Lankhorst vincula arquitectura empresarial con partes interesadas y coheren
 
 ### Modelos de comportamiento y tiempo
 
-Máquinas de estados, secuencias, procesos y simulaciones muestran cambio. Responden qué ocurre, en qué orden, bajo qué condición y con qué demora.
+En simple: Máquinas de estados, secuencias, procesos y simulaciones muestran cambio. Responden qué ocurre, en qué orden, bajo qué condición y con qué demora.
 
-Un modelo de estados protege transiciones de una entidad. Un BPMN representa coordinación. Un diagrama de secuencia localiza intercambios. Una simulación explora capacidad y variabilidad. Elegir uno depende de la pregunta.
+Ejemplo cercano: Un modelo de estados protege transiciones de una entidad. Un BPMN representa coordinación. Un diagrama de secuencia localiza intercambios. Una simulación explora capacidad y variabilidad. Elegir uno depende de la pregunta.
 
 No se debe forzar comportamiento dentro de una estructura estática mediante flechas ambiguas. Tampoco llenar un proceso con cada mensaje técnico. Se vinculan vistas cuando el detalle cambia audiencia.
 
@@ -192,7 +192,7 @@ El tiempo puede representarse como orden, duración, demora o frecuencia. Un dia
 
 ### Modelos de decisión y causalidad
 
-No todos los dibujos sirven para la misma pregunta. Un árbol ayuda a elegir entre caminos; un modelo causal ayuda a explicar por qué un cambio puede producir otro efecto más tarde. Una tabla de decisión representa combinaciones de condiciones y resultados. Un árbol muestra ramificación. Un modelo causal expresa mecanismos, retroalimentación y demoras. Un argumento vincula afirmación, evidencia y rivales.
+En simple, con un ejemplo: No todos los dibujos sirven para la misma pregunta. Un árbol ayuda a elegir entre caminos; un modelo causal ayuda a explicar por qué un cambio puede producir otro efecto más tarde. Una tabla de decisión representa combinaciones de condiciones y resultados. Un árbol muestra ramificación. Un modelo causal expresa mecanismos, retroalimentación y demoras. Un argumento vincula afirmación, evidencia y rivales.
 
 John Sterman muestra que los modelos de dinámica de sistemas permiten explorar cómo estructura y retroalimentación generan comportamiento. Peter Checkland utiliza modelos conceptuales en Soft Systems Methodology como dispositivos para aprender sobre situaciones, no como copias de la realidad.
 
@@ -206,7 +206,7 @@ Un lazo causal no demuestra magnitud ni demora. Una tabla de decisión no explic
 
 ### Modelos de experiencia y perspectiva
 
-Journey, blueprint de servicio, mapa de actores y escenario conservan lo que vive una persona y cómo se relaciona con trabajo interno. Responden dónde aparece fricción, información, emoción, exclusión o reparación. Stickdorn, Hormess, Lawrence y Schneider organizan esta relación mediante recorridos y blueprints de servicio que conectan la experiencia visible con la operación que la sostiene.
+En simple, con un ejemplo: Journey, blueprint de servicio, mapa de actores y escenario conservan lo que vive una persona y cómo se relaciona con trabajo interno. Responden dónde aparece fricción, información, emoción, exclusión o reparación. Stickdorn, Hormess, Lawrence y Schneider organizan esta relación mediante recorridos y blueprints de servicio que conectan la experiencia visible con la operación que la sostiene.
 
 No reemplazan proceso ni arquitectura. Una línea emocional no prueba causa. Una persona ficticia no sustituye evidencia. Su valor consiste en mantener la promesa y las perspectivas que los modelos técnicos excluyen.
 
@@ -220,7 +220,7 @@ La representación debe separar experiencia observada de interpretación del equ
 
 ### Elegir entre recorrido, prototipo, blueprint y modelo formal
 
-Un journey map sigue la experiencia de una persona o población a través de etapas y puntos de contacto. Resulta adecuado cuando la decisión depende de expectativa, esfuerzo, información, emoción, barrera o reparación a lo largo del tiempo. No explica por sí solo las causas internas. En Hotel Horizonte permite mostrar que la llegada comienza con la promesa comercial y no en el mostrador, pero necesita vincularse con evidencia operacional para no atribuir cada dificultad a la interfaz visible.
+En simple, con un ejemplo: Un journey map sigue la experiencia de una persona o población a través de etapas y puntos de contacto. Resulta adecuado cuando la decisión depende de expectativa, esfuerzo, información, emoción, barrera o reparación a lo largo del tiempo. No explica por sí solo las causas internas. En Hotel Horizonte permite mostrar que la llegada comienza con la promesa comercial y no en el mostrador, pero necesita vincularse con evidencia operacional para no atribuir cada dificultad a la interfaz visible.
 
 Un prototipo vuelve experimentable una alternativa antes de construirla por completo. Puede ser una conversación simulada, una secuencia en papel, una interfaz interactiva o un ensayo de servicio. Conviene cuando existe incertidumbre sobre comprensión, acción o coordinación futura. Su fidelidad se decide por la pregunta. Una pantalla detallada no ayuda si todavía se discute quién puede autorizar una excepción; una simulación con roles puede revelar esa relación con menor costo.
 
@@ -238,9 +238,9 @@ El límite aparece cuando se exige a una representación responder todo. Agregar
 
 ### Audiencia y traducción entre vistas
 
-Una misma pregunta puede requerir distintas vistas por audiencia. Dirección necesita riesgo y decisión; desarrollo, interfaces y reglas; operación, excepciones y señales. La traducción debe conservar conceptos y cambiar resolución.
+En simple: Una misma pregunta puede requerir distintas vistas por audiencia. Dirección necesita riesgo y decisión; desarrollo, interfaces y reglas; operación, excepciones y señales. La traducción debe conservar conceptos y cambiar resolución.
 
-Crear una copia manual para cada audiencia aumenta inconsistencia. Conviene mantener un modelo base cuando existe semántica común y derivar vistas. No todo puede centralizarse: relatos y normas tienen fuentes distintas.
+Ejemplo cercano: Crear una copia manual para cada audiencia aumenta inconsistencia. Conviene mantener un modelo base cuando existe semántica común y derivar vistas. No todo puede centralizarse: relatos y normas tienen fuentes distintas.
 
 La traducción se prueba con escenarios. Cada audiencia localiza la misma reserva, transición o excepción. Si los nombres cambian sin correspondencia, la cartera fragmenta comprensión.
 
@@ -252,7 +252,7 @@ La traducción también puede revelar desacuerdo. Si Tecnología llama “éxito
 
 ### Costo total de un modelo
 
-Un modelo no cuesta sólo lo que tarda en dibujarse. También cuesta explicarlo, mantenerlo al día y corregir decisiones tomadas con una versión vieja; una lámina barata puede volverse cara si nadie entiende cuándo dejó de valer. El costo incluye investigar, construir, explicar, validar, mantener, gobernar y retirar. También incluye decisiones equivocadas por ambigüedad o desactualización.
+En simple, con un ejemplo: Un modelo no cuesta sólo lo que tarda en dibujarse. También cuesta explicarlo, mantenerlo al día y corregir decisiones tomadas con una versión vieja; una lámina barata puede volverse cara si nadie entiende cuándo dejó de valer. El costo incluye investigar, construir, explicar, validar, mantener, gobernar y retirar. También incluye decisiones equivocadas por ambigüedad o desactualización.
 
 Un diagrama generado puede ser barato de actualizar y caro de comprender. Un taller participativo puede ser costoso y revelar una frontera decisiva. La comparación utiliza consecuencia evitada, frecuencia de uso y vida esperada.
 
@@ -266,7 +266,7 @@ También existe costo de dependencia de herramienta. Un formato propietario pued
 
 ### Inteligencia artificial como productora de representaciones
 
-En 2026, herramientas de inteligencia artificial pueden inferir diagramas desde código, registros o texto y traducir entre notaciones. Reducen costo de producción y pueden multiplicar modelos sin propósito.
+En simple, con un ejemplo: En 2026, herramientas de inteligencia artificial pueden inferir diagramas desde código, registros o texto y traducir entre notaciones. Reducen costo de producción y pueden multiplicar modelos sin propósito.
 
 Una representación generada hereda sesgos y ausencias de la fuente. Desde código omitirá trabajo manual. Desde entrevistas puede inventar continuidad. Desde registros puede confundir frecuencia con importancia.
 
@@ -292,9 +292,9 @@ Los tres modelos actualizados reciben fecha y caso de prueba. Si no pasan, no vu
 
 ### Criterio de descarte y suficiencia
 
-Antes de construir, se aplican cinco filtros. La pregunta debe estar abierta. La decisión debe tener consecuencia. La representación debe mejorar algo frente a texto, consulta o prueba directa. Debe existir evidencia accesible. El costo debe ser proporcional a uso y riesgo.
+En simple: Antes de construir, se aplican cinco filtros. La pregunta debe estar abierta. La decisión debe tener consecuencia. La representación debe mejorar algo frente a texto, consulta o prueba directa. Debe existir evidencia accesible. El costo debe ser proporcional a uso y riesgo.
 
-Después de construir se aplica descarte. Si la audiencia no puede leer, si no cambia la decisión, si duplica otra vista, si no puede mantenerse o si su incertidumbre excede el uso, se corrige o retira. Un modelo no se conserva para justificar el trabajo invertido.
+Ejemplo cercano: Después de construir se aplica descarte. Si la audiencia no puede leer, si no cambia la decisión, si duplica otra vista, si no puede mantenerse o si su incertidumbre excede el uso, se corrige o retira. Un modelo no se conserva para justificar el trabajo invertido.
 
 La suficiencia es provisional. Una vista puede alcanzar para explorar y no para autorizar. Se etiqueta su nivel de compromiso. Esto evita que un boceto de taller circule meses después como arquitectura aprobada.
 
@@ -323,7 +323,7 @@ También puede concluir “construir para una sola decisión”. No toda vista n
 
 ### Matriz pregunta modelo
 
-Esta matriz es una tabla para comparar qué representación ayuda mejor a responder cada pregunta. Si necesitamos saber dónde espera una persona, un proceso puede servir más que un diagrama de software; si buscamos una dependencia técnica, puede ocurrir lo contrario. Se listan preguntas en filas y modelos candidatos en columnas. Cada cruce indica cobertura fuerte, parcial o nula, costo y audiencia. La matriz evita elegir por costumbre.
+En simple, con un ejemplo: Esta matriz es una tabla para comparar qué representación ayuda mejor a responder cada pregunta. Si necesitamos saber dónde espera una persona, un proceso puede servir más que un diagrama de software; si buscamos una dependencia técnica, puede ocurrir lo contrario. Se listan preguntas en filas y modelos candidatos en columnas. Cada cruce indica cobertura fuerte, parcial o nula, costo y audiencia. La matriz evita elegir por costumbre.
 
 Una pregunta puede requerir modelos complementarios. Cuando necesita muchas vistas, se revisan alcance, decisiones mezcladas y costo de comprensión; la cantidad no demuestra por sí sola que esté mal formulada. Una vista que cubre todo parcialmente puede no cubrir nada con suficiente precisión.
 
@@ -337,7 +337,7 @@ La matriz no produce un puntaje automático. Las coberturas requieren argumento.
 
 ### Matriz aplicada a la validación previa
 
-Hotel Horizonte completa la matriz con preguntas suficientemente distintas para no esconder una decisión compuesta. La primera pregunta es dónde se forma la espera total. Su audiencia principal reúne Operaciones y Recepción, usa episodios observados y requiere un modelo de proceso. La segunda pregunta es qué transición puede producir doble asignación. Tecnología y Recepción necesitan una máquina de estados vinculada con eventos del PMS.
+En simple, con un ejemplo: Hotel Horizonte completa la matriz con preguntas suficientemente distintas para no esconder una decisión compuesta. La primera pregunta es dónde se forma la espera total. Su audiencia principal reúne Operaciones y Recepción, usa episodios observados y requiere un modelo de proceso. La segunda pregunta es qué transición puede producir doble asignación. Tecnología y Recepción necesitan una máquina de estados vinculada con eventos del PMS.
 
 La tercera pregunta es qué dependencia impide emitir acceso. Tecnología y proveedor necesitan arquitectura y contratos. La cuarta pregunta es quién puede detener, autorizar o reparar una promesa. Operaciones y Comercial necesitan una matriz de autoridad. La quinta pregunta es qué información recibe el huésped durante la espera. Comercial, Recepción y personas afectadas necesitan una vista acotada de experiencia.
 
@@ -355,9 +355,9 @@ La matriz conserva una fila abierta para el tablero solicitado por Elena Acosta.
 
 ### Prueba de lectura y decisión
 
-La audiencia recibe un escenario sin explicación del autor. Debe identificar alcance, elementos, relaciones, supuestos y decisión. Se observa dónde interpreta distinto.
+En simple: La audiencia recibe un escenario sin explicación del autor. Debe identificar alcance, elementos, relaciones, supuestos y decisión. Se observa dónde interpreta distinto.
 
-Luego se introduce un caso límite: mensaje tardío, huésped con accesibilidad, servicio externo caído o norma modificada. El modelo debe permitir localizar la pregunta o declarar que queda fuera.
+Ejemplo cercano: Luego se introduce un caso límite: mensaje tardío, huésped con accesibilidad, servicio externo caído o norma modificada. El modelo debe permitir localizar la pregunta o declarar que queda fuera.
 
 Una lectura idéntica no siempre es necesaria. Sí debe haber acuerdo sobre significado operativo de los elementos usados para decidir. La leyenda y las etiquetas forman parte de la prueba.
 
@@ -369,7 +369,7 @@ Una segunda ronda verifica aprendizaje. Si la audiencia puede usar el modelo só
 
 ### Comparar carteras antes de comprometer mantenimiento
 
-La prueba de una vista individual no demuestra que la cartera sea mínima. Dos modelos pueden funcionar por separado y duplicar la misma decisión; también pueden dejar una brecha entre ambos. Antes de aprobar el conjunto se comparan al menos dos carteras candidatas sobre los mismos escenarios y con las mismas audiencias. La comparación registra decisiones correctas, preguntas sin respuesta, tiempo de lectura, desacuerdos y esfuerzo estimado de actualización.
+En simple, con un ejemplo: La prueba de una vista individual no demuestra que la cartera sea mínima. Dos modelos pueden funcionar por separado y duplicar la misma decisión; también pueden dejar una brecha entre ambos. Antes de aprobar el conjunto se comparan al menos dos carteras candidatas sobre los mismos escenarios y con las mismas audiencias. La comparación registra decisiones correctas, preguntas sin respuesta, tiempo de lectura, desacuerdos y esfuerzo estimado de actualización.
 
 La primera alternativa de HH-15 combina proceso, arquitectura y tablero. Resulta fácil de presentar a conducción, pero no permite reconstruir autoridad ni la experiencia de una confirmación anticipada. La segunda agrega estados, matriz de autoridad y vista de experiencia. Aumenta costo y descubre que la palabra “disponible” habilita acciones diferentes. El equipo intenta una tercera opción: incorporar las aclaraciones dentro del proceso.
 
@@ -383,7 +383,7 @@ El cierre registra por qué fue elegida la cartera, qué alternativa se descart�
 
 ### Trazabilidad sin modelo total
 
-Las vistas se vinculan mediante identificadores y glosario, no mediante una lámina gigantesca. Reserva R73 puede aparecer en proceso, estado y arquitectura bajo el mismo concepto.
+En simple, con un ejemplo: Las vistas se vinculan mediante identificadores y glosario, no mediante una lámina gigantesca. Reserva R73 puede aparecer en proceso, estado y arquitectura bajo el mismo concepto.
 
 Cada relación registra fuente o hipótesis. Un repositorio permite encontrar vistas afectadas por un cambio. La trazabilidad no implica sincronía automática de toda representación.
 

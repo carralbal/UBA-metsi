@@ -1,8 +1,8 @@
 {
   "document": "N30",
-  "stage": "content-canonical-thesis-n00-standard",
+  "stage": "explicit-accessible-layers-all-concepts",
   "source": "source/N30_observabilidad_senales_sli_slo_incidentes_y_aprendizaje-content-canonical-v4.md",
-  "source_sha256": "0fb35a6675522567ae04625b2b3fa3700dabd91f90aa31542627edc99abbc2fc",
+  "source_sha256": "0ee338d1b304d574c9aeff893f41f3f2dc68d6941eac4f857dcf79b67fc21007",
   "eligible_blocks": [
     {
       "kind": "heading",
@@ -26,7 +26,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "Un hospital integra el laboratorio con la historia clínica y el tablero de guardia. Durante una madrugada, servidores, colas y bases mantienen disponibilidad dentro del objetivo. Los mensajes se procesan sin error y la latencia media parece normal. Sin embargo, tres resultados críticos no llegan a la pantalla desde la cual el equipo médico decide. El laboratorio terminó su trabajo; la guardia continúa esperando una información que el sistema técnico considera entregada.",
+      "text": "En simple, con un ejemplo: Un hospital integra el laboratorio con la historia clínica y el tablero de guardia. Durante una madrugada, servidores, colas y bases mantienen disponibilidad dentro del objetivo. Los mensajes se procesan sin error y la latencia media parece normal. Sin embargo, tres resultados críticos no llegan a la pantalla desde la cual el equipo médico decide. El laboratorio terminó su trabajo; la guardia continúa esperando una información que el sistema técnico considera entregada.",
       "source_id": "src-0005"
     },
     {
@@ -216,7 +216,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "La observabilidad es la capacidad de comprender estados y comportamientos internos mediante señales externas suficientes y contextualizadas. No es sinónimo de monitoreo, acumulación de registros ni compra de una plataforma. Requiere instrumentación y un modelo que permita formular preguntas nuevas.",
+      "text": "En simple, con un ejemplo: La observabilidad es la capacidad de comprender estados y comportamientos internos mediante señales externas suficientes y contextualizadas. No es sinónimo de monitoreo, acumulación de registros ni compra de una plataforma. Requiere instrumentación y un modelo que permita formular preguntas nuevas.",
       "source_id": "src-0043"
     },
     {
@@ -246,12 +246,12 @@
     },
     {
       "kind": "paragraph",
-      "text": "El monitoreo compara señales conocidas con condiciones y umbrales previamente definidos. Detecta desviaciones esperadas y activa decisiones operativas, pero no explica por sí solo causalidad ni responde preguntas que nadie formuló.",
+      "text": "En simple: El monitoreo compara señales conocidas con condiciones y umbrales previamente definidos. Detecta desviaciones esperadas y activa decisiones operativas, pero no explica por sí solo causalidad ni responde preguntas que nadie formuló.",
       "source_id": "src-0049"
     },
     {
       "kind": "paragraph",
-      "text": "Hotel Horizonte vigila ingresos logrados por minuto y estados indeterminados. HH-30 vincula cada indicador con población, ventana, responsable y primera acción. Cobertura, precisión y utilidad de las alertas muestran si el monitoreo protege la promesa o sólo produce mensajes.",
+      "text": "Ejemplo cercano: Hotel Horizonte vigila ingresos logrados por minuto y estados indeterminados. HH-30 vincula cada indicador con población, ventana, responsable y primera acción. Cobertura, precisión y utilidad de las alertas muestran si el monitoreo protege la promesa o sólo produce mensajes.",
       "source_id": "src-0050"
     },
     {
@@ -276,12 +276,12 @@
     },
     {
       "kind": "paragraph",
-      "text": "La telemetría reúne trazas, métricas, registros y contexto emitidos por componentes y recorridos. No se vuelve evidencia por existir en gran volumen. Correlación, semántica, integridad y procedencia permiten reconstruir actividad distribuida.",
+      "text": "En simple: La telemetría reúne trazas, métricas, registros y contexto emitidos por componentes y recorridos. No se vuelve evidencia por existir en gran volumen. Correlación, semántica, integridad y procedencia permiten reconstruir actividad distribuida.",
       "source_id": "src-0055"
     },
     {
       "kind": "paragraph",
-      "text": "HH-30 utiliza un identificador de episodio a través del canal, el PMS y la cerradura. También registra decisiones manuales para evitar que el tramo sin software desaparezca. Muestreo y retención se prueban con una excepción, porque una traza incompleta puede sostener una explicación equivocada.",
+      "text": "Ejemplo cercano: HH-30 utiliza un identificador de episodio a través del canal, el PMS y la cerradura. También registra decisiones manuales para evitar que el tramo sin software desaparezca. Muestreo y retención se prueban con una excepción, porque una traza incompleta puede sostener una explicación equivocada.",
       "source_id": "src-0056"
     },
     {
@@ -306,12 +306,12 @@
     },
     {
       "kind": "paragraph",
-      "text": "Una señal de negocio representa una consecuencia operativa o de valor producida por el sistema. No se reduce a transacciones técnicas ni a un indicador financiero tardío. Conecta eventos del recorrido con población y resultado.",
+      "text": "En simple: Una señal de negocio representa una consecuencia operativa o de valor producida por el sistema. No se reduce a transacciones técnicas ni a un indicador financiero tardío. Conecta eventos del recorrido con población y resultado.",
       "source_id": "src-0061"
     },
     {
       "kind": "paragraph",
-      "text": "Un ingreso logrado sin reasignación representa mejor la promesa que una respuesta HTTP exitosa. HH-30 reconcilia esa señal con evidencia de Recepción y Housekeeping. La definición incluye denominador, ventana, exclusiones y fuente para impedir que cambios de captura parezcan mejoras.",
+      "text": "Ejemplo cercano: Un ingreso logrado sin reasignación representa mejor la promesa que una respuesta HTTP exitosa. HH-30 reconcilia esa señal con evidencia de Recepción y Housekeeping. La definición incluye denominador, ventana, exclusiones y fuente para impedir que cambios de captura parezcan mejoras.",
       "source_id": "src-0062"
     },
     {
@@ -336,7 +336,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "DORA organiza en 2026 cinco métricas de desempeño de entrega de software. Tres describen el rendimiento del cambio: tiempo de entrega de cambios, frecuencia de despliegue y tasa de retrabajo del despliegue. Dos observan inestabilidad: tasa de fallas de cambio y tiempo de recuperación de un despliegue fallido. La unidad recomendada es una aplicación o servicio, porque agregar productos con dinámicas distintas puede fabricar una cifra que no representa a ninguno.",
+      "text": "En simple, con un ejemplo: DORA organiza en 2026 cinco métricas de desempeño de entrega de software. Tres describen el rendimiento del cambio: tiempo de entrega de cambios, frecuencia de despliegue y tasa de retrabajo del despliegue. Dos observan inestabilidad: tasa de fallas de cambio y tiempo de recuperación de un despliegue fallido. La unidad recomendada es una aplicación o servicio, porque agregar productos con dinámicas distintas puede fabricar una cifra que no representa a ninguno.",
       "source_id": "src-0067"
     },
     {
@@ -386,7 +386,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "Un indicador de nivel de servicio, SLI, cuantifica una dimensión observable de la capacidad que importa a quienes dependen de ella. No es cualquier métrica disponible. Define eventos válidos, población, ventana y método de cálculo.",
+      "text": "En simple, con un ejemplo: Un indicador de nivel de servicio, SLI, cuantifica una dimensión observable de la capacidad que importa a quienes dependen de ella. No es cualquier métrica disponible. Define eventos válidos, población, ventana y método de cálculo.",
       "source_id": "src-0077"
     },
     {
@@ -416,7 +416,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "Un objetivo de nivel de servicio, SLO, establece el nivel esperado de un SLI durante una ventana y orienta decisiones. No es una promesa de perfección ni se convierte automáticamente en un acuerdo contractual.",
+      "text": "En simple, con un ejemplo: Un objetivo de nivel de servicio, SLO, establece el nivel esperado de un SLI durante una ventana y orienta decisiones. No es una promesa de perfección ni se convierte automáticamente en un acuerdo contractual.",
       "source_id": "src-0083"
     },
     {
@@ -471,7 +471,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "El presupuesto de error es la fracción de eventos no buenos permitida por el SLO durante su ventana. Para un SLO de 99 %, equivale a 1 % de los eventos válidos. Vincula confiabilidad con ritmo de cambio porque permite acordar de antemano qué decisiones se restringen cuando el servicio consume ese margen. No autoriza daño ni vuelve aceptable cualquier falla incluida en el porcentaje.",
+      "text": "En simple, con un ejemplo: El presupuesto de error es la fracción de eventos no buenos permitida por el SLO durante su ventana. Para un SLO de 99 %, equivale a 1 % de los eventos válidos. Vincula confiabilidad con ritmo de cambio porque permite acordar de antemano qué decisiones se restringen cuando el servicio consume ese margen. No autoriza daño ni vuelve aceptable cualquier falla incluida en el porcentaje.",
       "source_id": "src-0094"
     },
     {
@@ -521,7 +521,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "Una alerta accionable comunica una condición relevante a alguien capaz de intervenir con contexto suficiente. No es cada anomalía ni un mensaje sin prioridad. Relaciona señal, impacto, urgencia, responsable y primera acción segura.",
+      "text": "En simple, con un ejemplo: Una alerta accionable comunica una condición relevante a alguien capaz de intervenir con contexto suficiente. No es cada anomalía ni un mensaje sin prioridad. Relaciona señal, impacto, urgencia, responsable y primera acción segura.",
       "source_id": "src-0104"
     },
     {
@@ -566,7 +566,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "Un incidente es una alteración no deseada de una capacidad o promesa que requiere coordinación y aprendizaje. No se define sólo por caída técnica ni por la severidad asignada al final. Incluye degradación, datos incorrectos y trabajo humano extraordinario.",
+      "text": "En simple, con un ejemplo: Un incidente es una alteración no deseada de una capacidad o promesa que requiere coordinación y aprendizaje. No se define sólo por caída técnica ni por la severidad asignada al final. Incluye degradación, datos incorrectos y trabajo humano extraordinario.",
       "source_id": "src-0113"
     },
     {
@@ -596,7 +596,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "La respuesta coordinada distribuye autoridad y comunicación para limitar daño bajo presión. No depende de una persona heroica ni de una guía operativa inflexible. Define roles, prioridades, canales, escalamiento y vínculo con quienes están afectados.",
+      "text": "En simple, con un ejemplo: La respuesta coordinada distribuye autoridad y comunicación para limitar daño bajo presión. No depende de una persona heroica ni de una guía operativa inflexible. Define roles, prioridades, canales, escalamiento y vínculo con quienes están afectados.",
       "source_id": "src-0119"
     },
     {
@@ -626,7 +626,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "Una revisión posterior reconstruye condiciones, decisiones y mecanismos para aprender sin reducir el incidente a culpa individual. No es una cronología ornamental ni una búsqueda automática de causa raíz única.",
+      "text": "En simple, con un ejemplo: Una revisión posterior reconstruye condiciones, decisiones y mecanismos para aprender sin reducir el incidente a culpa individual. No es una cronología ornamental ni una búsqueda automática de causa raíz única.",
       "source_id": "src-0125"
     },
     {
@@ -666,7 +666,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "Un bucle de aprendizaje operativo devuelve evidencia de uso e incidentes a arquitectura, contratos, calidad y gobierno de liberación. No es una retrospectiva aislada ni una lista infinita de tareas. Prioriza cambios por mecanismo, riesgo y capacidad de contener recurrencia.",
+      "text": "En simple, con un ejemplo: Un bucle de aprendizaje operativo devuelve evidencia de uso e incidentes a arquitectura, contratos, calidad y gobierno de liberación. No es una retrospectiva aislada ni una lista infinita de tareas. Prioriza cambios por mecanismo, riesgo y capacidad de contener recurrencia.",
       "source_id": "src-0133"
     },
     {

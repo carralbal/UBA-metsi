@@ -1,8 +1,8 @@
 {
   "document": "N13",
-  "stage": "content-canonical-accessible-concept-layers",
+  "stage": "explicit-accessible-layers-all-concepts",
   "source": "source/N13_demoras_concurrencia_consistencia_idempotencia_y_reconciliacion-content-canonical-v2.md",
-  "source_sha256": "6dd7ee841181e3103cd388c22f37d728d9fdc9b3c9a9d996b233fd8f5da125ab",
+  "source_sha256": "0207c6b48326fe91097905a070c2025f05a6d50160a9c438c1cbd36557797304",
   "eligible_blocks": [
     {
       "kind": "heading",
@@ -166,7 +166,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "En una llamada local, un error suele parecer completo: la función devuelve o falla. Entre sistemas, al menos tres momentos pueden separarse. La solicitud puede no llegar. Puede llegar y no ejecutarse. Puede ejecutarse y perderse la respuesta. Desde el cliente, los últimos dos casos pueden verse iguales.",
+      "text": "En simple, con un ejemplo: En una llamada local, un error suele parecer completo: la función devuelve o falla. Entre sistemas, al menos tres momentos pueden separarse. La solicitud puede no llegar. Puede llegar y no ejecutarse. Puede ejecutarse y perderse la respuesta. Desde el cliente, los últimos dos casos pueden verse iguales.",
       "source_id": "src-0033"
     },
     {
@@ -191,12 +191,12 @@
     },
     {
       "kind": "paragraph",
-      "text": "Toda comunicación demora. La pregunta útil no es si existe latencia, sino qué demora cambia una decisión. Cien milisegundos pueden ser irrelevantes para un reporte y críticos para una puja. Cinco minutos pueden ser aceptables para analítica y dañinos para inventario escaso.",
+      "text": "En simple: Toda comunicación demora. La pregunta útil no es si existe latencia, sino qué demora cambia una decisión. Cien milisegundos pueden ser irrelevantes para un reporte y críticos para una puja. Cinco minutos pueden ser aceptables para analítica y dañinos para inventario escaso.",
       "source_id": "src-0038"
     },
     {
       "kind": "paragraph",
-      "text": "El presupuesto de tiempo distribuye una expectativa entre captura, transporte, procesamiento, actualización y presentación. Permite identificar qué parte consume margen y cuándo una vista debe declarar obsolescencia. También evita llamar “tiempo real” a una cadena cuyo dato más lento se renueva cada noche.",
+      "text": "Ejemplo cercano: El presupuesto de tiempo distribuye una expectativa entre captura, transporte, procesamiento, actualización y presentación. Permite identificar qué parte consume margen y cuándo una vista debe declarar obsolescencia. También evita llamar “tiempo real” a una cadena cuyo dato más lento se renueva cada noche.",
       "source_id": "src-0039"
     },
     {
@@ -216,7 +216,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "Una infraestructura puede entregar un mensaje como máximo una vez, al menos una vez o con mecanismos que aproximan una entrega única dentro de un alcance. Ninguna etiqueta garantiza por sí sola que el efecto de negocio ocurra exactamente una vez.",
+      "text": "En simple, con un ejemplo: Una infraestructura puede entregar un mensaje como máximo una vez, al menos una vez o con mecanismos que aproximan una entrega única dentro de un alcance. Ninguna etiqueta garantiza por sí sola que el efecto de negocio ocurra exactamente una vez.",
       "source_id": "src-0043"
     },
     {
@@ -241,12 +241,12 @@
     },
     {
       "kind": "paragraph",
-      "text": "Leslie Lamport mostró que los sistemas distribuidos necesitan razonar sobre relaciones causales y no sólo sobre relojes. Si una aprobación responde a una solicitud, la solicitud debe precederla causalmente aunque las marcas horarias estén desajustadas. Dos asignaciones independientes pueden ser concurrentes aunque una llegue primero.",
+      "text": "En simple: Leslie Lamport mostró que los sistemas distribuidos necesitan razonar sobre relaciones causales y no sólo sobre relojes. Si una aprobación responde a una solicitud, la solicitud debe precederla causalmente aunque las marcas horarias estén desajustadas. Dos asignaciones independientes pueden ser concurrentes aunque una llegue primero.",
       "source_id": "src-0048"
     },
     {
       "kind": "paragraph",
-      "text": "Ordenar por recepción es útil para procesar, pero no siempre para decidir. Ordenar por tiempo declarado puede ser manipulado o impreciso. Un número de versión protege una entidad contra actualizaciones basadas en estado obsoleto. Un vector causal aporta más información y también más costo.",
+      "text": "Ejemplo cercano: Ordenar por recepción es útil para procesar, pero no siempre para decidir. Ordenar por tiempo declarado puede ser manipulado o impreciso. Un número de versión protege una entidad contra actualizaciones basadas en estado obsoleto. Un vector causal aporta más información y también más costo.",
       "source_id": "src-0049"
     },
     {
@@ -271,12 +271,12 @@
     },
     {
       "kind": "paragraph",
-      "text": "Concurrencia no significa simplemente velocidad. Existe cuando dos operaciones se superponen sin conocer completamente el resultado de la otra. Cada una puede ser válida sobre el estado que leyó y, combinadas, violar una invariante.",
+      "text": "En simple: Concurrencia no significa simplemente velocidad. Existe cuando dos operaciones se superponen sin conocer completamente el resultado de la otra. Cada una puede ser válida sobre el estado que leyó y, combinadas, violar una invariante.",
       "source_id": "src-0054"
     },
     {
       "kind": "paragraph",
-      "text": "Dos agentes consultan una habitación libre y luego intentan asignarla. Un control optimista compara la versión leída con la vigente y rechaza una escritura obsoleta. Un bloqueo pesimista reserva capacidad antes de decidir y puede aumentar espera o producir abandono. Una operación atómica sobre inventario puede proteger el recurso sin bloquear todo el proceso.",
+      "text": "Ejemplo cercano: Dos agentes consultan una habitación libre y luego intentan asignarla. Un control optimista compara la versión leída con la vigente y rechaza una escritura obsoleta. Un bloqueo pesimista reserva capacidad antes de decidir y puede aumentar espera o producir abandono. Una operación atómica sobre inventario puede proteger el recurso sin bloquear todo el proceso.",
       "source_id": "src-0055"
     },
     {
@@ -336,12 +336,12 @@
     },
     {
       "kind": "paragraph",
-      "text": "Consistencia puede significar varias cosas. En una base transaccional refiere a reglas observadas por operaciones. Entre réplicas puede referir a qué resultados ve una lectura después de una escritura. En el negocio significa que ciertas afirmaciones no pueden ser simultáneamente válidas.",
+      "text": "En simple: Consistencia puede significar varias cosas. En una base transaccional refiere a reglas observadas por operaciones. Entre réplicas puede referir a qué resultados ve una lectura después de una escritura. En el negocio significa que ciertas afirmaciones no pueden ser simultáneamente válidas.",
       "source_id": "src-0067"
     },
     {
       "kind": "paragraph",
-      "text": "“La habitación no se asigna a dos reservas vigentes” es una invariante. “Todos los tableros muestran el mismo número inmediatamente” puede ser innecesario. Proteger ambas con la misma coordinación agrega costo sin igualar beneficio.",
+      "text": "Ejemplo cercano: “La habitación no se asigna a dos reservas vigentes” es una invariante. “Todos los tableros muestran el mismo número inmediatamente” puede ser innecesario. Proteger ambas con la misma coordinación agrega costo sin igualar beneficio.",
       "source_id": "src-0068"
     },
     {
@@ -361,7 +361,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "Una garantía sólo resulta evaluable cuando se identifica quién observa, qué operación intenta realizar y durante cuánto tiempo la divergencia puede conservarse. La frase “el sistema es consistente” reúne preguntas diferentes. Recepción necesita saber si puede asignar una habitación; Comercial, si puede prometer una categoría; el huésped, si la confirmación continúa vigente; conciliación, si todos los registros terminarán reflejando una reparación.",
+      "text": "En simple, con un ejemplo: Una garantía sólo resulta evaluable cuando se identifica quién observa, qué operación intenta realizar y durante cuánto tiempo la divergencia puede conservarse. La frase “el sistema es consistente” reúne preguntas diferentes. Recepción necesita saber si puede asignar una habitación; Comercial, si puede prometer una categoría; el huésped, si la confirmación continúa vigente; conciliación, si todos los registros terminarán reflejando una reparación.",
       "source_id": "src-0072"
     },
     {
@@ -406,12 +406,12 @@
     },
     {
       "kind": "paragraph",
-      "text": "Coordinar obliga a esperar comunicación o autoridad compartida. Puede proteger una decisión y también volverla inaccesible durante una partición o una caída. Evitar coordinación mejora continuidad y exige que ciertas operaciones sean conmutativas, monotónicas o reconciliables.",
+      "text": "En simple: Coordinar obliga a esperar comunicación o autoridad compartida. Puede proteger una decisión y también volverla inaccesible durante una partición o una caída. Evitar coordinación mejora continuidad y exige que ciertas operaciones sean conmutativas, monotónicas o reconciliables.",
       "source_id": "src-0081"
     },
     {
       "kind": "paragraph",
-      "text": "Peter Bailis y colaboradores mostraron que algunas invariantes pueden preservarse sin coordinación si las operaciones son compatibles con ellas. La lección no es eliminar coordinación, sino localizarla. Un contador de visualizaciones admite suma distribuida. La última habitación disponible no admite dos compromisos independientes sin política adicional.",
+      "text": "Ejemplo cercano: Peter Bailis y colaboradores mostraron que algunas invariantes pueden preservarse sin coordinación si las operaciones son compatibles con ellas. La lección no es eliminar coordinación, sino localizarla. Un contador de visualizaciones admite suma distribuida. La última habitación disponible no admite dos compromisos independientes sin política adicional.",
       "source_id": "src-0082"
     },
     {
@@ -431,7 +431,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "Una operación idempotente produce, respecto de la propiedad elegida, el mismo resultado observable aunque se procese varias veces con la misma intención. RFC 9110 define métodos HTTP idempotentes por el efecto pretendido de múltiples solicitudes idénticas. Esa semántica de protocolo no vuelve idempotente cualquier proceso interno o efecto externo.",
+      "text": "En simple, con un ejemplo: Una operación idempotente produce, respecto de la propiedad elegida, el mismo resultado observable aunque se procese varias veces con la misma intención. RFC 9110 define métodos HTTP idempotentes por el efecto pretendido de múltiples solicitudes idénticas. Esa semántica de protocolo no vuelve idempotente cualquier proceso interno o efecto externo.",
       "source_id": "src-0086"
     },
     {
@@ -456,7 +456,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "Deduplicar compara piezas para decidir si representan la misma intención. Igualdad de contenido no alcanza: dos compras idénticas pueden ser legítimas. Igualdad de mensaje tampoco alcanza: el productor puede crear otro identificador al reintentar.",
+      "text": "En simple, con un ejemplo: Deduplicar compara piezas para decidir si representan la misma intención. Igualdad de contenido no alcanza: dos compras idénticas pueden ser legítimas. Igualdad de mensaje tampoco alcanza: el productor puede crear otro identificador al reintentar.",
       "source_id": "src-0091"
     },
     {
@@ -486,12 +486,12 @@
     },
     {
       "kind": "paragraph",
-      "text": "El control optimista permite avanzar y verifica al comprometer que el estado leído sigue vigente. Funciona bien cuando los conflictos son poco frecuentes y el rechazo puede resolverse. Su costo aparece en trabajo descartado y experiencia de quien debe reintentar.",
+      "text": "En simple: El control optimista permite avanzar y verifica al comprometer que el estado leído sigue vigente. Funciona bien cuando los conflictos son poco frecuentes y el rechazo puede resolverse. Su costo aparece en trabajo descartado y experiencia de quien debe reintentar.",
       "source_id": "src-0097"
     },
     {
       "kind": "paragraph",
-      "text": "El bloqueo pesimista reserva el recurso antes del cambio. Reduce ciertos conflictos y aumenta contención, riesgo de espera y necesidad de vencimiento. Una reserva temporal de inventario puede ser razonable si es visible, acotada y liberable.",
+      "text": "Ejemplo cercano: El bloqueo pesimista reserva el recurso antes del cambio. Reduce ciertos conflictos y aumenta contención, riesgo de espera y necesidad de vencimiento. Una reserva temporal de inventario puede ser razonable si es visible, acotada y liberable.",
       "source_id": "src-0098"
     },
     {
@@ -561,7 +561,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "Reconciliar no es copiar el valor de un sistema sobre otro. Es comparar representaciones relacionadas, clasificar diferencias, reunir evidencia y decidir qué transición conduce a un estado defendible.",
+      "text": "En simple: Reconciliar no es copiar el valor de un sistema sobre otro. Es comparar representaciones relacionadas, clasificar diferencias, reunir evidencia y decidir qué transición conduce a un estado defendible.",
       "source_id": "src-0112"
     },
     {
@@ -571,7 +571,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "La reconciliación necesita frecuencia, umbral, responsable, autoridad y plazo. Algunas divergencias se resuelven automáticamente porque existe fuente y regla claras. Otras requieren revisión porque hay obligaciones o daño. El resultado debe registrar explicación y efecto, no sólo “conciliado”.",
+      "text": "Ejemplo cercano: La reconciliación necesita frecuencia, umbral, responsable, autoridad y plazo. Algunas divergencias se resuelven automáticamente porque existe fuente y regla claras. Otras requieren revisión porque hay obligaciones o daño. El resultado debe registrar explicación y efecto, no sólo “conciliado”.",
       "source_id": "src-0114"
     },
     {
@@ -596,7 +596,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "Cuando una operación tiene varios pasos y uno falla, no siempre existe un botón capaz de volver todo atrás. Una saga coordina esos pasos y una compensación repara lo posible; por ejemplo, cancelar una reserva y devolver el pago no borra el mensaje que ya recibió la persona. Cuando una transición cruza componentes con transacciones locales, no siempre puede revertirse de manera atómica. Una saga coordina una secuencia de pasos y define acciones compensatorias si no puede continuar. Puede utilizar coreografía entre participantes u orquestación mediante un coordinador.",
+      "text": "En simple, con un ejemplo: Cuando una operación tiene varios pasos y uno falla, no siempre existe un botón capaz de volver todo atrás. Una saga coordina esos pasos y una compensación repara lo posible; por ejemplo, cancelar una reserva y devolver el pago no borra el mensaje que ya recibió la persona. Cuando una transición cruza componentes con transacciones locales, no siempre puede revertirse de manera atómica. Una saga coordina una secuencia de pasos y define acciones compensatorias si no puede continuar. Puede utilizar coreografía entre participantes u orquestación mediante un coordinador.",
       "source_id": "src-0119"
     },
     {
@@ -696,7 +696,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "Cerrar una reconciliación no equivale a conseguir que dos campos terminen con el mismo valor. El cierre debe demostrar que las diferencias relevantes fueron explicadas, que las obligaciones incompatibles recibieron tratamiento y que ninguna reparación pendiente quedó oculta por la convergencia técnica. Dos sistemas pueden mostrar “cancelada” y todavía existir una credencial activa, un cobro sin devolver o una persona que conserva una confirmación válida desde su perspectiva.",
+      "text": "En simple, con un ejemplo: Cerrar una reconciliación no equivale a conseguir que dos campos terminen con el mismo valor. El cierre debe demostrar que las diferencias relevantes fueron explicadas, que las obligaciones incompatibles recibieron tratamiento y que ninguna reparación pendiente quedó oculta por la convergencia técnica. Dos sistemas pueden mostrar “cancelada” y todavía existir una credencial activa, un cobro sin devolver o una persona que conserva una confirmación válida desde su perspectiva.",
       "source_id": "src-0139"
     },
     {
@@ -736,7 +736,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "La transición se prueba introduciendo fallas controladas: respuesta perdida después del efecto, mensaje duplicado, entrega tardía, dos comandos concurrentes, lectura antigua, consumidor detenido, clave repetida con parámetros distintos y compensación fallida.",
+      "text": "En simple, con un ejemplo: La transición se prueba introduciendo fallas controladas: respuesta perdida después del efecto, mensaje duplicado, entrega tardía, dos comandos concurrentes, lectura antigua, consumidor detenido, clave repetida con parámetros distintos y compensación fallida.",
       "source_id": "src-0147"
     },
     {

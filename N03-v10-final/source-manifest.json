@@ -135,7 +135,7 @@
     {
       "source_id": "N03-s05-b002",
       "kind": "paragraph",
-      "text": "En Ingeniería de Software aprendimos a definir alcance, interfaces y contexto de un producto. Esa disciplina evita que un proyecto intente resolverlo todo. Aquí conservamos esa necesidad y agregamos otra pregunta: ¿qué consecuencias vuelve invisibles el alcance elegido? Una interfaz declara qué intercambia un componente; una frontera metodológica declara, además, qué actores, demoras y efectos consideraremos al explicar y decidir."
+      "text": "En simple, con un ejemplo: En Ingeniería de Software aprendimos a definir alcance, interfaces y contexto de un producto. Esa disciplina evita que un proyecto intente resolverlo todo. Aquí conservamos esa necesidad y agregamos otra pregunta: ¿qué consecuencias vuelve invisibles el alcance elegido? Una interfaz declara qué intercambia un componente; una frontera metodológica declara, además, qué actores, demoras y efectos consideraremos al explicar y decidir."
     },
     {
       "source_id": "N03-s05-b003",
@@ -145,12 +145,12 @@
     {
       "source_id": "N03-s05-b004",
       "kind": "paragraph",
-      "text": "Quien ya cursó Ingeniería de Software reconoce una secuencia familiar: identificar actores, especificar requisitos, modelar procesos, definir interfaces, construir, probar y operar. N03 no invalida esa secuencia. La coloca dentro de una pregunta anterior: ¿cuál es el sistema relevante para formular esos requisitos y juzgar el resultado? Un requisito impecable puede automatizar con precisión una frontera equivocada."
+      "text": "En simple: Quien ya cursó Ingeniería de Software reconoce una secuencia familiar: identificar actores, especificar requisitos, modelar procesos, definir interfaces, construir, probar y operar. N03 no invalida esa secuencia. La coloca dentro de una pregunta anterior: ¿cuál es el sistema relevante para formular esos requisitos y juzgar el resultado? Un requisito impecable puede automatizar con precisión una frontera equivocada."
     },
     {
       "source_id": "N03-s05-b005",
       "kind": "paragraph",
-      "text": "Supongamos que Hotel Horizonte escribe: “Cuando Housekeeping marque una habitación como liberada, el PMS deberá habilitarla para asignación en menos de treinta segundos”. El requisito es verificable. Sin embargo, todavía no sabemos si “liberada” significa limpieza terminada, inspección aprobada, cerradura operativa, ausencia de bloqueo de mantenimiento o posibilidad comercial de asignación. Tampoco sabemos qué ocurre si esos estados discrepan. La calidad sintáctica del requisito no resuelve la calidad del recorte."
+      "text": "Ejemplo cercano: Supongamos que Hotel Horizonte escribe: “Cuando Housekeeping marque una habitación como liberada, el PMS deberá habilitarla para asignación en menos de treinta segundos”. El requisito es verificable. Sin embargo, todavía no sabemos si “liberada” significa limpieza terminada, inspección aprobada, cerradura operativa, ausencia de bloqueo de mantenimiento o posibilidad comercial de asignación. Tampoco sabemos qué ocurre si esos estados discrepan. La calidad sintáctica del requisito no resuelve la calidad del recorte."
     },
     {
       "source_id": "N03-s05-b006",
@@ -205,7 +205,7 @@
     {
       "source_id": "N03-s05-b016",
       "kind": "paragraph",
-      "text": "Los problemas socio-técnicos se conectan con una cantidad potencialmente ilimitada de factores. El check-in de un hotel depende de reserva, habitación, identidad, pago, dotación, capacitación, edificio, transporte, clima, regulación y expectativa. Si todo pertenece al sistema con el mismo nivel de detalle, el análisis se vuelve inmanejable. Sin frontera no hay investigación proporcionada, responsabilidad operativa ni decisión posible."
+      "text": "En simple, con un ejemplo: Los problemas socio-técnicos se conectan con una cantidad potencialmente ilimitada de factores. El check-in de un hotel depende de reserva, habitación, identidad, pago, dotación, capacitación, edificio, transporte, clima, regulación y expectativa. Si todo pertenece al sistema con el mismo nivel de detalle, el análisis se vuelve inmanejable. Sin frontera no hay investigación proporcionada, responsabilidad operativa ni decisión posible."
     },
     {
       "source_id": "N03-s05-b017",
@@ -230,7 +230,7 @@
     {
       "source_id": "N03-s05-b021",
       "kind": "paragraph",
-      "text": "Define qué elementos y relaciones se incluyen para explicar una situación. Puede concentrarse en el ciclo de reserva, llegada y habitación, dejando afuera la adquisición comercial. Esa exclusión es razonable si la pregunta es por confiabilidad de la promesa, pero no si ciertas campañas venden beneficios que Operaciones no puede cumplir."
+      "text": "En simple, con un ejemplo: Define qué elementos y relaciones se incluyen para explicar una situación. Puede concentrarse en el ciclo de reserva, llegada y habitación, dejando afuera la adquisición comercial. Esa exclusión es razonable si la pregunta es por confiabilidad de la promesa, pero no si ciertas campañas venden beneficios que Operaciones no puede cumplir."
     },
     {
       "source_id": "N03-s05-b022",
@@ -240,7 +240,7 @@
     {
       "source_id": "N03-s05-b023",
       "kind": "paragraph",
-      "text": "Define sobre qué componentes existe autorización o capacidad de cambio. El equipo puede modificar reglas internas y una integración, pero no el algoritmo de una OTA. La OTA sigue dentro del sistema analítico como dependencia aunque quede fuera del control directo."
+      "text": "En simple, con un ejemplo: Define sobre qué componentes existe autorización o capacidad de cambio. El equipo puede modificar reglas internas y una integración, pero no el algoritmo de una OTA. La OTA sigue dentro del sistema analítico como dependencia aunque quede fuera del control directo."
     },
     {
       "source_id": "N03-s05-b024",
@@ -255,7 +255,7 @@
     {
       "source_id": "N03-s05-b026",
       "kind": "paragraph",
-      "text": "Define quién responde por una decisión o resultado. Los contratos suelen fragmentarla: el hotel responsabiliza al canal, el canal al proveedor de conectividad, el proveedor al dato enviado. Para el huésped existe una única promesa. La arquitectura contractual puede no coincidir con la experiencia ni con la responsabilidad ética."
+      "text": "En simple, con un ejemplo: Define quién responde por una decisión o resultado. Los contratos suelen fragmentarla: el hotel responsabiliza al canal, el canal al proveedor de conectividad, el proveedor al dato enviado. Para el huésped existe una única promesa. La arquitectura contractual puede no coincidir con la experiencia ni con la responsabilidad ética."
     },
     {
       "source_id": "N03-s05-b027",
@@ -270,7 +270,7 @@
     {
       "source_id": "N03-s05-b029",
       "kind": "paragraph",
-      "text": "Define desde cuándo y hasta cuándo se observa. Medir check-in hasta entregar una tarjeta excluye el tiempo previo de reserva y el posterior descubrimiento de una habitación inadecuada. Medir una devolución hasta ordenar el reintegro excluye el tiempo bancario y la confirmación del cliente."
+      "text": "En simple, con un ejemplo: Define desde cuándo y hasta cuándo se observa. Medir check-in hasta entregar una tarjeta excluye el tiempo previo de reserva y el posterior descubrimiento de una habitación inadecuada. Medir una devolución hasta ordenar el reintegro excluye el tiempo bancario y la confirmación del cliente."
     },
     {
       "source_id": "N03-s05-b030",
@@ -285,7 +285,7 @@
     {
       "source_id": "N03-s05-b032",
       "kind": "paragraph",
-      "text": "Incluir o excluir actores afecta su capacidad de ser vistos. Una intervención sobre autoservicio puede considerar a “usuarios digitales” y tratar a quienes requieren ayuda como excepciones. Esa frontera convierte una población real en desviación. Un proyecto de optimización de reparto puede modelar vehículos y destinos, pero excluir condiciones de conductores, seguridad vial o recepción. La eficiencia calculada se sostiene sobre costos transferidos."
+      "text": "En simple, con un ejemplo: Incluir o excluir actores afecta su capacidad de ser vistos. Una intervención sobre autoservicio puede considerar a “usuarios digitales” y tratar a quienes requieren ayuda como excepciones. Esa frontera convierte una población real en desviación. Un proyecto de optimización de reparto puede modelar vehículos y destinos, pero excluir condiciones de conductores, seguridad vial o recepción. La eficiencia calculada se sostiene sobre costos transferidos."
     },
     {
       "source_id": "N03-s05-b033",
@@ -360,7 +360,7 @@
     {
       "source_id": "N03-s05-b047",
       "kind": "paragraph",
-      "text": "La primera versión del piloto incluía la carga anticipada, la validación dentro del PMS y la emisión de la llave. Esa frontera era adecuada para comprobar si la función técnica ejecutaba. No era adecuada para decidir sobre dotación ni para afirmar que la promesa de llegada había mejorado. La diferencia no se resuelve agregando cajas por precaución. Se resuelve relacionando frontera y decisión."
+      "text": "En simple, con un ejemplo: La primera versión del piloto incluía la carga anticipada, la validación dentro del PMS y la emisión de la llave. Esa frontera era adecuada para comprobar si la función técnica ejecutaba. No era adecuada para decidir sobre dotación ni para afirmar que la promesa de llegada había mejorado. La diferencia no se resuelve agregando cajas por precaución. Se resuelve relacionando frontera y decisión."
     },
     {
       "source_id": "N03-s05-b048",
@@ -385,12 +385,12 @@
     {
       "source_id": "N03-s06-b002",
       "kind": "paragraph",
-      "text": "En una cadena lineal, A causa B y luego C. En un sistema, B puede modificar A. Esa retroalimentación puede reforzar una tendencia o equilibrarla."
+      "text": "En simple: En una cadena lineal, A causa B y luego C. En un sistema, B puede modificar A. Esa retroalimentación puede reforzar una tendencia o equilibrarla."
     },
     {
       "source_id": "N03-s06-b003",
       "kind": "paragraph",
-      "text": "Peter Senge utiliza el pensamiento sistémico para desplazar la atención desde hechos aislados hacia patrones y estructuras que los producen. Donella Meadows ofrece una formulación compatible: el comportamiento de un sistema surge de su estructura, especialmente de acumulaciones, flujos, información y retroalimentaciones. Para esta lectura, ambas perspectivas cumplen una función práctica. Evitan interpretar cada incidente como una anomalía independiente y orientan la búsqueda de relaciones que se sostienen o se corrigen a sí mismas a través del tiempo."
+      "text": "Ejemplo cercano: Peter Senge utiliza el pensamiento sistémico para desplazar la atención desde hechos aislados hacia patrones y estructuras que los producen. Donella Meadows ofrece una formulación compatible: el comportamiento de un sistema surge de su estructura, especialmente de acumulaciones, flujos, información y retroalimentaciones. Para esta lectura, ambas perspectivas cumplen una función práctica. Evitan interpretar cada incidente como una anomalía independiente y orientan la búsqueda de relaciones que se sostienen o se corrigen a sí mismas a través del tiempo."
     },
     {
       "source_id": "N03-s06-b004",
@@ -415,7 +415,7 @@
     {
       "source_id": "N03-s06-b008",
       "kind": "paragraph",
-      "text": "Una demora separa acción y efecto. Puede existir entre:"
+      "text": "En simple: Una demora separa acción y efecto. Puede existir entre:"
     },
     {
       "source_id": "N03-s06-b009",
@@ -450,7 +450,7 @@
     {
       "source_id": "N03-s06-b015",
       "kind": "paragraph",
-      "text": "Cuando la demora no se representa, el equipo atribuye el resultado a la causa más cercana. Un incidente ocurre después de una actualización y se culpa al software, aunque una política de dotación de meses atrás haya reducido supervisión. Una mejora aparece inmediatamente después de lanzar una app y se le atribuye, aunque coincida con temporada baja."
+      "text": "Ejemplo cercano: Cuando la demora no se representa, el equipo atribuye el resultado a la causa más cercana. Un incidente ocurre después de una actualización y se culpa al software, aunque una política de dotación de meses atrás haya reducido supervisión. Una mejora aparece inmediatamente después de lanzar una app y se le atribuye, aunque coincida con temporada baja."
     },
     {
       "source_id": "N03-s06-b016",
@@ -465,7 +465,7 @@
     {
       "source_id": "N03-s06-b018",
       "kind": "paragraph",
-      "text": "Un efecto de primer orden es la consecuencia directa buscada: el huésped completa datos antes de llegar."
+      "text": "En simple, con un ejemplo: Un efecto de primer orden es la consecuencia directa buscada: el huésped completa datos antes de llegar."
     },
     {
       "source_id": "N03-s06-b019",
@@ -520,7 +520,7 @@
     {
       "source_id": "N03-s06-b029",
       "kind": "paragraph",
-      "text": "Desplazar un problema es mejorarlo en un lugar y hacerlo reaparecer en otro. Por ejemplo, acelerar la confirmación puede reducir la espera comercial y aumentar luego las reasignaciones que debe resolver Recepción. Una intervención puede mejorar la métrica donde se aplica y mover la dificultad a otro lugar."
+      "text": "En simple, con un ejemplo: Desplazar un problema es mejorarlo en un lugar y hacerlo reaparecer en otro. Por ejemplo, acelerar la confirmación puede reducir la espera comercial y aumentar luego las reasignaciones que debe resolver Recepción. Una intervención puede mejorar la métrica donde se aplica y mover la dificultad a otro lugar."
     },
     {
       "source_id": "N03-s06-b030",
@@ -565,7 +565,7 @@
     {
       "source_id": "N03-s06-b038",
       "kind": "paragraph",
-      "text": "No existe una única escala. Una intervención puede trabajar con fronteras anidadas:"
+      "text": "En simple: No existe una única escala. Una intervención puede trabajar con fronteras anidadas:"
     },
     {
       "source_id": "N03-s06-b039",
@@ -595,7 +595,7 @@
     {
       "source_id": "N03-s06-b044",
       "kind": "paragraph",
-      "text": "El análisis se mueve entre niveles según la pregunta. Una falla de interfaz puede resolverse localmente; una contradicción de inventario exige proceso/ecosistema. El error es usar siempre la frontera más grande o la más cómoda."
+      "text": "Ejemplo cercano: El análisis se mueve entre niveles según la pregunta. Una falla de interfaz puede resolverse localmente; una contradicción de inventario exige proceso/ecosistema. El error es usar siempre la frontera más grande o la más cómoda."
     },
     {
       "source_id": "N03-s06-b045",
@@ -615,12 +615,12 @@
     {
       "source_id": "N03-s06-b048",
       "kind": "paragraph",
-      "text": "Los indicadores también recortan el sistema. Elegir numerador, denominador, inicio, fin y población equivale a definir una frontera. Una métrica puede ser matemáticamente correcta y metodológicamente engañosa si excluye el tramo donde se produce el costo."
+      "text": "En simple: Los indicadores también recortan el sistema. Elegir numerador, denominador, inicio, fin y población equivale a definir una frontera. Una métrica puede ser matemáticamente correcta y metodológicamente engañosa si excluye el tramo donde se produce el costo."
     },
     {
       "source_id": "N03-s06-b049",
       "kind": "paragraph",
-      "text": "En Hotel Horizonte, “duración del check-in” podría medirse desde que recepción abre la reserva hasta que entrega la llave. Quedarían afuera la espera previa, la carga anticipada de datos, la búsqueda de una confirmación, el traslado hasta una habitación incorrecta y la reparación. Si se automatiza la pantalla, el indicador mejora aunque la experiencia total no cambie."
+      "text": "Ejemplo cercano: En Hotel Horizonte, “duración del check-in” podría medirse desde que recepción abre la reserva hasta que entrega la llave. Quedarían afuera la espera previa, la carga anticipada de datos, la búsqueda de una confirmación, el traslado hasta una habitación incorrecta y la reparación. Si se automatiza la pantalla, el indicador mejora aunque la experiencia total no cambie."
     },
     {
       "source_id": "N03-s06-b050",
@@ -640,7 +640,7 @@
     {
       "source_id": "N03-s06-b053",
       "kind": "paragraph",
-      "text": "Los diagramas de retroalimentación pueden convertirse en flechas plausibles sin evidencia. Para que un bucle sea útil, cada relación debe expresar dirección, mecanismo, condición y demora. “Más automatización produce menos trabajo” es demasiado general. ¿Qué tarea disminuye, cuál aparece, bajo qué volumen, para quién y después de cuánto tiempo?"
+      "text": "En simple, con un ejemplo: Los diagramas de retroalimentación pueden convertirse en flechas plausibles sin evidencia. Para que un bucle sea útil, cada relación debe expresar dirección, mecanismo, condición y demora. “Más automatización produce menos trabajo” es demasiado general. ¿Qué tarea disminuye, cuál aparece, bajo qué volumen, para quién y después de cuánto tiempo?"
     },
     {
       "source_id": "N03-s06-b054",
@@ -670,7 +670,7 @@
     {
       "source_id": "N03-s06-b059",
       "kind": "paragraph",
-      "text": "Un bucle causal se lee como una hipótesis narrativa que regresa a su punto de partida. Cada flecha debería poder traducirse a una frase completa: “cuando aumenta X, y las demás condiciones relevantes permanecen comparables, Y tiende a aumentar o disminuir después de cierta demora, porque opera este mecanismo”. Si no podemos completar la frase, la flecha es decoración."
+      "text": "En simple, con un ejemplo: Un bucle causal se lee como una hipótesis narrativa que regresa a su punto de partida. Cada flecha debería poder traducirse a una frase completa: “cuando aumenta X, y las demás condiciones relevantes permanecen comparables, Y tiende a aumentar o disminuir después de cierta demora, porque opera este mecanismo”. Si no podemos completar la frase, la flecha es decoración."
     },
     {
       "source_id": "N03-s06-b060",
@@ -750,7 +750,7 @@
     {
       "source_id": "N03-s06-b075",
       "kind": "paragraph",
-      "text": "La retroalimentación suele operar sobre acumulaciones. Reservas pendientes, habitaciones por inspeccionar, reclamos abiertos, pagos sin conciliar y excepciones sin resolver son cantidades que cambian mediante entradas y salidas. Observar sólo el flujo diario puede ocultar una acumulación creciente."
+      "text": "En simple, con un ejemplo: La retroalimentación suele operar sobre acumulaciones. Reservas pendientes, habitaciones por inspeccionar, reclamos abiertos, pagos sin conciliar y excepciones sin resolver son cantidades que cambian mediante entradas y salidas. Observar sólo el flujo diario puede ocultar una acumulación creciente."
     },
     {
       "source_id": "N03-s06-b076",
@@ -775,7 +775,7 @@
     {
       "source_id": "N03-s06-b080",
       "kind": "paragraph",
-      "text": "El episodio de las habitaciones comunicadas no demuestra por sí solo que el check-in digital empeore el servicio. Sí revela relaciones que la medición original no podía observar. Para investigarlas, el equipo formula un bucle provisional y distingue lo que sabe de lo que debe comprobar."
+      "text": "En simple, con un ejemplo: El episodio de las habitaciones comunicadas no demuestra por sí solo que el check-in digital empeore el servicio. Sí revela relaciones que la medición original no podía observar. Para investigarlas, el equipo formula un bucle provisional y distingue lo que sabe de lo que debe comprobar."
     },
     {
       "source_id": "N03-s06-b081",
@@ -895,7 +895,7 @@
     {
       "source_id": "N03-s07-b002",
       "kind": "paragraph",
-      "text": "La responsabilidad puede fragmentarse entre quien promete, quien decide, quien ejecuta y quien repara. Una OTA muestra disponibilidad; el channel manager sincroniza; el PMS asigna; recepción enfrenta al huésped; dirección define política. Cuando ocurre una contradicción, cada parte puede haber cumplido su operación local."
+      "text": "En simple, con un ejemplo: La responsabilidad puede fragmentarse entre quien promete, quien decide, quien ejecuta y quien repara. Una OTA muestra disponibilidad; el channel manager sincroniza; el PMS asigna; recepción enfrenta al huésped; dirección define política. Cuando ocurre una contradicción, cada parte puede haber cumplido su operación local."
     },
     {
       "source_id": "N03-s07-b003",
@@ -930,7 +930,7 @@
     {
       "source_id": "N03-s07-b009",
       "kind": "paragraph",
-      "text": "Un mapa puede adquirir autoridad por su apariencia. Las cajas y líneas parecen describir “el sistema”, cuando en realidad expresan una hipótesis para una pregunta y una audiencia. Tratar el modelo como territorio vuelve invisibles sus exclusiones."
+      "text": "En simple, con un ejemplo: Un mapa puede adquirir autoridad por su apariencia. Las cajas y líneas parecen describir “el sistema”, cuando en realidad expresan una hipótesis para una pregunta y una audiencia. Tratar el modelo como territorio vuelve invisibles sus exclusiones."
     },
     {
       "source_id": "N03-s07-b010",
@@ -950,7 +950,7 @@
     {
       "source_id": "N03-s07-b013",
       "kind": "paragraph",
-      "text": "Los efectos de segundo orden se investigan mejor mediante escenarios concretos que con listas genéricas de riesgos. Un escenario combina actor, condición, evento, respuesta, consecuencia y posibilidad de reparación. “Puede haber exclusión” es vago; “una huésped sin smartphone llega fuera de horario, el acceso alternativo requiere personal que fue reducido por la adopción prevista y la demora no entra en la métrica digital” expresa un mecanismo verificable."
+      "text": "En simple, con un ejemplo: Los efectos de segundo orden se investigan mejor mediante escenarios concretos que con listas genéricas de riesgos. Un escenario combina actor, condición, evento, respuesta, consecuencia y posibilidad de reparación. “Puede haber exclusión” es vago; “una huésped sin smartphone llega fuera de horario, el acceso alternativo requiere personal que fue reducido por la adopción prevista y la demora no entra en la métrica digital” expresa un mecanismo verificable."
     },
     {
       "source_id": "N03-s07-b014",
@@ -970,7 +970,7 @@
     {
       "source_id": "N03-s07-b017",
       "kind": "paragraph",
-      "text": "Reducir la frontera sirve para poder actuar; ampliarla sirve cuando algo importante quedó afuera. Si una demora se explica por una sola regla, no hace falta mapear toda la empresa; si esa regla depende de un tercero, excluirlo impide decidir. Ampliar siempre no es más sistémico. Una frontera debe crecer cuando una exclusión cambia la explicación causal, impide evaluar el outcome, oculta un afectado significativo o vuelve inoperable la responsabilidad. Debe reducirse cuando el detalle no puede modificar la decisión actual, mezcla horizontes o diluye la capacidad de experimentar."
+      "text": "En simple, con un ejemplo: Reducir la frontera sirve para poder actuar; ampliarla sirve cuando algo importante quedó afuera. Si una demora se explica por una sola regla, no hace falta mapear toda la empresa; si esa regla depende de un tercero, excluirlo impide decidir. Ampliar siempre no es más sistémico. Una frontera debe crecer cuando una exclusión cambia la explicación causal, impide evaluar el outcome, oculta un afectado significativo o vuelve inoperable la responsabilidad. Debe reducirse cuando el detalle no puede modificar la decisión actual, mezcla horizontes o diluye la capacidad de experimentar."
     },
     {
       "source_id": "N03-s07-b018",
@@ -990,7 +990,7 @@
     {
       "source_id": "N03-s07-b021",
       "kind": "paragraph",
-      "text": "Un mapa de retroalimentación no prescribe automáticamente dónde actuar. Un punto muy visible puede tener poca capacidad de cambio, mientras una regla discreta modifica todo el circuito. Cambiar el texto de una interfaz es sencillo; cambiar la definición de disponibilidad, el incentivo de sobreventa o la autoridad para reparar puede ser más influyente y también más conflictivo."
+      "text": "En simple, con un ejemplo: Un mapa de retroalimentación no prescribe automáticamente dónde actuar. Un punto muy visible puede tener poca capacidad de cambio, mientras una regla discreta modifica todo el circuito. Cambiar el texto de una interfaz es sencillo; cambiar la definición de disponibilidad, el incentivo de sobreventa o la autoridad para reparar puede ser más influyente y también más conflictivo."
     },
     {
       "source_id": "N03-s07-b022",
@@ -1020,12 +1020,12 @@
     {
       "source_id": "N03-s07-b027",
       "kind": "paragraph",
-      "text": "Un piloto no debería demostrar solamente que una función ejecuta. Debe poner a prueba la frontera que sostiene la intervención. Para ello necesita una hipótesis, un grupo o contexto acotado, señales de resultado y de equilibrio, autoridad para actuar y una condición de salida."
+      "text": "En simple: Un piloto no debería demostrar solamente que una función ejecuta. Debe poner a prueba la frontera que sostiene la intervención. Para ello necesita una hipótesis, un grupo o contexto acotado, señales de resultado y de equilibrio, autoridad para actuar y una condición de salida."
     },
     {
       "source_id": "N03-s07-b028",
       "kind": "paragraph",
-      "text": "En Hotel Horizonte podría probarse check-in digital durante dos semanas, en un turno y con determinadas categorías de reserva. El resultado principal no sería “porcentaje de formularios completados”, sino tiempo y confiabilidad hasta acceder a una habitación adecuada. Las métricas de equilibrio incluirían excepciones, espera de quienes no usan la opción, carga transferida a Housekeeping, reversiones de estado, fallas de llave y reparaciones manuales."
+      "text": "Ejemplo cercano: En Hotel Horizonte podría probarse check-in digital durante dos semanas, en un turno y con determinadas categorías de reserva. El resultado principal no sería “porcentaje de formularios completados”, sino tiempo y confiabilidad hasta acceder a una habitación adecuada. Las métricas de equilibrio incluirían excepciones, espera de quienes no usan la opción, carga transferida a Housekeeping, reversiones de estado, fallas de llave y reparaciones manuales."
     },
     {
       "source_id": "N03-s07-b029",
@@ -1060,7 +1060,7 @@
     {
       "source_id": "N03-s07-b035",
       "kind": "paragraph",
-      "text": "Cuando una capacidad incorpora IA, la frontera tecnológica suele dibujarse alrededor del modelo. Esa elección omite datos de entrada, instrucciones, herramientas, memoria, proveedor, interfaz, supervisión y acciones posteriores. La salida probabilística es solo un evento dentro de un sistema de decisión."
+      "text": "En simple, con un ejemplo: Cuando una capacidad incorpora IA, la frontera tecnológica suele dibujarse alrededor del modelo. Esa elección omite datos de entrada, instrucciones, herramientas, memoria, proveedor, interfaz, supervisión y acciones posteriores. La salida probabilística es solo un evento dentro de un sistema de decisión."
     },
     {
       "source_id": "N03-s07-b036",
@@ -1150,7 +1150,7 @@
     {
       "source_id": "N03-s07-b053",
       "kind": "paragraph",
-      "text": "En sistemas basados en IA, una función visible puede depender de datos recuperados, un modelo remoto, moderación, herramientas y personal externo. El perfil de IA generativa de NIST (2024) exige mapear riesgos a lo largo del ciclo y entre actores; el Reglamento europeo 2024/1689 distribuye obligaciones entre proveedores y responsables de despliegue, incluso cuando están en países distintos. La lección no es ampliar siempre hasta el planeta, sino declarar dependencias que pueden cambiar la explicación, el derecho a objetar o la capacidad de reparar."
+      "text": "En simple, con un ejemplo: En sistemas basados en IA, una función visible puede depender de datos recuperados, un modelo remoto, moderación, herramientas y personal externo. El perfil de IA generativa de NIST (2024) exige mapear riesgos a lo largo del ciclo y entre actores; el Reglamento europeo 2024/1689 distribuye obligaciones entre proveedores y responsables de despliegue, incluso cuando están en países distintos. La lección no es ampliar siempre hasta el planeta, sino declarar dependencias que pueden cambiar la explicación, el derecho a objetar o la capacidad de reparar."
     },
     {
       "source_id": "N03-s07-b054",
@@ -1165,7 +1165,7 @@
     {
       "source_id": "N03-s07-b056",
       "kind": "paragraph",
-      "text": "La solución propuesta permite cargar documento, validar pago, seleccionar horario y recibir una llave digital. Una frontera centrada en interfaz puede evaluar usabilidad, seguridad y tasa de completitud. Es necesaria, pero insuficiente."
+      "text": "En simple, con un ejemplo: La solución propuesta permite cargar documento, validar pago, seleccionar horario y recibir una llave digital. Una frontera centrada en interfaz puede evaluar usabilidad, seguridad y tasa de completitud. Es necesaria, pero insuficiente."
     },
     {
       "source_id": "N03-s07-b057",
@@ -1644,7 +1644,7 @@
     }
   ],
   "eligible_block_count": 328,
-  "eligible_word_count": 9397,
-  "source_sha256": "10a152eb5cb261fd4c33922413aa929021e44aad24f93246f6397678dd48e715",
-  "stage": "content-canonical-accessible-concept-layers"
+  "eligible_word_count": 9603,
+  "source_sha256": "d234560f06a1af2159ccb18a0d01c8813ad9aa13209b75dabc3cf471cb09ecea",
+  "stage": "explicit-accessible-layers-all-concepts"
 }

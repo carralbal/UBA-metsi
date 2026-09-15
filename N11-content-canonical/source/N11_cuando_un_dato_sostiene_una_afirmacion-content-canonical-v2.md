@@ -66,7 +66,7 @@ El producto de esta lectura será HH-11, un expediente de sostén para tres afir
 
 ### Un dato es una representación, no el fenómeno
 
-Un dato es una representación producida bajo reglas. Puede adoptar la forma de número, categoría, texto, imagen, marca temporal, vínculo o ausencia registrada. En todos los casos selecciona alguna propiedad y descarta otras. La temperatura indicada por un sensor no es el ambiente; una reserva con estado “confirmada” no es la promesa completa; una respuesta en una encuesta no es la experiencia entera de una persona.
+En simple, con un ejemplo: Un dato es una representación producida bajo reglas. Puede adoptar la forma de número, categoría, texto, imagen, marca temporal, vínculo o ausencia registrada. En todos los casos selecciona alguna propiedad y descarta otras. La temperatura indicada por un sensor no es el ambiente; una reserva con estado “confirmada” no es la promesa completa; una respuesta en una encuesta no es la experiencia entera de una persona.
 
 Esta distinción no reduce el valor de los datos. Lo vuelve analizable. Si el dato fuera el fenómeno mismo, no habría que preguntar quién lo produjo, con qué instrumento, en qué momento ni para qué propósito. Como es una representación, esas preguntas determinan su alcance.
 
@@ -78,7 +78,7 @@ George Box y Norman Draper ofrecen una cautela complementaria: un modelo no cons
 
 ### La afirmación fija la carga de prueba
 
-“Ayer una huésped esperó cuarenta minutos” es una afirmación singular. Puede sostenerse con el expediente correspondiente, una marca temporal confiable y un criterio claro sobre cuándo comenzó y terminó la espera. “Las personas esperan cuarenta minutos” es una afirmación sobre una población. Requiere cobertura suficiente y una medida que no seleccione únicamente los casos visibles. “Las reservas de terceros provocan la espera” es una afirmación causal. Además de describir una asociación, debe enfrentar mecanismos rivales y diferencias previas entre grupos.
+En simple, con un ejemplo: “Ayer una huésped esperó cuarenta minutos” es una afirmación singular. Puede sostenerse con el expediente correspondiente, una marca temporal confiable y un criterio claro sobre cuándo comenzó y terminó la espera. “Las personas esperan cuarenta minutos” es una afirmación sobre una población. Requiere cobertura suficiente y una medida que no seleccione únicamente los casos visibles. “Las reservas de terceros provocan la espera” es una afirmación causal. Además de describir una asociación, debe enfrentar mecanismos rivales y diferencias previas entre grupos.
 
 La forma gramatical puede ocultar este cambio. Un tablero titulado “demora por canal” parece descriptivo, pero una reunión puede leerlo como explicación. La frase “los casos con más pasos tardan más” puede nombrar una regularidad o sugerir que eliminar pasos reducirá la demora. La segunda interpretación necesita saber si esos pasos son causa de la espera o respuesta a casos ya complejos.
 
@@ -95,7 +95,7 @@ No forman una escalera en la que cada nivel sea siempre superior. Una afirmació
 
 ### De la idea a la medida: constructo y operacionalización
 
-Muchas propiedades importantes no se observan directamente. “Confiabilidad del ingreso”, “calidad de servicio”, “adopción”, “riesgo” y “complejidad” son constructos: conceptos que organizan varias observaciones posibles. Para trabajar con ellos se necesita una operacionalización, es decir, una regla que indique qué señales se tomarán como representación.
+En simple, con un ejemplo: Muchas propiedades importantes no se observan directamente. “Confiabilidad del ingreso”, “calidad de servicio”, “adopción”, “riesgo” y “complejidad” son constructos: conceptos que organizan varias observaciones posibles. Para trabajar con ellos se necesita una operacionalización, es decir, una regla que indique qué señales se tomarán como representación.
 
 En Hotel Horizonte, la confiabilidad del ingreso podría operacionalizarse como proporción de llegadas que completan identificación, asignación y acceso dentro de una ventana acordada sin corrección posterior. Otra definición podría medir únicamente la entrega de la llave. Ambas producen números legítimos, pero representan promesas distintas. Si una habitación se asigna rápido y luego debe cambiarse, la segunda definición registra éxito y la primera, falla.
 
@@ -105,9 +105,9 @@ Un indicador puede ser confiable y no ser válido. **Confiabilidad** significa q
 
 ### Unidad de análisis, población, ventana y granularidad
 
-Toda afirmación cuantitativa necesita responder cuatro preguntas antes del cálculo.
+En simple: Toda afirmación cuantitativa necesita responder cuatro preguntas antes del cálculo.
 
-La primera es la **unidad de análisis**. ¿Se cuentan reservas, huéspedes, habitaciones, estadías, llegadas, correcciones o episodios de coordinación? Una reserva puede incluir cuatro huéspedes y atravesar tres correcciones. Mezclar unidades produce denominadores que parecen compatibles y no lo son.
+Ejemplo cercano: La primera es la **unidad de análisis**. ¿Se cuentan reservas, huéspedes, habitaciones, estadías, llegadas, correcciones o episodios de coordinación? Una reserva puede incluir cuatro huéspedes y atravesar tres correcciones. Mezclar unidades produce denominadores que parecen compatibles y no lo son.
 
 La segunda es la **población**. ¿La afirmación se refiere a todas las llegadas, sólo a las registradas por el PMS, a temporada alta o a reservas que llegaron por agencias? La cobertura no se deduce del tamaño de la tabla. Una base con millones de filas puede omitir sistemáticamente el canal donde ocurre el problema.
 
@@ -119,7 +119,7 @@ Estas decisiones deben preceder al tablero. Cuando aparecen después, suelen fun
 
 ### El denominador es una decisión conceptual
 
-Una tasa relaciona un numerador con un conjunto de oportunidades. “Treinta y dos por ciento de correcciones” no significa nada hasta saber qué se contó como corrección y qué ingresó al denominador. Si se divide por reservas creadas, por llegadas efectivas o por habitaciones ocupadas, la cifra cambia y también cambia su interpretación.
+En simple, con un ejemplo: Una tasa relaciona un numerador con un conjunto de oportunidades. “Treinta y dos por ciento de correcciones” no significa nada hasta saber qué se contó como corrección y qué ingresó al denominador. Si se divide por reservas creadas, por llegadas efectivas o por habitaciones ocupadas, la cifra cambia y también cambia su interpretación.
 
 Considérese un día con cien reservas. Diez se cancelan antes de llegar, cinco se fusionan porque estaban duplicadas y ochenta y cinco producen una estadía. Hay doce modificaciones en el PMS, pero cuatro corresponden a actualizaciones de preferencia sin conflicto. La tasa puede ser doce sobre cien, doce sobre ochenta y cinco, ocho sobre ochenta y cinco o una medida por huésped. Ninguna opción es neutral. Cada una responde una pregunta distinta.
 
@@ -127,9 +127,9 @@ Los denominadores ausentes producen afirmaciones espectaculares. “Los incident
 
 ### Calidad suficiente para el uso, no perfección universal
 
-La calidad de un dato se evalúa contra la afirmación y la decisión. Entre las dimensiones más frecuentes aparecen exactitud, completitud, consistencia, actualidad, unicidad, validez de formato, accesibilidad y relevancia. No todas pesan igual en cada caso.
+En simple: La calidad de un dato se evalúa contra la afirmación y la decisión. Entre las dimensiones más frecuentes aparecen exactitud, completitud, consistencia, actualidad, unicidad, validez de formato, accesibilidad y relevancia. No todas pesan igual en cada caso.
 
-Para contactar a una persona por una contingencia, la actualidad de un teléfono puede ser más importante que la normalización perfecta de su domicilio. Para conciliar cobros, la unicidad y la correspondencia entre identificadores resultan críticas. Para comparar tiempos entre canales, la definición común del inicio y el final pesa más que agregar decimales.
+Ejemplo cercano: Para contactar a una persona por una contingencia, la actualidad de un teléfono puede ser más importante que la normalización perfecta de su domicilio. Para conciliar cobros, la unicidad y la correspondencia entre identificadores resultan críticas. Para comparar tiempos entre canales, la definición común del inicio y el final pesa más que agregar decimales.
 
 Esta mirada evita dos errores. El primero es iniciar un programa de “calidad total” sin una decisión prioritaria. El trabajo se vuelve infinito porque siempre existe otra celda por corregir. El segundo es aceptar cualquier defecto con el argumento de que ningún dato es perfecto. La suficiencia no es indulgencia: exige demostrar que los errores plausibles no cambian materialmente la decisión.
 
@@ -153,7 +153,7 @@ La extracción no cambia; cambia la carga de prueba. HH-11 registra entonces que
 
 ### Procedencia: entidad, actividad y agente
 
-La procedencia describe de dónde proviene un dato, qué actividades lo transformaron y qué personas o sistemas intervinieron. El W3C Provenance Working Group organiza esta relación mediante entidades, actividades y agentes. Su modelo conceptual, editado por Luc Moreau y Paolo Missier, permite representar generación, derivación, atribución y uso. No obliga a adoptar una tecnología particular. Ofrece un vocabulario para que una organización pueda reconstruir responsabilidad y versión.
+En simple, con un ejemplo: La procedencia describe de dónde proviene un dato, qué actividades lo transformaron y qué personas o sistemas intervinieron. El W3C Provenance Working Group organiza esta relación mediante entidades, actividades y agentes. Su modelo conceptual, editado por Luc Moreau y Paolo Missier, permite representar generación, derivación, atribución y uso. No obliga a adoptar una tecnología particular. Ofrece un vocabulario para que una organización pueda reconstruir responsabilidad y versión.
 
 En Hotel Horizonte, el valor “canal = tercero” puede provenir de una reserva recibida por una agencia, transformarse durante una consolidación nocturna y ser corregido manualmente por Recepción. Si el tablero conserva sólo el valor final, no permite saber cuándo cambió ni bajo qué regla. La procedencia no garantiza verdad, pero vuelve evaluable la historia del dato.
 
@@ -163,7 +163,7 @@ La trazabilidad completa no siempre es necesaria. Para una exploración reversib
 
 ### Cada transformación puede cambiar el significado
 
-Los datos rara vez llegan al tablero tal como fueron capturados. Se limpian, unen, deduplican, clasifican, agregan, imputan y filtran. Cada operación resuelve un problema y puede introducir otro.
+En simple, con un ejemplo: Los datos rara vez llegan al tablero tal como fueron capturados. Se limpian, unen, deduplican, clasifican, agregan, imputan y filtran. Cada operación resuelve un problema y puede introducir otro.
 
 Unir tablas por correo electrónico puede asociar historiales, pero confunde personas que comparten dirección o utilizan varias. Deduplicar por nombre y fecha puede eliminar reservas legítimas. Imputar una hora faltante con la mediana permite calcular un promedio, aunque inventa una precisión que no existía. Clasificar comentarios con un modelo reduce trabajo manual, pero incorpora errores cuya distribución debe conocerse.
 
@@ -173,9 +173,9 @@ La transformación también puede producir una afirmación nueva. Sumar importes
 
 ### Selección: quién puede entrar al dato
 
-Toda fuente posee un mecanismo de inclusión. Los registros de actividad contienen lo que el software decidió conservar. Las encuestas contienen a quienes recibieron, comprendieron y contestaron. Los reclamos contienen experiencias que atravesaron un canal de expresión. Las observaciones contienen aquello que el investigador pudo ver en ciertos momentos.
+En simple: Toda fuente posee un mecanismo de inclusión. Los registros de actividad contienen lo que el software decidió conservar. Las encuestas contienen a quienes recibieron, comprendieron y contestaron. Los reclamos contienen experiencias que atravesaron un canal de expresión. Las observaciones contienen aquello que el investigador pudo ver en ciertos momentos.
 
-El sesgo de selección aparece cuando la probabilidad de estar en el dato se relaciona con el fenómeno. Si las personas que abandonan una aplicación no llegan a responder la encuesta, la satisfacción medida representa a quienes pudieron completar el recorrido. Si Recepción sólo crea incidentes para reservas de terceros, el canal parecerá más problemático aunque el trabajo invisible también exista en reservas directas.
+Ejemplo cercano: El sesgo de selección aparece cuando la probabilidad de estar en el dato se relaciona con el fenómeno. Si las personas que abandonan una aplicación no llegan a responder la encuesta, la satisfacción medida representa a quienes pudieron completar el recorrido. Si Recepción sólo crea incidentes para reservas de terceros, el canal parecerá más problemático aunque el trabajo invisible también exista en reservas directas.
 
 No hay una corrección universal. A veces se amplía cobertura; otras, se comparan fuentes; se ponderan casos; se realiza una muestra deliberada de ausencias o se limita la afirmación a la población observable. Lo indispensable es no confundir volumen con representatividad.
 
@@ -185,7 +185,7 @@ Los sistemas operacionales presentan problemas análogos, aunque no sean encuest
 
 ### Ausencias que significan cosas distintas
 
-Un valor ausente puede indicar que la propiedad no aplica, que nadie la observó, que el instrumento falló, que la persona decidió no responder, que una integración llegó tarde o que una regla de negocio impidió registrar. Tratar todos esos casos como vacío borra información sobre el mecanismo.
+En simple, con un ejemplo: Un valor ausente puede indicar que la propiedad no aplica, que nadie la observó, que el instrumento falló, que la persona decidió no responder, que una integración llegó tarde o que una regla de negocio impidió registrar. Tratar todos esos casos como vacío borra información sobre el mecanismo.
 
 En Hotel Horizonte, una marca de acceso ausente puede significar que la llave no se entregó, que se utilizó una llave física sin integración, que el lector no transmitió o que la reserva fue cancelada. Reemplazar el vacío por cero transforma cuatro historias en una sola. Excluirlo del promedio puede mejorar la apariencia del proceso si precisamente los casos más problemáticos carecen de cierre.
 
@@ -193,9 +193,9 @@ La práctica mínima consiste en clasificar las razones de ausencia que importan
 
 ### Tiempo: actualidad, orden y momento de conocimiento
 
-Los datos tienen por lo menos tres tiempos relevantes: cuándo ocurrió el fenómeno, cuándo fue registrado y cuándo estuvo disponible para decidir. Confundirlos produce falsas secuencias.
+En simple: Los datos tienen por lo menos tres tiempos relevantes: cuándo ocurrió el fenómeno, cuándo fue registrado y cuándo estuvo disponible para decidir. Confundirlos produce falsas secuencias.
 
-Una habitación puede quedar físicamente lista a las 13:40, registrarse como limpia a las 13:55 y sincronizarse con el PMS a las 14:10. Para estudiar productividad de Housekeeping interesa el primer tiempo; para reconstruir qué sabía Recepción al asignar, el tercero. El valor final no permite responder ambas preguntas.
+Ejemplo cercano: Una habitación puede quedar físicamente lista a las 13:40, registrarse como limpia a las 13:55 y sincronizarse con el PMS a las 14:10. Para estudiar productividad de Housekeeping interesa el primer tiempo; para reconstruir qué sabía Recepción al asignar, el tercero. El valor final no permite responder ambas preguntas.
 
 También importa el momento de conocimiento. Si una categoría se corrige después de un incidente, reescribir retroactivamente la fila puede servir para análisis histórico y destruir la posibilidad de auditar la decisión original. Una representación profesional distingue, cuando corresponde, validez del dato en el mundo y disponibilidad para el actor.
 
@@ -203,9 +203,9 @@ N12 profundizará eventos y estados. N11 sólo fija la condición de evidencia: 
 
 ### Agregación: lo que el promedio conserva y lo que oculta
 
-El promedio resume una distribución. Resulta útil cuando la variación no cambia la decisión o cuando se acompaña con información suficiente. Se vuelve peligroso cuando mezcla poblaciones, oculta colas o compensa daños concentrados.
+En simple: El promedio resume una distribución. Resulta útil cuando la variación no cambia la decisión o cuando se acompaña con información suficiente. Se vuelve peligroso cuando mezcla poblaciones, oculta colas o compensa daños concentrados.
 
-Supóngase que el tiempo medio de ingreso baja de doce a diez minutos. La mejora parece clara. Sin embargo, los casos ordinarios pasan de once a siete minutos y los que requieren asistencia, de veinte a treinta y ocho. El promedio total puede mejorar mientras una población queda peor. El problema no es matemático; es la afirmación “la experiencia mejoró”.
+Ejemplo cercano: Supóngase que el tiempo medio de ingreso baja de doce a diez minutos. La mejora parece clara. Sin embargo, los casos ordinarios pasan de once a siete minutos y los que requieren asistencia, de veinte a treinta y ocho. El promedio total puede mejorar mientras una población queda peor. El problema no es matemático; es la afirmación “la experiencia mejoró”.
 
 Para evaluar una distribución conviene mirar mediana, percentiles, dispersión y segmentos pertinentes, pero ninguna colección de estadísticas reemplaza el criterio. Segmentar por toda variable disponible puede fabricar diferencias casuales o exponer datos sensibles. La pregunta profesional es qué heterogeneidad cambiaría la decisión y qué agrupamiento puede justificarse.
 
@@ -213,7 +213,7 @@ Un tablero debe permitir bajar de la síntesis a episodios, no para vigilar pers
 
 ### Comparabilidad: dos cifras con el mismo nombre pueden medir cosas distintas
 
-Comparar exige invariancia suficiente. La unidad, la definición, el instrumento, la cobertura y el período deben ser compatibles o sus diferencias deben modelarse. Dos áreas pueden informar “tiempo de resolución” y comenzar el reloj en momentos diferentes. Un proveedor puede contar usuarios activos por apertura de sesión y otro por acción significativa. El mismo nombre no garantiza el mismo dato.
+En simple, con un ejemplo: Comparar exige invariancia suficiente. La unidad, la definición, el instrumento, la cobertura y el período deben ser compatibles o sus diferencias deben modelarse. Dos áreas pueden informar “tiempo de resolución” y comenzar el reloj en momentos diferentes. Un proveedor puede contar usuarios activos por apertura de sesión y otro por acción significativa. El mismo nombre no garantiza el mismo dato.
 
 Los cambios de proceso crean quiebres. Si el hotel incorpora autocheck-in para casos simples, el promedio de Recepción puede empeorar porque allí quedan los casos complejos, aunque el sistema total mejore. Comparar antes y después sin reconocer la selección inducida atribuiría fracaso a una consecuencia prevista del rediseño.
 
@@ -221,27 +221,27 @@ La comparación también necesita un contrafáctico razonable. Una mejora durant
 
 ### Incertidumbre: declarar qué tan estable es la conclusión
 
-Toda medición contiene incertidumbre. Puede provenir de muestreo, instrumento, captura, clasificación, transformación, variación temporal o desconocimiento del mecanismo. Declararla no significa agregar un intervalo a cada número. Significa identificar qué fuentes podrían cambiar la conclusión.
+En simple: Toda medición contiene incertidumbre. Puede provenir de muestreo, instrumento, captura, clasificación, transformación, variación temporal o desconocimiento del mecanismo. Declararla no significa agregar un intervalo a cada número. Significa identificar qué fuentes podrían cambiar la conclusión.
 
-Una cifra con muchos decimales puede ser menos informativa que un rango con condiciones. “La demora media es 11,347 minutos” sugiere una precisión que el inicio del reloj quizá no posee. “En la muestra auditada, la diferencia estuvo entre nueve y trece minutos y se concentró en llegadas sin conciliación previa” comunica magnitud, variación y contexto.
+Ejemplo cercano: Una cifra con muchos decimales puede ser menos informativa que un rango con condiciones. “La demora media es 11,347 minutos” sugiere una precisión que el inicio del reloj quizá no posee. “En la muestra auditada, la diferencia estuvo entre nueve y trece minutos y se concentró en llegadas sin conciliación previa” comunica magnitud, variación y contexto.
 
 El lenguaje debe corresponder a la evidencia. “Se observó”, “es compatible con”, “sugiere”, “permite estimar” y “demuestra” no son sinónimos. Una organización que usa siempre tono categórico pierde capacidad de distinguir hallazgo, hipótesis y decisión.
 
 ### Contradicciones que aumentan la calidad
 
-Cuando dos fuentes no coinciden, el impulso suele ser elegir una y descartar la otra. Sin embargo, la contradicción puede revelar definiciones, tiempos o fronteras distintas.
+En simple: Cuando dos fuentes no coinciden, el impulso suele ser elegir una y descartar la otra. Sin embargo, la contradicción puede revelar definiciones, tiempos o fronteras distintas.
 
-El PMS informa que una habitación estaba disponible; Housekeeping muestra que la limpieza terminó veinte minutos después; la cerradura registra acceso todavía más tarde. La pregunta útil no es cuál sistema posee “la verdad” en abstracto. Es qué estado representa cada fuente, para qué decisión fue creado y quién tenía autoridad en cada momento.
+Ejemplo cercano: El PMS informa que una habitación estaba disponible; Housekeeping muestra que la limpieza terminó veinte minutos después; la cerradura registra acceso todavía más tarde. La pregunta útil no es cuál sistema posee “la verdad” en abstracto. Es qué estado representa cada fuente, para qué decisión fue creado y quién tenía autoridad en cada momento.
 
 Triangular no significa sumar fuentes hasta lograr confianza. Significa explicar convergencias y divergencias. Si tres sistemas copian el mismo dato original, no aportan tres evidencias independientes. Si una entrevista y un log difieren, la discrepancia puede revelar trabajo no registrado o memoria imperfecta. La calidad aumenta cuando el expediente conserva la tensión y propone cómo resolverla.
 
 ## Datos producidos o interpretados con inteligencia artificial
 
-Los sistemas de inteligencia artificial pueden extraer campos, clasificar textos, resumir expedientes, detectar anomalías o generar datos sintéticos. Estas capacidades no eliminan la cadena de evidencia; agregan transformaciones y nuevas fuentes de error.
+En simple: Los sistemas de inteligencia artificial pueden extraer campos, clasificar textos, resumir expedientes, detectar anomalías o generar datos sintéticos. Estas capacidades no eliminan la cadena de evidencia; agregan transformaciones y nuevas fuentes de error.
 
 Una clasificación automática de reclamos puede mejorar cobertura y, a la vez, confundir ironía, lenguaje local o categorías minoritarias. Un resumen generado puede omitir una condición decisiva y mantener una redacción convincente. Los datos sintéticos pueden proteger ciertos atributos o ampliar pruebas, pero no constituyen observaciones del proceso real y no deben mezclarse sin marca con registros operacionales.
 
-El AI RMF 1.0 de NIST, publicado en 2023 bajo la autoría de Elham Tabassi, vincula gobierno, mapeo, medición y gestión del riesgo. Autio, C. et al. señalan además en el perfil de inteligencia artificial generativa de NIST publicado en 2024 riesgos de integridad de información y procedencia a lo largo de la cadena.
+Ejemplo cercano: El AI RMF 1.0 de NIST, publicado en 2023 bajo la autoría de Elham Tabassi, vincula gobierno, mapeo, medición y gestión del riesgo. Autio, C. et al. señalan además en el perfil de inteligencia artificial generativa de NIST publicado en 2024 riesgos de integridad de información y procedencia a lo largo de la cadena.
 
 La serie ISO/IEC 5259, también publicada desde 2024, organiza calidad de datos para analítica y aprendizaje automático a lo largo del ciclo de vida. El Reglamento de Inteligencia Artificial de la Unión Europea exige prácticas de gobierno de datos para sistemas de alto riesgo.
 
@@ -285,9 +285,9 @@ El expediente debe poder ser leído por quien decide y reconstruido por quien au
 
 ## La suficiencia crece con el costo de equivocarse
 
-No toda decisión necesita el mismo estándar. Puede pensarse en cuatro compromisos.
+En simple: No toda decisión necesita el mismo estándar. Puede pensarse en cuatro compromisos.
 
-**Explorar:** orientar una entrevista, revisar una muestra o abrir una hipótesis. Una señal parcial puede alcanzar si se declara su limitación.
+Ejemplo cercano: **Explorar:** orientar una entrevista, revisar una muestra o abrir una hipótesis. Una señal parcial puede alcanzar si se declara su limitación.
 
 **Probar:** ejecutar un cambio reversible, acotado y observable. Se necesita línea de base, protección y criterio de salida.
 
@@ -299,7 +299,7 @@ Esta proporcionalidad evita tanto la parálisis como la irresponsabilidad. Un da
 
 ### Prueba de sensibilidad: ¿el error plausible cambia la decisión?
 
-Una manera práctica de evaluar suficiencia consiste en variar supuestos razonables. Si se incluyen los casos sin cierre, ¿la diferencia entre canales permanece? Si la llegada comienza diez minutos antes de la marca del PMS, ¿cambia el orden? Si se reclasifican reservas corregidas, ¿el patrón se sostiene? Si se separan dos agencias, ¿la afirmación general desaparece?
+En simple, con un ejemplo: Una manera práctica de evaluar suficiencia consiste en variar supuestos razonables. Si se incluyen los casos sin cierre, ¿la diferencia entre canales permanece? Si la llegada comienza diez minutos antes de la marca del PMS, ¿cambia el orden? Si se reclasifican reservas corregidas, ¿el patrón se sostiene? Si se separan dos agencias, ¿la afirmación general desaparece?
 
 La prueba no busca fabricar robustez. Busca conocer qué decisión depende de una convención frágil. Cuando pequeñas variaciones invierten la conclusión, el expediente debe bajar el grado de confianza o limitar la acción. Cuando el patrón persiste bajo alternativas plausibles, la afirmación gana fuerza.
 
@@ -307,7 +307,7 @@ También puede ocurrir que la incertidumbre no afecte la decisión. Si cualquier
 
 ### Umbrales: dónde una cifra se convierte en acción
 
-Los umbrales suelen presentarse como propiedades técnicas. “Si la tasa supera cinco por ciento, intervenir”. Pero ese cinco por ciento distribuye tolerancia, costo y riesgo. Debe justificarse por consecuencias, capacidad de reparación, regulación, variación esperada o comparación relevante.
+En simple, con un ejemplo: Los umbrales suelen presentarse como propiedades técnicas. “Si la tasa supera cinco por ciento, intervenir”. Pero ese cinco por ciento distribuye tolerancia, costo y riesgo. Debe justificarse por consecuencias, capacidad de reparación, regulación, variación esperada o comparación relevante.
 
 Un umbral puede crear comportamiento. Si se evalúa a un área por cerrar casos dentro de cinco días, aparecerá incentivo para cambiar estados antes de resolver. Si se premia ocupación sin considerar reparación, la sobreventa puede parecer eficiente hasta que el daño ocurre en Recepción. La medida no sólo observa el sistema; participa en él.
 
@@ -317,7 +317,7 @@ Por eso HH-11 registra quién fijó el umbral, qué ocurre a cada lado y qué se
 
 ### Reproducibilidad y reconstrucción de la decisión
 
-Una afirmación es reproducible cuando otra persona puede obtener un resultado consistente utilizando las mismas entradas, reglas y condiciones de análisis. El informe de las Academias Nacionales de Estados Unidos de 2019 utiliza esta idea para distinguir reproducibilidad de replicación. En un sistema de información, la primera requiere conservar consulta o código, versión de datos, parámetros y transformaciones. No demuestra que el resultado sea verdadero. Permite detectar errores y discutir decisiones sobre una base común.
+En simple, con un ejemplo: Una afirmación es reproducible cuando otra persona puede obtener un resultado consistente utilizando las mismas entradas, reglas y condiciones de análisis. El informe de las Academias Nacionales de Estados Unidos de 2019 utiliza esta idea para distinguir reproducibilidad de replicación. En un sistema de información, la primera requiere conservar consulta o código, versión de datos, parámetros y transformaciones. No demuestra que el resultado sea verdadero. Permite detectar errores y discutir decisiones sobre una base común.
 
 La replicación plantea otra pregunta: ¿un procedimiento independiente o nuevos datos producen un resultado compatible? En contextos organizacionales no siempre existe una repetición limpia, pero se puede contrastar otro período, otro canal o una muestra observada. Confundir reproducibilidad con validez permite ejecutar dos veces el mismo error.
 

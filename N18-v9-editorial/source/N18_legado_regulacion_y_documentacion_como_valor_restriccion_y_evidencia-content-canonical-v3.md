@@ -104,9 +104,9 @@ N18 usa las fuentes para asignar preguntas, no para coronar una teoría. Evoluci
 
 ### Legado sociotécnico
 
-El legado sociotécnico reúne tecnología, datos, rutinas, contratos, conocimientos y relaciones de autoridad acumuladas. Su edad no determina su valor ni su riesgo: importa qué capacidad sostiene, para quién y con qué dependencia.
+En simple: El legado sociotécnico reúne tecnología, datos, rutinas, contratos, conocimientos y relaciones de autoridad acumuladas. Su edad no determina su valor ni su riesgo: importa qué capacidad sostiene, para quién y con qué dependencia.
 
-Analizarlo exige separar la pieza visible del sistema de trabajo que creció alrededor. Una pantalla antigua puede esconder conciliaciones confiables; una plataforma reciente puede depender de una sola persona o de una regla que nadie documentó.
+Ejemplo cercano: Analizarlo exige separar la pieza visible del sistema de trabajo que creció alrededor. Una pantalla antigua puede esconder conciliaciones confiables; una plataforma reciente puede depender de una sola persona o de una regla que nadie documentó.
 
 En Hotel Horizonte, el archivo nocturno del PMS conserva la secuencia con la que Recepción resuelve discrepancias. Antes de retirarlo, HH-18 debe probar qué evidencia y qué capacidad reemplazarán esa función.
 
@@ -118,9 +118,9 @@ El criterio de conservación no es nostalgia ni costo hundido. Una pieza merece 
 
 ### Arqueología del sistema
 
-La arqueología del sistema reconstruye por qué existe una regla, una excepción o un componente y qué consecuencias produce hoy. No busca justificar el pasado, sino recuperar el contexto necesario para decidir sin atribuir irracionalidad a quienes actuaron con otra información.
+En simple: La arqueología del sistema reconstruye por qué existe una regla, una excepción o un componente y qué consecuencias produce hoy. No busca justificar el pasado, sino recuperar el contexto necesario para decidir sin atribuir irracionalidad a quienes actuaron con otra información.
 
-Combina código, tickets, manuales, contratos, incidentes y relatos de operación. Las contradicciones entre fuentes son hallazgos: pueden revelar cambios de significado, controles informales o una frontera de autoridad.
+Ejemplo cercano: Combina código, tickets, manuales, contratos, incidentes y relatos de operación. Las contradicciones entre fuentes son hallazgos: pueden revelar cambios de significado, controles informales o una frontera de autoridad.
 
 La reconstrucción es suficiente cuando otra persona puede explicar la decisión de origen, la capacidad protegida y la señal que volvería defendible conservar, adaptar o retirar.
 
@@ -132,7 +132,7 @@ También se busca evidencia negativa. Que una regla aparezca en cien registros n
 
 ### Deuda técnica y deuda institucional
 
-La deuda es un costo, riesgo o trabajo futuro impuesto por el estado actual de una capacidad. Puede originarse en una decisión deliberada que reduce costo o tiempo inmediato, en una omisión accidental o en cambios posteriores del entorno, el conocimiento, el volumen o las dependencias. Puede residir en código, datos, roles, normas internas o acuerdos con proveedores.
+En simple, con un ejemplo: La deuda es un costo, riesgo o trabajo futuro impuesto por el estado actual de una capacidad. Puede originarse en una decisión deliberada que reduce costo o tiempo inmediato, en una omisión accidental o en cambios posteriores del entorno, el conocimiento, el volumen o las dependencias. Puede residir en código, datos, roles, normas internas o acuerdos con proveedores.
 
 La deuda deliberada conserva la razón por la que se aceptó, el beneficio obtenido y la condición de revisión. La accidental aparece cuando una relación o fragilidad no fue reconocida. La emergente surge aunque la decisión original haya sido adecuada, por ejemplo ante fin de soporte, pérdida de una competencia o nueva exigencia. Distinguir el origen evita atribuir negligencia sin evidencia y permite elegir tratamiento: corregir una omisión, financiar una transición o revisar una capacidad que dejó de ajustarse al contexto.
 
@@ -148,7 +148,7 @@ Priorizar deuda exige comparar con otras obligaciones. Pagar primero lo más vis
 
 ### Acoplamiento y radio de impacto
 
-El acoplamiento expresa cuánto depende una capacidad de elementos que deben cambiar o fallar juntos. El radio de impacto delimita personas, procesos y servicios que pueden verse afectados por esa modificación.
+En simple, con un ejemplo: El acoplamiento expresa cuánto depende una capacidad de elementos que deben cambiar o fallar juntos. El radio de impacto delimita personas, procesos y servicios que pueden verse afectados por esa modificación.
 
 Los diagramas de componentes no alcanzan: también existen acoplamientos semánticos, temporales, contractuales y humanos. Una categoría compartida o una ventana de cierre puede conectar áreas que nunca intercambian una llamada técnica.
 
@@ -164,9 +164,9 @@ La evidencia puede obtenerse mediante análisis de trazas, pruebas de contrato, 
 
 ### Regulación como requisito de diseño
 
-La regulación distribuye derechos, obligaciones, evidencia y autoridad que el sistema debe realizar. No se agrega al final como control documental ni se reduce a una lista de casillas.
+En simple: La regulación distribuye derechos, obligaciones, evidencia y autoridad que el sistema debe realizar. No se agrega al final como control documental ni se reduce a una lista de casillas.
 
-En Argentina, la Ley 25.326 obliga a considerar finalidad, calidad, seguridad, acceso y rectificación de datos personales. Esas condiciones modifican formularios, retención, permisos, trazabilidad y respuesta ante reclamos.
+Ejemplo cercano: En Argentina, la Ley 25.326 obliga a considerar finalidad, calidad, seguridad, acceso y rectificación de datos personales. Esas condiciones modifican formularios, retención, permisos, trazabilidad y respuesta ante reclamos.
 
 HH-18 conecta cada obligación con un episodio, un responsable y una prueba. La conformidad se demuestra en el funcionamiento y en la posibilidad de reparación, no sólo en una declaración.
 
@@ -178,7 +178,7 @@ Existe una tensión real entre cumplimiento uniforme y situaciones particulares.
 
 ### Interpretación normativa
 
-Interpretar una norma consiste en determinar alcance y consecuencia para una situación concreta con autoridad competente. El texto jurídico fija límites, pero rara vez prescribe por sí solo una arquitectura o una interfaz.
+En simple, con un ejemplo: Interpretar una norma consiste en determinar alcance y consecuencia para una situación concreta con autoridad competente. El texto jurídico fija límites, pero rara vez prescribe por sí solo una arquitectura o una interfaz.
 
 El expediente distingue cita, interpretación, decisión de diseño y efecto observado. Esta cadena permite discutir qué parte es obligatoria y qué parte es una opción institucional revisable.
 
@@ -192,7 +192,7 @@ Una frase como “la normativa exige conservar todos los datos” debe tratarse 
 
 ### Documentación como interfaz
 
-La documentación coordina personas, decisiones y artefactos a través del tiempo. Es una interfaz porque permite que alguien que no participó del diseño opere, cuestione o cambie la capacidad sin depender de memoria privada.
+En simple, con un ejemplo: La documentación coordina personas, decisiones y artefactos a través del tiempo. Es una interfaz porque permite que alguien que no participó del diseño opere, cuestione o cambie la capacidad sin depender de memoria privada.
 
 Documentar cada pantalla puede ser inútil si faltan significado, excepciones, motivos y autoridad. La documentación mínima se define por las decisiones que debe sostener y por el costo de no poder reconstruirlas.
 
@@ -206,7 +206,7 @@ El exceso también daña. Miles de páginas sin jerarquía aumentan el costo de 
 
 ### Documentación versionada junto con el cambio
 
-La documentación tratada como código se conserva en archivos de texto, atraviesa control de versiones y se revisa con el cambio que explica. Chacon y Straub describen en *Pro Git* el modelo distribuido que permite conservar versiones, comparar cambios y reconstruir relaciones entre contribuciones. Este enfoque permite identificar autoría, ejecutar validaciones y publicar una versión coherente. No significa que toda documentación deba escribirse con herramientas de desarrollo ni que una confirmación técnica reemplace la aprobación institucional.
+En simple, con un ejemplo: La documentación tratada como código se conserva en archivos de texto, atraviesa control de versiones y se revisa con el cambio que explica. Chacon y Straub describen en *Pro Git* el modelo distribuido que permite conservar versiones, comparar cambios y reconstruir relaciones entre contribuciones. Este enfoque permite identificar autoría, ejecutar validaciones y publicar una versión coherente. No significa que toda documentación deba escribirse con herramientas de desarrollo ni que una confirmación técnica reemplace la aprobación institucional.
 
 En HH-18, la definición de `asignable`, la guía de contingencia y la decisión que justifica una excepción comparten identificador con la modificación correspondiente. Una revisión comprueba que cambien juntos cuando se altera el contrato. Git conserva la secuencia de versiones y permite reconstruir quién propuso una diferencia; no demuestra que la explicación sea cierta, suficiente o comprensible para el turno. La prueba sigue siendo que otra persona pueda operar, cuestionar y reparar.
 
@@ -216,9 +216,9 @@ Este régimen reduce divergencias, pero también puede excluir a quienes no usan
 
 ### Información de ciclo de vida
 
-La información de ciclo de vida conserva lo necesario para concebir, construir, operar, sostener y retirar una capacidad. Cambia de forma y de nivel de detalle según la decisión, pero mantiene procedencia y relaciones entre versiones.
+En simple: La información de ciclo de vida conserva lo necesario para concebir, construir, operar, sostener y retirar una capacidad. Cambia de forma y de nivel de detalle según la decisión, pero mantiene procedencia y relaciones entre versiones.
 
-Incluye requisitos, riesgos, contratos, configuración, incidentes, excepciones, decisiones y evidencia de retiro. Su dueño no es un archivo único: cada rol debe producir y mantener la parte que conoce.
+Ejemplo cercano: Incluye requisitos, riesgos, contratos, configuración, incidentes, excepciones, decisiones y evidencia de retiro. Su dueño no es un archivo único: cada rol debe producir y mantener la parte que conoce.
 
 La suficiencia se prueba al transferir y al retirar. Si una capacidad sólo puede mantenerse con acceso al equipo original, la información todavía no cumple su función.
 
@@ -232,7 +232,7 @@ La transferencia revela vacíos porque cambia la persona y el contexto. Quien re
 
 ### Migración de datos como decisión semántica
 
-Migrar datos no es copiar registros. Exige preservar o transformar conscientemente significado, temporalidad, procedencia, permisos y usos autorizados.
+En simple, con un ejemplo: Migrar datos no es copiar registros. Exige preservar o transformar conscientemente significado, temporalidad, procedencia, permisos y usos autorizados.
 
 Dos campos con el mismo nombre pueden representar estados diferentes; un valor nulo puede significar desconocido, no aplicable o no registrado. El mapeo debe explicitar esas diferencias y definir qué pérdida es aceptable.
 
@@ -246,9 +246,9 @@ La reconciliación combina controles agregados y episodios. Igualar cantidades n
 
 ### Excepciones heredadas
 
-Una excepción heredada es una salida especial creada en el pasado que todavía resuelve algún caso. Antes de eliminarla conviene saber a quién protege: una planilla incómoda puede ser la única vía para atender una situación que el sistema nuevo no reconoce. Una excepción heredada es una desviación estabilizada que puede contener conocimiento, privilegio o daño. Su frecuencia no la vuelve correcta y su rareza no la vuelve irrelevante.
+En simple: Una excepción heredada es una salida especial creada en el pasado que todavía resuelve algún caso. Antes de eliminarla conviene saber a quién protege: una planilla incómoda puede ser la única vía para atender una situación que el sistema nuevo no reconoce. Una excepción heredada es una desviación estabilizada que puede contener conocimiento, privilegio o daño. Su frecuencia no la vuelve correcta y su rareza no la vuelve irrelevante.
 
-Antes de formalizarla o eliminarla se reconstruyen origen, población, autoridad y consecuencia. Algunas excepciones protegen accesibilidad; otras compensan una falla de diseño o reservan discrecionalidad para un actor poderoso.
+Ejemplo cercano: Antes de formalizarla o eliminarla se reconstruyen origen, población, autoridad y consecuencia. Algunas excepciones protegen accesibilidad; otras compensan una falla de diseño o reservan discrecionalidad para un actor poderoso.
 
 HH-18 conserva la excepción como caso de prueba y decide si debe convertirse en regla, mantenerse bajo control o retirarse con una alternativa segura.
 
@@ -260,11 +260,11 @@ Los datos de excepción son valiosos y peligrosos. Permiten conocer dónde falla
 
 ### Seguridad y mantenibilidad
 
-Seguridad y mantenibilidad deben pensarse juntas: hay que proteger hoy sin volver imposible cambiar mañana. Un control copiado en muchos lugares puede frenar un ataque y también hacer que una corrección urgente tarde semanas en aplicarse. Mantenibilidad es la capacidad de cambiar con comprensión, prueba y recuperación; seguridad limita exposición, abuso y pérdida de control. Ambas se deterioran cuando dependencias, conocimiento o configuraciones quedan invisibles.
+En simple: Seguridad y mantenibilidad deben pensarse juntas: hay que proteger hoy sin volver imposible cambiar mañana. Un control copiado en muchos lugares puede frenar un ataque y también hacer que una corrección urgente tarde semanas en aplicarse. Mantenibilidad es la capacidad de cambiar con comprensión, prueba y recuperación; seguridad limita exposición, abuso y pérdida de control. Ambas se deterioran cuando dependencias, conocimiento o configuraciones quedan invisibles.
 
 Actualizar por calendario puede introducir una falla; postergar indefinidamente puede ampliar vulnerabilidad. La decisión combina criticidad, soporte, pruebas, ventana operacional y plan de reversión.
 
-El indicador no es sólo tiempo de cambio. También importa si se detecta impacto, se conserva evidencia y se restaura el servicio sin depender de una persona irreemplazable.
+Ejemplo cercano: El indicador no es sólo tiempo de cambio. También importa si se detecta impacto, se conserva evidencia y se restaura el servicio sin depender de una persona irreemplazable.
 
 La mantenibilidad puede evaluarse mediante cambios representativos. Se modifica una regla, se actualiza una dependencia y se retira un permiso, observando cuántas relaciones deben comprenderse, qué pruebas detectan efectos y cuánto conocimiento extraordinario se requiere. Un sistema que cambia rápido gracias a intervención heroica no es mantenible; oculta el costo en disponibilidad de personas.
 
@@ -274,7 +274,7 @@ La decisión debe incluir quién absorbe la fricción. Un control puede mejorar 
 
 ### Inteligencia artificial sobre sistemas heredados
 
-La inteligencia artificial puede resumir documentos, proponer relaciones y asistir la comprensión de código, pero produce hipótesis, no memoria autorizada. Sus respuestas dependen del corpus, de la consigna y de patrones que pueden omitir una excepción decisiva.
+En simple, con un ejemplo: La inteligencia artificial puede resumir documentos, proponer relaciones y asistir la comprensión de código, pero produce hipótesis, no memoria autorizada. Sus respuestas dependen del corpus, de la consigna y de patrones que pueden omitir una excepción decisiva.
 
 El uso responsable conserva fuentes, versiones y revisión de quienes operan el sistema. Datos personales, secretos, licencias y riesgo de generación insegura limitan qué material puede procesarse y cómo se valida el resultado.
 

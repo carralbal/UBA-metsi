@@ -88,7 +88,7 @@ Parnas, D. L. permite delimitar módulos por decisiones que conviene ocultar; La
 
 ### Contrato sintáctico
 
-Un contrato sintáctico define estructura, tipos, obligatoriedad y formato de un intercambio. Permite detectar mensajes incompletos o incompatibles antes de procesarlos, pero no garantiza que productor y consumidor compartan significado, oportunidad ni efecto.
+En simple, con un ejemplo: Un contrato sintáctico define estructura, tipos, obligatoriedad y formato de un intercambio. Permite detectar mensajes incompletos o incompatibles antes de procesarlos, pero no garantiza que productor y consumidor compartan significado, oportunidad ni efecto.
 
 En HH-27, una reserva debe declarar identificador, fecha, categoría y estado con tipos precisos. Esquemas, ejemplos válidos y casos que deben rechazarse forman una especificación ejecutable. La prueba conserva versión y consumidor, porque una estructura aceptada por un canal puede quebrar otro.
 
@@ -104,7 +104,7 @@ La prueba sintáctica se ejecuta sobre el artefacto que llegará a producción. 
 
 ### API como contrato parcial y verificable
 
-Una API ofrece una frontera para que dos capacidades interactúen sin compartir toda su implementación. Su valor no reside en ocultar cualquier diferencia, sino en hacer explícitas las diferencias que el consumidor necesita conocer: operaciones disponibles, datos aceptados, resultados posibles, identidad, autoridad, versiones, límites y tratamiento de fallas. La interfaz es estable cuando conserva esas obligaciones relevantes, no cuando permanece inmóvil.
+En simple, con un ejemplo: Una API ofrece una frontera para que dos capacidades interactúen sin compartir toda su implementación. Su valor no reside en ocultar cualquier diferencia, sino en hacer explícitas las diferencias que el consumidor necesita conocer: operaciones disponibles, datos aceptados, resultados posibles, identidad, autoridad, versiones, límites y tratamiento de fallas. La interfaz es estable cuando conserva esas obligaciones relevantes, no cuando permanece inmóvil.
 
 OpenAPI 3.2.0 permite describir interfaces HTTP mediante rutas, operaciones, parámetros, cuerpos, respuestas, seguridad y esquemas reutilizables. AsyncAPI 3.1.0 describe interacciones dirigidas por mensajes mediante canales, operaciones, mensajes y correlación. Los dos estándares producen artefactos que pueden revisarse y utilizarse para generar documentación, validadores o pruebas. Sin embargo, describir una interfaz no demuestra que la implementación respete el contrato ni que el contrato represente correctamente la decisión del dominio.
 
@@ -126,9 +126,9 @@ En Hotel Horizonte, una respuesta exitosa del PMS puede afirmar que una reserva 
 
 ### Contrato semántico
 
-Un contrato semántico acuerda qué significa cada dato, estado y transición en un contexto de decisión. No es un glosario aislado: vincula términos con reglas, autoridad, población y consecuencias observables.
+En simple: Un contrato semántico acuerda qué significa cada dato, estado y transición en un contexto de decisión. No es un glosario aislado: vincula términos con reglas, autoridad, población y consecuencias observables.
 
-Para Hotel Horizonte, «confirmada» debe distinguir mensaje recibido, pago autorizado y capacidad efectivamente reservada. Episodios límite y tablas de decisión revelan ambigüedades que una definición general no muestra. Lucía y Federico deben poder anticipar la misma próxima acción al leer el estado.
+Ejemplo cercano: Para Hotel Horizonte, «confirmada» debe distinguir mensaje recibido, pago autorizado y capacidad efectivamente reservada. Episodios límite y tablas de decisión revelan ambigüedades que una definición general no muestra. Lucía y Federico deben poder anticipar la misma próxima acción al leer el estado.
 
 El significado cambia con contexto y necesita gobierno. Cada término conserva ejemplos positivos, contraejemplos, responsable y condición de revisión. Si la operación crea una excepción nueva, el contrato se actualiza sin reescribir retrospectivamente qué significaba el estado durante el episodio anterior.
 
@@ -142,9 +142,9 @@ Evans (2003) vincula lenguaje compartido y fronteras de dominio. N27 toma esa re
 
 ### Contrato temporal
 
-Un contrato temporal define ventanas, orden, vigencia, latencia y tratamiento de demora. No se reduce a un tiempo máximo de espera, conocido como *timeout*. Establece cuándo una afirmación puede usarse y qué decisión corresponde si llega tarde, duplicada o fuera de secuencia.
+En simple: Un contrato temporal define ventanas, orden, vigencia, latencia y tratamiento de demora. No se reduce a un tiempo máximo de espera, conocido como *timeout*. Establece cuándo una afirmación puede usarse y qué decisión corresponde si llega tarde, duplicada o fuera de secuencia.
 
-HH-27 prueba un estado de habitación que arriba después de una reasignación. Relojes, trazas y versiones permiten reconstruir qué sabía cada sistema al actuar. La regla distingue ausencia de respuesta, rechazo y resultado indeterminado para impedir que el vencimiento invente una certeza.
+Ejemplo cercano: HH-27 prueba un estado de habitación que arriba después de una reasignación. Relojes, trazas y versiones permiten reconstruir qué sabía cada sistema al actuar. La regla distingue ausencia de respuesta, rechazo y resultado indeterminado para impedir que el vencimiento invente una certeza.
 
 Los relojes no son perfectos y la operación necesita tolerancias explícitas. El contrato declara qué orden importa, cuánto dura una afirmación y cómo se reconcilian eventos atrasados. Esas condiciones se revisan con transiciones reales, no sólo con latencia promedio.
 
@@ -160,7 +160,7 @@ En la conciliación se compara lo conocido por cada actor en ese momento y se re
 
 ### Contrato operacional
 
-Un contrato operacional define efectos, errores, observación, escalamiento y reparación alrededor de una interfaz. No es un SLA ni una página de soporte. Traduce comportamiento técnico en acciones posibles para quienes sostienen el servicio.
+En simple, con un ejemplo: Un contrato operacional define efectos, errores, observación, escalamiento y reparación alrededor de una interfaz. No es un SLA ni una página de soporte. Traduce comportamiento técnico en acciones posibles para quienes sostienen el servicio.
 
 En HH-27, Recepción necesita saber cómo continuar cuando la confirmación queda indeterminada. La ficha especifica quién diagnostica, quién decide, qué evidencia recibe el turno y cómo se informa al huésped. Un error sin próxima acción segura deja la integración técnicamente descripta y operacionalmente incompleta.
 
@@ -176,9 +176,9 @@ La reparación forma parte del contrato y no de una etapa posterior. Incluye rec
 
 ### Precondición y poscondición
 
-Las precondiciones y poscondiciones declaran qué debe ser cierto antes y después de una operación. No son comentarios sobre el camino feliz: limitan estados válidos y vuelven comprobable el efecto prometido.
+En simple: Las precondiciones y poscondiciones declaran qué debe ser cierto antes y después de una operación. No son comentarios sobre el camino feliz: limitan estados válidos y vuelven comprobable el efecto prometido.
 
-Para asignar una habitación, HH-27 exige disponibilidad vigente, restricciones satisfechas y autoridad. Después, la reserva debe quedar vinculada con la habitación y conservar trazabilidad. Pruebas de transición e invariantes verifican ambas condiciones, incluidos rechazo y resultado indeterminado.
+Ejemplo cercano: Para asignar una habitación, HH-27 exige disponibilidad vigente, restricciones satisfechas y autoridad. Después, la reserva debe quedar vinculada con la habitación y conservar trazabilidad. Pruebas de transición e invariantes verifican ambas condiciones, incluidos rechazo y resultado indeterminado.
 
 La concurrencia puede invalidar una precondición entre lectura y escritura. Por eso la especificación incluye momento de evaluación, mecanismo de exclusión o compensación y evidencia persistida. La corrección se juzga sobre el estado material, no sobre la respuesta que vio un único componente.
 
@@ -190,7 +190,7 @@ El contrato sólo promete aquello que puede demostrar en esos cortes; los demás
 
 ### Invariante
 
-Una invariante es una condición que debe preservarse a través de operaciones, versiones y fallas. Se diferencia de una preferencia porque violarla vuelve inaceptable el estado, aunque una métrica agregada mejore.
+En simple, con un ejemplo: Una invariante es una condición que debe preservarse a través de operaciones, versiones y fallas. Se diferencia de una preferencia porque violarla vuelve inaceptable el estado, aunque una métrica agregada mejore.
 
 Una habitación accesible prometida no puede reasignarse sin decisión autorizada. HH-27 busca violaciones mediante secuencias concurrentes, reintentos y cambios de versión. El registro debe mostrar cuándo se evaluó la condición y quién pudo detener o reparar la transición.
 
@@ -202,7 +202,7 @@ Las pruebas basadas en propiedades complementan ejemplos conocidos al generar ó
 
 ### Idempotencia
 
-La idempotencia permite repetir una operación sin multiplicar su efecto material. No exige respuestas textuales idénticas ni elimina el costo del reintento. Su propósito es preservar la consecuencia cuando la comunicación deja incierto el resultado anterior.
+En simple, con un ejemplo: La idempotencia permite repetir una operación sin multiplicar su efecto material. No exige respuestas textuales idénticas ni elimina el costo del reintento. Su propósito es preservar la consecuencia cuando la comunicación deja incierto el resultado anterior.
 
 En HH-27, reenviar una confirmación no debe crear dos reservas ni duplicar un cobro. Claves, estados y deduplicación sostienen la garantía, que se prueba perdiendo respuestas y repitiendo mensajes. La evidencia incluye el estado final y los efectos externos.
 
@@ -216,7 +216,7 @@ Los efectos laterales se revisan por separado. Una asignación puede ser idempot
 
 ### Contrato de error
 
-Un contrato de error clasifica fallas, incertidumbre y respuestas que productores, consumidores y operación pueden manejar. No es una lista genérica de códigos: distingue rechazo, demora, duplicación, resultado indeterminado y degradación.
+En simple, con un ejemplo: Un contrato de error clasifica fallas, incertidumbre y respuestas que productores, consumidores y operación pueden manejar. No es una lista genérica de códigos: distingue rechazo, demora, duplicación, resultado indeterminado y degradación.
 
 El PMS debe informar si la reserva fue rechazada o si todavía se desconoce el estado. HH-27 asocia cada clase con una acción segura, evidencia mínima y autoridad de escalamiento. Pruebas negativas verifican que un consumidor no interprete silencio como éxito ni como fracaso definitivo.
 
@@ -230,7 +230,7 @@ El mensaje dirigido a la operación traduce la clase técnica sin prometer una c
 
 ### Evolución compatible
 
-La evolución compatible permite cambiar un contrato sin quebrar consumidores existentes ni congelar el servicio. No se resuelve incrementando un número de versión. Requiere declarar qué se conserva, qué se depreca y durante cuánto tiempo convivirán interpretaciones.
+En simple, con un ejemplo: La evolución compatible permite cambiar un contrato sin quebrar consumidores existentes ni congelar el servicio. No se resuelve incrementando un número de versión. Requiere declarar qué se conserva, qué se depreca y durante cuánto tiempo convivirán interpretaciones.
 
 HH-27 incorpora un estado nuevo mientras algunos canales sólo comprenden el vocabulario anterior. Pruebas con consumidores reales y telemetría de uso muestran quién sigue expuesto. La migración tiene responsable, fecha y condición de retiro, además de una traducción segura durante la convivencia.
 
@@ -242,7 +242,7 @@ Una estrategia de evolución incluye aviso, período de convivencia, traducción
 
 ### Contrato de datos
 
-Un contrato de datos acuerda significado, calidad, responsabilidad, privacidad y cambio de un producto de datos. No es sólo un esquema de tabla ni un acuerdo entre equipos técnicos. Explica qué usos habilita una observación y qué límites conserva.
+En simple, con un ejemplo: Un contrato de datos acuerda significado, calidad, responsabilidad, privacidad y cambio de un producto de datos. No es sólo un esquema de tabla ni un acuerdo entre equipos técnicos. Explica qué usos habilita una observación y qué límites conserva.
 
 La disponibilidad de habitación registra fuente, frescura, reglas de corrección y población. HH-27 sigue su linaje desde Housekeeping hasta el canal y contrasta consultas reales. Un valor estructuralmente válido puede ser inadecuado si perdió vigencia o si omite una restricción relevante.
 
@@ -256,9 +256,9 @@ El modelo PROV de W3C distingue entidades, actividades y agentes y ofrece un anc
 
 ### Contrato de seguridad
 
-Un contrato de seguridad define identidad, autorización, confidencialidad, integridad y evidencia de acceso. No consiste en agregar autenticación al final. Distribuye controles según fronteras de confianza, propósito y daño posible.
+En simple: Un contrato de seguridad define identidad, autorización, confidencialidad, integridad y evidencia de acceso. No consiste en agregar autenticación al final. Distribuye controles según fronteras de confianza, propósito y daño posible.
 
-El canal puede consultar una categoría sin acceder a datos innecesarios del huésped. HH-27 prueba permisos mínimos, intentos indebidos, trazabilidad y revocación. También verifica la contingencia, porque un control que bloquea toda atención durante una falla puede producir otro daño.
+Ejemplo cercano: El canal puede consultar una categoría sin acceder a datos innecesarios del huésped. HH-27 prueba permisos mínimos, intentos indebidos, trazabilidad y revocación. También verifica la contingencia, porque un control que bloquea toda atención durante una falla puede producir otro daño.
 
 Seguridad, continuidad y accesibilidad pueden entrar en tensión. La decisión debe declarar qué riesgo se acepta, quién lo autoriza y qué señal obliga a revisar. El contrato protege tanto la información como la posibilidad de explicar y reparar una acción.
 
@@ -268,7 +268,7 @@ La evidencia de seguridad debe ser suficiente para investigar sin convertirse en
 
 ### Prueba de contrato
 
-Una prueba de contrato verifica acuerdos relevantes desde las perspectivas del productor, el consumidor y la operación. No reemplaza pruebas de punta a punta ni evidencia del resultado observable; localiza incompatibilidades antes de exponer el recorrido completo.
+En simple, con un ejemplo: Una prueba de contrato verifica acuerdos relevantes desde las perspectivas del productor, el consumidor y la operación. No reemplaza pruebas de punta a punta ni evidencia del resultado observable; localiza incompatibilidades antes de exponer el recorrido completo.
 
 En HH-27, el consumidor publica expectativas y el productor las ejecuta antes de desplegar. La suite cubre estructura, significado, orden, duplicados, demora, errores, permisos y versiones. Cada resultado conserva la especificación y el artefacto que efectivamente se probó.
 

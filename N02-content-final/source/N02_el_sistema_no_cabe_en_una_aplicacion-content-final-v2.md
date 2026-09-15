@@ -8,7 +8,7 @@
 
 ## La valija que el sistema había embarcado
 
-Imaginemos un aeropuerto. Una pasajera llega a destino y su valija no aparece. Abre la aplicación: “Equipaje embarcado”. El código fue leído antes de cerrar el vuelo; rampa recuerda haberla colocado en el carro correcto. La cinta funcionó, el avión salió en horario y los tableros muestran verde. Sin embargo, la valija quedó junto a una puerta porque el carro cambió de posición durante una tormenta.
+En simple, con un ejemplo: Imaginemos un aeropuerto. Una pasajera llega a destino y su valija no aparece. Abre la aplicación: “Equipaje embarcado”. El código fue leído antes de cerrar el vuelo; rampa recuerda haberla colocado en el carro correcto. La cinta funcionó, el avión salió en horario y los tableros muestran verde. Sin embargo, la valija quedó junto a una puerta porque el carro cambió de posición durante una tormenta.
 
 La pasajera se llama Martina. Viajó para presentar un trabajo al día siguiente y en la valija llevaba la ropa que pensaba usar, un adaptador que no consiguió en Buenos Aires y una carpeta con documentos originales. Durante unos minutos espera frente a la cinta porque todo lo que ve le indica que debe seguir esperando. En la pantalla del aeropuerto, su vuelo figura como finalizado. En la aplicación de la aerolínea, el equipaje aparece embarcado. En el comprobante pegado a su pasaporte, el destino es correcto. Cada señal parece tranquilizadora por separado. Juntas producen una instrucción equivocada: no haga nada todavía.
 
@@ -50,7 +50,7 @@ Para la práctica profesional, esto implica declarar para qué se dibuja una fro
 
 ## De HH-01 a HH-02: del pedido revisable al sistema relevante
 
-HH-01, construido en N01, dejó un memo metodológico con un pedido, un propósito, incertidumbres, evidencia inicial, una acción autorizada y una decisión todavía no autorizada. El memo no afirmó que el PMS causara las sobreventas. Autorizó reconstruir episodios de reserva y llegada para distinguir problemas de aplicación, información, coordinación y promesa. N02 recibe esa pregunta y cambia la unidad de análisis.
+En simple, con un ejemplo: HH-01, construido en N01, dejó un memo metodológico con un pedido, un propósito, incertidumbres, evidencia inicial, una acción autorizada y una decisión todavía no autorizada. El memo no afirmó que el PMS causara las sobreventas. Autorizó reconstruir episodios de reserva y llegada para distinguir problemas de aplicación, información, coordinación y promesa. N02 recibe esa pregunta y cambia la unidad de análisis.
 
 HH-02 es el mapa provisional del sistema de trabajo que produce una promesa de alojamiento. Parte de un episodio, no del inventario tecnológico. Registra participantes, información, tecnologías, actividades, terceros, tiempos, autoridad, resultado y reparación. Cada relación se expresa con un verbo porque una lista de componentes no permite explicar cómo una reserva confirmada llega a convertirse, o no, en una habitación adecuada.
 
@@ -66,7 +66,7 @@ La diferencia puede expresarse de manera simple. Ingeniería de Software ayuda a
 
 ## Cinco objetos que no conviene llamar simplemente “el sistema”
 
-La palabra *sistema* resulta cómoda porque permite conversar sin detenerse a precisar la unidad de análisis. Esa comodidad se vuelve peligrosa cuando llega el momento de atribuir una causa, diseñar una prueba o asignar responsabilidad. En una misma reunión, “el sistema” puede significar la pantalla que usa Recepción, el conjunto de aplicaciones conectadas, la información que circula, el trabajo que produce alojamiento o la situación problemática completa. Las cinco expresiones están relacionadas, pero no son intercambiables.
+En simple, con un ejemplo: La palabra *sistema* resulta cómoda porque permite conversar sin detenerse a precisar la unidad de análisis. Esa comodidad se vuelve peligrosa cuando llega el momento de atribuir una causa, diseñar una prueba o asignar responsabilidad. En una misma reunión, “el sistema” puede significar la pantalla que usa Recepción, el conjunto de aplicaciones conectadas, la información que circula, el trabajo que produce alojamiento o la situación problemática completa. Las cinco expresiones están relacionadas, pero no son intercambiables.
 
 | Unidad | Qué incluye | Pregunta característica | Riesgo de confundirla con el conjunto |
 |---|---|---|---|
@@ -82,7 +82,7 @@ La precisión aparece cuando el equipo puede completar una frase: **“Para resp
 
 ## El error de buscar el sistema dentro del software
 
-Cuando una organización dice “el sistema”, suele señalar aquello que tiene nombre comercial, contrato y pantalla: el PMS, el ERP, la aplicación móvil. Es comprensible. El software concentra funciones visibles, contiene datos y condiciona gran parte de la actividad. El problema aparece cuando esa conveniencia lingüística se convierte en teoría causal.
+En simple, con un ejemplo: Cuando una organización dice “el sistema”, suele señalar aquello que tiene nombre comercial, contrato y pantalla: el PMS, el ERP, la aplicación móvil. Es comprensible. El software concentra funciones visibles, contiene datos y condiciona gran parte de la actividad. El problema aparece cuando esa conveniencia lingüística se convierte en teoría causal.
 
 Si definimos el sistema como el PMS, la escena inicial se reduce a una inconsistencia entre un registro y la realidad. Las soluciones plausibles serán corregir el registro, integrar la planilla o reemplazar el producto. Pero todavía no sabemos qué significa “liberada”, quién tiene autoridad para declarar ese estado, qué evento lo produce, cuánto demora en propagarse, qué excepciones existen ni quién responde cuando la promesa comercial antecede a la capacidad operacional.
 
@@ -127,9 +127,9 @@ Las reglas y la autoridad atraviesan esas clases. A veces están codificadas; ot
 
 ## Elegir la frontera por la promesa, no por el organigrama
 
-Ningún análisis puede incluir todo. La frontera establece qué elementos y relaciones trataremos como parte del sistema y cuáles como entorno. El criterio no es dibujar el universo, sino conservar aquello que puede explicar el resultado y ser relevante para la decisión.
+En simple: Ningún análisis puede incluir todo. La frontera establece qué elementos y relaciones trataremos como parte del sistema y cuáles como entorno. El criterio no es dibujar el universo, sino conservar aquello que puede explicar el resultado y ser relevante para la decisión.
 
-Si la pregunta es por qué una pantalla responde lentamente, el sistema puede incluir cliente, red, servicios, base de datos e infraestructura. Si la pregunta es por qué la huésped espera aun con una reserva confirmada, esa frontera resulta demasiado estrecha. Habrá que incluir estados de habitación, reglas de inventario, coordinación entre áreas, promesas de canal, excepciones y autoridad de reparación. Si la pregunta es por qué aumenta la sobreventa, quizá debamos agregar no-shows, cancelaciones, políticas de ocupación, tiempos de sincronización y contratos con terceros.
+Ejemplo cercano: Si la pregunta es por qué una pantalla responde lentamente, el sistema puede incluir cliente, red, servicios, base de datos e infraestructura. Si la pregunta es por qué la huésped espera aun con una reserva confirmada, esa frontera resulta demasiado estrecha. Habrá que incluir estados de habitación, reglas de inventario, coordinación entre áreas, promesas de canal, excepciones y autoridad de reparación. Si la pregunta es por qué aumenta la sobreventa, quizá debamos agregar no-shows, cancelaciones, políticas de ocupación, tiempos de sincronización y contratos con terceros.
 
 Una forma práctica de elegir frontera consiste en completar tres frases:
 
@@ -145,7 +145,7 @@ La norma ISO/IEC/IEEE 15288:2023 ofrece un recordatorio útil: los procesos de c
 
 ## El sistema efectivo incluye trabajo que no figura en arquitectura
 
-En Hotel Horizonte, una planilla compartida registra habitaciones liberadas antes de que el PMS refleje el cambio. Un grupo de mensajería permite consultar excepciones. Una supervisora recuerda restricciones y decide compensaciones. Desde una arquitectura oficial, estos elementos pueden parecer desviaciones. Desde el servicio real, participan en la capacidad de alojar.
+En simple, con un ejemplo: En Hotel Horizonte, una planilla compartida registra habitaciones liberadas antes de que el PMS refleje el cambio. Un grupo de mensajería permite consultar excepciones. Una supervisora recuerda restricciones y decide compensaciones. Desde una arquitectura oficial, estos elementos pueden parecer desviaciones. Desde el servicio real, participan en la capacidad de alojar.
 
 Reconocerlos como parte del sistema no implica aprobarlos. Una práctica informal puede cumplir simultáneamente cuatro funciones:
 
@@ -209,15 +209,15 @@ Volvamos a la escena inicial y construyamos tres explicaciones rivales.
 
 ### Explicación A: el PMS está desactualizado
 
-La habitación fue liberada a las 12:42 y el PMS no recibió o no procesó el evento. La evidencia relevante sería la secuencia de cambios, logs o registros de integración, versión de estado y tiempos. Si esta explicación se sostiene, una intervención técnica sobre eventos, sincronización o reconciliación puede ser central.
+En simple, con un ejemplo: La habitación fue liberada a las 12:42 y el PMS no recibió o no procesó el evento. La evidencia relevante sería la secuencia de cambios, logs o registros de integración, versión de estado y tiempos. Si esta explicación se sostiene, una intervención técnica sobre eventos, sincronización o reconciliación puede ser central.
 
 ### Explicación B: “liberada” no significa lo mismo
 
-Housekeeping usa “liberada” para indicar limpieza terminada; Recepción necesita “asignable”, que además exige cerradura operativa y ausencia de una restricción. La planilla y el PMS pueden estar actualizados y, aun así, representar conceptos distintos. La evidencia necesaria incluye definiciones, reglas, casos de excepción y autoridad. Integrar más rápido datos semánticamente incompatibles aceleraría la contradicción.
+En simple, con un ejemplo: Housekeeping usa “liberada” para indicar limpieza terminada; Recepción necesita “asignable”, que además exige cerradura operativa y ausencia de una restricción. La planilla y el PMS pueden estar actualizados y, aun así, representar conceptos distintos. La evidencia necesaria incluye definiciones, reglas, casos de excepción y autoridad. Integrar más rápido datos semánticamente incompatibles aceleraría la contradicción.
 
 ### Explicación C: la promesa comercial antecede al sistema de trabajo
 
-La OTA ofrece check-in temprano bajo una regla que no contempla variabilidad operacional o vende una categoría cuya asignación se decide más tarde. La contradicción aparece antes del evento de limpieza. La evidencia debe reconstruir configuración del canal, contrato, ventanas, tasas de cumplimiento y decisiones comerciales. Cambiar el PMS puede no modificar la causa dominante.
+En simple, con un ejemplo: La OTA ofrece check-in temprano bajo una regla que no contempla variabilidad operacional o vende una categoría cuya asignación se decide más tarde. La contradicción aparece antes del evento de limpieza. La evidencia debe reconstruir configuración del canal, contrato, ventanas, tasas de cumplimiento y decisiones comerciales. Cambiar el PMS puede no modificar la causa dominante.
 
 | Hipótesis | Evidencia que la fortalecería | Evidencia que la debilitaría | Primera decisión razonable |
 |---|---|---|---|
@@ -245,29 +245,29 @@ El mapa todavía no es una solución. Su valor se prueba si permite formular exp
 
 ### 1. Nombrar una capacidad y su receptor
 
-No comenzar con “sistema de reservas”, porque ese nombre ya privilegia una solución. Usar una formulación orientada a resultado: “capacidad para prometer y entregar alojamiento bajo condiciones acordadas”. Identificar quién recibe el producto o servicio y quién asume consecuencias si falla.
+En simple, con un ejemplo: No comenzar con “sistema de reservas”, porque ese nombre ya privilegia una solución. Usar una formulación orientada a resultado: “capacidad para prometer y entregar alojamiento bajo condiciones acordadas”. Identificar quién recibe el producto o servicio y quién asume consecuencias si falla.
 
 ### 2. Reconstruir un episodio completo
 
-Elegir un caso real desde la señal inicial hasta la resolución. Registrar participantes, decisiones, esperas, herramientas, información y reparaciones. El episodio impide que el mapa se apoye únicamente en procedimientos o entrevistas generales.
+En simple, con un ejemplo: Reconstruir un episodio es contar un caso real desde que empieza hasta que termina, sin saltar las esperas ni las reparaciones. Una reserva concreta permite ver quién actuó, qué información recibió y dónde cambió el resultado. Elegir un caso real desde la señal inicial hasta la resolución. Registrar participantes, decisiones, esperas, herramientas, información y reparaciones. El episodio impide que el mapa se apoye únicamente en procedimientos o entrevistas generales.
 
 ### 3. Dibujar relaciones con verbos y tiempos
 
-Mostrar quién promete, registra, interpreta, modifica, espera, autoriza, entrega y repara. Incorporar demoras y ventanas cuando cambian el comportamiento. Las flechas sin verbo suelen ocultar el mecanismo.
+En simple, con un ejemplo: Un mapa se entiende mejor cuando dice qué hace cada parte y cuándo lo hace. No alcanza con unir «Recepción» y «PMS»: conviene escribir «Recepción consulta el estado antes de asignar la habitación». Mostrar quién promete, registra, interpreta, modifica, espera, autoriza, entrega y repara. Incorporar demoras y ventanas cuando cambian el comportamiento. Las flechas sin verbo suelen ocultar el mecanismo.
 
 ### 4. Agregar lo informal y lo ausente
 
-Preguntar qué ocurriría si desaparecieran planillas, llamadas, memoria local o tareas no reconocidas. Identificar también a quien recibe el resultado pero no participa en el diseño. Lo ausente puede ser más explicativo que un componente oficial.
+En simple, con un ejemplo: Preguntar qué ocurriría si desaparecieran planillas, llamadas, memoria local o tareas no reconocidas. Identificar también a quien recibe el resultado pero no participa en el diseño. Lo ausente puede ser más explicativo que un componente oficial.
 
 ### 5. Formular al menos dos explicaciones rivales
 
-Cada una debe señalar relaciones distintas y exigir evidencia diferente. Si el mapa solo sostiene la hipótesis inicial, funciona como ilustración persuasiva, no como instrumento de investigación.
+En simple, con un ejemplo: Dos explicaciones rivales son respuestas diferentes que todavía podrían ser verdaderas. Por ejemplo, una habitación puede figurar ocupada porque el PMS recibió tarde un cambio o porque Recepción y Housekeeping usan palabras distintas para describir el mismo estado. Cada una debe señalar relaciones distintas y exigir evidencia diferente. Si el mapa solo sostiene la hipótesis inicial, funciona como ilustración persuasiva, no como instrumento de investigación.
 
 ### 6. Revisar frontera según la decisión
 
-Para cada elemento preguntar: ¿puede cambiar una explicación o una alternativa? ¿Su exclusión desplaza responsabilidad o daño? ¿Podemos tratarlo como entorno con una restricción explícita? Documentar por qué entra o queda afuera.
+En simple: Para cada elemento preguntar: ¿puede cambiar una explicación o una alternativa? ¿Su exclusión desplaza responsabilidad o daño? ¿Podemos tratarlo como entorno con una restricción explícita? Documentar por qué entra o queda afuera.
 
-El resultado debe ser suficientemente estable para coordinar la investigación y suficientemente provisional para cambiar. No buscamos “el mapa verdadero” de Hotel Horizonte. Buscamos una representación defendible para la próxima decisión.
+Ejemplo cercano: El resultado debe ser suficientemente estable para coordinar la investigación y suficientemente provisional para cambiar. No buscamos “el mapa verdadero” de Hotel Horizonte. Buscamos una representación defendible para la próxima decisión.
 
 ### Tercera aplicación de HH-02: una frontera lista para ser revisada
 
@@ -279,9 +279,9 @@ La decisión que HH-02 habilita es seguir durante dos semanas una muestra de epi
 
 ## Objeciones y límites: ampliar la frontera también cuesta
 
-La crítica al reduccionismo tecnológico puede conducir al error opuesto: todo se vuelve socio-técnico, político, histórico y cultural, por lo tanto nada puede delimitarse. Un mapa infinito no es más sistémico; es inutilizable.
+En simple: La crítica al reduccionismo tecnológico puede conducir al error opuesto: todo se vuelve socio-técnico, político, histórico y cultural, por lo tanto nada puede delimitarse. Un mapa infinito no es más sistémico; es inutilizable.
 
-La amplitud debe ser proporcional a la decisión. Para corregir una consulta lenta no hace falta reconstruir la estrategia comercial completa, salvo que el supuesto de carga dependa de ella. Para reemplazar el PMS sí puede ser necesario incluir contratos, migración, trabajo informal, integraciones y continuidad porque la intervención modifica esas relaciones.
+Ejemplo cercano: La amplitud debe ser proporcional a la decisión. Para corregir una consulta lenta no hace falta reconstruir la estrategia comercial completa, salvo que el supuesto de carga dependa de ella. Para reemplazar el PMS sí puede ser necesario incluir contratos, migración, trabajo informal, integraciones y continuidad porque la intervención modifica esas relaciones.
 
 Tampoco toda práctica social requiere codificación. Algunas conversaciones son deliberadamente flexibles; formalizarlas puede aumentar rigidez y vigilancia. Ni toda incompatibilidad debe eliminarse: áreas diferentes pueden necesitar vistas distintas mientras exista una traducción clara. La optimización conjunta no significa homogeneizar, sino diseñar relaciones que permitan a las partes cumplir el propósito sin trasladar costos de forma invisible.
 
@@ -314,7 +314,7 @@ La transferencia muestra también un límite de la analogía con el hotel. La se
 
 ## De HH-02 a N03: un mapa con consecuencias abiertas
 
-HH-02 queda completo cuando otra persona puede reconstruir la promesa, el episodio, los elementos relevantes, las relaciones con verbos, las tres explicaciones rivales, la evidencia que fortalecería o debilitaría cada una y la decisión que permanece fuera de alcance. Su propósito no es estabilizar una arquitectura, sino ofrecer una representación que pueda ser discutida y modificada sin perder trazabilidad.
+En simple, con un ejemplo: HH-02 queda completo cuando otra persona puede reconstruir la promesa, el episodio, los elementos relevantes, las relaciones con verbos, las tres explicaciones rivales, la evidencia que fortalecería o debilitaría cada una y la decisión que permanece fuera de alcance. Su propósito no es estabilizar una arquitectura, sino ofrecer una representación que pueda ser discutida y modificada sin perder trazabilidad.
 
 N03 recibirá ese mapa para examinar algo que N02 sólo deja señalado: toda frontera permite ver ciertas relaciones y deja otras afuera; una mejora local puede volver mediante demoras, carga o riesgo desplazado. Por eso HH-02 incluye una frontera analítica y una condición explícita de revisión. No desarrolla todavía bucles de retroalimentación ni efectos de segundo y tercer orden. Entrega las relaciones y preguntas necesarias para que N03 pueda hacerlo sin volver a identificar el sistema con una aplicación.
 

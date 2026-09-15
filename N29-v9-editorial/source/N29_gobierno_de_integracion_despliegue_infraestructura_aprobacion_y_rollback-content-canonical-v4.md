@@ -6,7 +6,7 @@
 
 ## La versión anterior volvió y las transferencias siguieron duplicadas
 
-Una empresa de pagos libera una nueva versión del servicio que calcula comisiones y confirma transferencias. La cadena automatizada termina sin errores, las pruebas funcionales están aprobadas y el cambio se habilita primero para una fracción de operaciones. Veinte minutos después, Atención recibe reclamos por movimientos duplicados. El equipo activa el rollback y restaura la versión anterior del código. Los reclamos continúan.
+En simple, con un ejemplo: Una empresa de pagos libera una nueva versión del servicio que calcula comisiones y confirma transferencias. La cadena automatizada termina sin errores, las pruebas funcionales están aprobadas y el cambio se habilita primero para una fracción de operaciones. Veinte minutos después, Atención recibe reclamos por movimientos duplicados. El equipo activa el rollback y restaura la versión anterior del código. Los reclamos continúan.
 
 La explicación inicial atribuye el incidente a un defecto de la versión nueva. Sin embargo, la base ya contiene transacciones transformadas por una migración, la cola conserva mensajes producidos con el esquema nuevo y un tercero reintenta solicitudes cuyo resultado no recibió. Volver el binario no devuelve datos, configuración, infraestructura ni actores al estado previo. La reversión técnica fue real y la recuperación del servicio, incompleta.
 
@@ -86,7 +86,7 @@ Beck, K. y Fowler, M. muestran cómo cambios pequeños, pruebas y refactorizaci�
 
 ### Integración continua
 
-La integración continua mantiene cambios pequeños combinados y verificados con frecuencia sobre una base compartida. No es ejecutar una herramienta ni fusionar sin disciplina. Su valor está en reducir la distancia entre versiones y volver visibles las incompatibilidades antes de que se acumulen.
+En simple, con un ejemplo: La integración continua mantiene cambios pequeños combinados y verificados con frecuencia sobre una base compartida. No es ejecutar una herramienta ni fusionar sin disciplina. Su valor está en reducir la distancia entre versiones y volver visibles las incompatibilidades antes de que se acumulen.
 
 En HH-29, un cambio de reserva se integra junto con pruebas de contrato, migración y configuración. Cada resultado conserva revisión de código, artefacto y evidencia. Frecuencia, tiempo de reparación y fallas detectadas antes de desplegar permiten evaluar si la práctica reduce riesgo o sólo acelera actividad.
 
@@ -104,11 +104,11 @@ El registro distingue una falla del producto, del ambiente y de la propia prueba
 
 ### Git conserva versiones, GitHub organiza una práctica
 
-Git es un sistema distribuido de control de versiones. La exposición de Chacon y Straub en *Pro Git* permite comprender cómo sus objetos y relaciones conservan una historia que puede reconstruirse y compararse. Una rama separa temporalmente una línea de trabajo; una fusión integra historias; una etiqueta identifica un punto significativo. Estas capacidades no garantizan por sí solas revisión, calidad ni aprobación. Una historia completa puede documentar con precisión una decisión equivocada.
+En simple: Git es un sistema distribuido de control de versiones. La exposición de Chacon y Straub en *Pro Git* permite comprender cómo sus objetos y relaciones conservan una historia que puede reconstruirse y compararse. Una rama separa temporalmente una línea de trabajo; una fusión integra historias; una etiqueta identifica un punto significativo. Estas capacidades no garantizan por sí solas revisión, calidad ni aprobación. Una historia completa puede documentar con precisión una decisión equivocada.
 
 GitHub agrega una plataforma de colaboración alrededor del repositorio. Las solicitudes de cambio reúnen diferencia, conversación, verificaciones y decisión de integración. Las reglas de protección pueden exigir revisiones, controles automáticos y restricciones sobre la rama principal. Las incidencias relacionan trabajo pendiente con evidencia y responsabilidad. Las versiones publicadas agrupan artefactos. Cada función necesita una política: quién puede proponer, quién revisa qué aspecto, qué control bloquea y qué excepción existe ante una urgencia.
 
-HH-29 utiliza una rama breve para modificar el contrato de asignación. La solicitud de cambio declara el problema, la hipótesis, la población afectada y la prueba esperada. La revisión técnica examina implementación y seguridad; Lucía verifica que el comportamiento represente la operación; la autoridad de liberación evalúa exposición y recuperación. Dos aprobaciones idénticas no agregan independencia. La revisión produce valor cuando cada participante puede observar una dimensión relevante y formular una objeción que modifique la decisión.
+Ejemplo cercano: HH-29 utiliza una rama breve para modificar el contrato de asignación. La solicitud de cambio declara el problema, la hipótesis, la población afectada y la prueba esperada. La revisión técnica examina implementación y seguridad; Lucía verifica que el comportamiento represente la operación; la autoridad de liberación evalúa exposición y recuperación. Dos aprobaciones idénticas no agregan independencia. La revisión produce valor cuando cada participante puede observar una dimensión relevante y formular una objeción que modifique la decisión.
 
 Los controles de rama protegen una frontera, pero no deben confundir integración con liberación. El cambio puede ingresar a la base compartida y permanecer deshabilitado mientras se completa una prueba o se limita una cohorte. A la inversa, una modificación de configuración fuera del repositorio puede alterar producción sin que la rama principal cambie. El expediente conecta commit, artefacto, configuración, aprobación, población y resultado observado.
 
@@ -116,7 +116,7 @@ La historia debe ser interpretable. Mensajes genéricos, fusiones masivas y cred
 
 ### DevOps como capacidad de entrega y aprendizaje
 
-DevOps no designa un cargo, una herramienta ni una etapa posterior al desarrollo. Nombra una capacidad organizacional que acerca construcción y operación mediante flujo, retroalimentación, automatización responsable y aprendizaje compartido. Su resultado no es desplegar más veces, sino poder cambiar una capacidad con evidencia, observar consecuencias y reparar sin transferir el costo a quienes sostienen el servicio.
+En simple, con un ejemplo: DevOps no designa un cargo, una herramienta ni una etapa posterior al desarrollo. Nombra una capacidad organizacional que acerca construcción y operación mediante flujo, retroalimentación, automatización responsable y aprendizaje compartido. Su resultado no es desplegar más veces, sino poder cambiar una capacidad con evidencia, observar consecuencias y reparar sin transferir el costo a quienes sostienen el servicio.
 
 En Hotel Horizonte, Federico no termina cuando la aplicación compila. Necesita conocer la cola que verá Lucía, la contingencia que ejecutará Mariela y la promesa que Camila mantiene abierta. Operaciones tampoco recibe pasivamente un artefacto. Participa en criterios, pruebas, observabilidad y recuperación. Esta relación reduce el tiempo entre una decisión de diseño y la evidencia de su efecto, sin borrar funciones ni concentrar autoridad en una sola persona.
 
@@ -126,9 +126,9 @@ El trabajo se observa de punta a punta. Tiempo hasta cambio, frecuencia, fallas,
 
 ### Artefacto liberable
 
-Un artefacto liberable es una unidad identificada, inmutable y trazable que puede promoverse entre ambientes. No es cualquier compilación ni una copia reconstruida para producción. Debe vincular versión, dependencias, procedencia, configuración requerida y evidencia de prueba.
+En simple: Un artefacto liberable es una unidad identificada, inmutable y trazable que puede promoverse entre ambientes. No es cualquier compilación ni una copia reconstruida para producción. Debe vincular versión, dependencias, procedencia, configuración requerida y evidencia de prueba.
 
-HH-29 promueve la misma imagen que atravesó las verificaciones, sin recompilarla en cada ambiente. Firmas y atestaciones permiten rastrear origen y transformación. El expediente detecta si un cambio de biblioteca, secreto o parámetro altera lo que realmente se pone en operación.
+Ejemplo cercano: HH-29 promueve la misma imagen que atravesó las verificaciones, sin recompilarla en cada ambiente. Firmas y atestaciones permiten rastrear origen y transformación. El expediente detecta si un cambio de biblioteca, secreto o parámetro altera lo que realmente se pone en operación.
 
 La trazabilidad no garantiza adecuación al uso. Un artefacto auténtico puede implementar una decisión equivocada. Por eso la liberación conecta identidad técnica con contrato, riesgo, autorización y capacidad de recuperación, y rechaza cualquier unidad cuya historia no pueda reconstruirse.
 
@@ -138,7 +138,7 @@ Promover el mismo artefacto no significa producir el mismo sistema. Configuraci�
 
 ### Ambiente y configuración
 
-Ambiente y configuración reúnen condiciones externas que determinan cómo se comporta una versión. No son detalles posteriores al código. Redes, secretos, permisos, datos, capacidades y reglas pueden convertir el mismo artefacto en sistemas materialmente distintos.
+En simple, con un ejemplo: Ambiente y configuración reúnen condiciones externas que determinan cómo se comporta una versión. No son detalles posteriores al código. Redes, secretos, permisos, datos, capacidades y reglas pueden convertir el mismo artefacto en sistemas materialmente distintos.
 
 En Hotel Horizonte, reglas de cerradura y permisos se controlan junto con la aplicación. HH-29 compara inventarios, deriva y comportamiento en condiciones reales. La prueba incluye configuración faltante, versión antigua y privilegio indebido para revelar dependencias que el ambiente de desarrollo no reproduce.
 
@@ -150,7 +150,7 @@ La configuración tiene ciclo de vida propio. Un parámetro temporal puede perma
 
 ### Infraestructura como código
 
-La infraestructura como código expresa recursos y políticas mediante definiciones versionadas y revisables. No significa automatizar cualquier cambio sin control. Permite comparar, reproducir y recuperar condiciones que antes dependían de acciones manuales irreconstruibles.
+En simple, con un ejemplo: La infraestructura como código expresa recursos y políticas mediante definiciones versionadas y revisables. No significa automatizar cualquier cambio sin control. Permite comparar, reproducir y recuperar condiciones que antes dependían de acciones manuales irreconstruibles.
 
 HH-29 registra red, permisos y capacidad que sostienen el ingreso. Los planes de cambio se revisan antes de aplicar y el estado observado se contrasta después. Una reconstrucción controlada prueba mejor la definición que la mera existencia de archivos declarativos.
 
@@ -164,9 +164,9 @@ La recreación se ensaya en un entorno vacío con dependencias y datos controlad
 
 ### Puerta de decisión
 
-Una puerta de decisión vincula evidencia y autoridad con el compromiso que puede asumirse. No es una reunión fija ni una firma ceremonial. Su exigencia aumenta según exposición, irreversibilidad, novedad y daño posible.
+En simple: Una puerta de decisión vincula evidencia y autoridad con el compromiso que puede asumirse. No es una reunión fija ni una firma ceremonial. Su exigencia aumenta según exposición, irreversibilidad, novedad y daño posible.
 
-HH-29 habilita una población limitada sólo cuando pasan los escenarios críticos y existe recuperación ensayada. Los criterios se fijan antes de ver el resultado; la autoridad puede aprobar, limitar o rechazar y debe dejar razones. Una excepción conserva duración y responsable.
+Ejemplo cercano: HH-29 habilita una población limitada sólo cuando pasan los escenarios críticos y existe recuperación ensayada. Los criterios se fijan antes de ver el resultado; la autoridad puede aprobar, limitar o rechazar y debe dejar razones. Una excepción conserva duración y responsable.
 
 Demasiadas puertas pueden dispersar responsabilidad y demorar reparación. El diseño separa controles que previenen daño de burocracia que sólo registra actividad. La eficacia se revisa con decisiones reales: qué falla detectó, qué riesgo aceptó y qué aprendizaje modificó el umbral.
 
@@ -176,9 +176,9 @@ Los controles automáticos y humanos cumplen funciones distintas. Una firma pued
 
 ### Aprobación basada en riesgo
 
-La aprobación basada en riesgo ajusta controles y autoridad al daño y a la reversibilidad del cambio. No equivale a aprobar automáticamente cambios pequeños ni a exigir un comité para cada versión. Clasifica alcance, dependencia, datos, población y capacidad de recuperación.
+En simple: La aprobación basada en riesgo ajusta controles y autoridad al daño y a la reversibilidad del cambio. No equivale a aprobar automáticamente cambios pequeños ni a exigir un comité para cada versión. Clasifica alcance, dependencia, datos, población y capacidad de recuperación.
 
-En HH-29, un ajuste de texto puede fluir con controles automáticos; una migración de estados requiere evidencia y revisión adicionales. La clasificación se registra antes de ejecutar y se contrasta con fallas posteriores. Una historia de incidentes puede elevar exigencia aunque el cambio parezca familiar.
+Ejemplo cercano: En HH-29, un ajuste de texto puede fluir con controles automáticos; una migración de estados requiere evidencia y revisión adicionales. La clasificación se registra antes de ejecutar y se contrasta con fallas posteriores. Una historia de incidentes puede elevar exigencia aunque el cambio parezca familiar.
 
 Una taxonomía rígida puede ser manipulada o quedar obsoleta. Por eso existe una vía para escalar dudas y revisar categorías. El objetivo es concentrar atención experta donde reduce exposición, sin convertir velocidad en ausencia de juicio.
 
@@ -196,7 +196,7 @@ Un cambio limitado, reversible y detectable puede avanzar con controles automát
 
 ### Segregación de funciones
 
-La segregación de funciones distribuye capacidades sensibles para reducir abuso y error no detectado. No exige que cada acción atraviese muchas personas. Combina permisos mínimos, revisión independiente, trazabilidad y controles compensatorios.
+En simple, con un ejemplo: La segregación de funciones distribuye capacidades sensibles para reducir abuso y error no detectado. No exige que cada acción atraviese muchas personas. Combina permisos mínimos, revisión independiente, trazabilidad y controles compensatorios.
 
 Quien desarrolla HH-29 no debería poder modificar producción y borrar evidencia sin rastro. Los registros muestran quién propuso, aprobó, ejecutó y verificó. Un ejercicio de acceso indebido comprueba que la separación existe en el sistema y no sólo en una política.
 
@@ -208,9 +208,9 @@ Durante una urgencia se aplica el control compensatorio más cercano al riesgo: 
 
 ### Despliegue progresivo
 
-El despliegue progresivo amplía exposición por etapas mientras observa evidencia y conserva una salida. No es liberar lentamente sin criterio. Utiliza cohortes, banderas de funcionalidad, canarios y umbrales definidos de antemano.
+En simple: El despliegue progresivo amplía exposición por etapas mientras observa evidencia y conserva una salida. No es liberar lentamente sin criterio. Utiliza cohortes, banderas de funcionalidad, canarios y umbrales definidos de antemano.
 
-El nuevo ingreso comienza en un turno y una categoría controlados. HH-29 compara señales técnicas y de negocio con una población no expuesta, y detiene ante estados indeterminados o reparación excesiva. La selección inicial no debe excluir precisamente a quienes concentran el riesgo.
+Ejemplo cercano: El nuevo ingreso comienza en un turno y una categoría controlados. HH-29 compara señales técnicas y de negocio con una población no expuesta, y detiene ante estados indeterminados o reparación excesiva. La selección inicial no debe excluir precisamente a quienes concentran el riesgo.
 
 Una muestra pequeña puede no representar picos ni casos críticos. Cada expansión incorpora una hipótesis nueva y revisa el resultado anterior. El cierre ocurre cuando la evidencia cubre el alcance pretendido, no cuando el porcentaje de tráfico alcanza por inercia un valor planificado.
 
@@ -222,7 +222,7 @@ Los umbrales incluyen señales técnicas, operativas y humanas. Una tasa baja de
 
 ### Rollback
 
-Rollback restaura una versión o estado anterior cuando la reversión es segura y completa. No es un botón universal ni sinónimo de recuperación. Debe abarcar código, configuración, infraestructura, contratos y datos afectados.
+En simple, con un ejemplo: Rollback restaura una versión o estado anterior cuando la reversión es segura y completa. No es un botón universal ni sinónimo de recuperación. Debe abarcar código, configuración, infraestructura, contratos y datos afectados.
 
 HH-29 ensaya la vuelta a una versión compatible y mide el tiempo hasta recuperar la promesa. El ejercicio verifica qué estados ya cambiaron y cuáles requieren reconciliación. Una respuesta técnica exitosa no basta si el huésped conserva una reserva duplicada o inaccesible.
 
@@ -242,9 +242,9 @@ Esta práctica profundiza la propuesta de entrega continua de Humble y Farley: a
 
 ### Rollforward y reparación
 
-Rollforward y reparación corrigen hacia adelante cuando volver no restituye la promesa. No significan improvisar bajo presión. Preparan cambios compensatorios, reconciliación, comunicación y una vía manual segura.
+En simple: Rollforward y reparación corrigen hacia adelante cuando volver no restituye la promesa. No significan improvisar bajo presión. Preparan cambios compensatorios, reconciliación, comunicación y una vía manual segura.
 
-En Hotel Horizonte, estados ya migrados necesitan reparación mientras el servicio continúa. HH-29 define qué se corrige automáticamente, qué revisa Operaciones y cómo se verifica el resultado. Las guías operativas se ensayan con personas de turno para reducir dependencia de héroes.
+Ejemplo cercano: En Hotel Horizonte, estados ya migrados necesitan reparación mientras el servicio continúa. HH-29 define qué se corrige automáticamente, qué revisa Operaciones y cómo se verifica el resultado. Las guías operativas se ensayan con personas de turno para reducir dependencia de héroes.
 
 Avanzar con diagnóstico incierto puede ampliar el daño. La decisión establece umbrales, población y autoridad para detener. Cada corrección conserva procedencia y se integra después a la versión gobernada, de modo que la emergencia no cree una rama operacional invisible.
 
@@ -254,9 +254,9 @@ La comunicación forma parte de la reparación. Quien recibió una promesa falsa
 
 ### Procedencia y cadena de suministro
 
-La procedencia y la cadena de suministro permiten conocer origen, transformación y controles de componentes y artefactos. No se resuelven con un inventario estático. Deben conectar fuente, dependencias, entorno de construcción, firma y despliegue efectivo.
+En simple: La procedencia y la cadena de suministro permiten conocer origen, transformación y controles de componentes y artefactos. No se resuelven con un inventario estático. Deben conectar fuente, dependencias, entorno de construcción, firma y despliegue efectivo.
 
-HH-29 rastrea el artefacto del PMS hasta su código y plataforma de compilación. SBOM, firmas y atestaciones permiten investigar cambios y vulnerabilidades. La verificación independiente comprueba que la evidencia pertenece al artefacto liberado y no a otra versión.
+Ejemplo cercano: HH-29 rastrea el artefacto del PMS hasta su código y plataforma de compilación. SBOM, firmas y atestaciones permiten investigar cambios y vulnerabilidades. La verificación independiente comprueba que la evidencia pertenece al artefacto liberado y no a otra versión.
 
 Una procedencia válida no demuestra ausencia de fallas ni legitimidad del uso. Sirve para limitar incertidumbre, responder a incidentes y decidir qué retirar. El gobierno incluye componentes de terceros, accesos de mantenimiento y cambios urgentes que suelen quedar fuera de la cadena automatizada ordinaria.
 
@@ -274,9 +274,9 @@ Una severidad publicada no sustituye la evaluación local, pero tampoco puede de
 
 ### Cierre de liberación
 
-El cierre de liberación confirma que el cambio quedó operable, observado, documentado y transferido. No coincide con terminar la cadena automatizada ni con alcanzar todo el tráfico. Revisa resultados, excepciones, responsabilidad, deuda y próximos umbrales.
+En simple: El cierre de liberación confirma que el cambio quedó operable, observado, documentado y transferido. No coincide con terminar la cadena automatizada ni con alcanzar todo el tráfico. Revisa resultados, excepciones, responsabilidad, deuda y próximos umbrales.
 
-Recepción confirma que puede operar y conoce la contingencia antes de retirar soporte reforzado. HH-29 compara evidencia de producción con los criterios de la puerta y registra cualquier desviación. El cierre distingue trabajo pendiente aceptado de una obligación que impide sostener la promesa.
+Ejemplo cercano: Recepción confirma que puede operar y conoce la contingencia antes de retirar soporte reforzado. HH-29 compara evidencia de producción con los criterios de la puerta y registra cualquier desviación. El cierre distingue trabajo pendiente aceptado de una obligación que impide sostener la promesa.
 
 Cerrar demasiado pronto borra señales; sostener un modo especial indefinido crea dependencia. La decisión fija fecha y condiciones para volver a revisar. Una liberación termina cuando la organización puede gobernar la versión sin ocultar las capacidades temporales que todavía la sostienen.
 

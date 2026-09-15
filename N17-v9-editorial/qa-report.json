@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "b98abb8388f3d403365ef1d34f1f032eb5524619b4fc2ec51ba419e61442b99e",
-        "declared_sha256": "b98abb8388f3d403365ef1d34f1f032eb5524619b4fc2ec51ba419e61442b99e",
+        "actual_sha256": "2c1bd60b5ae2101b499c0a50c0621520f77967aeb8a528e27d1a6e62cdde8ae6",
+        "declared_sha256": "2c1bd60b5ae2101b499c0a50c0621520f77967aeb8a528e27d1a6e62cdde8ae6",
         "document_json_matches": true,
         "source": "source/N17_logicas_predictivas_iterativas_incrementales_adaptativas_y_experimentales-content-canonical-v4.md",
         "source_exists": true,
@@ -48,6 +48,19 @@
       "status": "PASS"
     },
     {
+      "check": "errors_grid_groups_each_label_with_its_explanation",
+      "evidence": [
+        {
+          "cards": 10,
+          "declared_rows": 5,
+          "expected_rows": 5,
+          "labels": 10,
+          "naked_pairs": 0
+        }
+      ],
+      "status": "PASS"
+    },
+    {
       "check": "no_lfs_pointers_private_paths_or_placeholders",
       "evidence": {
         "lfs_pointers": [],
@@ -67,12 +80,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 18807083,
-        "final_sha256": "9a55e733a7613ae11846774aac4776e6d09c80a0d15ea1303a3d423669e25c68",
+        "bytes": 18750922,
+        "final_sha256": "5b436b059a259b8a5070b0caf897a9b68b0367b69d6f1fb25a03c9a27b3eddf2",
         "pages": 29,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "3e455c8908c295ef50ae1754f5a2ab78bb462da6d2b2bf02a584db20659bd580",
+        "raw_sha256": "03a101200d482be72bb3dd717006ceaa83dc9c19c9137395673fa615e0fa44c3",
         "unique_sizes": [
           [
             594.96,
@@ -1158,15 +1171,15 @@
       5,
       23
     ],
-    "pdf_bytes": 18807083,
-    "pdf_sha256": "9a55e733a7613ae11846774aac4776e6d09c80a0d15ea1303a3d423669e25c68",
+    "pdf_bytes": 18750922,
+    "pdf_sha256": "5b436b059a259b8a5070b0caf897a9b68b0367b69d6f1fb25a03c9a27b3eddf2",
     "source_blocks": 293
   },
   "mode": "read-only",
   "package": "N17-v9-editorial",
-  "passed_checks": 26,
+  "passed_checks": 27,
   "status": "PASS",
-  "total_checks": 26,
+  "total_checks": 27,
   "validator": "validate_n11_n36_v6.py",
   "version": "v9-editorial"
 }

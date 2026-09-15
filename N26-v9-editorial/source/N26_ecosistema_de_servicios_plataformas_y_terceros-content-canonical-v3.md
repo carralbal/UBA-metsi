@@ -88,7 +88,7 @@ Coase, R. H. permite examinar qué coordinaciones conviene sostener dentro de un
 
 ### Ecosistema de servicio
 
-Un ecosistema de servicio reúne participantes autónomos que sostienen una misma promesa mediante capacidades, reglas e intercambios interdependientes. No es una lista ampliada de proveedores ni una arquitectura encerrada en el hotel. La unidad de análisis es el recorrido que una persona espera completar, aunque cada parte pertenezca a una organización distinta.
+En simple, con un ejemplo: Un ecosistema de servicio reúne participantes autónomos que sostienen una misma promesa mediante capacidades, reglas e intercambios interdependientes. No es una lista ampliada de proveedores ni una arquitectura encerrada en el hotel. La unidad de análisis es el recorrido que una persona espera completar, aunque cada parte pertenezca a una organización distinta.
 
 En HH-26, reserva, identidad, pago, disponibilidad y cerradura intervienen en un solo ingreso. El mapa debe mostrar qué afirmación entrega cada actor, quién puede cuestionarla y cómo se repara una contradicción. También debe incorporar planillas, llamados y autorizaciones de turno, porque el trabajo manual forma parte del sistema aun cuando no aparezca en una API.
 
@@ -100,7 +100,7 @@ La inclusión no los vuelve equivalentes: cada uno aporta una capacidad, persigu
 
 ### Capacidad de servicio
 
-Una capacidad de servicio combina personas, información, tecnología y autoridad para producir un resultado repetible bajo condiciones definidas. No equivale a una aplicación, un equipo o una función del organigrama. Su nombre expresa qué debe poder lograrse y no qué componente se compró o quién lo administra.
+En simple, con un ejemplo: Una capacidad de servicio combina personas, información, tecnología y autoridad para producir un resultado repetible bajo condiciones definidas. No equivale a una aplicación, un equipo o una función del organigrama. Su nombre expresa qué debe poder lograrse y no qué componente se compró o quién lo administra.
 
 Entregar una habitación asignable exige inventario, limpieza, cerradura, identidad, autoridad de Recepción y posibilidad de resolver una excepción. HH-26 contrasta el camino ordinario con una llegada tardía, una habitación accesible y una dependencia caída. Si el resultado sólo aparece cuando interviene alguien con conocimiento privado, la capacidad todavía no pertenece a la organización.
 
@@ -112,7 +112,7 @@ El indicador no se elige por comodidad técnica, sino por su relación con el re
 
 ### Plataforma compartida
 
-Una plataforma compartida ofrece capacidades gobernadas que otros equipos utilizan para construir y operar servicios. No es infraestructura neutral: sus interfaces, estándares, prioridades y reglas de evolución distribuyen posibilidades y restricciones. Centralizar una función puede reducir coordinación y, al mismo tiempo, concentrar dependencia.
+En simple, con un ejemplo: Una plataforma compartida ofrece capacidades gobernadas que otros equipos utilizan para construir y operar servicios. No es infraestructura neutral: sus interfaces, estándares, prioridades y reglas de evolución distribuyen posibilidades y restricciones. Centralizar una función puede reducir coordinación y, al mismo tiempo, concentrar dependencia.
 
 En Hotel Horizonte, identidad y pagos sirven a varios recorridos. HH-26 observa adopción útil, tiempo de integración, confiabilidad, soporte y costo de salida, no la cantidad de consumidores registrados. Una plataforma que obliga a cada turno a mantener una planilla paralela puede exhibir disponibilidad técnica y seguir trasladando trabajo a la operación.
 
@@ -130,9 +130,9 @@ La distinción modifica métricas y gobierno. En la plataforma interna interesa 
 
 ### Tercero crítico
 
-Un tercero crítico es un participante externo cuya falla o decisión puede comprometer una promesa material. La criticidad no coincide necesariamente con gasto, prestigio ni frecuencia de uso. Surge de concentración, sustituibilidad, tiempo de recuperación, acceso a evidencia y alcance del daño.
+En simple: Un tercero crítico es un participante externo cuya falla o decisión puede comprometer una promesa material. La criticidad no coincide necesariamente con gasto, prestigio ni frecuencia de uso. Surge de concentración, sustituibilidad, tiempo de recuperación, acceso a evidencia y alcance del daño.
 
-El canal de reservas es crítico cuando concentra demanda y excepciones, aun si el contrato lo presenta como un intermediario. HH-26 simula indisponibilidad, datos incompletos y un cambio unilateral. La pregunta no es sólo cuánto tarda en volver, sino qué puede hacer el hotel mientras tanto y qué población queda sin alternativa segura.
+Ejemplo cercano: El canal de reservas es crítico cuando concentra demanda y excepciones, aun si el contrato lo presenta como un intermediario. HH-26 simula indisponibilidad, datos incompletos y un cambio unilateral. La pregunta no es sólo cuánto tarda en volver, sino qué puede hacer el hotel mientras tanto y qué población queda sin alternativa segura.
 
 La clasificación se documenta con fuente, responsable y fecha. Puede cambiar cuando aparece otra vía, se modifica una dependencia o una obligación se vuelve más severa. Un acuerdo de nivel de servicio, conocido por la sigla SLA, o una certificación aportan evidencia, pero no sustituyen un ensayo de contingencia ni liberan al hotel de responder frente a la persona afectada.
 
@@ -144,7 +144,7 @@ Esa matriz permite decidir dónde exigir notificación de cambios, dónde duplic
 
 ### Responsabilidad sobre la capacidad
 
-La responsabilidad sobre una capacidad reúne autoridad persistente para priorizar, observar, coordinar y reparar una promesa. No es un contacto para escalar ni una responsabilidad nominal sin recursos. La persona responsable debe poder negociar con terceros, limitar exposición, financiar recuperación y explicar por qué una decisión sigue vigente.
+En simple, con un ejemplo: La responsabilidad sobre una capacidad reúne autoridad persistente para priorizar, observar, coordinar y reparar una promesa. No es un contacto para escalar ni una responsabilidad nominal sin recursos. La persona responsable debe poder negociar con terceros, limitar exposición, financiar recuperación y explicar por qué una decisión sigue vigente.
 
 El ingreso conserva una responsabilidad integral aunque identidad, pagos, inventario y cerraduras pertenezcan a áreas diferentes. HH-26 registra qué decisiones puede tomar la autoridad asignada, cuáles requieren otra intervención y qué señales recibe. Un nombre en una matriz no alcanza si, durante una llegada nocturna, nadie puede autorizar una llave temporal o compensar al huésped.
 
@@ -156,9 +156,9 @@ Si Ricardo debe esperar una autorización que nadie atiende, la brecha no se cor
 
 ### Mapa de dependencias
 
-Un mapa de dependencias representa qué necesita cada capacidad, en qué secuencia y bajo qué supuestos. Se diferencia de un diagrama de componentes porque incluye datos, autoridad, contratos, decisiones manuales y condiciones de recuperación. Cada vínculo debe expresar qué afirmación transporta y qué ocurre si resulta tardía o falsa.
+En simple: Un mapa de dependencias representa qué necesita cada capacidad, en qué secuencia y bajo qué supuestos. Se diferencia de un diagrama de componentes porque incluye datos, autoridad, contratos, decisiones manuales y condiciones de recuperación. Cada vínculo debe expresar qué afirmación transporta y qué ocurre si resulta tardía o falsa.
 
-En HH-26, la llave depende de identidad, pago, estado de habitación y autorización local. Trazas, entrevistas, incidentes y ejercicios de conmutación contrastan esa representación. La discrepancia entre el dibujo y la práctica no se corrige de inmediato: puede revelar trabajo invisible, una excepción legítima o una dependencia que nadie gobierna.
+Ejemplo cercano: En HH-26, la llave depende de identidad, pago, estado de habitación y autorización local. Trazas, entrevistas, incidentes y ejercicios de conmutación contrastan esa representación. La discrepancia entre el dibujo y la práctica no se corrige de inmediato: puede revelar trabajo invisible, una excepción legítima o una dependencia que nadie gobierna.
 
 El mapa sirve para elegir dónde invertir, qué aislar y qué probar primero. Debe declarar alcance y fecha, porque una dependencia puede cambiar sin alterar la interfaz visible. Si sólo inspecciona software, deja fuera la coordinación que sostiene la promesa y produce una seguridad analítica ficticia.
 
@@ -168,9 +168,9 @@ Un mapa que sólo dibuja flechas permanentes sugiere que toda falla produce el m
 
 ### Frontera de confianza
 
-Una frontera de confianza marca dónde cambian las garantías, la autoridad y la evidencia aceptada. Puede atravesar una organización, una red o un componente; no coincide automáticamente con ninguno de esos límites. Al cruzarla, una afirmación requiere reglas explícitas de verificación, vigencia y tratamiento de contradicciones.
+En simple: Una frontera de confianza marca dónde cambian las garantías, la autoridad y la evidencia aceptada. Puede atravesar una organización, una red o un componente; no coincide automáticamente con ninguno de esos límites. Al cruzarla, una afirmación requiere reglas explícitas de verificación, vigencia y tratamiento de contradicciones.
 
-El PMS no debería aceptar cualquier estado enviado por el canal como si tuviera idéntica procedencia. HH-26 registra identidad del emisor, permisos, frescura, reconciliación y evidencia de acceso. También prueba qué hace Recepción cuando dos fuentes válidas discrepan, porque rechazar todo puede ser tan dañino como confiar sin controles.
+Ejemplo cercano: El PMS no debería aceptar cualquier estado enviado por el canal como si tuviera idéntica procedencia. HH-26 registra identidad del emisor, permisos, frescura, reconciliación y evidencia de acceso. También prueba qué hace Recepción cuando dos fuentes válidas discrepan, porque rechazar todo puede ser tan dañino como confiar sin controles.
 
 La decisión equilibra exposición y continuidad. Una frontera demasiado rígida vuelve inviable la atención; una demasiado permeable concentra riesgo y hace irreconstruible el episodio. Los controles se revisan cuando cambia un proveedor, una población o el daño posible, y siempre conservan una vía de reparación comprensible.
 
@@ -180,7 +180,7 @@ Durante la prueba, Federico altera frescura y procedencia mientras Lucía decide
 
 ### Responsabilidad compartida
 
-Responsabilidad compartida distribuye tareas entre participantes sin diluir quién responde por la consecuencia completa. No significa que todos sean responsables de todo. Cada obligación debe vincularse con autoridad, evidencia, tiempo de respuesta y una persona capaz de coordinar cuando el reparto falla.
+En simple, con un ejemplo: Responsabilidad compartida distribuye tareas entre participantes sin diluir quién responde por la consecuencia completa. No significa que todos sean responsables de todo. Cada obligación debe vincularse con autoridad, evidencia, tiempo de respuesta y una persona capaz de coordinar cuando el reparto falla.
 
 El proveedor protege la plataforma; el hotel gobierna configuración, accesos, promesa comercial y reparación al huésped. HH-26 transforma ese enunciado genérico en decisiones verificables para una llegada bloqueada. Matrices, contratos y guías operativas aportan evidencia sólo si coinciden con lo que los turnos pueden ejecutar bajo presión.
 
@@ -194,7 +194,7 @@ La evidencia no se limita a una declaración contractual: incluye quién recibi�
 
 ### Degradación diseñada
 
-La degradación diseñada mantiene una parte segura y valiosa de la promesa cuando una dependencia falla. No equivale a tolerar en silencio una calidad inferior. Define antes del incidente qué capacidad mínima continúa, para quién, durante cuánto tiempo y bajo qué señal debe detenerse.
+En simple, con un ejemplo: La degradación diseñada mantiene una parte segura y valiosa de la promesa cuando una dependencia falla. No equivale a tolerar en silencio una calidad inferior. Define antes del incidente qué capacidad mínima continúa, para quién, durante cuánto tiempo y bajo qué señal debe detenerse.
 
 En HH-26, Recepción puede entregar una llave temporal bajo autorización cuando identidad externa no responde. La medida requiere registro, verificación posterior y límites que protejan seguridad y privacidad. El ejercicio incluye una habitación accesible y una llegada nocturna para comprobar que la contingencia no dependa de condiciones excepcionales favorables.
 
@@ -206,7 +206,7 @@ Si el modo reducido supera su ventana o acumula decisiones pendientes, la respue
 
 ### Riesgo de concentración
 
-El riesgo de concentración aparece cuando varias capacidades dependen de un mismo proveedor, dato, servicio o punto de decisión. La diversidad nominal no garantiza independencia: dos canales pueden usar la misma nube y múltiples recorridos pueden apoyarse en una única identidad.
+En simple, con un ejemplo: El riesgo de concentración aparece cuando varias capacidades dependen de un mismo proveedor, dato, servicio o punto de decisión. La diversidad nominal no garantiza independencia: dos canales pueden usar la misma nube y múltiples recorridos pueden apoyarse en una única identidad.
 
 HH-26 construye escenarios de falla común y no se limita a disponibilidad histórica. Observa cuántas promesas se afectan, qué poblaciones carecen de alternativa y cuánto tiempo necesita la recuperación. El mapa también incluye concentración de conocimiento, porque una sola persona puede ser un punto crítico aunque la infraestructura esté replicada.
 
@@ -218,7 +218,7 @@ La decisión puede ser separar dominios, reservar una vía manual o aceptar el r
 
 ### Portabilidad y salida
 
-Portabilidad y salida preservan la posibilidad de mover datos, procesos y responsabilidades sin quebrar la promesa. No son una cláusula ornamental ni una exportación de archivos al final del contrato. Incluyen formatos, derechos, reglas, secuencias, competencias, costos y continuidad durante la transición.
+En simple, con un ejemplo: Portabilidad y salida preservan la posibilidad de mover datos, procesos y responsabilidades sin quebrar la promesa. No son una cláusula ornamental ni una exportación de archivos al final del contrato. Incluyen formatos, derechos, reglas, secuencias, competencias, costos y continuidad durante la transición.
 
 El hotel debe poder recuperar reservas, definiciones de estado y evidencia si cambia de canal. HH-26 ensaya una extracción, valida completitud y reconstruye un recorrido con el sistema alternativo. La prueba muestra dependencias ocultas en credenciales, conocimiento operativo y decisiones comerciales que un archivo técnicamente correcto no conserva.
 
@@ -236,9 +236,9 @@ Los hallazgos se traducen en cláusulas, automatizaciones o entrenamiento y vuel
 
 ### Gobernanza del ecosistema
 
-La gobernanza del ecosistema coordina reglas comunes entre participantes que conservan autonomía. No centraliza toda decisión ni supone que el contrato resolverá una caída. Combina foros, estándares, incentivos, métricas, escalamiento, práctica de contingencia y mecanismos para revisar acuerdos.
+En simple: La gobernanza del ecosistema coordina reglas comunes entre participantes que conservan autonomía. No centraliza toda decisión ni supone que el contrato resolverá una caída. Combina foros, estándares, incentivos, métricas, escalamiento, práctica de contingencia y mecanismos para revisar acuerdos.
 
-Hotel, canal y proveedor definen juntos estados, avisos y reparación, pero mantienen responsabilidades diferentes. HH-26 utiliza incidentes y cambios de interfaz para observar si el gobierno anticipa consecuencias o sólo distribuye culpa después. Las personas afectadas deben tener una vía visible cuando el conflicto entre organizaciones bloquea su recorrido.
+Ejemplo cercano: Hotel, canal y proveedor definen juntos estados, avisos y reparación, pero mantienen responsabilidades diferentes. HH-26 utiliza incidentes y cambios de interfaz para observar si el gobierno anticipa consecuencias o sólo distribuye culpa después. Las personas afectadas deben tener una vía visible cuando el conflicto entre organizaciones bloquea su recorrido.
 
 El participante con más poder puede imponer costos que el mecanismo formal no corrige. Por eso la gobernanza registra quién puede proponer, vetar, financiar y salir, además de quién ejecuta. Su eficacia se mide por la capacidad de sostener y reparar la promesa, aprender del episodio y modificar reglas sin borrar la autonomía necesaria.
 

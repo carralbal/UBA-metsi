@@ -1,8 +1,8 @@
 {
   "document": "N12",
-  "stage": "content-canonical-thesis-n00-standard",
+  "stage": "explicit-accessible-layers-all-concepts",
   "source": "source/N12_eventos_estados_comandos_evidencia_y_autoridad-content-canonical-v3.md",
-  "source_sha256": "7143f29de5879ade939edca87fc5fa8abcccf69ecc8d0dc0d2c2aad837cb930b",
+  "source_sha256": "accc08d872ae5b34f4420c898f23e1b2f249e695e45a9b8bb23e341763b73110",
   "eligible_blocks": [
     {
       "kind": "heading",
@@ -176,7 +176,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "Un evento representa una ocurrencia relevante para el sistema. Se nombra en pasado porque no ordena ni predice: “Reserva confirmada”, “Limpieza terminada”, “Inspección aprobada”, “Asignación rechazada”. Su forma declara que, según cierta fuente y cierto criterio, algo ya sucedió.",
+      "text": "En simple, con un ejemplo: Un evento representa una ocurrencia relevante para el sistema. Se nombra en pasado porque no ordena ni predice: “Reserva confirmada”, “Limpieza terminada”, “Inspección aprobada”, “Asignación rechazada”. Su forma declara que, según cierta fuente y cierto criterio, algo ya sucedió.",
       "source_id": "src-0035"
     },
     {
@@ -201,7 +201,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "Un comando solicita que el sistema intente producir un cambio. Se formula como acción: “Asignar habitación”, “Confirmar reserva”, “Cancelar estadía”, “Autorizar excepción”. A diferencia del evento, todavía no afirma que el cambio ocurrió.",
+      "text": "En simple, con un ejemplo: Un comando solicita que el sistema intente producir un cambio. Se formula como acción: “Asignar habitación”, “Confirmar reserva”, “Cancelar estadía”, “Autorizar excepción”. A diferencia del evento, todavía no afirma que el cambio ocurrió.",
       "source_id": "src-0040"
     },
     {
@@ -226,7 +226,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "Un estado representa la situación reconocida de una entidad o proceso en un momento. Puede almacenarse directamente o derivarse de una secuencia de eventos. “Habitación asignable”, “reserva confirmada” y “pago conciliado” son respuestas a preguntas operacionales.",
+      "text": "En simple, con un ejemplo: Un estado representa la situación reconocida de una entidad o proceso en un momento. Puede almacenarse directamente o derivarse de una secuencia de eventos. “Habitación asignable”, “reserva confirmada” y “pago conciliado” son respuestas a preguntas operacionales.",
       "source_id": "src-0045"
     },
     {
@@ -251,7 +251,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "Una consulta solicita información sin intención de cambiar el sistema. “¿Qué habitaciones son asignables?” puede responderse con una proyección. “Asignar la 412” es un comando. Mezclar ambas funciones crea operaciones que parecen lectura y producen efectos.",
+      "text": "En simple, con un ejemplo: Una consulta solicita información sin intención de cambiar el sistema. “¿Qué habitaciones son asignables?” puede responderse con una proyección. “Asignar la 412” es un comando. Mezclar ambas funciones crea operaciones que parecen lectura y producen efectos.",
       "source_id": "src-0050"
     },
     {
@@ -276,7 +276,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "Un evento es una afirmación estructurada. La evidencia permite evaluar esa afirmación. Puede incluir una firma, un documento, una lectura de sensor, un registro técnico, una observación, una aprobación o una combinación.",
+      "text": "En simple, con un ejemplo: Un evento es una afirmación estructurada. La evidencia permite evaluar esa afirmación. Puede incluir una firma, un documento, una lectura de sensor, un registro técnico, una observación, una aprobación o una combinación.",
       "source_id": "src-0055"
     },
     {
@@ -301,7 +301,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "La autoridad es la capacidad reconocida para ordenar, validar o asumir una decisión dentro de un sistema social. Puede estar distribuida entre personas, áreas, normas, contratos y componentes. Un permiso técnico implementa parte de esa capacidad, pero no la define por completo.",
+      "text": "En simple, con un ejemplo: La autoridad es la capacidad reconocida para ordenar, validar o asumir una decisión dentro de un sistema social. Puede estar distribuida entre personas, áreas, normas, contratos y componentes. Un permiso técnico implementa parte de esa capacidad, pero no la define por completo.",
       "source_id": "src-0060"
     },
     {
@@ -326,12 +326,12 @@
     },
     {
       "kind": "paragraph",
-      "text": "Una transición verificable conecta situación previa, comando, evaluación, evento, estado resultante, evidencia y autoridad. No todas las transiciones contienen cada pieza como objeto separado, pero el razonamiento debe poder reconstruirse.",
+      "text": "En simple: Una transición verificable conecta situación previa, comando, evaluación, evento, estado resultante, evidencia y autoridad. No todas las transiciones contienen cada pieza como objeto separado, pero el razonamiento debe poder reconstruirse.",
       "source_id": "src-0065"
     },
     {
       "kind": "paragraph",
-      "text": "Considérese “asignar habitación”. Estado previo: reserva confirmada, identidad validada, habitación inspeccionada y accesible. Comando: asignar la 412 a la reserva R73. Autoridad: Recepción dentro de su turno y bajo reglas de categoría. Evaluación: no existe otra asignación vigente y la habitación cumple condiciones. Evento: asignación aceptada. Estado: habitación 412 asignada a R73. Evidencia: identificadores, reglas, tiempos y actor. Reparación: si la cerradura falla, reasignar sin borrar la historia.",
+      "text": "Ejemplo cercano: Considérese “asignar habitación”. Estado previo: reserva confirmada, identidad validada, habitación inspeccionada y accesible. Comando: asignar la 412 a la reserva R73. Autoridad: Recepción dentro de su turno y bajo reglas de categoría. Evaluación: no existe otra asignación vigente y la habitación cumple condiciones. Evento: asignación aceptada. Estado: habitación 412 asignada a R73. Evidencia: identificadores, reglas, tiempos y actor. Reparación: si la cerradura falla, reasignar sin borrar la historia.",
       "source_id": "src-0066"
     },
     {
@@ -436,12 +436,12 @@
     },
     {
       "kind": "paragraph",
-      "text": "Una transición posee al menos tres tiempos. **Tiempo del fenómeno:** cuándo ocurrió en el mundo. **Tiempo de registro:** cuándo una fuente lo capturó. **Tiempo de conocimiento:** cuándo estuvo disponible para quien debía decidir.",
+      "text": "En simple: Una transición posee al menos tres tiempos. **Tiempo del fenómeno:** cuándo ocurrió en el mundo. **Tiempo de registro:** cuándo una fuente lo capturó. **Tiempo de conocimiento:** cuándo estuvo disponible para quien debía decidir.",
       "source_id": "src-0087"
     },
     {
       "kind": "paragraph",
-      "text": "Housekeeping termina a las 13:42, registra a las 13:47 y el PMS recibe a las 14:03. Si se estudia productividad, interesa el primer tiempo. Si se audita la asignación de Lucía a las 14:00, importa qué información estaba disponible entonces. Reemplazar todas las marcas por la hora de sincronización reescribe la historia.",
+      "text": "Ejemplo cercano: Housekeeping termina a las 13:42, registra a las 13:47 y el PMS recibe a las 14:03. Si se estudia productividad, interesa el primer tiempo. Si se audita la asignación de Lucía a las 14:00, importa qué información estaba disponible entonces. Reemplazar todas las marcas por la hora de sincronización reescribe la historia.",
       "source_id": "src-0088"
     },
     {
@@ -461,7 +461,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "Un sistema puede registrar todos los mensajes y no poder reconstruir una historia. La correlación vincula comandos, resultados, eventos y reparaciones de un mismo episodio mediante identificadores estables.",
+      "text": "En simple, con un ejemplo: Un sistema puede registrar todos los mensajes y no poder reconstruir una historia. La correlación vincula comandos, resultados, eventos y reparaciones de un mismo episodio mediante identificadores estables.",
       "source_id": "src-0092"
     },
     {
@@ -486,7 +486,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "Los nombres genéricos trasladan significado fuera del mensaje. `RoomUpdated`, `StatusChanged` o “registro procesado” dicen que algo cambió sin explicar qué. Los consumidores deben interpretar campos y terminan construyendo semánticas incompatibles.",
+      "text": "En simple, con un ejemplo: Los nombres genéricos trasladan significado fuera del mensaje. `RoomUpdated`, `StatusChanged` o “registro procesado” dicen que algo cambió sin explicar qué. Los consumidores deben interpretar campos y terminan construyendo semánticas incompatibles.",
       "source_id": "src-0097"
     },
     {
@@ -516,7 +516,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "El mismo conjunto de eventos puede alimentar varias vistas. Recepción necesita habitaciones asignables ahora. Dirección puede analizar tiempos de preparación. Mantenimiento necesita fallas de cerradura. No existe obligación de imponer una tabla única para todos.",
+      "text": "En simple, con un ejemplo: El mismo conjunto de eventos puede alimentar varias vistas. Recepción necesita habitaciones asignables ahora. Dirección puede analizar tiempos de preparación. Mantenimiento necesita fallas de cerradura. No existe obligación de imponer una tabla única para todos.",
       "source_id": "src-0103"
     },
     {
@@ -541,12 +541,12 @@
     },
     {
       "kind": "paragraph",
-      "text": "Los eventos pueden contener errores. Corregir no significa borrar silenciosamente. Una **rectificación** afirma que un dato anterior fue incorrecto y presenta el valor corregido. Una **retractación** retira una afirmación sin necesariamente reemplazarla. Una **compensación** produce una acción que contrarresta efectos, aunque no haga desaparecer lo ocurrido.",
+      "text": "En simple: Los eventos pueden contener errores. Corregir no significa borrar silenciosamente. Una **rectificación** afirma que un dato anterior fue incorrecto y presenta el valor corregido. Una **retractación** retira una afirmación sin necesariamente reemplazarla. Una **compensación** produce una acción que contrarresta efectos, aunque no haga desaparecer lo ocurrido.",
       "source_id": "src-0108"
     },
     {
       "kind": "paragraph",
-      "text": "Si una reserva fue cancelada por error y luego restaurada, el sistema no volvió exactamente al punto inicial. Pudo enviar correos, liberar inventario o generar angustia. Registrar sólo “confirmada” oculta consecuencias. El diseño necesita distinguir estado final de historia reparada.",
+      "text": "Ejemplo cercano: Si una reserva fue cancelada por error y luego restaurada, el sistema no volvió exactamente al punto inicial. Pudo enviar correos, liberar inventario o generar angustia. Registrar sólo “confirmada” oculta consecuencias. El diseño necesita distinguir estado final de historia reparada.",
       "source_id": "src-0109"
     },
     {
@@ -571,12 +571,12 @@
     },
     {
       "kind": "paragraph",
-      "text": "Un registro de auditoría conserva acciones o cambios según una política. Puede ser evidencia, pero su existencia no garantiza suficiencia. Si registra usuario y hora sin motivo, regla ni resultado, permite saber quién tocó un campo y no por qué la decisión era válida.",
+      "text": "En simple: Un registro de auditoría conserva acciones o cambios según una política. Puede ser evidencia, pero su existencia no garantiza suficiencia. Si registra usuario y hora sin motivo, regla ni resultado, permite saber quién tocó un campo y no por qué la decisión era válida.",
       "source_id": "src-0114"
     },
     {
       "kind": "paragraph",
-      "text": "También puede ser manipulado, incompleto o inaccesible para quien debe investigar. Un sistema seguro necesita controles de integridad, acceso, retención y separación de funciones. Un sistema justo necesita además que las personas afectadas puedan conocer y cuestionar decisiones cuando corresponda.",
+      "text": "Ejemplo cercano: También puede ser manipulado, incompleto o inaccesible para quien debe investigar. Un sistema seguro necesita controles de integridad, acceso, retención y separación de funciones. Un sistema justo necesita además que las personas afectadas puedan conocer y cuestionar decisiones cuando corresponda.",
       "source_id": "src-0115"
     },
     {
@@ -601,7 +601,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "En organizaciones reales, ninguna aplicación posee toda la autoridad. Comercial puede prometer una categoría. Housekeeping declara trabajo terminado. Supervisión aprueba condiciones. Recepción asigna. Seguridad gestiona acceso. Finanzas decide ciertas devoluciones. La transición completa cruza responsabilidades.",
+      "text": "En simple, con un ejemplo: En organizaciones reales, ninguna aplicación posee toda la autoridad. Comercial puede prometer una categoría. Housekeeping declara trabajo terminado. Supervisión aprueba condiciones. Recepción asigna. Seguridad gestiona acceso. Finanzas decide ciertas devoluciones. La transición completa cruza responsabilidades.",
       "source_id": "src-0120"
     },
     {
@@ -626,7 +626,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "En 2026, un asistente puede leer mensajes, completar formularios, recomendar una habitación o emitir comandos a otros sistemas. La palabra “agente” describe capacidad técnica, no autoridad institucional. Se debe decidir qué puede observar, proponer, ejecutar, revertir y escalar.",
+      "text": "En simple, con un ejemplo: En 2026, un asistente puede leer mensajes, completar formularios, recomendar una habitación o emitir comandos a otros sistemas. La palabra “agente” describe capacidad técnica, no autoridad institucional. Se debe decidir qué puede observar, proponer, ejecutar, revertir y escalar.",
       "source_id": "src-0125"
     },
     {
@@ -781,12 +781,12 @@
     },
     {
       "kind": "paragraph",
-      "text": "Cada transición atraviesa tres preguntas. ¿El nombre describe lo que realmente ocurrió? ¿La regla utiliza condiciones suficientes para ese nombre? ¿El efecto posterior corresponde a la autoridad que aceptó el comando?",
+      "text": "En simple: Cada transición atraviesa tres preguntas. ¿El nombre describe lo que realmente ocurrió? ¿La regla utiliza condiciones suficientes para ese nombre? ¿El efecto posterior corresponde a la autoridad que aceptó el comando?",
       "source_id": "src-0156"
     },
     {
       "kind": "paragraph",
-      "text": "Si el evento se llama “Habitación entregable”, pero sólo valida limpieza, el nombre excede la regla. Si la regla consulta cerradura y asignación, pero cualquier cuenta puede aceptarla, el efecto excede la autoridad. Si la autoridad es correcta, pero el estado visible no se actualiza a tiempo, la promesa excede el conocimiento disponible.",
+      "text": "Ejemplo cercano: Si el evento se llama “Habitación entregable”, pero sólo valida limpieza, el nombre excede la regla. Si la regla consulta cerradura y asignación, pero cualquier cuenta puede aceptarla, el efecto excede la autoridad. Si la autoridad es correcta, pero el estado visible no se actualiza a tiempo, la promesa excede el conocimiento disponible.",
       "source_id": "src-0157"
     },
     {
@@ -841,7 +841,7 @@
     },
     {
       "kind": "paragraph",
-      "text": "Una condición evalúa si un comando puede aceptarse. Una invariante expresa algo que debe mantenerse a través de transiciones. “Una habitación no puede estar asignada a dos reservas vigentes” es una invariante. “La batería debe superar cierto umbral para emitir acceso” es una condición.",
+      "text": "En simple, con un ejemplo: Una condición evalúa si un comando puede aceptarse. Una invariante expresa algo que debe mantenerse a través de transiciones. “Una habitación no puede estar asignada a dos reservas vigentes” es una invariante. “La batería debe superar cierto umbral para emitir acceso” es una condición.",
       "source_id": "src-0168"
     },
     {

@@ -118,7 +118,7 @@ La frontera inicial debe ser lo bastante pequeña para aprender y lo bastante re
 
 ### Capacidad
 
-Una capacidad es la posibilidad sostenida de lograr un resultado bajo condiciones definidas. Incluye personas, reglas, datos, tecnología, operación y reparación, no sólo una función disponible.
+En simple, con un ejemplo: Una capacidad es la posibilidad sostenida de lograr un resultado bajo condiciones definidas. Incluye personas, reglas, datos, tecnología, operación y reparación, no sólo una función disponible.
 
 Se demuestra mediante uso sobre un episodio y una población. El entregable puede estar completo mientras la capacidad no existe si faltan autoridad, soporte o manejo de excepciones.
 
@@ -132,9 +132,9 @@ En este núcleo, capacidad significa aptitud sociotécnica para lograr un result
 
 ### Corte vertical
 
-Un corte vertical, también llamado *vertical slice* en la bibliografía profesional, es un corte mínimo que atraviesa las capas necesarias para producir capacidad observable. Su frontera sigue un episodio de valor y no la estructura de especialidades.
+En simple: Un corte vertical, también llamado *vertical slice* en la bibliografía profesional, es un corte mínimo que atraviesa las capas necesarias para producir capacidad observable. Su frontera sigue un episodio de valor y no la estructura de especialidades.
 
-Puede incluir interfaz, reglas, datos, integración y trabajo humano en una versión limitada. La calidad y la protección no se difieren si son necesarias para usar el corte.
+Ejemplo cercano: Puede incluir interfaz, reglas, datos, integración y trabajo humano en una versión limitada. La calidad y la protección no se difieren si son necesarias para usar el corte.
 
 La llegada anticipada con habitación accesible constituye un slice sólo cuando puede completarse de punta a punta.
 
@@ -144,11 +144,11 @@ El corte debe conservar calidad proporcional al riesgo. La población limitada r
 
 ### Corte por aprendizaje
 
-Un corte por aprendizaje maximiza información útil para una decisión con exposición limitada. Se elige por la incertidumbre que reduce, no por ser la tarea más sencilla.
+En simple: Un corte por aprendizaje maximiza información útil para una decisión con exposición limitada. Se elige por la incertidumbre que reduce, no por ser la tarea más sencilla.
 
 La hipótesis, la señal y la decisión posterior se declaran antes. El corte puede ser técnico, operacional o manual si permite distinguir alternativas relevantes.
 
-HH-23 prioriza observar la incompatibilidad semántica de “liberada” porque reconocerla cambia la secuencia y evita escalar una promesa falsa. El corte crea una proyección provisoria para aprender, pero no declara resuelto el contrato entre productores y consumidores.
+Ejemplo cercano: HH-23 prioriza observar la incompatibilidad semántica de “liberada” porque reconocerla cambia la secuencia y evita escalar una promesa falsa. El corte crea una proyección provisoria para aprender, pero no declara resuelto el contrato entre productores y consumidores.
 
 La selección por aprendizaje compara valor de información y costo de exposición. Una incertidumbre puede ser importante y requerir una prueba demasiado riesgosa. En ese caso se buscan simulaciones, datos históricos, recorridos manuales o ambientes controlados. El objetivo no es aprender a cualquier precio, sino obtener evidencia suficiente para una decisión proporcional.
 
@@ -156,13 +156,13 @@ El resultado de aprendizaje se redacta antes: después del corte, debería poder
 
 ### Corte por outcome
 
-Un corte por outcome reúne lo necesario para cambiar una condición en una población definida. Evita producir piezas terminadas que todavía no modifican la experiencia ni la capacidad de decidir.
+En simple: Un corte por outcome reúne lo necesario para cambiar una condición en una población definida. Evita producir piezas terminadas que todavía no modifican la experiencia ni la capacidad de decidir.
 
 El outcome puede ser pequeño, pero debe ser real y medible sin trasladar daño. La población excluida y la vía alternativa quedan explícitas.
 
 Reducir reasignaciones para llegadas anticipadas accesibles es un corte por outcome; habilitar un nuevo campo no lo es.
 
-Un resultado pequeño no debe confundirse con una mejora local. Puede abarcar una población reducida y mantener la trayectoria completa. La pregunta es si la condición cambia para esa población, no si el equipo redujo el tamaño de sus tareas.
+Ejemplo cercano: Un resultado pequeño no debe confundirse con una mejora local. Puede abarcar una población reducida y mantener la trayectoria completa. La pregunta es si la condición cambia para esa población, no si el equipo redujo el tamaño de sus tareas.
 
 El corte también registra consecuencias desplazadas. Una reasignación puede bajar porque Housekeeping absorbe más verificaciones manuales. El resultado se considera completo sólo si incluye esfuerzo, demora y riesgo transferidos hacia quienes sostienen la capacidad.
 
@@ -178,11 +178,11 @@ La seguridad y la accesibilidad ingresan como propiedades de la capacidad, no co
 
 ### Integración temprana
 
-La integración temprana confronta contratos, datos y prácticas antes de que el costo de cambio se acumule. No exige terminar todo, sino probar pronto la relación más riesgosa.
+En simple: La integración temprana confronta contratos, datos y prácticas antes de que el costo de cambio se acumule. No exige terminar todo, sino probar pronto la relación más riesgosa.
 
 Incluye significado, temporalidad, autoridad y respuesta ante fallas, además de conectividad. La evidencia de un caso feliz no alcanza si la excepción define el problema.
 
-En el hotel, cerradura, sistema de gestión hotelera (PMS) y Recepción se integran sobre una llegada real antes de expandir interfaces o automatizaciones.
+Ejemplo cercano: En el hotel, cerradura, sistema de gestión hotelera (PMS) y Recepción se integran sobre una llegada real antes de expandir interfaces o automatizaciones.
 
 La integración incluye el error. El equipo fuerza un evento tardío, una cerradura sin respuesta y una discrepancia de accesibilidad. Cada falla debe conducir a un estado comprensible y una ruta operativa. Probar sólo disponibilidad técnica deja sin evidencia la condición que más importa durante una llegada.
 
@@ -194,11 +194,11 @@ HH-23 registra cada corte con versión, población, alcance, resultado y conting
 
 ### Esqueleto operable
 
-Un esqueleto operable, conocido como *walking skeleton*, es una trayectoria mínima ejecutable que conecta las partes esenciales del sistema. Sirve para revelar supuestos de integración y operación desde el comienzo.
+En simple: Un esqueleto operable, conocido como *walking skeleton*, es una trayectoria mínima ejecutable que conecta las partes esenciales del sistema. Sirve para revelar supuestos de integración y operación desde el comienzo.
 
 Puede ser austero en alcance, pero debe atravesar una ruta completa, producir observabilidad y admitir recuperación. No es una maqueta que simula dependencias críticas.
 
-HH-23 lo usa para comprobar una confirmación de habitación con datos reales y reversión, antes de construir variantes.
+Ejemplo cercano: HH-23 lo usa para comprobar una confirmación de habitación con datos reales y reversión, antes de construir variantes.
 
 El esqueleto debe mantenerse ejecutable mientras crece. Cada nuevo corte amplía una trayectoria y conserva pruebas sobre lo anterior. Si una versión requiere desactivar la ruta previa durante semanas, el sistema pierde capacidad de aprender incrementalmente.
 
@@ -206,7 +206,7 @@ Su austeridad está en la variedad, la interfaz o el grado de automatización, n
 
 ### Producto mínimo viable
 
-Un producto mínimo viable es un dispositivo para probar una hipótesis de valor y uso con el menor compromiso defendible. “Mínimo” no autoriza baja calidad ni omisión de derechos.
+En simple, con un ejemplo: Un producto mínimo viable es un dispositivo para probar una hipótesis de valor y uso con el menor compromiso defendible. “Mínimo” no autoriza baja calidad ni omisión de derechos.
 
 Debe permitir una decisión y limitar población, duración y daño. Si la hipótesis puede probarse manualmente, construir software adicional puede ser desperdicio.
 
@@ -218,7 +218,7 @@ Una intervención manual puede ser preferible si reproduce el mecanismo relevant
 
 ### Bandera de activación y exposición
 
-Una bandera de activación, conocida como *feature flag*, separa despliegue técnico de disponibilidad para poblaciones concretas. Permite aumentar o retirar exposición sin confundir el estado del código con el estado del servicio.
+En simple, con un ejemplo: Una bandera de activación, conocida como *feature flag*, separa despliegue técnico de disponibilidad para poblaciones concretas. Permite aumentar o retirar exposición sin confundir el estado del código con el estado del servicio.
 
 Cada bandera necesita dueño, combinaciones probadas, monitoreo y fecha de retiro. Acumularlas crea estados que amplían deuda y riesgo.
 
@@ -240,11 +240,11 @@ La expansión no sigue una escalera automática. Puede aumentar volumen con la m
 
 ### Definición de terminado orientada a capacidad
 
-Terminado significa que el corte puede usarse, observarse, sostenerse y repararse dentro de su alcance. Las pruebas técnicas son necesarias, pero no suficientes.
+En simple: Terminado significa que el corte puede usarse, observarse, sostenerse y repararse dentro de su alcance. Las pruebas técnicas son necesarias, pero no suficientes.
 
 La definición incluye datos, permisos, operación, accesibilidad, monitoreo, documentación y contingencia pertinentes al riesgo. Cada excepción excluida conserva una salida segura.
 
-Una demostración exitosa no cierra HH-23 si el turno nocturno todavía necesita al equipo creador para resolver una discrepancia.
+Ejemplo cercano: Una demostración exitosa no cierra HH-23 si el turno nocturno todavía necesita al equipo creador para resolver una discrepancia.
 
 La definición incluye evidencia de aprendizaje transferido. La persona que recibe la capacidad debe poder explicar estados, reconocer una excepción y ejecutar la ruta de contingencia. Una capacitación realizada no demuestra esa posibilidad; un episodio resuelto sí aporta evidencia.
 
@@ -272,9 +272,9 @@ La aceptación conserva alcance y vigencia. Cinco episodios consecutivos no prue
 
 ### Deuda de integración
 
-La deuda de integración es trabajo y riesgo diferidos al separar componentes que deberán funcionar juntos. Crece cuando contratos y datos evolucionan sin confrontarse.
+En simple: La deuda de integración es trabajo y riesgo diferidos al separar componentes que deberán funcionar juntos. Crece cuando contratos y datos evolucionan sin confrontarse.
 
-No se observa sólo en código: conciliación manual, ambientes divergentes y decisiones tardías también acumulan interés. El registro identifica quién paga y cuándo puede activarse.
+Ejemplo cercano: No se observa sólo en código: conciliación manual, ambientes divergentes y decisiones tardías también acumulan interés. El registro identifica quién paga y cuándo puede activarse.
 
 Postergar la relación entre PMS y cerraduras puede hacer parecer productivos a ambos equipos mientras vuelve más incierta la promesa completa.
 
@@ -284,9 +284,9 @@ Existe también deuda de operación. Alertas que sólo entiende un especialista,
 
 ### Secuencia de slices
 
-La secuencia ordena cortes por aprendizaje, outcome, dependencia y protección. No es una lista de funcionalidades pequeñas ni una división uniforme del alcance.
+En simple: La secuencia ordena cortes por aprendizaje, outcome, dependencia y protección. No es una lista de funcionalidades pequeñas ni una división uniforme del alcance.
 
-Cada slice utiliza evidencia del anterior y debe preservar una trayectoria operativa. La secuencia puede cambiar si aparece una incertidumbre más peligrosa, pero registra la razón.
+Ejemplo cercano: Cada slice utiliza evidencia del anterior y debe preservar una trayectoria operativa. La secuencia puede cambiar si aparece una incertidumbre más peligrosa, pero registra la razón.
 
 HH-23 avanza desde una llegada limitada hacia más turnos y casos sólo después de probar integración, excepción y reparación.
 
@@ -306,11 +306,11 @@ Cada corte registra una conclusión limitada. El primero puede sostener que la t
 
 ### Expansión
 
-Expandir aumenta población, volumen o compromiso después de demostrar capacidad en el alcance anterior. No es una consecuencia automática de desplegar ni de cumplir una fecha.
+En simple: Expandir aumenta población, volumen o compromiso después de demostrar capacidad en el alcance anterior. No es una consecuencia automática de desplegar ni de cumplir una fecha.
 
 La escala puede alterar variabilidad, autoridad, costo y distribución de daños. Cada paso revalida mecanismo, salvaguardas y capacidad operacional.
 
-El hotel amplía la regla sólo si el nuevo turno puede observar y revertir con el mismo nivel de protección que el piloto.
+Ejemplo cercano: El hotel amplía la regla sólo si el nuevo turno puede observar y revertir con el mismo nivel de protección que el piloto.
 
 La evidencia necesaria crece con la consecuencia. Aumentar diez casos en el mismo turno puede requerir observar capacidad y tiempos. Incorporar un canal cuyos datos tienen otra semántica requiere revalidar el mecanismo. Eliminar revisión humana exige evidencia sobre errores, explicación y reparación. La palabra escala no debe ocultar qué dimensión cambia.
 

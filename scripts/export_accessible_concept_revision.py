@@ -15,12 +15,14 @@ import export_pdfs
 import finalize_and_qa
 import finalize_block_c_pdfs
 
-TOUCHED = (0, 1, 2, 3, 4, 6, 7, 10, 13, 14, 15, 16, 18, 21, 24)
+TOUCHED = tuple(range(37))
 PACKAGES = {
     0: ("N00-v3-final", "v3"), 1: ("N01-v18-final", "v18"),
     2: ("N02-v15-final", "v15"), 3: ("N03-v10-final", "v10"),
-    4: ("N04-v9-final", "v9"), 6: ("N06-v10-final", "v10"),
-    7: ("N07-v10-final", "v10"), 10: ("N10-v9-final", "v9"),
+    4: ("N04-v9-final", "v9"), 5: ("N05-v10-final", "v10"),
+    6: ("N06-v10-final", "v10"), 7: ("N07-v10-final", "v10"),
+    8: ("N08-v10-final", "v10"), 9: ("N09-v10-final", "v10"),
+    10: ("N10-v9-final", "v9"),
 }
 
 

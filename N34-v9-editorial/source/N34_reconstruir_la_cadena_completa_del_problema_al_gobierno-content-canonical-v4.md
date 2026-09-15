@@ -84,9 +84,9 @@ David Snowden distingue situaciones causales de situaciones complejas y ayuda a 
 
 ### Cadena de intervención
 
-La cadena de intervención une una situación observada con la forma de entenderla, la decisión tomada, la acción realizada, la consecuencia y la revisión posterior. No es un cronograma ni una lista de entregables. Sirve para explicar por qué cada paso parecía razonable con la evidencia disponible y qué dato podría cambiarlo.
+En simple: La cadena de intervención une una situación observada con la forma de entenderla, la decisión tomada, la acción realizada, la consecuencia y la revisión posterior. No es un cronograma ni una lista de entregables. Sirve para explicar por qué cada paso parecía razonable con la evidencia disponible y qué dato podría cambiarlo.
 
-En Hotel Horizonte, la promesa al huésped conecta todas las piezas. Una demora observada se interpreta como conflicto entre estados, conduce a delimitar una capacidad de integración y termina en reglas de reserva, operación y reparación. Si el expediente salta del problema a la solución técnica, no permite saber por qué esa arquitectura responde al episodio ni quién asumió sus efectos.
+Ejemplo cercano: En Hotel Horizonte, la promesa al huésped conecta todas las piezas. Una demora observada se interpreta como conflicto entre estados, conduce a delimitar una capacidad de integración y termina en reglas de reserva, operación y reparación. Si el expediente salta del problema a la solución técnica, no permite saber por qué esa arquitectura responde al episodio ni quién asumió sus efectos.
 
 Reconstruir la cadena exige conservar alternativas descartadas y decisiones reversibles. Cada enlace debe tener evidencia, autoridad y una condición de revisión. Cuando aparece una contradicción, no se reescribe el pasado para producir continuidad aparente: se identifica qué supuesto dejó de sostenerse y qué parte de la intervención necesita cambiar.
 
@@ -94,9 +94,9 @@ La cadena no siempre es lineal. Una prueba puede obligar a revisar el problema; 
 
 ### Trazabilidad argumental
 
-La trazabilidad del argumento permite seguir una afirmación hasta su evidencia, entender por qué esa evidencia la sostiene y saber qué decisión autoriza. No hace falta rastrear cada frase ni guardar todos los vínculos posibles. Importa lo que puede cambiar una decisión.
+En simple: La trazabilidad del argumento permite seguir una afirmación hasta su evidencia, entender por qué esa evidencia la sostiene y saber qué decisión autoriza. No hace falta rastrear cada frase ni guardar todos los vínculos posibles. Importa lo que puede cambiar una decisión.
 
-La tesis del hotel se vincula con episodios, registros y decisiones. La afirmación de que dos áreas usan significados incompatibles para «liberada» se apoya en conversaciones, estados del PMS y una reserva concreta. La garantía explica por qué esa divergencia produce una promesa incumplible. El registro identifica además quién puede redefinir el contrato semántico.
+Ejemplo cercano: La tesis del hotel se vincula con episodios, registros y decisiones. La afirmación de que dos áreas usan significados incompatibles para «liberada» se apoya en conversaciones, estados del PMS y una reserva concreta. La garantía explica por qué esa divergencia produce una promesa incumplible. El registro identifica además quién puede redefinir el contrato semántico.
 
 Una traza útil admite cuestionamiento. Otra persona debe poder localizar la fuente, conocer su vigencia y proponer una explicación rival. Si un enlace depende de la memoria de Federico Müller o de una reunión no documentada, la cadena es frágil. La trazabilidad termina donde la evidencia ya no cambia la decisión y ese límite también se declara.
 
@@ -116,9 +116,9 @@ Una revisión adversa toma la mejor explicación rival y recorre qué fuente la 
 
 ### Coherencia vertical
 
-La coherencia vertical alinea el problema profesional, el resultado esperado, las medidas y las decisiones en distintos niveles. No requiere que Dirección, Operaciones y Tecnología usen la misma métrica, sino que pueda explicarse cómo cada indicador contribuye a juzgar una consecuencia común.
+En simple: La coherencia vertical alinea el problema profesional, el resultado esperado, las medidas y las decisiones en distintos niveles. No requiere que Dirección, Operaciones y Tecnología usen la misma métrica, sino que pueda explicarse cómo cada indicador contribuye a juzgar una consecuencia común.
 
-En Hotel Horizonte, la demora observada se conecta con una capacidad y con un objetivo de nivel de servicio (SLO). El tiempo técnico de respuesta sólo adquiere sentido si se relaciona con una habitación efectivamente entregable y con la experiencia del huésped. El porcentaje de componentes completos puede estar verde mientras la promesa de llegada sigue fallando.
+Ejemplo cercano: En Hotel Horizonte, la demora observada se conecta con una capacidad y con un objetivo de nivel de servicio (SLO). El tiempo técnico de respuesta sólo adquiere sentido si se relaciona con una habitación efectivamente entregable y con la experiencia del huésped. El porcentaje de componentes completos puede estar verde mientras la promesa de llegada sigue fallando.
 
 La prueba vertical pregunta qué decisión cambiaría ante cada señal. Elena Acosta necesita evidencia para asignar inversión; Ricardo Sosa, para ajustar capacidad operativa; Federico, para intervenir sobre integración. Si una métrica mejora sin alterar el resultado esperado o no tiene un destinatario capaz de actuar, ocupa espacio en el tablero pero no integra la intervención.
 
@@ -126,7 +126,7 @@ La alineación se verifica en ambos sentidos. Desde la estrategia se pregunta qu
 
 ### Coherencia horizontal
 
-La coherencia horizontal verifica compatibilidad entre procesos, datos, tecnología, contratos e incentivos que operan en un mismo nivel. No equivale a uniformidad entre áreas. Dos equipos pueden conservar lenguajes y herramientas diferentes siempre que sus intercambios mantengan significado, oportunidad y responsabilidad.
+En simple, con un ejemplo: La coherencia horizontal verifica compatibilidad entre procesos, datos, tecnología, contratos e incentivos que operan en un mismo nivel. No equivale a uniformidad entre áreas. Dos equipos pueden conservar lenguajes y herramientas diferentes siempre que sus intercambios mantengan significado, oportunidad y responsabilidad.
 
 En el hotel, contrato, operación y reparación deben usar un estado compatible. Camila Duarte puede prometer una llegada temprana sólo si Mariela Benítez informa condiciones observables y Lucía Ferreyra dispone de autoridad para asignar o explicar una excepción. El PMS no resuelve por sí solo una contradicción entre esas reglas.
 
@@ -138,9 +138,9 @@ Cada frontera incluye un contrato, una expectativa y una capacidad de reparar. E
 
 ### Registro de supuestos
 
-Un registro de supuestos identifica premisas que sostienen una decisión, su evidencia, su responsable y la condición que obligaría a revisarlas. No es una lista genérica de riesgos. Un supuesto afirma que algo debe mantenerse verdadero para que el mecanismo elegido produzca el resultado esperado.
+En simple: Un registro de supuestos identifica premisas que sostienen una decisión, su evidencia, su responsable y la condición que obligaría a revisarlas. No es una lista genérica de riesgos. Un supuesto afirma que algo debe mantenerse verdadero para que el mecanismo elegido produzca el resultado esperado.
 
-La disponibilidad de Recepción se prueba durante el turno nocturno. El diseño podría asumir que siempre existe una persona capaz de revisar una excepción, que las cerraduras responden en línea o que Housekeeping actualiza el estado antes de cierta hora. Cada premisa se vincula con un episodio capaz de confirmarla o debilitarla.
+Ejemplo cercano: La disponibilidad de Recepción se prueba durante el turno nocturno. El diseño podría asumir que siempre existe una persona capaz de revisar una excepción, que las cerraduras responden en línea o que Housekeeping actualiza el estado antes de cierta hora. Cada premisa se vincula con un episodio capaz de confirmarla o debilitarla.
 
 Los supuestos cambian de estado: propuestos, contrastados, aceptados con límite o refutados. Una premisa crítica sin prueba reduce el compromiso admisible. Si la operación depende de conocimiento privado de Lucía, el expediente no lo disfraza como procedimiento estable; registra la dependencia y define capacitación, contingencia o menor alcance.
 
@@ -148,9 +148,9 @@ El registro evita frases inmunes a evidencia, como «el equipo acompañará» o 
 
 ### Registro de decisiones
 
-El registro de decisiones conserva el problema, las alternativas consideradas, la opción elegida, las razones, la autoridad, la fecha y las consecuencias previstas. Se diferencia de una minuta porque selecciona aquello que explica un compromiso. También documenta qué evidencia futura podría justificar adaptación o reversión.
+En simple: El registro de decisiones conserva el problema, las alternativas consideradas, la opción elegida, las razones, la autoridad, la fecha y las consecuencias previstas. Se diferencia de una minuta porque selecciona aquello que explica un compromiso. También documenta qué evidencia futura podría justificar adaptación o reversión.
 
-Hotel Horizonte registra por qué limita la autonomía del agente. La entrada compara borrador, recomendación y ejecución, describe los riesgos sobre inventario y compensación, y nombra a Elena como autoridad para aceptar el alcance. Federico conserva la configuración técnica y Ricardo valida la contingencia operacional.
+Ejemplo cercano: Hotel Horizonte registra por qué limita la autonomía del agente. La entrada compara borrador, recomendación y ejecución, describe los riesgos sobre inventario y compensación, y nombra a Elena como autoridad para aceptar el alcance. Federico conserva la configuración técnica y Ricardo valida la contingencia operacional.
 
 El registro evita tanto la amnesia como la falsa inevitabilidad. Una decisión puede haber sido razonable bajo otra población o política y dejar de serlo después. Mantener su contexto permite aprender sin culpar retrospectivamente. Si nadie puede explicar por qué se descartó una alternativa, el compromiso no está defendido aunque haya muchas actas.
 
@@ -158,7 +158,7 @@ Una entrada se escribe en el momento de decidir y se complementa, pero no se ree
 
 ### Arquitectura de evidencia
 
-La arquitectura de evidencia define qué fuentes sostienen cada afirmación y decisión, cómo se combinan, cuánto duran y quién puede examinarlas. No es un repositorio único ni una jerarquía universal de métodos. Diferentes preguntas requieren episodios, trazas, entrevistas, pruebas, documentos o métricas con funciones distintas.
+En simple, con un ejemplo: La arquitectura de evidencia define qué fuentes sostienen cada afirmación y decisión, cómo se combinan, cuánto duran y quién puede examinarlas. No es un repositorio único ni una jerarquía universal de métodos. Diferentes preguntas requieren episodios, trazas, entrevistas, pruebas, documentos o métricas con funciones distintas.
 
 En el hotel se triangulan entrevistas, registros técnicos y pruebas de operación. La voz de Lucía muestra trabajo invisible; las trazas reconstruyen estados; una reserva adversa prueba la contingencia. Ninguna fuente domina automáticamente: el registro técnico puede ser exacto y no registrar la excepción que definió la experiencia del huésped.
 
@@ -170,9 +170,9 @@ La arquitectura distingue fuentes primarias, derivadas y testimoniales sin impon
 
 ### Contradicción productiva
 
-Una contradicción productiva aparece cuando evidencias o actores sostienen descripciones incompatibles que revelan fronteras, supuestos o intereses distintos. No es un error que deba promediarse ni una equivalencia entre cualquier opinión y cualquier dato. Su productividad depende de convertir la divergencia en una pregunta contrastable.
+En simple: Una contradicción productiva aparece cuando evidencias o actores sostienen descripciones incompatibles que revelan fronteras, supuestos o intereses distintos. No es un error que deba promediarse ni una equivalencia entre cualquier opinión y cualquier dato. Su productividad depende de convertir la divergencia en una pregunta contrastable.
 
-Comercial y Recepción definen «liberada» de manera distinta. Para Camila, puede significar disponible para ofrecer; para Lucía, asignable con limpieza, cerradura y autoridad confirmadas. La discrepancia no se resuelve eligiendo quién tiene razón en abstracto, sino reconstruyendo el episodio y definiendo qué estado necesita cada promesa.
+Ejemplo cercano: Comercial y Recepción definen «liberada» de manera distinta. Para Camila, puede significar disponible para ofrecer; para Lucía, asignable con limpieza, cerradura y autoridad confirmadas. La discrepancia no se resuelve eligiendo quién tiene razón en abstracto, sino reconstruyendo el episodio y definiendo qué estado necesita cada promesa.
 
 Conservar la contradicción impide cerrar demasiado pronto. Se documentan las consecuencias de cada definición, la autoridad para acordar un contrato y la prueba que mostrará si funciona. Si el conflicto sólo refleja un dato incorrecto, se corrige; si expresa objetivos en tensión, la decisión debe reconocer el costo distribuido.
 
@@ -182,9 +182,9 @@ La contradicción se formula como dos afirmaciones completas con sus fuentes, no
 
 ### Puerta de integración
 
-Una puerta de integración comprueba suficiencia conjunta antes de ampliar un compromiso. No es una aprobación obtenida por cantidad de firmas ni la suma de componentes terminados. Reúne criterios de problema, valor, operación, tecnología, riesgo, evidencia y capacidad de reparación.
+En simple: Una puerta de integración comprueba suficiencia conjunta antes de ampliar un compromiso. No es una aprobación obtenida por cantidad de firmas ni la suma de componentes terminados. Reúne criterios de problema, valor, operación, tecnología, riesgo, evidencia y capacidad de reparación.
 
-El piloto de Hotel Horizonte avanza sólo si contrato, contingencia y señal cierran. La puerta exige que el estado de habitación tenga significado compartido, que una reserva adversa pueda repararse y que exista monitoreo con autoridad de respuesta. Cada criterio muestra evidencia actual y no una promesa de completarlo luego.
+Ejemplo cercano: El piloto de Hotel Horizonte avanza sólo si contrato, contingencia y señal cierran. La puerta exige que el estado de habitación tenga significado compartido, que una reserva adversa pueda repararse y que exista monitoreo con autoridad de respuesta. Cada criterio muestra evidencia actual y no una promesa de completarlo luego.
 
 La puerta puede aprobar, limitar, pedir nueva prueba o detener. Un resultado condicionado conserva alcance, fecha y responsable. Si una dimensión crítica falla, un buen promedio no compensa el defecto. El propósito es impedir que el entusiasmo de un área transforme piezas correctas en una intervención incoherente.
 
@@ -204,7 +204,7 @@ El resultado también vuelve sobre su propio diseño: un criterio que nunca alte
 
 ### Expediente mínimo defendible
 
-El expediente mínimo defendible contiene lo necesario para reconstruir, cuestionar y gobernar la intervención. No es el documento más corto ni una carpeta exhaustiva. Su suficiencia depende de las decisiones que otra audiencia deba comprender y de las consecuencias que podría necesitar reparar.
+En simple, con un ejemplo: El expediente mínimo defendible contiene lo necesario para reconstruir, cuestionar y gobernar la intervención. No es el documento más corto ni una carpeta exhaustiva. Su suficiencia depende de las decisiones que otra audiencia deba comprender y de las consecuencias que podría necesitar reparar.
 
 En HH-34 figuran la pregunta profesional, el episodio, la tesis, las alternativas, los supuestos, las decisiones, la arquitectura de evidencia, las pruebas y las condiciones de revisión. Una persona ajena al equipo puede recorrer la cadena sin pedir una explicación oral que complete saltos esenciales. Los anexos amplían evidencia, pero el argumento principal permanece visible.
 
@@ -214,9 +214,9 @@ El expediente utiliza capas. Una síntesis presenta la cadena, las decisiones y 
 
 ### Prueba de extremo a extremo
 
-La prueba de extremo a extremo sigue una promesa a través de fronteras organizacionales y técnicas hasta su consecuencia y reparación. Se diferencia de una prueba de integración que confirma intercambio entre componentes. Aquí importan actores, tiempos, autoridad y estados que el recorrido completo activa.
+En simple: La prueba de extremo a extremo sigue una promesa a través de fronteras organizacionales y técnicas hasta su consecuencia y reparación. Se diferencia de una prueba de integración que confirma intercambio entre componentes. Aquí importan actores, tiempos, autoridad y estados que el recorrido completo activa.
 
-Una reserva adversa atraviesa canal, hotel y reparación. El caso combina llegada anticipada, accesibilidad y un estado inconsistente. Se observa qué prometió Comercial, qué recibió el PMS, qué pudo confirmar Mariela, qué decidió Lucía y cómo Tecnología reconstruyó el episodio. La prueba termina cuando el huésped obtiene una respuesta operable, no cuando la API devuelve éxito.
+Ejemplo cercano: Una reserva adversa atraviesa canal, hotel y reparación. El caso combina llegada anticipada, accesibilidad y un estado inconsistente. Se observa qué prometió Comercial, qué recibió el PMS, qué pudo confirmar Mariela, qué decidió Lucía y cómo Tecnología reconstruyó el episodio. La prueba termina cuando el huésped obtiene una respuesta operable, no cuando la API devuelve éxito.
 
 El recorrido conserva tiempos y cambios de estado para localizar dónde aparece la primera divergencia y quién puede intervenir.
 
@@ -228,7 +228,7 @@ La repetición con otro turno comprueba que la capacidad no depende de conocimie
 
 ### Cierre con incertidumbre
 
-Cerrar con incertidumbre significa declarar qué se sabe, qué permanece abierto y quién seguirá observando. No equivale a certeza total ni a finalizar documentos. Una intervención profesional puede ser defendible con preguntas pendientes si su riesgo residual, su alcance y sus condiciones de revisión están explícitos.
+En simple, con un ejemplo: Cerrar con incertidumbre significa declarar qué se sabe, qué permanece abierto y quién seguirá observando. No equivale a certeza total ni a finalizar documentos. Una intervención profesional puede ser defendible con preguntas pendientes si su riesgo residual, su alcance y sus condiciones de revisión están explícitos.
 
 La operación del hotel acepta ciertas señales y dudas. La prueba muestra que el flujo ordinario mejora, pero quedan pocos casos de accesibilidad durante alta demanda. Elena autoriza un alcance limitado; Ricardo conserva contingencia; Lucía registra episodios; Federico revisa la evidencia en una fecha acordada.
 

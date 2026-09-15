@@ -69,7 +69,7 @@ Esta lectura cierra el Bloque 1. Su resultado no es una solución ni un conjunto
 
 ### Desde requerimientos hacia atrás
 
-La ingeniería de software exige que un requisito de calidad sea claro, verificable y trazable. ISO/IEC/IEEE 29148:2018 formaliza la ingeniería de requisitos y su vínculo con necesidades, restricciones y trazabilidad. SWEBOK V4 e ISO/IEC/IEEE 15288:2023 sitúan esa práctica dentro de un ciclo de vida más amplio. METSI conserva la exigencia, pero retrocede un paso: antes de perfeccionar el requisito pregunta qué problema lo vuelve necesario y qué evidencia justificaría invertir en él. La trazabilidad no debería comenzar en una historia de usuario; debería poder llegar hasta una situación, una población afectada y una decisión.
+En simple, con un ejemplo: La ingeniería de software exige que un requisito de calidad sea claro, verificable y trazable. ISO/IEC/IEEE 29148:2018 formaliza la ingeniería de requisitos y su vínculo con necesidades, restricciones y trazabilidad. SWEBOK V4 e ISO/IEC/IEEE 15288:2023 sitúan esa práctica dentro de un ciclo de vida más amplio. METSI conserva la exigencia, pero retrocede un paso: antes de perfeccionar el requisito pregunta qué problema lo vuelve necesario y qué evidencia justificaría invertir en él. La trazabilidad no debería comenzar en una historia de usuario; debería poder llegar hasta una situación, una población afectada y una decisión.
 
 “El sistema deberá responder consultas frecuentes mediante IA” puede verificarse técnicamente. Incluso podrían medirse precisión y latencia. Pero el requisito no explica por qué existen esas consultas. Tal vez la información esté dispersa; quizá las políticas sean contradictorias; puede que una parte de las personas no encuentre una vía de asistencia. Automatizar respuestas atacaría mecanismos distintos en cada caso y podría ocultar el último. La calidad formal del requisito no compensa la debilidad del encuadre.
 
@@ -77,7 +77,7 @@ El avance conceptual de esta lectura consiste entonces en ir desde requerimiento
 
 ### El pedido, el síntoma y el problema cumplen funciones distintas
 
-El pedido inicial contiene decisiones políticas y comerciales: reemplazar el PMS, lanzar una aplicación, incorporar un asistente conversacional. No es información inútil. Revela urgencia, presupuesto, expectativas, actores con autoridad y una narrativa de futuro. Pero no demuestra qué mecanismo produce la situación ni qué outcome debería priorizarse.
+En simple, con un ejemplo: El pedido inicial contiene decisiones políticas y comerciales: reemplazar el PMS, lanzar una aplicación, incorporar un asistente conversacional. No es información inútil. Revela urgencia, presupuesto, expectativas, actores con autoridad y una narrativa de futuro. Pero no demuestra qué mecanismo produce la situación ni qué outcome debería priorizarse.
 
 Un síntoma es una manifestación observable: sobreventas, espera, reseñas negativas, correcciones manuales. Puede medirse, pero no explica por qué ocurre. Llamar “problema” al síntoma suele inducir una respuesta simétrica: si hay demora, acelerar; si hay error, validar; si hay contactos, automatizar. Esa simetría es seductora porque transforma una observación en un requisito sin atravesar una explicación.
 
@@ -89,7 +89,7 @@ La solución es una intervención posible. Puede ser tecnológica, organizaciona
 
 ### Ejemplo operativo: una demora de check-in expresada de cuatro maneras
 
-Un tablero muestra una mediana de dieciocho minutos entre la llegada de una persona y la entrega de la habitación. En los episodios más lentos, el percentil 95, la demora supera los cuarenta y siete minutos. La organización podría presentar ese mismo conjunto de observaciones de cuatro maneras. Cada formulación es gramaticalmente correcta, pero no cumple la misma función profesional.
+En simple, con un ejemplo: Un tablero muestra una mediana de dieciocho minutos entre la llegada de una persona y la entrega de la habitación. En los episodios más lentos, el percentil 95, la demora supera los cuarenta y siete minutos. La organización podría presentar ese mismo conjunto de observaciones de cuatro maneras. Cada formulación es gramaticalmente correcta, pero no cumple la misma función profesional.
 
 **Pedido:** “Necesitamos automatizar el check-in”. La frase propone una dirección de acción. Puede condensar una intuición valiosa y hasta una restricción estratégica: quizá la dirección ya decidió ofrecer autoservicio. Sin embargo, todavía no explica qué parte de los dieciocho minutos resulta evitable, qué población se beneficiará ni qué condiciones debe sostener el hotel para que la automatización no traslade la espera a otra instancia.
 
@@ -105,7 +105,7 @@ Una prueba sencilla consiste en completar, antes de redactar requisitos, esta se
 
 ### La prueba de las primeras dos horas
 
-Una formulación se vuelve útil cuando cambia lo que el equipo hace al comenzar. Hotel Horizonte dispone de dos horas antes de una reunión con el proveedor. Si adopta el pedido como problema, utilizará ese tiempo para enumerar funciones del autoservicio: lectura de documentos, firma digital, asignación de habitación, emisión de llave y conexión con el PMS. El trabajo puede ser técnicamente competente, pero toda la evidencia quedará organizada alrededor de una solución que ya ingresó al análisis como conclusión.
+En simple, con un ejemplo: Una formulación se vuelve útil cuando cambia lo que el equipo hace al comenzar. Hotel Horizonte dispone de dos horas antes de una reunión con el proveedor. Si adopta el pedido como problema, utilizará ese tiempo para enumerar funciones del autoservicio: lectura de documentos, firma digital, asignación de habitación, emisión de llave y conexión con el PMS. El trabajo puede ser técnicamente competente, pero toda la evidencia quedará organizada alrededor de una solución que ya ingresó al análisis como conclusión.
 
 Si adopta el síntoma como problema, “el check-in demora demasiado”, probablemente comparará promedios, buscará pasos lentos y propondrá eliminar tareas. Ese enfoque permite hallar desperdicios reales, aunque corre el riesgo de tratar igual una espera producida por captura duplicada y otra causada por una excepción de identidad que exige cuidado. Reducir segundos no equivale necesariamente a reducir el tiempo hasta una decisión correcta.
 
@@ -119,7 +119,7 @@ Esta prueba también ayuda a decidir el siguiente nivel de inversión. Una seña
 
 ### Encuadrar es construir un argumento, no completar una plantilla
 
-Donald Schön y Martin Rein mostraron que los conflictos de política no se explican únicamente por intereses opuestos; también dependen de marcos diferentes que seleccionan hechos, mecanismos y criterios de éxito. En diseño, Kees Dorst describe el *framing* como la construcción de una relación entre una forma de comprender la situación y un principio de acción. Estas perspectivas ayudan a abandonar la idea de que el problema correcto espera ser descubierto como un objeto estable.
+En simple: Donald Schön y Martin Rein mostraron que los conflictos de política no se explican únicamente por intereses opuestos; también dependen de marcos diferentes que seleccionan hechos, mecanismos y criterios de éxito. En diseño, Kees Dorst describe el *framing* como la construcción de una relación entre una forma de comprender la situación y un principio de acción. Estas perspectivas ayudan a abandonar la idea de que el problema correcto espera ser descubierto como un objeto estable.
 
 Eso no vuelve equivalente cualquier formulación. Un encuadre puede ser más o menos defendible según:
 
@@ -130,7 +130,7 @@ Eso no vuelve equivalente cualquier formulación. Un encuadre puede ser más o m
 - la posibilidad de ser cuestionado;
 - la proporcionalidad entre alcance y decisión.
 
-El argumento puede representarse con cinco piezas. **Afirmación:** qué situación constituye el problema. **Evidencia:** qué episodios, datos y testimonios la sostienen. **Garantía:** por qué esa evidencia permite inferir el mecanismo. **Alternativas:** qué otras explicaciones siguen siendo plausibles. **Condición de revisión:** qué hallazgo cambiaría el encuadre. Esta estructura, inspirada en el modelo de argumentación de Toulmin, evita que una frase gane autoridad solo por su tono técnico.
+Ejemplo cercano: El argumento puede representarse con cinco piezas. **Afirmación:** qué situación constituye el problema. **Evidencia:** qué episodios, datos y testimonios la sostienen. **Garantía:** por qué esa evidencia permite inferir el mecanismo. **Alternativas:** qué otras explicaciones siguen siendo plausibles. **Condición de revisión:** qué hallazgo cambiaría el encuadre. Esta estructura, inspirada en el modelo de argumentación de Toulmin, evita que una frase gane autoridad solo por su tono técnico.
 
 Completar casilleros no garantiza el argumento. Un equipo puede escribir “causa: mala integración” sin demostrar causalidad; “usuario: huésped” sin reconocer personal afectado; “outcome: mejorar experiencia” sin criterio verificable. La plantilla sirve si obliga a discutir relaciones. Si se transforma en ceremonia, produce un problema administrativamente completo y epistemológicamente vacío.
 
@@ -140,7 +140,7 @@ Completar casilleros no garantiza el argumento. Un equipo puede escribir “caus
 
 #### 1. Latencia tecnológica
 
-**Afirmación:** las sobreventas y esperas se producen principalmente porque el inventario y los estados de habitación se propagan tarde entre PMS, channel manager y OTA.
+En simple, con un ejemplo: **Afirmación:** las sobreventas y esperas se producen principalmente porque el inventario y los estados de habitación se propagan tarde entre PMS, channel manager y OTA.
 
 **Evidencia esperable:** trazas con demoras superiores a la ventana de seguridad; discrepancias concentradas en integraciones o períodos específicos; reducción de incidentes al reconciliar o cerrar temporalmente ventas.
 
@@ -148,7 +148,7 @@ Completar casilleros no garantiza el argumento. Un equipo puede escribir “caus
 
 #### 2. Incompatibilidad semántica y de autoridad
 
-**Afirmación:** las áreas y sistemas emplean estados equivalentes solo en apariencia; nadie tiene una regla común y autoridad inequívoca para declarar cuándo una habitación es vendible, limpia, asignable o fuera de servicio.
+En simple, con un ejemplo: **Afirmación:** las áreas y sistemas emplean estados equivalentes solo en apariencia; nadie tiene una regla común y autoridad inequívoca para declarar cuándo una habitación es vendible, limpia, asignable o fuera de servicio.
 
 **Evidencia esperable:** casos con sistemas actualizados pero decisiones contradictorias; definiciones diferentes; correcciones que dependen de supervisión; conflictos recurrentes después de cambios manuales.
 
@@ -156,15 +156,15 @@ Completar casilleros no garantiza el argumento. Un equipo puede escribir “caus
 
 #### 3. Política comercial y capacidad de reparación
 
-**Afirmación:** la organización acepta sobreventa y promesas tempranas para optimizar ocupación, pero carece de capacidad y criterios para reparar cuando el supuesto de no-show falla.
+En simple: **Afirmación:** la organización acepta sobreventa y promesas tempranas para optimizar ocupación, pero carece de capacidad y criterios para reparar cuando el supuesto de no-show falla.
 
-**Evidencia esperable:** incidentes correlacionados con reglas de ocupación y no con fallas técnicas; decisiones comerciales explícitas; compensaciones variables; carga concentrada en ciertos turnos o sedes.
+Ejemplo cercano: **Evidencia esperable:** incidentes correlacionados con reglas de ocupación y no con fallas técnicas; decisiones comerciales explícitas; compensaciones variables; carga concentrada en ciertos turnos o sedes.
 
 **Intervenciones plausibles:** modificar política, segmentar riesgo, reservar capacidad de contingencia, mejorar detección y estandarizar reparación.
 
 #### 4. Trabajo de excepción invisibilizado
 
-**Afirmación:** el servicio estándar funciona, pero la experiencia se deteriora cuando aparecen necesidades de accesibilidad, reservas intermediadas, cambios tardíos o identidades ambiguas; el sistema fue diseñado para el caso modal y traslada la complejidad a huéspedes y personal.
+En simple, con un ejemplo: **Afirmación:** el servicio estándar funciona, pero la experiencia se deteriora cuando aparecen necesidades de accesibilidad, reservas intermediadas, cambios tardíos o identidades ambiguas; el sistema fue diseñado para el caso modal y traslada la complejidad a huéspedes y personal.
 
 **Evidencia esperable:** promedios aceptables con colas largas o daño concentrado; contactos repetidos; abandonos; intervenciones manuales no registradas; diferencias por canal, idioma o necesidad de asistencia.
 
@@ -182,7 +182,7 @@ El efecto práctico es inmediato. La reunión con el proveedor deja de comenzar 
 
 ### 2026: “se necesita IA” es un pedido, no un diagnóstico
 
-En 2026 muchas iniciativas llegan formuladas como una solución inevitable: “se necesita un copiloto”, “hay que automatizar con agentes”, “los competidores ya usan IA”. El pedido puede expresar una oportunidad real, presión del mercado o una decisión estratégica legítima. Pero sigue sin demostrar qué problema conviene resolver ni que la IA sea la alternativa de mayor valor.
+En simple, con un ejemplo: En 2026 muchas iniciativas llegan formuladas como una solución inevitable: “se necesita un copiloto”, “hay que automatizar con agentes”, “los competidores ya usan IA”. El pedido puede expresar una oportunidad real, presión del mercado o una decisión estratégica legítima. Pero sigue sin demostrar qué problema conviene resolver ni que la IA sea la alternativa de mayor valor.
 
 La evidencia reciente obliga a desconfiar tanto del rechazo automático como del entusiasmo sin encuadre. El informe DORA 2025 describe la IA aplicada al desarrollo de software como un amplificador de las capacidades y debilidades organizacionales existentes. El *Future of Jobs Report 2025* registra una expectativa amplia de transformación por IA y, a la vez, identifica las brechas de capacidades como una barrera central. Ambos datos apuntan a la misma pregunta metodológica: ¿qué sistema organizacional recibirá la tecnología y qué mecanismo se espera que cambie?
 
@@ -196,7 +196,7 @@ El encuadre contemporáneo también incluye la alternativa. Una búsqueda mejora
 
 ### Outcome: el cambio que importa, no la cosa que se entrega
 
-Un **output** es un producto de la intervención: nueva aplicación, integración, capacitación, tablero o procedimiento. Puede verificarse mediante entrega. Un **outcome** es un cambio en capacidad, conducta o condición relevante: menos promesas incumplidas, menor duración de discrepancias, reparación más rápida o menor carga desigual. El **impacto** refiere a consecuencias más amplias y de largo plazo, como confianza, sostenibilidad económica o inclusión. El **valor** expresa la importancia atribuida por actores y no puede reducirse siempre a una única métrica.
+En simple, con un ejemplo: Un **output** es un producto de la intervención: nueva aplicación, integración, capacitación, tablero o procedimiento. Puede verificarse mediante entrega. Un **outcome** es un cambio en capacidad, conducta o condición relevante: menos promesas incumplidas, menor duración de discrepancias, reparación más rápida o menor carga desigual. El **impacto** refiere a consecuencias más amplias y de largo plazo, como confianza, sostenibilidad económica o inclusión. El **valor** expresa la importancia atribuida por actores y no puede reducirse siempre a una única métrica.
 
 La distinción previene un error común: declarar éxito porque el proyecto produjo aquello que prometió, aunque la situación no mejore. Implementar un asistente conversacional es output. Reducir consultas repetidas sin aumentar acciones equivocadas, exclusión ni carga de escalamiento es outcome. Aumentar conversión puede ser valor comercial y deteriorar confiabilidad para huéspedes; el conflicto debe hacerse visible.
 
@@ -216,9 +216,9 @@ El outcome no reemplaza la teoría causal. Una métrica puede mejorar por tempor
 
 ### Protecciones y anti-outcomes: declarar qué éxito no autoriza
 
-Un encuadre puede orientar correctamente hacia un outcome y producir una intervención dañina si ignora cómo se obtiene. Reducir el tiempo de check-in expulsando casos complejos de la medición mejora el promedio. Disminuir contactos cerrando canales de ayuda mejora eficiencia aparente. Elevar ocupación mediante sobreventa aumenta ingreso esperado y también incumplimiento.
+En simple: Un encuadre puede orientar correctamente hacia un outcome y producir una intervención dañina si ignora cómo se obtiene. Reducir el tiempo de check-in expulsando casos complejos de la medición mejora el promedio. Disminuir contactos cerrando canales de ayuda mejora eficiencia aparente. Elevar ocupación mediante sobreventa aumenta ingreso esperado y también incumplimiento.
 
-Las **protecciones**, también denominadas *guardrails*, son condiciones que limitan una búsqueda de mejora. No son una lista genérica de valores. Deben conectarse con mecanismos de daño plausibles y contar con señales. Para el hotel pueden incluir: no aumentar reubicaciones involuntarias; no deteriorar accesibilidad; no incrementar correcciones después del check-in; no transferir trabajo no reconocido a Recepción; no ejecutar cambios sensibles sin identidad y autoridad suficientes.
+Ejemplo cercano: Las **protecciones**, también denominadas *guardrails*, son condiciones que limitan una búsqueda de mejora. No son una lista genérica de valores. Deben conectarse con mecanismos de daño plausibles y contar con señales. Para el hotel pueden incluir: no aumentar reubicaciones involuntarias; no deteriorar accesibilidad; no incrementar correcciones después del check-in; no transferir trabajo no reconocido a Recepción; no ejecutar cambios sensibles sin identidad y autoridad suficientes.
 
 Un **anti-outcome** nombra aquello que la intervención no debe producir: por ejemplo, menos espera visible a costa de más abandono silencioso. Formularlo obliga a imaginar cómo una métrica podría ser manipulada o cómo una solución desplazaría el problema. También ayuda a diseñar señales de equilibrio antes de que el equipo se enamore del resultado principal.
 
@@ -226,9 +226,9 @@ Los límites absolutos son poco realistas cuando toda opción tiene costo. “Ni
 
 ### Evidencia que puede cambiar el encuadre
 
-Un problema es revisable cuando declara de antemano qué observación sería incómoda. Esta condición combate el sesgo retrospectivo: sin ella, toda evidencia termina reinterpretada para sostener la hipótesis original.
+En simple: Un problema es revisable cuando declara de antemano qué observación sería incómoda. Esta condición combate el sesgo retrospectivo: sin ella, toda evidencia termina reinterpretada para sostener la hipótesis original.
 
-Para el encuadre de latencia tecnológica podría registrarse: “si la mayoría de episodios ocurre con estados ya sincronizados, se reducirá el peso de la integración y se examinarán semántica, autoridad o política”. Para el encuadre comercial: “si los incidentes no se concentran en ventanas de alta ocupación ni reglas de sobreventa, se revisará el mecanismo”. Para el de excepciones: “si la distribución por población y canal no muestra diferencias relevantes, se buscará otra fuente de variabilidad”.
+Ejemplo cercano: Para el encuadre de latencia tecnológica podría registrarse: “si la mayoría de episodios ocurre con estados ya sincronizados, se reducirá el peso de la integración y se examinarán semántica, autoridad o política”. Para el encuadre comercial: “si los incidentes no se concentran en ventanas de alta ocupación ni reglas de sobreventa, se revisará el mecanismo”. Para el de excepciones: “si la distribución por población y canal no muestra diferencias relevantes, se buscará otra fuente de variabilidad”.
 
 La evidencia suficiente depende de la decisión. No se necesita demostrar causalidad definitiva para decidir dos semanas de observación o una prueba piloto reversible. Sí se necesita evidencia mayor para firmar una migración irreversible, retirar un canal accesible o delegar cancelaciones a un agente. La calidad metodológica consiste en hacer proporcional el compromiso a la fuerza del argumento y al costo de equivocarse.
 
@@ -244,7 +244,7 @@ Las señales no prueban por sí solas el mecanismo. Una divergencia puede correl
 
 ### Quién formula el problema también forma parte del problema
 
-Encuadrar distribuye poder. La persona que define el fenómeno decide qué trabajo cuenta, qué daño aparece y qué opciones se consideran razonables. Si Dirección formula “baja adopción de autoservicio”, el personal puede aparecer como resistencia y el huésped como déficit de conducta. Si se formula “dificultad para completar tareas sin asistencia”, pueden emerger barreras de diseño, lenguaje o identidad. Ninguna redacción es inocente.
+En simple, con un ejemplo: Encuadrar distribuye poder. La persona que define el fenómeno decide qué trabajo cuenta, qué daño aparece y qué opciones se consideran razonables. Si Dirección formula “baja adopción de autoservicio”, el personal puede aparecer como resistencia y el huésped como déficit de conducta. Si se formula “dificultad para completar tareas sin asistencia”, pueden emerger barreras de diseño, lenguaje o identidad. Ninguna redacción es inocente.
 
 Esto no exige consenso total. Los actores pueden tener intereses incompatibles. Un proceso participativo serio conserva desacuerdos y objeciones en lugar de promediar una frase vacía. Conviene registrar:
 
@@ -285,7 +285,7 @@ Un encuadre de calidad no necesita llenar cada campo con certeza. Debe diferenci
 
 ### Prueba de consistencia entre las nueve decisiones
 
-Los campos no deben revisarse de manera aislada. Un cambio en uno obliga a examinar los demás. Si la población prioritaria pasa de “todas las llegadas” a “reservas intermediadas que requieren asistencia”, probablemente cambien el outcome, la muestra, los mecanismos y las protecciones. Si un contrato impide modificar el canal durante un año, la restricción altera las alternativas pero no convierte al contrato en explicación causal. Si una nueva traza descarta latencia, debe revisarse el mecanismo y quizá la frontera, no solamente reemplazar una palabra.
+En simple, con un ejemplo: Los campos no deben revisarse de manera aislada. Un cambio en uno obliga a examinar los demás. Si la población prioritaria pasa de “todas las llegadas” a “reservas intermediadas que requieren asistencia”, probablemente cambien el outcome, la muestra, los mecanismos y las protecciones. Si un contrato impide modificar el canal durante un año, la restricción altera las alternativas pero no convierte al contrato en explicación causal. Si una nueva traza descarta latencia, debe revisarse el mecanismo y quizá la frontera, no solamente reemplazar una palabra.
 
 Una comprobación rápida consiste en recorrer cuatro coherencias:
 
@@ -325,7 +325,7 @@ Una señal de madurez consiste en poder escribir dos formulaciones rivales usand
 
 ### La puerta de decisión: aprobar, devolver, dividir o reformular
 
-El resultado operativo de N10 no es un texto bonito. Es una decisión sobre la calidad del encuadre. Un equipo, un patrocinador o un comité debería poder tomar al menos cuatro caminos legítimos.
+En simple, con un ejemplo: El resultado operativo de N10 no es un texto bonito. Es una decisión sobre la calidad del encuadre. Un equipo, un patrocinador o un comité debería poder tomar al menos cuatro caminos legítimos.
 
 **Aprobar el encuadre para el próximo compromiso.** No significa declarar que el problema es verdadero para siempre. Significa que el argumento tiene evidencia proporcional, mecanismos plausibles, outcome y protecciones suficientes para autorizar una acción concreta: observar, realizar una prueba piloto, contratar una prueba o diseñar una migración. La aprobación debe indicar hasta dónde alcanza.
 
@@ -359,19 +359,19 @@ La analogía con el hotel permite transferir la estructura, síntoma, mecanismos
 
 ### Cuándo detener la construcción y actuar
 
-Todo encuadre es incompleto. Investigar indefinidamente puede convertirse en una forma de evitar responsabilidad. La decisión de avanzar depende de tres variables:
+En simple: Todo encuadre es incompleto. Investigar indefinidamente puede convertirse en una forma de evitar responsabilidad. La decisión de avanzar depende de tres variables:
 
 - **reversibilidad:** cuánto cuesta corregir la intervención;
 - **exposición:** qué daño puede producir mientras se aprende;
 - **valor de nueva evidencia:** qué probabilidad existe de que cambie la elección.
 
-Una acción local, reversible y observable puede comenzar con mecanismos todavía inciertos si conserva protecciones y comparación. Una migración, un cambio contractual o una automatización de alto impacto exige un argumento más fuerte. El punto de suficiencia no es “comprender todo”, sino tener evidencia proporcional para el próximo compromiso.
+Ejemplo cercano: Una acción local, reversible y observable puede comenzar con mecanismos todavía inciertos si conserva protecciones y comparación. Una migración, un cambio contractual o una automatización de alto impacto exige un argumento más fuerte. El punto de suficiencia no es “comprender todo”, sino tener evidencia proporcional para el próximo compromiso.
 
 También puede ser correcto separar problemas. Si la sobreventa proviene de política comercial y las demoras de check-in de asignación y accesibilidad, una formulación única puede ocultar decisiones. La unidad del problema debe responder a mecanismos y autoridad, no al deseo de tener un único proyecto.
 
 ### Límites del encuadre
 
-Un encuadre funciona como el marco de una foto: ayuda a mirar algo y deja otras cosas afuera. Si el equipo define el problema sólo como demora, puede mejorar minutos y seguir sin atender accesibilidad, reparación o carga de trabajo. Un buen encuadre no garantiza una intervención correcta. Los mecanismos pueden cambiar, la evidencia puede estar sesgada y los actores pueden manipular métricas. La formulación escrita tiende a congelarse cuando ingresa a un contrato o registro de pendientes. Por eso necesita responsable, versión, fecha, evidencia nueva y condición de revisión.
+En simple, con un ejemplo: Un encuadre funciona como el marco de una foto: ayuda a mirar algo y deja otras cosas afuera. Si el equipo define el problema sólo como demora, puede mejorar minutos y seguir sin atender accesibilidad, reparación o carga de trabajo. Un buen encuadre no garantiza una intervención correcta. Los mecanismos pueden cambiar, la evidencia puede estar sesgada y los actores pueden manipular métricas. La formulación escrita tiende a congelarse cuando ingresa a un contrato o registro de pendientes. Por eso necesita responsable, versión, fecha, evidencia nueva y condición de revisión.
 
 ## Errores frecuentes
 

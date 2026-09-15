@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "7004fe2507129480338258e11e20c92d88b03b7603bb1c717dd6c4e182529fa4",
-        "declared_sha256": "7004fe2507129480338258e11e20c92d88b03b7603bb1c717dd6c4e182529fa4",
+        "actual_sha256": "57d1450bee0e2acc7f14f528737c0799b7c3688b41dfc5adaa8a99425f02b68c",
+        "declared_sha256": "57d1450bee0e2acc7f14f528737c0799b7c3688b41dfc5adaa8a99425f02b68c",
         "document_json_matches": true,
         "source": "source/N20_estrategia_metodologica_tailoring_hitos_y_condiciones_de_salida-content-canonical-v4.md",
         "source_exists": true,
@@ -48,6 +48,19 @@
       "status": "PASS"
     },
     {
+      "check": "errors_grid_groups_each_label_with_its_explanation",
+      "evidence": [
+        {
+          "cards": 10,
+          "declared_rows": 5,
+          "expected_rows": 5,
+          "labels": 10,
+          "naked_pairs": 0
+        }
+      ],
+      "status": "PASS"
+    },
+    {
       "check": "no_lfs_pointers_private_paths_or_placeholders",
       "evidence": {
         "lfs_pointers": [],
@@ -67,12 +80,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 20029045,
-        "final_sha256": "829edd72b51ceb069a3aca3120d2363f2e12a26afa036f60408f6f29d094f38d",
+        "bytes": 19965574,
+        "final_sha256": "fd28c67a69dd59cab43cd05c34d38b42e905f200c1cda38a67552ee231f31657",
         "pages": 29,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "fe6cc0dd5602e351b3796c870a81c552737ab24aec07da4c7972cfd8eef98dc3",
+        "raw_sha256": "589dfd4fd06e260626246679a064672edd05ef59d8921b0ce1b7736db552aff3",
         "unique_sizes": [
           [
             594.96,
@@ -1130,15 +1143,15 @@
       5,
       23
     ],
-    "pdf_bytes": 20029045,
-    "pdf_sha256": "829edd72b51ceb069a3aca3120d2363f2e12a26afa036f60408f6f29d094f38d",
+    "pdf_bytes": 19965574,
+    "pdf_sha256": "fd28c67a69dd59cab43cd05c34d38b42e905f200c1cda38a67552ee231f31657",
     "source_blocks": 284
   },
   "mode": "read-only",
   "package": "N20-v9-editorial",
-  "passed_checks": 26,
+  "passed_checks": 27,
   "status": "PASS",
-  "total_checks": 26,
+  "total_checks": 27,
   "validator": "validate_n11_n36_v6.py",
   "version": "v9-editorial"
 }

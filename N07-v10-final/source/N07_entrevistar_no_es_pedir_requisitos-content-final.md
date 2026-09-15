@@ -49,7 +49,7 @@ El avance de este Núcleo consiste en pasar de una pregunta de proyecto a una ca
 
 ### De relevar requisitos a investigar evidencia
 
-En Ingeniería de Software se utilizan entrevistas para relevar necesidades y requisitos. N07 conserva la conversación, pero cambia su producto inicial: antes de pedir soluciones, reconstruye episodios, decisiones y excepciones. La entrevista no entrega requisitos terminados; produce evidencia situada que luego debe triangularse con registros, observación y otras perspectivas. Esta concepción sigue a Brinkmann y Kvale (2015): entrevistar es una práctica social de producción de conocimiento, no una tubería neutral para extraer respuestas.
+En simple, con un ejemplo: En Ingeniería de Software se utilizan entrevistas para relevar necesidades y requisitos. N07 conserva la conversación, pero cambia su producto inicial: antes de pedir soluciones, reconstruye episodios, decisiones y excepciones. La entrevista no entrega requisitos terminados; produce evidencia situada que luego debe triangularse con registros, observación y otras perspectivas. Esta concepción sigue a Brinkmann y Kvale (2015): entrevistar es una práctica social de producción de conocimiento, no una tubería neutral para extraer respuestas.
 
 La diferencia es más profunda que un cambio de vocabulario. En un enfoque de extracción, se supone que el requisito ya existe en algún lugar: dentro de la cabeza de una persona usuaria, en la estrategia de una dirección o en un procedimiento todavía no documentado. El trabajo del analista sería formular preguntas claras, capturar respuestas y traducirlas a una especificación. Esa imagen funciona cuando la decisión ya está suficientemente encuadrada y lo que falta es acordar detalles. Falla cuando todavía están en discusión la frontera del sistema, la causa del problema, la distribución de autoridad o el resultado que importa.
 
@@ -69,7 +69,7 @@ También permite investigar decisiones que ya terminaron. La persona puede expli
 
 ### “¿Qué necesita del nuevo sistema?”
 
-La pregunta parece respetuosa. Recepción pide un botón para liberar habitaciones, Comercial un tablero en tiempo real, Housekeeping notificaciones y Dirección un asistente conversacional. El equipo convierte respuestas en requisitos y demuestra escucha.
+En simple, con un ejemplo: La pregunta parece respetuosa. Recepción pide un botón para liberar habitaciones, Comercial un tablero en tiempo real, Housekeeping notificaciones y Dirección un asistente conversacional. El equipo convierte respuestas en requisitos y demuestra escucha.
 
 Pero las personas expresan problemas mediante soluciones disponibles. El botón puede condensar una dificultad de autoridad. El tablero puede intentar reparar desconfianza. La notificación puede responder a una demora que una integración debería resolver. El asistente puede simbolizar modernidad.
 
@@ -77,7 +77,7 @@ Copiar el pedido traslada al entrevistado la responsabilidad de diseño y conser
 
 ### Del discurso general al episodio
 
-Pasar al episodio significa pedir una historia concreta en lugar de aceptar frases generales. Ante «el sistema siempre falla», conviene preguntar por la última vez: qué intentaba hacer la persona, qué vio y qué ocurrió después. Las personas describen el trabajo según procedimiento, identidad profesional, caso reciente o expectativa del entrevistador. Los episodios concretos reducen idealización.
+En simple, con un ejemplo: Pasar al episodio significa pedir una historia concreta en lugar de aceptar frases generales. Ante «el sistema siempre falla», conviene preguntar por la última vez: qué intentaba hacer la persona, qué vio y qué ocurrió después. Las personas describen el trabajo según procedimiento, identidad profesional, caso reciente o expectativa del entrevistador. Los episodios concretos reducen idealización.
 
 Preguntas útiles:
 
@@ -115,7 +115,7 @@ No toda pregunta abierta es buena. “Contame tu experiencia” puede producir d
 
 ### Preguntas inductivas y sesgo de confirmación
 
-“¿Cuánto tiempo pierde por el PMS viejo?” presupone pérdida, causa y antigüedad relevante. “¿La aplicación le simplificaría?” invita aprobación social. “¿Por qué se resiste el equipo?” convierte no adopción en rasgo.
+En simple, con un ejemplo: “¿Cuánto tiempo pierde por el PMS viejo?” presupone pérdida, causa y antigüedad relevante. “¿La aplicación le simplificaría?” invita aprobación social. “¿Por qué se resiste el equipo?” convierte no adopción en rasgo.
 
 Alternativas:
 
@@ -129,7 +129,7 @@ El sesgo no se elimina por redactar perfecto. Se reduce declarando hipótesis, b
 
 ### Anatomía de una pregunta: lo que abre y lo que clausura
 
-Toda pregunta contiene decisiones metodológicas, aunque parezca espontánea. Primero fija un **objeto**: puede preguntar por una pantalla, una tarea, un episodio o una promesa de servicio. Segundo fija un **tiempo**: lo que normalmente ocurre, el último caso, un período o un futuro imaginado. Tercero propone una **causalidad**: puede dejarla abierta o incorporar una explicación. Cuarto distribuye **responsabilidad**: pregunta qué hizo alguien, qué permitió el entorno o quién debería corregir. Quinto define qué clase de respuesta parecerá legítima: una cifra, una opinión, una secuencia o un juicio moral.
+En simple, con un ejemplo: Toda pregunta contiene decisiones metodológicas, aunque parezca espontánea. Primero fija un **objeto**: puede preguntar por una pantalla, una tarea, un episodio o una promesa de servicio. Segundo fija un **tiempo**: lo que normalmente ocurre, el último caso, un período o un futuro imaginado. Tercero propone una **causalidad**: puede dejarla abierta o incorporar una explicación. Cuarto distribuye **responsabilidad**: pregunta qué hizo alguien, qué permitió el entorno o quién debería corregir. Quinto define qué clase de respuesta parecerá legítima: una cifra, una opinión, una secuencia o un juicio moral.
 
 Por eso "¿por qué los usuarios no adoptan el sistema?" no es una pregunta inocente. Da por existente un sistema adecuado, define la conducta esperada como adopción y localiza la explicación en las personas. Podría ser correcta, pero ya ha descartado alternativas: que la herramienta interrumpa el trabajo, que el indicador de uso sea incompleto, que existan riesgos no resueltos o que el sistema formal no permita cumplir la tarea. Una formulación más investigable sería: "¿En qué situaciones se usa cada canal para completar esta tarea, y qué consecuencias tiene?". La segunda pregunta no elimina la posibilidad de un problema de adopción; evita convertirla en la única explicación antes de reunir evidencia.
 
@@ -152,7 +152,7 @@ La secuencia puede revelar que "tiempo real" significa cinco minutos para Operac
 
 ### El incidente crítico como unidad de aprendizaje
 
-La técnica del incidente crítico de Flanagan (1954) pide reconstruir un caso significativo, exitoso, fallido o sorprendente, porque los extremos vuelven visibles condiciones que el relato rutinario comprime. El incidente no se elige sólo por dramatismo. Debe estar relacionado con la capacidad que se investiga y permitir recuperar contexto suficiente. "La peor experiencia con el sistema" puede producir una anécdota intensa pero irrelevante; "la última vez que una contradicción entre estados cambió la habitación entregada" delimita un fenómeno.
+En simple, con un ejemplo: La técnica del incidente crítico de Flanagan (1954) pide reconstruir un caso significativo, exitoso, fallido o sorprendente, porque los extremos vuelven visibles condiciones que el relato rutinario comprime. El incidente no se elige sólo por dramatismo. Debe estar relacionado con la capacidad que se investiga y permitir recuperar contexto suficiente. "La peor experiencia con el sistema" puede producir una anécdota intensa pero irrelevante; "la última vez que una contradicción entre estados cambió la habitación entregada" delimita un fenómeno.
 
 La reconstrucción separa al menos seis capas: situación inicial, señales disponibles, acciones, criterios, resultado y explicación posterior. Esa separación evita el sesgo retrospectivo. Después de conocer el desenlace, las personas tienden a narrar señales como si siempre hubieran sido claras. Preguntar "¿qué sabía exactamente a las 12:42?" obliga a volver al horizonte de información del momento. Preguntar "¿qué alternativa parecía razonable entonces?" protege contra juzgar la decisión únicamente desde el resultado.
 
@@ -172,7 +172,7 @@ La conversación produce una secuencia inicial y cuatro explicaciones rivales: l
 
 ### Diseñar la muestra de entrevistas: variación antes que volumen
 
-N06 ya definió que la selección de fuentes responde a una misión de evidencia y no a un número ritual. N07 aplica ese criterio a la situación de entrevista. Entrevistar “cinco usuarios” no tiene significado universal. Si el servicio cambia por turno, canal, experiencia, tipo de reserva y accesibilidad, la selección debe cubrir los contrastes pertinentes para la afirmación investigada.
+En simple, con un ejemplo: N06 ya definió que la selección de fuentes responde a una misión de evidencia y no a un número ritual. N07 aplica ese criterio a la situación de entrevista. Entrevistar “cinco usuarios” no tiene significado universal. Si el servicio cambia por turno, canal, experiencia, tipo de reserva y accesibilidad, la selección debe cubrir los contrastes pertinentes para la afirmación investigada.
 
 El poder de información propuesto por Malterud, Siersma y Guassora (2016) ofrece un criterio más preciso que acumular testimonios: la cantidad necesaria depende de la especificidad de la muestra, la precisión del propósito, la calidad del diálogo, el marco conceptual y la estrategia de análisis. La saturación no significa que ya no aparezca ninguna novedad. Puede indicar que ciertos mecanismos se repiten para el propósito actual. No permite estimar prevalencia. Una excepción rara de alto daño puede importar aunque aparezca una sola vez.
 
@@ -182,7 +182,7 @@ Conviene registrar quién no fue entrevistado y cómo limita la conclusión.
 
 ### Calibrar evidencia, no acumular testimonios
 
-Una ronda de entrevistas debe diseñarse como un pequeño sistema de aprendizaje. Antes de comenzar, el equipo declara qué afirmaciones necesita sostener, qué variaciones podrían cambiarlas y qué decisión está en juego. Esto impide convertir «hablar con usuarios» en una actividad ritual. Si la decisión es modificar una política nocturna, entrevistar sólo al turno diurno produce volumen sin cobertura. Si se evalúa una experiencia de accesibilidad, cinco personas sin barreras relevantes no compensan la ausencia de quienes sí las encuentran.
+En simple, con un ejemplo: Una ronda de entrevistas debe diseñarse como un pequeño sistema de aprendizaje. Antes de comenzar, el equipo declara qué afirmaciones necesita sostener, qué variaciones podrían cambiarlas y qué decisión está en juego. Esto impide convertir «hablar con usuarios» en una actividad ritual. Si la decisión es modificar una política nocturna, entrevistar sólo al turno diurno produce volumen sin cobertura. Si se evalúa una experiencia de accesibilidad, cinco personas sin barreras relevantes no compensan la ausencia de quienes sí las encuentran.
 
 La cantidad se vuelve significativa cuando se relaciona con una estructura de contraste. Puede organizarse una matriz por turno, antigüedad, canal, tipo de episodio y desenlace. No hace falta cubrir todas las combinaciones como si se tratara de una encuesta estadística; sí conviene reconocer dónde se concentra la evidencia y dónde quedan huecos. Una muestra cualitativa bien argumentada no promete representatividad numérica. Promete que las perspectivas elegidas son pertinentes para examinar los mecanismos y límites de la afirmación.
 
@@ -196,7 +196,7 @@ El criterio de cierre debe ser explícito. Una ronda puede terminar cuando los m
 
 ### Poder y seguridad psicológica
 
-La entrevista ocurre dentro de relaciones. Una empleada puede temer que revelar atajos produzca sanción. Una persona tercerizada puede depender del contrato. Un huésped puede sentirse obligado a agradecer compensación.
+En simple, con un ejemplo: La entrevista ocurre dentro de relaciones. Una empleada puede temer que revelar atajos produzca sanción. Una persona tercerizada puede depender del contrato. Un huésped puede sentirse obligado a agradecer compensación.
 
 El investigador debe explicar:
 
@@ -223,7 +223,7 @@ La composición también busca contraste. Se seleccionan turnos con distinta exp
 
 ### De la conversación a un registro analizable
 
-Escuchar exige conservar lenguaje y significado, pero el análisis transforma material. El profesional agrupa, contrasta e interpreta. Debe distinguir:
+En simple: Escuchar exige conservar lenguaje y significado, pero el análisis transforma material. El profesional agrupa, contrasta e interpreta. Debe distinguir:
 
 - frase/episodio de la fuente;
 - categoría analítica;
@@ -231,13 +231,13 @@ Escuchar exige conservar lenguaje y significado, pero el análisis transforma ma
 - hipótesis;
 - decisión.
 
-Si Recepción dice “Housekeeping nunca actualiza”, la síntesis no debe convertirlo en hecho. Puede registrar percepción y buscar episodios. Tal vez actualización ocurre, pero llega tarde o significa otra cosa.
+Ejemplo cercano: Si Recepción dice “Housekeeping nunca actualiza”, la síntesis no debe convertirlo en hecho. Puede registrar percepción y buscar episodios. Tal vez actualización ocurre, pero llega tarde o significa otra cosa.
 
 La devolución a participantes puede aclarar la interpretación, aunque la persona no posee autoridad exclusiva sobre el análisis. También puede estar condicionada por relaciones de poder.
 
 ### De la nota a evidencia utilizable
 
-Una ficha de entrevista debería conservar:
+En simple, con un ejemplo: Una ficha de entrevista debería conservar:
 
 - código, fecha, rol/contexto;
 - propósito y consentimiento;
@@ -272,7 +272,7 @@ El entrevistador debe saber abandonar el guion cuando aparece un episodio críti
 
 ### Sondas que profundizan sin dirigir
 
-Ante “siempre pasa”, preguntar por última vez y excepción. Ante “es lento”, pedir operación, medida y comparación. Ante “necesitamos integración”, preguntar qué información, momento y decisión. Ante “nadie usa”, buscar quién sí y por qué.
+En simple, con un ejemplo: Ante “siempre pasa”, preguntar por última vez y excepción. Ante “es lento”, pedir operación, medida y comparación. Ante “necesitamos integración”, preguntar qué información, momento y decisión. Ante “nadie usa”, buscar quién sí y por qué.
 
 Sondas útiles:
 
@@ -288,7 +288,7 @@ El silencio es una herramienta. Completar demasiado rápido la respuesta produce
 
 ### Registrar y codificar sin borrar
 
-El análisis puede comenzar con códigos descriptivos, como evento, espera, fuente, decisión y excepción, y luego construir mecanismos. La frecuencia ayuda a ver recurrencia, pero no determina importancia. Un daño severo raro puede dominar. La codificación reflexiva de Braun y Clarke (2021) permite recordar que un tema no aparece solo en los datos: se construye mediante decisiones analíticas que deben conservar relación con los fragmentos y con la pregunta de investigación.
+En simple, con un ejemplo: El análisis puede comenzar con códigos descriptivos, como evento, espera, fuente, decisión y excepción, y luego construir mecanismos. La frecuencia ayuda a ver recurrencia, pero no determina importancia. Un daño severo raro puede dominar. La codificación reflexiva de Braun y Clarke (2021) permite recordar que un tema no aparece solo en los datos: se construye mediante decisiones analíticas que deben conservar relación con los fragmentos y con la pregunta de investigación.
 
 Una matriz por episodio permite comparar:
 
@@ -308,7 +308,7 @@ Los temas deben volver a citas y episodios. Si “falta de confianza” no puede
 
 ### La cadena de inferencia: de una frase a una decisión
 
-El salto más peligroso ocurre después de entrevistar. El equipo escucha una frase potente, la convierte en hallazgo y la usa para justificar una funcionalidad. Para impedirlo conviene conservar una cadena de inferencia con niveles explícitos. Cada nivel responde una pregunta distinta y admite un tipo de crítica diferente.
+En simple, con un ejemplo: El salto más peligroso ocurre después de entrevistar. El equipo escucha una frase potente, la convierte en hallazgo y la usa para justificar una funcionalidad. Para impedirlo conviene conservar una cadena de inferencia con niveles explícitos. Cada nivel responde una pregunta distinta y admite un tipo de crítica diferente.
 
 El primer nivel es el **fragmento fuente**: qué dijo o mostró la persona, en qué momento y frente a qué pregunta. El segundo es la **reconstrucción del episodio**: qué actores, eventos y condiciones aparecen al integrar distintos fragmentos. El tercero es el **código descriptivo**: una etiqueta cercana al material, por ejemplo "verificación paralela" o "espera de autorización". El cuarto es el **patrón**: recurrencia o variación entre episodios. El quinto es el **mecanismo propuesto**: una relación explicativa, como "la incompatibilidad entre criterios obliga a verificar fuera del sistema". El sexto es la **implicación de decisión**: qué alternativa, prueba o restricción cambia si el mecanismo se sostiene.
 
@@ -326,7 +326,7 @@ Conviene realizar sesiones de contraste entre analistas. Dos personas pueden cod
 
 ### Triangulación: fuentes distintas para preguntas distintas
 
-Triangular no significa buscar tres fuentes que digan lo mismo. Significa combinar fuentes cuyos errores y alcances sean diferentes. La entrevista recupera significado y criterio; los registros aportan secuencia y frecuencia dentro de lo que fue instrumentado; la observación muestra actividad y entorno; los documentos expresan la norma; un experimento prueba qué cambia al intervenir. Cuando convergen, la afirmación se fortalece. Cuando divergen, aparece una pregunta más precisa.
+En simple, con un ejemplo: Triangular no significa buscar tres fuentes que digan lo mismo. Significa combinar fuentes cuyos errores y alcances sean diferentes. La entrevista recupera significado y criterio; los registros aportan secuencia y frecuencia dentro de lo que fue instrumentado; la observación muestra actividad y entorno; los documentos expresan la norma; un experimento prueba qué cambia al intervenir. Cuando convergen, la afirmación se fortalece. Cuando divergen, aparece una pregunta más precisa.
 
 Si los registros indican respuestas rápidas y las entrevistas describen lentitud, no es necesario elegir entre "dato objetivo" y "percepción subjetiva". Tal vez el registro técnico mide sólo procesamiento del servidor y la persona mide el tiempo completo hasta poder decidir. Tal vez el sistema responde rápido pero exige repetir información. Tal vez un episodio reciente domina el recuerdo. La divergencia obliga a alinear unidades: qué reloj comienza, cuál termina y qué resultado esperado importa.
 
@@ -334,7 +334,7 @@ La triangulación también protege a las personas. Sin contraste, una cita puede
 
 ### Condiciones que cambian lo que puede decirse
 
-Ambas pueden ser útiles, pero tienen propósitos distintos. La entrevista produce comprensión/evidencia. La sesión de requisitos negocia comportamiento y restricciones después de construir suficiente contexto. Si se mezclan, la persona puede creer que cada idea será implementada y el analista puede cerrar prematuramente.
+En simple, con un ejemplo: Ambas pueden ser útiles, pero tienen propósitos distintos. La entrevista produce comprensión/evidencia. La sesión de requisitos negocia comportamiento y restricciones después de construir suficiente contexto. Si se mezclan, la persona puede creer que cada idea será implementada y el analista puede cerrar prematuramente.
 
 El equipo debe comunicar si está investigando, validando o decidiendo. También debe devolver cómo se utilizó la contribución. Participar sin influencia visible genera fatiga.
 
@@ -342,19 +342,19 @@ El equipo debe comunicar si está investigando, validando o decidiendo. También
 
 ### Entrevistas colectivas y conflicto
 
-Una entrevista colectiva o un taller permite observar acuerdo, lenguaje compartido y negociación, pero no reemplaza entrevistas individuales. La presencia de pares y jerarquías cambia lo decible. Es útil cuando la interacción entre perspectivas es el objeto; es riesgoso para prácticas sensibles.
+En simple, con un ejemplo: Una entrevista colectiva o un taller permite observar acuerdo, lenguaje compartido y negociación, pero no reemplaza entrevistas individuales. La presencia de pares y jerarquías cambia lo decible. Es útil cuando la interacción entre perspectivas es el objeto; es riesgoso para prácticas sensibles.
 
 Si Recepción y Housekeeping reconstruyen juntas un episodio, pueden descubrir diferencias de evento. Si una jefatura evalúa en público, los atajos desaparecerán. El diseño debe decidir composición, facilitación y forma de registrar disenso.
 
 ### Devolución y validación
 
-Después del análisis conviene devolver una síntesis: “la interpretación propuesta es…”, con evidencia y preguntas. Los actores pueden corregir contexto o mostrar casos. Esta devolución, a veces llamada validación con participantes, no es votación de verdad; es otra fuente.
+En simple, con un ejemplo: Después del análisis conviene devolver una síntesis: “la interpretación propuesta es…”, con evidencia y preguntas. Los actores pueden corregir contexto o mostrar casos. Esta devolución, a veces llamada validación con participantes, no es votación de verdad; es otra fuente.
 
 Debe comunicarse qué cambió y qué no, para evitar participación extractiva. Si una sugerencia no se adopta, se explica por restricciones, evidencia o compromiso entre alternativas. Esta trazabilidad construye confianza y mejora la calidad de futuras conversaciones.
 
 ### Calidad de una entrevista
 
-Una buena entrevista no se mide por su duración ni por la cantidad de frases anotadas. Es útil cuando deja un episodio claro, distingue hechos de interpretaciones y abre preguntas que pueden contrastarse con otras fuentes. No se evalúa por duración ni cantidad de citas. Una buena entrevista:
+En simple, con un ejemplo: Una buena entrevista no se mide por su duración ni por la cantidad de frases anotadas. Es útil cuando deja un episodio claro, distingue hechos de interpretaciones y abre preguntas que pueden contrastarse con otras fuentes. No se evalúa por duración ni cantidad de citas. Una buena entrevista:
 
 - produce episodios reconstruibles;
 - hace visibles criterios y autoridad;
@@ -369,7 +369,7 @@ Una conversación agradable puede ser metodológicamente pobre; una contradicci�
 
 ### Memoria episódica, reconstrucción y sesgos
 
-Las preguntas generales invitan teorías personales: “normalmente hacemos...”. Las episódicas anclan en tiempo, secuencia y decisiones: “volvamos a la última llegada con una habitación no disponible; ¿qué ocurrió primero?”. El episodio ofrece señales contrastables.
+En simple, con un ejemplo: Las preguntas generales invitan teorías personales: “normalmente hacemos...”. Las episódicas anclan en tiempo, secuencia y decisiones: “volvamos a la última llegada con una habitación no disponible; ¿qué ocurrió primero?”. El episodio ofrece señales contrastables.
 
 La memoria sigue siendo reconstructiva. El actor puede ordenar eventos, omitir rutinas o explicar con conocimiento adquirido después. Pedir artefactos, mensajes, pantallas y horarios ayuda a reconstruir. También sirve solicitar un caso que contradiga el primero.
 
@@ -379,7 +379,7 @@ Las emociones no son ruido. Frustración, temor o orgullo pueden señalar impact
 
 ### Contradicción sin interrogatorio
 
-Cuando fuentes difieren, confrontar de forma acusatoria reduce seguridad y produce defensa. Puede presentarse la discrepancia como problema del sistema: “en estos registros aparece otra secuencia; ¿en qué condiciones ocurre cada una?”.
+En simple, con un ejemplo: Cuando fuentes difieren, confrontar de forma acusatoria reduce seguridad y produce defensa. Puede presentarse la discrepancia como problema del sistema: “en estos registros aparece otra secuencia; ¿en qué condiciones ocurre cada una?”.
 
 La contradicción puede deberse a roles, momentos o definiciones. Dirección observa indicadores; recepción vive excepciones; housekeeping usa otro evento de inicio. Ambas versiones pueden ser correctas dentro de fronteras distintas.
 
@@ -391,9 +391,9 @@ Las discrepancias se conservan en el análisis. Resolverlas mediante redacción 
 
 ### De transcripción a afirmaciones trazables
 
-La transcripción completa puede ser útil y costosa. La nota selectiva es más liviana y puede perder contexto. El diseño depende de sensibilidad, propósito y capacidad. En todos los casos debe distinguir cita, paráfrasis, interpretación y pregunta.
+En simple: La transcripción completa puede ser útil y costosa. La nota selectiva es más liviana y puede perder contexto. El diseño depende de sensibilidad, propósito y capacidad. En todos los casos debe distinguir cita, paráfrasis, interpretación y pregunta.
 
-El análisis comienza identificando episodios, condiciones, acciones, razones, consecuencias y excepciones. Luego compara entre casos. Los códigos ayudan a encontrar patrones, pero pueden fragmentar historias. Conservar resúmenes episódicos evita perder secuencia.
+Ejemplo cercano: El análisis comienza identificando episodios, condiciones, acciones, razones, consecuencias y excepciones. Luego compara entre casos. Los códigos ayudan a encontrar patrones, pero pueden fragmentar historias. Conservar resúmenes episódicos evita perder secuencia.
 
 Una afirmación analítica debería enlazar evidencia favorable y adversa. “Recepción no confía en el estado de habitación” puede apoyarse en acciones de verificación, relatos y divergencias; también registrar turnos donde sí confía. El alcance importa.
 
@@ -401,7 +401,7 @@ La devolución al actor verifica comprensión, no delega conclusión. Puede corr
 
 ### Ética, consentimiento y seguridad
 
-La persona debe comprender propósito, uso, voluntariedad posible, registro y confidencialidad. En relaciones laborales, aceptar puede no ser plenamente libre. Reducir presión requiere canales, separación de evaluación y cuidado en devolución.
+En simple, con un ejemplo: La persona debe comprender propósito, uso, voluntariedad posible, registro y confidencialidad. En relaciones laborales, aceptar puede no ser plenamente libre. Reducir presión requiere canales, separación de evaluación y cuidado en devolución.
 
 No todo dato útil debe recogerse. Historias personales, salud o conflictos pueden exceder necesidad. Minimizar protege y mejora foco. Si aparece una denuncia o riesgo grave, deben existir protocolos; prometer secreto absoluto puede ser irresponsable.
 
@@ -411,7 +411,7 @@ La reciprocidad exige devolución y uso responsable. Extraer conocimiento sin mo
 
 ### De la entrevista a necesidades y decisiones
 
-Una preferencia expresada no es un requisito automático. “Necesito una pantalla con todas las reservas” puede responder a falta de confianza, fragmentación o autoridad. Convertirla literalmente congela una solución local.
+En simple, con un ejemplo: Una preferencia expresada no es un requisito automático. “Necesito una pantalla con todas las reservas” puede responder a falta de confianza, fragmentación o autoridad. Convertirla literalmente congela una solución local.
 
 El equipo traduce episodio en necesidad, resultado esperado, información, regla, excepción y criterio. Después propone alternativas y valida. La trazabilidad conserva la expresión original para no borrar perspectiva.
 
@@ -421,7 +421,7 @@ Un requisito de calidad puede emerger de trabajo: recepción necesita detectar c
 
 ### Entrevistar artefactos y decisiones
 
-Una técnica potente consiste en usar un objeto como ancla: una reserva, un registro técnico, una planilla, una captura o un reclamo. En lugar de hablar del proceso ideal, se recorre qué representa cada campo, quién lo modifica, qué se infiere y qué ocurre cuando falta. El objeto cumple aquí una función de entrevista. La indagación contextual de Beyer y Holtzblatt (1997) agrega otra exigencia, observar actividad y entorno mientras el trabajo ocurre. Esa capa corresponde a N08 y no debe darse por cubierta con el relato.
+En simple, con un ejemplo: Una técnica potente consiste en usar un objeto como ancla: una reserva, un registro técnico, una planilla, una captura o un reclamo. En lugar de hablar del proceso ideal, se recorre qué representa cada campo, quién lo modifica, qué se infiere y qué ocurre cuando falta. El objeto cumple aquí una función de entrevista. La indagación contextual de Beyer y Holtzblatt (1997) agrega otra exigencia, observar actividad y entorno mientras el trabajo ocurre. Esa capa corresponde a N08 y no debe darse por cubierta con el relato.
 
 El artefacto activa memoria y muestra semántica. También puede imponer su estructura: lo que no está registrado desaparece. Por eso se pregunta qué información quedó fuera, qué conversación acompañó y qué decisión no puede reconstruirse.
 
@@ -431,7 +431,7 @@ Los artefactos pueden contener datos sensibles. Deben minimizarse, enmascararse 
 
 ### Señales de una entrevista insuficiente
 
-Una entrevista es insuficiente si solo produce opiniones generales, soluciones pedidas, confirmación de la hipótesis y una lista sin secuencia. También si no distingue lo que la persona hizo de lo que cree que debería hacerse.
+En simple, con un ejemplo: Una entrevista es insuficiente si solo produce opiniones generales, soluciones pedidas, confirmación de la hipótesis y una lista sin secuencia. También si no distingue lo que la persona hizo de lo que cree que debería hacerse.
 
 Otra señal es la ausencia de excepciones. Todo proceso real tiene variación. Si el relato coincide exactamente con el procedimiento, puede faltar confianza, memoria episódica o profundidad. Preguntar por la última vez que algo no funcionó ayuda.
 
@@ -443,9 +443,9 @@ Después de cada sesión el equipo debería registrar qué aprendió, qué contr
 
 ### Una guía de razonamiento posterior
 
-Al cerrar una ronda, conviene formular afirmaciones en cinco capas. Primera: qué ocurrió según la fuente. Segunda: qué evidencia adicional lo sostiene. Tercera: qué mecanismo se propone. Cuarta: qué decisión podría cambiar. Quinta: qué condición invalidaría la interpretación.
+En simple: Al cerrar una ronda, conviene formular afirmaciones en cinco capas. Primera: qué ocurrió según la fuente. Segunda: qué evidencia adicional lo sostiene. Tercera: qué mecanismo se propone. Cuarta: qué decisión podría cambiar. Quinta: qué condición invalidaría la interpretación.
 
-Este formato impide saltar de una frase a una funcionalidad. Si varias personas piden una vista unificada, el mecanismo puede ser fragmentación, autoridad o carga cognitiva. Cada uno conduce a una respuesta diferente.
+Ejemplo cercano: Este formato impide saltar de una frase a una funcionalidad. Si varias personas piden una vista unificada, el mecanismo puede ser fragmentación, autoridad o carga cognitiva. Cada uno conduce a una respuesta diferente.
 
 La capa de invalidación protege contra apego. “Si observamos que los estados son consistentes y la demora aparece antes, revisaremos la hipótesis”. La entrevista se integra así a un ciclo de investigación, modelado y acción.
 
@@ -453,7 +453,7 @@ La calidad final no reside en citar muchas voces, sino en representar con justic
 
 ### Preparación y cierre como partes de la evidencia
 
-Antes de entrevistar, el equipo explicita qué decisión podría cambiar y qué sesgos trae. Revisa vocabulario, acceso y riesgos. Un protocolo común mejora comparabilidad, pero debe permitir seguir hallazgos inesperados.
+En simple, con un ejemplo: Antes de entrevistar, el equipo explicita qué decisión podría cambiar y qué sesgos trae. Revisa vocabulario, acceso y riesgos. Un protocolo común mejora comparabilidad, pero debe permitir seguir hallazgos inesperados.
 
 Después, una síntesis inmediata conserva contexto: qué sorprendió, qué contradijo, qué quedó sin preguntar y cómo influyó la situación. Separar este memo de la transcripción evita presentar interpretación como cita.
 
@@ -495,7 +495,7 @@ El caso también muestra una regla de seguridad. Las frases atribuidas no deben 
 
 ## 2026: transcribir y resumir automáticamente exige una cadena de evidencia
 
-El perfil de IA generativa de NIST, NIST AI 600-1 (2024), advierte sobre confabulación, privacidad y homogeneización de salidas. NIST AI 100-4 (2024) muestra que procedencia y transformaciones importan para interpretar contenido digital. En una entrevista, un servicio de transcripción o resumen agrega actores, condiciones de tratamiento de datos y decisiones editoriales.
+En simple, con un ejemplo: El perfil de IA generativa de NIST, NIST AI 600-1 (2024), advierte sobre confabulación, privacidad y homogeneización de salidas. NIST AI 100-4 (2024) muestra que procedencia y transformaciones importan para interpretar contenido digital. En una entrevista, un servicio de transcripción o resumen agrega actores, condiciones de tratamiento de datos y decisiones editoriales.
 
 La práctica defendible conserva audio cuando corresponde y existe consentimiento, vincula cada afirmación con su fragmento, identifica omisiones y registra qué produjo la IA y qué verificó una persona. Una síntesis automática puede acelerar análisis, pero no debe borrar silencios, dudas o contradicciones. El Reglamento europeo 2024/1689 refuerza la necesidad de informar determinadas interacciones con IA; incluso fuera de su jurisdicción, la transparencia es una condición ética de la investigación.
 

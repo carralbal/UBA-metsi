@@ -40,7 +40,7 @@ El recorrido se organiza en tres movimientos. Primero se desagrega al interesado
 
 ### Lo que Ingeniería de Software ya permite hacer y lo que ahora falta
 
-En Ingeniería de Software se aprendió a identificar *stakeholders*, formular necesidades, negociar requisitos, modelar roles y validar soluciones. Esos aprendizajes siguen siendo indispensables. Un producto que no reconoce quién lo usa, quién lo compra o quién lo mantiene difícilmente pueda diseñarse bien. También se aprendió que los requisitos entran en conflicto y que ninguna especificación es completamente neutral.
+En simple, con un ejemplo: En Ingeniería de Software se aprendió a identificar *stakeholders*, formular necesidades, negociar requisitos, modelar roles y validar soluciones. Esos aprendizajes siguen siendo indispensables. Un producto que no reconoce quién lo usa, quién lo compra o quién lo mantiene difícilmente pueda diseñarse bien. También se aprendió que los requisitos entran en conflicto y que ninguna especificación es completamente neutral.
 
 METSI agrega una capa anterior y otra posterior. La capa anterior pregunta quién pudo definir el problema y qué relaciones quedaron fuera antes de escribir un requisito. La capa posterior pregunta quién soportará las consecuencias reales cuando el sistema funcione de acuerdo con la especificación. Una funcionalidad puede estar correctamente implementada y producir una distribución injusta de carga, autoridad o riesgo. Un flujo puede satisfacer al usuario principal y volver invisible a quien repara sus excepciones.
 
@@ -50,7 +50,7 @@ La diferencia puede expresarse de forma sencilla. Un análisis tradicional suele
 
 ### Primera mirada a HH-05: el taller que parecía completo
 
-El episodio HH-05 comienza cuando Hotel Horizonte convoca a Dirección, Comercial, Tecnología y al proveedor candidato para discutir un nuevo PMS, una aplicación de llegada y un asistente conversacional. La reunión funciona bien. Se acuerdan objetivos, se priorizan funciones y se identifican integraciones. El proveedor trae casos exitosos y controla el vocabulario técnico. Comercial presenta tasas de abandono. Dirección fija una fecha. Tecnología traduce deseos en capacidades. Al finalizar, todos perciben avance.
+En simple, con un ejemplo: El episodio HH-05 comienza cuando Hotel Horizonte convoca a Dirección, Comercial, Tecnología y al proveedor candidato para discutir un nuevo PMS, una aplicación de llegada y un asistente conversacional. La reunión funciona bien. Se acuerdan objetivos, se priorizan funciones y se identifican integraciones. El proveedor trae casos exitosos y controla el vocabulario técnico. Comercial presenta tasas de abandono. Dirección fija una fecha. Tecnología traduce deseos en capacidades. Al finalizar, todos perciben avance.
 
 La mesa no incluye a Recepción, Housekeeping, Mantenimiento, Finanzas, personal nocturno, huéspedes reubicados, personas que necesitan asistencia ni quienes abandonaron el canal digital. El proveedor puede describir lo que el producto hace; no necesariamente cómo el hotel sostiene la promesa. Dirección tiene autoridad para invertir; no observa cada excepción. Comercial conoce conversión; no ve la reparación operativa. La definición resultante, “digitalizar la llegada para reducir espera y dependencia del personal”, parece consensuada porque quienes podrían cuestionar su sentido no estuvieron presentes.
 
@@ -60,7 +60,7 @@ El taller deja de ser una ceremonia cuando cada participación se diseña en rel
 
 ### Más allá del stakeholder genérico
 
-La palabra *stakeholder* es útil para recordar que una intervención no pertenece sólo al equipo técnico. Freeman la formuló como una relación entre la estrategia y grupos capaces de afectar o ser afectados por sus objetivos. Se vuelve peligrosa cuando aplana relaciones muy distintas. Para N05 conviene separar al menos nueve posiciones.
+En simple, con un ejemplo: La palabra *stakeholder* es útil para recordar que una intervención no pertenece sólo al equipo técnico. Freeman la formuló como una relación entre la estrategia y grupos capaces de afectar o ser afectados por sus objetivos. Se vuelve peligrosa cuando aplana relaciones muy distintas. Para N05 conviene separar al menos nueve posiciones.
 
 Un **decisor** posee autoridad formal o legítima para comprometer recursos, aceptar riesgo o modificar una política. Un **operador** sostiene el servicio y responde ante variaciones. Un **usuario directo** interactúa con una aplicación o componente. Un **beneficiario** recibe valor aunque no opere el sistema. Un **afectado** soporta consecuencias aunque no sea cliente ni usuario. Un **experto de dominio** conoce reglas o mecanismos relevantes sin necesariamente poder decidir. Un **proveedor** controla una capacidad bajo contrato. Un **responsable** debe rendir cuentas por una decisión o resultado. Un **regulador o garante** establece límites, derechos y evidencia exigible.
 
@@ -72,7 +72,7 @@ El mismo actor cambia de relevancia según la pregunta. Para seleccionar proveed
 
 ### El poder no vive sólo en el organigrama
 
-El organigrama muestra jerarquías formales. El sistema real opera mediante capacidades distribuidas. Existe poder cuando una persona, grupo u organización puede cambiar lo que otros pueden hacer, conocer o evitar. Dirección controla presupuesto; una OTA controla visibilidad e inventario; una supervisora habilita excepciones; un proveedor administra versiones; una persona administrativa conserva conocimiento que nadie documentó; una métrica determina qué casos se consideran exitosos.
+En simple, con un ejemplo: El organigrama muestra jerarquías formales. El sistema real opera mediante capacidades distribuidas. Existe poder cuando una persona, grupo u organización puede cambiar lo que otros pueden hacer, conocer o evitar. Dirección controla presupuesto; una OTA controla visibilidad e inventario; una supervisora habilita excepciones; un proveedor administra versiones; una persona administrativa conserva conocimiento que nadie documentó; una métrica determina qué casos se consideran exitosos.
 
 Pueden distinguirse siete fuentes de poder. El **poder formal** proviene de cargos, normas o derechos. El **poder de recursos** controla presupuesto, infraestructura, datos o tiempo. El **poder experto** depende de conocimiento difícil de sustituir. El **poder informacional** selecciona qué señales llegan a la decisión y cómo se clasifican. El **poder de implementación** aparece cuando alguien puede ejecutar, adaptar, demorar o bloquear en la práctica. El **poder de salida** pertenece a quien puede abandonar la relación sin sufrir un costo excesivo. El **poder de encuadre** define qué problema se discute, qué alternativas parecen razonables y qué consecuencias se consideran externas.
 
@@ -88,7 +88,7 @@ El poder también actúa mediante la agenda. Un equipo puede permitir que todos 
 
 ### Conocimiento situado y autoridad epistémica
 
-Cada actor conoce una parte porque ocupa una posición. Dirección comprende estrategia, compromisos y restricciones políticas. Operación conoce variabilidad, secuencias y reparaciones. Las personas usuarias conocen experiencia y efectos, aunque no siempre la causa técnica. Proveedores conocen capacidades y límites del producto. Seguridad comprende amenazas. Finanzas reconstruye estados que otras áreas llaman simplemente “pago”.
+En simple, con un ejemplo: Cada actor conoce una parte porque ocupa una posición. Dirección comprende estrategia, compromisos y restricciones políticas. Operación conoce variabilidad, secuencias y reparaciones. Las personas usuarias conocen experiencia y efectos, aunque no siempre la causa técnica. Proveedores conocen capacidades y límites del producto. Seguridad comprende amenazas. Finanzas reconstruye estados que otras áreas llaman simplemente “pago”.
 
 Ninguna perspectiva es completa. Tampoco todas tienen el mismo peso para toda afirmación. Una gerente puede decidir presupuesto y no describir el trabajo nocturno. Una operadora puede reconstruir una excepción y desconocer cláusulas contractuales. Un huésped puede demostrar un daño real sin identificar el mecanismo que lo produjo. Un especialista puede explicar el modelo y no saber qué representa una clasificación para la persona afectada.
 
@@ -100,7 +100,7 @@ El conocimiento tácito no es magia. Puede investigarse observando decisiones, s
 
 ### Trabajo visible, trabajo oculto y carga desplazada
 
-Star y Strauss muestran que la visibilidad del trabajo depende de qué se registra, se reconoce y se vuelve objeto de coordinación. Los sistemas de información dependen de actividades que suelen desaparecer del modelo formal: reconciliar planillas, interpretar mensajes, recordar excepciones, explicar errores, calmar a una persona, copiar datos, llamar a un proveedor o compensar una promesa. Ese trabajo se vuelve visible sólo cuando deja de hacerse.
+En simple, con un ejemplo: Star y Strauss muestran que la visibilidad del trabajo depende de qué se registra, se reconoce y se vuelve objeto de coordinación. Los sistemas de información dependen de actividades que suelen desaparecer del modelo formal: reconciliar planillas, interpretar mensajes, recordar excepciones, explicar errores, calmar a una persona, copiar datos, llamar a un proveedor o compensar una promesa. Ese trabajo se vuelve visible sólo cuando deja de hacerse.
 
 La automatización puede reducir tareas y crear otras. Un check-in digital disminuye carga de ingreso de datos, pero puede trasladar al huésped la captura de documentos, a Recepción la resolución de identidad y a Tecnología el monitoreo de integraciones. Si las métricas cuentan sólo transacciones automáticas, el sistema parece más eficiente mientras la reparación crece fuera del flujo principal.
 
@@ -110,7 +110,7 @@ Mapear actores exige preguntar quién realiza el trabajo necesario para que la s
 
 ### Voz, silencio y posibilidad efectiva de disentir
 
-Hablar en una reunión requiere tiempo, idioma, vocabulario, seguridad y ausencia de represalia. Quienes tienen menor poder pueden no ser invitados, aceptar la formulación dominante, describir problemas en términos que el equipo no reconoce, evitar revelar atajos que violan procedimientos, carecer de datos agregados o haber abandonado el servicio antes de poder quejarse.
+En simple, con un ejemplo: Hablar en una reunión requiere tiempo, idioma, vocabulario, seguridad y ausencia de represalia. Quienes tienen menor poder pueden no ser invitados, aceptar la formulación dominante, describir problemas en términos que el equipo no reconoce, evitar revelar atajos que violan procedimientos, carecer de datos agregados o haber abandonado el servicio antes de poder quejarse.
 
 Por eso “consultamos a usuarios” no demuestra participación significativa. Debe examinarse quién fue seleccionado, quién falta, qué podía decir, qué podía cambiar y qué respuesta recibió. La presencia física es una condición débil. La voz efectiva requiere que una contribución pueda modificar al menos una hipótesis, un requisito, una prueba, una restricción, una autoridad o una condición de salida.
 
@@ -120,9 +120,9 @@ La seguridad psicológica no se resuelve pidiendo “hablen con libertad”. A v
 
 ### De la consulta a la participación con propósito
 
-No existe un único nivel correcto de participación. La escala de Arnstein permite advertir que informar, consultar y transferir poder no son equivalentes. El diseño sociotécnico participativo de Mumford y la justicia de diseño de Costanza-Chock agregan dos exigencias: la participación debe incidir en las alternativas y debe partir de quienes viven las consecuencias, no sólo de quienes patrocinan la intervención. Informar, consultar, observar, codiseñar, decidir conjuntamente, habilitar veto o establecer supervisión responden a situaciones distintas. El error consiste en elegir el nivel por comodidad y llamarlo participación suficiente sin relacionarlo con la decisión y el riesgo.
+En simple: No existe un único nivel correcto de participación. La escala de Arnstein permite advertir que informar, consultar y transferir poder no son equivalentes. El diseño sociotécnico participativo de Mumford y la justicia de diseño de Costanza-Chock agregan dos exigencias: la participación debe incidir en las alternativas y debe partir de quienes viven las consecuencias, no sólo de quienes patrocinan la intervención. Informar, consultar, observar, codiseñar, decidir conjuntamente, habilitar veto o establecer supervisión responden a situaciones distintas. El error consiste en elegir el nivel por comodidad y llamarlo participación suficiente sin relacionarlo con la decisión y el riesgo.
 
-Informar puede bastar para un cambio reversible de bajo impacto. Consultar permite incorporar experiencia sin transferir autoridad. Codiseñar resulta útil cuando distintas formas de conocimiento deben construir alternativas. La decisión conjunta puede ser necesaria cuando varias áreas comparten autoridad o consecuencias. Un derecho de detención se justifica en condiciones críticas aunque la persona que lo ejerce no controle el proyecto completo.
+Ejemplo cercano: Informar puede bastar para un cambio reversible de bajo impacto. Consultar permite incorporar experiencia sin transferir autoridad. Codiseñar resulta útil cuando distintas formas de conocimiento deben construir alternativas. La decisión conjunta puede ser necesaria cuando varias áreas comparten autoridad o consecuencias. Un derecho de detención se justifica en condiciones críticas aunque la persona que lo ejerce no controle el proyecto completo.
 
 La participación temprana puede cambiar propósito y frontera. La participación durante diseño permite contrastar prácticas y alternativas. Durante prueba revela barreras y efectos distributivos. En operación observa consecuencias acumulativas. Una consulta tardía sobre interfaz no reemplaza la posibilidad temprana de discutir si el canal debía ser obligatorio.
 
@@ -132,7 +132,7 @@ Toda estrategia de participación debería declarar cinco elementos: qué pregun
 
 ### Representación no equivale a presencia
 
-Invitar a una persona de un colectivo no garantiza representar su variación. Puede carecer de información, tiempo, seguridad o mandato. Puede ser tratada como caso excepcional y obligada a hablar por experiencias que no comparte. También puede existir una organización representante con conocimiento colectivo que no sustituye la experiencia directa de episodios concretos.
+En simple, con un ejemplo: Invitar a una persona de un colectivo no garantiza representar su variación. Puede carecer de información, tiempo, seguridad o mandato. Puede ser tratada como caso excepcional y obligada a hablar por experiencias que no comparte. También puede existir una organización representante con conocimiento colectivo que no sustituye la experiencia directa de episodios concretos.
 
 La representación se fortalece combinando mecanismos. Entrevistas aportan profundidad; encuestas amplían cobertura y simplifican matices; observación revela trabajo no declarado; reclamos muestran fallas y sesgo de quienes lograron reclamar; datos distributivos permiten comparar grupos; organizaciones intermedias aportan memoria y lenguaje; pruebas de recorrido confrontan la propuesta con situaciones reales.
 
@@ -142,7 +142,7 @@ La fatiga participativa es un riesgo. Pedir repetidamente que personas expuestas
 
 ### Beneficios, daños y capacidad de reparación
 
-Los beneficios y los daños no se distribuyen de manera simétrica. El hotel puede reducir minutos promedio mientras un grupo pierde una vía de atención. Un huésped puede perder una noche, privacidad o una oportunidad; una compensación económica no siempre restaura la situación. Una empleada puede absorber carga emocional y luego ser evaluada por tiempo de atención. El proveedor puede limitar contractualmente responsabilidad mientras el hotel enfrenta al cliente.
+En simple, con un ejemplo: Los beneficios y los daños no se distribuyen de manera simétrica. El hotel puede reducir minutos promedio mientras un grupo pierde una vía de atención. Un huésped puede perder una noche, privacidad o una oportunidad; una compensación económica no siempre restaura la situación. Una empleada puede absorber carga emocional y luego ser evaluada por tiempo de atención. El proveedor puede limitar contractualmente responsabilidad mientras el hotel enfrenta al cliente.
 
 Para cada grupo afectado conviene analizar intensidad, duración, reversibilidad, acumulación y alternativas. Un error leve repetido todos los días puede producir más carga que un incidente grave excepcional. Una barrera digital es fricción para quien tiene otro canal y exclusión para quien no. Una clasificación incorrecta puede corregirse en una pantalla y permanecer replicada en otros sistemas.
 
@@ -152,7 +152,7 @@ Una reparación completa pregunta quién reconoce el daño, quién posee autorid
 
 ### Perspectivas incompatibles y conflicto productivo
 
-Comercial puede definir éxito como aumentar reserva directa y reducir comisión. Finanzas puede observar que descuentos y costo de atención reducen margen. Recepción puede señalar que ciertos canales producen datos incompletos y más reparación. Las tres perspectivas son legítimas porque usan fronteras, tiempos e incentivos diferentes.
+En simple, con un ejemplo: Comercial puede definir éxito como aumentar reserva directa y reducir comisión. Finanzas puede observar que descuentos y costo de atención reducen margen. Recepción puede señalar que ciertos canales producen datos incompletos y más reparación. Las tres perspectivas son legítimas porque usan fronteras, tiempos e incentivos diferentes.
 
 Promediarlas en “mejorar ventas directas rentables” produce una frase aceptable, pero no resuelve atribución ni intercambio. La intervención necesita conservar la tensión y convertirla en preguntas: ¿qué margen se mide?, ¿durante cuánto tiempo?, ¿qué carga se incluye?, ¿qué grupos reciben peor servicio?, ¿qué costo se acepta para sostener una promesa?
 
@@ -162,9 +162,9 @@ Las métricas ayudan y también ocultan. Una puntuación agregada transforma val
 
 ### Autoridad, responsabilidad y capacidad
 
-Tres elementos suelen separarse. **Autoridad** es el derecho formal o legítimo a decidir. **Responsabilidad** es la obligación de responder por el resultado. **Capacidad** es la posibilidad real de ejecutar, supervisar o reparar.
+En simple: Tres elementos suelen separarse. **Autoridad** es el derecho formal o legítimo a decidir. **Responsabilidad** es la obligación de responder por el resultado. **Capacidad** es la posibilidad real de ejecutar, supervisar o reparar.
 
-Si una persona tiene responsabilidad sin autoridad, se convierte en amortiguador. Recepción da la cara por una promesa comercial que no puede modificar. Si existe autoridad sin información, la decisión puede ser formalmente válida y operacionalmente ciega. Si hay capacidad sin responsabilidad, por ejemplo cuando un proveedor puede cambiar un modelo, aparece riesgo de gobierno.
+Ejemplo cercano: Si una persona tiene responsabilidad sin autoridad, se convierte en amortiguador. Recepción da la cara por una promesa comercial que no puede modificar. Si existe autoridad sin información, la decisión puede ser formalmente válida y operacionalmente ciega. Si hay capacidad sin responsabilidad, por ejemplo cuando un proveedor puede cambiar un modelo, aparece riesgo de gobierno.
 
 Un diseño sólido distingue quién propone, quién aporta evidencia, quién decide, quién ejecuta, quién verifica, quién puede detener, quién repara, quién debe ser informado y quién puede impugnar. Las matrices de responsabilidad son útiles sólo si no transforman relaciones complejas en letras sin explicar capacidad y consecuencia.
 
@@ -221,7 +221,7 @@ Se acuerda quién decide, quién monitorea, qué señal obliga a revisar, quién
 
 ### Segunda mirada a HH-05: la prueba del actor ausente
 
-Antes de cerrar una decisión en HH-05, el equipo de Hotel Horizonte pregunta quién no está en la sala y qué evidencia podría aportar. La prueba no busca sumar participantes indefinidamente; busca detectar ausencias capaces de cambiar propósito, explicación, riesgo o viabilidad.
+En simple, con un ejemplo: Antes de cerrar una decisión en HH-05, el equipo de Hotel Horizonte pregunta quién no está en la sala y qué evidencia podría aportar. La prueba no busca sumar participantes indefinidamente; busca detectar ausencias capaces de cambiar propósito, explicación, riesgo o viabilidad.
 
 El ejercicio tiene cuatro movimientos. Primero, nombrar una ausencia concreta: personal nocturno, personas sin smartphone, tercerizados, huéspedes reubicados, equipo de incidentes. Segundo, reconstruir qué trabajo nuevo realizaría, qué señal perdería y qué error no podría disputar. Tercero, identificar evidencia alternativa si la participación directa no es posible. Cuarto, registrar por qué se considera suficiente y qué señal obligaría a revisar.
 
@@ -231,7 +231,7 @@ Una señal de calidad es que la prueba cambie la agenda: incorpora una entrevist
 
 ### Métodos para perspectivas difíciles de incorporar
 
-Algunos actores no pueden participar en talleres: trabajan por turnos, dependen jerárquicamente, son externos, poseen poco tiempo o aparecen durante excepciones. La metodología debe adaptar los métodos.
+En simple, con un ejemplo: Algunos actores no pueden participar en talleres: trabajan por turnos, dependen jerárquicamente, son externos, poseen poco tiempo o aparecen durante excepciones. La metodología debe adaptar los métodos.
 
 La observación de acompañamiento captura trabajo que no llega a una reunión. Las entrevistas separadas reducen presión de autoridad. Los diarios breves registran eventos distribuidos. El análisis de reclamos y abandono aproxima voces ausentes, reconociendo su sesgo. Las simulaciones exploran condiciones infrecuentes. Las organizaciones representantes aportan memoria colectiva. Las pruebas adversariales construyen escenarios desde la posición de quien tiene menor capacidad de reparar.
 
@@ -243,7 +243,7 @@ La triangulación debe buscar diferencias. Si Dirección describe una excepción
 
 ### 2026: la IA redistribuye poder aunque parezca asistencia
 
-En 2026 muchas organizaciones incorporan modelos generativos, asistentes, clasificación automática y recomendaciones dentro de productos existentes. La conversación suele enfocarse en precisión, costo y productividad. N05 obliga a observar otra dimensión: cada sistema de IA redistribuye capacidad de definir, conocer, decidir y reparar.
+En simple, con un ejemplo: En 2026 muchas organizaciones incorporan modelos generativos, asistentes, clasificación automática y recomendaciones dentro de productos existentes. La conversación suele enfocarse en precisión, costo y productividad. N05 obliga a observar otra dimensión: cada sistema de IA redistribuye capacidad de definir, conocer, decidir y reparar.
 
 La cadena de actores se amplía. Existen quienes desarrollan el modelo base, quienes lo adaptan, quienes proveen infraestructura, quienes integran el producto, quienes definen prompts y políticas, quienes producen datos o retroalimentación, quienes operan la herramienta y quienes reciben sus consecuencias. El usuario final ve una interfaz; el sistema político incluye una cadena de suministro.
 
@@ -259,7 +259,7 @@ La IA vuelve menos visible cierto trabajo. Personas revisan salidas, etiquetan e
 
 ### Tercera mirada a HH-05: Hotel Horizonte y la llegada automatizada
 
-Hotel Horizonte considera habilitar un asistente capaz de completar check-in, proponer cambios y responder sobre disponibilidad. La propuesta promete reducir espera, liberar tiempo de Recepción y ofrecer atención continua. El mapa ADC comienza con una decisión acotada: autorizar al asistente a completar casos simples y derivar aquellos con identidad, pago, accesibilidad, garantía o habitación no confirmada.
+En simple, con un ejemplo: Hotel Horizonte considera habilitar un asistente capaz de completar check-in, proponer cambios y responder sobre disponibilidad. La propuesta promete reducir espera, liberar tiempo de Recepción y ofrecer atención continua. El mapa ADC comienza con una decisión acotada: autorizar al asistente a completar casos simples y derivar aquellos con identidad, pago, accesibilidad, garantía o habitación no confirmada.
 
 El criterio de resultado provisorio no es “porcentaje automatizado”. Es disminuir tiempo total de llegada sin aumentar promesas incorrectas, exclusión de canal, carga de reparación ni decisiones que una persona no pueda impugnar. Esa formulación cambia actores y evidencia.
 
@@ -286,13 +286,13 @@ El error no se resuelve invitando a todos a opinar sobre la interfaz. Requiere d
 | Tecnología y proveedor | Integran y cambian capacidad | Configuración, datos, versiones, dependencia | Productividad o deuda, incidentes y dependencia difícil de revertir | Auditoría, registro de cambios, portabilidad y escalamiento |
 | Comercial y OTA | Definen oferta y expectativa | Encuadre, reglas, inventario, contrato | Conversión o sobrepromesa | Acordar semántica, límites y responsabilidad de reparación |
 
-La primera decisión razonable no es automatizar todo ni rechazar la IA. Es probar un alcance reversible con señales explícitas: tasa de derivación, promesas incorrectas, tiempo total hasta solución, carga por turno, abandono, accesibilidad y reparación. La condición de salida podría establecer que cualquier confirmación sin autoridad operativa detiene el flujo automático hasta revisar estados e integración.
+En simple, con un ejemplo: La primera decisión razonable no es automatizar todo ni rechazar la IA. Es probar un alcance reversible con señales explícitas: tasa de derivación, promesas incorrectas, tiempo total hasta solución, carga por turno, abandono, accesibilidad y reparación. La condición de salida podría establecer que cualquier confirmación sin autoridad operativa detiene el flujo automático hasta revisar estados e integración.
 
 El caso muestra por qué los actores no rodean al sistema: lo constituyen. La promesa de llegada existe sólo cuando esas relaciones producen, interpretan y autorizan información de manera coherente.
 
 ### De la voz a la evidencia
 
-Las voces del hotel no son perfiles decorativos. El bloque anterior permite verlas juntas; ahora corresponde interpretar qué relación ocupa cada una respecto del mismo resultado esperado y qué evidencia exige su afirmación.
+En simple, con un ejemplo: Las voces del hotel no son perfiles decorativos. El bloque anterior permite verlas juntas; ahora corresponde interpretar qué relación ocupa cada una respecto del mismo resultado esperado y qué evidencia exige su afirmación.
 
 Elena Acosta sostiene: **“Decidir rápido no sirve si la decisión deja sin voz a quien sostendrá el cambio.”** Su frase obliga a distinguir urgencia de clausura y a pedir evidencia sobre operación y afectados antes de comprometer escala.
 

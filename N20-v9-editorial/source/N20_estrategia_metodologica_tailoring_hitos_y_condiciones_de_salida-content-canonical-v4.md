@@ -108,11 +108,11 @@ N20 no trata el Manifiesto Ágil como catálogo ni al PMBOK como receta. Los usa
 
 ### Estrategia como hipótesis
 
-Una estrategia afirma cómo una combinación de acciones produciría capacidad y un resultado bajo condiciones explícitas. No es un listado de prácticas ni una certeza sobre el futuro.
+En simple: Una estrategia afirma cómo una combinación de acciones produciría capacidad y un resultado bajo condiciones explícitas. No es un listado de prácticas ni una certeza sobre el futuro.
 
 La formulación conecta decisiones, dependencias y mecanismos y conserva una explicación rival. Cada tramo debe indicar qué evidencia permitiría continuar, adaptar o detener.
 
-En Hotel Horizonte, integrar estados sólo reducirá reasignaciones si Recepción puede interpretar y corregir la diferencia antes de prometer la habitación.
+Ejemplo cercano: En Hotel Horizonte, integrar estados sólo reducirá reasignaciones si Recepción puede interpretar y corregir la diferencia antes de prometer la habitación.
 
 La forma completa distingue resultado deseado, mecanismo y condiciones. “Implementar el nuevo flujo mejorará el servicio” no permite revisar nada. HH-20 afirma que hacer visible procedencia y autoridad en el punto de confirmación reducirá reasignaciones porque Recepción podrá detectar y corregir discrepancias antes de enviar la promesa, siempre que Housekeeping actualice a tiempo y exista capacidad de reparación. Cada tramo puede fallar de modo distinto.
 
@@ -124,7 +124,7 @@ Esta formulación combina estrategia deliberada y aprendizaje emergente sin conf
 
 ### Ajuste metodológico situado por función
 
-El ajuste metodológico situado selecciona y adapta procesos según la función que deben cumplir en una intervención concreta. Nombrar un marco no alcanza. El equipo debe explicar qué información aporta cada práctica, qué decisión permite tomar y qué riesgo ayuda a controlar.
+En simple, con un ejemplo: El ajuste metodológico situado selecciona y adapta procesos según la función que deben cumplir en una intervención concreta. Nombrar un marco no alcanza. El equipo debe explicar qué información aporta cada práctica, qué decisión permite tomar y qué riesgo ayuda a controlar.
 
 La adaptación puede cambiar intensidad, secuencia, participantes o artefactos, pero debe conservar evidencia, autoridad y protección proporcional al riesgo. Lo que se elimina deja una función explícitamente cubierta por otro mecanismo.
 
@@ -154,11 +154,11 @@ La adaptación se prueba ante una objeción concreta. Si se elimina una revisió
 
 ### Factores situacionales
 
-Los factores situacionales son condiciones que modifican qué estrategia resulta defendible: criticidad, novedad, regulación, distribución, tamaño, competencias, dependencia y reversibilidad.
+En simple: Los factores situacionales son condiciones que modifican qué estrategia resulta defendible: criticidad, novedad, regulación, distribución, tamaño, competencias, dependencia y reversibilidad.
 
 No funcionan como excusas generales. Cada factor debe cambiar una decisión observable, como la supervisión, el ritmo de revisión, la prueba o la autoridad. Si no cambia nada, no forma parte de la adaptación.
 
-El hotel requiere mayor contingencia durante temporada alta y mayor contraste cuando una regla afecta accesibilidad, aunque el componente técnico sea el mismo.
+Ejemplo cercano: El hotel requiere mayor contingencia durante temporada alta y mayor contraste cuando una regla afecta accesibilidad, aunque el componente técnico sea el mismo.
 
 Los factores actúan en combinación. Alta criticidad con baja reversibilidad exige anticipar y probar; alta novedad con buena capacidad de reparación permite exposición limitada; distribución geográfica aumenta necesidad de autonomía local y contratos claros. Una lista no alcanza. Se explica cómo cada condición modifica secuencia, intensidad, participantes o autoridad.
 
@@ -178,11 +178,11 @@ El marco de NIST se usa para recorrer gobierno, contexto, medición y respuesta.
 
 ### Arquitectura de decisiones
 
-La arquitectura de decisiones ordena qué debe decidirse, por quién, con qué evidencia y bajo qué dependencia. Hace visible que un calendario de tareas puede ocultar puertas, conflictos y autorizaciones decisivas.
+En simple: La arquitectura de decisiones ordena qué debe decidirse, por quién, con qué evidencia y bajo qué dependencia. Hace visible que un calendario de tareas puede ocultar puertas, conflictos y autorizaciones decisivas.
 
 Se modelan relaciones: una decisión habilita, limita o vuelve innecesaria a otra. La secuencia se revisa cuando una dependencia no produce la evidencia esperada.
 
-HH-20 separa decidir el significado de “habitación liberada”, probar la integración y autorizar una promesa comercial. Ninguna de esas decisiones puede reemplazarse con avance técnico.
+Ejemplo cercano: HH-20 separa decidir el significado de “habitación liberada”, probar la integración y autorizar una promesa comercial. Ninguna de esas decisiones puede reemplazarse con avance técnico.
 
 La arquitectura representa dependencias lógicas, no solamente orden cronológico. Definir significado habilita diseñar contratos; probar contratos habilita evaluar operación; demostrar reparación habilita ampliar promesa. Algunas actividades pueden avanzar en paralelo, pero ninguna evidencia sustituye a otra. La capacitación puede prepararse mientras se prueba integración, aunque no cerrar antes de que el proceso final exista.
 
@@ -198,11 +198,11 @@ La persona que revisa no puede cambiar el umbral después de observar el resulta
 
 ### Hitos con consecuencia
 
-Un hito es un estado verificable que habilita, limita o cambia decisiones posteriores. Una fecha o una reunión no constituyen hito si nada puede decidirse de manera distinta.
+En simple: Un hito es un estado verificable que habilita, limita o cambia decisiones posteriores. Una fecha o una reunión no constituyen hito si nada puede decidirse de manera distinta.
 
 El criterio se define antes, incluye evidencia suficiente y señala la autoridad que actúa. Puede habilitar expansión, exigir corrección o cerrar una hipótesis.
 
-El piloto del hotel alcanza un hito cuando personal, monitoreo y contingencia resuelven el mismo episodio; completar la instalación no alcanza.
+Ejemplo cercano: El piloto del hotel alcanza un hito cuando personal, monitoreo y contingencia resuelven el mismo episodio; completar la instalación no alcanza.
 
 Un hito describe una condición del sistema, no una ceremonia del proyecto. “Reglas configuradas” puede ser evidencia parcial; “Recepción resuelve el episodio ordinario y la excepción con estados trazables y sin ayuda extraordinaria” permite decidir transferencia. El criterio combina capacidad, autonomía y población. Debe ser comprensible para quienes autorizan y para quienes sostienen operación.
 
@@ -212,7 +212,7 @@ Los hitos pueden ser cualitativos sin ser vagos. Resolver un episodio adverso, e
 
 ### Criterios de entrada
 
-Los criterios de entrada protegen una actividad de comenzar sin condiciones mínimas. Reducen exposición prematura y evitan que el equipo compense con urgencia una decisión que todavía carece de autoridad o evidencia.
+En simple, con un ejemplo: Los criterios de entrada protegen una actividad de comenzar sin condiciones mínimas. Reducen exposición prematura y evitan que el equipo compense con urgencia una decisión que todavía carece de autoridad o evidencia.
 
 Pueden exigir población delimitada, datos disponibles, responsables, contingencia y obligación resuelta. No son una lista ornamental: si falta una condición crítica, la actividad no comienza o cambia de alcance.
 
@@ -226,11 +226,11 @@ Bloquear no significa inmovilizar todo. Mientras falta autorización para exposi
 
 ### Criterios de salida
 
-Los criterios de salida definen qué evidencia permite cerrar, transferir, ampliar o detener. Se expresan como capacidad y decisión, no como porcentaje de tareas realizadas.
+En simple: Los criterios de salida definen qué evidencia permite cerrar, transferir, ampliar o detener. Se expresan como capacidad y decisión, no como porcentaje de tareas realizadas.
 
 El cierre puede admitir incertidumbre residual, siempre que alcance, riesgo, responsable y revisión permanezcan explícitos. Modificar el criterio luego del resultado crea una nueva evaluación y no reescribe la anterior.
 
-En el hotel, la salida exige uso ordinario, excepción accesible, monitoreo y recuperación probados antes de ampliar la promesa.
+Ejemplo cercano: En el hotel, la salida exige uso ordinario, excepción accesible, monitoreo y recuperación probados antes de ampliar la promesa.
 
 La suficiencia depende de la decisión siguiente. Una salida para pasar de prototipo a piloto puede exigir comprensión y seguridad básica; para transferir a operación requiere capacidad sostenida, soporte y reparación; para retirar el sistema anterior, reconciliación y respuesta a reclamos. Usar el mismo “hecho” para todos los tramos confunde madurez con actividad.
 
@@ -240,13 +240,13 @@ La salida puede ser detener. Si el piloto muestra que la integración no conserv
 
 ### Condición de detención
 
-Una condición de detención establece cuándo daño, falta de aprendizaje o costo vuelven improcedente continuar. Debe estar ligada a una señal y a una autoridad con poder real para actuar.
+En simple: Una condición de detención establece cuándo daño, falta de aprendizaje o costo vuelven improcedente continuar. Debe estar ligada a una señal y a una autoridad con poder real para actuar.
 
 Detener puede significar reducir población, volver al circuito anterior, revisar una hipótesis o cerrar la intervención. La contingencia protege a quienes ya quedaron expuestos.
 
 Si toda desviación se resuelve agregando plazo, la estrategia no tiene límite y la puerta es ficticia.
 
-La señal debe llegar antes de que la consecuencia sea irreparable. Un umbral mensual no sirve para una discrepancia que afecta la llegada en minutos. HH-20 combina detección inmediata para incidentes, acumulación para patrones y revisión periódica de hipótesis. Cada señal tiene un canal y una persona disponible para actuar.
+Ejemplo cercano: La señal debe llegar antes de que la consecuencia sea irreparable. Un umbral mensual no sirve para una discrepancia que afecta la llegada en minutos. HH-20 combina detección inmediata para incidentes, acumulación para patrones y revisión periódica de hipótesis. Cada señal tiene un canal y una persona disponible para actuar.
 
 La detención no siempre implica volver a cero. Puede congelar expansión, aislar una función, reducir población o activar operación manual. La respuesta se ensaya y financia. Si el circuito anterior fue desmantelado o nadie posee permiso para usarlo, la contingencia existe sólo en el documento.
 
@@ -256,9 +256,9 @@ Detener distribuye costos y puede encontrar resistencia. Comercial pierde una ca
 
 ### Cadencia de evidencia
 
-La cadencia de evidencia es el ritmo con que una estrategia observa y revisa sus efectos. No tiene por qué coincidir con la cadencia de reuniones ni con la entrega técnica.
+En simple: La cadencia de evidencia es el ritmo con que una estrategia observa y revisa sus efectos. No tiene por qué coincidir con la cadencia de reuniones ni con la entrega técnica.
 
-Incidentes requieren respuesta inmediata; adopción y resultados pueden necesitar ventanas más largas. Combinar señales con ritmos distintos evita reaccionar a ruido o descubrir tarde un daño.
+Ejemplo cercano: Incidentes requieren respuesta inmediata; adopción y resultados pueden necesitar ventanas más largas. Combinar señales con ritmos distintos evita reaccionar a ruido o descubrir tarde un daño.
 
 HH-20 define quién mira cada señal y cuándo llega a la autoridad capaz de modificar el compromiso.
 
@@ -270,9 +270,9 @@ La evidencia necesita tiempo para ser interpretada. Reuniones demasiado frecuent
 
 ### Gobierno proporcional
 
-El gobierno proporcional asigna decisión y control según consecuencia, incertidumbre e irreversibilidad. No centraliza todo ni delega aquello que exige una obligación institucional.
+En simple: El gobierno proporcional asigna decisión y control según consecuencia, incertidumbre e irreversibilidad. No centraliza todo ni delega aquello que exige una obligación institucional.
 
-La autoridad debe acompañarse de información, tiempo y recursos para responder. El escalamiento se reserva para conflictos que el nivel local no puede resolver, sin convertirlo en una cola permanente.
+Ejemplo cercano: La autoridad debe acompañarse de información, tiempo y recursos para responder. El escalamiento se reserva para conflictos que el nivel local no puede resolver, sin convertirlo en una cola permanente.
 
 El escenario adverso comprueba quién actúa cuando falta la persona habitual y qué decisión queda legítimamente bloqueada.
 
@@ -288,9 +288,9 @@ ISO/IEC/IEEE 16085:2021 vincula gestión del riesgo con responsabilidades y segu
 
 ### Transferencia a operación
 
-Transferir significa que una capacidad puede sostenerse con roles, conocimiento, recursos, monitoreo y reparación. Entregar archivos o capacitar una vez no demuestra autonomía.
+En simple: Transferir significa que una capacidad puede sostenerse con roles, conocimiento, recursos, monitoreo y reparación. Entregar archivos o capacitar una vez no demuestra autonomía.
 
-La prueba exige que operación resuelva un episodio ordinario y una excepción, acceda a evidencia y conozca cuándo escalar. Las responsabilidades temporales del equipo de cambio deben desaparecer o convertirse explícitamente en funciones permanentes.
+Ejemplo cercano: La prueba exige que operación resuelva un episodio ordinario y una excepción, acceda a evidencia y conozca cuándo escalar. Las responsabilidades temporales del equipo de cambio deben desaparecer o convertirse explícitamente en funciones permanentes.
 
 HH-20 registra aceptación operacional y asuntos abiertos sin fingir un cierre perfecto.
 
@@ -302,7 +302,7 @@ Los asuntos abiertos se clasifican por riesgo y responsable. Una mejora deseable
 
 ### Retiro de la estrategia
 
-Retirar prácticas y estructuras temporales forma parte del diseño metodológico. Comités, tableros y controles de transición consumen capacidad y pueden difuminar responsabilidad cuando su hipótesis ya cerró.
+En simple, con un ejemplo: Retirar prácticas y estructuras temporales forma parte del diseño metodológico. Comités, tableros y controles de transición consumen capacidad y pueden difuminar responsabilidad cuando su hipótesis ya cerró.
 
 El retiro conserva decisiones y evidencia suficientes para auditoría y aprendizaje. También transfiere las funciones que deben continuar y revoca accesos o contratos que ya no son necesarios.
 

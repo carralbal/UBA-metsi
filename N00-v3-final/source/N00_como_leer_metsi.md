@@ -56,7 +56,7 @@ La apuesta por reservar el encuentro para actividad intelectual no se apoya sól
 
 ## METSI: del pedido a una intervención defendible
 
-Metodología de los Sistemas de Información estudia cómo comprender e intervenir en situaciones organizacionales donde personas, información, tecnologías, reglas, intereses y condiciones materiales producen juntas un resultado. Su objeto no es una aplicación aislada ni una colección de métodos de moda. Es la relación entre una situación que importa, el sistema que hoy la produce, la evidencia disponible y una intervención que debe poder justificarse, revisarse y, cuando sea necesario, detenerse o repararse.
+En simple, con un ejemplo: Metodología de los Sistemas de Información estudia cómo comprender e intervenir en situaciones organizacionales donde personas, información, tecnologías, reglas, intereses y condiciones materiales producen juntas un resultado. Su objeto no es una aplicación aislada ni una colección de métodos de moda. Es la relación entre una situación que importa, el sistema que hoy la produce, la evidencia disponible y una intervención que debe poder justificarse, revisarse y, cuando sea necesario, detenerse o repararse.
 
 La materia comienza con una incomodidad deliberada. En la vida profesional, los pedidos suelen llegar redactados como soluciones: «hay que reemplazar el sistema», «necesitamos una app», «incorporemos inteligencia artificial», «automaticemos este proceso». Esas frases pueden contener una oportunidad real, una restricción legítima o una decisión política ya tomada. Pero todavía no explican qué fenómeno debe cambiar, quién vive el problema, qué mecanismo lo produce ni qué consecuencias podría introducir la solución preferida. METSI trabaja precisamente en ese espacio entre el pedido y una intervención defendible.
 
@@ -84,7 +84,7 @@ La relación entre ambas disciplinas puede expresarse con una frase: **construir
 
 ## El mapa de la materia: ocho bloques, una capacidad acumulativa
 
-La materia está organizada en ocho bloques curriculares, identificados de A a H. Cada bloque abre una familia de preguntas y entrega capacidades que el siguiente necesita. En la secuencia editorial y de producción, N01 a N10 forman además el **Bloque 1** de la colección: ese paquete reúne los bloques curriculares A y B. Son dos niveles de agrupación distintos y no dos mapas rivales. El orden importa porque evita discutir soluciones, modelos o tecnologías antes de contar con una representación suficientemente defendible del problema. Sin embargo, el recorrido no es una escalera que abandona lo anterior: los conceptos regresan y cambian de significado cuando aumenta la complejidad.
+En simple, con un ejemplo: La materia está organizada en ocho bloques curriculares, identificados de A a H. Cada bloque abre una familia de preguntas y entrega capacidades que el siguiente necesita. En la secuencia editorial y de producción, N01 a N10 forman además el **Bloque 1** de la colección: ese paquete reúne los bloques curriculares A y B. Son dos niveles de agrupación distintos y no dos mapas rivales. El orden importa porque evita discutir soluciones, modelos o tecnologías antes de contar con una representación suficientemente defendible del problema. Sin embargo, el recorrido no es una escalera que abandona lo anterior: los conceptos regresan y cambian de significado cuando aumenta la complejidad.
 
 | Bloque | Núcleos | Pregunta que organiza el bloque | Capacidad que deja disponible |
 |---|---:|---|---|
@@ -111,31 +111,31 @@ No estudiaremos estas palabras como un catálogo de definiciones. METSI pregunta
 
 ### Gestionar una intervención
 
-Gestionar una intervención es organizar el trabajo sin perder de vista el problema que se quiere cambiar. Por ejemplo, un cronograma puede estar completo y aun así conducir a construir una solución que nadie necesita. En la familia de gestión aparecen **PMI**, **PMBOK**, proyecto, programa, portfolio, **WBS**, riesgo y *tailoring*. Estos términos permiten organizar alcance, trabajo, dependencias, responsabilidades y decisiones. METSI agrega una pregunta previa: ¿el objeto que estamos gestionando representa suficientemente el problema y la capacidad que necesitamos transformar? Una WBS puede descomponer con precisión un proyecto equivocado; un registro de riesgos puede ser impecable y omitir el riesgo que quedó fuera de la frontera; un tailoring puede adaptar prácticas con rigor o simplemente eliminar controles incómodos.
+En simple, con un ejemplo: Gestionar una intervención es organizar el trabajo sin perder de vista el problema que se quiere cambiar. Por ejemplo, un cronograma puede estar completo y aun así conducir a construir una solución que nadie necesita. En la familia de gestión aparecen **PMI**, **PMBOK**, proyecto, programa, portfolio, **WBS**, riesgo y *tailoring*. Estos términos permiten organizar alcance, trabajo, dependencias, responsabilidades y decisiones. METSI agrega una pregunta previa: ¿el objeto que estamos gestionando representa suficientemente el problema y la capacidad que necesitamos transformar? Una WBS puede descomponer con precisión un proyecto equivocado; un registro de riesgos puede ser impecable y omitir el riesgo que quedó fuera de la frontera; un tailoring puede adaptar prácticas con rigor o simplemente eliminar controles incómodos.
 
 ### Trabajar con agilidad y flujo
 
-En la familia de agilidad y flujo aparecen **Agile**, **Scrum**, **Kanban**, *backlog*, *sprint*, historias de usuario, *story points*, *value points*, trabajo en curso (**WIP**) y producto mínimo viable (**MVP**). Estas ideas ayudan a dividir, priorizar, aprender y coordinar. METSI evita tratarlas como rituales autosuficientes. Un backlog ordenado no demuestra que el problema esté bien construido; más velocidad puede acelerar una contradicción; un MVP puede reducir alcance sin conservar la hipótesis que justificaba aprender. La pregunta será qué incertidumbre reduce cada práctica y qué decisión cambia gracias a ese aprendizaje.
+En simple, con un ejemplo: En la familia de agilidad y flujo aparecen **Agile**, **Scrum**, **Kanban**, *backlog*, *sprint*, historias de usuario, *story points*, *value points*, trabajo en curso (**WIP**) y producto mínimo viable (**MVP**). Estas ideas ayudan a dividir, priorizar, aprender y coordinar. METSI evita tratarlas como rituales autosuficientes. Un backlog ordenado no demuestra que el problema esté bien construido; más velocidad puede acelerar una contradicción; un MVP puede reducir alcance sin conservar la hipótesis que justificaba aprender. La pregunta será qué incertidumbre reduce cada práctica y qué decisión cambia gracias a ese aprendizaje.
 
 ### Diseñar experiencia y procesos
 
-En la familia de experiencia y procesos aparecen **UX**, **UI**, *customer journey*, *service blueprint*, **BPM**, **BPMN**, personas y accesibilidad. UI ayuda a diseñar la interfaz; UX amplía la mirada hacia la experiencia; BPM y BPMN permiten representar actividades, eventos, reglas y responsabilidades. Donald Norman distingue el modelo conceptual que propone quien diseña del modelo que construye quien usa el sistema. En Hotel Horizonte, una pantalla puede mostrar el estado «liberada» con perfecta consistencia y, sin embargo, Housekeeping y Recepción pueden interpretarlo mediante modelos distintos sobre limpieza, asignación, cerraduras y autoridad. METSI conecta esas representaciones con trabajo real, poder y promesas de servicio. Un recorrido ideal puede ocultar reparaciones informales; una persona ficticia puede borrar diversidad; un proceso formal puede excluir la excepción que sostiene la operación. La representación sirve si permite observar mejor y decidir, no sólo si se ve completa.
+En simple, con un ejemplo: En la familia de experiencia y procesos aparecen **UX**, **UI**, *customer journey*, *service blueprint*, **BPM**, **BPMN**, personas y accesibilidad. UI ayuda a diseñar la interfaz; UX amplía la mirada hacia la experiencia; BPM y BPMN permiten representar actividades, eventos, reglas y responsabilidades. Donald Norman distingue el modelo conceptual que propone quien diseña del modelo que construye quien usa el sistema. En Hotel Horizonte, una pantalla puede mostrar el estado «liberada» con perfecta consistencia y, sin embargo, Housekeeping y Recepción pueden interpretarlo mediante modelos distintos sobre limpieza, asignación, cerraduras y autoridad. METSI conecta esas representaciones con trabajo real, poder y promesas de servicio. Un recorrido ideal puede ocultar reparaciones informales; una persona ficticia puede borrar diversidad; un proceso formal puede excluir la excepción que sostiene la operación. La representación sirve si permite observar mejor y decidir, no sólo si se ve completa.
 
 ### Gobernar producto y valor
 
-En la familia de producto y valor aparecen producto, servicio, plataforma, *output*, *outcome*, **OKR**, hipótesis y priorización. Un output es algo producido; un outcome es un cambio observable en una situación. Esa distinción impide confundir entrega con resultado. METSI pregunta además quién define que el cambio es valioso, qué mecanismos podrían producirlo, qué efectos adversos quedan fuera de la métrica y qué evidencia justificaría abandonar una iniciativa. Priorizar no es ordenar deseos: es hacer visibles renuncias, dependencias y costos de oportunidad.
+En simple, con un ejemplo: En la familia de producto y valor aparecen producto, servicio, plataforma, *output*, *outcome*, **OKR**, hipótesis y priorización. Un output es algo producido; un outcome es un cambio observable en una situación. Esa distinción impide confundir entrega con resultado. METSI pregunta además quién define que el cambio es valioso, qué mecanismos podrían producirlo, qué efectos adversos quedan fuera de la métrica y qué evidencia justificaría abandonar una iniciativa. Priorizar no es ordenar deseos: es hacer visibles renuncias, dependencias y costos de oportunidad.
 
 ### Integrar tecnología e información
 
-En la familia técnica aparecen **API**, eventos, estados, arquitectura, consistencia, idempotencia, contratos y legado. Una API puede intercambiar datos correctamente y aun así propagar significados incompatibles. Un estado puede estar actualizado pero no otorgar autoridad para actuar. La idempotencia evita duplicar efectos ante reintentos, pero no determina si la operación era legítima. El legado no es sólo código viejo: incluye contratos, datos, prácticas, conocimiento y restricciones que sostienen capacidades actuales. METSI relaciona precisión técnica con la promesa organizacional que esa tecnología debe sostener.
+En simple, con un ejemplo: En la familia técnica aparecen **API**, eventos, estados, arquitectura, consistencia, idempotencia, contratos y legado. Una API puede intercambiar datos correctamente y aun así propagar significados incompatibles. Un estado puede estar actualizado pero no otorgar autoridad para actuar. La idempotencia evita duplicar efectos ante reintentos, pero no determina si la operación era legítima. El legado no es sólo código viejo: incluye contratos, datos, prácticas, conocimiento y restricciones que sostienen capacidades actuales. METSI relaciona precisión técnica con la promesa organizacional que esa tecnología debe sostener.
 
 ### Entregar y operar
 
-En la familia de entrega y operación aparecen **DevOps**, **CI/CD**, observabilidad, **SLI**, **SLO**, incidentes y *rollback*. Estas prácticas acortan ciclos, automatizan controles y permiten observar sistemas en funcionamiento. METSI amplía la pregunta desde «¿está disponible el componente?» hacia «¿puede el sistema completo cumplir y reparar su promesa?». Un servicio puede respetar su SLO y la experiencia fallar; un despliegue puede completarse sin que la organización esté preparada; un rollback técnico puede no revertir decisiones, datos o daños ya producidos.
+En simple, con un ejemplo: En la familia de entrega y operación aparecen **DevOps**, **CI/CD**, observabilidad, **SLI**, **SLO**, incidentes y *rollback*. Estas prácticas acortan ciclos, automatizan controles y permiten observar sistemas en funcionamiento. METSI amplía la pregunta desde «¿está disponible el componente?» hacia «¿puede el sistema completo cumplir y reparar su promesa?». Un servicio puede respetar su SLO y la experiencia fallar; un despliegue puede completarse sin que la organización esté preparada; un rollback técnico puede no revertir decisiones, datos o daños ya producidos.
 
 ### Incorporar IA con gobierno
 
-En la familia de inteligencia artificial aparecen *machine learning* (**ML**), IA generativa, **RAG**, agentes, *human-in-the-loop*, autonomía, supervisión y trazabilidad. La cuestión no es sólo qué modelo usar, sino qué tarea se delega, qué evidencia demuestra capacidad, qué errores importan, quién puede intervenir y cómo se repara. Un sistema con una persona «en el circuito» puede seguir sin supervisión efectiva si esa persona no tiene tiempo, información o autoridad. La autonomía no se declara por marketing: se analiza a partir de las acciones que el sistema puede iniciar y de sus consecuencias.
+En simple, con un ejemplo: En la familia de inteligencia artificial aparecen *machine learning* (**ML**), IA generativa, **RAG**, agentes, *human-in-the-loop*, autonomía, supervisión y trazabilidad. La cuestión no es sólo qué modelo usar, sino qué tarea se delega, qué evidencia demuestra capacidad, qué errores importan, quién puede intervenir y cómo se repara. Un sistema con una persona «en el circuito» puede seguir sin supervisión efectiva si esa persona no tiene tiempo, información o autoridad. La autonomía no se declara por marketing: se analiza a partir de las acciones que el sistema puede iniciar y de sus consecuencias.
 
 Estas familias se cruzan durante toda la materia. Scrum puede organizar el trabajo de un producto; una API puede sostener un servicio; un SLO puede aportar evidencia para un outcome; una IA puede integrarse mediante eventos y quedar gobernada por una política de riesgo. METSI construye puentes entre esas palabras para evitar dos extremos: aprenderlas como compartimentos separados o mezclarlas en una única idea vaga de «hacer sistemas».
 
@@ -163,7 +163,7 @@ La puesta en común no consiste en que todos los equipos lean lo mismo. Se selec
 
 ### Un encuentro, paso a paso: ejemplo con Hotel Horizonte
 
-HH-00.1 registra dos sobreventas, además de esperas en Recepción, habitaciones que figuran disponibles pero no pueden entregarse y respuestas distintas según el canal. A partir de esa evidencia, la pregunta inicial es: **¿el problema dominante está en el PMS, en la coordinación operativa o en la promesa comercial?** Cada estudiante llega con una hipótesis inicial, cita al menos un fragmento del memo y declara qué dato todavía le falta. No se espera que haya encontrado «la respuesta correcta». Se espera que pueda mostrar de dónde salió su interpretación.
+En simple, con un ejemplo: HH-00.1 registra dos sobreventas, además de esperas en Recepción, habitaciones que figuran disponibles pero no pueden entregarse y respuestas distintas según el canal. A partir de esa evidencia, la pregunta inicial es: **¿el problema dominante está en el PMS, en la coordinación operativa o en la promesa comercial?** Cada estudiante llega con una hipótesis inicial, cita al menos un fragmento del memo y declara qué dato todavía le falta. No se espera que haya encontrado «la respuesta correcta». Se espera que pueda mostrar de dónde salió su interpretación.
 
 El encuentro virtual puede comenzar comparando esas hipótesis en grupos pequeños. Un equipo interpreta que la demora podría estar en la propagación del inventario entre el PMS y las agencias de viaje en línea, aunque HH-00 todavía no aporta un log que lo demuestre. Otro observa que dos áreas podrían usar la palabra *disponible* con significados distintos. Un tercero sospecha que Comercial ofrece una condición que Operaciones no siempre puede cumplir. El docente no decide todavía cuál gana. Pide construir una tabla breve con cuatro columnas: fragmento identificado de HH-00, afirmación que el equipo puede sostener, evidencia que falta y decisión que esa afirmación habilitaría.
 
@@ -177,9 +177,9 @@ Este ejemplo resume la lógica operativa del curso: leer para llegar con una pri
 
 ### Modalidades presenciales, virtuales y asincrónicas
 
-La función se conserva aunque cambie el medio. El encuentro presencial favorece movimiento, conversaciones simultáneas y artefactos compartidos. El encuentro virtual sincrónico concentra comparación, decisión y devolución inmediata. Una actividad asincrónica no es una clase filmada: necesita propósito observable, consigna acotada, artefacto de salida y una conexión explícita con el momento siguiente.
+En simple: La función se conserva aunque cambie el medio. El encuentro presencial favorece movimiento, conversaciones simultáneas y artefactos compartidos. El encuentro virtual sincrónico concentra comparación, decisión y devolución inmediata. Una actividad asincrónica no es una clase filmada: necesita propósito observable, consigna acotada, artefacto de salida y una conexión explícita con el momento siguiente.
 
-El mismo episodio puede atravesar los tres modos sin repetirse. Si `HH-07` describe una habitación que Housekeeping declaró lista aunque Recepción todavía no podía asignarla, el momento asincrónico reconstruye la secuencia y marca dónde cambia el significado de «lista». El encuentro virtual contrasta una falla de propagación técnica con una incompatibilidad de reglas operativas. El presencial representa el pase entre áreas, introduce una excepción y observa quién puede detectar, decidir y reparar. Cada momento hereda evidencia y produce otra que el siguiente necesita.
+Ejemplo cercano: El mismo episodio puede atravesar los tres modos sin repetirse. Si `HH-07` describe una habitación que Housekeeping declaró lista aunque Recepción todavía no podía asignarla, el momento asincrónico reconstruye la secuencia y marca dónde cambia el significado de «lista». El encuentro virtual contrasta una falla de propagación técnica con una incompatibilidad de reglas operativas. El presencial representa el pase entre áreas, introduce una excepción y observa quién puede detectar, decidir y reparar. Cada momento hereda evidencia y produce otra que el siguiente necesita.
 
 El tamaño del grupo modifica la logística, no el propósito. Con 20 estudiantes, cada equipo puede defender su mapa; con 50 convienen estaciones y comparaciones cruzadas; con 120 en modalidad virtual, una encuesta diagnóstica, salas pequeñas, documento compartido y síntesis docente. Siempre queda una salida observable: hipótesis revisada, relación agregada, criterio de decisión o pregunta mejor formulada.
 
@@ -328,7 +328,7 @@ Finalmente, una N no es una evaluación encubierta. Las preguntas de preparació
 
 ### Convenciones del sistema editorial
 
-Tres numeraciones conviven en la colección y no significan lo mismo. `Nxx` identifica un Núcleo conceptual. `HH-xx` identifica un paquete o episodio de evidencia de Hotel Horizonte. La marca **SECCIÓN 01, 02, 03...** ordena únicamente los apartados argumentales dentro del documento que se está leyendo. En el diseño, la sección se muestra como etiqueta rectangular y no como el círculo reservado para N00 en la portada. Su barra vertical es siempre volt: identifica una entrada de sección y no distingue jerarquía, núcleo ni extensión. La portada, el Contenido, Referentes, las portadillas de Parte, las pausas visuales a página completa, las láminas de evidencia, Referencias base y el cierre no reciben número de sección porque funcionan como aparato de orientación, evidencia o referencia, no como argumento del documento. El índice marca **SIN NUM.** los aparatos que conviene localizar y este criterio cubre también las portadillas, las pausas visuales y el cierre. **SIN NUM.** no elimina el folio ni la línea de pie: todas las páginas permanecen dentro del sistema de compaginación.
+En simple, con un ejemplo: Tres numeraciones conviven en la colección y no significan lo mismo. `Nxx` identifica un Núcleo conceptual. `HH-xx` identifica un paquete o episodio de evidencia de Hotel Horizonte. La marca **SECCIÓN 01, 02, 03...** ordena únicamente los apartados argumentales dentro del documento que se está leyendo. En el diseño, la sección se muestra como etiqueta rectangular y no como el círculo reservado para N00 en la portada. Su barra vertical es siempre volt: identifica una entrada de sección y no distingue jerarquía, núcleo ni extensión. La portada, el Contenido, Referentes, las portadillas de Parte, las pausas visuales a página completa, las láminas de evidencia, Referencias base y el cierre no reciben número de sección porque funcionan como aparato de orientación, evidencia o referencia, no como argumento del documento. El índice marca **SIN NUM.** los aparatos que conviene localizar y este criterio cubre también las portadillas, las pausas visuales y el cierre. **SIN NUM.** no elimina el folio ni la línea de pie: todas las páginas permanecen dentro del sistema de compaginación.
 
 El registro gramatical también cumple una regla estable. Cuando una consigna te pide actuar, el documento usa voseo rioplatense. Cuando describe una estructura, una condición o un criterio general, usa formulación impersonal. Las preguntas de autochequeo pueden usar la primera persona para que cada estudiante ensaye internamente su respuesta antes de compartirla.
 
@@ -338,11 +338,11 @@ Los numerales siguen otra regla estable. En la prosa general, del cero al diez s
 
 ### Portada
 
-La portada identifica el número, el título y la tesis breve del documento. La imagen es única para cada N y funciona como entrada conceptual. No hace falta interpretarla de manera «correcta». Conviene observar qué sensación, relación o tensión propone y comprobar luego si esa primera impresión cambia durante la lectura.
+En simple, con un ejemplo: La portada identifica el número, el título y la tesis breve del documento. La imagen es única para cada N y funciona como entrada conceptual. No hace falta interpretarla de manera «correcta». Conviene observar qué sensación, relación o tensión propone y comprobar luego si esa primera impresión cambia durante la lectura.
 
 ### Contenido
 
-En palabras simples, esta página es el mapa de la lectura: muestra qué conviene leer primero, qué partes profundizan y cuánto tiempo reservar. Por ejemplo, una estudiante con noventa minutos puede seguir sólo la ruta marcada y volver luego a las extensiones. La tabla de contenido permite anticipar el recorrido. Antes de comenzar, conviene recorrer sus títulos y formular una hipótesis: ¿qué camino parece proponer el documento?, ¿qué conceptos resultan conocidos?, ¿dónde podría estar la dificultad? Esa anticipación activa conocimiento previo y evita leer cada sección como un fragmento aislado.
+En simple, con un ejemplo: En palabras simples, esta página es el mapa de la lectura: muestra qué conviene leer primero, qué partes profundizan y cuánto tiempo reservar. Por ejemplo, una estudiante con noventa minutos puede seguir sólo la ruta marcada y volver luego a las extensiones. La tabla de contenido permite anticipar el recorrido. Antes de comenzar, conviene recorrer sus títulos y formular una hipótesis: ¿qué camino parece proponer el documento?, ¿qué conceptos resultan conocidos?, ¿dónde podría estar la dificultad? Esa anticipación activa conocimiento previo y evita leer cada sección como un fragmento aislado.
 
 ### Referentes
 
@@ -354,7 +354,7 @@ Es la pregunta que organiza la lectura. No suele tener una respuesta de una sola
 
 ### Historia, analogía o metáfora
 
-La historia no es un adorno ni una pausa antes del contenido «serio». Construye una experiencia compartida que vuelve visible la estructura del problema. Su función se parece a la de una buena charla: presentar un conflicto, sostener curiosidad y permitir que una idea abstracta se comprenda antes de formalizarse.
+En simple, con un ejemplo: La historia no es un adorno ni una pausa antes del contenido «serio». Construye una experiencia compartida que vuelve visible la estructura del problema. Su función se parece a la de una buena charla: presentar un conflicto, sostener curiosidad y permitir que una idea abstracta se comprenda antes de formalizarse.
 
 ### Tesis
 
@@ -362,19 +362,19 @@ La tesis es la afirmación principal que el documento defenderá. Debe leerse co
 
 ### Desarrollo conceptual
 
-El desarrollo conceptual explica las ideas con más precisión después de presentar su sentido general. Por ejemplo, primero podemos entender que una frontera decide qué queda dentro del análisis y luego estudiar sus criterios, efectos y límites. El desarrollo combina definiciones, distinciones, marcos, evidencia y discusión. Algunas secciones requieren dos velocidades. En una primera pasada se busca el argumento general. En una segunda se revisan términos, relaciones y ejemplos. Si un párrafo no se entiende, conviene preguntar qué función cumple dentro de la tesis antes de consultar cada palabra por separado.
+En simple, con un ejemplo: El desarrollo conceptual explica las ideas con más precisión después de presentar su sentido general. Por ejemplo, primero podemos entender que una frontera decide qué queda dentro del análisis y luego estudiar sus criterios, efectos y límites. El desarrollo combina definiciones, distinciones, marcos, evidencia y discusión. Algunas secciones requieren dos velocidades. En una primera pasada se busca el argumento general. En una segunda se revisan términos, relaciones y ejemplos. Si un párrafo no se entiende, conviene preguntar qué función cumple dentro de la tesis antes de consultar cada palabra por separado.
 
 ### Ejemplos intercalados
 
-Los ejemplos reducen la distancia entre concepto y situación. No deben memorizarse como casos modelo. La pregunta relevante es qué relación vuelven observable. Un ejemplo sobre una habitación liberada puede mostrar incompatibilidad semántica; otro sobre un chatbot puede mostrar autoridad y reparación. Cambia el escenario, pero se conserva la función analítica.
+En simple, con un ejemplo: Los ejemplos reducen la distancia entre concepto y situación. No deben memorizarse como casos modelo. La pregunta relevante es qué relación vuelven observable. Un ejemplo sobre una habitación liberada puede mostrar incompatibilidad semántica; otro sobre un chatbot puede mostrar autoridad y reparación. Cambia el escenario, pero se conserva la función analítica.
 
 ### Infografías
 
-Una infografía es un dibujo que ayuda a ver relaciones difíciles de seguir sólo con palabras. Por ejemplo, una flecha entre Reserva y Recepción puede mostrar quién envía información, en qué dirección y antes de qué decisión. Una infografía aparece cuando una relación se comprende mejor visualmente. Puede mostrar partes, capas, secuencias, bucles, decisiones o integraciones. Debe leerse en dos sentidos: primero la estructura completa; luego cada componente y sus conexiones. Si el diagrama sólo se mira como ilustración, se pierde su valor. Si no agrega una relación que el texto no muestra con igual claridad, no debería estar.
+En simple, con un ejemplo: Una infografía es un dibujo que ayuda a ver relaciones difíciles de seguir sólo con palabras. Por ejemplo, una flecha entre Reserva y Recepción puede mostrar quién envía información, en qué dirección y antes de qué decisión. Una infografía aparece cuando una relación se comprende mejor visualmente. Puede mostrar partes, capas, secuencias, bucles, decisiones o integraciones. Debe leerse en dos sentidos: primero la estructura completa; luego cada componente y sus conexiones. Si el diagrama sólo se mira como ilustración, se pierde su valor. Si no agrega una relación que el texto no muestra con igual claridad, no debería estar.
 
 ### Pausas visuales
 
-Una pausa visual es como levantar la vista después de varias páginas para ordenar lo aprendido. La fotografía y una frase breve no agregan otro tema: ayudan a relacionar la idea anterior antes de continuar. Las páginas de imagen completa dan respiración al ritmo de lectura y condensan una frase potente. No reemplazan contenido. Invitan a detenerse y recuperar una idea antes de avanzar. El paralelogramo volt funciona como firma visual y no como señal de que la frase sea más verdadera. La página final conserva el sistema de compaginación y accesibilidad, pero omite la frase porque funciona como marca de cierre y no como condensación argumental.
+En simple, con un ejemplo: Una pausa visual es como levantar la vista después de varias páginas para ordenar lo aprendido. La fotografía y una frase breve no agregan otro tema: ayudan a relacionar la idea anterior antes de continuar. Las páginas de imagen completa dan respiración al ritmo de lectura y condensan una frase potente. No reemplazan contenido. Invitan a detenerse y recuperar una idea antes de avanzar. El paralelogramo volt funciona como firma visual y no como señal de que la frase sea más verdadera. La página final conserva el sistema de compaginación y accesibilidad, pero omite la frase porque funciona como marca de cierre y no como condensación argumental.
 
 ### Hotel Horizonte
 
@@ -382,7 +382,7 @@ El caso longitudinal traduce conceptos a una organización ficticia pero verosí
 
 ### Arquetipos del caso
 
-Los arquetipos son personajes estables que permiten mirar el mismo problema desde lugares distintos. Por ejemplo, Lucía ve la llegada desde Recepción y Federico desde Tecnología; ninguno posee por sí solo toda la explicación. Elena Acosta, Lucía Ferreyra, Mariela Benítez, Ricardo Sosa, Federico Müller y Camila Duarte se presentan en N00 como arquetipos situados: tienen edad, responsabilidad, información disponible, necesidades, miedos, supuestos y puntos ciegos. No son estereotipos psicológicos ni voces que deban obedecerse. Sirven para anticipar por qué una misma escena puede producir interpretaciones legítimamente distintas. En los Núcleos siguientes sus intervenciones aparecerán entre comillas y deberán analizarse como posiciones: qué observan, qué controlan, qué arriesgan y qué permanece fuera de su campo de visión.
+En simple, con un ejemplo: Los arquetipos son personajes estables que permiten mirar el mismo problema desde lugares distintos. Por ejemplo, Lucía ve la llegada desde Recepción y Federico desde Tecnología; ninguno posee por sí solo toda la explicación. Elena Acosta, Lucía Ferreyra, Mariela Benítez, Ricardo Sosa, Federico Müller y Camila Duarte se presentan en N00 como arquetipos situados: tienen edad, responsabilidad, información disponible, necesidades, miedos, supuestos y puntos ciegos. No son estereotipos psicológicos ni voces que deban obedecerse. Sirven para anticipar por qué una misma escena puede producir interpretaciones legítimamente distintas. En los Núcleos siguientes sus intervenciones aparecerán entre comillas y deberán analizarse como posiciones: qué observan, qué controlan, qué arriesgan y qué permanece fuera de su campo de visión.
 
 ### Límites y tensiones
 
@@ -424,19 +424,19 @@ El flujo pedagógico tiene tres momentos conectados. Antes del encuentro, cada e
 
 ### Antes: preparar una contribución
 
-La preparación mínima no consiste en «haber pasado por todas las páginas». Consiste en llegar con una contribución posible. Puede ser una duda precisa, un ejemplo, una objeción o una hipótesis sobre Hotel Horizonte. Para construirla conviene usar cuatro marcas: `?` para lo que no se comprende; `!` para una idea que cambia la mirada; `↔` para una conexión con otra materia o experiencia; y `Δ` para una decisión que podría modificarse.
+En simple, con un ejemplo: La preparación mínima no consiste en «haber pasado por todas las páginas». Consiste en llegar con una contribución posible. Puede ser una duda precisa, un ejemplo, una objeción o una hipótesis sobre Hotel Horizonte. Para construirla conviene usar cuatro marcas: `?` para lo que no se comprende; `!` para una idea que cambia la mirada; `↔` para una conexión con otra materia o experiencia; y `Δ` para una decisión que podría modificarse.
 
 Una lectura extensa no requiere subrayar todo. Cuando todo está resaltado, nada está jerarquizado. Conviene seleccionar entre tres y cinco fragmentos y escribir al margen por qué importan. La explicación propia es más valiosa que el color del resaltador.
 
 ### Durante: usar el tiempo compartido
 
-El encuentro presencial o virtual no repite la lectura. Puede comenzar aclarando dudas, pero dedica la mayor parte del tiempo a poner en común, analizar episodios, construir mapas, ensayar entrevistas, comparar hipótesis o decidir frente a evidencia incompleta. La función docente es diseñar condiciones, introducir contraejemplos, ajustar profundidad y cuidar que las diferencias se vuelvan productivas.
+En simple, con un ejemplo: El encuentro presencial o virtual no repite la lectura. Puede comenzar aclarando dudas, pero dedica la mayor parte del tiempo a poner en común, analizar episodios, construir mapas, ensayar entrevistas, comparar hipótesis o decidir frente a evidencia incompleta. La función docente es diseñar condiciones, introducir contraejemplos, ajustar profundidad y cuidar que las diferencias se vuelvan productivas.
 
 En grupos numerosos, no todas las personas hablarán en plenario. La participación puede distribuirse mediante trabajo en parejas, pequeños grupos, documentos compartidos, votaciones razonadas o roles. Participar no equivale a hablar más: equivale a aportar evidencia, hacer una pregunta que mejora el encuadre, sintetizar una tensión o revisar una posición.
 
 ### Después: hacer visible qué cambió
 
-El cierre recupera la pregunta profesional. Cada estudiante debería poder completar dos frases: «antes pensaba…; ahora sostengo…» y «la evidencia que podría hacerme cambiar nuevamente es…». La segunda evita convertir el aprendizaje en una nueva certeza rígida.
+En simple, con un ejemplo: El cierre recupera la pregunta profesional. Cada estudiante debería poder completar dos frases: «antes pensaba…; ahora sostengo…» y «la evidencia que podría hacerme cambiar nuevamente es…». La segunda evita convertir el aprendizaje en una nueva certeza rígida.
 
 Chris Argyris y Donald Schön permiten nombrar este ciclo como aprendizaje de doble bucle. No sólo se corrige una respuesta dentro de las reglas existentes: también se revisan los supuestos y criterios que produjeron la primera interpretación. La secuencia «antes pensaba, ahora sostengo, qué evidencia me haría revisar» deja visible ese cambio y mantiene abierta la posibilidad de volver a aprender.
 
@@ -444,7 +444,7 @@ La producción posterior puede ser breve: una nota de decisión, una versión co
 
 ## Un método de lectura en siete movimientos
 
-No existe una única manera correcta de leer, pero conviene contar con un procedimiento inicial que después pueda adaptarse. El siguiente método no busca controlar cada minuto: ayuda a que la densidad del documento no se convierta en una sucesión de párrafos sin jerarquía.
+En simple, con un ejemplo: No existe una única manera correcta de leer, pero conviene contar con un procedimiento inicial que después pueda adaptarse. El siguiente método no busca controlar cada minuto: ayuda a que la densidad del documento no se convierta en una sucesión de párrafos sin jerarquía.
 
 El primer movimiento es **anticipar**. Antes de leer en profundidad, mirá la portada, el contenido, los títulos, las fotografías y la pregunta profesional. Escribí en una frase qué creés que intentará demostrar la lectura. Esa predicción puede ser incorrecta; justamente por eso resulta útil. Al final permitirá observar si el argumento modificó tu encuadre.
 
@@ -549,7 +549,7 @@ El caso longitudinal conserva continuidad. Las voces muestran perspectivas, no v
 
 ## Producto mínimo para llegar al encuentro
 
-Condensá tu preparación en una sola página o nota. Incluí una formulación de la tesis con palabras propias; un fragmento marcado porque cambia o complica tu interpretación; una hipótesis sobre Hotel Horizonte apoyada en al menos una cita identificada de HH-00; una evidencia que podría debilitarla; y una pregunta que el trabajo con otras personas ayude a responder. No busques una respuesta «correcta» ni un resumen del documento. Prepará una contribución que pueda entrar en conversación.
+En simple, con un ejemplo: Condensá tu preparación en una sola página o nota. Incluí una formulación de la tesis con palabras propias; un fragmento marcado porque cambia o complica tu interpretación; una hipótesis sobre Hotel Horizonte apoyada en al menos una cita identificada de HH-00; una evidencia que podría debilitarla; y una pregunta que el trabajo con otras personas ayude a responder. No busques una respuesta «correcta» ni un resumen del documento. Prepará una contribución que pueda entrar en conversación.
 
 Llevá la nota al encuentro en papel o en un archivo accesible. No hace falta que la entregues antes en el campus y no recibe una calificación separada. Usala como evidencia de entrada para la actividad y revisala con tres criterios: conexión con el texto, trazabilidad de la hipótesis y apertura a revisión. Si una comisión necesita otro canal por razones de accesibilidad u organización, el docente lo anunciará antes de la fecha de lectura.
 
@@ -563,7 +563,7 @@ Esta tercera parte explicita las decisiones pedagógicas e institucionales que s
 
 ## Aprender con inteligencia artificial
 
-La IA forma parte del contexto profesional y académico. Eso no implica una autorización general para usarla en cualquier actividad. Cada consigna debe declarar si está permitida, para qué función y bajo qué condiciones; la indicación específica prevalece. Cuando se habilita, puede funcionar como herramienta de exploración, contraste y producción controlada, no como sustituto del juicio.
+En simple, con un ejemplo: La IA forma parte del contexto profesional y académico. Eso no implica una autorización general para usarla en cualquier actividad. Cada consigna debe declarar si está permitida, para qué función y bajo qué condiciones; la indicación específica prevalece. Cuando se habilita, puede funcionar como herramienta de exploración, contraste y producción controlada, no como sustituto del juicio.
 
 Un estudiante puede pedir explicaciones alternativas, ejemplos, preguntas de autoevaluación o ayuda para organizar notas. También puede comparar una síntesis generada con la lectura. Pero debe conservar cuatro responsabilidades: verificar afirmaciones, distinguir fuente de generación, proteger datos sensibles y poder explicar el resultado con sus propias razones.
 
@@ -577,7 +577,7 @@ El diagnóstico de UNESCO IESALC para educación superior publicado en 2025 refu
 
 ## Diferentes maneras de entrar al mismo aprendizaje
 
-No todas las personas leen al mismo ritmo ni procesan mejor el mismo formato. El diseño editorial ofrece texto, imagen, tablas, historias y síntesis, pero ninguna modalidad debería convertirse en barrera. Si una imagen contiene información decisiva, necesita explicación textual. Si una infografía es compleja, debe poder reconstruirse en palabras. Si una palabra en inglés es necesaria, el glosario debe hacerla accesible.
+En simple, con un ejemplo: No todas las personas leen al mismo ritmo ni procesan mejor el mismo formato. El diseño editorial ofrece texto, imagen, tablas, historias y síntesis, pero ninguna modalidad debería convertirse en barrera. Si una imagen contiene información decisiva, necesita explicación textual. Si una infografía es compleja, debe poder reconstruirse en palabras. Si una palabra en inglés es necesaria, el glosario debe hacerla accesible.
 
 Ofrecer múltiples entradas no significa reducir la exigencia. Significa separar la dificultad conceptual relevante de obstáculos accidentales. El objetivo es que cada estudiante pueda acceder, participar y demostrar comprensión sin que una única forma de interacción monopolice el curso. Las pautas de Diseño Universal para el Aprendizaje de CAST (2024) sostienen este criterio mediante múltiples medios de implicación, representación, acción y expresión.
 
@@ -593,7 +593,7 @@ Ese destino debe anunciarse. Por ejemplo: «cualquier formato mostrará actores,
 
 ## Cómo saber si la lectura produjo aprendizaje
 
-Chi y Wylie proponen el marco ICAP para distinguir cuatro modos de compromiso cognitivo. Una relación pasiva con el texto atiende y reconoce. Una relación activa manipula, subraya o toma notas. Una relación constructiva genera una explicación o inferencia que no estaba explícita. Una relación interactiva construye con otras personas y revisa lo producido. La referencia cambia el análisis porque evita llamar «aprendizaje activo» a cualquier movimiento visible. METSI necesita acceso a los cuatro modos y diseña el encuentro para que la actividad llegue a producción propia y contraste, no sólo a participación superficial.
+En simple, con un ejemplo: Chi y Wylie proponen el marco ICAP para distinguir cuatro modos de compromiso cognitivo. Una relación pasiva con el texto atiende y reconoce. Una relación activa manipula, subraya o toma notas. Una relación constructiva genera una explicación o inferencia que no estaba explícita. Una relación interactiva construye con otras personas y revisa lo producido. La referencia cambia el análisis porque evita llamar «aprendizaje activo» a cualquier movimiento visible. METSI necesita acceso a los cuatro modos y diseña el encuentro para que la actividad llegue a producción propia y contraste, no sólo a participación superficial.
 
 Las evidencias de comprensión pueden ser pequeñas. Formular una pregunta que no estaba en el texto pero se desprende de él es evidencia. Detectar que dos conceptos se están usando como sinónimos sin serlo es evidencia. Cambiar la hipótesis del hotel frente a un episodio es evidencia. Repetir una definición sin poder aplicarla ofrece una señal mucho más débil.
 
@@ -629,7 +629,7 @@ Finalmente, la discusión abierta necesita seguridad y rigor. Toda interpretaci�
 
 ### Una tensión real entre reflexión profesional y justicia de diseño
 
-Schön ayuda a comprender al profesional como alguien que conversa con la situación, reconoce una sorpresa y revisa su repertorio mientras actúa. Esa mirada es valiosa porque rechaza la aplicación mecánica de una receta. En Hotel Horizonte invita a preguntar qué observa cada persona cuando el plan falla y cómo transforma esa observación en una nueva hipótesis.
+En simple, con un ejemplo: Schön ayuda a comprender al profesional como alguien que conversa con la situación, reconoce una sorpresa y revisa su repertorio mientras actúa. Esa mirada es valiosa porque rechaza la aplicación mecánica de una receta. En Hotel Horizonte invita a preguntar qué observa cada persona cuando el plan falla y cómo transforma esa observación en una nueva hipótesis.
 
 Costanza-Chock introduce una objeción que Schön no resuelve por sí solo: ¿quién recibe el nombre de profesional, quién puede participar de esa conversación y quién absorbe el costo de lo decidido? Un equipo puede reflexionar con honestidad y conservar una frontera injusta si sólo escucha a quienes ya tienen cargo, lenguaje técnico y tiempo institucional. La práctica reflexiva mejora una decisión desde las voces presentes; la justicia de diseño obliga a examinar cómo se formó ese conjunto de voces y quién quedó afuera.
 

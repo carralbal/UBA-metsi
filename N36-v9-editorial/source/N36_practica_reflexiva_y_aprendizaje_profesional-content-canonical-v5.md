@@ -48,7 +48,7 @@ La lectura avanza en tres pasos. Primero vuelve sobre una experiencia sin maquil
 
 ### Detenerse mientras todavía se está actuando
 
-En Hotel Horizonte, Lucía Ferreyra recibe una señal extraña. El sistema indica que una habitación accesible está liberada, pero la cerradura no responde. El huésped está frente al mostrador y la solución prevista ya no alcanza. «Limpia no significa utilizable», dice Lucía. Podría insistir con el procedimiento o llamar a Federico Müller para que decida. En cambio, separa dos estados que la pantalla presentaba como uno.
+En simple, con un ejemplo: En Hotel Horizonte, Lucía Ferreyra recibe una señal extraña. El sistema indica que una habitación accesible está liberada, pero la cerradura no responde. El huésped está frente al mostrador y la solución prevista ya no alcanza. «Limpia no significa utilizable», dice Lucía. Podría insistir con el procedimiento o llamar a Federico Müller para que decida. En cambio, separa dos estados que la pantalla presentaba como uno.
 
 Lucía consulta a Mariela Benítez, limita la promesa y ofrece una alternativa reversible. Antes de continuar deja una marca breve: qué señal contradijo al tablero, qué decisión tomó y qué daño intentó evitar. No redacta un informe mientras espera el huésped. Conserva lo mínimo necesario para que la corrección no desaparezca después.
 
@@ -60,7 +60,7 @@ Para pensar así no alcanza con pedirle a alguien que preste más atención. El 
 
 ### Volver después sin inventar que todo era obvio
 
-Al día siguiente, el equipo revisa el episodio. Ahora conoce el desenlace, pero intenta no usarlo para reescribir el pasado. Coloca en una mesa la reserva, el estado de limpieza, el registro de la cerradura, el mensaje al huésped y la nota de Lucía. Cada pieza recibe una hora. Luego cada rol explica qué sabía en ese momento, no qué entiende ahora.
+En simple, con un ejemplo: Al día siguiente, el equipo revisa el episodio. Ahora conoce el desenlace, pero intenta no usarlo para reescribir el pasado. Coloca en una mesa la reserva, el estado de limpieza, el registro de la cerradura, el mensaje al huésped y la nota de Lucía. Cada pieza recibe una hora. Luego cada rol explica qué sabía en ese momento, no qué entiende ahora.
 
 Federico observa que el evento técnico llegó tarde. Mariela recuerda que la habitación estaba limpia, pero todavía no había comprobado el acceso. «Nosotros dijimos disponible», señala Camila Duarte al mostrar la promesa comercial. Ricardo Sosa responde: «La operación trató liberada y asignable como sinónimos». Las versiones no coinciden y esa diferencia es información, no un obstáculo que deba borrarse.
 
@@ -72,7 +72,7 @@ Volver después no significa evitar responsabilidades. Primero hay que entender 
 
 ### Tratar la sorpresa como una pista
 
-Hay una sorpresa cuando ocurre algo importante que no esperábamos. No toda diferencia exige una investigación larga. Algunas sólo piden corregir un dato. Otras abren una pregunta decisiva. La habitación estaba limpia, el tablero decía disponible y, sin embargo, el huésped no podía usarla. ¿Qué significaba entonces estar disponible?
+En simple, con un ejemplo: Hay una sorpresa cuando ocurre algo importante que no esperábamos. No toda diferencia exige una investigación larga. Algunas sólo piden corregir un dato. Otras abren una pregunta decisiva. La habitación estaba limpia, el tablero decía disponible y, sin embargo, el huésped no podía usarla. ¿Qué significaba entonces estar disponible?
 
 John Dewey explicó que vivir una experiencia no alcanza para aprender de ella. Incluso podemos salir más convencidos de una idea equivocada si sólo recordamos el resultado. La sorpresa corta esa comodidad. Nos obliga a buscar en qué momento lo que pensábamos dejó de explicar lo que estaba pasando.
 
@@ -84,7 +84,7 @@ Una sorpresa útil se cuenta con precisión. No alcanza con decir que algo sali�
 
 ### Comparar lo que decimos con lo que hacemos
 
-El protocolo de Hotel Horizonte afirma que cualquier turno puede detener una promesa cuando falta una condición crítica. Los registros muestran otra cosa. Los turnos sólo detienen cuando Federico está disponible. Cuando no está, intentan resolver sin escalar para no aumentar el tiempo de atención.
+En simple, con un ejemplo: El protocolo de Hotel Horizonte afirma que cualquier turno puede detener una promesa cuando falta una condición crítica. Los registros muestran otra cosa. Los turnos sólo detienen cuando Federico está disponible. Cuando no está, intentan resolver sin escalar para no aumentar el tiempo de atención.
 
 La regla escrita muestra lo que la organización dice que hace. Las decisiones repetidas muestran lo que hace de verdad. Chris Argyris y Donald Schön llamaron a esas dos caras teoría declarada y teoría en uso. La distinción permite mirar la distancia entre el discurso y la práctica sin convertirla de inmediato en una acusación.
 
@@ -98,7 +98,7 @@ La comparación termina con una elección. La organización puede dar condicione
 
 ### Corregir una acción sin cambiar todavía la regla
 
-El hotel recibe demasiadas alertas de discrepancia. Algunas son críticas y otras no, por eso el turno comienza a ignorarlas. «Probemos otro umbral durante una semana», propone Federico. El objetivo permanece, detectar a tiempo los estados incompatibles, pero cambia el modo de alcanzarlo.
+En simple, con un ejemplo: El hotel recibe demasiadas alertas de discrepancia. Algunas son críticas y otras no, por eso el turno comienza a ignorarlas. «Probemos otro umbral durante una semana», propone Federico. El objetivo permanece, detectar a tiempo los estados incompatibles, pero cambia el modo de alcanzarlo.
 
 Argyris y Schön llamaron aprendizaje de bucle simple a la corrección de una acción dentro de objetivos y reglas que se mantienen estables. Es una forma necesaria de aprender. Permite afinar un proceso, corregir un error o reducir ruido sin reabrir todo el sistema en cada incidente.
 
@@ -110,7 +110,7 @@ Para el estudiante, la pregunta práctica es directa: ¿estoy corrigiendo la man
 
 ### Revisar la regla que define el éxito
 
-El tablero del hotel premia velocidad. Dos casos reciben la misma calificación si se resuelven en cinco minutos, aunque uno deje al huésped sin una habitación accesible y el otro cierre con una reparación aceptada. Ajustar el umbral no corrige esa definición de éxito.
+En simple, con un ejemplo: El tablero del hotel premia velocidad. Dos casos reciben la misma calificación si se resuelven en cinco minutos, aunque uno deje al huésped sin una habitación accesible y el otro cierre con una reparación aceptada. Ajustar el umbral no corrige esa definición de éxito.
 
 Elena Acosta reúne a quienes deben cambiar la regla. La nueva meta combina tiempo, posibilidad de uso, reparación y carga de trabajo. También cambia quién puede decidir: Recepción puede detener una promesa ante señales definidas y debe dejar la información necesaria para que otra persona continúe. Comercial ya no ofrece algo que Operaciones no puede sostener.
 
@@ -122,7 +122,7 @@ El equipo prueba la nueva definición con dos episodios de igual duración y dis
 
 ### Conservar una decisión antes de conocer el desenlace
 
-Los equipos suelen registrar tareas, fechas y entregas. Eso no basta para aprender de una decisión. También hace falta recordar qué opciones existían, qué datos estaban disponibles, cuánta confianza tenía el equipo y qué señal lo obligaría a cambiar de idea.
+En simple, con un ejemplo: Los equipos suelen registrar tareas, fechas y entregas. Eso no basta para aprender de una decisión. También hace falta recordar qué opciones existían, qué datos estaban disponibles, cuánta confianza tenía el equipo y qué señal lo obligaría a cambiar de idea.
 
 El diario de decisiones guarda esa memoria. No registra cada movimiento ni sirve para vigilar personas. Se usa en decisiones importantes, inciertas o difíciles de deshacer. La entrada se escribe antes de conocer el resultado y después recibe notas nuevas. La versión original no se modifica para hacer parecer que todos sabían lo que iba a ocurrir.
 
@@ -134,7 +134,7 @@ Un diario útil es breve y fácil de encontrar. Incluye fecha, responsables, hec
 
 ### Revisar sin buscar un culpable rápido
 
-Durante el segundo turno aparece una nueva discrepancia. Un mensaje automático confirma una condición que la habitación todavía no cumple. Nadie resulta dañado porque Lucía detecta la diferencia. El equipo decide revisar el episodio antes de que la ausencia de daño lo vuelva invisible.
+En simple, con un ejemplo: Durante el segundo turno aparece una nueva discrepancia. Un mensaje automático confirma una condición que la habitación todavía no cumple. Nadie resulta dañado porque Lucía detecta la diferencia. El equipo decide revisar el episodio antes de que la ausencia de daño lo vuelva invisible.
 
 Una revisión posterior comienza con la distancia entre lo esperado y lo que ocurrió. Escucha a quienes vieron partes distintas del caso, busca cómo se produjo el problema y termina con acciones y pruebas. No se limita a ordenar horarios ni a escribir consejos generales. Tampoco borra la obligación de responder.
 
@@ -148,7 +148,7 @@ El resultado no puede quedar en «comunicar mejor». Comercial cambia la promesa
 
 ### Practicar una dificultad específica
 
-Leer un caso y comprender la respuesta no demuestra que una persona pueda actuar bajo presión. Para convertir el aprendizaje en capacidad, el equipo practica una decisión concreta. No ensaya mejorar la atención en general. Ensaya reconocer dos señales incompatibles, detener una promesa y construir una alternativa reversible.
+En simple, con un ejemplo: Leer un caso y comprender la respuesta no demuestra que una persona pueda actuar bajo presión. Para convertir el aprendizaje en capacidad, el equipo practica una decisión concreta. No ensaya mejorar la atención en general. Ensaya reconocer dos señales incompatibles, detener una promesa y construir una alternativa reversible.
 
 Este modo de entrenar se llama práctica deliberada. Tiene una meta que puede observarse, una dificultad adecuada, una devolución rápida y otra oportunidad para intentar. Los estudios de K. Anders Ericsson, Ralf Krampe y Clemens Tesch-Römer ayudan a distinguirla de repetir por repetir. Hacer muchas veces una tarea conocida puede fijar un hábito sin enseñar algo nuevo.
 
@@ -160,9 +160,9 @@ El entrenamiento debe detenerse cuando el mismo error nace de algo que la person
 
 ### Mostrar cómo cambió el juicio
 
-Al final de una materia o un proyecto es tentador reunir las mejores entregas. Una colección impecable puede mostrar producción, pero esconder el aprendizaje. Para comprender cómo cambió el juicio hacen falta versiones, dudas, objeciones, decisiones descartadas y consecuencias.
+En simple: Al final de una materia o un proyecto es tentador reunir las mejores entregas. Una colección impecable puede mostrar producción, pero esconder el aprendizaje. Para comprender cómo cambió el juicio hacen falta versiones, dudas, objeciones, decisiones descartadas y consecuencias.
 
-El portafolio de aprendizaje reúne las piezas que muestran ese cambio. No guarda todo. En Hotel Horizonte incluye la idea inicial, el episodio que la puso en duda, la decisión revisada, una devolución y el resultado de la prueba siguiente.
+Ejemplo cercano: El portafolio de aprendizaje reúne las piezas que muestran ese cambio. No guarda todo. En Hotel Horizonte incluye la idea inicial, el episodio que la puso en duda, la decisión revisada, una devolución y el resultado de la prueba siguiente.
 
 Lo central es comparar versiones. La primera no se trata como un error sólo porque después haya cambiado. Hay que explicar por qué parecía razonable con los datos disponibles. La segunda muestra qué nueva señal hizo cambiar de idea. Una nota final cuenta qué aprendió a hacer el equipo y qué duda sigue abierta.
 
@@ -172,7 +172,7 @@ Cuando el trabajo es colectivo, cada integrante identifica su contribución sin 
 
 ### Usar IA para ampliar preguntas, no para tercerizar el juicio
 
-El equipo ya escribió su explicación del episodio cuando consulta una herramienta de inteligencia artificial. Le pide tres mecanismos rivales y, para cada uno, una observación que lo apoyaría y otra que lo debilitaría. La salida sugiere que el cambio pudo depender del contrato, de la coordinación manual o de una variación de demanda.
+En simple, con un ejemplo: El equipo ya escribió su explicación del episodio cuando consulta una herramienta de inteligencia artificial. Le pide tres mecanismos rivales y, para cada uno, una observación que lo apoyaría y otra que lo debilitaría. La salida sugiere que el cambio pudo depender del contrato, de la coordinación manual o de una variación de demanda.
 
 Lucía contrasta los episodios. Federico revisa trazas. Ricardo analiza la capacidad del turno. Una de las hipótesis menciona un dato que no existe y se descarta. Otra ayuda a localizar una condición olvidada. La herramienta amplió la búsqueda, pero no convirtió una frase plausible en evidencia.
 
@@ -192,7 +192,7 @@ Esta propuesta de N36 no es una regla idéntica para cualquier herramienta. Cuan
 
 ### Organizar un sistema que pueda seguir aprendiendo
 
-Una buena conversación puede cambiar a quienes participaron y desaparecer al día siguiente. Para que eso no ocurra, la organización conecta cuatro tareas: guardar el caso, entenderlo, decidir un cambio y practicarlo. Cada hallazgo tiene una persona a cargo, una fecha y una señal que permitirá saber si se completó.
+En simple, con un ejemplo: Una buena conversación puede cambiar a quienes participaron y desaparecer al día siguiente. Para que eso no ocurra, la organización conecta cuatro tareas: guardar el caso, entenderlo, decidir un cambio y practicarlo. Cada hallazgo tiene una persona a cargo, una fecha y una señal que permitirá saber si se completó.
 
 En Hotel Horizonte, el turno registra una sorpresa. La revisión busca qué la produjo. La dirección asigna recursos y permisos. Otro turno prueba si puede actuar. El resultado vuelve al tablero y al diario. Cuando ese recorrido se repite, ya no hay sólo personas que aprenden: existe un sistema de aprendizaje profesional.
 

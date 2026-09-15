@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "11c40cbbb8fcae9cc7ef387fb371af76ed3f9f4aa3a0c5a01d33873a854a1cd0",
-        "declared_sha256": "11c40cbbb8fcae9cc7ef387fb371af76ed3f9f4aa3a0c5a01d33873a854a1cd0",
+        "actual_sha256": "7a7a6b9d7928f16b4396a98455c9a54935485a8abd4c166dec879cdbfc6df5b8",
+        "declared_sha256": "7a7a6b9d7928f16b4396a98455c9a54935485a8abd4c166dec879cdbfc6df5b8",
         "document_json_matches": true,
         "source": "source/N29_gobierno_de_integracion_despliegue_infraestructura_aprobacion_y_rollback-content-canonical-v4.md",
         "source_exists": true,
@@ -48,6 +48,19 @@
       "status": "PASS"
     },
     {
+      "check": "errors_grid_groups_each_label_with_its_explanation",
+      "evidence": [
+        {
+          "cards": 10,
+          "declared_rows": 5,
+          "expected_rows": 5,
+          "labels": 10,
+          "naked_pairs": 0
+        }
+      ],
+      "status": "PASS"
+    },
+    {
       "check": "no_lfs_pointers_private_paths_or_placeholders",
       "evidence": {
         "lfs_pointers": [],
@@ -67,12 +80,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 19557045,
-        "final_sha256": "b1bed5ce71d5d545a5e9931ae4019455319e5b1e0fad9f5f25fcf8179724a7a9",
+        "bytes": 19513601,
+        "final_sha256": "7011c5c72d64a0dd8cf810b5f860bfe4825cbc0a64fd2133e7424b28414fed61",
         "pages": 28,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "e0e35e891ec555e47612feab68c3faededa06e8ba32effe1f6aeace19f579f52",
+        "raw_sha256": "14d8460440b4818cf71e368b44f9e13ed5a86fe9f5978b512ba0611a14c3183c",
         "unique_sizes": [
           [
             594.96,
@@ -1137,15 +1150,15 @@
       5,
       22
     ],
-    "pdf_bytes": 19557045,
-    "pdf_sha256": "b1bed5ce71d5d545a5e9931ae4019455319e5b1e0fad9f5f25fcf8179724a7a9",
+    "pdf_bytes": 19513601,
+    "pdf_sha256": "7011c5c72d64a0dd8cf810b5f860bfe4825cbc0a64fd2133e7424b28414fed61",
     "source_blocks": 263
   },
   "mode": "read-only",
   "package": "N29-v9-editorial",
-  "passed_checks": 26,
+  "passed_checks": 27,
   "status": "PASS",
-  "total_checks": 26,
+  "total_checks": 27,
   "validator": "validate_n11_n36_v6.py",
   "version": "v9-editorial"
 }

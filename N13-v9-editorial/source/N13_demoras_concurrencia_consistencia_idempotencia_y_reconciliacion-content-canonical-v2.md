@@ -62,7 +62,7 @@ El producto será HH-13, expediente de convergencia. Recibe una transición de H
 
 ### Falla parcial: una operación puede ocurrir sin que quien la inició lo sepa
 
-En una llamada local, un error suele parecer completo: la función devuelve o falla. Entre sistemas, al menos tres momentos pueden separarse. La solicitud puede no llegar. Puede llegar y no ejecutarse. Puede ejecutarse y perderse la respuesta. Desde el cliente, los últimos dos casos pueden verse iguales.
+En simple, con un ejemplo: En una llamada local, un error suele parecer completo: la función devuelve o falla. Entre sistemas, al menos tres momentos pueden separarse. La solicitud puede no llegar. Puede llegar y no ejecutarse. Puede ejecutarse y perderse la respuesta. Desde el cliente, los últimos dos casos pueden verse iguales.
 
 Esta ambigüedad cambia el razonamiento. Si pagar una beca es inocuo al repetirse, se puede reintentar. Si el efecto es irreversible o costoso, repetir a ciegas es peligroso. Esperar indefinidamente tampoco resuelve: la persona necesita información y la organización, un criterio de escalamiento.
 
@@ -72,9 +72,9 @@ La evidencia que fortalece una explicación es la combinación de identificador 
 
 ### Demora y presupuesto de tiempo
 
-Toda comunicación demora. La pregunta útil no es si existe latencia, sino qué demora cambia una decisión. Cien milisegundos pueden ser irrelevantes para un reporte y críticos para una puja. Cinco minutos pueden ser aceptables para analítica y dañinos para inventario escaso.
+En simple: Toda comunicación demora. La pregunta útil no es si existe latencia, sino qué demora cambia una decisión. Cien milisegundos pueden ser irrelevantes para un reporte y críticos para una puja. Cinco minutos pueden ser aceptables para analítica y dañinos para inventario escaso.
 
-El presupuesto de tiempo distribuye una expectativa entre captura, transporte, procesamiento, actualización y presentación. Permite identificar qué parte consume margen y cuándo una vista debe declarar obsolescencia. También evita llamar “tiempo real” a una cadena cuyo dato más lento se renueva cada noche.
+Ejemplo cercano: El presupuesto de tiempo distribuye una expectativa entre captura, transporte, procesamiento, actualización y presentación. Permite identificar qué parte consume margen y cuándo una vista debe declarar obsolescencia. También evita llamar “tiempo real” a una cadena cuyo dato más lento se renueva cada noche.
 
 Un timeout no prueba que el servicio falló. Declara que quien esperaba dejó de esperar bajo cierta política. Debe conducir a una decisión: cancelar, consultar, reintentar, degradar o escalar. Reintentos anidados pueden multiplicar carga y empeorar una saturación. La guía de Microsoft sobre el patrón Retry insiste en clasificar fallas transitorias y limitar intentos dentro del contexto completo.
 
@@ -82,7 +82,7 @@ En Hotel Horizonte, el presupuesto para impedir doble asignación debe ser más 
 
 ### Entrega y procesamiento no son la misma garantía
 
-Una infraestructura puede entregar un mensaje como máximo una vez, al menos una vez o con mecanismos que aproximan una entrega única dentro de un alcance. Ninguna etiqueta garantiza por sí sola que el efecto de negocio ocurra exactamente una vez.
+En simple, con un ejemplo: Una infraestructura puede entregar un mensaje como máximo una vez, al menos una vez o con mecanismos que aproximan una entrega única dentro de un alcance. Ninguna etiqueta garantiza por sí sola que el efecto de negocio ocurra exactamente una vez.
 
 “Como máximo una vez” evita duplicación en transporte y puede perder la operación. “Al menos una vez” reduce pérdida mediante repetición y obliga a tolerar duplicados. “Exactamente una vez” depende de fronteras, almacenamiento, versión y efecto externo. Un correo, una transferencia o una puerta abierta pueden quedar fuera de la garantía de una plataforma.
 
@@ -92,9 +92,9 @@ El identificador del mensaje no alcanza si cada reintento crea uno nuevo. Se nec
 
 ### Orden causal y orden de llegada
 
-Leslie Lamport mostró que los sistemas distribuidos necesitan razonar sobre relaciones causales y no sólo sobre relojes. Si una aprobación responde a una solicitud, la solicitud debe precederla causalmente aunque las marcas horarias estén desajustadas. Dos asignaciones independientes pueden ser concurrentes aunque una llegue primero.
+En simple: Leslie Lamport mostró que los sistemas distribuidos necesitan razonar sobre relaciones causales y no sólo sobre relojes. Si una aprobación responde a una solicitud, la solicitud debe precederla causalmente aunque las marcas horarias estén desajustadas. Dos asignaciones independientes pueden ser concurrentes aunque una llegue primero.
 
-Ordenar por recepción es útil para procesar, pero no siempre para decidir. Ordenar por tiempo declarado puede ser manipulado o impreciso. Un número de versión protege una entidad contra actualizaciones basadas en estado obsoleto. Un vector causal aporta más información y también más costo.
+Ejemplo cercano: Ordenar por recepción es útil para procesar, pero no siempre para decidir. Ordenar por tiempo declarado puede ser manipulado o impreciso. Un número de versión protege una entidad contra actualizaciones basadas en estado obsoleto. Un vector causal aporta más información y también más costo.
 
 El modelo debe conservar sólo el orden que cambia el resultado. Enviar un epígrafe antes o después de una imagen puede ser conmutativo. Asignar una última habitación y confirmar una reserva no lo es. La coordinación se reserva para invariantes que realmente lo requieren.
 
@@ -104,9 +104,9 @@ La prueba consiste en invertir artificialmente el orden de llegada. Si el result
 
 ### Concurrencia: dos intenciones válidas pueden ser incompatibles juntas
 
-Concurrencia no significa simplemente velocidad. Existe cuando dos operaciones se superponen sin conocer completamente el resultado de la otra. Cada una puede ser válida sobre el estado que leyó y, combinadas, violar una invariante.
+En simple: Concurrencia no significa simplemente velocidad. Existe cuando dos operaciones se superponen sin conocer completamente el resultado de la otra. Cada una puede ser válida sobre el estado que leyó y, combinadas, violar una invariante.
 
-Dos agentes consultan una habitación libre y luego intentan asignarla. Un control optimista compara la versión leída con la vigente y rechaza una escritura obsoleta. Un bloqueo pesimista reserva capacidad antes de decidir y puede aumentar espera o producir abandono. Una operación atómica sobre inventario puede proteger el recurso sin bloquear todo el proceso.
+Ejemplo cercano: Dos agentes consultan una habitación libre y luego intentan asignarla. Un control optimista compara la versión leída con la vigente y rechaza una escritura obsoleta. Un bloqueo pesimista reserva capacidad antes de decidir y puede aumentar espera o producir abandono. Una operación atómica sobre inventario puede proteger el recurso sin bloquear todo el proceso.
 
 La evidencia para elegir mecanismo incluye frecuencia de conflicto, costo del error, reversibilidad, duración de la reserva y carga. Si el conflicto es raro y reparable, el control optimista puede ser suficiente. Si implica medicación duplicada, dinero o acceso físico, la invariante exige protección más fuerte.
 
@@ -130,9 +130,9 @@ La prueba separa causas que el incidente original mezclaba. No se corrige con un
 
 ### Consistencia: proteger invariantes, no sincronizar todo
 
-Consistencia puede significar varias cosas. En una base transaccional refiere a reglas observadas por operaciones. Entre réplicas puede referir a qué resultados ve una lectura después de una escritura. En el negocio significa que ciertas afirmaciones no pueden ser simultáneamente válidas.
+En simple: Consistencia puede significar varias cosas. En una base transaccional refiere a reglas observadas por operaciones. Entre réplicas puede referir a qué resultados ve una lectura después de una escritura. En el negocio significa que ciertas afirmaciones no pueden ser simultáneamente válidas.
 
-“La habitación no se asigna a dos reservas vigentes” es una invariante. “Todos los tableros muestran el mismo número inmediatamente” puede ser innecesario. Proteger ambas con la misma coordinación agrega costo sin igualar beneficio.
+Ejemplo cercano: “La habitación no se asigna a dos reservas vigentes” es una invariante. “Todos los tableros muestran el mismo número inmediatamente” puede ser innecesario. Proteger ambas con la misma coordinación agrega costo sin igualar beneficio.
 
 Werner Vogels describió la consistencia eventual como una garantía de convergencia cuando dejan de llegar actualizaciones, no como permiso para cualquier divergencia. Martin Kleppmann muestra que los modelos de consistencia deben explicarse desde las anomalías que permiten y las garantías que ofrecen a quien usa el sistema.
 
@@ -140,7 +140,7 @@ El equipo debe declarar alcance, ventana y observador. Una vista puede ser monot
 
 ### Matriz de garantías por observador, ventana e invariante
 
-Una garantía sólo resulta evaluable cuando se identifica quién observa, qué operación intenta realizar y durante cuánto tiempo la divergencia puede conservarse. La frase “el sistema es consistente” reúne preguntas diferentes. Recepción necesita saber si puede asignar una habitación; Comercial, si puede prometer una categoría; el huésped, si la confirmación continúa vigente; conciliación, si todos los registros terminarán reflejando una reparación.
+En simple, con un ejemplo: Una garantía sólo resulta evaluable cuando se identifica quién observa, qué operación intenta realizar y durante cuánto tiempo la divergencia puede conservarse. La frase “el sistema es consistente” reúne preguntas diferentes. Recepción necesita saber si puede asignar una habitación; Comercial, si puede prometer una categoría; el huésped, si la confirmación continúa vigente; conciliación, si todos los registros terminarán reflejando una reparación.
 
 Una misma arquitectura puede ofrecer garantías distintas a cada observador sin ser incoherente, siempre que esas diferencias estén declaradas y no habiliten acciones incompatibles.
 
@@ -158,9 +158,9 @@ El resultado no es imponer la vista más fuerte a todo el sistema. Es localizar 
 
 ### Disponibilidad, coordinación y consecuencia
 
-Coordinar obliga a esperar comunicación o autoridad compartida. Puede proteger una decisión y también volverla inaccesible durante una partición o una caída. Evitar coordinación mejora continuidad y exige que ciertas operaciones sean conmutativas, monotónicas o reconciliables.
+En simple: Coordinar obliga a esperar comunicación o autoridad compartida. Puede proteger una decisión y también volverla inaccesible durante una partición o una caída. Evitar coordinación mejora continuidad y exige que ciertas operaciones sean conmutativas, monotónicas o reconciliables.
 
-Peter Bailis y colaboradores mostraron que algunas invariantes pueden preservarse sin coordinación si las operaciones son compatibles con ellas. La lección no es eliminar coordinación, sino localizarla. Un contador de visualizaciones admite suma distribuida. La última habitación disponible no admite dos compromisos independientes sin política adicional.
+Ejemplo cercano: Peter Bailis y colaboradores mostraron que algunas invariantes pueden preservarse sin coordinación si las operaciones son compatibles con ellas. La lección no es eliminar coordinación, sino localizarla. Un contador de visualizaciones admite suma distribuida. La última habitación disponible no admite dos compromisos independientes sin política adicional.
 
 La decisión combina cuatro preguntas: ¿qué daño produce una divergencia?, ¿cuánto dura?, ¿puede detectarse?, ¿puede repararse? Para una preferencia de interfaz puede aceptarse convergencia tardía. Para una revocación de acceso, la demora necesita límite estricto y modo seguro.
 
@@ -168,7 +168,7 @@ La disponibilidad tampoco es un valor abstracto. Mantener una pantalla operativa
 
 ### Idempotencia: repetir la misma intención sin multiplicar el efecto protegido
 
-Una operación idempotente produce, respecto de la propiedad elegida, el mismo resultado observable aunque se procese varias veces con la misma intención. RFC 9110 define métodos HTTP idempotentes por el efecto pretendido de múltiples solicitudes idénticas. Esa semántica de protocolo no vuelve idempotente cualquier proceso interno o efecto externo.
+En simple, con un ejemplo: Una operación idempotente produce, respecto de la propiedad elegida, el mismo resultado observable aunque se procese varias veces con la misma intención. RFC 9110 define métodos HTTP idempotentes por el efecto pretendido de múltiples solicitudes idénticas. Esa semántica de protocolo no vuelve idempotente cualquier proceso interno o efecto externo.
 
 Cancelar dos veces una reserva puede dejarla cancelada una sola vez y enviar dos devoluciones. Actualizar un domicilio al mismo valor puede ser idempotente sobre el dato y no sobre notificaciones o auditoría. La propiedad debe nombrar el efecto protegido.
 
@@ -178,7 +178,7 @@ La idempotencia no borra cada intento. Conserva que hubo repetición, devuelve u
 
 ### Deduplicación e identidad de intención
 
-Deduplicar compara piezas para decidir si representan la misma intención. Igualdad de contenido no alcanza: dos compras idénticas pueden ser legítimas. Igualdad de mensaje tampoco alcanza: el productor puede crear otro identificador al reintentar.
+En simple, con un ejemplo: Deduplicar compara piezas para decidir si representan la misma intención. Igualdad de contenido no alcanza: dos compras idénticas pueden ser legítimas. Igualdad de mensaje tampoco alcanza: el productor puede crear otro identificador al reintentar.
 
 Una clave adecuada suele nacer donde se conoce la intención y atravesar las fronteras que pueden repetirla. Para la beca, identifica obligación, beneficiaria y período. Para la habitación, identifica la decisión de confirmar una reserva, no toda consulta de disponibilidad.
 
@@ -190,9 +190,9 @@ La respuesta ante una clave conocida también forma parte del contrato. No convi
 
 ### Control optimista, bloqueo y operaciones conmutativas
 
-El control optimista permite avanzar y verifica al comprometer que el estado leído sigue vigente. Funciona bien cuando los conflictos son poco frecuentes y el rechazo puede resolverse. Su costo aparece en trabajo descartado y experiencia de quien debe reintentar.
+En simple: El control optimista permite avanzar y verifica al comprometer que el estado leído sigue vigente. Funciona bien cuando los conflictos son poco frecuentes y el rechazo puede resolverse. Su costo aparece en trabajo descartado y experiencia de quien debe reintentar.
 
-El bloqueo pesimista reserva el recurso antes del cambio. Reduce ciertos conflictos y aumenta contención, riesgo de espera y necesidad de vencimiento. Una reserva temporal de inventario puede ser razonable si es visible, acotada y liberable.
+Ejemplo cercano: El bloqueo pesimista reserva el recurso antes del cambio. Reduce ciertos conflictos y aumenta contención, riesgo de espera y necesidad de vencimiento. Una reserva temporal de inventario puede ser razonable si es visible, acotada y liberable.
 
 Las operaciones conmutativas reducen la necesidad de orden. Agregar etiquetas diferentes a un conjunto puede converger sin decidir cuál fue primero. Asignar una unidad indivisible no. Rediseñar la operación puede convertir conflicto en acumulación: registrar demandas y adjudicar luego bajo una autoridad común, por ejemplo.
 
@@ -220,11 +220,11 @@ También se registra el tiempo durante el cual Comercial ve una copia antigua. R
 
 ### Reconciliación: comparar, explicar y decidir
 
-Reconciliar no es copiar el valor de un sistema sobre otro. Es comparar representaciones relacionadas, clasificar diferencias, reunir evidencia y decidir qué transición conduce a un estado defendible.
+En simple: Reconciliar no es copiar el valor de un sistema sobre otro. Es comparar representaciones relacionadas, clasificar diferencias, reunir evidencia y decidir qué transición conduce a un estado defendible.
 
 Una diferencia puede deberse a demora esperada, pérdida, duplicación, regla distinta, identidad mal vinculada, corrección legítima o fraude. Sobrescribir antes de clasificar elimina evidencia. Dejar toda diferencia abierta convierte la excepción en deuda operacional.
 
-La reconciliación necesita frecuencia, umbral, responsable, autoridad y plazo. Algunas divergencias se resuelven automáticamente porque existe fuente y regla claras. Otras requieren revisión porque hay obligaciones o daño. El resultado debe registrar explicación y efecto, no sólo “conciliado”.
+Ejemplo cercano: La reconciliación necesita frecuencia, umbral, responsable, autoridad y plazo. Algunas divergencias se resuelven automáticamente porque existe fuente y regla claras. Otras requieren revisión porque hay obligaciones o daño. El resultado debe registrar explicación y efecto, no sólo “conciliado”.
 
 El diseño comienza por un inventario de pares comparables. No tiene sentido conciliar “estado de reserva” con “estado de pago” como si fueran el mismo atributo. Se vinculan porque una regla puede depender de ambos. Cada comparación declara entidad, período, transformación y tolerancia. HH-11 reaparece como disciplina de evidencia, no como repetición temática.
 
@@ -234,7 +234,7 @@ La reconciliación también produce información de mejora. Si las mismas diverg
 
 ### Compensación y sagas
 
-Cuando una operación tiene varios pasos y uno falla, no siempre existe un botón capaz de volver todo atrás. Una saga coordina esos pasos y una compensación repara lo posible; por ejemplo, cancelar una reserva y devolver el pago no borra el mensaje que ya recibió la persona. Cuando una transición cruza componentes con transacciones locales, no siempre puede revertirse de manera atómica. Una saga coordina una secuencia de pasos y define acciones compensatorias si no puede continuar. Puede utilizar coreografía entre participantes u orquestación mediante un coordinador.
+En simple, con un ejemplo: Cuando una operación tiene varios pasos y uno falla, no siempre existe un botón capaz de volver todo atrás. Una saga coordina esos pasos y una compensación repara lo posible; por ejemplo, cancelar una reserva y devolver el pago no borra el mensaje que ya recibió la persona. Cuando una transición cruza componentes con transacciones locales, no siempre puede revertirse de manera atómica. Una saga coordina una secuencia de pasos y define acciones compensatorias si no puede continuar. Puede utilizar coreografía entre participantes u orquestación mediante un coordinador.
 
 La guía actual del Azure Architecture Center advierte que las compensaciones no recrean necesariamente el estado inicial, pueden fallar y requieren seguimiento. Un reembolso no elimina la comunicación enviada; una reasignación no borra la espera. Deben distinguirse pasos compensables, reintentables e irreversibles.
 
@@ -265,7 +265,7 @@ El expediente obliga a declarar propiedades desde la promesa. “Usamos una cola
 
 ### Prueba de cierre de una reconciliación
 
-Cerrar una reconciliación no equivale a conseguir que dos campos terminen con el mismo valor. El cierre debe demostrar que las diferencias relevantes fueron explicadas, que las obligaciones incompatibles recibieron tratamiento y que ninguna reparación pendiente quedó oculta por la convergencia técnica. Dos sistemas pueden mostrar “cancelada” y todavía existir una credencial activa, un cobro sin devolver o una persona que conserva una confirmación válida desde su perspectiva.
+En simple, con un ejemplo: Cerrar una reconciliación no equivale a conseguir que dos campos terminen con el mismo valor. El cierre debe demostrar que las diferencias relevantes fueron explicadas, que las obligaciones incompatibles recibieron tratamiento y que ninguna reparación pendiente quedó oculta por la convergencia técnica. Dos sistemas pueden mostrar “cancelada” y todavía existir una credencial activa, un cobro sin devolver o una persona que conserva una confirmación válida desde su perspectiva.
 
 La prueba comienza con una fotografía versionada de las representaciones comparadas. Para cada una se conserva entidad, período, regla de transformación, momento de conocimiento y autoridad que puede modificarla. Luego se clasifica la divergencia y se registra si el efecto observado es reversible, compensable o irreversible. Esta distinción impide usar una actualización de datos como sustituto de reparación. Borrar una asignación duplicada no informa al huésped; revocar una credencial no compensa una espera; devolver dinero no elimina una divulgación.
 
@@ -281,7 +281,7 @@ Esta forma de cierre conserva aprendizaje sin trasladar a N14 el análisis del p
 
 ### Prueba de perturbación
 
-La transición se prueba introduciendo fallas controladas: respuesta perdida después del efecto, mensaje duplicado, entrega tardía, dos comandos concurrentes, lectura antigua, consumidor detenido, clave repetida con parámetros distintos y compensación fallida.
+En simple, con un ejemplo: La transición se prueba introduciendo fallas controladas: respuesta perdida después del efecto, mensaje duplicado, entrega tardía, dos comandos concurrentes, lectura antigua, consumidor detenido, clave repetida con parámetros distintos y compensación fallida.
 
 Para cada perturbación se registra resultado, evidencia visible, invariante, experiencia de la persona y camino de reparación. La prueba pasa cuando el sistema evita el efecto prohibido o lo detecta dentro del plazo y conduce a una reparación autorizada.
 

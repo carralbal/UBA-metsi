@@ -6,7 +6,7 @@
 
 ## La iniciativa que siempre encontraba una métrica a favor
 
-Una empresa de distribución propone predecir abandonos de clientes y ofrecer descuentos automáticos. La presentación promete retención, eficiencia comercial y mejor experiencia. Cada área aporta una razón distinta y todas quedan reunidas bajo una iniciativa llamada fidelización inteligente. El piloto reduce bajas en un segmento y aumenta descuentos concedidos a quienes habrían continuado sin incentivo.
+En simple, con un ejemplo: Una empresa de distribución propone predecir abandonos de clientes y ofrecer descuentos automáticos. La presentación promete retención, eficiencia comercial y mejor experiencia. Cada área aporta una razón distinta y todas quedan reunidas bajo una iniciativa llamada fidelización inteligente. El piloto reduce bajas en un segmento y aumenta descuentos concedidos a quienes habrían continuado sin incentivo.
 
 Marketing celebra retención, Finanzas observa erosión de margen, Atención registra reclamos por trato desigual y Tecnología muestra disponibilidad. La iniciativa sobrevive porque cualquier resultado puede narrarse como éxito o aprendizaje. Si mejora una métrica, se atribuye al modelo; si aparece daño, se solicita más datos; si nada cambia, se culpa a la adopción. La interpretación se adapta después de conocer el resultado.
 
@@ -114,7 +114,7 @@ La refutabilidad requiere una alternativa operativa. No basta con escribir que l
 
 ### Hipótesis de iniciativa
 
-Una hipótesis de iniciativa afirma que una intervención producirá un outcome mediante un mecanismo bajo condiciones explícitas. Puede resultar falsa sin que el equipo cambie después su significado.
+En simple, con un ejemplo: Una hipótesis de iniciativa afirma que una intervención producirá un outcome mediante un mecanismo bajo condiciones explícitas. Puede resultar falsa sin que el equipo cambie después su significado.
 
 La formulación incluye población, horizonte y decisión futura. Distingue el trabajo a realizar del efecto que justificaría sostenerlo y nombra qué evidencia obligaría a revisar.
 
@@ -126,7 +126,7 @@ Una afirmación demasiado amplia, como la inteligencia artificial reducirá la e
 
 ### Resultado observable
 
-Un resultado observable, denominado *outcome* en la bibliografía de producto, es un cambio relevante en conducta, capacidad o condición de actores concretos. No equivale a desplegar, adoptar ni completar una actividad.
+En simple, con un ejemplo: Un resultado observable, denominado *outcome* en la bibliografía de producto, es un cambio relevante en conducta, capacidad o condición de actores concretos. No equivale a desplegar, adoptar ni completar una actividad.
 
 Debe indicar población, dirección y horizonte y considerar efectos desplazados hacia otras personas. Una mejora media no alcanza si agrava una excepción crítica.
 
@@ -138,25 +138,25 @@ También conviene separar resultados tempranos y finales. Una confirmación más
 
 ### Mecanismo
 
-El mecanismo explica cómo la intervención podría producir el outcome. Describe condiciones y pasos intermedios que pueden observarse antes del resultado final.
+En simple: El mecanismo explica cómo la intervención podría producir el outcome. Describe condiciones y pasos intermedios que pueden observarse antes del resultado final.
 
 Formularlo permite elegir señales tempranas y distinguir una hipótesis rival. También muestra qué parte de la intervención convendría conservar si el outcome no cambia.
 
 Más información sólo ayuda si llega a quien decide, en un momento en que todavía puede actuar y con autoridad suficiente.
 
-Un mecanismo se fortalece cuando produce predicciones intermedias diferenciadas. Si el problema es información tardía, debería observarse que los eventos llegan después de la promesa. Si es interpretación semántica, los estados llegarán a tiempo y significarán cosas diferentes. Si es autoridad, la persona conocerá el conflicto y no podrá modificar la asignación. Esas huellas permiten decidir sin esperar únicamente un resultado agregado.
+Ejemplo cercano: Un mecanismo se fortalece cuando produce predicciones intermedias diferenciadas. Si el problema es información tardía, debería observarse que los eventos llegan después de la promesa. Si es interpretación semántica, los estados llegarán a tiempo y significarán cosas diferentes. Si es autoridad, la persona conocerá el conflicto y no podrá modificar la asignación. Esas huellas permiten decidir sin esperar únicamente un resultado agregado.
 
 El mecanismo no debe confundirse con una narración plausible escrita después. Se documenta antes y se revisa cuando aparece evidencia. La revisión no borra la formulación anterior, porque la diferencia entre ambas constituye aprendizaje sobre el sistema.
 
 ### Refutabilidad práctica
 
-La refutabilidad práctica es la posibilidad real de observar evidencia que obligue a modificar o abandonar la apuesta. No exige un laboratorio perfecto, pero sí una decisión que pueda perder apoyo.
+En simple: La refutabilidad práctica es la posibilidad real de observar evidencia que obligue a modificar o abandonar la apuesta. No exige un laboratorio perfecto, pero sí una decisión que pueda perder apoyo.
 
 El umbral se define antes y se vincula con una autoridad. Obligaciones y daños irreversibles limitan qué puede exponerse a prueba.
 
 Si aumentan reasignaciones de habitaciones accesibles, el piloto se detiene aunque mejore el promedio general.
 
-La posibilidad de detener depende de autoridad y arquitectura. Una salvaguarda sin una persona autorizada es una advertencia; una persona autorizada sin un mecanismo de reversión puede registrar daño y no evitarlo. HH-22 vincula la señal con una acción ejecutable y prueba esa ruta antes de exponer casos reales.
+Ejemplo cercano: La posibilidad de detener depende de autoridad y arquitectura. Una salvaguarda sin una persona autorizada es una advertencia; una persona autorizada sin un mecanismo de reversión puede registrar daño y no evitarlo. HH-22 vincula la señal con una acción ejecutable y prueba esa ruta antes de exponer casos reales.
 
 La refutabilidad no obliga a abandonar toda la iniciativa ante la primera contradicción. Puede debilitar un mecanismo para una población, sostenerlo para otra o revelar que la intervención necesita una condición adicional. Lo que no admite es transformar cada contradicción en una confirmación de la versión original.
 
@@ -178,11 +178,11 @@ El diseño previo protege además contra el sesgo de selección. Si sólo se obs
 
 ### Línea de base
 
-La línea de base, denominada *baseline* en parte de la bibliografía, describe el estado de comparación previo con período, población, variabilidad y limitaciones. Un promedio aislado no permite atribuir ni reconocer estacionalidad.
+En simple: La línea de base, denominada *baseline* en parte de la bibliografía, describe el estado de comparación previo con período, población, variabilidad y limitaciones. Un promedio aislado no permite atribuir ni reconocer estacionalidad.
 
 Se construye con episodios comparables y calidad de datos conocida. Si una definición o fuente cambia durante la intervención, se conserva el quiebre en lugar de fabricar continuidad.
 
-HH-22 mide ingreso por turno, canal y necesidad accesible antes del piloto para distinguir mejora de mezcla poblacional.
+Ejemplo cercano: HH-22 mide ingreso por turno, canal y necesidad accesible antes del piloto para distinguir mejora de mezcla poblacional.
 
 La línea de base no representa una normalidad eterna. Describe un período y sus condiciones, incluidos picos, cambios de personal y problemas de registro. El objetivo no es congelar el sistema, sino ofrecer una referencia cuya comparabilidad pueda discutirse.
 
@@ -194,11 +194,11 @@ Cuando una fuente cambia su definición, la serie se corta y la comparación se 
 
 ### Hipótesis rival
 
-Una hipótesis rival ofrece otra explicación capaz de producir las mismas señales. Su función no es multiplicar objeciones, sino diseñar una observación que discrimine mecanismos plausibles.
+En simple: Una hipótesis rival ofrece otra explicación capaz de producir las mismas señales. Su función no es multiplicar objeciones, sino diseñar una observación que discrimine mecanismos plausibles.
 
 Se prioriza según probabilidad y consecuencia. Gana apoyo cuando anticipa casos que la explicación principal no puede resolver.
 
-La demora del hotel puede provenir de falta de autoridad y no de falta de información; ambas hipótesis exigen intervenciones distintas.
+Ejemplo cercano: La demora del hotel puede provenir de falta de autoridad y no de falta de información; ambas hipótesis exigen intervenciones distintas.
 
 Una rival útil debe ser plausible y discriminable. Afirmar que todo puede deberse al azar no orienta ninguna observación. En cambio, proponer que el efecto proviene de mensajes más claros predice mejora incluso cuando no cambia la asignación. Proponer que proviene de mayor dotación predice una diferencia por turno. Estas consecuencias permiten diseñar comparaciones.
 
@@ -206,23 +206,23 @@ La rival también limita el entusiasmo tecnológico. Una herramienta puede corre
 
 ### Resultado y métrica
 
-Una métrica operacionaliza una parte del resultado mediante unidad, población, ventana y agregación. Crea visibilidad y también ceguera, por lo que no es el outcome ni una verdad neutral.
+En simple: Una métrica operacionaliza una parte del resultado mediante unidad, población, ventana y agregación. Crea visibilidad y también ceguera, por lo que no es el outcome ni una verdad neutral.
 
 La selección considera validez, sensibilidad, latencia y posibilidad de manipulación. Se combinan señales de mecanismo, outcome y protección para no optimizar una cifra aislada.
 
 El tiempo promedio se acompaña con percentiles, excepciones y reparación, y conserva el denominador que permite reconstruirlo.
 
-Toda métrica crea incentivos. Si el equipo es premiado por tiempo hasta confirmación, puede confirmar antes y trasladar errores al mostrador. Si se mide sólo cancelación, puede retener reservas mediante condiciones que empeoran la experiencia. El expediente identifica conductas que la medida podría inducir y agrega una señal de protección.
+Ejemplo cercano: Toda métrica crea incentivos. Si el equipo es premiado por tiempo hasta confirmación, puede confirmar antes y trasladar errores al mostrador. Si se mide sólo cancelación, puede retener reservas mediante condiciones que empeoran la experiencia. El expediente identifica conductas que la medida podría inducir y agrega una señal de protección.
 
 La incertidumbre de la medida debe conservarse. Una diferencia pequeña en una muestra limitada no autoriza una promesa precisa. Intervalos, sensibilidad a supuestos y calidad de datos ayudan a expresar cuánto depende la conclusión de decisiones analíticas. Box recuerda que la utilidad de un modelo no elimina su carácter aproximado.
 
 ### Umbral de decisión
 
-Un umbral define qué evidencia habilita continuar, adaptar, ampliar o detener. No es una meta aspiracional ni un semáforo sin autoridad.
+En simple: Un umbral define qué evidencia habilita continuar, adaptar, ampliar o detener. No es una meta aspiracional ni un semáforo sin autoridad.
 
 Se fija antes de mirar el resultado e incluye reglas para datos incompletos y señales contradictorias. Cambiarlo crea una nueva decisión que debe quedar registrada.
 
-HH-22 exige una reducción sostenida de reasignaciones y ninguna pérdida crítica de accesibilidad antes de ampliar población.
+Ejemplo cercano: HH-22 exige una reducción sostenida de reasignaciones y ninguna pérdida crítica de accesibilidad antes de ampliar población.
 
 Los umbrales pueden ser asimétricos. Para ampliar una automatización puede requerirse evidencia acumulada de beneficio, mientras una sola falla grave puede detenerla. Esa asimetría refleja consecuencias, no inconsistencia estadística. El expediente explica por qué una salvaguarda prevalece sobre la métrica principal.
 
@@ -240,7 +240,7 @@ En 2026, esta operación resulta central para sistemas con componentes de inteli
 
 ### Salvaguarda
 
-Una salvaguarda limita exposición y preserva reparación durante el aprendizaje. Puede tener prioridad sobre la métrica principal y detener una iniciativa que parece exitosa.
+En simple, con un ejemplo: Una salvaguarda limita exposición y preserva reparación durante el aprendizaje. Puede tener prioridad sobre la métrica principal y detener una iniciativa que parece exitosa.
 
 Incluye población, señal, responsable, mecanismo de reversión y respuesta para quienes sufrieron el daño. No debe confundirse con monitoreo sin capacidad de actuar.
 
@@ -252,11 +252,11 @@ La protección incluye reparación a la persona afectada. Volver el sistema al e
 
 ### Experimento natural y piloto
 
-Un piloto es una intervención deliberadamente limitada para aprender sobre operación y outcome en condiciones reales. Un experimento natural aprovecha variación externa sin asignarla, pero también requiere una comparación defendible.
+En simple: Un piloto es una intervención deliberadamente limitada para aprender sobre operación y outcome en condiciones reales. Un experimento natural aprovecha variación externa sin asignarla, pero también requiere una comparación defendible.
 
 Población, duración, baseline, exposición y decisión posterior se definen antes. El nombre piloto no legitima un lanzamiento general ni suspende obligaciones.
 
-En el hotel se comparan dos turnos con demanda semejante y supervisión disponible, sin privar a ninguno de una protección conocida.
+Ejemplo cercano: En el hotel se comparan dos turnos con demanda semejante y supervisión disponible, sin privar a ninguno de una protección conocida.
 
 El piloto se diseña para representar la operación que se pretende escalar. Si sólo funciona con especialistas presentes, datos corregidos y baja demanda, prueba una capacidad de demostración y no una capacidad de servicio. Las condiciones extraordinarias se registran y se retiran progresivamente antes de ampliar.
 
@@ -264,11 +264,11 @@ Un experimento natural puede aportar evidencia cuando una regla cambia en una ju
 
 ### Aprendizaje decisional
 
-Existe aprendizaje decisional cuando la evidencia modifica una elección, un límite o un compromiso. Una sorpresa interesante que no puede cambiar ninguna acción no cumple esa función.
+En simple: Existe aprendizaje decisional cuando la evidencia modifica una elección, un límite o un compromiso. Una sorpresa interesante que no puede cambiar ninguna acción no cumple esa función.
 
 El expediente registra qué se creía, qué señal apareció y por qué la decisión siguiente difiere. Así evita reescribir la hipótesis para proteger el trabajo ya realizado.
 
-El hotel puede abandonar la automatización total y conservar apoyo a la decisión si los casos adversos muestran que la autoridad humana es parte del mecanismo.
+Ejemplo cercano: El hotel puede abandonar la automatización total y conservar apoyo a la decisión si los casos adversos muestran que la autoridad humana es parte del mecanismo.
 
 El aprendizaje se observa en el contraste entre decisión prevista y decisión tomada. Si el equipo esperaba ampliar y finalmente limita, debe explicar qué evidencia produjo ese cambio. Si mantiene la decisión, debe mostrar que los resultados no cruzaron umbrales y que las rivales no explican mejor la señal.
 
@@ -276,7 +276,7 @@ La organización también aprende sobre su capacidad para experimentar. Datos ta
 
 ### Retiro de una apuesta
 
-Retirar una apuesta significa detener inversión y exposición preservando conocimiento, obligaciones y una salida operativa. No equivale a declarar fracaso y borrar lo aprendido.
+En simple, con un ejemplo: Retirar una apuesta significa detener inversión y exposición preservando conocimiento, obligaciones y una salida operativa. No equivale a declarar fracaso y borrar lo aprendido.
 
 La ruta considera contratos, datos, personas dependientes y capacidades que sí demostraron valor. La decisión se prepara antes para que el costo hundido no la vuelva impracticable.
 

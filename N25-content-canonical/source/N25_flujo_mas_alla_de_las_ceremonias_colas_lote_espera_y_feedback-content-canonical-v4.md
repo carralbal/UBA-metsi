@@ -120,11 +120,11 @@ El mapa combina tiempos con narrativas de episodios. La distribución identifica
 
 ### Flujo de valor
 
-Flujo de valor es el movimiento de una necesidad hasta una capacidad usada, observada y reparable. Su frontera sigue la perspectiva de quien espera el resultado y no la estructura del organigrama.
+En simple: Flujo de valor es el movimiento de una necesidad hasta una capacidad usada, observada y reparable. Su frontera sigue la perspectiva de quien espera el resultado y no la estructura del organigrama.
 
 Registrar unidades reales revela espera, retrabajo y decisiones que un proceso ideal omite. El outcome permite distinguir flujo de mera velocidad de producción.
 
-En Hotel Horizonte, el flujo operacional de N14 comienza con una necesidad de alojamiento y termina con una habitación entregada bajo la promesa acordada. El flujo de cambio de N25 comienza cuando un episodio vuelve reconocible una necesidad de modificación y termina cuando la capacidad corregida está en uso, puede observarse y admite reparación.
+Ejemplo cercano: En Hotel Horizonte, el flujo operacional de N14 comienza con una necesidad de alojamiento y termina con una habitación entregada bajo la promesa acordada. El flujo de cambio de N25 comienza cuando un episodio vuelve reconocible una necesidad de modificación y termina cuando la capacidad corregida está en uso, puede observarse y admite reparación.
 
 La misma unidad puede contener ciclos internos. Una discrepancia vuelve a Housekeeping, la asignación se corrige y la comunicación se repite. El flujo no reinicia para mejorar la métrica. Conserva las devoluciones dentro del episodio y registra cuándo una corrección genera retrabajo.
 
@@ -132,7 +132,7 @@ La condición de salida incluye reparación. Si la persona recibe una habitació
 
 ### Trabajo en curso
 
-Trabajo en curso reúne unidades iniciadas que todavía no alcanzaron su condición de salida. Incluye casos bloqueados, devueltos e invisibles fuera del tablero de un equipo.
+En simple, con un ejemplo: Trabajo en curso reúne unidades iniciadas que todavía no alcanzaron su condición de salida. Incluye casos bloqueados, devueltos e invisibles fuera del tablero de un equipo.
 
 Más trabajo abierto consume atención, amplía colas y demora feedback. El límite debe observarse de punta a punta para no trasladar inventario entre áreas.
 
@@ -144,7 +144,7 @@ La edad del trabajo en curso aporta una señal anticipada. Antes de que aumente 
 
 ### Cola
 
-Una cola es demanda que espera capacidad o una decisión antes de avanzar. Puede ser visible en una bandeja o permanecer oculta en correos, consultas y memoria de una persona.
+En simple, con un ejemplo: Una cola es demanda que espera capacidad o una decisión antes de avanzar. Puede ser visible en una bandeja o permanecer oculta en correos, consultas y memoria de una persona.
 
 Su comportamiento depende de llegadas, variabilidad, prioridades y recurso disponible. Acelerar una etapa no ayuda si aumenta la llegada o desplaza el cuello hacia otra cola.
 
@@ -156,11 +156,11 @@ Una cola también puede proteger. Limitar cambios durante un pico reduce riesgo 
 
 ### Tiempo de flujo
 
-Tiempo de flujo es el lapso desde que una unidad entra al sistema hasta que alcanza salida. Incluye trabajo activo, espera, devoluciones y pausas protectoras.
+En simple: Tiempo de flujo es el lapso desde que una unidad entra al sistema hasta que alcanza salida. Incluye trabajo activo, espera, devoluciones y pausas protectoras.
 
 La frontera y la unidad deben permanecer estables para comparar. Promedios se acompañan con distribución y segmentos porque algunos casos pueden esperar mucho más.
 
-HH-25 distingue cuánto tiempo se trabaja sobre una llegada y cuánto permanece sin avanzar entre Recepción, Housekeeping y Tecnología.
+Ejemplo cercano: HH-25 distingue cuánto tiempo se trabaja sobre una llegada y cuánto permanece sin avanzar entre Recepción, Housekeeping y Tecnología.
 
 La distribución importa más que un promedio único. La mediana puede bajar mientras algunos casos críticos esperan mucho más. Percentiles, edad y segmentación por tipo de demanda permiten detectar poblaciones que la mejora general no alcanza.
 
@@ -174,9 +174,9 @@ Una solicitud descartada antes del compromiso no integra el trabajo en curso, pe
 
 ### Métricas de flujo y cadencias de decisión
 
-La Guía Kanban distingue cuatro métricas mínimas de flujo: trabajo en curso, throughput, edad de los elementos y tiempo de ciclo. Cada una observa una relación diferente. El trabajo en curso muestra cuántas unidades están activas. El throughput cuenta cuántas alcanzan salida en un período. La edad advierte cuánto lleva abierto cada elemento todavía inconcluso. El tiempo de ciclo mide cuánto demoraron las unidades que salieron desde el punto de inicio acordado. Ninguna cifra explica por sí sola el mecanismo ni la experiencia completa.
+En simple: La Guía Kanban distingue cuatro métricas mínimas de flujo: trabajo en curso, throughput, edad de los elementos y tiempo de ciclo. Cada una observa una relación diferente. El trabajo en curso muestra cuántas unidades están activas. El throughput cuenta cuántas alcanzan salida en un período. La edad advierte cuánto lleva abierto cada elemento todavía inconcluso. El tiempo de ciclo mide cuánto demoraron las unidades que salieron desde el punto de inicio acordado. Ninguna cifra explica por sí sola el mecanismo ni la experiencia completa.
 
-Las métricas necesitan una misma unidad y una frontera estable. Mezclar incidentes pequeños, proyectos extensos y consultas simples produce un promedio sin significado operativo. HH-25 sigue episodios de llegada que requieren coordinación entre áreas y conserva segmentos por canal, turno, accesibilidad y tipo de excepción. Si cambia el punto de comienzo, mantiene ambas series durante la transición. Así puede distinguir una mejora real de una modificación de medición.
+Ejemplo cercano: Las métricas necesitan una misma unidad y una frontera estable. Mezclar incidentes pequeños, proyectos extensos y consultas simples produce un promedio sin significado operativo. HH-25 sigue episodios de llegada que requieren coordinación entre áreas y conserva segmentos por canal, turno, accesibilidad y tipo de excepción. Si cambia el punto de comienzo, mantiene ambas series durante la transición. Así puede distinguir una mejora real de una modificación de medición.
 
 La edad complementa el análisis de elementos terminados. Un tiempo de ciclo histórico favorable puede coexistir con casos actuales que envejecen sin avanzar. La revisión observa cuáles exceden una expectativa de nivel de servicio y qué condición los retiene. Esa expectativa no constituye una promesa individual ni una fecha garantizada; expresa una previsión probabilística basada en el flujo observado. Un caso severo puede requerir otra política aunque su clase sea infrecuente.
 
@@ -206,11 +206,11 @@ La reducción debe considerar condiciones laborales. Un flujo que mejora porque 
 
 ### Ley de Little
 
-La Ley de Little relaciona trabajo en curso, throughput y tiempo medio en un sistema estable. Es una identidad sobre promedios de la misma frontera y unidad, no una predicción de cada caso.
+En simple: La Ley de Little relaciona trabajo en curso, throughput y tiempo medio en un sistema estable. Es una identidad sobre promedios de la misma frontera y unidad, no una predicción de cada caso.
 
 Aplicarla exige observar un período representativo y contabilizar entradas y salidas consistentemente. Si el sistema cambia o mezcla poblaciones, el resultado necesita interpretación y segmentación.
 
-La relación muestra por qué sostener más trabajo abierto con throughput semejante alarga el tiempo, aun cuando todas las personas parezcan ocupadas.
+Ejemplo cercano: La relación muestra por qué sostener más trabajo abierto con throughput semejante alarga el tiempo, aun cuando todas las personas parezcan ocupadas.
 
 La estabilidad se evalúa, no se supone. Entradas y salidas pueden variar por temporada; las unidades pueden tener tamaños distintos; la frontera puede cambiar. HH-25 calcula la relación sobre ventanas comparables y segmenta cuando las diferencias alteran significado.
 
@@ -218,11 +218,11 @@ Usar la identidad como meta puede inducir errores. Ordenar reducir trabajo en cu
 
 ### Tamaño de lote
 
-Tamaño de lote es la cantidad de trabajo o cambio acumulada antes de transferir, integrar o recibir feedback. Lotes grandes reducen frecuencia de coordinación, pero amplían espera, riesgo y costo de error.
+En simple: Tamaño de lote es la cantidad de trabajo o cambio acumulada antes de transferir, integrar o recibir feedback. Lotes grandes reducen frecuencia de coordinación, pero amplían espera, riesgo y costo de error.
 
 Reducirlos sólo ayuda si cada unidad mantiene capacidad completa y el siguiente tramo puede absorberla. Un lote pequeño de componentes incompletos crea más inventario parcial.
 
-HH-25 prueba cambios menores sobre episodios completos y observa si la revisión adicional crea una nueva cola.
+Ejemplo cercano: HH-25 prueba cambios menores sobre episodios completos y observa si la revisión adicional crea una nueva cola.
 
 El lote aparece en varias formas: cantidad de requisitos antes de decidir, cambios antes de integrar, casos antes de validar o liberaciones antes de comunicar. Reducir sólo el lote de código puede dejar intacta la espera dominante. El mapa localiza dónde se acumula trabajo y qué costo sostiene esa acumulación.
 
@@ -230,7 +230,7 @@ Algunos lotes responden a costos fijos reales, como preparar un ambiente o coord
 
 ### Transferencia
 
-Una transferencia, también llamada *handoff*, mueve trabajo, información o autoridad entre actores o contextos. Puede agregar especialización y control, pero también pérdida, espera y necesidad de reinterpretación.
+En simple, con un ejemplo: Una transferencia, también llamada *handoff*, mueve trabajo, información o autoridad entre actores o contextos. Puede agregar especialización y control, pero también pérdida, espera y necesidad de reinterpretación.
 
 La transferencia se analiza por lo que debe comprender quien recibe y por las devoluciones que produce. El problema no es contar áreas, sino identificar qué información o decisión se degrada.
 
@@ -242,7 +242,7 @@ No toda transferencia debe eliminarse. Especialización, independencia de contro
 
 ### Retroalimentación
 
-La retroalimentación, también llamada *feedback*, es información sobre el efecto de una acción que puede modificar una decisión posterior. Una señal sin destinatario, oportunidad ni autoridad no cierra el circuito.
+En simple, con un ejemplo: La retroalimentación, también llamada *feedback*, es información sobre el efecto de una acción que puede modificar una decisión posterior. Una señal sin destinatario, oportunidad ni autoridad no cierra el circuito.
 
 Se evalúan latencia, calidad y capacidad de respuesta. Automatizar la captura puede amplificar ruido si nadie distingue incidencia, preferencia y daño.
 
@@ -264,19 +264,19 @@ La reparación cierra el circuito con una doble salida. Restaura la capacidad y 
 
 ### Variabilidad
 
-Variabilidad son diferencias en llegada, tamaño, dificultad o capacidad que alteran el flujo. No toda variación es error: algunas representan diversidad legítima de necesidades y contextos.
+En simple: Variabilidad son diferencias en llegada, tamaño, dificultad o capacidad que alteran el flujo. No toda variación es error: algunas representan diversidad legítima de necesidades y contextos.
 
 La utilización alta vuelve al sistema más sensible a picos y excepciones. Segmentación, margen y políticas explícitas permiten absorberlos sin prometer uniformidad falsa.
 
 Los picos de check-in revelan una cola que permanece invisible en días normales y exigen una respuesta distinta de exigir más velocidad individual.
 
-La variabilidad puede provenir de demanda, complejidad, disponibilidad o definición. Mezclar unidades muy diferentes crea una distribución que ninguna persona puede interpretar. HH-25 segmenta episodios sin fragmentar el resultado de punta a punta.
+Ejemplo cercano: La variabilidad puede provenir de demanda, complejidad, disponibilidad o definición. Mezclar unidades muy diferentes crea una distribución que ninguna persona puede interpretar. HH-25 segmenta episodios sin fragmentar el resultado de punta a punta.
 
 Algunas diferencias son la expresión legítima de necesidades diversas. Estandarizar para reducir variabilidad puede excluir. El diseño busca absorber variedad mediante reglas, autonomía y capacidad, no eliminar a quien no coincide con el caso medio.
 
 ### Tasa de salida
 
-La tasa de salida, también llamada *throughput*, es la cantidad de unidades que alcanzan salida por período dentro de una frontera definida. No equivale a tareas iniciadas, puntos ni actividad de un área.
+En simple, con un ejemplo: La tasa de salida, también llamada *throughput*, es la cantidad de unidades que alcanzan salida por período dentro de una frontera definida. No equivale a tareas iniciadas, puntos ni actividad de un área.
 
 Puede aumentar mediante lotes que deterioran calidad o trasladan retrabajo; por eso se interpreta con tiempo, outcome y reparación. La unidad debe conservar significado entre mediciones.
 
@@ -288,11 +288,11 @@ Comparar tasas entre equipos suele ser inválido porque las unidades y fronteras
 
 ### Eficiencia de flujo
 
-La eficiencia de flujo compara tiempo activo con tiempo total para localizar espera. En este texto, tiempo activo significa que la unidad recibe trabajo pertinente, incluida reparación necesaria; no equivale automáticamente a tiempo que agrega valor ni excluye retrabajo. No debe usarse para exigir actividad continua ni para eliminar controles que protegen seguridad o derechos.
+En simple: La eficiencia de flujo compara tiempo activo con tiempo total para localizar espera. En este texto, tiempo activo significa que la unidad recibe trabajo pertinente, incluida reparación necesaria; no equivale automáticamente a tiempo que agrega valor ni excluye retrabajo. No debe usarse para exigir actividad continua ni para eliminar controles que protegen seguridad o derechos.
 
 Una proporción baja abre una investigación sobre colas, lotes y handoffs; no identifica por sí sola una solución. Mejorarla puede empeorar outcome si desplaza trabajo hacia otra población.
 
-HH-25 examina por qué una corrección trabaja un día y espera meses y distingue autorización necesaria de demora accidental.
+Ejemplo cercano: HH-25 examina por qué una corrección trabaja un día y espera meses y distingue autorización necesaria de demora accidental.
 
 La proporción orienta una investigación, pero no establece cuánto tiempo activo debería existir. Un caso complejo puede requerir análisis; uno simple puede esperar una decisión. El objetivo no es maximizar la proporción sino reducir demora que no contribuye al outcome ni a la protección.
 
@@ -302,9 +302,9 @@ Cuando interesa evaluar desperdicio, el tiempo activo se desagrega en transforma
 
 ### Sistema de feedback y reparación
 
-Un sistema de feedback y reparación detecta desvíos, decide respuesta, restaura capacidad y conserva aprendizaje. Integra señales de operación, usuarios, negocio y riesgo con autoridades capaces de actuar.
+En simple: Un sistema de feedback y reparación detecta desvíos, decide respuesta, restaura capacidad y conserva aprendizaje. Integra señales de operación, usuarios, negocio y riesgo con autoridades capaces de actuar.
 
-Se observa tiempo de detección, recuperación, comunicación y prevención. La reparación incluye a las personas afectadas, no sólo el estado técnico.
+Ejemplo cercano: Se observa tiempo de detección, recuperación, comunicación y prevención. La reparación incluye a las personas afectadas, no sólo el estado técnico.
 
 En HH-25, Recepción reporta una excepción, la regla se corrige antes del siguiente lote y el caso perjudicado recibe una respuesta trazable.
 

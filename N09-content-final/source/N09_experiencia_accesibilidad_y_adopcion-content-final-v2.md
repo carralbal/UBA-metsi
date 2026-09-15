@@ -51,11 +51,11 @@ N09 no reconstruye otra vez el procedimiento ni vuelve a explicar cómo observar
 
 ### Lo que ya se sabe desde Ingeniería de Software
 
-Ingeniería de Software aporta usabilidad, requisitos no funcionales y pruebas de aceptación. ISO 9241-11:2018 obliga a definir la usabilidad con relación a personas, objetivos y contexto de uso; ISO 9241-210:2019 extiende el diseño centrado en las personas a todo el ciclo de vida de sistemas interactivos. N09 conserva esos instrumentos y cambia la unidad: de pantalla a recorrido, de usuario promedio a poblaciones concretas, de conformidad a capacidad efectiva. Una interfaz puede cumplir criterios y conducir a un canal inaccesible cuando aparece una excepción.
+En simple, con un ejemplo: Ingeniería de Software aporta usabilidad, requisitos no funcionales y pruebas de aceptación. ISO 9241-11:2018 obliga a definir la usabilidad con relación a personas, objetivos y contexto de uso; ISO 9241-210:2019 extiende el diseño centrado en las personas a todo el ciclo de vida de sistemas interactivos. N09 conserva esos instrumentos y cambia la unidad: de pantalla a recorrido, de usuario promedio a poblaciones concretas, de conformidad a capacidad efectiva. Una interfaz puede cumplir criterios y conducir a un canal inaccesible cuando aparece una excepción.
 
 ### UI, UX y diseño cumplen funciones diferentes
 
-La interfaz de usuario, conocida como UI, reúne superficies y mecanismos mediante los cuales una persona percibe estado, ingresa información, elige y recibe respuesta. Incluye jerarquía visual, controles, tipografía, mensajes, navegación y comportamiento interactivo. Su calidad importa porque una relación mal expresada puede producir un error aun cuando la regla interna sea correcta. Sin embargo, UI no nombra toda la experiencia ni el proceso que hace posible el resultado.
+En simple, con un ejemplo: La interfaz de usuario, conocida como UI, reúne superficies y mecanismos mediante los cuales una persona percibe estado, ingresa información, elige y recibe respuesta. Incluye jerarquía visual, controles, tipografía, mensajes, navegación y comportamiento interactivo. Su calidad importa porque una relación mal expresada puede producir un error aun cuando la regla interna sea correcta. Sin embargo, UI no nombra toda la experiencia ni el proceso que hace posible el resultado.
 
 La experiencia de usuario, conocida como UX, comprende percepciones y respuestas que emergen antes, durante y después del uso. Depende de expectativas, comprensión, desempeño, confianza, accesibilidad, ayuda, contexto y consecuencias. No reside dentro de la persona como gusto privado ni dentro de la aplicación como atributo fijo. Se produce en una relación. Dos personas pueden atravesar la misma interfaz y encontrar capacidades distintas porque cambian dispositivo, idioma, experiencia previa, presión, conectividad, necesidad de apoyo o alternativa disponible.
 
@@ -77,13 +77,13 @@ La decisión profesional consiste en localizar la intervención mínima que pres
 
 ### La interfaz impecable que no resuelve el servicio
 
-El nuevo check-in digital de Hotel Horizonte permite completar datos, validar documento y elegir horario en cuatro pantallas claras. Las pruebas de usabilidad son buenas. Sin embargo, el huésped llega y la habitación no está lista; la categoría prometida difiere; el beneficio corporativo no figura; el canal exige smartphone; la persona cree que “check-in completado” significa acceso inmediato.
+En simple, con un ejemplo: El nuevo check-in digital de Hotel Horizonte permite completar datos, validar documento y elegir horario en cuatro pantallas claras. Las pruebas de usabilidad son buenas. Sin embargo, el huésped llega y la habitación no está lista; la categoría prometida difiere; el beneficio corporativo no figura; el canal exige smartphone; la persona cree que “check-in completado” significa acceso inmediato.
 
 La interfaz puede funcionar y el servicio fracasar. La experiencia no reside en la pantalla, sino en una secuencia de promesas, decisiones, espacios, espera, interacción, corrección y memoria. Lo visible depende de procesos, datos, reglas y autoridad.
 
 ### Experiencia de principio a fin
 
-Una experiencia comienza antes de la interacción principal y continúa después. Para alojamiento incluye búsqueda, reserva, confirmación, preparación, llegada, estancia, soporte, pago y salida. Cada etapa puede usar otro canal y organización.
+En simple, con un ejemplo: Una experiencia comienza antes de la interacción principal y continúa después. Para alojamiento incluye búsqueda, reserva, confirmación, preparación, llegada, estancia, soporte, pago y salida. Cada etapa puede usar otro canal y organización.
 
 Una representación útil conecta:
 
@@ -101,7 +101,7 @@ Un mapa de recorrido puramente emocional puede identificar frustración, pero no
 
 ### Usabilidad y resultado
 
-Usabilidad incluye efectividad, eficiencia y satisfacción en un contexto específico. No es “que sea intuitivo” universalmente. Una tarea rápida puede ser inefectiva si la persona confirma algo que no comprende. Una pantalla eficiente para casos típicos puede excluir lectores de pantalla o idioma distinto.
+En simple, con un ejemplo: Usabilidad incluye efectividad, eficiencia y satisfacción en un contexto específico. No es “que sea intuitivo” universalmente. Una tarea rápida puede ser inefectiva si la persona confirma algo que no comprende. Una pantalla eficiente para casos típicos puede excluir lectores de pantalla o idioma distinto.
 
 El contexto comprende dispositivo, conectividad, presión, conocimiento, capacidad, ambiente y consecuencia. Probar con empleados en oficina no representa a una familia llegando con equipaje ni a personal nocturno durante falla.
 
@@ -109,7 +109,7 @@ La métrica debe conectar interacción y resultado del servicio: completitud, er
 
 ### Accesibilidad como propiedad sistémica
 
-Accesibilidad no es un sello binario. Una habitación “accesible” puede requerir atributos distintos: ancho, giro, barras, altura, baño, señalización, asistencia auditiva, ruta sin obstáculos. La etiqueta agregada no permite confirmar compatibilidad.
+En simple, con un ejemplo: Accesibilidad no es un sello binario. Una habitación “accesible” puede requerir atributos distintos: ancho, giro, barras, altura, baño, señalización, asistencia auditiva, ruta sin obstáculos. La etiqueta agregada no permite confirmar compatibilidad.
 
 En entornos digitales incluye percepción, operación, comprensión y robustez, pero también:
 
@@ -126,9 +126,9 @@ WCAG orienta contenido web, pero no garantiza servicio accesible. La reserva pue
 
 ### Diseñar atributos, no etiquetas
 
-Una respuesta responsable no afirma compatibilidad universal. Mantiene atributos verificables, procedencia y vigencia; permite expresar necesidades; comunica incertidumbre y ofrece confirmación humana.
+En simple: Una respuesta responsable no afirma compatibilidad universal. Mantiene atributos verificables, procedencia y vigencia; permite expresar necesidades; comunica incertidumbre y ofrece confirmación humana.
 
-Esto cambia el modelo de información. “Accesible: sí/no” se reemplaza por propiedades, restricciones y evidencia. También cambia autoridad: ¿quién verifica físicamente?, ¿quién actualiza?, ¿qué ocurre si falta un dato?, ¿cómo se evita prometer?
+Ejemplo cercano: Esto cambia el modelo de información. “Accesible: sí/no” se reemplaza por propiedades, restricciones y evidencia. También cambia autoridad: ¿quién verifica físicamente?, ¿quién actualiza?, ¿qué ocurre si falta un dato?, ¿cómo se evita prometer?
 
 En IA, una base vaga genera respuestas fluidas y peligrosas. El modelo no puede reparar semántica inexistente.
 
@@ -146,7 +146,7 @@ Esta primera aplicación cambia la decisión. No corresponde optimizar la tasa d
 
 ### Adopción como resultado del trabajo
 
-“Resistencia al cambio” suele cerrar investigación. Las personas pueden no usar una herramienta porque:
+En simple, con un ejemplo: “Resistencia al cambio” suele cerrar investigación. Las personas pueden no usar una herramienta porque:
 
 - datos no son confiables;
 - duplica carga;
@@ -169,7 +169,7 @@ Un PMS nuevo puede estandarizar estados y volver visibles demoras. Esa visibilid
 
 ### Fricción protectora y fricción improductiva
 
-La promesa de “cero fricción” es peligrosa. Algunas fricciones protegen:
+En simple, con un ejemplo: La promesa de “cero fricción” es peligrosa. Algunas fricciones protegen:
 
 - confirmación antes de cancelar;
 - revisión de decisión de alto impacto;
@@ -184,7 +184,7 @@ El criterio pregunta quién carga, quién se beneficia y qué riesgo reduce. Una
 
 ### Métricas de experiencia, accesibilidad y adopción
 
-Ninguna métrica aislada basta. Posibles señales:
+En simple: Ninguna métrica aislada basta. Posibles señales:
 
 - éxito por tarea/población/contexto;
 - tiempo y variabilidad;
@@ -198,11 +198,11 @@ Ninguna métrica aislada basta. Posibles señales:
 - comprensión/confianza;
 - distribución, no solo promedio.
 
-“Tasa de autoservicio” puede subir porque se eliminó una alternativa. “Usuarios activos” puede crecer sin valor. Toda métrica necesita límites de protección que impidan mejorar el indicador a costa del servicio.
+Ejemplo cercano: “Tasa de autoservicio” puede subir porque se eliminó una alternativa. “Usuarios activos” puede crecer sin valor. Toda métrica necesita límites de protección que impidan mejorar el indicador a costa del servicio.
 
 ### Diseñar con diversidad sin inventar un usuario promedio
 
-Las personas varían en capacidades, idioma, experiencia, dispositivo, conectividad, tiempo, confianza y contexto. Segmentar solo por demografía puede estereotipar; ignorar diferencias produce exclusión.
+En simple, con un ejemplo: Las personas varían en capacidades, idioma, experiencia, dispositivo, conectividad, tiempo, confianza y contexto. Segmentar solo por demografía puede estereotipar; ignorar diferencias produce exclusión.
 
 Conviene trabajar con condiciones/tareas:
 
@@ -222,7 +222,7 @@ El principio de diseño universal orienta amplitud, pero no elimina ajustes razo
 
 ### Pruebas inclusivas
 
-Una auditoría automática encuentra ciertos problemas de código; no evalúa comprensión, flujo completo ni servicio. La estrategia combina:
+En simple, con un ejemplo: Una auditoría automática encuentra ciertos problemas de código; no evalúa comprensión, flujo completo ni servicio. La estrategia combina:
 
 - revisión WCAG;
 - tecnología asistiva;
@@ -240,7 +240,7 @@ La prueba debe usar tareas reales. Que un lector de pantalla navegue no demuestr
 
 ### Adopción, incentivos y justicia de medición
 
-Si la métrica de desempeño exige cerrar rápido, una herramienta que obliga a registrar excepciones será evitada. Si el sistema registra cada override como error del operador, se ocultan overrides. Adopción y medición se co-diseñan.
+En simple, con un ejemplo: Si la métrica de desempeño exige cerrar rápido, una herramienta que obliga a registrar excepciones será evitada. Si el sistema registra cada override como error del operador, se ocultan overrides. Adopción y medición se co-diseñan.
 
 El equipo debe observar quién obtiene beneficio inmediato y quién aporta datos/trabajo. Un nuevo sistema puede beneficiar a dirección mediante visibilidad y cargar a operación con registro. Sin retorno útil, la adopción depende de coerción.
 
@@ -250,11 +250,11 @@ La justicia de medición exige no comparar contextos incomparables. Un turno noc
 
 ### Accesibilidad, cambio y apropiación
 
-Adoptar también implica desaprender. Si una planilla se retira, debe migrarse su función e historia, entrenar excepciones y ofrecer transición. Mantener indefinidamente doble carga destruye confianza.
+En simple: Adoptar también implica desaprender. Si una planilla se retira, debe migrarse su función e historia, entrenar excepciones y ofrecer transición. Mantener indefinidamente doble carga destruye confianza.
 
 Un plan de adopción sólido incluye capacidades, participación, soporte, devolución, métricas, autoridad y criterios para retirar tanto prácticas antiguas como funciones nuevas que no aportan.
 
-Los estándares ofrecen criterios esenciales, pero la conformidad de interfaz no garantiza acceso al servicio. La persona puede completar campos y quedar bloqueada por identidad, pago, canal alternativo o asistencia inexistente.
+Ejemplo cercano: Los estándares ofrecen criterios esenciales, pero la conformidad de interfaz no garantiza acceso al servicio. La persona puede completar campos y quedar bloqueada por identidad, pago, canal alternativo o asistencia inexistente.
 
 La accesibilidad es una cadena. Si un eslabón falla, el resultado no se alcanza. Incluye contenido comprensible, compatibilidad técnica, procesos, soporte, entorno físico y políticas. También contempla limitaciones situacionales: ruido, conectividad, lesión temporal, dispositivo compartido o estrés. Lazar, Goldstein y Taylor muestran por qué esta capacidad necesita proceso y política institucional, además de correcciones técnicas.
 
@@ -298,7 +298,7 @@ HH-09 obliga entonces a comparar dos alternativas. La primera conserva el autose
 
 ### Personalización e IA
 
-La IA puede adaptar contenido, anticipar asistencia o recomendar una alternativa. También puede inferir atributos, segmentar y producir tratamientos inconsistentes. La personalización debe estar subordinada al resultado buscado y a límites de equidad y privacidad.
+En simple, con un ejemplo: La IA puede adaptar contenido, anticipar asistencia o recomendar una alternativa. También puede inferir atributos, segmentar y producir tratamientos inconsistentes. La personalización debe estar subordinada al resultado buscado y a límites de equidad y privacidad.
 
 Una recomendación accesible no debe convertirse en perfil permanente sin necesidad. La persona necesita saber qué se adapta y poder elegir. Las salidas deben evaluarse en escenarios diversos, incluidos errores y lenguaje ambiguo.
 
@@ -308,7 +308,7 @@ Medir utilidad promedio no basta. Se necesitan peores casos, distribución, capa
 
 ### Diseñar recuperación y confianza
 
-Toda interacción puede fallar. La experiencia depende de detectar estado, comprender qué ocurrió, conservar trabajo y acceder a reparación. Un mensaje amable sin acción no recupera.
+En simple, con un ejemplo: Toda interacción puede fallar. La experiencia depende de detectar estado, comprender qué ocurrió, conservar trabajo y acceder a reparación. Un mensaje amable sin acción no recupera.
 
 La recuperación incluye responsabilidad: quién reconoce, quién decide, qué compensación existe y cómo se evita repetición. Puede aumentar confianza si es rápida y justa, pero no debe usarse para normalizar fallas evitables.
 
@@ -320,7 +320,7 @@ Una experiencia responsable permite no solo completar, sino entender, elegir, co
 
 ### Mapa de servicio y evidencia de principio a fin
 
-Un mapa de servicio conecta acciones de la persona, interacciones visibles, trabajo interno, sistemas y soporte. Su valor no está en dibujar carriles, sino en mostrar dependencias y puntos donde una promesa puede romperse.
+En simple, con un ejemplo: Un mapa de servicio conecta acciones de la persona, interacciones visibles, trabajo interno, sistemas y soporte. Su valor no está en dibujar carriles, sino en mostrar dependencias y puntos donde una promesa puede romperse.
 
 Para cada paso conviene registrar objetivo, señal recibida, esfuerzo, alternativa, fallo y reparación. La línea de visibilidad revela qué trabajo la persona desconoce y qué información necesita. La línea interna muestra coordinaciones que una interfaz no resuelve.
 
@@ -330,9 +330,9 @@ También se vincula con métricas. Cada punto crítico tiene señales técnicas 
 
 ### Deuda de cambio, equidad y retiro
 
-La adopción evoluciona. Antes del uso existe expectativa y preparación; durante el inicio, aprendizaje y soporte; después, apropiación, estabilización y eventual retiro. Medir una semana no permite inferir sostenibilidad.
+En simple: La adopción evoluciona. Antes del uso existe expectativa y preparación; durante el inicio, aprendizaje y soporte; después, apropiación, estabilización y eventual retiro. Medir una semana no permite inferir sostenibilidad.
 
-El cambio acumula deuda cuando se despliega sin retirar procesos, actualizar roles o sostener formación. Los equipos operan dos circuitos y desarrollan reglas locales. La tasa de uso puede crecer mientras la complejidad aumenta.
+Ejemplo cercano: El cambio acumula deuda cuando se despliega sin retirar procesos, actualizar roles o sostener formación. Los equipos operan dos circuitos y desarrollan reglas locales. La tasa de uso puede crecer mientras la complejidad aumenta.
 
 El plan debe definir qué práctica anterior se mantiene, hasta cuándo y bajo qué criterio se retira. También qué conocimiento nuevo se vuelve crítico y cómo se distribuye. La transición necesita capacidad adicional; asumir productividad inmediata genera presión y atajos.
 
@@ -387,7 +387,7 @@ El mapa puede construirse en una sesión, pero se valida con episodios y persona
 
 ### Protocolo operativo: investigar antes de optimizar
 
-Un equipo puede aplicar N09 mediante un protocolo de seis movimientos. No es una receta universal; es una secuencia de control que conserva preguntas necesarias.
+En simple, con un ejemplo: Un equipo puede aplicar N09 mediante un protocolo de seis movimientos. No es una receta universal; es una secuencia de control que conserva preguntas necesarias.
 
 **1. Definir la capacidad esperada y las poblaciones relevantes.** La formulación debe poder observarse. “Mejorar experiencia” es demasiado amplia. “Personas con reservas confirmadas pueden llegar, comprender el estado de su habitación y obtener una alternativa compatible cuando la promesa no puede cumplirse” ofrece una capacidad verificable. Las poblaciones se definen por condiciones que alteran el recorrido, no por un personaje promedio.
 
@@ -405,7 +405,7 @@ Este protocolo no sustituye WCAG, las pruebas de software, la investigación con
 
 ### 2026: las interfaces conversacionales amplían acceso y crean nuevas barreras
 
-WCAG 2.2 se consolidó como referencia vigente y fue aprobada como ISO/IEC 40500:2025. Sus nuevos criterios refuerzan aspectos muy concretos: que el foco no quede oculto, que exista alternativa a movimientos de arrastre, que los objetivos táctiles tengan tamaño suficiente, que la ayuda sea consistente, que no se obligue a reingresar información y que la autenticación no dependa exclusivamente de una prueba cognitiva. Son avances relevantes porque traducen barreras frecuentes en condiciones verificables.
+En simple, con un ejemplo: WCAG 2.2 se consolidó como referencia vigente y fue aprobada como ISO/IEC 40500:2025. Sus nuevos criterios refuerzan aspectos muy concretos: que el foco no quede oculto, que exista alternativa a movimientos de arrastre, que los objetivos táctiles tengan tamaño suficiente, que la ayuda sea consistente, que no se obligue a reingresar información y que la autenticación no dependa exclusivamente de una prueba cognitiva. Son avances relevantes porque traducen barreras frecuentes en condiciones verificables.
 
 Al mismo tiempo, el propio W3C advierte que WCAG no cubre todas las necesidades. También explica que la accesibilidad depende de que contenido, agentes de usuario, tecnologías asistivas y herramientas de autor funcionen de manera articulada. La ausencia de errores detectados automáticamente no demuestra que una persona pueda completar el servicio: la automatización sólo observa una parte de los criterios y no conoce el resultado del recorrido.
 
@@ -478,7 +478,7 @@ Tratar todas las excepciones manualmente puede crear una clase de servicio infer
 
 ### De HH-09 a N10: evidencia para construir el problema
 
-HH-09 entrega a N10 un recorrido completo, no una formulación final del problema. El artefacto conserva ocho campos: propósito, condiciones, señal visible, acción, trabajo de soporte, evidencia, modo de falla, alternativa y reparación. Para cada transición agrega cuatro medidas distributivas: tiempo, esfuerzo, asistencia y error. También identifica qué promesa quedó abierta, qué población soportó la carga, qué explicación rival continúa viva y qué decisión no debería tomarse todavía.
+En simple, con un ejemplo: HH-09 entrega a N10 un recorrido completo, no una formulación final del problema. El artefacto conserva ocho campos: propósito, condiciones, señal visible, acción, trabajo de soporte, evidencia, modo de falla, alternativa y reparación. Para cada transición agrega cuatro medidas distributivas: tiempo, esfuerzo, asistencia y error. También identifica qué promesa quedó abierta, qué población soportó la carga, qué explicación rival continúa viva y qué decisión no debería tomarse todavía.
 
 En Hotel Horizonte, la entrega puede resumirse así: la etiqueta “adaptada” no alcanza para confirmar compatibilidad; la promesa falla por una combinación todavía discutible de semántica, vigencia operativa y autoridad; la carga se concentra en personas que necesitan atributos específicos y en Recepción; las alternativas son estructurar atributos, integrar estados o limitar la promesa automática; y la prueba más pequeña consiste en tres habitaciones, cinco atributos, confirmación trazable y cuatro semanas de observación.
 

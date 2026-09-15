@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "758c9153d75c6d5dca64c30462f0f66855e0e02d276db79f8e16b26ad576eb2f",
-        "declared_sha256": "758c9153d75c6d5dca64c30462f0f66855e0e02d276db79f8e16b26ad576eb2f",
+        "actual_sha256": "f2aa18bb40ec2ff3b1a43b2ed03763b361f9b72a0a3921715a77b467d32a291b",
+        "declared_sha256": "f2aa18bb40ec2ff3b1a43b2ed03763b361f9b72a0a3921715a77b467d32a291b",
         "document_json_matches": true,
         "source": "source/N32_evaluar_tareas_cobertura_severidad_desigualdad_robustez_y_supervision-content-canonical-v4.md",
         "source_exists": true,
@@ -48,6 +48,19 @@
       "status": "PASS"
     },
     {
+      "check": "errors_grid_groups_each_label_with_its_explanation",
+      "evidence": [
+        {
+          "cards": 12,
+          "declared_rows": 6,
+          "expected_rows": 6,
+          "labels": 12,
+          "naked_pairs": 0
+        }
+      ],
+      "status": "PASS"
+    },
+    {
       "check": "no_lfs_pointers_private_paths_or_placeholders",
       "evidence": {
         "lfs_pointers": [],
@@ -67,12 +80,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 19656434,
-        "final_sha256": "1b38f6b317fbc3f244464f907b23be94d609b331f867006934b10896bca8dc40",
+        "bytes": 19639411,
+        "final_sha256": "a66950b0290b45a12bec809716d8df1b14b882fdc6b1e4b79a2dbaa1ace2a461",
         "pages": 27,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "488f645a837d7506f2089fdd86fa3898f12e98b90a38595c91cd28e3eecded30",
+        "raw_sha256": "47023afda165f00efd5d7ebfb71108742a7b5783075c3513fdd51132e1656f1c",
         "unique_sizes": [
           [
             594.96,
@@ -1129,15 +1142,15 @@
       5,
       21
     ],
-    "pdf_bytes": 19656434,
-    "pdf_sha256": "1b38f6b317fbc3f244464f907b23be94d609b331f867006934b10896bca8dc40",
+    "pdf_bytes": 19639411,
+    "pdf_sha256": "a66950b0290b45a12bec809716d8df1b14b882fdc6b1e4b79a2dbaa1ace2a461",
     "source_blocks": 252
   },
   "mode": "read-only",
   "package": "N32-v9-editorial",
-  "passed_checks": 26,
+  "passed_checks": 27,
   "status": "PASS",
-  "total_checks": 26,
+  "total_checks": 27,
   "validator": "validate_n11_n36_v6.py",
   "version": "v9-editorial"
 }

@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "0fb35a6675522567ae04625b2b3fa3700dabd91f90aa31542627edc99abbc2fc",
-        "declared_sha256": "0fb35a6675522567ae04625b2b3fa3700dabd91f90aa31542627edc99abbc2fc",
+        "actual_sha256": "0ee338d1b304d574c9aeff893f41f3f2dc68d6941eac4f857dcf79b67fc21007",
+        "declared_sha256": "0ee338d1b304d574c9aeff893f41f3f2dc68d6941eac4f857dcf79b67fc21007",
         "document_json_matches": true,
         "source": "source/N30_observabilidad_senales_sli_slo_incidentes_y_aprendizaje-content-canonical-v4.md",
         "source_exists": true,
@@ -48,6 +48,19 @@
       "status": "PASS"
     },
     {
+      "check": "errors_grid_groups_each_label_with_its_explanation",
+      "evidence": [
+        {
+          "cards": 10,
+          "declared_rows": 5,
+          "expected_rows": 5,
+          "labels": 10,
+          "naked_pairs": 0
+        }
+      ],
+      "status": "PASS"
+    },
+    {
       "check": "no_lfs_pointers_private_paths_or_placeholders",
       "evidence": {
         "lfs_pointers": [],
@@ -67,12 +80,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 18422135,
-        "final_sha256": "8b41ae006468262b9c84d53f4b1ef830fcd27c81a69127d6ef089cab25470dd0",
+        "bytes": 18400598,
+        "final_sha256": "a4a90ea7ea7a3b42880d2ee0ae0822ddec005c63a99647f3d1a8e8d14659d90d",
         "pages": 28,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "368561cfc323897f35f7a69cd46d64ea6397edf4a1e5827f9a3a50313f80cb89",
+        "raw_sha256": "d28e3b99548d0105b57c97983d6c1e6c9f138fbff0c3f84bfa4c9bb7acf96247",
         "unique_sizes": [
           [
             594.96,
@@ -1176,15 +1189,15 @@
       5,
       21
     ],
-    "pdf_bytes": 18422135,
-    "pdf_sha256": "8b41ae006468262b9c84d53f4b1ef830fcd27c81a69127d6ef089cab25470dd0",
+    "pdf_bytes": 18400598,
+    "pdf_sha256": "a4a90ea7ea7a3b42880d2ee0ae0822ddec005c63a99647f3d1a8e8d14659d90d",
     "source_blocks": 256
   },
   "mode": "read-only",
   "package": "N30-v9-editorial",
-  "passed_checks": 26,
+  "passed_checks": 27,
   "status": "PASS",
-  "total_checks": 26,
+  "total_checks": 27,
   "validator": "validate_n11_n36_v6.py",
   "version": "v9-editorial"
 }

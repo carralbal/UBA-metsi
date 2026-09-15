@@ -6,7 +6,7 @@
 
 ## El asistente recomendó una materia y modificó una trayectoria académica
 
-Una universidad prueba un asistente para orientar inscripciones. En la demostración conversa con naturalidad, recupera correlatividades y propone una combinación de materias compatible con los horarios declarados. Una estudiante acepta la recomendación. Semanas después descubre que una de las materias no cuenta para su plan y que la baja tardía afecta una beca. Nadie había autorizado al asistente a convertir una explicación probable en una decisión académica.
+En simple, con un ejemplo: Una universidad prueba un asistente para orientar inscripciones. En la demostración conversa con naturalidad, recupera correlatividades y propone una combinación de materias compatible con los horarios declarados. Una estudiante acepta la recomendación. Semanas después descubre que una de las materias no cuenta para su plan y que la baja tardía afecta una beca. Nadie había autorizado al asistente a convertir una explicación probable en una decisión académica.
 
 La primera discusión se concentra en el modelo: tamaño, proveedor, precisión y fluidez. Pero esas propiedades no dicen si la IA es necesaria. Antes hay que definir la tarea, el propósito, la población, la alternativa sin IA y la consecuencia de un error. Consultar una regla vigente, estimar una probabilidad, redactar una explicación y ejecutar una inscripción son acciones diferentes, aunque aparezcan dentro de la misma conversación.
 
@@ -86,9 +86,9 @@ Nissenbaum, H. aporta la integridad contextual como criterio para evaluar si dat
 
 ### Regla determinista
 
-Una regla determinista une condiciones explícitas con una respuesta definida de antemano. Puede ser compleja, pero no aprende patrones a partir de ejemplos ni redacta respuestas abiertas. La diferencia importa. En una regla podemos declarar las condiciones, explicar el resultado y probar sus caminos. En un sistema estadístico también debemos medir la incertidumbre y el desempeño sobre una población. Una regla extensa tampoco es necesariamente simple ni puede probarse con todas las combinaciones posibles.
+En simple: Una regla determinista une condiciones explícitas con una respuesta definida de antemano. Puede ser compleja, pero no aprende patrones a partir de ejemplos ni redacta respuestas abiertas. La diferencia importa. En una regla podemos declarar las condiciones, explicar el resultado y probar sus caminos. En un sistema estadístico también debemos medir la incertidumbre y el desempeño sobre una población. Una regla extensa tampoco es necesariamente simple ni puede probarse con todas las combinaciones posibles.
 
-En Hotel Horizonte, el validador de identidad rechaza un documento vencido. La prueba pertinente no consiste en observar muchos rechazos correctos, sino en verificar la tabla de vigencias, las excepciones admitidas, el mensaje entregado y la autoridad que puede continuar el proceso. Un documento válido rechazado revela un defecto de implementación o de política; una excepción no contemplada revela un límite del dominio codificado.
+Ejemplo cercano: En Hotel Horizonte, el validador de identidad rechaza un documento vencido. La prueba pertinente no consiste en observar muchos rechazos correctos, sino en verificar la tabla de vigencias, las excepciones admitidas, el mensaje entregado y la autoridad que puede continuar el proceso. Un documento válido rechazado revela un defecto de implementación o de política; una excepción no contemplada revela un límite del dominio codificado.
 
 Elegir una regla no elimina el gobierno. La versión, el responsable y la posibilidad de corregir el estado deben quedar registrados, especialmente si el rechazo bloquea una reserva. Cuando las condiciones son estables y auditables, la regla suele ser preferible a una solución de IA. Si el caso requiere interpretar evidencia ambigua, la decisión profesional debe reconocer que el mecanismo ya no es puramente determinista.
 
@@ -100,7 +100,7 @@ La primera ayuda a identificar mecanismos; la segunda obliga a observar el efect
 
 ### Predicción
 
-Una predicción estima algo que todavía no sabemos a partir de patrones observados en datos anteriores. Puede anticipar cancelaciones, demanda o duración. No explica por sí sola por qué ocurrirá algo ni decide qué debemos hacer. Para convertir una probabilidad en una acción hacen falta un umbral, una evaluación del costo de error y una persona con autoridad para asumir la consecuencia.
+En simple, con un ejemplo: Una predicción estima algo que todavía no sabemos a partir de patrones observados en datos anteriores. Puede anticipar cancelaciones, demanda o duración. No explica por sí sola por qué ocurrirá algo ni decide qué debemos hacer. Para convertir una probabilidad en una acción hacen falta un umbral, una evaluación del costo de error y una persona con autoridad para asumir la consecuencia.
 
 Un modelo puede estimar la probabilidad de cancelación de una reserva. Para evaluar esa estimación, el hotel necesita conocer la población de entrenamiento, la ventana temporal, la calibración y el desempeño por canal, temporada y tipo de huésped. Una probabilidad del ochenta por ciento debería corresponder aproximadamente a ocho cancelaciones cada diez casos comparables; una clasificación acertada no alcanza si los valores de confianza no conservan ese significado.
 
@@ -116,7 +116,7 @@ Pearl y Mackenzie separan asociación de intervención. Un buen pronóstico de c
 
 ### Generación
 
-Un sistema generativo produce texto, imágenes u otras secuencias condicionadas por una instrucción y un contexto. La salida se construye por plausibilidad estadística, no mediante una comprobación intrínseca de verdad, vigencia o autoridad. Por eso una respuesta fluida puede ser falsa, citar una política derogada o formular una promesa que ninguna persona del hotel está habilitada para cumplir.
+En simple, con un ejemplo: Un sistema generativo produce texto, imágenes u otras secuencias condicionadas por una instrucción y un contexto. La salida se construye por plausibilidad estadística, no mediante una comprobación intrínseca de verdad, vigencia o autoridad. Por eso una respuesta fluida puede ser falsa, citar una política derogada o formular una promesa que ninguna persona del hotel está habilitada para cumplir.
 
 Cuando el asistente redacta una respuesta al huésped, la calidad no se reduce a gramática y tono. Deben reconstruirse la consulta, los documentos recuperados, sus fechas, la instrucción aplicada y la revisión humana posterior. Si dos políticas vigentes entran en conflicto, la respuesta correcta no es completar el vacío con lenguaje convincente, sino exponer la contradicción y escalarla a quien puede decidir.
 
@@ -134,7 +134,7 @@ El perfil de NIST para IA generativa agrega riesgos de confabulación, procedenc
 
 ### Agencia
 
-Un sistema agente no sólo genera una respuesta: selecciona pasos, consulta herramientas y modifica estados para perseguir un objetivo. La agencia aparece en el ciclo de observar, planificar, actuar y volver a observar. No equivale a una conversación extensa, porque su rasgo decisivo es la capacidad de producir efectos en sistemas externos.
+En simple, con un ejemplo: Un sistema agente no sólo genera una respuesta: selecciona pasos, consulta herramientas y modifica estados para perseguir un objetivo. La agencia aparece en el ciclo de observar, planificar, actuar y volver a observar. No equivale a una conversación extensa, porque su rasgo decisivo es la capacidad de producir efectos en sistemas externos.
 
 El agente de Hotel Horizonte consulta inventario y ofrece una alternativa. Para que ese recorrido sea admisible, cada herramienta necesita permisos mínimos, parámetros válidos y una confirmación proporcional al daño posible. La evidencia debe mostrar qué habitaciones leyó, qué regla aplicó, qué oferta presentó y si llegó a reservar, liberar o compensar. Sin esa cadena, una respuesta aparentemente útil puede ocultar una modificación indebida.
 
@@ -154,9 +154,9 @@ Por eso las acciones con consecuencia externa se interrumpen antes de ejecutar, 
 
 ### Tarea y propósito
 
-La unidad adecuada para decidir sobre IA es una tarea situada, no un puesto completo ni una lista abstracta de casos de uso. La tarea reúne una entrada, una transformación, una salida, una población y una consecuencia. El propósito explica qué problema profesional intenta resolver y evita confundir disponibilidad tecnológica con necesidad organizacional.
+En simple: La unidad adecuada para decidir sobre IA es una tarea situada, no un puesto completo ni una lista abstracta de casos de uso. La tarea reúne una entrada, una transformación, una salida, una población y una consecuencia. El propósito explica qué problema profesional intenta resolver y evita confundir disponibilidad tecnológica con necesidad organizacional.
 
-En Recepción, clasificar una solicitud antes de decidir puede parecer una tarea menor. Sin embargo, la clasificación puede determinar quién responde, qué política se consulta y cuánto espera una persona. La evaluación debe observar casos ordinarios y excepciones, como una llegada anticipada con necesidad de accesibilidad, y comparar la decisión posterior con el proceso vigente. Una etiqueta correcta que dirige el caso al circuito equivocado no cumple el propósito.
+Ejemplo cercano: En Recepción, clasificar una solicitud antes de decidir puede parecer una tarea menor. Sin embargo, la clasificación puede determinar quién responde, qué política se consulta y cuánto espera una persona. La evaluación debe observar casos ordinarios y excepciones, como una llegada anticipada con necesidad de accesibilidad, y comparar la decisión posterior con el proceso vigente. Una etiqueta correcta que dirige el caso al circuito equivocado no cumple el propósito.
 
 Recortar la tarea permite asignar autoridad y medir efectos sin automatizar todo el rol de Lucía Ferreyra. También hace visible el trabajo desplazado hacia Mariela Benítez, Camila Duarte u otro equipo. Si el propósito no puede expresarse mediante una decisión y una consecuencia observables, todavía no existe base suficiente para elegir la IA, una regla, una búsqueda o un rediseño de proceso.
 
@@ -164,7 +164,7 @@ El recorte conserva las relaciones con el trabajo anterior y posterior. Clasific
 
 ### Alternativa sin IA
 
-Evaluar pertinencia exige comparar la propuesta con alternativas practicables: una regla, un buscador, mejores datos, un cambio de interfaz, un rediseño del proceso o incluso no intervenir. La comparación no se hace contra la ausencia idealizada de solución, sino contra la mejor opción que la organización podría sostener con sus capacidades y restricciones actuales.
+En simple, con un ejemplo: Evaluar pertinencia exige comparar la propuesta con alternativas practicables: una regla, un buscador, mejores datos, un cambio de interfaz, un rediseño del proceso o incluso no intervenir. La comparación no se hace contra la ausencia idealizada de solución, sino contra la mejor opción que la organización podría sostener con sus capacidades y restricciones actuales.
 
 En Hotel Horizonte, un buscador de políticas puede reemplazar respuestas generadas cuando el problema es localizar una norma vigente. Esa opción no redacta una contestación completa, pero conserva el texto original, reduce afirmaciones inventadas y facilita que Lucía reconozca la autoridad de la fuente. La prueba debe comparar tiempos, errores, carga de revisión y capacidad de reparar, no solamente la preferencia de quienes usan la herramienta.
 
@@ -176,7 +176,7 @@ Si la alternativa cambia durante el piloto, la evaluación se actualiza, porque 
 
 ### Valor incremental
 
-El valor incremental es la diferencia atribuible a la IA respecto de una línea de base viable. No se identifica con cantidad de usuarios, entusiasmo ni precisión aislada. Debe expresarse en una mejora que importe para la decisión, descontando verificación, incidentes, infraestructura, capacitación y trabajo adicional de quienes reciben los errores.
+En simple, con un ejemplo: El valor incremental es la diferencia atribuible a la IA respecto de una línea de base viable. No se identifica con cantidad de usuarios, entusiasmo ni precisión aislada. Debe expresarse en una mejora que importe para la decisión, descontando verificación, incidentes, infraestructura, capacitación y trabajo adicional de quienes reciben los errores.
 
 Si el tiempo de resolución baja sin aumentar reparaciones, existe una señal favorable, pero todavía hay que explicar el mecanismo. El hotel podría haber mejorado porque la IA ordenó información, porque se actualizó la política o porque el equipo incorporó una rutina nueva. Una comparación temporal, casos equivalentes y el registro de cambios concurrentes permiten evitar que todo avance se atribuya al componente más visible.
 
@@ -186,7 +186,7 @@ El cálculo incorpora costos distribuidos y diferidos. La herramienta puede ahor
 
 ### Consecuencia de decisión
 
-La consecuencia de decisión une la salida del sistema con la acción que afecta recursos, derechos o experiencia. Dos usos del mismo modelo pueden tener riesgos muy distintos: sugerir un texto informativo no equivale a reasignar una habitación, ofrecer una compensación o cancelar una reserva. El análisis debe seguir la cadena completa y no detenerse en la exactitud de la recomendación.
+En simple, con un ejemplo: La consecuencia de decisión une la salida del sistema con la acción que afecta recursos, derechos o experiencia. Dos usos del mismo modelo pueden tener riesgos muy distintos: sugerir un texto informativo no equivale a reasignar una habitación, ofrecer una compensación o cancelar una reserva. El análisis debe seguir la cadena completa y no detenerse en la exactitud de la recomendación.
 
 Una sugerencia que termina reasignando una habitación accesible expone una consecuencia material. La evidencia relevante incluye la recomendación, la interpretación de Lucía, el cambio efectuado en el PMS, la experiencia del huésped y la posibilidad de revertirlo. Si el sistema nunca ejecuta directamente pero su interfaz induce aceptación automática, la influencia sigue formando parte del diseño.
 
@@ -198,9 +198,9 @@ La cadena de influencia incluye presentación y presión de uso. Una recomendaci
 
 ### Incertidumbre y calibración
 
-La incertidumbre expresa cuánto respaldo tiene una salida bajo determinadas condiciones. En una predicción puede comunicarse mediante probabilidades; en generación también incluye ambigüedad de la consulta, cobertura de fuentes y estabilidad del contexto. Una cifra de confianza interna no es necesariamente una probabilidad interpretable ni una explicación comprensible para quien decide.
+En simple: La incertidumbre expresa cuánto respaldo tiene una salida bajo determinadas condiciones. En una predicción puede comunicarse mediante probabilidades; en generación también incluye ambigüedad de la consulta, cobertura de fuentes y estabilidad del contexto. Una cifra de confianza interna no es necesariamente una probabilidad interpretable ni una explicación comprensible para quien decide.
 
-Si el modelo reconoce baja certeza ante una política excepcional, la respuesta útil es abstenerse o escalar, no disimular la duda con tono seguro. La calibración compara confianza y resultados en casos equivalentes. Hotel Horizonte debe revisar por separado consultas frecuentes y excepcionales, porque un buen promedio puede convivir con sobreconfianza precisamente donde la reparación es más costosa.
+Ejemplo cercano: Si el modelo reconoce baja certeza ante una política excepcional, la respuesta útil es abstenerse o escalar, no disimular la duda con tono seguro. La calibración compara confianza y resultados en casos equivalentes. Hotel Horizonte debe revisar por separado consultas frecuentes y excepcionales, porque un buen promedio puede convivir con sobreconfianza precisamente donde la reparación es más costosa.
 
 Comunicar incertidumbre sólo sirve si modifica la acción. Lucía necesita saber cuándo revisar una fuente, Federico cuándo investigar deriva y Elena cuándo limitar el servicio. Un indicador sin umbral, destinatario ni respuesta prevista agrega información, pero no gobierno. La prueba de pertinencia debe demostrar que las personas interpretan la señal y cuentan con tiempo para actuar.
 
@@ -208,7 +208,7 @@ La calibración se revisa por población y período. Una confianza útil en cons
 
 ### Control humano significativo
 
-Existe control humano significativo cuando una persona dispone de información comprensible, tiempo suficiente, competencia, autoridad y una alternativa real para intervenir. Una casilla de aprobación no cumple esas condiciones si la decisión ya está tomada, si rechazar genera una penalización o si reparar exige permisos que la persona no posee.
+En simple, con un ejemplo: Existe control humano significativo cuando una persona dispone de información comprensible, tiempo suficiente, competencia, autoridad y una alternativa real para intervenir. Una casilla de aprobación no cumple esas condiciones si la decisión ya está tomada, si rechazar genera una penalización o si reparar exige permisos que la persona no posee.
 
 En el hotel, Recepción debe poder rechazar la sugerencia del asistente y corregir el estado de la reserva. La prueba incluye un turno con alta demanda, una política ambigua y la ausencia de Federico. Si Lucía detecta el problema pero sólo puede llamar a Tecnología, la supervisión es nominal. Si puede detener la acción, elegir una ruta manual y registrar el motivo, el control modifica efectivamente el resultado.
 
@@ -220,7 +220,7 @@ Cuando la tasa de corrección cambia, se investiga si mejoró el sistema, dismin
 
 ### Fundamentación y procedencia
 
-La fundamentación vincula una respuesta con razones y fuentes identificables. La procedencia reconstruye de dónde proviene cada fragmento, qué transformación sufrió, qué versión estaba vigente y cómo intervino en la salida. Recuperar un documento cercano semánticamente no demuestra que la inferencia sea correcta ni que la fuente tenga autoridad para el caso.
+En simple, con un ejemplo: La fundamentación vincula una respuesta con razones y fuentes identificables. La procedencia reconstruye de dónde proviene cada fragmento, qué transformación sufrió, qué versión estaba vigente y cómo intervino en la salida. Recuperar un documento cercano semánticamente no demuestra que la inferencia sea correcta ni que la fuente tenga autoridad para el caso.
 
 Cuando el asistente cita la política y su fecha de vigencia, una persona revisora puede contrastar la afirmación con el original. El expediente debe conservar consulta, fragmento recuperado, documento, versión y respuesta final. Si una política comercial contradice el procedimiento operativo, ambas fuentes deben permanecer visibles; elegir silenciosamente la más conveniente destruiría la evidencia del conflicto.
 
@@ -238,9 +238,9 @@ La condición de no uso incluye también esa brecha: cuando una salida depende d
 
 ### Condición de no uso
 
-La condición de no uso establece antes del despliegue cuándo la IA no debe iniciarse, debe abstenerse o debe retirarse. No es una advertencia genérica ni una reacción improvisada luego del daño. Traduce límites de autoridad, evidencia y reparación en reglas operativas que quienes trabajan pueden reconocer.
+En simple: La condición de no uso establece antes del despliegue cuándo la IA no debe iniciarse, debe abstenerse o debe retirarse. No es una advertencia genérica ni una reacción improvisada luego del daño. Traduce límites de autoridad, evidencia y reparación en reglas operativas que quienes trabajan pueden reconocer.
 
-Hotel Horizonte prohíbe compensaciones automáticas sin autoridad. También puede impedir acciones cuando falta una fuente vigente, la identidad no está verificada, el caso involucra accesibilidad no contemplada o no existe una ruta manual disponible. La condición debe producir un estado seguro, informar a Lucía y conservar lo ocurrido para revisión, en lugar de abandonar la conversación sin continuidad.
+Ejemplo cercano: Hotel Horizonte prohíbe compensaciones automáticas sin autoridad. También puede impedir acciones cuando falta una fuente vigente, la identidad no está verificada, el caso involucra accesibilidad no contemplada o no existe una ruta manual disponible. La condición debe producir un estado seguro, informar a Lucía y conservar lo ocurrido para revisión, en lugar de abandonar la conversación sin continuidad.
 
 Definir el no uso vuelve más precisa la adopción, porque separa los episodios aptos de aquellos que requieren otra capacidad. Elena acepta el riesgo residual sólo dentro de ese perímetro. Si el volumen de abstenciones crece, cambia la población o falla la reparación, la respuesta no es relajar silenciosamente la regla, sino reabrir la decisión de pertinencia.
 

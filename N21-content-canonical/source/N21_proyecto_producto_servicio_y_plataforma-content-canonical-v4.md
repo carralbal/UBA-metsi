@@ -118,11 +118,11 @@ El equipo advirtió que la separación también ayuda a leer conflictos que suel
 
 ### Proyecto
 
-Un proyecto es un esfuerzo temporal con propósito, recursos y cierre definidos. Coordina un cambio, pero no equivale a la capacidad que quedará operando cuando termine.
+En simple: Un proyecto es un esfuerzo temporal con propósito, recursos y cierre definidos. Coordina un cambio, pero no equivale a la capacidad que quedará operando cuando termine.
 
 Su éxito incluye entregar, transferir y cerrar obligaciones, no sólo cumplir alcance, plazo y costo. El expediente identifica quién recibe la capacidad y qué deuda o incertidumbre permanece.
 
-En Hotel Horizonte, migrar el circuito de ingreso puede organizarse como proyecto; atender llegadas no termina con ese proyecto.
+Ejemplo cercano: En Hotel Horizonte, migrar el circuito de ingreso puede organizarse como proyecto; atender llegadas no termina con ese proyecto.
 
 La temporalidad debe incluir una transferencia verificable. Un proyecto no concluye profesionalmente cuando se consume el presupuesto, sino cuando la capacidad receptora puede operar dentro de los límites acordados y conoce las obligaciones que permanecen abiertas. La transferencia incluye accesos, conocimiento, datos de referencia, rutas de escalamiento y criterios de aceptación operacional. Si el equipo temporal conserva permisos indispensables o interpreta en exclusiva las alertas, la fecha de cierre sólo desplaza dependencia.
 
@@ -130,7 +130,7 @@ El proyecto sigue siendo valioso porque concentra atención y hace posible coord
 
 ### Producto
 
-Un producto es una propuesta de valor gobernada que evoluciona para abordar problemas y resultados de poblaciones definidas. Se materializa mediante capacidades, pero no se confunde con una capacidad aislada. Su horizonte continúa mientras aprendizaje, uso y valor justifican inversión.
+En simple, con un ejemplo: Un producto es una propuesta de valor gobernada que evoluciona para abordar problemas y resultados de poblaciones definidas. Se materializa mediante capacidades, pero no se confunde con una capacidad aislada. Su horizonte continúa mientras aprendizaje, uso y valor justifican inversión.
 
 No es una aplicación, una lista de trabajo ni un equipo estable por sí solos. Requiere ownership con autoridad, métricas de outcome y capacidad para operar, cambiar y retirar.
 
@@ -142,7 +142,7 @@ El producto también contiene una condición de no continuidad. Mientras el proy
 
 ### Servicio
 
-Un servicio sostiene una promesa de valor bajo condiciones acordadas. Integra personas, procesos, tecnología, niveles, excepciones y reparación desde la perspectiva de quien depende del resultado.
+En simple, con un ejemplo: Un servicio sostiene una promesa de valor bajo condiciones acordadas. Integra personas, procesos, tecnología, niveles, excepciones y reparación desde la perspectiva de quien depende del resultado.
 
 Un canal o API puede participar sin constituir el servicio. La unidad relevante es la experiencia completa y la capacidad operacional para responder cuando la promesa falla.
 
@@ -154,11 +154,11 @@ El servicio se produce en la interacción entre capacidades del proveedor y acci
 
 ### Plataforma
 
-Una plataforma ofrece capacidades compartidas para que otros actores produzcan valor con autonomía gobernada. Define interfaces, reglas de acceso, evolución y distribución de costos.
+En simple: Una plataforma ofrece capacidades compartidas para que otros actores produzcan valor con autonomía gobernada. Define interfaces, reglas de acceso, evolución y distribución de costos.
 
 No toda infraestructura común es plataforma. Deben existir consumidores identificables, una oferta utilizable y evidencia de que reduce carga sin concentrar dependencia o poder injustificado.
 
-Identidad, pagos y estados hoteleros pueden formar una plataforma si canales y equipos los usan sin pedir intervención manual para cada cambio.
+Ejemplo cercano: Identidad, pagos y estados hoteleros pueden formar una plataforma si canales y equipos los usan sin pedir intervención manual para cada cambio.
 
 La plataforma se reconoce por la capacidad de habilitar variedad bajo reglas estables. Un repositorio central que requiere que el equipo propietario implemente cada solicitud puede ser infraestructura compartida, pero no ofrece necesariamente autonomía gobernada. La diferencia se observa en la experiencia de los consumidores: pueden descubrir la capacidad, comprender sus contratos, probarla, utilizarla, observarla y abandonar su uso sin depender de favores informales.
 
@@ -172,7 +172,7 @@ La tipología cambia la decisión. En identidad interna, sumar consumidores pued
 
 ### Cuatro objetos, cuatro regímenes de gestión
 
-La distinción se vuelve operacional cuando cambia el régimen de gestión. Un proyecto necesita propósito temporal, gobernanza, recursos, riesgos y una transición verificable. La Guía del PMBOK, octava edición, permite relacionar esa conducción con valor, alcance, cronograma, finanzas, interesados, recursos y riesgo sin imponer una única secuencia de trabajo. Su cierre confirma que el esfuerzo temporal terminó y que sus productos fueron transferidos. No demuestra que el resultado continúe funcionando.
+En simple, con un ejemplo: La distinción se vuelve operacional cuando cambia el régimen de gestión. Un proyecto necesita propósito temporal, gobernanza, recursos, riesgos y una transición verificable. La Guía del PMBOK, octava edición, permite relacionar esa conducción con valor, alcance, cronograma, finanzas, interesados, recursos y riesgo sin imponer una única secuencia de trabajo. Su cierre confirma que el esfuerzo temporal terminó y que sus productos fueron transferidos. No demuestra que el resultado continúe funcionando.
 
 Un producto necesita una responsabilidad persistente sobre problemas, resultados y evolución. Su unidad de decisión no es solamente el alcance aprobado, sino la hipótesis de valor para una población. Cambiar una funcionalidad puede ser correcto aunque contradiga el plan inicial si nueva evidencia muestra una necesidad diferente. Esa flexibilidad no elimina gobierno: requiere una orientación de producto, límites, evidencia de uso y decisión de continuar, modificar o retirar.
 
@@ -194,7 +194,7 @@ El caso del hotel exige una asignación plural. Ricardo puede responder por el r
 
 ### Horizonte temporal
 
-Cada objeto organiza el tiempo de modo diferente: el proyecto cierra, el producto evoluciona, el servicio sostiene una promesa y la plataforma acompaña un ecosistema. Confundir esos horizontes crea financiación y responsabilidades incompatibles.
+En simple, con un ejemplo: Cada objeto organiza el tiempo de modo diferente: el proyecto cierra, el producto evoluciona, el servicio sostiene una promesa y la plataforma acompaña un ecosistema. Confundir esos horizontes crea financiación y responsabilidades incompatibles.
 
 La duración no vuelve permanente una capacidad. Todo objeto necesita una condición de revisión o retiro, aunque su fecha no pueda anticiparse.
 
@@ -208,9 +208,9 @@ La clasificación también puede cambiar sin que el objeto desaparezca. Una capa
 
 ### Unidad de valor
 
-La unidad de valor conecta una necesidad con una capacidad y una consecuencia observable para actores concretos. Permite evitar que funcionalidades, tickets o transacciones sustituyan el outcome.
+En simple: La unidad de valor conecta una necesidad con una capacidad y una consecuencia observable para actores concretos. Permite evitar que funcionalidades, tickets o transacciones sustituyan el outcome.
 
-La misma unidad puede tener efectos diferentes para usuario y operador. Por eso incluye calidad, esfuerzo, distribución y posibilidad de reparación, no sólo volumen.
+Ejemplo cercano: La misma unidad puede tener efectos diferentes para usuario y operador. Por eso incluye calidad, esfuerzo, distribución y posibilidad de reparación, no sólo volumen.
 
 Reducir espera con igual protección accesible representa más valor que procesar más check-ins trasladando conciliación al turno nocturno.
 
@@ -220,7 +220,7 @@ La formulación también debe resistir un caso adverso. Si el resultado aumenta 
 
 ### Responsabilidad persistente
 
-La responsabilidad persistente significa que alguien conserva capacidad real de cuidar una decisión después de la entrega. No alcanza con poner un nombre: esa persona necesita información, autoridad y recursos para atender incidentes y decidir cambios. La responsabilidad persistente, denominada *ownership* en parte de la bibliografía profesional, combina autoridad, información, presupuesto y responsabilidad durante el ciclo del objeto. Nombrar a una persona sin esas condiciones sólo personaliza una carencia institucional.
+En simple, con un ejemplo: La responsabilidad persistente significa que alguien conserva capacidad real de cuidar una decisión después de la entrega. No alcanza con poner un nombre: esa persona necesita información, autoridad y recursos para atender incidentes y decidir cambios. La responsabilidad persistente, denominada *ownership* en parte de la bibliografía profesional, combina autoridad, información, presupuesto y responsabilidad durante el ciclo del objeto. Nombrar a una persona sin esas condiciones sólo personaliza una carencia institucional.
 
 La responsabilidad no equivale a propiedad personal ni a disponibilidad permanente. Designa una función institucional capaz de priorizar, explicar una decisión, convocar a quienes poseen otras competencias y asegurar que la consecuencia tenga reparación.
 
@@ -234,7 +234,7 @@ La continuidad tampoco exige que la misma persona permanezca indefinidamente. Lo
 
 ### Operación como diseño
 
-Operar no es ejecutar pasivamente una solución terminada. Incidentes, excepciones y variabilidad producen evidencia que modifica producto, servicio y plataforma.
+En simple, con un ejemplo: Operar no es ejecutar pasivamente una solución terminada. Incidentes, excepciones y variabilidad producen evidencia que modifica producto, servicio y plataforma.
 
 Diseñar para operación incluye observabilidad, acceso, instrucciones, guardias, escalamiento y reparación. Una capacidad que depende del equipo del proyecto para cada anomalía todavía no fue transferida.
 
@@ -256,11 +256,11 @@ Finalmente, gobernar significa preparar salidas. Un producto que no puede retira
 
 ### Ecosistema
 
-Un ecosistema reúne actores autónomos cuyas decisiones se coordinan mediante interfaces, incentivos y reglas. El valor y el riesgo no quedan contenidos dentro de una sola organización.
+En simple: Un ecosistema reúne actores autónomos cuyas decisiones se coordinan mediante interfaces, incentivos y reglas. El valor y el riesgo no quedan contenidos dentro de una sola organización.
 
 Una plataforma puede facilitar participación y también concentrar acceso, datos o poder de negociación. La gobernanza observa quién puede entrar, cuestionar, salir y reparar un daño.
 
-HH-21 incluye canales externos y proveedores porque modifican la promesa aunque no respondan a la misma autoridad.
+Ejemplo cercano: HH-21 incluye canales externos y proveedores porque modifican la promesa aunque no respondan a la misma autoridad.
 
 El ecosistema obliga a distinguir control de influencia. Hotel Horizonte no controla la política de un canal de reservas ni la hoja de ruta de un proveedor de cerraduras, pero puede negociar contratos, diversificar dependencias, observar cambios y conservar rutas alternativas. Declarar falta de control no elimina responsabilidad sobre la promesa que el hotel formula a sus huéspedes.
 
@@ -268,7 +268,7 @@ Las reglas de participación distribuyen oportunidades y costos. Una integració
 
 ### Financiación por capacidad
 
-Financiar por capacidad alinea inversión con evolución, operación y outcome, en lugar de agotarla al terminar un paquete de entregables. No garantiza continuidad automática ni protege a un equipo por identidad.
+En simple, con un ejemplo: Financiar por capacidad alinea inversión con evolución, operación y outcome, en lugar de agotarla al terminar un paquete de entregables. No garantiza continuidad automática ni protege a un equipo por identidad.
 
 La revisión considera valor, obligaciones, costo total, deuda y opciones de retiro. Puede aumentar, redirigir o cerrar inversión cuando cambia la evidencia.
 
@@ -288,7 +288,7 @@ Project Management Institute (2021) respalda la temporalidad del proyecto e ISO/
 
 ### Gobernanza del portafolio
 
-La gobernanza del portafolio coordina proyectos, productos, servicios y plataformas como compromisos interdependientes. Compara capacidades y outcomes sin forzar que todos usen la misma métrica.
+En simple, con un ejemplo: La gobernanza del portafolio coordina proyectos, productos, servicios y plataformas como compromisos interdependientes. Compara capacidades y outcomes sin forzar que todos usen la misma métrica.
 
 Las dependencias, obligaciones y recursos compartidos vuelven insuficiente optimizar cada objeto por separado. Toda prioridad declara qué alternativa se retrasa y qué población absorbe el efecto.
 
@@ -310,7 +310,7 @@ Elena resuelve la asignación de inversión con esas evidencias y registra qué 
 
 ### Cierre y retiro
 
-Cerrar un proyecto, retirar un producto y discontinuar un servicio son decisiones distintas. Cada una requiere transición, comunicación, conservación de evidencia y protección de casos abiertos.
+En simple, con un ejemplo: Cerrar un proyecto, retirar un producto y discontinuar un servicio son decisiones distintas. Cada una requiere transición, comunicación, conservación de evidencia y protección de casos abiertos.
 
 El costo hundido no justifica persistencia, pero la falta de uso tampoco autoriza un corte abrupto. Se identifican dependencias, obligaciones y una alternativa para quienes todavía necesitan la capacidad.
 

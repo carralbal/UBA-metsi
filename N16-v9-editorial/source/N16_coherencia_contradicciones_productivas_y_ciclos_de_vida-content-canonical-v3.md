@@ -6,7 +6,7 @@
 
 ## La excepción que existía en cuatro modelos y no podía ejecutarse
 
-Una universidad rediseña la inscripción a finales. El modelo de proceso muestra una validación automática y una excepción manual para estudiantes próximos a graduarse. La arquitectura indica que el servicio académico sólo acepta solicitudes que superan todas las reglas. La matriz de autoridad asigna a Secretaría Académica la capacidad de autorizar excepciones. El prototipo permite seleccionar “solicitar revisión”.
+En simple, con un ejemplo: Una universidad rediseña la inscripción a finales. El modelo de proceso muestra una validación automática y una excepción manual para estudiantes próximos a graduarse. La arquitectura indica que el servicio académico sólo acepta solicitudes que superan todas las reglas. La matriz de autoridad asigna a Secretaría Académica la capacidad de autorizar excepciones. El prototipo permite seleccionar “solicitar revisión”.
 
 Durante una prueba, Martina utiliza esa opción. La interfaz confirma que su caso será revisado. El proceso deriva a Secretaría. La autoridad aprueba. Sin embargo, el servicio rechaza nuevamente porque su contrato no admite excepciones. Cuatro modelos describían partes razonables y, juntos, prometían una transición imposible.
 
@@ -60,9 +60,9 @@ No agregará detalle para hacer coincidir dibujos. Tampoco diseñará estrategia
 
 ### Coherencia no es igualdad
 
-Dos mapas de una ciudad pueden mostrar transporte y riesgo de inundación. No contienen las mismas relaciones, pero pueden usar la misma calle y período sin contradecirse. El problema aparece si uno la ubica abierta y otro cerrada para la misma decisión y momento.
+En simple: Dos mapas de una ciudad pueden mostrar transporte y riesgo de inundación. No contienen las mismas relaciones, pero pueden usar la misma calle y período sin contradecirse. El problema aparece si uno la ubica abierta y otro cerrada para la misma decisión y momento.
 
-ISO/IEC/IEEE 42010:2022 permite comprender una descripción arquitectónica como conjunto de vistas gobernadas por puntos de vista y preocupaciones. La coherencia se evalúa dentro y entre vistas según sus reglas, no por repetición de contenido.
+Ejemplo cercano: ISO/IEC/IEEE 42010:2022 permite comprender una descripción arquitectónica como conjunto de vistas gobernadas por puntos de vista y preocupaciones. La coherencia se evalúa dentro y entre vistas según sus reglas, no por repetición de contenido.
 
 Un modelo de proceso y uno de estados deben corresponder donde se tocan. El proceso puede omitir estados internos; la máquina puede omitir actores. Si ambos nombran “aprobada”, deben declarar una relación compatible.
 
@@ -72,7 +72,7 @@ La auditoría no compara páginas completas por semejanza. Selecciona afirmacion
 
 #### Contradicción terminológica
 
-Existe cuando una palabra representa conceptos diferentes o varias palabras ocultan el mismo. “Disponible”, “lista” y “entregable” en Hotel Horizonte parecen sinónimos y no lo son.
+En simple, con un ejemplo: Existe cuando una palabra representa conceptos diferentes o varias palabras ocultan el mismo. “Disponible”, “lista” y “entregable” en Hotel Horizonte parecen sinónimos y no lo son.
 
 La corrección puede renombrar, definir alcance o crear correspondencia. Un glosario único ayuda sólo si las áreas comparten concepto. Forzar una palabra puede borrar una distinción necesaria.
 
@@ -84,7 +84,7 @@ La prueba registra término, concepto, actor, fuente y acción habilitada. Luego
 
 #### Contradicción de frontera y nivel
 
-Una vista de sistema puede terminar en el PMS; el proceso, en el acceso del huésped. No se contradicen por tener fronteras distintas. Se contradicen si una conclusión del PMS se presenta como outcome completo.
+En simple, con un ejemplo: Una vista de sistema puede terminar en el PMS; el proceso, en el acceso del huésped. No se contradicen por tener fronteras distintas. Se contradicen si una conclusión del PMS se presenta como outcome completo.
 
 También puede mezclarse nivel. Un proceso habla de capacidad institucional y la arquitectura, de un punto de integración. Las relaciones no pueden compararse directamente. Se necesita una vista puente o una correspondencia.
 
@@ -96,7 +96,7 @@ La prueba utiliza una conclusión que atraviese la frontera. En Hotel Horizonte,
 
 #### Contradicción temporal
 
-Dos documentos pueden decir cosas distintas porque describen momentos diferentes. Un plano futuro y un sistema actual no se contradicen por estar desalineados; el problema aparece cuando nadie indica cuál rige hoy ni cómo se pasará de uno al otro. Un modelo actual y uno objetivo pueden diferir correctamente. El defecto es ocultar el tiempo. Fecha de captura no equivale a período de validez; un documento reciente puede describir futuro.
+En simple, con un ejemplo: Dos documentos pueden decir cosas distintas porque describen momentos diferentes. Un plano futuro y un sistema actual no se contradicen por estar desalineados; el problema aparece cuando nadie indica cuál rige hoy ni cómo se pasará de uno al otro. Un modelo actual y uno objetivo pueden diferir correctamente. El defecto es ocultar el tiempo. Fecha de captura no equivale a período de validez; un documento reciente puede describir futuro.
 
 Se distinguen actual, transitorio, objetivo, histórico y escenario. Cada uno necesita condición de entrada y salida. La transición entre modelos también se planifica.
 
@@ -108,7 +108,7 @@ El expediente vincula cada versión con una decisión y una población. Una vist
 
 #### Contradicción normativa y operacional
 
-Esta contradicción aparece cuando una regla pide algo que el trabajo real no permite cumplir. Por ejemplo, un procedimiento puede exigir una aprobación en treinta minutos aunque durante la noche no exista nadie con autoridad para darla. Una norma puede otorgar autoridad y la operación no ofrecer mecanismo. Un procedimiento puede exigir revisión y la cola no tener responsable. La diferencia representa incumplimiento, transición o imposibilidad.
+En simple, con un ejemplo: Esta contradicción aparece cuando una regla pide algo que el trabajo real no permite cumplir. Por ejemplo, un procedimiento puede exigir una aprobación en treinta minutos aunque durante la noche no exista nadie con autoridad para darla. Una norma puede otorgar autoridad y la operación no ofrecer mecanismo. Un procedimiento puede exigir revisión y la cola no tener responsable. La diferencia representa incumplimiento, transición o imposibilidad.
 
 La autoridad normativa no crea capacidad. La ejecución frecuente tampoco deroga automáticamente la norma. Se necesitan responsables para decidir si implementar, modificar política o aceptar riesgo temporal.
 
@@ -120,7 +120,7 @@ El tratamiento conecta regla, capacidad y ruta de reparación. Se comprueba qui�
 
 #### Contradicción cuantitativa
 
-Dos tableros pueden mostrar valores distintos por población, ventana, unidad o transformación. N11 ya enseñó a auditar afirmaciones. N16 verifica que los metadatos viajen con la vista.
+En simple, con un ejemplo: Dos tableros pueden mostrar valores distintos por población, ventana, unidad o transformación. N11 ya enseñó a auditar afirmaciones. N16 verifica que los metadatos viajen con la vista.
 
 Si ambos pretenden medir lo mismo bajo igual definición, la diferencia indica error o demora. Si miden outcomes distintos, puede ser legítima. Promediar oculta la causa.
 
@@ -130,7 +130,7 @@ La prueba escribe para cada valor numerador, denominador, unidad, ventana, momen
 
 #### Contradicción de identidad y granularidad
 
-Dos vistas pueden referirse a una misma entidad con identificadores incompatibles. El proceso habla de una reserva, el sistema de acceso registra una estadía, la facturación agrupa consumos por cuenta y el tablero consolida por habitación. Mientras todo funciona, esas diferencias parecen administrativas. Cuando existe una excepción, impiden reconstruir el caso completo.
+En simple, con un ejemplo: Dos vistas pueden referirse a una misma entidad con identificadores incompatibles. El proceso habla de una reserva, el sistema de acceso registra una estadía, la facturación agrupa consumos por cuenta y el tablero consolida por habitación. Mientras todo funciona, esas diferencias parecen administrativas. Cuando existe una excepción, impiden reconstruir el caso completo.
 
 La identidad no se resuelve eligiendo un código universal. Primero se determina qué entidad necesita cada decisión y durante qué período conserva significado. Una reserva puede cancelarse y reemplazarse; una estadía comienza con el ingreso efectivo; una habitación cambia de huésped. Convertirlas en sinónimos crea asociaciones falsas.
 
@@ -146,7 +146,7 @@ Esta clase de contradicción importa especialmente cuando se entrenan modelos an
 
 #### Contradicción de actor y autoridad
 
-Una vista puede asignar una actividad a un rol y otra atribuir la decisión a un área, un sistema o una persona. No siempre existe conflicto. Ejecutar, recomendar, aprobar y responder por la consecuencia son relaciones diferentes. El problema aparece cuando esa diferencia impide saber quién puede actuar o reparar.
+En simple, con un ejemplo: Una vista puede asignar una actividad a un rol y otra atribuir la decisión a un área, un sistema o una persona. No siempre existe conflicto. Ejecutar, recomendar, aprobar y responder por la consecuencia son relaciones diferentes. El problema aparece cuando esa diferencia impide saber quién puede actuar o reparar.
 
 La matriz de responsabilidades suele simplificar para comunicar gobierno. El proceso muestra participación efectiva. La arquitectura identifica permisos técnicos. Una persona puede tener credencial para ejecutar un comando sin autoridad para decidirlo; también puede poseer autoridad formal sin acceso o capacidad durante una guardia.
 
@@ -172,7 +172,7 @@ La corrección reduce una contradicción terminológica y descubre una operacion
 
 ### Modelos como afirmaciones revisables
 
-Un modelo no es sólo archivo. Formula afirmaciones sobre elementos y relaciones. Cada una posee evidencia y condición de revisión. Esta lectura extiende N11 desde una cifra hacia una cartera.
+En simple, con un ejemplo: Un modelo no es sólo archivo. Formula afirmaciones sobre elementos y relaciones. Cada una posee evidencia y condición de revisión. Esta lectura extiende N11 desde una cifra hacia una cartera.
 
 Peter Checkland y John Poulter utilizan modelos conceptuales para estructurar aprendizaje y comparación con situaciones percibidas. El desacuerdo no necesariamente se elimina: puede revelar distintas visiones del mundo.
 
@@ -192,9 +192,9 @@ La unidad mínima de gobierno es una afirmación que pueda examinarse. Debe señ
 
 #### Correspondencias y contratos entre vistas
 
-Una correspondencia declara cómo un elemento de una vista se relaciona con otro: equivalencia, composición, realización, dependencia o traducción. No todas las relaciones son identidad.
+En simple: Una correspondencia declara cómo un elemento de una vista se relaciona con otro: equivalencia, composición, realización, dependencia o traducción. No todas las relaciones son identidad.
 
-“Aprobar excepción” en proceso puede realizarse mediante comando en arquitectura y producir estado. La matriz de autoridad define quién acepta. El vínculo permite recorrer impacto sin copiar detalle.
+Ejemplo cercano: “Aprobar excepción” en proceso puede realizarse mediante comando en arquitectura y producir estado. La matriz de autoridad define quién acepta. El vínculo permite recorrer impacto sin copiar detalle.
 
 El contrato incluye significado, dirección, condición y responsable. Si cambia el estado, se identifican procesos y métricas afectadas. Las correspondencias pueden gestionarse como datos y generar vistas. La automatización ayuda a detectar nombres sin vínculo, pero una persona valida semántica.
 
@@ -202,7 +202,7 @@ El contrato también declara qué ocurre cuando la relación no puede sostenerse
 
 #### Registro de contradicciones
 
-Este registro es una lista de desacuerdos que necesitan decisión, no una colección de errores para ocultar. Si Comercial y Recepción usan «disponible» con sentidos distintos, se anota la consecuencia, quién debe resolverla y hasta cuándo puede tolerarse. Cada contradicción recibe identificador, modelos, afirmaciones, tipo, evidencia, consecuencia, responsable, decisión y plazo. Se evita resolverla en comentarios dispersos.
+En simple, con un ejemplo: Este registro es una lista de desacuerdos que necesitan decisión, no una colección de errores para ocultar. Si Comercial y Recepción usan «disponible» con sentidos distintos, se anota la consecuencia, quién debe resolverla y hasta cuándo puede tolerarse. Cada contradicción recibe identificador, modelos, afirmaciones, tipo, evidencia, consecuencia, responsable, decisión y plazo. Se evita resolverla en comentarios dispersos.
 
 La clasificación conduce a tratamiento. Error se corrige. Diferencia legítima se documenta. Brecha temporal se planifica. Incertidumbre se investiga. Conflicto normativo se escala. Riesgo puede aceptarse con autoridad.
 
@@ -214,7 +214,7 @@ El cierre conserva quién decidió, con qué evidencia y con qué alcance.
 
 #### Análisis de impacto
 
-Cuando cambia una regla, se pregunta qué modelos, decisiones, procesos, interfaces y métricas dependen. La trazabilidad de HH-15 permite navegar.
+En simple, con un ejemplo: Cuando cambia una regla, se pregunta qué modelos, decisiones, procesos, interfaces y métricas dependen. La trazabilidad de HH-15 permite navegar.
 
 El impacto puede ser semántico aunque no cambie código. Renombrar “confirmada” exige revisar comunicaciones y tableros. Un cambio técnico puede no alterar experiencia si el contrato se mantiene.
 
@@ -226,7 +226,7 @@ Los efectos desconocidos se mantienen visibles y reciben una investigación ante
 
 ### Dependencias entre decisión, modelo y operación
 
-El impacto se comprende mejor cuando el punto de partida no es el archivo modificado, sino la decisión que ese archivo sostiene. Cambiar una categoría del tablero puede afectar una reunión de gestión aunque ningún proceso operativo cambie. Alterar una regla de proceso puede modificar experiencia y autoridad aunque el tablero todavía muestre los mismos números.
+En simple, con un ejemplo: El impacto se comprende mejor cuando el punto de partida no es el archivo modificado, sino la decisión que ese archivo sostiene. Cambiar una categoría del tablero puede afectar una reunión de gestión aunque ningún proceso operativo cambie. Alterar una regla de proceso puede modificar experiencia y autoridad aunque el tablero todavía muestre los mismos números.
 
 Se construye una cadena breve: evidencia, afirmación, modelo, decisión, acción y consecuencia. Cada enlace declara responsable y condición. La cadena no pretende documentar toda la organización. Se concentra en aquello cuya ruptura cambiaría la intervención o impediría defenderla.
 
@@ -240,7 +240,7 @@ También se registran dependencias negativas. Una decisión puede requerir que c
 
 ### Baseline, versión y decisión
 
-Una baseline identifica un conjunto de modelos considerado suficiente para una decisión o etapa. No declara verdad eterna. Permite saber qué se revisó y qué cambió.
+En simple, con un ejemplo: Una baseline identifica un conjunto de modelos considerado suficiente para una decisión o etapa. No declara verdad eterna. Permite saber qué se revisó y qué cambió.
 
 ISO/IEC/IEEE 15288:2023 define procesos a lo largo de concepción, desarrollo, producción, utilización, soporte y retiro, aplicables de modo iterativo y concurrente. No prescribe un ciclo único. Esa flexibilidad ayuda a gobernar modelos sin forzar fases lineales.
 
@@ -250,7 +250,7 @@ Antes de aprobar una baseline se recorre al menos un escenario ordinario y uno a
 
 #### Ritmos de actualización y ventanas de compatibilidad
 
-Las vistas no cambian al mismo ritmo. Un tablero puede actualizarse cada minuto, un procedimiento cada trimestre y una política sólo después de una aprobación formal. Exigir sincronía instantánea sería costoso e incluso ilegítimo. La coherencia necesita ventanas de compatibilidad y reglas de transición.
+En simple, con un ejemplo: Las vistas no cambian al mismo ritmo. Un tablero puede actualizarse cada minuto, un procedimiento cada trimestre y una política sólo después de una aprobación formal. Exigir sincronía instantánea sería costoso e incluso ilegítimo. La coherencia necesita ventanas de compatibilidad y reglas de transición.
 
 Cada modelo declara frecuencia esperada, evento que obliga a revisar y demora aceptable. Si cambia una regla crítica, algunas vistas deben bloquearse hasta actualizarse. Si cambia una métrica exploratoria, puede convivir temporalmente con la anterior mientras se comparan resultados.
 
@@ -264,7 +264,7 @@ Gobernar ritmos permite que los modelos sigan siendo útiles durante el cambio. 
 
 ### Ciclos de vida no son cascadas obligatorias
 
-Winston Royce describió riesgos de un proceso secuencial de desarrollo y recomendó retroalimentación, prototipos y participación. Barry Boehm organizó desarrollo espiral alrededor de riesgos. El Manifiesto Ágil priorizó software funcionando y respuesta al cambio.
+En simple, con un ejemplo: Winston Royce describió riesgos de un proceso secuencial de desarrollo y recomendó retroalimentación, prototipos y participación. Barry Boehm organizó desarrollo espiral alrededor de riesgos. El Manifiesto Ágil priorizó software funcionando y respuesta al cambio.
 
 Estas tradiciones no deben convertirse en caricaturas. Un ciclo de vida representa cómo se organiza decisión, evidencia y compromiso. Puede ser incremental, iterativo, continuo o regulado.
 
@@ -276,7 +276,7 @@ Cada artefacto puede atravesar estados distintos sin esperar al resto de la cart
 
 #### Inteligencia artificial y coherencia aparente
 
-Una herramienta puede comparar textos y diagramas, detectar nombres diferentes y proponer enlaces. También puede homogeneizar lenguaje y borrar tensiones legítimas. La generación automática tiende a completar ausencias. Una flecha plausible puede no tener evidencia. Toda corrección propuesta conserva fuente, confianza y revisión.
+En simple, con un ejemplo: Una herramienta puede comparar textos y diagramas, detectar nombres diferentes y proponer enlaces. También puede homogeneizar lenguaje y borrar tensiones legítimas. La generación automática tiende a completar ausencias. Una flecha plausible puede no tener evidencia. Toda corrección propuesta conserva fuente, confianza y revisión.
 
 Los agentes que modifican código, proceso y documentación amplían el problema. Una actualización en una vista no autoriza cambios en otra sin evaluar impacto y autoridad.
 
@@ -286,9 +286,9 @@ Toda propuesta automática conserva fragmentos de origen, versión del artefacto
 
 ### Priorizar contradicciones por consecuencia y reversibilidad
 
-No toda diferencia merece el mismo esfuerzo. La prioridad combina consecuencia posible, probabilidad de uso, dificultad de detección y reversibilidad. Una discrepancia cosmética puede esperar. Una diferencia sobre quién autoriza una excepción requiere tratamiento antes de operar, aunque ocurra pocas veces.
+En simple: No toda diferencia merece el mismo esfuerzo. La prioridad combina consecuencia posible, probabilidad de uso, dificultad de detección y reversibilidad. Una discrepancia cosmética puede esperar. Una diferencia sobre quién autoriza una excepción requiere tratamiento antes de operar, aunque ocurra pocas veces.
 
-La consecuencia se observa sobre personas, promesas, recursos, cumplimiento y aprendizaje. Una contradicción que expone a un huésped a quedar sin habitación es distinta de otra que obliga a rehacer un informe. Ambas cuestan, pero la primera limita el derecho a experimentar.
+Ejemplo cercano: La consecuencia se observa sobre personas, promesas, recursos, cumplimiento y aprendizaje. Una contradicción que expone a un huésped a quedar sin habitación es distinta de otra que obliga a rehacer un informe. Ambas cuestan, pero la primera limita el derecho a experimentar.
 
 La reversibilidad pregunta qué ocurre si se elige mal. Cambiar un nombre interno puede corregirse con costo acotado. Enviar una comunicación, negar una prestación o borrar evidencia puede ser irreversible. Cuanto menor sea la reversibilidad, mayor debe ser la exigencia de correspondencia y prueba previa.
 
@@ -333,19 +333,19 @@ Su escala es deliberadamente acotada. Cada expediente se abre para una decisión
 
 ### Recorrido de escenario transversal
 
-Se elige un caso con identidad y resultado. Se ejecuta mental o técnicamente en cada vista, registrando entradas, decisiones, estados y consecuencias.
+En simple: Se elige un caso con identidad y resultado. Se ejecuta mental o técnicamente en cada vista, registrando entradas, decisiones, estados y consecuencias.
 
 El escenario ordinario prueba correspondencia básica. El adverso prueba excepción, demora, autoridad y reparación. Una contradicción que nunca alcanza una decisión puede tener prioridad menor.
 
 Cada salto entre vistas utiliza correspondencia explícita. Si depende de explicación oral, se registra ausencia. La prueba termina cuando la audiencia puede reconstruir qué se sabe, qué se espera y qué sigue abierto.
 
-El registro se organiza por paso y no por archivo. Para cada transición anota identidad del caso, afirmación observada, fuente, versión, actor, autoridad y consecuencia. Así puede distinguirse una vista que omite detalle porque no lo necesita de otra que habilita una acción incompatible. Una segunda persona repite el recorrido sin explicación del autor. Si debe completar relaciones de memoria, la correspondencia todavía no es transferible.
+Ejemplo cercano: El registro se organiza por paso y no por archivo. Para cada transición anota identidad del caso, afirmación observada, fuente, versión, actor, autoridad y consecuencia. Así puede distinguirse una vista que omite detalle porque no lo necesita de otra que habilita una acción incompatible. Una segunda persona repite el recorrido sin explicación del autor. Si debe completar relaciones de memoria, la correspondencia todavía no es transferible.
 
 La evidencia del recorrido queda adjunta al expediente para repetir la prueba después de cada cambio relevante.
 
 #### Prueba de cambio
 
-Una prueba de cambio consiste en modificar una parte del modelo y observar qué otras partes deberían ajustarse. Por ejemplo, si una aprobación deja de ser manual, hay que revisar quién controla la excepción, qué queda registrado y cómo se revierte un error. Se modifica deliberadamente una regla, actor o dependencia y se recorre impacto. El objetivo es evaluar mantenibilidad de la cartera.
+En simple, con un ejemplo: Una prueba de cambio consiste en modificar una parte del modelo y observar qué otras partes deberían ajustarse. Por ejemplo, si una aprobación deja de ser manual, hay que revisar quién controla la excepción, qué queda registrado y cómo se revierte un error. Se modifica deliberadamente una regla, actor o dependencia y se recorre impacto. El objetivo es evaluar mantenibilidad de la cartera.
 
 Si nadie puede encontrar vistas afectadas, la trazabilidad falla. Si deben actualizarse copias manuales idénticas, existe duplicación. Si una vista cambia automáticamente y otra requiere decisión, se coordinan ritmos.
 
@@ -355,7 +355,7 @@ La prueba fija antes del cambio qué decisión se busca mejorar y qué daños no
 
 ### Prueba de retiro, recuperación y memoria
 
-Retirar un modelo no equivale a eliminarlo. La organización debe impedir su uso operativo y conservar la capacidad de reconstruir por qué una decisión se tomó con esa versión. El equilibrio combina claridad presente y memoria institucional.
+En simple, con un ejemplo: Retirar un modelo no equivale a eliminarlo. La organización debe impedir su uso operativo y conservar la capacidad de reconstruir por qué una decisión se tomó con esa versión. El equilibrio combina claridad presente y memoria institucional.
 
 La prueba de retiro empieza en los lugares donde una persona buscaría. Se revisan repositorios, enlaces, tableros, procedimientos, materiales de capacitación y accesos directos. La versión retirada aparece marcada como histórica o deja de estar disponible en el circuito de trabajo. Una copia sin contexto puede reintroducir una regla vencida.
 
@@ -369,7 +369,7 @@ La prueba concluye con una persona que no participó en el cambio. Debe poder el
 
 ### Revisión de contradicciones abiertas
 
-Revisar contradicciones abiertas es volver sobre desacuerdos que todavía tienen consecuencias. Por ejemplo, si dos áreas siguen usando definiciones distintas de «urgente», el equipo debe comprobar si la diferencia aún provoca demoras o decisiones incompatibles. Las contradicciones se revisan por consecuencia y edad. Una investigación puede producir evidencia, cambiar una política o mostrar diferencia legítima.
+En simple, con un ejemplo: Revisar contradicciones abiertas es volver sobre desacuerdos que todavía tienen consecuencias. Por ejemplo, si dos áreas siguen usando definiciones distintas de «urgente», el equipo debe comprobar si la diferencia aún provoca demoras o decisiones incompatibles. Las contradicciones se revisan por consecuencia y edad. Una investigación puede producir evidencia, cambiar una política o mostrar diferencia legítima.
 
 Se evita usar cantidad abierta como indicador de mala calidad. Una cartera que no registra contradicciones puede ser menos honesta. Importan criticidad, tratamiento y aprendizaje.
 
@@ -407,7 +407,7 @@ La revisión se reabre cuando cambia una correlatividad, una evaluación o la ev
 
 ### Ejemplo simple: un turno que cambió de canal
 
-Un centro de atención ofrece turnos por teléfono y por web. El mapa de proceso indica que toda cancelación libera inmediatamente el horario. La interfaz web muestra disponibilidad en tiempo real. El reporte diario cuenta turnos liberados. El instructivo del call center advierte que las cancelaciones telefónicas se consolidan cada treinta minutos.
+En simple, con un ejemplo: Un centro de atención ofrece turnos por teléfono y por web. El mapa de proceso indica que toda cancelación libera inmediatamente el horario. La interfaz web muestra disponibilidad en tiempo real. El reporte diario cuenta turnos liberados. El instructivo del call center advierte que las cancelaciones telefónicas se consolidan cada treinta minutos.
 
 La diferencia puede leerse como error de actualización. El recorrido revela algo distinto. La web escribe directamente en la agenda; el operador telefónico registra primero una solicitud porque algunos convenios requieren validación. “Cancelar” nombra una intención en un canal y una transición confirmada en el otro.
 
@@ -421,7 +421,7 @@ El ejemplo demuestra que la coherencia no nace de un vocabulario uniforme. Nace 
 
 ### Caso institucional: una política vigente sin capacidad distribuida
 
-Una organización aprueba que cualquier persona pueda solicitar revisión humana de una decisión automatizada. La política, el formulario y la comunicación pública expresan el derecho. El flujo operativo sólo asigna revisores en la sede central. Las delegaciones reciben solicitudes pero no acceden a la evidencia ni pueden escalarlas.
+En simple, con un ejemplo: Una organización aprueba que cualquier persona pueda solicitar revisión humana de una decisión automatizada. La política, el formulario y la comunicación pública expresan el derecho. El flujo operativo sólo asigna revisores en la sede central. Las delegaciones reciben solicitudes pero no acceden a la evidencia ni pueden escalarlas.
 
 Una auditoría superficial confirma que la frase aparece en todos los documentos. La cartera parece coherente. El recorrido desde una delegación muestra que la misma afirmación no tiene realización equivalente. La contradicción no es textual, sino entre alcance normativo y capacidad operacional.
 

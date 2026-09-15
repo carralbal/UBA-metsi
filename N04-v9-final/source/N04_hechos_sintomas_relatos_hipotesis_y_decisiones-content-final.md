@@ -51,7 +51,7 @@ El límite con N05 también debe ser explícito. N04 reconoce que la posición d
 
 ### Lo que Ingeniería de Software ya permite conservar
 
-Ingeniería de Software aportó trazabilidad entre necesidades, requisitos, código y pruebas. N04 extiende esa cadena hacia atrás: antes del requisito debe poder reconstruirse qué observación, relato o inferencia lo sostiene. Un requisito puede ser verificable y estar fundado en una afirmación débil; una prueba puede pasar y validar una regla cuya justificación ya cambió.
+En simple, con un ejemplo: Ingeniería de Software aportó trazabilidad entre necesidades, requisitos, código y pruebas. N04 extiende esa cadena hacia atrás: antes del requisito debe poder reconstruirse qué observación, relato o inferencia lo sostiene. Un requisito puede ser verificable y estar fundado en una afirmación débil; una prueba puede pasar y validar una regla cuya justificación ya cambió.
 
 Ese desplazamiento hacia atrás es decisivo. Una prueba automatizada responde si una implementación satisface un comportamiento especificado. No responde por sí sola si el comportamiento especificado representa una necesidad vigente, si la necesidad fue formulada a partir de una muestra sesgada o si el resultado local mejora la promesa completa del servicio. Podemos construir correctamente la solución equivocada, medir con precisión el fenómeno equivocado y automatizar con gran eficiencia una decisión que nadie volvió a justificar.
 
@@ -59,7 +59,7 @@ N04 no reemplaza el rigor de construcción. Agrega un rigor anterior y otro post
 
 ### La unidad de trabajo: afirmación, rastro y decisión
 
-La evidencia no es una cosa que se acumula en una carpeta. Es una relación: algo cuenta como evidencia **para una afirmación**, dentro de una pregunta y con consecuencias sobre una decisión. Un log no es evidencia en abstracto. Puede ser evidencia de que una solicitud llegó a un servidor, pero no necesariamente de que una persona recibió el servicio, comprendió la respuesta o pudo continuar su tarea. Una entrevista puede ser evidencia de cómo alguien interpreta una situación, pero no demuestra por sí sola la frecuencia del fenómeno ni su causa dominante.
+En simple, con un ejemplo: La evidencia no es una cosa que se acumula en una carpeta. Es una relación: algo cuenta como evidencia **para una afirmación**, dentro de una pregunta y con consecuencias sobre una decisión. Un log no es evidencia en abstracto. Puede ser evidencia de que una solicitud llegó a un servidor, pero no necesariamente de que una persona recibió el servicio, comprendió la respuesta o pudo continuar su tarea. Una entrevista puede ser evidencia de cómo alguien interpreta una situación, pero no demuestra por sí sola la frecuencia del fenómeno ni su causa dominante.
 
 Por eso conviene trabajar con una unidad mínima compuesta por cinco elementos:
 
@@ -75,7 +75,7 @@ Si falta el primer elemento, acumulamos datos sin pregunta. Si falta el segundo,
 
 ### Un argumento profesional no es una pila de datos
 
-En una discusión técnica solemos presentar evidencia como volumen: “tenemos treinta entrevistas”, “el tablero contiene un millón de filas”, “la IA analizó todos los comentarios”. La cantidad puede mejorar cobertura, pero no construye el argumento. Un argumento profesional necesita mostrar cómo se pasa de un rastro a una conclusión.
+En simple, con un ejemplo: En una discusión técnica solemos presentar evidencia como volumen: “tenemos treinta entrevistas”, “el tablero contiene un millón de filas”, “la IA analizó todos los comentarios”. La cantidad puede mejorar cobertura, pero no construye el argumento. Un argumento profesional necesita mostrar cómo se pasa de un rastro a una conclusión.
 
 Podemos descomponerlo de manera sencilla:
 
@@ -95,7 +95,7 @@ Esta estructura adapta el modelo de argumentación de Stephen Toulmin. Los datos
 
 ### Tres afirmaciones que parecen hechos
 
-En Hotel Horizonte circulan tres frases:
+En simple, con un ejemplo: En Hotel Horizonte circulan tres frases:
 
 1. “El PMS es lento”.
 2. “Las OTAs se llevan el margen”.
@@ -115,45 +115,45 @@ El problema no es que las frases sean falsas. Pueden señalar fenómenos reales.
 
 #### Observación
 
-Registro de algo percibido bajo condiciones específicas. “A las 11:07, la pantalla tardó 8,4 segundos en mostrar la reserva” es una observación si existe instrumento y contexto. No demuestra que siempre ocurra ni que explique la espera total.
+En simple, con un ejemplo: Registro de algo percibido bajo condiciones específicas. “A las 11:07, la pantalla tardó 8,4 segundos en mostrar la reserva” es una observación si existe instrumento y contexto. No demuestra que siempre ocurra ni que explique la espera total.
 
 La observación está mediada: alguien decide qué medir, con qué herramienta y dónde empieza el reloj. No por eso deja de ser evidencia; exige documentar procedimiento y alcance.
 
 #### Afirmación de una fuente
 
-Algo dicho por un actor o documento. “Recepción afirma que el sistema se congela al cobrar” es evidencia de una perspectiva, no prueba directa de la causa. Los testimonios son valiosos para conocer trabajo, significado y episodios, pero deben conservar autor, contexto e incentivos.
+En simple, con un ejemplo: Algo dicho por un actor o documento. “Recepción afirma que el sistema se congela al cobrar” es evidencia de una perspectiva, no prueba directa de la causa. Los testimonios son valiosos para conocer trabajo, significado y episodios, pero deben conservar autor, contexto e incentivos.
 
 #### Dato
 
-Representación codificada producida por un proceso. Un valor de 37 segundos, una categoría “cancelada” o una tasa de ocupación parecen objetivos, pero dependen de definiciones, captura, limpieza y población. El dato es evidencia sobre el proceso que lo generó tanto como sobre el fenómeno.
+En simple, con un ejemplo: Representación codificada producida por un proceso. Un valor de 37 segundos, una categoría “cancelada” o una tasa de ocupación parecen objetivos, pero dependen de definiciones, captura, limpieza y población. El dato es evidencia sobre el proceso que lo generó tanto como sobre el fenómeno.
 
 #### Síntoma
 
-Un síntoma es una señal de que algo merece investigarse, no la explicación de su causa. Que aumenten los reclamos muestra un problema, pero todavía no dice si lo produjo la interfaz, una regla, una demora o una promesa imposible. Manifestación de una situación: espera, queja, error, reapertura, diferencia contable. Un síntoma orienta investigación, pero no identifica causa. El mismo síntoma puede surgir de mecanismos distintos.
+En simple, con un ejemplo: Un síntoma es una señal de que algo merece investigarse, no la explicación de su causa. Que aumenten los reclamos muestra un problema, pero todavía no dice si lo produjo la interfaz, una regla, una demora o una promesa imposible. Manifestación de una situación: espera, queja, error, reapertura, diferencia contable. Un síntoma orienta investigación, pero no identifica causa. El mismo síntoma puede surgir de mecanismos distintos.
 
 #### Interpretación
 
-Significado atribuido a evidencia. “La demora se concentra en reservas con garantía incompleta” puede ser una interpretación sustentada por episodios y datos. Debe distinguirse del registro original para poder discutirla.
+En simple, con un ejemplo: Significado atribuido a evidencia. “La demora se concentra en reservas con garantía incompleta” puede ser una interpretación sustentada por episodios y datos. Debe distinguirse del registro original para poder discutirla.
 
 #### Hipótesis causal
 
-Proposición sobre un mecanismo: “Cuando la garantía llega sin identificador estable, recepción consulta tres fuentes y aumenta la variabilidad”. Es más útil que “el sistema es malo” porque puede buscarse evidencia a favor y en contra.
+En simple, con un ejemplo: Proposición sobre un mecanismo: “Cuando la garantía llega sin identificador estable, recepción consulta tres fuentes y aumenta la variabilidad”. Es más útil que “el sistema es malo” porque puede buscarse evidencia a favor y en contra.
 
 #### Supuesto
 
-Un supuesto es algo que el equipo está dando por cierto sin haberlo comprobado todavía. Por ejemplo, puede asumir que toda persona que abandona un formulario tuvo una dificultad de uso, aunque quizá encontró otra vía o cambió de decisión. Afirmación aceptada provisionalmente para actuar sin verificación suficiente. Su legitimidad depende del costo de error, reversibilidad y condición de revisión. Suponer que una API estará disponible puede ser aceptable para un boceto y peligroso para firmar un contrato.
+En simple, con un ejemplo: Un supuesto es algo que el equipo está dando por cierto sin haberlo comprobado todavía. Por ejemplo, puede asumir que toda persona que abandona un formulario tuvo una dificultad de uso, aunque quizá encontró otra vía o cambió de decisión. Afirmación aceptada provisionalmente para actuar sin verificación suficiente. Su legitimidad depende del costo de error, reversibilidad y condición de revisión. Suponer que una API estará disponible puede ser aceptable para un boceto y peligroso para firmar un contrato.
 
 #### Decisión
 
-Compromiso de actuar, no conclusión verdadera. “Realizaremos un piloto en un turno” es una decisión fundada en evidencia y supuestos. Puede ser prudente aunque la evidencia sea incompleta. Confundir decisión con hecho impide revisarla.
+En simple, con un ejemplo: Compromiso de actuar, no conclusión verdadera. “Realizaremos un piloto en un turno” es una decisión fundada en evidencia y supuestos. Puede ser prudente aunque la evidencia sea incompleta. Confundir decisión con hecho impide revisarla.
 
 #### Restricción
 
-Una restricción marca un límite que la intervención debe respetar o discutir con la autoridad adecuada. Si una norma exige conservar cierto registro, el equipo no puede borrarlo sólo porque simplifica el diseño. Condición que limita opciones: fecha legal, presupuesto, contrato, política, capacidad. Algunas son duras; otras son preferencias presentadas como inevitables. La metodología debe verificar su autoridad y posibilidad de negociación.
+En simple, con un ejemplo: Una restricción marca un límite que la intervención debe respetar o discutir con la autoridad adecuada. Si una norma exige conservar cierto registro, el equipo no puede borrarlo sólo porque simplifica el diseño. Condición que limita opciones: fecha legal, presupuesto, contrato, política, capacidad. Algunas son duras; otras son preferencias presentadas como inevitables. La metodología debe verificar su autoridad y posibilidad de negociación.
 
 ### Los datos no son hechos puros
 
-Supóngase que el tablero informa “tiempo medio de check-in: 4 minutos 12 segundos”. Antes de usarlo conviene preguntar:
+En simple, con un ejemplo: Supóngase que el tablero informa “tiempo medio de check-in: 4 minutos 12 segundos”. Antes de usarlo conviene preguntar:
 
 - ¿cuándo comienza y termina?;
 - ¿incluye cola?;
@@ -175,7 +175,7 @@ ISO/IEC 25012 organiza la calidad de datos como un modelo que distingue caracter
 
 ### Validez, confiabilidad y utilidad: tres preguntas diferentes
 
-Cuando una medición llega a una reunión, suele evaluarse con una sola pregunta: “¿el dato es correcto?”. Esa pregunta mezcla al menos tres problemas.
+En simple, con un ejemplo: Cuando una medición llega a una reunión, suele evaluarse con una sola pregunta: “¿el dato es correcto?”. Esa pregunta mezcla al menos tres problemas.
 
 La **confiabilidad** se refiere a la estabilidad del procedimiento. Si repetimos la medición en condiciones equivalentes, ¿obtenemos resultados semejantes? Un cronómetro automático que siempre inicia treinta segundos tarde puede ser confiable (repite el mismo patrón) y, sin embargo, producir una medida sesgada. Dos observadores que aplican criterios distintos para decidir cuándo termina un check-in generan baja confiabilidad, aunque ambos trabajen con cuidado.
 
@@ -189,9 +189,9 @@ Estas tres preguntas evitan dos errores opuestos. El primero es rechazar toda ev
 
 ### Error de medición, sesgo y variación real
 
-Una diferencia observada puede provenir del fenómeno o del modo de medirlo. Distinguir ambas fuentes es esencial.
+En simple: Una diferencia observada puede provenir del fenómeno o del modo de medirlo. Distinguir ambas fuentes es esencial.
 
-El **error aleatorio** introduce variación sin una dirección estable: una conexión inestable agrega segundos distintos, una persona pulsa tarde el botón de inicio o una muestra pequeña cambia por azar. Puede reducirse con repetición, mejores instrumentos o muestras adecuadas.
+Ejemplo cercano: El **error aleatorio** introduce variación sin una dirección estable: una conexión inestable agrega segundos distintos, una persona pulsa tarde el botón de inicio o una muestra pequeña cambia por azar. Puede reducirse con repetición, mejores instrumentos o muestras adecuadas.
 
 El **sesgo sistemático** empuja la medición en una dirección. Si el cronómetro comienza cuando Recepción abre la reserva y omite la cola anterior, el proceso parecerá más corto de lo que vive el huésped. Si la encuesta se envía solo a quienes completaron el check-in digital, quienes abandonaron quedan fuera. Aumentar la cantidad de registros no corrige necesariamente el sesgo; puede volver más precisa una descripción equivocada.
 
@@ -203,7 +203,7 @@ Para estudiantes de Ingeniería de Software, una analogía útil es la prueba au
 
 ### Una escalera de afirmaciones, no una jerarquía automática
 
-Conviene imaginar una secuencia de trabajo: fuente, registro, dato, interpretación, hipótesis y decisión. No es una escalera en la que cada peldaño sea “más verdadero”. Es una cadena en la que cada transformación responde una pregunta distinta y debe conservar su vínculo con la anterior.
+En simple, con un ejemplo: Conviene imaginar una secuencia de trabajo: fuente, registro, dato, interpretación, hipótesis y decisión. No es una escalera en la que cada peldaño sea “más verdadero”. Es una cadena en la que cada transformación responde una pregunta distinta y debe conservar su vínculo con la anterior.
 
 La fuente puede ser una persona, un sensor, un contrato o un sistema. El registro conserva algo producido por esa fuente. El dato lo codifica según una definición. La interpretación le atribuye significado. La hipótesis lo conecta con un mecanismo posible. La decisión compromete una acción. El error aparece cuando una etapa se presenta como si fuera otra: un testimonio se vuelve causa, una correlación se vuelve mecanismo o una decisión aprobada se vuelve verdad técnica.
 
@@ -228,7 +228,7 @@ También ayudan a evitar el error inverso: exigir observación directa para todo
 
 ### Primera pasada por HH-04: de la frase a la cadena
 
-La afirmación inicial, “el PMS es la causa de la demora”, puede desarmarse sin perder el problema que Elena intenta señalar. En HH-04 se observaron una discrepancia de identidad, una consulta previa, nueve segundos de respuesta, un bloqueo de Mantenimiento, una reasignación y doce minutos hasta la entrega. El tablero codificó el caso como demorado. Lucía interpretó que la coordinación fue dominante. Federico detectó latencia. Dirección recomendó evaluar una sustitución.
+En simple, con un ejemplo: La afirmación inicial, “el PMS es la causa de la demora”, puede desarmarse sin perder el problema que Elena intenta señalar. En HH-04 se observaron una discrepancia de identidad, una consulta previa, nueve segundos de respuesta, un bloqueo de Mantenimiento, una reasignación y doce minutos hasta la entrega. El tablero codificó el caso como demorado. Lucía interpretó que la coordinación fue dominante. Federico detectó latencia. Dirección recomendó evaluar una sustitución.
 
 Cada elemento ocupa un lugar distinto. El episodio documenta una secuencia; el registro técnico mide una operación; el indicador aplica una definición a una población; las explicaciones conectan rastros con mecanismos; la recomendación compara alternativas y compromete recursos. Mantener esas diferencias permite discutir una parte sin descartar las otras. Corregir el reloj del tablero no refuta la experiencia de Lucía. Reconocer coordinación no elimina la latencia. Detectar un componente lento no demuestra que reemplazarlo produzca el resultado esperado.
 
@@ -238,7 +238,7 @@ El primer producto de N04 no es una conclusión, sino una cadena trazable: **fue
 
 ### Fuente, procedencia y cadena de transformación
 
-La procedencia permite reconstruir de dónde viene un dato y qué transformaciones sufrió. Para una métrica importante conviene conocer:
+En simple: La procedencia permite reconstruir de dónde viene un dato y qué transformaciones sufrió. Para una métrica importante conviene conocer:
 
 - sistema o persona de origen;
 - evento de captura;
@@ -251,13 +251,13 @@ La procedencia permite reconstruir de dónde viene un dato y qué transformacion
 - momento de extracción;
 - responsable o custodio.
 
-Sin procedencia, dos tableros pueden mostrar ocupación distinta y la discusión convertirse en autoridad personal. Con procedencia se descubre que uno calcula habitaciones vendidas y otro habitaciones físicamente ocupadas, o que usan cortes horarios diferentes.
+Ejemplo cercano: Sin procedencia, dos tableros pueden mostrar ocupación distinta y la discusión convertirse en autoridad personal. Con procedencia se descubre que uno calcula habitaciones vendidas y otro habitaciones físicamente ocupadas, o que usan cortes horarios diferentes.
 
 La procedencia también importa en IA. Una respuesta fluida puede combinar documentos desactualizados, instrucciones y generación. La cita no garantiza que la afirmación esté contenida en la fuente. Debe verificarse relación, versión y aplicabilidad.
 
 ### Triangulación
 
-Triangular es mirar el mismo hecho desde fuentes que pueden equivocarse de maneras distintas. Por ejemplo, para entender una demora se puede comparar lo que relata una persona, lo que registra el sistema y lo que muestra la observación directa. Triangular no significa acumular tres fuentes que dicen lo mismo. Significa combinar perspectivas o métodos con errores distintos.
+En simple, con un ejemplo: Triangular es mirar el mismo hecho desde fuentes que pueden equivocarse de maneras distintas. Por ejemplo, para entender una demora se puede comparar lo que relata una persona, lo que registra el sistema y lo que muestra la observación directa. Triangular no significa acumular tres fuentes que dicen lo mismo. Significa combinar perspectivas o métodos con errores distintos.
 
 Para investigar demora de check-in:
 
@@ -274,7 +274,7 @@ La triangulación debe ser proporcional. Una decisión reversible y local puede 
 
 ### Correlación, mecanismo y causalidad
 
-Los proyectos suelen saltar de una asociación a una intervención. Los huéspedes que usan check-in digital reportan mayor satisfacción; por lo tanto, se concluye que digitalizar mejora satisfacción. Quizá quienes eligen el canal tienen casos simples, llegan en horarios menos congestionados o son clientes frecuentes.
+En simple, con un ejemplo: Los proyectos suelen saltar de una asociación a una intervención. Los huéspedes que usan check-in digital reportan mayor satisfacción; por lo tanto, se concluye que digitalizar mejora satisfacción. Quizá quienes eligen el canal tienen casos simples, llegan en horarios menos congestionados o son clientes frecuentes.
 
 Para sostener causalidad conviene preguntar:
 
@@ -293,7 +293,7 @@ El trabajo causal puede apoyarse en la distinción de Judea Pearl entre observar
 
 ### Ausencia de evidencia y evidencia de ausencia
 
-Si no hay reclamos de accesibilidad, ¿significa que el servicio es accesible? Puede significar que las personas no intentan reservar, abandonan antes o usan otros canales. La falta de registro puede ser consecuencia de la barrera.
+En simple, con un ejemplo: Si no hay reclamos de accesibilidad, ¿significa que el servicio es accesible? Puede significar que las personas no intentan reservar, abandonan antes o usan otros canales. La falta de registro puede ser consecuencia de la barrera.
 
 Si no hay incidentes reportados, quizá el sistema sea seguro o quizá el reporte sea difícil y punitivo. Si un modelo no registra anulaciones humanas, no puede concluirse que las recomendaciones se siguen; quizá la acción ocurre fuera.
 
@@ -303,7 +303,7 @@ Esta distinción es crucial al evaluar grupos con baja voz. Los sistemas observa
 
 ### Supuestos: no eliminarlos, gobernarlos
 
-Todo proyecto actúa con supuestos. El objetivo no es fingir que pueden eliminarse, sino hacerlos visibles y proporcionales.
+En simple: Todo proyecto actúa con supuestos. El objetivo no es fingir que pueden eliminarse, sino hacerlos visibles y proporcionales.
 
 Un registro útil incluye:
 
@@ -318,11 +318,11 @@ Un registro útil incluye:
 
 Los supuestos pueden clasificarse por criticidad e incertidumbre. Uno de alto impacto y baja evidencia merece investigación temprana. Uno de bajo impacto y fácil reversión puede aceptarse.
 
-En Hotel Horizonte, “las OTAs ofrecen API de disponibilidad con la frecuencia necesaria” podría condicionar arquitectura. “La mayoría de huéspedes tiene smartphone” condiciona canal y equidad. “Housekeeping puede actualizar en tiempo real” condiciona operación y trabajo. No son detalles técnicos: sostienen la promesa.
+Ejemplo cercano: En Hotel Horizonte, “las OTAs ofrecen API de disponibilidad con la frecuencia necesaria” podría condicionar arquitectura. “La mayoría de huéspedes tiene smartphone” condiciona canal y equidad. “Housekeeping puede actualizar en tiempo real” condiciona operación y trabajo. No son detalles técnicos: sostienen la promesa.
 
 ### Decidir con evidencia incompleta
 
-Esperar certeza total también produce costo. La pregunta profesional es qué evidencia es suficiente para una decisión específica.
+En simple: Esperar certeza total también produce costo. La pregunta profesional es qué evidencia es suficiente para una decisión específica.
 
 La suficiencia depende de:
 
@@ -335,13 +335,13 @@ La suficiencia depende de:
 - alternativas;
 - capacidad de monitoreo.
 
-Puede ser razonable probar un mensaje informativo con una cohorte pequeña y retirada inmediata. No es razonable permitir que un agente cancele reservas con identidad ambigua basándose en una demostración.
+Ejemplo cercano: Puede ser razonable probar un mensaje informativo con una cohorte pequeña y retirada inmediata. No es razonable permitir que un agente cancele reservas con identidad ambigua basándose en una demostración.
 
 La decisión debe contener condiciones: “se avanzará en modo sombra durante cuatro semanas si se preserva el flujo actual; la herramienta no ejecutará acciones; se medirán errores por tipo y población; la prueba se detendrá ante exposición de datos o una recomendación peligrosa”. Así, la incertidumbre se convierte en diseño.
 
 ### El papel de las métricas
 
-Una métrica es una representación construida para orientar una pregunta. No debe confundirse con el objetivo ni con la realidad completa.
+En simple: Una métrica es una representación construida para orientar una pregunta. No debe confundirse con el objetivo ni con la realidad completa.
 
 Una buena métrica declara:
 
@@ -356,13 +356,13 @@ Una buena métrica declara:
 - métrica de equilibrio;
 - decisión asociada.
 
-“Contactos evitados” puede incentivar ocultar ayuda. “Resolución en primer contacto” puede cerrar prematuramente. “Exactitud del modelo” puede ocultar severidad y desigualdad. “Velocidad del equipo” puede convertirse en presión para dividir trabajo artificialmente.
+Ejemplo cercano: “Contactos evitados” puede incentivar ocultar ayuda. “Resolución en primer contacto” puede cerrar prematuramente. “Exactitud del modelo” puede ocultar severidad y desigualdad. “Velocidad del equipo” puede convertirse en presión para dividir trabajo artificialmente.
 
 La métrica es útil cuando forma parte de un argumento, no cuando reemplaza el juicio.
 
 ### Evidencia generada por IA
 
-Los sistemas generativos producen texto plausible, clasificaciones, resúmenes y propuestas. Pueden ayudar a explorar, pero agregan riesgos epistemológicos:
+En simple: Los sistemas generativos producen texto plausible, clasificaciones, resúmenes y propuestas. Pueden ayudar a explorar, pero agregan riesgos epistemológicos:
 
 - fuentes inexistentes o mal atribuidas;
 - mezcla de versiones;
@@ -373,7 +373,7 @@ Los sistemas generativos producen texto plausible, clasificaciones, resúmenes y
 - dificultad de reproducir una salida;
 - exposición de información.
 
-Una práctica mínima exige registrar propósito, entrada relevante, salida usada, verificación, cambios y decisión humana. Si la IA propone causas de demora, esas causas son hipótesis. Si resume entrevistas, debe contrastarse con originales. Si genera un modelo, el estudiante o profesional debe explicar su semántica y límites.
+Ejemplo cercano: Una práctica mínima exige registrar propósito, entrada relevante, salida usada, verificación, cambios y decisión humana. Si la IA propone causas de demora, esas causas son hipótesis. Si resume entrevistas, debe contrastarse con originales. Si genera un modelo, el estudiante o profesional debe explicar su semántica y límites.
 
 La IA puede también apoyar crítica: buscar contraejemplos, proponer preguntas adversariales o detectar contradicciones. Su valor depende de que no se convierta en autoridad invisible.
 
@@ -381,7 +381,7 @@ La IA puede también apoyar crítica: buscar contraejemplos, proponer preguntas 
 
 ### Los hechos institucionales también se construyen
 
-Algunas afirmaciones dependen de reglas sociales y sistemas de registro. Una reserva está “confirmada” porque una autoridad y un conjunto de procedimientos reconocen ese estado. Un pago está “aprobado” según la respuesta de una pasarela, aunque pueda ser revertido. Una habitación está “lista” cuando alguien con autoridad aplica criterios definidos.
+En simple, con un ejemplo: Algunas afirmaciones dependen de reglas sociales y sistemas de registro. Una reserva está “confirmada” porque una autoridad y un conjunto de procedimientos reconocen ese estado. Un pago está “aprobado” según la respuesta de una pasarela, aunque pueda ser revertido. Una habitación está “lista” cuando alguien con autoridad aplica criterios definidos.
 
 Decir que estos hechos se construyen no significa que sean arbitrarios. Significa que su verdad depende de definiciones, eventos y autoridad. Dos áreas pueden producir hechos institucionales incompatibles porque aplican reglas diferentes. La solución no es elegir la base “más verdadera” en abstracto, sino decidir qué afirmación necesita cada acción y quién puede sostenerla.
 
@@ -401,7 +401,7 @@ Las condiciones de revisión deben ser observables. “Revisar si cambia el cont
 
 ### Grados de confianza y lenguaje profesional
 
-La forma de comunicar debe reflejar la fuerza de la evidencia. “Observamos”, “dos actores informaron”, “los registros sugieren”, “inferimos provisionalmente” y “decidimos asumir” no son variaciones estilísticas: expresan estatutos distintos. El lenguaje categórico puede convertir una hipótesis útil en una falsa certeza.
+En simple, con un ejemplo: La forma de comunicar debe reflejar la fuerza de la evidencia. “Observamos”, “dos actores informaron”, “los registros sugieren”, “inferimos provisionalmente” y “decidimos asumir” no son variaciones estilísticas: expresan estatutos distintos. El lenguaje categórico puede convertir una hipótesis útil en una falsa certeza.
 
 Asignar un nivel de confianza ayuda solo si se explica. “Alta” puede significar fuentes independientes, mecanismo consistente y ausencia de evidencia adversa relevante. No debería reducirse a un porcentaje inventado. En decisiones complejas conviene registrar confianza por afirmación, no una confianza global del proyecto.
 
@@ -413,7 +413,7 @@ Comunicar de este modo protege la discusión. Permite que otra persona cuestione
 
 ### Segunda pasada por HH-04: actualizar entre hipótesis rivales
 
-Una hipótesis es valiosa porque organiza una búsqueda, no porque permita sentir que el problema ya fue comprendido. El riesgo aparece cuando el equipo la convierte en identidad: “el PMS es la causa que descubrimos”. Desde ese momento, una evidencia favorable parece importante y una evidencia adversa parece una excepción. La investigación deja de reducir incertidumbre y comienza a proteger una historia.
+En simple, con un ejemplo: Una hipótesis es valiosa porque organiza una búsqueda, no porque permita sentir que el problema ya fue comprendido. El riesgo aparece cuando el equipo la convierte en identidad: “el PMS es la causa que descubrimos”. Desde ese momento, una evidencia favorable parece importante y una evidencia adversa parece una excepción. La investigación deja de reducir incertidumbre y comienza a proteger una historia.
 
 Una manera práctica de evitarlo es comparar hipótesis rivales antes de recolectar nueva evidencia. Para la demora de check-in pueden proponerse:
 
@@ -439,7 +439,7 @@ El equipo debe acordar por anticipado qué resultado lo obligaría a revisar su 
 
 ### Qué falta también es información
 
-Los conjuntos de datos no sólo contienen valores: contienen ausencias. Y las ausencias tienen mecanismos. Un campo puede faltar porque una persona olvidó completarlo, porque el evento no aplica, porque el sistema no permite registrarlo, porque el caso fue abandonado o porque alguien evita dejar trazabilidad. Tratar todos los vacíos como iguales fabrica una población ficticia.
+En simple, con un ejemplo: Los conjuntos de datos no sólo contienen valores: contienen ausencias. Y las ausencias tienen mecanismos. Un campo puede faltar porque una persona olvidó completarlo, porque el evento no aplica, porque el sistema no permite registrarlo, porque el caso fue abandonado o porque alguien evita dejar trazabilidad. Tratar todos los vacíos como iguales fabrica una población ficticia.
 
 Conviene distinguir tres situaciones intuitivas. A veces un dato falta casi por azar: se perdió un paquete sin relación con el tipo de huésped. A veces falta por una variable conocida: las reservas de cierto canal no envían un identificador. Y a veces falta precisamente por el fenómeno que se pretende estudiar: quienes encuentran más fricción abandonan antes de responder la encuesta. En este último caso, analizar sólo registros completos puede invertir la conclusión.
 
@@ -449,7 +449,7 @@ La selección también ocurre antes de medir. Si se observa únicamente el turno
 
 ### Quién puede producir evidencia y quién puede cuestionarla
 
-La evidencia también tiene una dimensión organizacional. No todas las voces reciben el mismo crédito. Un tablero ejecutivo puede ser aceptado sin preguntas porque parece técnico; una advertencia de Recepción puede llamarse “anécdota” aunque provenga de cientos de interacciones; una persona huésped puede quedar reducida a un puntaje; un proveedor puede definir qué logs entrega y, con ello, qué causas resultan visibles.
+En simple, con un ejemplo: La evidencia también tiene una dimensión organizacional. No todas las voces reciben el mismo crédito. Un tablero ejecutivo puede ser aceptado sin preguntas porque parece técnico; una advertencia de Recepción puede llamarse “anécdota” aunque provenga de cientos de interacciones; una persona huésped puede quedar reducida a un puntaje; un proveedor puede definir qué logs entrega y, con ello, qué causas resultan visibles.
 
 Esto no implica que todas las afirmaciones valgan igual. Implica que la evaluación debe depender de pertinencia, procedencia y contraste, no sólo de jerarquía. Quien está cerca del trabajo puede observar excepciones que una métrica agregada borra. Quien administra datos puede detectar limitaciones que el usuario no ve. Quien asume riesgo contractual puede aportar restricciones reales. Ninguna posición posee por sí sola la descripción completa.
 
@@ -468,7 +468,7 @@ En sistemas con IA esta cuestión es central. Una clasificación puede convertir
 
 ### El instrumento AED: de la afirmación a la revisión
 
-Para trabajar sin burocracia puede utilizarse un Registro Afirmación, Evidencia y Decisión (AED). No es una plantilla universal; es una disciplina de razonamiento. Cada registro importante debería contener:
+En simple: Para trabajar sin burocracia puede utilizarse un Registro Afirmación, Evidencia y Decisión (AED). No es una plantilla universal; es una disciplina de razonamiento. Cada registro importante debería contener:
 
 1. **Afirmación acotada.** Una oración que indique fenómeno, población, momento y alcance.
 2. **Estatus.** Observación, testimonio, dato, interpretación, hipótesis, supuesto, restricción o decisión.
@@ -481,13 +481,13 @@ Para trabajar sin burocracia puede utilizarse un Registro Afirmación, Evidencia
 9. **Próxima evidencia útil.** La observación de menor costo que mejor discrimina entre alternativas.
 10. **Condición de revisión.** Señal, fecha, responsable y autoridad para modificar o detener.
 
-Veamos una versión compacta. Afirmación: “En llegadas con garantía incompleta, la demora dominante se produce antes de abrir el PMS”. Estatus: hipótesis. Rastros: doce episodios, observación de dos turnos y eventos de pago. Puente: la secuencia muestra consultas externas previas a la operación técnica. Limitación: no incluye grupos ni turno nocturno. Rival: el estado de habitación podría concentrarse en los mismos casos. Confianza: moderada. Decisión: no priorizar reemplazo del PMS antes de aislar el mecanismo. Próxima evidencia: comparar episodios equivalentes con garantía completa e incompleta. Revisión: si el tiempo técnico supera la espera externa en la muestra ampliada, reabrir H1.
+Ejemplo cercano: Veamos una versión compacta. Afirmación: “En llegadas con garantía incompleta, la demora dominante se produce antes de abrir el PMS”. Estatus: hipótesis. Rastros: doce episodios, observación de dos turnos y eventos de pago. Puente: la secuencia muestra consultas externas previas a la operación técnica. Limitación: no incluye grupos ni turno nocturno. Rival: el estado de habitación podría concentrarse en los mismos casos. Confianza: moderada. Decisión: no priorizar reemplazo del PMS antes de aislar el mecanismo. Próxima evidencia: comparar episodios equivalentes con garantía completa e incompleta. Revisión: si el tiempo técnico supera la espera externa en la muestra ampliada, reabrir H1.
 
 El registro obliga a separar lo que se sabe de lo que se hace. Puede haber evidencia moderada y una decisión firme si la urgencia es alta; puede haber evidencia fuerte y ninguna intervención inmediata si el costo o la autoridad no lo permiten. La decisión incorpora valores, restricciones y riesgo. La evidencia la informa, pero no la reemplaza.
 
 ### Cuándo la evidencia es suficiente
 
-“Necesitamos más datos” puede ser prudencia o evasión. Nunca tendremos una descripción total del sistema. La suficiencia depende de la decisión: daño posible, reversibilidad, costo de aprender tarde y diversidad de personas afectadas.
+En simple, con un ejemplo: “Necesitamos más datos” puede ser prudencia o evasión. Nunca tendremos una descripción total del sistema. La suficiencia depende de la decisión: daño posible, reversibilidad, costo de aprender tarde y diversidad de personas afectadas.
 
 Para una prueba local y reversible puede alcanzar una muestra pequeña si el mecanismo es visible, la señal aparece rápido y existe capacidad de detener. Para cambiar un contrato, migrar datos históricos o automatizar una decisión que afecta derechos, se necesita evidencia más diversa, controles independientes, escenarios adversos y autoridad explícita.
 
@@ -502,7 +502,7 @@ La suficiencia no significa certeza. Significa que continuar recolectando inform
 
 ### IA, procedencia y verdad en 2026
 
-Los sistemas generativos vuelven más urgente esta disciplina porque pueden producir textos, imágenes, resúmenes y clasificaciones verosímiles sin conservar de manera visible la cadena que los originó. Una salida puede citar una fuente real y atribuirle una afirmación que no contiene. Puede sintetizar correctamente el promedio de entrevistas y borrar precisamente los desacuerdos que deberían orientar el diseño. Puede asignar un porcentaje de confianza que describe el funcionamiento interno del modelo, no la probabilidad de que la afirmación sea verdadera.
+En simple, con un ejemplo: Los sistemas generativos vuelven más urgente esta disciplina porque pueden producir textos, imágenes, resúmenes y clasificaciones verosímiles sin conservar de manera visible la cadena que los originó. Una salida puede citar una fuente real y atribuirle una afirmación que no contiene. Puede sintetizar correctamente el promedio de entrevistas y borrar precisamente los desacuerdos que deberían orientar el diseño. Puede asignar un porcentaje de confianza que describe el funcionamiento interno del modelo, no la probabilidad de que la afirmación sea verdadera.
 
 El AI Risk Management Framework 1.0 de NIST organiza la gestión continua alrededor de gobernar, mapear, medir y gestionar. Para N04, esa continuidad importa más que convertir el marco en una lista: la evidencia debe revisarse durante el ciclo de vida, especialmente cuando cambian el contexto, las fuentes o las consecuencias de una decisión automatizada.
 
@@ -527,7 +527,7 @@ En 2026, esta distinción resulta central para sistemas que combinan búsqueda, 
 
 ### Regla de trazabilidad mínima
 
-La trazabilidad mínima permite volver desde una decisión hasta las pruebas y supuestos que la sostuvieron. Como en un trabajo escolar bien citado, otra persona debe poder comprobar de dónde salió una afirmación sin reconstruir todo desde cero. Toda recomendación importante debe poder reconstruirse hacia atrás:
+En simple, con un ejemplo: La trazabilidad mínima permite volver desde una decisión hasta las pruebas y supuestos que la sostuvieron. Como en un trabajo escolar bien citado, otra persona debe poder comprobar de dónde salió una afirmación sin reconstruir todo desde cero. Toda recomendación importante debe poder reconstruirse hacia atrás:
 
 **recomendación → decisión → criterio → hipótesis o interpretación → evidencia → fuente**.
 
@@ -539,7 +539,7 @@ Si la cadena se corta, no siempre hace falta producir otro documento. Puede ser 
 
 ### Tercera pasada por HH-04: decidir sin clausurar la investigación
 
-El primer pedido de la Dirección parece contener diagnóstico y solución: “El PMS quedó viejo, Recepción pierde demasiado tiempo y necesitamos un sistema integrado, una aplicación y un chatbot antes de la temporada alta”. N04 obliga a desarmar esa oración sin tratarla como error ni como verdad. Contiene una evaluación tecnológica, un síntoma operativo, una restricción temporal y tres alternativas preferidas. Cada componente requiere evidencia distinta.
+En simple, con un ejemplo: El primer pedido de la Dirección parece contener diagnóstico y solución: “El PMS quedó viejo, Recepción pierde demasiado tiempo y necesitamos un sistema integrado, una aplicación y un chatbot antes de la temporada alta”. N04 obliga a desarmar esa oración sin tratarla como error ni como verdad. Contiene una evaluación tecnológica, un síntoma operativo, una restricción temporal y tres alternativas preferidas. Cada componente requiere evidencia distinta.
 
 El equipo recibe además un tablero con ocupación de 86 %, 12 % de check-ins demorados, 68 % de consultas “resueltas” por chat, satisfacción de 4,3 sobre 5 y siete incidentes de sobreventa. Las cifras parecen más sólidas que el correo, pero todavía no está claro qué representan. ¿Demorado respecto de qué promesa? ¿El tiempo incluye la fila? ¿Resuelto significa que la necesidad terminó o que la conversación se cerró? ¿Quién recibió la encuesta? ¿Sobreventa se cuenta por reserva, habitación, noche o persona afectada?
 
@@ -547,19 +547,19 @@ Para no debatir por intuición, el equipo toma una afirmación central: **“el 
 
 #### Hipótesis A: falla de propagación técnica
 
-Housekeeping declara una habitación liberada a las 12:42. El PMS no recibe el evento o no actualiza el estado a tiempo. Recepción consulta otra fuente, espera o asigna una alternativa. Si esta hipótesis domina, deberían observarse eventos correctos en el sistema de origen, demoras o errores en integración y una reducción del problema cuando la propagación funciona.
+En simple, con un ejemplo: Housekeeping declara una habitación liberada a las 12:42. El PMS no recibe el evento o no actualiza el estado a tiempo. Recepción consulta otra fuente, espera o asigna una alternativa. Si esta hipótesis domina, deberían observarse eventos correctos en el sistema de origen, demoras o errores en integración y una reducción del problema cuando la propagación funciona.
 
 La evidencia útil incluye secuencia temporal, identificadores, reintentos, versiones de estado y logs de integración. La decisión proporcional sería probar monitoreo, idempotencia, reconciliación o una corrección técnica antes de comprometer una sustitución completa.
 
 #### Hipótesis B: incompatibilidad de significado
 
-Housekeeping usa “liberada” para indicar limpieza terminada. Recepción necesita “asignable”: limpieza terminada, cerradura operativa, ausencia de una restricción y autorización para entregar. La planilla y el PMS pueden estar sincronizados y representar conceptos diferentes. Integrar más rápido aceleraría la contradicción.
+En simple, con un ejemplo: Housekeeping usa “liberada” para indicar limpieza terminada. Recepción necesita “asignable”: limpieza terminada, cerradura operativa, ausencia de una restricción y autorización para entregar. La planilla y el PMS pueden estar sincronizados y representar conceptos diferentes. Integrar más rápido aceleraría la contradicción.
 
 La evidencia útil no es sólo un log. Incluye definiciones, reglas, casos de excepción, autoridad para cambiar estados y episodios donde dos áreas actuaron correctamente según significados incompatibles. La primera decisión razonable sería acordar estados y transiciones antes de evaluar tecnología.
 
 #### Hipótesis C: promesa comercial desacoplada
 
-Una OTA ofrece check-in temprano o una categoría cuya asignación se decide después. La contradicción nace antes de la limpieza y del PMS: el canal vende una condición sin evidencia suficiente de capacidad operativa. Recepción repara una promesa que otra parte del sistema produjo.
+En simple, con un ejemplo: Una OTA ofrece check-in temprano o una categoría cuya asignación se decide después. La contradicción nace antes de la limpieza y del PMS: el canal vende una condición sin evidencia suficiente de capacidad operativa. Recepción repara una promesa que otra parte del sistema produjo.
 
 La evidencia debe reconstruir configuración del canal, contrato, ventanas, cupos, tasa de cumplimiento y mecanismos de reparación. La decisión podría consistir en cambiar política, condición comercial o coordinación. Reemplazar el PMS puede no modificar el mecanismo dominante.
 
@@ -593,7 +593,7 @@ El correo es un hecho documental: se sabe que la Dirección formuló ese pedido 
 
 #### Qué cambia si interviene IA
 
-Si una herramienta generativa resume episodios, el equipo conserva los fragmentos originales, registra herramienta y versión, verifica cada afirmación decisiva y busca casos que contradigan la síntesis. Si el chatbot clasifica una consulta como “resuelta”, esa etiqueta no se usa como resultado sin comprobar qué ocurrió después. NIST AI 600-1 advierte sobre confabulación y homogeneización; NIST AI 100-4 y C2PA ayudan a pensar procedencia y transformaciones, pero ninguna credencial técnica convierte contenido en verdad.
+En simple, con un ejemplo: Si una herramienta generativa resume episodios, el equipo conserva los fragmentos originales, registra herramienta y versión, verifica cada afirmación decisiva y busca casos que contradigan la síntesis. Si el chatbot clasifica una consulta como “resuelta”, esa etiqueta no se usa como resultado sin comprobar qué ocurrió después. NIST AI 600-1 advierte sobre confabulación y homogeneización; NIST AI 100-4 y C2PA ayudan a pensar procedencia y transformaciones, pero ninguna credencial técnica convierte contenido en verdad.
 
 #### Criterio de salida: qué puede decidirse ahora
 

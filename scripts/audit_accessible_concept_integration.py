@@ -92,7 +92,10 @@ def main() -> None:
             concept_checks = {
                 "authority_once": authority_source.read_text(encoding="utf-8").count(bridge) == 1,
                 "package_once": package_source.read_text(encoding="utf-8").count(bridge) == 1,
-                "manifest_starts_with_bridge": manifest_text.startswith(bridge),
+                "manifest_starts_with_bridge": bool(re.match(
+                    r"^(?:En simple(?::|, con un ejemplo:) |Ejemplo cercano: )?" + re.escape(bridge),
+                    manifest_text,
+                )),
                 "html_once": html_text.count(escaped) == 1,
                 "html_bound_to_source_id": bool(element_match and escaped in element_match.group(1)),
                 "pdf_token_coverage_at_least_90_percent": pdf_coverage >= 0.90,

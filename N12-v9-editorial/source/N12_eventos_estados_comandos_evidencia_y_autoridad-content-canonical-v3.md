@@ -66,7 +66,7 @@ El producto será HH-12, mapa de transición verificable. Recibirá una afirmaci
 
 ### Evento: una afirmación sobre algo que ocurrió
 
-Un evento representa una ocurrencia relevante para el sistema. Se nombra en pasado porque no ordena ni predice: “Reserva confirmada”, “Limpieza terminada”, “Inspección aprobada”, “Asignación rechazada”. Su forma declara que, según cierta fuente y cierto criterio, algo ya sucedió.
+En simple, con un ejemplo: Un evento representa una ocurrencia relevante para el sistema. Se nombra en pasado porque no ordena ni predice: “Reserva confirmada”, “Limpieza terminada”, “Inspección aprobada”, “Asignación rechazada”. Su forma declara que, según cierta fuente y cierto criterio, algo ya sucedió.
 
 Esto no convierte al evento en hecho indiscutible. Puede haber sido emitido por error, duplicado, producido con una regla defectuosa o contradicho por evidencia posterior. La inmutabilidad técnica de un registro no garantiza verdad. Conserva que el sistema afirmó algo en un momento.
 
@@ -76,7 +76,7 @@ El evento debe tener relevancia de dominio. Registrar cada escritura de base pro
 
 ### Comando: una intención que puede ser rechazada
 
-Un comando solicita que el sistema intente producir un cambio. Se formula como acción: “Asignar habitación”, “Confirmar reserva”, “Cancelar estadía”, “Autorizar excepción”. A diferencia del evento, todavía no afirma que el cambio ocurrió.
+En simple, con un ejemplo: Un comando solicita que el sistema intente producir un cambio. Se formula como acción: “Asignar habitación”, “Confirmar reserva”, “Cancelar estadía”, “Autorizar excepción”. A diferencia del evento, todavía no afirma que el cambio ocurrió.
 
 Esta distinción protege contra la confirmación prematura. Una interfaz que muestra éxito porque envió el comando confunde transporte con decisión. Un correo que dice “reserva cancelada” antes de que el sistema valide cargos, autoridad y dependencias convierte una intención en promesa.
 
@@ -86,7 +86,7 @@ No toda interacción merece modelarse como comando. Consultar disponibilidad no 
 
 ### Estado: una respuesta vigente construida bajo reglas
 
-Un estado representa la situación reconocida de una entidad o proceso en un momento. Puede almacenarse directamente o derivarse de una secuencia de eventos. “Habitación asignable”, “reserva confirmada” y “pago conciliado” son respuestas a preguntas operacionales.
+En simple, con un ejemplo: Un estado representa la situación reconocida de una entidad o proceso en un momento. Puede almacenarse directamente o derivarse de una secuencia de eventos. “Habitación asignable”, “reserva confirmada” y “pago conciliado” son respuestas a preguntas operacionales.
 
 El estado no es la suma completa de la historia. Selecciona lo necesario para una decisión. Dos reservas pueden estar “confirmadas” y haber llegado allí por caminos diferentes: pago anticipado, garantía corporativa o excepción manual. Si el camino cambia derechos o reparaciones, el estado necesita conservar vínculos con la evidencia relevante.
 
@@ -96,7 +96,7 @@ En UML, una máquina de estados modela estados y transiciones disparadas por eve
 
 ### Consulta: preguntar no debería fingir que se decidió
 
-Una consulta solicita información sin intención de cambiar el sistema. “¿Qué habitaciones son asignables?” puede responderse con una proyección. “Asignar la 412” es un comando. Mezclar ambas funciones crea operaciones que parecen lectura y producen efectos.
+En simple, con un ejemplo: Una consulta solicita información sin intención de cambiar el sistema. “¿Qué habitaciones son asignables?” puede responderse con una proyección. “Asignar la 412” es un comando. Mezclar ambas funciones crea operaciones que parecen lectura y producen efectos.
 
 La separación también ayuda a reconocer incertidumbre. Una consulta puede responder “desconocido” o “actualizado hasta las 13:58”. No necesita fabricar un estado definitivo cuando la información todavía no llegó. La interfaz debe representar esa condición para que quien decide no confunda ausencia de actualización con ausencia de problema.
 
@@ -106,7 +106,7 @@ La consulta tampoco es neutral por definición. Una lista puede omitir casos, or
 
 ### Evidencia: por qué se cree que el evento ocurrió
 
-Un evento es una afirmación estructurada. La evidencia permite evaluar esa afirmación. Puede incluir una firma, un documento, una lectura de sensor, un registro técnico, una observación, una aprobación o una combinación.
+En simple, con un ejemplo: Un evento es una afirmación estructurada. La evidencia permite evaluar esa afirmación. Puede incluir una firma, un documento, una lectura de sensor, un registro técnico, una observación, una aprobación o una combinación.
 
 “Pago recibido” podría sostenerse con confirmación del procesador, identificador de transacción y conciliación posterior. “Habitación inspeccionada” puede requerir identidad de quien inspeccionó, criterio aplicado y observaciones. Un clic registrado demuestra interacción con una interfaz, no necesariamente comprensión ni consentimiento.
 
@@ -116,7 +116,7 @@ No se debe adjuntar evidencia ilimitada. Guardar imágenes, conversaciones o dat
 
 ### Autoridad: capacidad legítima, no sólo permiso técnico
 
-La autoridad es la capacidad reconocida para ordenar, validar o asumir una decisión dentro de un sistema social. Puede estar distribuida entre personas, áreas, normas, contratos y componentes. Un permiso técnico implementa parte de esa capacidad, pero no la define por completo.
+En simple, con un ejemplo: La autoridad es la capacidad reconocida para ordenar, validar o asumir una decisión dentro de un sistema social. Puede estar distribuida entre personas, áreas, normas, contratos y componentes. Un permiso técnico implementa parte de esa capacidad, pero no la define por completo.
 
 El control de acceso basado en roles fue propuesto por David Ferraiolo y Richard Kuhn y desarrollado luego por Ravi Sandhu y otros. Organiza usuarios, roles, permisos y restricciones, y resulta valioso para responder quién puede ejecutar una operación sobre un recurso. Sin embargo, que una cuenta posea permiso `UPDATE` no demuestra que la persona tenga autoridad para comprometer una habitación, conceder una devolución o alterar una nota.
 
@@ -126,9 +126,9 @@ Modelar autoridad exige registrar fuente normativa, alcance, condiciones, delega
 
 ### Transición: la unidad que conecta las cinco funciones
 
-Una transición verificable conecta situación previa, comando, evaluación, evento, estado resultante, evidencia y autoridad. No todas las transiciones contienen cada pieza como objeto separado, pero el razonamiento debe poder reconstruirse.
+En simple: Una transición verificable conecta situación previa, comando, evaluación, evento, estado resultante, evidencia y autoridad. No todas las transiciones contienen cada pieza como objeto separado, pero el razonamiento debe poder reconstruirse.
 
-Considérese “asignar habitación”. Estado previo: reserva confirmada, identidad validada, habitación inspeccionada y accesible. Comando: asignar la 412 a la reserva R73. Autoridad: Recepción dentro de su turno y bajo reglas de categoría. Evaluación: no existe otra asignación vigente y la habitación cumple condiciones. Evento: asignación aceptada. Estado: habitación 412 asignada a R73. Evidencia: identificadores, reglas, tiempos y actor. Reparación: si la cerradura falla, reasignar sin borrar la historia.
+Ejemplo cercano: Considérese “asignar habitación”. Estado previo: reserva confirmada, identidad validada, habitación inspeccionada y accesible. Comando: asignar la 412 a la reserva R73. Autoridad: Recepción dentro de su turno y bajo reglas de categoría. Evaluación: no existe otra asignación vigente y la habitación cumple condiciones. Evento: asignación aceptada. Estado: habitación 412 asignada a R73. Evidencia: identificadores, reglas, tiempos y actor. Reparación: si la cerradura falla, reasignar sin borrar la historia.
 
 Una transición puede fallar aunque cada componente funcione. El comando llega, la regla se evalúa, el evento se emite y la proyección se actualiza. Pero si la regla no representa la autoridad o la evidencia no permite verificar, la corrección técnica sostiene una decisión equivocada.
 
@@ -167,9 +167,9 @@ Esa diferencia afecta la decisión de Lucía. Si falta evidencia de cerradura, l
 
 ### Tres tiempos para una misma ocurrencia
 
-Una transición posee al menos tres tiempos. **Tiempo del fenómeno:** cuándo ocurrió en el mundo. **Tiempo de registro:** cuándo una fuente lo capturó. **Tiempo de conocimiento:** cuándo estuvo disponible para quien debía decidir.
+En simple: Una transición posee al menos tres tiempos. **Tiempo del fenómeno:** cuándo ocurrió en el mundo. **Tiempo de registro:** cuándo una fuente lo capturó. **Tiempo de conocimiento:** cuándo estuvo disponible para quien debía decidir.
 
-Housekeeping termina a las 13:42, registra a las 13:47 y el PMS recibe a las 14:03. Si se estudia productividad, interesa el primer tiempo. Si se audita la asignación de Lucía a las 14:00, importa qué información estaba disponible entonces. Reemplazar todas las marcas por la hora de sincronización reescribe la historia.
+Ejemplo cercano: Housekeeping termina a las 13:42, registra a las 13:47 y el PMS recibe a las 14:03. Si se estudia productividad, interesa el primer tiempo. Si se audita la asignación de Lucía a las 14:00, importa qué información estaba disponible entonces. Reemplazar todas las marcas por la hora de sincronización reescribe la historia.
 
 Los relojes también pueden diferir. Leslie Lamport mostró que en sistemas distribuidos no existe necesariamente un reloj global suficiente para ordenar todos los acontecimientos. Su relación “ocurrió antes que” permite reconocer orden causal parcial. N12 toma una consecuencia conceptual: una marca temporal idéntica o cercana no prueba por sí sola el orden semántico.
 
@@ -177,7 +177,7 @@ N13 desarrollará demoras, concurrencia y consistencia. Aquí basta establecer q
 
 ### Correlación: saber qué piezas pertenecen al mismo episodio
 
-Un sistema puede registrar todos los mensajes y no poder reconstruir una historia. La correlación vincula comandos, resultados, eventos y reparaciones de un mismo episodio mediante identificadores estables.
+En simple, con un ejemplo: Un sistema puede registrar todos los mensajes y no poder reconstruir una historia. La correlación vincula comandos, resultados, eventos y reparaciones de un mismo episodio mediante identificadores estables.
 
 En una reserva, el identificador del PMS puede diferir del de la agencia, el pago y la cerradura. Unir por nombre del huésped produce errores y expone datos. Se necesita una estrategia de identidad y correspondencia que permita seguir el caso sin fingir que todos los sistemas comparten la misma entidad.
 
@@ -187,7 +187,7 @@ La correlación tampoco equivale a causalidad. Que dos mensajes compartan reserv
 
 ### Nombrar el evento por el hecho relevante
 
-Los nombres genéricos trasladan significado fuera del mensaje. `RoomUpdated`, `StatusChanged` o “registro procesado” dicen que algo cambió sin explicar qué. Los consumidores deben interpretar campos y terminan construyendo semánticas incompatibles.
+En simple, con un ejemplo: Los nombres genéricos trasladan significado fuera del mensaje. `RoomUpdated`, `StatusChanged` o “registro procesado” dicen que algo cambió sin explicar qué. Los consumidores deben interpretar campos y terminan construyendo semánticas incompatibles.
 
 Un evento orientado al dominio nombra la ocurrencia: “Inspección aprobada”, “Asignación rechazada por accesibilidad”, “Promesa comercial modificada”. Debe evitar incluir como hecho una intención no confirmada. “Reserva solicitada” y “Reserva confirmada” no son intercambiables.
 
@@ -199,7 +199,7 @@ Grady Booch aporta una disciplina complementaria: una abstracción sólo es úti
 
 ### Estado derivado y múltiples proyecciones
 
-El mismo conjunto de eventos puede alimentar varias vistas. Recepción necesita habitaciones asignables ahora. Dirección puede analizar tiempos de preparación. Mantenimiento necesita fallas de cerradura. No existe obligación de imponer una tabla única para todos.
+En simple, con un ejemplo: El mismo conjunto de eventos puede alimentar varias vistas. Recepción necesita habitaciones asignables ahora. Dirección puede analizar tiempos de preparación. Mantenimiento necesita fallas de cerradura. No existe obligación de imponer una tabla única para todos.
 
 Martin Fowler denomina *event sourcing* al patrón que conserva cambios de estado como secuencia de eventos y permite reconstruir estados. Puede aportar auditoría y vistas alternativas, pero agrega complejidad de evolución, consulta, privacidad y operación. No es la conclusión automática de N12.
 
@@ -209,9 +209,9 @@ La proyección debe declarar su demora y alcance. “Disponibilidad actualizada 
 
 ### Corrección, retractación y compensación
 
-Los eventos pueden contener errores. Corregir no significa borrar silenciosamente. Una **rectificación** afirma que un dato anterior fue incorrecto y presenta el valor corregido. Una **retractación** retira una afirmación sin necesariamente reemplazarla. Una **compensación** produce una acción que contrarresta efectos, aunque no haga desaparecer lo ocurrido.
+En simple: Los eventos pueden contener errores. Corregir no significa borrar silenciosamente. Una **rectificación** afirma que un dato anterior fue incorrecto y presenta el valor corregido. Una **retractación** retira una afirmación sin necesariamente reemplazarla. Una **compensación** produce una acción que contrarresta efectos, aunque no haga desaparecer lo ocurrido.
 
-Si una reserva fue cancelada por error y luego restaurada, el sistema no volvió exactamente al punto inicial. Pudo enviar correos, liberar inventario o generar angustia. Registrar sólo “confirmada” oculta consecuencias. El diseño necesita distinguir estado final de historia reparada.
+Ejemplo cercano: Si una reserva fue cancelada por error y luego restaurada, el sistema no volvió exactamente al punto inicial. Pudo enviar correos, liberar inventario o generar angustia. Registrar sólo “confirmada” oculta consecuencias. El diseño necesita distinguir estado final de historia reparada.
 
 La compensación no es una máquina del tiempo. Devolver un pago repara dinero, pero quizá no una oportunidad perdida. Reasignar una habitación puede restaurar alojamiento y no borrar una espera. La evidencia debe conservar qué parte fue reparada y cuál permanece.
 
@@ -221,9 +221,9 @@ La persona afectada necesita una explicación coherente con esa elección. “El
 
 ### Evidencia no es lo mismo que registro de auditoría
 
-Un registro de auditoría conserva acciones o cambios según una política. Puede ser evidencia, pero su existencia no garantiza suficiencia. Si registra usuario y hora sin motivo, regla ni resultado, permite saber quién tocó un campo y no por qué la decisión era válida.
+En simple: Un registro de auditoría conserva acciones o cambios según una política. Puede ser evidencia, pero su existencia no garantiza suficiencia. Si registra usuario y hora sin motivo, regla ni resultado, permite saber quién tocó un campo y no por qué la decisión era válida.
 
-También puede ser manipulado, incompleto o inaccesible para quien debe investigar. Un sistema seguro necesita controles de integridad, acceso, retención y separación de funciones. Un sistema justo necesita además que las personas afectadas puedan conocer y cuestionar decisiones cuando corresponda.
+Ejemplo cercano: También puede ser manipulado, incompleto o inaccesible para quien debe investigar. Un sistema seguro necesita controles de integridad, acceso, retención y separación de funciones. Un sistema justo necesita además que las personas afectadas puedan conocer y cuestionar decisiones cuando corresponda.
 
 La evidencia se diseña desde la afirmación. Para sostener “la supervisora aprobó la inspección bajo el protocolo vigente” hacen falta identidad, protocolo o versión, resultado, momento y vínculo con la habitación. Grabar video continuo sería desproporcionado. Una marca sin protocolo sería débil.
 
@@ -233,7 +233,7 @@ Esto no exige que toda prueba resida en el mismo sistema. Puede existir un compr
 
 ### Autoridad distribuida y separaciones necesarias
 
-En organizaciones reales, ninguna aplicación posee toda la autoridad. Comercial puede prometer una categoría. Housekeeping declara trabajo terminado. Supervisión aprueba condiciones. Recepción asigna. Seguridad gestiona acceso. Finanzas decide ciertas devoluciones. La transición completa cruza responsabilidades.
+En simple, con un ejemplo: En organizaciones reales, ninguna aplicación posee toda la autoridad. Comercial puede prometer una categoría. Housekeeping declara trabajo terminado. Supervisión aprueba condiciones. Recepción asigna. Seguridad gestiona acceso. Finanzas decide ciertas devoluciones. La transición completa cruza responsabilidades.
 
 Esta distribución puede evitar abusos y errores. La separación de funciones impide que una misma persona cree, apruebe y concilie una operación sensible. Pero también puede producir esperas si nadie tiene autoridad para resolver excepciones.
 
@@ -243,7 +243,7 @@ Nancy Leveson analiza la seguridad como un problema de control dentro de sistema
 
 ## Agentes de inteligencia artificial: proponer no es decidir
 
-En 2026, un asistente puede leer mensajes, completar formularios, recomendar una habitación o emitir comandos a otros sistemas. La palabra “agente” describe capacidad técnica, no autoridad institucional. Se debe decidir qué puede observar, proponer, ejecutar, revertir y escalar.
+En simple, con un ejemplo: En 2026, un asistente puede leer mensajes, completar formularios, recomendar una habitación o emitir comandos a otros sistemas. La palabra “agente” describe capacidad técnica, no autoridad institucional. Se debe decidir qué puede observar, proponer, ejecutar, revertir y escalar.
 
 Una recomendación generada es una salida analítica. Un comando enviado por el agente es una intención operacional. Un evento posterior registra si el sistema la aceptó. Confundir las tres piezas produce automatización sin control. También vuelve inútil una revisión humana que recibe la decisión consumada.
 
@@ -290,9 +290,9 @@ El mapa no se completa de izquierda a derecha de manera rígida. Una excepción 
 
 ### Prueba de coherencia entre nombre, regla y efecto
 
-Cada transición atraviesa tres preguntas. ¿El nombre describe lo que realmente ocurrió? ¿La regla utiliza condiciones suficientes para ese nombre? ¿El efecto posterior corresponde a la autoridad que aceptó el comando?
+En simple: Cada transición atraviesa tres preguntas. ¿El nombre describe lo que realmente ocurrió? ¿La regla utiliza condiciones suficientes para ese nombre? ¿El efecto posterior corresponde a la autoridad que aceptó el comando?
 
-Si el evento se llama “Habitación entregable”, pero sólo valida limpieza, el nombre excede la regla. Si la regla consulta cerradura y asignación, pero cualquier cuenta puede aceptarla, el efecto excede la autoridad. Si la autoridad es correcta, pero el estado visible no se actualiza a tiempo, la promesa excede el conocimiento disponible.
+Ejemplo cercano: Si el evento se llama “Habitación entregable”, pero sólo valida limpieza, el nombre excede la regla. Si la regla consulta cerradura y asignación, pero cualquier cuenta puede aceptarla, el efecto excede la autoridad. Si la autoridad es correcta, pero el estado visible no se actualiza a tiempo, la promesa excede el conocimiento disponible.
 
 La prueba debe incluir un caso ordinario, un rechazo, una demora, una corrección y una excepción. Diseñar sólo el camino feliz produce estados que no explican el trabajo real.
 
@@ -314,7 +314,7 @@ La matriz permite detectar dos fallas opuestas. En la primera, demasiados actore
 
 ### Condiciones e invariantes
 
-Una condición evalúa si un comando puede aceptarse. Una invariante expresa algo que debe mantenerse a través de transiciones. “Una habitación no puede estar asignada a dos reservas vigentes” es una invariante. “La batería debe superar cierto umbral para emitir acceso” es una condición.
+En simple, con un ejemplo: Una condición evalúa si un comando puede aceptarse. Una invariante expresa algo que debe mantenerse a través de transiciones. “Una habitación no puede estar asignada a dos reservas vigentes” es una invariante. “La batería debe superar cierto umbral para emitir acceso” es una condición.
 
 Las invariantes hacen visibles decisiones que una interfaz suele dispersar. También exponen conflictos. Una política comercial de sobreventa acepta que las confirmaciones superen inventario físico bajo ciertas condiciones; no puede coexistir sin más con la afirmación “toda reserva confirmada tiene habitación asignada”. Se necesita distinguir promesa de categoría, inventario esperado y asignación concreta.
 

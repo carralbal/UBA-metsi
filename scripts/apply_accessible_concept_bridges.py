@@ -90,7 +90,16 @@ def package_folder(number: int) -> Path:
 def load_source(folder: Path) -> tuple[Path, dict]:
     manifest_path = folder / "source-manifest.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    return folder / manifest["source"], manifest
+    expanded = {
+        "N02-content-final": "source/N02_el_sistema_no_cabe_en_una_aplicacion-content-final-v2.md",
+        "N03-content-final": "source/N03_fronteras_retroalimentacion_y_efectos-content-final-v2.md",
+        "N05-content-final": "source/N05_actores_afectados_poder_y_perspectivas-content-final-v2.md",
+        "N06-content-final": "source/N06_discovery_como_reduccion_de_incertidumbre-content-final-v2.md",
+        "N08-content-final": "source/N08_observar_el_trabajo_invisible-content-final-v2.md",
+        "N09-content-final": "source/N09_experiencia_accesibilidad_y_adopcion-content-final-v2.md",
+    }
+    source_name = expanded.get(folder.name, manifest["source"])
+    return folder / source_name, manifest
 
 
 def first_paragraph(text: str, title: str) -> str:
@@ -136,8 +145,9 @@ def update_manifest(folder: Path, title: str, bridge: str, source: Path, stage: 
     if "eligible_blocks" in manifest:
         source_id, old = paragraph_id(manifest, title)
         entry = next(item for item in manifest["eligible_blocks"] if item["source_id"] == source_id)
-        if not entry["text"].startswith(bridge):
+        if bridge not in entry["text"]:
             entry["text"] = f"{bridge} {old}"
+    manifest["source"] = str(source.relative_to(folder))
     manifest["source_sha256"] = digest(source)
     manifest["stage"] = stage
     path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

@@ -63,6 +63,14 @@ def words(text: str) -> list[str]:
 
 def source_for(code: str) -> Path:
     number = int(code[1:])
+    expanded_early_sources = {
+        2: "N02_el_sistema_no_cabe_en_una_aplicacion-content-final-v2.md",
+        3: "N03_fronteras_retroalimentacion_y_efectos-content-final-v2.md",
+        5: "N05_actores_afectados_poder_y_perspectivas-content-final-v2.md",
+        6: "N06_discovery_como_reduccion_de_incertidumbre-content-final-v2.md",
+        8: "N08_observar_el_trabajo_invisible-content-final-v2.md",
+        9: "N09_experiencia_accesibilidad_y_adopcion-content-final-v2.md",
+    }
     # N01–N10 continuaron su revisión en los paquetes content-final; N11–N36
     # usan content-canonical como autoridad. N00 conserva su raíz canónica.
     folder = ROOT / (
@@ -70,6 +78,8 @@ def source_for(code: str) -> Path:
         else f"{code}-content-final" if number <= 10
         else f"{code}-content-canonical"
     )
+    if number in expanded_early_sources:
+        return folder / "source" / expanded_early_sources[number]
     manifest = json.loads((folder / "source-manifest.json").read_text(encoding="utf-8"))
     return folder / manifest["source"]
 
@@ -128,6 +138,8 @@ def inspect(section: dict) -> dict:
     sentence_lengths = [len(words(s)) for s in sentences]
     short_sentence = any(5 <= length <= 24 for length in sentence_lengths[:4])
     has_plain_marker = any(marker in lead for marker in PLAIN_MARKERS)
+    has_explicit_plain = "en simple: " in scope or "en simple, con un ejemplo: " in scope
+    has_explicit_example = "ejemplo cercano: " in scope or "en simple, con un ejemplo: " in scope
     has_example = (
         any(marker in scope for marker in EXAMPLE_MARKERS)
         or any(marker in scope for marker in CONCRETE_MARKERS)
@@ -145,6 +157,10 @@ def inspect(section: dict) -> dict:
         risks.append("sin_entrada_llana_clara")
     if not has_example:
         risks.append("sin_ejemplo_cercano_en_apertura")
+    if not has_explicit_plain:
+        risks.append("sin_capa_llana_explicita")
+    if not has_explicit_example:
+        risks.append("sin_ejemplo_explicito")
     if sentence_lengths and sum(sentence_lengths) / len(sentence_lengths) > 32:
         risks.append("oraciones_iniciales_extensas")
     return {
@@ -156,6 +172,8 @@ def inspect(section: dict) -> dict:
         "initial_long_word_ratio": round(long_word_ratio, 3),
         "plain_entry": has_plain_entry,
         "near_example": has_example,
+        "explicit_plain_layer": has_explicit_plain,
+        "explicit_near_example": has_explicit_example,
         "risks": risks,
         "status": "pass" if not risks else "review",
     }

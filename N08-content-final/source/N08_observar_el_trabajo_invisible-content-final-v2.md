@@ -8,7 +8,7 @@
 
 ## El puente que se sostenía gracias a gestos que nadie había diseñado
 
-Durante años, una ciudad costera operó un puente levadizo que conectaba el centro con el puerto. El manual describía una secuencia aparentemente completa: recibir el aviso de una embarcación, detener el tránsito, verificar las barreras, elevar la estructura, confirmar el paso, bajar el puente y reabrir la circulación. El tablero registraba cada estado y el sistema emitía una alarma si un paso ocurría fuera de orden. Para quien observaba desde la oficina de control, el puente era una máquina gobernada por un procedimiento preciso.
+En simple, con un ejemplo: Durante años, una ciudad costera operó un puente levadizo que conectaba el centro con el puerto. El manual describía una secuencia aparentemente completa: recibir el aviso de una embarcación, detener el tránsito, verificar las barreras, elevar la estructura, confirmar el paso, bajar el puente y reabrir la circulación. El tablero registraba cada estado y el sistema emitía una alarma si un paso ocurría fuera de orden. Para quien observaba desde la oficina de control, el puente era una máquina gobernada por un procedimiento preciso.
 
 Una mañana, un equipo de modernización llegó para estudiar su automatización. Había cámaras, sensores y registros de diez años. El objetivo parecía sencillo: reducir el tiempo de interrupción y retirar decisiones humanas de una operación considerada repetitiva. En la primera reunión, una ingeniera preguntó al operador más antiguo cuánto demoraba el ciclo. “Entre ocho y doce minutos”, respondió. El tablero confirmaba el promedio. La conversación avanzó hacia motores, algoritmos y tolerancias.
 
@@ -56,7 +56,7 @@ La relación entre ambas fuentes es productiva cuando genera contraste. Si una p
 
 ### El flujo de dos minutos y todo lo que queda afuera
 
-El procedimiento de llegada en Hotel Horizonte parece lineal: localizar la reserva, verificar identidad y garantía, confirmar habitación, registrar el ingreso y entregar acceso. En una demostración dura dos minutos. Ese recorrido resulta útil para capacitar, probar una interfaz y verificar un caso esperado.
+En simple, con un ejemplo: El procedimiento de llegada en Hotel Horizonte parece lineal: localizar la reserva, verificar identidad y garantía, confirmar habitación, registrar el ingreso y entregar acceso. En una demostración dura dos minutos. Ese recorrido resulta útil para capacitar, probar una interfaz y verificar un caso esperado.
 
 En operación aparecen otras tareas. Recepción busca el correo de una promoción, compara dos identificadores, consulta si una habitación está físicamente lista, explica una diferencia de tarifa, guarda equipaje, decide una excepción, solicita autorización y registra una reparación posterior. Algunas acciones ocurren antes de que el huésped llegue; otras continúan después de que la pantalla muestra “check-in completo”.
 
@@ -68,7 +68,7 @@ La observación debe seguir el episodio de principio a fin. El objeto puede ser 
 
 ### Trabajo imaginado, prescripto, realizado y revelado
 
-Para observar sin caer en simplificaciones conviene distinguir cuatro planos relacionados.
+En simple, con un ejemplo: Para observar sin caer en simplificaciones conviene distinguir cuatro planos relacionados.
 
 **Trabajo imaginado** es la representación que una organización tiene sobre cómo funciona su operación. Vive en presentaciones, tableros, modelos y conversaciones de dirección. Puede ser útil para coordinar estrategia, pero tiende a comprimir excepciones y trabajo informal. Hollnagel (2017) utiliza la diferencia entre trabajo imaginado y trabajo realizado para estudiar cómo los sistemas sostienen resultados bajo variación, no sólo cómo se apartan de una regla.
 
@@ -86,7 +86,7 @@ Los cuatro planos deberían tensionarse entre sí. Si el trabajo realizado se ap
 
 ### Qué vuelve invisible al trabajo
 
-Una actividad puede ser invisible por varias razones. Algunas tareas ocurren fuera del sistema digital: mirar una fila, escuchar una conversación o mover un objeto. Otras quedan invisibles porque el registro captura el resultado, no el esfuerzo: una habitación reasignada aparece como un cambio de estado, aunque haya exigido seis llamadas. También existe trabajo que la cultura considera “natural”: recordar excepciones, calmar a una persona o ayudar a un colega.
+En simple, con un ejemplo: Una actividad puede ser invisible por varias razones. Algunas tareas ocurren fuera del sistema digital: mirar una fila, escuchar una conversación o mover un objeto. Otras quedan invisibles porque el registro captura el resultado, no el esfuerzo: una habitación reasignada aparece como un cambio de estado, aunque haya exigido seis llamadas. También existe trabajo que la cultura considera “natural”: recordar excepciones, calmar a una persona o ayudar a un colega.
 
 La invisibilidad puede ser temporal. La preparación ocurre antes del encuentro visible y la reparación después. Puede ser organizacional: un área recibe un dato limpio y no ve quién resolvió contradicciones antes de entregarlo. Puede ser política: reconocer una tarea obligaría a admitir carga, dependencia o riesgo. Puede ser técnica: los registros de aplicación capturan eventos, pero no significado, autoridad ni motivo. Star y Strauss (1999) muestran que la visibilidad del trabajo no es neutral: depende de categorías, jerarquías y sistemas que vuelven reconocidas ciertas contribuciones y silencian otras.
 
@@ -103,9 +103,9 @@ Nombrar estas familias cambia el diseño. “Eliminar intermediarios” puede su
 
 ### Variación, desvío, adaptación y deriva
 
-Una práctica distinta del procedimiento admite explicaciones rivales. Puede ser un incumplimiento que aumenta riesgo, una adaptación necesaria ante una regla incompleta, un control compensatorio, una innovación local, una costumbre que perdió propósito o una forma de eludir supervisión. La distancia respecto del manual no determina la categoría; importan función, contexto y consecuencia.
+En simple: Una práctica distinta del procedimiento admite explicaciones rivales. Puede ser un incumplimiento que aumenta riesgo, una adaptación necesaria ante una regla incompleta, un control compensatorio, una innovación local, una costumbre que perdió propósito o una forma de eludir supervisión. La distancia respecto del manual no determina la categoría; importan función, contexto y consecuencia.
 
-Dekker (2014) cuestiona las explicaciones que detienen el análisis en el “error humano”. Nombrar a la última persona que actuó puede describir dónde se volvió visible el resultado, pero no explica por qué esa acción parecía razonable, posible o necesaria dentro del sistema. El análisis debe avanzar desde quién se equivocó hacia las condiciones que organizaron atención, información, presión y autoridad.
+Ejemplo cercano: Dekker (2014) cuestiona las explicaciones que detienen el análisis en el “error humano”. Nombrar a la última persona que actuó puede describir dónde se volvió visible el resultado, pero no explica por qué esa acción parecía razonable, posible o necesaria dentro del sistema. El análisis debe avanzar desde quién se equivocó hacia las condiciones que organizaron atención, información, presión y autoridad.
 
 Si el turno noche comparte una credencial, la práctica preserva continuidad cuando el alta de usuarios demora. A la vez, destruye trazabilidad y facilita abuso. Celebrarla como resiliencia perpetuaría una exposición. Bloquearla sin resolver provisión de acceso podría detener el hotel. La intervención responsable conserva la capacidad de operar de noche y reemplaza el mecanismo riesgoso de la credencial compartida por identidad individual y contingencia gobernada.
 
@@ -125,7 +125,7 @@ El equipo formula dos explicaciones rivales. La primera sostiene que la demora d
 
 ### Coordinación, transferencias y cognición distribuida
 
-Mucho trabajo invisible consiste en hacer que otros trabajos encajen. Avisar, traducir, esperar, verificar, insistir y reparar no siempre transforman directamente el objeto, pero permiten que el servicio continúe. Strauss (1988) denomina articulación al trabajo que coordina tareas distribuidas y recompone planes frente a contingencias. Suele aparecer entre responsabilidades formales y clasificarse como demora o comunicación innecesaria, aunque sin él la operación no cierre.
+En simple, con un ejemplo: Mucho trabajo invisible consiste en hacer que otros trabajos encajen. Avisar, traducir, esperar, verificar, insistir y reparar no siempre transforman directamente el objeto, pero permiten que el servicio continúe. Strauss (1988) denomina articulación al trabajo que coordina tareas distribuidas y recompone planes frente a contingencias. Suele aparecer entre responsabilidades formales y clasificarse como demora o comunicación innecesaria, aunque sin él la operación no cierre.
 
 Una transferencia no consiste sólo en mover datos. Incluye una promesa sobre significado, prioridad, oportunidad y responsabilidad. “Habitación liberada” puede indicar limpieza terminada para Housekeeping y disponibilidad comercial para Recepción. Aunque el mensaje llegue sin error, la coordinación falla si ambos interpretan estados distintos.
 
@@ -137,7 +137,7 @@ Las interrupciones merecen el mismo análisis. Algunas fragmentan trabajo y crea
 
 ### Del episodio observado al blueprint de servicio
 
-La observación contextual sigue el trabajo mientras ocurre y pregunta por objetos, interrupciones, decisiones y condiciones del entorno. Su valor no reside en mirar en silencio, sino en conectar una acción visible con el sentido que tiene para quien la realiza. Una persona puede explicar por qué consulta una lista justo después de usarla, mostrar qué información falta y distinguir una regla de una adaptación. El registro conserva descripción e interpretación separadas para que la cercanía no se transforme en certeza.
+En simple, con un ejemplo: La observación contextual sigue el trabajo mientras ocurre y pregunta por objetos, interrupciones, decisiones y condiciones del entorno. Su valor no reside en mirar en silencio, sino en conectar una acción visible con el sentido que tiene para quien la realiza. Una persona puede explicar por qué consulta una lista justo después de usarla, mostrar qué información falta y distinguir una regla de una adaptación. El registro conserva descripción e interpretación separadas para que la cercanía no se transforme en certeza.
 
 Un blueprint de servicio puede organizar luego esa evidencia en capas: acciones de la persona que recibe el servicio, puntos de contacto visibles, trabajo de primera línea, trabajo interno y procesos de apoyo. También incorpora evidencias, esperas, fallas y relaciones entre capas. No reemplaza el proceso ni el recorrido de experiencia. Sirve cuando la pregunta consiste en localizar qué trabajo sostiene una promesa visible y dónde una transferencia produce demora o pérdida de significado.
 
@@ -147,7 +147,7 @@ El modelo falla si convierte cada tarea en una caja idéntica o si representa so
 
 ### Microdecisiones, autoridad y deuda operativa
 
-El trabajo invisible no está compuesto únicamente por tareas omitidas en el procedimiento. También incluye una corriente de **microdecisiones**: elecciones pequeñas, situadas y muchas veces no registradas que permiten que el sistema siga funcionando. Una persona decide esperar antes de confirmar, consultar a alguien que formalmente no interviene, reinterpretar una categoría, priorizar una excepción o postergar una actualización. Cada decisión parece menor. En conjunto, determinan calidad, seguridad, equidad y capacidad de recuperación.
+En simple, con un ejemplo: El trabajo invisible no está compuesto únicamente por tareas omitidas en el procedimiento. También incluye una corriente de **microdecisiones**: elecciones pequeñas, situadas y muchas veces no registradas que permiten que el sistema siga funcionando. Una persona decide esperar antes de confirmar, consultar a alguien que formalmente no interviene, reinterpretar una categoría, priorizar una excepción o postergar una actualización. Cada decisión parece menor. En conjunto, determinan calidad, seguridad, equidad y capacidad de recuperación.
 
 Observar estas microdecisiones no significa exigir que todo sea aprobado por una jerarquía. Significa reconstruir tres elementos: qué incertidumbre enfrentó la persona, qué autoridad real tenía para resolverla y qué consecuencias podía anticipar. La autoridad formal puede estar escrita en un manual; la autoridad operativa aparece en la práctica. A veces coinciden. Otras veces, quien posee la información no puede decidir, quien puede decidir no está disponible y quien finalmente actúa absorbe un riesgo que la organización no reconoce.
 
@@ -183,7 +183,7 @@ La respuesta no consiste en documentar cada juicio hasta paralizar el trabajo. C
 
 ### Observar un episodio de principio a fin
 
-La unidad más útil no siempre es una tarea. Puede ser un episodio: una llegada, una cancelación, un cambio de habitación o una medicación. El episodio conecta condiciones iniciales, señales, interpretaciones, decisiones, acciones, resultado y reparación. Permite comparar casos sin convertir a una persona en unidad causal.
+En simple, con un ejemplo: La unidad más útil no siempre es una tarea. Puede ser un episodio: una llegada, una cancelación, un cambio de habitación o una medicación. El episodio conecta condiciones iniciales, señales, interpretaciones, decisiones, acciones, resultado y reparación. Permite comparar casos sin convertir a una persona en unidad causal.
 
 Un registro robusto separa al menos tres capas. La **descripción** consigna lo observable: “a las 14:12 abre el correo de campaña”. La **interpretación** propone significado: “busca una condición no disponible en el PMS”. La **pregunta** conserva incertidumbre: “¿esa información siempre se recibe por correo?”. Mezclar las capas fabrica certeza prematura.
 
@@ -195,7 +195,7 @@ La observación de una persona aporta profundidad sobre habilidades e interrupci
 
 ### Diseñar la muestra de observación: condiciones antes que volumen
 
-N06 ya estableció que una muestra se justifica por las diferencias capaces de cambiar una decisión. N08 aplica ese principio a situaciones observables. Observar “cinco usuarios” no define una muestra útil. La selección debe representar condiciones que podrían cambiar la explicación: turno, nivel de experiencia, canal, demanda, tipo de huésped, desenlace, necesidad de asistencia, incidente y funcionamiento ordinario.
+En simple, con un ejemplo: N06 ya estableció que una muestra se justifica por las diferencias capaces de cambiar una decisión. N08 aplica ese principio a situaciones observables. Observar “cinco usuarios” no define una muestra útil. La selección debe representar condiciones que podrían cambiar la explicación: turno, nivel de experiencia, canal, demanda, tipo de huésped, desenlace, necesidad de asistencia, incidente y funcionamiento ordinario.
 
 Los casos excepcionales ayudan a descubrir mecanismos, pero estudiar sólo crisis exagera fragilidad. Los casos exitosos muestran defensas cotidianas. Comparar un episodio adverso y uno favorable bajo condiciones similares puede revelar una diferencia pequeña: una señal visible, una relación de confianza o una política clara.
 
@@ -231,7 +231,7 @@ La ficha HH-08 agrega contexto, señal, decisión, función, consecuencia y fuen
 
 ### De observación a hipótesis y rediseño
 
-Una observación no se vuelve requisito de manera automática. Primero debe formularse una afirmación: bajo ciertas condiciones, una práctica cumple determinada función y produce ciertos efectos. Luego se buscan episodios que la fortalezcan o debiliten. Recién después se decide qué preservar, reemplazar o experimentar.
+En simple, con un ejemplo: Una observación no se vuelve requisito de manera automática. Primero debe formularse una afirmación: bajo ciertas condiciones, una práctica cumple determinada función y produce ciertos efectos. Luego se buscan episodios que la fortalezcan o debiliten. Recién después se decide qué preservar, reemplazar o experimentar.
 
 La tradición sociotécnica de Trist y Bamforth (1951) aporta una advertencia que sigue vigente: cambiar la organización técnica transforma relaciones, autonomía, coordinación y experiencia laboral. Por eso el rediseño no puede optimizar un componente y tratar el resto como contexto estable. La intervención debe comparar alternativas técnicas y organizacionales como configuraciones conjuntas.
 
@@ -254,7 +254,7 @@ Un buen requisito conserva la función observada. “Ante discrepancia entre est
 
 ### Observar sin convertir en auditoría punitiva
 
-La calidad de la evidencia depende de la relación de observación. Si las personas creen que cada atajo se utilizará para evaluarlas, mostrarán el procedimiento oficial y ocultarán exactamente aquello que la investigación necesita comprender. Informar propósito, uso de datos, acceso, conservación y posibilidad de detener no es sólo ética; es condición metodológica.
+En simple, con un ejemplo: La calidad de la evidencia depende de la relación de observación. Si las personas creen que cada atajo se utilizará para evaluarlas, mostrarán el procedimiento oficial y ocultarán exactamente aquello que la investigación necesita comprender. Informar propósito, uso de datos, acceso, conservación y posibilidad de detener no es sólo ética; es condición metodológica.
 
 La voluntariedad debe ser real. En relaciones laborales, aceptar la presencia de un observador puede sentirse obligatorio. Conviene minimizar datos personales, evitar grabación cuando no sea necesaria y separar aprendizaje sistémico de desempeño individual. No debe prometerse anonimato si el contexto permite identificar a la persona.
 
@@ -266,7 +266,7 @@ La devolución final debería incluir no sólo conclusiones, sino qué se observ
 
 ### Cuantificar sin borrar la práctica
 
-Después de comprender categorías pueden medirse frecuencia, tiempo y distribución. Definir antes qué cuenta evita que los registros capturen únicamente lo fácil. Una espera puede provenir de procesamiento, dependencia externa, falta de autoridad o cuidado deliberado. Sumarlas bajo “tiempo improductivo” destruye explicación.
+En simple, con un ejemplo: Después de comprender categorías pueden medirse frecuencia, tiempo y distribución. Definir antes qué cuenta evita que los registros capturen únicamente lo fácil. Una espera puede provenir de procesamiento, dependencia externa, falta de autoridad o cuidado deliberado. Sumarlas bajo “tiempo improductivo” destruye explicación.
 
 El promedio también puede ocultar extremos. Si el ingreso medio dura cuatro minutos, los casos de treinta pueden concentrarse en huéspedes internacionales, promociones o situaciones que requieren ayuda adicional. La dispersión revela inequidad y fragilidad. Interesa quién realiza el trabajo, en qué horario y qué tareas aparecen después del evento visible.
 
@@ -276,9 +276,9 @@ El ciclo más sólido alterna cualitativo y cuantitativo. La observación constr
 
 ### 2026: observar el trabajo alrededor de la IA
 
-En 2026, muchas organizaciones incorporan asistentes generativos, recomendadores y automatizaciones sin eliminar la tarea completa. Gmyrek et al. (2025), para la Organización Internacional del Trabajo, muestran que la transformación de tareas es más probable que la sustitución total en numerosos empleos expuestos. Esa transformación crea trabajo nuevo: formular instrucciones, revisar resultados, recuperar contexto, detectar errores, explicar decisiones, escalar excepciones y reparar impactos.
+En simple: En 2026, muchas organizaciones incorporan asistentes generativos, recomendadores y automatizaciones sin eliminar la tarea completa. Gmyrek et al. (2025), para la Organización Internacional del Trabajo, muestran que la transformación de tareas es más probable que la sustitución total en numerosos empleos expuestos. Esa transformación crea trabajo nuevo: formular instrucciones, revisar resultados, recuperar contexto, detectar errores, explicar decisiones, escalar excepciones y reparar impactos.
 
-Una herramienta puede reducir el tiempo de redactar un mensaje y aumentar el tiempo de verificar hechos. Puede atender consultas simples y concentrar en personas casos emocionalmente complejos. Puede recomendar una habitación y trasladar al operador la responsabilidad de descubrir una restricción que el modelo no representa. Medir sólo velocidad de generación oculta este trabajo.
+Ejemplo cercano: Una herramienta puede reducir el tiempo de redactar un mensaje y aumentar el tiempo de verificar hechos. Puede atender consultas simples y concentrar en personas casos emocionalmente complejos. Puede recomendar una habitación y trasladar al operador la responsabilidad de descubrir una restricción que el modelo no representa. Medir sólo velocidad de generación oculta este trabajo.
 
 El perfil de IA generativa de NIST, elaborado por Autio et al. (2024), plantea que la gestión del riesgo exige comprender contexto, actores, impactos y supervisión. En operación, “hay una persona revisando” no demuestra control. La supervisión exige tiempo, información, competencia, autoridad para contradecir y una alternativa real. Si la persona debe aceptar para cumplir una meta, desconoce la procedencia o no puede detener el flujo, su presencia es decorativa.
 
@@ -310,7 +310,7 @@ La transferencia no consiste en copiar soluciones del hotel. El dominio clínico
 
 ### Protocolo operativo de observación
 
-Un protocolo proporcional puede organizarse en diez decisiones:
+En simple: Un protocolo proporcional puede organizarse en diez decisiones:
 
 1. **Definir la pregunta.** Qué incertidumbre y qué decisión se investigan.
 2. **Elegir la unidad.** Persona, tarea, episodio, objeto o transferencia.
@@ -325,7 +325,7 @@ Un protocolo proporcional puede organizarse en diez decisiones:
 
 El protocolo no es una receta rígida. Asegura comparabilidad y protección sin impedir seguir un episodio crítico. Puede adaptarse si se declara qué función se conserva. Omitir una grabación puede ser correcto por privacidad; omitir la distinción entre descripción e inferencia debilita toda conclusión.
 
-La observación termina con una devolución y un registro de límites. También debe prever seguimiento después del cambio. Una automatización puede eliminar carga visible y crear monitoreo de excepciones. Comparar antes y después requiere considerar aprendizaje, temporada y cambios externos; atribuir toda diferencia a la herramienta es otra simplificación.
+Ejemplo cercano: La observación termina con una devolución y un registro de límites. También debe prever seguimiento después del cambio. Una automatización puede eliminar carga visible y crear monitoreo de excepciones. Comparar antes y después requiere considerar aprendizaje, temporada y cambios externos; atribuir toda diferencia a la herramienta es otra simplificación.
 
 ## De N08 a N09: del trabajo realizado al recorrido vivido
 
@@ -348,7 +348,7 @@ La frontera importa porque una práctica puede sostener la operación y perjudic
 - **Generalizar desde un turno.** Presenta un recorte como sistema completo.
 - **No observar después del cambio.** Pierde nuevas tareas y fallas emergentes.
 
-La consecuencia profesional más seria es atribuir al software o a una persona un resultado producido por relaciones. Esa simplificación conduce a requisitos técnicamente correctos e intervenciones sistémicamente pobres. También distribuye injustamente la responsabilidad: quien ejecuta la última acción visible termina cargando con decisiones de diseño, política o recursos.
+En simple, con un ejemplo: La consecuencia profesional más seria es atribuir al software o a una persona un resultado producido por relaciones. Esa simplificación conduce a requisitos técnicamente correctos e intervenciones sistémicamente pobres. También distribuye injustamente la responsabilidad: quien ejecuta la última acción visible termina cargando con decisiones de diseño, política o recursos.
 
 Observar con rigor permite formular explicaciones más defendibles. No garantiza neutralidad ni acceso completo. Obliga a declarar posición, muestra, límites y cadena de inferencia. Esa modestia no debilita el análisis; impide que la autoridad del investigador sustituya a la evidencia.
 

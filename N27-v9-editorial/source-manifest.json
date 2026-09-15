@@ -230,7 +230,7 @@
     {
       "source_id": "N27-s07-b002",
       "kind": "paragraph",
-      "text": "Un contrato sintáctico define estructura, tipos, obligatoriedad y formato de un intercambio. Permite detectar mensajes incompletos o incompatibles antes de procesarlos, pero no garantiza que productor y consumidor compartan significado, oportunidad ni efecto."
+      "text": "En simple, con un ejemplo: Un contrato sintáctico define estructura, tipos, obligatoriedad y formato de un intercambio. Permite detectar mensajes incompletos o incompatibles antes de procesarlos, pero no garantiza que productor y consumidor compartan significado, oportunidad ni efecto."
     },
     {
       "source_id": "N27-s07-b003",
@@ -270,7 +270,7 @@
     {
       "source_id": "N27-s07-b010",
       "kind": "paragraph",
-      "text": "Una API ofrece una frontera para que dos capacidades interactúen sin compartir toda su implementación. Su valor no reside en ocultar cualquier diferencia, sino en hacer explícitas las diferencias que el consumidor necesita conocer: operaciones disponibles, datos aceptados, resultados posibles, identidad, autoridad, versiones, límites y tratamiento de fallas. La interfaz es estable cuando conserva esas obligaciones relevantes, no cuando permanece inmóvil."
+      "text": "En simple, con un ejemplo: Una API ofrece una frontera para que dos capacidades interactúen sin compartir toda su implementación. Su valor no reside en ocultar cualquier diferencia, sino en hacer explícitas las diferencias que el consumidor necesita conocer: operaciones disponibles, datos aceptados, resultados posibles, identidad, autoridad, versiones, límites y tratamiento de fallas. La interfaz es estable cuando conserva esas obligaciones relevantes, no cuando permanece inmóvil."
     },
     {
       "source_id": "N27-s07-b011",
@@ -325,12 +325,12 @@
     {
       "source_id": "N27-s07-b021",
       "kind": "paragraph",
-      "text": "Un contrato semántico acuerda qué significa cada dato, estado y transición en un contexto de decisión. No es un glosario aislado: vincula términos con reglas, autoridad, población y consecuencias observables."
+      "text": "En simple: Un contrato semántico acuerda qué significa cada dato, estado y transición en un contexto de decisión. No es un glosario aislado: vincula términos con reglas, autoridad, población y consecuencias observables."
     },
     {
       "source_id": "N27-s07-b022",
       "kind": "paragraph",
-      "text": "Para Hotel Horizonte, «confirmada» debe distinguir mensaje recibido, pago autorizado y capacidad efectivamente reservada. Episodios límite y tablas de decisión revelan ambigüedades que una definición general no muestra. Lucía y Federico deben poder anticipar la misma próxima acción al leer el estado."
+      "text": "Ejemplo cercano: Para Hotel Horizonte, «confirmada» debe distinguir mensaje recibido, pago autorizado y capacidad efectivamente reservada. Episodios límite y tablas de decisión revelan ambigüedades que una definición general no muestra. Lucía y Federico deben poder anticipar la misma próxima acción al leer el estado."
     },
     {
       "source_id": "N27-s07-b023",
@@ -365,12 +365,12 @@
     {
       "source_id": "N27-s07-b029",
       "kind": "paragraph",
-      "text": "Un contrato temporal define ventanas, orden, vigencia, latencia y tratamiento de demora. No se reduce a un tiempo máximo de espera, conocido como *timeout*. Establece cuándo una afirmación puede usarse y qué decisión corresponde si llega tarde, duplicada o fuera de secuencia."
+      "text": "En simple: Un contrato temporal define ventanas, orden, vigencia, latencia y tratamiento de demora. No se reduce a un tiempo máximo de espera, conocido como *timeout*. Establece cuándo una afirmación puede usarse y qué decisión corresponde si llega tarde, duplicada o fuera de secuencia."
     },
     {
       "source_id": "N27-s07-b030",
       "kind": "paragraph",
-      "text": "HH-27 prueba un estado de habitación que arriba después de una reasignación. Relojes, trazas y versiones permiten reconstruir qué sabía cada sistema al actuar. La regla distingue ausencia de respuesta, rechazo y resultado indeterminado para impedir que el vencimiento invente una certeza."
+      "text": "Ejemplo cercano: HH-27 prueba un estado de habitación que arriba después de una reasignación. Relojes, trazas y versiones permiten reconstruir qué sabía cada sistema al actuar. La regla distingue ausencia de respuesta, rechazo y resultado indeterminado para impedir que el vencimiento invente una certeza."
     },
     {
       "source_id": "N27-s07-b031",
@@ -410,7 +410,7 @@
     {
       "source_id": "N27-s07-b038",
       "kind": "paragraph",
-      "text": "Un contrato operacional define efectos, errores, observación, escalamiento y reparación alrededor de una interfaz. No es un SLA ni una página de soporte. Traduce comportamiento técnico en acciones posibles para quienes sostienen el servicio."
+      "text": "En simple, con un ejemplo: Un contrato operacional define efectos, errores, observación, escalamiento y reparación alrededor de una interfaz. No es un SLA ni una página de soporte. Traduce comportamiento técnico en acciones posibles para quienes sostienen el servicio."
     },
     {
       "source_id": "N27-s07-b039",
@@ -450,12 +450,12 @@
     {
       "source_id": "N27-s08-b002",
       "kind": "paragraph",
-      "text": "Las precondiciones y poscondiciones declaran qué debe ser cierto antes y después de una operación. No son comentarios sobre el camino feliz: limitan estados válidos y vuelven comprobable el efecto prometido."
+      "text": "En simple: Las precondiciones y poscondiciones declaran qué debe ser cierto antes y después de una operación. No son comentarios sobre el camino feliz: limitan estados válidos y vuelven comprobable el efecto prometido."
     },
     {
       "source_id": "N27-s08-b003",
       "kind": "paragraph",
-      "text": "Para asignar una habitación, HH-27 exige disponibilidad vigente, restricciones satisfechas y autoridad. Después, la reserva debe quedar vinculada con la habitación y conservar trazabilidad. Pruebas de transición e invariantes verifican ambas condiciones, incluidos rechazo y resultado indeterminado."
+      "text": "Ejemplo cercano: Para asignar una habitación, HH-27 exige disponibilidad vigente, restricciones satisfechas y autoridad. Después, la reserva debe quedar vinculada con la habitación y conservar trazabilidad. Pruebas de transición e invariantes verifican ambas condiciones, incluidos rechazo y resultado indeterminado."
     },
     {
       "source_id": "N27-s08-b004",
@@ -485,7 +485,7 @@
     {
       "source_id": "N27-s08-b009",
       "kind": "paragraph",
-      "text": "Una invariante es una condición que debe preservarse a través de operaciones, versiones y fallas. Se diferencia de una preferencia porque violarla vuelve inaceptable el estado, aunque una métrica agregada mejore."
+      "text": "En simple, con un ejemplo: Una invariante es una condición que debe preservarse a través de operaciones, versiones y fallas. Se diferencia de una preferencia porque violarla vuelve inaceptable el estado, aunque una métrica agregada mejore."
     },
     {
       "source_id": "N27-s08-b010",
@@ -515,7 +515,7 @@
     {
       "source_id": "N27-s08-b015",
       "kind": "paragraph",
-      "text": "La idempotencia permite repetir una operación sin multiplicar su efecto material. No exige respuestas textuales idénticas ni elimina el costo del reintento. Su propósito es preservar la consecuencia cuando la comunicación deja incierto el resultado anterior."
+      "text": "En simple, con un ejemplo: La idempotencia permite repetir una operación sin multiplicar su efecto material. No exige respuestas textuales idénticas ni elimina el costo del reintento. Su propósito es preservar la consecuencia cuando la comunicación deja incierto el resultado anterior."
     },
     {
       "source_id": "N27-s08-b016",
@@ -550,7 +550,7 @@
     {
       "source_id": "N27-s08-b022",
       "kind": "paragraph",
-      "text": "Un contrato de error clasifica fallas, incertidumbre y respuestas que productores, consumidores y operación pueden manejar. No es una lista genérica de códigos: distingue rechazo, demora, duplicación, resultado indeterminado y degradación."
+      "text": "En simple, con un ejemplo: Un contrato de error clasifica fallas, incertidumbre y respuestas que productores, consumidores y operación pueden manejar. No es una lista genérica de códigos: distingue rechazo, demora, duplicación, resultado indeterminado y degradación."
     },
     {
       "source_id": "N27-s08-b023",
@@ -585,7 +585,7 @@
     {
       "source_id": "N27-s09-b002",
       "kind": "paragraph",
-      "text": "La evolución compatible permite cambiar un contrato sin quebrar consumidores existentes ni congelar el servicio. No se resuelve incrementando un número de versión. Requiere declarar qué se conserva, qué se depreca y durante cuánto tiempo convivirán interpretaciones."
+      "text": "En simple, con un ejemplo: La evolución compatible permite cambiar un contrato sin quebrar consumidores existentes ni congelar el servicio. No se resuelve incrementando un número de versión. Requiere declarar qué se conserva, qué se depreca y durante cuánto tiempo convivirán interpretaciones."
     },
     {
       "source_id": "N27-s09-b003",
@@ -615,7 +615,7 @@
     {
       "source_id": "N27-s09-b008",
       "kind": "paragraph",
-      "text": "Un contrato de datos acuerda significado, calidad, responsabilidad, privacidad y cambio de un producto de datos. No es sólo un esquema de tabla ni un acuerdo entre equipos técnicos. Explica qué usos habilita una observación y qué límites conserva."
+      "text": "En simple, con un ejemplo: Un contrato de datos acuerda significado, calidad, responsabilidad, privacidad y cambio de un producto de datos. No es sólo un esquema de tabla ni un acuerdo entre equipos técnicos. Explica qué usos habilita una observación y qué límites conserva."
     },
     {
       "source_id": "N27-s09-b009",
@@ -650,12 +650,12 @@
     {
       "source_id": "N27-s09-b015",
       "kind": "paragraph",
-      "text": "Un contrato de seguridad define identidad, autorización, confidencialidad, integridad y evidencia de acceso. No consiste en agregar autenticación al final. Distribuye controles según fronteras de confianza, propósito y daño posible."
+      "text": "En simple: Un contrato de seguridad define identidad, autorización, confidencialidad, integridad y evidencia de acceso. No consiste en agregar autenticación al final. Distribuye controles según fronteras de confianza, propósito y daño posible."
     },
     {
       "source_id": "N27-s09-b016",
       "kind": "paragraph",
-      "text": "El canal puede consultar una categoría sin acceder a datos innecesarios del huésped. HH-27 prueba permisos mínimos, intentos indebidos, trazabilidad y revocación. También verifica la contingencia, porque un control que bloquea toda atención durante una falla puede producir otro daño."
+      "text": "Ejemplo cercano: El canal puede consultar una categoría sin acceder a datos innecesarios del huésped. HH-27 prueba permisos mínimos, intentos indebidos, trazabilidad y revocación. También verifica la contingencia, porque un control que bloquea toda atención durante una falla puede producir otro daño."
     },
     {
       "source_id": "N27-s09-b017",
@@ -680,7 +680,7 @@
     {
       "source_id": "N27-s09-b021",
       "kind": "paragraph",
-      "text": "Una prueba de contrato verifica acuerdos relevantes desde las perspectivas del productor, el consumidor y la operación. No reemplaza pruebas de punta a punta ni evidencia del resultado observable; localiza incompatibilidades antes de exponer el recorrido completo."
+      "text": "En simple, con un ejemplo: Una prueba de contrato verifica acuerdos relevantes desde las perspectivas del productor, el consumidor y la operación. No reemplaza pruebas de punta a punta ni evidencia del resultado observable; localiza incompatibilidades antes de exponer el recorrido completo."
     },
     {
       "source_id": "N27-s09-b022",
@@ -1307,5 +1307,7 @@
       "kind": "list-item",
       "text": "Winograd, T. y Flores, F. (1986). *Understanding Computers and Cognition: A New Foundation for Design*. Ablex."
     }
-  ]
+  ],
+  "source_sha256": "6cfe122870fbfcef0aabbdf2f969b0fd900bf2191201a45ed484502c49666fd8",
+  "stage": "explicit-accessible-layers-all-concepts"
 }

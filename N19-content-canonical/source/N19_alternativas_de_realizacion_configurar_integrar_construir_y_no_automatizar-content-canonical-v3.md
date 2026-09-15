@@ -6,7 +6,7 @@
 
 ## La compra que evitaba desarrollar y creó un sistema nuevo
 
-Un municipio selecciona una plataforma integral para turnos, expedientes y notificaciones. La propuesta promete mejores prácticas, implementación rápida y menor mantenimiento. La comparación se presenta como comprar algo probado o construir desde cero.
+En simple, con un ejemplo: Un municipio selecciona una plataforma integral para turnos, expedientes y notificaciones. La propuesta promete mejores prácticas, implementación rápida y menor mantenimiento. La comparación se presenta como comprar algo probado o construir desde cero.
 
 Después de adjudicar, aparecen decisiones omitidas. La plataforma no modela la autoridad local para excepciones, el canal exige cambiar acuerdos con áreas de atención y los datos del registro civil necesitan una integración específica. Para conservar los plazos comunicados se agregan configuraciones, conectores y trabajo manual.
 
@@ -108,9 +108,9 @@ El Data Act europeo hace visible que acceso y portabilidad son condiciones de po
 
 ### Capacidad antes que solución
 
-Una decisión de realización comienza por la capacidad que debe existir y el resultado que debe sostener, no por un catálogo. Esta formulación conserva abiertas alternativas que una solución nombrada cerraría de antemano.
+En simple: Una decisión de realización comienza por la capacidad que debe existir y el resultado que debe sostener, no por un catálogo. Esta formulación conserva abiertas alternativas que una solución nombrada cerraría de antemano.
 
-La capacidad incluye uso, operación, seguridad, cambio y reparación bajo condiciones concretas. Dos productos con funciones parecidas pueden sostenerla de manera muy distinta si cambian autoridad, dependencia o trabajo humano.
+Ejemplo cercano: La capacidad incluye uso, operación, seguridad, cambio y reparación bajo condiciones concretas. Dos productos con funciones parecidas pueden sostenerla de manera muy distinta si cambian autoridad, dependencia o trabajo humano.
 
 Hotel Horizonte necesita entregar habitaciones defendibles, no “comprar un motor”. HH-19 evalúa toda opción contra ese episodio y su excepción accesible.
 
@@ -122,7 +122,7 @@ La capacidad incluye condiciones adversas. Se pregunta qué ocurre con baja cone
 
 ### Espacio de opciones
 
-El espacio de opciones incluye configurar, integrar, construir, contratar un servicio, operar manualmente y no automatizar. También admite combinaciones y secuencias, siempre que cada una sea una alternativa completa.
+En simple, con un ejemplo: El espacio de opciones incluye configurar, integrar, construir, contratar un servicio, operar manualmente y no automatizar. También admite combinaciones y secuencias, siempre que cada una sea una alternativa completa.
 
 Ampliar opciones no significa analizarlas indefinidamente. Se descartan con criterios explícitos de capacidad, obligación, costo total, tiempo para aprender y salida, conservando el supuesto que podría rehabilitarlas.
 
@@ -136,7 +136,7 @@ Conservar opciones tiene costo. Una prueba paralela puede duplicar trabajo y dem
 
 ### Configurar
 
-Configurar adapta el comportamiento mediante mecanismos previstos por un producto. Preserva el núcleo del proveedor, pero acepta sus categorías, secuencias y límites de extensión.
+En simple, con un ejemplo: Configurar adapta el comportamiento mediante mecanismos previstos por un producto. Preserva el núcleo del proveedor, pero acepta sus categorías, secuencias y límites de extensión.
 
 La decisión exige distinguir configuración portable de personalización propietaria. Deben probarse actualizaciones, permisos, auditoría y reversión, no sólo el caso feliz de la demostración.
 
@@ -150,11 +150,11 @@ La evidencia incluye una actualización. Muchos productos funcionan el día de l
 
 ### Integrar
 
-Integrar coordina componentes mediante contratos sintácticos, semánticos, temporales y operacionales. Que una API responda no demuestra que ambos sistemas entiendan el mismo estado ni sepan reparar una discrepancia.
+En simple: Integrar coordina componentes mediante contratos sintácticos, semánticos, temporales y operacionales. Que una API responda no demuestra que ambos sistemas entiendan el mismo estado ni sepan reparar una discrepancia.
 
 El costo incluye reconciliación, observabilidad, versionado y autoridad ante fallas. La integración se prueba sobre el episodio completo y sobre la demora o duplicación que podría cambiar una promesa.
 
-El hotel sólo puede confirmar una habitación cuando cerradura, PMS, asignación y comunicación sostienen conjuntamente la misma decisión.
+Ejemplo cercano: El hotel sólo puede confirmar una habitación cuando cerradura, PMS, asignación y comunicación sostienen conjuntamente la misma decisión.
 
 Los contratos sintácticos fijan campos y formatos; los semánticos, qué significa cada valor; los temporales, vigencia, orden y latencia; los operacionales, detección, reintento, conciliación y responsabilidad. Una integración puede aprobar pruebas de interfaz y fallar porque “entregable” designa limpieza terminada en un sistema y la combinación de preparada, asignable, accesible y confirmada en otro. Ese defecto no se corrige agregando reintentos.
 
@@ -166,9 +166,9 @@ El costo crece con cada frontera y con la necesidad de coordinar cambios. HH-19 
 
 ### Construir
 
-Construir crea control directo sobre una capacidad cuando diferenciación, regulación o restricción lo justifican. También crea obligación de diseñar, operar, asegurar, evolucionar y retirar lo construido.
+En simple: Construir crea control directo sobre una capacidad cuando diferenciación, regulación o restricción lo justifican. También crea obligación de diseñar, operar, asegurar, evolucionar y retirar lo construido.
 
-El control nominal es insuficiente si el conocimiento queda concentrado o si componentes externos dominan la solución. HH-19 registra competencias, cadena de suministro y costo de mantener la capacidad durante su vida útil.
+Ejemplo cercano: El control nominal es insuficiente si el conocimiento queda concentrado o si componentes externos dominan la solución. HH-19 registra competencias, cadena de suministro y costo de mantener la capacidad durante su vida útil.
 
 La prueba no termina con el despliegue: operación debe resolver una excepción y un cambio sin asistencia extraordinaria del equipo creador.
 
@@ -180,7 +180,7 @@ El control debe probarse. Poseer el repositorio no garantiza comprender dependen
 
 ### Servicio gestionado y tercerización
 
-Un servicio gestionado delega actividades bajo un acuerdo y puede asignar al proveedor responsabilidades operativas, contractuales e incluso jurídicas dentro del marco aplicable. Esa distribución no permite suponer que desaparecen la rendición de cuentas de la organización ni las obligaciones que una norma declare no delegables. HH-19 distingue ejecución, responsabilidad asignada, rendición de cuentas y autoridad de reparación antes de comparar ofertas.
+En simple, con un ejemplo: Un servicio gestionado delega actividades bajo un acuerdo y puede asignar al proveedor responsabilidades operativas, contractuales e incluso jurídicas dentro del marco aplicable. Esa distribución no permite suponer que desaparecen la rendición de cuentas de la organización ni las obligaciones que una norma declare no delegables. HH-19 distingue ejecución, responsabilidad asignada, rendición de cuentas y autoridad de reparación antes de comparar ofertas.
 
 La ejecución responde quién realiza una actividad. La responsabilidad asignada identifica quién debe cumplir una prestación y responder por su incumplimiento según contrato y norma. La rendición de cuentas, también denominada *accountability*, indica quién debe explicar la decisión, supervisar resultados y actuar ante consecuencias. Una obligación no delegable permanece en el sujeto definido por la fuente normativa aunque contrate apoyo. Estas categorías pueden recaer en actores diferentes y su distribución no se presume: se documenta y valida.
 
@@ -206,9 +206,9 @@ La salida se diseña al ingresar. Incluye formatos, frecuencia de exportación, 
 
 ### Trabajo manual deliberado
 
-El trabajo manual puede ser una solución deliberada cuando volumen, variabilidad o consecuencia no justifican automatización. Debe diseñarse con capacidad, instrucción, autoridad y evidencia, no esconderse como excepción informal.
+En simple: El trabajo manual puede ser una solución deliberada cuando volumen, variabilidad o consecuencia no justifican automatización. Debe diseñarse con capacidad, instrucción, autoridad y evidencia, no esconderse como excepción informal.
 
-Su costo incluye atención, espera, error y desigualdad entre turnos. La comparación debe reconocer también su valor: flexibilidad, juicio situado y reversibilidad mientras se aprende.
+Ejemplo cercano: Su costo incluye atención, espera, error y desigualdad entre turnos. La comparación debe reconocer también su valor: flexibilidad, juicio situado y reversibilidad mientras se aprende.
 
 HH-19 delimita qué casos siguen manuales, quién los resuelve y qué señal volvería preferible automatizarlos.
 
@@ -220,11 +220,11 @@ También se vigilan consecuencias distributivas. El trabajo oculto suele recaer 
 
 ### No automatizar
 
-No automatizar es una elección positiva de límite cuando la automatización amplificaría daño, vigilancia, rigidez o dependencia. No equivale a abandonar el problema ni a conservar un proceso defectuoso.
+En simple: No automatizar es una elección positiva de límite cuando la automatización amplificaría daño, vigilancia, rigidez o dependencia. No equivale a abandonar el problema ni a conservar un proceso defectuoso.
 
 La opción puede combinar rediseño, información, formación o apoyo a la decisión sin delegar autoridad. Necesita una revisión, porque cambios de volumen, capacidad o protección pueden alterar el balance.
 
-El hotel no automatiza compensaciones excepcionales: registra criterios y conserva una decisión humana autorizada y auditable.
+Ejemplo cercano: El hotel no automatiza compensaciones excepcionales: registra criterios y conserva una decisión humana autorizada y auditable.
 
 El límite puede fundarse en baja frecuencia, alta variabilidad, datos insuficientes, obligación de consideración individual o imposibilidad de reparar. No automatizar una decisión no impide automatizar soporte: reunir antecedentes, verificar consistencia o recordar plazos puede reducir carga sin transferir autoridad. Se busca el punto en que la herramienta mejora información y la persona conserva juicio real.
 
@@ -242,7 +242,7 @@ El límite se revisa con nueva evidencia. Si el volumen crece, puede ampliarse a
 
 ### Costo total de vida
 
-El costo total incluye adquisición, integración, migración, operación, cambio, seguridad, soporte, incidentes, salida y reparación. También incluye atención y trabajo invisible que no aparece en una factura.
+En simple, con un ejemplo: El costo total incluye adquisición, integración, migración, operación, cambio, seguridad, soporte, incidentes, salida y reparación. También incluye atención y trabajo invisible que no aparece en una factura.
 
 Las alternativas se comparan en el mismo horizonte y con rangos, no con una cifra exacta fabricada. Los costos que dependen de un supuesto se registran junto con la condición que los haría variar.
 
@@ -256,9 +256,9 @@ El costo de reparación merece identidad propia. Una falla puede requerir devolv
 
 ### Dependencia y poder de proveedor
 
-La dependencia aparece cuando cambiar, auditar o salir requiere costos o permisos que limitan decisión futura. Puede residir en datos, formatos, competencias, contratos, propiedad intelectual o posición de mercado.
+En simple: La dependencia aparece cuando cambiar, auditar o salir requiere costos o permisos que limitan decisión futura. Puede residir en datos, formatos, competencias, contratos, propiedad intelectual o posición de mercado.
 
-El proveedor conoce mejor el producto y puede controlar evidencia sobre fallas o precios. La gobernanza equilibra esa asimetría con derechos de acceso, pruebas de salida, alternativas y autoridad institucional.
+Ejemplo cercano: El proveedor conoce mejor el producto y puede controlar evidencia sobre fallas o precios. La gobernanza equilibra esa asimetría con derechos de acceso, pruebas de salida, alternativas y autoridad institucional.
 
 HH-19 no infiere portabilidad de una cláusula: exporta reservas, reglas y auditoría y mide pérdida, tiempo y continuidad.
 
@@ -270,7 +270,7 @@ El poder también actúa sobre ritmo. El proveedor decide fechas de versión, di
 
 ### Riesgo de cadena de suministro
 
-La cadena de suministro incluye bibliotecas, servicios, modelos, personas y procesos externos que afectan seguridad y continuidad. Un inventario de componentes permite localizar exposición, pero no sustituye capacidad de actuar.
+En simple, con un ejemplo: La cadena de suministro incluye bibliotecas, servicios, modelos, personas y procesos externos que afectan seguridad y continuidad. Un inventario de componentes permite localizar exposición, pero no sustituye capacidad de actuar.
 
 Se exigen procedencia, actualización, notificación, evaluación de cambios y responsables de respuesta. El riesgo se prueba cuando una dependencia falla o introduce una vulnerabilidad crítica.
 
@@ -284,7 +284,7 @@ La respuesta proporcional evita dos extremos. Bloquear todo componente externo v
 
 ### Adquisición de inteligencia artificial
 
-Adquirir inteligencia artificial implica evaluar modelo, datos, integración, supervisión, desempeño, seguridad, dependencia y reparación. La precisión global es sólo una parte de esa evidencia.
+En simple, con un ejemplo: Adquirir inteligencia artificial implica evaluar modelo, datos, integración, supervisión, desempeño, seguridad, dependencia y reparación. La precisión global es sólo una parte de esa evidencia.
 
 El comportamiento puede variar por población, versión y contexto; por eso se registran casos, límites de autoridad, monitoreo y posibilidad de impugnar. También se prueba qué ocurre si el proveedor cambia o retira el modelo.
 

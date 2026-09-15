@@ -6,7 +6,7 @@
 
 ## El producto conservó el nombre y dejó de ser el sistema aprobado
 
-Una empresa utiliza un servicio de inteligencia artificial para ordenar postulaciones laborales y preparar preguntas de entrevista. El comité de riesgo aprobó un piloto con una versión, un conjunto de datos y permisos limitados. Cuatro meses después, el proveedor mantiene el mismo nombre comercial, pero cambia el modelo base; Recursos Humanos agrega perfiles históricos y el equipo técnico habilita una herramienta para consultar redes profesionales. Ningún cambio atraviesa una nueva aprobación.
+En simple, con un ejemplo: Una empresa utiliza un servicio de inteligencia artificial para ordenar postulaciones laborales y preparar preguntas de entrevista. El comité de riesgo aprobó un piloto con una versión, un conjunto de datos y permisos limitados. Cuatro meses después, el proveedor mantiene el mismo nombre comercial, pero cambia el modelo base; Recursos Humanos agrega perfiles históricos y el equipo técnico habilita una herramienta para consultar redes profesionales. Ningún cambio atraviesa una nueva aprobación.
 
 El problema aparece cuando una candidata pide revisar por qué quedó afuera y nadie puede explicar qué versión tomó la decisión. El contrato nombra al proveedor. El inventario registra una licencia. El acta conserva los resultados del piloto. Pero ningún documento describe el uso actual. El propósito, las fuentes, la versión, las instrucciones, las herramientas, los responsables, la población evaluada y la vía de reparación están repartidos entre sistemas que cambian a ritmos distintos.
 
@@ -86,7 +86,7 @@ Cathy O’Neil muestra que la opacidad, la escala y la falta de apelación puede
 
 ### Inventario de sistemas de IA
 
-Un inventario de IA registra usos concretos, no sólo productos, licencias o modelos comprados. Cada entrada debe explicar el propósito, la población, el responsable, los componentes, los datos, las herramientas, la autonomía, las consecuencias posibles y el momento del ciclo de vida. Si el mismo modelo se usa para otra tarea o recibe permisos nuevos, se registra como un uso diferente.
+En simple, con un ejemplo: Un inventario de IA registra usos concretos, no sólo productos, licencias o modelos comprados. Cada entrada debe explicar el propósito, la población, el responsable, los componentes, los datos, las herramientas, la autonomía, las consecuencias posibles y el momento del ciclo de vida. Si el mismo modelo se usa para otra tarea o recibe permisos nuevos, se registra como un uso diferente.
 
 Hotel Horizonte identifica cada asistente por tarea, versión y permisos. El servicio que responde preguntas sobre políticas constituye una entrada distinta del agente que modifica reservas, aunque ambos usen el mismo proveedor. El registro vincula a Federico Müller como responsable técnico, a la autoridad de negocio correspondiente y a Lucía Ferreyra como participante de la operación.
 
@@ -96,7 +96,7 @@ El descubrimiento combina compras, accesos, integraciones, entrevistas y observa
 
 ### Frontera del sistema
 
-La frontera de un sistema de IA incluye el modelo, los datos, las instrucciones, las herramientas, la interfaz, las personas, las reglas y el proceso donde una respuesta produce efectos. No termina en la API del proveedor ni en el código que administra Tecnología. Definirla permite saber qué causas, evidencias y autoridades deben revisarse ante una evaluación o un incidente.
+En simple, con un ejemplo: La frontera de un sistema de IA incluye el modelo, los datos, las instrucciones, las herramientas, la interfaz, las personas, las reglas y el proceso donde una respuesta produce efectos. No termina en la API del proveedor ni en el código que administra Tecnología. Definirla permite saber qué causas, evidencias y autoridades deben revisarse ante una evaluación o un incidente.
 
 El registro del hotel abarca la decisión de Recepción y sus fuentes. Una recomendación puede originarse en un modelo externo, una política redactada por Comercial, un estado del PMS y la forma en que la interfaz presenta la opción. Si Lucía acepta por una señal visual ambigua, excluir la interfaz del análisis atribuiría al modelo un mecanismo que pertenece al sistema completo.
 
@@ -106,7 +106,7 @@ Cada elemento entra por el mecanismo que puede modificar. Una política recupera
 
 ### Responsabilidad asignada y rendición de cuentas
 
-Asignar responsabilidad significa dar capacidad real para orientar, limitar y sostener el sistema durante su vida útil. Rendir cuentas significa poder explicar decisiones, responder por sus consecuencias y ordenar una reparación. Nombrar a una persona sin presupuesto, información ni poder para suspender el uso no cumple ninguna de las dos condiciones.
+En simple, con un ejemplo: Asignar responsabilidad significa dar capacidad real para orientar, limitar y sostener el sistema durante su vida útil. Rendir cuentas significa poder explicar decisiones, responder por sus consecuencias y ordenar una reparación. Nombrar a una persona sin presupuesto, información ni poder para suspender el uso no cumple ninguna de las dos condiciones.
 
 En Hotel Horizonte, una responsable puede detener ofertas automáticas. Federico controla despliegues y accesos, Camila Duarte gobierna condiciones comerciales, Ricardo Sosa responde por la operación y Elena acepta el riesgo residual. El expediente explicita cómo se resuelven desacuerdos y quién decide cuando una mejora comercial amenaza una condición de servicio.
 
@@ -116,7 +116,7 @@ La responsabilidad asignada se expresa mediante derechos de decisión. La person
 
 ### Clasificación de riesgo
 
-Clasificar el riesgo sirve para decidir cuántos controles necesita un uso según sus posibles consecuencias. No depende sólo del tamaño del modelo, de su técnica o de una etiqueta comercial. Importan quiénes pueden verse afectados, qué tan grave sería el daño, si puede repararse, cuánto decide el sistema y si una persona puede cuestionar el resultado.
+En simple, con un ejemplo: Clasificar el riesgo sirve para decidir cuántos controles necesita un uso según sus posibles consecuencias. No depende sólo del tamaño del modelo, de su técnica o de una etiqueta comercial. Importan quiénes pueden verse afectados, qué tan grave sería el daño, si puede repararse, cuánto decide el sistema y si una persona puede cuestionar el resultado.
 
 Responder preguntas y modificar reservas reciben niveles distintos en el hotel. El primer uso puede limitarse a recuperar una política y redactar un borrador; el segundo altera inventario, precio o accesibilidad. La clasificación determina evidencia previa, aprobación, monitoreo, intervención humana y condiciones de retiro para cada capacidad.
 
@@ -140,7 +140,7 @@ Una nueva población, un permiso de escritura o una vía de reparación que dej�
 
 ### Procedencia de datos y modelos
 
-La procedencia reconstruye origen, permiso, transformación, versión y uso de datos, modelos y documentos. Nombrar una fuente no alcanza: debe poder seguirse cómo un elemento ingresó al sistema, qué modificaciones recibió y en qué salida participó. Esta cadena permite reproducir decisiones y localizar cambios que alteran comportamiento.
+En simple, con un ejemplo: La procedencia reconstruye origen, permiso, transformación, versión y uso de datos, modelos y documentos. Nombrar una fuente no alcanza: debe poder seguirse cómo un elemento ingresó al sistema, qué modificaciones recibió y en qué salida participó. Esta cadena permite reproducir decisiones y localizar cambios que alteran comportamiento.
 
 Cada fragmento recuperado por el asistente conserva documento y vigencia. El hotel registra la política original, la fecha, el segmento utilizado y la versión del índice que lo seleccionó. Si una respuesta combina una condición comercial con un procedimiento operativo, ambas procedencias permanecen visibles y no se funden en una autoridad inexistente.
 
@@ -156,7 +156,7 @@ Consiste en conservar capacidad institucional y social para discutir qué conoci
 
 ### Gobierno de proveedores
 
-Gobernar proveedores implica definir obligaciones sobre evidencia, seguridad, cambios, acceso, incidentes, continuidad y salida. Comprar un servicio no transfiere la responsabilidad por las decisiones tomadas con él. El contrato debe sostener los controles que la organización promete y reconocer aquello que el proveedor no permite observar.
+En simple, con un ejemplo: Gobernar proveedores implica definir obligaciones sobre evidencia, seguridad, cambios, acceso, incidentes, continuidad y salida. Comprar un servicio no transfiere la responsabilidad por las decisiones tomadas con él. El contrato debe sostener los controles que la organización promete y reconocer aquello que el proveedor no permite observar.
 
 Hotel Horizonte exige notificación de cambios materiales. También acuerda versiones, conservación de registros, tiempos de aviso, tratamiento de datos y asistencia para investigar incidentes. Si el proveedor puede reemplazar el modelo sin informar, cualquier evaluación previa pierde alcance y Federico no puede explicar una variación de comportamiento.
 
@@ -176,7 +176,7 @@ La negociación conserva además asimetría de poder. Un hotel puede no obtener 
 
 ### Control de cambios
 
-El control de cambios identifica modificaciones capaces de alterar propósito, desempeño, exposición o responsabilidad. No toda actualización requiere la misma revisión, pero tampoco todo cambio presentado como técnico es menor. Una nueva fuente, instrucción, herramienta, interfaz o permiso puede modificar la frontera aunque el modelo permanezca igual.
+En simple, con un ejemplo: El control de cambios identifica modificaciones capaces de alterar propósito, desempeño, exposición o responsabilidad. No toda actualización requiere la misma revisión, pero tampoco todo cambio presentado como técnico es menor. Una nueva fuente, instrucción, herramienta, interfaz o permiso puede modificar la frontera aunque el modelo permanezca igual.
 
 En el hotel, agregar una herramienta dispara pruebas de permisos y consecuencias. El cambio se describe, clasifica y vincula con los usos afectados. Antes de habilitarlo, se repiten casos críticos, se verifica la ruta de reparación y se informa a Recepción. La aprobación conserva quién decidió, sobre qué evidencia y con qué condición de reversión.
 
@@ -186,9 +186,9 @@ Una matriz relaciona tipos de cambio con reclamos que deben volver a probarse. M
 
 ### Monitoreo de IA desplegada
 
-El monitoreo de IA desplegada observa desempeño, uso, distribución, deriva y consecuencias en la operación. Latencia y disponibilidad son necesarias, pero no revelan si una respuesta sigue siendo correcta, quién recibe errores ni cuánto trabajo demanda repararlos. Las señales deben corresponder con las promesas y riesgos del uso inventariado.
+En simple: El monitoreo de IA desplegada observa desempeño, uso, distribución, deriva y consecuencias en la operación. Latencia y disponibilidad son necesarias, pero no revelan si una respuesta sigue siendo correcta, quién recibe errores ni cuánto trabajo demanda repararlos. Las señales deben corresponder con las promesas y riesgos del uso inventariado.
 
-Hotel Horizonte sigue corrección por población, abstenciones, frecuencia de escalamiento, cambios de reserva y reparaciones. También relaciona esas señales con versión, canal y turno. Un descenso de reclamos puede indicar mejora, pero también abandono del canal; una mayor abstención puede ser prudencia o pérdida de cobertura. Los episodios permiten interpretar la serie.
+Ejemplo cercano: Hotel Horizonte sigue corrección por población, abstenciones, frecuencia de escalamiento, cambios de reserva y reparaciones. También relaciona esas señales con versión, canal y turno. Un descenso de reclamos puede indicar mejora, pero también abandono del canal; una mayor abstención puede ser prudencia o pérdida de cobertura. Los episodios permiten interpretar la serie.
 
 Toda métrica necesita umbral, responsable y respuesta. Federico investiga deriva, Lucía aporta evidencia operacional y Elena decide si se adapta, limita o suspende el uso. Si el tablero sólo muestra degradación después de producida, existe observación sin control. El monitoreo debe cerrar el circuito con una decisión registrada.
 
@@ -198,7 +198,7 @@ La deriva se separa en datos, comportamiento, uso y consecuencia. Una distribuci
 
 ### Incidente de IA
 
-Un incidente de IA es un daño, una falla relevante o una pérdida de control vinculada con el sistema sociotécnico. No requiere una caída del servicio ni una acción maliciosa. Puede consistir en discriminación, divulgación, promesa indebida, imposibilidad de reparación o comportamiento que excede la autoridad concedida.
+En simple, con un ejemplo: Un incidente de IA es un daño, una falla relevante o una pérdida de control vinculada con el sistema sociotécnico. No requiere una caída del servicio ni una acción maliciosa. Puede consistir en discriminación, divulgación, promesa indebida, imposibilidad de reparación o comportamiento que excede la autoridad concedida.
 
 Una respuesta inventada provoca una compensación improcedente en Hotel Horizonte. La prioridad inicial es contener el efecto, asistir al huésped y preservar consulta, fuentes, salida, acciones y versiones. La investigación distingue si falló la recuperación, la instrucción, el modelo, la interfaz, la supervisión o una combinación de esos elementos.
 
@@ -210,7 +210,7 @@ La investigación preserva instrucción, fuentes, versión, llamadas a herramien
 
 ### Contestabilidad y reparación
 
-La contestabilidad ofrece a una persona información comprensible, una vía accesible para objetar y una revisión por autoridad competente. La reparación restituye, compensa o corrige la consecuencia cuando corresponde. Un formulario sin plazo, seguimiento o poder decisorio produce apariencia de revisión, no una garantía efectiva.
+En simple, con un ejemplo: La contestabilidad ofrece a una persona información comprensible, una vía accesible para objetar y una revisión por autoridad competente. La reparación restituye, compensa o corrige la consecuencia cuando corresponde. Un formulario sin plazo, seguimiento o poder decisorio produce apariencia de revisión, no una garantía efectiva.
 
 El huésped corrige un dato y recupera su reserva. Para que eso ocurra, Lucía debe conocer qué decidió el sistema, qué evidencia usó y qué acciones puede revertir. El reclamo queda vinculado con la salida original y con la corrección realizada, de modo que el hotel pueda reparar el caso y aprender si otros episodios comparten la misma falla.
 
@@ -228,7 +228,7 @@ La reparación se considera cerrada cuando el estado fue restituido, la persona 
 
 ### Retiro y salida
 
-El retiro desactiva una capacidad sin perder continuidad operativa, evidencia necesaria ni derechos de las personas afectadas. No equivale a cancelar una licencia. Deben planificarse revocación de accesos, conservación o eliminación de datos, reemplazo del servicio, comunicación y tratamiento de decisiones todavía abiertas.
+En simple, con un ejemplo: El retiro desactiva una capacidad sin perder continuidad operativa, evidencia necesaria ni derechos de las personas afectadas. No equivale a cancelar una licencia. Deben planificarse revocación de accesos, conservación o eliminación de datos, reemplazo del servicio, comunicación y tratamiento de decisiones todavía abiertas.
 
 Cuando el hotel retira un asistente, revoca herramientas y preserva los registros exigidos para reclamos e investigación. El procedimiento identifica qué reservas quedan en transición, qué ruta manual las atiende y cómo se evita que una integración residual continúe ejecutando. Ricardo valida continuidad y Federico comprueba la baja técnica.
 
@@ -240,7 +240,7 @@ El retiro distingue apagar nuevas acciones, resolver casos en curso y cerrar dep
 
 ### Sistema de gestión de IA
 
-Un sistema de gestión de IA integra política, roles, procesos, evidencia y mejora continua para gobernar usos concretos. No se reduce a un comité, un código ético o una certificación. Su eficacia se observa en decisiones repetibles sobre inventario, riesgo, cambio, incidentes, reparación y retiro.
+En simple, con un ejemplo: Un sistema de gestión de IA integra política, roles, procesos, evidencia y mejora continua para gobernar usos concretos. No se reduce a un comité, un código ético o una certificación. Su eficacia se observa en decisiones repetibles sobre inventario, riesgo, cambio, incidentes, reparación y retiro.
 
 Hotel Horizonte revisa inventario, incidentes y cambios en una cadencia común. Los responsables llevan evidencia de sus usos, las personas de operación presentan episodios y Elena resuelve excepciones y recursos. Las decisiones actualizan controles y vuelven a la operación; una reunión que sólo recibe tableros no constituye un ciclo de gestión.
 

@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "16734a1c9b40dc5e7a64de40c93f0a3bd790c41bca257695f5652af26f5c0a0d",
-        "declared_sha256": "16734a1c9b40dc5e7a64de40c93f0a3bd790c41bca257695f5652af26f5c0a0d",
+        "actual_sha256": "4b86c8ba11ed7f0f5d15b5e9dfd7333617eaabff17fd2586887d539639f7bec5",
+        "declared_sha256": "4b86c8ba11ed7f0f5d15b5e9dfd7333617eaabff17fd2586887d539639f7bec5",
         "document_json_matches": true,
         "source": "source/N36_practica_reflexiva_y_aprendizaje_profesional-content-canonical-v5.md",
         "source_exists": true,
@@ -48,6 +48,19 @@
       "status": "PASS"
     },
     {
+      "check": "errors_grid_groups_each_label_with_its_explanation",
+      "evidence": [
+        {
+          "cards": 8,
+          "declared_rows": 4,
+          "expected_rows": 4,
+          "labels": 8,
+          "naked_pairs": 0
+        }
+      ],
+      "status": "PASS"
+    },
+    {
       "check": "no_lfs_pointers_private_paths_or_placeholders",
       "evidence": {
         "lfs_pointers": [],
@@ -67,12 +80,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 20404252,
-        "final_sha256": "e9e22dc470d5b4060faee45999a9267dd3892bf2b29c010abc2efc101592a89f",
+        "bytes": 20428931,
+        "final_sha256": "7fb57d2314171db81d8fa26a327addef6115f9690dcd904b1161d1bebc3e2bbf",
         "pages": 26,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "69029f0161bb0c1a2fb4aa4750019dca8455617bd017e65e7bf794d397cdd10f",
+        "raw_sha256": "9655c3f399a1c88de223b688dd0bc528bf6be2e541efa3da9de3900949c9f874",
         "unique_sizes": [
           [
             594.96,
@@ -1123,15 +1136,15 @@
       5,
       19
     ],
-    "pdf_bytes": 20404252,
-    "pdf_sha256": "e9e22dc470d5b4060faee45999a9267dd3892bf2b29c010abc2efc101592a89f",
+    "pdf_bytes": 20428931,
+    "pdf_sha256": "7fb57d2314171db81d8fa26a327addef6115f9690dcd904b1161d1bebc3e2bbf",
     "source_blocks": 219
   },
   "mode": "read-only",
   "package": "N36-v9-editorial",
-  "passed_checks": 26,
+  "passed_checks": 27,
   "status": "PASS",
-  "total_checks": 26,
+  "total_checks": 27,
   "validator": "validate_n11_n36_v6.py",
   "version": "v9-editorial"
 }

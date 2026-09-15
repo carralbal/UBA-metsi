@@ -76,9 +76,9 @@ Un ejemplo simple: una historia de usuario puede expresar que recepción necesit
 
 ## Método, metodología, marco, práctica, técnica y herramienta
 
-En el lenguaje cotidiano estos términos se mezclan. Para intervenir con precisión conviene separarlos.
+En simple: En el lenguaje cotidiano estos términos se mezclan. Para intervenir con precisión conviene separarlos.
 
-Un método es una forma organizada de proceder para alcanzar un propósito. Una entrevista contextual es un método para comprender actividad situada. Un experimento controlado es un método para producir evidencia causal bajo ciertas condiciones. Un análisis de incidentes es un método para reconstruir cómo interactuaron eventos, decisiones y condiciones.
+Ejemplo cercano: Un método es una forma organizada de proceder para alcanzar un propósito. Una entrevista contextual es un método para comprender actividad situada. Un experimento controlado es un método para producir evidencia causal bajo ciertas condiciones. Un análisis de incidentes es un método para reconstruir cómo interactuaron eventos, decisiones y condiciones.
 
 Una metodología, en sentido fuerte, incluye el razonamiento mediante el cual se seleccionan, combinan y evalúan métodos. No se limita a decir qué hacer. Pregunta por qué conviene hacerlo ahora, qué supuesto trata, qué evidencia producirá, qué costo y riesgo introduce, y cómo cambiará la decisión según el resultado.
 
@@ -94,7 +94,7 @@ Estas distinciones no persiguen pureza terminológica. Evitan sustituciones frec
 
 ## La metodología como sistema de preguntas
 
-En palabras simples, una metodología ayuda a preguntar antes de actuar. Si una facultad pide un chatbot, primero obliga a aclarar qué problema debe cambiar, para quién y qué dato mostraría una mejora. Una metodología situada debe ayudar a recorrer, al menos, seis familias de preguntas.
+En simple, con un ejemplo: En palabras simples, una metodología ayuda a preguntar antes de actuar. Si una facultad pide un chatbot, primero obliga a aclarar qué problema debe cambiar, para quién y qué dato mostraría una mejora. Una metodología situada debe ayudar a recorrer, al menos, seis familias de preguntas.
 
 Checkland y Poulter proponen trabajar con situaciones problemáticas antes que suponer que el problema ya viene definido. Esa diferencia es central: una metodología no recibe un objeto neutral, sino un conjunto de interpretaciones, intereses y relaciones que deben hacerse discutibles antes de decidir qué cambiar.
 
@@ -114,7 +114,7 @@ Estas preguntas forman un ciclo, no una lista de control que se completa una vez
 
 ### Un ejemplo completo: de una frase vaga a una decisión comprobable
 
-Supongamos que una gerenta afirma: “el check-in es lento”. La frase parece clara, pero todavía no sabemos qué significa *lento*, para quién ni en qué parte del recorrido. Un equipo orientado por la solución podría pedir una pantalla más rápida. Un equipo metodológico comienza separando observación, interpretación y preferencia.
+En simple, con un ejemplo: Supongamos que una gerenta afirma: “el check-in es lento”. La frase parece clara, pero todavía no sabemos qué significa *lento*, para quién ni en qué parte del recorrido. Un equipo orientado por la solución podría pedir una pantalla más rápida. Un equipo metodológico comienza separando observación, interpretación y preferencia.
 
 La observación podría ser: durante el turno de la tarde, doce de treinta huéspedes esperaron más de diez minutos desde que llegaron al mostrador hasta que recibieron la llave. La interpretación podría ser: la espera se produce porque la aplicación de recepción responde con demora. La preferencia podría ser: queremos un check-in móvil. Las tres frases cumplen funciones distintas. La primera describe un fenómeno medible; la segunda propone un mecanismo causal; la tercera anticipa una alternativa.
 
@@ -168,9 +168,9 @@ No se necesita registrar cada conversación. Se necesita conservar las decisione
 
 ## La metodología también distribuye poder
 
-Elegir una metodología no es una decisión neutra. Determina quién participa, qué cuenta como evidencia, qué incertidumbre se acepta y quién tiene autoridad para cerrar una controversia.
+En simple: Elegir una metodología no es una decisión neutra. Determina quién participa, qué cuenta como evidencia, qué incertidumbre se acepta y quién tiene autoridad para cerrar una controversia.
 
-Un taller con gerentes puede producir alineación rápida y excluir a quienes realizan el trabajo. Una encuesta puede amplificar respuestas fáciles de codificar e invisibilizar experiencias minoritarias. Un backlog priorizado exclusivamente por valor comercial desplaza accesibilidad o riesgo operacional. Un modelo entrenado con decisiones históricas puede convertir relaciones de poder previas en una recomendación aparentemente objetiva.
+Ejemplo cercano: Un taller con gerentes puede producir alineación rápida y excluir a quienes realizan el trabajo. Una encuesta puede amplificar respuestas fáciles de codificar e invisibilizar experiencias minoritarias. Un backlog priorizado exclusivamente por valor comercial desplaza accesibilidad o riesgo operacional. Un modelo entrenado con decisiones históricas puede convertir relaciones de poder previas en una recomendación aparentemente objetiva.
 
 Incluso la velocidad tiene distribución. Reducir el tiempo de check-in puede mejorar la experiencia promedio y aumentar el trabajo previo que housekeeping realiza sin visibilidad. Automatizar respuestas puede disminuir carga de recepción y transferir al huésped la tarea de interpretar una excepción. Una metodología responsable pregunta no solo si la intervención funciona, sino para quién, bajo qué condiciones y a costa de quién.
 
@@ -178,9 +178,9 @@ Esto no significa que toda decisión requiera consenso universal. Algunas autori
 
 ## Metodología como diseño de un sistema de aprendizaje
 
-Pensar la metodología como una secuencia de actividades concentra la atención en el orden: primero investigar, después modelar, luego construir y finalmente operar. Pensarla como un sistema de aprendizaje cambia la unidad de análisis. Lo importante pasa a ser qué incertidumbre se intenta reducir, qué evidencia puede hacerlo, quién debe interpretarla, qué decisión depende de ella y con qué frecuencia se revisará lo decidido.
+En simple: Pensar la metodología como una secuencia de actividades concentra la atención en el orden: primero investigar, después modelar, luego construir y finalmente operar. Pensarla como un sistema de aprendizaje cambia la unidad de análisis. Lo importante pasa a ser qué incertidumbre se intenta reducir, qué evidencia puede hacerlo, quién debe interpretarla, qué decisión depende de ella y con qué frecuencia se revisará lo decidido.
 
-Argyris y Schön distinguen corregir una acción dentro de reglas existentes de revisar las reglas que produjeron esa acción. La primera forma de aprendizaje puede ajustar una pantalla o una demora; la segunda puede cuestionar por qué el hotel promete una condición que ninguna área puede garantizar. Senge agrega que ese aprendizaje depende de reconocer relaciones y retroalimentaciones, no de buscar una causa aislada cada vez que aparece un síntoma.
+Ejemplo cercano: Argyris y Schön distinguen corregir una acción dentro de reglas existentes de revisar las reglas que produjeron esa acción. La primera forma de aprendizaje puede ajustar una pantalla o una demora; la segunda puede cuestionar por qué el hotel promete una condición que ninguna área puede garantizar. Senge agrega que ese aprendizaje depende de reconocer relaciones y retroalimentaciones, no de buscar una causa aislada cada vez que aparece un síntoma.
 
 Ese sistema tiene entradas, transformaciones, salidas y retroalimentaciones. Recibe pedidos, incidentes, métricas, restricciones, conocimiento tácito y preferencias. Los transforma mediante observación, modelado, comparación, experimentación y deliberación. Produce hipótesis, compromisos, artefactos, cambios operativos y límites. Luego recibe los efectos de esos cambios y debe distinguir señal de ruido, aprendizaje de mera actividad y corrección local de mejora sistémica.
 
@@ -190,9 +190,9 @@ En Hotel Horizonte, una entrevista con recepción no vale por haber sido realiza
 
 ## Incertidumbre epistemológica, de acción y de coordinación
 
-No toda incertidumbre es del mismo tipo. Mezclarlas conduce a elegir prácticas inadecuadas.
+En simple: No toda incertidumbre es del mismo tipo. Mezclarlas conduce a elegir prácticas inadecuadas.
 
-La incertidumbre epistemológica se refiere a lo que no comprendemos. No sabemos por qué se produce la sobreventa, cómo se interpreta un estado o qué trabajo compensa una falla. Se reduce con investigación, observación, contraste de fuentes, análisis de eventos y modelos explicativos.
+Ejemplo cercano: La incertidumbre epistemológica se refiere a lo que no comprendemos. No sabemos por qué se produce la sobreventa, cómo se interpreta un estado o qué trabajo compensa una falla. Se reduce con investigación, observación, contraste de fuentes, análisis de eventos y modelos explicativos.
 
 La incertidumbre de acción aparece cuando comprendemos razonablemente la situación, pero no sabemos qué alternativa producirá el resultado buscado. Podemos saber que las promesas se contradicen y aun así desconocer si conviene cambiar reglas, integrar canales, sustituir el PMS o rediseñar responsabilidades. Se reduce mediante comparación, prototipos, experimentos, entregas reversibles y observación de efectos.
 
@@ -204,9 +204,9 @@ Una estrategia metodológica madura identifica qué mezcla enfrenta. Realizar m�
 
 ## Evidencia suficiente no significa evidencia perfecta
 
-Decidir con rigor exige una suficiencia proporcionada, no certeza. Una modificación local que puede revertirse en horas admite una base menor que una migración irreversible de datos. También exige menos evidencia que una automatización capaz de afectar derechos o un cambio contractual de largo plazo.
+En simple: Decidir con rigor exige una suficiencia proporcionada, no certeza. Una modificación local que puede revertirse en horas admite una base menor que una migración irreversible de datos. También exige menos evidencia que una automatización capaz de afectar derechos o un cambio contractual de largo plazo.
 
-La suficiencia tiene al menos cinco dimensiones. Debe ser pertinente para la afirmación; diversa cuando una única fuente tiene sesgos previsibles; oportuna respecto del momento de la decisión; trazable hasta su origen; y proporcionada al daño posible. Diez entrevistas generales pueden ser menos suficientes que dos observaciones de episodios críticos. Un tablero con miles de registros puede ser irrelevante si su definición de “check-in completo” excluye la espera posterior.
+Ejemplo cercano: La suficiencia tiene al menos cinco dimensiones. Debe ser pertinente para la afirmación; diversa cuando una única fuente tiene sesgos previsibles; oportuna respecto del momento de la decisión; trazable hasta su origen; y proporcionada al daño posible. Diez entrevistas generales pueden ser menos suficientes que dos observaciones de episodios críticos. Un tablero con miles de registros puede ser irrelevante si su definición de “check-in completo” excluye la espera posterior.
 
 La metodología debe declarar qué evidencia bastará antes de buscarla. De lo contrario aparece una asimetría: se detiene la investigación cuando los datos apoyan la solución preferida y se exige certeza infinita cuando la contradicen. Definir criterios de suficiencia no elimina el juicio, pero vuelve discutible su uso.
 
@@ -246,13 +246,13 @@ En el hotel, investigar durante seis meses sin estabilizar inconsistencias crít
 
 ## Una prueba breve de calidad metodológica
 
-Antes de adoptar una práctica, el equipo debería poder completar una frase: “hacemos esto ahora porque necesitamos reducir esta incertidumbre, mediante esta evidencia, antes de tomar esta decisión”. Si no puede hacerlo, la práctica puede obedecer a hábito, identidad o presión de apariencia. Después de realizarla debería completar otra: “lo observado cambia o no cambia esta decisión por estas razones”. La segunda frase evita confundir actividad con aprendizaje.
+En simple, con un ejemplo: Antes de adoptar una práctica, el equipo debería poder completar una frase: “hacemos esto ahora porque necesitamos reducir esta incertidumbre, mediante esta evidencia, antes de tomar esta decisión”. Si no puede hacerlo, la práctica puede obedecer a hábito, identidad o presión de apariencia. Después de realizarla debería completar otra: “lo observado cambia o no cambia esta decisión por estas razones”. La segunda frase evita confundir actividad con aprendizaje.
 
 La prueba no reemplaza conocimiento especializado. Funciona como control de coherencia. Obliga a conectar propósito, método, evidencia y acción; hace visible cuándo una técnica se aplica porque una herramienta la ofrece o porque un marco la prescribe. Repetida en hitos importantes, convierte la metodología en una conversación verificable sobre cómo se sabe y cómo se decide.
 
 ### Ejemplo: una misma práctica, dos calidades metodológicas
 
-Hotel Horizonte decide entrevistar a seis personas de Recepción. La actividad, observada desde afuera, parece rigurosa: existe una guía, se registran respuestas y luego se redacta un informe. Sin embargo, el equipo ya resolvió comprar un nuevo PMS y formula preguntas destinadas a confirmar esa elección: qué pantallas resultan lentas, qué funciones faltan y qué errores recuerdan quienes atienden. Las entrevistas producen información real, pero el propósito de la práctica es retrospectivo: legitimar una solución que ya no puede ser modificada. Si alguien relata que el problema aparece antes de tocar el PMS (por ejemplo, cuando Comercial promete un check-in temprano sin consultar capacidad operativa), el dato queda clasificado como “fuera de alcance”. La actividad fue ejecutada correctamente y, aun así, su calidad metodológica es baja porque incumple el criterio de revisabilidad.
+En simple, con un ejemplo: Hotel Horizonte decide entrevistar a seis personas de Recepción. La actividad, observada desde afuera, parece rigurosa: existe una guía, se registran respuestas y luego se redacta un informe. Sin embargo, el equipo ya resolvió comprar un nuevo PMS y formula preguntas destinadas a confirmar esa elección: qué pantallas resultan lentas, qué funciones faltan y qué errores recuerdan quienes atienden. Las entrevistas producen información real, pero el propósito de la práctica es retrospectivo: legitimar una solución que ya no puede ser modificada. Si alguien relata que el problema aparece antes de tocar el PMS (por ejemplo, cuando Comercial promete un check-in temprano sin consultar capacidad operativa), el dato queda clasificado como “fuera de alcance”. La actividad fue ejecutada correctamente y, aun así, su calidad metodológica es baja porque incumple el criterio de revisabilidad.
 
 Imaginemos ahora las mismas seis entrevistas con una frase previa distinta: “las realizamos para distinguir si la demora dominante nace en la interfaz, en la propagación de estados o en la coordinación entre áreas; si aparecen mecanismos diferentes, revisaremos el alcance de la intervención”. Las preguntas reconstruyen episodios concretos, separan observación de interpretación y preguntan qué ocurrió antes y después de cada excepción. El equipo contrasta los relatos con registros y acuerda de antemano qué hallazgo sostendría cada explicación. La técnica no cambió: sigue siendo una entrevista. Cambiaron su propósito, la posibilidad de contradicción y el vínculo entre evidencia y decisión.
 
@@ -262,21 +262,21 @@ La prueba breve permite comparar ambas situaciones sin idealizar la segunda. En 
 
 ### La metodología como receta
 
-El equipo sigue una secuencia porque “así se hace”. Produce entrevistas, historias, diagramas y sprints aunque no pueda relacionarlos con incertidumbres. La receta reduce ansiedad y facilita auditoría superficial, pero puede industrializar una pregunta equivocada.
+En simple, con un ejemplo: El equipo sigue una secuencia porque “así se hace”. Produce entrevistas, historias, diagramas y sprints aunque no pueda relacionarlos con incertidumbres. La receta reduce ansiedad y facilita auditoría superficial, pero puede industrializar una pregunta equivocada.
 
 ### La metodología como marca identitaria
 
-El equipo se define como ágil, lean, design thinking o data-driven y evalúa decisiones según fidelidad cultural. La pertenencia reemplaza el razonamiento. Las prácticas de otros enfoques se rechazan aun cuando el contexto las necesita.
+En simple, con un ejemplo: El equipo se define como ágil, lean, design thinking o data-driven y evalúa decisiones según fidelidad cultural. La pertenencia reemplaza el razonamiento. Las prácticas de otros enfoques se rechazan aun cuando el contexto las necesita.
 
 ### La metodología como legitimación retrospectiva
 
-Este error ocurre cuando el equipo decide primero y arma después una explicación elegante para justificarlo. Por ejemplo, compra una herramienta y recién entonces selecciona métricas que hacen parecer inevitable esa elección. La solución se decidió antes. Después se producen artefactos y evidencia para justificarla. Las entrevistas buscan confirmación; las métricas se eligen por conveniencia; el piloto demuestra que el sistema ejecuta, no que mejora el outcome. La metodología ya no organiza aprendizaje: fabrica consentimiento.
+En simple, con un ejemplo: Este error ocurre cuando el equipo decide primero y arma después una explicación elegante para justificarlo. Por ejemplo, compra una herramienta y recién entonces selecciona métricas que hacen parecer inevitable esa elección. La solución se decidió antes. Después se producen artefactos y evidencia para justificarla. Las entrevistas buscan confirmación; las métricas se eligen por conveniencia; el piloto demuestra que el sistema ejecuta, no que mejora el outcome. La metodología ya no organiza aprendizaje: fabrica consentimiento.
 
 Reconocer estos patrones es difícil porque pueden producir entregables impecables. El criterio de revisabilidad permite detectarlos aun cuando la forma parezca correcta.
 
 ## 2026: cuando el método también debe gobernar agentes
 
-En 2026, una herramienta generativa puede actuar sobre servicios y registros, no sólo sugerir texto. Esa capacidad modifica el problema metodológico. Cuando una salida de inteligencia artificial se convierte en una acción, la calidad depende del contexto y la autoridad que recibió el agente. También de la evidencia que conserva y de quién puede detenerlo o reparar una consecuencia.
+En simple, con un ejemplo: En 2026, una herramienta generativa puede actuar sobre servicios y registros, no sólo sugerir texto. Esa capacidad modifica el problema metodológico. Cuando una salida de inteligencia artificial se convierte en una acción, la calidad depende del contexto y la autoridad que recibió el agente. También de la evidencia que conserva y de quién puede detenerlo o reparar una consecuencia.
 
 Imaginemos que Hotel Horizonte incorpora un agente para gestionar cancelaciones. Una evaluación superficial comprueba que interpreta correctamente cien consultas de prueba. Una evaluación metodológica pregunta además si distingue consulta de orden, si verifica identidad, si reconoce reservas grupales, si puede leer condiciones contractuales, si explica por qué actuó, si solicita intervención humana ante una excepción y si existe una vía de reversión. El agente no es solamente un componente inteligente: pasa a ocupar una posición dentro del sistema de autoridad.
 
@@ -329,7 +329,7 @@ La metodología permite distinguir tarea, outcome y autoridad. La pregunta decis
 
 ## Consecuencias para la práctica profesional
 
-El modelo curricular IS2020 de ACM y AIS define Sistemas de Información como una disciplina que articula tecnología, personas, procesos y contexto organizacional. Esa formulación ayuda a precisar el rol profesional: no se trata de agregar una capa social después del diseño técnico, sino de intervenir una configuración en la que decisiones técnicas y organizacionales se producen mutuamente.
+En simple, con un ejemplo: El modelo curricular IS2020 de ACM y AIS define Sistemas de Información como una disciplina que articula tecnología, personas, procesos y contexto organizacional. Esa formulación ayuda a precisar el rol profesional: no se trata de agregar una capa social después del diseño técnico, sino de intervenir una configuración en la que decisiones técnicas y organizacionales se producen mutuamente.
 
 El profesional de sistemas no agrega valor por conocer la mayor cantidad de marcos. Agrega valor cuando puede:
 

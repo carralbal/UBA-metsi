@@ -6,7 +6,7 @@
 
 ## El certificado que demoró cuarenta y tres días en un proceso de cuarenta y ocho horas
 
-Julián termina la carrera y solicita un certificado analítico para presentar en un empleo. El portal informa un plazo de cuarenta y ocho horas. Completa el formulario, adjunta su documento y recibe el número 8417. Dos días después, el estado sigue en “recibido”.
+En simple, con un ejemplo: Julián termina la carrera y solicita un certificado analítico para presentar en un empleo. El portal informa un plazo de cuarenta y ocho horas. Completa el formulario, adjunta su documento y recibe el número 8417. Dos días después, el estado sigue en “recibido”.
 
 Escribe a Alumnos. Una persona confirma que el pedido ingresó, pero explica que antes debe verificarse identidad, plan de estudios, actas y ausencia de deuda. La validación académica depende de un archivo que se exporta los martes. Tesorería responde en otra aplicación. Si aparece una materia cursada bajo un plan anterior, el expediente pasa a Equivalencias. Cuando todo está completo, una autoridad firma y otra oficina publica el documento.
 
@@ -64,7 +64,7 @@ El producto será HH-14, mapa de flujo real y excepciones. Recibe episodios y tr
 
 ### Proceso no es área, aplicación ni lista de tareas
 
-Una organización suele llamar proceso a lo que un sector controla. “Proceso de Recepción” puede comenzar cuando una persona llega al mostrador y terminar cuando se entrega una llave. Para el huésped, el servicio comenzó con la reserva y no terminó si la llave no abre.
+En simple, con un ejemplo: Una organización suele llamar proceso a lo que un sector controla. “Proceso de Recepción” puede comenzar cuando una persona llega al mostrador y terminar cuando se entrega una llave. Para el huésped, el servicio comenzó con la reserva y no terminó si la llave no abre.
 
 Michael Hammer cuestionó mejoras funcionales que aceleran tareas sin transformar el resultado de principio a fin. Thomas Davenport vinculó innovación de procesos con información y tecnología, pero advirtió que el cambio requiere comprender trabajo y organización. Ambas tradiciones desplazan la atención desde departamentos hacia outcomes.
 
@@ -74,11 +74,11 @@ La evidencia que prueba la frontera es el episodio completo. Si el indicador ter
 
 ### Instancia, variante y población
 
-El diagrama representa una clase de recorridos; cada solicitud real es una instancia. Confundir ambos produce dos errores. Se trata el camino dibujado como si todos los casos lo siguieran o se concluye que no existe proceso porque cada caso difiere.
+En simple: El diagrama representa una clase de recorridos; cada solicitud real es una instancia. Confundir ambos produce dos errores. Se trata el camino dibujado como si todos los casos lo siguieran o se concluye que no existe proceso porque cada caso difiere.
 
 Una variante agrupa instancias que comparten una secuencia o condición relevante. Certificados ordinarios, cambios de plan e identidad no conciliada pueden requerir rutas distintas. La variante debe descubrirse por evidencia y no por preferencia visual.
 
-La población importa. Seguir sólo casos exitosos invisibiliza abandonos. Seguir únicamente incidentes exagera la excepción. HH-11 aporta muestreo, procedencia y suficiencia. N14 utiliza esas reglas para elegir casos y no para volver a enseñar medición.
+Ejemplo cercano: La población importa. Seguir sólo casos exitosos invisibiliza abandonos. Seguir únicamente incidentes exagera la excepción. HH-11 aporta muestreo, procedencia y suficiencia. N14 utiliza esas reglas para elegir casos y no para volver a enseñar medición.
 
 La unidad puede ser persona, reserva, solicitud o paquete de trabajo. Cambiarla cambia el proceso observado. Un huésped puede tener dos habitaciones y tres tickets. El mapa debe declarar qué identidad sigue y cómo vincula otras.
 
@@ -86,7 +86,7 @@ La variante tampoco se define sólo por secuencia. Dos casos pueden recorrer los
 
 ### Evento inicial, outcome y condición de cierre
 
-El evento inicial debe expresar una demanda reconocible. “Formulario recibido” comienza desde el sistema; “persona solicita un certificado con datos suficientes” comienza desde la necesidad. Ninguna fórmula es siempre correcta. La elección depende de lo que se pretende mejorar.
+En simple, con un ejemplo: El evento inicial debe expresar una demanda reconocible. “Formulario recibido” comienza desde el sistema; “persona solicita un certificado con datos suficientes” comienza desde la necesidad. Ninguna fórmula es siempre correcta. La elección depende de lo que se pretende mejorar.
 
 El outcome describe una diferencia observable, no la ejecución de una tarea. “Documento emitido” puede ser insuficiente si no es válido o accesible. “Huésped alojado en una habitación adecuada” conecta varias áreas y permite examinar el servicio.
 
@@ -98,7 +98,7 @@ Una condición demasiado exigente puede impedir medir. Esperar satisfacción per
 
 ### Camino declarado, camino ejecutado y camino experimentado
 
-El camino declarado aparece en procedimientos, roles y sistemas. El ejecutado se reconstruye con eventos, documentos, observación y relatos. El experimentado muestra qué espera, repite o interpreta la persona afectada.
+En simple, con un ejemplo: El camino declarado aparece en procedimientos, roles y sistemas. El ejecutado se reconstruye con eventos, documentos, observación y relatos. El experimentado muestra qué espera, repite o interpreta la persona afectada.
 
 Los tres pueden diferir sin que uno sea completamente falso. El procedimiento expresa norma. Los registros capturan sólo lo instrumentado. El relato conserva experiencia y puede omitir mecanismos. Contrastar evita elegir una fuente única por comodidad.
 
@@ -110,9 +110,9 @@ La divergencia entre caminos es un hallazgo, no una molestia que debe limpiarse.
 
 ### Tiempo de trabajo, espera y calendario
 
-El tiempo total de una instancia se compone de trabajo directo, espera, transporte, retrabajo y calendario. Medir sólo la duración activa produce la paradoja del certificado: dos horas de trabajo dentro de cuarenta y tres días.
+En simple: El tiempo total de una instancia se compone de trabajo directo, espera, transporte, retrabajo y calendario. Medir sólo la duración activa produce la paradoja del certificado: dos horas de trabajo dentro de cuarenta y tres días.
 
-La espera puede ocurrir antes de una cola visible. Un caso aguarda que alguien lo descubra en una bandeja, que llegue un día de lote o que una autoridad esté disponible. El calendario institucional convierte minutos de tarea en días de servicio.
+Ejemplo cercano: La espera puede ocurrir antes de una cola visible. Un caso aguarda que alguien lo descubra en una bandeja, que llegue un día de lote o que una autoridad esté disponible. El calendario institucional convierte minutos de tarea en días de servicio.
 
 Hopp y Spearman muestran que flujo, inventario de trabajo y tiempo están relacionados. La Ley de Little vincula, bajo condiciones estables, cantidad promedio en el sistema, tasa de salida y tiempo promedio. No identifica por sí sola una causa, pero permite detectar incoherencias entre capacidad prometida y acumulación.
 
@@ -134,9 +134,9 @@ El mapa agrega para cada tramo el tiempo disponible para la persona y el tiempo 
 
 ### Handoff: traslado de trabajo, información y responsabilidad
 
-Un handoff ocurre cuando una instancia cambia de responsable, medio o contexto. No es sólo enviar datos. Incluye qué se espera del receptor, qué evidencia acompaña el caso y cuándo queda aceptada la responsabilidad.
+En simple: Un handoff ocurre cuando una instancia cambia de responsable, medio o contexto. No es sólo enviar datos. Incluye qué se espera del receptor, qué evidencia acompaña el caso y cuándo queda aceptada la responsabilidad.
 
-Un correo puede transmitir información sin transferir responsabilidad efectiva. Una tarea puede asignarse y permanecer invisible. Si nadie confirma recepción, existe una zona donde ambos actores creen que el otro responde.
+Ejemplo cercano: Un correo puede transmitir información sin transferir responsabilidad efectiva. Una tarea puede asignarse y permanecer invisible. Si nadie confirma recepción, existe una zona donde ambos actores creen que el otro responde.
 
 Rummler y Brache llamaron la atención sobre los espacios en blanco entre funciones, donde los procesos suelen perder desempeño. N14 los trata como objetos explícitos: condición de salida, condición de entrada, paquete de información, autoridad, plazo y devolución.
 
@@ -146,11 +146,11 @@ También se prueba el retorno. Si el receptor detecta información insuficiente,
 
 ### Contrato de recepción y tipos de transferencia
 
-No todos los handoffs trasladan lo mismo. Una transferencia de información entrega datos para que otra actividad continúe. Una transferencia de custodia cambia quién debe conservar y localizar el caso. Una transferencia de decisión entrega a otro rol una pregunta sobre la que posee autoridad. Una transferencia de ejecución asigna trabajo sin desplazar necesariamente la responsabilidad por la promesa.
+En simple: No todos los handoffs trasladan lo mismo. Una transferencia de información entrega datos para que otra actividad continúe. Una transferencia de custodia cambia quién debe conservar y localizar el caso. Una transferencia de decisión entrega a otro rol una pregunta sobre la que posee autoridad. Una transferencia de ejecución asigna trabajo sin desplazar necesariamente la responsabilidad por la promesa.
 
 Confundirlas produce vacíos: alguien recibe un archivo y supone que también recibió autoridad, o ejecuta una tarea mientras otra área continúa respondiendo por el resultado sin poder observarla.
 
-El contrato de recepción vuelve comprobable el cambio. Declara identidad del caso, estado conocido, decisión pendiente, evidencia adjunta, condición para aceptar, plazo y conducta ante rechazo. La aceptación no necesita una ceremonia pesada. Puede ser un evento del sistema, una toma explícita de la cola o una regla de asignación cuya ejecución quede visible. Lo indispensable es que emisor y receptor puedan reconstruir desde cuándo cambió la responsabilidad y qué parte no cambió.
+Ejemplo cercano: El contrato de recepción vuelve comprobable el cambio. Declara identidad del caso, estado conocido, decisión pendiente, evidencia adjunta, condición para aceptar, plazo y conducta ante rechazo. La aceptación no necesita una ceremonia pesada. Puede ser un evento del sistema, una toma explícita de la cola o una regla de asignación cuya ejecución quede visible. Lo indispensable es que emisor y receptor puedan reconstruir desde cuándo cambió la responsabilidad y qué parte no cambió.
 
 Hotel Horizonte aplica el contrato cuando una habitación inspeccionada pasa de Housekeeping a Recepción. Mariela Benítez afirma que la preparación terminó y adjunta hora, unidad y excepción observada. Lucía Ferreyra acepta el caso para asignación sólo si puede comprobar vigencia de cerradura y requerimientos de la reserva. Si falta una señal técnica, no devuelve toda la habitación a limpieza.
 
@@ -166,9 +166,9 @@ El análisis agrega una medida de calidad del handoff. No cuenta mensajes enviad
 
 ### Colas: inventario de trabajo y política de prioridad
 
-Una cola es trabajo que espera capacidad o condición. Puede ser física, digital, mental o informal. Toda cola posee entrada, disciplina de prioridad, responsable, capacidad y señal de envejecimiento, aunque la organización no las haya definido.
+En simple: Una cola es trabajo que espera capacidad o condición. Puede ser física, digital, mental o informal. Toda cola posee entrada, disciplina de prioridad, responsable, capacidad y señal de envejecimiento, aunque la organización no las haya definido.
 
-“Primero en entrar, primero en salir” es una política. Priorizar urgencia, valor, riesgo o fecha es otra. Cuando no se declara, la prioridad puede depender de quién insiste, conoce a alguien o domina el lenguaje institucional. La cola se vuelve mecanismo de desigualdad.
+Ejemplo cercano: “Primero en entrar, primero en salir” es una política. Priorizar urgencia, valor, riesgo o fecha es otra. Cuando no se declara, la prioridad puede depender de quién insiste, conoce a alguien o domina el lenguaje institucional. La cola se vuelve mecanismo de desigualdad.
 
 La utilización cercana al máximo aumenta espera ante variabilidad. Buscar que cada persona esté ocupada todo el tiempo puede empeorar el flujo. Capacidad de reserva, límites de trabajo en curso y segmentación de variantes permiten absorber picos.
 
@@ -176,9 +176,9 @@ La evidencia incluye tasa de llegada, salida, edad, bloqueos y reingresos. Una c
 
 ### Cuello de botella y restricción
 
-El cuello de botella limita el flujo bajo una configuración. No siempre es el sector con más trabajo visible. Puede ser una autoridad disponible dos horas, un lote semanal, una regla o información que llega tarde.
+En simple: El cuello de botella limita el flujo bajo una configuración. No siempre es el sector con más trabajo visible. Puede ser una autoridad disponible dos horas, un lote semanal, una regla o información que llega tarde.
 
-Mejorar una tarea que no limita el sistema produce inventario más rápido. Automatizar la recepción de certificados puede llenar antes la cola de validación. El indicador local mejora mientras el tiempo total empeora.
+Ejemplo cercano: Mejorar una tarea que no limita el sistema produce inventario más rápido. Automatizar la recepción de certificados puede llenar antes la cola de validación. El indicador local mejora mientras el tiempo total empeora.
 
 La restricción puede moverse después de una intervención. Por eso se mide el sistema nuevamente. También puede variar por segmento: equivalencias limita casos históricos; firma, los ordinarios. Un único promedio esconde ambos.
 
@@ -188,11 +188,11 @@ Una restricción puede ser política. Firmar en lote quizá no responda a capaci
 
 ### Retrabajo, bucles y demanda de falla
 
-Retrabajo repite actividad porque la salida anterior no resultó suficiente. Puede deberse a error, información incompleta, cambio legítimo o regla contradictoria. No todo bucle es desperdicio: revisar una decisión de alto riesgo puede ser necesario.
+En simple: Retrabajo repite actividad porque la salida anterior no resultó suficiente. Puede deberse a error, información incompleta, cambio legítimo o regla contradictoria. No todo bucle es desperdicio: revisar una decisión de alto riesgo puede ser necesario.
 
 John Seddon denomina demanda de falla al contacto generado porque el sistema no hizo o no comunicó bien lo necesario. Las consultas de Julián sobre estado consumen capacidad y expresan opacidad. Medirlas como demanda nueva oculta que el proceso las produjo.
 
-El bucle debe registrar causa y decisión. “Devuelto” sin motivo impide aprender. Si las mismas faltas reaparecen, conviene mover validación al origen, mejorar información o cambiar regla. Si cada caso requiere juicio distinto, automatizar puede endurecer una excepción.
+Ejemplo cercano: El bucle debe registrar causa y decisión. “Devuelto” sin motivo impide aprender. Si las mismas faltas reaparecen, conviene mover validación al origen, mejorar información o cambiar regla. Si cada caso requiere juicio distinto, automatizar puede endurecer una excepción.
 
 La evidencia útil separa repetición protectora de repetición evitable. La primera agrega control proporcional; la segunda consume tiempo sin mejorar la promesa.
 
@@ -200,9 +200,9 @@ El retrabajo también puede cruzar fronteras. Un dato corregido en Alumnos oblig
 
 ### Excepción: el trabajo que el camino feliz expulsa
 
-Una excepción aparece cuando una instancia no puede continuar bajo reglas ordinarias. Puede ser rara y crítica, o frecuente y mal nombrada. Si una quinta parte de certificados presenta identidad no conciliada, esa frecuencia constituye evidencia fuerte de que podría existir una variante estable; la clasificación se confirma sólo si comparte condiciones, recorrido y cierre distinguibles.
+En simple: Una excepción aparece cuando una instancia no puede continuar bajo reglas ordinarias. Puede ser rara y crítica, o frecuente y mal nombrada. Si una quinta parte de certificados presenta identidad no conciliada, esa frecuencia constituye evidencia fuerte de que podría existir una variante estable; la clasificación se confirma sólo si comparte condiciones, recorrido y cierre distinguibles.
 
-El proceso debe declarar detección, clasificación, autoridad, información, plazo y retorno. “Resolver manualmente” no es diseño. Traslada carga a personas que quizá no tienen herramientas ni legitimidad.
+Ejemplo cercano: El proceso debe declarar detección, clasificación, autoridad, información, plazo y retorno. “Resolver manualmente” no es diseño. Traslada carga a personas que quizá no tienen herramientas ni legitimidad.
 
 Las excepciones revelan supuestos. Un formulario que admite un apellido y un documento estable presupone trayectorias administrativas homogéneas. Los casos que no encajan no son ruido: prueban el límite del modelo.
 
@@ -212,7 +212,7 @@ La salida de excepción debe poder regresar al flujo ordinario o cerrar con otra
 
 ## Ciclo de vida de una excepción y retorno al flujo
 
-La excepción no es una etiqueta final. Es un estado gobernado que comienza cuando una condición ordinaria deja de ser suficiente y termina cuando el caso reingresa, obtiene un cierre alternativo o se transforma en una obligación distinta. Entre ambos puntos necesita identidad, edad, evidencia y autoridad. Una bandeja llamada “casos especiales” reúne situaciones heterogéneas y hace imposible saber si alguna perdió vigencia o quedó sin reparación.
+En simple, con un ejemplo: La excepción no es una etiqueta final. Es un estado gobernado que comienza cuando una condición ordinaria deja de ser suficiente y termina cuando el caso reingresa, obtiene un cierre alternativo o se transforma en una obligación distinta. Entre ambos puntos necesita identidad, edad, evidencia y autoridad. Una bandeja llamada “casos especiales” reúne situaciones heterogéneas y hace imposible saber si alguna perdió vigencia o quedó sin reparación.
 
 El primer paso es clasificar por causa y consecuencia, no por el área que recibe. Puede faltar información, existir una contradicción entre fuentes, requerirse una autorización, fallar una capacidad o aparecer una trayectoria que el modelo no contempló. Dos casos enviados a la misma persona pueden necesitar políticas diferentes. Una falta documental admite completar; una identidad disputada exige preservar versiones; una obligación de accesibilidad puede impedir continuar por el camino ordinario aun cuando todos los campos estén completos.
 
@@ -230,7 +230,7 @@ La métrica combina entradas, cierres, reingresos, edad, reaperturas y consecuen
 
 ### Trabajo en sombra y memoria organizacional
 
-El trabajo en sombra incluye planillas paralelas, mensajes, recordatorios y acuerdos usados para sostener el proceso. Puede compensar una herramienta inadecuada, preservar cuidado o crear riesgos.
+En simple, con un ejemplo: El trabajo en sombra incluye planillas paralelas, mensajes, recordatorios y acuerdos usados para sostener el proceso. Puede compensar una herramienta inadecuada, preservar cuidado o crear riesgos.
 
 Eliminarlo sin entenderlo puede romper el servicio. Formalizarlo todo puede destruir flexibilidad. N08 enseñó a observarlo; N14 pregunta qué función cumple en el flujo. Si una planilla ordena prioridad porque el sistema no muestra edad, la necesidad debe incorporarse. Si comparte datos sensibles sin control, requiere alternativa segura.
 
@@ -240,7 +240,7 @@ La evidencia del trabajo en sombra se trata con cuidado. No se publica una conve
 
 ### Responsabilidad end-to-end sin dueño absoluto
 
-Nombrar una persona responsable del proceso puede mejorar coordinación y también crear una ficción. Nadie controla por completo a clientes, proveedores, normas, clima y sistemas externos. La responsabilidad end-to-end no significa mando absoluto, sino capacidad de observar el recorrido, convocar a quienes deciden y conducir reparación.
+En simple, con un ejemplo: Nombrar una persona responsable del proceso puede mejorar coordinación y también crear una ficción. Nadie controla por completo a clientes, proveedores, normas, clima y sistemas externos. La responsabilidad end-to-end no significa mando absoluto, sino capacidad de observar el recorrido, convocar a quienes deciden y conducir reparación.
 
 El rol necesita acceso a evidencia y autoridad de escalamiento. Si sólo recibe métricas al cierre del mes, no puede intervenir sobre una cola envejecida. Si puede ordenar a todas las áreas sin conocer restricciones, puede desplazar riesgo. La gobernanza combina responsabilidad de conjunto con conocimiento local.
 
@@ -252,7 +252,7 @@ Una alternativa es un equipo estable alrededor de la capacidad en lugar de un co
 
 ## Automatización e inteligencia artificial dentro del proceso
 
-Automatizar una tarea es darle parte del trabajo a una regla o herramienta; no garantiza mejorar el recorrido completo. Un clasificador puede ordenar casos más rápido y, si se equivoca de destino, crear una cola mayor en el área siguiente. Automatizar una tarea no mejora necesariamente el flujo. Un clasificador puede derivar certificados a Equivalencias con rapidez y aumentar falsos desvíos. Un agente puede perseguir respuestas entre sistemas y repetir solicitudes. La evaluación debe observar tiempo total, errores, retrabajo y daño.
+En simple, con un ejemplo: Automatizar una tarea es darle parte del trabajo a una regla o herramienta; no garantiza mejorar el recorrido completo. Un clasificador puede ordenar casos más rápido y, si se equivoca de destino, crear una cola mayor en el área siguiente. Automatizar una tarea no mejora necesariamente el flujo. Un clasificador puede derivar certificados a Equivalencias con rapidez y aumentar falsos desvíos. Un agente puede perseguir respuestas entre sistemas y repetir solicitudes. La evaluación debe observar tiempo total, errores, retrabajo y daño.
 
 La inteligencia artificial puede ayudar a resumir expedientes, detectar variantes, proponer prioridad o reunir evidencia. No debe ocultar criterio ni autoridad. Una recomendación necesita señales, incertidumbre y posibilidad de revisión.
 
@@ -297,7 +297,7 @@ Cada campo recibe fuente, fecha y responsable de revisión. Una flecha sin evide
 
 ### Reconstrucción por triangulación
 
-La reconstrucción utiliza procedimientos, eventos, observación, entrevistas, documentos y métricas. Cada fuente responde algo distinto. La minería de procesos aporta frecuencia y secuencia instrumentada. La observación revela trabajo no registrado. Las entrevistas explican criterios y excepciones. La experiencia muestra la promesa percibida.
+En simple, con un ejemplo: La reconstrucción utiliza procedimientos, eventos, observación, entrevistas, documentos y métricas. Cada fuente responde algo distinto. La minería de procesos aporta frecuencia y secuencia instrumentada. La observación revela trabajo no registrado. Las entrevistas explican criterios y excepciones. La experiencia muestra la promesa percibida.
 
 Se elige una muestra con casos ordinarios, largos, abandonados y reparados. Se preserva procedencia. Las discrepancias no se promedian: se convierten en preguntas. Si el procedimiento dice una aprobación y los eventos no la muestran, puede faltar instrumentación o control.
 
@@ -341,9 +341,9 @@ August-Wilhelm Scheer conecta procesos, información y arquitectura organizacion
 
 ### Métricas end-to-end
 
-Las métricas deben corresponder a la promesa. Tiempo total, porcentaje de casos completos sin retrabajo, edad de abiertos, tasa de abandono, excepciones, reparaciones y distribución por segmento forman un conjunto inicial.
+En simple: Las métricas deben corresponder a la promesa. Tiempo total, porcentaje de casos completos sin retrabajo, edad de abiertos, tasa de abandono, excepciones, reparaciones y distribución por segmento forman un conjunto inicial.
 
-La eficiencia local puede conservarse como diagnóstico, no como éxito suficiente. Si Housekeeping limpia más habitaciones y aumenta la espera de inspección, el sistema no mejoró. Si automatizar reduce costo y aumenta rechazos injustos, el outcome se deteriora.
+Ejemplo cercano: La eficiencia local puede conservarse como diagnóstico, no como éxito suficiente. Si Housekeeping limpia más habitaciones y aumenta la espera de inspección, el sistema no mejoró. Si automatizar reduce costo y aumenta rechazos injustos, el outcome se deteriora.
 
 La Ley de Little puede comprobar coherencia entre trabajo en curso, salida y tiempo. No reemplaza estudiar variabilidad ni causa. Los percentiles evitan que un promedio oculte la cola larga.
 
@@ -353,7 +353,7 @@ También se mide estabilidad. Un proceso puede cumplir promedio durante semanas 
 
 ### Diseñar un experimento de flujo
 
-Una intervención declara mecanismo. “Implementar un bot” es una solución; “reducir espera causada por información faltante al inicio” es una hipótesis. Puede probarse con validación anticipada, mensaje claro o asistencia humana.
+En simple, con un ejemplo: Una intervención declara mecanismo. “Implementar un bot” es una solución; “reducir espera causada por información faltante al inicio” es una hipótesis. Puede probarse con validación anticipada, mensaje claro o asistencia humana.
 
 Se elige una zona, un período y medidas de sistema. También se vigilan efectos rivales: desplazar cola, aumentar falsos rechazos, sobrecargar otro rol o perjudicar excepciones. La reversibilidad permite aprender con menor costo.
 

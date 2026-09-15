@@ -51,13 +51,13 @@ El avance es deliberado. N02 respondió qué sistema conviene mirar. N03 examina
 
 ### Lo que ya sabemos desde Ingeniería de Software
 
-En Ingeniería de Software aprendimos a definir alcance, interfaces y contexto de un producto. Esa disciplina evita que un proyecto intente resolverlo todo. Aquí conservamos esa necesidad y agregamos otra pregunta: ¿qué consecuencias vuelve invisibles el alcance elegido? Una interfaz declara qué intercambia un componente; una frontera metodológica declara, además, qué actores, demoras y efectos consideraremos al explicar y decidir.
+En simple, con un ejemplo: En Ingeniería de Software aprendimos a definir alcance, interfaces y contexto de un producto. Esa disciplina evita que un proyecto intente resolverlo todo. Aquí conservamos esa necesidad y agregamos otra pregunta: ¿qué consecuencias vuelve invisibles el alcance elegido? Una interfaz declara qué intercambia un componente; una frontera metodológica declara, además, qué actores, demoras y efectos consideraremos al explicar y decidir.
 
 ### Del requisito al sistema relevante: un puente con Ingeniería de Software
 
-Quien ya cursó Ingeniería de Software reconoce una secuencia familiar: identificar actores, especificar requisitos, modelar procesos, definir interfaces, construir, probar y operar. N03 no invalida esa secuencia. La coloca dentro de una pregunta anterior: ¿cuál es el sistema relevante para formular esos requisitos y juzgar el resultado? Un requisito impecable puede automatizar con precisión una frontera equivocada.
+En simple: Quien ya cursó Ingeniería de Software reconoce una secuencia familiar: identificar actores, especificar requisitos, modelar procesos, definir interfaces, construir, probar y operar. N03 no invalida esa secuencia. La coloca dentro de una pregunta anterior: ¿cuál es el sistema relevante para formular esos requisitos y juzgar el resultado? Un requisito impecable puede automatizar con precisión una frontera equivocada.
 
-Supongamos que Hotel Horizonte escribe: “Cuando Housekeeping marque una habitación como liberada, el PMS deberá habilitarla para asignación en menos de treinta segundos”. El requisito es verificable. Sin embargo, todavía no sabemos si “liberada” significa limpieza terminada, inspección aprobada, cerradura operativa, ausencia de bloqueo de mantenimiento o posibilidad comercial de asignación. Tampoco sabemos qué ocurre si esos estados discrepan. La calidad sintáctica del requisito no resuelve la calidad del recorte.
+Ejemplo cercano: Supongamos que Hotel Horizonte escribe: “Cuando Housekeeping marque una habitación como liberada, el PMS deberá habilitarla para asignación en menos de treinta segundos”. El requisito es verificable. Sin embargo, todavía no sabemos si “liberada” significa limpieza terminada, inspección aprobada, cerradura operativa, ausencia de bloqueo de mantenimiento o posibilidad comercial de asignación. Tampoco sabemos qué ocurre si esos estados discrepan. La calidad sintáctica del requisito no resuelve la calidad del recorte.
 
 El paso adicional consiste en declarar una **unidad de resultado**. En vez de preguntar sólo si el PMS propagó un dato, preguntamos si el sistema completo pudo sostener una promesa: entregar una habitación adecuada, segura y disponible en el momento acordado. Esa unidad obliga a incluir relaciones que una especificación puramente técnica podría tratar como externas: autoridad de Housekeeping, bloqueos de Mantenimiento, reglas comerciales, tiempos de inspección y capacidad de reparación.
 
@@ -76,7 +76,7 @@ Este enfoque también mejora las pruebas. Una prueba unitaria verifica lógica l
 
 ### Delimitar para poder actuar
 
-Los problemas socio-técnicos se conectan con una cantidad potencialmente ilimitada de factores. El check-in de un hotel depende de reserva, habitación, identidad, pago, dotación, capacitación, edificio, transporte, clima, regulación y expectativa. Si todo pertenece al sistema con el mismo nivel de detalle, el análisis se vuelve inmanejable. Sin frontera no hay investigación proporcionada, responsabilidad operativa ni decisión posible.
+En simple, con un ejemplo: Los problemas socio-técnicos se conectan con una cantidad potencialmente ilimitada de factores. El check-in de un hotel depende de reserva, habitación, identidad, pago, dotación, capacitación, edificio, transporte, clima, regulación y expectativa. Si todo pertenece al sistema con el mismo nivel de detalle, el análisis se vuelve inmanejable. Sin frontera no hay investigación proporcionada, responsabilidad operativa ni decisión posible.
 
 Pero delimitar no es descubrir un borde natural. Es elegir qué relaciones serán tratadas como internas y cuáles como entorno para un propósito concreto. Una frontera puede ser válida para diagnosticar latencia de una pantalla e insuficiente para explicar la espera del huésped. Puede ser útil durante dos semanas y quedar invalidada por un incidente.
 
@@ -86,29 +86,29 @@ El profesional necesita sostener dos ideas a la vez: toda intervención requiere
 
 #### Frontera analítica
 
-Define qué elementos y relaciones se incluyen para explicar una situación. Puede concentrarse en el ciclo de reserva, llegada y habitación, dejando afuera la adquisición comercial. Esa exclusión es razonable si la pregunta es por confiabilidad de la promesa, pero no si ciertas campañas venden beneficios que Operaciones no puede cumplir.
+En simple, con un ejemplo: Define qué elementos y relaciones se incluyen para explicar una situación. Puede concentrarse en el ciclo de reserva, llegada y habitación, dejando afuera la adquisición comercial. Esa exclusión es razonable si la pregunta es por confiabilidad de la promesa, pero no si ciertas campañas venden beneficios que Operaciones no puede cumplir.
 
 #### Frontera de intervención
 
-Define sobre qué componentes existe autorización o capacidad de cambio. El equipo puede modificar reglas internas y una integración, pero no el algoritmo de una OTA. La OTA sigue dentro del sistema analítico como dependencia aunque quede fuera del control directo.
+En simple, con un ejemplo: Define sobre qué componentes existe autorización o capacidad de cambio. El equipo puede modificar reglas internas y una integración, pero no el algoritmo de una OTA. La OTA sigue dentro del sistema analítico como dependencia aunque quede fuera del control directo.
 
 Confundir ambas fronteras produce un error frecuente: como no podemos cambiar algo, dejamos de modelar su efecto. Una dependencia incontrolable puede ser precisamente la razón para diseñar contingencia, negociación contractual o límites de promesa.
 
 #### Frontera de responsabilidad
 
-Define quién responde por una decisión o resultado. Los contratos suelen fragmentarla: el hotel responsabiliza al canal, el canal al proveedor de conectividad, el proveedor al dato enviado. Para el huésped existe una única promesa. La arquitectura contractual puede no coincidir con la experiencia ni con la responsabilidad ética.
+En simple, con un ejemplo: Define quién responde por una decisión o resultado. Los contratos suelen fragmentarla: el hotel responsabiliza al canal, el canal al proveedor de conectividad, el proveedor al dato enviado. Para el huésped existe una única promesa. La arquitectura contractual puede no coincidir con la experiencia ni con la responsabilidad ética.
 
 La intervención debe mostrar puntos donde responsabilidad formal y capacidad real están separadas. Asignar responsabilidad sin autoridad o información crea un control nominal.
 
 #### Frontera temporal
 
-Define desde cuándo y hasta cuándo se observa. Medir check-in hasta entregar una tarjeta excluye el tiempo previo de reserva y el posterior descubrimiento de una habitación inadecuada. Medir una devolución hasta ordenar el reintegro excluye el tiempo bancario y la confirmación del cliente.
+En simple, con un ejemplo: Define desde cuándo y hasta cuándo se observa. Medir check-in hasta entregar una tarjeta excluye el tiempo previo de reserva y el posterior descubrimiento de una habitación inadecuada. Medir una devolución hasta ordenar el reintegro excluye el tiempo bancario y la confirmación del cliente.
 
 Las fronteras temporales pueden mejorar artificialmente un indicador. Por eso deben alinearse con el outcome y conservar eventos que permitan reconstruir demoras.
 
 ### La frontera como decisión política
 
-Incluir o excluir actores afecta su capacidad de ser vistos. Una intervención sobre autoservicio puede considerar a “usuarios digitales” y tratar a quienes requieren ayuda como excepciones. Esa frontera convierte una población real en desviación. Un proyecto de optimización de reparto puede modelar vehículos y destinos, pero excluir condiciones de conductores, seguridad vial o recepción. La eficiencia calculada se sostiene sobre costos transferidos.
+En simple, con un ejemplo: Incluir o excluir actores afecta su capacidad de ser vistos. Una intervención sobre autoservicio puede considerar a “usuarios digitales” y tratar a quienes requieren ayuda como excepciones. Esa frontera convierte una población real en desviación. Un proyecto de optimización de reparto puede modelar vehículos y destinos, pero excluir condiciones de conductores, seguridad vial o recepción. La eficiencia calculada se sostiene sobre costos transferidos.
 
 La política de la frontera aparece en preguntas como:
 
@@ -133,7 +133,7 @@ La escala es parte de la hipótesis. Un patrón visible por turno puede desapare
 
 ### Primera pasada por HH-03: qué frontera permitió declarar éxito
 
-La primera versión del piloto incluía la carga anticipada, la validación dentro del PMS y la emisión de la llave. Esa frontera era adecuada para comprobar si la función técnica ejecutaba. No era adecuada para decidir sobre dotación ni para afirmar que la promesa de llegada había mejorado. La diferencia no se resuelve agregando cajas por precaución. Se resuelve relacionando frontera y decisión.
+En simple, con un ejemplo: La primera versión del piloto incluía la carga anticipada, la validación dentro del PMS y la emisión de la llave. Esa frontera era adecuada para comprobar si la función técnica ejecutaba. No era adecuada para decidir sobre dotación ni para afirmar que la promesa de llegada había mejorado. La diferencia no se resuelve agregando cajas por precaución. Se resuelve relacionando frontera y decisión.
 
 Para evaluar la ejecución técnica alcanza con preguntar si los datos requeridos llegaron, las reglas se aplicaron y la credencial fue emitida. Para evaluar el servicio deben incorporarse la espera completa, el significado de los estados, el acceso efectivo, las excepciones y la reparación. Para decidir sobre capacidad nocturna también deben observarse picos, mezcla de casos, trabajo transferido y funciones compensadoras del personal. Cada decisión exige una frontera distinta, aunque las tres puedan representarse como capas de un mismo mapa.
 
@@ -143,9 +143,9 @@ El error del equipo no fue comenzar con una frontera pequeña. Un piloto necesit
 
 ### Retroalimentación: cuando el efecto vuelve como causa
 
-En una cadena lineal, A causa B y luego C. En un sistema, B puede modificar A. Esa retroalimentación puede reforzar una tendencia o equilibrarla.
+En simple: En una cadena lineal, A causa B y luego C. En un sistema, B puede modificar A. Esa retroalimentación puede reforzar una tendencia o equilibrarla.
 
-Peter Senge utiliza el pensamiento sistémico para desplazar la atención desde hechos aislados hacia patrones y estructuras que los producen. Donella Meadows ofrece una formulación compatible: el comportamiento de un sistema surge de su estructura, especialmente de acumulaciones, flujos, información y retroalimentaciones. Para esta lectura, ambas perspectivas cumplen una función práctica. Evitan interpretar cada incidente como una anomalía independiente y orientan la búsqueda de relaciones que se sostienen o se corrigen a sí mismas a través del tiempo.
+Ejemplo cercano: Peter Senge utiliza el pensamiento sistémico para desplazar la atención desde hechos aislados hacia patrones y estructuras que los producen. Donella Meadows ofrece una formulación compatible: el comportamiento de un sistema surge de su estructura, especialmente de acumulaciones, flujos, información y retroalimentaciones. Para esta lectura, ambas perspectivas cumplen una función práctica. Evitan interpretar cada incidente como una anomalía independiente y orientan la búsqueda de relaciones que se sostienen o se corrigen a sí mismas a través del tiempo.
 
 Un ciclo reforzador amplifica. En Hotel Horizonte, mayor presión por ocupación puede aumentar sobreventa. La sobreventa genera reubicaciones y trabajo manual. La carga deteriora la actualización de estados. Datos menos confiables aumentan la incertidumbre comercial, que justifica mayor margen de sobreventa. El ciclo se fortalece.
 
@@ -155,7 +155,7 @@ Las retroalimentaciones explican por qué una política produce el efecto contra
 
 ### Demoras y atribución errónea
 
-Una demora separa acción y efecto. Puede existir entre:
+En simple: Una demora separa acción y efecto. Puede existir entre:
 
 - vender y preparar capacidad;
 - modificar una regla y observar reclamos;
@@ -164,13 +164,13 @@ Una demora separa acción y efecto. Puede existir entre:
 - ordenar reintegro y recibir dinero;
 - desplegar un modelo y detectar efectos distributivos.
 
-Cuando la demora no se representa, el equipo atribuye el resultado a la causa más cercana. Un incidente ocurre después de una actualización y se culpa al software, aunque una política de dotación de meses atrás haya reducido supervisión. Una mejora aparece inmediatamente después de lanzar una app y se le atribuye, aunque coincida con temporada baja.
+Ejemplo cercano: Cuando la demora no se representa, el equipo atribuye el resultado a la causa más cercana. Un incidente ocurre después de una actualización y se culpa al software, aunque una política de dotación de meses atrás haya reducido supervisión. Una mejora aparece inmediatamente después de lanzar una app y se le atribuye, aunque coincida con temporada baja.
 
 La trazabilidad temporal no demuestra causalidad, pero evita relatos imposibles. El análisis debe buscar secuencia, mecanismos, exposiciones, alternativas y evidencia contradictoria.
 
 ### Efectos de primer, segundo y tercer orden
 
-Un efecto de primer orden es la consecuencia directa buscada: el huésped completa datos antes de llegar.
+En simple, con un ejemplo: Un efecto de primer orden es la consecuencia directa buscada: el huésped completa datos antes de llegar.
 
 Un efecto de segundo orden surge de la adaptación: Recepción deja de verificar ciertos campos, el huésped cree que ya hizo check-in o Housekeeping recibe presión para confirmar antes.
 
@@ -192,7 +192,7 @@ Cuando la ciudad modifica el régimen de agua, también cambia el comportamiento
 
 ### Desplazamiento del problema
 
-Una intervención puede mejorar la métrica donde se aplica y mover la dificultad a otro lugar.
+En simple, con un ejemplo: Desplazar un problema es mejorarlo en un lugar y hacerlo reaparecer en otro. Por ejemplo, acelerar la confirmación puede reducir la espera comercial y aumentar luego las reasignaciones que debe resolver Recepción. Una intervención puede mejorar la métrica donde se aplica y mover la dificultad a otro lugar.
 
 - El chatbot reduce llamadas y aumenta correos de reclamo.
 - La aplicación acelera llegada y traslada carga de datos al huésped.
@@ -205,7 +205,7 @@ Detectar desplazamiento requiere ampliar la observación más allá del componen
 
 ### Fronteras anidadas
 
-No existe una única escala. Una intervención puede trabajar con fronteras anidadas:
+En simple: No existe una única escala. Una intervención puede trabajar con fronteras anidadas:
 
 1. interacción específica: confirmar un cambio de habitación;
 2. proceso: gestionar estancia y excepciones;
@@ -213,7 +213,7 @@ No existe una única escala. Una intervención puede trabajar con fronteras anid
 4. organización: capacidad del hotel;
 5. ecosistema: canales, proveedores, pagos y regulación.
 
-El análisis se mueve entre niveles según la pregunta. Una falla de interfaz puede resolverse localmente; una contradicción de inventario exige proceso/ecosistema. El error es usar siempre la frontera más grande o la más cómoda.
+Ejemplo cercano: El análisis se mueve entre niveles según la pregunta. Una falla de interfaz puede resolverse localmente; una contradicción de inventario exige proceso/ecosistema. El error es usar siempre la frontera más grande o la más cómoda.
 
 Las fronteras anidadas también distribuyen métricas. El tiempo de una interacción debe conectarse con resolución del proceso y outcome del servicio. De lo contrario, cada nivel optimiza sin coordinación.
 
@@ -221,9 +221,9 @@ Las fronteras anidadas también distribuyen métricas. El tiempo de una interacc
 
 ### La frontera de medición puede contradecir la frontera del servicio
 
-Los indicadores también recortan el sistema. Elegir numerador, denominador, inicio, fin y población equivale a definir una frontera. Una métrica puede ser matemáticamente correcta y metodológicamente engañosa si excluye el tramo donde se produce el costo.
+En simple: Los indicadores también recortan el sistema. Elegir numerador, denominador, inicio, fin y población equivale a definir una frontera. Una métrica puede ser matemáticamente correcta y metodológicamente engañosa si excluye el tramo donde se produce el costo.
 
-En Hotel Horizonte, “duración del check-in” podría medirse desde que recepción abre la reserva hasta que entrega la llave. Quedarían afuera la espera previa, la carga anticipada de datos, la búsqueda de una confirmación, el traslado hasta una habitación incorrecta y la reparación. Si se automatiza la pantalla, el indicador mejora aunque la experiencia total no cambie.
+Ejemplo cercano: En Hotel Horizonte, “duración del check-in” podría medirse desde que recepción abre la reserva hasta que entrega la llave. Quedarían afuera la espera previa, la carga anticipada de datos, la búsqueda de una confirmación, el traslado hasta una habitación incorrecta y la reparación. Si se automatiza la pantalla, el indicador mejora aunque la experiencia total no cambie.
 
 La frontera de medición debe corresponder con la promesa. Para “llegar y acceder a una habitación adecuada”, el reloj podría comenzar cuando el huésped intenta iniciar el proceso y terminar cuando dispone de la habitación prometida o de una alternativa aceptada. Aun así, un promedio ocultaría colas largas o diferencias entre grupos. Percentiles, distribución por condiciones y métricas de equilibrio ayudan a ver lo que el promedio recorta.
 
@@ -231,7 +231,7 @@ También debe declararse quién queda fuera del denominador. Medir adopción sol
 
 ### Bucles causales: disciplina, no decoración
 
-Los diagramas de retroalimentación pueden convertirse en flechas plausibles sin evidencia. Para que un bucle sea útil, cada relación debe expresar dirección, mecanismo, condición y demora. “Más automatización produce menos trabajo” es demasiado general. ¿Qué tarea disminuye, cuál aparece, bajo qué volumen, para quién y después de cuánto tiempo?
+En simple, con un ejemplo: Los diagramas de retroalimentación pueden convertirse en flechas plausibles sin evidencia. Para que un bucle sea útil, cada relación debe expresar dirección, mecanismo, condición y demora. “Más automatización produce menos trabajo” es demasiado general. ¿Qué tarea disminuye, cuál aparece, bajo qué volumen, para quién y después de cuánto tiempo?
 
 Una relación causal no se valida porque un taller la considere razonable. Puede sostenerse provisionalmente con episodios, datos temporales, conocimiento operacional y comparación entre casos. Debe admitir explicaciones rivales. Si después de aumentar sobreventa aparecen más reubicaciones, la asociación es esperable, pero también pueden haber cambiado demanda, inventario o política de cancelación.
 
@@ -243,7 +243,7 @@ Por eso una intervención debe identificar no sólo ciclos dañinos, sino defens
 
 ### Cómo leer un bucle sin confundir correlación con causalidad
 
-Un bucle causal se lee como una hipótesis narrativa que regresa a su punto de partida. Cada flecha debería poder traducirse a una frase completa: “cuando aumenta X, y las demás condiciones relevantes permanecen comparables, Y tiende a aumentar o disminuir después de cierta demora, porque opera este mecanismo”. Si no podemos completar la frase, la flecha es decoración.
+En simple, con un ejemplo: Un bucle causal se lee como una hipótesis narrativa que regresa a su punto de partida. Cada flecha debería poder traducirse a una frase completa: “cuando aumenta X, y las demás condiciones relevantes permanecen comparables, Y tiende a aumentar o disminuir después de cierta demora, porque opera este mecanismo”. Si no podemos completar la frase, la flecha es decoración.
 
 Tomemos el ciclo de sobreventa. “Más presión comercial → más margen de sobreventa” puede sostenerse con política, entrevistas y decisiones históricas. “Más margen → más reubicaciones” requiere observar demanda, inasistencias, inventario y períodos. “Más reubicaciones → más trabajo manual” puede medirse en contactos, tiempo y excepciones. “Más trabajo manual → datos menos oportunos” necesita registros temporales o episodios reconstruidos. Finalmente, “datos menos oportunos → mayor incertidumbre comercial” debe mostrar cómo esa información interviene en la siguiente decisión. El círculo completo no se prueba con una sola correlación.
 
@@ -271,7 +271,7 @@ John Sterman propone tratar estos modelos como instrumentos para aprender, no co
 
 ### Acumulaciones, flujos y capacidad
 
-La retroalimentación suele operar sobre acumulaciones. Reservas pendientes, habitaciones por inspeccionar, reclamos abiertos, pagos sin conciliar y excepciones sin resolver son cantidades que cambian mediante entradas y salidas. Observar sólo el flujo diario puede ocultar una acumulación creciente.
+En simple, con un ejemplo: La retroalimentación suele operar sobre acumulaciones. Reservas pendientes, habitaciones por inspeccionar, reclamos abiertos, pagos sin conciliar y excepciones sin resolver son cantidades que cambian mediante entradas y salidas. Observar sólo el flujo diario puede ocultar una acumulación creciente.
 
 Si ingresan veinte excepciones y se resuelven diecinueve, el desempeño puede parecer alto. Sin embargo, la cola aumenta cada día. Cuando la antigüedad supera cierto punto, aparecen reclamos, reintentos y escalaciones que agregan trabajo. La acumulación modifica el flujo y crea un bucle reforzador.
 
@@ -281,7 +281,7 @@ Un mapa de frontera que incluya proceso pero omita acumulaciones y capacidad pue
 
 ### Segunda pasada por HH-03: el bucle que el promedio no mostraba
 
-El episodio de las habitaciones comunicadas no demuestra por sí solo que el check-in digital empeore el servicio. Sí revela relaciones que la medición original no podía observar. Para investigarlas, el equipo formula un bucle provisional y distingue lo que sabe de lo que debe comprobar.
+En simple, con un ejemplo: El episodio de las habitaciones comunicadas no demuestra por sí solo que el check-in digital empeore el servicio. Sí revela relaciones que la medición original no podía observar. Para investigarlas, el equipo formula un bucle provisional y distingue lo que sabe de lo que debe comprobar.
 
 La secuencia propuesta comienza con una expectativa de llegada más rápida. Esa expectativa aumenta el uso del formulario y también la presión para que las habitaciones figuren disponibles a la hora declarada. Bajo ocupación alta, algunas confirmaciones se adelantan. Los estados menos confiables generan verificaciones y reversiones en Recepción. Las excepciones concentran más trabajo por caso, alargan la cola y fortalecen la percepción de que hace falta automatizar todavía más o reducir pasos. Si esa respuesta elimina verificaciones sin resolver la semántica y la autoridad, el circuito puede reforzarse.
 
@@ -303,7 +303,7 @@ Las tres podrían coexistir. La tabla no selecciona una por apariencia ni preten
 
 ### Fronteras de responsabilidad y brechas de control
 
-La responsabilidad puede fragmentarse entre quien promete, quien decide, quien ejecuta y quien repara. Una OTA muestra disponibilidad; el channel manager sincroniza; el PMS asigna; recepción enfrenta al huésped; dirección define política. Cuando ocurre una contradicción, cada parte puede haber cumplido su operación local.
+En simple, con un ejemplo: La responsabilidad puede fragmentarse entre quien promete, quien decide, quien ejecuta y quien repara. Una OTA muestra disponibilidad; el channel manager sincroniza; el PMS asigna; recepción enfrenta al huésped; dirección define política. Cuando ocurre una contradicción, cada parte puede haber cumplido su operación local.
 
 Una brecha de control aparece cuando alguien responde por un resultado sin autoridad, información o capacidad para influirlo. Recepción puede ser evaluada por tiempo de llegada sin poder corregir inventario ni priorización de housekeeping. Un proveedor puede comprometer disponibilidad técnica sin controlar semántica de datos. Un modelo puede recomendar una acción mientras nadie tiene atribución clara para rechazarla.
 
@@ -317,7 +317,7 @@ Nancy Leveson muestra, desde la ingeniería de seguridad, que los accidentes pue
 
 ### Fronteras como hipótesis y no como territorio
 
-Un mapa puede adquirir autoridad por su apariencia. Las cajas y líneas parecen describir “el sistema”, cuando en realidad expresan una hipótesis para una pregunta y una audiencia. Tratar el modelo como territorio vuelve invisibles sus exclusiones.
+En simple, con un ejemplo: Un mapa puede adquirir autoridad por su apariencia. Las cajas y líneas parecen describir “el sistema”, cuando en realidad expresan una hipótesis para una pregunta y una audiencia. Tratar el modelo como territorio vuelve invisibles sus exclusiones.
 
 La frontera debe versionarse. Cada versión puede registrar propósito, evidencia utilizada, decisiones habilitadas y condición de revisión. Si un incidente revela una dependencia omitida, se modifica el modelo y se conserva por qué cambió. Esa historia es conocimiento metodológico: muestra qué supuestos resultaron débiles y evita repetirlos.
 
@@ -325,7 +325,7 @@ Versionar no significa dibujar de nuevo ante cualquier detalle. Se cambia cuando
 
 ### Análisis de escenarios y prueba adversarial
 
-Los efectos de segundo orden se investigan mejor mediante escenarios concretos que con listas genéricas de riesgos. Un escenario combina actor, condición, evento, respuesta, consecuencia y posibilidad de reparación. “Puede haber exclusión” es vago; “una huésped sin smartphone llega fuera de horario, el acceso alternativo requiere personal que fue reducido por la adopción prevista y la demora no entra en la métrica digital” expresa un mecanismo verificable.
+En simple, con un ejemplo: Los efectos de segundo orden se investigan mejor mediante escenarios concretos que con listas genéricas de riesgos. Un escenario combina actor, condición, evento, respuesta, consecuencia y posibilidad de reparación. “Puede haber exclusión” es vago; “una huésped sin smartphone llega fuera de horario, el acceso alternativo requiere personal que fue reducido por la adopción prevista y la demora no entra en la métrica digital” expresa un mecanismo verificable.
 
 La prueba adversarial pregunta cómo podría mejorar la métrica y empeorar el outcome. También imagina conductas adaptativas: qué hará una persona para cumplir el indicador, qué canal alternativo usará un huésped, qué información dejará de registrarse y qué grupo tendrá menos capacidad de reclamar.
 
@@ -333,7 +333,7 @@ No se trata de oponerse a toda intervención. La adversarialidad mejora diseño:
 
 ### Cuándo reducir y cuándo ampliar
 
-Ampliar siempre no es más sistémico. Una frontera debe crecer cuando una exclusión cambia la explicación causal, impide evaluar el outcome, oculta un afectado significativo o vuelve inoperable la responsabilidad. Debe reducirse cuando el detalle no puede modificar la decisión actual, mezcla horizontes o diluye la capacidad de experimentar.
+En simple, con un ejemplo: Reducir la frontera sirve para poder actuar; ampliarla sirve cuando algo importante quedó afuera. Si una demora se explica por una sola regla, no hace falta mapear toda la empresa; si esa regla depende de un tercero, excluirlo impide decidir. Ampliar siempre no es más sistémico. Una frontera debe crecer cuando una exclusión cambia la explicación causal, impide evaluar el outcome, oculta un afectado significativo o vuelve inoperable la responsabilidad. Debe reducirse cuando el detalle no puede modificar la decisión actual, mezcla horizontes o diluye la capacidad de experimentar.
 
 Puede trabajarse con fronteras simultáneas. Una pequeña para un piloto reversible; otra mayor para evaluar impacto y condiciones de escala; una tercera para responsabilidad y contingencia. Exigir que un solo diagrama responda todas las preguntas produce complejidad sin claridad.
 
@@ -341,7 +341,7 @@ El criterio de cierre no es haber representado el mundo, sino contar con una exp
 
 ### Puntos de intervención y consecuencias desplazadas
 
-Un mapa de retroalimentación no prescribe automáticamente dónde actuar. Un punto muy visible puede tener poca capacidad de cambio, mientras una regla discreta modifica todo el circuito. Cambiar el texto de una interfaz es sencillo; cambiar la definición de disponibilidad, el incentivo de sobreventa o la autoridad para reparar puede ser más influyente y también más conflictivo.
+En simple, con un ejemplo: Un mapa de retroalimentación no prescribe automáticamente dónde actuar. Un punto muy visible puede tener poca capacidad de cambio, mientras una regla discreta modifica todo el circuito. Cambiar el texto de una interfaz es sencillo; cambiar la definición de disponibilidad, el incentivo de sobreventa o la autoridad para reparar puede ser más influyente y también más conflictivo.
 
 La idea de apalancamiento, desarrollada por Donella Meadows, debe tratarse con prudencia. Una pequeña modificación no siempre produce un gran beneficio y puede generar consecuencias amplificadas. Cuanto más estructural sea el punto, ya sea un objetivo, una regla, información o distribución de autoridad, mayor puede ser su efecto y más necesaria la prueba gradual.
 
@@ -353,9 +353,9 @@ La respuesta no consiste en evitar intercambios, sino en hacerlos explícitos. U
 
 ### Piloto de frontera: aprender antes de escalar
 
-Un piloto no debería demostrar solamente que una función ejecuta. Debe poner a prueba la frontera que sostiene la intervención. Para ello necesita una hipótesis, un grupo o contexto acotado, señales de resultado y de equilibrio, autoridad para actuar y una condición de salida.
+En simple: Un piloto no debería demostrar solamente que una función ejecuta. Debe poner a prueba la frontera que sostiene la intervención. Para ello necesita una hipótesis, un grupo o contexto acotado, señales de resultado y de equilibrio, autoridad para actuar y una condición de salida.
 
-En Hotel Horizonte podría probarse check-in digital durante dos semanas, en un turno y con determinadas categorías de reserva. El resultado principal no sería “porcentaje de formularios completados”, sino tiempo y confiabilidad hasta acceder a una habitación adecuada. Las métricas de equilibrio incluirían excepciones, espera de quienes no usan la opción, carga transferida a Housekeeping, reversiones de estado, fallas de llave y reparaciones manuales.
+Ejemplo cercano: En Hotel Horizonte podría probarse check-in digital durante dos semanas, en un turno y con determinadas categorías de reserva. El resultado principal no sería “porcentaje de formularios completados”, sino tiempo y confiabilidad hasta acceder a una habitación adecuada. Las métricas de equilibrio incluirían excepciones, espera de quienes no usan la opción, carga transferida a Housekeeping, reversiones de estado, fallas de llave y reparaciones manuales.
 
 La elección del perímetro debe justificarse. Si se excluyen grupos corporativos porque tienen reglas complejas, el piloto permite aprender sobre el flujo simple, pero no afirmar que la solución cubre el servicio completo. Si se excluyen llegadas nocturnas, no se aprende sobre el momento con menor capacidad de reparación. La conclusión debe respetar la frontera de exposición real.
 
@@ -369,7 +369,7 @@ El aprendizaje final no es binario. Puede indicar continuar, modificar, detener,
 
 ### Fronteras en sistemas con inteligencia artificial
 
-Cuando una capacidad incorpora IA, la frontera tecnológica suele dibujarse alrededor del modelo. Esa elección omite datos de entrada, instrucciones, herramientas, memoria, proveedor, interfaz, supervisión y acciones posteriores. La salida probabilística es solo un evento dentro de un sistema de decisión.
+En simple, con un ejemplo: Cuando una capacidad incorpora IA, la frontera tecnológica suele dibujarse alrededor del modelo. Esa elección omite datos de entrada, instrucciones, herramientas, memoria, proveedor, interfaz, supervisión y acciones posteriores. La salida probabilística es solo un evento dentro de un sistema de decisión.
 
 Si un asistente recomienda reubicar huéspedes, hay que incluir quién formula el objetivo, qué restricciones recibe, qué datos no observa, quién acepta la recomendación y cómo se corrige. Una revisión humana no funciona como control si la persona carece de tiempo, evidencia o autoridad para contradecirla.
 
@@ -396,13 +396,13 @@ Por ejemplo: “Para investigar demoras y promesas contradictorias en llegada, i
 
 ### 2026: las fronteras también atraviesan proveedores, datos y jurisdicciones
 
-En sistemas basados en IA, una función visible puede depender de datos recuperados, un modelo remoto, moderación, herramientas y personal externo. El perfil de IA generativa de NIST (2024) exige mapear riesgos a lo largo del ciclo y entre actores; el Reglamento europeo 2024/1689 distribuye obligaciones entre proveedores y responsables de despliegue, incluso cuando están en países distintos. La lección no es ampliar siempre hasta el planeta, sino declarar dependencias que pueden cambiar la explicación, el derecho a objetar o la capacidad de reparar.
+En simple, con un ejemplo: En sistemas basados en IA, una función visible puede depender de datos recuperados, un modelo remoto, moderación, herramientas y personal externo. El perfil de IA generativa de NIST (2024) exige mapear riesgos a lo largo del ciclo y entre actores; el Reglamento europeo 2024/1689 distribuye obligaciones entre proveedores y responsables de despliegue, incluso cuando están en países distintos. La lección no es ampliar siempre hasta el planeta, sino declarar dependencias que pueden cambiar la explicación, el derecho a objetar o la capacidad de reparar.
 
 ISO/IEC/IEEE 15288:2023 distingue sistema de interés, elementos y sistemas relacionados durante el ciclo de vida. Polojärvi (2023) advierte que llamar socio-técnico a “personas más tecnología” no alcanza: deben explicarse relaciones. Para N03, una frontera 2026 es defendible cuando identifica quién controla, quién queda expuesto y qué señal obligaría a redibujarla.
 
 ### Tercera pasada por HH-03: una decisión de escala condicionada
 
-La solución propuesta permite cargar documento, validar pago, seleccionar horario y recibir una llave digital. Una frontera centrada en interfaz puede evaluar usabilidad, seguridad y tasa de completitud. Es necesaria, pero insuficiente.
+En simple, con un ejemplo: La solución propuesta permite cargar documento, validar pago, seleccionar horario y recibir una llave digital. Una frontera centrada en interfaz puede evaluar usabilidad, seguridad y tasa de completitud. Es necesaria, pero insuficiente.
 
 La frontera del servicio debe incluir:
 

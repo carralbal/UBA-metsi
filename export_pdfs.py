@@ -59,7 +59,7 @@ def export(number: int) -> None:
         # resolución, pueden tardar más de un minuto en quedar materializadas.
         # Esperar no altera el documento: evita conservar silenciosamente el
         # PDF anterior cuando Chrome todavía está componiendo las páginas.
-        deadline = time.monotonic() + 180
+        deadline = time.monotonic() + int(os.environ.get("METSI_EXPORT_TIMEOUT_SECONDS", "180"))
         previous = -1
         stable_since = None
         try:

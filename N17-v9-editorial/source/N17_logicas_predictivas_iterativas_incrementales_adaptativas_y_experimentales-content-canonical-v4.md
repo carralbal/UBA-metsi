@@ -86,9 +86,9 @@ SEBoK fundamenta puertas con criterios de entrada, salida y autoridad real.
 
 ### La incertidumbre no es una sola
 
-La incertidumbre puede concernir al problema, al mecanismo, a la solución, a la integración, al uso o al efecto. Cada clase exige una forma distinta de aprender y un compromiso proporcional.
+En simple: La incertidumbre puede concernir al problema, al mecanismo, a la solución, a la integración, al uso o al efecto. Cada clase exige una forma distinta de aprender y un compromiso proporcional.
 
-Una obligación conocida no se experimenta; una preferencia de interfaz puede iterarse; una capacidad puede entregarse por incrementos. Reunir todo bajo “no sabemos” oculta qué evidencia hace falta y quién puede actuar.
+Ejemplo cercano: Una obligación conocida no se experimenta; una preferencia de interfaz puede iterarse; una capacidad puede entregarse por incrementos. Reunir todo bajo “no sabemos” oculta qué evidencia hace falta y quién puede actuar.
 
 HH-17 localiza la incertidumbre dentro del episodio del hotel antes de elegir método.
 
@@ -104,11 +104,11 @@ El mapa se actualiza porque la incertidumbre cambia con la acción. Resolver una
 
 ### Lógica predictiva
 
-La lógica predictiva anticipa decisiones cuando el conocimiento es suficiente y el costo de cambiar tarde es alto. Es adecuada para obligaciones, interfaces estables, ventanas contractuales y preparaciones que requieren coordinación previa.
+En simple: La lógica predictiva anticipa decisiones cuando el conocimiento es suficiente y el costo de cambiar tarde es alto. Es adecuada para obligaciones, interfaces estables, ventanas contractuales y preparaciones que requieren coordinación previa.
 
 Predecir no significa afirmar certeza. Supuestos, rangos y contingencias permanecen explícitos, y una puerta revisa si el conocimiento sigue vigente antes de aumentar compromiso.
 
-El hotel debe prever capacidad y seguridad para temporada alta, aunque otros aspectos de la experiencia todavía necesiten aprendizaje.
+Ejemplo cercano: El hotel debe prever capacidad y seguridad para temporada alta, aunque otros aspectos de la experiencia todavía necesiten aprendizaje.
 
 La anticipación es defendible cuando existe una relación razonablemente estable entre condiciones, acciones y consecuencias. Esa estabilidad puede provenir de una obligación, una restricción física, una interfaz contractual o evidencia operacional acumulada. No depende de que el futuro sea completamente previsible.
 
@@ -122,11 +122,11 @@ Un contraejemplo aclara el límite. Congelar durante seis meses la regla comerci
 
 ### Lógica iterativa
 
-La lógica iterativa revisa una misma solución o representación mediante ciclos de retroalimentación. Sirve cuando el objetivo está relativamente claro, pero forma, comprensión o adecuación requieren refinamiento.
+En simple: La lógica iterativa revisa una misma solución o representación mediante ciclos de retroalimentación. Sirve cuando el objetivo está relativamente claro, pero forma, comprensión o adecuación requieren refinamiento.
 
 Cada ciclo conserva la versión anterior, la evidencia recibida y el criterio que cambió. Repetir sin una pregunta de aprendizaje sólo agrega actividad.
 
-HH-17 itera el modo de mostrar una discrepancia hasta que Recepción pueda interpretarla y actuar a tiempo.
+Ejemplo cercano: HH-17 itera el modo de mostrar una discrepancia hasta que Recepción pueda interpretarla y actuar a tiempo.
 
 La unidad de iteración debe permanecer reconocible. Si en cada ciclo cambia simultáneamente el problema, la población, el dato y el criterio, la comparación pierde fuerza. En el hotel, las primeras iteraciones mantienen el mismo episodio y la misma discrepancia, mientras varían jerarquía visual, vocabulario y secuencia de confirmación. Recepción puede entonces explicar qué modificación redujo el tiempo de interpretación y cuál sólo desplazó trabajo hacia otro rol. El registro de versiones convierte opinión en evidencia discutible.
 
@@ -136,11 +136,11 @@ La evidencia de una buena iteración muestra cambio en uso o comprensión y cons
 
 ### Lógica incremental
 
-La lógica incremental agrega capacidad utilizable por partes. Cada incremento debe funcionar dentro de un alcance real y ampliar lo que el sistema permite hacer.
+En simple: La lógica incremental agrega capacidad utilizable por partes. Cada incremento debe funcionar dentro de un alcance real y ampliar lo que el sistema permite hacer.
 
 Dividir por componentes no crea incremento si ninguna parte puede usarse. La secuencia considera resultado, dependencias, operación y posibilidad de reparación.
 
-El hotel puede incorporar primero el episodio de llegada anticipada accesible y ampliar luego a otros turnos y excepciones.
+Ejemplo cercano: El hotel puede incorporar primero el episodio de llegada anticipada accesible y ampliar luego a otros turnos y excepciones.
 
 La unidad incremental es una capacidad completa para una población delimitada. Puede apoyarse en componentes provisionales, pero debe permitir realizar el episodio de punta a punta, observarlo y repararlo. Entregar primero la base de datos, luego la API y finalmente la pantalla distribuye construcción, no necesariamente valor. Ningún actor puede usar esos fragmentos por separado para atender a una persona. En cambio, cubrir un tipo de reserva con estados, permisos, comunicación y contingencia constituye un incremento aunque la solución técnica todavía sea parcial.
 
@@ -150,11 +150,11 @@ La ampliación exige evidencia acumulativa y no sólo éxito local. Se comprueba
 
 ### Lógica adaptativa
 
-La lógica adaptativa revisa prioridades y prácticas cuando el contexto o la evidencia cambian. Exige límites, memoria y autoridad para evitar que cualquier desvío se justifique retrospectivamente.
+En simple: La lógica adaptativa revisa prioridades y prácticas cuando el contexto o la evidencia cambian. Exige límites, memoria y autoridad para evitar que cualquier desvío se justifique retrospectivamente.
 
 Se define qué señales habilitan adaptación, qué compromisos permanecen y cómo se comunica el cambio. La adaptación no suspende obligaciones ni vuelve irrelevante la estrategia.
 
-HH-17 modifica su secuencia si el principal riesgo pasa de latencia técnica a interpretación operacional.
+Ejemplo cercano: HH-17 modifica su secuencia si el principal riesgo pasa de latencia técnica a interpretación operacional.
 
 La adaptación comienza con una discrepancia entre lo esperado y lo observado. No toda variación merece cambiar el rumbo. Se acuerdan señales, ventanas y niveles de respuesta para distinguir ruido, incidente y transformación del contexto. Una demora aislada puede resolverse operacionalmente; una serie de demoras asociada a un cambio de canal puede exigir revisar prioridad y diseño. La adaptación es gobernada cuando la evidencia que la activa y la decisión que modifica quedan unidas.
 
@@ -164,11 +164,11 @@ Un límite importante es la fatiga adaptativa. Cambiar prioridades, roles o herr
 
 ### Lógica experimental
 
-La lógica experimental interviene de manera limitada para distinguir hipótesis bajo incertidumbre genuina. Requiere unidades o casos delimitados, una referencia o contrafáctico defendible cuando la pregunta lo exige, señal de decisión, salvaguardas y criterio de interrupción definidos antes.
+En simple: La lógica experimental interviene de manera limitada para distinguir hipótesis bajo incertidumbre genuina. Requiere unidades o casos delimitados, una referencia o contrafáctico defendible cuando la pregunta lo exige, señal de decisión, salvaguardas y criterio de interrupción definidos antes.
 
 No corresponde experimentar con un derecho conocido ni con un daño irreparable. La pregunta legítima puede ser cómo cumplir mejor una obligación, no si conviene cumplirla.
 
-El hotel puede comparar dos maneras de presentar una alerta, pero no privar a un grupo de accesibilidad para medir abandono.
+Ejemplo cercano: El hotel puede comparar dos maneras de presentar una alerta, pero no privar a un grupo de accesibilidad para medir abandono.
 
 Un experimento profesional no es cualquier prueba. Formula una hipótesis que pueda resultar falsa y presenta una explicación rival relevante para la decisión. Si busca una causa, debe poder distinguir explicaciones y anticipar qué resultado cambiará la decisión. Si toda observación confirma la iniciativa, se trata de una demostración, no de un experimento.
 
@@ -180,7 +180,7 @@ El resultado debe interpretarse dentro de sus condiciones. Una mejora durante un
 
 ### PMBOK, Scrum y Kanban no nombran la misma clase de cosa
 
-Comparar enfoques exige comenzar por su función. La Guía del PMBOK, octava edición, organiza un estándar profesional para dirigir proyectos mediante seis principios, siete dominios de desempeño y procesos que deben adaptarse al contexto. Scrum define un marco ligero para producir valor frente a problemas complejos mediante un equipo, eventos, artefactos y compromisos.
+En simple, con un ejemplo: Comparar enfoques exige comenzar por su función. La Guía del PMBOK, octava edición, organiza un estándar profesional para dirigir proyectos mediante seis principios, siete dominios de desempeño y procesos que deben adaptarse al contexto. Scrum define un marco ligero para producir valor frente a problemas complejos mediante un equipo, eventos, artefactos y compromisos.
 
 La Guía Kanban propone mejorar el flujo a partir de una definición explícita del trabajo, la gestión activa de sus elementos y la mejora del sistema. La predicción, la iteración, el incremento, la adaptación y la experimentación son otra cosa: lógicas para relacionar conocimiento, compromiso y aprendizaje. No compiten en un único catálogo.
 
@@ -212,9 +212,9 @@ La comprobación final no pregunta si se aplicó correctamente una etiqueta, sin
 
 ### Híbrido no significa collage
 
-Una estrategia híbrida combina lógicas por decisión y mecanismo de aprendizaje, no por acumulación de ceremonias. Cada tramo explica qué incertidumbre aborda y cómo se relaciona con los demás.
+En simple: Una estrategia híbrida combina lógicas por decisión y mecanismo de aprendizaje, no por acumulación de ceremonias. Cada tramo explica qué incertidumbre aborda y cómo se relaciona con los demás.
 
-La anticipación puede fijar restricciones, la iteración refinar una interfaz, el incremento entregar capacidad y un experimento protegido evaluar efecto. Sus cadencias y autoridades no deben contradecirse.
+Ejemplo cercano: La anticipación puede fijar restricciones, la iteración refinar una interfaz, el incremento entregar capacidad y un experimento protegido evaluar efecto. Sus cadencias y autoridades no deben contradecirse.
 
 HH-17 representa la combinación como arquitectura de decisiones y no como una etiqueta global del proyecto.
 
@@ -226,11 +226,11 @@ La prueba del híbrido consiste en reconstruir un cambio. Ante una discrepancia 
 
 ### Cadencia de decisión y cadencia de entrega
 
-La cadencia de decisión marca cuándo se revisan evidencia y compromiso; la de entrega indica cuándo aparece capacidad utilizable. Pueden coincidir, pero cumplen funciones diferentes.
+En simple: La cadencia de decisión marca cuándo se revisan evidencia y compromiso; la de entrega indica cuándo aparece capacidad utilizable. Pueden coincidir, pero cumplen funciones diferentes.
 
 Una entrega frecuente sin autoridad disponible produce acumulación sin aprendizaje. Una revisión continua sin capacidad observable produce conversación sin contraste.
 
-El hotel revisa incidentes de inmediato, decisiones de expansión por turno y resultados en una ventana más larga.
+Ejemplo cercano: El hotel revisa incidentes de inmediato, decisiones de expansión por turno y resultados en una ventana más larga.
 
 Cada cadencia responde a la velocidad con que una señal puede volverse daño o conocimiento. Seguridad y continuidad requieren observación casi inmediata; comprensión de una interfaz puede evaluarse después de varios episodios; una reducción sostenible de compensaciones necesita una ventana suficientemente larga para evitar conclusiones por azar. Mezclar esas escalas produce dos errores opuestos: reaccionar a ruido o descubrir tarde una falla acumulativa.
 
@@ -240,11 +240,11 @@ El calendario puede incluir períodos deliberados de estabilidad. Después de ca
 
 ### Compromiso progresivo
 
-El compromiso progresivo aumenta inversión y exposición cuando la evidencia supera umbrales. Protege opciones mientras la incertidumbre es alta y evita inmovilizar recursos por una premisa temprana.
+En simple: El compromiso progresivo aumenta inversión y exposición cuando la evidencia supera umbrales. Protege opciones mientras la incertidumbre es alta y evita inmovilizar recursos por una premisa temprana.
 
 No justifica demorar obligaciones ni fraccionar tanto que nunca aparezca capacidad. Cada etapa debe decidir qué se aprende, qué se vuelve más irreversible y qué salida permanece.
 
-HH-17 amplía población sólo después de demostrar operación y reparación en el alcance anterior.
+Ejemplo cercano: HH-17 amplía población sólo después de demostrar operación y reparación en el alcance anterior.
 
 La lógica de opciones de Boehm ayuda a comprender por qué no conviene comprometer todo al inicio. Una inversión pequeña puede comprar información que reduce el costo de decidir la siguiente etapa. Sin embargo, esa opción sólo tiene valor si la organización puede ejercerla. Un contrato indivisible, una campaña ya anunciada o una arquitectura sin salida vuelven nominal la progresividad. Por eso HH-17 revisa compromisos jurídicos, reputacionales y técnicos junto con el presupuesto.
 
@@ -254,7 +254,7 @@ El compromiso también puede reducirse. Detener una apuesta, volver a una altern
 
 ### Reversibilidad
 
-Reversibilidad es la capacidad de cambiar de curso con costo y daño conocidos. Incluye técnica, datos, contratos, expectativas, trabajo y reparación para las personas afectadas.
+En simple, con un ejemplo: Reversibilidad es la capacidad de cambiar de curso con costo y daño conocidos. Incluye técnica, datos, contratos, expectativas, trabajo y reparación para las personas afectadas.
 
 Una reversión técnica puede restaurar software sin recuperar información divulgada ni promesas incumplidas. Por eso se evalúa antes de exponer y se financia la contingencia.
 
@@ -268,7 +268,7 @@ Hay decisiones conscientemente irreversibles. Comunicar una política, migrar un
 
 ### Descubrimiento y entrega
 
-Descubrimiento reduce incertidumbre sobre problema, mecanismo y uso; entrega construye y sostiene capacidad. Separarlos completamente demora contraste, pero confundirlos puede exponer como producto una hipótesis inmadura.
+En simple, con un ejemplo: Descubrimiento reduce incertidumbre sobre problema, mecanismo y uso; entrega construye y sostiene capacidad. Separarlos completamente demora contraste, pero confundirlos puede exponer como producto una hipótesis inmadura.
 
 La estrategia conecta ambos mediante cortes que producen evidencia y capacidad proporcional. Quien descubre debe observar operación; quien entrega debe conocer la hipótesis que justifica el trabajo.
 
@@ -282,11 +282,11 @@ La tensión aparece cuando las métricas premian sólo producción. Un equipo pu
 
 ### Riesgo como organizador
 
-El riesgo combina consecuencia, incertidumbre, exposición y capacidad de reparación. Organiza cuánto anticipar, qué supervisar y quién debe autorizar sin reducirse a una lista posterior.
+En simple: El riesgo combina consecuencia, incertidumbre, exposición y capacidad de reparación. Organiza cuánto anticipar, qué supervisar y quién debe autorizar sin reducirse a una lista posterior.
 
 Los riesgos distributivos importan aunque el promedio mejore. Una falla rara puede dominar la estrategia si daña a una población sin alternativa.
 
-En Hotel Horizonte, accesibilidad y promesa comercial exigen controles diferentes de una preferencia visual.
+Ejemplo cercano: En Hotel Horizonte, accesibilidad y promesa comercial exigen controles diferentes de una preferencia visual.
 
 El riesgo no se obtiene multiplicando mecánicamente dos números. La consecuencia puede ser económica, operacional, jurídica, reputacional o humana; la incertidumbre puede provenir de falta de datos o de desacuerdo causal; la exposición depende de población y duración; la reparación varía entre devolver dinero y restituir un derecho. La evaluación es comparativa y conserva la argumentación que asigna prioridad.
 
@@ -300,11 +300,11 @@ N17 no define todavía el método completo de la iniciativa. Establece, para cad
 
 ### Puertas de decisión
 
-Una puerta es un punto en que una autoridad continúa, modifica, detiene o escala según evidencia. Su valor reside en la opción real de cambiar compromiso.
+En simple: Una puerta es un punto en que una autoridad continúa, modifica, detiene o escala según evidencia. Su valor reside en la opción real de cambiar compromiso.
 
 Se definen umbrales, participantes y consecuencias antes de llegar. Si siempre ratifica continuidad, la puerta es una ceremonia y no un mecanismo de gobierno.
 
-HH-17 exige una puerta antes de ampliar la regla a nuevos turnos o canales.
+Ejemplo cercano: HH-17 exige una puerta antes de ampliar la regla a nuevos turnos o canales.
 
 Una puerta combina expediente, deliberación y acción. El expediente reúne evidencia pertinente; la deliberación compara hipótesis y consecuencias; la acción modifica compromiso. Si falta cualquiera, el dispositivo queda incompleto. Un tablero sin decisión acumula indicadores. Una decisión sin evidencia convierte jerarquía en criterio. Una revisión sin posibilidad de cambiar recursos es sólo comunicación.
 
@@ -314,11 +314,11 @@ También debe registrarse el desacuerdo. Si Comercial y Recepción interpretan d
 
 ### Criterios de entrada y salida
 
-Los criterios de entrada protegen una actividad de comenzar sin condiciones mínimas; los de salida definen qué evidencia permite cerrar, transferir o ampliar. Ninguno equivale a una lista ornamental.
+En simple: Los criterios de entrada protegen una actividad de comenzar sin condiciones mínimas; los de salida definen qué evidencia permite cerrar, transferir o ampliar. Ninguno equivale a una lista ornamental.
 
 Pueden incluir población, datos, autoridad, contingencia y capacidad operacional. Cambiarlos después del resultado debe quedar como una nueva decisión, no como corrección silenciosa.
 
-El hotel no inicia exposición sin supervisión ni cierra el piloto sin probar una excepción y su reparación.
+Ejemplo cercano: El hotel no inicia exposición sin supervisión ni cierra el piloto sin probar una excepción y su reparación.
 
 Un criterio útil es observable, pertinente y accionable. “La solución está lista” no indica qué mirar; “no quedan incidentes” puede ser inalcanzable o esconder falta de uso. En cambio, “el turno nocturno resolvió tres llegadas anticipadas, incluida una accesible, sin intervención extraordinaria y con conciliación completa” vincula capacidad, población y autonomía. La autoridad puede decidir a partir de esa evidencia.
 
@@ -328,9 +328,9 @@ Entrada y salida se relacionan. Si la prueba comienza sin población representat
 
 ### Hipótesis de intervención
 
-Una hipótesis de intervención afirma que una combinación acotada de acciones producirá capacidad y un resultado bajo condiciones. Vincula decisiones con mecanismo, evidencia y revisión sin decidir todavía cómo se secuenciará toda la iniciativa.
+En simple: Una hipótesis de intervención afirma que una combinación acotada de acciones producirá capacidad y un resultado bajo condiciones. Vincula decisiones con mecanismo, evidencia y revisión sin decidir todavía cómo se secuenciará toda la iniciativa.
 
-Permite que la estrategia resulte insuficiente sin presentar cada cambio como fracaso personal. Una explicación rival y una condición de detención protegen contra confirmación selectiva.
+Ejemplo cercano: Permite que la estrategia resulte insuficiente sin presentar cada cambio como fracaso personal. Una explicación rival y una condición de detención protegen contra confirmación selectiva.
 
 HH-17 sostiene que información consistente reduce reasignaciones sólo si autoridad y tiempos permiten actuar.
 
@@ -342,7 +342,7 @@ La hipótesis incluye condiciones externas. Una mejora observada en baja tempora
 
 ### Automatización e inteligencia artificial
 
-Automatizar redistribuye decisión, velocidad y posibilidad de error. La inteligencia artificial agrega comportamiento probabilístico, dependencia de datos y cambios de modelo que requieren evaluación continua.
+En simple, con un ejemplo: Automatizar redistribuye decisión, velocidad y posibilidad de error. La inteligencia artificial agrega comportamiento probabilístico, dependencia de datos y cambios de modelo que requieren evaluación continua.
 
 La lógica se elige por la decisión, no por la novedad de la técnica. Las obligaciones se fijan, las interfaces pueden iterarse y la efectividad se prueba con exposición protegida y supervisión.
 
@@ -356,11 +356,11 @@ El criterio de autoridad es decisivo. Una recomendación puede acelerar la lectu
 
 ### Portafolio de apuestas
 
-Un portafolio de apuestas coordina hipótesis que compiten por capacidad y producen riesgos interdependientes. Cada apuesta necesita resultado, responsable, límite, evidencia y condición de cierre.
+En simple: Un portafolio de apuestas coordina hipótesis que compiten por capacidad y producen riesgos interdependientes. Cada apuesta necesita resultado, responsable, límite, evidencia y condición de cierre.
 
 Diversificar no significa iniciar muchas iniciativas. La organización compara aprendizaje y exposición y retira compromisos que no sostienen su mecanismo.
 
-El hotel mantiene la mejora del PMS, un piloto operacional y una alternativa manual, pero limita cuántas pueden avanzar simultáneamente.
+Ejemplo cercano: El hotel mantiene la mejora del PMS, un piloto operacional y una alternativa manual, pero limita cuántas pueden avanzar simultáneamente.
 
 Las apuestas comparten recursos y pueden afectar una misma evidencia. Dos pilotos simultáneos sobre confirmación impiden atribuir cambios; una migración técnica puede alterar el indicador usado por otro experimento. El portafolio mapea esas interferencias y decide orden, no sólo prioridad individual. También reserva capacidad para contingencias, porque ocupar al cien por ciento la organización elimina la posibilidad de responder a una señal adversa.
 
@@ -370,9 +370,9 @@ El cierre libera recursos y protege foco. HH-17 revisa no sólo qué comienza, s
 
 ### Aprender sin borrar memoria
 
-Aprender actualiza decisiones y conserva por qué la versión anterior fue razonable bajo otras condiciones. Baselines, registros y resultados conectan el cambio con evidencia nueva.
+En simple: Aprender actualiza decisiones y conserva por qué la versión anterior fue razonable bajo otras condiciones. Baselines, registros y resultados conectan el cambio con evidencia nueva.
 
-La memoria no debe inmovilizar ni la adaptación borrar responsabilidad. Otra persona debe poder reconstruir qué se sabía, qué cambió y quién autorizó el nuevo compromiso.
+Ejemplo cercano: La memoria no debe inmovilizar ni la adaptación borrar responsabilidad. Otra persona debe poder reconstruir qué se sabía, qué cambió y quién autorizó el nuevo compromiso.
 
 HH-17 conserva el plan inicial, marca la ambigüedad descubierta y documenta la combinación elegida para no repetir una hipótesis descartada.
 

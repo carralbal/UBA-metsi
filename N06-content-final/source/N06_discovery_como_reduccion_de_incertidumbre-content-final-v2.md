@@ -47,11 +47,11 @@ El producto de N06 es una estrategia de investigación proporcionada. Incluye pr
 
 ### Lo que ya sabemos desde Ingeniería de Software
 
-Ingeniería de Software aporta técnicas de relevamiento, prototipos y análisis de riesgos. N06 no agrega una lista más de técnicas: exige elegirlas según incertidumbre y decisión. Una entrevista, un registro técnico o un prototipo tienen valor diferente si se necesita comprender significado, frecuencia, factibilidad o adopción. La técnica correcta depende de la pregunta que pueda resolver.
+En simple, con un ejemplo: Ingeniería de Software aporta técnicas de relevamiento, prototipos y análisis de riesgos. N06 no agrega una lista más de técnicas: exige elegirlas según incertidumbre y decisión. Una entrevista, un registro técnico o un prototipo tienen valor diferente si se necesita comprender significado, frecuencia, factibilidad o adopción. La técnica correcta depende de la pregunta que pueda resolver.
 
 ### Investigar no es demorar
 
-Hotel Horizonte debe decidir si firma en tres semanas un contrato por cinco años con una suite en la nube. El equipo propone realizar entrevistas, mapear procesos, analizar datos, construir prototipos y estudiar el mercado. Todo podría aportar conocimiento, pero no todo tiene el mismo valor para la decisión inmediata.
+En simple, con un ejemplo: Hotel Horizonte debe decidir si firma en tres semanas un contrato por cinco años con una suite en la nube. El equipo propone realizar entrevistas, mapear procesos, analizar datos, construir prototipos y estudiar el mercado. Todo podría aportar conocimiento, pero no todo tiene el mismo valor para la decisión inmediata.
 
 Si la firma compromete datos, costos de salida, integraciones y operación, las preguntas prioritarias se refieren a portabilidad, personalizaciones, coexistencia, recuperación, dependencias y capacidad interna. Diseñar la pantalla ideal de check-in puede ser interesante y urgente para otro frente, pero discrimina poco entre firmar, renegociar o postergar.
 
@@ -61,7 +61,7 @@ Esto no convierte discovery en cálculo financiero estrecho. Comprender afectado
 
 ### Reducir incertidumbre no es acumular certeza
 
-La incertidumbre no es un volumen homogéneo que disminuye a medida que se producen informes. Conviene distinguir tres familias. La incertidumbre de conocimiento se refiere a qué está ocurriendo, por qué y con qué alcance. La incertidumbre de acción se refiere a qué alternativa conviene intentar, qué capacidad existe para realizarla y qué consecuencias puede producir. La incertidumbre de coordinación aparece cuando varias personas conocen partes diferentes, usan definiciones incompatibles o pueden actuar de maneras que se interfieren. Una organización puede disponer de muchos datos y seguir sin poder coordinar una decisión.
+En simple, con un ejemplo: La incertidumbre no es un volumen homogéneo que disminuye a medida que se producen informes. Conviene distinguir tres familias. La incertidumbre de conocimiento se refiere a qué está ocurriendo, por qué y con qué alcance. La incertidumbre de acción se refiere a qué alternativa conviene intentar, qué capacidad existe para realizarla y qué consecuencias puede producir. La incertidumbre de coordinación aparece cuando varias personas conocen partes diferentes, usan definiciones incompatibles o pueden actuar de maneras que se interfieren. Una organización puede disponer de muchos datos y seguir sin poder coordinar una decisión.
 
 Las tres familias se relacionan. Saber que una demora se concentra en reservas con pagos pendientes reduce incertidumbre de conocimiento. Todavía queda por decidir si conviene cambiar la regla, integrar sistemas o reforzar una verificación manual. Incluso elegida una alternativa, Recepción, Finanzas y el proveedor pueden no compartir la misma definición de “pagado”. El trabajo de discovery consiste en localizar la diferencia que bloquea o vuelve riesgoso el compromiso siguiente, no en prometer una representación completa del sistema.
 
@@ -69,33 +69,33 @@ Las tres familias se relacionan. Saber que una demora se concentra en reservas c
 
 #### Incertidumbre del problema
 
-No se conoce qué situación merece intervención, quién está afectado, qué mecanismos operan o qué resultado esperado importa. Técnicas útiles: reconstrucción de episodios, observación, análisis de actores, datos y contradicciones.
+En simple, con un ejemplo: Hay incertidumbre del problema cuando todavía no sabemos qué situación necesita cambiar. Si pocas personas usan un portal, la causa podría ser dificultad de uso, falta de necesidad, una regla externa o una alternativa más conveniente. No se conoce qué situación merece intervención, quién está afectado, qué mecanismos operan o qué resultado esperado importa. Técnicas útiles: reconstrucción de episodios, observación, análisis de actores, datos y contradicciones.
 
 #### Incertidumbre de solución
 
-Se conoce razonablemente la situación, pero no si una alternativa producirá el cambio. Técnicas: prototipo, simulación, prueba de concepto, experimento, comparación y piloto.
+En simple, con un ejemplo: Hay incertidumbre de solución cuando entendemos el problema, pero todavía no sabemos qué alternativa funcionará. Por ejemplo, sabemos que un formulario provoca abandonos, aunque falta probar si conviene cambiar las preguntas, el orden o el canal. Se conoce razonablemente la situación, pero no si una alternativa producirá el cambio. Técnicas: prototipo, simulación, prueba de concepto, experimento, comparación y piloto.
 
 #### Incertidumbre de ejecución
 
-La alternativa parece útil, pero hay dudas sobre capacidad, plazo, integración, migración, proveedor o coordinación. Técnicas: exploración técnica acotada, ensayo de migración, revisión contractual, mapa de dependencias y prueba operativa.
+En simple, con un ejemplo: La alternativa parece útil, pero hay dudas sobre capacidad, plazo, integración, migración, proveedor o coordinación. Técnicas: exploración técnica acotada, ensayo de migración, revisión contractual, mapa de dependencias y prueba operativa.
 
 #### Incertidumbre de adopción y trabajo
 
-No se sabe cómo cambiarán tareas, autoridad, incentivos o accesibilidad. Técnicas: observación, codiseño, prototipo en contexto, simulación de roles y análisis de carga.
+En simple, con un ejemplo: Esta incertidumbre pregunta si las personas podrán y querrán incorporar el cambio en su tarea real. Una función puede operar bien y fracasar porque agrega pasos, quita autonomía o no contempla el turno nocturno. No se sabe cómo cambiarán tareas, autoridad, incentivos o accesibilidad. Técnicas: observación, codiseño, prototipo en contexto, simulación de roles y análisis de carga.
 
 #### Incertidumbre de efectos
 
-Se desconocen daños, desplazamientos y respuestas del sistema. Técnicas: análisis anticipado de fallas, análisis sistémico, evaluación de impacto, prueba adversarial, monitoreo y participación de afectados.
+En simple, con un ejemplo: Esta incertidumbre aparece cuando no sabemos qué consecuencias producirá una intervención además de su resultado buscado. Un recordatorio puede reducir olvidos y, al mismo tiempo, saturar de mensajes a quienes ya habían cumplido. Se desconocen daños, desplazamientos y respuestas del sistema. Técnicas: análisis anticipado de fallas, análisis sistémico, evaluación de impacto, prueba adversarial, monitoreo y participación de afectados.
 
 #### Incertidumbre de medición
 
-Las señales disponibles quizá no representan el resultado. Técnicas: auditoría de definición/procedencia, reconstrucción manual, comparación de fuentes, instrumento nuevo y análisis de cohortes.
+En simple: Las señales disponibles quizá no representan el resultado. Técnicas: auditoría de definición/procedencia, reconstrucción manual, comparación de fuentes, instrumento nuevo y análisis de cohortes.
 
-Una misma pregunta puede cruzar tipos. “¿El asistente conversacional reducirá carga?” incluye solución, adopción, efectos y medición. Descomponer evita que una demostración responda solo facilidad técnica y sea interpretada como evidencia total.
+Ejemplo cercano: Una misma pregunta puede cruzar tipos. “¿El asistente conversacional reducirá carga?” incluye solución, adopción, efectos y medición. Descomponer evita que una demostración responda solo facilidad técnica y sea interpretada como evidencia total.
 
 ### Conectar pregunta y decisión
 
-Cada pregunta de investigación debería registrar:
+En simple: Cada pregunta de investigación debería registrar:
 
 - incertidumbre;
 - decisión afectada;
@@ -108,13 +108,13 @@ Cada pregunta de investigación debería registrar:
 - responsable de interpretar;
 - condición de cierre o escalamiento.
 
-“¿Los huéspedes quieren una aplicación?” es débil: no define comportamiento, alternativa ni decisión. “¿En qué casos una preparación previa evita correcciones en llegada y qué barreras introduce?” permite comparar autoservicio, rediseño de comunicación y apoyo humano.
+Ejemplo cercano: “¿Los huéspedes quieren una aplicación?” es débil: no define comportamiento, alternativa ni decisión. “¿En qué casos una preparación previa evita correcciones en llegada y qué barreras introduce?” permite comparar autoservicio, rediseño de comunicación y apoyo humano.
 
 **Ejemplo breve. Botón nuevo.** Antes de rediseñar una pantalla, cinco registros de abandono pueden mostrar que la mayoría falla por identidad vencida y no por usabilidad.
 
 ### De una pregunta interesante a una pregunta que decide
 
-Las preguntas amplias sirven para abrir un campo, pero rara vez alcanzan para organizar una intervención. “¿Cómo mejorar la experiencia del huésped?” invita a explorar, aunque no indica qué compromiso está en juego, qué evidencia distinguiría alternativas ni cuándo sería suficiente dejar de preguntar. Para convertirla en una pregunta decisional conviene realizar cuatro movimientos.
+En simple, con un ejemplo: Las preguntas amplias sirven para abrir un campo, pero rara vez alcanzan para organizar una intervención. “¿Cómo mejorar la experiencia del huésped?” invita a explorar, aunque no indica qué compromiso está en juego, qué evidencia distinguiría alternativas ni cuándo sería suficiente dejar de preguntar. Para convertirla en una pregunta decisional conviene realizar cuatro movimientos.
 
 El primero consiste en nombrar la decisión próxima. No es lo mismo investigar para priorizar un problema que para firmar un contrato, aprobar un piloto o ampliar una automatización. La misma evidencia puede ser suficiente para una conversación inicial e insuficiente para comprometer cinco años de datos y operación.
 
@@ -130,20 +130,20 @@ Una buena pregunta de discovery no intenta describir el universo completo. Const
 
 ### Valor de la información
 
-Una investigación es valiosa cuando reduce una incertidumbre importante antes de un compromiso. Puede pensarse cualitativamente mediante cuatro variables:
+En simple: Una investigación es valiosa cuando reduce una incertidumbre importante antes de un compromiso. Puede pensarse cualitativamente mediante cuatro variables:
 
 1. probabilidad de que el hallazgo cambie la decisión;
 2. diferencia de consecuencia entre alternativas;
 3. costo y tiempo de obtener evidencia;
 4. posibilidad de aprender después sin daño grave.
 
-Si dos proveedores tienen modelos contractuales radicalmente distintos, comprobar portabilidad puede cambiar elección y evitar dependencia: valor alto. Si el color preferido de una pantalla no afecta el próximo hito, valor bajo por ahora.
+Ejemplo cercano: Si dos proveedores tienen modelos contractuales radicalmente distintos, comprobar portabilidad puede cambiar elección y evitar dependencia: valor alto. Si el color preferido de una pantalla no afecta el próximo hito, valor bajo por ahora.
 
 El valor también puede consistir en demostrar que una decisión no debe tomarse todavía. Pero “necesitamos más investigación” debe indicar qué incertidumbre, cuánto cambia la exposición y qué evidencia sería suficiente.
 
 ### Un cálculo cualitativo del valor de información
 
-El valor esperado de información puede expresarse con fórmulas, pero en la práctica profesional suele comenzar con una comparación disciplinada. Supongamos que el hotel evalúa dos proveedores. El primero ofrece menor costo inicial y una migración rápida; el segundo permite exportación verificable, coexistencia y salida contractual. Antes de investigar, el equipo podría preferir al primero. Una prueba de exportación tiene alto valor si existe una probabilidad razonable de descubrir que los datos críticos no pueden reconstruirse y si ese hallazgo cambiaría la elección.
+En simple, con un ejemplo: El valor esperado de información puede expresarse con fórmulas, pero en la práctica profesional suele comenzar con una comparación disciplinada. Supongamos que el hotel evalúa dos proveedores. El primero ofrece menor costo inicial y una migración rápida; el segundo permite exportación verificable, coexistencia y salida contractual. Antes de investigar, el equipo podría preferir al primero. Una prueba de exportación tiene alto valor si existe una probabilidad razonable de descubrir que los datos críticos no pueden reconstruirse y si ese hallazgo cambiaría la elección.
 
 El análisis puede organizarse con cinco preguntas:
 
@@ -163,7 +163,7 @@ Una cartera madura conserva preguntas de bajo valor sin ejecutarlas inmediatamen
 
 ### Sesgos, confianza y posibilidad de sorpresa
 
-La prioridad no depende solamente del riesgo objetivo. También depende de cómo se juzga lo desconocido. Tversky y Kahneman (1974) mostraron que las personas recurren a atajos que vuelven disponible lo reciente, buscan coherencia con la primera explicación y ajustan poco una estimación inicial. En una organización, esos sesgos se vuelven colectivos cuando un tablero, una autoridad o una demostración del proveedor fijan la primera narrativa.
+En simple, con un ejemplo: La prioridad no depende solamente del riesgo objetivo. También depende de cómo se juzga lo desconocido. Tversky y Kahneman (1974) mostraron que las personas recurren a atajos que vuelven disponible lo reciente, buscan coherencia con la primera explicación y ajustan poco una estimación inicial. En una organización, esos sesgos se vuelven colectivos cuando un tablero, una autoridad o una demostración del proveedor fijan la primera narrativa.
 
 Por eso una estrategia debe reservar lugar para la sorpresa. Antes de investigar conviene registrar la explicación favorita, una explicación rival y el hallazgo que debilitaría a cada una. También conviene separar confianza de evidencia: dos personas pueden asignar alta confianza por razones distintas, o discrepar porque observan poblaciones y momentos diferentes. La discrepancia bien localizada es una señal de muestreo, no un problema que deba promediarse de inmediato.
 
@@ -171,9 +171,9 @@ Una práctica de calibración consiste en formular una expectativa antes de mira
 
 ### Criticidad, reversibilidad y costo de demora
 
-La cantidad de discovery no es universal.
+En simple: La cantidad de discovery no es universal.
 
-Alta criticidad y baja reversibilidad exigen evidencia previa fuerte. Migrar reservas futuras sin recuperación, automatizar cancelaciones o usar relatos sensibles para entrenar un modelo son ejemplos.
+Ejemplo cercano: Alta criticidad y baja reversibilidad exigen evidencia previa fuerte. Migrar reservas futuras sin recuperación, automatizar cancelaciones o usar relatos sensibles para entrenar un modelo son ejemplos.
 
 Alta reversibilidad y alto costo de demora favorecen una prueba acotada. Modificar una plantilla informativa para un subconjunto, con reversión y monitoreo, puede aprender más rápido que meses de análisis.
 
@@ -187,7 +187,7 @@ March (1991) permite ver otra tensión: explorar alternativas compite con explot
 
 ### Diseñar una cartera de evidencia
 
-Ningún método ve todo. Una estrategia combina métodos con sesgos complementarios:
+En simple: Ningún método ve todo. Una estrategia combina métodos con sesgos complementarios:
 
 - entrevistas para experiencia, criterio e incentivo;
 - observación para trabajo real e interrupciones;
@@ -199,7 +199,7 @@ Ningún método ve todo. Una estrategia combina métodos con sesgos complementar
 - pilotos para comportamiento operacional;
 - casos negativos para refutar la explicación favorita.
 
-La secuencia importa. Una observación temprana mejora entrevistas. Los registros técnicos seleccionan episodios. Una contradicción redefine la muestra. Un prototipo puede hacer visible una decisión que antes se discutía en abstracto. La orientación de diseño centrado en las personas de ISO 9241-210:2019 refuerza la necesidad de comprender contexto, involucrar a quienes usan y sostienen el sistema, evaluar contra requisitos y reiterar. En N06 esos principios se subordinan a una decisión concreta: no toda iteración tiene igual valor ni toda participación responde la misma incertidumbre.
+Ejemplo cercano: La secuencia importa. Una observación temprana mejora entrevistas. Los registros técnicos seleccionan episodios. Una contradicción redefine la muestra. Un prototipo puede hacer visible una decisión que antes se discutía en abstracto. La orientación de diseño centrado en las personas de ISO 9241-210:2019 refuerza la necesidad de comprender contexto, involucrar a quienes usan y sostienen el sistema, evaluar contra requisitos y reiterar. En N06 esos principios se subordinan a una decisión concreta: no toda iteración tiene igual valor ni toda participación responde la misma incertidumbre.
 
 Triangular no exige ejecutar todos los métodos. Exige que los principales errores no sean comunes a toda la evidencia. Entrevistar solo jefaturas distintas multiplica fuentes con sesgo similar.
 
@@ -209,7 +209,7 @@ La cartera también debe distinguir evidencia primaria, evidencia derivada y evi
 
 ### Muestreo orientado a variación
 
-En investigación situada no siempre se busca estimación estadística. Puede buscarse variación relevante:
+En simple: En investigación situada no siempre se busca estimación estadística. Puede buscarse variación relevante:
 
 - caso ordinario y excepcional;
 - éxito y fracaso;
@@ -221,11 +221,11 @@ En investigación situada no siempre se busca estimación estadística. Puede bu
 - alta/baja demanda;
 - proveedor o sistema distinto.
 
-La muestra debe alinearse con la afirmación. Cinco entrevistas no permiten estimar un porcentaje de población; sí pueden revelar mecanismos y preguntas. Un millón de registros técnicos no explica significado si el evento está mal definido. Patton (2015) denomina muestreo intencional a la selección de casos ricos en información. Su valor no reside en imitar una representatividad estadística que no posee, sino en hacer visible variación pertinente para la pregunta y declarar qué generalización no puede sostener.
+Ejemplo cercano: La muestra debe alinearse con la afirmación. Cinco entrevistas no permiten estimar un porcentaje de población; sí pueden revelar mecanismos y preguntas. Un millón de registros técnicos no explica significado si el evento está mal definido. Patton (2015) denomina muestreo intencional a la selección de casos ricos en información. Su valor no reside en imitar una representatividad estadística que no posee, sino en hacer visible variación pertinente para la pregunta y declarar qué generalización no puede sostener.
 
 ### Secuenciar aprendizaje y dependencias
 
-Una cartera no es una bolsa de actividades independientes. Algunas preguntas son utilizables sólo después de responder otras. Antes de evaluar una nueva pantalla de llegada, Hotel Horizonte necesita distinguir qué demoras provienen de interacción, cuáles de estados incompatibles y cuáles de autorizaciones ausentes. Antes de medir el efecto de un asistente, debe definir qué consultas puede resolver, qué fuente se considera autorizada y quién repara una acción equivocada. Investigar todo en paralelo puede producir evidencia abundante que no converge sobre ninguna decisión.
+En simple, con un ejemplo: Una cartera no es una bolsa de actividades independientes. Algunas preguntas son utilizables sólo después de responder otras. Antes de evaluar una nueva pantalla de llegada, Hotel Horizonte necesita distinguir qué demoras provienen de interacción, cuáles de estados incompatibles y cuáles de autorizaciones ausentes. Antes de medir el efecto de un asistente, debe definir qué consultas puede resolver, qué fuente se considera autorizada y quién repara una acción equivocada. Investigar todo en paralelo puede producir evidencia abundante que no converge sobre ninguna decisión.
 
 El orden puede representarse como dependencias entre preguntas. Una pregunta de definición precede a una de medición cuando no existe una unidad compartida. Una pregunta de factibilidad precede a una de adopción cuando la alternativa todavía no puede simularse de manera creíble. Una pregunta de daño puede anteceder a ambas si su respuesta vuelve inadmisible la intervención. No se trata de una secuencia universal, sino de justificar por qué una evidencia podrá ser interpretada cuando llegue.
 
@@ -235,7 +235,7 @@ La dependencia más peligrosa es política. A veces una investigación se progra
 
 ### Discovery continuo y compromisos
 
-Separar una fase de discovery y otra de entrega crea dos riesgos: investigar sin responsabilidad por operación y entregar sin revisar hipótesis. En sistemas dinámicos, el aprendizaje continúa. Torres (2021) propone hábitos de descubrimiento continuo que mantienen el contacto con decisiones de producto. La idea es valiosa siempre que “continuo” no se convierta en una cuota de entrevistas ni desplace la responsabilidad por riesgos sistémicos, contratos y operación.
+En simple, con un ejemplo: Separar una fase de discovery y otra de entrega crea dos riesgos: investigar sin responsabilidad por operación y entregar sin revisar hipótesis. En sistemas dinámicos, el aprendizaje continúa. Torres (2021) propone hábitos de descubrimiento continuo que mantienen el contacto con decisiones de producto. La idea es valiosa siempre que “continuo” no se convierta en una cuota de entrevistas ni desplace la responsabilidad por riesgos sistémicos, contratos y operación.
 
 Esto no significa que todo permanezca abierto. Cada hito cierra decisiones provisionalmente:
 
@@ -252,7 +252,7 @@ El compromiso debe declarar vigencia. Una decisión válida para temporada baja 
 
 ### Escalera de compromisos y opciones reales
 
-Discovery no debería producir un salto directo desde una idea hasta una transformación irreversible. Conviene diseñar una escalera de compromisos. Cada peldaño compra aprendizaje y, al mismo tiempo, consume opciones. Cuanto más avanza una organización, más dinero, reputación, datos y coordinación quedan vinculados con una alternativa.
+En simple, con un ejemplo: Discovery no debería producir un salto directo desde una idea hasta una transformación irreversible. Conviene diseñar una escalera de compromisos. Cada peldaño compra aprendizaje y, al mismo tiempo, consume opciones. Cuanto más avanza una organización, más dinero, reputación, datos y coordinación quedan vinculados con una alternativa.
 
 En el primer peldaño puede existir una exploración de bajo costo: reconstruir episodios, revisar contratos o ensayar una exportación. En el segundo, un prototipo o simulación permite comprobar comprensión y factibilidad sin operar sobre huéspedes reales. En el tercero, un piloto limitado introduce condiciones reales con población, duración, monitoreo y reversión. Recién después aparece una ampliación progresiva.
 
@@ -264,7 +264,7 @@ La lógica de opciones reales resulta especialmente útil con IA. Conectar un as
 
 ### Cartera priorizada de investigación
 
-Las preguntas compiten por tiempo igual que las funcionalidades. Una cartera priorizada evita que el discovery quede gobernado por curiosidad o por quien habla más fuerte. Cada elemento puede expresar:
+En simple, con un ejemplo: Una cartera priorizada de investigación ordena qué dudas conviene resolver primero. Por ejemplo, antes de probar colores de una pantalla puede ser más valioso averiguar por qué muchas personas nunca llegan a verla. Las preguntas compiten por tiempo igual que las funcionalidades. Una cartera priorizada evita que el discovery quede gobernado por curiosidad o por quien habla más fuerte. Cada elemento puede expresar:
 
 - decisión y fecha;
 - hipótesis o incertidumbre;
@@ -282,7 +282,7 @@ La cartera debe admitir eliminar preguntas. Si una decisión se retira, investig
 
 ### Experimentos que producen decisiones
 
-Un experimento no es mostrar un prototipo a personas y preguntar si gusta. Debe contener:
+En simple, con un ejemplo: Un experimento no es mostrar un prototipo a personas y preguntar si gusta. Debe contener:
 
 1. hipótesis;
 2. población/contexto;
@@ -298,7 +298,7 @@ Los experimentos organizacionales rara vez aíslan todas las variables. El equip
 
 ### Investigación de diseño antes de validar una interfaz
 
-La investigación de diseño estudia personas, actividades, entornos, artefactos y relaciones para orientar una intervención. No comienza necesariamente con una pantalla ni termina cuando aparece un prototipo. ISO 9241-210:2019 exige comprender el contexto de uso, involucrar a las personas, producir soluciones y evaluarlas de manera iterativa. N06 ubica esas actividades dentro de una cartera de incertidumbres: cada una debe explicar qué decisión podría cambiar y qué riesgo reduce.
+En simple, con un ejemplo: La investigación de diseño estudia personas, actividades, entornos, artefactos y relaciones para orientar una intervención. No comienza necesariamente con una pantalla ni termina cuando aparece un prototipo. ISO 9241-210:2019 exige comprender el contexto de uso, involucrar a las personas, producir soluciones y evaluarlas de manera iterativa. N06 ubica esas actividades dentro de una cartera de incertidumbres: cada una debe explicar qué decisión podría cambiar y qué riesgo reduce.
 
 Una entrevista puede explorar expectativas y lenguaje; la observación puede revelar secuencias y trabajo invisible; un prototipo puede hacer discutible una interacción; una simulación de servicio puede exponer transferencias y autoridad. Los métodos no son intercambiables. Preguntar si una persona prefiere una confirmación no demuestra que la comprenda bajo presión. Observar un episodio actual no prueba que una alternativa futura funcione. Un prototipo de alta fidelidad puede producir comentarios visuales y ocultar que la promesa depende de procesos todavía inexistentes.
 
@@ -308,7 +308,7 @@ La investigación termina provisionalmente cuando la evidencia permite elegir en
 
 ### Discovery en una cartera de decisiones
 
-Varias decisiones conviven: contrato, datos, flujo, personal, canal e IA. No todas necesitan el mismo nivel de madurez. El equipo puede avanzar con una mientras mantiene opciones en otra. Esta gestión de cartera evita que una incertidumbre localizada bloquee todo o que el entusiasmo por una prueba pequeña autorice el programa completo.
+En simple, con un ejemplo: Varias decisiones conviven: contrato, datos, flujo, personal, canal e IA. No todas necesitan el mismo nivel de madurez. El equipo puede avanzar con una mientras mantiene opciones en otra. Esta gestión de cartera evita que una incertidumbre localizada bloquee todo o que el entusiasmo por una prueba pequeña autorice el programa completo.
 
 Un tablero útil muestra decisiones, no cantidad de entrevistas: decidida, en investigación, bloqueada, revertida o por revisar; evidencia y condición. Esto conecta discovery con gobierno.
 
@@ -332,7 +332,7 @@ La cartera HH-06 incluye una regla de descarte. Si la exportación no conserva r
 
 ### Evidencia suficiente no significa evidencia perfecta
 
-El ideal de certeza total puede ser tan irresponsable como la improvisación. Mientras el equipo busca eliminar cada duda, el problema continúa, el contexto cambia y la investigación consume tiempo de personas. La suficiencia es una relación entre evidencia, decisión y exposición: suficiente para qué, para quién, durante cuánto tiempo y con qué posibilidad de reparación.
+En simple, con un ejemplo: El ideal de certeza total puede ser tan irresponsable como la improvisación. Mientras el equipo busca eliminar cada duda, el problema continúa, el contexto cambia y la investigación consume tiempo de personas. La suficiencia es una relación entre evidencia, decisión y exposición: suficiente para qué, para quién, durante cuánto tiempo y con qué posibilidad de reparación.
 
 Una evidencia puede ser suficiente para descartar una alternativa y todavía insuficiente para elegir otra. Si un ensayo muestra que un proveedor no puede exportar reservas futuras con sus cambios, tal vez alcance para excluirlo. No demuestra que el proveedor restante sea adecuado. Del mismo modo, un piloto puede demostrar factibilidad técnica sin demostrar adopción o impacto operacional.
 
@@ -344,7 +344,7 @@ La evidencia perfecta es inalcanzable porque toda observación tiene condiciones
 
 ### Cuándo detener provisionalmente
 
-Discovery alcanza suficiencia para el próximo paso cuando:
+En simple: Discovery alcanza suficiencia para el próximo paso cuando:
 
 - existe un encuadre del problema con evidencia y límites;
 - se representan alternativas plausibles, incluida una simple;
@@ -355,11 +355,11 @@ Discovery alcanza suficiencia para el próximo paso cuando:
 - existe plan para aprender en operación;
 - nueva investigación tendría menor valor que actuar cuidadosamente.
 
-No se detiene porque se realizaron “diez entrevistas”. Tampoco continúa porque aparecieron preguntas: siempre aparecerán.
+Ejemplo cercano: No se detiene porque se realizaron “diez entrevistas”. Tampoco continúa porque aparecieron preguntas: siempre aparecerán.
 
 ### Discovery y restricciones reales
 
-Una compra firmada, una fecha legal o una arquitectura obligatoria no eliminan discovery. Cambian sus decisiones disponibles. Tal vez no pueda elegirse plataforma, pero sí alcance, secuencia, integración, controles, transición, contingencia y criterios de aceptación.
+En simple, con un ejemplo: Una compra firmada, una fecha legal o una arquitectura obligatoria no eliminan discovery. Cambian sus decisiones disponibles. Tal vez no pueda elegirse plataforma, pero sí alcance, secuencia, integración, controles, transición, contingencia y criterios de aceptación.
 
 Conviene distinguir restricción de preferencia y supuesto. “Debe salir en diciembre” puede ser obligación externa, promesa comercial o deseo. Cada categoría admite negociación diferente. Discovery investiga también la naturaleza de la restricción.
 
@@ -371,7 +371,7 @@ La existencia de restricciones aumenta la importancia de condiciones de salida. 
 
 ### Discovery responsable con IA
 
-La IA puede agrupar notas, sugerir temas, generar preguntas y buscar contradicciones. También puede homogeneizar lenguaje, perder minorías y crear citas inexistentes. Debe utilizarse sobre una cadena de evidencia preservada.
+En simple, con un ejemplo: La IA puede agrupar notas, sugerir temas, generar preguntas y buscar contradicciones. También puede homogeneizar lenguaje, perder minorías y crear citas inexistentes. Debe utilizarse sobre una cadena de evidencia preservada.
 
 Los datos de entrevistas, reclamos y operaciones pueden ser sensibles. Antes de usar un proveedor se evalúan confidencialidad, retención, jurisdicción y necesidad. Anonimizar no siempre evita reidentificación en equipos pequeños.
 
@@ -389,7 +389,7 @@ La IA también altera el costo de experimentación. Es fácil crear un prototipo
 
 ### Aprender mecanismos, no coleccionar hallazgos
 
-Un hallazgo aislado describe algo observado. El aprendizaje útil lo relaciona con condiciones y decisiones. “Recepción usa una planilla” es un hallazgo; “cuando una reserva llega sin determinada reconciliación, recepción usa la planilla para conservar contexto que el PMS no representa, lo que reduce una espera y crea divergencia” propone un mecanismo.
+En simple, con un ejemplo: Un hallazgo aislado describe algo observado. El aprendizaje útil lo relaciona con condiciones y decisiones. “Recepción usa una planilla” es un hallazgo; “cuando una reserva llega sin determinada reconciliación, recepción usa la planilla para conservar contexto que el PMS no representa, lo que reduce una espera y crea divergencia” propone un mecanismo.
 
 El mecanismo puede ser incorrecto, pero es investigable. Sugiere observar casos con y sin reconciliación, retirar controladamente la práctica, revisar contenido y entrevistar a quienes la usan. También conecta con alternativas distintas: mejorar semántica, autoridad, integración o herramienta.
 
@@ -399,7 +399,7 @@ El aprendizaje también puede ser negativo: una hipótesis no explica casos, una
 
 ### Criterios de parada y riesgo residual
 
-Discovery termina provisionalmente cuando la evidencia permite una decisión proporcionada, no cuando desaparecen las preguntas. El equipo debe declarar qué incertidumbre acepta y cómo limitará sus consecuencias.
+En simple, con un ejemplo: Discovery termina provisionalmente cuando la evidencia permite una decisión proporcionada, no cuando desaparecen las preguntas. El equipo debe declarar qué incertidumbre acepta y cómo limitará sus consecuencias.
 
 Un criterio de parada puede combinar confianza en el mecanismo, reversibilidad de la acción, señal disponible y capacidad de reparación. Si la intervención es pequeña, observable y reversible, puede actuarse con confianza moderada. Si es irreversible o afecta derechos, se necesita evidencia más fuerte y revisión independiente.
 
@@ -411,7 +411,7 @@ Una revisión posterior compara expectativas y efectos. Si la evidencia real con
 
 ### Coordinación entre discovery y entrega
 
-Separar un equipo que investiga de otro que construye puede producir transferencias defectuosas. El primero genera conclusiones que el segundo interpreta tarde; el segundo descubre restricciones que no vuelven al encuadre. Integrar no exige que todos hagan todo, sino ciclos compartidos de decisión.
+En simple, con un ejemplo: Separar un equipo que investiga de otro que construye puede producir transferencias defectuosas. El primero genera conclusiones que el segundo interpreta tarde; el segundo descubre restricciones que no vuelven al encuadre. Integrar no exige que todos hagan todo, sino ciclos compartidos de decisión.
 
 Las hipótesis deben aparecer en la cartera y en los criterios de entrega. Una historia no solo describe funcionalidad: puede indicar qué resultado esperado prueba, qué señal observar y qué supuesto queda abierto. La revisión de una entrega incluye evidencia de uso y operación, no solamente demostración.
 
@@ -449,7 +449,7 @@ La suficiencia se alcanza porque la evidencia discrimina alternativas y el compr
 
 ### En 2026: la IA abarata producir respuestas, no necesariamente aprender
 
-DORA (2025) describe la IA como amplificador del sistema organizacional: puede acelerar síntesis y prototipos, pero también multiplicar trabajo equivocado. El marco de gestión de riesgos de IA de NIST (Tabassi, 2023) exige mapear contexto e impactos antes de medir y gestionar riesgos. Ambos aportes convergen en un criterio: una herramienta más veloz amplifica la calidad o la fragilidad del sistema en el que se incorpora.
+En simple, con un ejemplo: Una herramienta de IA puede producir muchas respuestas rápidas sin demostrar que sean útiles o correctas. Por ejemplo, generar diez prototipos en una tarde no reduce la incertidumbre si ninguno se prueba con personas ni con datos reales. DORA (2025) describe la IA como amplificador del sistema organizacional: puede acelerar síntesis y prototipos, pero también multiplicar trabajo equivocado. El marco de gestión de riesgos de IA de NIST (Tabassi, 2023) exige mapear contexto e impactos antes de medir y gestionar riesgos. Ambos aportes convergen en un criterio: una herramienta más veloz amplifica la calidad o la fragilidad del sistema en el que se incorpora.
 
 En discovery, una IA puede ampliar hipótesis, agrupar material o crear variantes. Eso reduce costo de generación, no garantiza valor de información. El control profesional consiste en registrar qué salida podría contradecir la hipótesis, verificar fuentes, muestrear casos reales y comparar contra una línea de base. Si ninguna evidencia posible cambiaría la decisión, la actividad no investiga: justifica.
 

@@ -118,11 +118,11 @@ El tiempo completa el mapa. Cada opción declara qué cambia si comienza ahora, 
 
 ### Prioridad
 
-Prioridad es una relación de precedencia entre opciones bajo objetivos, recursos y límites concretos. No es una propiedad intrínseca ni una etiqueta de urgencia.
+En simple: Prioridad es una relación de precedencia entre opciones bajo objetivos, recursos y límites concretos. No es una propiedad intrínseca ni una etiqueta de urgencia.
 
 La decisión nombra qué avanza, qué espera y qué consecuencia se acepta. Puede cambiar cuando cambian evidencia, obligaciones o capacidad, por lo que conserva fecha y autoridad.
 
-En Hotel Horizonte, accesibilidad precede a campaña porque protege una condición del servicio, no porque reciba más puntos.
+Ejemplo cercano: En Hotel Horizonte, accesibilidad precede a campaña porque protege una condición del servicio, no porque reciba más puntos.
 
 La precedencia siempre posee una frontera. Accesibilidad puede preceder dentro de la capacidad compartida por ambas opciones y el mismo horizonte. No significa que toda tarea relacionada deba detener el resto del hotel. La decisión identifica el componente obligatorio y compara formas legítimas de cumplirlo.
 
@@ -130,11 +130,11 @@ Una prioridad necesita una condición de salida. Si completar accesibilidad perm
 
 ### Renuncia explícita
 
-Renunciar es decidir no hacer, no ahora o no de esa manera y asumir sus efectos. Sin renuncia, ordenar una lista mientras todo sigue activo sólo oculta trabajo en curso.
+En simple: Renunciar es decidir no hacer, no ahora o no de esa manera y asumir sus efectos. Sin renuncia, ordenar una lista mientras todo sigue activo sólo oculta trabajo en curso.
 
 El expediente identifica población afectada, costo de oportunidad y condición de revisión. También distingue postergación reversible de abandono que exige comunicación o reparación.
 
-HH-24 registra que la campaña espera hasta estabilizar la promesa y muestra qué beneficio se demora.
+Ejemplo cercano: HH-24 registra que la campaña espera hasta estabilizar la promesa y muestra qué beneficio se demora.
 
 La renuncia se expresa en una frase completa: durante seis semanas no se incorporará el canal externo, por lo que se posterga una estimación de reservas, para terminar cobertura accesible y observar estabilidad; la decisión se revisará con datos de demanda y operación. Esta estructura permite que una persona afectada reconozca qué se decidió y no encuentre sólo una posición inferior en una lista.
 
@@ -142,11 +142,11 @@ Algunas renuncias son irreversibles. Perder una ventana regulatoria, discontinua
 
 ### Valor situado
 
-Valor es una mejora relevante para actores y estrategia bajo condiciones determinadas. La misma opción puede crear valor para una población y trasladar costo o riesgo hacia otra.
+En simple: Valor es una mejora relevante para actores y estrategia bajo condiciones determinadas. La misma opción puede crear valor para una población y trasladar costo o riesgo hacia otra.
 
 No se reduce a ingreso, satisfacción ni volumen. Se formula junto con outcome, horizonte, obligación y distribución de consecuencias.
 
-Reducir trabajo nocturno puede mejorar sostenibilidad y experiencia aunque no aumente de inmediato la cantidad de reservas.
+Ejemplo cercano: Reducir trabajo nocturno puede mejorar sostenibilidad y experiencia aunque no aumente de inmediato la cantidad de reservas.
 
 El valor se formula desde varias perspectivas que pueden entrar en tensión. Para el huésped puede ser previsibilidad; para Recepción, capacidad de resolver; para la dirección, sostenimiento económico; para la comunidad, cumplimiento de condiciones justas. Una iniciativa no necesita maximizar todas, pero debe declarar cuál orienta la decisión y qué límites protegen a las otras.
 
@@ -154,11 +154,11 @@ La evidencia de valor aparece después del uso y puede contradecir el caso de ne
 
 ### Costo de oportunidad
 
-El costo de oportunidad es el valor de la mejor alternativa desplazada por una elección. Sólo existe en relación con opciones factibles bajo la misma capacidad y horizonte.
+En simple: El costo de oportunidad es el valor de la mejor alternativa desplazada por una elección. Sólo existe en relación con opciones factibles bajo la misma capacidad y horizonte.
 
 No equivale al presupuesto de la opción rechazada. Incluye aprendizaje, protección y capacidad que ya no podrán realizarse en ese período.
 
-Si el equipo dedica el mes a una personalización, HH-24 muestra qué corrección accesible deja de hacer y quién espera.
+Ejemplo cercano: Si el equipo dedica el mes a una personalización, HH-24 muestra qué corrección accesible deja de hacer y quién espera.
 
 El costo de oportunidad requiere alternativas factibles. Comparar una opción con un beneficio ideal sin capacidad para producirlo exagera la renuncia. El expediente utiliza opciones que compiten por el mismo recurso y horizonte y declara qué parte podría realizarse de otro modo.
 
@@ -176,13 +176,13 @@ La comparación incluye escenarios. HH-24 pregunta qué ocurre si baja la capaci
 
 ### Costo de demora
 
-El costo de demora expresa cómo cambia un beneficio o un daño mientras una opción espera. Puede ser lineal, crecer ante una fecha o perder valor gradualmente; la forma y el horizonte deben declararse.
+En simple: El costo de demora expresa cómo cambia un beneficio o un daño mientras una opción espera. Puede ser lineal, crecer ante una fecha o perder valor gradualmente; la forma y el horizonte deben declararse.
 
 Una cifra precisa sin evidencia fabrica autoridad. Se trabajan rangos, supuestos y poblaciones y se revisa la estimación cuando aparece nueva información.
 
 Demorar una protección antes de temporada alta tiene otra consecuencia que hacerlo después del pico, aunque el esfuerzo técnico sea idéntico.
 
-La forma de la demora puede ser lineal, escalonada, asociada a una fecha o incierta. Una multa contractual aparece después de un umbral; una oportunidad de mercado puede decaer; un riesgo de seguridad puede acumular exposición sin permitir predecir el momento del incidente. Representar la forma evita dividir beneficio por esfuerzo como si todas las semanas fueran equivalentes.
+Ejemplo cercano: La forma de la demora puede ser lineal, escalonada, asociada a una fecha o incierta. Una multa contractual aparece después de un umbral; una oportunidad de mercado puede decaer; un riesgo de seguridad puede acumular exposición sin permitir predecir el momento del incidente. Representar la forma evita dividir beneficio por esfuerzo como si todas las semanas fueran equivalentes.
 
 Esperar también puede producir valor al permitir obtener información, aprovechar una dependencia o evitar construir durante un cambio regulatorio. Para no alterar el significado habitual de costo de demora, HH-24 registra ese efecto por separado como valor de la opción de esperar. Luego compara el costo de postergar con ese valor, sin llamar costo negativo a fenómenos distintos ni transformar la espera en justificación indefinida.
 
@@ -190,7 +190,7 @@ Reinertsen (2009) aporta el análisis temporal de la demora; McGrath y MacMillan
 
 ### Clases de servicio
 
-Una clase de servicio define políticas de selección y tratamiento para tipos de demanda, como obligación, fecha fija, urgencia o trabajo estándar. No sirve para otorgar excepciones discrecionales.
+En simple, con un ejemplo: Una clase de servicio define políticas de selección y tratamiento para tipos de demanda, como obligación, fecha fija, urgencia o trabajo estándar. No sirve para otorgar excepciones discrecionales.
 
 Cada clase necesita criterio de entrada, límite, autoridad y regla de reposición del trabajo desplazado. Demasiadas urgencias destruyen la previsibilidad de todo el sistema.
 
@@ -202,11 +202,11 @@ Una fecha fija no es sinónimo de urgencia. Puede planificarse hacia atrás y re
 
 ### Obligación como límite
 
-Una obligación establece una condición que no puede tratarse como preferencia intercambiable. Derechos, seguridad y compromisos legales restringen el espacio antes de comparar beneficios.
+En simple: Una obligación establece una condición que no puede tratarse como preferencia intercambiable. Derechos, seguridad y compromisos legales restringen el espacio antes de comparar beneficios.
 
 La interpretación requiere autoridad y contexto; no toda política interna es una obligación externa. El expediente separa fuente, lectura y decisión de diseño.
 
-La accesibilidad del servicio no compite por puntaje con una campaña, aunque existan varias maneras legítimas de realizarla.
+Ejemplo cercano: La accesibilidad del servicio no compite por puntaje con una campaña, aunque existan varias maneras legítimas de realizarla.
 
 El límite no decide automáticamente la solución. Puede haber varias intervenciones compatibles con la obligación y diferentes costos de oportunidad. La cartera compara esas alternativas dentro del espacio legítimo y conserva la fuente que justifica el límite.
 
@@ -214,11 +214,11 @@ Cuando obligaciones entran en tensión, el equipo no inventa una jerarquía. Esc
 
 ### Dependencia habilitante
 
-Una dependencia habilitante es una capacidad cuyo avance permite o reduce el costo de varias opciones posteriores. No toda precedencia técnica merece recibir prioridad.
+En simple: Una dependencia habilitante es una capacidad cuyo avance permite o reduce el costo de varias opciones posteriores. No toda precedencia técnica merece recibir prioridad.
 
 Se comprueba qué decisiones desbloquea, qué población protege y si existe una ruta alternativa. Priorizar una dependencia sin outcome puede financiar infraestructura indefinidamente.
 
-Un contrato semántico común habilita canales y reportes sólo si los equipos pueden usarlo sin nueva conciliación.
+Ejemplo cercano: Un contrato semántico común habilita canales y reportes sólo si los equipos pueden usarlo sin nueva conciliación.
 
 La dependencia se prueba con consumidores concretos. Si sólo existe una afirmación general de que servirá a todos, puede convertirse en una plataforma sin resultado verificable. HH-24 identifica qué opción se desbloquea, cuánto trabajo evita y qué evidencia confirmará la habilitación.
 
@@ -236,9 +236,9 @@ La revisión también aprende sobre la política. Si la clase urgente se usa con
 
 ### Capacidad disponible
 
-Capacidad disponible es el trabajo sostenible que el sistema puede absorber sin degradar operación, aprendizaje ni reparación. No coincide con horas contratadas ni con ocupación máxima.
+En simple: Capacidad disponible es el trabajo sostenible que el sistema puede absorber sin degradar operación, aprendizaje ni reparación. No coincide con horas contratadas ni con ocupación máxima.
 
-Incidentes, variabilidad, mantenimiento y coordinación consumen capacidad aunque no aparezcan como iniciativa. Reservar margen reduce colas y protege respuesta.
+Ejemplo cercano: Incidentes, variabilidad, mantenimiento y coordinación consumen capacidad aunque no aparezcan como iniciativa. Reservar margen reduce colas y protege respuesta.
 
 HH-24 registra que el mismo equipo atiende cambios e incidentes y no promete el cien por ciento a la cartera.
 
@@ -250,9 +250,9 @@ Capacidad disponible no tiene aquí el mismo significado que capacidad sociotéc
 
 ### Límite de trabajo en curso
 
-Un límite de trabajo en curso restringe cuántas iniciativas pueden permanecer activas simultáneamente. Hace visible que comenzar más no produce terminar antes.
+En simple: Un límite de trabajo en curso restringe cuántas iniciativas pueden permanecer activas simultáneamente. Hace visible que comenzar más no produce terminar antes.
 
-El límite se aplica con políticas de entrada y excepciones y se ajusta mediante evidencia de flujo. Su función no es mantener personas ocupadas, sino reducir espera y dispersión.
+Ejemplo cercano: El límite se aplica con políticas de entrada y excepciones y se ajusta mediante evidencia de flujo. Su función no es mantener personas ocupadas, sino reducir espera y dispersión.
 
 El hotel mantiene un límite de dos apuestas activas y obliga a cerrar, detener o postergar una antes de incorporar otra. Las cuatro opciones permanecen visibles en cartera, pero sólo cobertura accesible e instrumentación consumen trabajo en curso.
 
@@ -268,7 +268,7 @@ Contar exige eventos claros. Una apuesta entra al trabajo en curso cuando recibe
 
 ### Kanban como política de compromiso
 
-La Guía Kanban de mayo de 2025 organiza tres prácticas: definir y visualizar el flujo, gestionar activamente los elementos y mejorar el flujo. Esa definición es más exigente que disponer tarjetas en columnas. Obliga a declarar qué unidad se mueve, dónde comienza y termina, qué estados atraviesa, qué controla el trabajo en curso, qué nivel de servicio se espera y mediante qué métricas se revisará el sistema. Sin esas políticas, el tablero muestra actividad sin explicar por qué algo entra, espera o sale.
+En simple, con un ejemplo: La Guía Kanban de mayo de 2025 organiza tres prácticas: definir y visualizar el flujo, gestionar activamente los elementos y mejorar el flujo. Esa definición es más exigente que disponer tarjetas en columnas. Obliga a declarar qué unidad se mueve, dónde comienza y termina, qué estados atraviesa, qué controla el trabajo en curso, qué nivel de servicio se espera y mediante qué métricas se revisará el sistema. Sin esas políticas, el tablero muestra actividad sin explicar por qué algo entra, espera o sale.
 
 El compromiso marca una frontera decisiva. Antes de él existen opciones o demanda; después existe trabajo que consume capacidad y debe gobernarse. En HH-24 una solicitud comercial no ingresa porque alguien la rotuló urgente. Entra cuando una autoridad acepta su consecuencia, identifica el recurso restrictivo y muestra qué otra opción se posterga. Mover el punto de compromiso hacia adelante puede proteger foco, pero no reduce la espera total de quien demanda. Por eso N24 conserva visibles la cola previa y el trabajo activo.
 
@@ -280,11 +280,11 @@ Kanban tampoco resuelve por sí solo qué merece prioridad. Hace observables flu
 
 ### Gobernanza de cartera
 
-Gobernar cartera es revisar opciones, compromisos y renuncias como un sistema interdependiente. Integra estrategia, obligaciones, capacidad y evidencia sin reducir toda consecuencia a un único ordenamiento numérico.
+En simple: Gobernar cartera es revisar opciones, compromisos y renuncias como un sistema interdependiente. Integra estrategia, obligaciones, capacidad y evidencia sin reducir toda consecuencia a un único ordenamiento numérico.
 
 La autoridad central necesita conocimiento local y voces afectadas; de otro modo, el orden reproduce visibilidad y poder. Cada decisión conserva responsable y efecto distributivo.
 
-HH-24 puede detener una apuesta que aprendió poco para proteger otra que demuestra más outcome o evita un daño crítico.
+Ejemplo cercano: HH-24 puede detener una apuesta que aprendió poco para proteger otra que demuestra más outcome o evita un daño crítico.
 
 La gobernanza necesita representación de voces afectadas y conocimiento de operación. Una decisión central basada sólo en casos de negocio privilegia beneficios visibles y subestima trabajo trasladado. Lucía y Mariela aportan episodios que cambian estimaciones de valor y capacidad.
 
@@ -292,7 +292,7 @@ La autoridad final no elimina desacuerdo. Registra qué criterio prevaleció, qu
 
 ### Fecha de revisión
 
-Una prioridad no debería durar para siempre por simple costumbre. La fecha de revisión acuerda cuándo volver a mirar la decisión y con qué datos; por ejemplo, una mejora postergada por la temporada alta se reevalúa cuando baja la demanda. Una fecha de revisión impide convertir la prioridad actual en verdad permanente. Indica cuándo y con qué evidencia volverán a contrastarse supuestos, outcomes y renuncias.
+En simple, con un ejemplo: Una prioridad no debería durar para siempre por simple costumbre. La fecha de revisión acuerda cuándo volver a mirar la decisión y con qué datos; por ejemplo, una mejora postergada por la temporada alta se reevalúa cuando baja la demanda. Una fecha de revisión impide convertir la prioridad actual en verdad permanente. Indica cuándo y con qué evidencia volverán a contrastarse supuestos, outcomes y renuncias.
 
 Revisar demasiado seguido crea volatilidad; hacerlo tarde convierte postergación en abandono. La cadencia se ajusta a velocidad del cambio y costo de demora.
 

@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "a737c25a65541e4dfb555df0b4dffcd0320e6b3aa61494a7245f43a00ccb90dd",
-        "declared_sha256": "a737c25a65541e4dfb555df0b4dffcd0320e6b3aa61494a7245f43a00ccb90dd",
+        "actual_sha256": "9e814d244907a61bfb15c2dc2e7df5ee88749ecebe832519d481d605b830b7af",
+        "declared_sha256": "9e814d244907a61bfb15c2dc2e7df5ee88749ecebe832519d481d605b830b7af",
         "document_json_matches": true,
         "source": "source/N14_procesos_end_to_end_handoffs_colas_y_excepciones-content-canonical-v3.md",
         "source_exists": true,
@@ -80,12 +80,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 20505399,
-        "final_sha256": "33eac214439783113952a77dbdb4b5af4afa236f97e68fe2e24bd295944b8066",
+        "bytes": 20518058,
+        "final_sha256": "9ad34a49a4dfdfa8d1f57c182624d78c173082f4eabd0bc8c72316bb08a338f4",
         "pages": 29,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "06555ae6eedda008d1e75a03e2abce3d1844b39ab38792944a2d09db39d4eea6",
+        "raw_sha256": "18e79f78ee98732d20618ccf376223bd9fd2f62e9f2a6f11990b3a6137fc2c8d",
         "unique_sizes": [
           [
             594.96,
@@ -1102,7 +1102,7 @@
       "evidence": {
         "declared_exceptions": [],
         "invalid_exception_declarations": [],
-        "minimum": 0.5629,
+        "minimum": 0.5926,
         "structural_exceptions": [
           1,
           2,
@@ -1137,14 +1137,14 @@
   "document": "N14",
   "failed_checks": [],
   "metrics": {
-    "minimum_ordinary_vertical_density": 0.5629,
+    "minimum_ordinary_vertical_density": 0.5926,
     "pages": 29,
     "pause_pages": [
       5,
       23
     ],
-    "pdf_bytes": 20505399,
-    "pdf_sha256": "33eac214439783113952a77dbdb4b5af4afa236f97e68fe2e24bd295944b8066",
+    "pdf_bytes": 20518058,
+    "pdf_sha256": "9ad34a49a4dfdfa8d1f57c182624d78c173082f4eabd0bc8c72316bb08a338f4",
     "source_blocks": 292
   },
   "mode": "read-only",

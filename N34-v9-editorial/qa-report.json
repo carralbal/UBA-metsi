@@ -15,8 +15,8 @@
     {
       "check": "source_manifest_and_package_identity_are_hash_locked",
       "evidence": {
-        "actual_sha256": "3e297462a0e38b87dece58c9b4c5671b5f5b6759227dc7abda7eb9fc1d1b0def",
-        "declared_sha256": "3e297462a0e38b87dece58c9b4c5671b5f5b6759227dc7abda7eb9fc1d1b0def",
+        "actual_sha256": "61f944a79c60a512cb213e53d04a96d4d76dd7e2d44efc1575d27b075a2396b4",
+        "declared_sha256": "61f944a79c60a512cb213e53d04a96d4d76dd7e2d44efc1575d27b075a2396b4",
         "document_json_matches": true,
         "source": "source/N34_reconstruir_la_cadena_completa_del_problema_al_gobierno-content-canonical-v4.md",
         "source_exists": true,
@@ -48,6 +48,19 @@
       "status": "PASS"
     },
     {
+      "check": "errors_grid_groups_each_label_with_its_explanation",
+      "evidence": [
+        {
+          "cards": 12,
+          "declared_rows": 6,
+          "expected_rows": 6,
+          "labels": 12,
+          "naked_pairs": 0
+        }
+      ],
+      "status": "PASS"
+    },
+    {
       "check": "no_lfs_pointers_private_paths_or_placeholders",
       "evidence": {
         "lfs_pointers": [],
@@ -67,12 +80,12 @@
     {
       "check": "final_pdf_is_parseable_new_distinct_and_all_pages_are_a4",
       "evidence": {
-        "bytes": 21273209,
-        "final_sha256": "1e02e9eb90c80e8f691a03d593518eacc96ae60babd960e42c7abefc2e88b122",
+        "bytes": 21216884,
+        "final_sha256": "b1ab0e781af12a084d472af3f541d1db7b649b1b0be6e9808f7a01b74232e9d4",
         "pages": 28,
         "raw_artifact_available": true,
         "raw_artifact_policy": "optional regenerable intermediate",
-        "raw_sha256": "8414f4f80c5d9f88b80cee04e3d80903565a0e9e81ef3ff87cf2bcc19b77bfd6",
+        "raw_sha256": "d349a2b7c91868168e81090509dc4184b60448595699ca1a1217943e3e6ecf79",
         "unique_sizes": [
           [
             594.96,
@@ -1129,15 +1142,15 @@
       5,
       22
     ],
-    "pdf_bytes": 21273209,
-    "pdf_sha256": "1e02e9eb90c80e8f691a03d593518eacc96ae60babd960e42c7abefc2e88b122",
+    "pdf_bytes": 21216884,
+    "pdf_sha256": "b1ab0e781af12a084d472af3f541d1db7b649b1b0be6e9808f7a01b74232e9d4",
     "source_blocks": 254
   },
   "mode": "read-only",
   "package": "N34-v9-editorial",
-  "passed_checks": 26,
+  "passed_checks": 27,
   "status": "PASS",
-  "total_checks": 26,
+  "total_checks": 27,
   "validator": "validate_n11_n36_v6.py",
   "version": "v9-editorial"
 }
