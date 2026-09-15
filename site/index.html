@@ -19,8 +19,8 @@
   <meta name="twitter:image" content="https://carralbal.github.io/UBA-metsi/og.png">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" as="image" href="covers/hero-metsi-bw-v1.webp?v=20260914-2" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="metsi.css?v=20260914-2">
-  <script src="metsi.js" defer></script>
+  <link rel="stylesheet" href="metsi.css?v=20260915-1">
+  <script src="metsi.js?v=20260915-1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#recorrido">Ir al recorrido</a>
@@ -115,6 +115,53 @@
           <p>Los 36 Núcleos forman un mapa completo y acumulativo. N01 a N36 tienen lectura publicada y auditada, desde la formulación del problema hasta el gobierno de IA, la transferencia y la práctica reflexiva.</p>
         </div>
       </div>
+
+      <section class="practice-map section-pad" aria-labelledby="practice-map-title">
+        <header class="practice-map-head">
+          <p class="practice-map-kicker">Prácticas, marcos y lenguajes</p>
+          <div>
+            <h3 id="practice-map-title">Un campo de prácticas,<br>no un catálogo de métodos.</h3>
+            <p>METSI los sitúa dentro de una intervención: algunos organizan el recorrido, otros ayudan a actuar y otros amplían el contexto. Seleccioná un punto para ver dónde se trabaja.</p>
+          </div>
+        </header>
+
+        <div class="practice-legend" aria-label="Clave de lectura del mapa">
+          <span><i class="legend-dot central"></i>Concepto central</span>
+          <span><i class="legend-dot applied"></i>Aplicación relevante</span>
+          <span><i class="legend-dot contextual"></i>Referencia contextual</span>
+          <span><i class="legend-size"></i>El tamaño indica su presencia en la materia</span>
+        </div>
+
+        <div class="practice-map-desktop">
+          <div class="practice-y-axis" aria-hidden="true">
+            <span>Experiencia<br>y personas</span>
+            <span>Gestión<br>y proceso</span>
+            <span>Diseño<br>y arquitectura</span>
+            <span>Tecnología<br>y operación</span>
+          </div>
+          <div class="practice-stage-wrap">
+            <div class="practice-stage" data-practice-map aria-label="Mapa interactivo de prácticas y marcos"></div>
+            <div class="practice-x-axis" aria-hidden="true">
+              <span><b>A</b>Sistema</span><span><b>B</b>Investigar</span><span><b>C</b>Modelar</span><span><b>D</b>Estrategia</span>
+              <span><b>E</b>Producto</span><span><b>F</b>Operar</span><span><b>G</b>Gobernar IA</span><span><b>H</b>Integrar</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="practice-map-mobile" id="practice-routes" data-practice-mobile aria-label="Recorridos de prácticas y marcos por bloque"></div>
+
+        <aside class="practice-detail" id="practice-detail" data-practice-detail aria-live="polite" aria-atomic="true">
+          <div class="practice-detail-heading">
+            <span data-practice-status>Concepto central</span>
+            <h4 data-practice-title>Arquitectura e integración</h4>
+          </div>
+          <p data-practice-description>Conecta representaciones, contratos y decisiones para que las partes funcionen como un sistema.</p>
+          <div>
+            <p class="practice-detail-label">Se trabaja en</p>
+            <ul data-practice-documents></ul>
+          </div>
+        </aside>
+      </section>
 
       <div class="block-map section-pad">
         <details class="block" open>
