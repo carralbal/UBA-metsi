@@ -25,7 +25,7 @@ El diagnóstico y las guardas se conservan en [`audits/2026-09-12-N34-visual-sem
 
 ### Estado
 
-Paquete docente v3 construido y auditado. Existen treinta y seis paquetes pedagógicos, uno por cada N, y treinta y seis presentaciones editables. En conjunto contienen 360 pantallas y 360 notas de orador, además de preparación asincrónica, taller sincrónico, guion docente y rúbrica por cada Núcleo.
+Paquete docente v3 construido y auditado nuevamente el 14 de septiembre de 2026. Existen treinta y seis paquetes pedagógicos, uno por cada N, y treinta y seis presentaciones editables. En conjunto contienen 360 pantallas y 360 notas de orador, además de preparación asincrónica, taller sincrónico, guion docente y rúbrica por cada Núcleo.
 
 ### Trabajo realizado
 
@@ -54,7 +54,7 @@ El criterio técnico está cumplido. La prueba piloto con ayudantes queda como v
 
 ## P2. Sistema de trabajo estudiantil para Hotel Horizonte
 
-**Estado:** sistema candidato construido el 12 de septiembre de 2026. Pendiente de prueba piloto con el equipo docente.
+**Estado:** sistema candidato construido el 12 de septiembre de 2026 y revalidado el 14 de septiembre de 2026. Pendiente de prueba piloto con el equipo docente.
 
 ### Decisión pedagógica recomendada
 
