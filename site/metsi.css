@@ -93,7 +93,7 @@ h1{margin:0;max-width:13ch;font-size:clamp(3.7rem,7.2vw,8rem);line-height:.88;le
 .practice-map{max-width:var(--page);margin:0 auto;padding-top:2rem;padding-bottom:7rem}
 .practice-atlas{position:relative;padding:clamp(2rem,4vw,4.4rem);overflow:hidden;background:var(--paper);color:var(--ink);border:1px solid #cccbc4}
 .practice-map-head{display:grid;grid-template-columns:minmax(12rem,.32fr) minmax(0,1fr);gap:clamp(2rem,7vw,8rem);padding-bottom:2.4rem;border-bottom:1px solid var(--line)}
-.practice-map-kicker{margin:.2rem 0;color:#6f8e00;font-size:.66rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.practice-map-kicker{display:inline-block;width:max-content;max-width:100%;margin:.2rem 0;padding:0 .12em;color:var(--ink);background:linear-gradient(to bottom,transparent 34%,var(--volt) 34%,var(--volt) 88%,transparent 88%);font-size:.66rem;font-weight:700;letter-spacing:.18em;line-height:1.15;text-transform:uppercase}
 .practice-map-head h3{margin:0;max-width:18ch;color:var(--ink);font-size:clamp(2.7rem,4.8vw,5rem);line-height:.96;letter-spacing:-.035em}
 .practice-map-head div>p{max-width:52rem;margin:1.5rem 0 0;color:var(--muted);font:400 1.05rem/1.6 var(--serif)}
 
