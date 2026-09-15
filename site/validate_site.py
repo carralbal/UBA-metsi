@@ -689,7 +689,7 @@ def build_report(require_sources: bool = False) -> dict[str, Any]:
             and program_pdf.is_file()
             and deployed_program_pdf.is_file()
             and safe_hash(deployed_program_pdf) == safe_hash(program_pdf)
-            and program_pages == 7
+            and program_pages == 8
             and not program_pdf_error
         ),
         "public_program_integrated": (
@@ -705,7 +705,7 @@ def build_report(require_sources: bool = False) -> dict[str, Any]:
                 "Ocho unidades",
                 "Hotel Horizonte",
                 "Instancias sumativas propuestas",
-                "Bibliografía y revisión",
+                "Referentes y bibliografía",
             )
         ),
         "program_navigation_accessible": (

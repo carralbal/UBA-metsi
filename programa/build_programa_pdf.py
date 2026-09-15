@@ -6,6 +6,8 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
+from pypdf import PdfReader, PdfWriter
+from pypdf.generic import NameObject
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_LEFT
 from reportlab.lib.pagesizes import A4
@@ -165,6 +167,16 @@ def main() -> None:
     story.append(PageBreak())
     story.extend(markdown_story(text, s))
     ProgramDoc(str(OUTPUT)).build(story)
+    reader = PdfReader(str(OUTPUT), strict=False)
+    writer = PdfWriter()
+    writer.clone_document_from_reader(reader)
+    writer._info = None
+    writer._ID = None
+    writer.root_object.pop(NameObject("/Metadata"), None)
+    sanitized = OUTPUT.with_suffix(".sanitized.pdf")
+    with sanitized.open("wb") as stream:
+        writer.write(stream)
+    sanitized.replace(OUTPUT)
     print(OUTPUT)
 
 

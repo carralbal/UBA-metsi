@@ -168,17 +168,44 @@ La evaluación combina instancias formativas y sumativas, preservando el régime
 
 Estas condiciones fueron contrastadas en agosto de 2026 con el régimen de FCE-UBA. Deben verificarse nuevamente antes de la presentación formal porque una actualización normativa prevalece sobre este documento.
 
-## Bibliografía
+## Referentes y bibliografía
 
-La bibliografía se organiza por unidad y función pedagógica. Separa:
+La bibliografía se organiza por unidad y función pedagógica. Esta selección común hace visible la conversación intelectual que sostiene el programa; cada lectura N incorpora además las fuentes específicas necesarias para su problema. No constituye un canon cerrado ni una lista de herramientas: reúne perspectivas que pueden complementarse, contradecirse y obligar a revisar una decisión.
 
-- fuentes fundacionales;
-- estándares y cuerpos normativos vigentes;
-- investigación académica;
-- marcos y guías profesionales;
-- casos y materiales docentes propios.
+### Pensamiento argentino y latinoamericano
 
-Cada referencia registra edición o versión, fecha de consulta, vigencia, fragmento requerido y razón de inclusión. Se evita usar manuales de herramientas comerciales como base conceptual. La matriz completa forma parte del registro interno de revisión docente.
+- García, R. (2006). *Sistemas complejos: conceptos, método y fundamentación epistemológica de la investigación interdisciplinaria*. Gedisa. Aporta una forma rigurosa de construir sistemas de estudio mediante preguntas, relaciones y evidencia.
+- Etkin, J. y Schvarstein, L. (1989). *Identidad de las organizaciones: invariancia y cambio*. Paidós. Permite estudiar tensiones entre identidad, estructura, poder y transformación organizacional.
+- Scolari, C. A. (2018). *Las leyes de la interfaz: diseño, ecología, evolución, tecnología*. Gedisa. Amplía la interfaz desde la pantalla hacia una red de relaciones, prácticas y mediaciones.
+- Winograd, T. y Flores, F. (1986). *Understanding Computers and Cognition: A New Foundation for Design*. Ablex. Introduce compromisos, lenguaje y acción como dimensiones centrales del diseño de sistemas.
+- Varsavsky, O. (1974). *Estilos tecnológicos: propuestas para la selección de tecnologías bajo racionalidad socialista*. Periferia. Vuelve discutibles la neutralidad tecnológica, la dependencia y los criterios de selección.
+- Ricaurte, P. (2019). “Data Epistemologies, The Coloniality of Power, and Resistance”. *Television & New Media*, 20(4), 350–365. https://doi.org/10.1177/1527476419831640
+- Freire, P. (2005). *Pedagogy of the Oppressed*, 30th Anniversary Edition. Continuum. Vincula reflexión, diálogo y acción transformadora sin reducir el aprendizaje a recibir respuestas.
+
+### Referentes globales
+
+- Churchman, C. W. (1968). *The Systems Approach*. Delacorte Press.
+- Checkland, P. y Poulter, J. (2007). *Learning for Action*. Wiley.
+- Meadows, D. H. (2008). *Thinking in Systems: A Primer*. Chelsea Green Publishing.
+- Schön, D. A. (1983). *The Reflective Practitioner*. Basic Books.
+- Suchman, L. A. (2007). *Human-Machine Reconfigurations: Plans and Situated Actions*. Cambridge University Press.
+- Norman, D. A. (2013). *The Design of Everyday Things: Revised and Expanded Edition*. Basic Books.
+- Freeman, R. E. (1984). *Strategic Management: A Stakeholder Approach*. Pitman.
+- Mumford, E. (2003). *Redesigning Human Systems*. IRM Press.
+- Leveson, N. G. (2012). *Engineering a Safer World: Systems Thinking Applied to Safety*. MIT Press.
+- Edmondson, A. C. (1999). “Psychological Safety and Learning Behavior in Work Teams”. *Administrative Science Quarterly*, 44(2), 350–383. https://doi.org/10.2307/2666999
+
+### Marcos, estándares y evidencia profesional
+
+- Project Management Institute (2025). *A Guide to the Project Management Body of Knowledge, PMBOK Guide, Eighth Edition, and The Standard for Project Management*. PMI. https://www.pmi.org/standards/pmbok
+- Schwaber, K. y Sutherland, J. (2020). *The Scrum Guide*. https://scrumguides.org/scrum-guide.html
+- Object Management Group (2017). *Unified Modeling Language, Version 2.5.1*. https://www.omg.org/spec/UML/2.5.1
+- Object Management Group (2014). *Business Process Model and Notation, Version 2.0.2*. https://www.omg.org/spec/BPMN/2.0.2
+- W3C (2024). *Web Content Accessibility Guidelines (WCAG) 2.2*. https://www.w3.org/TR/WCAG22/
+- Tabassi, E. (2023). *Artificial Intelligence Risk Management Framework (AI RMF 1.0)*. NIST AI 100-1. https://doi.org/10.6028/NIST.AI.100-1
+- DeBellis, D. et al. (2024). *DORA Accelerate State of DevOps 2024 Report*. https://research.google/pubs/dora-accelerate-state-of-devops-2024-report/
+
+Cada referencia registra edición o versión, vigencia, fragmento requerido y razón de inclusión. Se evita usar manuales de herramientas comerciales como base conceptual. La matriz completa forma parte del registro de revisión docente.
 
 ## Revisión y actualización
 

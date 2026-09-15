@@ -234,6 +234,23 @@ footer{padding:3rem clamp(1.4rem,7vw,7rem);display:grid;grid-template-columns:1f
 @media(max-width:900px){.program-facts,.program-units{grid-template-columns:repeat(2,minmax(0,1fr))}.program-facts article:nth-child(3){border-left:0;border-top:1px solid var(--line)}.program-units article:not(:nth-child(4n+1)){padding-left:0;border-left:0}.program-units article:nth-child(even){padding-left:1rem;border-left:1px solid var(--line)}.program-actions{grid-template-columns:1fr}}
 @media(max-width:650px){.program-facts,.program-units{grid-template-columns:1fr}.program-facts article{border-left:0;border-top:1px solid var(--line)}.program-facts article:first-child{border-top:0}.program-units article:nth-child(even){padding-left:0;border-left:0}.program-actions .button{width:100%;text-align:center}}
 
+/* Referentes: registro editorial, no galería de tarjetas. */
+.references{background:var(--paper);color:var(--ink)}
+.references-note{margin-top:1.4rem;color:var(--muted);font-style:italic}
+.reference-ledger{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:4rem;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.reference-ledger>article{padding:2rem 2.2rem 2.4rem 0}
+.reference-ledger>article+article{padding-left:2.2rem;border-left:1px solid var(--line)}
+.reference-region{margin:0 0 1.4rem;font-size:.67rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.reference-ledger ol{margin:0;padding:0;list-style:none}
+.reference-ledger li{display:grid;grid-template-columns:2.2rem 1fr;gap:.9rem;padding:1rem 0;border-top:1px solid var(--line)}
+.reference-ledger li>span{padding-top:.2rem;color:var(--muted);font-size:.61rem;font-weight:800;letter-spacing:.12em}
+.reference-ledger b{display:block;font:400 1.28rem/1.15 var(--serif)}
+.reference-ledger li p{margin:.25rem 0 0;color:var(--muted);font-size:.82rem;line-height:1.45}
+.reference-actions{display:grid;grid-template-columns:auto minmax(18rem,1fr);gap:2rem;align-items:center;margin-top:2.5rem}
+.reference-actions p{max-width:48rem;margin:0;color:var(--muted);font-size:.88rem}
+@media(max-width:900px){.reference-ledger{grid-template-columns:1fr}.reference-ledger>article{padding-right:0}.reference-ledger>article+article{padding-left:0;border-left:0;border-top:1px solid var(--ink)}.reference-actions{grid-template-columns:1fr}}
+@media(max-width:650px){.reference-ledger{margin-top:2.5rem}.reference-ledger b{font-size:1.13rem}.reference-actions .button{width:100%;text-align:center}}
+
 /* Programa académico. */
 .program-page{background:var(--paper)}
 .program-page .site-header{position:sticky;top:0;background:rgba(23,24,23,.97);color:var(--white)}
@@ -268,8 +285,17 @@ footer{padding:3rem clamp(1.4rem,7vw,7rem);display:grid;grid-template-columns:1f
 .unit-card h3{margin:.7rem 0 .6rem}
 .unit-card p{margin:0;font-size:.98rem;line-height:1.58}
 .program-note{font-size:.83rem!important;color:var(--muted)}
+.bibliography-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin:2.5rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.bibliography-grid>div{padding:0 1.8rem 1.8rem 0}
+.bibliography-grid>div+div{padding-left:1.8rem;border-left:1px solid var(--line)}
+.bibliography-list{margin:0;padding:0!important;list-style:none}
+.bibliography-list li{padding:.85rem 0;border-top:1px solid var(--line);font-size:.94rem!important;line-height:1.4!important}
+.bibliography-list b,.bibliography-list span{display:block}
+.bibliography-list b{font-family:var(--sans);font-size:.82rem;letter-spacing:.01em}
+.bibliography-list span{margin-top:.18rem;color:var(--muted)}
+.bibliography-standards{padding:1.2rem 1.4rem;border-left:.42rem solid var(--volt);background:var(--paper-soft);font:700 .86rem/1.7 var(--sans)!important;letter-spacing:.02em}
 @media(max-width:900px){.program-hero{grid-template-columns:1fr;min-height:auto;padding-top:8rem}.program-layout{grid-template-columns:1fr}.program-toc{position:static}.program-toc ol{display:grid;grid-template-columns:repeat(2,1fr);gap:0 1.5rem}}
-@media(max-width:650px){.program-hero{padding:7rem 1.2rem 4rem}.program-meta{grid-template-columns:1fr}.program-layout{padding-left:1.2rem;padding-right:1.2rem}.program-toc ol,.unit-grid{grid-template-columns:1fr}.unit-card:nth-child(even){padding-left:0;border-left:0}}
+@media(max-width:650px){.program-hero{padding:7rem 1.2rem 4rem}.program-meta{grid-template-columns:1fr}.program-layout{padding-left:1.2rem;padding-right:1.2rem}.program-toc ol,.unit-grid,.bibliography-grid{grid-template-columns:1fr}.unit-card:nth-child(even){padding-left:0;border-left:0}.bibliography-grid>div{padding-right:0}.bibliography-grid>div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
 
 /* Atlas interactivo de prácticas: recorrido primero, herramientas después. */
 @media(max-width:1100px){

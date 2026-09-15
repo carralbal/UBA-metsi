@@ -196,19 +196,52 @@ N02 retoma justamente lo que hoy dejamos abierto: dónde termina el sistema rele
   },
 ];
 
-function usePresentationKeys({ next, previous, first, last, toggleNotes, toggleFullscreen }) {
+const videoSources = {
+  road: {
+    label: "Colegas recorriendo un espacio de trabajo",
+    source: "Pexels",
+    creator: "Tiger Lily",
+    url: "https://www.pexels.com/video/workmates-walking-in-office-corridor-7147176/",
+  },
+  structure: {
+    label: "Persona caminando por un corredor de arquitectura mínima",
+    source: "Pexels",
+    creator: "cottonbro studio",
+    url: "https://www.pexels.com/video/person-walking-on-a-white-corridor-5971048/",
+  },
+  wires: {
+    label: "Flujo dinámico de conexiones y datos",
+    source: "Pexels",
+    creator: "Chandresh Uike",
+    url: "https://www.pexels.com/video/futuristic-digital-data-flow-background-34127955/",
+  },
+  lights: {
+    label: "Manos revisando documentos de trabajo",
+    source: "Pexels",
+    creator: "Kaboompics.com",
+    url: "https://www.pexels.com/video/person-looking-through-papers-on-work-desk-7710457/",
+  },
+  hotel: {
+    label: "Recepción y atención de una huésped en un hotel",
+    source: "Pexels",
+    creator: "Mikhail Nilov",
+    url: "https://www.pexels.com/video/a-receptionist-assisting-a-client-in-the-hotel-7820474/",
+  },
+};
+
+function usePresentationKeys({ next, previous, first, last, openNotes, toggleFullscreen }) {
   useEffect(() => {
     const onKey = (event) => {
       if (["ArrowRight", "PageDown", " "].includes(event.key)) { event.preventDefault(); next(); }
       if (["ArrowLeft", "PageUp"].includes(event.key)) { event.preventDefault(); previous(); }
       if (event.key === "Home") first();
       if (event.key === "End") last();
-      if (event.key.toLowerCase() === "n") toggleNotes();
+      if (event.key.toLowerCase() === "n") openNotes();
       if (event.key.toLowerCase() === "f") toggleFullscreen();
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [next, previous, first, last, toggleNotes, toggleFullscreen]);
+  }, [next, previous, first, last, openNotes, toggleFullscreen]);
 }
 
 function SlideBody({ slide }) {
@@ -224,10 +257,13 @@ function SlideBody({ slide }) {
 }
 
 function App() {
-  const initial = Math.min(Math.max(Number(new URLSearchParams(location.search).get("slide")) || 1, 1), slides.length) - 1;
+  const query = new URLSearchParams(location.search);
+  const presenterMode = query.get("presenter") === "1";
+  const initial = Math.min(Math.max(Number(query.get("slide")) || 1, 1), slides.length) - 1;
   const [index, setIndex] = useState(initial);
-  const [notesOpen, setNotesOpen] = useState(new URLSearchParams(location.search).get("presenter") === "1");
   const rootRef = useRef(null);
+  const channelRef = useRef(null);
+  const indexRef = useRef(initial);
   const slide = slides[index];
 
   const controls = useMemo(() => ({
@@ -235,20 +271,74 @@ function App() {
     previous: () => setIndex((value) => Math.max(value - 1, 0)),
     first: () => setIndex(0),
     last: () => setIndex(slides.length - 1),
-    toggleNotes: () => setNotesOpen((value) => !value),
+    openNotes: () => window.open(
+      `${location.pathname}?slide=${index + 1}&presenter=1`,
+      "metsi-n01-speaker-notes",
+    )?.focus(),
     toggleFullscreen: () => document.fullscreenElement ? document.exitFullscreen() : rootRef.current?.requestFullscreen(),
-  }), []);
+  }), [index]);
   usePresentationKeys(controls);
 
   useEffect(() => {
+    if (!("BroadcastChannel" in window)) return undefined;
+    const channel = new BroadcastChannel("metsi-n01-presentation");
+    channelRef.current = channel;
+    channel.onmessage = ({ data }) => {
+      if (data?.type === "slide" && Number.isInteger(data.index)) {
+        setIndex(Math.min(Math.max(data.index, 0), slides.length - 1));
+      }
+      if (data?.type === "request-slide") {
+        channel.postMessage({ type: "slide", index: indexRef.current });
+      }
+    };
+    if (presenterMode) channel.postMessage({ type: "request-slide" });
+    return () => channel.close();
+  }, [presenterMode]);
+
+  useEffect(() => {
+    indexRef.current = index;
     const params = new URLSearchParams(location.search);
     params.set("slide", String(index + 1));
-    if (notesOpen) params.set("presenter", "1");
+    if (presenterMode) params.set("presenter", "1");
     else params.delete("presenter");
     history.replaceState(null, "", `${location.pathname}?${params}${location.hash}`);
-  }, [index, notesOpen]);
+    localStorage.setItem("metsi-n01-slide", String(index));
+    channelRef.current?.postMessage({ type: "slide", index });
+  }, [index, presenterMode]);
 
-  return <main ref={rootRef} className={`presentation ${notesOpen ? "presenter" : ""}`}>
+  useEffect(() => {
+    if (!presenterMode) window.name = "metsi-n01-presentation";
+  }, [presenterMode]);
+
+  useEffect(() => {
+    const onStorage = (event) => {
+      if (event.key === "metsi-n01-slide") {
+        const nextIndex = Number(event.newValue);
+        if (Number.isInteger(nextIndex)) setIndex(Math.min(Math.max(nextIndex, 0), slides.length - 1));
+      }
+    };
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
+  }, []);
+
+  if (presenterMode) {
+    const source = videoSources[slide.video];
+    return <main className="notes-window">
+      <header>
+        <div><span>NOTAS DE ORADOR · METSI N01</span><b>{String(index + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}</b></div>
+        <h1>{slide.title}</h1>
+      </header>
+      <article>{slide.notes.split("\n\n").map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</article>
+      <aside><span>FONDO VISUAL</span><a href={source.url} target="_blank" rel="noreferrer">{source.label} · {source.creator} · {source.source}</a></aside>
+      <nav aria-label="Navegación desde las notas">
+        <button onClick={controls.previous} disabled={index === 0}>← Anterior</button>
+        <a href={`${location.pathname}?slide=${index + 1}`} target="metsi-n01-presentation">Abrir presentación ↗</a>
+        <button onClick={controls.next} disabled={index === slides.length - 1}>Siguiente →</button>
+      </nav>
+    </main>;
+  }
+
+  return <main ref={rootRef} className="presentation">
     <section className={`stage tone-${slide.tone}`} aria-label={`Diapositiva ${index + 1} de ${slides.length}`}>
       <video key={slide.video} className="background-video" autoPlay muted loop playsInline poster={`./media/${slide.video}.png`}>
         <source src={`./media/${slide.video}.mp4`} type="video/mp4" />
@@ -260,12 +350,11 @@ function App() {
       <footer><span>{String(index + 1).padStart(2, "0")}</span><p>Diego Carralbal · METSI · FCE UBA</p></footer>
       <nav className="controls" aria-label="Navegación de la presentación">
         <button onClick={controls.previous} disabled={index === 0} aria-label="Diapositiva anterior">←</button>
-        <button onClick={controls.toggleNotes} aria-pressed={notesOpen}>N</button>
+        <button onClick={controls.openNotes} aria-label="Abrir notas de orador en otra pestaña" title="Abrir notas de orador en otra pestaña">N↗</button>
         <button onClick={controls.toggleFullscreen} aria-label="Pantalla completa">□</button>
         <button onClick={controls.next} disabled={index === slides.length - 1} aria-label="Diapositiva siguiente">→</button>
       </nav>
     </section>
-    {notesOpen && <aside className="speaker-notes"><div><span>NOTAS DE ORADOR</span><b>{String(index + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}</b></div>{slide.notes.split("\n\n").map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</aside>}
   </main>;
 }
 
