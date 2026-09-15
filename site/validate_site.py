@@ -722,10 +722,10 @@ def build_report(require_sources: bool = False) -> dict[str, Any]:
             and ".site-header.menu-open nav" in css
         ),
         "hero_background_asset_and_breakpoints": (
-            (ROOT / "covers" / "hero-metsi-bw-v1.webp").is_file()
-            and 'url("covers/hero-metsi-bw-v1.webp?v=20260914-2")' in css
-            and "background-position:56% center" in css
-            and "background-position:62% center" in css
+            (ROOT / "covers" / "hero-metsi-fce-bw-v2.webp").is_file()
+            and 'url("covers/hero-metsi-fce-bw-v2.webp?v=20260915-1")' in css
+            and "background-position:18% center" in css
+            and "background-position:left center" in css
         ),
         "public_manifest_contains_no_internal_provenance": (
             not public_manifest_forbidden

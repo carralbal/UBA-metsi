@@ -1,0 +1,43 @@
+{
+  "title": "Atlas de prácticas y marcos METSI",
+  "claim": "Las prácticas cambian de función a medida que la intervención avanza desde comprender el sistema hasta integrar, transferir y aprender.",
+  "source_sections": [
+    {
+      "id": "s1",
+      "heading": "Ocho bloques. Una capacidad acumulativa.",
+      "summary": "N01 a N36 forman ocho estaciones conectadas que construyen una capacidad profesional acumulativa."
+    },
+    {
+      "id": "s2",
+      "heading": "Atlas de prácticas y marcos",
+      "summary": "Los marcos se sitúan según la función que cumplen en una intervención y según cuatro capas de práctica."
+    }
+  ],
+  "nodes": [
+    {"id":"a","label":"A · Sistema · N01—N04","role":"system","source":["s1"],"purpose":"Distinguir el pedido del sistema que produce el resultado."},
+    {"id":"b","label":"B · Investigar · N05—N10","role":"evidence","source":["s1"],"purpose":"Construir un problema investigable desde personas, episodios y evidencia."},
+    {"id":"c","label":"C · Modelar · N11—N16","role":"evidence","source":["s1"],"purpose":"Crear representaciones que permitan afirmar, coordinar y discutir."},
+    {"id":"d","label":"D · Estrategia · N17—N20","role":"decision","source":["s1"],"purpose":"Elegir una estrategia con autoridad, hitos y condiciones de salida."},
+    {"id":"e","label":"E · Producto · N21—N25","role":"process","source":["s1"],"purpose":"Transformar hipótesis en flujo, cortes y aprendizaje."},
+    {"id":"f","label":"F · Operar · N26—N30","role":"process","source":["s1"],"purpose":"Sostener una promesa entre servicios, terceros, calidad y operación."},
+    {"id":"g","label":"G · Gobernar IA · N31—N33","role":"constraint","source":["s1"],"purpose":"Gobernar evidencia, riesgo, operación y retiro de IA."},
+    {"id":"h","label":"H · Integrar · N34—N36","role":"outcome","source":["s1"],"purpose":"Volver coherente, transferible y revisable la intervención."},
+    {"id":"people","label":"Experiencia y personas","role":"boundary","source":["s2"],"purpose":"Agrupar prácticas que observan participación, experiencia, adopción y afectación."},
+    {"id":"management","label":"Gestión y proceso","role":"boundary","source":["s2"],"purpose":"Agrupar prácticas que organizan decisión, riesgo, flujo, calidad y gobierno."},
+    {"id":"design","label":"Diseño y arquitectura","role":"boundary","source":["s2"],"purpose":"Agrupar lenguajes y prácticas que representan servicios, interfaces y estructuras."},
+    {"id":"technology","label":"Tecnología y operación","role":"boundary","source":["s2"],"purpose":"Agrupar prácticas que realizan, integran, despliegan, observan y reparan."}
+  ],
+  "edges": [
+    {"id":"e-ab","from":"a","to":"b","relation":"transformation","source":["s1"],"meaning":"El sistema delimitado orienta la investigación."},
+    {"id":"e-bc","from":"b","to":"c","relation":"evidence","source":["s1"],"meaning":"La investigación aporta evidencia para modelar."},
+    {"id":"e-cd","from":"c","to":"d","relation":"dependency","source":["s1"],"meaning":"Las representaciones preparan una estrategia situada."},
+    {"id":"e-de","from":"d","to":"e","relation":"transformation","source":["s1"],"meaning":"La estrategia se convierte en hipótesis, producto y flujo."},
+    {"id":"e-ef","from":"e","to":"f","relation":"flow","source":["s1"],"meaning":"La entrega ingresa al sistema real de operación."},
+    {"id":"e-fg","from":"f","to":"g","relation":"authority","source":["s1"],"meaning":"La operación aporta señales y límites al gobierno de IA."},
+    {"id":"e-gh","from":"g","to":"h","relation":"feedback","source":["s1"],"meaning":"Gobierno, evidencia y aprendizaje se integran en una práctica revisable."},
+    {"id":"e-pa","from":"people","to":"a","relation":"boundary","source":["s2"],"meaning":"La experiencia y las personas atraviesan el recorrido desde su inicio."},
+    {"id":"e-md","from":"management","to":"d","relation":"boundary","source":["s2"],"meaning":"Gestión y proceso aportan decisiones y condiciones de avance."},
+    {"id":"e-dc","from":"design","to":"c","relation":"boundary","source":["s2"],"meaning":"Diseño y arquitectura aportan representaciones para comprender y decidir."},
+    {"id":"e-tf","from":"technology","to":"f","relation":"boundary","source":["s2"],"meaning":"Tecnología y operación hacen observable la promesa en uso."}
+  ]
+}

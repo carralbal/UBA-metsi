@@ -80,10 +80,11 @@
     });
   });
 
-  const practiceMap = document.querySelector('[data-practice-map]');
-  const practiceMobile = document.querySelector('[data-practice-mobile]');
+  const practiceBlocks = document.querySelector('[data-practice-blocks]');
+  const practiceField = document.querySelector('[data-practice-field]');
+  const practiceAtlas = document.querySelector('[data-practice-atlas]');
   const practiceDetail = document.querySelector('[data-practice-detail]');
-  if (practiceMap && practiceMobile && practiceDetail) {
+  if (practiceBlocks && practiceField && practiceAtlas && practiceDetail) {
     const practiceData = [
       { id:'stakeholders', label:'Gestión de stakeholders', block:1, band:1, status:'central', size:3, dx:-38, dy:-34, description:'Identifica quién decide, quién hace el trabajo, quién recibe el efecto y quién queda sin voz.', refs:[['N05','Actores, poder, exposición, voz y reparación'],['N07','Entrevistas y episodios'],['N20','Autoridad y estrategia'],['N35','Comunicación y transferencia']] },
       { id:'risk', label:'Gestión de riesgos', block:1, band:2, status:'applied', size:3, dx:30, dy:-26, description:'Hace explícitos exposición, incertidumbre, consecuencias y condiciones para revisar una decisión.', refs:[['N04','Hipótesis, supuestos y decisiones'],['N18','Legado y regulación'],['N20','Estrategia situada'],['N28','Calidad según riesgo'],['N32','Riesgo y evidencia en IA']] },
@@ -132,31 +133,35 @@
       { id:'incidents', label:'Incidentes, rollback y continuidad', block:8, band:4, status:'central', size:3, dx:20, dy:-20, description:'Trata la falla, la reversión y la continuidad como parte del diseño y del aprendizaje, no como excepciones finales.', refs:[['N18','Continuidad y legado'],['N26','Servicios y terceros'],['N29','Rollback y protección'],['N30','Incidentes y aprendizaje'],['N33','Contención y retiro de IA'],['N34','Reconstrucción de la cadena']] }
     ];
     const blockLabels = ['Sistema','Investigar','Modelar','Estrategia','Producto','Operar','Gobernar IA','Integrar'];
+    const blockMeta = [
+      { range:'N01—N04', claim:'Del pedido formulado al sistema que hace posible el resultado.' },
+      { range:'N05—N10', claim:'De las personas afectadas a un problema investigable y situado.' },
+      { range:'N11—N16', claim:'De los datos dispersos a representaciones que permiten discutir.' },
+      { range:'N17—N20', claim:'De una lógica elegida a una estrategia con autoridad y salida.' },
+      { range:'N21—N25', claim:'De una hipótesis de valor a un flujo que aprende con cada corte.' },
+      { range:'N26—N30', claim:'De componentes y terceros a una promesa operable y reparable.' },
+      { range:'N31—N33', claim:'De usar IA a gobernar su evidencia, riesgo, operación y retiro.' },
+      { range:'N34—N36', claim:'De artefactos correctos a una intervención coherente que aprende.' }
+    ];
     const bandLabels = ['Experiencia y personas','Gestión y proceso','Diseño y arquitectura','Tecnología y operación'];
     const statusLabels = { central:'Concepto central', applied:'Aplicación relevante', contextual:'Referencia contextual' };
     const pdfLinks = new Map([...document.querySelectorAll('.nucleus.available')].map((link) => [link.querySelector('b')?.textContent.trim(), link.getAttribute('href')]));
 
-    const makeButton = (item, mobile = false) => {
+    const makePracticeButton = (item, order) => {
       const button = document.createElement('button');
       button.type = 'button';
-      button.className = `practice-node ${item.status} size-${item.size}${mobile ? ' practice-node-mobile' : ''}`;
+      button.className = `practice-node ${item.status} size-${item.size}`;
       button.dataset.practiceId = item.id;
       button.setAttribute('aria-label', `${item.label}. ${statusLabels[item.status]}. ${blockLabels[item.block - 1]}.`);
-      if (!mobile) {
-        button.style.setProperty('--x', `${(item.block - .5) * 12.5}%`);
-        button.style.setProperty('--y', `${(item.band - .5) * 25}%`);
-        button.style.setProperty('--dx', `${item.dx || 0}px`);
-        button.style.setProperty('--dy', `${item.dy || 0}px`);
-      }
+      button.style.setProperty('--node-order', order);
       const dot = document.createElement('i');
       dot.setAttribute('aria-hidden', 'true');
+      const index = document.createElement('small');
+      index.textContent = String(order + 1).padStart(2, '0');
       const label = document.createElement('span');
       label.textContent = item.label;
-      button.append(dot, label);
-      button.addEventListener('click', () => {
-        selectPractice(item);
-        if (mobile) practiceDetail.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
-      });
+      button.append(index, dot, label);
+      button.addEventListener('click', () => selectPractice(item));
       return button;
     };
 
@@ -190,19 +195,71 @@
       }));
     };
 
-    practiceData.forEach((item) => practiceMap.append(makeButton(item)));
-    for (let block = 1; block <= 8; block += 1) {
-      const route = document.createElement('section');
-      route.className = 'practice-route';
-      route.id = `practice-block-${String.fromCharCode(96 + block)}`;
-      const heading = document.createElement('h4');
-      heading.innerHTML = `<b>${String.fromCharCode(64 + block)}</b><span>${blockLabels[block - 1]}</span>`;
-      const list = document.createElement('div');
-      practiceData.filter((item) => item.block === block).forEach((item) => list.append(makeButton(item, true)));
-      route.append(heading, list);
-      practiceMobile.append(route);
-    }
-    selectPractice(practiceData.find((item) => item.id === 'architecture'));
+    const selectBlock = (block) => {
+      practiceBlocks.querySelectorAll('[data-practice-block]').forEach((button) => {
+        const selected = Number(button.dataset.practiceBlock) === block;
+        button.classList.toggle('is-selected', selected);
+        button.setAttribute('aria-selected', String(selected));
+        button.tabIndex = selected ? 0 : -1;
+      });
+
+      const meta = blockMeta[block - 1];
+      practiceAtlas.querySelector('[data-practice-block-letter]').textContent = String.fromCharCode(64 + block);
+      practiceAtlas.querySelector('[data-practice-block-range]').textContent = meta.range;
+      practiceAtlas.querySelector('[data-practice-block-title]').textContent = blockLabels[block - 1];
+      practiceAtlas.querySelector('[data-practice-block-claim]').textContent = meta.claim;
+
+      const items = practiceData.filter((item) => item.block === block);
+      const bands = bandLabels.map((label, bandIndex) => {
+        const section = document.createElement('section');
+        section.className = 'practice-band';
+        const heading = document.createElement('header');
+        const bandNumber = document.createElement('span');
+        bandNumber.textContent = String(bandIndex + 1).padStart(2, '0');
+        const title = document.createElement('h5');
+        title.textContent = label;
+        heading.append(bandNumber, title);
+        const nodes = document.createElement('div');
+        nodes.className = 'practice-band-nodes';
+        const bandItems = items.filter((item) => item.band === bandIndex + 1);
+        if (bandItems.length) {
+          bandItems.forEach((item, order) => nodes.append(makePracticeButton(item, order)));
+        } else {
+          const empty = document.createElement('p');
+          empty.className = 'practice-band-empty';
+          empty.textContent = 'Esta capa no conduce la estación.';
+          nodes.append(empty);
+        }
+        section.append(heading, nodes);
+        return section;
+      });
+      practiceField.replaceChildren(...bands);
+      selectPractice(items.find((item) => item.status === 'central') || items[0]);
+    };
+
+    blockLabels.forEach((label, index) => {
+      const block = index + 1;
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'practice-block';
+      button.dataset.practiceBlock = block;
+      button.setAttribute('role', 'tab');
+      button.innerHTML = `<small>${blockMeta[index].range}</small><b>${String.fromCharCode(65 + index)}</b><span>${label}</span>`;
+      button.addEventListener('click', () => selectBlock(block));
+      button.addEventListener('keydown', (event) => {
+        if (!['ArrowLeft','ArrowRight','Home','End'].includes(event.key)) return;
+        event.preventDefault();
+        let next = index;
+        if (event.key === 'ArrowLeft') next = (index + 7) % 8;
+        if (event.key === 'ArrowRight') next = (index + 1) % 8;
+        if (event.key === 'Home') next = 0;
+        if (event.key === 'End') next = 7;
+        selectBlock(next + 1);
+        practiceBlocks.children[next].focus();
+      });
+      practiceBlocks.append(button);
+    });
+    selectBlock(1);
   }
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
