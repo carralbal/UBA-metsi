@@ -317,7 +317,7 @@
   }
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const revealTargets = document.querySelectorAll('.value-grid, .case-thread, .rhythm, .anatomy-grid, .guide-card, .cover-library, .quality-grid, .practice-map');
+  const revealTargets = document.querySelectorAll('.value-grid, .case-thread, .rhythm, .anatomy-grid, .guide-card, .quality-grid, .practice-map');
   revealTargets.forEach((item) => item.setAttribute('data-reveal', ''));
   if (reduced || !('IntersectionObserver' in window)) {
     revealTargets.forEach((item) => item.classList.add('revealed'));
