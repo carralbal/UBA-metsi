@@ -4,7 +4,7 @@ import { pathToFileURL } from "node:url";
 import { Presentation, PresentationFile } from "@oai/artifact-tool";
 
 const workspaceDir = process.cwd();
-const skillDir = "/Users/diegocarralbal/.codex/plugins/cache/openai-primary-runtime/presentations/26.909.12148/skills/presentations";
+const skillDir = "/Users/diegocarralbal/.codex/plugins/cache/openai-primary-runtime/presentations/26.909.11814/skills/presentations";
 const runtimeNode = "/Users/diegocarralbal/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node";
 const runtimeNodeModules = "/Users/diegocarralbal/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules";
 const runtimePython = "/Users/diegocarralbal/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3";
@@ -14,11 +14,12 @@ const args = process.argv.slice(2);
 const onlyIndex = args.indexOf("--only");
 const only = onlyIndex >= 0 ? args[onlyIndex + 1]?.toUpperCase() : null;
 const revisionIndex = args.indexOf("--revision");
-const revision = revisionIndex >= 0 ? args[revisionIndex + 1] : "v1";
+const revision = revisionIndex >= 0 ? args[revisionIndex + 1] : "v4";
 const startIndex = args.indexOf("--start");
 const startAt = startIndex >= 0 ? args[startIndex + 1]?.toUpperCase() : null;
 const endIndex = args.indexOf("--end");
 const endAt = endIndex >= 0 ? args[endIndex + 1]?.toUpperCase() : null;
+const buildRunId = new Date().toISOString().replace(/[:.]/g, "-");
 
 const { finalizePresentation } = await import(
   pathToFileURL(path.join(skillDir, "container_tools/artifact_tool_utils.mjs")).href,
@@ -309,22 +310,137 @@ function listItems(md, heading) {
     .map((line) => cleanMd(line.trim().slice(2)));
 }
 
+function spokenText(value) {
+  const teacherVerbs = new Map([
+    ["avanza", "avanzar"],
+    ["cambia", "cambiar"],
+    ["compara", "comparar"],
+    ["conecta", "conectar"],
+    ["contrasta", "contrastar"],
+    ["distingue", "distinguir"],
+    ["introduce", "introducir"],
+    ["presenta", "presentar"],
+    ["recupera", "recuperar"],
+    ["releva", "relevar"],
+    ["retiene", "retener"],
+    ["separa", "separar"],
+    ["trabaja", "trabajar"],
+    ["utiliza", "utilizar"],
+  ]);
+  let text = cleanMd(value)
+    .replace(/\r?\n+/g, " ")
+    .replace(/[•]/g, "")
+    .replace(/[;—–]/g, ".")
+    .replace(/\s+([,.])/g, "$1")
+    .replace(/\s{2,}/g, " ")
+    .replace(/^Consigna individual:\s*decidir\b/i, "Primero, cada persona decide")
+    .replace(/^Consigna individual:\s*/i, "Primero vamos a trabajar de manera individual. ")
+    .replace(/\bSe entregan\b/g, "Les voy a entregar")
+    .replace(/\bSe entrega\b/g, "Les voy a entregar")
+    .replace(/\bSe revela\b/g, "Les voy a mostrar")
+    .replace(/\bSe distribuyen\b/g, "Vamos a distribuir")
+    .replace(/\bSe identifican\b/g, "Vamos a identificar")
+    .replace(/\bSe prueban\b/g, "Vamos a probar")
+    .replace(/\bSe eligen\b/g, "Vamos a elegir")
+    .replace(/\bSe reconstruyen\b/g, "Vamos a reconstruir")
+    .replace(/\bSe analiza\b/g, "Vamos a analizar")
+    .replace(/\bSe anticipa\b/g, "Al final vamos a anticipar")
+    .replace(/\bLa respuesta sólo admite\b/g, "Pueden responder solamente")
+    .replace(/\b1\.\s+/g, "Primero, ")
+    .replace(/\b2\.\s+/g, "Después, ")
+    .replace(/\b3\.\s+/g, "Luego, ")
+    .replace(/\b4\.\s+/g, "También, ")
+    .replace(/\b5\.\s+/g, "A continuación, ")
+    .replace(/\b6\.\s+/g, "Además, ")
+    .replace(/\b7\.\s+/g, "Luego, ")
+    .replace(/\b8\.\s+/g, "Para cerrar, ")
+    .trim();
+  text = text.replace(/\bEl docente\s+(\p{L}+)/gu, (match, verb) => {
+    const infinitive = teacherVerbs.get(verb.toLowerCase());
+    return infinitive ? `Ahora voy a ${infinitive}` : "Ahora voy a intervenir y";
+  });
+  text = text
+    .replace(/Ahora voy a avanzar semanas y revela/g, "Ahora voy a avanzar algunas semanas y mostrar")
+    .replace(/Ahora voy a retener, duplica y reordena/g, "Ahora voy a retener, duplicar y reordenar")
+    .replace(/Ahora voy a trabajar con exclusiones reales de las entregas y muestra/g, "Ahora voy a trabajar con exclusiones reales de las entregas y mostrar")
+    .replace(/\. Introduce costo de error, demora y reversibilidad/g, ". Voy a introducir el costo del error, el costo de la demora y la reversibilidad")
+    .replace(/\. Distingue lo imaginado de lo documentado/g, ". Distingan lo imaginado de lo documentado")
+    .replace(/\. Compara el cierre administrativo/g, ". Comparen el cierre administrativo")
+    .replace(/^Cambia una obligación/g, "Ahora voy a cambiar una obligación");
+  return text.replace(/(^|[.!?]\s+)([a-záéíóúñ])/g, (match, prefix, letter) => `${prefix}${letter.toUpperCase()}`);
+}
+
+function spokenProbe(context, rowNumber) {
+  if (!context.probes.length) return "";
+  const first = context.probes[(rowNumber - 1) % context.probes.length];
+  const second = context.probes[rowNumber % context.probes.length];
+  return `Mientras trabajan, tengan presentes estas dos preguntas. ${spokenText(first)} ${spokenText(second)}`;
+}
+
+function spokenGate(activityNumber) {
+  const gates = {
+    1: "Cuando todos hayan dejado una posición visible, seguimos.",
+    2: "Antes de continuar, quiero que cada equipo pueda señalar por lo menos una diferencia que cambiaría una decisión.",
+    3: "Seguimos cuando la distinción pueda explicarse con un ejemplo del caso y no solamente con una definición.",
+    4: "Antes de avanzar, dejen la producción en una forma que otro equipo pueda leer y revisar.",
+    5: "Anoten con claridad qué cambió, qué se mantiene y qué decisión queda habilitada por la evidencia nueva.",
+    6: "La revisión termina cuando la objeción señala una relación concreta y propone una prueba posible.",
+    7: "Cada equipo cierra cuando puede sostener una decisión provisional y también puede nombrar su límite.",
+    8: "Antes de terminar, dejen por escrito qué aprendieron y qué evidencia todavía podría cambiar su posición.",
+  };
+  return gates[activityNumber] ?? "";
+}
+
 function buildNotes(row, context) {
-  const probes = Array.from({ length: Math.min(3, context.probes.length) }, (_, offset) => {
-    const index = (row.number - 1 + offset) % context.probes.length;
-    return `• ${context.probes[index]}`;
-  }).join("\n");
-  const activity = row.number >= 2 && row.number <= 9 ? context.steps[row.number - 2] : null;
-  const activityNote = activity
-    ? `CONSIGNA VISIBLE Y TIEMPO\n${activity.title} · ${activity.minutes} minutos\n${activity.body}`
-    : "";
+  if (row.number === 1) {
+    return [
+      `Hoy vamos a trabajar sobre ${spokenText(context.h1.replace(/^N\d+\s*·\s*/, ""))}.`,
+      `Quiero empezar con una pregunta. ${spokenText(context.question || row.visible)}`,
+      "Tómense un minuto para responder con sus propias palabras. No busquen una definición perfecta ni traten de adivinar qué respuesta espero. Anoten qué creen ahora y qué dato les falta para estar más seguros.",
+      spokenProbe(context, row.number),
+      "Después vamos a comparar las respuestas. Si aparecen posiciones distintas, esa diferencia nos va a servir para reconocer los supuestos con los que cada uno llegó al encuentro.",
+    ].filter(Boolean).join("\n\n");
+  }
+
+  if (row.number === 10) {
+    return [
+      "Para cerrar, vuelvan por un momento a la respuesta que dieron al comienzo.",
+      "Completen estas tres frases con una idea concreta. Antes pensaba. Ahora sostengo. Todavía revisaría mi posición si apareciera determinada evidencia.",
+      "No hace falta mostrar una conclusión definitiva. Lo importante es poder explicar qué cambió, qué produjo ese cambio y qué pregunta sigue abierta.",
+      `El resultado que buscamos hoy es este. ${spokenText(context.workshopResult)}`,
+      "Dejen ese registro por escrito. Va a ser el punto de partida para el próximo encuentro y una huella del recorrido que estamos construyendo.",
+    ].filter(Boolean).join("\n\n");
+  }
+
+  const activity = context.steps[row.number - 2];
+  const openings = {
+    1: "Vamos a empezar con una primera toma de posición.",
+    2: "Ahora vamos a poner en común lo que cada uno vio y a comparar diferencias.",
+    3: "Detengámonos en la distinción que necesitamos para poder decidir mejor.",
+    4: "Con esa distinción disponible, vamos a reconstruir el problema sobre un caso concreto.",
+    5: "Voy a incorporar información nueva. La idea es observar si nuestra explicación resiste o necesita cambiar.",
+    6: "Llegó el momento de revisar el trabajo de otro equipo con cuidado y con evidencia.",
+    7: "Vamos a defender una posición provisional y a explicar en qué evidencia se apoya.",
+    8: "Para terminar esta secuencia, vamos a registrar qué cambió y qué pregunta queda abierta.",
+  };
+  const why = {
+    1: "La primera respuesta funciona como una referencia. Más adelante podremos ver si cambió y por qué.",
+    2: "No intenten borrar el desacuerdo demasiado rápido. Una diferencia puede mostrar que estamos usando criterios distintos o mirando consecuencias diferentes.",
+    3: "No necesitamos repasar toda la lectura. Vamos a usar el concepto solamente donde ayuda a interpretar lo que tenemos delante.",
+    4: "Busquen relaciones que otra persona pueda seguir. Una afirmación gana valor cuando podemos mostrar en qué evidencia se apoya y qué decisión modifica.",
+    5: "Cambiar de posición frente a evidencia nueva no es un error. Es una señal de que el razonamiento permanece abierto a revisión.",
+    6: "Una buena objeción no reemplaza el trabajo ajeno. Señala una relación débil y propone qué observación permitiría examinarla.",
+    7: "Sean breves y específicos. Necesitamos escuchar qué sostienen, con qué evidencia y bajo qué condición aceptarían revisar la decisión.",
+    8: "El registro final importa porque nos permite reconstruir el aprendizaje sin depender de la memoria del momento.",
+  };
+  const time = activity?.minutes ? `Tenemos ${activity.minutes} minutos para esta parte.` : "";
   return [
-    `PROPÓSITO DE LA PANTALLA\n${row.visible}`,
-    activityNote,
-    `FACILITACIÓN SINCRÓNICA\n${row.note}\nSeñal para avanzar: ${row.advance}`,
-    `USO ASINCRÓNICO\n${context.prepPurpose}\nPresentar esta pantalla como una estación de trabajo. Pedir evidencia visible antes de habilitar la siguiente y abrir una devolución breve entre pares. No convertirla en explicación grabada del texto ya leído.`,
-    probes ? `PREGUNTAS DE SONDEO POSIBLES\n${probes}` : "",
-    `RESULTADO DEL ENCUENTRO\n${context.workshopResult}`,
+    openings[activity?.number],
+    activity ? spokenText(activity.body) : spokenText(row.visible),
+    why[activity?.number],
+    time,
+    spokenProbe(context, row.number),
+    spokenGate(activity?.number),
   ].filter(Boolean).join("\n\n");
 }
 
@@ -359,7 +475,7 @@ async function buildDeck(n) {
     slide.speakerNotes.setVisible(true);
   }
 
-  const privateDir = path.join(workspaceDir, ".class-deck-build", n);
+  const privateDir = path.join(workspaceDir, ".class-deck-build", revision, buildRunId, n);
   const outputDir = path.join(workspaceDir, "pedagogy", "presentations", n);
   await fs.mkdir(privateDir, { recursive: true });
   await fs.mkdir(outputDir, { recursive: true });

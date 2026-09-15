@@ -1,6 +1,47 @@
 # Materiales de clase N01 a N36
 
-Estas presentaciones v3 son el soporte visible de los encuentros. No resumen las lecturas: organizan decisiones, comparaciones, perturbaciones, producción de artefactos, revisión y cierre. Cada una se apoya en la fuente canónica publicada y en las ocho actividades reales de su taller. Las notas de orador permiten facilitar la misma secuencia en modalidad sincrónica o asincrónica.
+Estas presentaciones son el soporte visible de los encuentros. No resumen las lecturas: organizan decisiones, comparaciones, perturbaciones, producción de artefactos, revisión y cierre. Cada una se apoya en la fuente canónica publicada y en las ocho actividades reales de su taller.
+
+## Versión docente vigente · guion oral
+
+Las notas de la revisión v4 están redactadas como palabras que el docente puede leer directamente durante la clase.
+
+- [N01 · material de clase v4 · guion oral](N01/N01-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N02 · material de clase v4 · guion oral](N02/N02-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N03 · material de clase v4 · guion oral](N03/N03-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N04 · material de clase v4 · guion oral](N04/N04-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N05 · material de clase v4 · guion oral](N05/N05-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N06 · material de clase v4 · guion oral](N06/N06-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N07 · material de clase v4 · guion oral](N07/N07-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N08 · material de clase v4 · guion oral](N08/N08-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N09 · material de clase v4 · guion oral](N09/N09-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N10 · material de clase v4 · guion oral](N10/N10-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N11 · material de clase v4 · guion oral](N11/N11-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N12 · material de clase v4 · guion oral](N12/N12-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N13 · material de clase v4 · guion oral](N13/N13-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N14 · material de clase v4 · guion oral](N14/N14-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N15 · material de clase v4 · guion oral](N15/N15-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N16 · material de clase v4 · guion oral](N16/N16-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N17 · material de clase v4 · guion oral](N17/N17-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N18 · material de clase v4 · guion oral](N18/N18-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N19 · material de clase v4 · guion oral](N19/N19-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N20 · material de clase v4 · guion oral](N20/N20-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N21 · material de clase v4 · guion oral](N21/N21-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N22 · material de clase v4 · guion oral](N22/N22-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N23 · material de clase v4 · guion oral](N23/N23-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N24 · material de clase v4 · guion oral](N24/N24-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N25 · material de clase v4 · guion oral](N25/N25-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N26 · material de clase v4 · guion oral](N26/N26-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N27 · material de clase v4 · guion oral](N27/N27-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N28 · material de clase v4 · guion oral](N28/N28-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N29 · material de clase v4 · guion oral](N29/N29-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N30 · material de clase v4 · guion oral](N30/N30-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N31 · material de clase v4 · guion oral](N31/N31-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N32 · material de clase v4 · guion oral](N32/N32-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N33 · material de clase v4 · guion oral](N33/N33-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N34 · material de clase v4 · guion oral](N34/N34-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N35 · material de clase v4 · guion oral](N35/N35-METSI-material-de-clase-v4-guion-oral.pptx)
+- [N36 · material de clase v4 · guion oral](N36/N36-METSI-material-de-clase-v4-guion-oral.pptx)
 
 ## Piloto audiovisual para validar
 

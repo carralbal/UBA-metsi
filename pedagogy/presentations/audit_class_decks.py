@@ -15,7 +15,7 @@ from PIL import Image, ImageDraw
 
 ROOT = Path(__file__).resolve().parents[2]
 PRESENTATIONS = ROOT / "pedagogy" / "presentations"
-SKILL_DIR = Path("/Users/diegocarralbal/.codex/plugins/cache/openai-primary-runtime/presentations/26.909.12148/skills/presentations")
+SKILL_DIR = Path("/Users/diegocarralbal/.codex/plugins/cache/openai-primary-runtime/presentations/26.909.11814/skills/presentations")
 RUNTIME_PYTHON = Path("/Users/diegocarralbal/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3")
 RUNTIME_NODE = Path("/Users/diegocarralbal/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node")
 RUNTIME_MODULES = Path("/Users/diegocarralbal/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules")
@@ -81,17 +81,25 @@ def inspect_deck(deck: Path) -> dict:
             key=natural_key,
         )
         notes = [xml_text(archive, name) for name in note_names]
-        required = [
+        forbidden = [
             "PROPÓSITO DE LA PANTALLA",
             "FACILITACIÓN SINCRÓNICA",
             "USO ASINCRÓNICO",
             "RESULTADO DEL ENCUENTRO",
+            "CONSIGNA VISIBLE Y TIEMPO",
+            "Señal para avanzar",
+            "El docente",
+            "•",
         ]
-        missing = [heading for heading in required if any(heading not in note for note in notes)]
-        activity_notes_missing = [
+        notes_with_stage_directions = [
             index + 1
             for index, note in enumerate(notes)
-            if 2 <= index + 1 <= 9 and "CONSIGNA VISIBLE Y TIEMPO" not in note
+            if any(marker in note for marker in forbidden)
+        ]
+        short_notes = [
+            index + 1
+            for index, note in enumerate(notes)
+            if len(note.split()) < 45
         ]
         visible_text = [xml_text(archive, name) for name in slide_names]
         activity_title_mismatches = [
@@ -104,8 +112,8 @@ def inspect_deck(deck: Path) -> dict:
         "bytes": deck.stat().st_size,
         "slides": len(slide_names),
         "notes": len(note_names),
-        "notes_missing_headings": missing,
-        "activity_notes_missing": activity_notes_missing,
+        "notes_with_stage_directions": notes_with_stage_directions,
+        "short_notes": short_notes,
         "workshop_steps": len(expected_steps),
         "workshop_minutes": sum(step["minutes"] for step in expected_steps),
         "activity_title_mismatches": activity_title_mismatches,
@@ -113,8 +121,8 @@ def inspect_deck(deck: Path) -> dict:
         "pass": (
             len(slide_names) == 10
             and len(note_names) == 10
-            and not missing
-            and not activity_notes_missing
+            and not notes_with_stage_directions
+            and not short_notes
             and len(expected_steps) == 8
             and sum(step["minutes"] for step in expected_steps) == 120
             and not activity_title_mismatches
@@ -150,7 +158,7 @@ def render_deck(deck: Path, render_root: Path) -> Path:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--render-root", type=Path)
-    parser.add_argument("--revision", default="v3")
+    parser.add_argument("--revision", default="v4-guion-oral")
     args = parser.parse_args()
 
     decks = [
@@ -179,25 +187,30 @@ def main() -> None:
         "speaker_notes": sum(result.get("notes", 0) for result in results),
         "results": results,
     }
+    versioned_json_path = PRESENTATIONS / f"AUDIT-N01-N36-{args.revision}.json"
+    versioned_md_path = PRESENTATIONS / f"AUDIT-N01-N36-{args.revision}.md"
     json_path = PRESENTATIONS / "AUDIT-N01-N36.json"
     md_path = PRESENTATIONS / "AUDIT-N01-N36.md"
-    json_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    json_content = json.dumps(report, ensure_ascii=False, indent=2) + "\n"
+    versioned_json_path.write_text(json_content, encoding="utf-8")
+    json_path.write_text(json_content, encoding="utf-8")
 
     rows = "\n".join(
         f"| {index:02d} | {result.get('slides', 0)} | {result.get('notes', 0)} | {'PASS' if result.get('pass') else 'FAIL'} |"
         for index, result in enumerate(results, start=1)
     )
-    md_path.write_text(
+    md_content = (
         f"# Auditoría de presentaciones N01 a N36 · {args.revision}\n\n"
         f"Resultado: **{report['status']}**.\n\n"
         f"Se verificaron {report['documents']} presentaciones, {report['slides']} pantallas visibles y "
-        f"{report['speaker_notes']} bloques de notas de orador. Cada nota distingue propósito, facilitación "
-        "sincrónica, uso asincrónico y resultado del encuentro; las pantallas 02 a 09 también conservan la "
-        "consigna real y el tiempo del taller correspondiente.\n\n"
+        f"{report['speaker_notes']} notas de orador. Cada nota está redactada como discurso oral continuo, "
+        "sin rótulos internos, instrucciones de facilitación, viñetas ni referencias al docente en tercera persona. "
+        "Las pantallas 02 a 09 conservan la actividad y el tiempo del taller correspondiente.\n\n"
         "| N | Pantallas | Notas | Estado |\n|---:|---:|---:|---|\n"
-        f"{rows}\n",
-        encoding="utf-8",
+        f"{rows}\n"
     )
+    versioned_md_path.write_text(md_content, encoding="utf-8")
+    md_path.write_text(md_content, encoding="utf-8")
     print(json.dumps({key: report[key] for key in ["status", "documents", "slides", "speaker_notes"]}, ensure_ascii=False))
 
 
