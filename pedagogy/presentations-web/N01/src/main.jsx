@@ -8,9 +8,9 @@ const slides = [
     video: "road",
     tone: "deep",
     layout: "opening",
-    title: <>La solución llega formulada.<br />El problema, todavía no.</>,
-    prompt: "¿Qué necesitamos comprender antes de comprometernos con una solución?",
-    aside: <>Hoy no venimos a repetir N01.<br />Venimos a ponerlo a trabajar.</>,
+    title: <>La solución llegó<br />antes que el problema</>,
+    prompt: "¿Qué necesitamos comprender antes de decidir?",
+    aside: <>METSI · N01<br />La pregunta profesional</>,
     notes: `Quiero empezar sin explicar nada. Imaginen que somos el equipo que recibió un pedido muy claro: comprar un nuevo PMS para el Hotel Horizonte. La solución ya viene nombrada, incluso parece urgente. La pregunta es qué necesitamos comprender antes de comprometernos con ella.
 
 Tómense unos segundos y elijan una palabra para nombrar el problema. Puede ser una falla, una demora, una descoordinación, una promesa comercial o algo distinto. No busco todavía la palabra correcta. Me interesa que escuchemos la diversidad de encuadres que aparece incluso cuando todos leímos el mismo material.
@@ -39,7 +39,7 @@ Si eligieron “todavía no”, no alcanza con decir que falta información. Nom
     video: "wires",
     tone: "deep",
     layout: "definitions",
-    title: "Tres palabras que suelen mezclarse",
+    title: "Pedido. Problema. Solución",
     items: [
       ["PEDIDO", "Lo que alguien solicita"],
       ["PROBLEMA", "La situación que todavía debemos explicar"],
@@ -59,8 +59,8 @@ Cuando volvamos, no me cuenten todo el memo. Tráiganme una diferencia y la cons
     video: "lights",
     tone: "deep",
     layout: "comparison",
-    title: "No gana el memo más prolijo",
-    subtitle: "Gana la diferencia que vuelve visible una consecuencia.",
+    title: "Dos encuadres. Dos decisiones",
+    subtitle: "La diferencia aparece en la próxima acción.",
     items: [
       ["HH-01 · A", "El problema es el sistema actual", "Próxima acción: reemplazar"],
       ["HH-01 · B", "La promesa comercial no llega a operación", "Próxima acción: reconstruir el episodio"],
@@ -77,7 +77,7 @@ Si el PMS respondió a tiempo, la primera explicación pierde fuerza. Si Comerci
     video: "structure",
     tone: "light",
     layout: "questions",
-    title: "Una prueba en cuatro preguntas",
+    title: "Cuatro preguntas",
     items: [
       "¿Qué incertidumbre reducimos?",
       "¿Antes de qué decisión?",
@@ -96,7 +96,7 @@ Apliquen la prueba a una acción de su memo. Por ejemplo, entrevistar a Recepci�
     video: "hotel",
     tone: "deep",
     layout: "sequence",
-    title: <>Una versión común,<br />sin borrar el desacuerdo</>,
+    title: <>Una versión que<br />pueda ser objetada</>,
     items: ["Pedido", "Propósito", "Incertidumbre", "Evidencia", "Actores", "Autoridad", "Próxima decisión"],
     prompt: "Una versión que otra persona pueda objetar y revisar",
     duration: "23 MIN",
@@ -113,7 +113,7 @@ Tienen veintitrés minutos. El producto es una versión que otra persona pueda o
     video: "wires",
     tone: "deep",
     layout: "evidence",
-    title: "La evidencia debe poder incomodar",
+    title: "La evidencia incomoda",
     subtitle: "Cada equipo recibe dos piezas.",
     items: [
       "El PMS respondió a tiempo",
@@ -137,7 +137,7 @@ Al final necesito ver una revisión explícita, incluso si la revisión consiste
     video: "lights",
     tone: "deep",
     layout: "definitions",
-    title: "Objetar no es resolver por otro",
+    title: "Una objeción abre una prueba",
     items: [
       ["CITAR", "El campo cuestionado"],
       ["MOSTRAR", "La relación que no se sostiene"],
@@ -158,7 +158,7 @@ Cuando reciban las objeciones, no se defiendan enseguida. Primero prueben si per
     video: "hotel",
     tone: "deep",
     layout: "questions",
-    title: "Noventa segundos. Cuatro frases.",
+    title: "Una posición y su límite",
     items: [
       "Queremos sostener…",
       "La siguiente acción autorizada es…",
@@ -198,28 +198,28 @@ N02 retoma justamente lo que hoy dejamos abierto: dónde termina el sistema rele
 
 const videoSources = {
   road: {
-    label: "Colegas recorriendo un espacio de trabajo",
-    source: "Pexels",
-    creator: "Tiger Lily",
-    url: "https://www.pexels.com/video/workmates-walking-in-office-corridor-7147176/",
+    label: "Arquitectura brutalista en blanco y negro",
+    source: "Pixabay",
+    creator: "Solarselle77",
+    url: "https://pixabay.com/videos/architecture-minimalism-concrete-327458/",
   },
   structure: {
-    label: "Persona caminando por un corredor de arquitectura mínima",
+    label: "Corredor de hotel en blanco y negro",
     source: "Pexels",
-    creator: "cottonbro studio",
-    url: "https://www.pexels.com/video/person-walking-on-a-white-corridor-5971048/",
+    creator: "bruno lucas",
+    url: "https://www.pexels.com/video/black-and-white-corridor-5784035/",
   },
   wires: {
-    label: "Flujo dinámico de conexiones y datos",
+    label: "Revisión de documentos de trabajo",
     source: "Pexels",
-    creator: "Chandresh Uike",
-    url: "https://www.pexels.com/video/futuristic-digital-data-flow-background-34127955/",
+    creator: "Artem Podrez",
+    url: "https://www.pexels.com/video/people-working-with-accounting-documents-6780083/",
   },
   lights: {
-    label: "Manos revisando documentos de trabajo",
+    label: "Páginas en blanco y negro",
     source: "Pexels",
-    creator: "Kaboompics.com",
-    url: "https://www.pexels.com/video/person-looking-through-papers-on-work-desk-7710457/",
+    creator: "Pranjall Kumar",
+    url: "https://www.pexels.com/video/a-person-flipping-the-next-page-of-a-book-6185321/",
   },
   hotel: {
     label: "Recepción y atención de una huésped en un hotel",
@@ -229,7 +229,7 @@ const videoSources = {
   },
 };
 
-const mediaVersion = "20260915-3";
+const mediaVersion = "20260915-cinema-1";
 
 function BackgroundVideo({ name }) {
   const videoRef = useRef(null);
@@ -321,7 +321,7 @@ function App() {
     previous: () => setIndex((value) => Math.max(value - 1, 0)),
     first: () => setIndex(0),
     last: () => setIndex(slides.length - 1),
-    openNotes: () => window.open(notesHref, "metsi-n01-speaker-notes", "noopener")?.focus(),
+    openNotes: () => window.open(notesHref, "_blank", "noopener")?.focus(),
     toggleFullscreen: () => document.fullscreenElement ? document.exitFullscreen() : rootRef.current?.requestFullscreen(),
   }), [index, notesHref]);
   usePresentationKeys(controls);
@@ -379,7 +379,7 @@ function App() {
       <aside><span>FONDO VISUAL</span><a href={source.url} target="_blank" rel="noreferrer">{source.label} · {source.creator} · {source.source}</a></aside>
       <nav aria-label="Navegación desde las notas">
         <button onClick={controls.previous} disabled={index === 0}>← Anterior</button>
-        <a href={`${location.pathname}?slide=${index + 1}`} target="metsi-n01-presentation">Abrir presentación ↗</a>
+        <a href={`${location.pathname}?slide=${index + 1}`} target="_blank" rel="noopener">Abrir presentación ↗</a>
         <button onClick={controls.next} disabled={index === slides.length - 1}>Siguiente →</button>
       </nav>
     </main>;
@@ -395,7 +395,7 @@ function App() {
       <footer><span>{String(index + 1).padStart(2, "0")}</span><p>Diego Carralbal · METSI · FCE UBA</p></footer>
       <nav className="controls" aria-label="Navegación de la presentación">
         <button onClick={controls.previous} disabled={index === 0} aria-label="Diapositiva anterior">←</button>
-        <a href={notesHref} target="metsi-n01-speaker-notes" rel="noopener" aria-label="Abrir notas de orador en otra pestaña" title="Abrir notas de orador en otra pestaña">Notas ↗</a>
+        <a href={notesHref} target="_blank" rel="noopener" aria-label="Abrir notas de orador en otra pestaña" title="Abrir notas de orador en otra pestaña">Notas ↗</a>
         <button onClick={controls.toggleFullscreen} aria-label="Pantalla completa">□</button>
         <button onClick={controls.next} disabled={index === slides.length - 1} aria-label="Diapositiva siguiente">→</button>
       </nav>
