@@ -117,46 +117,69 @@
       </div>
 
       <section class="practice-map section-pad" aria-labelledby="practice-map-title">
-        <header class="practice-map-head">
-          <p class="practice-map-kicker">Atlas de prácticas y marcos</p>
-          <div>
-            <h3 id="practice-map-title">Las prácticas cambian de función<br>durante la intervención.</h3>
-            <p>No son materias aisladas ni una lista de herramientas. El recorrido A–H muestra cuándo una práctica ayuda a comprender, decidir, realizar, operar o aprender. Elegí una estación y después un concepto.</p>
-          </div>
-        </header>
-
-        <div class="practice-legend" aria-label="Clave de lectura del atlas">
-          <span><i class="legend-dot central"></i>Estructura el bloque</span>
-          <span><i class="legend-dot applied"></i>Se aplica para decidir</span>
-          <span><i class="legend-dot contextual"></i>Amplía el contexto</span>
-          <span><i class="legend-size"></i>La escala indica recurrencia</span>
-        </div>
-
-        <nav class="practice-blocks" data-practice-blocks role="tablist" aria-label="Ocho estaciones del recorrido METSI"></nav>
-
-        <div class="practice-atlas" data-practice-atlas>
-          <header class="practice-atlas-core">
-            <p><span data-practice-block-letter>A</span><b data-practice-block-range>N01—N04</b></p>
-            <h4 data-practice-block-title>Sistema</h4>
-            <span data-practice-block-claim>Del pedido formulado al sistema que hace posible el resultado.</span>
+        <div class="practice-atlas" id="atlas-practicas" data-practice-atlas>
+          <header class="practice-map-head">
+            <p class="practice-map-kicker">Atlas de prácticas y marcos</p>
+            <div>
+              <h3 id="practice-map-title">Un campo de prácticas,<br>no un catálogo de métodos.</h3>
+              <p>Cada estación reorganiza las prácticas según el problema que permite comprender y la decisión que ayuda a tomar. Elegí una estación A–H y después un concepto.</p>
+            </div>
           </header>
 
-          <div class="practice-field" data-practice-field aria-label="Prácticas del bloque seleccionado"></div>
+          <div class="practice-radial-layout">
+            <div class="practice-radial-column">
+              <div class="practice-radial" data-practice-radial>
+                <svg viewBox="0 0 600 600" role="img" aria-labelledby="practice-radial-title practice-radial-desc">
+                  <title id="practice-radial-title">Recorrido radial por los ocho bloques de METSI</title>
+                  <desc id="practice-radial-desc">Ocho estaciones rodean el centro METSI. La estación seleccionada actualiza el detalle de prácticas y lecturas.</desc>
+                  <circle class="practice-radial-track" cx="300" cy="300" r="242"></circle>
+                  <circle class="practice-radial-track" cx="300" cy="300" r="174"></circle>
+                  <g data-practice-sectors aria-hidden="true"></g>
+                  <g data-practice-axes aria-hidden="true"></g>
+                </svg>
+                <nav class="practice-blocks" data-practice-blocks role="tablist" aria-label="Ocho estaciones del recorrido METSI"></nav>
+                <div class="practice-atlas-core" aria-live="polite">
+                  <b data-practice-block-range>N01—N04</b>
+                  <h4 data-practice-block-title>Sistema</h4>
+                  <span>METSI · <i data-practice-block-letter>A</i></span>
+                </div>
+              </div>
 
-          <aside class="practice-detail" id="practice-detail" data-practice-detail aria-live="polite" aria-atomic="true">
-            <div class="practice-detail-heading">
-              <span data-practice-status>Concepto central</span>
-              <h4 data-practice-title>Gestión de stakeholders</h4>
+              <div class="practice-legend" aria-label="Clave de lectura del atlas">
+                <span><i class="legend-dot central"></i>Estructura la estación</span>
+                <span><i class="legend-dot applied"></i>Se aplica para decidir</span>
+                <span><i class="legend-dot contextual"></i>Aporta contexto</span>
+              </div>
             </div>
-            <p data-practice-description>Identifica quién decide, quién hace el trabajo, quién recibe el efecto y quién queda sin voz.</p>
-            <div>
-              <p class="practice-detail-label">Aparece en estas lecturas</p>
-              <ul data-practice-documents></ul>
+
+            <div class="practice-sheet">
+              <header class="practice-sheet-head">
+                <span data-practice-sheet-letter>A</span>
+                <div>
+                  <p data-practice-sheet-range>N01—N04 · estación 01</p>
+                  <h4 data-practice-sheet-title>Sistema</h4>
+                  <b data-practice-block-claim>Del pedido formulado al sistema que hace posible el resultado.</b>
+                </div>
+              </header>
+
+              <div class="practice-field" data-practice-field aria-label="Prácticas del bloque seleccionado"></div>
+
+              <aside class="practice-detail" id="practice-detail" data-practice-detail aria-live="polite" aria-atomic="true">
+                <div class="practice-detail-heading">
+                  <span data-practice-status>Concepto central</span>
+                  <h4 data-practice-title>Gestión de stakeholders</h4>
+                </div>
+                <p data-practice-description>Identifica quién decide, quién hace el trabajo, quién recibe el efecto y quién queda sin voz.</p>
+                <div>
+                  <p class="practice-detail-label">Aparece en estas lecturas</p>
+                  <ul data-practice-documents></ul>
+                </div>
+              </aside>
             </div>
-          </aside>
+          </div>
+
+          <p class="practice-atlas-caption"><span>01</span> Un marco puede reaparecer en otra estación con una función diferente. El atlas muestra su lugar principal y las lecturas donde se vuelve concreto.</p>
         </div>
-
-        <p class="practice-atlas-caption"><span>01</span> Un mismo marco puede reaparecer en otra estación con una función diferente. El mapa muestra su lugar principal y las lecturas donde se vuelve concreto.</p>
       </section>
 
       <div class="block-map section-pad">

@@ -84,7 +84,10 @@
   const practiceField = document.querySelector('[data-practice-field]');
   const practiceAtlas = document.querySelector('[data-practice-atlas]');
   const practiceDetail = document.querySelector('[data-practice-detail]');
-  if (practiceBlocks && practiceField && practiceAtlas && practiceDetail) {
+  const practiceRadial = document.querySelector('[data-practice-radial]');
+  const practiceSectors = document.querySelector('[data-practice-sectors]');
+  const practiceAxes = document.querySelector('[data-practice-axes]');
+  if (practiceBlocks && practiceField && practiceAtlas && practiceDetail && practiceRadial && practiceSectors && practiceAxes) {
     const practiceData = [
       { id:'stakeholders', label:'Gestión de stakeholders', block:1, band:1, status:'central', size:3, dx:-38, dy:-34, description:'Identifica quién decide, quién hace el trabajo, quién recibe el efecto y quién queda sin voz.', refs:[['N05','Actores, poder, exposición, voz y reparación'],['N07','Entrevistas y episodios'],['N20','Autoridad y estrategia'],['N35','Comunicación y transferencia']] },
       { id:'risk', label:'Gestión de riesgos', block:1, band:2, status:'applied', size:3, dx:30, dy:-26, description:'Hace explícitos exposición, incertidumbre, consecuencias y condiciones para revisar una decisión.', refs:[['N04','Hipótesis, supuestos y decisiones'],['N18','Legado y regulación'],['N20','Estrategia situada'],['N28','Calidad según riesgo'],['N32','Riesgo y evidencia en IA']] },
@@ -202,15 +205,23 @@
         button.setAttribute('aria-selected', String(selected));
         button.tabIndex = selected ? 0 : -1;
       });
+      practiceSectors.querySelectorAll('[data-practice-sector]').forEach((sector) => {
+        sector.classList.toggle('is-selected', Number(sector.dataset.practiceSector) === block);
+      });
 
       const meta = blockMeta[block - 1];
       practiceAtlas.querySelector('[data-practice-block-letter]').textContent = String.fromCharCode(64 + block);
       practiceAtlas.querySelector('[data-practice-block-range]').textContent = meta.range;
       practiceAtlas.querySelector('[data-practice-block-title]').textContent = blockLabels[block - 1];
       practiceAtlas.querySelector('[data-practice-block-claim]').textContent = meta.claim;
+      practiceAtlas.querySelector('[data-practice-sheet-letter]').textContent = String.fromCharCode(64 + block);
+      practiceAtlas.querySelector('[data-practice-sheet-range]').textContent = `${meta.range} · estación ${String(block).padStart(2, '0')}`;
+      practiceAtlas.querySelector('[data-practice-sheet-title]').textContent = blockLabels[block - 1];
 
       const items = practiceData.filter((item) => item.block === block);
-      const bands = bandLabels.map((label, bandIndex) => {
+      const bands = bandLabels.flatMap((label, bandIndex) => {
+        const bandItems = items.filter((item) => item.band === bandIndex + 1);
+        if (!bandItems.length) return [];
         const section = document.createElement('section');
         section.className = 'practice-band';
         const heading = document.createElement('header');
@@ -221,30 +232,57 @@
         heading.append(bandNumber, title);
         const nodes = document.createElement('div');
         nodes.className = 'practice-band-nodes';
-        const bandItems = items.filter((item) => item.band === bandIndex + 1);
-        if (bandItems.length) {
-          bandItems.forEach((item, order) => nodes.append(makePracticeButton(item, order)));
-        } else {
-          const empty = document.createElement('p');
-          empty.className = 'practice-band-empty';
-          empty.textContent = 'Esta capa no conduce la estación.';
-          nodes.append(empty);
-        }
+        bandItems.forEach((item, order) => nodes.append(makePracticeButton(item, order)));
         section.append(heading, nodes);
-        return section;
+        return [section];
       });
       practiceField.replaceChildren(...bands);
       selectPractice(items.find((item) => item.status === 'central') || items[0]);
     };
 
+    const radialPoint = (radius, angle) => {
+      const radians = (angle - 90) * Math.PI / 180;
+      return [300 + radius * Math.cos(radians), 300 + radius * Math.sin(radians)];
+    };
+    const radialArc = (inner, outer, start, end) => {
+      const [x1, y1] = radialPoint(outer, start);
+      const [x2, y2] = radialPoint(outer, end);
+      const [x3, y3] = radialPoint(inner, end);
+      const [x4, y4] = radialPoint(inner, start);
+      return `M ${x1} ${y1} A ${outer} ${outer} 0 0 1 ${x2} ${y2} L ${x3} ${y3} A ${inner} ${inner} 0 0 0 ${x4} ${y4} Z`;
+    };
+
     blockLabels.forEach((label, index) => {
       const block = index + 1;
+      const start = index * 45 + 2.2;
+      const end = (index + 1) * 45 - 2.2;
+      const sector = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      sector.classList.add('practice-radial-sector');
+      sector.dataset.practiceSector = block;
+      sector.setAttribute('d', radialArc(178, 238, start, end));
+      practiceSectors.append(sector);
+
+      const [axisX1, axisY1] = radialPoint(245, index * 45);
+      const [axisX2, axisY2] = radialPoint(262, index * 45);
+      const axis = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      axis.classList.add('practice-radial-axis');
+      axis.setAttribute('x1', axisX1);
+      axis.setAttribute('y1', axisY1);
+      axis.setAttribute('x2', axisX2);
+      axis.setAttribute('y2', axisY2);
+      practiceAxes.append(axis);
+
+      const angle = index * 45 + 22.5;
+      const [buttonX, buttonY] = radialPoint(270, angle);
       const button = document.createElement('button');
       button.type = 'button';
       button.className = 'practice-block';
       button.dataset.practiceBlock = block;
       button.setAttribute('role', 'tab');
-      button.innerHTML = `<small>${blockMeta[index].range}</small><b>${String.fromCharCode(65 + index)}</b><span>${label}</span>`;
+      button.setAttribute('aria-label', `${String.fromCharCode(65 + index)}. ${label}. ${blockMeta[index].range}`);
+      button.textContent = String.fromCharCode(65 + index);
+      button.style.setProperty('--practice-left', `${buttonX / 6}%`);
+      button.style.setProperty('--practice-top', `${buttonY / 6}%`);
       button.addEventListener('click', () => selectBlock(block));
       button.addEventListener('keydown', (event) => {
         if (!['ArrowLeft','ArrowRight','Home','End'].includes(event.key)) return;

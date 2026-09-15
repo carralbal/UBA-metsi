@@ -1,36 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1100" role="img" aria-labelledby="atlas-title atlas-desc">
-  <title id="atlas-title">Atlas de prácticas y marcos METSI</title>
-  <desc id="atlas-desc">Ocho estaciones conectadas muestran el avance desde comprender el sistema hasta integrar y aprender. Cuatro capas transversales sitúan las prácticas de personas, gestión, diseño y tecnología.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200" role="img" aria-labelledby="atlas-title atlas-desc">
+  <title id="atlas-title">Atlas radial de prácticas y marcos METSI</title>
+  <desc id="atlas-desc">Ocho estaciones A a H forman un anillo alrededor de METSI. La estación A está seleccionada y despliega, sobre una misma superficie de papel cálido, sus prácticas y vínculos con las lecturas.</desc>
   <defs>
-    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 Z" fill="#60615d"/></marker>
     <style>
-      .k{font:700 18px Arial,sans-serif;letter-spacing:4px}.t{font:700 56px Arial,sans-serif}.s{font:400 24px Arial,sans-serif}.b{font:700 26px Arial,sans-serif}.r{font:700 15px Arial,sans-serif;letter-spacing:2px}.l{font:700 18px Arial,sans-serif;letter-spacing:2px}.n{font:700 68px Arial,sans-serif}
+      .eyebrow{font:700 18px Arial,sans-serif;letter-spacing:4px}.display{font:400 62px Georgia,serif}.title{font:400 44px Georgia,serif}.body{font:400 21px Georgia,serif}.meta{font:700 15px Arial,sans-serif;letter-spacing:2px}.label{font:700 18px Arial,sans-serif}.node{font:400 34px Georgia,serif}.small{font:400 16px Arial,sans-serif}.line{stroke:#b9b8b1;stroke-width:2}.sector{fill:none;stroke:#e1e1dc;stroke-width:72;stroke-linecap:butt}
     </style>
   </defs>
-  <rect width="1800" height="1100" fill="#F6F4EE"/>
-  <rect x="42" y="42" width="1716" height="1016" rx="28" fill="none" stroke="#C8C6BF" stroke-width="2"/>
-  <text class="k" x="90" y="105" fill="#474843">METSI · ARQUITECTURA DE LA MATERIA</text>
-  <text class="t" x="90" y="180" fill="#242522">Las prácticas cambian de función durante la intervención</text>
-  <text class="s" x="90" y="225" fill="#666762">El recorrido precede a las herramientas: cada marco ocupa un lugar, cumple una función y deja evidencia para el siguiente bloque.</text>
-  <path d="M100 285 H1700" stroke="#8B8B87" stroke-width="2" fill="none"/>
-  <path d="M150 498 C330 390 450 390 610 498 S900 606 1050 498 S1340 390 1635 498" stroke="#60615d" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <rect width="1800" height="1200" fill="#f6f4ee"/>
+  <rect x="55" y="55" width="1690" height="1090" fill="none" stroke="#c8c6bf" stroke-width="2"/>
+  <text class="eyebrow" x="105" y="125" fill="#6f8e00">ATLAS DE PRÁCTICAS Y MARCOS</text>
+  <text class="display" x="565" y="135" fill="#242522">Un campo de prácticas,</text>
+  <text class="display" x="565" y="205" fill="#242522">no un catálogo de métodos.</text>
+  <text class="body" x="565" y="255" fill="#666762">Cada estación reorganiza las prácticas según el problema que permite comprender</text>
+  <text class="body" x="565" y="286" fill="#666762">y la decisión que ayuda a tomar.</text>
+  <path d="M105 325 H1695" class="line" fill="none"/>
 
-  <g id="block-a"><circle cx="160" cy="498" r="52" fill="#CFFF00" stroke="#242522" stroke-width="2"/><text class="n" x="137" y="520" fill="#242522">A</text><text class="r" x="112" y="585" fill="#686963">N01—N04</text><text class="b" x="105" y="622" fill="#242522">Sistema</text></g>
-  <g id="block-b"><circle cx="370" cy="420" r="44" fill="#F6F4EE" stroke="#242522" stroke-width="3"/><text class="n" x="347" y="442" fill="#242522">B</text><text class="r" x="322" y="350" fill="#686963">N05—N10</text><text class="b" x="310" y="318" fill="#242522">Investigar</text></g>
-  <g id="block-c"><circle cx="575" cy="490" r="44" fill="#F6F4EE" stroke="#242522" stroke-width="3"/><text class="n" x="550" y="512" fill="#242522">C</text><text class="r" x="527" y="582" fill="#686963">N11—N16</text><text class="b" x="520" y="619" fill="#242522">Modelar</text></g>
-  <g id="block-d"><circle cx="790" cy="575" r="44" fill="#F6F4EE" stroke="#242522" stroke-width="3"/><text class="n" x="765" y="597" fill="#242522">D</text><text class="r" x="742" y="670" fill="#686963">N17—N20</text><text class="b" x="723" y="707" fill="#242522">Estrategia</text></g>
-  <g id="block-e"><circle cx="1000" cy="505" r="52" fill="#CFFF00" stroke="#242522" stroke-width="2"/><text class="n" x="978" y="527" fill="#242522">E</text><text class="r" x="952" y="596" fill="#686963">N21—N25</text><text class="b" x="940" y="633" fill="#242522">Producto</text></g>
-  <g id="block-f"><circle cx="1210" cy="420" r="44" fill="#F6F4EE" stroke="#242522" stroke-width="3"/><text class="n" x="1190" y="442" fill="#242522">F</text><text class="r" x="1162" y="350" fill="#686963">N26—N30</text><text class="b" x="1162" y="318" fill="#242522">Operar</text></g>
-  <g id="block-g"><circle cx="1420" cy="470" r="44" fill="#F6F4EE" stroke="#242522" stroke-width="3"/><text class="n" x="1395" y="492" fill="#242522">G</text><text class="r" x="1372" y="562" fill="#686963">N31—N33</text><text class="b" x="1345" y="599" fill="#242522">Gobernar IA</text></g>
-  <g id="block-h"><circle cx="1625" cy="498" r="52" fill="#CFFF00" stroke="#242522" stroke-width="2"/><text class="n" x="1600" y="520" fill="#242522">H</text><text class="r" x="1577" y="585" fill="#686963">N34—N36</text><text class="b" x="1570" y="622" fill="#242522">Integrar</text></g>
+  <g id="station-a"><path d="M575.7 409 A250 250 0 0 1 711 544.3" class="sector" stroke="#cfff00"/><circle cx="703" cy="417" r="39" fill="#cfff00" stroke="#242522" stroke-width="2"/><text class="node" x="691" y="428" fill="#242522">A</text></g>
+  <g id="station-b"><path d="M711 544.3 A250 250 0 0 1 711 735.7" class="sector"/><circle cx="795" cy="640" r="39" fill="#f6f4ee" stroke="#242522" stroke-width="2"/><text class="node" x="783" y="651" fill="#242522">B</text></g>
+  <g id="station-c"><path d="M711 735.7 A250 250 0 0 1 575.7 871" class="sector"/><circle cx="703" cy="863" r="39" fill="#f6f4ee" stroke="#242522" stroke-width="2"/><text class="node" x="690" y="874" fill="#242522">C</text></g>
+  <g id="station-d"><path d="M575.7 871 A250 250 0 0 1 384.3 871" class="sector"/><circle cx="480" cy="955" r="39" fill="#f6f4ee" stroke="#242522" stroke-width="2"/><text class="node" x="467" y="966" fill="#242522">D</text></g>
+  <g id="station-e"><path d="M384.3 871 A250 250 0 0 1 249 735.7" class="sector"/><circle cx="257" cy="863" r="39" fill="#f6f4ee" stroke="#242522" stroke-width="2"/><text class="node" x="245" y="874" fill="#242522">E</text></g>
+  <g id="station-f"><path d="M249 735.7 A250 250 0 0 1 249 544.3" class="sector"/><circle cx="165" cy="640" r="39" fill="#f6f4ee" stroke="#242522" stroke-width="2"/><text class="node" x="154" y="651" fill="#242522">F</text></g>
+  <g id="station-g"><path d="M249 544.3 A250 250 0 0 1 384.3 409" class="sector"/><circle cx="257" cy="417" r="39" fill="#f6f4ee" stroke="#242522" stroke-width="2"/><text class="node" x="244" y="428" fill="#242522">G</text></g>
+  <g id="station-h"><path d="M384.3 409 A250 250 0 0 1 575.7 409" class="sector"/><circle cx="480" cy="325" r="39" fill="#f6f4ee" stroke="#242522" stroke-width="2"/><text class="node" x="467" y="336" fill="#242522">H</text></g>
 
-  <g id="lane-people"><path d="M130 800 H1670" stroke="#C8C6BF" stroke-width="2"/><circle cx="380" cy="800" r="9" fill="#CFFF00" stroke="#242522"/><text class="l" x="130" y="785" fill="#555651">01 · EXPERIENCIA Y PERSONAS</text><text class="s" x="405" y="809" fill="#242522">participación · UX · accesibilidad · cambio</text></g>
-  <g id="lane-management"><path d="M130 860 H1670" stroke="#C8C6BF" stroke-width="2"/><circle cx="700" cy="860" r="9" fill="#F6F4EE" stroke="#242522" stroke-width="2"/><text class="l" x="130" y="845" fill="#555651">02 · GESTIÓN Y PROCESO</text><text class="s" x="725" y="869" fill="#242522">riesgo · estrategia · producto · calidad · gobierno</text></g>
-  <g id="lane-design"><path d="M130 920 H1670" stroke="#C8C6BF" stroke-width="2"/><circle cx="1010" cy="920" r="9" fill="#F6F4EE" stroke="#242522" stroke-width="2"/><text class="l" x="130" y="905" fill="#555651">03 · DISEÑO Y ARQUITECTURA</text><text class="s" x="1035" y="929" fill="#242522">servicios · BPMN · UML · C4 · interfaces</text></g>
-  <g id="lane-technology"><path d="M130 980 H1670" stroke="#C8C6BF" stroke-width="2"/><circle cx="1000" cy="980" r="9" fill="#777873"/><text class="l" x="130" y="965" fill="#555651">04 · TECNOLOGÍA Y OPERACIÓN</text><text class="s" x="1025" y="989" fill="#242522">APIs · Git · CI/CD · DevOps · observabilidad</text></g>
+  <circle cx="480" cy="640" r="154" fill="#f6f4ee" stroke="#b9b8b1" stroke-width="2"/>
+  <text class="meta" x="428" y="608" fill="#6f8e00">N01—N04</text>
+  <text class="title" x="402" y="659" fill="#242522">Sistema</text>
+  <text class="meta" x="431" y="695" fill="#666762">METSI · A</text>
 
-  <path d="M160 550 C160 690 380 690 380 790" stroke="#CFFF00" stroke-width="2" stroke-dasharray="5 9" fill="none"/>
-  <path d="M790 625 C790 735 700 735 700 850" stroke="#8B8B87" stroke-width="2" stroke-dasharray="5 9" fill="none"/>
-  <path d="M1000 557 C1000 730 1010 730 1010 910" stroke="#8B8B87" stroke-width="2" stroke-dasharray="5 9" fill="none"/>
-  <path d="M1210 464 C1210 750 1000 750 1000 970" stroke="#8B8B87" stroke-width="2" stroke-dasharray="5 9" fill="none"/>
+  <g id="legend">
+    <path d="M135 1050 H825" class="line" fill="none"/>
+    <circle cx="180" cy="1087" r="9" fill="#cfff00" stroke="#6f8e00"/><text class="small" x="200" y="1093" fill="#666762">ESTRUCTURA</text>
+    <circle cx="405" cy="1087" r="9" fill="#f6f4ee" stroke="#242522" stroke-width="2"/><text class="small" x="425" y="1093" fill="#666762">APLICACIÓN</text>
+    <circle cx="625" cy="1087" r="9" fill="#7c7f78"/><text class="small" x="645" y="1093" fill="#666762">CONTEXTO</text>
+  </g>
+
+  <g id="detail-sheet">
+    <rect x="900" y="350" width="760" height="690" fill="#e9e9e4"/>
+    <rect x="940" y="395" width="74" height="74" fill="#cfff00"/>
+    <text class="title" x="960" y="448" fill="#242522">A</text>
+    <text class="meta" x="1045" y="410" fill="#666762">N01—N04 · ESTACIÓN 01</text>
+    <text class="title" x="1045" y="462" fill="#242522">Sistema</text>
+    <text class="body" x="1045" y="500" fill="#666762">Del pedido formulado al sistema que hace</text>
+    <text class="body" x="1045" y="530" fill="#666762">posible el resultado.</text>
+    <path d="M940 570 H1620" class="line" fill="none"/>
+  </g>
+  <g id="layer-people"><text class="meta" x="940" y="625" fill="#6f8e00">01</text><text class="meta" x="990" y="625" fill="#666762">EXPERIENCIA Y PERSONAS</text><circle cx="1325" cy="619" r="11" fill="#cfff00" stroke="#6f8e00"/><text class="label" x="1350" y="625" fill="#242522">Gestión de stakeholders</text><path d="M940 660 H1620" class="line" fill="none"/></g>
+  <g id="layer-management"><text class="meta" x="940" y="715" fill="#6f8e00">02</text><text class="meta" x="990" y="715" fill="#666762">GESTIÓN Y PROCESO</text><circle cx="1325" cy="709" r="11" fill="none" stroke="#242522" stroke-width="2"/><text class="label" x="1350" y="715" fill="#242522">Gestión de riesgos</text><path d="M940 750 H1620" class="line" fill="none"/></g>
+  <g id="layer-design"><text class="meta" x="940" y="805" fill="#6f8e00">03</text><text class="meta" x="990" y="805" fill="#666762">DISEÑO Y ARQUITECTURA</text><circle cx="1325" cy="799" r="9" fill="none" stroke="#242522" stroke-width="2"/><text class="label" x="1347" y="805" fill="#242522">UML</text><circle cx="1450" cy="799" r="7" fill="#7c7f78"/><text class="label" x="1470" y="805" fill="#666762">C4</text><path d="M940 840 H1620" class="line" fill="none"/></g>
+  <g id="concept-detail"><text class="meta" x="940" y="890" fill="#6f8e00">CONCEPTO CENTRAL · EXPERIENCIA Y PERSONAS</text><text class="title" x="940" y="940" fill="#242522">Gestión de stakeholders</text><text class="body" x="940" y="978" fill="#666762">Identifica quién decide, quién hace el trabajo, quién recibe el efecto</text><text class="body" x="940" y="1008" fill="#666762">y quién queda sin voz.</text></g>
 </svg>
