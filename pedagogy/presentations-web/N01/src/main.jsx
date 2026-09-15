@@ -229,6 +229,55 @@ const videoSources = {
   },
 };
 
+const mediaVersion = "20260915-3";
+
+function BackgroundVideo({ name }) {
+  const videoRef = useRef(null);
+  const [playing, setPlaying] = useState(false);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return undefined;
+    video.muted = true;
+    const start = () => video.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
+    start();
+    const resumeWhenVisible = () => {
+      if (document.visibilityState === "visible" && video.paused) start();
+    };
+    document.addEventListener("visibilitychange", resumeWhenVisible);
+    return () => document.removeEventListener("visibilitychange", resumeWhenVisible);
+  }, [name]);
+
+  const toggle = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (video.paused) video.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
+    else {
+      video.pause();
+      setPlaying(false);
+    }
+  };
+
+  return <>
+    <video
+      ref={videoRef}
+      className="background-video"
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="auto"
+      poster={`./media/${name}.png?v=${mediaVersion}`}
+      onCanPlay={() => videoRef.current?.play().catch(() => setPlaying(false))}
+      onPlaying={() => setPlaying(true)}
+      onPause={() => setPlaying(false)}
+    >
+      <source src={`./media/${name}.mp4?v=${mediaVersion}`} type="video/mp4" />
+    </video>
+    <button className="video-toggle" type="button" onClick={toggle}>{playing ? "Pausar video" : "Reproducir video"}</button>
+  </>;
+}
+
 function usePresentationKeys({ next, previous, first, last, openNotes, toggleFullscreen }) {
   useEffect(() => {
     const onKey = (event) => {
@@ -265,18 +314,16 @@ function App() {
   const channelRef = useRef(null);
   const indexRef = useRef(initial);
   const slide = slides[index];
+  const notesHref = `${location.pathname}?slide=${index + 1}&presenter=1`;
 
   const controls = useMemo(() => ({
     next: () => setIndex((value) => Math.min(value + 1, slides.length - 1)),
     previous: () => setIndex((value) => Math.max(value - 1, 0)),
     first: () => setIndex(0),
     last: () => setIndex(slides.length - 1),
-    openNotes: () => window.open(
-      `${location.pathname}?slide=${index + 1}&presenter=1`,
-      "metsi-n01-speaker-notes",
-    )?.focus(),
+    openNotes: () => window.open(notesHref, "metsi-n01-speaker-notes", "noopener")?.focus(),
     toggleFullscreen: () => document.fullscreenElement ? document.exitFullscreen() : rootRef.current?.requestFullscreen(),
-  }), [index]);
+  }), [index, notesHref]);
   usePresentationKeys(controls);
 
   useEffect(() => {
@@ -340,9 +387,7 @@ function App() {
 
   return <main ref={rootRef} className="presentation">
     <section className={`stage tone-${slide.tone}`} aria-label={`Diapositiva ${index + 1} de ${slides.length}`}>
-      <video key={slide.video} className="background-video" autoPlay muted loop playsInline poster={`./media/${slide.video}.png`}>
-        <source src={`./media/${slide.video}.mp4`} type="video/mp4" />
-      </video>
+      <BackgroundVideo key={slide.video} name={slide.video} />
       <div className="veil" />
       <header className="slide-header"><span>{String(index + 1).padStart(2, "0")}</span><i /><b>METSI · N01</b><em>{slide.stage}</em><hr /></header>
       <article className={`slide-copy layout-${slide.layout}`}><SlideBody slide={slide} /></article>
@@ -350,7 +395,7 @@ function App() {
       <footer><span>{String(index + 1).padStart(2, "0")}</span><p>Diego Carralbal · METSI · FCE UBA</p></footer>
       <nav className="controls" aria-label="Navegación de la presentación">
         <button onClick={controls.previous} disabled={index === 0} aria-label="Diapositiva anterior">←</button>
-        <button onClick={controls.openNotes} aria-label="Abrir notas de orador en otra pestaña" title="Abrir notas de orador en otra pestaña">N↗</button>
+        <a href={notesHref} target="metsi-n01-speaker-notes" rel="noopener" aria-label="Abrir notas de orador en otra pestaña" title="Abrir notas de orador en otra pestaña">Notas ↗</a>
         <button onClick={controls.toggleFullscreen} aria-label="Pantalla completa">□</button>
         <button onClick={controls.next} disabled={index === slides.length - 1} aria-label="Diapositiva siguiente">→</button>
       </nav>
