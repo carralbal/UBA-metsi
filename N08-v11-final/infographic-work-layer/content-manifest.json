@@ -1,0 +1,232 @@
+{
+  "title": "Del episodio a una decisión revisable",
+  "claim": "Un registro de observación sostiene una decisión defendible cuando mantiene distinguibles contexto, evento, interpretación, incertidumbre, función, consecuencia y decisión, y contrasta esas capas con participantes, rastros y otros episodios.",
+  "source_sections": [
+    {
+      "id": "N08-tesis",
+      "heading": "Tesis",
+      "summary": "Observar profesionalmente reconstruye la función, la incertidumbre, la evidencia, la autoridad y las consecuencias antes de cambiar una práctica."
+    },
+    {
+      "id": "N08-episodio",
+      "heading": "Observar un episodio de principio a fin",
+      "summary": "El episodio conecta condiciones iniciales, señales, interpretaciones, decisiones, acciones, resultado y reparación, y exige separar descripción, interpretación y pregunta."
+    },
+    {
+      "id": "N08-registro",
+      "heading": "Instrumento de decisión: registro en capas",
+      "summary": "Define las siete capas, qué registra cada una y su pregunta de control, y exige contrastar las notas con participantes y otros rastros."
+    },
+    {
+      "id": "N08-redisenio",
+      "heading": "De observación a hipótesis y rediseño",
+      "summary": "La observación se formula como hipótesis, se contrasta con episodios y recién después permite decidir qué preservar, cambiar o experimentar."
+    },
+    {
+      "id": "N08-protocolo",
+      "heading": "Protocolo operativo de observación",
+      "summary": "La observación separa descripción, interpretación y pregunta, triangula fuentes, formula mecanismos rivales, conecta con una decisión y vuelve a observar."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "contexto",
+      "label": "Contexto: turno, carga, canal y restricciones",
+      "role": "evidence",
+      "source": ["N08-registro"],
+      "purpose": "Sitúa la condición capaz de cambiar el episodio."
+    },
+    {
+      "id": "evento",
+      "label": "Evento: acción, señal, objeto y tiempo",
+      "role": "evidence",
+      "source": ["N08-episodio", "N08-registro"],
+      "purpose": "Conserva lo observable sin agregar explicación."
+    },
+    {
+      "id": "interpretacion",
+      "label": "Interpretación: significado provisional",
+      "role": "process",
+      "source": ["N08-episodio", "N08-registro"],
+      "purpose": "Hace explícita la inferencia que se formula."
+    },
+    {
+      "id": "incertidumbre",
+      "label": "Incertidumbre: duda o alternativa",
+      "role": "constraint",
+      "source": ["N08-episodio", "N08-registro"],
+      "purpose": "Mantiene abierta otra explicación posible."
+    },
+    {
+      "id": "funcion",
+      "label": "Función: capacidad sostenida",
+      "role": "process",
+      "source": ["N08-tesis", "N08-registro"],
+      "purpose": "Identifica qué permite detectar, decidir o reparar la práctica."
+    },
+    {
+      "id": "consecuencia",
+      "label": "Consecuencia: resultado y trabajo posterior",
+      "role": "outcome",
+      "source": ["N08-tesis", "N08-registro"],
+      "purpose": "Expone quién recibe valor, carga o daño."
+    },
+    {
+      "id": "decision",
+      "label": "Decisión: cambio posible",
+      "role": "decision",
+      "source": ["N08-registro", "N08-redisenio"],
+      "purpose": "Formula una acción que puede revisarse frente a nueva evidencia."
+    },
+    {
+      "id": "base_observable",
+      "label": "Base observable: contexto y evento",
+      "role": "evidence",
+      "source": ["N08-episodio", "N08-registro"],
+      "purpose": "Reúne condiciones y hechos sin confundirlos con inferencias."
+    },
+    {
+      "id": "hipotesis_abiertas",
+      "label": "Hipótesis abiertas: interpretación e incertidumbre",
+      "role": "process",
+      "source": ["N08-episodio", "N08-registro", "N08-redisenio"],
+      "purpose": "Convierte la lectura provisional en explicaciones que todavía pueden ser debilitadas."
+    },
+    {
+      "id": "contraste",
+      "label": "Contraste con participantes, otros rastros y otros episodios",
+      "role": "process",
+      "source": ["N08-registro", "N08-redisenio", "N08-protocolo"],
+      "purpose": "Corrige hechos, agrega razones y evita que una nota aislada se convierta en conclusión."
+    },
+    {
+      "id": "criterio_intervencion",
+      "label": "Criterio de intervención: función y consecuencia",
+      "role": "decision",
+      "source": ["N08-tesis", "N08-registro", "N08-redisenio"],
+      "purpose": "Permite cambiar la práctica sin destruir la capacidad que sostiene ni perpetuar su riesgo."
+    },
+    {
+      "id": "accion_provisional",
+      "label": "Acción provisional: preservar, cambiar o probar",
+      "role": "outcome",
+      "source": ["N08-registro", "N08-redisenio", "N08-protocolo"],
+      "purpose": "Conecta la evidencia con una intervención proporcional y revisable."
+    }
+  ],
+  "edges": [
+    {
+      "id": "e01",
+      "from": "contexto",
+      "to": "base_observable",
+      "relation": "evidence",
+      "source": ["N08-registro"],
+      "meaning": "El contexto sitúa las condiciones bajo las que ocurrió el episodio."
+    },
+    {
+      "id": "e02",
+      "from": "evento",
+      "to": "base_observable",
+      "relation": "evidence",
+      "source": ["N08-episodio", "N08-registro"],
+      "meaning": "El evento aporta la descripción observable."
+    },
+    {
+      "id": "e03",
+      "from": "interpretacion",
+      "to": "hipotesis_abiertas",
+      "relation": "transformation",
+      "source": ["N08-episodio", "N08-registro"],
+      "meaning": "La interpretación propone un significado sin presentarlo como hecho."
+    },
+    {
+      "id": "e04",
+      "from": "incertidumbre",
+      "to": "hipotesis_abiertas",
+      "relation": "constraint",
+      "source": ["N08-episodio", "N08-registro"],
+      "meaning": "La incertidumbre impide cerrar prematuramente la explicación."
+    },
+    {
+      "id": "e05",
+      "from": "base_observable",
+      "to": "contraste",
+      "relation": "evidence",
+      "source": ["N08-registro", "N08-protocolo"],
+      "meaning": "Los hechos situados se comparan con fuentes adicionales."
+    },
+    {
+      "id": "e06",
+      "from": "hipotesis_abiertas",
+      "to": "contraste",
+      "relation": "evidence",
+      "source": ["N08-redisenio", "N08-protocolo"],
+      "meaning": "Las hipótesis entran al contraste para fortalecerse o debilitarse."
+    },
+    {
+      "id": "e07",
+      "from": "funcion",
+      "to": "criterio_intervencion",
+      "relation": "dependency",
+      "source": ["N08-tesis", "N08-registro"],
+      "meaning": "La intervención depende de comprender la capacidad sostenida."
+    },
+    {
+      "id": "e08",
+      "from": "consecuencia",
+      "to": "criterio_intervencion",
+      "relation": "dependency",
+      "source": ["N08-tesis", "N08-registro"],
+      "meaning": "La intervención debe considerar valor, carga y daño posteriores."
+    },
+    {
+      "id": "e09",
+      "from": "contraste",
+      "to": "criterio_intervencion",
+      "relation": "transformation",
+      "source": ["N08-registro", "N08-redisenio"],
+      "meaning": "El contraste permite distinguir qué función conservar y qué mecanismo revisar."
+    },
+    {
+      "id": "e10",
+      "from": "criterio_intervencion",
+      "to": "accion_provisional",
+      "relation": "flow",
+      "source": ["N08-redisenio", "N08-protocolo"],
+      "meaning": "El criterio conecta la evidencia con preservar, cambiar o probar."
+    },
+    {
+      "id": "e11",
+      "from": "decision",
+      "to": "accion_provisional",
+      "relation": "flow",
+      "source": ["N08-registro", "N08-redisenio"],
+      "meaning": "La capa de decisión declara el cambio posible."
+    },
+    {
+      "id": "e12",
+      "from": "accion_provisional",
+      "to": "contexto",
+      "relation": "feedback",
+      "source": ["N08-registro", "N08-protocolo"],
+      "meaning": "La evidencia adicional puede modificar la decisión y abrir una nueva observación."
+    }
+  ],
+  "rendering": {
+    "view_box": "0 0 1800 1100",
+    "font_families": {
+      "sans": ["Avenir", "Avenir Next", "sans-serif"],
+      "serif": ["Didot", "Bodoni 72", "serif"]
+    },
+    "svg": {
+      "file": "n08-work-layers.svg",
+      "sha256": "ec883deab6147e6f1fa85048e631be14650799177c008f71f9e030cabd4029e6"
+    },
+    "png": {
+      "file": "n08-work-layers.png",
+      "width_px": 3600,
+      "height_px": 2200,
+      "sha256": "9a94d9f5be0dd8d086e5268d26bab778a71fbc02f31244d90c9cc21da80846e1"
+    }
+  }
+}

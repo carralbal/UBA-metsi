@@ -1,0 +1,153 @@
+{
+  "document": "N04",
+  "stage": "content-final",
+  "source": "source/N04_hechos_sintomas_relatos_hipotesis_y_decisiones-content-final.md",
+  "sha256": "4e86351bcd6865c81bbdb8a5e72352e55042b5d9e16f71949737c610e6d13320",
+  "bytes": 72569,
+  "word_counts": {
+    "total": 10108,
+    "substantive_from_thesis_through_synthesis": 8695
+  },
+  "references": {
+    "entries": 10,
+    "urls": [
+      "https://doi.org/10.1017/CBO9780511840005",
+      "https://iupress.org/9780253211903/the-essential-peirce-volume-2/",
+      "https://www.iso.org/standard/35736.html",
+      "https://doi.org/10.1080/07421222.1996.11518099",
+      "https://doi.org/10.6028/NIST.AI.100-1",
+      "https://doi.org/10.6028/NIST.AI.600-1",
+      "https://doi.org/10.6028/NIST.AI.100-4",
+      "https://spec.c2pa.org/specifications/specifications/2.4/specs/C2PA_Specification.html"
+    ],
+    "anchors": {
+      "Toulmin (2003)": true,
+      "Peirce (1998)": true,
+      "Pearl y Mackenzie (2018)": true,
+      "ISO/IEC 25012:2008": true,
+      "Wang y Strong (1996)": true,
+      "Schön (1983)": true,
+      "NIST AI 100-1 (2023)": true,
+      "NIST AI 600-1 (2024)": true,
+      "NIST AI 100-4 (2024)": true,
+      "C2PA 2.4 (2026)": true
+    }
+  },
+  "results": [
+    {
+      "check": "canonical_heading_order",
+      "result": "pass",
+      "evidence": [
+        "Pregunta profesional",
+        "El doce por ciento que parecía hablar solo",
+        "Tesis",
+        "De N03 a N04: del mapa a la justificación",
+        "Movimiento 1 · Desarmar una afirmación sin perder su historia",
+        "Movimiento 2 · Contrastar explicaciones sin borrar incertidumbre",
+        "Movimiento 3 · Decidir y dejar abierta la revisión",
+        "Síntesis",
+        "Cinco píldoras para recordar",
+        "Glosario esencial",
+        "Preguntas de preparación",
+        "Referencias base"
+      ]
+    },
+    {
+      "check": "three_movement_architecture",
+      "result": "pass",
+      "evidence": [
+        5,
+        25,
+        40
+      ]
+    },
+    {
+      "check": "substantive_word_floor",
+      "result": "pass",
+      "evidence": 8695
+    },
+    {
+      "check": "total_word_count",
+      "result": "pass",
+      "evidence": 10108
+    },
+    {
+      "check": "hotel_horizonte_conductor",
+      "result": "pass",
+      "evidence": {
+        "HH-04": 9,
+        "Hotel Horizonte": 7
+      }
+    },
+    {
+      "check": "reference_count",
+      "result": "pass",
+      "evidence": 10
+    },
+    {
+      "check": "all_references_anchored",
+      "result": "pass",
+      "evidence": {
+        "Toulmin (2003)": true,
+        "Peirce (1998)": true,
+        "Pearl y Mackenzie (2018)": true,
+        "ISO/IEC 25012:2008": true,
+        "Wang y Strong (1996)": true,
+        "Schön (1983)": true,
+        "NIST AI 100-1 (2023)": true,
+        "NIST AI 600-1 (2024)": true,
+        "NIST AI 100-4 (2024)": true,
+        "C2PA 2.4 (2026)": true
+      }
+    },
+    {
+      "check": "five_pills",
+      "result": "pass",
+      "evidence": 5
+    },
+    {
+      "check": "six_questions",
+      "result": "pass",
+      "evidence": 6
+    },
+    {
+      "check": "preparation_instruction",
+      "result": "pass",
+      "evidence": "present"
+    },
+    {
+      "check": "no_placeholders",
+      "result": "pass",
+      "evidence": {
+        "TBD": 0,
+        "lorem": 0,
+        "XXX": 0,
+        "[TODO]": 0
+      }
+    },
+    {
+      "check": "no_prose_dashes",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "impersonal_register",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "urls_unique",
+      "result": "pass",
+      "evidence": {
+        "count": 8,
+        "unique": 8
+      }
+    },
+    {
+      "check": "content_only_package",
+      "result": "pass",
+      "evidence": "no layout or image artifact references"
+    }
+  ],
+  "overall": "pass"
+}

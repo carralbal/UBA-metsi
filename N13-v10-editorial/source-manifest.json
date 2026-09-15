@@ -1,0 +1,1356 @@
+{
+  "document": "N13",
+  "source": "source/N13_demoras_concurrencia_consistencia_idempotencia_y_reconciliacion-content-canonical-v2-regional-v1.md",
+  "eligible_blocks": [
+    {
+      "source_id": "N13-h1",
+      "kind": "heading-1",
+      "text": "Demoras, concurrencia, consistencia, idempotencia y reconciliación"
+    },
+    {
+      "source_id": "N13-s01-h2",
+      "kind": "heading-2",
+      "text": "Pregunta profesional"
+    },
+    {
+      "source_id": "N13-s01-b001",
+      "kind": "paragraph",
+      "text": "¿Cómo sostener una transición cuando los mensajes llegan tarde, se repiten, se cruzan o fallan después de haber producido parte de sus efectos?"
+    },
+    {
+      "source_id": "N13-s02-h2",
+      "kind": "heading-2",
+      "text": "La beca que se pagó dos veces y seguía figurando impaga"
+    },
+    {
+      "source_id": "N13-s02-b001",
+      "kind": "paragraph",
+      "text": "Una universidad liquida una beca extraordinaria para estudiantes que perdieron ingresos. Camila recibe una notificación: “Transferencia en proceso”. Dos minutos después, la aplicación muestra un error de conexión y ofrece el botón “Reintentar”. Camila lo presiona. Al día siguiente encuentra dos depósitos iguales en su cuenta bancaria, mientras el portal universitario todavía dice “Pago pendiente”."
+    },
+    {
+      "source_id": "N13-s02-b002",
+      "kind": "paragraph",
+      "text": "Tesorería observa tres piezas. El sistema de becas conserva una orden aprobada. La pasarela registra dos solicitudes con identificadores diferentes. El banco confirma dos créditos. El portal, que actualiza su vista mediante un proceso nocturno, aún no recibió la confirmación. Cada componente ejecutó una parte razonable y, sin embargo, el resultado institucional es incorrecto."
+    },
+    {
+      "source_id": "N13-s02-b003",
+      "kind": "paragraph",
+      "text": "La primera explicación culpa al botón. La segunda, a la red. La tercera, al banco. Ninguna alcanza. El primer intento llegó al proveedor y produjo el depósito, pero la respuesta se perdió. La interfaz interpretó ausencia de respuesta como ausencia de efecto. El reintento creó una intención nueva porque no conservó identidad común. El proveedor no pudo reconocer que ambos pedidos correspondían al mismo pago. El portal confundió una proyección demorada con el estado del mundo."
+    },
+    {
+      "source_id": "N13-s02-b004",
+      "kind": "paragraph",
+      "text": "El equipo debe decidir qué hacer antes de discutir tecnología. ¿La segunda transferencia puede revertirse? ¿Quién asume el costo si Camila ya utilizó el dinero? ¿Qué evidencia demuestra que los dos créditos corresponden a una sola obligación? ¿Cuál es el estado que debe comunicar el portal mientras se investiga? ¿Un reintento debe repetir la operación o consultar el resultado anterior?"
+    },
+    {
+      "source_id": "N13-s02-b005",
+      "kind": "paragraph",
+      "text": "N12 había permitido nombrar la transición. El comando era pagar una beca aprobada; el evento esperado, pago acreditado; el estado, obligación cancelada; la evidencia, confirmación bancaria; la autoridad, Tesorería bajo la resolución correspondiente. N13 agrega una condición que N12 dejó localizada: la transición ocurre entre componentes que no comparten reloj, memoria ni destino."
+    },
+    {
+      "source_id": "N13-s02-b006",
+      "kind": "paragraph",
+      "text": "El equipo introduce una clave de idempotencia asociada a la obligación, no al clic. Todo intento de pago con la misma intención utiliza esa clave. Si la respuesta se pierde, el cliente consulta el resultado antes de crear otra obligación. El proveedor conserva la relación entre clave y efecto durante una ventana definida. Tesorería monitorea intentos ambiguos y reconcilia confirmaciones del banco con obligaciones internas."
+    },
+    {
+      "source_id": "N13-s02-b007",
+      "kind": "paragraph",
+      "text": "La corrección no termina ahí. Dos solicitudes iguales pueden representar intenciones distintas si cambiaron monto, destinatario o período. Una clave repetida con contenido diferente debe rechazarse y escalar. Una transferencia acreditada no puede “deshacerse” como si nunca hubiera ocurrido. Puede iniciarse una recuperación, registrar una compensación o asumir el costo. La política necesita distinguir repetición técnica de decisión nueva."
+    },
+    {
+      "source_id": "N13-s02-b008",
+      "kind": "paragraph",
+      "text": "El portal también cambia. Ya no presenta “pendiente” como una verdad única. Distingue aprobación, envío, confirmación externa, conciliación y excepción. Indica hasta qué momento está actualizada la vista. Cuando existe resultado ambiguo, evita ofrecer un reintento ciego y abre una consulta."
+    },
+    {
+      "source_id": "N13-s02-b009",
+      "kind": "paragraph",
+      "text": "La historia muestra una propiedad incómoda de los sistemas distribuidos: una falla puede impedir conocer si una operación ocurrió sin impedir que ocurra. Repetir mejora disponibilidad y puede duplicar efectos. Esperar certeza reduce riesgo y puede bloquear una necesidad urgente. La consistencia no es una sincronía perfecta, sino una política explícita sobre qué diferencias se toleran, durante cuánto tiempo y cómo convergen."
+    },
+    {
+      "source_id": "N13-s02-b010",
+      "kind": "paragraph",
+      "text": "Esta lectura trabaja ese problema. Demora, concurrencia, consistencia, idempotencia y reconciliación no son anomalías marginales. Son dimensiones del compromiso que una organización asume cuando una transición atraviesa fronteras."
+    },
+    {
+      "source_id": "N13-s03-h2",
+      "kind": "heading-2",
+      "text": "Hotel Horizonte: dos asignaciones para la última habitación"
+    },
+    {
+      "source_id": "N13-s03-b001",
+      "kind": "paragraph",
+      "text": "HH-12 definió “entregable” como una transición que combina inspección, reserva, asignación, acceso, evidencia y autoridad. A las 18:02 queda una sola habitación de cierta categoría. Lucía intenta asignarla a una reserva directa. Casi al mismo tiempo, una agencia envía la confirmación de otra reserva vendida minutos antes."
+    },
+    {
+      "source_id": "N13-s03-b002",
+      "kind": "paragraph",
+      "text": "El PMS recibe primero el comando de Lucía y acepta. El integrador recibe después el mensaje de la agencia, pero su marca temporal es anterior. Un proceso automático reintenta porque no obtuvo respuesta. La asignación externa aparece dos veces. La vista de Comercial todavía muestra inventario porque se actualiza cada cinco minutos. Recepción ve cero disponibilidad; la agencia, una confirmación; dirección, dos ventas válidas."
+    },
+    {
+      "source_id": "N13-s03-b003",
+      "kind": "paragraph",
+      "text": "No existe un orden único que resuelva por sí solo la promesa. El momento de venta, el momento de recepción, la prioridad de canal y la autoridad para comprometer inventario son criterios diferentes. La organización necesita declarar cuál protege, qué conflicto puede tolerar y cómo repara cuando dos decisiones legítimas compiten por una capacidad indivisible."
+    },
+    {
+      "source_id": "N13-s03-b004",
+      "kind": "paragraph",
+      "text": "HH-13 construirá un expediente de convergencia para este episodio. Identificará intención, efectos, orden necesario, invariantes, política de reintento, clave de idempotencia, condición de conflicto, estado observable, reconciliación y reparación."
+    },
+    {
+      "source_id": "N13-s04-h2",
+      "kind": "heading-2",
+      "text": "Tesis"
+    },
+    {
+      "source_id": "N13-s04-b001",
+      "kind": "paragraph",
+      "text": "En un sistema distribuido, no recibir una respuesta no demuestra que nada haya ocurrido. Tampoco alcanza con mirar el orden aparente de los hechos para saber qué sucedió primero. Cada frontera introduce demoras, repeticiones, pérdidas, cambios de orden y conocimiento parcial. El diseño profesional debe decidir qué propiedad protege, qué diferencia acepta y cómo recupera una transición ambigua. La idempotencia permite repetir una misma intención sin multiplicar ciertos efectos, pero no elimina la concurrencia ni define cuándo dos pedidos significan lo mismo. La consistencia expresa reglas que deben conservarse y garantías que pueden observarse. No obliga a que todas las copias coincidan en todo momento. La reconciliación compara representaciones, explica diferencias y conduce el sistema hacia un estado defendible. No hay patrón gratuito. Más coordinación puede proteger invariantes y aumentar espera, dependencia y fragilidad. Menos coordinación puede mejorar disponibilidad y exigir detección de conflictos, compensaciones y comunicación de incertidumbre. La elección se justifica por consecuencia, reversibilidad, volumen, tiempo y autoridad."
+    },
+    {
+      "source_id": "N13-s04-b002",
+      "kind": "paragraph",
+      "text": "La tesis se vuelve operativa al declarar qué divergencia entre fuentes puede tolerarse, durante cuánto tiempo y qué mecanismo detecta, reconcilia o compensa consecuencias incorrectas. Esa secuencia obliga a declarar qué cambia, qué permanece abierto y qué evidencia podría modificar la decisión. El rigor no proviene de agregar términos, sino de hacer reconstruible el paso entre una observación, una explicación y una acción."
+    },
+    {
+      "source_id": "N13-s04-b003",
+      "kind": "paragraph",
+      "text": "Un ejemplo sencillo permite verlo: una compra aprobada en un servicio y pendiente en otro puede esperar, salvo que la diferencia libere mercadería o cobre dos veces. El caso muestra por qué una misma señal admite explicaciones e intervenciones diferentes. Antes de ampliar alcance conviene precisar población, condición de éxito y fuente de evidencia."
+    },
+    {
+      "source_id": "N13-s04-b004",
+      "kind": "paragraph",
+      "text": "El límite también importa: exigir consistencia instantánea para todo o aceptar cualquier demora bajo la etiqueta vacía de consistencia eventual. Ese contraejemplo evita convertir una idea útil en receta universal. Una decisión puede ser provisional, pero debe decir qué protege ahora y cuándo volverá a examinarse."
+    },
+    {
+      "source_id": "N13-s04-b005",
+      "kind": "paragraph",
+      "text": "En Hotel Horizonte, PMS, Housekeeping y cerradura conservan versiones diferentes; Lucía necesita decidir y Federico reconstruir tiempos sin borrar el episodio. El caso longitudinal obliga a sostener la misma promesa mientras cambian el modelo y la evidencia; así puede verse qué aprendió realmente el equipo."
+    },
+    {
+      "source_id": "N13-s04-b006",
+      "kind": "paragraph",
+      "text": "La consecuencia profesional es preguntar qué decisión depende de cada estado y cómo se recupera; N14 recorrerá handoffs, colas y excepciones. La tesis no cierra la discusión: fija un criterio común para que el encuentro pueda comparar argumentos, producir evidencia y decidir sin ocultar incertidumbre."
+    },
+    {
+      "source_id": "N13-s05-h2",
+      "kind": "heading-2",
+      "text": "De N12 a N13: de la transición verificable a la transición bajo falla parcial"
+    },
+    {
+      "source_id": "N13-s05-b001",
+      "kind": "paragraph",
+      "text": "N12 separó comando, evento, estado, evidencia y autoridad. HH-12 hizo explícita una transición y su reparación. N13 conserva ese vocabulario y pregunta qué ocurre cuando sus piezas viajan entre componentes autónomos."
+    },
+    {
+      "source_id": "N13-s05-b002",
+      "kind": "paragraph",
+      "text": "El avance no consiste en recomendar microservicios ni mensajería. Un sistema monolítico que integra un banco, un correo o una planilla ya enfrenta distribución. Tampoco desarrolla procesos end-to-end, handoffs y colas organizacionales, que pertenecen a N14. Aquí se analiza la confiabilidad de una transición concreta bajo demora, repetición, competencia y falla parcial."
+    },
+    {
+      "source_id": "N13-s05-b003",
+      "kind": "paragraph",
+      "text": "El producto será HH-13, expediente de convergencia. Recibe una transición de HH-12 y documenta qué puede llegar tarde, duplicado o en conflicto; qué invariante importa; qué garantías se ofrecen; y cómo se detecta, reconcilia y repara una divergencia."
+    },
+    {
+      "source_id": "N13-s06-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 1 · Aceptar que no saber también es un estado"
+    },
+    {
+      "source_id": "N13-s06-b001",
+      "kind": "heading-3",
+      "text": "Falla parcial: una operación puede ocurrir sin que quien la inició lo sepa"
+    },
+    {
+      "source_id": "N13-s06-b002",
+      "kind": "paragraph",
+      "text": "En simple, con un ejemplo: En una llamada local, un error suele parecer completo: la función devuelve o falla. Entre sistemas, al menos tres momentos pueden separarse. La solicitud puede no llegar. Puede llegar y no ejecutarse. Puede ejecutarse y perderse la respuesta. Desde el cliente, los últimos dos casos pueden verse iguales."
+    },
+    {
+      "source_id": "N13-s06-b003",
+      "kind": "paragraph",
+      "text": "Esta ambigüedad cambia el razonamiento. Si pagar una beca es inocuo al repetirse, se puede reintentar. Si el efecto es irreversible o costoso, repetir a ciegas es peligroso. Esperar indefinidamente tampoco resuelve: la persona necesita información y la organización, un criterio de escalamiento."
+    },
+    {
+      "source_id": "N13-s06-b004",
+      "kind": "paragraph",
+      "text": "El estado “resultado desconocido” debe poder representarse. No equivale a pendiente, rechazado ni aceptado. Indica que existe una intención registrada y evidencia insuficiente sobre su efecto. Su tratamiento puede incluir consulta, espera, reconciliación o intervención humana."
+    },
+    {
+      "source_id": "N13-s06-b005",
+      "kind": "paragraph",
+      "text": "La evidencia que fortalece una explicación es la combinación de identificador estable, registro de envío, recepción del proveedor y efecto externo. Un registro local sólo demuestra que el cliente intentó. Una confirmación bancaria sin vínculo con la obligación demuestra un crédito, no su causa."
+    },
+    {
+      "source_id": "N13-s06-b006",
+      "kind": "heading-3",
+      "text": "Demora y presupuesto de tiempo"
+    },
+    {
+      "source_id": "N13-s06-b007",
+      "kind": "paragraph",
+      "text": "En simple: Toda comunicación demora. La pregunta útil no es si existe latencia, sino qué demora cambia una decisión. Cien milisegundos pueden ser irrelevantes para un reporte y críticos para una puja. Cinco minutos pueden ser aceptables para analítica y dañinos para inventario escaso."
+    },
+    {
+      "source_id": "N13-s06-b008",
+      "kind": "paragraph",
+      "text": "Ejemplo cercano: El presupuesto de tiempo distribuye una expectativa entre captura, transporte, procesamiento, actualización y presentación. Permite identificar qué parte consume margen y cuándo una vista debe declarar obsolescencia. También evita llamar “tiempo real” a una cadena cuyo dato más lento se renueva cada noche."
+    },
+    {
+      "source_id": "N13-s06-b009",
+      "kind": "paragraph",
+      "text": "Un timeout no prueba que el servicio falló. Declara que quien esperaba dejó de esperar bajo cierta política. Debe conducir a una decisión: cancelar, consultar, reintentar, degradar o escalar. Reintentos anidados pueden multiplicar carga y empeorar una saturación. La guía de Microsoft sobre el patrón Retry insiste en clasificar fallas transitorias y limitar intentos dentro del contexto completo."
+    },
+    {
+      "source_id": "N13-s06-b010",
+      "kind": "paragraph",
+      "text": "En Hotel Horizonte, el presupuesto para impedir doble asignación debe ser más exigente que el de un tablero semanal. El nivel se define por la consecuencia, no por una preferencia tecnológica general."
+    },
+    {
+      "source_id": "N13-s06-b011",
+      "kind": "heading-3",
+      "text": "Entrega y procesamiento no son la misma garantía"
+    },
+    {
+      "source_id": "N13-s06-b012",
+      "kind": "paragraph",
+      "text": "En simple, con un ejemplo: Una infraestructura puede entregar un mensaje como máximo una vez, al menos una vez o con mecanismos que aproximan una entrega única dentro de un alcance. Ninguna etiqueta garantiza por sí sola que el efecto de negocio ocurra exactamente una vez."
+    },
+    {
+      "source_id": "N13-s06-b013",
+      "kind": "paragraph",
+      "text": "“Como máximo una vez” evita duplicación en transporte y puede perder la operación. “Al menos una vez” reduce pérdida mediante repetición y obliga a tolerar duplicados. “Exactamente una vez” depende de fronteras, almacenamiento, versión y efecto externo. Un correo, una transferencia o una puerta abierta pueden quedar fuera de la garantía de una plataforma."
+    },
+    {
+      "source_id": "N13-s06-b014",
+      "kind": "paragraph",
+      "text": "La pregunta debe trasladarse del mensaje al efecto. ¿Puede repetirse la reserva sin crear otra? ¿Puede enviarse dos veces el correo sin duplicar la promesa? ¿Qué parte está protegida por transacción y cuál requiere deduplicación o reconciliación?"
+    },
+    {
+      "source_id": "N13-s06-b015",
+      "kind": "paragraph",
+      "text": "El identificador del mensaje no alcanza si cada reintento crea uno nuevo. Se necesita identidad de intención. Tampoco alcanza conservar el mismo identificador para siempre: una solicitud legítima posterior puede coincidir en datos y representar otra decisión."
+    },
+    {
+      "source_id": "N13-s06-b016",
+      "kind": "heading-3",
+      "text": "Orden causal y orden de llegada"
+    },
+    {
+      "source_id": "N13-s06-b017",
+      "kind": "paragraph",
+      "text": "En simple: Leslie Lamport mostró que los sistemas distribuidos necesitan razonar sobre relaciones causales y no sólo sobre relojes. Si una aprobación responde a una solicitud, la solicitud debe precederla causalmente aunque las marcas horarias estén desajustadas. Dos asignaciones independientes pueden ser concurrentes aunque una llegue primero."
+    },
+    {
+      "source_id": "N13-s06-b018",
+      "kind": "paragraph",
+      "text": "Ejemplo cercano: Ordenar por recepción es útil para procesar, pero no siempre para decidir. Ordenar por tiempo declarado puede ser manipulado o impreciso. Un número de versión protege una entidad contra actualizaciones basadas en estado obsoleto. Un vector causal aporta más información y también más costo."
+    },
+    {
+      "source_id": "N13-s06-b019",
+      "kind": "paragraph",
+      "text": "El modelo debe conservar sólo el orden que cambia el resultado. Enviar un epígrafe antes o después de una imagen puede ser conmutativo. Asignar una última habitación y confirmar una reserva no lo es. La coordinación se reserva para invariantes que realmente lo requieren."
+    },
+    {
+      "source_id": "N13-s06-b020",
+      "kind": "paragraph",
+      "text": "Una secuencia total puede incluso fabricar causalidad. Si el PMS enumera por recepción, el mensaje tardío de la agencia aparece después de la asignación de Lucía aunque corresponda a una venta anterior. Eso no decide prioridad, pero permite formular el conflicto correctamente. La prioridad debe provenir de una regla reconocida, como aceptación confirmada, reserva temporal vigente o canal contractual, y no del azar de la red."
+    },
+    {
+      "source_id": "N13-s06-b021",
+      "kind": "paragraph",
+      "text": "La prueba consiste en invertir artificialmente el orden de llegada. Si el resultado legítimo debería mantenerse, la lógica no puede depender de la recepción. Si debe cambiar, el equipo necesita justificar qué información volvió diferente a la segunda decisión."
+    },
+    {
+      "source_id": "N13-s06-b022",
+      "kind": "heading-3",
+      "text": "Concurrencia: dos intenciones válidas pueden ser incompatibles juntas"
+    },
+    {
+      "source_id": "N13-s06-b023",
+      "kind": "paragraph",
+      "text": "En simple: Concurrencia no significa simplemente velocidad. Existe cuando dos operaciones se superponen sin conocer completamente el resultado de la otra. Cada una puede ser válida sobre el estado que leyó y, combinadas, violar una invariante."
+    },
+    {
+      "source_id": "N13-s06-b024",
+      "kind": "paragraph",
+      "text": "Ejemplo cercano: Dos agentes consultan una habitación libre y luego intentan asignarla. Un control optimista compara la versión leída con la vigente y rechaza una escritura obsoleta. Un bloqueo pesimista reserva capacidad antes de decidir y puede aumentar espera o producir abandono. Una operación atómica sobre inventario puede proteger el recurso sin bloquear todo el proceso."
+    },
+    {
+      "source_id": "N13-s06-b025",
+      "kind": "paragraph",
+      "text": "La evidencia para elegir mecanismo incluye frecuencia de conflicto, costo del error, reversibilidad, duración de la reserva y carga. Si el conflicto es raro y reparable, el control optimista puede ser suficiente. Si implica medicación duplicada, dinero o acceso físico, la invariante exige protección más fuerte."
+    },
+    {
+      "source_id": "N13-s06-b026",
+      "kind": "paragraph",
+      "text": "También se debe distinguir competencia real de actualización independiente. Dos personas pueden editar campos que no interfieren y el sistema rechazar a una porque compara la versión completa. Ese falso conflicto traslada trabajo de resolución sin proteger mejor la promesa. La granularidad del control debe corresponder a la invariante."
+    },
+    {
+      "source_id": "N13-s06-b027",
+      "kind": "paragraph",
+      "text": "Cuando el sistema elige un ganador necesita producir evidencia para quien pierde. “Intente nuevamente” oculta si cambió inventario, autoridad o regla. Un rechazo explicable permite buscar alternativa sin convertir la concurrencia en error misterioso."
+    },
+    {
+      "source_id": "N13-s06-b028",
+      "kind": "heading-3",
+      "text": "Primera aplicación de HH-13: localizar la ambigüedad"
+    },
+    {
+      "source_id": "N13-s06-b029",
+      "kind": "paragraph",
+      "text": "El equipo de Hotel Horizonte dibuja la transición de HH-12 y marca cinco fronteras: agencia a integrador, integrador a PMS, PMS a inventario, PMS a cerradura y PMS a Comercial. En cada una registra demora esperada, timeout, política de reintento y evidencia disponible."
+    },
+    {
+      "source_id": "N13-s06-b030",
+      "kind": "paragraph",
+      "text": "Descubre que el integrador reintenta toda confirmación sin conservar una clave de intención. El PMS deduplica por identificador de mensaje, que cambia en cada intento. Comercial actualiza una copia cada cinco minutos y no muestra su antigüedad. La cerradura recibe asignaciones, pero una cancelación tardía puede invalidar una credencial ya emitida."
+    },
+    {
+      "source_id": "N13-s06-b031",
+      "kind": "paragraph",
+      "text": "La explicación “la agencia duplicó” resulta insuficiente. El sistema completo convirtió repetición esperable en doble efecto. HH-13 reformula el problema: falta identidad de intención, control de versión sobre inventario y una política explícita de estado desconocido."
+    },
+    {
+      "source_id": "N13-s06-b032",
+      "kind": "paragraph",
+      "text": "El equipo reproduce el episodio con cuatro perturbaciones. Pierde la respuesta del PMS, duplica el mensaje, demora la cancelación y ejecuta dos asignaciones sobre la misma versión. Comprueba que el primer caso genera reintento inseguro, el segundo crea dos registros, el tercero mantiene una credencial y el cuarto acepta dos promesas antes de actualizar la vista."
+    },
+    {
+      "source_id": "N13-s06-b033",
+      "kind": "paragraph",
+      "text": "La prueba separa causas que el incidente original mezclaba. No se corrige con una única bandera. Se necesita identidad en el reintento, exclusión sobre la unidad, revocación trazable y frescura visible. HH-13 transforma un relato de “inconsistencia” en cuatro decisiones verificables."
+    },
+    {
+      "source_id": "N13-s07-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 2 · Elegir consistencia e idempotencia por consecuencia"
+    },
+    {
+      "source_id": "N13-s07-b001",
+      "kind": "heading-3",
+      "text": "Consistencia: proteger invariantes, no sincronizar todo"
+    },
+    {
+      "source_id": "N13-s07-b002",
+      "kind": "paragraph",
+      "text": "En simple: Consistencia puede significar varias cosas. En una base transaccional refiere a reglas observadas por operaciones. Entre réplicas puede referir a qué resultados ve una lectura después de una escritura. En el negocio significa que ciertas afirmaciones no pueden ser simultáneamente válidas."
+    },
+    {
+      "source_id": "N13-s07-b003",
+      "kind": "paragraph",
+      "text": "Ejemplo cercano: “La habitación no se asigna a dos reservas vigentes” es una invariante. “Todos los tableros muestran el mismo número inmediatamente” puede ser innecesario. Proteger ambas con la misma coordinación agrega costo sin igualar beneficio."
+    },
+    {
+      "source_id": "N13-s07-b004",
+      "kind": "paragraph",
+      "text": "Werner Vogels describió la consistencia eventual como una garantía de convergencia cuando dejan de llegar actualizaciones, no como permiso para cualquier divergencia. Martin Kleppmann muestra que los modelos de consistencia deben explicarse desde las anomalías que permiten y las garantías que ofrecen a quien usa el sistema."
+    },
+    {
+      "source_id": "N13-s07-b005",
+      "kind": "paragraph",
+      "text": "El equipo debe declarar alcance, ventana y observador. Una vista puede ser monotónica para una persona, conservar sus propias escrituras o permitir lecturas antiguas. El rótulo “eventual” sin límite, señal de frescura ni reparación es una omisión de diseño."
+    },
+    {
+      "source_id": "N13-s07-b006",
+      "kind": "heading-3",
+      "text": "Matriz de garantías por observador, ventana e invariante"
+    },
+    {
+      "source_id": "N13-s07-b007",
+      "kind": "paragraph",
+      "text": "En simple, con un ejemplo: Una garantía sólo resulta evaluable cuando se identifica quién observa, qué operación intenta realizar y durante cuánto tiempo la divergencia puede conservarse. La frase “el sistema es consistente” reúne preguntas diferentes. Recepción necesita saber si puede asignar una habitación; Comercial, si puede prometer una categoría; el huésped, si la confirmación continúa vigente; conciliación, si todos los registros terminarán reflejando una reparación."
+    },
+    {
+      "source_id": "N13-s07-b008",
+      "kind": "paragraph",
+      "text": "Una misma arquitectura puede ofrecer garantías distintas a cada observador sin ser incoherente, siempre que esas diferencias estén declaradas y no habiliten acciones incompatibles."
+    },
+    {
+      "source_id": "N13-s07-b009",
+      "kind": "paragraph",
+      "text": "HH-13 organiza esas relaciones en una matriz. Cada fila contiene actor, decisión, dato observado, antigüedad máxima aceptable, invariante protegida y conducta ante incertidumbre. Para Lucía Ferreyra, una lectura de inventario con varios minutos de antigüedad puede servir para orientar una consulta, pero no para confirmar la última unidad física. Para Camila Duarte, una proyección demorada puede ser suficiente para analizar demanda y no para publicar disponibilidad inmediata."
+    },
+    {
+      "source_id": "N13-s07-b010",
+      "kind": "paragraph",
+      "text": "Para el integrador, recibir un mensaje no demuestra que el PMS haya comprometido la asignación. El significado depende de la acción que la observación pretende autorizar."
+    },
+    {
+      "source_id": "N13-s07-b011",
+      "kind": "paragraph",
+      "text": "La ventana no se define sólo con latencia promedio. Debe incluir el extremo que todavía permite cumplir la promesa, la forma de advertir antigüedad y la respuesta cuando el plazo se supera. Una vista que converge en diez minutos puede ser adecuada para planificación diaria y peligrosa durante un arribo previsto en cinco. El límite también puede variar por población o consecuencia. Una preferencia de almohada tolera una demora que no resulta aceptable para revocar una credencial o proteger una habitación accesible."
+    },
+    {
+      "source_id": "N13-s07-b012",
+      "kind": "paragraph",
+      "text": "La matriz obliga a separar tres propiedades. La primera es la garantía técnica, como lectura de las propias escrituras, orden causal o convergencia en ausencia de nuevas actualizaciones. La segunda es la regla institucional que decide qué acción puede realizarse con esa garantía. La tercera es el control operacional que hace visible incumplimiento, detiene una acción o inicia reparación. Observabilidad y política de excepción no redefinen la consistencia eventual. Vuelven gobernable su uso dentro de un servicio concreto."
+    },
+    {
+      "source_id": "N13-s07-b013",
+      "kind": "paragraph",
+      "text": "La prueba recorre una misma versión desde varios puntos. Se confirma una reserva, se demora la proyección comercial y se consulta el PMS desde Recepción. El equipo registra qué ve cada actor, qué sabe sobre la frescura y qué acción queda disponible. Luego repite el ejercicio con una cancelación y una respuesta perdida. Si alguien puede convertir una lectura antigua en una nueva promesa sin advertencia, la matriz descubre una brecha entre garantía y autoridad aunque todas las réplicas converjan después."
+    },
+    {
+      "source_id": "N13-s07-b014",
+      "kind": "paragraph",
+      "text": "El resultado no es imponer la vista más fuerte a todo el sistema. Es localizar dónde coordinar, dónde informar incertidumbre y dónde aceptar convergencia posterior. La garantía mínima defendible es la que protege la invariante y permite reparar dentro de la ventana comprometida sin presentar una observación parcial como certeza compartida."
+    },
+    {
+      "source_id": "N13-s07-b015",
+      "kind": "heading-3",
+      "text": "Disponibilidad, coordinación y consecuencia"
+    },
+    {
+      "source_id": "N13-s07-b016",
+      "kind": "paragraph",
+      "text": "En simple: Coordinar obliga a esperar comunicación o autoridad compartida. Puede proteger una decisión y también volverla inaccesible durante una partición o una caída. Evitar coordinación mejora continuidad y exige que ciertas operaciones sean conmutativas, monotónicas o reconciliables."
+    },
+    {
+      "source_id": "N13-s07-b017",
+      "kind": "paragraph",
+      "text": "Ejemplo cercano: Peter Bailis y colaboradores mostraron que algunas invariantes pueden preservarse sin coordinación si las operaciones son compatibles con ellas. La lección no es eliminar coordinación, sino localizarla. Un contador de visualizaciones admite suma distribuida. La última habitación disponible no admite dos compromisos independientes sin política adicional."
+    },
+    {
+      "source_id": "N13-s07-b018",
+      "kind": "paragraph",
+      "text": "La decisión combina cuatro preguntas: ¿qué daño produce una divergencia?, ¿cuánto dura?, ¿puede detectarse?, ¿puede repararse? Para una preferencia de interfaz puede aceptarse convergencia tardía. Para una revocación de acceso, la demora necesita límite estricto y modo seguro."
+    },
+    {
+      "source_id": "N13-s07-b019",
+      "kind": "paragraph",
+      "text": "La disponibilidad tampoco es un valor abstracto. Mantener una pantalla operativa que promete inventario inexistente no sostiene el servicio. A veces degradar, informar incertidumbre o suspender una acción conserva mejor la promesa que continuar con datos antiguos."
+    },
+    {
+      "source_id": "N13-s07-b020",
+      "kind": "heading-3",
+      "text": "Idempotencia: repetir la misma intención sin multiplicar el efecto protegido"
+    },
+    {
+      "source_id": "N13-s07-b021",
+      "kind": "paragraph",
+      "text": "En simple, con un ejemplo: Una operación idempotente produce, respecto de la propiedad elegida, el mismo resultado observable aunque se procese varias veces con la misma intención. RFC 9110 define métodos HTTP idempotentes por el efecto pretendido de múltiples solicitudes idénticas. Esa semántica de protocolo no vuelve idempotente cualquier proceso interno o efecto externo."
+    },
+    {
+      "source_id": "N13-s07-b022",
+      "kind": "paragraph",
+      "text": "Cancelar dos veces una reserva puede dejarla cancelada una sola vez y enviar dos devoluciones. Actualizar un domicilio al mismo valor puede ser idempotente sobre el dato y no sobre notificaciones o auditoría. La propiedad debe nombrar el efecto protegido."
+    },
+    {
+      "source_id": "N13-s07-b023",
+      "kind": "paragraph",
+      "text": "AWS propone claves de solicitud para hacer seguros los reintentos y advierte sobre el caso de la misma clave con intención diferente. La clave debe estar vinculada a actor, operación y parámetros relevantes; conservar resultado; tener una ventana compatible con retrasos; y rechazar colisiones semánticas."
+    },
+    {
+      "source_id": "N13-s07-b024",
+      "kind": "paragraph",
+      "text": "La idempotencia no borra cada intento. Conserva que hubo repetición, devuelve un resultado coherente y evita duplicar el compromiso. La observabilidad necesita contar intentos sin confundirlos con efectos."
+    },
+    {
+      "source_id": "N13-s07-b025",
+      "kind": "heading-3",
+      "text": "Deduplicación e identidad de intención"
+    },
+    {
+      "source_id": "N13-s07-b026",
+      "kind": "paragraph",
+      "text": "En simple, con un ejemplo: Deduplicar compara piezas para decidir si representan la misma intención. Igualdad de contenido no alcanza: dos compras idénticas pueden ser legítimas. Igualdad de mensaje tampoco alcanza: el productor puede crear otro identificador al reintentar."
+    },
+    {
+      "source_id": "N13-s07-b027",
+      "kind": "paragraph",
+      "text": "Una clave adecuada suele nacer donde se conoce la intención y atravesar las fronteras que pueden repetirla. Para la beca, identifica obligación, beneficiaria y período. Para la habitación, identifica la decisión de confirmar una reserva, no toda consulta de disponibilidad."
+    },
+    {
+      "source_id": "N13-s07-b028",
+      "kind": "paragraph",
+      "text": "La retención de claves es una decisión. Si vence antes de que llegue un mensaje tardío, el efecto puede duplicarse. Si nunca vence, puede impedir operaciones futuras legítimas y acumular datos. La ventana se relaciona con demora máxima, derecho a reclamo y ciclo de vida de la obligación."
+    },
+    {
+      "source_id": "N13-s07-b029",
+      "kind": "paragraph",
+      "text": "La evidencia que debilita una política es encontrar duplicados fuera de ventana, claves reutilizadas con parámetros distintos o efectos secundarios no cubiertos. La prueba debe incluir reintento inmediato, tardío, concurrente y posterior a una respuesta ambigua."
+    },
+    {
+      "source_id": "N13-s07-b030",
+      "kind": "paragraph",
+      "text": "La respuesta ante una clave conocida también forma parte del contrato. No conviene ejecutar nuevamente ni responder un éxito genérico: debe recuperarse el resultado original o indicar que sigue en proceso. Así el cliente puede distinguir una operación reconocida de una petición nueva y conservar el mismo episodio."
+    },
+    {
+      "source_id": "N13-s07-b031",
+      "kind": "heading-3",
+      "text": "Control optimista, bloqueo y operaciones conmutativas"
+    },
+    {
+      "source_id": "N13-s07-b032",
+      "kind": "paragraph",
+      "text": "En simple: El control optimista permite avanzar y verifica al comprometer que el estado leído sigue vigente. Funciona bien cuando los conflictos son poco frecuentes y el rechazo puede resolverse. Su costo aparece en trabajo descartado y experiencia de quien debe reintentar."
+    },
+    {
+      "source_id": "N13-s07-b033",
+      "kind": "paragraph",
+      "text": "Ejemplo cercano: El bloqueo pesimista reserva el recurso antes del cambio. Reduce ciertos conflictos y aumenta contención, riesgo de espera y necesidad de vencimiento. Una reserva temporal de inventario puede ser razonable si es visible, acotada y liberable."
+    },
+    {
+      "source_id": "N13-s07-b034",
+      "kind": "paragraph",
+      "text": "Las operaciones conmutativas reducen la necesidad de orden. Agregar etiquetas diferentes a un conjunto puede converger sin decidir cuál fue primero. Asignar una unidad indivisible no. Rediseñar la operación puede convertir conflicto en acumulación: registrar demandas y adjudicar luego bajo una autoridad común, por ejemplo."
+    },
+    {
+      "source_id": "N13-s07-b035",
+      "kind": "paragraph",
+      "text": "No existe mecanismo universal. El artefacto debe explicar qué anomalía evita, qué rechazos introduce y cómo se repara una operación que pierde la carrera."
+    },
+    {
+      "source_id": "N13-s07-b036",
+      "kind": "paragraph",
+      "text": "Jim Gray y Andreas Reuter organizaron los fundamentos de procesamiento transaccional alrededor de atomicidad, consistencia, aislamiento y durabilidad, junto con recuperación. Esas propiedades siguen siendo decisivas dentro de una frontera controlada. El problema aparece al suponer que alcanzan automáticamente a un banco, una persona o un dispositivo que ya produjo un efecto."
+    },
+    {
+      "source_id": "N13-s07-b037",
+      "kind": "paragraph",
+      "text": "Pat Helland señaló que los procesos que exceden una transacción necesitan identidad, mensajes y actividades capaces de continuar durante períodos extensos. La enseñanza para N13 es conservar transacciones locales donde protegen invariantes y diseñar explícitamente lo que ocurre entre ellas. Renunciar a una transacción global no equivale a renunciar a corrección."
+    },
+    {
+      "source_id": "N13-s07-b038",
+      "kind": "paragraph",
+      "text": "Barbara Liskov y Jeannette Wing muestran que una sustitución es segura sólo cuando conserva las propiedades que quienes consumen la abstracción tienen derecho a esperar. David Parnas aporta el ocultamiento de decisiones como forma de contener cambios, no de ocultar contratos. Leonard Kleinrock permite leer espera, carga y capacidad como relaciones cuantificables. Juntas, estas contribuciones obligan a declarar qué garantía cruza una frontera, qué decisión permanece local y qué demora vuelve inválida una promesa."
+    },
+    {
+      "source_id": "N13-s07-b039",
+      "kind": "heading-3",
+      "text": "Segunda aplicación de HH-13: proteger la última habitación"
+    },
+    {
+      "source_id": "N13-s07-b040",
+      "kind": "paragraph",
+      "text": "Hotel Horizonte define una invariante: una unidad física no puede sostener dos asignaciones vigentes para intervalos superpuestos. Comercial puede sobre-vender categorías bajo una política separada, pero la asignación concreta exige exclusión."
+    },
+    {
+      "source_id": "N13-s07-b041",
+      "kind": "paragraph",
+      "text": "El PMS implementa una versión sobre la unidad y acepta el comando sólo si coincide con la versión leída. La agencia conserva una clave de intención para que el reintento recupere el resultado anterior. El integrador rechaza la misma clave con otra reserva o fechas distintas. Comercial muestra inventario con momento de actualización y deja de presentar una copia vencida como confirmación."
+    },
+    {
+      "source_id": "N13-s07-b042",
+      "kind": "paragraph",
+      "text": "La operación que pierde la carrera no desaparece. Produce “asignación rechazada por conflicto” y activa una alternativa: otra unidad, otra categoría, espera o reparación comercial. Así, consistencia técnica y promesa institucional quedan conectadas."
+    },
+    {
+      "source_id": "N13-s07-b043",
+      "kind": "paragraph",
+      "text": "El equipo mide dos resultados. La doble asignación debe caer a cero dentro del alcance protegido. Las ventas que requieren reparación pueden continuar porque nacen antes de la asignación física; ahora quedan detectadas antes del arribo y con responsable. Si sólo se midiera consistencia del PMS, el segundo problema parecería resuelto aunque el huésped siguiera absorbiendo el costo."
+    },
+    {
+      "source_id": "N13-s07-b044",
+      "kind": "paragraph",
+      "text": "También se registra el tiempo durante el cual Comercial ve una copia antigua. Reducirlo tiene costo. El hotel compara ese costo con sobreventas, consultas manuales y compensaciones. La política de actualización se vuelve una decisión económica y de servicio, no una aspiración abstracta de instantaneidad."
+    },
+    {
+      "source_id": "N13-s08-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 3 · Reconciliar para converger sin falsificar la historia"
+    },
+    {
+      "source_id": "N13-s08-b001",
+      "kind": "heading-3",
+      "text": "Reconciliación: comparar, explicar y decidir"
+    },
+    {
+      "source_id": "N13-s08-b002",
+      "kind": "paragraph",
+      "text": "En simple: Reconciliar no es copiar el valor de un sistema sobre otro. Es comparar representaciones relacionadas, clasificar diferencias, reunir evidencia y decidir qué transición conduce a un estado defendible."
+    },
+    {
+      "source_id": "N13-s08-b003",
+      "kind": "paragraph",
+      "text": "Una diferencia puede deberse a demora esperada, pérdida, duplicación, regla distinta, identidad mal vinculada, corrección legítima o fraude. Sobrescribir antes de clasificar elimina evidencia. Dejar toda diferencia abierta convierte la excepción en deuda operacional."
+    },
+    {
+      "source_id": "N13-s08-b004",
+      "kind": "paragraph",
+      "text": "Ejemplo cercano: La reconciliación necesita frecuencia, umbral, responsable, autoridad y plazo. Algunas divergencias se resuelven automáticamente porque existe fuente y regla claras. Otras requieren revisión porque hay obligaciones o daño. El resultado debe registrar explicación y efecto, no sólo “conciliado”."
+    },
+    {
+      "source_id": "N13-s08-b005",
+      "kind": "paragraph",
+      "text": "El diseño comienza por un inventario de pares comparables. No tiene sentido conciliar “estado de reserva” con “estado de pago” como si fueran el mismo atributo. Se vinculan porque una regla puede depender de ambos. Cada comparación declara entidad, período, transformación y tolerancia. HH-11 reaparece como disciplina de evidencia, no como repetición temática."
+    },
+    {
+      "source_id": "N13-s08-b006",
+      "kind": "paragraph",
+      "text": "Luego se construye una taxonomía de diferencias. Una demora dentro de ventana puede observarse sin intervenir. Un duplicado con la misma clave puede cerrarse automáticamente. Dos intenciones incompatibles exigen autoridad. Una diferencia de monto puede indicar conversión, cargo o error. Clasificar antes de actuar evita que una rutina de sincronización convierta excepciones legítimas en datos supuestamente limpios."
+    },
+    {
+      "source_id": "N13-s08-b007",
+      "kind": "paragraph",
+      "text": "La reconciliación también produce información de mejora. Si las mismas divergencias reaparecen, el problema no es sólo una cola pendiente. Puede haber semántica distinta, frontera mal ubicada o regla que ninguna parte conoce completa. El indicador útil no es únicamente cantidad conciliada, sino recurrencia, edad, causa y costo de reparación."
+    },
+    {
+      "source_id": "N13-s08-b008",
+      "kind": "heading-3",
+      "text": "Compensación y sagas"
+    },
+    {
+      "source_id": "N13-s08-b009",
+      "kind": "paragraph",
+      "text": "En simple, con un ejemplo: Cuando una operación tiene varios pasos y uno falla, no siempre existe un botón capaz de volver todo atrás. Una saga coordina esos pasos y una compensación repara lo posible; por ejemplo, cancelar una reserva y devolver el pago no borra el mensaje que ya recibió la persona. Cuando una transición cruza componentes con transacciones locales, no siempre puede revertirse de manera atómica. Una saga coordina una secuencia de pasos y define acciones compensatorias si no puede continuar. Puede utilizar coreografía entre participantes u orquestación mediante un coordinador."
+    },
+    {
+      "source_id": "N13-s08-b010",
+      "kind": "paragraph",
+      "text": "La guía actual del Azure Architecture Center advierte que las compensaciones no recrean necesariamente el estado inicial, pueden fallar y requieren seguimiento. Un reembolso no elimina la comunicación enviada; una reasignación no borra la espera. Deben distinguirse pasos compensables, reintentables e irreversibles."
+    },
+    {
+      "source_id": "N13-s08-b011",
+      "kind": "paragraph",
+      "text": "La compensación no debe automatizar una decisión que corresponde a la persona afectada. Cancelar todos los servicios puede ser técnicamente sencillo y peor que ofrecer una alternativa. Autoridad, evidencia y consecuencia de N12 siguen vigentes."
+    },
+    {
+      "source_id": "N13-s08-b012",
+      "kind": "paragraph",
+      "text": "Una saga por coreografía distribuye reacción entre participantes. Reduce un coordinador central y puede volver difícil comprender el recorrido cuando crece. Una saga orquestada hace visible el estado del proceso y concentra lógica y dependencia. La elección depende de complejidad, autonomía y necesidad de supervisión, no de una preferencia universal."
+    },
+    {
+      "source_id": "N13-s08-b013",
+      "kind": "paragraph",
+      "text": "Cada paso debe declarar si es reintentable, compensable o irreversible. Emitir una credencial puede revocarse; revelar información no. Enviar un mensaje puede compensarse con otro, pero no retirarse de la memoria de quien lo recibió. El punto de no retorno debe ubicarse después de validaciones críticas cuando sea posible."
+    },
+    {
+      "source_id": "N13-s08-b014",
+      "kind": "paragraph",
+      "text": "Las compensaciones también fallan y pueden repetirse. Necesitan su propia idempotencia, evidencia y escalamiento. Una arquitectura que modela el camino de avance con precisión y deja la reparación como intervención manual sin contexto sólo desplazó la falla."
+    },
+    {
+      "source_id": "N13-s08-b015",
+      "kind": "heading-3",
+      "text": "Instrumento HH-13: expediente de convergencia"
+    },
+    {
+      "source_id": "N13-s08-b016",
+      "kind": "paragraph",
+      "text": "HH-13 organiza una transición distribuida mediante diez decisiones:"
+    },
+    {
+      "source_id": "N13-s08-b017",
+      "kind": "list-item",
+      "text": "**Intención estable:** qué obligación o decisión debe mantener identidad a través de intentos."
+    },
+    {
+      "source_id": "N13-s08-b018",
+      "kind": "list-item",
+      "text": "**Efecto protegido:** qué no debe perderse, duplicarse o contradecirse."
+    },
+    {
+      "source_id": "N13-s08-b019",
+      "kind": "list-item",
+      "text": "**Fronteras y tiempos:** qué componentes participan y qué demoras son relevantes."
+    },
+    {
+      "source_id": "N13-s08-b020",
+      "kind": "list-item",
+      "text": "**Invariante:** qué debe conservarse aun bajo concurrencia o falla."
+    },
+    {
+      "source_id": "N13-s08-b021",
+      "kind": "list-item",
+      "text": "**Garantía observable:** qué puede esperar cada actor sobre lectura, escritura y frescura."
+    },
+    {
+      "source_id": "N13-s08-b022",
+      "kind": "list-item",
+      "text": "**Reintento e idempotencia:** qué se repite, con qué clave, ventana y respuesta."
+    },
+    {
+      "source_id": "N13-s08-b023",
+      "kind": "list-item",
+      "text": "**Conflicto:** cómo se detectan versiones, órdenes o intenciones incompatibles."
+    },
+    {
+      "source_id": "N13-s08-b024",
+      "kind": "list-item",
+      "text": "**Estado ambiguo:** cómo se representa y qué acciones quedan habilitadas mientras falta evidencia."
+    },
+    {
+      "source_id": "N13-s08-b025",
+      "kind": "list-item",
+      "text": "**Reconciliación:** quién compara, con qué fuentes, frecuencia, umbral y plazo."
+    },
+    {
+      "source_id": "N13-s08-b026",
+      "kind": "list-item",
+      "text": "**Reparación y aprendizaje:** cómo se compensa, escala y modifica el diseño sin borrar lo ocurrido."
+    },
+    {
+      "source_id": "N13-s08-b027",
+      "kind": "paragraph",
+      "text": "El expediente obliga a declarar propiedades desde la promesa. “Usamos una cola” no responde qué ocurre si entrega dos veces. “Tenemos transacciones” no explica efectos externos. “La base es consistente” no garantiza que el huésped y Recepción observen una situación compatible."
+    },
+    {
+      "source_id": "N13-s08-b028",
+      "kind": "heading-3",
+      "text": "Prueba de cierre de una reconciliación"
+    },
+    {
+      "source_id": "N13-s08-b029",
+      "kind": "paragraph",
+      "text": "En simple, con un ejemplo: Cerrar una reconciliación no equivale a conseguir que dos campos terminen con el mismo valor. El cierre debe demostrar que las diferencias relevantes fueron explicadas, que las obligaciones incompatibles recibieron tratamiento y que ninguna reparación pendiente quedó oculta por la convergencia técnica. Dos sistemas pueden mostrar “cancelada” y todavía existir una credencial activa, un cobro sin devolver o una persona que conserva una confirmación válida desde su perspectiva."
+    },
+    {
+      "source_id": "N13-s08-b030",
+      "kind": "paragraph",
+      "text": "La prueba comienza con una fotografía versionada de las representaciones comparadas. Para cada una se conserva entidad, período, regla de transformación, momento de conocimiento y autoridad que puede modificarla. Luego se clasifica la divergencia y se registra si el efecto observado es reversible, compensable o irreversible. Esta distinción impide usar una actualización de datos como sustituto de reparación. Borrar una asignación duplicada no informa al huésped; revocar una credencial no compensa una espera; devolver dinero no elimina una divulgación."
+    },
+    {
+      "source_id": "N13-s08-b031",
+      "kind": "paragraph",
+      "text": "El expediente de cierre contiene cuatro evidencias. La primera muestra cuál fue la explicación aceptada y qué explicaciones rivales se descartaron. La segunda demuestra que la invariante vuelve a cumplirse dentro del alcance declarado. La tercera verifica que cada efecto externo tenga resolución, responsable y plazo. La cuarta confirma que un nuevo mensaje tardío o un reintento no reabra silenciosamente el conflicto. Si falta una de ellas, la divergencia puede estar contenida, pero no cerrada."
+    },
+    {
+      "source_id": "N13-s08-b032",
+      "kind": "paragraph",
+      "text": "Hotel Horizonte aplica el criterio a una confirmación duplicada. El PMS conserva una sola asignación y la agencia mantiene dos mensajes enviados. La conciliación vincula ambos mensajes con una intención, identifica cuál generó la promesa adicional y registra la alternativa ofrecida. Después demora deliberadamente una copia anterior de la confirmación. La prueba sólo concluye cuando esa copia se reconoce como historia, no reactiva inventario ni vuelve a emitir una credencial. La convergencia debe sobrevivir al dato rezagado que originó el problema."
+    },
+    {
+      "source_id": "N13-s08-b033",
+      "kind": "paragraph",
+      "text": "La autoridad de cierre depende de la consecuencia. Una diferencia puramente informativa puede cerrarse mediante una regla automática comprobada. Un compromiso comercial, un pago o una revocación de acceso exige que el rol responsable pueda revisar evidencia y aceptar el riesgo residual. El sistema registra quién cerró, bajo qué criterio y qué señal obligaría a reabrir. “Conciliado” deja de ser una marca administrativa y se convierte en una afirmación auditable."
+    },
+    {
+      "source_id": "N13-s08-b034",
+      "kind": "paragraph",
+      "text": "También se prueba la autonomía de la reparación. Otra persona, sin recurrir a quien diseñó la integración, debe reconstruir el episodio y ejecutar el camino previsto. Si necesita consultar mensajes privados, interpretar códigos no documentados o pedir acceso extraordinario, la capacidad de reconciliar todavía depende de conocimiento informal. La prueba revela entonces una deuda operacional aunque el caso particular haya terminado."
+    },
+    {
+      "source_id": "N13-s08-b035",
+      "kind": "paragraph",
+      "text": "Esta forma de cierre conserva aprendizaje sin trasladar a N14 el análisis del proceso completo. N13 se limita a demostrar que una transición distribuida puede recuperar un estado defendible, explicar sus efectos y resistir mensajes tardíos. N14 utilizará esa evidencia para estudiar cómo múltiples transiciones, esperas y responsabilidades componen el servicio de principio a fin."
+    },
+    {
+      "source_id": "N13-s08-b036",
+      "kind": "heading-3",
+      "text": "Prueba de perturbación"
+    },
+    {
+      "source_id": "N13-s08-b037",
+      "kind": "paragraph",
+      "text": "En simple, con un ejemplo: La transición se prueba introduciendo fallas controladas: respuesta perdida después del efecto, mensaje duplicado, entrega tardía, dos comandos concurrentes, lectura antigua, consumidor detenido, clave repetida con parámetros distintos y compensación fallida."
+    },
+    {
+      "source_id": "N13-s08-b038",
+      "kind": "paragraph",
+      "text": "Para cada perturbación se registra resultado, evidencia visible, invariante, experiencia de la persona y camino de reparación. La prueba pasa cuando el sistema evita el efecto prohibido o lo detecta dentro del plazo y conduce a una reparación autorizada."
+    },
+    {
+      "source_id": "N13-s08-b039",
+      "kind": "paragraph",
+      "text": "El objetivo no es demostrar ausencia de fallas. Es mostrar que una falla esperable no se convierte silenciosamente en promesa falsa. Las métricas incluyen ambigüedades abiertas, edad de divergencias, duplicados evitados, conflictos detectados y reparaciones manuales."
+    },
+    {
+      "source_id": "N13-s08-b040",
+      "kind": "paragraph",
+      "text": "La prueba debe observar desde afuera y desde adentro. Internamente verifica claves, versiones y eventos. Externamente verifica qué ve y qué puede hacer la persona. Un sistema puede conservar la invariante y mostrar durante horas una confirmación errónea. La calidad incluye esa representación."
+    },
+    {
+      "source_id": "N13-s08-b041",
+      "kind": "paragraph",
+      "text": "Ross, R., McEvilley, M. y Winstead, M. tratan en NIST SP 800-160 Volumen 1 Revisión 1 la confiabilidad y la seguridad como propiedades emergentes de sistemas, sostenidas a lo largo de ingeniería y ciclo de vida. La perturbación sigue ese enfoque: prueba relaciones, dependencias y recuperación, no sólo funciones aisladas."
+    },
+    {
+      "source_id": "N13-s08-b042",
+      "kind": "heading-3",
+      "text": "Tercera aplicación de HH-13: converger sin elegir un registro por costumbre"
+    },
+    {
+      "source_id": "N13-s08-b043",
+      "kind": "paragraph",
+      "text": "El episodio de la última habitación deja cuatro estados: PMS asignó a la reserva directa; agencia confirmó la externa; cerradura emitió una credencial; Comercial mostró capacidad. El equipo no declara al PMS “fuente única de verdad” y descarta lo demás. Cada pieza representa una obligación diferente."
+    },
+    {
+      "source_id": "N13-s08-b044",
+      "kind": "paragraph",
+      "text": "HH-13 clasifica la divergencia. La asignación física queda protegida por versión. La confirmación de agencia es una promesa comercial que exige alternativa o compensación. La credencial debe revocarse si no corresponde a la asignación vigente. La vista comercial debe actualizarse y registrar la ventana que permitió vender."
+    },
+    {
+      "source_id": "N13-s08-b045",
+      "kind": "paragraph",
+      "text": "La reconciliación produce tres eventos: asignación externa rechazada por conflicto, alternativa ofrecida y credencial anterior revocada. Dirección conserva el costo de reparación como evidencia para revisar prioridad de canal y frecuencia de actualización."
+    },
+    {
+      "source_id": "N13-s08-b046",
+      "kind": "paragraph",
+      "text": "El sistema converge, pero no oculta que existieron dos compromisos. La verdad operacional incluye el estado final y el recorrido que generó obligación."
+    },
+    {
+      "source_id": "N13-s08-b047",
+      "kind": "paragraph",
+      "text": "En la revisión semanal, el equipo encuentra que seis de ocho conflictos nacieron en una ventana específica de actualización de la agencia. Podría reducir la ventana, reservar capacidad por canal o cambiar la promesa externa. Cada alternativa distribuye costo y riesgo de manera distinta. HH-13 no elige automáticamente; ofrece evidencia para decidir."
+    },
+    {
+      "source_id": "N13-s08-b048",
+      "kind": "paragraph",
+      "text": "La solución adoptada combina una reserva temporal corta, control de versión al asignar y conciliación anticipada de confirmaciones sin respuesta. Se establece además un umbral: toda divergencia con llegada prevista en menos de veinticuatro horas requiere revisión humana dentro de treinta minutos. La política convierte la convergencia en responsabilidad operativa."
+    },
+    {
+      "source_id": "N13-s08-b049",
+      "kind": "heading-3",
+      "text": "Caso de transferencia: una orden de medicación repetida"
+    },
+    {
+      "source_id": "N13-s08-b050",
+      "kind": "paragraph",
+      "text": "Una médica prescribe una dosis. La red se interrumpe después de enviar la orden y la aplicación permite reintentar. Si cada intento crea una orden independiente, enfermería puede recibir dos tareas válidas. Deduplicar sólo por paciente y medicamento también sería peligroso: dos dosis iguales pueden corresponder a horarios distintos."
+    },
+    {
+      "source_id": "N13-s08-b051",
+      "kind": "paragraph",
+      "text": "La identidad de intención combina orden clínica, dosis, vía y ventana. El sistema recupera el resultado del primer intento. La administración efectiva utiliza otra identidad y otra autoridad. Una lectura antigua del plan no debe autorizar una dosis revocada."
+    },
+    {
+      "source_id": "N13-s08-b052",
+      "kind": "paragraph",
+      "text": "La invariante clínica y la política de frescura requieren conocimiento especializado. N13 no prescribe tratamiento. Transfiere el método: localizar efecto protegido, identidad, concurrencia, evidencia, estado ambiguo y reconciliación."
+    },
+    {
+      "source_id": "N13-s08-b053",
+      "kind": "paragraph",
+      "text": "El caso vuelve visible un límite: la idempotencia técnica reduce la duplicación y no reemplaza el juicio. Si la intención clínica cambió, repetir una clave vieja puede ser tan dañino como crear una nueva sin control."
+    },
+    {
+      "source_id": "N13-s08-b054",
+      "kind": "paragraph",
+      "text": "La prueba incluye revocar la orden mientras una estación está desconectada. Al reconectarse, la estación no debe ejecutar la versión antigua sin verificar vigencia. Esto no se resuelve deduplicando: exige una garantía sobre lectura y autoridad clínica. La transferencia demuestra que cada propiedad protege una pregunta diferente."
+    },
+    {
+      "source_id": "N13-s08-b055",
+      "kind": "paragraph",
+      "text": "También muestra por qué el estado ambiguo debe ser visible. Si no se sabe si la dosis fue administrada, repetir puede dañar y omitir también. La interfaz debe conducir a verificación y escalamiento, no elegir por defecto una acción irreversible."
+    },
+    {
+      "source_id": "N13-s08-b056",
+      "kind": "heading-3",
+      "text": "Contraejemplo: cuando coordinar todo empeora el servicio"
+    },
+    {
+      "source_id": "N13-s08-b057",
+      "kind": "paragraph",
+      "text": "Una biblioteca pequeña centraliza préstamos en una única base transaccional dentro de una red estable. Para “modernizar”, distribuye catálogo, socios, reservas y multas en servicios independientes. Cada préstamo inicia una saga, varias colas y reconciliaciones nocturnas."
+    },
+    {
+      "source_id": "N13-s08-b058",
+      "kind": "paragraph",
+      "text": "El nuevo diseño tolera fallas que el contexto casi no tenía y crea demoras, estados intermedios y soporte especializado. La invariante principal podía protegerse con una transacción local. La distribución no mejoró una decisión ni una promesa."
+    },
+    {
+      "source_id": "N13-s08-b059",
+      "kind": "paragraph",
+      "text": "El contraejemplo limita la tesis: no toda organización necesita consistencia eventual, sagas o claves cruzando múltiples servicios. La respuesta más robusta puede ser reducir fronteras. Modelar la falla no obliga a fabricarla."
+    },
+    {
+      "source_id": "N13-s08-b060",
+      "kind": "paragraph",
+      "text": "El equipo vuelve a una frontera transaccional para préstamo y devolución, y mantiene integración asincrónica sólo para notificaciones y analítica. El cambio reduce estados intermedios y conserva la capacidad que realmente importaba. No es una regresión tecnológica, sino una adecuación entre arquitectura y decisión."
+    },
+    {
+      "source_id": "N13-s08-b061",
+      "kind": "paragraph",
+      "text": "Existe un contraejemplo inverso. Una red de bibliotecas con sedes desconectadas puede necesitar operación local y reconciliación porque esperar conectividad impediría prestar. La misma promesa cambia con el contexto. N13 no califica tecnologías por modernidad; compara consecuencias bajo fallas reales."
+    },
+    {
+      "source_id": "N13-s09-h2",
+      "kind": "heading-2",
+      "text": "Errores frecuentes"
+    },
+    {
+      "source_id": "N13-s09-b001",
+      "kind": "heading-3",
+      "text": "Interpretar timeout como rechazo"
+    },
+    {
+      "source_id": "N13-s09-b002",
+      "kind": "paragraph",
+      "text": "El timeout termina una espera, no demuestra el resultado. Debe abrir consulta o estado ambiguo antes de repetir un efecto sensible."
+    },
+    {
+      "source_id": "N13-s09-b003",
+      "kind": "heading-3",
+      "text": "Prometer exactamente una vez sin declarar alcance"
+    },
+    {
+      "source_id": "N13-s09-b004",
+      "kind": "paragraph",
+      "text": "Una plataforma puede deduplicar mensajes dentro de su frontera y no controlar correo, banco o dispositivo físico."
+    },
+    {
+      "source_id": "N13-s09-b005",
+      "kind": "heading-3",
+      "text": "Usar un identificador nuevo en cada reintento"
+    },
+    {
+      "source_id": "N13-s09-b006",
+      "kind": "paragraph",
+      "text": "La repetición deja de reconocerse como la misma intención y puede multiplicar efectos."
+    },
+    {
+      "source_id": "N13-s09-b007",
+      "kind": "heading-3",
+      "text": "Hacer idempotente el dato y duplicar consecuencias"
+    },
+    {
+      "source_id": "N13-s09-b008",
+      "kind": "paragraph",
+      "text": "El estado final puede coincidir mientras se repiten pagos, notificaciones, puntos o reservas."
+    },
+    {
+      "source_id": "N13-s09-b009",
+      "kind": "heading-3",
+      "text": "Llamar eventual a una divergencia sin límite"
+    },
+    {
+      "source_id": "N13-s09-b010",
+      "kind": "paragraph",
+      "text": "La consistencia eventual garantiza convergencia cuando cesan las actualizaciones. Usarla de manera defendible requiere, además, observabilidad, una ventana explícita y una política de excepción; ninguna de ellas autoriza espera indefinida."
+    },
+    {
+      "source_id": "N13-s09-b011",
+      "kind": "heading-3",
+      "text": "Coordinar todo"
+    },
+    {
+      "source_id": "N13-s09-b012",
+      "kind": "paragraph",
+      "text": "Bloquear cada lectura y escritura protege propiedades irrelevantes, aumenta latencia y amplía puntos de falla."
+    },
+    {
+      "source_id": "N13-s09-b013",
+      "kind": "heading-3",
+      "text": "Reconciliar sobrescribiendo"
+    },
+    {
+      "source_id": "N13-s09-b014",
+      "kind": "paragraph",
+      "text": "Elegir un valor por jerarquía técnica puede borrar obligaciones, evidencia y causas diferentes."
+    },
+    {
+      "source_id": "N13-s09-b015",
+      "kind": "heading-3",
+      "text": "Compensar como si nada hubiera ocurrido"
+    },
+    {
+      "source_id": "N13-s09-b016",
+      "kind": "paragraph",
+      "text": "La acción inversa no elimina tiempo, comunicación, daño ni responsabilidad. La reparación debe declarar límites."
+    },
+    {
+      "source_id": "N13-s09-b017",
+      "kind": "heading-3",
+      "text": "Reintentar sin presupuesto"
+    },
+    {
+      "source_id": "N13-s09-b018",
+      "kind": "paragraph",
+      "text": "Reintentos anidados pueden sostener una sobrecarga y prolongar una falla. Se necesitan límites, espera y escalamiento."
+    },
+    {
+      "source_id": "N13-s10-h2",
+      "kind": "heading-2",
+      "text": "Consecuencias profesionales"
+    },
+    {
+      "source_id": "N13-s10-b001",
+      "kind": "paragraph",
+      "text": "La confiabilidad no pertenece sólo a infraestructura. Producto define qué comunica durante la incertidumbre. Análisis identifica invariantes y equivalencia semántica. Desarrollo implementa claves, versiones y transacciones. Operaciones observa divergencias y conduce reconciliaciones. Seguridad protege autoridad y evidencia. Dirección decide qué daño se tolera y cómo se repara."
+    },
+    {
+      "source_id": "N13-s10-b002",
+      "kind": "paragraph",
+      "text": "Un equipo profesional puede responder qué ocurre si una respuesta se pierde después del efecto, si un mensaje llega dos veces, si dos decisiones compiten y si una compensación falla. También puede explicar por qué eligió coordinar una transición y dejar converger otra."
+    },
+    {
+      "source_id": "N13-s10-b003",
+      "kind": "paragraph",
+      "text": "La calidad se mide por la promesa sostenida. Disponibilidad sin verdad puede ser una pantalla operativa que perjudica. Consistencia sin acceso puede impedir el servicio. N13 convierte esa tensión en decisiones verificables."
+    },
+    {
+      "source_id": "N13-s10-b004",
+      "kind": "paragraph",
+      "text": "La documentación también cambia. Ya no basta un diagrama de componentes y flechas. Cada transición crítica necesita contrato semántico, garantías observables, política de reintento, estado ambiguo y reconciliación. Esa información debe estar cerca de quienes operan y no sólo del código."
+    },
+    {
+      "source_id": "N13-s10-b005",
+      "kind": "paragraph",
+      "text": "La gestión puede priorizar inversión con evidencia. Una divergencia frecuente, invisible y costosa exige rediseño. Una diferencia breve, observable y reversible puede aceptarse. La confiabilidad deja de ser una consigna y se vuelve una cartera de riesgos explícitos."
+    },
+    {
+      "source_id": "N13-s11-h2",
+      "kind": "heading-2",
+      "text": "Límites y tensiones"
+    },
+    {
+      "source_id": "N13-s11-b001",
+      "kind": "paragraph",
+      "text": "Las garantías fuertes cuestan coordinación, pero el costo no siempre justifica reducirlas. En derechos, dinero, seguridad o acceso, una espera visible puede ser preferible a una decisión incorrecta. La optimización debe incluir a quien absorbe el error."
+    },
+    {
+      "source_id": "N13-s11-b002",
+      "kind": "paragraph",
+      "text": "La reconciliación automática puede consolidar una regla injusta. Si siempre vence el sistema central, se silencian evidencias periféricas. N05 obliga a preguntar qué fuente tiene autoridad, quién puede impugnar y qué actores cargan con la demora."
+    },
+    {
+      "source_id": "N13-s11-b003",
+      "kind": "paragraph",
+      "text": "La observabilidad necesaria para deduplicar y auditar puede entrar en tensión con privacidad. Las claves no deben contener datos personales innecesarios. La retención debe justificarse por ventana de riesgo y reclamo."
+    },
+    {
+      "source_id": "N13-s11-b004",
+      "kind": "paragraph",
+      "text": "Los agentes de inteligencia artificial agravan la ambigüedad cuando ejecutan herramientas. Un modelo puede reintentar porque no ve respuesta, reformular el comando y crear otra intención. La política debe separar propuesta, ejecución, identidad, resultado y aprobación. La capacidad de llamar una API no concede autoridad para repetir un efecto."
+    },
+    {
+      "source_id": "N13-s11-b005",
+      "kind": "paragraph",
+      "text": "La conversación tampoco es una clave confiable. Dos frases parecidas pueden expresar decisiones distintas y una reformulación automática puede alterar monto, alcance o destinatario. La capa de ejecución debe construir una intención estructurada, mostrarla cuando la consecuencia lo exige y mantener su identidad durante consulta y reintento. Si cambian parámetros sustantivos, debe abrirse una transición nueva."
+    },
+    {
+      "source_id": "N13-s11-b006",
+      "kind": "paragraph",
+      "text": "Además, el agente necesita recuperar el resultado confirmado en lugar de inferirlo a partir de una respuesta incompleta. Así, idempotencia y reconciliación se aplican al circuito sociotécnico completo, no solamente al punto de servicio invocado."
+    },
+    {
+      "source_id": "N13-s11-b007",
+      "kind": "paragraph",
+      "text": "Finalmente, una organización puede no conocer sus demoras máximas ni sus fuentes de conflicto. HH-13 no inventa precisión. Registra incertidumbre, define observación y limita la promesa hasta obtener evidencia."
+    },
+    {
+      "source_id": "N13-s12-h2",
+      "kind": "heading-2",
+      "text": "De N13 a N14: de la convergencia técnica al flujo real"
+    },
+    {
+      "source_id": "N13-s12-b001",
+      "kind": "paragraph",
+      "text": "HH-13 muestra fronteras, tiempos, reintentos, conflictos y reparaciones de una transición. Sin embargo, una experiencia completa contiene muchas transiciones, esperas y traspasos entre personas y sistemas. La falla puede residir menos en un mensaje que en una cola sin dueño o una excepción fuera del proceso declarado."
+    },
+    {
+      "source_id": "N13-s12-b002",
+      "kind": "paragraph",
+      "text": "N14 recorrerá procesos end-to-end, handoffs, colas y excepciones. No volverá a desarrollar idempotencia ni consistencia. Utilizará el expediente de convergencia para reconstruir cómo el trabajo y la responsabilidad atraviesan áreas hasta cumplir o quebrar una promesa."
+    },
+    {
+      "source_id": "N13-s12-b003",
+      "kind": "heading-3",
+      "text": "Una lectura situada desde América Latina"
+    },
+    {
+      "source_id": "N13-s12-b004",
+      "kind": "paragraph",
+      "text": "Mario Bunge propone distinguir con precisión conceptos, hechos y mecanismos. Fernando Flores muestra que muchos sistemas de información coordinan compromisos expresados en lenguaje. En simple: un modelo no es correcto porque tenga muchas cajas; sirve cuando permite saber quién prometió qué, qué condición cambió y quién puede actuar ante una excepción."
+    },
+    {
+      "source_id": "N13-s12-b005",
+      "kind": "paragraph",
+      "text": "Rolando García ayuda a no separar el modelo de la situación que intenta explicar. Carlos Scolari permite leer diagramas e interfaces como dispositivos que hacen visibles algunas relaciones y ocultan otras. En Hotel Horizonte, «habitación liberada», «disponible» y «asignable» pueden parecer equivalentes en un diagrama y producir decisiones distintas en la operación. Modelar exige conservar esa diferencia y probarla con episodios reales."
+    },
+    {
+      "source_id": "N13-s13-h2",
+      "kind": "heading-2",
+      "text": "Síntesis"
+    },
+    {
+      "source_id": "N13-s13-b001",
+      "kind": "paragraph",
+      "text": "Una falla parcial puede dejar una operación realizada y una respuesta perdida. La demora cambia qué sabe cada actor. La concurrencia permite que dos intenciones válidas violen juntas una invariante. El orden de llegada no siempre representa causalidad ni prioridad legítima."
+    },
+    {
+      "source_id": "N13-s13-b002",
+      "kind": "paragraph",
+      "text": "La consistencia se diseña desde propiedades observables y consecuencias. No exige sincronizar todo. La idempotencia protege un efecto frente a la repetición de una misma intención y necesita clave, alcance, ventana y respuesta. La deduplicación sin semántica confunde coincidencia con identidad."
+    },
+    {
+      "source_id": "N13-s13-b003",
+      "kind": "paragraph",
+      "text": "Reconciliar significa comparar, explicar y decidir. Una compensación conduce hacia un estado defendible sin fingir que el pasado desapareció. Coordinar, esperar, degradar y reparar son elecciones metodológicas."
+    },
+    {
+      "source_id": "N13-s13-b004",
+      "kind": "paragraph",
+      "text": "HH-13 organiza diez decisiones y una prueba de perturbación. Su resultado es una política verificable para sostener una transición bajo desorden y falla parcial. El siguiente paso es observar cómo muchas transiciones forman un servicio de principio a fin."
+    },
+    {
+      "source_id": "N13-s14-h2",
+      "kind": "heading-2",
+      "text": "Cinco píldoras para recordar"
+    },
+    {
+      "source_id": "N13-s14-b001",
+      "kind": "list-item",
+      "text": "Ausencia de respuesta no significa ausencia de efecto."
+    },
+    {
+      "source_id": "N13-s14-b002",
+      "kind": "list-item",
+      "text": "Idempotencia protege un efecto definido, no toda consecuencia posible."
+    },
+    {
+      "source_id": "N13-s14-b003",
+      "kind": "list-item",
+      "text": "Consistencia es una garantía elegida sobre invariantes y observadores."
+    },
+    {
+      "source_id": "N13-s14-b004",
+      "kind": "list-item",
+      "text": "Reconciliar exige explicar diferencias antes de sobrescribirlas."
+    },
+    {
+      "source_id": "N13-s14-b005",
+      "kind": "list-item",
+      "text": "A veces la decisión más robusta es reducir fronteras y coordinación innecesaria."
+    },
+    {
+      "source_id": "N13-s15-h2",
+      "kind": "heading-2",
+      "text": "Glosario esencial"
+    },
+    {
+      "source_id": "N13-s15-b001",
+      "kind": "paragraph",
+      "text": "**Clave de idempotencia:** identificador estable que vincula reintentos con una misma intención dentro de un alcance y una ventana."
+    },
+    {
+      "source_id": "N13-s15-b002",
+      "kind": "paragraph",
+      "text": "**Compensación:** acción que contrarresta efectos de una transición sin borrar lo ocurrido."
+    },
+    {
+      "source_id": "N13-s15-b003",
+      "kind": "paragraph",
+      "text": "**Concurrencia:** superposición de operaciones que no conocen completamente el resultado de las otras."
+    },
+    {
+      "source_id": "N13-s15-b004",
+      "kind": "paragraph",
+      "text": "**Consistencia:** conjunto de garantías sobre estados, lecturas, escrituras e invariantes observables."
+    },
+    {
+      "source_id": "N13-s15-b005",
+      "kind": "paragraph",
+      "text": "**Convergencia:** llegada de representaciones relacionadas a una situación compatible bajo una política."
+    },
+    {
+      "source_id": "N13-s15-b006",
+      "kind": "paragraph",
+      "text": "**Deduplicación:** reconocimiento y tratamiento de piezas que representan la misma intención o efecto."
+    },
+    {
+      "source_id": "N13-s15-b007",
+      "kind": "paragraph",
+      "text": "**Demora:** intervalo entre ocurrencia, comunicación, procesamiento, conocimiento o presentación."
+    },
+    {
+      "source_id": "N13-s15-b008",
+      "kind": "paragraph",
+      "text": "**Estado ambiguo:** situación en la que existe evidencia insuficiente para afirmar aceptación, rechazo o efecto."
+    },
+    {
+      "source_id": "N13-s15-b009",
+      "kind": "paragraph",
+      "text": "**Falla parcial:** falla que afecta una parte del sistema mientras otras continúan y pueden producir efectos."
+    },
+    {
+      "source_id": "N13-s15-b010",
+      "kind": "paragraph",
+      "text": "**Idempotencia:** propiedad por la cual repetir una misma intención no multiplica el efecto protegido."
+    },
+    {
+      "source_id": "N13-s15-b011",
+      "kind": "paragraph",
+      "text": "**Invariante:** condición que debe mantenerse a través de todas las transiciones válidas."
+    },
+    {
+      "source_id": "N13-s15-b012",
+      "kind": "paragraph",
+      "text": "**Orden causal:** relación por la cual una ocurrencia depende de otra, aunque sus tiempos físicos no formen un orden global confiable."
+    },
+    {
+      "source_id": "N13-s15-b013",
+      "kind": "paragraph",
+      "text": "**Reconciliación:** comparación de representaciones para explicar diferencias y decidir una convergencia o reparación."
+    },
+    {
+      "source_id": "N13-s15-b014",
+      "kind": "paragraph",
+      "text": "**Reintento:** nueva tentativa de una operación ante falla o resultado desconocido."
+    },
+    {
+      "source_id": "N13-s15-b015",
+      "kind": "paragraph",
+      "text": "**Saga:** coordinación de transacciones locales mediante pasos y compensaciones."
+    },
+    {
+      "source_id": "N13-s15-b016",
+      "kind": "paragraph",
+      "text": "**Timeout:** decisión de dejar de esperar una respuesta después de un umbral."
+    },
+    {
+      "source_id": "N13-s16-h2",
+      "kind": "heading-2",
+      "text": "Preguntas de preparación"
+    },
+    {
+      "source_id": "N13-s16-b001",
+      "kind": "list-item",
+      "text": "¿Por qué un timeout no permite concluir que una operación no ocurrió?"
+    },
+    {
+      "source_id": "N13-s16-b002",
+      "kind": "list-item",
+      "text": "¿Qué diferencia existe entre deduplicar mensajes y hacer idempotente un efecto de negocio?"
+    },
+    {
+      "source_id": "N13-s16-b003",
+      "kind": "list-item",
+      "text": "¿Qué invariante necesita coordinación en el episodio de la última habitación y qué vistas pueden converger después?"
+    },
+    {
+      "source_id": "N13-s16-b004",
+      "kind": "list-item",
+      "text": "¿Cuándo una compensación repara el estado sin reparar completamente el daño?"
+    },
+    {
+      "source_id": "N13-s16-b005",
+      "kind": "list-item",
+      "text": "¿Qué evidencia permite distinguir una demora esperada de una divergencia que requiere intervención?"
+    },
+    {
+      "source_id": "N13-s16-b006",
+      "kind": "list-item",
+      "text": "¿En qué situación reducir la distribución sería mejor que agregar sagas y reconciliación?"
+    },
+    {
+      "source_id": "N13-s16-b007",
+      "kind": "paragraph",
+      "text": "Para el encuentro, seleccionar una transición conocida que atraviese dos o más sistemas. Describir una respuesta perdida, un duplicado, un conflicto concurrente y una lectura antigua. Proponer efecto protegido, clave de intención, invariante, estado ambiguo y política de reconciliación."
+    },
+    {
+      "source_id": "N13-s17-h2",
+      "kind": "heading-2",
+      "text": "Referencias base"
+    },
+    {
+      "source_id": "N13-s17-b001",
+      "kind": "list-item",
+      "text": "Lamport, L. (1978). “Time, Clocks, and the Ordering of Events in a Distributed System”. *Communications of the ACM*, 21(7), 558-565. https://doi.org/10.1145/359545.359563"
+    },
+    {
+      "source_id": "N13-s17-b002",
+      "kind": "list-item",
+      "text": "Gray, J. y Reuter, A. (1992). *Transaction Processing: Concepts and Techniques*. Morgan Kaufmann."
+    },
+    {
+      "source_id": "N13-s17-b003",
+      "kind": "list-item",
+      "text": "Helland, P. (2007). “Life beyond Distributed Transactions: An Apostate’s Opinion”. *CIDR*. https://www.cidrdb.org/cidr2007/papers/cidr07p15.pdf"
+    },
+    {
+      "source_id": "N13-s17-b004",
+      "kind": "list-item",
+      "text": "Vogels, W. (2009). “Eventually Consistent”. *Communications of the ACM*, 52(1), 40-44. https://doi.org/10.1145/1435417.1435432"
+    },
+    {
+      "source_id": "N13-s17-b005",
+      "kind": "list-item",
+      "text": "Kleppmann, M. (2017). *Designing Data-Intensive Applications*. O’Reilly Media."
+    },
+    {
+      "source_id": "N13-s17-b006",
+      "kind": "list-item",
+      "text": "Bailis, P., Fekete, A., Franklin, M. J., Ghodsi, A., Hellerstein, J. M. y Stoica, I. (2014). “Coordination Avoidance in Database Systems”. *Proceedings of the VLDB Endowment*, 8(3), 185-196. https://doi.org/10.14778/2735508.2735509"
+    },
+    {
+      "source_id": "N13-s17-b007",
+      "kind": "list-item",
+      "text": "Liskov, B. H. y Wing, J. M. (1994). “A Behavioral Notion of Subtyping”. *ACM Transactions on Programming Languages and Systems*, 16(6), 1811-1841. https://doi.org/10.1145/197320.197383"
+    },
+    {
+      "source_id": "N13-s17-b008",
+      "kind": "list-item",
+      "text": "Parnas, D. L. (1972). “On the Criteria to Be Used in Decomposing Systems into Modules”. *Communications of the ACM*, 15(12), 1053-1058. https://doi.org/10.1145/361598.361623"
+    },
+    {
+      "source_id": "N13-s17-b009",
+      "kind": "list-item",
+      "text": "Kleinrock, L. (1975). *Queueing Systems, Volume 1: Theory*. Wiley."
+    },
+    {
+      "source_id": "N13-s17-b010",
+      "kind": "list-item",
+      "text": "Fielding, R. T., Nottingham, M. y Reschke, J. (2022). *RFC 9110: HTTP Semantics*. RFC Editor. https://www.rfc-editor.org/rfc/rfc9110.html"
+    },
+    {
+      "source_id": "N13-s17-b011",
+      "kind": "list-item",
+      "text": "Featonby, M. (2021). “Making Retries Safe with Idempotent APIs”. *Amazon Builders’ Library*. https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/"
+    },
+    {
+      "source_id": "N13-s17-b012",
+      "kind": "list-item",
+      "text": "Microsoft (2026). “Retry Pattern”. *Azure Architecture Center*. https://learn.microsoft.com/en-us/azure/architecture/patterns/retry"
+    },
+    {
+      "source_id": "N13-s17-b013",
+      "kind": "list-item",
+      "text": "Microsoft (2026). “Saga Distributed Transactions Pattern”. *Azure Architecture Center*. https://learn.microsoft.com/en-us/azure/architecture/patterns/saga"
+    },
+    {
+      "source_id": "N13-s17-b014",
+      "kind": "list-item",
+      "text": "Microsoft (2026). “Compensating Transaction Pattern”. *Azure Architecture Center*. https://learn.microsoft.com/en-us/azure/architecture/patterns/compensating-transaction"
+    },
+    {
+      "source_id": "N13-s17-b015",
+      "kind": "list-item",
+      "text": "Ross, R., McEvilley, M. y Winstead, M. (2022). *Engineering Trustworthy Secure Systems*. NIST SP 800-160 Vol. 1 Rev. 1. https://doi.org/10.6028/NIST.SP.800-160v1r1"
+    },
+    {
+      "source_id": "N13-s17-b016",
+      "kind": "list-item",
+      "text": "Bunge, M. (2004). *Emergencia y convergencia: novedad cualitativa y unidad del conocimiento*. Gedisa."
+    },
+    {
+      "source_id": "N13-s17-b017",
+      "kind": "list-item",
+      "text": "Flores, F. (1997). *Creando organizaciones para el futuro*. Dolmen."
+    },
+    {
+      "source_id": "N13-s17-b018",
+      "kind": "list-item",
+      "text": "García, R. (2006). *Sistemas complejos: conceptos, método y fundamentación epistemológica de la investigación interdisciplinaria*. Gedisa."
+    },
+    {
+      "source_id": "N13-s17-b019",
+      "kind": "list-item",
+      "text": "Scolari, C. A. (2018). *Las leyes de la interfaz: diseño, ecología, evolución, tecnología*. Gedisa."
+    },
+    {
+      "source_id": "N13-s17-b020",
+      "kind": "list-item",
+      "text": "Maturana, H. R. y Varela, F. J. (1984). *El árbol del conocimiento: las bases biológicas del entendimiento humano*. Editorial Universitaria."
+    },
+    {
+      "source_id": "N13-s17-b021",
+      "kind": "list-item",
+      "text": "Etkin, J. y Schvarstein, L. (1989). *Identidad de las organizaciones: invariancia y cambio*. Paidós."
+    },
+    {
+      "source_id": "N13-s17-b022",
+      "kind": "list-item",
+      "text": "Sosa Escudero, W. (2019). *Big Data: breve manual para conocer la ciencia de datos que ya invadió nuestras vidas*. Siglo XXI Editores."
+    },
+    {
+      "source_id": "N13-s17-b023",
+      "kind": "list-item",
+      "text": "Echeverría, R. (2005). *Ontología del lenguaje*. Granica."
+    }
+  ]
+}

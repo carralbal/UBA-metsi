@@ -167,6 +167,22 @@ N00_HOTEL_CHARACTERS = [
 
 
 REFERENCE_WORKS = {
+    "mario-bunge": (
+        "Emergencia y convergencia: novedad cualitativa y unidad del conocimiento",
+        "Gedisa, 2004",
+    ),
+    "humberto-maturana": (
+        "El árbol del conocimiento: las bases biológicas del entendimiento humano",
+        "Editorial Universitaria, 1984 · con Francisco Varela",
+    ),
+    "fernando-flores": (
+        "Creando organizaciones para el futuro",
+        "Dolmen, 1997",
+    ),
+    "paulo-freire": (
+        "Pedagogía del oprimido",
+        "Siglo XXI Editores, 2005",
+    ),
     "steinar-kvale": (
         "InterViews: Learning the Craft of Qualitative Research Interviewing",
         "SAGE · 3rd ed., 2015 · con Svend Brinkmann",
@@ -2130,6 +2146,53 @@ def write_referent_rights_manifest(
 
 
 def principal_references(number: int, refs: list[str]) -> list[tuple[str, str, dict]]:
+    regional_pairs = {
+        1: ("mario-bunge", "humberto-maturana"),
+        2: ("mario-bunge", "humberto-maturana"),
+        3: ("mario-bunge", "humberto-maturana"),
+        4: ("mario-bunge", "humberto-maturana"),
+        5: ("paulo-freire", "fernando-flores"),
+        6: ("paulo-freire", "fernando-flores"),
+        7: ("paulo-freire", "fernando-flores"),
+        8: ("paulo-freire", "fernando-flores"),
+        9: ("paulo-freire", "fernando-flores"),
+        10: ("paulo-freire", "fernando-flores"),
+    }
+    global_pairs = {
+        1: ("peter-checkland", "donald-schon", "chris-argyris", "james-march"),
+        2: ("steven-alter", "peter-checkland", "enid-mumford", "eric-trist"),
+        3: ("west-churchman", "gerald-midgley", "donella-meadows", "peter-senge"),
+        4: ("judea-pearl", "richard-wang", "donald-schon", "elham-tabassi"),
+        5: ("edward-freeman", "langdon-winner", "miranda-fricker", "sasha-costanza-chock"),
+        6: ("james-march", "michael-quinn-patton", "eric-ries", "donald-schon"),
+        7: ("sasha-costanza-chock", "hugh-beyer", "lucy-suchman", "nist"),
+        8: ("lucy-suchman", "hugh-beyer", "erik-hollnagel", "sidney-dekker"),
+        9: ("sasha-costanza-chock", "don-norman", "lucy-suchman", "w3c"),
+        10: ("kees-dorst", "michael-jackson", "donald-schon", "nicole-forsgren"),
+    }
+    if number in regional_pairs:
+        selected: list[tuple[str, str, dict]] = []
+        seen: set[str] = set()
+        for key in regional_pairs[number]:
+            entry = PORTRAIT_REGISTRY[key]
+            raw = next(
+                (ref for ref in refs if any(pattern.casefold() in ref.casefold() for pattern in entry["patterns"])),
+                None,
+            )
+            if raw is None:
+                raise ValueError(f"La referencia N{number:02d} no permite resolver al referente regional {key}")
+            selected.append((raw, key, entry))
+            seen.add(key)
+        for key in global_pairs[number]:
+            entry = PORTRAIT_REGISTRY[key]
+            raw = next(
+                (ref for ref in refs if any(pattern.casefold() in ref.casefold() for pattern in entry["patterns"])),
+                None,
+            )
+            if raw is None:
+                raise ValueError(f"La referencia N{number:02d} no permite resolver al referente global {key}")
+            selected.append((raw, key, entry))
+        return selected
     if number == 3:
         selected: list[tuple[str, str, dict]] = []
         reference_markers = {
@@ -3308,8 +3371,7 @@ def build_document(number:int)->dict:
             css_text = base_css + "\n\n" + COLLECTION_CSS
     css_text = css_text.rstrip() + "\n\n" + SECTION_MARKER_CONTRAST_CSS.strip() + "\n\n" + THESIS_N00_STANDARD_CSS.strip() + "\n"
     packaged_css.write_text(css_text,encoding="utf-8")
-    if number in {5, 6, 7, 8, 9, 10}:
-        (out / "metsi.css").write_text(css_text, encoding="utf-8")
+    (out / "metsi.css").write_text(css_text, encoding="utf-8")
     cover_source_label = f"assets/{cover_source.name}"
     hotel_source_label = f"assets/{hotel_file}" if hotel_source is not None else ""
     clean_title = title.replace(f"N{number:02d} — ", "").replace(f"N{number:02d} · ", "")
@@ -3369,8 +3431,7 @@ def build_document(number:int)->dict:
     }
     manifest_text = json.dumps(manifest,ensure_ascii=False,indent=2) + ("\n" if number in {5, 6, 7, 8, 9, 10} else "")
     (out/"manifest.json").write_text(manifest_text,encoding="utf-8")
-    if number in {5, 6, 7, 8, 9, 10}:
-        (out/"document.json").write_text(manifest_text,encoding="utf-8")
+    (out/"document.json").write_text(manifest_text,encoding="utf-8")
     write_referent_rights_manifest(number, source, refs, assets, out)
     if number == 6 and not (out / "image-manifest.json").exists():
         raise FileNotFoundError("N06 requiere image-manifest.json curado dentro del paquete")

@@ -1,0 +1,61 @@
+{
+  "title": "De la pregunta a una decisión revisable",
+  "claim": "Una entrevista profesional convierte episodios y rastros contrastados en una afirmación calibrada que puede sostener una decisión revisable.",
+  "source_sections": [
+    {
+      "id": "N07-s04-b002",
+      "heading": "De N06 a N07: de la misión de evidencia a la conversación",
+      "summary": "Define la cadena trazable entre pregunta, episodio, fragmento fuente, interpretación y decisión afectada."
+    },
+    {
+      "id": "N07-s05-b015",
+      "heading": "Anatomía de una pregunta",
+      "summary": "Toda pregunta fija objeto, tiempo, causalidad, responsabilidad y clase de respuesta legítima."
+    },
+    {
+      "id": "N07-s06-b052",
+      "heading": "Diseñar la situación de entrevista",
+      "summary": "La conversación debe permitir reconstruir episodios sin borrar poder, seguridad ni contradicción."
+    },
+    {
+      "id": "N07-s07-b001-b009",
+      "heading": "La cadena de inferencia: de una frase a una decisión",
+      "summary": "Distingue fragmento fuente, episodio, código, patrón, mecanismo e implicación de decisión."
+    },
+    {
+      "id": "N07-s07-b046",
+      "heading": "Afirmaciones contrastables",
+      "summary": "Exige evidencia favorable y adversa, alcance, confianza y próxima comprobación."
+    }
+  ],
+  "nodes": [
+    {"id": "question", "label": "Pregunta decisoria", "role": "decision", "source": ["N07-s04-b002", "N07-s05-b015"], "purpose": "Explicita qué decisión podría cambiar y orienta la búsqueda."},
+    {"id": "fragment", "label": "Fragmento fuente", "role": "evidence", "source": ["N07-s07-b001-b009"], "purpose": "Conserva qué se dijo o mostró y frente a qué pregunta."},
+    {"id": "episode", "label": "Episodio concreto", "role": "evidence", "source": ["N07-s04-b002", "N07-s06-b052", "N07-s07-b001-b009"], "purpose": "Reconstruye actores, eventos y condiciones."},
+    {"id": "artifacts", "label": "Registros y artefactos", "role": "evidence", "source": ["N07-s04-b002", "N07-s07-b046"], "purpose": "Aporta rastros con errores y alcances distintos del relato."},
+    {"id": "negative", "label": "Caso negativo", "role": "evidence", "source": ["N07-s07-b046"], "purpose": "Contradice o limita la explicación dominante."},
+    {"id": "contrast", "label": "Rastros y contraste", "role": "process", "source": ["N07-s04-b002", "N07-s07-b001-b009", "N07-s07-b046"], "purpose": "Integra convergencias, discrepancias y evidencia adversa."},
+    {"id": "scope", "label": "Alcance", "role": "constraint", "source": ["N07-s07-b046"], "purpose": "Declara hasta dónde puede sostenerse la afirmación."},
+    {"id": "confidence", "label": "Grado de confianza", "role": "constraint", "source": ["N07-s07-b001-b009", "N07-s07-b046"], "purpose": "Distingue pista, patrón y mecanismo contrastado."},
+    {"id": "rival", "label": "Explicación rival", "role": "constraint", "source": ["N07-s07-b001-b009", "N07-s07-b046"], "purpose": "Evita cerrar prematuramente la causalidad."},
+    {"id": "claim", "label": "Afirmación calibrada", "role": "outcome", "source": ["N07-s07-b001-b009", "N07-s07-b046"], "purpose": "Sintetiza lo que puede sostenerse con evidencia favorable y adversa."},
+    {"id": "decision", "label": "Decisión revisable", "role": "decision", "source": ["N07-s04-b002", "N07-s07-b001-b009"], "purpose": "Vincula la afirmación con una acción proporcional y revisable."},
+    {"id": "next_check", "label": "Próxima comprobación", "role": "process", "source": ["N07-s07-b046"], "purpose": "Define qué nueva evidencia podría cambiar la decisión."}
+  ],
+  "edges": [
+    {"id": "e1", "from": "question", "to": "episode", "relation": "flow", "source": ["N07-s04-b002", "N07-s05-b015"], "meaning": "La decisión en juego orienta el episodio que conviene reconstruir."},
+    {"id": "e2", "from": "fragment", "to": "contrast", "relation": "evidence", "source": ["N07-s07-b001-b009"], "meaning": "El fragmento fuente entra al contraste sin convertirse todavía en hallazgo."},
+    {"id": "e3", "from": "episode", "to": "contrast", "relation": "evidence", "source": ["N07-s07-b001-b009"], "meaning": "El episodio aporta secuencia y condiciones."},
+    {"id": "e4", "from": "artifacts", "to": "contrast", "relation": "evidence", "source": ["N07-s04-b002", "N07-s07-b046"], "meaning": "Los artefactos permiten contrastar el relato con rastros independientes."},
+    {"id": "e5", "from": "negative", "to": "contrast", "relation": "evidence", "source": ["N07-s07-b046"], "meaning": "El caso negativo limita la explicación dominante."},
+    {"id": "e6", "from": "contrast", "to": "scope", "relation": "transformation", "source": ["N07-s07-b046"], "meaning": "El contraste obliga a declarar alcance."},
+    {"id": "e7", "from": "contrast", "to": "confidence", "relation": "transformation", "source": ["N07-s07-b001-b009"], "meaning": "El contraste calibra el grado de confianza."},
+    {"id": "e8", "from": "contrast", "to": "rival", "relation": "transformation", "source": ["N07-s07-b001-b009", "N07-s07-b046"], "meaning": "La discrepancia conserva explicaciones rivales."},
+    {"id": "e9", "from": "scope", "to": "claim", "relation": "dependency", "source": ["N07-s07-b046"], "meaning": "La afirmación depende de su alcance declarado."},
+    {"id": "e10", "from": "confidence", "to": "claim", "relation": "dependency", "source": ["N07-s07-b001-b009"], "meaning": "La afirmación expresa el estado de confianza."},
+    {"id": "e11", "from": "rival", "to": "claim", "relation": "dependency", "source": ["N07-s07-b046"], "meaning": "La afirmación conserva la explicación rival pertinente."},
+    {"id": "e12", "from": "claim", "to": "decision", "relation": "evidence", "source": ["N07-s04-b002", "N07-s07-b001-b009"], "meaning": "La afirmación calibrada sostiene una acción proporcional."},
+    {"id": "e13", "from": "decision", "to": "next_check", "relation": "flow", "source": ["N07-s07-b046"], "meaning": "La decisión declara qué debe comprobarse después."},
+    {"id": "e14", "from": "next_check", "to": "question", "relation": "feedback", "source": ["N07-s04-b002", "N07-s07-b046"], "meaning": "La nueva evidencia reabre y precisa la pregunta."}
+  ]
+}

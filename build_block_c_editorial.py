@@ -616,7 +616,22 @@ REFERENTS = {
     36: ["donald-schon", "peter-senge", "john-dewey", "david-kolb", "amy-edmondson", "paulo-freire"],
 }
 
+REGIONAL_REFERENTS = {
+    **{number: ["mario-bunge", "fernando-flores"] for number in range(11, 17)},
+    **{number: ["fernando-flores", "mario-bunge"] for number in range(17, 21)},
+    **{number: ["fernando-flores", "paulo-freire"] for number in range(21, 26)},
+    **{number: ["fernando-flores", "mario-bunge"] for number in range(26, 31)},
+    **{number: ["paulo-freire", "mario-bunge"] for number in range(31, 34)},
+    **{number: ["paulo-freire", "humberto-maturana"] for number in range(34, 37)},
+}
+for _number, _regional_keys in REGIONAL_REFERENTS.items():
+    REFERENTS[_number] = _regional_keys + [
+        key for key in REFERENTS[_number] if key not in _regional_keys
+    ][:4]
+
 PORTRAIT_NAMES = {
+    "mario-bunge": "Mario Bunge", "humberto-maturana": "Humberto Maturana",
+    "fernando-flores": "Fernando Flores", "paulo-freire": "Paulo Freire",
     "richard-wang": "Richard Y. Wang", "luc-moreau": "Luc Moreau", "robert-groves": "Robert M. Groves",
     "helen-nissenbaum": "Helen Nissenbaum", "elham-tabassi": "Elham Tabassi", "cathy-oneil": "Cathy O’Neil",
     "eric-evans": "Eric Evans", "leslie-lamport": "Leslie Lamport", "martin-fowler": "Martin Fowler",
@@ -2290,8 +2305,13 @@ def build(number: int) -> dict:
     (out / "index.html").write_text(html_text, encoding="utf-8")
 
     stable_css = (ROOT / "N10-v9-final" / "magazine.css").read_text(encoding="utf-8")
-    css = stable_css + "\n\n" + BLOCK_C_CSS + "\n\n" + V8_EDITORIAL_CORRECTIONS + "\n\n" + V9_N34_CORRECTIONS + "\n\n" + THESIS_N00_STANDARD_CSS
+    css = (
+        stable_css + "\n\n" + BLOCK_C_CSS + "\n\n" + V8_EDITORIAL_CORRECTIONS
+        + "\n\n" + V9_N34_CORRECTIONS + "\n\n" + THESIS_N00_STANDARD_CSS
+        + "\n\n" + REGIONALIZATION_ENDMATTER_CSS
+    )
     (out / "magazine.css").write_text(css, encoding="utf-8")
+    (out / "metsi.css").write_text(css, encoding="utf-8")
 
     rendered_ids = re.findall(r'data-source-id="([^"]+)"', html_text)
     source_ids = [entry["source_id"] for entry in entries]
@@ -4094,6 +4114,46 @@ body.block-c.document-n16 .block-c-thesis .section-body p{margin-bottom:3mm!impo
 body.block-c .approved-infographic-page{
   break-before:page!important;page-break-before:always!important;
   break-after:page!important;page-break-after:always!important
+}
+'''
+
+
+REGIONALIZATION_ENDMATTER_CSS = r'''
+/* N11 and N22 have longer regionalized closing arguments.  Give synthesis,
+   pills and glossary their own stable page boxes so content never escapes a
+   fixed parent and collides with the following apparatus. */
+body.block-c:is(.document-n11,.document-n22) .handoff-synthesis-page{
+  height:auto!important;min-height:0!important;display:block!important;
+  break-inside:auto!important;page-break-inside:auto!important
+}
+body.block-c:is(.document-n11,.document-n22) .handoff-synthesis-page .block-c-handoff-out{
+  break-inside:avoid-page!important;page-break-inside:avoid!important
+}
+body.block-c:is(.document-n11,.document-n22) .handoff-synthesis-page .block-c-synthesis{
+  box-sizing:border-box!important;height:236mm!important;min-height:236mm!important;
+  break-before:page!important;page-break-before:always!important;
+  break-after:page!important;page-break-after:always!important;
+  overflow:hidden!important
+}
+body.block-c:is(.document-n11,.document-n22) .pills-glossary-page{
+  height:auto!important;min-height:0!important;display:block!important;
+  padding:0!important;background:transparent!important;border:0!important;
+  break-before:page!important;page-break-before:always!important;
+  break-inside:auto!important;page-break-inside:auto!important
+}
+body.block-c:is(.document-n11,.document-n22) .pills-glossary-page .pill-summary,
+body.block-c:is(.document-n11,.document-n22) .pills-glossary-page .glossary-two-column{
+  box-sizing:border-box!important;height:236mm!important;min-height:236mm!important;
+  padding:8mm!important;background:#F0F1EE!important;
+  border-left:1.5mm solid #CFFF00!important;overflow:hidden!important;
+  break-inside:avoid-page!important;page-break-inside:avoid!important
+}
+body.block-c:is(.document-n11,.document-n22) .pills-glossary-page .pill-summary{
+  break-after:page!important;page-break-after:always!important;
+  border-bottom:0!important
+}
+body.block-c:is(.document-n11,.document-n22) .pills-glossary-page .glossary-two-column{
+  break-before:page!important;page-break-before:always!important
 }
 '''
 

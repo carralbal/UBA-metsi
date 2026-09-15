@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600" role="img" aria-labelledby="title desc">
+  <title id="title">N27, el contrato real tiene cuatro capas</title>
+  <desc id="desc">El expediente parte del estado liberada y separa cuatro capas verificables. La sintaxis controla forma y tipos. La semántica conserva liberada como limpieza terminada y compone asignable con cerradura operativa y ausencia de restricción. La capa temporal distingue evento, recepción y proceso, y trata duplicados, demoras y desorden. La capa operacional define decisión, error, autoridad y reparación. Un mensaje válido sin consecuencia compartida falla; el contrato completo permite una próxima acción segura.</desc>
+  <defs>
+    <style>
+      .sans{font-family:Inter,Arial,Helvetica,sans-serif;fill:#202020}.serif{font-family:Georgia,'Times New Roman',serif;fill:#202020}.eyebrow{font-size:22px;font-weight:700;letter-spacing:6px}.title{font-size:47px;letter-spacing:-1px}.subtitle{font-size:20px;fill:#5E605D}.section{font-size:18px;font-weight:700;letter-spacing:4px}.label{font-size:19px;font-weight:700}.body{font-size:16px;fill:#4F524F}.small{font-size:14px;fill:#646764}.number{font-size:14px;font-weight:700;letter-spacing:3px}.rule{stroke:#A8AAA6;stroke-width:2}.spine{stroke:#202020;stroke-width:3}.outline{fill:#FFFFFF;stroke:#777A76;stroke-width:2}.pale{fill:#E4E6E3;stroke:#777A76;stroke-width:2}.dash{fill:none;stroke:#8E918D;stroke-width:2;stroke-dasharray:9 9}
+    </style>
+  </defs>
+  <rect width="1200" height="1600" fill="#F7F7F4"/><rect x="34" y="34" width="1132" height="1532" rx="18" fill="none" stroke="#C6C8C4" stroke-width="2"/>
+  <path d="M68 72 H188 L176 92 H56 Z" fill="#CFFF00"/><text x="214" y="91" class="sans eyebrow">N27 · CONTRATO VERIFICABLE</text>
+  <text x="68" y="155" class="serif title">El contrato real tiene cuatro capas</text><text x="70" y="196" class="sans subtitle">Un mensaje aceptado todavía puede producir una decisión incompatible.</text><path d="M68 226 H1132" class="rule"/>
+
+  <g aria-label="Evento de partida">
+    <text x="72" y="270" class="sans section">UN MISMO EVENTO, CUATRO COMPROMISOS</text>
+    <rect x="72" y="300" width="1056" height="106" class="outline"/>
+    <circle cx="126" cy="353" r="25" fill="#CFFF00" stroke="#202020" stroke-width="2"/><text x="126" y="359" class="sans number" text-anchor="middle">01</text>
+    <text x="176" y="346" class="sans label">Estado recibido: liberada</text><text x="176" y="378" class="sans body">¿Qué afirma, hasta cuándo vale y qué permite hacer?</text>
+    <text x="1080" y="347" class="sans label" text-anchor="end">mensaje válido</text><text x="1080" y="378" class="sans body" text-anchor="end">consecuencia todavía abierta</text>
+  </g>
+
+  <path d="M126 406 V1286" class="spine"/><circle cx="126" cy="496" r="11" fill="#CFFF00" stroke="#202020" stroke-width="2"/><circle cx="126" cy="700" r="11" fill="#FFFFFF" stroke="#202020" stroke-width="2"/><circle cx="126" cy="904" r="11" fill="#FFFFFF" stroke="#202020" stroke-width="2"/><circle cx="126" cy="1108" r="11" fill="#FFFFFF" stroke="#202020" stroke-width="2"/>
+
+  <g aria-label="Contrato sintáctico">
+    <rect x="174" y="438" width="954" height="154" class="pale"/>
+    <text x="210" y="478" class="sans number">CAPA 01</text><text x="210" y="518" class="serif title">Sintaxis</text><text x="438" y="494" class="sans label">forma · tipos · campos · versión</text><text x="438" y="527" class="sans body">Acepta o rechaza la estructura sin completar lo que nunca fue afirmado.</text>
+    <g aria-label="Prueba sintáctica"><path d="M924 466 V562" class="rule"/><text x="956" y="494" class="sans number">TEST DE ESTRUCTURA</text><text x="956" y="526" class="sans label">mensaje límite</text><text x="956" y="552" class="sans small">válido o rechazado</text></g>
+  </g>
+
+  <g aria-label="Contrato semántico">
+    <rect x="174" y="642" width="954" height="154" class="outline"/>
+    <text x="210" y="682" class="sans number">CAPA 02</text><text x="210" y="722" class="serif title">Semántica</text><text x="438" y="686" class="sans label">liberada = limpieza terminada</text><text x="438" y="719" class="sans body">asignable = liberada + cerradura operativa + sin restricción</text><text x="438" y="751" class="sans small">La traducción conserva diferencias legítimas entre Housekeeping y Recepción.</text>
+    <g aria-label="Prueba semántica"><path d="M924 670 V766" class="rule"/><text x="956" y="698" class="sans number">TEST DE ACCIÓN</text><text x="956" y="730" class="sans label">misma próxima acción</text><text x="956" y="756" class="sans small">para el mismo episodio</text></g>
+  </g>
+
+  <g aria-label="Contrato temporal">
+    <rect x="174" y="846" width="954" height="154" class="pale"/>
+    <text x="210" y="886" class="sans number">CAPA 03</text><text x="210" y="926" class="serif title">Tiempo</text><text x="438" y="890" class="sans label">evento · recepción · proceso · vigencia</text><text x="438" y="923" class="sans body">Un duplicado no repite el efecto. Una demora no restaura un estado anterior.</text><text x="438" y="955" class="sans small">Desorden y vencimiento abren verificación, no inventan éxito.</text>
+    <g aria-label="Prueba temporal"><path d="M924 874 V970" class="rule"/><text x="956" y="902" class="sans number">TEST DE DEMORA</text><text x="956" y="934" class="sans label">17 min de demora</text><text x="956" y="960" class="sans small">duplicado y desorden</text></g>
+  </g>
+
+  <g aria-label="Contrato operacional">
+    <rect x="174" y="1050" width="954" height="154" class="outline"/>
+    <text x="210" y="1090" class="sans number">CAPA 04</text><text x="210" y="1130" class="serif title">Operación</text><text x="438" y="1094" class="sans label">efecto · error · autoridad · reparación</text><text x="438" y="1127" class="sans body">Lucía distingue rechazo, espera e indeterminación sin una llamada privada.</text><text x="438" y="1159" class="sans small">Federico traza, Ricardo gobierna y Camila limita la promesa.</text>
+    <g aria-label="Prueba operacional"><path d="M924 1078 V1174" class="rule"/><text x="956" y="1106" class="sans number">TEST DE CONTINGENCIA</text><text x="956" y="1138" class="sans label">falla parcial</text><text x="956" y="1164" class="sans small">próxima acción segura</text></g>
+  </g>
+
+  <g aria-label="Puerta de aceptación">
+    <text x="72" y="1282" class="sans section">LA ACEPTACIÓN SE DECIDE SOBRE LA CONSECUENCIA</text>
+    <rect x="72" y="1318" width="486" height="130" class="outline"/><text x="108" y="1357" class="sans number">FALLA</text><text x="108" y="1392" class="sans label">mensaje válido</text><text x="108" y="1422" class="sans body">sin significado, vigencia ni reparación compartidos</text>
+    <rect x="590" y="1318" width="538" height="130" class="pale"/><path d="M590 1318 H754 L742 1342 H578 Z" fill="#CFFF00"/><text x="626" y="1357" class="sans number">CONTRATO COMPLETO</text><text x="626" y="1392" class="sans label">misma consecuencia anticipada</text><text x="626" y="1422" class="sans body">y una salida practicable cuando el resultado es indeterminado</text>
+  </g>
+  <path d="M72 1504 H1128" class="rule"/><text x="72" y="1540" class="sans small">COMPILAR JUNTOS NO ES TODAVÍA COORDINAR UNA DECISIÓN.</text><text x="1128" y="1540" class="sans small" text-anchor="end">N27 · METSI</text>
+</svg>

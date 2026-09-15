@@ -1,0 +1,25 @@
+{
+  "title": "El hito existe cuando cambia una decisión posible",
+  "claim": "Una estrategia situada vincula cada práctica y cada hito con función, evidencia, autoridad, consecuencia y salida.",
+  "source_sections": [
+    {"id": "thesis", "heading": "Tesis", "summary": "La intensidad responde al riesgo y cada hito une evidencia, autoridad y una decisión posible."},
+    {"id": "hh20", "heading": "Hotel Horizonte: una estrategia con puertas que pueden detener", "summary": "El caso construye cinco puertas y prueba transferencia con autonomía real."},
+    {"id": "movement2", "heading": "Movimiento 2 · Componer prácticas con puertas verificables", "summary": "Un hito cambia compromisos y prevé acciones tanto si se alcanza como si falla."},
+    {"id": "movement3", "heading": "Movimiento 3 · Revisar la estrategia sin borrar el aprendizaje", "summary": "La revisión conserva versiones, autoridad, memoria y posibilidades de retiro."}
+  ],
+  "nodes": [
+    {"id": "capacity", "label": "Confirmar una habitación con capacidad disponible, observable y reparable", "role": "capacity", "source": ["hh20"], "purpose": "Fijar la promesa que la estrategia debe sostener."},
+    {"id": "understand", "label": "Comprender", "role": "gate", "source": ["hh20"], "purpose": "Cerrar episodios, obligación e hipótesis antes de comprometer exposición."},
+    {"id": "prepare", "label": "Preparar", "role": "gate", "source": ["hh20"], "purpose": "Verificar datos, personas y contingencia."},
+    {"id": "test", "label": "Probar", "role": "gate", "source": ["movement2"], "purpose": "Observar episodio, falla y reparación."},
+    {"id": "transfer", "label": "Transferir", "role": "gate", "source": ["hh20", "movement3"], "purpose": "Demostrar uso, observación y reparación sin apoyo extraordinario."},
+    {"id": "operations", "label": "Autonomía operacional", "role": "outcome", "source": ["hh20"], "purpose": "Cambiar de régimen y retirar estructuras temporales."},
+    {"id": "fallbacks", "label": "Investigar, reducir, reparar o retirar", "role": "exit", "source": ["movement2", "movement3"], "purpose": "Conservar salidas reales cuando la condición falla."}
+  ],
+  "edges": [
+    {"id": "commit", "from": "capacity", "to": "understand", "relation": "commitment", "source": ["thesis"], "meaning": "La promesa organiza la secuencia metodológica."},
+    {"id": "progress", "from": "understand", "to": "transfer", "relation": "decision_gates", "source": ["movement2"], "meaning": "El compromiso aumenta sólo cuando la evidencia cruza una puerta."},
+    {"id": "handover", "from": "transfer", "to": "operations", "relation": "transfer", "source": ["hh20"], "meaning": "La transferencia se prueba mediante autonomía efectiva."},
+    {"id": "exit", "from": "test", "to": "fallbacks", "relation": "failure_route", "source": ["movement2", "movement3"], "meaning": "No alcanzar un hito también produce una acción prevista y registrable."}
+  ]
+}

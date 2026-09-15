@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1100" role="img" aria-labelledby="title desc">
+  <title id="title">De la pregunta a una decisión revisable</title>
+  <desc id="desc">Una pregunta decisoria orienta la reconstrucción de evidencia. Fragmentos, episodios, registros y casos negativos convergen en un contraste que declara alcance, confianza y explicaciones rivales. De allí surge una afirmación calibrada, una decisión revisable y una próxima comprobación que vuelve a precisar la pregunta.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#444542"/>
+    </marker>
+    <marker id="arrowVolt" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#BCEB00"/>
+    </marker>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#1F201E" flood-opacity="0.10"/>
+    </filter>
+    <style>
+      .sans { font-family: Avenir, "Avenir Next", Arial, sans-serif; fill: #282927; }
+      .serif { font-family: Didot, "Bodoni 72", Georgia, serif; fill: #282927; }
+      .eyebrow { font-size: 30px; font-weight: 700; letter-spacing: 3px; }
+      .cluster { font-size: 30px; font-weight: 700; letter-spacing: 1.8px; }
+      .nodeTitle { font-size: 32px; font-weight: 700; }
+      .nodeCopy { font-size: 30px; font-weight: 450; }
+      .small { font-size: 30px; font-weight: 650; }
+      .inverse { fill: #F7F5EF; }
+      .muted { fill: #666762; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="1100" fill="#F6F4EE"/>
+  <path d="M62 72 H1738" stroke="#242522" stroke-width="3"/>
+  <path d="M62 72 H328" stroke="#BCEB00" stroke-width="10"/>
+  <g id="heading">
+    <text class="sans eyebrow" x="62" y="54">N07 · CADENA DE EVIDENCIA</text>
+    <text class="serif" x="62" y="145" font-size="58" font-weight="500">De la pregunta a una decisión revisable</text>
+    <text class="sans muted" x="64" y="198" font-size="30">La entrevista vale cuando conserva la cadena que permite discutir cada salto.</text>
+  </g>
+
+  <!-- Las catorce relaciones se dibujan antes que los objetos y sus textos. -->
+  <g id="connectors" fill="none" stroke="#555651" stroke-width="3" marker-end="url(#arrow)">
+    <path id="e1" d="M382 520 C398 520 400 478 420 478"/>
+    <path id="e2" d="M782 338 C816 338 817 356 855 356"/>
+    <path id="e3" d="M782 478 C816 478 817 478 855 478"/>
+    <path id="e4" d="M782 625 C816 625 817 625 855 625"/>
+    <path id="e5" d="M782 778 C816 778 817 778 855 778"/>
+    <path id="e6" d="M1180 360 C1200 360 1200 350 1220 350"/>
+    <path id="e7" d="M1180 510 H1220"/>
+    <path id="e8" d="M1180 660 C1200 660 1200 710 1220 710"/>
+    <path id="e9" d="M1460 350 C1478 350 1478 370 1496 370"/>
+    <path id="e10" d="M1460 530 C1478 530 1478 450 1496 450"/>
+    <path id="e11" d="M1460 710 C1478 710 1478 530 1496 530"/>
+    <path id="e12" d="M1617 590 V646"/>
+    <path id="e13" d="M1617 842 C1617 900 1390 920 1262 920"/>
+  </g>
+  <path id="e14" d="M882 920 C730 1010 322 1018 178 876" fill="none" stroke="#9A9B95" stroke-width="3" stroke-dasharray="12 10" marker-end="url(#arrowVolt)"/>
+
+  <g id="question" filter="url(#shadow)">
+    <path d="M62 284 H350 L382 316 V850 H62 Z" fill="#252624"/>
+    <path d="M62 284 H218" stroke="#BCEB00" stroke-width="12"/>
+    <text class="sans inverse eyebrow" x="92" y="337">01</text>
+    <text class="serif inverse" x="92" y="409" font-size="44">Pregunta</text>
+    <text class="serif inverse" x="92" y="458" font-size="44">decisoria</text>
+    <text class="sans inverse nodeCopy" x="92" y="530">¿Qué decisión</text>
+    <text class="sans inverse nodeCopy" x="92" y="570">podría cambiar?</text>
+    <path d="M92 610 H332" stroke="#6E706B" stroke-width="2"/>
+    <text class="sans inverse small" x="92" y="650">OBJETO</text>
+    <text class="sans inverse small" x="92" y="686">TIEMPO</text>
+    <text class="sans inverse small" x="92" y="722">CAUSALIDAD</text>
+    <text class="sans inverse small" x="92" y="758">RESPONSABILIDAD</text>
+    <text class="sans inverse small" x="92" y="794">RESPUESTA</text>
+    <text class="sans inverse small" x="92" y="830">LEGÍTIMA</text>
+    <circle cx="382" cy="520" r="9" fill="#BCEB00" stroke="#252624" stroke-width="2"/>
+  </g>
+
+  <g id="evidenceField">
+    <text class="sans cluster" x="420" y="260">EVIDENCIAS</text>
+    <g id="fragment" filter="url(#shadow)">
+      <path d="M420 284 H750 L782 310 V390 H420 Z" fill="#FFFFFF" stroke="#868782" stroke-width="2"/>
+      <path d="M444 309 H588" stroke="#BCEB00" stroke-width="7"/>
+      <text class="sans nodeTitle" x="444" y="358">Fragmento fuente</text>
+      <circle cx="782" cy="338" r="8" fill="#F6F4EE" stroke="#555651" stroke-width="2"/>
+    </g>
+    <g id="episode" filter="url(#shadow)">
+      <path d="M420 420 H750 L782 446 V535 H420 Z" fill="#E5E5E0" stroke="#868782" stroke-width="2"/>
+      <text class="sans nodeTitle" x="444" y="466">Episodio concreto</text>
+      <text class="sans nodeCopy" x="444" y="506">Secuencia y contexto</text>
+      <circle cx="782" cy="478" r="8" fill="#F6F4EE" stroke="#555651" stroke-width="2"/>
+    </g>
+    <g id="artifacts" filter="url(#shadow)">
+      <path d="M420 565 H750 L782 591 V685 H420 Z" fill="#FFFFFF" stroke="#868782" stroke-width="2"/>
+      <text class="sans nodeTitle" x="444" y="610">Registros y artefactos</text>
+      <text class="sans nodeCopy" x="444" y="652">Rastros independientes</text>
+      <circle cx="782" cy="625" r="8" fill="#F6F4EE" stroke="#555651" stroke-width="2"/>
+    </g>
+    <g id="negative" filter="url(#shadow)">
+      <path d="M420 720 H750 L782 746 V835 H420 Z" fill="#E5E5E0" stroke="#868782" stroke-width="2"/>
+      <text class="sans nodeTitle" x="444" y="766">Caso negativo</text>
+      <text class="sans nodeCopy" x="444" y="806">Contradice o limita</text>
+      <circle cx="782" cy="778" r="8" fill="#F6F4EE" stroke="#555651" stroke-width="2"/>
+    </g>
+  </g>
+
+  <g id="contrast" filter="url(#shadow)">
+    <text class="sans cluster" x="855" y="260">ENSAMBLE</text>
+    <path d="M855 310 H1140 L1180 345 V820 H855 Z" fill="#D5D6D1" stroke="#555651" stroke-width="2.5"/>
+    <path d="M895 360 H1142 V780 H895 Z" fill="#F6F4EE" stroke="#8F908A" stroke-width="2"/>
+    <path d="M895 360 L938 328 H1180 L1142 360" fill="#E9E9E4" stroke="#8F908A" stroke-width="2"/>
+    <text class="serif" x="927" y="442" font-size="42">Rastros</text>
+    <text class="serif" x="927" y="492" font-size="42">y contraste</text>
+    <path d="M927 535 H1110" stroke="#BCEB00" stroke-width="7"/>
+    <text class="sans nodeCopy" x="927" y="590">CONVERGEN</text>
+    <text class="sans nodeCopy" x="927" y="645">DISCREPAN</text>
+    <text class="sans nodeCopy" x="927" y="700">LIMITAN</text>
+    <circle cx="855" cy="356" r="8" fill="#F6F4EE" stroke="#555651" stroke-width="2"/>
+    <circle cx="855" cy="478" r="8" fill="#F6F4EE" stroke="#555651" stroke-width="2"/>
+    <circle cx="855" cy="625" r="8" fill="#F6F4EE" stroke="#555651" stroke-width="2"/>
+    <circle cx="855" cy="778" r="8" fill="#F6F4EE" stroke="#555651" stroke-width="2"/>
+    <circle cx="1180" cy="360" r="8" fill="#F6F4EE" stroke="#555651" stroke-width="2"/>
+    <circle cx="1180" cy="510" r="8" fill="#F6F4EE" stroke="#555651" stroke-width="2"/>
+    <circle cx="1180" cy="660" r="8" fill="#F6F4EE" stroke="#555651" stroke-width="2"/>
+  </g>
+
+  <g id="calibration">
+    <text class="sans cluster" x="1220" y="260">CALIBRACIÓN</text>
+    <g id="scope" filter="url(#shadow)">
+      <path d="M1220 300 H1435 L1460 322 V400 H1220 Z" fill="#FFFFFF" stroke="#868782" stroke-width="2"/>
+      <text class="sans nodeTitle" x="1244" y="362">Alcance</text>
+    </g>
+    <g id="confidence" filter="url(#shadow)">
+      <path d="M1220 435 H1435 L1460 457 V650 H1220 Z" fill="#E5E5E0" stroke="#868782" stroke-width="2"/>
+      <text class="sans nodeTitle" x="1244" y="482">Grado de</text>
+      <text class="sans nodeTitle" x="1244" y="520">confianza</text>
+      <text class="sans nodeCopy" x="1244" y="562">Pista o patrón</text>
+      <text class="sans nodeCopy" x="1244" y="596">Mecanismo</text>
+      <text class="sans nodeCopy" x="1244" y="632">contrastado</text>
+    </g>
+    <g id="rival" filter="url(#shadow)">
+      <path d="M1220 660 H1435 L1460 682 V760 H1220 Z" fill="#FFFFFF" stroke="#868782" stroke-width="2"/>
+      <text class="sans nodeTitle" x="1244" y="705">Explicación</text>
+      <text class="sans nodeTitle" x="1244" y="742">rival</text>
+    </g>
+  </g>
+
+  <g id="outcomes">
+    <text class="sans cluster" x="1496" y="260">SALIDA</text>
+    <g id="claim" filter="url(#shadow)">
+      <path d="M1496 300 H1710 L1738 328 V590 H1496 Z" fill="#FFFFFF" stroke="#555651" stroke-width="2.5"/>
+      <path d="M1710 300 V328 H1738" fill="#D5D6D1" stroke="#555651" stroke-width="2.5"/>
+      <path d="M1524 338 H1660" stroke="#BCEB00" stroke-width="8"/>
+      <text class="serif" x="1524" y="407" font-size="38">Afirmación</text>
+      <text class="serif" x="1524" y="451" font-size="38">calibrada</text>
+      <text class="sans nodeCopy" x="1524" y="505">Evidencia</text>
+      <text class="sans nodeCopy" x="1524" y="541">favorable</text>
+      <text class="sans nodeCopy" x="1524" y="577">y adversa</text>
+    </g>
+    <g id="decision" filter="url(#shadow)">
+      <path d="M1496 646 H1710 L1738 674 V842 H1496 Z" fill="#252624"/>
+      <text class="sans inverse eyebrow" x="1524" y="692">DECISIÓN</text>
+      <text class="serif inverse" x="1524" y="746" font-size="38">Revisable</text>
+      <text class="sans inverse nodeCopy" x="1524" y="790">Acción</text>
+      <text class="sans inverse nodeCopy" x="1524" y="826">proporcional</text>
+      <circle cx="1617" cy="842" r="9" fill="#BCEB00" stroke="#252624" stroke-width="2"/>
+    </g>
+  </g>
+
+  <g id="next_check" filter="url(#shadow)">
+    <path d="M930 872 H1214 L1262 920 L1214 968 H930 L882 920 Z" fill="#F6F4EE" stroke="#555651" stroke-width="2.5"/>
+    <text class="sans small" x="1072" y="911" text-anchor="middle">PRÓXIMA</text>
+    <text class="sans small" x="1072" y="950" text-anchor="middle">COMPROBACIÓN</text>
+  </g>
+  <g id="feedbackLegend">
+    <path d="M62 1028 H1738" stroke="#C8C7C0" stroke-width="2"/>
+    <circle cx="70" cy="1070" r="8" fill="#BCEB00" stroke="#555651" stroke-width="1.5"/>
+    <text class="sans" x="92" y="1080" font-size="30" font-weight="650">Nueva evidencia: precisa la pregunta, limita la afirmación o cambia la decisión.</text>
+    <text class="sans muted" x="1738" y="1080" text-anchor="end" font-size="30">N07 · METSI</text>
+  </g>
+</svg>

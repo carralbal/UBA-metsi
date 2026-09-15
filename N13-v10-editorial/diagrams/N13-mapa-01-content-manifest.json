@@ -1,0 +1,126 @@
+{
+  "title": "Repetir un mensaje no debe multiplicar el efecto",
+  "claim": "Una transición distribuida converge cuando conserva la identidad de la intención, protege una invariante y reconcilia representaciones divergentes sin falsificar la historia.",
+  "source_sections": [
+    {
+      "id": "thesis",
+      "heading": "Tesis",
+      "summary": "Cada frontera introduce demoras, repetición, pérdida, reordenamiento y conocimiento parcial; el método debe proteger propiedades y recuperar transiciones ambiguas."
+    },
+    {
+      "id": "ambiguity",
+      "heading": "Primera aplicación de HH-13: localizar la ambigüedad",
+      "summary": "El episodio requiere identidad de intención, control de versión y una política explícita de estado desconocido."
+    },
+    {
+      "id": "instrument",
+      "heading": "Instrumento HH-13: expediente de convergencia",
+      "summary": "HH-13 documenta intención, efecto protegido, fronteras, invariante, reintento, conflicto, estado observable, reconciliación y reparación."
+    },
+    {
+      "id": "reconciliation",
+      "heading": "Reconciliar para converger sin falsificar la historia",
+      "summary": "Reconciliar es comparar representaciones, explicar diferencias y decidir una reparación defendible."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "original_request",
+      "label": "Solicitud original para asignar la última habitación",
+      "role": "evidence",
+      "source": ["ambiguity"],
+      "purpose": "Mostrar la intención inicial antes de que la respuesta sea conocida."
+    },
+    {
+      "id": "retry",
+      "label": "Reintento de la misma intención ante una respuesta ausente",
+      "role": "evidence",
+      "source": ["thesis", "ambiguity"],
+      "purpose": "Hacer visible que la repetición del mensaje no debe multiplicar el efecto."
+    },
+    {
+      "id": "late_cancellation",
+      "label": "Cancelación que llega tarde y puede encontrar otro estado",
+      "role": "evidence",
+      "source": ["instrument"],
+      "purpose": "Representar el desorden temporal entre componentes autónomos."
+    },
+    {
+      "id": "intent_key",
+      "label": "Clave estable de intención",
+      "role": "constraint",
+      "source": ["ambiguity", "instrument"],
+      "purpose": "Reconocer mensajes que expresan una misma intención aunque lleguen más de una vez."
+    },
+    {
+      "id": "invariant_gate",
+      "label": "Una habitación física no puede tener dos asignaciones vigentes superpuestas",
+      "role": "decision",
+      "source": ["instrument"],
+      "purpose": "Proteger la propiedad que no puede violarse durante la transición."
+    },
+    {
+      "id": "single_effect",
+      "label": "Aplicar una vez el efecto protegido",
+      "role": "outcome",
+      "source": ["thesis", "instrument"],
+      "purpose": "Expresar la consecuencia observable de la idempotencia."
+    },
+    {
+      "id": "ambiguous_state",
+      "label": "Estado ambiguo que no debe confirmarse ni sobrescribirse sin evidencia",
+      "role": "constraint",
+      "source": ["ambiguity", "reconciliation"],
+      "purpose": "Conservar la incertidumbre cuando el resultado todavía no puede defenderse."
+    },
+    {
+      "id": "reconciliation",
+      "label": "Comparar agencia, PMS y cerradura para explicar y reparar",
+      "role": "evidence",
+      "source": ["reconciliation"],
+      "purpose": "Recuperar un estado defendible sin borrar la historia."
+    }
+  ],
+  "edges": [
+    {
+      "id": "same_intention",
+      "from": "retry",
+      "to": "intent_key",
+      "relation": "identity",
+      "source": ["ambiguity", "instrument"],
+      "meaning": "La identidad estable permite reconocer que el reintento expresa la misma intención."
+    },
+    {
+      "id": "protect_invariant",
+      "from": "intent_key",
+      "to": "invariant_gate",
+      "relation": "constraint",
+      "source": ["instrument"],
+      "meaning": "La intención sólo puede producir un efecto que preserve la invariante declarada."
+    },
+    {
+      "id": "apply_once",
+      "from": "invariant_gate",
+      "to": "single_effect",
+      "relation": "outcome",
+      "source": ["thesis", "instrument"],
+      "meaning": "La aceptación produce un único efecto protegido."
+    },
+    {
+      "id": "defer_ambiguity",
+      "from": "invariant_gate",
+      "to": "ambiguous_state",
+      "relation": "constraint",
+      "source": ["ambiguity"],
+      "meaning": "La falta de evidencia suficiente mantiene el estado como ambiguo."
+    },
+    {
+      "id": "reconcile_sources",
+      "from": "ambiguous_state",
+      "to": "reconciliation",
+      "relation": "feedback",
+      "source": ["reconciliation"],
+      "meaning": "La divergencia activa una comparación de representaciones y una reparación explícita."
+    }
+  ]
+}
