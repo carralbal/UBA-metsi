@@ -93,7 +93,7 @@ h1{margin:0;max-width:13ch;font-size:clamp(3.7rem,7.2vw,8rem);line-height:.88;le
 .practice-map{max-width:var(--page);margin:0 auto;padding-top:2rem;padding-bottom:7rem}
 .practice-atlas{position:relative;padding:clamp(2rem,4vw,4.4rem);overflow:hidden;background:var(--paper);color:var(--ink);border:1px solid #cccbc4}
 .practice-map-head{display:grid;grid-template-columns:minmax(12rem,.32fr) minmax(0,1fr);gap:clamp(2rem,7vw,8rem);padding-bottom:2.4rem;border-bottom:1px solid var(--line)}
-.practice-map-kicker{display:inline-block;width:max-content;max-width:100%;margin:.2rem 0;padding:0 .12em;color:var(--ink);background:linear-gradient(to bottom,transparent 34%,var(--volt) 34%,var(--volt) 88%,transparent 88%);font-size:.66rem;font-weight:700;letter-spacing:.18em;line-height:1.15;text-transform:uppercase}
+.practice-map-kicker{display:inline-block;width:max-content;max-width:100%;justify-self:start;align-self:start;margin:.2rem 0;padding:0 .12em;color:var(--ink);background:linear-gradient(to bottom,transparent 34%,var(--volt) 34%,var(--volt) 88%,transparent 88%);font-size:.66rem;font-weight:700;letter-spacing:.18em;line-height:1.15;text-transform:uppercase}
 .practice-map-head h3{margin:0;max-width:18ch;color:var(--ink);font-size:clamp(2.7rem,4.8vw,5rem);line-height:.96;letter-spacing:-.035em}
 .practice-map-head div>p{max-width:52rem;margin:1.5rem 0 0;color:var(--muted);font:400 1.05rem/1.6 var(--serif)}
 
@@ -102,13 +102,13 @@ h1{margin:0;max-width:13ch;font-size:clamp(3.7rem,7.2vw,8rem);line-height:.88;le
 .practice-radial{position:relative;width:min(100%,35rem);aspect-ratio:1;margin:0 auto}
 .practice-radial svg{display:block;width:100%;height:100%;overflow:visible}
 .practice-radial-track,.practice-radial-axis{fill:none;stroke:#9d9f98;stroke-width:1}
-.practice-radial-sector{fill:var(--paper-soft);stroke:var(--paper);stroke-width:4;transition:fill .18s ease}
-.practice-radial-sector.is-selected{fill:var(--volt)}
+.practice-radial-sector{fill:var(--paper-soft);stroke:var(--paper);stroke-width:4;cursor:pointer;transition:fill .18s ease}
+.practice-radial-sector.is-active{fill:var(--volt)}
 .practice-blocks{position:absolute;inset:0;display:block;margin:0;padding:0;pointer-events:none}
 .practice-block{position:absolute;z-index:2;left:var(--practice-left);top:var(--practice-top);display:grid;width:3.35rem;height:3.35rem;place-items:center;transform:translate(-50%,-50%);border:1px solid var(--ink);border-radius:50%;background:var(--paper);color:var(--ink);font:400 1.45rem/1 var(--serif);cursor:pointer;pointer-events:auto;transition:background .18s ease,color .18s ease,transform .18s ease}
 .practice-block:hover,.practice-block:focus-visible{transform:translate(-50%,-50%) scale(1.08)}
 .practice-block:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
-.practice-block.is-selected{background:var(--volt);color:var(--ink);border-color:var(--ink)}
+.practice-block.is-active{background:var(--volt);color:var(--ink);border-color:var(--ink)}
 .practice-atlas-core{position:absolute;inset:31%;display:grid;place-content:center;text-align:center;border:1px solid var(--line);border-radius:50%;background:var(--paper);color:var(--ink)}
 .practice-atlas-core b{color:#6f8e00;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase}
 .practice-atlas-core h4{margin:.5rem 0 .35rem;color:var(--ink);font:400 clamp(1.65rem,2.4vw,2.5rem)/1 var(--serif)}

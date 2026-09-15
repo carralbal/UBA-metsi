@@ -149,6 +149,7 @@
     const bandLabels = ['Experiencia y personas','Gestión y proceso','Diseño y arquitectura','Tecnología y operación'];
     const statusLabels = { central:'Concepto central', applied:'Aplicación relevante', contextual:'Referencia contextual' };
     const pdfLinks = new Map([...document.querySelectorAll('.nucleus.available')].map((link) => [link.querySelector('b')?.textContent.trim(), link.getAttribute('href')]));
+    let selectedBlock = 1;
 
     const makePracticeButton = (item, order) => {
       const button = document.createElement('button');
@@ -198,21 +199,31 @@
       }));
     };
 
-    const selectBlock = (block) => {
+    const previewBlock = (block) => {
       practiceBlocks.querySelectorAll('[data-practice-block]').forEach((button) => {
-        const selected = Number(button.dataset.practiceBlock) === block;
-        button.classList.toggle('is-selected', selected);
-        button.setAttribute('aria-selected', String(selected));
-        button.tabIndex = selected ? 0 : -1;
+        button.classList.toggle('is-active', Number(button.dataset.practiceBlock) === block);
       });
       practiceSectors.querySelectorAll('[data-practice-sector]').forEach((sector) => {
-        sector.classList.toggle('is-selected', Number(sector.dataset.practiceSector) === block);
+        sector.classList.toggle('is-active', Number(sector.dataset.practiceSector) === block);
       });
 
       const meta = blockMeta[block - 1];
       practiceAtlas.querySelector('[data-practice-block-letter]').textContent = String.fromCharCode(64 + block);
       practiceAtlas.querySelector('[data-practice-block-range]').textContent = meta.range;
       practiceAtlas.querySelector('[data-practice-block-title]').textContent = blockLabels[block - 1];
+    };
+
+    const selectBlock = (block) => {
+      selectedBlock = block;
+      practiceBlocks.querySelectorAll('[data-practice-block]').forEach((button) => {
+        const selected = Number(button.dataset.practiceBlock) === block;
+        button.classList.toggle('is-selected', selected);
+        button.setAttribute('aria-selected', String(selected));
+        button.tabIndex = selected ? 0 : -1;
+      });
+      previewBlock(block);
+
+      const meta = blockMeta[block - 1];
       practiceAtlas.querySelector('[data-practice-block-claim]').textContent = meta.claim;
       practiceAtlas.querySelector('[data-practice-sheet-letter]').textContent = String.fromCharCode(64 + block);
       practiceAtlas.querySelector('[data-practice-sheet-range]').textContent = `${meta.range} · estación ${String(block).padStart(2, '0')}`;
@@ -260,6 +271,8 @@
       sector.classList.add('practice-radial-sector');
       sector.dataset.practiceSector = block;
       sector.setAttribute('d', radialArc(178, 238, start, end));
+      sector.addEventListener('pointerenter', () => previewBlock(block));
+      sector.addEventListener('click', () => selectBlock(block));
       practiceSectors.append(sector);
 
       const [axisX1, axisY1] = radialPoint(245, index * 45);
@@ -283,6 +296,8 @@
       button.textContent = String.fromCharCode(65 + index);
       button.style.setProperty('--practice-left', `${buttonX / 6}%`);
       button.style.setProperty('--practice-top', `${buttonY / 6}%`);
+      button.addEventListener('pointerenter', () => previewBlock(block));
+      button.addEventListener('focus', () => previewBlock(block));
       button.addEventListener('click', () => selectBlock(block));
       button.addEventListener('keydown', (event) => {
         if (!['ArrowLeft','ArrowRight','Home','End'].includes(event.key)) return;
@@ -297,6 +312,7 @@
       });
       practiceBlocks.append(button);
     });
+    practiceRadial.addEventListener('pointerleave', () => previewBlock(selectedBlock));
     selectBlock(1);
   }
 
