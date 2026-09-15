@@ -135,7 +135,7 @@
       { id:'architecture', label:'Arquitectura e integración', block:8, band:3, status:'central', size:3, dx:-34, dy:-20, description:'Conecta representaciones, contratos y decisiones para que las partes funcionen como un sistema.', refs:[['N02','Sistema frente a aplicación'],['N12','Eventos y autoridad'],['N16','Coherencia entre modelos'],['N19','Configurar, integrar o construir'],['N26','Ecosistema y arquitectura'],['N27','Contratos'],['N29','Integración y despliegue'],['N34','Cadena completa']] },
       { id:'incidents', label:'Incidentes, rollback y continuidad', block:8, band:4, status:'central', size:3, dx:20, dy:-20, description:'Trata la falla, la reversión y la continuidad como parte del diseño y del aprendizaje, no como excepciones finales.', refs:[['N18','Continuidad y legado'],['N26','Servicios y terceros'],['N29','Rollback y protección'],['N30','Incidentes y aprendizaje'],['N33','Contención y retiro de IA'],['N34','Reconstrucción de la cadena']] }
     ];
-    const blockLabels = ['Sistema','Investigar','Modelar','Estrategia','Producto','Operar','Gobernar IA','Integrar'];
+    const blockLabels = ['Comprender','Investigar','Modelar','Decidir','Entregar','Operar','Gobernar','Integrar'];
     const blockMeta = [
       { range:'N01—N04', claim:'Del pedido formulado al sistema que hace posible el resultado.' },
       { range:'N05—N10', claim:'De las personas afectadas a un problema investigable y situado.' },
