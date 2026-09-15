@@ -47,7 +47,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:400}
 h2{margin:0;max-width:14ch;font-size:clamp(3.1rem,6.7vw,7rem);line-height:.94;letter-spacing:-.045em}
 h2 em{font-style:italic;color:var(--muted)}
 
-.hero{position:relative;min-height:100svh;overflow:hidden;background-color:var(--ink);background-image:url("covers/hero-metsi-bw-v1.webp?v=20260914-2");background-size:cover;background-position:center center;background-repeat:no-repeat;color:var(--white);display:grid;grid-template-columns:minmax(0,1fr);align-items:center;padding:8rem clamp(1.4rem,5vw,5.2rem) 5rem}
+.hero{position:relative;min-height:100svh;overflow:hidden;background-color:var(--ink);background-image:url("covers/hero-metsi-fce-bw-v2.webp?v=20260915-1");background-size:cover;background-position:center center;background-repeat:no-repeat;color:var(--white);display:grid;grid-template-columns:minmax(0,1fr);align-items:center;padding:8rem clamp(1.4rem,5vw,5.2rem) 5rem}
 .hero::before{content:"";position:absolute;inset:0;background:rgba(10,11,10,.34)}
 .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:var(--volt)}
 .hero-copy{position:relative;z-index:3;max-width:59rem}
@@ -166,10 +166,10 @@ footer{padding:3rem clamp(1.4rem,7vw,7rem);display:grid;grid-template-columns:1f
   .site-header nav a::after{display:none}
   .site-header nav .mobile-collection-link{display:block;border-bottom:0;color:var(--ink);background:var(--volt);margin-top:.7rem;padding:.9rem 1rem;text-align:center}
   .site-header.menu-open nav{opacity:1;visibility:visible;transform:none;pointer-events:auto}
-  .hero{background-position:56% center}
+  .hero{background-position:18% center}
 }
 @media(max-width:650px){
-  .hero{background-position:62% center}
+  .hero{background-position:left center}
   .hero::before{background:rgba(10,11,10,.48)}
   .journey-track li{grid-template-columns:3.2rem calc(100% - 4.2rem)}
   .journey-track li>div{min-width:0}
