@@ -1,11 +1,25 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
+import { speakerNotes } from "./speakerNotes.js";
+
+const slideComposition = [
+  { placement: "left", overlay: "left", videoPosition: "50% 50%", copyWidth: "56rem" },
+  { placement: "left", overlay: "left", videoPosition: "50% 50%", copyWidth: "67rem" },
+  { placement: "left", overlay: "left", videoPosition: "58% 50%", copyWidth: "74rem" },
+  { placement: "right", overlay: "right", videoPosition: "48% 50%", copyWidth: "72rem" },
+  { placement: "right", overlay: "right", videoPosition: "44% 50%", copyWidth: "62rem" },
+  { placement: "left", overlay: "left", videoPosition: "58% 50%", copyWidth: "68rem" },
+  { placement: "left", overlay: "left", videoPosition: "55% 50%", copyWidth: "74rem" },
+  { placement: "right", overlay: "right", videoPosition: "46% 50%", copyWidth: "67rem" },
+  { placement: "right", overlay: "right", videoPosition: "38% 50%", copyWidth: "61rem" },
+  { placement: "left", overlay: "left", videoPosition: "56% 50%", copyWidth: "72rem" },
+];
 
 const slides = [
   {
     stage: "APERTURA",
-    video: "road",
+    video: "opening-library",
     tone: "deep",
     layout: "opening",
     title: <>La solución llegó<br />antes que el problema</>,
@@ -19,7 +33,7 @@ Voy a registrar esas palabras porque al final vamos a volver a ellas. Si nuestra
   },
   {
     stage: "DECISIÓN INICIAL",
-    video: "structure",
+    video: "decision-meeting",
     tone: "light",
     layout: "decision",
     title: "¿Comprar el PMS ahora?",
@@ -36,7 +50,7 @@ Si eligieron “todavía no”, no alcanza con decir que falta información. Nom
   },
   {
     stage: "COMPARAR ENCUADRES",
-    video: "wires",
+    video: "framing-documents",
     tone: "deep",
     layout: "definitions",
     title: "Pedido. Problema. Solución",
@@ -56,7 +70,7 @@ Cuando volvamos, no me cuenten todo el memo. Tráiganme una diferencia y la cons
   },
   {
     stage: "DOS VERSIONES",
-    video: "lights",
+    video: "versions-table",
     tone: "deep",
     layout: "comparison",
     title: "Dos encuadres. Dos decisiones",
@@ -74,7 +88,7 @@ Si el PMS respondió a tiempo, la primera explicación pierde fuerza. Si Comerci
   },
   {
     stage: "CLÍNICA CONCEPTUAL",
-    video: "structure",
+    video: "questions-library",
     tone: "light",
     layout: "questions",
     title: "Cuatro preguntas",
@@ -110,7 +124,7 @@ Tienen veintitrés minutos. El producto es una versión que otra persona pueda o
   },
   {
     stage: "EVIDENCIA NUEVA",
-    video: "wires",
+    video: "evidence-prototypes",
     tone: "deep",
     layout: "evidence",
     title: "La evidencia incomoda",
@@ -134,7 +148,7 @@ Al final necesito ver una revisión explícita, incluso si la revisión consiste
   },
   {
     stage: "REVISIÓN CRUZADA",
-    video: "lights",
+    video: "review-contract",
     tone: "deep",
     layout: "definitions",
     title: "Una objeción abre una prueba",
@@ -155,7 +169,7 @@ Cuando reciban las objeciones, no se defiendan enseguida. Primero prueben si per
   },
   {
     stage: "DEFENSA",
-    video: "hotel",
+    video: "defense-documents",
     tone: "deep",
     layout: "questions",
     title: "Una posición y su límite",
@@ -176,7 +190,7 @@ Defender no significa fingir certeza. Significa mostrar una posición suficiente
   },
   {
     stage: "CIERRE Y PUENTE",
-    video: "road",
+    video: "closing-campus",
     tone: "deep",
     layout: "reflection",
     title: "Lo que cambió deja una huella",
@@ -194,32 +208,42 @@ Antes de irnos, quiero que miremos el recorrido completo: recibimos una solució
 
 N02 retoma justamente lo que hoy dejamos abierto: dónde termina el sistema relevante y qué relaciones necesitamos incluir para no intervenir sobre una parte aislada.`,
   },
-];
+].map((slide, index) => ({
+  ...slide,
+  ...slideComposition[index],
+  notes: speakerNotes[index],
+}));
 
 const videoSources = {
-  road: {
-    label: "Arquitectura brutalista en blanco y negro",
-    source: "Pixabay",
-    creator: "Solarselle77",
-    url: "https://pixabay.com/videos/architecture-minimalism-concrete-327458/",
-  },
-  structure: {
-    label: "Corredor de hotel en blanco y negro",
+  "opening-library": {
+    label: "Biblioteca universitaria de varios niveles",
     source: "Pexels",
-    creator: "bruno lucas",
-    url: "https://www.pexels.com/video/black-and-white-corridor-5784035/",
+    creator: "cottonbro studio",
+    url: "https://www.pexels.com/video/people-inside-a-multi-floor-library-6334475/",
   },
-  wires: {
-    label: "Revisión de documentos de trabajo",
+  "decision-meeting": {
+    label: "Encuentro profesional antes de una decisión",
     source: "Pexels",
-    creator: "Artem Podrez",
-    url: "https://www.pexels.com/video/people-working-with-accounting-documents-6780083/",
+    creator: "Tima Miroshnichenko",
+    url: "https://www.pexels.com/video/person-showing-a-documents-to-a-man-5442621/",
   },
-  lights: {
-    label: "Páginas en blanco y negro",
+  "framing-documents": {
+    label: "Documentos examinados en una conversación profesional",
     source: "Pexels",
-    creator: "Pranjall Kumar",
-    url: "https://www.pexels.com/video/a-person-flipping-the-next-page-of-a-book-6185321/",
+    creator: "Gustavo Fring",
+    url: "https://www.pexels.com/video/close-up-of-documents-6285657/",
+  },
+  "versions-table": {
+    label: "Discusión profesional alrededor de documentos",
+    source: "Pexels",
+    creator: "Kaboompics",
+    url: "https://www.pexels.com/video/people-talking-at-a-table-8136057/",
+  },
+  "questions-library": {
+    label: "Trabajo y conversación dentro de una biblioteca universitaria",
+    source: "Pexels",
+    creator: "cottonbro studio",
+    url: "https://www.pexels.com/video/people-inside-the-university-library-6334254/",
   },
   hotel: {
     label: "Recepción y atención de una huésped en un hotel",
@@ -227,9 +251,33 @@ const videoSources = {
     creator: "Mikhail Nilov",
     url: "https://www.pexels.com/video/a-receptionist-assisting-a-client-in-the-hotel-7820474/",
   },
+  "evidence-prototypes": {
+    label: "Prototipos de papel sometidos a revisión",
+    source: "Pexels",
+    creator: "Musko io",
+    url: "https://www.pexels.com/video/women-discussing-about-documents-13892558/",
+  },
+  "review-contract": {
+    label: "Revisión cruzada de un documento de trabajo",
+    source: "Pexels",
+    creator: "Pressmaster",
+    url: "https://www.pexels.com/video/group-of-people-in-discussion-about-a-contract-3191900/",
+  },
+  "defense-documents": {
+    label: "Defensa de una posición apoyada en documentos",
+    source: "Pexels",
+    creator: "August de Richelieu",
+    url: "https://www.pexels.com/video/a-man-giving-signed-documents-to-his-secretary-4478794/",
+  },
+  "closing-campus": {
+    label: "Recorrido universitario frente a una biblioteca",
+    source: "Pexels",
+    creator: "Media Hopper Studio",
+    url: "https://www.pexels.com/video/university-campus-walkway-with-students-passing-library-30614645/",
+  },
 };
 
-const mediaVersion = "20260915-cinema-1";
+const mediaVersion = "20260915-cinema-2";
 
 function BackgroundVideo({ name }) {
   const videoRef = useRef(null);
@@ -386,7 +434,11 @@ function App() {
   }
 
   return <main ref={rootRef} className="presentation">
-    <section className={`stage tone-${slide.tone}`} aria-label={`Diapositiva ${index + 1} de ${slides.length}`}>
+    <section
+      className={`stage tone-${slide.tone} slide-${String(index + 1).padStart(2, "0")} placement-${slide.placement} overlay-${slide.overlay}`}
+      style={{ "--video-position": slide.videoPosition, "--copy-max": slide.copyWidth }}
+      aria-label={`Diapositiva ${index + 1} de ${slides.length}`}
+    >
       <BackgroundVideo key={slide.video} name={slide.video} />
       <div className="veil" />
       <header className="slide-header"><span>{String(index + 1).padStart(2, "0")}</span><i /><b>METSI · N01</b><em>{slide.stage}</em><hr /></header>
