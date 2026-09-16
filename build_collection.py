@@ -357,6 +357,116 @@ REFERENCE_WORKS = {
     ),
 }
 
+# The front-matter page must explain why every featured voice matters for the
+# reading.  N11–N36 already render this source-grounded bridge; N01–N10 use the
+# same editorial contract here instead of stopping at a portrait and a title.
+REFERENCE_DESCRIPTIONS = {
+    "mario-bunge": "Exige conceptos precisos, mecanismos discutibles y evidencia capaz de distinguir una explicación de una etiqueta técnica.",
+    "humberto-maturana": "Muestra que conocer y coordinar dependen de las distinciones, el lenguaje y la historia compartida por quienes observan.",
+    "peter-checkland": "Propone investigar situaciones problemáticas con modelos que ayuden a aprender antes de fijar una solución definitiva.",
+    "donald-schon": "Explica cómo los profesionales revisan su encuadre mientras actúan frente a problemas inciertos y singulares.",
+    "chris-argyris": "Permite reconocer cuándo una organización corrige errores sin revisar las reglas que los producen.",
+    "james-march": "Distingue la explotación de lo conocido y la exploración necesaria para aprender bajo incertidumbre.",
+    "steven-alter": "Sitúa el análisis en sistemas de trabajo donde personas, información, procesos y tecnología producen resultados juntos.",
+    "enid-mumford": "Integra calidad técnica y calidad de vida laboral mediante un diseño sociotécnico participativo.",
+    "eric-trist": "Demuestra que optimizar la tecnología sin rediseñar el sistema social puede empeorar el trabajo completo.",
+    "west-churchman": "Obliga a preguntar qué queda fuera de la frontera y quién carga con las consecuencias de esa decisión.",
+    "gerald-midgley": "Vincula intervención sistémica, fronteras y pluralidad de perspectivas para actuar sin borrar conflictos relevantes.",
+    "donella-meadows": "Hace visibles relaciones, demoras y puntos de intervención que una lista de componentes no permite comprender.",
+    "peter-senge": "Relaciona modelos mentales, aprendizaje colectivo y comprensión de interdependencias en organizaciones.",
+    "judea-pearl": "Distingue asociación, intervención y causalidad para evitar que una correlación se convierta en explicación automática.",
+    "richard-wang": "Muestra que la calidad de los datos depende del uso y de las necesidades de quienes toman decisiones.",
+    "elham-tabassi": "Aporta un marco para gobernar riesgos de inteligencia artificial según contexto, impacto, medición y responsabilidad.",
+    "paulo-freire": "Une reflexión, diálogo y acción situada para que las personas afectadas participen en comprender y transformar el problema.",
+    "fernando-flores": "Vincula lenguaje, compromisos y tecnología para observar cómo una organización promete, coordina y repara acciones.",
+    "edward-freeman": "Amplía la decisión más allá del cliente inmediato e incorpora a quienes afectan o son afectados por la intervención.",
+    "langdon-winner": "Permite discutir cómo los artefactos distribuyen poder y vuelven algunas alternativas más fáciles que otras.",
+    "miranda-fricker": "Explica cómo una persona puede ser injustamente desacreditada o carecer de conceptos para expresar su experiencia.",
+    "sasha-costanza-chock": "Propone diseñar con las comunidades afectadas y examinar quién define problemas, prioridades y criterios de éxito.",
+    "michael-quinn-patton": "Organiza evaluaciones orientadas al uso para que la evidencia responda a decisiones reales y audiencias concretas.",
+    "eric-ries": "Convierte supuestos de producto en experimentos pequeños que permiten aprender antes de ampliar el compromiso.",
+    "hugh-beyer": "Propone comprender el trabajo en contexto antes de traducir observaciones en requisitos y decisiones de diseño.",
+    "lucy-suchman": "Muestra que la acción situada adapta los planes y que el trabajo real nunca cabe por completo en un procedimiento.",
+    "nist": "Ofrece criterios públicos para identificar, medir y gobernar riesgos de sistemas de inteligencia artificial.",
+    "erik-hollnagel": "Desplaza la atención del error aislado hacia las adaptaciones cotidianas que sostienen el desempeño.",
+    "sidney-dekker": "Ayuda a reconstruir por qué una acción parecía razonable en su contexto antes de atribuir culpa retrospectiva.",
+    "don-norman": "Relaciona diseño, señales y modelos mentales para que las personas comprendan qué pueden hacer y qué ocurrió.",
+    "w3c": "Establece criterios verificables de accesibilidad para que la experiencia digital no excluya recorridos ni capacidades.",
+    "kees-dorst": "Explica el encuadre como una construcción que conecta aspiraciones, mecanismos posibles y formas de intervención.",
+    "michael-jackson": "Distingue el mundo donde ocurre el problema del software que se construye para intervenir en él.",
+    "nicole-forsgren": "Conecta entrega de software, desempeño operativo y aprendizaje mediante evidencia empírica sobre capacidades organizacionales.",
+}
+
+FULL_BLEED_AND_REFERENTS_CSS = r'''
+/* N01–N10 front matter parity with the approved N11–N36 system. */
+html,body.premium-magazine,body.premium-magazine main{margin:0!important;padding:0!important}
+body.premium-magazine main{overflow-x:hidden!important}
+body.premium-magazine:not(.document-n00) .collection-cover,
+body.premium-magazine:not(.document-n00) .full-bleed,
+body.premium-magazine:not(.document-n00) .closing-image,
+body.premium-magazine:not(.document-n00) .reading-section[data-section="01"]{
+  page:fullbleed!important;position:relative!important;left:0!important;top:0!important;
+  box-sizing:border-box!important;width:210mm!important;height:297mm!important;
+  min-width:210mm!important;min-height:297mm!important;max-width:none!important;max-height:none!important;
+  margin:0!important;overflow:hidden!important;border:0!important;
+  break-before:page!important;page-break-before:always!important;
+  break-after:page!important;page-break-after:always!important
+}
+body.premium-magazine:not(.document-n00) .collection-cover>img,
+body.premium-magazine:not(.document-n00) .full-bleed>img,
+body.premium-magazine:not(.document-n00) .closing-image>img{
+  position:absolute!important;inset:0!important;display:block!important;
+  width:210mm!important;height:297mm!important;max-width:none!important;max-height:none!important;
+  object-fit:cover!important
+}
+body.premium-magazine:not(.document-n00) .collection-cover .cover-shade{
+  position:absolute!important;inset:0!important;width:210mm!important;height:297mm!important
+}
+body.premium-magazine:not(.document-n00) article.reading{page:content;margin:0!important;padding:0!important}
+body.premium-magazine:not(.document-n00) .authors-page{box-sizing:border-box;padding:16mm 18mm!important}
+body.premium-magazine:not(.document-n00) .authors-page .contributors-grid{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4mm 5mm;margin-top:5mm
+}
+body.premium-magazine:not(.document-n00) .authors-page .contributor{
+  box-sizing:border-box;min-height:73mm!important;padding:0 1mm 3mm!important;
+  border-bottom:.2mm solid #AAA;background:transparent;text-align:center
+}
+body.premium-magazine:not(.document-n00) .authors-page .portrait-frame{
+  width:32mm;height:32mm;margin:0 auto 2.5mm;border-radius:50%;overflow:hidden;background:#D8DAD7
+}
+body.premium-magazine:not(.document-n00) .authors-page .portrait-frame img{
+  display:block;width:100%;height:100%;object-fit:cover;object-position:center 22%;
+  border-radius:50%;filter:grayscale(1) contrast(1.03)
+}
+body.premium-magazine:not(.document-n00) .authors-page .contributor>b{
+  display:block;margin:.5mm 0;font:400 13pt/1 Didot,serif;color:#777
+}
+body.premium-magazine:not(.document-n00) .authors-page .contributor h3{
+  margin:1mm 0 1.3mm;font:600 8.1pt/1.15 Avenir,sans-serif;text-transform:uppercase
+}
+body.premium-magazine:not(.document-n00) .authors-page .contributor-work{min-height:17mm;margin:0 0 1.5mm}
+body.premium-magazine:not(.document-n00) .authors-page .contributor-work cite{
+  display:block;font:italic 6.9pt/1.22 Baskerville,Georgia,serif;color:#30302E;text-align:left
+}
+body.premium-magazine:not(.document-n00) .authors-page .contributor-work small{
+  display:block;margin-top:1mm;font:5.9pt/1.2 Avenir,sans-serif;color:#666;text-align:left
+}
+body.premium-magazine:not(.document-n00) .authors-page .contributor p{
+  margin:0;text-align:left;font:6.75pt/1.28 Avenir,sans-serif;color:#555
+}
+body.premium-magazine:not(.document-n00) .authors-page blockquote{
+  margin:5mm 8mm 0;padding-top:3mm;font-size:13pt
+}
+body.document-n03 .contents-page .contents-sinnum-note,
+body.document-n07 .contents-page .contents-sinnum-note,
+body.document-n08 .contents-page .contents-sinnum-note,
+body.document-n09 .contents-page .contents-sinnum-note{
+  position:absolute;left:16mm;right:auto;width:88mm;bottom:18mm;margin:0;
+  padding-top:2mm;border-top:.2mm solid #BFC1BD;
+  font:6.4pt/1.2 Avenir,sans-serif;color:#5B5D58
+}
+'''
+
 N06_REFERENT_KEYS = (
     "james-march",
     "michael-quinn-patton",
@@ -2321,8 +2431,22 @@ def reference_cards(number:int,refs:list[str],assets:Path)->str:
         if number == 10 and key == "donald-schon":
             work = "Frame Reflection: Toward the Resolution of Intractable Policy Controversies"
             publication = "Basic Books, 1994 · con Martin Rein"
-        work_label = "" if number == 0 else "<span>OBRA PRINCIPAL UTILIZADA</span>"
-        cards.append(f'''<article class="contributor">{portrait}<b>{idx:02d}</b><h3>{esc(name)}</h3>{work_label}<cite>{esc(work)}</cite><p>{esc(publication)}</p></article>''')
+        if number == 0:
+            cards.append(
+                f'''<article class="contributor">{portrait}<b>{idx:02d}</b><h3>{esc(name)}</h3>'''
+                f'''<cite>{esc(work)}</cite><p>{esc(publication)}</p></article>'''
+            )
+            continue
+        description = REFERENCE_DESCRIPTIONS.get(
+            key,
+            "Aporta una perspectiva que permite ampliar, contrastar y discutir las decisiones desarrolladas en esta lectura.",
+        )
+        cards.append(
+            f'''<article class="contributor contributor-{esc(key)}">'''
+            f'''<div class="portrait-frame">{portrait}</div><b>{idx:02d}</b><h3>{esc(name)}</h3>'''
+            f'''<div class="contributor-work"><cite>{esc(work)}</cite><small>{esc(publication)}</small></div>'''
+            f'''<p>{esc(description)}</p></article>'''
+        )
     return ''.join(cards)
 
 
@@ -2671,6 +2795,10 @@ def build_document(number:int)->dict:
             "key": key,
             "name": entry["name"],
             "source_page": entry["source_page"],
+            "description": REFERENCE_DESCRIPTIONS.get(
+                key,
+                "Aporta una perspectiva que permite ampliar, contrastar y discutir las decisiones desarrolladas en esta lectura.",
+            ),
         }
         rights_status = entry["rights_status"]
         if number == 5 and key in {"edward-freeman", "enid-mumford"}:
@@ -3369,7 +3497,16 @@ def build_document(number:int)->dict:
             stable_css = (HERE / "N01-v18-final" / "magazine.css").read_text(encoding="utf-8")
             base_css = stable_css.split("/* METSI collection extensions:", 1)[0].rstrip()
             css_text = base_css + "\n\n" + COLLECTION_CSS
-    css_text = css_text.rstrip() + "\n\n" + SECTION_MARKER_CONTRAST_CSS.strip() + "\n\n" + THESIS_N00_STANDARD_CSS.strip() + "\n"
+    css_text = (
+        css_text.rstrip()
+        + "\n\n"
+        + SECTION_MARKER_CONTRAST_CSS.strip()
+        + "\n\n"
+        + THESIS_N00_STANDARD_CSS.strip()
+        + "\n\n"
+        + FULL_BLEED_AND_REFERENTS_CSS.strip()
+        + "\n"
+    )
     packaged_css.write_text(css_text,encoding="utf-8")
     (out / "metsi.css").write_text(css_text, encoding="utf-8")
     cover_source_label = f"assets/{cover_source.name}"

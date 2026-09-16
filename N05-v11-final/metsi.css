@@ -1956,3 +1956,91 @@ body.premium-magazine {
 .premium-magazine:not(.document-n00) .thesis-standard .section-body p{
   margin:0 0 4mm;break-inside:avoid-column
 }
+
+/* METSI section-marker contrast 2026-09-14.
+   On the dark professional-question opener, the white disc carries an ink
+   numeral. Volt remains in the adjacent accent and label, never as small text
+   over paper. */
+.premium-magazine:not(.document-n00) .reading-section[data-section="01"] .section-marker span{
+  color:#171917!important;
+  background:#FAFAF8!important;
+  border-color:#171917!important
+}
+
+/* N00 is the editorial and pedagogical reference for every thesis. */
+.premium-magazine:not(.document-n00) .thesis-standard{
+  box-sizing:border-box;min-height:246mm;padding:8mm 9mm;
+  break-before:page;page-break-before:always;
+  break-after:page;page-break-after:always;
+  break-inside:avoid-page;page-break-inside:avoid;
+  background:#FAFAF8;border-left:1.5mm solid #CFFF00
+}
+.premium-magazine:not(.document-n00) .thesis-standard .section-heading{margin-bottom:5mm}
+.premium-magazine:not(.document-n00) .thesis-standard .section-heading h2{font-size:34pt;line-height:1}
+.premium-magazine:not(.document-n00) .thesis-standard .section-body{
+  columns:2;column-count:2;column-gap:9mm;column-rule:.2mm solid #C5C7C5;
+  font:400 10.7pt/1.42 Baskerville,Georgia,serif;orphans:3;widows:3
+}
+.premium-magazine:not(.document-n00) .thesis-standard .section-body p{
+  margin:0 0 4mm;break-inside:avoid-column
+}
+
+/* N01–N10 front matter parity with the approved N11–N36 system. */
+html,body.premium-magazine,body.premium-magazine main{margin:0!important;padding:0!important}
+body.premium-magazine main{overflow-x:hidden!important}
+body.premium-magazine:not(.document-n00) .collection-cover,
+body.premium-magazine:not(.document-n00) .full-bleed,
+body.premium-magazine:not(.document-n00) .closing-image,
+body.premium-magazine:not(.document-n00) .reading-section[data-section="01"]{
+  page:fullbleed!important;position:relative!important;left:0!important;top:0!important;
+  box-sizing:border-box!important;width:210mm!important;height:297mm!important;
+  min-width:210mm!important;min-height:297mm!important;max-width:none!important;max-height:none!important;
+  margin:0!important;overflow:hidden!important;border:0!important;
+  break-before:page!important;page-break-before:always!important;
+  break-after:page!important;page-break-after:always!important
+}
+body.premium-magazine:not(.document-n00) .collection-cover>img,
+body.premium-magazine:not(.document-n00) .full-bleed>img,
+body.premium-magazine:not(.document-n00) .closing-image>img{
+  position:absolute!important;inset:0!important;display:block!important;
+  width:210mm!important;height:297mm!important;max-width:none!important;max-height:none!important;
+  object-fit:cover!important
+}
+body.premium-magazine:not(.document-n00) .collection-cover .cover-shade{
+  position:absolute!important;inset:0!important;width:210mm!important;height:297mm!important
+}
+body.premium-magazine:not(.document-n00) article.reading{page:content;margin:0!important;padding:0!important}
+body.premium-magazine:not(.document-n00) .authors-page{box-sizing:border-box;padding:16mm 18mm!important}
+body.premium-magazine:not(.document-n00) .authors-page .contributors-grid{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4mm 5mm;margin-top:5mm
+}
+body.premium-magazine:not(.document-n00) .authors-page .contributor{
+  box-sizing:border-box;min-height:73mm!important;padding:0 1mm 3mm!important;
+  border-bottom:.2mm solid #AAA;background:transparent;text-align:center
+}
+body.premium-magazine:not(.document-n00) .authors-page .portrait-frame{
+  width:32mm;height:32mm;margin:0 auto 2.5mm;border-radius:50%;overflow:hidden;background:#D8DAD7
+}
+body.premium-magazine:not(.document-n00) .authors-page .portrait-frame img{
+  display:block;width:100%;height:100%;object-fit:cover;object-position:center 22%;
+  border-radius:50%;filter:grayscale(1) contrast(1.03)
+}
+body.premium-magazine:not(.document-n00) .authors-page .contributor>b{
+  display:block;margin:.5mm 0;font:400 13pt/1 Didot,serif;color:#777
+}
+body.premium-magazine:not(.document-n00) .authors-page .contributor h3{
+  margin:1mm 0 1.3mm;font:600 8.1pt/1.15 Avenir,sans-serif;text-transform:uppercase
+}
+body.premium-magazine:not(.document-n00) .authors-page .contributor-work{min-height:17mm;margin:0 0 1.5mm}
+body.premium-magazine:not(.document-n00) .authors-page .contributor-work cite{
+  display:block;font:italic 6.9pt/1.22 Baskerville,Georgia,serif;color:#30302E;text-align:left
+}
+body.premium-magazine:not(.document-n00) .authors-page .contributor-work small{
+  display:block;margin-top:1mm;font:5.9pt/1.2 Avenir,sans-serif;color:#666;text-align:left
+}
+body.premium-magazine:not(.document-n00) .authors-page .contributor p{
+  margin:0;text-align:left;font:6.75pt/1.28 Avenir,sans-serif;color:#555
+}
+body.premium-magazine:not(.document-n00) .authors-page blockquote{
+  margin:5mm 8mm 0;padding-top:3mm;font-size:13pt
+}
