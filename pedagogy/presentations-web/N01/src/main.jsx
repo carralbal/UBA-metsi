@@ -216,10 +216,10 @@ N02 retoma justamente lo que hoy dejamos abierto: dónde termina el sistema rele
 
 const videoSources = {
   "opening-library": {
-    label: "Biblioteca universitaria de varios niveles",
+    label: "Facultad de Derecho de la UBA, Recoleta, Buenos Aires",
     source: "Pexels",
-    creator: "cottonbro studio",
-    url: "https://www.pexels.com/video/people-inside-a-multi-floor-library-6334475/",
+    creator: "Jovana De Obaldia",
+    url: "https://www.pexels.com/video/buenos-aires-recoleta-facultad-de-derecho-19596479/",
   },
   "decision-meeting": {
     label: "Encuentro profesional antes de una decisión",
@@ -240,10 +240,10 @@ const videoSources = {
     url: "https://www.pexels.com/video/people-talking-at-a-table-8136057/",
   },
   "questions-library": {
-    label: "Trabajo y conversación dentro de una biblioteca universitaria",
+    label: "Arquitectura pública de Buenos Aires: Centro Cultural Kirchner",
     source: "Pexels",
-    creator: "cottonbro studio",
-    url: "https://www.pexels.com/video/people-inside-the-university-library-6334254/",
+    creator: "Leandro Binetti",
+    url: "https://www.pexels.com/video/centro-cultural-kirchner-cck-17432317/",
   },
   hotel: {
     label: "Recepción y atención de una huésped en un hotel",
@@ -270,14 +270,14 @@ const videoSources = {
     url: "https://www.pexels.com/video/a-man-giving-signed-documents-to-his-secretary-4478794/",
   },
   "closing-campus": {
-    label: "Recorrido universitario frente a una biblioteca",
+    label: "Vista aérea del centro de Buenos Aires y el Obelisco",
     source: "Pexels",
-    creator: "Media Hopper Studio",
-    url: "https://www.pexels.com/video/university-campus-walkway-with-students-passing-library-30614645/",
+    creator: "Juan Manuel Ferraro",
+    url: "https://www.pexels.com/video/the-downtown-area-of-buenos-aires-argentina-4762116/",
   },
 };
 
-const mediaVersion = "20260915-cinema-2";
+const mediaVersion = "20260916-local-cinema-3";
 
 function BackgroundVideo({ name }) {
   const videoRef = useRef(null);
@@ -358,6 +358,7 @@ function App() {
   const presenterMode = query.get("presenter") === "1";
   const initial = Math.min(Math.max(Number(query.get("slide")) || 1, 1), slides.length) - 1;
   const [index, setIndex] = useState(initial);
+  const [notesTheme, setNotesTheme] = useState(() => query.get("theme") || localStorage.getItem("metsi-n01-notes-theme") || "light");
   const rootRef = useRef(null);
   const channelRef = useRef(null);
   const indexRef = useRef(initial);
@@ -406,6 +407,10 @@ function App() {
   }, [presenterMode]);
 
   useEffect(() => {
+    localStorage.setItem("metsi-n01-notes-theme", notesTheme);
+  }, [notesTheme]);
+
+  useEffect(() => {
     const onStorage = (event) => {
       if (event.key === "metsi-n01-slide") {
         const nextIndex = Number(event.newValue);
@@ -418,13 +423,25 @@ function App() {
 
   if (presenterMode) {
     const source = videoSources[slide.video];
-    return <main className="notes-window">
-      <header>
-        <div><span>NOTAS DE ORADOR · METSI N01</span><b>{String(index + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}</b></div>
-        <h1>{slide.title}</h1>
-      </header>
-      <article>{slide.notes.split("\n\n").map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</article>
-      <aside><span>FONDO VISUAL</span><a href={source.url} target="_blank" rel="noreferrer">{source.label} · {source.creator} · {source.source}</a></aside>
+    return <main className={`notes-window theme-${notesTheme}`}>
+      <div className="notes-toolbar">
+        <span>NOTAS DE ORADOR · METSI N01</span>
+        <button
+          type="button"
+          onClick={() => setNotesTheme((value) => value === "light" ? "dark" : "light")}
+          aria-label={`Cambiar a tema ${notesTheme === "light" ? "oscuro" : "claro"}`}
+        >
+          {notesTheme === "light" ? "Tema oscuro" : "Tema claro"}
+        </button>
+      </div>
+      <section className="notes-reading">
+        <header>
+          <div><span>{slide.stage}</span><b>{String(index + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}</b></div>
+          <h1>{slide.title}</h1>
+        </header>
+        <article>{slide.notes.split("\n\n").map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</article>
+        <aside><span>FONDO VISUAL</span><a href={source.url} target="_blank" rel="noreferrer">{source.label} · {source.creator} · {source.source}</a></aside>
+      </section>
       <nav aria-label="Navegación desde las notas">
         <button onClick={controls.previous} disabled={index === 0}>← Anterior</button>
         <a href={`${location.pathname}?slide=${index + 1}`} target="_blank" rel="noopener">Abrir presentación ↗</a>
