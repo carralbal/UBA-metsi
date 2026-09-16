@@ -222,22 +222,22 @@ const videoSources = {
     url: "https://www.pexels.com/video/buenos-aires-recoleta-facultad-de-derecho-19596479/",
   },
   "decision-meeting": {
-    label: "Encuentro profesional antes de una decisión",
+    label: "Interior arquitectónico abstracto: decisiones, recorridos y puntos de vista",
     source: "Pexels",
-    creator: "Tima Miroshnichenko",
-    url: "https://www.pexels.com/video/person-showing-a-documents-to-a-man-5442621/",
+    creator: "K",
+    url: "https://www.pexels.com/video/modern-architectural-interior-with-geometric-design-32537473/",
   },
   "framing-documents": {
-    label: "Documentos examinados en una conversación profesional",
+    label: "Hojas que se ordenan para construir un encuadre",
     source: "Pexels",
-    creator: "Gustavo Fring",
-    url: "https://www.pexels.com/video/close-up-of-documents-6285657/",
+    creator: "Kmeel.com Videos",
+    url: "https://www.pexels.com/video/a-person-arranging-the-letter-papers-7104084/",
   },
   "versions-table": {
-    label: "Discusión profesional alrededor de documentos",
+    label: "Luz, sombra y estructura: una misma escena admite lecturas distintas",
     source: "Pexels",
-    creator: "Kaboompics",
-    url: "https://www.pexels.com/video/people-talking-at-a-table-8136057/",
+    creator: "Nothing Ahead",
+    url: "https://www.pexels.com/video/palm-tree-shadow-on-modern-building-exterior-35084306/",
   },
   "questions-library": {
     label: "Arquitectura pública de Buenos Aires: Centro Cultural Kirchner",
@@ -246,28 +246,28 @@ const videoSources = {
     url: "https://www.pexels.com/video/centro-cultural-kirchner-cck-17432317/",
   },
   hotel: {
-    label: "Recepción y atención de una huésped en un hotel",
+    label: "Pasillo de hotel vacío: operación, espera y promesa de servicio",
     source: "Pexels",
-    creator: "Mikhail Nilov",
-    url: "https://www.pexels.com/video/a-receptionist-assisting-a-client-in-the-hotel-7820474/",
+    creator: "Dominik Zítka",
+    url: "https://www.pexels.com/video/elegant-hotel-corridor-interior-view-31751335/",
   },
   "evidence-prototypes": {
-    label: "Prototipos de papel sometidos a revisión",
+    label: "Tarjeta en blanco preparada para convertir una idea en evidencia visible",
     source: "Pexels",
-    creator: "Musko io",
-    url: "https://www.pexels.com/video/women-discussing-about-documents-13892558/",
+    creator: "Artem Podrez",
+    url: "https://www.pexels.com/video/blank-paper-card-on-desk-and-hands-holding-pen-6278835/",
   },
   "review-contract": {
-    label: "Revisión cruzada de un documento de trabajo",
+    label: "Revisión cercana de documentos antes de tomar una posición",
     source: "Pexels",
-    creator: "Pressmaster",
-    url: "https://www.pexels.com/video/group-of-people-in-discussion-about-a-contract-3191900/",
+    creator: "Sora Shimazaki",
+    url: "https://www.pexels.com/video/a-person-reading-and-flipping-pages-of-a-document-5646341/",
   },
   "defense-documents": {
-    label: "Defensa de una posición apoyada en documentos",
+    label: "Sala preparada para presentar, discutir y defender una posición",
     source: "Pexels",
-    creator: "August de Richelieu",
-    url: "https://www.pexels.com/video/a-man-giving-signed-documents-to-his-secretary-4478794/",
+    creator: "Werner Pfennig",
+    url: "https://www.pexels.com/video/an-empty-conference-room-6951393/",
   },
   "closing-campus": {
     label: "Vista aérea del centro de Buenos Aires y el Obelisco",
@@ -277,7 +277,7 @@ const videoSources = {
   },
 };
 
-const mediaVersion = "20260916-local-cinema-3";
+const mediaVersion = "20260916-local-cinema-4";
 
 function BackgroundVideo({ name }) {
   const videoRef = useRef(null);
