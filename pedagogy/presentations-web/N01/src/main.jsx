@@ -216,10 +216,10 @@ N02 retoma justamente lo que hoy dejamos abierto: dónde termina el sistema rele
 
 const videoSources = {
   "opening-library": {
-    label: "Facultad de Derecho de la UBA, Recoleta, Buenos Aires",
+    label: "Geometría de escaleras, luz y recorridos en una arquitectura contemporánea",
     source: "Pexels",
-    creator: "Jovana De Obaldia",
-    url: "https://www.pexels.com/video/buenos-aires-recoleta-facultad-de-derecho-19596479/",
+    creator: "Nino Souza",
+    url: "https://www.pexels.com/video/the-inside-of-a-building-with-stairs-and-a-glass-ceiling-19205632/",
   },
   "decision-meeting": {
     label: "Interior arquitectónico abstracto: decisiones, recorridos y puntos de vista",
@@ -240,10 +240,10 @@ const videoSources = {
     url: "https://www.pexels.com/video/palm-tree-shadow-on-modern-building-exterior-35084306/",
   },
   "questions-library": {
-    label: "Arquitectura pública de Buenos Aires: Centro Cultural Kirchner",
+    label: "Macro editorial de páginas que se abren y revelan nuevas preguntas",
     source: "Pexels",
-    creator: "Leandro Binetti",
-    url: "https://www.pexels.com/video/centro-cultural-kirchner-cck-17432317/",
+    creator: "cottonbro studio",
+    url: "https://www.pexels.com/video/macro-shot-of-a-book-being-opened-5283816/",
   },
   hotel: {
     label: "Pasillo de hotel vacío: operación, espera y promesa de servicio",
@@ -270,14 +270,14 @@ const videoSources = {
     url: "https://www.pexels.com/video/an-empty-conference-room-6951393/",
   },
   "closing-campus": {
-    label: "Vista aérea del centro de Buenos Aires y el Obelisco",
+    label: "Luz y niebla construyen un umbral abstracto para el cierre",
     source: "Pexels",
-    creator: "Juan Manuel Ferraro",
-    url: "https://www.pexels.com/video/the-downtown-area-of-buenos-aires-argentina-4762116/",
+    creator: "Paolo San",
+    url: "https://www.pexels.com/video/dramatic-foggy-light-show-in-dark-hallway-28957437/",
   },
 };
 
-const mediaVersion = "20260916-local-cinema-4";
+const mediaVersion = "20260916-cinematic-safe-5";
 
 function BackgroundVideo({ name }) {
   const videoRef = useRef(null);
@@ -329,12 +329,14 @@ function BackgroundVideo({ name }) {
 function usePresentationKeys({ next, previous, first, last, openNotes, toggleFullscreen }) {
   useEffect(() => {
     const onKey = (event) => {
+      const target = event.target;
+      if (target instanceof HTMLElement && (target.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(target.tagName))) return;
       if (["ArrowRight", "PageDown", " "].includes(event.key)) { event.preventDefault(); next(); }
       if (["ArrowLeft", "PageUp"].includes(event.key)) { event.preventDefault(); previous(); }
-      if (event.key === "Home") first();
-      if (event.key === "End") last();
-      if (event.key.toLowerCase() === "n") openNotes();
-      if (event.key.toLowerCase() === "f") toggleFullscreen();
+      if (event.key === "Home") { event.preventDefault(); first(); }
+      if (event.key === "End") { event.preventDefault(); last(); }
+      if (event.key.toLowerCase() === "n") { event.preventDefault(); openNotes(); }
+      if (event.key.toLowerCase() === "f") { event.preventDefault(); toggleFullscreen(); }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -461,12 +463,13 @@ function App() {
       <header className="slide-header"><span>{String(index + 1).padStart(2, "0")}</span><i /><b>METSI · N01</b><em>{slide.stage}</em><hr /></header>
       <article className={`slide-copy layout-${slide.layout}`}><SlideBody slide={slide} /></article>
       {slide.duration && <div className="duration">{slide.duration}</div>}
+      <div className="institutional-logos" aria-label="Universidad de Buenos Aires y Facultad de Ciencias Económicas">
+        <img src="./brand/uba-flat-white-v1.png" alt="Universidad de Buenos Aires" />
+        <img src="./brand/fce-flat-white-v1.png" alt="Facultad de Ciencias Económicas" />
+      </div>
       <footer><span>{String(index + 1).padStart(2, "0")}</span><p>Diego Carralbal · METSI · FCE UBA</p></footer>
       <nav className="controls" aria-label="Navegación de la presentación">
-        <button onClick={controls.previous} disabled={index === 0} aria-label="Diapositiva anterior">←</button>
-        <a href={notesHref} target="_blank" rel="noopener" aria-label="Abrir notas de orador en otra pestaña" title="Abrir notas de orador en otra pestaña">Notas ↗</a>
         <button onClick={controls.toggleFullscreen} aria-label="Pantalla completa">□</button>
-        <button onClick={controls.next} disabled={index === slides.length - 1} aria-label="Diapositiva siguiente">→</button>
       </nav>
     </section>
   </main>;
