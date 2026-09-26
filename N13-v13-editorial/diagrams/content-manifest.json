@@ -1,0 +1,26 @@
+{
+  "document": "N13",
+  "diagrams": [
+    {
+      "file": "diagrams/N13-mapa-01.svg",
+      "title": "Repetir un mensaje no debe multiplicar el efecto",
+      "labels": [
+        "Solicitud original para asignar la última habitación",
+        "Reintento de la misma intención ante una respuesta ausente",
+        "Cancelación que llega tarde y puede encontrar otro estado",
+        "Clave estable de intención",
+        "Una habitación física no puede tener dos asignaciones vigentes superpuestas",
+        "Aplicar una vez el efecto protegido",
+        "Estado ambiguo que no debe confirmarse ni sobrescribirse sin evidencia",
+        "Comparar agencia, PMS y cerradura para explicar y reparar"
+      ],
+      "claim": "Una transición distribuida converge cuando conserva la identidad de la intención, protege una invariante y reconcilia representaciones divergentes sin falsificar la historia.",
+      "caption": "La convergencia conserva la identidad de la intención, protege una invariante y repara divergencias sin borrar la historia.",
+      "family": "convergence-gate",
+      "sha256": "8d22ba619f1a08227fa7464707dc0df5b702ed86aa5c64b361a7f6248a255ef1",
+      "approved": true,
+      "source_manifest": "diagrams/N13-mapa-01-content-manifest.json",
+      "alt_text": "diagrams/N13-mapa-01-alt-text.md"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "La cadena se prueba en ambos sentidos",
+  "claim": "Una intervención es defendible cuando puede recorrerse desde el problema hasta su consecuencia y desde un incidente hasta la decisión, la evidencia y el encuadre que lo habilitaron.",
+  "source_sections": [
+    {"id":"thesis","heading":"Tesis","summary":"Una colección de artefactos correctos no constituye una intervención coherente."},
+    {"id":"chain","heading":"Movimiento 1 · Cadena de intervención","summary":"El expediente relaciona encuadre, evidencia, decisión, acción, consecuencia y revisión."},
+    {"id":"trace","heading":"Movimiento 1 · Trazabilidad argumental","summary":"Cada afirmación decisiva conserva fuente, garantía, objeción y uso autorizado."},
+    {"id":"gate","heading":"Movimiento 3 · Puerta de integración","summary":"La suficiencia conjunta no admite compensar un defecto crítico con un promedio."},
+    {"id":"instrument","heading":"Instrumento HH-34","summary":"El expediente se prueba desde una promesa y también desde un incidente."}
+  ],
+  "nodes": [
+    {"id":"promise","label":"Llegada accesible, operable y reparable","role":"shared_promise","source":["instrument"],"purpose":"Organizar el expediente alrededor de una consecuencia común."},
+    {"id":"problem","label":"Problema","role":"argument_link","source":["chain"],"purpose":"Conservar mecanismos rivales y población."},
+    {"id":"evidence","label":"Evidencia","role":"argument_link","source":["trace"],"purpose":"Registrar fuente, vigencia, objeción y límite."},
+    {"id":"decision","label":"Decisión","role":"commitment_link","source":["chain"],"purpose":"Conservar autoridad, desacuerdo y revisión."},
+    {"id":"operation","label":"Operación","role":"system_link","source":["instrument"],"purpose":"Vincular señal, contingencia y reparación."},
+    {"id":"governance","label":"Gobierno","role":"system_link","source":["instrument"],"purpose":"Vincular cambio, incidente, retiro y aprendizaje."},
+    {"id":"contradictions","label":"Contradicciones abiertas","role":"integrity_guard","source":["thesis","chain"],"purpose":"Impedir una coherencia retrospectiva fabricada."},
+    {"id":"integration_gate","label":"Puerta no compensable","role":"decision_gate","source":["gate"],"purpose":"Continuar, limitar, producir evidencia o detener."}
+  ],
+  "edges": [
+    {"id":"frames","from":"promise","to":"problem","relation":"frames","source":["instrument"],"meaning":"La promesa y la población delimitan el problema profesional."},
+    {"id":"supports","from":"evidence","to":"decision","relation":"supports_and_limits","source":["trace"],"meaning":"La evidencia apoya y limita la decisión mediante una garantía examinable."},
+    {"id":"realizes","from":"decision","to":"operation","relation":"is_realized_as","source":["chain"],"meaning":"La decisión se vuelve capacidad, contrato, operación y consecuencia."},
+    {"id":"reopens","from":"governance","to":"decision","relation":"reopens","source":["instrument"],"meaning":"Un incidente permite volver hasta la decisión y la evidencia que lo habilitaron."},
+    {"id":"blocks_false_closure","from":"contradictions","to":"integration_gate","relation":"blocks_false_closure","source":["thesis","gate"],"meaning":"Una contradicción crítica impide aprobar por promedio."},
+    {"id":"authorizes","from":"operation","to":"integration_gate","relation":"feeds","source":["gate"],"meaning":"La prueba operativa aporta evidencia a la puerta de integración."}
+  ]
+}

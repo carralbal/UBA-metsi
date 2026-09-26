@@ -1,0 +1,1 @@
+Mapa que relaciona seis posiciones actorales con una decisión y sus consecuencias: definir, conocer, autorizar, ejecutar, experimentar, objetar y reparar. Una banda inferior reúne contrapesos de trazabilidad, participación, objeción y reparación.

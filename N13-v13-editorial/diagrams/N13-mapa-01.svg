@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100" role="img" aria-labelledby="title desc">
+  <title id="title">N13, convergencia bajo desorden</title>
+  <desc id="desc">Tres mensajes vinculados con una misma habitación llegan en momentos distintos: una solicitud original, un reintento y una cancelación demorada. Una clave estable de intención permite reconocerlos. Una puerta de invariante protege que una habitación física no tenga dos asignaciones vigentes. A la derecha, el efecto protegido se aplica una sola vez o el estado ambiguo entra en reconciliación. La reconciliación compara las representaciones de agencia, PMS y cerradura, explica la diferencia y decide una reparación sin borrar la historia.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#747672"/>
+    </marker>
+    <style>
+      .sans{font-family:Inter,Arial,Helvetica,sans-serif;fill:#202020}
+      .serif{font-family:Georgia,'Times New Roman',serif;fill:#202020}
+      .eyebrow{font-size:25px;font-weight:700;letter-spacing:7px}
+      .title{font-size:58px;letter-spacing:-1.5px}
+      .subtitle{font-size:27px;fill:#5F615E}
+      .section{font-size:23px;font-weight:700;letter-spacing:4px}
+      .label{font-size:28px;font-weight:700}
+      .body{font-size:23px;fill:#4F514E}
+      .small{font-size:20px;fill:#666864}
+      .number{font-size:21px;font-weight:700;letter-spacing:3px}
+      .rule{stroke:#A9ABA7;stroke-width:2}
+      .outline{fill:#FFFFFF;stroke:#777A76;stroke-width:2.2}
+      .route{fill:none;stroke:#747672;stroke-width:3;marker-end:url(#arrow)}
+      .delayed{fill:none;stroke:#8A8C88;stroke-width:2.5;stroke-dasharray:8 10;marker-end:url(#arrow)}
+    </style>
+  </defs>
+
+  <rect width="1800" height="1100" fill="#F7F7F4"/>
+  <rect x="36" y="36" width="1728" height="1028" rx="20" fill="none" stroke="#C6C8C4" stroke-width="2"/>
+
+  <path d="M72 74 H210 L196 94 H58 Z" fill="#CFFF00"/>
+  <text x="238" y="94" class="sans eyebrow">N13 · MAPA DE CONVERGENCIA</text>
+  <text x="72" y="170" class="serif title">Repetir un mensaje no debe multiplicar el efecto</text>
+  <text x="74" y="214" class="sans subtitle">Identidad, invariante y reconciliación permiten recuperar un estado defendible.</text>
+  <line x1="72" y1="248" x2="1728" y2="248" class="rule"/>
+
+  <text x="84" y="302" class="sans section">LLEGADAS DESORDENADAS</text>
+  <text x="668" y="302" class="sans section">PUERTA DE INVARIANTE</text>
+  <text x="1302" y="302" class="sans section">RESULTADO OBSERVABLE</text>
+
+  <g aria-label="Mensajes desordenados">
+    <g aria-label="Solicitud original">
+    <path d="M84 338 H500 L524 362 V438 H84 Z" class="outline"/>
+    <text x="112" y="378" class="sans number">01 · T0</text>
+    <text x="244" y="380" class="sans label">SOLICITUD ORIGINAL</text>
+    <text x="112" y="416" class="sans small">asignar la última habitación</text>
+    </g>
+
+    <g aria-label="Reintento de la misma intención">
+    <path d="M84 474 H500 L524 498 V574 H84 Z" fill="#E4E6E3" stroke="#777A76" stroke-width="2.2"/>
+    <text x="112" y="514" class="sans number">01 · T+8 s</text>
+    <text x="274" y="516" class="sans label">REINTENTO</text>
+    <text x="112" y="552" class="sans small">la respuesta no llegó, la intención es la misma</text>
+    </g>
+
+    <g aria-label="Cancelación demorada">
+    <path d="M84 610 H500 L524 634 V710 H84 Z" class="outline"/>
+    <rect x="84" y="610" width="10" height="100" fill="#CFFF00"/>
+    <text x="112" y="650" class="sans number">02 · T+4 min</text>
+    <text x="292" y="652" class="sans label">CANCELACIÓN</text>
+    <text x="112" y="688" class="sans small">llega tarde y puede encontrar otro estado</text>
+    </g>
+
+    <path d="M524 388 C580 388 582 472 628 472" class="route"/>
+    <path d="M524 524 H628" class="route"/>
+    <path d="M524 660 C584 660 582 576 628 576" class="delayed"/>
+
+    <circle cx="642" cy="524" r="58" fill="#FFFFFF" stroke="#202020" stroke-width="2.4"/>
+    <circle cx="642" cy="524" r="10" fill="#CFFF00" stroke="#202020" stroke-width="2"/>
+    <text x="642" y="615" class="sans number" text-anchor="middle">CLAVE ESTABLE</text>
+    <text x="642" y="641" class="sans number" text-anchor="middle">DE INTENCIÓN</text>
+  </g>
+
+  <g aria-label="Puerta de invariante">
+    <path d="M760 338 H1198 L1230 370 V710 H760 Z" fill="#FFFFFF" stroke="#777A76" stroke-width="2.2"/>
+    <path d="M1198 338 V370 H1230" fill="none" stroke="#777A76" stroke-width="2.2"/>
+    <path d="M760 338 H954 L938 358 H744 Z" fill="#CFFF00"/>
+    <text x="796" y="405" class="sans number">03</text>
+    <text x="858" y="407" class="sans label">EFECTO PROTEGIDO</text>
+    <text x="796" y="452" class="serif" style="font-size:32px">Una habitación física no puede</text>
+    <text x="796" y="493" class="serif" style="font-size:32px">tener dos asignaciones vigentes</text>
+    <text x="796" y="534" class="serif" style="font-size:32px">superpuestas.</text>
+    <line x1="796" y1="562" x2="1190" y2="562" class="rule"/>
+    <text x="796" y="598" class="sans" style="font-size:20px">IDENTIDAD · ¿es la misma intención?</text>
+    <text x="796" y="632" class="sans" style="font-size:20px">VERSIÓN · ¿qué estado se intenta cambiar?</text>
+    <text x="796" y="666" class="sans" style="font-size:20px">AUTORIDAD · ¿quién puede decidir y reparar?</text>
+    <circle cx="760" cy="524" r="10" fill="#CFFF00" stroke="#202020" stroke-width="2"/>
+    <circle cx="1230" cy="524" r="10" fill="#CFFF00" stroke="#202020" stroke-width="2"/>
+  </g>
+  <path d="M706 524 H744" class="route"/>
+
+  <g aria-label="Resultados observables">
+    <g aria-label="Efecto aplicado una vez">
+    <path d="M1302 338 H1704 L1728 362 V482 H1302 Z" fill="#E4E6E3" stroke="#777A76" stroke-width="2.2"/>
+    <text x="1330" y="380" class="sans number">04</text>
+    <text x="1392" y="382" class="sans label">APLICAR UNA VEZ</text>
+    <text x="1330" y="425" class="sans body">la intención repetida conserva</text>
+    <text x="1330" y="457" class="sans body">un único efecto protegido</text>
+    </g>
+
+    <g aria-label="Estado ambiguo">
+    <path d="M1302 526 H1704 L1728 550 V710 H1302 Z" fill="#FFFFFF" stroke="#777A76" stroke-width="2.2"/>
+    <text x="1330" y="568" class="sans number">05</text>
+    <text x="1392" y="570" class="sans label">ESTADO AMBIGUO</text>
+    <text x="1330" y="615" class="sans body">no confirmar ni sobrescribir</text>
+    <text x="1330" y="647" class="sans body">hasta reunir evidencia</text>
+    <text x="1330" y="681" class="sans small">comparar · explicar · decidir</text>
+    </g>
+  </g>
+  <path d="M1250 524 C1272 524 1276 410 1290 410" class="route"/>
+  <path d="M1250 524 C1272 524 1276 618 1290 618" class="delayed"/>
+
+  <g aria-label="Reconciliación del caso Hotel Horizonte">
+    <line x1="72" y1="772" x2="1728" y2="772" class="rule"/>
+    <text x="84" y="824" class="sans number">HH-13 · RECONCILIACIÓN</text>
+    <path d="M84 850 H488 L512 874 V956 H84 Z" fill="#FFFFFF" stroke="#9A9C98" stroke-width="1.8"/>
+    <text x="112" y="892" class="sans label">AGENCIA</text>
+    <text x="112" y="929" class="sans small">confirmación y cancelación</text>
+
+    <path d="M560 850 H964 L988 874 V956 H560 Z" fill="#E4E6E3" stroke="#9A9C98" stroke-width="1.8"/>
+    <text x="588" y="892" class="sans label">PMS</text>
+    <text x="588" y="929" class="sans small">asignación y versión vigente</text>
+
+    <path d="M1036 850 H1440 L1464 874 V956 H1036 Z" fill="#FFFFFF" stroke="#9A9C98" stroke-width="1.8"/>
+    <text x="1064" y="892" class="sans label">CERRADURA</text>
+    <text x="1064" y="929" class="sans small">credencial física activa</text>
+
+    <path d="M512 902 H548" class="route"/>
+    <path d="M988 902 H1024" class="route"/>
+    <path d="M1464 902 H1698 V760 H1518" class="delayed"/>
+    <text x="1512" y="886" class="sans number">06</text>
+    <text x="1512" y="920" class="sans label">REPARAR</text>
+    <text x="1512" y="949" class="sans small">sin borrar la historia</text>
+  </g>
+
+  <text x="84" y="1022" class="sans small">CONVERGER NO ES ELEGIR UN REGISTRO POR COSTUMBRE: ES HACER DEFENDIBLE LA DIFERENCIA Y SU REPARACIÓN.</text>
+  <text x="1710" y="1022" class="sans small" text-anchor="end">N13 · METSI</text>
+</svg>

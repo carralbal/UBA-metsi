@@ -1,0 +1,382 @@
+{
+  "document": "N09",
+  "version": "v9-final",
+  "title": "Mapa de recorrido accesible",
+  "anchor": {
+    "source_id": "N09-s07-b035",
+    "heading": "Instrumento de decisión: mapa de recorrido accesible"
+  },
+  "topology": "service-blueprint-evidence-atlas",
+  "claim": "Una transición sólo sostiene una experiencia accesible cuando la señal visible se apoya en trabajo y evidencia, hace observable la carga distribuida y conserva una alternativa con autoridad de reparación.",
+  "canonical_field_count": 8,
+  "field_count_rationale": "La sección anclada enumera ocho elementos y trata alternativa y reparación como un único campo compuesto.",
+  "source_sections": [
+    {
+      "id": "s_thesis",
+      "heading": "Tesis",
+      "summary": "La calidad se juzga por la capacidad efectiva de comprender, decidir, actuar, corregir y obtener un resultado sin cargas desproporcionadas."
+    },
+    {
+      "id": "s_bridge",
+      "heading": "De N08 a N09: del trabajo realizado al recorrido vivido",
+      "summary": "HH-09 conecta propósito, condiciones, señal, acción, trabajo, evidencia, falla, alternativa y reparación."
+    },
+    {
+      "id": "s_journey",
+      "heading": "Experiencia de principio a fin",
+      "summary": "La experiencia atraviesa promesas, decisiones, canales, trabajo interno, sistemas y reparación."
+    },
+    {
+      "id": "s_accessibility",
+      "heading": "Accesibilidad como propiedad sistémica",
+      "summary": "La accesibilidad requiere continuidad entre información, proceso, tecnología, operación y alternativa."
+    },
+    {
+      "id": "s_first_application",
+      "heading": "Primera aplicación de HH-09: de la promesa al primer bloqueo",
+      "summary": "La reserva accesible permite concretar condiciones, señal, trabajo, evidencia y costo de una alternativa incierta."
+    },
+    {
+      "id": "s_metrics",
+      "heading": "Métricas de experiencia, accesibilidad y adopción",
+      "summary": "Las métricas deben observar distribución, asistencia, errores, reparación y carga trasladada."
+    },
+    {
+      "id": "s_second_application",
+      "heading": "Segunda aplicación de HH-09: probar la alternativa y la carga trasladada",
+      "summary": "Tiempo, esfuerzo, asistencia y reparación hacen visible si el canal digital sólo desplaza trabajo."
+    },
+    {
+      "id": "s_service_map",
+      "heading": "Mapa de servicio y evidencia de principio a fin",
+      "summary": "La línea de visibilidad conecta acciones de la persona con trabajo interno, sistemas, soporte y autoridad."
+    },
+    {
+      "id": "s_instrument",
+      "source_id": "N09-s07-b035",
+      "heading": "Instrumento de decisión: mapa de recorrido accesible",
+      "summary": "La unidad mínima es una transición y cada transición registra ocho campos que unen experiencia y operación."
+    },
+    {
+      "id": "s_protocol",
+      "heading": "Protocolo operativo: investigar antes de optimizar",
+      "summary": "La evidencia habilita continuar, modificar, limitar, investigar o retirar y exige conservar salida."
+    },
+    {
+      "id": "s_third_application",
+      "heading": "Tercera aplicación de HH-09: una promesa accesible que el sistema no puede verificar",
+      "summary": "La etiqueta adaptada falla por semántica, procedencia, propagación y autoridad."
+    }
+  ],
+  "groups": [
+    {
+      "id": "g_journey",
+      "label": "Recorrido vivido",
+      "purpose": "Expone cuatro transiciones concretas sin reducirlas a una pantalla.",
+      "source": ["s_journey", "s_instrument"]
+    },
+    {
+      "id": "g_visible",
+      "label": "Plano visible",
+      "purpose": "Reúne lo que la persona intenta, las condiciones, la señal y la acción solicitada.",
+      "source": ["s_first_application", "s_instrument"]
+    },
+    {
+      "id": "g_internal",
+      "label": "Trabajo interno",
+      "purpose": "Muestra que la promesa depende de verificación, coordinación, datos y autoridad.",
+      "source": ["s_service_map", "s_instrument", "s_third_application"]
+    },
+    {
+      "id": "g_recovery",
+      "label": "Falla y salida",
+      "purpose": "Hace visible el punto de falla y la alternativa equivalente con reparación.",
+      "source": ["s_accessibility", "s_instrument"]
+    },
+    {
+      "id": "g_distribution",
+      "label": "Carga distribuida",
+      "purpose": "Evita que un promedio o una activación oculten tiempo, esfuerzo, asistencia y error.",
+      "source": ["s_metrics", "s_second_application"]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "j_need",
+      "label": "Necesito alojamiento",
+      "role": "process",
+      "source": ["s_instrument"],
+      "purpose": "Inicia el recorrido desde una necesidad, no desde la interfaz."
+    },
+    {
+      "id": "j_compare",
+      "label": "Puedo comparar",
+      "role": "outcome",
+      "source": ["s_instrument"],
+      "purpose": "Define la capacidad obtenida en la primera transición."
+    },
+    {
+      "id": "j_choose",
+      "label": "Elijo una opción",
+      "role": "process",
+      "source": ["s_instrument"],
+      "purpose": "Inicia la transición entre selección y comprensión."
+    },
+    {
+      "id": "j_understand",
+      "label": "Comprendo qué se promete",
+      "role": "outcome",
+      "source": ["s_instrument"],
+      "purpose": "Distingue una elección formal de una promesa comprendida."
+    },
+    {
+      "id": "j_arrive",
+      "label": "Llego al hotel",
+      "role": "process",
+      "source": ["s_instrument", "s_first_application"],
+      "purpose": "Inicia la transición elegida para ampliar el blueprint."
+    },
+    {
+      "id": "j_receive",
+      "label": "Recibo una habitación compatible",
+      "role": "outcome",
+      "source": ["s_instrument", "s_first_application"],
+      "purpose": "Define el resultado del servicio, no el evento técnico."
+    },
+    {
+      "id": "j_fail",
+      "label": "Algo falla",
+      "role": "constraint",
+      "source": ["s_instrument"],
+      "purpose": "Abre el recorrido de excepción en vez de ocultarlo."
+    },
+    {
+      "id": "j_repair",
+      "label": "Puedo obtener reparación",
+      "role": "outcome",
+      "source": ["s_instrument", "s_accessibility"],
+      "purpose": "Define recuperación como capacidad efectiva."
+    },
+    {
+      "id": "f_purpose",
+      "label": "Propósito: confirmar compatibilidad",
+      "role": "outcome",
+      "source": ["s_first_application", "s_instrument"],
+      "purpose": "Evita confundir el objetivo de la persona con presionar un botón."
+    },
+    {
+      "id": "f_conditions",
+      "label": "Condiciones: movilidad, teclado y conectividad",
+      "role": "constraint",
+      "source": ["s_first_application", "s_instrument"],
+      "purpose": "Explicita variaciones que alteran la transición."
+    },
+    {
+      "id": "f_signal",
+      "label": "Señal: etiqueta adaptada",
+      "role": "evidence",
+      "source": ["s_first_application", "s_third_application"],
+      "purpose": "Muestra la señal agregada que no confirma atributos."
+    },
+    {
+      "id": "f_action",
+      "label": "Acción: reservar y confirmar",
+      "role": "process",
+      "source": ["s_first_application", "s_instrument"],
+      "purpose": "Hace visible el esfuerzo solicitado a la persona."
+    },
+    {
+      "id": "f_work",
+      "label": "Trabajo: verificar atributos y disponibilidad",
+      "role": "process",
+      "source": ["s_first_application", "s_service_map", "s_instrument"],
+      "purpose": "Conecta la interacción con el trabajo que sostiene la promesa."
+    },
+    {
+      "id": "f_evidence",
+      "label": "Evidencia: procedencia, vigencia y autoridad",
+      "role": "evidence",
+      "source": ["s_first_application", "s_instrument", "s_third_application"],
+      "purpose": "Define qué permite defender la confirmación."
+    },
+    {
+      "id": "f_failure",
+      "label": "Modo de falla: la etiqueta produce una promesa falsa",
+      "role": "constraint",
+      "source": ["s_instrument", "s_third_application"],
+      "purpose": "Hace observable el mecanismo de interrupción."
+    },
+    {
+      "id": "f_alternative",
+      "label": "Alternativa y reparación: verificación, plazo y respuesta trazable",
+      "role": "process",
+      "source": ["s_accessibility", "s_instrument"],
+      "purpose": "Conserva un camino equivalente y la autoridad para activarlo."
+    },
+    {
+      "id": "m_burden",
+      "label": "Tiempo, esfuerzo, asistencia y error",
+      "role": "evidence",
+      "source": ["s_metrics", "s_second_application"],
+      "purpose": "Mide cómo se distribuye la carga de la transición."
+    },
+    {
+      "id": "d_decision",
+      "label": "Continuar, modificar, limitar, investigar o retirar",
+      "role": "decision",
+      "source": ["s_protocol", "s_instrument"],
+      "purpose": "Convierte el mapa en un instrumento de decisión revisable."
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_journey_1",
+      "from": "j_need",
+      "to": "j_compare",
+      "relation": "transformation",
+      "source": ["s_instrument"],
+      "meaning": "La primera transición convierte una necesidad en capacidad de comparar."
+    },
+    {
+      "id": "e_journey_2",
+      "from": "j_choose",
+      "to": "j_understand",
+      "relation": "transformation",
+      "source": ["s_instrument"],
+      "meaning": "Elegir sólo constituye avance si la persona comprende la promesa."
+    },
+    {
+      "id": "e_journey_3",
+      "from": "j_arrive",
+      "to": "j_receive",
+      "relation": "transformation",
+      "source": ["s_instrument", "s_first_application"],
+      "meaning": "La llegada debe producir una habitación compatible, no sólo un estado de check-in."
+    },
+    {
+      "id": "e_journey_4",
+      "from": "j_fail",
+      "to": "j_repair",
+      "relation": "transformation",
+      "source": ["s_instrument", "s_accessibility"],
+      "meaning": "Una falla exige una alternativa capaz de producir reparación."
+    },
+    {
+      "id": "e_focus",
+      "from": "j_arrive",
+      "to": "f_purpose",
+      "relation": "boundary",
+      "source": ["s_instrument"],
+      "meaning": "El blueprint amplía una transición concreta en lugar de modelar pantallas aisladas."
+    },
+    {
+      "id": "e_conditions_signal",
+      "from": "f_conditions",
+      "to": "f_signal",
+      "relation": "dependency",
+      "source": ["s_first_application"],
+      "meaning": "Las condiciones determinan si la señal alcanza para sostener la acción."
+    },
+    {
+      "id": "e_action_work",
+      "from": "f_action",
+      "to": "f_work",
+      "relation": "boundary",
+      "source": ["s_service_map", "s_instrument"],
+      "meaning": "La acción visible cruza la línea de visibilidad y depende de trabajo interno."
+    },
+    {
+      "id": "e_work_evidence",
+      "from": "f_work",
+      "to": "f_evidence",
+      "relation": "evidence",
+      "source": ["s_first_application", "s_instrument"],
+      "meaning": "La verificación y coordinación deben producir evidencia trazable."
+    },
+    {
+      "id": "e_evidence_signal",
+      "from": "f_evidence",
+      "to": "f_signal",
+      "relation": "evidence",
+      "source": ["s_first_application", "s_third_application"],
+      "meaning": "La señal visible sólo es defendible cuando está respaldada por evidencia vigente."
+    },
+    {
+      "id": "e_evidence_failure",
+      "from": "f_evidence",
+      "to": "f_failure",
+      "relation": "dependency",
+      "source": ["s_third_application"],
+      "meaning": "La ausencia o contradicción de evidencia revela el modo de falla."
+    },
+    {
+      "id": "e_failure_alternative",
+      "from": "f_failure",
+      "to": "f_alternative",
+      "relation": "flow",
+      "source": ["s_accessibility", "s_instrument"],
+      "meaning": "La interrupción abre un camino de alternativa y reparación."
+    },
+    {
+      "id": "e_evidence_decision",
+      "from": "f_evidence",
+      "to": "d_decision",
+      "relation": "evidence",
+      "source": ["s_protocol", "s_instrument"],
+      "meaning": "La evidencia crítica limita qué decisión puede defenderse."
+    },
+    {
+      "id": "e_alternative_decision",
+      "from": "f_alternative",
+      "to": "d_decision",
+      "relation": "authority",
+      "source": ["s_protocol", "s_instrument"],
+      "meaning": "La decisión debe reconocer quién puede activar alternativa, reparación o retiro."
+    },
+    {
+      "id": "e_burden_decision",
+      "from": "m_burden",
+      "to": "d_decision",
+      "relation": "evidence",
+      "source": ["s_metrics", "s_protocol"],
+      "meaning": "La carga distribuida impide decidir sólo por actividad o promedio."
+    },
+    {
+      "id": "e_decision_revision",
+      "from": "d_decision",
+      "to": "f_conditions",
+      "relation": "feedback",
+      "source": ["s_instrument", "s_protocol"],
+      "meaning": "Una decisión revisable vuelve al mapa cuando cambia la evidencia o un supuesto."
+    }
+  ],
+  "design_contract": {
+    "canvas": "1800x1100",
+    "target_width_mm": 160,
+    "minimum_svg_text_px": 28,
+    "minimum_final_text_pt": 7.06,
+    "palette": ["#F6F4EE", "#FFFFFF", "#E5E5E1", "#C9CAC5", "#73756F", "#272824", "#CFFF00"],
+    "fonts": {
+      "display": "Didot, Bodoni 72, serif",
+      "text": "Avenir, Avenir Next, sans-serif"
+    },
+    "forbidden_fonts": ["Arial", "Helvetica", "Inter", "Times New Roman"],
+    "connector_policy": "Todos los conectores se dibujan antes que los objetos y mantienen carriles independientes de texto."
+  },
+  "assets": {
+    "editable_svg": {
+      "file": "n09-accessible-service-blueprint.svg",
+      "sha256": "719fc5ce84aadc321e240a6dfdf468634a5da7997e47fbe9600cd4311ff8884d"
+    },
+    "preview_2x": {
+      "file": "n09-accessible-service-blueprint.png",
+      "width": 3600,
+      "height": 2200,
+      "sha256": "bf9bef41c52a302d5ac03e1784283692deff777211fbc24e9fa38d716a80c4e9"
+    },
+    "integration_copy": {
+      "file": "../diagrams/N09-mapa-decision.svg",
+      "sha256": "719fc5ce84aadc321e240a6dfdf468634a5da7997e47fbe9600cd4311ff8884d"
+    }
+  }
+}

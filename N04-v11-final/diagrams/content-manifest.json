@@ -1,0 +1,131 @@
+{
+  "title": "Cadena de evidencia desde la fuente hasta la decisión",
+  "claim": "Una afirmación conserva su fuerza sólo cuando cada transformación mantiene trazables su procedencia, definición, incertidumbre, autoridad y condición de revisión.",
+  "source_sections": [
+    {
+      "id": "s1",
+      "heading": "Fuente, procedencia y cadena de transformación",
+      "summary": "Reconstruye el origen y las transformaciones de una afirmación."
+    },
+    {
+      "id": "s2",
+      "heading": "Instrumento de decisión: registro y condiciones de revisión",
+      "summary": "Vincula evidencia, hipótesis y decisión revisable."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "source",
+      "label": "FUENTE",
+      "role": "evidence",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "purpose": "Persona · sensor · documento"
+    },
+    {
+      "id": "record",
+      "label": "REGISTRO",
+      "role": "evidence",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "purpose": "Captura situada y parcial"
+    },
+    {
+      "id": "data",
+      "label": "DATO",
+      "role": "evidence",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "purpose": "Codificación según una definición"
+    },
+    {
+      "id": "interpretation",
+      "label": "INTERPRETACIÓN",
+      "role": "process",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "purpose": "Significado atribuido"
+    },
+    {
+      "id": "hypothesis",
+      "label": "HIPÓTESIS",
+      "role": "process",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "purpose": "Mecanismo que puede contrastarse"
+    },
+    {
+      "id": "decision",
+      "label": "DECISIÓN",
+      "role": "decision",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "purpose": "Acción con condición de revisión"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "source",
+      "to": "record",
+      "relation": "transformation",
+      "source": [
+        "s1"
+      ],
+      "meaning": "La fuente se captura bajo condiciones específicas."
+    },
+    {
+      "id": "e2",
+      "from": "record",
+      "to": "data",
+      "relation": "transformation",
+      "source": [
+        "s1"
+      ],
+      "meaning": "El registro se codifica según una definición."
+    },
+    {
+      "id": "e3",
+      "from": "data",
+      "to": "interpretation",
+      "relation": "transformation",
+      "source": [
+        "s1"
+      ],
+      "meaning": "El dato recibe significado para una pregunta."
+    },
+    {
+      "id": "e4",
+      "from": "interpretation",
+      "to": "hypothesis",
+      "relation": "evidence",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "meaning": "La interpretación se confronta con mecanismos rivales."
+    },
+    {
+      "id": "e5",
+      "from": "hypothesis",
+      "to": "decision",
+      "relation": "decision",
+      "source": [
+        "s2"
+      ],
+      "meaning": "La hipótesis informa una acción proporcional y revisable."
+    }
+  ]
+}

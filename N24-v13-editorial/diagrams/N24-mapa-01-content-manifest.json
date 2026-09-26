@@ -1,0 +1,28 @@
+{
+  "title": "Priorizar hace visible la renuncia",
+  "claim": "Una prioridad es defendible cuando protege límites, restringe el trabajo activo y conserva quién espera, qué consecuencia se acepta y cuándo se revisa.",
+  "source_sections": [
+    {"id":"problem","heading":"La lista donde todo era prioridad uno","summary":"El puntaje común oculta obligaciones, capacidad y consecuencias heterogéneas."},
+    {"id":"hh24","heading":"Hotel Horizonte: priorizar también nombra a quién esperar","summary":"HH-24 limita la cartera a cobertura accesible e instrumentación y registra qué opciones esperan o se retiran."},
+    {"id":"thesis","heading":"Tesis","summary":"Priorizar convierte escasez en renuncias explícitas y revisables."},
+    {"id":"movement1","heading":"Movimiento 1 · Hacer visibles demora, capacidad y obligación","summary":"Las opciones conservan valor, obligación, población y costo de oportunidad en unidades pertinentes."},
+    {"id":"movement3","heading":"Movimiento 3 · Revisar prioridades con evidencia y límites","summary":"La cartera restringe trabajo activo y reabre decisiones ante cambios de capacidad o evidencia."}
+  ],
+  "nodes": [
+    {"id":"accessible","label":"Completar cobertura accesible","role":"protected_option","source":["hh24"],"purpose":"Proteger una condición vigente del servicio."},
+    {"id":"events","label":"Instrumentar eventos","role":"enabling_option","source":["hh24"],"purpose":"Habilitar evidencia y reducir reconstrucción manual."},
+    {"id":"channels","label":"Incorporar canales externos","role":"commercial_option","source":["hh24"],"purpose":"Conservar una oportunidad cuyo costo de demora decae con la temporada."},
+    {"id":"overbooking","label":"Automatizar sobreventa","role":"uncertain_option","source":["hh24"],"purpose":"Mostrar una apuesta sin mecanismo ni daño suficientemente probados."},
+    {"id":"boundary","label":"Obligación y protección como límite","role":"legitimacy_boundary","source":["movement1"],"purpose":"Evitar que un puntaje intercambie derechos y preferencias."},
+    {"id":"capacity","label":"Dos apuestas activas","role":"capacity_limit","source":["hh24","movement3"],"purpose":"Reservar margen operacional y reducir trabajo abierto."},
+    {"id":"renunciation","label":"Quién espera, consecuencia y revisión","role":"renunciation_record","source":["hh24","thesis"],"purpose":"Hacer trazable el costo de decir no o no ahora."}
+  ],
+  "edges": [
+    {"id":"protect","from":"boundary","to":"accessible","relation":"protects","source":["hh24"],"meaning":"La cobertura accesible recibe tratamiento protegido antes de la comparación."},
+    {"id":"activate1","from":"accessible","to":"capacity","relation":"selected","source":["hh24"],"meaning":"La primera apuesta ocupa capacidad por una protección vigente."},
+    {"id":"activate2","from":"events","to":"capacity","relation":"selected","source":["hh24"],"meaning":"La segunda apuesta habilita aprendizaje compartido."},
+    {"id":"wait","from":"channels","to":"renunciation","relation":"deferred","source":["hh24"],"meaning":"La oportunidad comercial conserva consecuencia y fecha de revisión."},
+    {"id":"withdraw","from":"overbooking","to":"renunciation","relation":"withdrawn","source":["hh24"],"meaning":"La automatización se retira hasta contar con evidencia suficiente."},
+    {"id":"record","from":"capacity","to":"renunciation","relation":"documents","source":["thesis","movement3"],"meaning":"La selección activa conserva el costo de las opciones desplazadas."}
+  ]
+}

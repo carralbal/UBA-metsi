@@ -1,0 +1,932 @@
+{
+  "missingImages": [],
+  "hiddenSourceBlocks": [],
+  "sourceBlocks": [
+    {
+      "id": "N01-h1",
+      "text": "Metodología sin recetas: intervenir cuando el problema todavía no está claro"
+    },
+    {
+      "id": "N01-s01-h2",
+      "text": "Pregunta profesional"
+    },
+    {
+      "id": "N01-s01-b001",
+      "text": "Si nos piden una aplicación nueva, ¿cómo averiguamos si hace falta esa aplicación o si el problema está en otro lado? ¿Cómo empezamos a actuar sin fingir que ya sabemos la respuesta?"
+    },
+    {
+      "id": "N01-s02-h2",
+      "text": "El mapa perfecto de la montaña equivocada"
+    },
+    {
+      "id": "N01-s02-b001",
+      "text": "Imaginá un equipo de rescate que avanza por la montaña. Hay niebla, pero llevan un mapa detallado. Repartieron responsabilidades, calcularon horarios y prepararon el equipo. Llegan a cada punto a la hora prevista. Todo parece funcionar hasta que descubren algo: el mapa corresponde a otro valle. Caminaron bien, pero hacia el lugar equivocado."
+    },
+    {
+      "id": "N01-s02-b002",
+      "text": "La escena es inventada. Sirve para pensar una situación muy común: hacer bien una tarea no demuestra que hayamos elegido la tarea correcta. Un grupo puede cumplir su cronograma, escribir buen código y entregar una aplicación que casi nadie necesita. También puede resolver una molestia visible y dejar intacta la causa que la produce. La prolijidad del trabajo no alcanza para saber si vamos bien orientados."
+    },
+    {
+      "id": "N01-s02-b003",
+      "text": "Volvamos al rescate. Una integrante ve una marca que no figura en el mapa. Otra escucha a alguien del lugar decir que el río cambió de cauce. El instrumento de altura indica que están doscientos metros más abajo de lo esperado. ¿Tiran el mapa? ¿Siguen porque ya hicieron mucho camino? Ninguna de esas respuestas es obligatoria. Pueden detenerse en un punto seguro, comparar las señales y comprobar dónde están."
+    },
+    {
+      "id": "N01-s02-b004",
+      "text": "Cada señal admite más de una explicación. La marca podría ser nueva; la persona del lugar podría equivocarse; el instrumento podría estar mal calibrado. Investigar no significa creer todo lo que aparece ni dudar de todo para siempre. Significa elegir una comprobación que ayude a decidir. Si equivocarse de valle pone vidas en peligro, la comprobación deberá ser más exigente que si sólo agrega unos minutos al recorrido."
+    },
+    {
+      "id": "N01-s02-b005",
+      "text": "Falta algo más: alguien debe poder ordenar la detención. Si todos ven problemas, pero nadie puede cambiar la ruta, juntar información no alcanza. Tampoco alcanza si quien hizo el mapa interpreta cada duda como una ofensa. Para aprender, el equipo necesita permiso para revisar lo que había decidido y una forma de hacerlo sin perder la coordinación."
+    },
+    {
+      "id": "N01-s02-b006",
+      "text": "En Hotel Horizonte pasa algo parecido. La dirección quiere reemplazar el programa de gestión, lanzar una aplicación para huéspedes y agregar un chatbot. Es un pedido concreto, como una ruta marcada. Pero todavía no explica por qué se venden habitaciones que después no están disponibles, por qué se demora una llegada o por qué dos áreas prometen cosas distintas. Comprar lo pedido podría ayudar. También podría llevarnos más rápido hacia el problema equivocado."
+    },
+    {
+      "id": "N01-s02-b007",
+      "text": "Esta lectura propone una primera regla: antes de comprometer una solución, explicá qué problema creés que resolverá y qué te haría cambiar de idea. A esto lo llamaremos criterio de revisabilidad. No exige cambiar de opinión ante cualquier comentario. Exige reconocer de antemano qué observación sería suficientemente importante para revisar una explicación o una decisión."
+    },
+    {
+      "id": "N01-s02-b008",
+      "text": "Por ejemplo, si pensamos que la demora del hotel se debe a una pantalla lenta, observar que la mayor parte de la espera ocurre antes de abrir esa pantalla importa mucho. No prueba automáticamente cuál es la causa, pero debilita nuestra explicación inicial. La metodología empieza ahí: ayuda a convertir esa sorpresa en una pregunta y la pregunta en una próxima acción útil."
+    },
+    {
+      "id": "N01-s03-h2",
+      "text": "Tesis"
+    },
+    {
+      "id": "N01-s03-b001",
+      "text": "Una metodología sirve para organizar cómo comprendemos una situación, elegimos qué hacer y comprobamos lo que pasó. No piensa por nosotros ni garantiza el resultado. Nos ayuda a tomar decisiones que podamos explicar, discutir y corregir. Ésa es la tesis de N01: necesitamos un modo de trabajar con criterio, no una receta que prometa acertar siempre."
+    },
+    {
+      "id": "N01-s03-b002",
+      "text": "Pensemos en una facultad que recibe muchas consultas y pide un chatbot. Podemos empezar eligiendo un proveedor. También podemos reconstruir algunas consultas: qué necesitaban las personas, dónde buscaron información y por qué no la encontraron. Tal vez faltaba una respuesta clara sobre horarios. Tal vez la información era correcta, pero inaccesible desde un teléfono. Tal vez cada oficina contestaba algo distinto. Las tres situaciones podrían producir el mismo pedido y requerir cambios diferentes."
+    },
+    {
+      "id": "N01-s03-b003",
+      "text": "La metodología conecta esas averiguaciones con una decisión. No alcanza con entrevistar porque «en esta etapa se entrevista». Debemos poder decir: vamos a hablar con estudiantes para distinguir entre información ausente, información difícil de encontrar y respuestas contradictorias. Según lo observado, cambiaremos el contenido, el acceso o la coordinación. El chatbot sigue siendo una opción; todavía no es una conclusión."
+    },
+    {
+      "id": "N01-s03-b004",
+      "text": "Esto tampoco significa investigar hasta estar completamente seguros. Si un cartel informa mal un horario y está haciendo perder turnos, podemos corregirlo mientras averiguamos por qué quedó desactualizado. Actuar sobre un daño claro no obliga a tener resuelto todo el problema. Lo importante es distinguir esa reparación inmediata de una decisión mayor, como reemplazar todos los canales de atención."
+    },
+    {
+      "id": "N01-s03-b005",
+      "text": "En el hotel, «integrar todo» debe traducirse en situaciones que podamos reconstruir: quién confirmó una habitación, qué sabía en ese momento, qué ocurrió al llegar la huésped y qué tuvo que hacer Recepción. A partir de esas historias comparamos explicaciones. Una integración puede ser necesaria, pero también puede hacer circular más rápido un dato cuyo significado nadie acordó."
+    },
+    {
+      "id": "N01-s03-b006",
+      "text": "La consecuencia profesional es concreta. Antes de preguntar «¿cómo implementamos lo solicitado?», preguntamos «¿qué tendría que cambiar para que esta intervención valga la pena?». Después elegimos qué observar, qué probar y quién puede decidir. Un buen trabajo metodológico deja esas relaciones claras, incluso cuando la decisión final es provisional y todavía quedan dudas."
+    },
+    {
+      "id": "N01-s04-h2",
+      "text": "Cómo leer este mapa: N01 abre el recorrido N02 a N10"
+    },
+    {
+      "id": "N01-s04-b001",
+      "text": "N01 presenta la pregunta general: cómo intervenir cuando el pedido todavía no explica bien el problema. No intenta enseñar de una vez todas las técnicas de la materia. Por ahora alcanza con distinguir lo que nos piden, lo que sucede y lo que necesitamos averiguar antes de comprometernos."
+    },
+    {
+      "id": "N01-s04-b002",
+      "text": "N02 amplía la mirada: una aplicación forma parte de un sistema donde también hay personas, reglas, información y trabajo. N03 estudia qué dejamos dentro y fuera del análisis y cómo una acción puede volver sobre nosotros con efectos no previstos. N04 separa hechos, relatos, síntomas e hipótesis para no confundir una explicación convincente con una explicación comprobada."
+    },
+    {
+      "id": "N01-s04-b003",
+      "text": "Después, N05 pregunta quién participa, quién decide y quién recibe las consecuencias. N06 ayuda a elegir qué incertidumbre conviene investigar primero. N07 trabaja entrevistas sobre situaciones concretas y N08 observa cómo se hace realmente el trabajo. N09 sigue la experiencia de las personas, incluidas las barreras para acceder al servicio. N10 reúne lo aprendido para formular un problema que pueda discutirse con evidencia."
+    },
+    {
+      "id": "N01-s04-b004",
+      "text": "No son diez maneras de repetir la misma advertencia. Cada lectura permite hacer algo que antes no podíamos hacer con suficiente precisión. N01 nos enseña a no tomar el pedido como diagnóstico. Al terminar N10, deberíamos poder explicar qué situación vamos a cambiar, para quién, por qué y qué dato nos obligaría a revisar esa elección."
+    },
+    {
+      "id": "N01-s05-h2",
+      "text": "La tranquilidad de empezar por una solución"
+    },
+    {
+      "id": "N01-s05-b001",
+      "text": "La directora de Hotel Horizonte pide tres productos: un PMS nuevo, una aplicación y un chatbot. PMS es la sigla en inglés del programa que ayuda a gestionar reservas, habitaciones y otras operaciones del hotel. La lista transmite seguridad: podemos pedir presupuestos, repartir tareas y armar fechas. Es más incómodo decir que todavía no sabemos cuál de esos productos hace falta."
+    },
+    {
+      "id": "N01-s05-b002",
+      "text": "Sin embargo, «el sistema es lento» puede describir esperas distintas. Quizá una pantalla tarda en responder. Quizá Recepción espera que alguien confirme la limpieza. Quizá una agencia de viajes online, también llamada OTA, informa tarde una reserva. O quizá Comercial ofreció una llegada temprana sin saber si habría una habitación preparada. Desde el mostrador todo puede sentirse como lentitud; las causas no son intercambiables."
+    },
+    {
+      "id": "N01-s05-b003",
+      "text": "Una aplicación nueva podría evitar una consulta repetida. También podría agregar otro lugar donde la huésped recibe una promesa que el hotel no puede cumplir. Un chatbot podría informar un horario correctamente y, si recibe demasiados permisos, cancelar una reserva por error. Por eso distinguimos el producto solicitado del resultado que queremos lograr."
+    },
+    {
+      "id": "N01-s05-b004",
+      "text": "Habrá restricciones reales. Tal vez la compra ya esté firmada o un contrato venza pronto. No hace falta fingir que todo puede discutirse. Podemos decir: «esta plataforma se va a incorporar; averigüemos qué puede resolver, qué seguirá pendiente y cómo limitar los riesgos». Aceptar una restricción no equivale a demostrar que la solución elegida ataca la causa."
+    },
+    {
+      "id": "N01-s06-h2",
+      "text": "Lo que Ingeniería de Software ya nos dio y lo que ahora falta"
+    },
+    {
+      "id": "N01-s06-b001",
+      "text": "Si ya estudiaste Ingeniería de Software, conocés parte del trabajo: aclarar requisitos, modelar, diseñar, programar, probar y mantener. También sabés que un programa puede funcionar según sus requisitos y seguir teniendo problemas de seguridad, rendimiento o uso. METSI se apoya en esa base; no la reemplaza."
+    },
+    {
+      "id": "N01-s06-b002",
+      "text": "Agrega una pregunta anterior que sigue presente durante todo el trabajo: ¿cómo llegamos a esos requisitos? Supongamos que uno dice «Recepción debe ver el estado de la habitación». Está bien escrito, pero falta saber quién informa ese estado, cuándo lo cambia y qué significa. Si «liberada» quiere decir «terminé de limpiar» para un área y «lista para asignar» para otra, mostrar el dato con más velocidad puede empeorar la confusión."
+    },
+    {
+      "id": "N01-s06-b003",
+      "text": "El SWEBOK organiza conocimientos de Ingeniería de Software que incluyen requisitos, arquitectura, calidad y práctica profesional. Los estándares de ciclo de vida de sistemas también miran más allá de la programación. No son adversarios de esta materia. Nos dan conocimientos útiles que debemos relacionar con el problema concreto, en lugar de usarlos como si eligieran por sí mismos qué necesita una organización."
+    },
+    {
+      "id": "N01-s06-b004",
+      "text": "Lucy Suchman estudia la diferencia entre un plan y lo que las personas hacen en una situación real. Imaginá un procedimiento que dice «verificar identidad y entregar la llave». Cuando llega una persona sin el documento esperado, alguien debe interpretar la excepción, pedir ayuda o encontrar otra respuesta autorizada. El plan orienta, pero no contiene cada detalle de esa actuación."
+    },
+    {
+      "id": "N01-s06-b005",
+      "text": "La conclusión no es abandonar los procedimientos. Es observar dónde necesitan criterio, información y autoridad para funcionar. Ingeniería de Software sigue siendo necesaria cuando la respuesta incluye software. METSI ayuda a justificar por qué esa respuesta es pertinente y a reconocer qué parte del problema no se arregla programando."
+    },
+    {
+      "id": "N01-s07-h2",
+      "text": "Método, metodología, marco, práctica, técnica y herramienta"
+    },
+    {
+      "id": "N01-s07-b001",
+      "text": "Imaginá que querés saber por qué las personas esperan tanto en una oficina. Podés acompañar algunas atenciones, hacer preguntas, ordenar los tiempos en una planilla y discutir lo observado. En esa actividad hay varias cosas diferentes. Separarlas evita creer que comprar una herramienta equivale a aprender a trabajar de otra manera."
+    },
+    {
+      "id": "N01-s07-b002",
+      "text": "Un método es una forma organizada de averiguar o hacer algo. Observar una atención completa, siguiendo un procedimiento, puede ser un método. Una entrevista centrada en un episodio es otro. Elegimos uno u otro según la pregunta. Si queremos saber cómo fue una excepción pasada, una entrevista puede servir; si queremos ver interrupciones que nadie recuerda, conviene observar."
+    },
+    {
+      "id": "N01-s07-b003",
+      "text": "La metodología incluye la justificación de esa elección: por qué usamos esos métodos, cómo los combinamos, qué esperamos aprender y qué decisión depende del resultado. En palabras comunes, el método explica cómo vamos a trabajar; la metodología explica por qué ese modo de trabajar tiene sentido acá. La distinción importa cuando una técnica se aplica bien, pero responde una pregunta que no ayuda a decidir."
+    },
+    {
+      "id": "N01-s07-b004",
+      "text": "Un marco ordena aspectos que conviene considerar. Es parecido a un mapa de preguntas: responsabilidades, riesgos, resultados o controles. Puede ayudarnos a no olvidar algo, pero no dice automáticamente cuánto control necesita cada caso. Tener una lista de riesgos posibles no demuestra que hayamos entendido el riesgo de esta intervención."
+    },
+    {
+      "id": "N01-s07-b005",
+      "text": "Una práctica es una actividad que un equipo realiza de manera habitual. Revisar cada semana los pedidos pendientes o analizar juntos una falla son prácticas. Su valor no depende de repetirlas siempre igual: depende de que cumplan una función. Si la revisión nunca permite cambiar una prioridad, quizá haya una reunión, pero no una práctica útil de priorización."
+    },
+    {
+      "id": "N01-s07-b006",
+      "text": "Una técnica es una operación más acotada. Por ejemplo, ordenar cronológicamente los eventos de una atención o comparar los tiempos de distintos turnos. Una herramienta sostiene el trabajo: papel, planilla, pizarra o programa. La planilla permite calcular; no decide si empezamos a contar demasiado tarde y dejamos afuera media hora de espera."
+    },
+    {
+      "id": "N01-s07-b007",
+      "text": "El contraejemplo aparece cuando un hotel compra una plataforma de tickets y anuncia que ya mejoró su metodología. Si nadie acordó qué se registra, quién responde y cuándo un pedido se considera resuelto, cambió el soporte, no necesariamente el trabajo. Las seis palabras no son un examen de vocabulario: permiten reconocer qué cambio se hizo y cuál sigue faltando."
+    },
+    {
+      "id": "N01-s08-h2",
+      "text": "La metodología como sistema de preguntas"
+    },
+    {
+      "id": "N01-s08-b001",
+      "text": "Una forma sencilla de empezar es imaginar la conversación que necesitamos antes de actuar. ¿Qué está pasando? ¿A quién le pasa? ¿Qué sabemos y qué estamos suponiendo? ¿Qué podríamos hacer? ¿Quién puede decidir? ¿Cómo comprobaremos si ayudó? Estas preguntas ordenan el trabajo sin prometer una secuencia válida para cualquier situación."
+    },
+    {
+      "id": "N01-s08-b002",
+      "text": "Checkland y Poulter proponen partir de situaciones problemáticas, no de problemas supuestamente definidos de una vez. La diferencia se entiende en el hotel: para Comercial falta agilidad; para Recepción hay promesas imposibles; para Tecnología faltan datos consistentes. No basta con elegir la descripción de quien habla más fuerte. Primero necesitamos entender qué ve cada área y qué ocurre en episodios que podamos reconstruir."
+    },
+    {
+      "id": "N01-s08-b003",
+      "text": "La primera familia de preguntas trata sobre la situación y su alcance. ¿Seguimos sólo la pantalla o también lo que ocurrió antes y después? A ese recorte lo llamamos frontera. No es una pared: es una decisión sobre qué relaciones vamos a estudiar ahora. Si dejamos afuera la promesa comercial, tendremos que explicar por qué creemos que no cambia el problema de llegada."
+    },
+    {
+      "id": "N01-s08-b004",
+      "text": "La segunda familia trata sobre lo que sabemos. «La huésped esperó veinte minutos» no es lo mismo que «esperó porque el programa falló». La primera afirmación puede apoyarse en un registro; la segunda necesita comprobar una causa. Preguntamos de dónde sale cada afirmación, en qué casos vale y qué dato falta."
+    },
+    {
+      "id": "N01-s08-b005",
+      "text": "La tercera trata sobre alternativas. Podemos cambiar información, reglas, responsabilidades, coordinación o tecnología. No todas las opciones cuestan lo mismo ni son igual de fáciles de deshacer. Antes de una compra importante, quizá una prueba pequeña permita descartar una explicación. Eso no obliga a elegir siempre la solución más barata; permite entender qué justifica gastar más."
+    },
+    {
+      "id": "N01-s08-b006",
+      "text": "La cuarta trata sobre el uso real: cómo funcionará la propuesta cuando haya mucha demanda, falte una persona o aparezca una excepción. La quinta trata sobre responsabilidad: quién autoriza, quién recibe el beneficio, quién puede resultar perjudicado y quién repara. La sexta trata sobre revisión: qué resultado nos haría continuar, cambiar o detener lo iniciado."
+    },
+    {
+      "id": "N01-s08-b007",
+      "text": "No respondemos todo una vez y archivamos las respuestas. Una observación puede mostrar que falta un actor; una prueba puede revelar una excepción; un incidente puede obligar a revisar permisos. Volver sobre una pregunta no significa empezar de cero ni admitir que todo estuvo mal. Significa incorporar algo que antes no sabíamos y dejar claro qué decisión cambia."
+    },
+    {
+      "id": "N01-s08-b008",
+      "text": "Un ejemplo completo: de una frase vaga a una decisión comprobable"
+    },
+    {
+      "id": "N01-s08-b009",
+      "text": "Supongamos que la gerenta dice: «El check-in es lento». El check-in es el registro de llegada de la huésped. Para entender la queja anotamos un dato didáctico: en un turno, doce de treinta personas esperaron más de diez minutos entre llegar al mostrador y recibir la llave. Ya sabemos qué tiempo medimos, en quiénes y durante qué período. Todavía no sabemos por qué ocurrió."
+    },
+    {
+      "id": "N01-s08-b010",
+      "text": "El equipo propone tres explicaciones: la pantalla tarda, falta confirmar que la habitación está lista o hay que volver a pedir información que ya se había enviado. También aparece una preferencia: hacer una aplicación móvil. Las explicaciones intentan decir qué causa la demora; la preferencia dice qué solución alguien quiere. Ninguna debería presentarse como si fuera el dato observado."
+    },
+    {
+      "id": "N01-s08-b011",
+      "text": "Decidimos seguir diez llegadas completas y reconstruir dos excepciones. Registramos cuándo se abre la pantalla, cuándo llega la confirmación de limpieza y cuándo se entrega la llave. Es una investigación inicial, no una muestra que permita generalizar cualquier resultado a todo el año. Nos sirve para localizar diferencias y decidir qué conviene estudiar después."
+    },
+    {
+      "id": "N01-s08-b012",
+      "text": "Si las pantallas responden rápido, pero nadie puede confirmar una habitación, acelerar el programa no parece la primera respuesta. Si la información ya estaba disponible y se pide otra vez, quizá haga falta evitar esa repetición. Si la demora técnica sí explica la mayor parte del tiempo, revisamos esa hipótesis con más evidencia. El método no eligió de antemano la respuesta: hizo posible distinguirlas."
+    },
+    {
+      "id": "N01-s09-h2",
+      "text": "Planificar no es predecir"
+    },
+    {
+      "id": "N01-s09-b001",
+      "text": "Organizar un viaje no garantiza que no llueva. Aun así, sirve acordar destino, horario, transporte y qué haremos si se cancela una salida. Un plan de trabajo cumple una función parecida: permite coordinar compromisos y detectar cuándo una condición cambió. No debería presentarse como una descripción infalible del futuro."
+    },
+    {
+      "id": "N01-s09-b002",
+      "text": "En Hotel Horizonte podemos comprometernos a observar dos turnos durante las próximas dos semanas y reunir la información necesaria para decidir el siguiente paso. Es un compromiso sobre una actividad y su propósito. Prometer ahora que un PMS nuevo eliminará todas las demoras en seis meses sería distinto: estaríamos prometiendo un resultado cuya causa todavía no comprobamos."
+    },
+    {
+      "id": "N01-s09-b003",
+      "text": "Conviene separar estimación, objetivo y promesa. Una estimación expresa cuánto creemos que algo tardará, bajo ciertos supuestos. Un objetivo dice qué queremos lograr. Una promesa compromete una respuesta frente a otras personas. Confundirlos permite que una fecha deseada se convierta en obligación sin haber revisado dependencias, contratos o capacidad."
+    },
+    {
+      "id": "N01-s09-b004",
+      "text": "También distinguimos lo que sabemos hacer de lo que necesitamos investigar. Preparar una entrevista conocida no tiene la misma incertidumbre que descubrir por qué falla una integración. Ambas actividades pueden planificarse, pero la segunda necesita momentos para interpretar lo aprendido y revisar el trabajo siguiente. El margen reservado para un riesgo no es tiempo sobrante: tiene una razón que debe hacerse explícita."
+    },
+    {
+      "id": "N01-s09-b005",
+      "text": "El PMBOK y las orientaciones de gestión del ciclo de vida ayudan a organizar decisiones y adaptar prácticas. No los usamos como una lista que garantiza éxito al completarse. El error contrario tampoco sirve: llamar «ágil» al trabajo para no asumir ningún compromiso. Un plan responsable declara qué se puede prometer, qué sigue incierto y cuándo se volverá a decidir."
+    },
+    {
+      "id": "N01-s10-h2",
+      "text": "Rigor sin rigidez"
+    },
+    {
+      "id": "N01-s10-b001",
+      "text": "Imaginá que hicimos entrevistas, pero nadie logra explicar por qué durante el turno de noche se usa una planilla paralela. Podemos seguir entrevistando porque así estaba escrito en el plan, o podemos observar ese turno. Cambiar de método puede ser la decisión más rigurosa si responde a una duda que las entrevistas no resolvieron."
+    },
+    {
+      "id": "N01-s10-b002",
+      "text": "Rigor significa cuidar las razones, las comprobaciones y las consecuencias de lo que hacemos. Rigidez significa repetir una forma de trabajo aunque haya dejado de servir. Improvisación, en el sentido problemático que usamos acá, es cambiar sin poder explicar qué función se conserva o qué riesgo se acepta. Adaptar no es hacer cualquier cosa: es cambiar con razones que otros puedan examinar."
+    },
+    {
+      "id": "N01-s10-b003",
+      "text": "Schön estudia cómo los profesionales revisan su manera de entender una situación mientras trabajan en ella. Por ejemplo, la planilla paralela puede parecer desorden hasta que descubrimos que registra una excepción que el programa no admite. La sorpresa obliga a revisar el diagnóstico inicial. Borrarla sin entender su función podría eliminar el único recurso con el que el turno resuelve el problema."
+    },
+    {
+      "id": "N01-s10-b004",
+      "text": "Para que otra persona pueda seguir nuestro razonamiento, guardamos lo necesario: la pregunta, la evidencia disponible, los supuestos, las alternativas, la decisión y el resultado observado. A esa posibilidad de reconstruir el camino la llamamos trazabilidad. No exige transcribir todas las conversaciones. Exige conservar lo que necesitaríamos para explicar por qué actuamos y para revisar una decisión después."
+    },
+    {
+      "id": "N01-s10-b005",
+      "text": "Un contraejemplo ayuda a fijar el límite. Si quitamos una prueba de seguridad porque falta tiempo y escribimos «adaptamos la metodología», la etiqueta no vuelve responsable la decisión. Debemos explicar qué riesgo queda, quién puede aceptarlo y qué protección lo reemplaza. Si no hay una respuesta defendible, la adaptación es sólo una manera elegante de nombrar una omisión."
+    },
+    {
+      "id": "N01-s11-h2",
+      "text": "La metodología también distribuye poder"
+    },
+    {
+      "id": "N01-s11-b001",
+      "text": "Supongamos que invitamos sólo a gerentes a discutir las demoras del hotel. Quizá acordemos una explicación en una hora. Eso muestra rapidez para llegar a un acuerdo, no necesariamente conocimiento del trabajo. La persona que recibe a las huéspedes de madrugada puede conocer una excepción que nadie en la reunión vio."
+    },
+    {
+      "id": "N01-s11-b002",
+      "text": "Elegir a quién escuchar cambia qué información entra en la decisión. Elegir qué medir también cambia qué problemas se ven. Si medimos únicamente el tiempo en el mostrador, podemos «mejorar» trasladando formularios y dudas al teléfono de la huésped. Si no medimos su esfuerzo ni ofrecemos ayuda, una parte del costo desaparece del indicador, pero no de la experiencia."
+    },
+    {
+      "id": "N01-s11-b003",
+      "text": "Decimos que la metodología distribuye poder porque determina quién puede hablar, qué cuenta como evidencia y quién puede objetar una decisión. No significa que todas las opiniones tengan el mismo respaldo ni que todo deba resolverse por unanimidad. Una directora puede tener autoridad para decidir; eso no hace verdadera, por sí sola, su explicación de la demora."
+    },
+    {
+      "id": "N01-s11-b004",
+      "text": "Una práctica responsable distingue tres cosas: quién sabe algo relevante, quién recibe la consecuencia y quién tiene la atribución de decidir. A veces coinciden en una persona y otras veces no. Escuchar a quien realiza el trabajo no elimina la autoridad formal. Le permite decidir con información más completa y dejar constancia de los desacuerdos que importan."
+    },
+    {
+      "id": "N01-s12-h2",
+      "text": "Metodología como diseño de un sistema de aprendizaje"
+    },
+    {
+      "id": "N01-s12-b001",
+      "text": "El hotel cambia el texto de una confirmación porque algunas huéspedes creen que pueden ingresar antes del horario disponible. Después revisa nuevas llegadas y escucha a Recepción. Si la confusión baja, aprende algo sobre esa intervención. Si no baja, necesita comprobar si las personas leyeron el mensaje, si otro canal promete algo distinto o si interpretó mal la causa."
+    },
+    {
+      "id": "N01-s12-b002",
+      "text": "Ese recorrido es un sistema de aprendizaje: una pregunta lleva a una acción, la acción produce efectos y esos efectos vuelven a quienes pueden decidir. No basta con guardar reclamos. Tiene que existir una conexión entre lo que se observa y lo que se modifica. Un informe excelente que nadie puede usar para cambiar una regla deja el circuito abierto."
+    },
+    {
+      "id": "N01-s12-b003",
+      "text": "Argyris y Schön distinguen corregir una acción de revisar la regla que la produce. En el hotel, corregir una confirmación equivocada es un primer tipo de aprendizaje. Preguntar por qué Comercial puede prometer horarios que Operaciones no garantiza es un segundo tipo: ya no ajustamos sólo el mensaje; discutimos la regla que permite emitirlo. Ninguno reemplaza automáticamente al otro. A veces hace falta reparar ahora y revisar la regla después."
+    },
+    {
+      "id": "N01-s12-b004",
+      "text": "Senge ayuda a mirar relaciones y efectos que vuelven sobre el sistema. Si acelerar reservas aumenta las llegadas que Recepción no puede atender, una mejora local cambia las condiciones de otra área. Aprender exige mirar esa relación, no culpar al último equipo que recibe la acumulación."
+    },
+    {
+      "id": "N01-s12-b005",
+      "text": "Podemos reconocer aprendizaje con una pregunta sencilla: ¿qué decisión sería distinta después de lo observado? Si la respuesta es «ninguna, porque ya estaba todo decidido», la actividad quizá sirvió para informar o registrar, pero no para aprender lo que se había prometido. No toda reunión debe cambiar el rumbo. Toda actividad presentada como aprendizaje debe permitir revisar alguna duda real."
+    },
+    {
+      "id": "N01-s13-h2",
+      "text": "Incertidumbre epistemológica, de acción y de coordinación"
+    },
+    {
+      "id": "N01-s13-b001",
+      "text": "Decir «tenemos incertidumbre» es parecido a decir «algo no funciona»: orienta poco. Hay dudas diferentes y no se resuelven todas del mismo modo. Podemos no saber qué causa el problema, no saber qué solución conviene o saber qué hacer y no lograr que las áreas lo sostengan."
+    },
+    {
+      "id": "N01-s13-b002",
+      "text": "La incertidumbre epistemológica es la falta de comprensión. La palabra es difícil; la pregunta es sencilla: ¿qué está pasando y por qué? Si no sabemos de dónde surge la sobreventa, necesitamos reconstruir reservas, comparar registros y escuchar a quienes intervienen. Comprar una herramienta antes de esa averiguación no resuelve la duda: apuesta a una explicación."
+    },
+    {
+      "id": "N01-s13-b003",
+      "text": "La incertidumbre de acción aparece cuando entendemos bastante bien la situación, pero no sabemos qué alternativa tendrá mejor resultado. Sabemos, por ejemplo, que dos canales prometen condiciones distintas. Podemos unificar el texto, cambiar una regla comercial o integrar información. Una prueba pequeña y reversible puede ayudarnos a comparar. Una nueva entrevista quizá agregue contexto, pero no siempre permite anticipar cómo funcionará cada opción."
+    },
+    {
+      "id": "N01-s13-b004",
+      "text": "La incertidumbre de coordinación trata sobre la capacidad de actuar juntos. Todos aceptan una regla, pero un turno no recibe la versión vigente y un proveedor sigue usando la anterior. No falta necesariamente otro diagnóstico; faltan acuerdos, responsabilidades o medios para sostener el cambio. Necesitamos saber quién actualiza, quién confirma y qué pasa cuando alguien no puede cumplir."
+    },
+    {
+      "id": "N01-s13-b005",
+      "text": "Hay además una duda normativa: qué debe permitirse y quién está autorizado. Un chatbot puede ser capaz de cancelar una reserva, pero eso no decide si debe hacerlo sin confirmación. Medir cuántas veces acierta ayuda a evaluar su funcionamiento; no resuelve por sí solo qué consecuencias aceptamos ni quién responde ante el error."
+    },
+    {
+      "id": "N01-s13-b006",
+      "text": "En un caso real pueden coexistir las cuatro. Lo importante es no usar siempre la práctica preferida. Más entrevistas no crean una autoridad que falta. Un prototipo no decide qué daño es aceptable. Un procedimiento bien escrito no demuestra la causa de una demora. Nombrar la duda permite elegir un trabajo que tenga posibilidades de reducirla."
+    },
+    {
+      "id": "N01-s14-h2",
+      "text": "Evidencia suficiente no significa evidencia perfecta"
+    },
+    {
+      "id": "N01-s14-b001",
+      "text": "Antes de salir de casa mirás el pronóstico. No necesitás certeza absoluta para llevar un paraguas: equivocarte cuesta poco. Para decidir una mudanza, esa misma información sería claramente insuficiente. En una organización también cambia la exigencia según el costo, el daño posible y la posibilidad de corregir una decisión."
+    },
+    {
+      "id": "N01-s14-b002",
+      "text": "Llamamos evidencia suficiente a la información que da un respaldo razonable para la decisión en juego. No es cualquier dato que coincida con nuestra preferencia. Debe referirse a la pregunta, tener un origen que podamos reconstruir y cubrir condiciones relevantes. Si una fuente puede omitir algo importante, conviene contrastarla con otras."
+    },
+    {
+      "id": "N01-s14-b003",
+      "text": "El hotel podría probar un texto más claro en un canal controlado y volver atrás rápidamente si confunde. Para migrar todas las reservas necesita comprobar mucho más: qué datos viajan, qué se pierde, cómo se valida y qué pasa si hay que restaurar. «Tenemos tres opiniones favorables» no es una base comparable para ambas decisiones."
+    },
+    {
+      "id": "N01-s14-b004",
+      "text": "También importa cuándo llega la evidencia. Un dato perfecto recibido después de una decisión irreversible puede servir para aprender, pero no para prevenir esa consecuencia. Por eso acordamos antes qué necesitamos observar y cuándo debemos decidir. Si buscamos hasta encontrar algo que confirme la compra preferida, no estamos usando un criterio de suficiencia: estamos eligiendo evidencia a conveniencia."
+    },
+    {
+      "id": "N01-s14-b005",
+      "text": "La falta de reclamos tampoco demuestra que todo funcione. Tal vez las personas no encontraron cómo reclamar o abandonaron el intento. Un piloto sin incidentes sólo informa sobre los casos y las condiciones que efectivamente incluyó. Antes de afirmar «es seguro» o «es accesible», preguntamos si hubo una oportunidad real de detectar la falla que nos preocupa."
+    },
+    {
+      "id": "N01-s15-h2",
+      "text": "Hitos de producción e hitos de decisión"
+    },
+    {
+      "id": "N01-s15-b001",
+      "text": "«Terminamos el informe» y «ya podemos decidir» no significan lo mismo. Un hito de producción marca que existe un producto: un documento, una integración o una versión. Un hito de decisión reúne evidencia para elegir qué hacer a continuación. Ambos pueden coincidir, pero no debemos darlo por hecho."
+    },
+    {
+      "id": "N01-s15-b002",
+      "text": "El hotel puede fijar un hito así: después de observar dos turnos y reconstruir veinte llegadas, decidiremos si conviene profundizar la demora técnica, la coordinación de habitaciones o ambas. Si los episodios no alcanzan para distinguirlas, la decisión puede ser investigar algo más específico. El informe se entregó; el resultado no tiene por qué ser autorizar la compra."
+    },
+    {
+      "id": "N01-s15-b003",
+      "text": "Antes de ampliar un piloto, otro hito puede preguntar si se redujo la espera completa, qué pasó con quienes necesitaron ayuda y si el equipo pudo reparar las excepciones. Las salidas posibles son continuar, modificar, detener, ampliar o buscar evidencia adicional. El hito sirve cuando alguna de esas opciones es real, no cuando sólo admite aprobar lo ya elegido."
+    },
+    {
+      "id": "N01-s15-b004",
+      "text": "Estos acuerdos ayudan cuando ya invertimos tiempo, dinero o prestigio. Abandonar una opción puede sentirse como perder lo hecho. Si acordamos antes qué resultado justificaría detenerla, es más fácil entender esa decisión como una protección y no como un fracaso personal. Lo invertido importa para aprender; no convierte una mala alternativa futura en una buena."
+    },
+    {
+      "id": "N01-s16-h2",
+      "text": "Tailoring: adaptar sin perder la lógica"
+    },
+    {
+      "id": "N01-s16-b001",
+      "text": "Un equipo pequeño puede acordar un cambio en una reunión breve; una organización con varios turnos quizá necesite un registro y una confirmación por área. Las formas son distintas, pero deben conservar algo común: saber qué se decidió, quién lo autorizó y qué versión se usa. Tailoring es el nombre habitual de esa adaptación deliberada al contexto."
+    },
+    {
+      "id": "N01-s16-b002",
+      "text": "No empezamos preguntando qué ceremonias podemos quitar. Empezamos por las funciones que necesitamos: comprender, decidir, coordinar, verificar, aprender y responder por las consecuencias. Después elegimos prácticas que las sostengan. Una nota breve puede reemplazar un informe largo si conserva lo necesario. No puede reemplazar una verificación que nunca se hizo."
+    },
+    {
+      "id": "N01-s16-b003",
+      "text": "Por ejemplo, si una integración del hotel afecta sólo una prueba reversible, quizá alcance una aprobación acotada y un registro simple. Si cambia reservas reales en varios canales, necesitamos revisar permisos, sincronización, contingencia y responsables. La diferencia no se justifica porque un equipo sea «más ágil»: se justifica por las consecuencias que puede producir el cambio."
+    },
+    {
+      "id": "N01-s16-b004",
+      "text": "La mirada de ciclo de vida agrega otra pregunta: ¿qué pasa después de entregar? Alguien debe mantener la información, atender fallas y retirar una solución que ya no sirve. Los estándares de ciclo de vida ayudan a no olvidar esa continuidad. No necesitamos convertir cada intervención en un expediente enorme, pero sí evitar que «terminado» signifique que el equipo se fue y nadie quedó a cargo."
+    },
+    {
+      "id": "N01-s16-b005",
+      "text": "Adaptar también tiene costos. Reducir una revisión puede ahorrar tiempo y perder una oportunidad de detectar errores. Concentrar decisiones en una persona puede acelerar y volver frágil al equipo cuando esa persona falta. Una adaptación defendible dice qué gana, qué arriesga y qué señal hará revisar el acuerdo."
+    },
+    {
+      "id": "N01-s17-h2",
+      "text": "El costo de no intervenir y el costo de aprender"
+    },
+    {
+      "id": "N01-s17-b001",
+      "text": "Supongamos que sabemos que una confirmación induce a error, pero demoramos su cambio hasta terminar una investigación completa. Durante ese mes, nuevas huéspedes siguen recibiendo la promesa equivocada. No actuar también tiene consecuencias. Ser prudentes no consiste únicamente en evitar el riesgo de hacer algo."
+    },
+    {
+      "id": "N01-s17-b002",
+      "text": "Por eso comparamos al menos tres caminos: hacer lo propuesto, intentar otra intervención y mantener la situación durante un período definido. El tercero no es un casillero vacío. Incluye esperas, trabajo manual, incidentes y oportunidades que se pierden. Preguntamos quién paga ese costo y cuánto tiempo puede sostenerse."
+    },
+    {
+      "id": "N01-s17-b003",
+      "text": "Investigar tampoco es gratis. Una entrevista usa tiempo y requiere confianza. Una observación puede alterar el trabajo. Un piloto expone a personas a una respuesta todavía no consolidada. Reunir registros puede involucrar información sensible. El aprendizaje se justifica cuando sabemos qué decisión podría cambiar y procuramos obtenerlo con el menor costo y exposición razonables."
+    },
+    {
+      "id": "N01-s17-b004",
+      "text": "March distingue explorar alternativas de aprovechar lo que ya sabemos hacer. En términos cotidianos, una cosa es mejorar la rutina existente y otra averiguar si conviene otra rutina. Si dedicamos todo a lo conocido, podemos volvernos muy eficientes en una solución equivocada. Si sólo exploramos, tal vez no sostengamos el servicio de hoy. La metodología ayuda a hacer explícita esa tensión."
+    },
+    {
+      "id": "N01-s17-b005",
+      "text": "El hotel puede estabilizar una promesa incorrecta ahora, investigar durante dos semanas las causas de las demoras y decidir inversiones por etapas. Así no convierte la investigación en excusa para dejar sufrir el problema ni la urgencia en permiso para comprar sin comprender. Cada paso necesita un propósito, una protección y un momento de revisión."
+    },
+    {
+      "id": "N01-s18-h2",
+      "text": "Una prueba breve de calidad metodológica"
+    },
+    {
+      "id": "N01-s18-b001",
+      "text": "Antes de iniciar una actividad, completá esta frase: «Vamos a hacer esto para averiguar tal cosa, porque de la respuesta depende esta decisión». Después completá otra: «Encontramos esto; por eso mantenemos o cambiamos esta decisión». Si no podés hacerlo, conviene revisar para qué sirve la actividad."
+    },
+    {
+      "id": "N01-s18-b002",
+      "text": "La prueba no reemplaza el conocimiento técnico. Alguien debe saber entrevistar, analizar datos o probar una integración. Pero evita que la destreza quede separada del propósito. Una encuesta técnicamente correcta puede responder algo irrelevante; una prueba bien ejecutada puede cubrir sólo el camino que nunca falla."
+    },
+    {
+      "id": "N01-s18-b003",
+      "text": "Ejemplo: una misma práctica, dos calidades metodológicas"
+    },
+    {
+      "id": "N01-s18-b004",
+      "text": "Dos equipos entrevistan a seis personas de Recepción. El primero ya decidió comprar un PMS. Pregunta por pantallas lentas y funciones faltantes. Cuando alguien cuenta que Comercial promete un ingreso temprano imposible de cumplir, lo deja fuera del informe porque «no es un tema del sistema». Las respuestas pueden ser reales. El problema es que ninguna puede cambiar la decisión que las entrevistas supuestamente debían orientar."
+    },
+    {
+      "id": "N01-s18-b005",
+      "text": "El segundo equipo pregunta por llegadas concretas: qué esperaba la huésped, qué información había, quién intervino y dónde se detuvo el trabajo. Busca distinguir una demora técnica de una espera por confirmación y de una promesa imposible. Luego contrasta los relatos con registros. No da por verdadera cada historia ni pretende que seis entrevistas representen toda la operación."
+    },
+    {
+      "id": "N01-s18-b006",
+      "text": "La diferencia no está en la cantidad de entrevistas ni en lo prolijo del informe. Está en qué duda se puede resolver y qué decisión sigue abierta. Si ambos equipos terminan recomendando el mismo PMS, aún podría haber una diferencia importante: el segundo debería poder explicar por qué esa opción tiene respaldo, qué no resolverá y qué observación justificaría revisarla."
+    },
+    {
+      "id": "N01-s19-h2",
+      "text": "Tres usos defectuosos de la metodología"
+    },
+    {
+      "id": "N01-s19-b001",
+      "text": "La metodología como receta"
+    },
+    {
+      "id": "N01-s19-b002",
+      "text": "El equipo produce entrevistas, diagramas y reuniones porque así lo indica su secuencia habitual. Nadie puede explicar qué duda resuelve cada cosa. Un síntoma es seguir produciendo el mismo documento aunque haya cambiado el problema. Para detectarlo, preguntamos qué decisión sería peor si omitiéramos esa actividad. Si no hay respuesta, quizá estemos repitiendo una forma sin conservar su función."
+    },
+    {
+      "id": "N01-s19-b003",
+      "text": "La metodología como marca identitaria"
+    },
+    {
+      "id": "N01-s19-b004",
+      "text": "Un grupo se define como ágil, lean o guiado por datos y rechaza cualquier práctica que no asocie con esa identidad. Por ejemplo, descarta una revisión porque la considera burocrática sin preguntar qué protege. Pertenecer a una tradición puede ayudar a aprender; deja de ayudar cuando reemplaza las razones. La prueba es si podemos discutir una práctica por sus efectos y no sólo por su etiqueta."
+    },
+    {
+      "id": "N01-s19-b005",
+      "text": "La metodología como legitimación retrospectiva"
+    },
+    {
+      "id": "N01-s19-b006",
+      "text": "Primero se compra la solución y después se busca una explicación que la haga parecer inevitable. Se seleccionan métricas favorables, se omiten excepciones y se llama «validación» a demostrar que el programa ejecuta. Para detectarlo, preguntamos qué resultado habría permitido decir que no. Si ninguno era aceptable, el trabajo quizá comunicó una decisión, pero no la puso a prueba."
+    },
+    {
+      "id": "N01-s19-b007",
+      "text": "Los tres errores pueden producir materiales excelentes a la vista. Por eso no juzgamos la calidad metodológica sólo por el formato. Miramos si hubo una pregunta real, una posibilidad de objeción y una relación clara entre lo observado y lo decidido."
+    },
+    {
+      "id": "N01-s20-h2",
+      "text": "2026: cuando el método también debe gobernar agentes"
+    },
+    {
+      "id": "N01-s20-b001",
+      "text": "Un chatbot que informa el horario del desayuno y un agente que cancela una reserva no hacen el mismo trabajo. El primero entrega información. El segundo modifica algo que afecta a una persona. Un agente de inteligencia artificial puede encadenar acciones y utilizar herramientas dentro de los permisos que recibe. Cuanto mayor es esa capacidad, más importante resulta definir sus límites."
+    },
+    {
+      "id": "N01-s20-b002",
+      "text": "Imaginá una huésped que escribe: «Si cancelo, ¿me cobran?». Si el agente interpreta la pregunta como una orden, puede cancelar una reserva que la persona sólo quería consultar. No alcanza con probar que redacta respuestas claras. Hay que comprobar que distingue consulta de autorización, verifica identidad y pide confirmación cuando corresponde."
+    },
+    {
+      "id": "N01-s20-b003",
+      "text": "El hotel debe decidir qué puede hacer el agente sin ayuda, qué casos deriva y quién repara un error. Una reserva grupal, una condición excepcional o una duda sobre la identidad pueden requerir intervención humana. Guardar un registro de la acción ayuda a reconstruir lo ocurrido; no devuelve por sí solo una habitación que ya se vendió a otra persona. La capacidad de reparar debe pensarse antes."
+    },
+    {
+      "id": "N01-s20-b004",
+      "text": "El marco de gestión de riesgo de IA de NIST organiza funciones de gobierno, comprensión del contexto, medición y gestión. Su perfil para IA generativa desarrolla riesgos particulares de esa tecnología. En esta lectura los usamos como orientación para hacer preguntas concretas, no como un certificado automático. ¿Qué propósito tiene el agente? ¿Qué información usa? ¿Qué permisos recibe? ¿Cómo se detecta y se detiene una acción indebida?"
+    },
+    {
+      "id": "N01-s20-b005",
+      "text": "La rapidez también cambia el trabajo de quienes diseñan. Un asistente puede generar código, requisitos o diagramas en minutos. Eso reduce el costo de producir una respuesta, no el de equivocarse con ella. Si partimos de una explicación incorrecta, podemos producir mucho material coherente con el mismo error. La advertencia sobre amplificación que retoma DORA 2025 es útil para mirar el sistema de trabajo, no sólo la velocidad de una herramienta."
+    },
+    {
+      "id": "N01-s20-b006",
+      "text": "Las normas y regulaciones aplicables deben revisarse según el contexto real; no suponemos que una regla extranjera se aplica automáticamente al hotel. La lección metodológica es más general: una capacidad técnica no otorga autoridad para usarla de cualquier manera. Debemos separar lo que el sistema puede ejecutar de lo que está autorizado a hacer y de aquello por lo que alguien debe responder."
+    },
+    {
+      "id": "N01-s20-b007",
+      "text": "Para estudiar pasa algo parecido. Un asistente puede entregar una respuesta extensa, pero vos necesitás poder explicar su razonamiento, contrastar sus afirmaciones y detectar lo que no sabe. Si la tecnología ahorra tiempo al producir alternativas, conviene invertir parte de ese tiempo en verificarlas. Tener más respuestas disponibles vuelve más importante saber qué pregunta estamos intentando resolver."
+    },
+    {
+      "id": "N01-s21-h2",
+      "text": "Aplicación a Hotel Horizonte: construir HH-01"
+    },
+    {
+      "id": "N01-s21-b001",
+      "text": "HH-01 será la primera nota de trabajo del caso. No tiene que diagnosticar todo el hotel ni elegir una plataforma. Tiene que convertir el pedido inicial en un próximo paso razonable. Otra persona debería poder leerla y entender qué sabemos, qué no sabemos y qué estamos autorizados a hacer."
+    },
+    {
+      "id": "N01-s21-b002",
+      "text": "El pedido recibido se conserva tal como llegó: nuevo PMS, aplicación y chatbot. El propósito se escribe de otra manera: mejorar la confiabilidad de lo que el hotel promete y su capacidad de cumplirlo, empezando por reservas, llegada, habitaciones y cambios. No borramos los productos pedidos; dejamos de tratarlos como respuestas ya demostradas."
+    },
+    {
+      "id": "N01-s21-b003",
+      "text": "Una primera incertidumbre es dónde nace la diferencia entre lo prometido y lo disponible. Para investigarla, Lucía puede reconstruir llegadas demoradas; Mariela, explicar cuándo una habitación está lista; Federico, revisar cómo viajan los estados; Camila, mostrar qué se ofrece por cada canal. Elena debe aclarar el alcance autorizado. No esperamos que una sola persona conozca toda la historia."
+    },
+    {
+      "id": "N01-s21-b004",
+      "text": "La nota incluye siete campos: pedido, propósito, dudas pendientes, evidencia disponible, próxima acción autorizada, decisión que todavía no se autoriza y condición de revisión. Un ejemplo de autorización sería: «Durante dos semanas reconstruiremos episodios de reserva y llegada para distinguir fallas técnicas, información contradictoria y problemas de coordinación. Todavía no elegiremos plataforma ni afirmaremos que el PMS causa la sobreventa»."
+    },
+    {
+      "id": "N01-s21-b005",
+      "text": "La condición de revisión podría decir: «Si los episodios muestran que la promesa se incumple antes de entrar en los canales observados, ampliaremos el análisis». Es más útil que escribir «revisar si hace falta», porque dice qué hallazgo importaría. También debemos aclarar qué se hará ante un daño urgente: una investigación no impide corregir una información claramente equivocada o asistir a una huésped que ya está esperando."
+    },
+    {
+      "id": "N01-s21-b006",
+      "text": "Probemos la nota con una objeción. Camila dice que hay una promoción que no puede esperar dos semanas. El equipo no responde sólo «falta investigación». Distingue lo que puede ofrecerse con respaldo ahora de lo que depende de capacidad todavía no confirmada. Elena decide dentro de su responsabilidad, con las dudas visibles. La metodología ayuda a actuar bajo restricciones; no elimina el conflicto ni toma la decisión por la dirección."
+    },
+    {
+      "id": "N01-s21-b007",
+      "text": "HH-01 entrega a N02 una pregunta pendiente: ¿qué relaciones hacen posible cumplir la promesa completa? Ése será el siguiente avance. Todavía no necesitamos el mapa definitivo, pero sí un punto de partida que no confunda pedido, causa y solución."
+    },
+    {
+      "id": "N01-s22-h2",
+      "text": "Caso de transferencia: turnos en un centro de salud"
+    },
+    {
+      "id": "N01-s22-b001",
+      "text": "En este ejemplo didáctico, un centro registra un 24 por ciento de ausencias y pide una aplicación para mandar recordatorios. Antes de elegir la solución, preguntamos qué se contó como ausencia. ¿La persona recibió el aviso? ¿El servicio canceló? ¿Había un registro duplicado? ¿La atención se resolvió por otra vía? El mismo porcentaje puede reunir situaciones distintas."
+    },
+    {
+      "id": "N01-s22-b002",
+      "text": "Si la causa principal es que los mensajes no llegan, un cambio de canal podría ayudar. Si la persona recibe el aviso pero no puede viajar en ese horario, insistir con más mensajes quizá no cambie nada. Necesitamos reconstruir casos y distinguir explicaciones antes de atribuir la demora a una supuesta falta de interés."
+    },
+    {
+      "id": "N01-s22-b003",
+      "text": "Supongamos ahora que se propone predecir quién faltará. La predicción no decide qué hacer con esa información. Podría usarse para ofrecer ayuda o para restringir acceso. Las consecuencias son distintas, aunque el modelo sea el mismo. Aquí discutimos una decisión de diseño del servicio, no una recomendación clínica."
+    },
+    {
+      "id": "N01-s22-b004",
+      "text": "La transferencia desde el hotel no consiste en copiar una solución. Consiste en conservar las preguntas: qué ocurre, cómo lo sabemos, qué alternativas hay, quién recibe el efecto y qué nos obligaría a revisar. Si no podemos explicar qué decisión cambia gracias a la investigación, todavía no conectamos método y propósito."
+    },
+    {
+      "id": "N01-s23-h2",
+      "text": "Consecuencias para la práctica profesional"
+    },
+    {
+      "id": "N01-s23-b001",
+      "text": "El aporte del profesional de sistemas no es recitar muchos marcos. Es ayudar a que una organización actúe mejor cuando las respuestas no son obvias. Eso incluye decir «todavía no sabemos» y acompañarlo con una propuesta concreta para averiguar lo necesario, no dejarlo como una objeción que frena todo."
+    },
+    {
+      "id": "N01-s23-b002",
+      "text": "El enfoque de Sistemas de Información que recoge IS2020 relaciona tecnología, personas, procesos y contexto organizacional. En la práctica, eso significa que no estudiamos primero un problema puramente técnico para agregar después «lo humano». Una decisión técnica puede cambiar quién tiene información, quién puede autorizar y quién debe resolver una excepción."
+    },
+    {
+      "id": "N01-s23-b003",
+      "text": "Un buen trabajo deja claro qué problema se intenta cambiar, qué supuestos siguen abiertos y qué evidencia sostiene el siguiente paso. También permite explicar por qué no se eligió otra alternativa. Esa explicación debe ser comprensible para quienes van a operar la solución y para quienes sufrirían una falla, no sólo para el equipo que la construyó."
+    },
+    {
+      "id": "N01-s23-b004",
+      "text": "La exigencia tiene dos lados. Debemos cuestionar una solución prematura y, al mismo tiempo, ayudar a decidir. Esperar certeza total también puede producir daño. El criterio profesional consiste en identificar qué duda conviene reducir ahora, qué puede aceptarse por un tiempo y qué protección limita las consecuencias de equivocarse."
+    },
+    {
+      "id": "N01-s24-h2",
+      "text": "Límites y tensiones"
+    },
+    {
+      "id": "N01-s24-b001",
+      "text": "No siempre podemos discutir el pedido completo. Una compra firmada, una fecha pública o una obligación pueden limitar las opciones. En ese caso registramos la restricción y trabajamos sobre lo que todavía puede decidirse: alcance, secuencia, permisos, pruebas y contingencia. Decir que una condición es fija no obliga a presentar como probado lo que todavía no sabemos."
+    },
+    {
+      "id": "N01-s24-b002",
+      "text": "Tampoco toda decisión necesita un estudio extenso. Si el cambio es pequeño, fácil de revertir y de bajo impacto, un control breve puede ser suficiente. Si afecta derechos, dinero, información sensible o continuidad, la exigencia aumenta. La proporcionalidad evita dos errores: investigar muy poco ante un daño serio e imponer un proceso enorme para una decisión menor."
+    },
+    {
+      "id": "N01-s24-b003",
+      "text": "Documentar puede ayudar o convertirse en una carga que nadie usa. Guardamos lo que permite reconstruir decisiones y aprender, no todo por miedo. Pero dejar todo en la memoria del equipo crea otra fragilidad: cuando alguien falta, se pierden motivos, acuerdos y límites. Una nota corta y bien elegida puede proteger más que cien páginas repetidas."
+    },
+    {
+      "id": "N01-s25-h2",
+      "text": "Una lectura situada desde América Latina"
+    },
+    {
+      "id": "N01-s25-b001",
+      "text": "Rolando García ayuda a pensar por qué un sistema no se obtiene simplemente enumerando componentes. Para estudiar una demora elegimos relaciones que permitan explicarla: promesa, información, trabajo y decisión. Esa elección necesita razones. No sería suficiente dibujar las áreas del hotel y llamar «sistema» al organigrama."
+    },
+    {
+      "id": "N01-s25-b002",
+      "text": "Mario Bunge agrega una exigencia útil: proponer una causa requiere mostrar cómo produciría el efecto. «Falló la coordinación» es una etiqueta demasiado amplia si no podemos reconstruir quién esperaba qué, qué información faltó y cómo esa falta produjo la demora. El concepto gana precisión cuando permite imaginar una observación que lo apoye y otra que lo contradiga."
+    },
+    {
+      "id": "N01-s25-b003",
+      "text": "Maturana y Varela permiten discutir que observar no es mirar desde ningún lugar. Elegimos preguntas, categorías y diferencias. Eso no significa que cualquier versión valga lo mismo: significa que debemos hacer visibles nuestros criterios y contrastarlos. Etkin y Schvarstein, por su parte, ayudan a comprender por qué una organización puede conservar reglas y tensiones aunque cambie su tecnología."
+    },
+    {
+      "id": "N01-s25-b004",
+      "text": "En Hotel Horizonte, reemplazar pantallas no elimina por sí solo una promesa comercial imposible. La lectura regional no se agrega como una lista de apellidos: obliga a preguntar qué relaciones y formas de trabajar siguen presentes después del cambio. También nos recuerda que una propuesta debe entender las condiciones de la organización donde se aplica, no copiar sin examen la experiencia de otro contexto."
+    },
+    {
+      "id": "N01-s26-h2",
+      "text": "Síntesis"
+    },
+    {
+      "id": "N01-s26-b001",
+      "text": "Una metodología organiza cómo preguntamos, comprobamos y decidimos. No garantiza acertar ni elimina la necesidad de criterio. Nos ayuda a distinguir el pedido de la causa, el producto del resultado y una preferencia de una explicación respaldada."
+    },
+    {
+      "id": "N01-s26-b002",
+      "text": "Podemos planificar sin fingir que conocemos el futuro y adaptar prácticas sin perder sus funciones. Para hacerlo, dejamos visibles las dudas, las responsabilidades y las condiciones de revisión. También miramos quién recibe los beneficios y quién carga con las consecuencias."
+    },
+    {
+      "id": "N01-s26-b003",
+      "text": "N01 deja una primera capacidad: responder a un pedido con una próxima acción justificada, en lugar de aceptar automáticamente la solución o paralizar todo. N02 continúa desde esa pregunta: ¿qué sistema necesitamos comprender para mejorar lo que la persona recibe?"
+    },
+    {
+      "id": "N01-s27-h2",
+      "text": "Cinco píldoras para recordar"
+    },
+    {
+      "id": "N01-s27-b001",
+      "text": "Hacer bien una tarea no demuestra que sea la tarea necesaria."
+    },
+    {
+      "id": "N01-s27-b002",
+      "text": "Antes de elegir una solución, distinguí el pedido de lo que realmente ocurre."
+    },
+    {
+      "id": "N01-s27-b003",
+      "text": "Cada práctica debe ayudar a responder una pregunta que importe para decidir."
+    },
+    {
+      "id": "N01-s27-b004",
+      "text": "Adaptar con rigor es cambiar la forma sin perder la función que protege."
+    },
+    {
+      "id": "N01-s27-b005",
+      "text": "Una decisión responsable dice qué la sostiene y qué podría hacerla cambiar."
+    },
+    {
+      "id": "N01-s28-h2",
+      "text": "Glosario esencial"
+    },
+    {
+      "id": "N01-s28-b001",
+      "text": "Método: forma organizada de averiguar o hacer algo; por ejemplo, observar un episodio completo."
+    },
+    {
+      "id": "N01-s28-b002",
+      "text": "Metodología: razones y acuerdos para elegir, combinar y revisar métodos según la situación."
+    },
+    {
+      "id": "N01-s28-b003",
+      "text": "Marco: conjunto organizado de aspectos que conviene considerar; orienta, pero no decide por el equipo."
+    },
+    {
+      "id": "N01-s28-b004",
+      "text": "Práctica: actividad habitual con una función reconocible, como revisar prioridades."
+    },
+    {
+      "id": "N01-s28-b005",
+      "text": "Técnica: operación acotada dentro del trabajo, como ordenar eventos por hora."
+    },
+    {
+      "id": "N01-s28-b006",
+      "text": "Herramienta: soporte para realizar una actividad, como una planilla. No reemplaza el criterio."
+    },
+    {
+      "id": "N01-s28-b007",
+      "text": "Frontera: decisión sobre qué relaciones estudiaremos ahora y cuáles quedan fuera del análisis."
+    },
+    {
+      "id": "N01-s28-b008",
+      "text": "Situación problemática: conjunto de hechos e interpretaciones que aún no explica de manera suficiente qué debe cambiar."
+    },
+    {
+      "id": "N01-s28-b009",
+      "text": "Evidencia suficiente: respaldo pertinente y proporcionado para la decisión en juego; no certeza total."
+    },
+    {
+      "id": "N01-s28-b010",
+      "text": "Incertidumbre epistemológica: duda sobre qué ocurre o por qué."
+    },
+    {
+      "id": "N01-s28-b011",
+      "text": "Incertidumbre de acción: duda sobre qué alternativa producirá el resultado buscado."
+    },
+    {
+      "id": "N01-s28-b012",
+      "text": "Incertidumbre de coordinación: duda sobre si las personas y áreas pueden sostener juntas una alternativa."
+    },
+    {
+      "id": "N01-s28-b013",
+      "text": "Incertidumbre normativa: duda sobre qué debe permitirse, quién autoriza y quién responde."
+    },
+    {
+      "id": "N01-s28-b014",
+      "text": "Revisabilidad: declarar qué observación podría cambiar una explicación o decisión."
+    },
+    {
+      "id": "N01-s28-b015",
+      "text": "Tailoring: adaptación de prácticas al contexto, conservando las funciones necesarias."
+    },
+    {
+      "id": "N01-s28-b016",
+      "text": "Outcome: resultado observable para alguien, como recibir a tiempo una habitación adecuada; no sólo entregar una aplicación."
+    },
+    {
+      "id": "N01-s28-b017",
+      "text": "Hito de decisión: momento acordado para mirar evidencia y elegir si continuar, cambiar o detener."
+    },
+    {
+      "id": "N01-s28-b018",
+      "text": "Trazabilidad: posibilidad de reconstruir cómo pasamos de una pregunta a una decisión."
+    },
+    {
+      "id": "N01-s28-b019",
+      "text": "Reversibilidad: posibilidad de deshacer una acción o limitar sus efectos; no se supone, se comprueba."
+    },
+    {
+      "id": "N01-s28-b020",
+      "text": "Agente de IA: sistema que puede encadenar acciones mediante herramientas y permisos definidos."
+    },
+    {
+      "id": "N01-s29-h2",
+      "text": "Preguntas de preparación"
+    },
+    {
+      "id": "N01-s29-b001",
+      "text": "Una facultad pide un chatbot. Escribí dos explicaciones distintas del problema y una observación que ayude a distinguirlas."
+    },
+    {
+      "id": "N01-s29-b002",
+      "text": "¿Qué puede autorizar ahora Hotel Horizonte sin haber elegido todavía una plataforma? ¿Qué debería seguir abierto?"
+    },
+    {
+      "id": "N01-s29-b003",
+      "text": "Compará cambiar una entrevista por una observación con quitar una prueba porque falta tiempo. ¿Qué justificaría cada decisión?"
+    },
+    {
+      "id": "N01-s29-b004",
+      "text": "¿Qué dato debilitaría la afirmación «reemplazar el PMS eliminará la demora»? Explicá por qué."
+    },
+    {
+      "id": "N01-s29-b005",
+      "text": "Describí un caso donde investigar más ayude y otro donde postergar una reparación produzca un costo injustificado."
+    },
+    {
+      "id": "N01-s29-b006",
+      "text": "Si sólo participan gerentes, ¿qué conocimiento podría faltar? Separá el derecho a decidir del conocimiento necesario para hacerlo."
+    },
+    {
+      "id": "N01-s29-b007",
+      "text": "En el ejemplo de turnos, ¿qué diferencia hay entre usar una predicción para ofrecer ayuda y usarla para limitar acceso?"
+    },
+    {
+      "id": "N01-s29-b008",
+      "text": "Para el encuentro, respondé dos preguntas y prepará HH-01 con sus siete campos. Elegí además una duda que todavía no puedas resolver. Traé la razón de esa dificultad: no hace falta inventar una respuesta para llegar preparado."
+    },
+    {
+      "id": "N01-s30-h2",
+      "text": "Referencias base"
+    },
+    {
+      "id": "N01-s30-b001",
+      "text": "Checkland, P., y Poulter, J. (2007). Learning for Action: A Short Definitive Account of Soft Systems Methodology and its Use for Practitioners, Teachers and Students. Wiley. ISBN 978-0-470-02554-3."
+    },
+    {
+      "id": "N01-s30-b002",
+      "text": "Schön, D. A. (1983). The Reflective Practitioner: How Professionals Think in Action. Basic Books."
+    },
+    {
+      "id": "N01-s30-b003",
+      "text": "Argyris, C., y Schön, D. A. (1996). Organizational Learning II: Theory, Method, and Practice. Addison-Wesley."
+    },
+    {
+      "id": "N01-s30-b004",
+      "text": "March, J. G. (1991). “Exploration and Exploitation in Organizational Learning”. Organization Science, 2(1), 71 a 87. https://doi.org/10.1287/orsc.2.1.71"
+    },
+    {
+      "id": "N01-s30-b005",
+      "text": "Suchman, L. (2007). Human-Machine Reconfigurations: Plans and Situated Actions. Cambridge University Press. https://doi.org/10.1017/CBO9780511625510"
+    },
+    {
+      "id": "N01-s30-b006",
+      "text": "Senge, P. M. (2006). The Fifth Discipline: The Art and Practice of the Learning Organization. Revised edition. Currency."
+    },
+    {
+      "id": "N01-s30-b007",
+      "text": "ISO/IEC/IEEE (2024). ISO/IEC/IEEE 24748-1:2024, Systems and software engineering: Life cycle management, Part 1: Guidelines for life cycle management. https://www.iso.org/standard/84709.html"
+    },
+    {
+      "id": "N01-s30-b008",
+      "text": "Project Management Institute (2025). A Guide to the Project Management Body of Knowledge, PMBOK Guide, Eighth Edition. https://www.pmi.org/standards/pmbok"
+    },
+    {
+      "id": "N01-s30-b009",
+      "text": "Tabassi, E. (2023). Artificial Intelligence Risk Management Framework, AI RMF 1.0. NIST AI 100-1. National Institute of Standards and Technology. https://doi.org/10.6028/NIST.AI.100-1"
+    },
+    {
+      "id": "N01-s30-b010",
+      "text": "Autio, C., Schwartz, R., Dunietz, J., Jain, S., Stanley, M., Tabassi, E., Hall, P., y Roberts, K. (2024). Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile. NIST AI 600-1. https://doi.org/10.6028/NIST.AI.600-1"
+    },
+    {
+      "id": "N01-s30-b011",
+      "text": "Washizaki, H. (Ed.). (2025). Guide to the Software Engineering Body of Knowledge, SWEBOK Guide, Version 4.0a. IEEE Computer Society. https://www.computer.org/education/bodies-of-knowledge/software-engineering"
+    },
+    {
+      "id": "N01-s30-b012",
+      "text": "ISO/IEC/IEEE (2023). ISO/IEC/IEEE 15288:2023, Systems and software engineering: System life cycle processes. https://www.iso.org/standard/81702.html"
+    },
+    {
+      "id": "N01-s30-b013",
+      "text": "Parlamento Europeo y Consejo de la Unión Europea (2024). Reglamento (UE) 2024/1689 por el que se establecen normas armonizadas en materia de inteligencia artificial. https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+    },
+    {
+      "id": "N01-s30-b014",
+      "text": "DORA (2025). State of AI-assisted Software Development. Google Cloud. https://dora.dev/research/2025/dora-report/"
+    },
+    {
+      "id": "N01-s30-b015",
+      "text": "ACM y AIS (2020). IS2020: A Competency Model for Undergraduate Programs in Information Systems. https://is2020.hosting2.acm.org/wp-content/uploads/2021/06/is2020.pdf"
+    },
+    {
+      "id": "N01-s30-b016",
+      "text": "Bunge, M. (2004). Emergencia y convergencia: novedad cualitativa y unidad del conocimiento. Gedisa."
+    },
+    {
+      "id": "N01-s30-b017",
+      "text": "Maturana, H. R. y Varela, F. J. (1984). El árbol del conocimiento: las bases biológicas del entendimiento humano. Editorial Universitaria."
+    },
+    {
+      "id": "N01-s30-b018",
+      "text": "García, R. (2006). Sistemas complejos: conceptos, método y fundamentación epistemológica de la investigación interdisciplinaria. Gedisa."
+    },
+    {
+      "id": "N01-s30-b019",
+      "text": "Etkin, J. y Schvarstein, L. (1989). Identidad de las organizaciones: invariancia y cambio. Paidós."
+    },
+    {
+      "id": "N01-s30-b020",
+      "text": "Flores, F. (1997). Creando organizaciones para el futuro. Dolmen."
+    },
+    {
+      "id": "N01-s30-b021",
+      "text": "Freire, P. (2005). Pedagogía del oprimido. Siglo XXI Editores."
+    },
+    {
+      "id": "N01-s30-b022",
+      "text": "Varsavsky, O. (1972). Hacia una política científica nacional. Ediciones Periferia."
+    },
+    {
+      "id": "N01-s30-b023",
+      "text": "Echeverría, R. (2005). Ontología del lenguaje. Granica."
+    }
+  ],
+  "headings": [
+    "Contenido",
+    "Referentes",
+    "Pregunta profesional",
+    "El mapa perfecto de la montaña equivocada",
+    "Tesis",
+    "Cómo leer este mapa: N01 abre el recorrido N02 a N10",
+    "La tranquilidad de empezar por una solución",
+    "Lo que Ingeniería de Software ya nos dio y lo que ahora falta",
+    "Método, metodología, marco, práctica, técnica y herramienta",
+    "La metodología como sistema de preguntas",
+    "Planificar no es predecir",
+    "Rigor sin rigidez",
+    "La metodología también distribuye poder",
+    "Metodología como diseño de un sistema de aprendizaje",
+    "Incertidumbre epistemológica, de acción y de coordinación",
+    "Evidencia suficiente no significa evidencia perfecta",
+    "Hitos de producción e hitos de decisión",
+    "Tailoring: adaptar sin perder la lógica",
+    "El costo de no intervenir y el costo de aprender",
+    "Una prueba breve de calidad metodológica",
+    "Tres usos defectuosos de la metodología",
+    "2026: cuando el método también debe gobernar agentes",
+    "Aplicación a Hotel Horizonte: construir HH-01",
+    "Caso de transferencia: turnos en un centro de salud",
+    "Consecuencias para la práctica profesional",
+    "Límites y tensiones",
+    "Una lectura situada desde América Latina",
+    "Síntesis",
+    "Cinco píldoras para recordar",
+    "Glosario esencial",
+    "Preguntas de preparación",
+    "Referencias base"
+  ]
+}

@@ -1,0 +1,1280 @@
+{
+  "missingImages": [],
+  "hiddenSourceBlocks": [],
+  "sourceBlocks": [
+    {
+      "id": "N11-h1",
+      "text": "Cuándo un dato permite sostener una afirmación"
+    },
+    {
+      "id": "N11-s01-h2",
+      "text": "Pregunta profesional"
+    },
+    {
+      "id": "N11-s01-b001",
+      "text": "¿Cómo saber si un dato realmente respalda lo que estamos diciendo y si alcanza para tomar la decisión que tenemos por delante?"
+    },
+    {
+      "id": "N11-s02-h2",
+      "text": "El noventa y siete por ciento que no sabía qué medía"
+    },
+    {
+      "id": "N11-s02-b001",
+      "text": "Una universidad presenta un tablero nuevo: «El 97 % de las solicitudes se resolvió dentro del plazo». Parece una excelente noticia. El sistema se instaló hace tres meses y las autoridades querían que los estudiantes recibieran respuestas más rápidas. El proveedor incorpora el porcentaje a su informe. Todos están listos para hablar de éxito."
+    },
+    {
+      "id": "N11-s02-b002",
+      "text": "La escena es ficticia, pero la pregunta es muy concreta. Una coordinadora quiere saber qué significa «se resolvió». El analista muestra el cálculo: contó las solicitudes que pasaron al estado «cerrada» antes de cinco días hábiles. Hasta ahí la operación parece clara. El problema aparece al visitar las oficinas."
+    },
+    {
+      "id": "N11-s02-b003",
+      "text": "En una, cerrar significa terminar el trámite. En otra, significa enviarlo a un área distinta. En una tercera se cierra después de mandar un mensaje que pide documentación. Para el tablero los tres casos son iguales. Para el estudiante, uno terminó, otro sigue esperando y otro todavía necesita hacer algo."
+    },
+    {
+      "id": "N11-s02-b004",
+      "text": "La coordinadora revisa expedientes. Encuentra solicitudes que se reabren al día siguiente. Algunas personas enviaron el mismo pedido dos veces porque no recibieron confirmación. Los correos que todavía no fueron cargados no aparecen. Además, el reloj empieza cuando la oficina registra la solicitud, no cuando la persona la envía. Parte de la espera queda afuera."
+    },
+    {
+      "id": "N11-s02-b005",
+      "text": "Entonces, ¿el 97 % es falso? No necesariamente. Puede estar bien calculado para las filas incluidas y para el estado que se eligió. Lo que no está justificado es usarlo para decir que el 97 % de los estudiantes resolvió su necesidad a tiempo. La cuenta y la conclusión hablan de cosas diferentes."
+    },
+    {
+      "id": "N11-s02-b006",
+      "text": "Ésta es una dificultad central de los sistemas de información. Un registro no contiene toda la experiencia que queremos conocer. Contiene lo que alguien decidió capturar mediante ciertas reglas. Para pasar del registro a una afirmación sobre el servicio tenemos que revisar esas reglas y lo que dejan afuera."
+    },
+    {
+      "id": "N11-s02-b007",
+      "text": "El equipo propone unificar los estados y medir desde la recepción original. Es un avance, pero todavía debe acordar otras decisiones. ¿Cómo se cuentan los pedidos duplicados? ¿Qué ocurre con una solicitud que necesita información adicional? ¿Cuándo termina realmente? ¿Se incluyen los canales manuales? Si el mes acaba hoy, ¿todas las solicitudes recientes tuvieron cinco días para completar su recorrido? No podemos juzgar como atrasado o resuelto un caso que todavía no tuvo el mismo tiempo de seguimiento."
+    },
+    {
+      "id": "N11-s02-b008",
+      "text": "La discusión importa aún más cuando aparece una decisión de gestión: reducir personal porque, según el tablero, el sistema ya absorbió la demanda. Para detectar dónde conviene investigar puede alcanzar una señal incompleta. Para quitar una capacidad de atención necesitamos saber qué trabajo sigue existiendo, aunque el indicador no lo muestre."
+    },
+    {
+      "id": "N11-s02-b009",
+      "text": "El informe se corrige. Ya no dice «97 % de resolución efectiva». Dice que el porcentaje se refiere a solicitudes registradas que alcanzaron cierto estado, y aclara que ese estado todavía tiene significados distintos. También explica qué se revisará antes de usarlo para evaluar la atención."
+    },
+    {
+      "id": "N11-s02-b010",
+      "text": "La nueva formulación es menos espectacular. A cambio, permite actuar mejor: revisar estados, incorporar canales omitidos, seguir reaperturas y comprobar qué espera realmente una persona. No tira el tablero a la basura. Lo ubica dentro de lo que puede sostener."
+    },
+    {
+      "id": "N11-s02-b011",
+      "text": "N11 trata de ese trabajo. No propone desconfiar de todos los números. Propone saber cómo se construyeron, a qué pregunta responden y qué paso adicional necesitamos antes de decidir con ellos."
+    },
+    {
+      "id": "N11-s03-h2",
+      "text": "Hotel Horizonte: el tablero que llega antes que la explicación"
+    },
+    {
+      "id": "N11-s03-b001",
+      "text": "N10 dejó una pregunta abierta en Hotel Horizonte: ¿por qué algunas llegadas obligan a corregir lo que se prometió? El equipo distinguió varias explicaciones y autorizó una investigación acotada. Todavía no había decidido que cambiar el PMS fuera la respuesta."
+    },
+    {
+      "id": "N11-s03-b002",
+      "text": "Ahora Federico Müller prepara una extracción de tres meses. En los datos del caso didáctico, las reservas de terceros muestran once minutos más de tiempo medio que las directas. Además, el 32 % registra alguna corrección, frente al 9 % de las directas. Alguien concluye: «Las agencias son el problema»."
+    },
+    {
+      "id": "N11-s03-b003",
+      "text": "Lucía Ferreyra pide revisar qué cuenta como corrección. En Recepción se registra así una modificación dentro del PMS. Pero llamar a Comercial, consultar a Housekeeping o explicar una condición al huésped no siempre deja la misma marca. Algunas reservas directas se arreglan antes de la llegada. En cambio, muchas reservas de terceros entran en una lista automática de pendientes que conserva más rastros."
+    },
+    {
+      "id": "N11-s03-b004",
+      "text": "Podemos estar viendo dos diferencias a la vez: una diferencia de servicio y otra de registro. Si una clase de casos se observa con más detalle, parecerá tener más incidentes aunque parte de la actividad de la otra esté fuera del sistema. El tablero no permite separar ambas cosas por sí solo."
+    },
+    {
+      "id": "N11-s03-b005",
+      "text": "Federico no hizo mal en calcular. Lucía no invalida los datos por aportar una observación. Juntos necesitan precisar qué significa el resultado. ¿Comparamos espera del huésped o tiempo dentro del PMS? ¿Correcciones de la reserva o todo el trabajo necesario para cumplirla? ¿Canal original o canal después de una modificación?"
+    },
+    {
+      "id": "N11-s03-b006",
+      "text": "HH-11 será un expediente breve para responder esas preguntas. Relacionará tres afirmaciones con su evidencia y con la decisión que podrían permitir. La misma tabla podrá respaldar una comparación limitada, dejar una explicación como hipótesis y no alcanzar todavía para justificar una automatización."
+    },
+    {
+      "id": "N11-s04-h2",
+      "text": "Tesis"
+    },
+    {
+      "id": "N11-s04-b001",
+      "text": "Un dato ayuda a sostener una afirmación cuando sabemos qué representa y por qué sirve para esa pregunta. Que venga de un sistema, tenga muchos decimales o aparezca en miles de filas no lo vuelve suficiente para cualquier conclusión."
+    },
+    {
+      "id": "N11-s04-b002",
+      "text": "Un ejemplo cotidiano: una aplicación informa que un colectivo tardó veinte minutos entre dos puntos. El dato puede ser exacto. Pero si querés saber cuánto tardó una persona en llegar al trabajo, también importa cuánto esperó en la parada, si tuvo que combinar y cuánto caminó al final. El problema no es que el dato sea malo en general. Es que representa sólo una parte de lo que querés afirmar."
+    },
+    {
+      "id": "N11-s04-b003",
+      "text": "Para evaluar su alcance necesitamos conocer la unidad que se contó, los casos incluidos, el período, el origen y las operaciones realizadas. No es lo mismo contar reservas que huéspedes; medir desde la llegada que desde la apertura de una pantalla; observar un mes tranquilo que una temporada de alta demanda."
+    },
+    {
+      "id": "N11-s04-b004",
+      "text": "También importa la frase que queremos sostener. «Ayer ocurrió una asignación incorrecta» necesita evidencia de ese episodio. «Las asignaciones incorrectas son frecuentes» necesita una base para estimar cuántas ocurren. «El canal causa esas asignaciones» requiere investigar otras explicaciones. Cambiar unas pocas palabras puede aumentar mucho lo que tenemos que demostrar."
+    },
+    {
+      "id": "N11-s04-b005",
+      "text": "Wang y Strong muestran por qué la calidad no se reduce a exactitud. ISO/IEC 25012 ofrece un marco para examinarla según necesidades y condiciones de uso. Box y Draper recuerdan el valor y los límites de simplificar mediante modelos. El punto común que usamos aquí es práctico: una representación sirve para ciertas preguntas, no para todas."
+    },
+    {
+      "id": "N11-s04-b006",
+      "text": "No debemos irnos al extremo opuesto. Un dato imperfecto puede alcanzar para abrir una investigación o para detener una prueba que está produciendo daño. No necesitamos calcular la frecuencia anual de una falla para reconocer un episodio grave y proteger a quienes podrían verse afectados."
+    },
+    {
+      "id": "N11-s04-b007",
+      "text": "En Hotel Horizonte, una extracción puede justificar mirar con más atención dos integraciones. No necesariamente justifica afirmar que todos los canales de terceros son malos ni permitir que un agente rechace reservas. La fuerza necesaria de la evidencia cambia con la consecuencia de equivocarse."
+    },
+    {
+      "id": "N11-s04-b008",
+      "text": "La propuesta de N11 es conservar el camino entre lo ocurrido, lo registrado, lo calculado y lo decidido. Ese camino permite hacer preguntas, detectar saltos y corregir. El rigor no está en usar un tono categórico: está en afirmar hasta donde la evidencia permite y aclarar qué falta para avanzar más."
+    },
+    {
+      "id": "N11-s05-h2",
+      "text": "De N10 a N11: del encuadre a la afirmación auditable"
+    },
+    {
+      "id": "N11-s05-b001",
+      "text": "N10 eligió una dificultad que vale la pena investigar. N11 toma las afirmaciones que usamos para explicarla y pregunta qué las respalda. «Las reservas de terceros necesitan más reparación» no pide la misma evidencia que «dos áreas entienden distinto la disponibilidad». Una necesita una comparación adecuada; la otra puede comenzar por reconstruir definiciones y episodios."
+    },
+    {
+      "id": "N11-s05-b002",
+      "text": "N04 ya había separado observaciones, relatos, datos e hipótesis. Ahora miramos más de cerca cómo algo se convierte en un dato. ¿Qué debió hacer el personal para que apareciera una fila? ¿Qué situaciones no tenían un campo donde registrarse? ¿Quién cambió una categoría antes de que llegara al tablero?"
+    },
+    {
+      "id": "N11-s05-b003",
+      "text": "El producto HH-11 no reemplaza la base ni exige copiarla entera en un informe. Guarda la explicación necesaria para usarla: qué afirmamos, con qué material, con qué límites y para qué decisión. También permite localizar el detalle cuando alguien necesita revisarlo."
+    },
+    {
+      "id": "N11-s05-b004",
+      "text": "N12 profundizará las diferencias entre que algo haya ocurrido, que figure un estado y que alguien haya pedido una acción. Aquí dejamos preparadas las preguntas. Registrar «confirmada» puede representar una decisión distinta de comprobar que una habitación está en condiciones de entregarse. Esa diferencia tiene que estar aclarada antes de contar ambas cosas como el mismo resultado."
+    },
+    {
+      "id": "N11-s06-h2",
+      "text": "Movimiento 1 · Definir qué se afirma antes de buscar datos"
+    },
+    {
+      "id": "N11-s06-b001",
+      "text": "El dato muestra algo, pero no muestra todo"
+    },
+    {
+      "id": "N11-s06-b002",
+      "text": "Una temperatura, una foto, una respuesta de encuesta y una hora de ingreso son datos de formas diferentes. Todos representan alguna propiedad o situación. Ninguno contiene por sí solo todo lo que pasó."
+    },
+    {
+      "id": "N11-s06-b003",
+      "text": "Si una encuesta pide elegir entre «satisfecho» e «insatisfecho», la respuesta conserva una valoración dentro de esas opciones. No registra necesariamente la causa. Si el sistema permite anotar sólo «resuelto», no sabremos si terminó el trabajo, si se derivó o si alguien cerró para cumplir el plazo. El diseño de las categorías forma parte de la producción del dato."
+    },
+    {
+      "id": "N11-s06-b004",
+      "text": "Esto no significa que cualquier interpretación sea válida. Podemos revisar cómo se capturó la información, comparar con episodios y decidir qué preguntas puede responder. Precisamente porque el dato no es el fenómeno completo, necesitamos esa revisión."
+    },
+    {
+      "id": "N11-s06-b005",
+      "text": "Una dirección puede ser suficiente para emitir una factura y no para coordinar una entrega que requiere saber por dónde se accede. Una respuesta técnica de medio segundo puede servir para evaluar una API y no describir los veinte minutos que la persona pasó resolviendo pasos manuales. La adecuación depende del uso."
+    },
+    {
+      "id": "N11-s06-b006",
+      "text": "Antes de iniciar una limpieza masiva de información, preguntá qué decisión necesita apoyo. Podés descubrir que el campo con peor formato no importa para esa decisión y que otro, perfectamente completo, usa una definición equivocada. Mejorar la calidad no consiste únicamente en llenar vacíos."
+    },
+    {
+      "id": "N11-s06-b007",
+      "text": "Seis afirmaciones diferentes sobre una misma situación"
+    },
+    {
+      "id": "N11-s06-b008",
+      "text": "Existencia: «Ayer una huésped esperó cuarenta minutos». Para sostenerlo necesitamos identificar el episodio y cómo se midió la espera. Un caso bien documentado alcanza para decir que ocurrió. No alcanza para decir que es habitual."
+    },
+    {
+      "id": "N11-s06-b009",
+      "text": "Descripción: «En las llegadas observadas este mes, la espera mediana fue de veinte minutos». Ahora necesitamos definir qué llegadas observamos, cuáles quedaron afuera y cómo calculamos. La afirmación habla de un conjunto y un período, no de un caso aislado."
+    },
+    {
+      "id": "N11-s06-b010",
+      "text": "Comparación: «Las reservas de terceros tuvieron más demora que las directas». Necesitamos que ambos grupos se midan de manera compatible. Si un reloj empieza al entrar al hotel y otro al abrir la reserva, la diferencia puede venir de la regla de medición."
+    },
+    {
+      "id": "N11-s06-b011",
+      "text": "Relación o asociación: «Cuando hay más discrepancias registradas, también aumenta la espera». Estamos diciendo que dos variables cambian juntas. Las discrepancias podrían producir parte de la espera, pero también podrían aumentar ambas por una tercera condición, como una llegada grupal difícil."
+    },
+    {
+      "id": "N11-s06-b012",
+      "text": "Causalidad: «Esta discrepancia contribuye a producir la demora». La afirmación es más exigente: debemos explicar el proceso y contrastar otras causas. No basta con poner dos curvas parecidas una al lado de la otra."
+    },
+    {
+      "id": "N11-s06-b013",
+      "text": "Predicción: «Con cierta información podemos anticipar qué llegadas necesitarán apoyo». Una predicción se evalúa en casos nuevos, no sólo en los que se usaron para construirla. Puede predecir sin explicar la causa. Y predecir dificultad no decide qué trato merece la persona."
+    },
+    {
+      "id": "N11-s06-b014",
+      "text": "No es una escalera donde causalidad siempre vale más que descripción. Para asignar apoyo temporal puede alcanzar una buena descripción de una cola. Para afirmar que un control nunca falla, un solo contraejemplo verificado puede ser decisivo. El tipo de pregunta fija el tipo de prueba."
+    },
+    {
+      "id": "N11-s06-b015",
+      "text": "Convertir una idea amplia en una medida"
+    },
+    {
+      "id": "N11-s06-b016",
+      "text": "«Buena atención» es una idea comprensible, pero no se mide directamente como la longitud de una mesa. Puede incluir rapidez, claridad, trato, resolución y posibilidad de ayuda. A esos conceptos que reúnen varias dimensiones los llamamos constructos."
+    },
+    {
+      "id": "N11-s06-b017",
+      "text": "Para estudiarlos elegimos señales y reglas. Ese paso se llama operacionalización. El término suena difícil, pero la pregunta es simple: ¿qué vamos a observar para reconocer lo que nos interesa?"
+    },
+    {
+      "id": "N11-s06-b018",
+      "text": "En el hotel podemos medir una llegada por el tiempo hasta emitir la llave. Otra opción es medir hasta que la persona recibe acceso a una habitación adecuada, registrando si hubo que corregir después. La primera regla es más fácil porque el sistema ya guarda el evento. La segunda está más cerca de la promesa, pero exige más información. La elección depende de qué afirmamos."
+    },
+    {
+      "id": "N11-s06-b019",
+      "text": "Una medida puede ser confiable sin ser válida para cierto uso. Confiable significa que da resultados consistentes en condiciones comparables. Válida significa que representa adecuadamente lo que queremos conocer. Si todas las oficinas cierran al derivar, el código puede aplicarse de forma consistente; aun así, no mide resolución final."
+    },
+    {
+      "id": "N11-s06-b020",
+      "text": "Pensá también en una balanza que suma siempre tres kilos. Repetiría el resultado de manera consistente, pero tendría un sesgo de exactitud. No alcanza con obtener la misma respuesta muchas veces. Debemos evaluar qué clase de error puede conservar el procedimiento."
+    },
+    {
+      "id": "N11-s06-b021",
+      "text": "Para revisar una operacionalización conviene probar casos límite. ¿Qué pasa si se emite una llave que no abre? ¿Si la habitación se cambia diez minutos después? ¿Si la persona necesita ayuda y la consigue por fuera del canal? Esos casos muestran si nuestra definición de éxito conserva lo que prometimos medir."
+    },
+    {
+      "id": "N11-s06-b022",
+      "text": "Cuatro decisiones antes del cálculo"
+    },
+    {
+      "id": "N11-s06-b023",
+      "text": "La unidad de análisis es aquello que contamos o comparamos. Una reserva puede incluir cuatro personas y dos habitaciones. Si hay tres modificaciones en la misma reserva, no son necesariamente tres llegadas fallidas. Antes de calcular debemos saber si contamos personas, reservas, habitaciones o modificaciones."
+    },
+    {
+      "id": "N11-s06-b024",
+      "text": "La población es el conjunto al que queremos referirnos. Puede ser todas las llegadas del mes o sólo las registradas en un canal. Tener miles de filas no garantiza cubrirlo todo. Si no aparecen los casos atendidos por teléfono, la base puede ser grande y dejar afuera precisamente la dificultad que buscamos."
+    },
+    {
+      "id": "N11-s06-b025",
+      "text": "El período define cuándo observamos. Comparar un mes de temporada baja con uno de alta demanda mezcla condiciones. No vuelve imposible la comparación, pero exige reconocer qué cambió. También importa que los casos hayan tenido tiempo suficiente para mostrar el resultado: una llegada aún abierta no equivale a una llegada sin problemas."
+    },
+    {
+      "id": "N11-s06-b026",
+      "text": "La granularidad es el nivel de detalle. Un promedio mensual puede ocultar una congestión que ocurre todos los días durante media hora. Registrar cada segundo puede producir mucho ruido si la decisión se toma por turno. Elegimos el detalle que permite ver el patrón relevante, no el máximo disponible por costumbre."
+    },
+    {
+      "id": "N11-s06-b027",
+      "text": "Estas cuatro decisiones deberían poder explicarse antes de mostrar el gráfico. Si recién aparecen cuando alguien cuestiona el resultado, pueden terminar funcionando como excusas. Documentarlas desde el comienzo permite comparar lo que se quiso medir con lo que realmente se calculó."
+    },
+    {
+      "id": "N11-s06-b028",
+      "text": "Qué ponemos debajo de la raya"
+    },
+    {
+      "id": "N11-s06-b029",
+      "text": "Un porcentaje divide una cantidad por otra. El número de abajo, el denominador, indica respecto de qué conjunto hablamos. «Doce correcciones» no dice lo mismo sobre un hotel con veinte llegadas que sobre uno con doscientas."
+    },
+    {
+      "id": "N11-s06-b030",
+      "text": "Hagamos una cuenta hipotética con reglas explícitas. Partimos de cien registros de reserva. Diez corresponden a cancelaciones previas. Cinco filas adicionales eran duplicados que se unifican. Quedan ochenta y cinco llegadas distintas. Durante ellas se registran doce modificaciones: cuatro son cambios voluntarios de preferencia sin un error previo y ocho corrigen un incumplimiento. Supongamos, además, que esas ocho pertenecen a ocho llegadas diferentes."
+    },
+    {
+      "id": "N11-s06-b031",
+      "text": "Doce sobre cien es el 12 %, pero mezcla modificaciones con registros iniciales. Ocho sobre ochenta y cinco es aproximadamente el 9,4 % de llegadas con el tipo de corrección que definimos. Si dos de esas ocho correcciones correspondieran a la misma llegada, habría que cambiar el numerador para medir llegadas afectadas. La cuenta depende de la unidad y de la pregunta."
+    },
+    {
+      "id": "N11-s06-b032",
+      "text": "No hay un denominador correcto para todas las preguntas. Podemos querer estudiar cancelaciones sobre reservas creadas, modificaciones por llegada o personas afectadas. Lo que no podemos hacer es elegir el que da una cifra más cómoda y conservar el mismo título."
+    },
+    {
+      "id": "N11-s06-b033",
+      "text": "Otro ejemplo: los incidentes suben de dos a tres. Es un aumento del 50 % en cantidad. Si las oportunidades pasaron de cien a doscientas, la tasa bajó de 2 % a 1,5 %. Ambas cuentas son posibles; hablan de aspectos diferentes. Un informe responsable muestra el contexto, especialmente cuando los números son pequeños."
+    },
+    {
+      "id": "N11-s06-b034",
+      "text": "Calidad para una decisión concreta"
+    },
+    {
+      "id": "N11-s06-b035",
+      "text": "Podemos revisar varias dimensiones. Exactitud: el valor coincide suficientemente con lo que pretende registrar. Completitud: están los datos necesarios. Consistencia: no aparecen contradicciones que impidan el uso. Actualidad: la información sigue siendo pertinente para el momento de decidir. Unicidad: no contamos dos veces lo mismo. Validez de formato: el campo cumple su regla técnica. Accesibilidad y relevancia: quienes deben usarlo pueden hacerlo y el dato responde a su necesidad."
+    },
+    {
+      "id": "N11-s06-b036",
+      "text": "La validez de formato no es lo mismo que la validez de una medida. «Cerrada» puede ser una opción perfectamente admitida por el sistema y representar mal la resolución del trámite. Conviene mantener separados esos dos usos de la palabra."
+    },
+    {
+      "id": "N11-s06-b037",
+      "text": "No todas las dimensiones pesan igual. Para avisar una contingencia necesitamos un contacto vigente. Para calcular una tasa necesitamos unidades bien identificadas y una cobertura adecuada. Para reconstruir una asignación importa qué información estaba disponible en ese momento, no sólo la versión correcta que tenemos hoy."
+    },
+    {
+      "id": "N11-s06-b038",
+      "text": "La guía de medición de NIST de 2024 incluida en las referencias trabaja en seguridad de la información; el Research Data Framework lo hace desde el ciclo de vida de los datos de investigación. No son manuales de hotelería. Podemos aprovechar su atención a planificación, recolección, evaluación y documentación sin afirmar que trasladan automáticamente todos sus procedimientos a este caso."
+    },
+    {
+      "id": "N11-s06-b039",
+      "text": "La suficiencia no es permiso para aceptar cualquier error. Debemos preguntar si los defectos plausibles podrían cambiar la decisión. Si sí, hay que corregir, obtener otra evidencia o limitar la acción. Si no, podemos avanzar declarando el margen y revisando cuando corresponda."
+    },
+    {
+      "id": "N11-s07-h2",
+      "text": "Primera aplicación de HH-11: tres afirmaciones, tres exigencias"
+    },
+    {
+      "id": "N11-s07-b001",
+      "text": "Federico y Lucía separan tres frases que antes aparecían juntas en la conversación."
+    },
+    {
+      "id": "N11-s07-b002",
+      "text": "A. «En estos registros, las llegadas de terceros tienen mayor tiempo medio entre el inicio formal del ingreso y la emisión de acceso». Es una comparación descriptiva. Antes de sostenerla hay que comprobar que los relojes y los grupos sean comparables, declarar exclusiones y mostrar algo más que el promedio. Todavía no describe toda la espera del huésped."
+    },
+    {
+      "id": "N11-s07-b003",
+      "text": "B. «Los canales de terceros producen la demora». Es una explicación causal. La extracción no alcanza. Los grupos pueden diferir en horario, documentación, pago o necesidades de asistencia. Además, puede registrarse más trabajo en unos que en otros. Hay que distinguir esas alternativas."
+    },
+    {
+      "id": "N11-s07-b004",
+      "text": "C. «Un agente de IA reducirá la demora sin aumentar errores». Es una hipótesis sobre una intervención todavía no probada. Necesita una tarea precisa, condiciones, comparación y protecciones. La diferencia observada entre canales no demuestra que esa tecnología tenga el efecto esperado."
+    },
+    {
+      "id": "N11-s07-b005",
+      "text": "No es un cambio de datos; es un cambio de alcance. HH-11 evita convertir A en B y B en C sin hacer el trabajo intermedio. Puede autorizar revisar la medición, investigar un mecanismo y diseñar una prueba. No convierte una tabla en permiso automático para comprar o delegar decisiones."
+    },
+    {
+      "id": "N11-s08-h2",
+      "text": "Movimiento 2 · Reconstruir cómo el dato llegó a ser evidencia"
+    },
+    {
+      "id": "N11-s08-b001",
+      "text": "De dónde viene y qué le pasó"
+    },
+    {
+      "id": "N11-s08-b002",
+      "text": "La procedencia es la historia de producción de un dato. No se reduce al nombre del archivo o de la base. Incluye quién lo generó, mediante qué actividad, qué cambios recibió y qué versión estamos usando."
+    },
+    {
+      "id": "N11-s08-b003",
+      "text": "El modelo PROV del W3C organiza esa historia mediante entidades, actividades y agentes. Una entidad puede ser una extracción de reservas; una actividad, la clasificación de sus canales; un agente, una persona o un sistema que interviene. El vocabulario ayuda a describir relaciones sin exigir una herramienta específica."
+    },
+    {
+      "id": "N11-s08-b004",
+      "text": "En Hotel Horizonte, «canal: tercero» pudo venir de una agencia, pasar por una integración y ser corregido después por Recepción. Si sólo conservamos el valor final, no sabemos qué veía el equipo al llegar el huésped. Podemos necesitar ambas cosas: una clasificación corregida para analizar y el registro previo para reconstruir una decisión."
+    },
+    {
+      "id": "N11-s08-b005",
+      "text": "Conviene separar fuente, custodia, transformación y autoridad. La fuente origina una observación o declaración. La custodia la almacena. La transformación cambia su representación. La autoridad determina qué decisión institucional puede habilitar. Que un proveedor guarde «habitación disponible» no le da por sí mismo autoridad para declarar que puede entregarse."
+    },
+    {
+      "id": "N11-s08-b006",
+      "text": "Conocer la procedencia no garantiza verdad. Una fuente identificada puede equivocarse. Pero permite evaluar el error, consultar el contexto y corregir sin inventar el origen. Sin esa historia, una cifra puede circular de informe en informe hasta parecer independiente de las decisiones que la produjeron."
+    },
+    {
+      "id": "N11-s08-b007",
+      "text": "Limpiar también es decidir"
+    },
+    {
+      "id": "N11-s08-b008",
+      "text": "Antes de llegar al tablero, los datos suelen pasar por varias operaciones. Filtrar elige qué casos quedan. Unir relaciona tablas. Deduplicar intenta eliminar registros repetidos. Clasificar asigna categorías. Imputar completa un valor faltante mediante una regla. Agregar reúne varios valores en un resumen."
+    },
+    {
+      "id": "N11-s08-b009",
+      "text": "Cada operación puede ser útil y puede introducir un problema. Unir por correo puede confundir a personas que comparten una dirección. Eliminar reservas con igual apellido y fecha puede borrar dos reservas legítimas. Completar una hora faltante con la mediana permite calcular, pero ese valor no pasa a ser una observación real por estar dentro de la tabla."
+    },
+    {
+      "id": "N11-s08-b010",
+      "text": "Supongamos que faltan horas de cierre justo en las llegadas más difíciles. Si las completamos con el tiempo habitual, el promedio parecerá mejor de lo que sabemos. Si las excluimos, también podemos ocultarlas. Hace falta estudiar por qué faltan, mostrar el alcance de la ausencia y evaluar cuánto cambia la conclusión bajo reglas razonables."
+    },
+    {
+      "id": "N11-s08-b011",
+      "text": "Una transformación importante debe conservar sus entradas, regla, versión, fecha, salida y casos que no pudo tratar. No para imprimir todo en el informe principal, sino para que otra persona pueda reconstruirlo. Si cambió la definición de «corrección», debemos marcar el cambio antes de comparar meses."
+    },
+    {
+      "id": "N11-s08-b012",
+      "text": "También debemos distinguir cálculo e inferencia. Sumar cobros es una operación sobre importes. Etiquetar una reserva como «riesgosa» agrega una interpretación basada en criterios. Aunque ambas aparezcan como columnas, la segunda necesita evaluación de errores, límites de uso y posibilidad de revisión."
+    },
+    {
+      "id": "N11-s08-b013",
+      "text": "Quién consigue aparecer en la base"
+    },
+    {
+      "id": "N11-s08-b014",
+      "text": "Una encuesta de satisfacción enviada al final de un trámite no incluye necesariamente a quienes abandonaron antes. Un registro de reclamos incluye a quienes pudieron y quisieron reclamar. Un sistema de atención guarda lo que se atendió dentro de sus canales, no todo el trabajo de la organización."
+    },
+    {
+      "id": "N11-s08-b015",
+      "text": "Hay sesgo de selección cuando la posibilidad de quedar registrado se relaciona con aquello que queremos estudiar. Si los casos más difíciles abandonan antes de responder, la satisfacción puede verse mejor. No se corrige simplemente acumulando más respuestas del mismo tipo."
+    },
+    {
+      "id": "N11-s08-b016",
+      "text": "Groves y Lyberg, desde la metodología de encuestas, distinguen problemas de representación y problemas de medición. Podemos preguntarles con exactitud a las personas equivocadas para nuestra población. También podemos seleccionar una población adecuada y hacer una pregunta que mida mal. Son errores distintos."
+    },
+    {
+      "id": "N11-s08-b017",
+      "text": "Los registros operativos tienen dificultades parecidas, aunque no sean encuestas. Una integración caída deja fuera un canal. Un campo opcional puede completarse sólo cuando hay tiempo. Un turno puede registrar reparaciones y otro resolverlas por teléfono. Antes de comparar rendimiento, hay que examinar esas diferencias."
+    },
+    {
+      "id": "N11-s08-b018",
+      "text": "No existe una solución universal. A veces conviene ampliar canales; otras, observar deliberadamente casos ausentes, contrastar fuentes o limitar la afirmación. Una corrección estadística requiere supuestos y datos que la sostengan. No podemos recuperar automáticamente experiencias que nunca tuvieron posibilidad de entrar al registro."
+    },
+    {
+      "id": "N11-s08-b019",
+      "text": "Un vacío no significa siempre cero"
+    },
+    {
+      "id": "N11-s08-b020",
+      "text": "Una hora de acceso vacía puede significar que la persona no ingresó. También puede indicar que se usó una llave física, que falló la transmisión o que la reserva se canceló. Escribir cero en todos los casos convierte historias diferentes en una misma duración."
+    },
+    {
+      "id": "N11-s08-b021",
+      "text": "Excluir los vacíos tampoco es neutral. Si las llegadas más problemáticas son las que no tienen cierre, calcular sólo las completas puede ocultar la dificultad. El informe debe mostrar cuántos casos faltan y qué sabemos sobre ellos."
+    },
+    {
+      "id": "N11-s08-b022",
+      "text": "La práctica mínima es distinguir las razones relevantes: no aplica, no observado, pendiente, falla de captura o motivo desconocido. No hace falta inventar una causa para cada fila. «No sabemos» es más útil que una clasificación falsa, siempre que se explique cómo limita el uso."
+    },
+    {
+      "id": "N11-s08-b023",
+      "text": "Además, la falta puede ser información. Si Housekeeping no logra registrar cierto estado porque la pantalla no lo permite, el vacío revela una limitación del sistema. Completarlo por detrás puede mejorar una planilla y dejar intacto el problema de trabajo."
+    },
+    {
+      "id": "N11-s08-b024",
+      "text": "Tres relojes para una misma habitación"
+    },
+    {
+      "id": "N11-s08-b025",
+      "text": "En un ejemplo didáctico, una habitación queda limpia a las 13:40. La persona lo registra a las 13:55. Recepción recibe la actualización a las 14:10. Son tres tiempos: el hecho, su registro y su disponibilidad para quien decide."
+    },
+    {
+      "id": "N11-s08-b026",
+      "text": "Si queremos estudiar el trabajo de limpieza, la hora de sincronización no representa su final. Si queremos reconstruir qué sabía Recepción a las 14:00, el dato que llegó a las 14:10 todavía no estaba disponible. Y «limpia» no prueba por sí solo que la habitación estuviera asignable: puede existir otra restricción."
+    },
+    {
+      "id": "N11-s08-b027",
+      "text": "Corregir hoy la hora original puede mejorar la información histórica. Pero si borramos la versión previa, perderemos qué se sabía cuando se tomó la decisión. En usos relevantes conviene conservar ambas perspectivas: cuándo ocurrió algo y cuándo fue conocido o reconocido."
+    },
+    {
+      "id": "N11-s08-b028",
+      "text": "Los relojes también necesitan compatibilidad. Diferencias de zona horaria, sincronización o resolución pueden alterar una secuencia. No hace falta resolver todos los detalles temporales de la organización para cualquier análisis. Sí aclarar cuáles importan antes de atribuir una demora o una responsabilidad."
+    },
+    {
+      "id": "N11-s08-b029",
+      "text": "Cuando el promedio mejora y algunas personas empeoran"
+    },
+    {
+      "id": "N11-s08-b030",
+      "text": "Hagamos una cuenta completa. En una situación ficticia hay cien llegadas: noventa habituales y diez que requieren asistencia. Antes, las primeras demoran once minutos en promedio y las segundas veintiuno. El total es 990 más 210: 1.200 minutos. Dividido por cien da doce minutos por llegada."
+    },
+    {
+      "id": "N11-s08-b031",
+      "text": "Después, mantenemos la misma composición para comparar. Las noventa habituales pasan a siete minutos y las otras diez a treinta y siete. El total es 630 más 370: 1.000 minutos. El promedio general baja a diez. Sin embargo, quienes requieren asistencia esperan dieciséis minutos más que antes."
+    },
+    {
+      "id": "N11-s08-b032",
+      "text": "La cuenta no está mal. La frase «todas las personas reciben una atención mejor» sí excedería lo que muestra. Necesitamos observar la distribución y las diferencias que importan para la decisión."
+    },
+    {
+      "id": "N11-s08-b033",
+      "text": "La mediana señala el centro de los casos ordenados. Los percentiles permiten ubicar tramos de la distribución, como los casos más lentos. La dispersión muestra cuánto varían. Son ayudas, no reemplazos del razonamiento. Ninguna cifra dice por sí sola si una espera es aceptable para una situación concreta."
+    },
+    {
+      "id": "N11-s08-b034",
+      "text": "Tampoco conviene separar por cada atributo disponible hasta encontrar una diferencia llamativa. Podemos producir asociaciones casuales o exponer información sensible. Elegimos grupos por una pregunta justificada, con datos suficientes y protecciones. Luego contrastamos la síntesis con episodios que permitan entender qué ocurre."
+    },
+    {
+      "id": "N11-s08-b035",
+      "text": "Comparar nombres iguales no garantiza comparar lo mismo"
+    },
+    {
+      "id": "N11-s08-b036",
+      "text": "Dos áreas informan «tiempo de resolución». Una empieza cuando recibe el pedido; otra, cuando alguien lo toma. Una termina al derivar; otra, cuando la persona confirma que obtuvo respuesta. El nombre coincide, pero las medidas no."
+    },
+    {
+      "id": "N11-s08-b037",
+      "text": "También puede cambiar la composición. Si el hotel pasa los ingresos más sencillos al autoservicio, en Recepción quedarán proporcionalmente más casos complejos. Su promedio puede subir sin que el personal haya empeorado. Hay que mirar qué cambió en el conjunto, no premiar o castigar una cifra aislada."
+    },
+    {
+      "id": "N11-s08-b038",
+      "text": "Para comparar antes y después debemos preguntar qué más ocurrió: demanda, turnos, reglas, canales o criterios de registro. Un mejor resultado en temporada baja no demuestra por sí solo el efecto de una intervención. La pregunta de fondo es qué habría pasado sin ella; ése es el razonamiento contrafáctico."
+    },
+    {
+      "id": "N11-s08-b039",
+      "text": "No siempre podemos construir una comparación ideal ni hacer un experimento. Podemos usar períodos, casos y conocimiento del proceso con límites explícitos. Lo que no corresponde es presentar una coincidencia temporal como demostración causal sólo porque necesitamos cerrar el informe."
+    },
+    {
+      "id": "N11-s08-b040",
+      "text": "Cuánta precisión podemos sostener"
+    },
+    {
+      "id": "N11-s08-b041",
+      "text": "Informar 11,347 minutos no agrega exactitud si nadie sabe cuándo empezó la espera. Los decimales vienen de una operación matemática; no reparan una captura débil. Conviene usar una precisión coherente con el instrumento y con la decisión."
+    },
+    {
+      "id": "N11-s08-b042",
+      "text": "La incertidumbre puede venir de casos faltantes, diferencias de captura, clasificaciones dudosas, variación temporal o una muestra pequeña. No siempre se resume con un único intervalo. Un intervalo estadístico no soluciona que el reloj empiece en el lugar equivocado."
+    },
+    {
+      "id": "N11-s08-b043",
+      "text": "Podemos decir «en los casos auditados observamos una diferencia», «el patrón es compatible con esta explicación» o «todavía no pudimos distinguir estas causas». Son grados diferentes de afirmación. No hace falta un lenguaje dubitativo en cada oración; hace falta no decir «demuestra» cuando sólo tenemos una pista."
+    },
+    {
+      "id": "N11-s08-b044",
+      "text": "La pregunta útil es qué incertidumbre podría cambiar lo que haremos. Si una clasificación dudosa afecta justamente a los casos que justifican cerrar un canal, hay que revisarla antes. Si una pequeña variación no cambia la necesidad de apoyo temporal, quizá podamos actuar mientras mejoramos la medición."
+    },
+    {
+      "id": "N11-s08-b045",
+      "text": "Las contradicciones pueden enseñar"
+    },
+    {
+      "id": "N11-s08-b046",
+      "text": "El PMS dice disponible, Housekeeping dice limpieza pendiente y la cerradura muestra un acceso posterior. No conviene elegir «el sistema oficial» y borrar lo demás sin entenderlo. Quizá representan condiciones distintas o momentos distintos. Quizá una fuente está equivocada. La diferencia necesita una explicación."
+    },
+    {
+      "id": "N11-s08-b047",
+      "text": "Triangular significa contrastar fuentes para entender coincidencias y diferencias. No significa contar votos. Tres tableros que copian la misma base no son tres confirmaciones independientes."
+    },
+    {
+      "id": "N11-s08-b048",
+      "text": "Una entrevista puede revelar una llamada que el registro no guardó. Un registro puede mostrar que una secuencia ocurrió distinto de como se recuerda. El objetivo no es declarar ganador al dato técnico o al testimonio. Es reconstruir el episodio con sus límites y buscar la evidencia adicional que importa."
+    },
+    {
+      "id": "N11-s08-b049",
+      "text": "Una vez comprendida la divergencia podremos decidir si corresponde corregir, mantener estados distintos o cambiar una regla. Limpiar antes de entender puede eliminar justamente la señal que explicaba la falla."
+    },
+    {
+      "id": "N11-s09-h2",
+      "text": "Datos producidos o interpretados con inteligencia artificial"
+    },
+    {
+      "id": "N11-s09-b001",
+      "text": "Una herramienta puede leer reclamos y clasificarlos por tema. Puede ahorrar trabajo y permitir revisar más casos. Pero su resultado agrega una interpretación, no una observación independiente. Si clasifica «me respondieron rapidísimo, lástima que no resolvieron nada» como satisfacción por velocidad, el error puede pasar al tablero sin que nadie vea el texto original."
+    },
+    {
+      "id": "N11-s09-b002",
+      "text": "Los resúmenes tienen otro riesgo. Pueden conservar el sentido general y omitir la condición que cambia la decisión: «aceptó la habitación, siempre que hubiera apoyo disponible». Si desaparece la segunda parte, el registro puede parecer un consentimiento sin condición. La buena redacción no demuestra fidelidad."
+    },
+    {
+      "id": "N11-s09-b003",
+      "text": "Por eso necesitamos saber qué tarea hizo la herramienta, sobre qué entradas, con qué versión y mediante qué verificación. La revisión debe incluir casos difíciles o poco frecuentes, no sólo los que confirman que suele funcionar. Una tasa global alta puede ocultar errores concentrados precisamente en las situaciones que más cuidado necesitan."
+    },
+    {
+      "id": "N11-s09-b004",
+      "text": "Los datos sintéticos son datos construidos para simular o representar ciertas propiedades. Pueden servir para probar un sistema sin usar directamente todos los registros personales. Pero no son episodios observados del hotel. Deben mantenerse identificados y evaluarse según el propósito; generarlos no garantiza por sí solo privacidad ni realismo suficiente."
+    },
+    {
+      "id": "N11-s09-b005",
+      "text": "El AI RMF de NIST, su perfil de IA generativa y la familia ISO/IEC 5259 ofrecen referencias para trabajar riesgos y calidad a lo largo del uso de datos y modelos. No convierten una lista de controles en una certificación automática de la afirmación. Seguimos necesitando evaluar entradas, transformaciones, errores y consecuencias en el caso concreto."
+    },
+    {
+      "id": "N11-s09-b006",
+      "text": "El Reglamento europeo de IA incluido en la bibliografía también trata responsabilidades según categorías y usos. No se extrapolan aquí obligaciones jurídicas a cualquier organización: su aplicación requiere examinar el ámbito y la situación correspondientes. Para el razonamiento de N11, la idea relevante es que una salida automatizada no elimina la responsabilidad de verificar ni de permitir una revisión adecuada."
+    },
+    {
+      "id": "N11-s09-b007",
+      "text": "En HH-11 debemos marcar si una clasificación fue realizada por una persona, por una herramienta o mediante ambas. También debemos distinguir si se usó como pista para investigar o como fundamento decisivo. No alcanza con agregar «revisado por humano» si esa persona no tuvo tiempo, información ni autoridad para objetar."
+    },
+    {
+      "id": "N11-s10-h2",
+      "text": "Segunda aplicación de HH-11: auditar la cadena del tablero"
+    },
+    {
+      "id": "N11-s10-b001",
+      "text": "Federico y Lucía vuelven a la extracción. En la continuación ficticia del caso encuentran cinco reglas que afectan la interpretación. El inicio se toma del primer cambio de estado dentro del PMS. El final es la emisión de tarjeta. El canal corresponde al valor final, aunque haya sido corregido. Los casos sin cierre quedan fuera del promedio. Las reservas fusionadas conservan un solo identificador sin mostrar en el tablero todas sus relaciones previas."
+    },
+    {
+      "id": "N11-s10-b002",
+      "text": "Ninguna regla es absurda por definición. Pueden servir para estudiar una operación dentro de la aplicación. El problema es usar el resultado para describir sin límites toda la espera del huésped. Hay trabajo antes, después y fuera de esos eventos."
+    },
+    {
+      "id": "N11-s10-b003",
+      "text": "El equipo revisa una selección de episodios. Agrega llegada observada y acceso efectivo cuando puede respaldarlos; donde no puede, conserva la ausencia. Distingue reparaciones posteriores a la llave. Reconstruye cambios de canal y clasifica razones de falta de cierre. No completa datos inventados para conseguir una tabla perfecta."
+    },
+    {
+      "id": "N11-s10-b004",
+      "text": "En este ejercicio, la diferencia entre grupos no desaparece, pero se reduce al comparar condiciones semejantes. Además, una parte importante de la dificultad observada se concentra en dos agencias que usan una definición de disponibilidad distinta. Eso orienta la investigación hacia un acuerdo de significado y una conciliación previa, no contra todos los terceros."
+    },
+    {
+      "id": "N11-s10-b005",
+      "text": "La conclusión queda acotada: durante el período y bajo las reglas auditadas, ciertas integraciones se asocian con más reparación, especialmente cuando no se comprueba antes la disponibilidad. Sigue pendiente cuánto explican otras condiciones, como pago o documentación. No declaramos causalidad completa sólo por haber mejorado el tablero."
+    },
+    {
+      "id": "N11-s10-b006",
+      "text": "Esta versión permite revisar esas integraciones y preparar una prueba. No autoriza bloquear todos los canales ni automatizar rechazos. El resultado de la auditoría no es una frase más contundente. Es una decisión mejor delimitada."
+    },
+    {
+      "id": "N11-s11-h2",
+      "text": "Movimiento 3 · Decidir cuánta evidencia alcanza y dejar la revisión preparada"
+    },
+    {
+      "id": "N11-s11-b001",
+      "text": "Hasta acá revisamos qué representa el dato y cómo llegó al tablero. Falta una pregunta: ¿alcanza para lo que queremos hacer? No existe una cantidad universal de filas ni un porcentaje de completitud que responda siempre. La suficiencia depende de la afirmación, las alternativas y las consecuencias."
+    },
+    {
+      "id": "N11-s11-b002",
+      "text": "Si queremos orientar una entrevista, una señal débil puede ser útil. Si queremos rechazar reservas, la misma señal es insuficiente. La diferencia no está en que una tabla cambie mágicamente de calidad; cambia el compromiso que pretendemos justificar con ella."
+    },
+    {
+      "id": "N11-s11-b003",
+      "text": "HH-11 reúne esas relaciones para que la decisión no quede desconectada de la evidencia. No se trata de conseguir un sello de «datos buenos», sino de explicar qué uso permiten y qué uso excede su alcance."
+    },
+    {
+      "id": "N11-s12-h2",
+      "text": "Instrumento HH-11: expediente de sostén de una afirmación"
+    },
+    {
+      "id": "N11-s12-b001",
+      "text": "La ficha puede ocupar una página de síntesis con referencias al detalle necesario. Nueve preguntas orientan el trabajo."
+    },
+    {
+      "id": "N11-s12-b002",
+      "text": "1. ¿Qué afirmamos exactamente? Copiá una frase que se pueda examinar. «Los terceros son malos» mezcla una valoración con una generalización. «En este período, ciertos ingresos de dos agencias registraron más reparación» define mejor el alcance y deja preguntas verificables."
+    },
+    {
+      "id": "N11-s12-b003",
+      "text": "2. ¿Qué decisión depende de eso? Indicá si se busca investigar, probar, ampliar o comprometer una acción. La misma comparación puede justificar observar una integración y no cerrar un canal. Escribí también qué pasaría si la afirmación fuera errónea."
+    },
+    {
+      "id": "N11-s12-b004",
+      "text": "3. ¿Qué queremos conocer y cómo lo medimos? Separá el fenómeno de su representación. Queremos conocer espera hasta una solución adecuada; hoy tenemos tiempo desde apertura en el PMS hasta emisión de tarjeta. La diferencia no desaparece por elegir un nombre parecido."
+    },
+    {
+      "id": "N11-s12-b005",
+      "text": "4. ¿Qué contamos, a quiénes y cuándo? Definí unidad, población, período e inclusiones. Mostrá qué casos no pueden aparecer y cuáles aún no completaron su recorrido. Si la afirmación sólo vale para reservas registradas en ciertos canales, decilo."
+    },
+    {
+      "id": "N11-s12-b006",
+      "text": "5. ¿De dónde salieron los datos? Identificá fuentes, responsables, versiones y momentos de disponibilidad relevantes. No hace falta publicar datos personales en el informe; hace falta que quienes corresponda puedan verificar la procedencia con accesos adecuados."
+    },
+    {
+      "id": "N11-s12-b007",
+      "text": "6. ¿Qué operaciones realizamos? Registrá filtros, uniones, eliminación de duplicados, clasificaciones, valores completados y cálculos. Si una transformación cambia la población o agrega una inferencia, debe poder reconocerse. Conservá también los casos que no pudieron procesarse."
+    },
+    {
+      "id": "N11-s12-b008",
+      "text": "7. ¿Qué errores o incertidumbres importan? No hagas una lista genérica de todos los errores posibles. Señalá cuáles podrían cambiar la conclusión: cierres faltantes, relojes distintos, clasificación dudosa o cobertura incompleta. Mostrá cómo se evaluaron o qué falta hacer."
+    },
+    {
+      "id": "N11-s12-b009",
+      "text": "8. ¿Qué otra explicación sigue siendo razonable? La diferencia por canal puede relacionarse con condiciones de pago o con distinta visibilidad del trabajo. Identificá qué observación ayudaría a distinguirlas. Una rival no es una formalidad para completar."
+    },
+    {
+      "id": "N11-s12-b010",
+      "text": "9. ¿Para qué alcanza y cuándo revisamos? Cerrá con el uso autorizado, los límites y la condición de revisión. Por ejemplo: alcanza para una prueba de conciliación con dos agencias; no para rechazar automáticamente; se revisará si aparecen daños, cambios de población o evidencia que contradiga el mecanismo."
+    },
+    {
+      "id": "N11-s12-b011",
+      "text": "La ficha debe poder ser leída por quien decide y reconstruida por quien verifica. Si un cálculo importante sólo existe en la memoria de Federico, todavía hay una dependencia frágil. La documentación no reemplaza su criterio, pero permite que el trabajo continúe y pueda discutirse."
+    },
+    {
+      "id": "N11-s13-h2",
+      "text": "La suficiencia crece con el costo de equivocarse"
+    },
+    {
+      "id": "N11-s13-b001",
+      "text": "Podemos distinguir cuatro tipos de compromiso. No son etapas obligatorias de todos los proyectos; ayudan a comparar exigencias."
+    },
+    {
+      "id": "N11-s13-b002",
+      "text": "Explorar. Una señal parcial puede orientar una entrevista o una revisión de episodios. Debemos aclarar su limitación para no transformarla en diagnóstico. El costo de aprender de una hipótesis equivocada suele ser menor que el de ejecutarla a gran escala."
+    },
+    {
+      "id": "N11-s13-b003",
+      "text": "Probar. Una intervención acotada necesita una medición inicial, condiciones de seguridad, observación y una salida. Llamarla piloto no reduce sus riesgos automáticamente. Hay que saber qué personas quedan expuestas y qué haremos si aparece una falla."
+    },
+    {
+      "id": "N11-s13-b004",
+      "text": "Ampliar. Extender a más turnos o canales requiere comprobar que la experiencia inicial no dependió de una persona excepcional, de casos fáciles o de una asistencia imposible de sostener. También hay que observar si los efectos cambian entre grupos."
+    },
+    {
+      "id": "N11-s13-b005",
+      "text": "Comprometer. Retirar atención, firmar una dependencia prolongada o automatizar decisiones difíciles de reparar exige evidencia y controles más fuertes. No alcanza con que la prueba haya funcionado algunas veces. Importan cobertura, autoridad, posibilidad de impugnación y capacidad de reparación."
+    },
+    {
+      "id": "N11-s13-b006",
+      "text": "No debemos usar esta distinción para demorar acciones protectoras urgentes. Si una prueba está asignando habitaciones inadecuadas, puede ser razonable detenerla antes de calcular una tasa estable. La exigencia de evidencia debe considerar tanto el costo de actuar como el de no actuar."
+    },
+    {
+      "id": "N11-s13-b007",
+      "text": "Probar cuánto depende la conclusión de una regla"
+    },
+    {
+      "id": "N11-s13-b008",
+      "text": "Una prueba de sensibilidad consiste en cambiar supuestos plausibles y ver qué ocurre con la conclusión. No cambiamos reglas hasta conseguir el resultado deseado. Examinamos de qué depende lo que estamos diciendo."
+    },
+    {
+      "id": "N11-s13-b009",
+      "text": "En el hotel podemos recalcular separando las dos agencias más problemáticas, conservando las clasificaciones originales o mostrando distintos tratamientos justificados para cierres faltantes. También podemos comparar relojes, siempre que tengamos evidencia de sus diferencias y no inventemos horas para todos los casos."
+    },
+    {
+      "id": "N11-s13-b010",
+      "text": "Si pequeñas variaciones razonables invierten la comparación, la decisión depende de una convención frágil. Debemos limitar el alcance o buscar datos que resuelvan la duda. Si la diferencia persiste en varios escenarios pertinentes, gana respaldo, aunque eso no demuestre causalidad."
+    },
+    {
+      "id": "N11-s13-b011",
+      "text": "Puede ocurrir que la incertidumbre no cambie la acción. Si todas las estimaciones razonables muestran una espera importante en la misma franja y tenemos capacidad segura de apoyo temporal, quizá no necesitemos el minuto exacto para organizarlo. La precisión necesaria depende de dónde están las alternativas de decisión."
+    },
+    {
+      "id": "N11-s13-b012",
+      "text": "Lo contrario también es posible. Una diferencia pequeña puede importar mucho cuando una regla determina acceso, cobro o rechazo. No se evalúa sólo el tamaño numérico: se evalúa qué ocurre a cada lado de la decisión."
+    },
+    {
+      "id": "N11-s13-b013",
+      "text": "Un umbral no es una ley de la naturaleza"
+    },
+    {
+      "id": "N11-s13-b014",
+      "text": "«Si la tasa supera el 5 %, intervenir» parece una regla técnica. Pero alguien eligió ese 5 % y debe explicar por qué. Puede responder a una obligación, una capacidad disponible, una comparación relevante o una tolerancia al riesgo. Esas razones deben mantenerse visibles."
+    },
+    {
+      "id": "N11-s13-b015",
+      "text": "Los umbrales también cambian el comportamiento. Si una oficina es evaluada sólo por cerrar antes de cinco días, puede comenzar a cerrar al derivar. La métrica deja de observar pasivamente: influye en lo que las personas hacen. El indicador mejora sin que necesariamente mejore el propósito."
+    },
+    {
+      "id": "N11-s13-b016",
+      "text": "En Hotel Horizonte, premiar ocupación sin observar reparaciones puede incentivar compromisos que después se resuelven a costa de Recepción. Premiar velocidad de ingreso sin verificar la habitación puede favorecer entregas prematuras. No significa que debamos eliminar toda métrica, sino acompañarla con condiciones y revisión."
+    },
+    {
+      "id": "N11-s13-b017",
+      "text": "Cathy O’Neil advierte sobre los daños que pueden producir modelos opacos cuando operan a escala y las personas afectadas tienen pocas posibilidades de discutirlos. La pregunta para HH-11 es concreta: ¿quién puede impugnar una clasificación?, ¿quién la revisa?, ¿qué ocurre mientras tanto?"
+    },
+    {
+      "id": "N11-s13-b018",
+      "text": "Un umbral útil tiene fundamento, consecuencias conocidas y un responsable. Puede requerir actualización. No se vuelve neutral porque esté implementado como una condición dentro de un sistema."
+    },
+    {
+      "id": "N11-s13-b019",
+      "text": "Repetir un cálculo no demuestra que mida bien"
+    },
+    {
+      "id": "N11-s13-b020",
+      "text": "Si otra persona usa las mismas entradas y reglas y obtiene un resultado consistente, hablamos de reproducibilidad en el sentido utilizado por las Academias Nacionales de Estados Unidos en su informe de 2019. Ayuda a detectar errores y a discutir sobre una base común."
+    },
+    {
+      "id": "N11-s13-b021",
+      "text": "Para lograrla necesitamos conservar versiones, parámetros y operaciones relevantes. Si el tablero recalcula el pasado con datos corregidos hoy, ya no necesariamente reproduce el resultado que se vio en la reunión anterior. Ambas versiones pueden tener utilidad, pero deben distinguirse."
+    },
+    {
+      "id": "N11-s13-b022",
+      "text": "La replicación plantea otra pregunta: con nuevos datos o un procedimiento independiente, ¿aparece un resultado compatible? En una organización no siempre podemos repetir las condiciones exactamente. Sí podemos contrastar otro período o revisar una muestra mediante observación, aclarando las diferencias."
+    },
+    {
+      "id": "N11-s13-b023",
+      "text": "Ninguna de las dos garantiza por sí sola validez. Podemos ejecutar dos veces una consulta que empieza el reloj demasiado tarde. También podemos repetir una medición consistente que deja afuera el mismo canal. Reproducir permite examinar el procedimiento; no decide si representa bien la promesa."
+    },
+    {
+      "id": "N11-s13-b024",
+      "text": "Además, necesitamos reconstruir la decisión: qué sabía el equipo entonces, qué supuestos aceptó, quién autorizó y qué habría cambiado su elección. El tablero actual no conserva necesariamente esa historia. El expediente debe relacionar la evidencia disponible con la acción tomada en su momento."
+    },
+    {
+      "id": "N11-s14-h2",
+      "text": "Tercera aplicación de HH-11: tres puertas de decisión"
+    },
+    {
+      "id": "N11-s14-b001",
+      "text": "Al finalizar la auditoría del ejercicio, el equipo conserva tres afirmaciones con fuerzas distintas."
+    },
+    {
+      "id": "N11-s14-b002",
+      "text": "La primera es descriptiva: ciertas integraciones de terceros presentan más episodios de reparación en el período revisado. Se apoya en la extracción identificada, definiciones compatibles, tratamiento explícito de ausencias y episodios contrastados. Permite concentrar observación y trabajo en esas integraciones. No generaliza a todos los intermediarios."
+    },
+    {
+      "id": "N11-s14-b003",
+      "text": "La segunda propone un mecanismo: las diferencias sobre el significado de disponibilidad contribuyen a la reparación cuando no se concilian antes de la llegada. Hay rastros, reglas de canal y relatos que la sostienen. Pero siguen abiertas otras condiciones, como pago o documentación. Permite diseñar una prueba específica, no declarar que ya conocemos toda la causa."
+    },
+    {
+      "id": "N11-s14-b004",
+      "text": "La tercera anticipa un resultado: conciliar antes de la llegada podría reducir reparaciones sin aumentar rechazos equivocados. Eso todavía no ocurrió en la prueba. Debe escribirse como hipótesis, con qué se espera cambiar, cómo se observará y cuándo se detendrá."
+    },
+    {
+      "id": "N11-s14-b005",
+      "text": "Elena autoriza dos semanas de prueba con dos agencias. No autoriza rechazos automáticos. Federico y el equipo preparan la comparación; Lucía conserva la capacidad de resolver excepciones; Ricardo verifica que el trabajo previo sea sostenible; Mariela y Camila revisan los estados y compromisos que les corresponden."
+    },
+    {
+      "id": "N11-s14-b006",
+      "text": "Se registran el tiempo completo, correcciones posteriores, casos afectados y trabajo adicional. Si la mejora aparece únicamente porque se rechazan más reservas o porque el personal absorbe validaciones fuera del registro, no cumple el propósito. La protección no queda como una nota: cambia cómo se evalúa la prueba."
+    },
+    {
+      "id": "N11-s14-b007",
+      "text": "HH-11 no promete el resultado. Deja preparada una forma de aprender de él. Esa diferencia evita que, después, cualquier cifra favorable se use como confirmación de una decisión que en realidad nunca estuvo abierta a revisión."
+    },
+    {
+      "id": "N11-s15-h2",
+      "text": "Caso de transferencia: riesgo de abandono universitario"
+    },
+    {
+      "id": "N11-s15-b001",
+      "text": "En una situación hipotética, una facultad construye un modelo para anticipar abandono. Usa actividad del campus virtual, materias aprobadas y registros administrativos. En datos históricos acierta muchas clasificaciones. La institución propone ofrecer tutorías y, además, bloquear algunas inscripciones hasta que la persona asista a una entrevista."
+    },
+    {
+      "id": "N11-s15-b002",
+      "text": "Esas dos acciones no son equivalentes. Una invitación voluntaria a recibir apoyo tiene consecuencias distintas de impedir una inscripción. La capacidad predictiva del modelo no autoriza por sí sola ninguna de ellas; cada uso necesita examinar propósito, errores, trato y posibilidades de revisión."
+    },
+    {
+      "id": "N11-s15-b003",
+      "text": "Una persona puede tener poca actividad virtual porque trabaja con materiales descargados, cursa presencialmente o tiene problemas de conectividad. No toda ausencia significa desvinculación. También puede haber estudiantes que abandonaron sin dejar suficientes rastros para aparecer en la base. El modelo aprende de lo registrado, no de toda la vida universitaria."
+    },
+    {
+      "id": "N11-s15-b004",
+      "text": "Un falso positivo ocurre si se señala como futuro abandono a alguien que no abandonaría bajo las condiciones evaluadas. Un falso negativo ocurre si no se detecta un caso que sí lo haría. Importan las consecuencias de ambos, no sólo la proporción total de aciertos. Un contacto puede ser inútil o estigmatizante si se hace mal; un bloqueo puede crear una barrera que agrave la situación."
+    },
+    {
+      "id": "N11-s15-b005",
+      "text": "Para reformar horarios, becas o apoyos tampoco alcanza con predecir. Debemos investigar mecanismos: qué dificultades existen y qué cambios podrían ayudar. Una variable que predice no es necesariamente una causa que convenga modificar."
+    },
+    {
+      "id": "N11-s15-b006",
+      "text": "El caso permite transferir la disciplina de HH-11. Separá la afirmación predictiva de la decisión institucional. Revisá población, señales, errores, alternativas y autoridad. Un modelo puede tener utilidad estadística y usarse de una manera injustificada. La evidencia y la legitimidad están relacionadas, pero no son lo mismo."
+    },
+    {
+      "id": "N11-s16-h2",
+      "text": "Contraejemplo: el incidente único que sí alcanza"
+    },
+    {
+      "id": "N11-s16-b001",
+      "text": "Una política declara: «Ninguna reserva confirmada puede perderse durante una sincronización». El equipo reconstruye un episodio y comprueba que una reserva confirmada desapareció después de un reintento. Conserva el registro original, la secuencia y la recuperación manual. Un caso verificado contradice la palabra «ninguna»."
+    },
+    {
+      "id": "N11-s16-b002",
+      "text": "Todavía no sabemos con qué frecuencia ocurre ni cuánto daño puede producir en toda la operación. Pero ya sabemos que el control no es absoluto. Responder «es sólo un caso» no resuelve la contradicción: confunde frecuencia con posibilidad."
+    },
+    {
+      "id": "N11-s16-b003",
+      "text": "El episodio puede justificar preservar evidencia, investigar y detener temporalmente una automatización según su riesgo. No hace falta esperar muchos casos para reconocer una falla que creíamos imposible. A la vez, no debemos usar ese único caso para inventar una tasa general."
+    },
+    {
+      "id": "N11-s16-b004",
+      "text": "Éste es el límite de la idea de que siempre necesitamos más datos. Lo decisivo es la relación entre evidencia y afirmación. Un caso puede ser insuficiente para una pregunta y suficiente para otra."
+    },
+    {
+      "id": "N11-s17-h2",
+      "text": "Errores frecuentes"
+    },
+    {
+      "id": "N11-s17-b001",
+      "text": "Elegir la pregunta porque ya tenemos una tabla"
+    },
+    {
+      "id": "N11-s17-b002",
+      "text": "Las fuentes disponibles sirven para explorar, pero no deberían definir por comodidad lo que importa. Si queremos conocer la espera completa, no la reemplazamos por tiempo dentro de la aplicación sólo porque es fácil de extraer. Aclaramos la diferencia y decidimos qué información adicional vale obtener."
+    },
+    {
+      "id": "N11-s17-b003",
+      "text": "Dar por bueno un dato porque está bien copiado"
+    },
+    {
+      "id": "N11-s17-b004",
+      "text": "Coincidir con la fuente no alcanza si la fuente usa un estado que significa otra cosa. Revisá significado, cobertura y vigencia. La exactitud de la copia no corrige una interpretación equivocada."
+    },
+    {
+      "id": "N11-s17-b005",
+      "text": "Creer que una base grande representa a todos"
+    },
+    {
+      "id": "N11-s17-b006",
+      "text": "Un millón de registros puede omitir a quienes no consiguen usar el canal. Antes de generalizar, preguntá quién tenía posibilidad de aparecer. El volumen no arregla una exclusión sistemática."
+    },
+    {
+      "id": "N11-s17-b007",
+      "text": "Decir «causa» donde sólo encontramos una relación"
+    },
+    {
+      "id": "N11-s17-b008",
+      "text": "Si dos variables cambian juntas, considerá otras condiciones que puedan influir en ambas. Buscá secuencias y casos que ayuden a distinguir explicaciones. No elijas el verbo más fuerte para que el informe parezca concluyente."
+    },
+    {
+      "id": "N11-s17-b009",
+      "text": "Borrar diferencias antes de entenderlas"
+    },
+    {
+      "id": "N11-s17-b010",
+      "text": "Dos valores pueden representar momentos o autorizaciones diferentes. Si los unificás sin revisar, podés eliminar información importante. Primero reconstruí; después decidí qué corresponde corregir o mantener separado."
+    },
+    {
+      "id": "N11-s17-b011",
+      "text": "Agregar decimales para compensar una definición débil"
+    },
+    {
+      "id": "N11-s17-b012",
+      "text": "Ninguna visualización vuelve válido un reloj que empieza tarde para la pregunta planteada. Ajustá la medida antes de sofisticar el cálculo. Mostrá una precisión que puedas sostener."
+    },
+    {
+      "id": "N11-s17-b013",
+      "text": "Tratar una salida de IA como observación original"
+    },
+    {
+      "id": "N11-s17-b014",
+      "text": "Una clasificación o un resumen es una transformación. Conservá la entrada, la regla o versión relevante y la evaluación de errores. Si la fuente no afirma algo, la redacción convincente de la herramienta no lo vuelve un hecho."
+    },
+    {
+      "id": "N11-s17-b015",
+      "text": "Pedir certeza total para una acción pequeña"
+    },
+    {
+      "id": "N11-s17-b016",
+      "text": "Una observación acotada no necesita el mismo respaldo que una decisión difícil de reparar. Explicá qué error importa para el paso concreto. No uses la búsqueda de perfección para evitar actuar frente a una dificultad conocida."
+    },
+    {
+      "id": "N11-s17-b017",
+      "text": "Ignorar lo que una métrica incentiva"
+    },
+    {
+      "id": "N11-s17-b018",
+      "text": "Si premiamos cierres, algunas personas pueden cerrar antes. Si premiamos ocupación, pueden trasladar el riesgo a la llegada. Revisá cómo cambia el trabajo y qué protecciones evitan que cumplir la cifra desplace el propósito."
+    },
+    {
+      "id": "N11-s18-h2",
+      "text": "Consecuencias profesionales"
+    },
+    {
+      "id": "N11-s18-b001",
+      "text": "Quienes trabajan con sistemas no sólo consumen datos: ayudan a producirlos. Definir un campo obligatorio, un estado o una regla de fusión determina qué podremos ver después. Una decisión pequeña de interfaz puede hacer que una dificultad frecuente no tenga dónde registrarse."
+    },
+    {
+      "id": "N11-s18-b002",
+      "text": "La responsabilidad está distribuida. Producto define resultados y eventos; desarrollo implementa captura y transformaciones; Operaciones conoce excepciones; quienes atienden personas reconocen reparaciones invisibles; las áreas de seguridad y privacidad delimitan usos; Dirección decide qué compromisos autoriza. No se resuelve dejando toda la «calidad» al analista que recibe la base al final."
+    },
+    {
+      "id": "N11-s18-b003",
+      "text": "Una práctica sólida permite cuestionar y corregir. Si Mariela observa que «limpia» se está leyendo como «asignable», debe existir una vía para revisar la definición y sus usos. No alcanza con pedirle que cargue mejor el mismo campo."
+    },
+    {
+      "id": "N11-s18-b004",
+      "text": "El expediente no garantiza decisiones acertadas. Hace posible ver dónde se apoyan y qué cambiar cuando fallan. Esa capacidad es especialmente importante cuando una cifra circula entre áreas y pierde las advertencias con las que fue creada."
+    },
+    {
+      "id": "N11-s19-h2",
+      "text": "Límites y tensiones"
+    },
+    {
+      "id": "N11-s19-b001",
+      "text": "No siempre hay tiempo ni posibilidad de medir todo. En una contingencia se actúa con información parcial. Algunos hechos son raros y algunas poblaciones difíciles de observar. La respuesta es declarar qué incertidumbre aceptamos y limitar la acción, no fabricar una certeza que no tenemos."
+    },
+    {
+      "id": "N11-s19-b002",
+      "text": "Recoger más información tampoco es siempre mejor. Podemos aumentar costos, cargar al personal o invadir privacidad sin mejorar la decisión. Helen Nissenbaum propone examinar la adecuación de los flujos de información según contexto, actores, atributos y condiciones de transmisión. Que un dato esté disponible no significa que cualquier uso sea apropiado."
+    },
+    {
+      "id": "N11-s19-b003",
+      "text": "Ser auditable no exige publicar datos personales sin restricciones. Exige que existan responsabilidades, evidencia y accesos adecuados para revisar lo que corresponde. Podemos mostrar reglas y resultados agregados mientras protegemos registros identificables y habilitamos controles específicos."
+    },
+    {
+      "id": "N11-s19-b004",
+      "text": "Medir diferencias entre grupos también tiene riesgos. Puede ayudar a encontrar barreras y puede fijar etiquetas que estigmatizan. Necesitamos una finalidad clara, categorías justificadas, datos mínimos y formas de cuestionar decisiones. No se resuelve sólo con una técnica de anonimización."
+    },
+    {
+      "id": "N11-s19-b005",
+      "text": "Finalmente, una afirmación bien respaldada puede usarse para un fin injustificado. Saber predecir una dificultad no decide que deba negarse una oportunidad. N11 limita lo que podemos afirmar; no reemplaza las preguntas sobre poder y responsabilidad de N05 ni la decisión sobre qué queremos proteger."
+    },
+    {
+      "id": "N11-s20-h2",
+      "text": "De N11 a N12: una representación necesita semántica y autoridad"
+    },
+    {
+      "id": "N11-s20-b001",
+      "text": "HH-11 deja tres afirmaciones y sus respaldos. También deja una dificultad de representación: el tablero puede mezclar algo que ocurrió, un estado que alguien declaró y una acción que alguien pidió. Para interpretar los datos, necesitamos distinguirlos."
+    },
+    {
+      "id": "N11-s20-b002",
+      "text": "«Se emitió una llave» registra un hecho. «La habitación está asignable» declara una condición según reglas. «Asignar la habitación» solicita una acción. Ninguna frase equivale automáticamente a las otras. Además, importa quién puede pedir, confirmar o corregir."
+    },
+    {
+      "id": "N11-s20-b003",
+      "text": "N12 trabajará esas diferencias mediante eventos, estados, comandos, evidencia y autoridad. No se trata de agregar vocabulario por sí mismo. Se trata de que el modelo no permita leer una intención como un resultado ni una anotación como un permiso que nadie concedió."
+    },
+    {
+      "id": "N11-s20-b004",
+      "text": "Así continúa el recorrido: primero precisamos qué afirmación necesita apoyo; después revisamos cómo representar el trabajo sin perder las distinciones que hacen posible decidir."
+    },
+    {
+      "id": "N11-s21-h2",
+      "text": "Una lectura situada desde América Latina"
+    },
+    {
+      "id": "N11-s21-b001",
+      "text": "Mario Bunge ayuda a exigir precisión conceptual y explicaciones que no se agoten en una etiqueta. Decir «hay un problema de calidad» no identifica el mecanismo. En el hotel necesitamos saber qué significa un estado, cómo se produce la discrepancia y qué observación podría contradecir nuestra explicación."
+    },
+    {
+      "id": "N11-s21-b002",
+      "text": "Fernando Flores y Rafael Echeverría permiten examinar el papel del lenguaje en la coordinación. «Reserva confirmada» no es una descripción inocua: puede expresar un compromiso que habilita a la persona a viajar. Para estudiar el dato debemos preguntar qué acción y qué expectativa organiza, sin suponer que cada registro cumple efectivamente la promesa."
+    },
+    {
+      "id": "N11-s21-b003",
+      "text": "Rolando García advierte sobre la necesidad de construir relaciones entre dimensiones que no se explican de forma aislada. Un indicador de llegada puede involucrar tecnología, organización y política comercial. Carlos Scolari ayuda a mirar cómo interfaces y categorías hacen visibles ciertas relaciones. Si no existe un modo de anotar una restricción importante, después no podemos concluir que nunca ocurrió."
+    },
+    {
+      "id": "N11-s21-b004",
+      "text": "Maturana y Varela invitan a reflexionar sobre las distinciones con las que conocemos. En esta lectura eso se traduce en hacer explícitas nuestras categorías y contrastarlas, no en afirmar que cualquier dato vale lo mismo. Etkin y Schvarstein permiten mirar cómo las reglas y la identidad organizacional participan en lo que se conserva o se modifica. Una redefinición del indicador puede encontrar resistencias porque cambia responsabilidades, no sólo porque cambia un cálculo."
+    },
+    {
+      "id": "N11-s21-b005",
+      "text": "Walter Sosa Escudero aporta una vía de divulgación para discutir oportunidades y límites de los datos masivos. Para el estudiante, la pregunta es cercana: ¿tener muchos casos resuelve que estemos midiendo algo distinto de lo que queremos saber? N11 muestra por qué no. Hace falta relacionar cantidad, pregunta y forma de producción."
+    },
+    {
+      "id": "N11-s21-b006",
+      "text": "Estas contribuciones dialogan con calidad de datos, metodología de encuestas y procedencia. No constituyen una explicación única. Ayudan a revisar diferentes partes del camino entre situación, registro y decisión sin reducir el trabajo a una consulta técnica."
+    },
+    {
+      "id": "N11-s22-h2",
+      "text": "Síntesis"
+    },
+    {
+      "id": "N11-s22-b001",
+      "text": "Una cifra puede estar bien calculada y no respaldar la conclusión que alguien extrae. Para evaluarla necesitamos saber qué representa, a quién incluye, en qué período, cómo se produjo y qué operaciones recibió."
+    },
+    {
+      "id": "N11-s22-b002",
+      "text": "La afirmación fija la exigencia. Un episodio, una frecuencia, una comparación, una causa y una predicción no se prueban de la misma manera. Una extracción puede ser útil para una pregunta y no alcanzar para otra."
+    },
+    {
+      "id": "N11-s22-b003",
+      "text": "En Hotel Horizonte revisamos relojes, canales, correcciones y casos faltantes. El objetivo no fue eliminar toda incertidumbre. Fue distinguir qué se puede sostener y qué prueba limitada tendría sentido, sin autorizar rechazos automáticos ni atribuir toda demora a los terceros."
+    },
+    {
+      "id": "N11-s22-b004",
+      "text": "HH-11 conserva esa relación: afirmación, evidencia, límites, decisión y revisión. N12 continúa con las representaciones que necesitamos para no confundir lo ocurrido, lo pedido y lo autorizado."
+    },
+    {
+      "id": "N11-s23-h2",
+      "text": "Cinco píldoras para recordar"
+    },
+    {
+      "id": "N11-s23-b001",
+      "text": "Que una cifra salga del sistema no significa que mida toda la situación."
+    },
+    {
+      "id": "N11-s23-b002",
+      "text": "Decir «ocurrió», «es frecuente» y «es la causa» exige pruebas diferentes."
+    },
+    {
+      "id": "N11-s23-b003",
+      "text": "Antes de confiar en un porcentaje, mirá qué se contó y respecto de qué conjunto."
+    },
+    {
+      "id": "N11-s23-b004",
+      "text": "Limpiar, resumir o clasificar puede cambiar el significado; conservá el recorrido."
+    },
+    {
+      "id": "N11-s23-b005",
+      "text": "La evidencia alcanza para una decisión concreta, no para cualquier uso futuro."
+    },
+    {
+      "id": "N11-s24-h2",
+      "text": "Glosario esencial"
+    },
+    {
+      "id": "N11-s24-b001",
+      "text": "Afirmación: algo que sostenemos sobre una situación y que puede discutirse mediante razones y evidencia. «Hubo más correcciones» necesita aclarar dónde y cuándo."
+    },
+    {
+      "id": "N11-s24-b002",
+      "text": "Dato: representación de una propiedad o un hecho bajo ciertas reglas. Una marca de «cerrado» no contiene toda la experiencia del trámite."
+    },
+    {
+      "id": "N11-s24-b003",
+      "text": "Calidad de datos: adecuación de los datos a una necesidad y unas condiciones de uso. No equivale sólo a ausencia de errores de carga."
+    },
+    {
+      "id": "N11-s24-b004",
+      "text": "Constructo: concepto que reúne varias dimensiones, como satisfacción o confiabilidad del servicio. Para estudiarlo elegimos señales concretas."
+    },
+    {
+      "id": "N11-s24-b005",
+      "text": "Operacionalización: definición de qué observaremos y cómo lo mediremos para estudiar ese concepto. Incluye cuándo empieza y termina un reloj."
+    },
+    {
+      "id": "N11-s24-b006",
+      "text": "Validez: grado en que la medida representa lo que queremos conocer para ese uso. Medir una derivación no prueba resolución final."
+    },
+    {
+      "id": "N11-s24-b007",
+      "text": "Unidad de análisis: aquello que contamos o comparamos: reserva, persona, habitación o episodio. Mezclarlas puede deformar una tasa."
+    },
+    {
+      "id": "N11-s24-b008",
+      "text": "Población: conjunto al que queremos referirnos. Puede ser mayor que el conjunto que efectivamente aparece en la base."
+    },
+    {
+      "id": "N11-s24-b009",
+      "text": "Denominador: conjunto respecto del cual calculamos una proporción. Ocho llegadas con problemas sobre ochenta y cinco no es lo mismo que ocho cambios sobre cien registros."
+    },
+    {
+      "id": "N11-s24-b010",
+      "text": "Granularidad: nivel de detalle. Un dato por mes y otro por minuto permiten ver cosas diferentes."
+    },
+    {
+      "id": "N11-s24-b011",
+      "text": "Procedencia: historia de origen y transformación de la información, con personas, sistemas y actividades involucrados."
+    },
+    {
+      "id": "N11-s24-b012",
+      "text": "Comparabilidad: condiciones que permiten interpretar una diferencia sin confundirla con cambios de definición, reloj o población."
+    },
+    {
+      "id": "N11-s24-b013",
+      "text": "Sesgo de selección: distorsión ligada a quién puede aparecer en los datos. Encuestar sólo a quienes terminaron puede ocultar abandonos."
+    },
+    {
+      "id": "N11-s24-b014",
+      "text": "Incertidumbre: razones por las que una conclusión puede variar, como datos faltantes, errores de clasificación o variación del proceso."
+    },
+    {
+      "id": "N11-s24-b015",
+      "text": "Reproducibilidad: posibilidad de obtener un resultado consistente con las mismas entradas y reglas. No garantiza que la pregunta esté bien medida."
+    },
+    {
+      "id": "N11-s24-b016",
+      "text": "Suficiencia: respaldo necesario para el paso que se pretende tomar, considerando las consecuencias de equivocarse."
+    },
+    {
+      "id": "N11-s24-b017",
+      "text": "Trazabilidad: posibilidad de seguir los vínculos entre fuente, transformación, afirmación y decisión para examinarlos y corregirlos."
+    },
+    {
+      "id": "N11-s25-h2",
+      "text": "Preguntas de preparación"
+    },
+    {
+      "id": "N11-s25-b001",
+      "text": "Encontrás una reserva perdida y alguien responde «con un caso no se prueba nada». ¿Qué sí podrías afirmar y qué no? Distinguí posibilidad y frecuencia."
+    },
+    {
+      "id": "N11-s25-b002",
+      "text": "Un sistema registra con exactitud la emisión de llaves. ¿Por qué ese dato puede no alcanzar para evaluar una llegada exitosa? Construí un episodio que muestre el límite."
+    },
+    {
+      "id": "N11-s25-b003",
+      "text": "El hotel informa «32 % de correcciones». ¿Qué tendrías que preguntar sobre numerador, denominador, población y período antes de interpretar esa cifra?"
+    },
+    {
+      "id": "N11-s25-b004",
+      "text": "Elegí una regla del tablero de HH-11: comienzo del reloj, cierre, canal final o exclusión de ausencias. Mostrá cómo puede cambiar la conclusión aunque el cálculo no tenga errores."
+    },
+    {
+      "id": "N11-s25-b005",
+      "text": "Recepción y Housekeeping aportan datos distintos sobre una habitación. ¿Qué revisarías antes de elegir una fuente? Explicá cuándo una contradicción puede enseñar algo sobre el sistema."
+    },
+    {
+      "id": "N11-s25-b006",
+      "text": "La misma comparación se usa para proponer una observación y para cerrar un canal de reservas. ¿Qué evidencia adicional exigirías para la segunda decisión y por qué?"
+    },
+    {
+      "id": "N11-s25-b007",
+      "text": "Para el encuentro, elegí una afirmación de una materia, un trabajo o una noticia. Reconstruí en una página qué pretende decir, cómo se midió, a quién incluye, de dónde salió y qué incertidumbre importa. Cerrá con un uso que aceptarías y otro que excedería la evidencia. Si falta información, no la inventes: explicá cómo limita tu conclusión."
+    },
+    {
+      "id": "N11-s26-h2",
+      "text": "Referencias base"
+    },
+    {
+      "id": "N11-s26-b001",
+      "text": "Wang, R. Y. y Strong, D. M. (1996). “Beyond Accuracy: What Data Quality Means to Data Consumers”. Journal of Management Information Systems, 12(4), 5-33. https://doi.org/10.1080/07421222.1996.11518099"
+    },
+    {
+      "id": "N11-s26-b002",
+      "text": "Box, G. E. P. y Draper, N. R. (1987). Empirical Model-Building and Response Surfaces. Wiley."
+    },
+    {
+      "id": "N11-s26-b003",
+      "text": "ISO/IEC (2008). ISO/IEC 25012:2008 Software engineering, Software product Quality Requirements and Evaluation (SQuaRE), Data quality model. https://www.iso.org/standard/35736.html"
+    },
+    {
+      "id": "N11-s26-b004",
+      "text": "ISO/IEC (2024). ISO/IEC 5259-1:2024 Artificial intelligence, Data quality for analytics and machine learning (ML), Part 1: Overview, terminology, and examples. https://www.iso.org/standard/81088.html"
+    },
+    {
+      "id": "N11-s26-b005",
+      "text": "W3C Provenance Working Group (2013). PROV-Overview: An Overview of the PROV Family of Documents. https://www.w3.org/TR/prov-overview/"
+    },
+    {
+      "id": "N11-s26-b006",
+      "text": "Moreau, L. y Missier, P. (eds.) (2013). PROV-DM: The PROV Data Model. W3C Recommendation. https://www.w3.org/TR/prov-dm/"
+    },
+    {
+      "id": "N11-s26-b007",
+      "text": "Groves, R. M. y Lyberg, L. (2010). “Total Survey Error: Past, Present, and Future”. Public Opinion Quarterly, 74(5), 849-879. https://doi.org/10.1093/poq/nfq065"
+    },
+    {
+      "id": "N11-s26-b008",
+      "text": "National Academies of Sciences, Engineering, and Medicine (2019). Reproducibility and Replicability in Science. The National Academies Press. https://doi.org/10.17226/25303"
+    },
+    {
+      "id": "N11-s26-b009",
+      "text": "Schroeder, K., Trinh, H. y Pillitteri, V. (2024). Measurement Guide for Information Security: Volume 1, Identifying and Selecting Measures. NIST SP 800-55v1. https://doi.org/10.6028/NIST.SP.800-55v1"
+    },
+    {
+      "id": "N11-s26-b010",
+      "text": "Hanisch, R. et al. (2024). NIST Research Data Framework, Version 2.0. NIST SP 1500-18r2. https://doi.org/10.6028/NIST.SP.1500-18r2"
+    },
+    {
+      "id": "N11-s26-b011",
+      "text": "Tabassi, E. (2023). Artificial Intelligence Risk Management Framework (AI RMF 1.0). NIST AI 100-1. https://doi.org/10.6028/NIST.AI.100-1"
+    },
+    {
+      "id": "N11-s26-b012",
+      "text": "Autio, C. et al. (2024). Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile. NIST AI 600-1. https://doi.org/10.6028/NIST.AI.600-1"
+    },
+    {
+      "id": "N11-s26-b013",
+      "text": "Unión Europea (2024). Reglamento (UE) 2024/1689 por el que se establecen normas armonizadas en materia de inteligencia artificial. https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+    },
+    {
+      "id": "N11-s26-b014",
+      "text": "Nissenbaum, H. (2010). Privacy in Context: Technology, Policy, and the Integrity of Social Life. Stanford University Press."
+    },
+    {
+      "id": "N11-s26-b015",
+      "text": "O’Neil, C. (2016). Weapons of Math Destruction. Crown."
+    },
+    {
+      "id": "N11-s26-b016",
+      "text": "Bunge, M. (2004). Emergencia y convergencia: novedad cualitativa y unidad del conocimiento. Gedisa."
+    },
+    {
+      "id": "N11-s26-b017",
+      "text": "Flores, F. (1997). Creando organizaciones para el futuro. Dolmen."
+    },
+    {
+      "id": "N11-s26-b018",
+      "text": "García, R. (2006). Sistemas complejos: conceptos, método y fundamentación epistemológica de la investigación interdisciplinaria. Gedisa."
+    },
+    {
+      "id": "N11-s26-b019",
+      "text": "Scolari, C. A. (2018). Las leyes de la interfaz: diseño, ecología, evolución, tecnología. Gedisa."
+    },
+    {
+      "id": "N11-s26-b020",
+      "text": "Maturana, H. R. y Varela, F. J. (1984). El árbol del conocimiento: las bases biológicas del entendimiento humano. Editorial Universitaria."
+    },
+    {
+      "id": "N11-s26-b021",
+      "text": "Etkin, J. y Schvarstein, L. (1989). Identidad de las organizaciones: invariancia y cambio. Paidós."
+    },
+    {
+      "id": "N11-s26-b022",
+      "text": "Sosa Escudero, W. (2019). Big Data: breve manual para conocer la ciencia de datos que ya invadió nuestras vidas. Siglo XXI Editores."
+    },
+    {
+      "id": "N11-s26-b023",
+      "text": "Echeverría, R. (2005). Ontología del lenguaje. Granica."
+    }
+  ],
+  "headings": [
+    "Contenido",
+    "Referentes",
+    "Pregunta profesional",
+    "El noventa y siete por ciento que no sabía qué medía",
+    "Hotel Horizonte: el tablero que llega antes que la explicación",
+    "Tesis",
+    "De N10 a N11: del encuadre a la afirmación auditable",
+    "Movimiento 1 · Definir qué se afirma antes de buscar datos",
+    "Primera aplicación de HH-11: tres afirmaciones, tres exigencias",
+    "Movimiento 2 · Reconstruir cómo el dato llegó a ser evidencia",
+    "Datos producidos o interpretados con inteligencia artificial",
+    "Segunda aplicación de HH-11: auditar la cadena del tablero",
+    "Movimiento 3 · Decidir cuánta evidencia alcanza y dejar la revisión preparada",
+    "Instrumento HH-11: expediente de sostén de una afirmación",
+    "La suficiencia crece con el costo de equivocarse",
+    "Tercera aplicación de HH-11: tres puertas de decisión",
+    "Caso de transferencia: riesgo de abandono universitario",
+    "Contraejemplo: el incidente único que sí alcanza",
+    "Errores frecuentes",
+    "Consecuencias profesionales",
+    "Límites y tensiones",
+    "De N11 a N12: una representación necesita semántica y autoridad",
+    "Una lectura situada desde América Latina",
+    "Síntesis",
+    "Cinco píldoras para recordar",
+    "Glosario esencial",
+    "Preguntas de preparación",
+    "Referencias base"
+  ]
+}

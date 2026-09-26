@@ -1,0 +1,3 @@
+# Texto alternativo
+
+Una pregunta de Hotel Horizonte sobre validación previa entra en una puerta de selección. La puerta evalúa qué decisión debe resolverse, quién será la audiencia, qué evidencia sostiene el recorte y cuánto cuesta mantenerlo vigente. La salida es una cartera mínima de cinco vistas. Proceso responde dónde espera el huésped. Estados responde cuándo puede confirmarse. Arquitectura responde qué dependencia puede fallar. Autoridad responde quién decide una excepción. Experiencia responde quién encuentra una barrera. Las vistas comparten reserva, habitación, huésped, promesa, asignación y excepción, pero mantienen límites y preguntas diferentes. La cartera se prueba sin su autor para verificar que la audiencia pueda decidir.

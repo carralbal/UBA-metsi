@@ -1,0 +1,1123 @@
+{
+  "missingImages": [],
+  "hiddenSourceBlocks": [],
+  "sourceBlocks": [
+    {
+      "id": "N09-h1",
+      "text": "Experiencia, accesibilidad y adopción no son decoración"
+    },
+    {
+      "id": "N09-s01-h2",
+      "text": "Pregunta profesional"
+    },
+    {
+      "id": "N09-s01-b001",
+      "text": "¿Cómo comprobamos que un servicio permite a distintas personas conseguir lo que necesitan, y no sólo completar una pantalla?"
+    },
+    {
+      "id": "N09-s02-h2",
+      "text": "La puerta automática que sólo era automática para algunos"
+    },
+    {
+      "id": "N09-s02-b001",
+      "text": "Imaginemos un edificio que inaugura una puerta automática. El día de la prueba, una persona camina por el centro, el sensor la detecta y las hojas se abren. El mecanismo responde como se esperaba. El equipo firma el acta y da por terminado el proyecto."
+    },
+    {
+      "id": "N09-s02-b002",
+      "text": "El lunes llega una niña con su familia. Se adelanta, se detiene frente al vidrio y la puerta no responde. Un adulto se acerca y el sensor la activa. No se presenta ningún reclamo. Para el registro del proyecto, hubo un acceso completado. Para la niña, entrar dependió de que otra persona realizara parte de la acción."
+    },
+    {
+      "id": "N09-s02-b003",
+      "text": "Más tarde, una mujer con bastón necesita más tiempo para atravesar el acceso que el previsto por la configuración. El guardia interviene para ayudarla. No es simplemente una cuestión de comodidad: hay una diferencia entre abrir la puerta y permitir un paso seguro. La prueba anterior no había examinado esa condición."
+    },
+    {
+      "id": "N09-s02-b004",
+      "text": "Durante un corte de energía, la puerta pasa al modo manual. La alternativa figura en el procedimiento, pero moverla requiere una fuerza que no todas las personas pueden ejercer. Existe un camino alternativo sobre el papel; todavía falta comprobar si es utilizable por quienes lo necesitan."
+    },
+    {
+      "id": "N09-s02-b005",
+      "text": "Esta historia es ficticia. No describe una instalación certificada ni propone cómo configurar sus controles. Sirve para mostrar una diferencia que también aparece en sistemas digitales: un componente puede superar una prueba acotada sin que el servicio completo funcione para la diversidad de personas que lo atraviesa."
+    },
+    {
+      "id": "N09-s02-b006",
+      "text": "En la reunión posterior, cada área habla de una parte. Mantenimiento explica el mecanismo, Seguridad sus controles, Arquitectura el espacio y Atención las ayudas prestadas. Ninguna mirada alcanza por sí sola. Para evaluar el acceso hay que reunir sensor, tiempo, circulación, señalización, contingencia y asistencia real."
+    },
+    {
+      "id": "N09-s02-b007",
+      "text": "La pregunta cambia de «¿se abre?» a «¿quiénes pueden entrar, en qué condiciones y qué pasa cuando algo falla?». También aparece un costo que el primer ensayo no mostraba: tiempo, esfuerzo, dependencia o necesidad de pedir ayuda. Que no haya reclamos no demuestra que ese costo no exista."
+    },
+    {
+      "id": "N09-s02-b008",
+      "text": "Una pantalla puede tener buena tipografía y pedir un dato que la persona no tiene. Un formulario puede completarse sin errores y confirmar una promesa que la organización no puede cumplir. Una aplicación puede registrar mucho uso porque se cerraron las alternativas. N09 mira estas diferencias para no confundir una interfaz bien terminada con un servicio bien resuelto."
+    },
+    {
+      "id": "N09-s03-h2",
+      "text": "Tesis"
+    },
+    {
+      "id": "N09-s03-b001",
+      "text": "Diseñar un buen servicio implica que las personas puedan comprender, actuar y obtener un resultado en condiciones reales. También deben poder corregir un error o recibir una alternativa cuando el camino previsto no funciona. Esto no se consigue sólo mejorando colores, botones o mensajes al final del proyecto."
+    },
+    {
+      "id": "N09-s03-b002",
+      "text": "La experiencia incluye lo que pasa antes, durante y después de la interacción. La accesibilidad pregunta qué barreras impiden participar o completar el recorrido. La adopción pregunta si una solución llega a incorporarse de manera sostenible a la vida o al trabajo. Están relacionadas, pero no son la misma cosa."
+    },
+    {
+      "id": "N09-s03-b003",
+      "text": "Un ejemplo permite distinguirlas. Una persona completa un formulario con facilidad. Al llegar al hotel, descubre que la habitación no tiene lo que necesitaba. La interacción digital pudo ser usable; el servicio falló. Si además no existe una alternativa practicable, la barrera no se resuelve con un mensaje más amable. Si el personal mantiene una planilla para evitar que el error se repita, prohibirla por «falta de adopción» puede empeorar el problema."
+    },
+    {
+      "id": "N09-s03-b004",
+      "text": "La calidad depende de relaciones entre personas, tareas y contexto. No podemos prometer una experiencia idéntica para todos, pero sí identificar condiciones relevantes, comprobar capacidades y ofrecer alternativas proporcionadas. Un promedio favorable no justifica ignorar a quienes quedan totalmente bloqueados."
+    },
+    {
+      "id": "N09-s03-b005",
+      "text": "Tampoco toda dificultad debe eliminarse. Confirmar una cancelación puede evitar un daño; repetir datos ya conocidos puede agregar esfuerzo inútil. Debemos preguntar qué protege cada paso, quién soporta la carga y si existe una manera más adecuada de cumplir esa función."
+    },
+    {
+      "id": "N09-s03-b006",
+      "text": "En Hotel Horizonte seguiremos una reserva que exige atributos específicos de la habitación. Revisaremos qué se promete, con qué información, quién confirma y qué ocurre si la habitación deja de estar disponible. N10 tomará esa evidencia para formular con precisión el problema y el resultado buscado. Aquí primero necesitamos comprender el recorrido."
+    },
+    {
+      "id": "N09-s04-h2",
+      "text": "De N08 a N09: del trabajo realizado al recorrido vivido"
+    },
+    {
+      "id": "N09-s04-b001",
+      "text": "N08 mostró llamadas, comprobaciones y reparaciones que sostienen el servicio aunque no aparezcan en el procedimiento. N09 agrega una pregunta: ¿cómo vive ese trabajo la persona que necesita el resultado? Un arreglo útil para un área puede trasladar esfuerzo al huésped o a otro equipo."
+    },
+    {
+      "id": "N09-s04-b002",
+      "text": "Permitir elegir una hora de llegada parece una mejora. Pero si el hotel no conecta esa elección con ocupación, limpieza, mantenimiento y autoridad de asignación, la pantalla comunica una expectativa que nadie puede asegurar. Cuanto más clara y convincente sea la promesa, mayor puede ser la decepción cuando no se cumple."
+    },
+    {
+      "id": "N09-s04-b003",
+      "text": "HH-08 dejó tramos todavía abiertos, verificaciones repetidas, ayudas y excepciones. HH-09 los sigue desde el propósito de la persona: qué necesita saber, qué debe hacer, dónde se bloquea y qué alternativas encuentra. No vuelve a explicar cómo observar; utiliza lo aprendido para evaluar capacidades y barreras."
+    },
+    {
+      "id": "N09-s04-b004",
+      "text": "Pensemos también en un turno bancario hipotético. El sistema lo marca como atendido cuando alguien abre el caso. La persona puede seguir esperando una autorización para completar el trámite. El evento interno y el resultado no coinciden. Esa diferencia será central para leer métricas de experiencia y adopción."
+    },
+    {
+      "id": "N09-s05-h2",
+      "text": "Movimiento 1 · Seguir el recorrido completo y reconocer barreras sistémicas"
+    },
+    {
+      "id": "N09-s05-b001",
+      "text": "Una pantalla es una parte del servicio"
+    },
+    {
+      "id": "N09-s05-b002",
+      "text": "Ingeniería de Software aporta pruebas de aceptación, usabilidad y requisitos de calidad. N09 conserva esos recursos y amplía lo que miramos. No basta con que cada control funcione: hay que seguir qué ocurre con la persona y con el trabajo después de usarlo."
+    },
+    {
+      "id": "N09-s05-b003",
+      "text": "ISO 9241-11:2018 relaciona usabilidad con personas, objetivos y contexto. La pregunta no es si algo es intuitivo en general, sino si determinadas personas pueden conseguir un objetivo con eficacia, eficiencia y satisfacción bajo ciertas condiciones. Una prueba con empleados en una oficina no representa automáticamente a una familia que llega con equipaje y poca batería."
+    },
+    {
+      "id": "N09-s05-b004",
+      "text": "ISO 9241-210:2019 sitúa el diseño centrado en las personas a lo largo del ciclo de vida. Esto permite revisar no sólo la apariencia, sino el contexto, las necesidades, las soluciones y su evaluación. Una prueba puede revelar que hace falta cambiar una regla o una promesa, no solamente mover un botón."
+    },
+    {
+      "id": "N09-s05-b005",
+      "text": "Cuando una interfaz funciona en el recorrido normal y deja sin salida ante una excepción, la tarea no está completamente resuelta. Necesitamos pruebas que lleguen hasta el resultado y la recuperación, con los límites de cada evaluación claramente expresados."
+    },
+    {
+      "id": "N09-s05-b006",
+      "text": "UI y UX: una distinción concreta"
+    },
+    {
+      "id": "N09-s05-b007",
+      "text": "La UI, interfaz de usuario, es aquello con lo que la persona interactúa: controles, textos, pantallas, estados y respuestas. En una reserva, incluye dónde se eligen fechas, cómo se muestran opciones y qué mensaje aparece al confirmar. Su claridad puede evitar errores importantes."
+    },
+    {
+      "id": "N09-s05-b008",
+      "text": "La UX, experiencia de usuario, abarca lo que la persona percibe y vive alrededor del uso. Incluye expectativas previas, comprensión, confianza, esfuerzo, resultado y lo que sucede después. En el hotel, no termina al presionar confirmar: continúa con la llegada y con la respuesta cuando algo no coincide con lo prometido."
+    },
+    {
+      "id": "N09-s05-b009",
+      "text": "Una buena UI puede contribuir a una buena experiencia. No puede asegurarla por sí sola. Si el mensaje «habitación confirmada» se apoya en un estado que no considera Mantenimiento, la claridad del mensaje hace más comprensible una promesa defectuosa. Ahí el problema no se soluciona sólo con diseño visual."
+    },
+    {
+      "id": "N09-s05-b010",
+      "text": "También ocurre lo contrario: una promesa válida puede estar mal expresada. Si los datos y la operación son correctos, pero nadie encuentra cómo cambiar la fecha, una intervención de interfaz puede ser suficiente. Ampliar la mirada no obliga a convertir cada problema en una transformación total. Ayuda a localizar dónde hace falta intervenir."
+    },
+    {
+      "id": "N09-s05-b011",
+      "text": "Otras funciones de diseño, sin mezclarlas"
+    },
+    {
+      "id": "N09-s05-b012",
+      "text": "El diseño de interacción decide cómo se relacionan las acciones y respuestas. ¿Qué puedo hacer ahora? ¿Qué cambió al confirmar? ¿Puedo volver atrás? Una pantalla puede ser atractiva y no dejar claras esas relaciones."
+    },
+    {
+      "id": "N09-s05-b013",
+      "text": "La arquitectura de información organiza contenidos para que puedan encontrarse y comprenderse. Si las condiciones de una reserva están repartidas entre lugares difíciles de relacionar, no alcanza con escribirlas correctamente. El diseño de contenido decide qué decir, en qué momento y con qué precisión: «datos enviados» no significa lo mismo que «habitación disponible»."
+    },
+    {
+      "id": "N09-s05-b014",
+      "text": "El diseño de servicios conecta esos puntos de contacto con personas, procesos, datos y responsabilidades que sostienen la promesa. Pregunta cómo llega una confirmación a la operación y quién puede reparar si falla. La accesibilidad atraviesa estas decisiones: no es un servicio de corrección que aparece cuando todo lo demás terminó."
+    },
+    {
+      "id": "N09-s05-b015",
+      "text": "Garrett (2011) distingue decisiones de estrategia, alcance, estructura, organización de la interfaz y superficie. Esa distinción permite preguntar en qué nivel nació una dificultad. No hace falta tomarla como una secuencia rígida. Su utilidad aquí es evitar que una decisión de apariencia intente reparar una incoherencia de propósito."
+    },
+    {
+      "id": "N09-s05-b016",
+      "text": "Scolari (2018) invita a comprender la interfaz como una red de relaciones. El tablero del hotel no sólo muestra habitaciones: hace visibles ciertas diferencias, permite algunas acciones y distribuye responsabilidades. Modificar qué estados admite puede cambiar el trabajo aunque ningún manual se haya actualizado todavía."
+    },
+    {
+      "id": "N09-s05-b017",
+      "text": "Cada función necesita evidencia adecuada. Una inspección puede encontrar un control confuso; una prueba de búsqueda, una organización difícil; un episodio, una promesa incumplida; la observación, un apoyo interno que falta. Una única puntuación de satisfacción no explica todas esas capas."
+    },
+    {
+      "id": "N09-s05-b018",
+      "text": "La llegada empieza antes y termina después del formulario"
+    },
+    {
+      "id": "N09-s05-b019",
+      "text": "El recorrido de alojamiento puede incluir búsqueda, comparación, reserva, confirmación, preparación, llegada, estancia, soporte y salida. No todos los casos pasan por los mismos canales ni en el mismo orden. El análisis necesita identificar qué transiciones importan para la pregunta que estamos estudiando."
+    },
+    {
+      "id": "N09-s05-b020",
+      "text": "En cada transición podemos relacionar cuatro cosas: qué intenta conseguir la persona, qué señal recibe, qué acción debe realizar y qué trabajo permite continuar. Después agregamos qué falla puede interrumpirla y qué alternativa existe. No dibujamos todo por costumbre; seleccionamos relaciones que ayuden a comprender o decidir."
+    },
+    {
+      "id": "N09-s05-b021",
+      "text": "Un mapa que sólo dice «se siente frustrada» identifica una experiencia, pero no explica qué la produce. Un mapa que sólo enumera tareas internas puede olvidar si alguien recibió lo prometido. El mapa útil conecta ambos lados: una regla, un estado o una dependencia con la consecuencia que vive la persona."
+    },
+    {
+      "id": "N09-s05-b022",
+      "text": "En el check-in digital del hotel, cuatro pantallas pueden funcionar bien y dejar abiertos un beneficio corporativo, una categoría de habitación o una hora de acceso. La tarea no consiste en sumar pantallas para cada problema. Consiste en distinguir qué se completó, qué sigue pendiente y quién tiene capacidad para resolverlo."
+    },
+    {
+      "id": "N09-s05-b023",
+      "text": "Accesibilidad digital y acceso al servicio"
+    },
+    {
+      "id": "N09-s05-b024",
+      "text": "Una barrera puede estar en el contenido, en una interacción, en el dispositivo requerido o en el proceso posterior. Un botón legible no ayuda si la única opción exige un documento que la persona no posee. Un formulario compatible con lector de pantalla no garantiza que la habitación prometida sea adecuada."
+    },
+    {
+      "id": "N09-s05-b025",
+      "text": "Las [WCAG 2.2 del W3C](https://www.w3.org/TR/WCAG22/) ofrecen criterios verificables para contenido web. Son una referencia esencial, pero no cubren todas las necesidades ni certifican por sí solas el servicio completo. La propia recomendación aclara ese alcance. Cumplimiento web y acceso al resultado deben estudiarse de manera relacionada, sin confundirlos."
+    },
+    {
+      "id": "N09-s05-b026",
+      "text": "Los [principios de accesibilidad del W3C](https://www.w3.org/WAI/fundamentals/accessibility-principles/) permiten ordenar preguntas sobre percepción, operación, comprensión y compatibilidad. A eso, en un servicio como el hotel, debemos sumar datos confiables, continuidad física, ayuda y alternativas efectivas. Una falla en cualquiera de esos tramos puede impedir llegar al resultado."
+    },
+    {
+      "id": "N09-s05-b027",
+      "text": "La barrera no es siempre permanente ni igual para todas las personas. Una lesión temporal, una conexión inestable, ruido, estrés o un dispositivo compartido pueden cambiar lo que alguien puede hacer en ese momento. Diseñar sólo para una situación ideal deja afuera diferencias previsibles."
+    },
+    {
+      "id": "N09-s05-b028",
+      "text": "Atributos verificables en lugar de una etiqueta vaga"
+    },
+    {
+      "id": "N09-s05-b029",
+      "text": "«Habitación accesible» puede significar cosas distintas. Una persona necesita una ducha sin desnivel; otra, cierta circulación alrededor de la cama; otra, información o asistencia en un formato específico. Una etiqueta general no permite confirmar que se cumple cada necesidad."
+    },
+    {
+      "id": "N09-s05-b030",
+      "text": "El hotel necesita datos concretos y verificables, con procedencia y vigencia. Qué atributo se comprobó, quién lo hizo, cuándo y qué restricción sigue pendiente. También necesita una forma proporcionada de que la persona indique lo que requiere, sin pedir información personal innecesaria."
+    },
+    {
+      "id": "N09-s05-b031",
+      "text": "Esto cambia tanto datos como responsabilidades. ¿Quién revisa físicamente? ¿Quién actualiza después de una reparación? ¿Qué se comunica si falta una medición? ¿Quién confirma para una reserva particular? La respuesta no puede quedar librada a una frase comercial o a la seguridad con que un asistente escribe."
+    },
+    {
+      "id": "N09-s05-b032",
+      "text": "Una base de conocimiento vaga no se vuelve precisa porque una IA produzca lenguaje fluido. Si sólo contiene «adaptada», el modelo no tiene evidencia para prometer una ducha sin borde. El diseño debe permitir reconocer la incertidumbre y resolverla antes de convertirla en compromiso."
+    },
+    {
+      "id": "N09-s05-b033",
+      "text": "Primera aplicación de HH-09: el primer bloqueo ocurre antes de llegar"
+    },
+    {
+      "id": "N09-s05-b034",
+      "text": "HH-09 comienza con una persona que necesita saber si hay una habitación compatible y disponible. Para este recorrido importan la ausencia de escalones en ciertos tramos, la ducha y el espacio de circulación. El sitio ofrece solamente la etiqueta «adaptada»."
+    },
+    {
+      "id": "N09-s05-b035",
+      "text": "La persona no puede comparar con esa información y llama. Recepción consulta una planilla que no comparte todos los estados de Mantenimiento. La llamada es una alternativa formal, pero todavía no asegura una respuesta confiable. Se repiten necesidades, se espera y puede terminar confirmándose algo que sigue sin verificarse."
+    },
+    {
+      "id": "N09-s05-b036",
+      "text": "El costo incluye tiempo, esfuerzo y exposición de información. No desaparece porque el hotel haya atendido amablemente. HH-09 lo registra para evaluar el sistema, no para atribuir la dificultad a la persona que necesita atributos específicos."
+    },
+    {
+      "id": "N09-s05-b037",
+      "text": "Hay al menos dos explicaciones que debemos distinguir. Quizá los atributos están comprobados y se comunican mal. O quizá el problema está en la actualización y disponibilidad, de modo que una pantalla más clara seguiría prometiendo algo incierto. La investigación conserva ambas antes de elegir una solución."
+    },
+    {
+      "id": "N09-s06-h2",
+      "text": "Movimiento 2 · Diseñar con diversidad y comprender la adopción"
+    },
+    {
+      "id": "N09-s06-b001",
+      "text": "No usar no significa automáticamente resistirse"
+    },
+    {
+      "id": "N09-s06-b002",
+      "text": "Una herramienta nueva puede registrar poco uso por razones muy distintas. Puede ser difícil aprenderla, duplicar tareas, no contemplar excepciones, fallar sin conexión o crear responsabilidades que el personal no puede asumir. También puede ser poco útil para el problema que prometía resolver."
+    },
+    {
+      "id": "N09-s06-b003",
+      "text": "La capacitación ayuda cuando falta conocimiento. No arregla una integración defectuosa, una regla incompatible ni una carga imposible de sostener. Llamar «resistencia al cambio» a cualquier falta de uso detiene la investigación justo donde debería comenzar."
+    },
+    {
+      "id": "N09-s06-b004",
+      "text": "La adopción es la incorporación sostenida de una solución a la vida o al trabajo de manera que permita obtener un resultado. No es simplemente iniciar sesión, activar una cuenta o cumplir una orden durante la primera semana. Puede haber actividad sin utilidad y utilidad sin uso uniforme de todas las funciones."
+    },
+    {
+      "id": "N09-s06-b005",
+      "text": "Rogers (2003) estudia la difusión de innovaciones considerando tiempo, comunicación y sistema social. En N09 usamos esa mirada sin suponer que expandirse demuestre conveniencia. Una herramienta puede difundirse por obligación o porque se cerraron alternativas. Todavía hay que revisar qué resultados y cargas produce."
+    },
+    {
+      "id": "N09-s06-b006",
+      "text": "Las personas también modifican la tecnología: configuran, combinan herramientas y crean usos no previstos. Esa apropiación puede revelar una capacidad útil o introducir riesgo. Como mostró N08, hay que investigar su función antes de prohibirla o incorporarla sin revisión."
+    },
+    {
+      "id": "N09-s06-b007",
+      "text": "Mirar a quienes no llegaron a entrar"
+    },
+    {
+      "id": "N09-s06-b008",
+      "text": "Si medimos sólo usuarios activos, perdemos a quienes no pudieron registrarse, no tienen el dispositivo requerido o desistieron antes. Una tasa alta dentro del canal puede convivir con exclusión fuera del canal."
+    },
+    {
+      "id": "N09-s06-b009",
+      "text": "Imaginemos una inscripción universitaria que se volvió exclusivamente digital. El porcentaje de trámites digitales sube porque ya no existe papel. Eso no permite saber cuántos estudiantes elegibles quedaron bloqueados. Necesitamos una forma de reconocer el recorrido no completado, no sólo los casos que ingresaron al sistema."
+    },
+    {
+      "id": "N09-s06-b010",
+      "text": "En el hotel, una persona sin batería puede quedar fuera del check-in móvil aunque la mayoría lo use con éxito. Mantener asistencia no es necesariamente un fracaso de digitalización. Puede ser una parte deliberada del servicio. Debe contar con recursos y calidad, no existir sólo como enlace al final de la pantalla."
+    },
+    {
+      "id": "N09-s06-b011",
+      "text": "El no uso también puede ser una elección razonable. Si una tarea es rara, sensible o requiere negociación, una persona puede preferir apoyo humano. El diseño tiene que distinguir falta de acceso, falta de utilidad, desconfianza y preferencia antes de tratar todo como un mismo problema de adopción."
+    },
+    {
+      "id": "N09-s06-b012",
+      "text": "Diseñar condiciones, no un personaje promedio"
+    },
+    {
+      "id": "N09-s06-b013",
+      "text": "Las diferencias relevantes no se reducen a edad o profesión. Para una tarea puede importar usar teclado, no tener acceso visual continuo, necesitar más tiempo, trabajar sin conexión o recibir asistencia de otra persona. Esas condiciones pueden combinarse y cambiar."
+    },
+    {
+      "id": "N09-s06-b014",
+      "text": "Construir un «usuario promedio» puede ocultarlas. Segmentar en exceso también puede fijar estereotipos: no toda persona de una edad usa igual un dispositivo ni toda discapacidad implica la misma necesidad. Conviene especificar capacidades, tareas y condiciones para diseñar y probar."
+    },
+    {
+      "id": "N09-s06-b015",
+      "text": "El diseño universal busca ampliar quiénes pueden usar una solución sin requerir adaptaciones individuales para cada caso. No elimina necesidades específicas ni la posibilidad de ajustes. Tampoco justifica prometer compatibilidad total cuando no existe evidencia."
+    },
+    {
+      "id": "N09-s06-b016",
+      "text": "Una alternativa tiene que permitir un resultado comparable con trato digno. No siempre tendrá exactamente la misma forma o duración, pero no debe descargar sistemáticamente esperas, costos y explicaciones sobre quienes encuentran una barrera. Un teléfono que nadie atiende no es una alternativa efectiva."
+    },
+    {
+      "id": "N09-s06-b017",
+      "text": "Lazar, Goldstein y Taylor (2015) relacionan accesibilidad con procesos y políticas. Esto ayuda a entender por qué no alcanza con corregir una pantalla una vez: hay que sostener contenido, pruebas, soporte, compras y cambios posteriores. La capacidad puede perderse si la organización no la mantiene."
+    },
+    {
+      "id": "N09-s06-b018",
+      "text": "La fricción no es siempre el enemigo"
+    },
+    {
+      "id": "N09-s06-b019",
+      "text": "Fricción es el esfuerzo, demora o dificultad de un recorrido. Puede ser innecesaria: cargar otra vez un dato que el sistema ya tiene, buscar reglas contradictorias o esperar sin saber qué falta. También puede cumplir una función de protección."
+    },
+    {
+      "id": "N09-s06-b020",
+      "text": "Antes de cancelar una reserva, una confirmación clara puede evitar una acción accidental. Ante una identidad incierta, una comprobación puede proteger a la persona. Una revisión independiente puede ser necesaria para una decisión de alto impacto. El objetivo no es quitar todos los pasos, sino justificar los que se mantienen."
+    },
+    {
+      "id": "N09-s06-b021",
+      "text": "Norman (2013) ayuda a pensar señales y restricciones que vuelven comprensibles las acciones y sus consecuencias. Una protección mal diseñada puede agregar dificultad sin evitar el error previsto. La pregunta no es sólo si existe una confirmación, sino si permite comprender y corregir antes de actuar."
+    },
+    {
+      "id": "N09-s06-b022",
+      "text": "Hay que revisar quién soporta la carga y qué riesgo se reduce. Una comprobación de seguridad que exige una acción inaccesible necesita otra forma de cumplir su función. Accesibilidad y protección no se resuelven declarando que una siempre debe sacrificarse por la otra. El diseño debe buscar opciones y reconocer límites reales."
+    },
+    {
+      "id": "N09-s06-b023",
+      "text": "Incentivos que vuelven difícil usar bien la herramienta"
+    },
+    {
+      "id": "N09-s06-b024",
+      "text": "Un sistema puede pedir registrar excepciones mientras la evaluación de desempeño premia cerrar rápido. El personal recibe dos mensajes incompatibles: documentá con cuidado y no tardes. Si se evita el registro, no alcanza con una campaña para mejorar adopción."
+    },
+    {
+      "id": "N09-s06-b025",
+      "text": "Algo parecido ocurre si cada corrección a una recomendación automática se cuenta como error del operador. Las personas pueden dejar de corregir para no perjudicar su indicador. La métrica influye en la conducta que después se presenta como uso exitoso."
+    },
+    {
+      "id": "N09-s06-b026",
+      "text": "Costanza-Chock (2020) permite preguntar quién define el problema, quién obtiene beneficios y quién soporta el costo. Una herramienta puede dar a Dirección más visibilidad y exigir a Recepción más carga sin devolverle información útil. Esa distribución merece examen, no una explicación genérica sobre resistencia."
+    },
+    {
+      "id": "N09-s06-b027",
+      "text": "También hay que comparar contextos de manera justa. El volumen de un turno con muchas excepciones no puede interpretarse igual que el de otro con casos simples y más apoyo. Una diferencia en resultados abre preguntas; no prueba automáticamente menor compromiso o capacidad."
+    },
+    {
+      "id": "N09-s06-b028",
+      "text": "Preparar la transición y no mantener dos trabajos para siempre"
+    },
+    {
+      "id": "N09-s06-b029",
+      "text": "Si una planilla sostiene una función importante, retirarla exige trasladar esa función y la información necesaria. Hay que probar excepciones, preparar al equipo y ofrecer ayuda. Un anuncio de lanzamiento no reemplaza ese trabajo."
+    },
+    {
+      "id": "N09-s06-b030",
+      "text": "Durante un tiempo puede ser razonable mantener dos circuitos. Pero la doble carga indefinida crea esfuerzo y versiones divergentes. El plan necesita condiciones para retirar la práctica anterior cuando la nueva demuestre que cumple, y condiciones para retirar o limitar una función nueva si no aporta."
+    },
+    {
+      "id": "N09-s06-b031",
+      "text": "La transición requiere capacidad adicional: aprender, corregir datos y ayudar a otras personas lleva tiempo. Si se exige productividad plena desde el primer día, pueden aparecer atajos que oculten dificultades. La adopción se evalúa a lo largo del tiempo, después de la novedad y del acompañamiento intensivo."
+    },
+    {
+      "id": "N09-s06-b032",
+      "text": "También importa la experiencia de quien atiende. Una interfaz cordial sobre procesos fragmentados puede obligar al personal a disculparse, buscar información y absorber conflictos durante toda la jornada. Mejorar al huésped no debería significar invisibilizar esa carga; tampoco el bienestar interno justifica trasladarla sin más al huésped. Hay que diseñar el servicio completo."
+    },
+    {
+      "id": "N09-s06-b033",
+      "text": "Probar tareas completas y condiciones diferentes"
+    },
+    {
+      "id": "N09-s06-b034",
+      "text": "Una revisión automática puede encontrar ciertos errores técnicos. No puede por sí sola determinar si se comprende una penalidad, si la asistencia responde o si la habitación prometida está disponible. La estrategia combina revisión de criterios, pruebas manuales, tecnologías asistivas, personas y seguimiento de excepciones."
+    },
+    {
+      "id": "N09-s06-b035",
+      "text": "Las tareas deben tener un resultado. Navegar con lector de pantalla no demuestra que sea posible completar una reserva y corregirla. Acceder con teclado a los controles no demuestra que el estado de una solicitud se comunique bien. Hay que seguir lo que la persona necesita conseguir."
+    },
+    {
+      "id": "N09-s06-b036",
+      "text": "Las personas participantes no son representantes universales de una categoría. Su tiempo, condiciones y compensación deben tratarse adecuadamente. Una sesión sirve para aprender sobre esos usos; no autoriza afirmar que se cubrieron todas las necesidades de una comunidad."
+    },
+    {
+      "id": "N09-s06-b037",
+      "text": "También se prueban fallas controladas, sin exponer a alguien a un daño para obtener evidencia. Qué ocurre si se pierde conexión, una habitación deja de estar disponible o falta un documento. La recuperación forma parte de la capacidad, no es un detalle que pueda dejarse para después."
+    },
+    {
+      "id": "N09-s06-b038",
+      "text": "Segunda aplicación de HH-09: el canal crece, pero también el esfuerzo"
+    },
+    {
+      "id": "N09-s06-b039",
+      "text": "HH-09 examina el recorrido bajo otra condición: una persona completa la reserva con lector de pantalla y después necesita resolver un cambio porque la habitación compatible quedó fuera de servicio. La prueba digital no termina al enviar datos. Sigue cómo se comunica el cambio, qué información se conserva y quién puede ofrecer una alternativa."
+    },
+    {
+      "id": "N09-s06-b040",
+      "text": "El hotel evitó una llamada inicial, pero ahora la persona debe volver a explicar su necesidad en Recepción. Lucía reconstruye el caso entre el PMS, una planilla y Mantenimiento. El canal digital tiene más actividad, mientras el esfuerzo total puede haber aumentado. Una métrica de uso aislada no detecta esa diferencia."
+    },
+    {
+      "id": "N09-s06-b041",
+      "text": "El equipo compara dos alternativas. Una mantiene el autoservicio y agrega una confirmación comprobable antes del compromiso. La otra limita la promesa automática y deriva temprano a una persona con acceso a datos confiables. No se elige por preferir tecnología o atención humana en abstracto, sino por resultado, carga, tiempo y posibilidad de error."
+    },
+    {
+      "id": "N09-s06-b042",
+      "text": "Durante la prueba se conserva el apoyo de Recepción que hoy evita daños. Su retiro no depende de una fecha promocional, sino de comprobar que la nueva capacidad puede sostener los casos pertinentes. La solución puede cambiar; la necesidad de una alternativa efectiva permanece."
+    },
+    {
+      "id": "N09-s07-h2",
+      "text": "Movimiento 3 · Medir, recuperar y gobernar la experiencia"
+    },
+    {
+      "id": "N09-s07-b001",
+      "text": "Qué medir para no confundir actividad con resultado"
+    },
+    {
+      "id": "N09-s07-b002",
+      "text": "Ninguna métrica cuenta toda la experiencia. La cantidad de formularios enviados puede ser útil, pero no demuestra que las reservas se entiendan o puedan cumplirse. Necesitamos relacionar actividad con resultado, errores y consecuencias."
+    },
+    {
+      "id": "N09-s07-b003",
+      "text": "Podemos observar éxito por tarea y condición, tiempo, variación, abandono, correcciones, ayuda solicitada y reparación. También el esfuerzo que se mueve hacia el personal o hacia quien usa el servicio. No hay que medir todo indiscriminadamente: hay que elegir señales que permitan comprobar la mejora y detectar si otra parte empeora."
+    },
+    {
+      "id": "N09-s07-b004",
+      "text": "La distribución importa. Dos grupos pueden completar el trámite en la misma proporción, pero uno necesitar varias llamadas y repetir datos personales. Un promedio de tiempo favorable puede esconder esperas extremas concentradas en ciertas condiciones. La diferencia no demuestra por sí sola su causa; indica dónde investigar."
+    },
+    {
+      "id": "N09-s07-b005",
+      "text": "Una medida de protección acompaña a la métrica que queremos mejorar. Si buscamos más autoservicio, revisamos también acceso, errores y carga de ayuda. Así evitamos celebrar una mejora conseguida al cerrar alternativas o trasladar trabajo. El indicador principal no debería poder mejorar a costa de aquello que el servicio debe proteger."
+    },
+    {
+      "id": "N09-s07-b006",
+      "text": "No siempre corresponde almacenar atributos personales para medir diferencias. Podemos usar pruebas controladas, revisión de casos y canales de reporte con protección adecuada. La falta de un dato no permite suponer que todas las personas enfrentan la misma experiencia, pero tampoco justifica recolectar información sensible sin necesidad."
+    },
+    {
+      "id": "N09-s07-b007",
+      "text": "Recuperarse también forma parte del diseño"
+    },
+    {
+      "id": "N09-s07-b008",
+      "text": "Todo servicio puede fallar. La diferencia está en si la persona puede reconocer el estado, comprender qué pasó, conservar lo que ya hizo y acceder a una respuesta útil. «Lamentamos las molestias» no repara una reserva por sí solo."
+    },
+    {
+      "id": "N09-s07-b009",
+      "text": "El mensaje debería aclarar qué ocurrió, qué sigue pendiente, quién actuará, qué plazo puede sostenerse y qué alternativa existe. No siempre se conoce de inmediato la solución. Comunicar esa incertidumbre con precisión es más honesto que afirmar que todo está resuelto para mantener una apariencia de simplicidad."
+    },
+    {
+      "id": "N09-s07-b010",
+      "text": "La recuperación requiere autoridad. Si nadie puede cambiar una asignación, corregir un cobro o ofrecer una alternativa, una interfaz de ayuda sólo recibe el problema. Hay que definir quién reconoce el error, quién decide y cómo se evita repetirlo."
+    },
+    {
+      "id": "N09-s07-b011",
+      "text": "La confianza depende de cumplimiento, previsibilidad, honestidad y posibilidad de control. Una reparación clara puede ayudar a recuperarla, pero no convierte en aceptables las fallas evitables. El equipo necesita aprender de los incidentes, no depender de compensaciones permanentes."
+    },
+    {
+      "id": "N09-s07-b012",
+      "text": "Personalizar sin convertir una necesidad en un perfil innecesario"
+    },
+    {
+      "id": "N09-s07-b013",
+      "text": "La IA puede adaptar lenguaje, proponer una ayuda o guiar paso a paso. Eso puede reducir algunas barreras. También puede inferir características, corregir indebidamente nombres o producir respuestas inconsistentes. Personalizar no es bueno por definición: depende de qué capacidad mejora y qué riesgos introduce."
+    },
+    {
+      "id": "N09-s07-b014",
+      "text": "Si alguien informa que necesita una ducha sin desnivel, el hotel debe usar ese dato para atender la necesidad pertinente. No necesita inferir un diagnóstico ni construir un perfil permanente sin justificación. La persona debe conocer qué se adapta y tener opciones cuando la adaptación no sirve."
+    },
+    {
+      "id": "N09-s07-b015",
+      "text": "Una interfaz conversacional puede facilitar una consulta y dificultar otra. Respuestas muy largas, variables o ambiguas pueden complicar la comprensión. Perder contexto obliga a repetir información. Si se deriva a una persona, esa derivación debe conservar lo necesario y respetar el tratamiento acordado de los datos."
+    },
+    {
+      "id": "N09-s07-b016",
+      "text": "El perfil de IA generativa de NIST (Autio et al., 2024) ofrece un marco para revisar riesgos como información inventada, privacidad y dependencia excesiva. En el hotel, eso se traduce en controles concretos: información con fuente y vigencia, límites sobre lo que puede prometerse y una vía real de corrección."
+    },
+    {
+      "id": "N09-s07-b017",
+      "text": "La exposición a IA estudiada por Gmyrek y sus colegas (2025) para la OIT también permite mirar cambios de tareas. Una herramienta puede ahorrar redacción y aumentar verificación. Si el personal necesita revisar excepciones, ese trabajo forma parte del servicio; no debe interpretarse automáticamente como resistencia a la automatización."
+    },
+    {
+      "id": "N09-s07-b018",
+      "text": "Retirar un canal también cambia el servicio"
+    },
+    {
+      "id": "N09-s07-b019",
+      "text": "Cerrar una ventanilla, quitar una ayuda o apagar una planilla no es un detalle administrativo. Puede eliminar la única opción efectiva para ciertos casos. El retiro requiere evidencia, igual que la incorporación de una función nueva."
+    },
+    {
+      "id": "N09-s07-b020",
+      "text": "Hay que comprobar resultado, carga, accesibilidad, soporte, continuidad y recuperación en condiciones pertinentes. También definir quién puede detener o revertir el retiro si aparece una dependencia no identificada. Comunicar antes permite descubrir casos que la medición habitual no mostraba."
+    },
+    {
+      "id": "N09-s07-b021",
+      "text": "Mantener dos circuitos para siempre tampoco es una solución universal. Puede duplicar carga y crear datos contradictorios. Si ocurre, hace falta resolver por qué la alternativa nueva todavía no alcanza, no apagar la anterior sólo para cumplir el calendario."
+    },
+    {
+      "id": "N09-s07-b022",
+      "text": "La transición puede organizarse de forma gradual, pero sin relegar a quienes encuentran barreras a una atención permanentemente inferior. El criterio es un resultado comparable con dignidad y apoyos adecuados. No basta con que la mayoría ya haya migrado."
+    },
+    {
+      "id": "N09-s07-b023",
+      "text": "Esta es parte de la deuda de cambio: tareas, roles, formación y prácticas que quedan desajustados después de un lanzamiento. La adopción sostenible exige atenderla. Una semana de uso intenso acompañada por todo el equipo de proyecto no demuestra cómo funcionará el servicio meses después."
+    },
+    {
+      "id": "N09-s07-b024",
+      "text": "Un mapa que ayude a localizar la barrera"
+    },
+    {
+      "id": "N09-s07-b025",
+      "text": "El mapa de recorrido accesible sigue transiciones: de necesitar alojamiento a poder comparar, de elegir a entender la promesa, de llegar a recibir una habitación compatible, de encontrar un problema a obtener una reparación. Su unidad no es cada pantalla, sino el paso que la persona necesita poder dar."
+    },
+    {
+      "id": "N09-s07-b026",
+      "text": "Para cada transición usamos ocho campos: propósito, condiciones, señal visible, acción requerida, trabajo de apoyo, evidencia, posible falla y alternativa con reparación. Son preguntas para comprender, no una obligación de llenar casillas con frases abstractas."
+    },
+    {
+      "id": "N09-s07-b027",
+      "text": "Campo"
+    },
+    {
+      "id": "N09-s07-b028",
+      "text": "Pregunta en la reserva del hotel"
+    },
+    {
+      "id": "N09-s07-b029",
+      "text": "Propósito"
+    },
+    {
+      "id": "N09-s07-b030",
+      "text": "¿Puede saber si la habitación permite el uso que necesita?"
+    },
+    {
+      "id": "N09-s07-b031",
+      "text": "Condiciones"
+    },
+    {
+      "id": "N09-s07-b032",
+      "text": "¿Qué atributos, medios de interacción o apoyos cambian el recorrido?"
+    },
+    {
+      "id": "N09-s07-b033",
+      "text": "Señal visible"
+    },
+    {
+      "id": "N09-s07-b034",
+      "text": "¿El sitio ofrece un dato verificado o una etiqueta general?"
+    },
+    {
+      "id": "N09-s07-b035",
+      "text": "Acción requerida"
+    },
+    {
+      "id": "N09-s07-b036",
+      "text": "¿Debe reservar, consultar, repetir información o esperar?"
+    },
+    {
+      "id": "N09-s07-b037",
+      "text": "Trabajo de apoyo"
+    },
+    {
+      "id": "N09-s07-b038",
+      "text": "¿Quién comprueba atributos y disponibilidad?"
+    },
+    {
+      "id": "N09-s07-b039",
+      "text": "Evidencia"
+    },
+    {
+      "id": "N09-s07-b040",
+      "text": "¿Qué registro respalda la confirmación y cuándo se actualizó?"
+    },
+    {
+      "id": "N09-s07-b041",
+      "text": "Posible falla"
+    },
+    {
+      "id": "N09-s07-b042",
+      "text": "¿Qué pasa si el atributo no existe o cambia el estado?"
+    },
+    {
+      "id": "N09-s07-b043",
+      "text": "Alternativa y reparación"
+    },
+    {
+      "id": "N09-s07-b044",
+      "text": "¿Quién puede ofrecer una opción adecuada y cómo se conserva el contexto?"
+    },
+    {
+      "id": "N09-s07-b045",
+      "text": "La primera versión puede construirse en una reunión y servir para formular preguntas. No debe confundirse con un mapa validado por esa sola razón. Se contrasta con episodios, pruebas y personas. Cada corrección debería mostrar qué supuesto cambió y qué decisión afecta."
+    },
+    {
+      "id": "N09-s07-b046",
+      "text": "Si el mapa sólo se vuelve más vistoso y no permite localizar quién puede actuar, todavía falta trabajo. Su valor no es representar toda la organización, sino relacionar una barrera con las condiciones que la producen y con opciones de intervención."
+    },
+    {
+      "id": "N09-s07-b047",
+      "text": "Un orden de trabajo para investigar antes de optimizar"
+    },
+    {
+      "id": "N09-s07-b048",
+      "text": "Primero definimos qué debe poder hacer la persona y bajo qué condiciones. «Mejorar experiencia» es demasiado amplio para comprobar. «Comprender si la habitación es compatible antes de comprometer la reserva» ofrece una pregunta más concreta, aunque luego deba precisarse con evidencia."
+    },
+    {
+      "id": "N09-s07-b049",
+      "text": "Después reconstruimos episodios completos, incluyendo abandonos, excepciones y reparaciones. Buscamos especialmente casos en que el sistema informó éxito y la persona no obtuvo el resultado. Esos casos muestran dónde una definición interna dejó fuera parte del servicio."
+    },
+    {
+      "id": "N09-s07-b050",
+      "text": "El tercer paso es relacionar cada transición con señal, datos, trabajo, autoridad y alternativa. Una línea que une dos áreas dice poco si no explica qué compromiso circula. «Recepción confirma con atributos verificados y un estado vigente» puede discutirse y probarse; «Recepción conectada a Operaciones» es sólo un rótulo."
+    },
+    {
+      "id": "N09-s07-b051",
+      "text": "Luego probamos diversidad y recuperación. Elegimos condiciones relevantes sin pretender representar a todas las personas con una sola sesión. Las fallas se ensayan de manera controlada. Los escenarios deben permitir aprender sin convertir a participantes en quienes pagan el costo de descubrir un riesgo evitable."
+    },
+    {
+      "id": "N09-s07-b052",
+      "text": "El quinto paso mira distribución: quién ahorra tiempo, quién agrega trabajo, quién obtiene autonomía y quién queda con más responsabilidad sin autoridad. Una mejora agregada puede ocultar una carga desproporcionada. Debe revisarse como parte del resultado."
+    },
+    {
+      "id": "N09-s07-b053",
+      "text": "Finalmente decidimos continuar, modificar, limitar, investigar más o retirar. Dejamos señales de seguimiento, responsable de reparación y condiciones de revisión. Este orden no sustituye estándares ni técnicas especializadas. Los conecta con una capacidad concreta que el servicio debe sostener."
+    },
+    {
+      "id": "N09-s07-b054",
+      "text": "2026: estándares y nuevas interfaces, con alcance claro"
+    },
+    {
+      "id": "N09-s07-b055",
+      "text": "WCAG 2.2 fue adoptada como [ISO/IEC 40500:2025](https://www.iso.org/standard/91029.html). La referencia ayuda a evaluar contenido web mediante criterios comprobables. No debe presentarse como una certificación automática de toda experiencia, proceso físico o promesa comercial."
+    },
+    {
+      "id": "N09-s07-b056",
+      "text": "La evaluación digital puede incluir, entre otros aspectos, visibilidad del foco, formas alternativas a ciertos gestos, ayuda y autenticación accesible. Los requisitos concretos, niveles y excepciones se consultan en el estándar, no en una lista resumida que reemplace su lectura. En N09 importa comprender qué problema ayuda a evaluar cada criterio y qué queda fuera de su alcance."
+    },
+    {
+      "id": "N09-s07-b057",
+      "text": "La bibliografía incorpora también la Directiva europea 2019/882 y el Reglamento europeo de IA 2024/1689. Son referencias sobre responsabilidad y condiciones de diseño, no normas que debamos declarar aplicables a cualquier organización por atender turistas o comprar una plataforma. Su aplicación concreta depende del ámbito y del caso, y requiere revisar los textos vigentes y la normativa pertinente."
+    },
+    {
+      "id": "N09-s07-b058",
+      "text": "Las interfaces conversacionales agregan posibilidades y dificultades. Pueden guiar con lenguaje natural o traducir contenido. También pueden responder con variaciones, perder contexto o confirmar algo sin datos suficientes. Informar que se conversa con IA no resuelve por sí solo esas barreras."
+    },
+    {
+      "id": "N09-s07-b059",
+      "text": "La evaluación debe seguir el recorrido: si la respuesta se comprende, si puede cuestionarse, si una acción importante se confirma de manera adecuada y si la derivación humana funciona. La inteligencia aparente de la conversación no compensa datos sin verificar ni una operación sin alternativas."
+    },
+    {
+      "id": "N09-s07-b060",
+      "text": "Tercera aplicación de HH-09: una promesa que nadie comprobó"
+    },
+    {
+      "id": "N09-s07-b061",
+      "text": "En este episodio del caso, la huésped se llama Marina. Es una persona distinta de Camila Duarte, la gerente comercial del hotel. Marina organiza un viaje de trabajo y necesita una ruta sin escalones desde la entrada, espacio lateral junto a la cama y una ducha sin borde."
+    },
+    {
+      "id": "N09-s07-b062",
+      "text": "El sitio muestra un símbolo de accesibilidad. El asistente responde que hay habitaciones adaptadas. Marina vuelve a preguntar por la ducha y recibe una afirmación general sobre la preparación del hotel para todos los huéspedes. Interpreta que la necesidad quedó confirmada y completa la reserva."
+    },
+    {
+      "id": "N09-s07-b063",
+      "text": "Al llegar, la habitación asignada tiene barras, pero también un desnivel de doce centímetros en la ducha. Otra habitación tiene los atributos requeridos, aunque está bloqueada por una falla de cerradura en un registro que el PMS no presenta de la misma manera. Este es un episodio posterior y distinto del problema de baño seguido en HH-08: la continuidad está en cómo circulan restricciones, no en suponer que todas las fallas son una sola."
+    },
+    {
+      "id": "N09-s07-b064",
+      "text": "Lucía consulta a Housekeeping y Mantenimiento. Mientras tanto, el asistente sigue ofreciendo una disponibilidad basada en la etiqueta comercial. La herramienta respondió a lo que pudo leer, pero formuló una seguridad que esos datos no permitían sostener."
+    },
+    {
+      "id": "N09-s07-b065",
+      "text": "Conviene separar cuatro problemas. El primero es de significado: «adaptada» reúne atributos diferentes. El segundo es de procedencia: no está claro quién verificó esos atributos y cuándo. El tercero es de actualización entre canales: un bloqueo no llega a todas las decisiones. El cuarto es de autoridad: se confirmó una promesa que nadie había respaldado para esa reserva."
+    },
+    {
+      "id": "N09-s07-b066",
+      "text": "Una modificación visual puede ayudar a mostrar atributos, pero no resuelve por sí sola los otros problemas. Tampoco alcanza con pedir al asistente que sea más amable o más prudente. Hace falta una fuente estructurada, actualización, reglas sobre qué puede confirmarse y una persona o proceso con capacidad de resolver lo pendiente."
+    },
+    {
+      "id": "N09-s07-b067",
+      "text": "Una respuesta mejor no necesita fingir certeza. Puede explicar qué atributos están verificados y aclarar que la disponibilidad para esas fechas aún requiere confirmación. Debe ofrecer un plazo y un responsable que el hotel pueda sostener. De nada sirve cambiar la frase si la confirmación prometida no tiene detrás trabajo y autoridad."
+    },
+    {
+      "id": "N09-s07-b068",
+      "text": "El piloto propuesto en HH-09 abarca tres habitaciones y cinco atributos críticos durante cuatro semanas. Es un alcance didáctico, no una garantía universal. Se registra quién verifica, se comprueba el tratamiento de bloqueos y se limita lo que el asistente puede prometer. Se observan tiempo, errores, esfuerzo y reparaciones."
+    },
+    {
+      "id": "N09-s07-b069",
+      "text": "Si la información no se mantiene vigente o el apoyo humano no responde dentro de lo acordado, se suspende esa promesa automática y se revisa el proceso. La prueba no termina necesariamente en ampliar. Puede mostrar que conviene reducir automatización o cambiar responsabilidades antes de continuar."
+    },
+    {
+      "id": "N09-s07-b070",
+      "text": "Tres explicaciones que llevan a intervenciones distintas"
+    },
+    {
+      "id": "N09-s07-b071",
+      "text": "La primera explicación dice que los datos son buenos, pero se comunican mal. Se fortalecería si mostrar atributos claros y permitir compararlos evita los errores bajo condiciones equivalentes. La intervención principal estaría en contenido, selección e interfaz."
+    },
+    {
+      "id": "N09-s07-b072",
+      "text": "La segunda dice que los atributos se conocen, pero disponibilidad y bloqueos no se coordinan. Se fortalecería si las promesas fallan después de una confirmación inicialmente correcta. La intervención tendría que revisar estados, actualización y autoridad de asignación."
+    },
+    {
+      "id": "N09-s07-b073",
+      "text": "La tercera dice que la organización incentiva confirmar más de lo que puede asegurar. En ese caso, datos e interfaz pueden ser insuficientes sin revisar políticas comerciales, reglas y reparación. La investigación debe buscar evidencia antes de atribuir esa conducta; no se deduce de un único mensaje defectuoso."
+    },
+    {
+      "id": "N09-s07-b074",
+      "text": "Las explicaciones pueden coexistir. Distinguirlas impide presentar un rediseño visual como solución total. También permite no reemplazar toda la plataforma si una intervención más acotada, bien respaldada, puede sostener el resultado."
+    },
+    {
+      "id": "N09-s07-b075",
+      "text": "Elena Acosta debe asegurar que la promesa institucional sea defendible. Lucía conoce el costo de reparar frente al huésped. Ricardo Sosa necesita que la operación pueda entregar la habitación. Federico distingue transmisión de datos, significado y autoridad. Mariela aporta condiciones reales de las habitaciones y Camila revisa cómo se ofrece el servicio. Ninguna perspectiva puede sustituir a todas las demás."
+    },
+    {
+      "id": "N09-s07-b076",
+      "text": "Caso de transferencia: inscripción universitaria"
+    },
+    {
+      "id": "N09-s07-b077",
+      "text": "Imaginemos una universidad que digitaliza la inscripción. El portal tiene buen contraste, pero sólo acepta un documento que algunos estudiantes extranjeros no poseen. Expira antes de que puedan reunir lo pedido y usa mensajes normativos difíciles de interpretar. El sistema informa que el 95 % de los trámites registrados es digital porque se eliminó el papel."
+    },
+    {
+      "id": "N09-s07-b078",
+      "text": "Esa cifra no muestra cuántas personas elegibles no pudieron empezar o terminar. Para evaluar el servicio necesitamos seguir identidad, documentación, comprensión, tiempo, soporte y recuperación. El objetivo no es que la mayoría de los trámites existentes use el portal, sino que quienes tienen derecho a inscribirse puedan hacerlo y entender su estado."
+    },
+    {
+      "id": "N09-s07-b079",
+      "text": "El lenguaje participa de ese resultado. «Solicitud recibida» no equivale a «inscripción confirmada». Si el mensaje no distingue lo que falta, la persona puede creer que terminó y descubrir el problema cuando ya no tiene tiempo de corregir. El contenido debe representar estados reales y ofrecer acciones posibles."
+    },
+    {
+      "id": "N09-s07-b080",
+      "text": "Derivar toda excepción a atención manual puede ser necesario al principio, pero también crear un servicio inferior para ciertos grupos. Hay que estudiar qué casos se repiten y merecen una respuesta mejor integrada. Los restantes necesitan autoridad y seguimiento, no una pantalla que diga contactar sin indicar una opción efectiva."
+    },
+    {
+      "id": "N09-s07-b081",
+      "text": "El ejemplo no exige automatizar toda diversidad. Exige que el canal elegido no borre a quienes no encajan y que las métricas permitan reconocerlo. La alternativa puede ser tecnológica, organizacional o una combinación."
+    },
+    {
+      "id": "N09-s07-b082",
+      "text": "De HH-09 a N10: qué evidencia entregamos"
+    },
+    {
+      "id": "N09-s07-b083",
+      "text": "HH-09 deja un recorrido con barreras y consecuencias localizadas. Para cada transición conserva propósito, condiciones, señal, acción, apoyo, evidencia, posible falla y alternativa con reparación. También registra diferencias de tiempo, esfuerzo, ayuda y error cuando resultan pertinentes."
+    },
+    {
+      "id": "N09-s07-b084",
+      "text": "En el hotel ya sabemos que una etiqueta general no alcanza para confirmar compatibilidad. La promesa puede fallar por significado, vigencia o autoridad, y todavía necesitamos discriminar cuánto aporta cada mecanismo. La carga recae sobre quien necesita atributos específicos y sobre quienes reconstruyen el caso para atenderlo."
+    },
+    {
+      "id": "N09-s07-b085",
+      "text": "Las alternativas incluyen describir atributos, coordinar bloqueos y limitar la confirmación automática. El piloto pequeño permite poner a prueba una combinación sin presentar una solución completa como inevitable. Lo que no se cubrió queda escrito."
+    },
+    {
+      "id": "N09-s07-b086",
+      "text": "N10 decidirá cómo convertir esa evidencia en una formulación del problema y un resultado verificable. N09 no sustituye ese trabajo: impide que empiece desde una pantalla aislada, una métrica de uso o una solución preferida sin conexión con la experiencia completa."
+    },
+    {
+      "id": "N09-s08-h2",
+      "text": "Errores frecuentes"
+    },
+    {
+      "id": "N09-s08-b001",
+      "text": "Reducir UX a apariencia. Una interfaz cuidada importa, pero no asegura que la promesa se cumpla. Hay que seguir qué ocurre después de confirmar."
+    },
+    {
+      "id": "N09-s08-b002",
+      "text": "Tratar accesibilidad como revisión final. Si los datos, reglas o canales excluyen, corregir controles al final puede no alcanzar. La pregunta debe estar presente desde el diseño."
+    },
+    {
+      "id": "N09-s08-b003",
+      "text": "Diseñar para una persona promedio. Las condiciones de uso cambian capacidades. Deben identificarse variaciones pertinentes sin convertirlas en estereotipos."
+    },
+    {
+      "id": "N09-s08-b004",
+      "text": "Medir adopción con cuentas activas. Actividad no demuestra utilidad ni acceso. Puede haber obligación, doble trabajo o personas que ni siquiera pudieron entrar."
+    },
+    {
+      "id": "N09-s08-b005",
+      "text": "Atribuir el no uso a actitud. Antes hay que revisar confianza, carga, excepciones, apoyo y recursos. Capacitar no corrige cualquier falla."
+    },
+    {
+      "id": "N09-s08-b006",
+      "text": "Quitar toda fricción. Algunos pasos evitan errores importantes. Deben diseñarse de manera comprensible y accesible, no retirarse por principio."
+    },
+    {
+      "id": "N09-s08-b007",
+      "text": "Probar sólo cuando todo sale bien. La capacidad de corregir, obtener ayuda y continuar también forma parte del servicio."
+    },
+    {
+      "id": "N09-s08-b008",
+      "text": "Automatizar datos imprecisos. Una respuesta rápida puede convertir una etiqueta vaga en una promesa falsa. La fuente y la autoridad importan tanto como el texto."
+    },
+    {
+      "id": "N09-s08-b009",
+      "text": "Confundir silencio con inclusión. Quien no puede usar un canal quizá tampoco pueda reclamar por él. Hay que investigar los casos que el tablero no recibe."
+    },
+    {
+      "id": "N09-s08-b010",
+      "text": "Celebrar ahorro sin buscar la carga trasladada. El tiempo que una parte ahorra puede reaparecer como repetición, asistencia o reparación en otra."
+    },
+    {
+      "id": "N09-s09-h2",
+      "text": "Consecuencias profesionales"
+    },
+    {
+      "id": "N09-s09-b001",
+      "text": "El profesional tiene que conectar lo visible con aquello que lo sostiene: información, procesos, personas, autoridad y reparación. Eso permite localizar si el cambio necesario está en una etiqueta, una interacción, una regla o una capacidad operativa."
+    },
+    {
+      "id": "N09-s09-b002",
+      "text": "También debe elegir pruebas y métricas que no borren diversidad. Una mejora merece explicarse con sus condiciones y sus límites. No corresponde convertir un buen promedio o una auditoría técnica parcial en una afirmación sobre todo el servicio."
+    },
+    {
+      "id": "N09-s09-b003",
+      "text": "Diseñar implica decidir qué se promete cuando falta información, qué alternativas se mantienen y quién puede corregir. Esas decisiones tienen consecuencias académicas, técnicas y organizacionales. No pertenecen sólo al acabado visual."
+    },
+    {
+      "id": "N09-s10-h2",
+      "text": "Límites y tensiones"
+    },
+    {
+      "id": "N09-s10-b001",
+      "text": "No podemos prever cada situación ni ofrecer una experiencia idéntica a cada persona. Podemos construir capacidades flexibles, identificar límites y mantener alternativas reales. Prometer accesibilidad total sin evidencia puede crear más confianza de la que el servicio merece."
+    },
+    {
+      "id": "N09-s10-b002",
+      "text": "Seguridad, privacidad y acceso pueden plantear tensiones. La tarea es buscar opciones proporcionadas y apoyarse en evaluación especializada cuando corresponda. Una solución no se vuelve aceptable por trasladar toda dificultad al grupo con menos alternativas."
+    },
+    {
+      "id": "N09-s10-b003",
+      "text": "Personalizar puede ayudar y, al mismo tiempo, aumentar información sensible. Debemos pedir y conservar lo necesario para un propósito claro, no recolectar por si algún día sirve. Algunas diferencias pueden investigarse sin crear perfiles permanentes."
+    },
+    {
+      "id": "N09-s10-b004",
+      "text": "La adopción necesita tiempo. Un piloto breve no demuestra sostenibilidad ni cubre automáticamente temporada alta, cambios de personal o casos no observados. La decisión debe señalar cuándo revisar y qué no autoriza todavía."
+    },
+    {
+      "id": "N09-s11-h2",
+      "text": "Una lectura situada desde América Latina"
+    },
+    {
+      "id": "N09-s11-b001",
+      "text": "Freire y Fals Borda ayudan a pensar el diseño con quienes atraviesan el servicio, no sólo para ellos desde una oficina. Participar debe permitir discutir la interpretación y señalar barreras que las categorías del proyecto dejaron afuera. No consiste únicamente en pedir opinión sobre una solución ya cerrada."
+    },
+    {
+      "id": "N09-s11-b002",
+      "text": "En el hotel, una persona puede explicar que «adaptada» no responde lo que necesita saber. Si el equipo insiste en que la categoría oficial es suficiente, la participación no modifica nada. La evidencia mejora cuando puede cambiar también el vocabulario y las reglas con que se describe el problema."
+    },
+    {
+      "id": "N09-s11-b003",
+      "text": "Scolari (2018) permite entender la interfaz como parte de relaciones entre personas e instituciones. Ricaurte (2019) ayuda a examinar cómo los datos y categorías distribuyen visibilidad y poder. Juntas, estas miradas permiten preguntar a quién reconoce el servicio y quién tiene que hacer trabajo adicional para encajar."
+    },
+    {
+      "id": "N09-s11-b004",
+      "text": "Flores orienta la atención hacia compromisos: una confirmación crea expectativas sobre lo que otra persona hará. García (2006) ayuda a relacionar dimensiones del sistema sin reducir el resultado a una sola pieza. Maturana y Varela recuerdan que la descripción depende de quien observa y debe contrastarse con otras perspectivas."
+    },
+    {
+      "id": "N09-s11-b005",
+      "text": "Etkin y Schvarstein permiten pensar identidad y cambio organizacional. Una herramienta nueva no llega a un espacio vacío: encuentra formas de coordinación, reglas y prácticas que pueden modificarse o resistir por razones diferentes. Esto ayuda a investigar adopción sin atribuir cada dificultad a una personalidad poco dispuesta al cambio."
+    },
+    {
+      "id": "N09-s11-b006",
+      "text": "El diálogo con ISO, Norman, Garrett y Costanza-Chock no borra diferencias entre enfoques. Ofrece preguntas complementarias para evaluar una intervención: qué puede hacer una persona, qué barrera encuentra, qué compromiso recibe, quién sostiene el servicio y cómo se decide una corrección."
+    },
+    {
+      "id": "N09-s12-h2",
+      "text": "Síntesis"
+    },
+    {
+      "id": "N09-s12-b001",
+      "text": "UI, experiencia, accesibilidad y adopción están relacionadas, pero no son equivalentes. Una pantalla puede funcionar sin que el servicio cumpla; un canal puede crecer porque no hay otra opción; una ayuda puede existir formalmente y no responder cuando se necesita."
+    },
+    {
+      "id": "N09-s12-b002",
+      "text": "HH-09 sigue una reserva para comprobar atributos, disponibilidad, confirmación y reparación. Así hace visibles barreras que una prueba de pantallas o una tasa de uso dejarían fuera. Las alternativas se comparan por lo que permiten conseguir y por la carga que distribuyen."
+    },
+    {
+      "id": "N09-s12-b003",
+      "text": "La intervención responsable no promete eliminar toda dificultad. Justifica los controles, mejora lo que no aporta, mantiene salidas efectivas y revisa consecuencias. N10 usará esta evidencia para formular qué problema conviene resolver y cómo reconocer un resultado mejor."
+    },
+    {
+      "id": "N09-s13-h2",
+      "text": "Cinco píldoras para recordar"
+    },
+    {
+      "id": "N09-s13-b001",
+      "text": "Completar una pantalla no es completar el servicio. Seguí hasta el resultado y la posible reparación."
+    },
+    {
+      "id": "N09-s13-b002",
+      "text": "Una etiqueta general no reemplaza atributos comprobados. Aclarar qué se sabe evita promesas que nadie puede sostener."
+    },
+    {
+      "id": "N09-s13-b003",
+      "text": "El uso alto puede esconder falta de alternativas. Mirá también a quienes no pudieron empezar o continuar."
+    },
+    {
+      "id": "N09-s13-b004",
+      "text": "No toda fricción sobra. Conservá la función protectora con el menor esfuerzo innecesario posible."
+    },
+    {
+      "id": "N09-s13-b005",
+      "text": "Una alternativa tiene que funcionar de verdad. Debe contar con información, personas y autoridad para ayudar."
+    },
+    {
+      "id": "N09-s14-h2",
+      "text": "Glosario esencial"
+    },
+    {
+      "id": "N09-s14-b001",
+      "text": "UI: controles, textos, estados y respuestas con los que se interactúa. Es una parte visible del sistema, no el servicio completo."
+    },
+    {
+      "id": "N09-s14-b002",
+      "text": "UX: experiencia asociada al uso antes, durante y después. Incluye expectativas, comprensión, esfuerzo y consecuencias."
+    },
+    {
+      "id": "N09-s14-b003",
+      "text": "Accesibilidad: condiciones que permiten participar y usar un servicio sin quedar bloqueado por barreras evitables. En esta lectura se estudia a lo largo del recorrido, además de sus requisitos técnicos específicos."
+    },
+    {
+      "id": "N09-s14-b004",
+      "text": "WCAG: pautas del W3C para evaluar accesibilidad del contenido web. No equivalen a una evaluación completa de toda promesa o entorno físico."
+    },
+    {
+      "id": "N09-s14-b005",
+      "text": "Usabilidad: posibilidad de que personas determinadas alcancen objetivos con eficacia, eficiencia y satisfacción en un contexto definido."
+    },
+    {
+      "id": "N09-s14-b006",
+      "text": "Adopción: incorporación sostenida de una solución al trabajo o a la vida. No se demuestra sólo con activar cuentas."
+    },
+    {
+      "id": "N09-s14-b007",
+      "text": "Fricción: esfuerzo, espera o dificultad de una interacción. Puede agregar una carga innecesaria o cumplir una función de protección."
+    },
+    {
+      "id": "N09-s14-b008",
+      "text": "Ajuste razonable: adaptación necesaria para permitir participación en una situación particular, dentro de las condiciones aplicables. Su alcance jurídico no se determina por esta definición didáctica."
+    },
+    {
+      "id": "N09-s14-b009",
+      "text": "Tecnología asistiva: apoyo como lector de pantalla, control por voz u otras herramientas que permiten interactuar de maneras diferentes."
+    },
+    {
+      "id": "N09-s14-b010",
+      "text": "Recorrido de principio a fin: secuencia desde la necesidad hasta el resultado, incluyendo lo que sucede si algo falla."
+    },
+    {
+      "id": "N09-s14-b011",
+      "text": "Alternativa efectiva: opción realmente disponible para conseguir un resultado adecuado cuando el camino principal no sirve. Un contacto sin respuesta no cumple esa función."
+    },
+    {
+      "id": "N09-s14-b012",
+      "text": "Apropiación: manera en que las personas incorporan y adaptan una herramienta, a veces con usos no previstos. Puede enseñar necesidades y también requerir revisión de riesgos."
+    },
+    {
+      "id": "N09-s15-h2",
+      "text": "Preguntas de preparación"
+    },
+    {
+      "id": "N09-s15-b001",
+      "text": "Una reserva supera una revisión de accesibilidad web, pero promete una habitación incorrecta. ¿Qué se comprobó y qué parte del servicio sigue sin evaluarse?"
+    },
+    {
+      "id": "N09-s15-b002",
+      "text": "Elegí una confirmación que pueda evitar un daño. ¿Qué debería explicar y cómo evitarías que se convierta en una barrera innecesaria?"
+    },
+    {
+      "id": "N09-s15-b003",
+      "text": "Recepción sigue usando una planilla. Proponé dos explicaciones distintas de «resistencia» y qué evidencia permitiría compararlas."
+    },
+    {
+      "id": "N09-s15-b004",
+      "text": "¿Qué información necesitaría Marina para decidir sobre la habitación? Distinguí atributos, disponibilidad y autoridad de confirmación."
+    },
+    {
+      "id": "N09-s15-b005",
+      "text": "¿Cómo podría aumentar la tasa de autoservicio mientras empeora el acceso? Indicá una medida de protección que usarías."
+    },
+    {
+      "id": "N09-s15-b006",
+      "text": "¿Qué trabajo puede trasladar el check-in digital al huésped y al personal? Elegí un episodio para observarlo de principio a fin."
+    },
+    {
+      "id": "N09-s15-b007",
+      "text": "Para el encuentro, respondé dos preguntas y prepará una ficha de HH-09 con una transición, una barrera, quién soporta la carga, una explicación rival y la evidencia que podría hacerte cambiar de decisión. No alcanza con escribir «mejorar UX»: tiene que reconocerse qué podría hacer mejor la persona."
+    },
+    {
+      "id": "N09-s16-h2",
+      "text": "Referencias base"
+    },
+    {
+      "id": "N09-s16-b001",
+      "text": "ISO (2018). ISO 9241-11:2018 Ergonomics of human-system interaction, Part 11: Usability: Definitions and concepts. International Organization for Standardization. https://www.iso.org/standard/63500.html"
+    },
+    {
+      "id": "N09-s16-b002",
+      "text": "ISO (2019). ISO 9241-210:2019 Ergonomics of human-system interaction, Part 210: Human-centred design for interactive systems. International Organization for Standardization. https://www.iso.org/standard/77520.html"
+    },
+    {
+      "id": "N09-s16-b003",
+      "text": "W3C (2024). Web Content Accessibility Guidelines (WCAG) 2.2, W3C Recommendation, 12 December 2024. https://www.w3.org/TR/WCAG22/"
+    },
+    {
+      "id": "N09-s16-b004",
+      "text": "ISO (2025). ISO/IEC 40500:2025 Information technology, W3C Web Content Accessibility Guidelines (WCAG) 2.2. International Organization for Standardization. https://www.iso.org/standard/91029.html"
+    },
+    {
+      "id": "N09-s16-b005",
+      "text": "W3C Web Accessibility Initiative (2024). Accessibility Principles. https://www.w3.org/WAI/fundamentals/accessibility-principles/"
+    },
+    {
+      "id": "N09-s16-b006",
+      "text": "Costanza-Chock, S. (2020). Design Justice: Community-Led Practices to Build the Worlds We Need. MIT Press. https://designjustice.mitpress.mit.edu/"
+    },
+    {
+      "id": "N09-s16-b007",
+      "text": "Lazar, J., Goldstein, D. F., y Taylor, A. (2015). Ensuring Digital Accessibility through Process and Policy. Morgan Kaufmann. https://doi.org/10.1016/C2013-0-13303-2"
+    },
+    {
+      "id": "N09-s16-b008",
+      "text": "Norman, D. A. (2013). The Design of Everyday Things: Revised and Expanded Edition. Basic Books."
+    },
+    {
+      "id": "N09-s16-b009",
+      "text": "Garrett, J. J. (2011). The Elements of User Experience: User-Centered Design for the Web and Beyond, Second Edition. New Riders."
+    },
+    {
+      "id": "N09-s16-b010",
+      "text": "Scolari, C. A. (2018). Las leyes de la interfaz: diseño, ecología, evolución, tecnología. Gedisa."
+    },
+    {
+      "id": "N09-s16-b011",
+      "text": "Rogers, E. M. (2003). Diffusion of Innovations, quinta edición. Free Press."
+    },
+    {
+      "id": "N09-s16-b012",
+      "text": "Suchman, L. A. (2007). Human-Machine Reconfigurations: Plans and Situated Actions. Cambridge University Press. https://doi.org/10.1017/CBO9780511808418"
+    },
+    {
+      "id": "N09-s16-b013",
+      "text": "Parlamento Europeo y Consejo de la Unión Europea (2019). Directiva (UE) 2019/882 sobre los requisitos de accesibilidad de los productos y servicios. https://eur-lex.europa.eu/eli/dir/2019/882/oj"
+    },
+    {
+      "id": "N09-s16-b014",
+      "text": "Parlamento Europeo y Consejo de la Unión Europea (2024). Reglamento (UE) 2024/1689 por el que se establecen normas armonizadas en materia de inteligencia artificial. https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+    },
+    {
+      "id": "N09-s16-b015",
+      "text": "Autio, C., Schwartz, R., Dunietz, J., Jain, S., Stanley, M., Tabassi, E., Hall, P., y Roberts, K. (2024). Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile, NIST AI 600-1. National Institute of Standards and Technology. https://doi.org/10.6028/NIST.AI.600-1"
+    },
+    {
+      "id": "N09-s16-b016",
+      "text": "Gmyrek, P., Berg, J., Kamiński, K., Konopczyński, F., Ładna, A., Nafradi, B., Rosłaniec, K., y Troszyński, M. (2025). Generative AI and Jobs: A Refined Global Index of Occupational Exposure, ILO Working Paper 140. International Labour Organization. https://doi.org/10.54394/HETP0387"
+    },
+    {
+      "id": "N09-s16-b017",
+      "text": "Freire, P. (2005). Pedagogía del oprimido. Siglo XXI Editores."
+    },
+    {
+      "id": "N09-s16-b018",
+      "text": "Flores, F. (1997). Creando organizaciones para el futuro. Dolmen."
+    },
+    {
+      "id": "N09-s16-b019",
+      "text": "Fals Borda, O. (1987). “The Application of Participatory Action-Research in Latin America”. International Sociology, 2(4), 329–347. https://doi.org/10.1177/026858098700200401"
+    },
+    {
+      "id": "N09-s16-b020",
+      "text": "Ricaurte, P. (2019). “Data Epistemologies, the Coloniality of Power, and Resistance”. Television & New Media, 20(4), 350–365. https://doi.org/10.1177/1527476419831640"
+    },
+    {
+      "id": "N09-s16-b021",
+      "text": "Maturana, H. R. y Varela, F. J. (1984). El árbol del conocimiento: las bases biológicas del entendimiento humano. Editorial Universitaria."
+    },
+    {
+      "id": "N09-s16-b022",
+      "text": "García, R. (2006). Sistemas complejos: conceptos, método y fundamentación epistemológica de la investigación interdisciplinaria. Gedisa."
+    },
+    {
+      "id": "N09-s16-b023",
+      "text": "Etkin, J. y Schvarstein, L. (1989). Identidad de las organizaciones: invariancia y cambio. Paidós."
+    }
+  ],
+  "headings": [
+    "Contenido",
+    "Referentes",
+    "Pregunta profesional",
+    "La puerta automática que sólo era automática para algunos",
+    "Tesis",
+    "De N08 a N09: del trabajo realizado al recorrido vivido",
+    "Movimiento 1 · Seguir el recorrido completo y reconocer barreras sistémicas",
+    "Movimiento 2 · Diseñar con diversidad y comprender la adopción",
+    "Movimiento 3 · Medir, recuperar y gobernar la experiencia",
+    "Cuatro voces dentro del sistema",
+    "Errores frecuentes",
+    "Consecuencias profesionales",
+    "Límites y tensiones",
+    "Una lectura situada desde América Latina",
+    "Síntesis",
+    "Cinco píldoras para recordar",
+    "Glosario esencial",
+    "Preguntas de preparación",
+    "Referencias base"
+  ]
+}

@@ -151,7 +151,8 @@ APPROVED_INFOGRAPHICS = {
         ),
     },
     25: {
-        "file": "N25-flujo-conserva-identidad.svg",
+        "file": "N25-mapa-legible.svg",
+        "directory": "legible-v2",
         "family": "temporal-flow-map",
         "caption": (
             "La unidad conserva identidad entre demanda y capacidad en uso, hace visibles "
@@ -247,6 +248,7 @@ APPROVED_INFOGRAPHICS = {
         ),
     },
 }
+LANDSCAPE_INFOGRAPHICS = set(range(11, 20))
 
 # Exceptionally dense maps need an independent reading surface. N34 keeps the
 # deferred placement for its unusually dense vertical plate; N11 remains a
@@ -1891,7 +1893,7 @@ def build(number: int) -> dict:
     diagram_target = diagrams / f"N{number:02d}-mapa-01.svg"
     if number in APPROVED_INFOGRAPHICS:
         approved_spec = APPROVED_INFOGRAPHICS[number]
-        approved_root = APPROVED_INFOGRAPHIC_ROOT / f"N{number:02d}"
+        approved_root = APPROVED_INFOGRAPHIC_ROOT / f"N{number:02d}" / approved_spec.get("directory", "")
         approved_asset = approved_root / approved_spec["file"]
         diagram_target = diagrams / f"N{number:02d}-mapa-01{approved_asset.suffix.lower()}"
         approved_manifest_path = approved_root / "content-manifest.json"
@@ -2040,7 +2042,7 @@ def build(number: int) -> dict:
                 diagram = diagram_records[diagram_cursor]
                 if number in APPROVED_INFOGRAPHICS:
                     infographic_markup = (
-                        f'<section class="approved-infographic-page{' n34-full-plate' if number == 34 else ''}">'
+                        f'<section class="approved-infographic-page{' n34-full-plate' if number == 34 else ' n25-full-plate' if number == 25 else ''}">'
                         '<header>'
                         f'<span>METSI · N{number:02d} · MAPA DE DECISIÓN</span>'
                         f'<p>{html.escape(diagram["claim"])}</p>'
@@ -2302,6 +2304,19 @@ def build(number: int) -> dict:
         f'<section class="full-bleed closing-image"><img src="assets/matches-close.png" alt="{html.escape(closing_alt)}">'
         f'<figcaption>{html.escape(closing_caption)}</figcaption></section></main></body></html>'
     )
+    if number in LANDSCAPE_INFOGRAPHICS:
+        # The map needs the full A4 landscape surface.  Keep it as a sibling
+        # of the reading articles; an oversized child of a portrait article
+        # would be clipped at the parent's 174 mm text measure.
+        html_text, detached = re.subn(
+            r'(<section class="approved-infographic-page">.*?</section>)',
+            r'</article>\1<article class="reading">',
+            html_text,
+            count=1,
+            flags=re.S,
+        )
+        if detached != 1:
+            raise RuntimeError(f"N{number:02d}: no se pudo separar el mapa horizontal")
     (out / "index.html").write_text(html_text, encoding="utf-8")
 
     stable_css = (ROOT / "N10-v9-final" / "magazine.css").read_text(encoding="utf-8")
@@ -2309,6 +2324,7 @@ def build(number: int) -> dict:
         stable_css + "\n\n" + BLOCK_C_CSS + "\n\n" + V8_EDITORIAL_CORRECTIONS
         + "\n\n" + V9_N34_CORRECTIONS + "\n\n" + THESIS_N00_STANDARD_CSS
         + "\n\n" + REGIONALIZATION_ENDMATTER_CSS
+        + "\n\n" + INFOGRAPHIC_PLATE_READABILITY_CSS
     )
     (out / "magazine.css").write_text(css, encoding="utf-8")
     (out / "metsi.css").write_text(css, encoding="utf-8")
@@ -4154,6 +4170,159 @@ body.block-c:is(.document-n11,.document-n22) .pills-glossary-page .pill-summary{
 }
 body.block-c:is(.document-n11,.document-n22) .pills-glossary-page .glossary-two-column{
   break-before:page!important;page-break-before:always!important
+}
+'''
+
+
+INFOGRAPHIC_PLATE_READABILITY_CSS = r'''
+/* The horizontal maps N11–N19 get a dedicated landscape reading surface.
+   Their SVG geometry stays intact; only the page composition changes. */
+body.block-c:is(
+  .document-n11,.document-n12,.document-n13,.document-n14,.document-n15,
+  .document-n16,.document-n17,.document-n18,.document-n19
+) .approved-infographic-page{
+  box-sizing:border-box!important;height:auto!important;min-height:0!important;
+  padding:5mm 6mm 3mm!important;display:block!important;
+  break-before:page!important;page-break-before:always!important;
+  break-after:auto!important;page-break-after:auto!important
+}
+body.block-c:is(
+  .document-n11,.document-n12,.document-n13,.document-n14,.document-n15,
+  .document-n16,.document-n17,.document-n18,.document-n19
+) .approved-infographic-page header{
+  max-width:none!important;padding-top:2mm!important
+}
+body.block-c:is(
+  .document-n11,.document-n12,.document-n13,.document-n14,.document-n15,
+  .document-n16,.document-n17,.document-n18,.document-n19
+) .approved-infographic-page header p{
+  max-width:166mm!important;margin:2mm 0 0!important;
+  font:400 11.5pt/1.15 Didot,"Bodoni 72",serif!important
+}
+body.block-c:is(
+  .document-n11,.document-n12,.document-n13,.document-n14,.document-n15,
+  .document-n16,.document-n17,.document-n18,.document-n19
+) .approved-infographic-page figure{
+  width:100%!important;height:auto!important;margin:3mm 0 0!important;
+  display:block!important
+}
+body.block-c:is(
+  .document-n11,.document-n12,.document-n13,.document-n14,.document-n15,
+  .document-n16,.document-n17,.document-n18,.document-n19
+) .approved-infographic-page img{
+  display:block!important;width:100%!important;height:auto!important;
+  max-height:none!important;object-fit:contain!important
+}
+body.block-c:is(
+  .document-n11,.document-n12,.document-n13,.document-n14,.document-n15,
+  .document-n16,.document-n17,.document-n18,.document-n19
+) .approved-infographic-page figcaption{
+  margin:2mm 0 0!important;font:7.2pt/1.22 Avenir,sans-serif!important
+}
+@page infographic-landscape{size:A4 landscape;margin:10mm 12mm}
+body.block-c:is(
+  .document-n11,.document-n12,.document-n13,.document-n14,.document-n15,
+  .document-n16,.document-n17,.document-n18,.document-n19
+) main{overflow:visible!important}
+body.block-c:is(
+  .document-n11,.document-n12,.document-n13,.document-n14,.document-n15,
+  .document-n16,.document-n17,.document-n18,.document-n19
+) .approved-infographic-page{
+  page:infographic-landscape!important;width:273mm!important;height:190mm!important;
+  min-height:190mm!important;padding:4mm 6mm!important;
+  break-after:page!important;page-break-after:always!important
+}
+body.block-c:is(
+  .document-n11,.document-n12,.document-n13,.document-n14,.document-n15,
+  .document-n16,.document-n17,.document-n18,.document-n19
+) .approved-infographic-page figure{
+  display:flex!important;flex-direction:column!important;align-items:center!important;
+  justify-content:center!important;height:153mm!important;margin:2mm 0 0!important
+}
+body.block-c:is(
+  .document-n11,.document-n12,.document-n13,.document-n14,.document-n15,
+  .document-n16,.document-n17,.document-n18,.document-n19
+) .approved-infographic-page img{
+  width:252mm!important;height:150mm!important;max-width:none!important;
+  max-height:none!important;object-fit:contain!important
+}
+
+/* Portrait decision maps: use the full reading surface instead of the
+   inherited 126 mm cap.  Keep the approved SVG and its semantic content. */
+body.block-c:is(
+  .document-n20,.document-n21,.document-n22,.document-n23,
+  .document-n24,.document-n25,.document-n26,.document-n27,
+  .document-n28,.document-n29,.document-n30,.document-n31,
+  .document-n32,.document-n33,.document-n35,.document-n36
+) .approved-infographic-page{
+  box-sizing:border-box!important;height:236mm!important;min-height:236mm!important;
+  padding:4mm 6mm 4mm!important;display:flex!important;flex-direction:column!important;
+  justify-content:flex-start!important;overflow:hidden!important
+}
+body.block-c:is(
+  .document-n20,.document-n21,.document-n22,.document-n23,
+  .document-n24,.document-n25,.document-n26,.document-n27,
+  .document-n28,.document-n29,.document-n30,.document-n31,
+  .document-n32,.document-n33,.document-n35,.document-n36
+) .approved-infographic-page header{
+  flex:0 0 auto!important;max-width:none!important;padding-top:2mm!important
+}
+body.block-c:is(
+  .document-n20,.document-n21,.document-n22,.document-n23,
+  .document-n24,.document-n25,.document-n26,.document-n27,
+  .document-n28,.document-n29,.document-n30,.document-n31,
+  .document-n32,.document-n33,.document-n35,.document-n36
+) .approved-infographic-page header p{
+  max-width:166mm!important;margin:2mm 0 0!important;
+  font:400 11.5pt/1.15 Didot,"Bodoni 72",serif!important
+}
+body.block-c:is(
+  .document-n20,.document-n21,.document-n22,.document-n23,
+  .document-n24,.document-n25,.document-n26,.document-n27,
+  .document-n28,.document-n29,.document-n30,.document-n31,
+  .document-n32,.document-n33,.document-n35,.document-n36
+) .approved-infographic-page figure{
+  flex:1 1 auto!important;min-height:0!important;height:auto!important;
+  margin:2mm 0 0!important;display:flex!important;flex-direction:column!important;
+  justify-content:flex-start!important;align-items:center!important
+}
+body.block-c:is(
+  .document-n20,.document-n21,.document-n22,.document-n23,
+  .document-n24,.document-n25,.document-n26,.document-n27,
+  .document-n28,.document-n29,.document-n30,.document-n31,
+  .document-n32,.document-n33,.document-n35,.document-n36
+) .approved-infographic-page img{
+  flex:1 1 auto!important;min-height:0!important;display:block!important;
+  width:100%!important;height:100%!important;max-height:none!important;
+  object-fit:contain!important;object-position:center top!important
+}
+body.block-c:is(
+  .document-n20,.document-n21,.document-n22,.document-n23,
+  .document-n24,.document-n25,.document-n26,.document-n27,
+  .document-n28,.document-n29,.document-n30,.document-n31,
+  .document-n32,.document-n33,.document-n35,.document-n36
+) .approved-infographic-page figcaption{
+  flex:0 0 auto!important;align-self:stretch!important;margin:1mm 0 0!important;
+  font:7.2pt/1.22 Avenir,sans-serif!important
+}
+
+/* N25 approved 2026-09-26: retain the existing 173mm article measure.
+   A wider named-page box causes Chromium to shrink the entire document. */
+body.block-c.document-n25 .approved-infographic-page.n25-full-plate{
+  width:100%!important;max-width:100%!important;
+  height:236mm!important;min-height:236mm!important;padding:0!important;
+  margin:0!important;display:block!important;overflow:visible!important;
+  background:#F7F6F2!important
+}
+body.block-c.document-n25 .n25-full-plate header,
+body.block-c.document-n25 .n25-full-plate figcaption{display:none!important}
+body.block-c.document-n25 .n25-full-plate figure{
+  width:100%!important;height:233.55mm!important;margin:0!important;
+  padding:0!important;display:block!important
+}
+body.block-c.document-n25 .n25-full-plate img{
+  display:block!important;width:100%!important;height:233.55mm!important;
+  max-width:none!important;max-height:none!important;object-fit:contain!important
 }
 '''
 

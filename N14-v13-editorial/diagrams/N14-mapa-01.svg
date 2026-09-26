@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100" role="img" aria-labelledby="title desc">
+  <title id="title">N14, flujo real y excepciones</title>
+  <desc id="desc">El mapa contrasta los cuatro minutos visibles del mostrador con los veintisiete minutos promedio que experimenta un huésped. Una línea sigue el caso desde la llegada hasta el acceso a la habitación. En el recorrido aparecen una cola de inspección, un handoff de responsabilidad, una decisión de identidad, una dependencia de cerradura y una excepción que requiere autoridad. El cierre se define por una llave que abre y una vía de reparación, no por la finalización de una tarea aislada.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 Z" fill="#747672"/></marker>
+    <style>
+      .sans{font-family:Inter,Arial,Helvetica,sans-serif;fill:#202020}
+      .serif{font-family:Georgia,'Times New Roman',serif;fill:#202020}
+      .eyebrow{font-size:25px;font-weight:700;letter-spacing:7px}
+      .title{font-size:58px;letter-spacing:-1.5px}
+      .subtitle{font-size:27px;fill:#5F615E}
+      .section{font-size:23px;font-weight:700;letter-spacing:4px}
+      .label{font-size:27px;font-weight:700}
+      .body{font-size:22px;fill:#4F514E}
+      .small{font-size:19px;fill:#666864}
+      .number{font-size:20px;font-weight:700;letter-spacing:3px}
+      .rule{stroke:#A9ABA7;stroke-width:2}
+      .route{fill:none;stroke:#747672;stroke-width:3;marker-end:url(#arrow)}
+      .wait{fill:none;stroke:#8A8C88;stroke-width:3;stroke-dasharray:8 10;marker-end:url(#arrow)}
+      .outline{fill:#FFFFFF;stroke:#777A76;stroke-width:2.2}
+    </style>
+  </defs>
+
+  <rect width="1800" height="1100" fill="#F7F7F4"/>
+  <rect x="36" y="36" width="1728" height="1028" rx="20" fill="none" stroke="#C6C8C4" stroke-width="2"/>
+  <path d="M72 74 H210 L196 94 H58 Z" fill="#CFFF00"/>
+  <text x="238" y="94" class="sans eyebrow">N14 · MAPA DE FLUJO REAL</text>
+  <text x="72" y="170" class="serif title">La tarea visible no es el tiempo del servicio</text>
+  <text x="74" y="214" class="sans subtitle">La promesa atraviesa trabajo, esperas, handoffs, colas, decisiones y reparación.</text>
+  <line x1="72" y1="248" x2="1728" y2="248" class="rule"/>
+
+  <g aria-label="Contraste de mediciones">
+    <text x="84" y="302" class="sans section">DOS RELOJES</text>
+    <path d="M84 334 H478 L502 358 V454 H84 Z" fill="#E4E6E3" stroke="#777A76" stroke-width="2.2"/>
+    <text x="112" y="374" class="sans number">MÉTRICA LOCAL</text>
+    <text x="112" y="420" class="serif" style="font-size:43px">4 min</text>
+    <text x="244" y="420" class="sans body">atención en mostrador</text>
+
+    <path d="M548 334 H1044 L1068 358 V454 H548 Z" class="outline"/>
+    <rect x="548" y="334" width="10" height="120" fill="#CFFF00"/>
+    <text x="578" y="374" class="sans number">EXPERIENCIA COMPLETA</text>
+    <text x="578" y="420" class="serif" style="font-size:43px">27 min</text>
+    <text x="742" y="420" class="sans" style="font-size:19px">promedio desde llegada hasta acceso</text>
+
+    <text x="1132" y="374" class="sans number">LO QUE EXPLICA LA DIFERENCIA</text>
+    <text x="1132" y="414" class="sans body">cola de inspección · identidad · cerradura</text>
+    <text x="1132" y="446" class="sans body">autoridad para reasignar · trabajo invisible</text>
+  </g>
+
+  <line x1="72" y1="500" x2="1728" y2="500" class="rule"/>
+  <text x="84" y="548" class="sans section">HH-14 · UN CASO COMPLETO</text>
+
+  <g aria-label="Llegada y promesa">
+    <circle cx="126" cy="640" r="46" fill="#FFFFFF" stroke="#202020" stroke-width="2.4"/>
+    <circle cx="126" cy="640" r="9" fill="#CFFF00" stroke="#202020" stroke-width="2"/>
+    <text x="84" y="722" class="sans number">01 · LLEGADA</text>
+  </g>
+
+  <path d="M176 640 H266" class="route"/>
+
+  <g aria-label="Cola de inspección">
+    <rect x="292" y="604" width="36" height="72" fill="#D6D8D5" stroke="#777A76" stroke-width="1.8"/>
+    <rect x="338" y="594" width="36" height="82" fill="#E4E6E3" stroke="#777A76" stroke-width="1.8"/>
+    <rect x="384" y="584" width="36" height="92" fill="#FFFFFF" stroke="#777A76" stroke-width="1.8"/>
+    <rect x="430" y="574" width="36" height="102" fill="#FFFFFF" stroke="#777A76" stroke-width="1.8"/>
+    <text x="292" y="722" class="sans number">02 · COLA</text>
+  </g>
+
+  <path d="M478 640 H584" class="wait"/>
+  <g aria-label="Handoff de housekeeping a recepción">
+    <path d="M606 590 L660 640 L606 690 Z" fill="#E4E6E3" stroke="#777A76" stroke-width="2.2"/>
+    <circle cx="620" cy="640" r="8" fill="#CFFF00" stroke="#202020" stroke-width="2"/>
+    <text x="548" y="722" class="sans number">03 · HANDOFF</text>
+  </g>
+
+  <path d="M674 640 H770" class="route"/>
+  <g aria-label="Decisión de identidad">
+    <path d="M838 564 L914 640 L838 716 L762 640 Z" fill="#FFFFFF" stroke="#777A76" stroke-width="2.2"/>
+    <path d="M806 563 H886 L874 580 H794 Z" fill="#CFFF00"/>
+    <text x="838" y="626" class="sans number" text-anchor="middle">04</text>
+    <text x="838" y="661" class="sans label" text-anchor="middle">IDENTIDAD</text>
+  </g>
+
+  <path d="M914 640 H1022" class="route"/>
+  <g aria-label="Asignación y acceso">
+    <path d="M1038 580 H1272 L1296 604 V700 H1038 Z" fill="#E4E6E3" stroke="#777A76" stroke-width="2.2"/>
+    <text x="1066" y="622" class="sans number">05</text>
+    <text x="1128" y="624" class="sans label">ASIGNAR</text>
+    <text x="1066" y="662" class="sans" style="font-size:18px">habitación y acceso vigentes</text>
+    <text x="1066" y="690" class="sans" style="font-size:17px;fill:#666864">Recepción conserva la promesa</text>
+  </g>
+
+  <path d="M1310 640 H1400" class="route"/>
+  <g aria-label="Resultado para el huésped">
+    <path d="M1416 580 H1692 L1724 612 V700 H1416 Z" class="outline"/>
+    <text x="1444" y="622" class="sans number">06 · OUTCOME</text>
+    <text x="1444" y="664" class="sans label">LA LLAVE ABRE</text>
+    <text x="1444" y="694" class="sans small">o existe una reparación visible</text>
+  </g>
+
+  <g aria-label="Rama de excepción">
+    <path d="M838 716 V822 H1040" class="wait"/>
+    <path d="M1052 778 H1364 L1388 802 V900 H1052 Z" fill="#FFFFFF" stroke="#777A76" stroke-width="2.2"/>
+    <rect x="1052" y="778" width="10" height="122" fill="#CFFF00"/>
+    <text x="1080" y="818" class="sans number">EXCEPCIÓN FRECUENTE</text>
+    <text x="1080" y="858" class="sans" style="font-size:20px;font-weight:700">IDENTIDAD NO CONCILIADA</text>
+    <text x="1080" y="887" class="sans" style="font-size:16px;fill:#666864">requiere autoridad, estado y vía de devolución</text>
+    <path d="M1388 840 H1510 V718" class="wait"/>
+  </g>
+
+  <g aria-label="Lectura del tiempo total">
+    <line x1="84" y1="934" x2="1718" y2="934" stroke="#777A76" stroke-width="3"/>
+    <circle cx="126" cy="934" r="8" fill="#202020"/>
+    <circle cx="838" cy="934" r="8" fill="#CFFF00" stroke="#202020" stroke-width="2"/>
+    <circle cx="1688" cy="934" r="8" fill="#202020"/>
+    <text x="84" y="978" class="sans number">EVENTO INICIAL</text>
+    <text x="718" y="978" class="sans number">TRABAJO + ESPERA + RETRABAJO</text>
+    <text x="1718" y="978" class="sans number" text-anchor="end">CIERRE VERIFICABLE</text>
+  </g>
+
+  <text x="84" y="1026" class="sans small">MEJORAR EL SERVICIO EXIGE SEGUIR LA INSTANCIA COMPLETA Y OBSERVAR DÓNDE CAMBIA LA RESPONSABILIDAD.</text>
+  <text x="1710" y="1026" class="sans small" text-anchor="end">N14 · METSI</text>
+</svg>

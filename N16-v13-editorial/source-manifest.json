@@ -1,0 +1,1586 @@
+{
+  "document": "N16",
+  "source": "source/N16.md",
+  "eligible_blocks": [
+    {
+      "source_id": "N16-h1",
+      "kind": "heading-1",
+      "text": "Modelos que se contradicen: cómo revisarlos y mantenerlos útiles"
+    },
+    {
+      "source_id": "N16-s01-h2",
+      "kind": "heading-2",
+      "text": "Pregunta profesional"
+    },
+    {
+      "source_id": "N16-s01-b001",
+      "kind": "paragraph",
+      "text": "¿Cómo distinguir un error entre modelos de una diferencia válida o de un problema real que la organización todavía debe resolver?"
+    },
+    {
+      "source_id": "N16-s02-h2",
+      "kind": "heading-2",
+      "text": "La excepción que existía en cuatro modelos y no podía ejecutarse"
+    },
+    {
+      "source_id": "N16-s02-b001",
+      "kind": "paragraph",
+      "text": "Una universidad aprueba una vía de revisión para estudiantes próximos a graduarse que encuentran una dificultad al inscribirse a finales. En este caso ficticio, el proceso muestra la excepción, una matriz indica que Secretaría Académica puede autorizarla y un prototipo permite seleccionar «solicitar revisión»."
+    },
+    {
+      "source_id": "N16-s02-b002",
+      "kind": "paragraph",
+      "text": "Martina prueba esa opción. Recibe un mensaje que anuncia revisión. Secretaría examina el caso y aprueba la excepción. Pero, cuando se intenta aplicar, el servicio académico vuelve a rechazar la inscripción: sólo acepta solicitudes que cumplen las reglas ordinarias."
+    },
+    {
+      "source_id": "N16-s02-b003",
+      "kind": "paragraph",
+      "text": "La excepción existe en el procedimiento y tiene autoridad. No tiene todavía un camino técnico y operativo completo. Los dibujos describen partes razonables, pero usados juntos prometen algo que todavía no puede ejecutarse de esa manera."
+    },
+    {
+      "source_id": "N16-s02-b004",
+      "kind": "paragraph",
+      "text": "Alguien propone borrar la excepción del proceso para hacerlo coincidir con el sistema. Otra persona quiere modificar la arquitectura. Otra sugiere cambiar el servicio inmediatamente. Antes de elegir, el equipo pregunta qué representa cada vista y qué decisión institucional está vigente."
+    },
+    {
+      "source_id": "N16-s02-b005",
+      "kind": "paragraph",
+      "text": "El proceso y la matriz reflejan una resolución ya aprobada. La arquitectura se obtuvo de producción el día anterior y describe correctamente un servicio que aún no implementa ese cambio. El prototipo muestra cómo debería funcionar el canal futuro. La fecha reciente de un archivo no vuelve actual todo lo que contiene: puede representar una propuesta."
+    },
+    {
+      "source_id": "N16-s02-b006",
+      "kind": "paragraph",
+      "text": "No hay una sola corrección de dibujo que resuelva la situación. Copiar producción en todos los documentos borraría la obligación aprobada. Activar el prototipo sin capacidad sostendría una promesa incompleta. Modificar el servicio sin revisar controles podría abrir otro problema."
+    },
+    {
+      "source_id": "N16-s02-b007",
+      "kind": "paragraph",
+      "text": "El equipo deja explícita la brecha: la revisión está aprobada; el canal automatizado propuesto todavía no puede completarla. Se necesita una vía temporal autorizada que permita recibir, resolver y aplicar los casos, con responsables y evidencia. Si no existe capacidad para cumplirla, se escala de inmediato. No se presenta la limitación técnica como permiso para suprimir la revisión."
+    },
+    {
+      "source_id": "N16-s02-b008",
+      "kind": "paragraph",
+      "text": "Después recorre el mismo caso por todas las vistas. La solicitud conserva identidad. El proceso muestra quién la recibe. La autoridad indica quién decide. El estado distingue «solicitada», «aprobada» y «aplicada». La arquitectura localiza qué capacidad falta para pasar de una a otra."
+    },
+    {
+      "source_id": "N16-s02-b009",
+      "kind": "paragraph",
+      "text": "La conversación cambia. Ya no se pregunta qué dibujo gana, sino qué afirma cada uno, para qué momento y con qué evidencia. La diferencia revela una decisión pendiente. Ocultarla habría dejado a Martina con una aprobación que no puede usar."
+    },
+    {
+      "source_id": "N16-s02-b010",
+      "kind": "paragraph",
+      "text": "N16 cierra el Bloque C con esa forma de trabajo. N11 revisó la evidencia; N12, eventos, estados y autoridad; N13, fallas entre partes; N14, recorridos completos; N15, selección de modelos. Ahora comprobamos cómo conviven y cambian esas representaciones sin exigir que repitan lo mismo."
+    },
+    {
+      "source_id": "N16-s03-h2",
+      "kind": "heading-2",
+      "text": "Hotel Horizonte: “entregable” no significaba lo mismo en toda la cartera"
+    },
+    {
+      "source_id": "N16-s03-b001",
+      "kind": "paragraph",
+      "text": "HH-15 dejó cinco familias de modelos para el piloto de validación previa y un tablero derivado. Elena Acosta pide seguir la reserva R-73, que tiene requerimientos de accesibilidad, y comprobar el acceso a la habitación antes del ingreso."
+    },
+    {
+      "source_id": "N16-s03-b002",
+      "kind": "paragraph",
+      "text": "En el proceso, «entregable» reúne preparación, asignación y acceso. En una vista de inventario, la misma palabra aparece antes de asignar una reserva concreta. En el recorrido de experiencia, se asocia con la confirmación que recibe el huésped. El tablero la cuenta desde que Housekeeping registra limpieza terminada."
+    },
+    {
+      "source_id": "N16-s03-b003",
+      "kind": "paragraph",
+      "text": "La repetición de la palabra parece dar coherencia. En realidad, puede habilitar acciones diferentes. Mariela Benítez queda evaluada por una entrega que no controla. Lucía Ferreyra recibe una señal que todavía no permite asignar. Federico Müller integra estados que parecen equivalentes y no lo son. Camila Duarte podría confirmar una condición que Operaciones no puede sostener."
+    },
+    {
+      "source_id": "N16-s03-b004",
+      "kind": "paragraph",
+      "text": "Elena ve un número favorable mientras algunas personas siguen esperando. No hace falta que un dato sea falso para que se use mal: alcanza con tratar limpieza terminada como si fuera alojamiento cumplido."
+    },
+    {
+      "source_id": "N16-s03-b005",
+      "kind": "paragraph",
+      "text": "El equipo vuelve a inspecciones, eventos del PMS, resultados del sistema de acceso y mensajes enviados. Para cada etiqueta pregunta qué ocurrió, quién puede afirmarlo y qué decisión permite tomar."
+    },
+    {
+      "source_id": "N16-s03-b006",
+      "kind": "paragraph",
+      "text": "HH-16 conservará diferencias necesarias: habitación preparada, condiciones de asignación, acceso operativo, requisitos de accesibilidad y confirmación comunicada. **Acceso operativo** significa que puede funcionar el ingreso autorizado; **accesibilidad** refiere a condiciones para que la persona pueda usar el servicio. Una cerradura que abre no demuestra por sí sola accesibilidad."
+    },
+    {
+      "source_id": "N16-s03-b007",
+      "kind": "paragraph",
+      "text": "«Entregable para R-73 ahora» será una conclusión ligada a condiciones y evidencia, no un sinónimo de cualquiera de esos estados. Elena podrá evaluar el piloto cuando se prueben también las excepciones y la pérdida de una condición antes del ingreso."
+    },
+    {
+      "source_id": "N16-s04-h2",
+      "kind": "heading-2",
+      "text": "Tesis"
+    },
+    {
+      "source_id": "N16-s04-b001",
+      "kind": "paragraph",
+      "text": "Dos modelos pueden mostrar cosas distintas y ser compatibles. Un plano de calles y un mapa de transporte no necesitan contener los mismos detalles. El problema aparece si los usamos para la misma decisión y uno afirma que un acceso está habilitado mientras el otro lo considera cerrado, sin explicar por qué."
+    },
+    {
+      "source_id": "N16-s04-b002",
+      "kind": "paragraph",
+      "text": "La **coherencia** no consiste en que todos los archivos repitan palabras. Consiste en que podamos explicar cómo se relacionan sus afirmaciones según propósito, alcance, tiempo y evidencia. Algunas diferencias son legítimas. Otras son errores. Otras muestran que la organización todavía no resolvió un problema."
+    },
+    {
+      "source_id": "N16-s04-b003",
+      "kind": "paragraph",
+      "text": "En la universidad, una regla aprobada y un servicio que no la implementó describen una brecha real. Hacer que los dibujos coincidan no la elimina. Hay que decidir cómo cumplir la obligación, qué capacidad construir y qué vía sostener mientras tanto."
+    },
+    {
+      "source_id": "N16-s04-b004",
+      "kind": "paragraph",
+      "text": "Una contradicción se vuelve **productiva** cuando ayuda a descubrir esa brecha y conduce a una respuesta. Deja de serlo si se conserva durante meses sin responsable, consecuencia ni revisión. No toda diferencia se debe resolver de inmediato, pero una incompatibilidad crítica no puede ocultarse bajo la idea de que «cada área tiene su mirada»."
+    },
+    {
+      "source_id": "N16-s04-b005",
+      "kind": "paragraph",
+      "text": "Los modelos también tienen una vida. Se proponen, se contrastan, se usan, se revisan y se retiran de ciertas decisiones. Un dibujo útil para explorar puede no estar autorizado para operar. Una versión histórica puede explicar un reclamo anterior y no servir para una llegada de hoy."
+    },
+    {
+      "source_id": "N16-s04-b006",
+      "kind": "paragraph",
+      "text": "Por eso la revisión une afirmaciones, fuentes, decisiones y versiones. No pretende controlar cada palabra de la organización. Se concentra en relaciones cuya confusión puede cambiar una acción, una promesa o una responsabilidad."
+    },
+    {
+      "source_id": "N16-s04-b007",
+      "kind": "paragraph",
+      "text": "Un contraejemplo aclara el límite. Si todos los diagramas se generan desde una base que omitió a quienes usan el canal asistido, pueden coincidir perfectamente y seguir incompletos. La coherencia interna necesita contraste con evidencia del trabajo y de sus consecuencias. Ordenar documentos no reemplaza conocer el sistema."
+    },
+    {
+      "source_id": "N16-s05-h2",
+      "kind": "heading-2",
+      "text": "De N15 a N16: de la cartera mínima a una conversación entre vistas"
+    },
+    {
+      "source_id": "N16-s05-b001",
+      "kind": "paragraph",
+      "text": "N15 justificó qué modelos convenía construir. HH-15 dejó preguntas, audiencias, fuentes y vínculos. Ahora recorremos casos comunes entre esas vistas para saber si sus relaciones alcanzan para decidir."
+    },
+    {
+      "source_id": "N16-s05-b002",
+      "kind": "paragraph",
+      "text": "No agregamos detalle sólo para hacerlas iguales. Si una arquitectura no muestra una emoción del huésped, eso puede ser una omisión adecuada a su propósito. Si ignora una dependencia que impide cumplir una promesa, la omisión cambia la decisión."
+    },
+    {
+      "source_id": "N16-s05-b003",
+      "kind": "paragraph",
+      "text": "HH-16 será un registro de coherencia y ciclo de vida. Indicará qué coincide, qué difiere, por qué importa y cómo se trata. N17 abrirá después la elección de estrategias de intervención. Primero necesitamos saber qué podemos afirmar y qué sigue pendiente."
+    },
+    {
+      "source_id": "N16-s06-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 1 · Clasificar diferencias antes de corregir"
+    },
+    {
+      "source_id": "N16-s06-b001",
+      "kind": "heading-3",
+      "text": "Comparar afirmaciones, no dibujos enteros"
+    },
+    {
+      "source_id": "N16-s06-b002",
+      "kind": "paragraph",
+      "text": "La [ISO/IEC/IEEE 42010:2022](https://www.iso.org/standard/74393.html) aporta conceptos para organizar descripciones de arquitectura mediante vistas y puntos de vista. La idea útil acá es que cada vista responde a preocupaciones determinadas. Compararlas exige reconocer esas convenciones, no pedirles idéntico contenido."
+    },
+    {
+      "source_id": "N16-s06-b003",
+      "kind": "paragraph",
+      "text": "Tomemos una afirmación concreta: «La reserva puede recibir una confirmación de ingreso». Buscamos qué condición representa el proceso, qué estado permite la aplicación, qué comunica la interfaz y quién tiene autoridad. Así ubicamos los puntos donde las vistas se tocan."
+    },
+    {
+      "source_id": "N16-s06-b004",
+      "kind": "paragraph",
+      "text": "Antes de editar, comprobamos propósito, alcance y tiempo. Quizá una vista muestra inventario general y otra, una reserva. Quizá una es futura. Cuando esa aclaración no alcanza y ambas habilitan acciones incompatibles en la misma situación, hay un problema que tratar."
+    },
+    {
+      "source_id": "N16-s06-b005",
+      "kind": "paragraph",
+      "text": "La clasificación que sigue es una ayuda para investigar. Un mismo episodio puede combinar varias clases. En el hotel, una palabra ambigua puede afectar a la vez una métrica y una responsabilidad."
+    },
+    {
+      "source_id": "N16-s06-b006",
+      "kind": "heading-3",
+      "text": "Cuando la misma palabra significa cosas distintas"
+    },
+    {
+      "source_id": "N16-s06-b007",
+      "kind": "paragraph",
+      "text": "Es una diferencia **terminológica**. Mariela usa «lista» para indicar que terminó preparación. Lucía la usa para decir que puede entregar la habitación a una reserva concreta. Si una integración toma ambas expresiones como equivalentes, puede avanzar demasiado pronto."
+    },
+    {
+      "source_id": "N16-s06-b008",
+      "kind": "paragraph",
+      "text": "La solución no es necesariamente elegir una palabra ganadora. Primero reemplazamos la etiqueta por la condición observable. ¿Terminó limpieza? ¿Terminó inspección? ¿Hay una asignación válida? ¿Se verificó el acceso para ese momento?"
+    },
+    {
+      "source_id": "N16-s06-b009",
+      "kind": "paragraph",
+      "text": "Después decidimos si renombrar, aclarar alcance o establecer una relación. «Preparada» y «entregable» pueden necesitar mantenerse distintas. Un glosario sirve si conserva esa diferencia y explica cómo se combinan las condiciones."
+    },
+    {
+      "source_id": "N16-s06-b010",
+      "kind": "paragraph",
+      "text": "Jackson ayuda a pensar qué fenómenos del mundo representamos antes de reducirlos a nombres dentro de una aplicación. La evidencia del uso se busca en episodios: qué entendió cada rol y qué hizo a partir de la señal. Una discusión de diccionario sin acciones puede dejar intacta la confusión."
+    },
+    {
+      "source_id": "N16-s06-b011",
+      "kind": "heading-3",
+      "text": "Cuando cambia la frontera o el nivel"
+    },
+    {
+      "source_id": "N16-s06-b012",
+      "kind": "paragraph",
+      "text": "Una arquitectura puede terminar en el PMS y un proceso llegar hasta el ingreso del huésped. No se contradicen por eso. Se vuelven problemáticos cuando una conclusión sobre el PMS se presenta como prueba de que todo el servicio terminó."
+    },
+    {
+      "source_id": "N16-s06-b013",
+      "kind": "paragraph",
+      "text": "También difieren los niveles. «Capacidad para alojar» incluye más que una llamada exitosa a una API. El éxito del intercambio puede ser una condición, pero no equivale por sí solo al resultado completo."
+    },
+    {
+      "source_id": "N16-s06-b014",
+      "kind": "paragraph",
+      "text": "La corrección puede ser agregar un vínculo o limitar lo que afirma un indicador. No siempre exige ampliar el diagrama. Un tablero de limpieza puede seguir siendo útil si deja de llamarse «entregas completadas» y se vincula con las condiciones restantes."
+    },
+    {
+      "source_id": "N16-s06-b015",
+      "kind": "paragraph",
+      "text": "La prueba consiste en seguir una conclusión al cruzar la frontera. ¿Qué deja de estar demostrado? ¿Quién absorbe ese límite? N05 y N09 ayudan a detectar si el recorte excluyó justamente a quien enfrenta una dificultad."
+    },
+    {
+      "source_id": "N16-s06-b016",
+      "kind": "heading-3",
+      "text": "Cuando los modelos hablan de momentos diferentes"
+    },
+    {
+      "source_id": "N16-s06-b017",
+      "kind": "paragraph",
+      "text": "Una vista **actual** describe lo que está vigente en un alcance. Una **objetivo** describe una situación futura aprobada o propuesta, y debe distinguir cuál de esas dos cosas es. Una **transitoria** organiza el pasaje. Una **histórica** conserva un estado anterior. Un **escenario** explora una posibilidad sin afirmar que ocurrirá."
+    },
+    {
+      "source_id": "N16-s06-b018",
+      "kind": "paragraph",
+      "text": "La fecha de creación del archivo no decide a cuál pertenece. Podemos dibujar hoy cómo funcionaba el sistema hace un año o cómo esperamos que funcione después del piloto."
+    },
+    {
+      "source_id": "N16-s06-b019",
+      "kind": "paragraph",
+      "text": "En el caso de Martina, la obligación aprobada y la implementación incompleta deben seguir visibles. La representación objetivo puede orientar desarrollo, pero no probar que la vía ya funciona. La actual permite localizar la brecha, pero no justifica ignorar la obligación."
+    },
+    {
+      "source_id": "N16-s06-b020",
+      "kind": "paragraph",
+      "text": "Para tratar la diferencia se identifican fechas, poblaciones y condiciones de entrada y salida. Se prueba un caso anterior al cambio, uno durante la transición y uno posterior. Si no sabemos qué regla corresponde en cada uno, la situación temporal sigue sin resolverse."
+    },
+    {
+      "source_id": "N16-s06-b021",
+      "kind": "heading-3",
+      "text": "Cuando la regla y la capacidad no coinciden"
+    },
+    {
+      "source_id": "N16-s06-b022",
+      "kind": "paragraph",
+      "text": "Un procedimiento exige resolver una autorización nocturna en treinta minutos. Durante la noche no hay nadie habilitado para decidirla ni una suplencia prevista. La regla puede estar perfectamente escrita y el trabajo no tener cómo cumplirla."
+    },
+    {
+      "source_id": "N16-s06-b023",
+      "kind": "paragraph",
+      "text": "Esta diferencia **normativa y operacional** necesita más que una actualización de texto. Debe examinarse la fuente de la obligación, qué capacidad falta, quién puede resolverla y cómo atender los casos mientras tanto. Si hay obligaciones que no pueden dispensarse, una aceptación interna de riesgo no las elimina."
+    },
+    {
+      "source_id": "N16-s06-b024",
+      "kind": "paragraph",
+      "text": "Argyris y Schön distinguen dos formas de aprendizaje. En el **circuito simple** corregimos acciones dentro de las reglas existentes: por ejemplo, aclaramos cómo se llama a la autoridad de guardia. En el **doble circuito** revisamos la regla o el supuesto: quizá no exista esa guardia o sea necesario organizar otra autoridad. No toda dificultad requiere cambiar la política; tampoco toda política se salva pidiendo más esfuerzo a quienes operan."
+    },
+    {
+      "source_id": "N16-s06-b025",
+      "kind": "paragraph",
+      "text": "La investigación reúne la regla, episodios y consecuencias. El trabajo habitual no deroga una obligación por repetirse, y la obligación no crea recursos por estar aprobada. La respuesta debe cerrar o atender la distancia entre ambas cosas."
+    },
+    {
+      "source_id": "N16-s06-b026",
+      "kind": "heading-3",
+      "text": "Cuando los números no son comparables"
+    },
+    {
+      "source_id": "N16-s06-b027",
+      "kind": "paragraph",
+      "text": "Un tablero informa dieciocho habitaciones preparadas. Otro, dieciséis ingresos confirmados. No sabemos todavía si hay un error: quizás cuentan entidades y cierres diferentes. El problema sería presentar ambas cifras como la misma cantidad de entregas."
+    },
+    {
+      "source_id": "N16-s06-b028",
+      "kind": "paragraph",
+      "text": "Revisamos unidad, población, período, corte, exclusiones y transformación. Para un porcentaje, también numerador y denominador. N11 enseñó a examinar la afirmación; N16 comprueba que esas definiciones sigan visibles cuando viaja a otra vista."
+    },
+    {
+      "source_id": "N16-s06-b029",
+      "kind": "paragraph",
+      "text": "Si los dos indicadores pretenden medir exactamente lo mismo con las mismas fuentes y reglas, investigamos el cálculo o la actualización. Si miden cosas distintas, explicamos la diferencia. Promediar los números para «quedar en el medio» no resuelve ninguna de las dos situaciones."
+    },
+    {
+      "source_id": "N16-s06-b030",
+      "kind": "paragraph",
+      "text": "Después reconstruimos casos en las fuentes. La conciliación aritmética ayuda, pero un total que coincide por casualidad puede esconder compensaciones entre errores. Necesitamos saber qué representa cada caso contado."
+    },
+    {
+      "source_id": "N16-s06-b031",
+      "kind": "heading-3",
+      "text": "Cuando cambia la identidad o el tamaño de lo que contamos"
+    },
+    {
+      "source_id": "N16-s06-b032",
+      "kind": "paragraph",
+      "text": "La reserva, la estadía, la habitación y la cuenta de consumos están relacionadas, pero no son la misma entidad. Una reserva puede no terminar en alojamiento. Una estadía puede incluir un cambio de habitación. Una cuenta puede reunir consumos de varias personas."
+    },
+    {
+      "source_id": "N16-s06-b033",
+      "kind": "paragraph",
+      "text": "No se arregla creando un código universal y suponiendo que todo corresponde uno a uno. Primero definimos qué entidad necesita cada decisión y cómo se relaciona con otras. Esas reglas de correspondencia deben comprobarse en el dominio, no imponerse por conveniencia de una tabla."
+    },
+    {
+      "source_id": "N16-s06-b034",
+      "kind": "paragraph",
+      "text": "La **granularidad** es el tamaño de la unidad que observamos. Un informe mensual resume muchos episodios. Sirve para planificar capacidad, pero no conserva toda la historia de una familia que esperó una hora. El promedio no refuta ese episodio; el episodio tampoco estima por sí solo la frecuencia general."
+    },
+    {
+      "source_id": "N16-s06-b035",
+      "kind": "paragraph",
+      "text": "En una prueba, seguimos una reubicación o una entrega parcial. Si los vínculos se pierden cuando cambia la habitación, la cartera sólo era coherente en el camino sencillo."
+    },
+    {
+      "source_id": "N16-s06-b036",
+      "kind": "paragraph",
+      "text": "Un ejemplo de datos muestra el riesgo: una reserva aparece dos veces porque tiene dos huéspedes y tres veces porque tiene tres cargos. Si unimos ambas listas sin cuidar la relación, podemos obtener seis filas y después contar seis reservas. La operación técnica puede ejecutarse sin error mientras la interpretación multiplica casos."
+    },
+    {
+      "source_id": "N16-s06-b037",
+      "kind": "paragraph",
+      "text": "Por eso verificamos correspondencias y conteos, incluyendo situaciones con cero, una o varias relaciones. La regla «una reserva equivale a una estadía» se trata como una afirmación a contrastar, no como una verdad porque la línea del diagrama sea recta."
+    },
+    {
+      "source_id": "N16-s06-b038",
+      "kind": "heading-3",
+      "text": "Cuando permiso, tarea y autoridad se mezclan"
+    },
+    {
+      "source_id": "N16-s06-b039",
+      "kind": "paragraph",
+      "text": "Una persona puede tener permiso técnico para ejecutar una acción y no estar autorizada a decidirla. Otra puede tener autoridad formal y carecer de acceso o disponibilidad para aplicarla durante una guardia."
+    },
+    {
+      "source_id": "N16-s06-b040",
+      "kind": "paragraph",
+      "text": "La revisión distingue quién inicia, quién aporta evidencia, quién decide, quién ejecuta, quién observa y quién responde ante una consecuencia. Una misma persona puede cumplir varios roles; distinguir funciones no obliga a multiplicar puestos."
+    },
+    {
+      "source_id": "N16-s06-b041",
+      "kind": "paragraph",
+      "text": "En el ejemplo de HH-16, Lucía puede reasignar dentro de condiciones aprobadas. Una mejora de categoría con costo adicional puede requerir autorización comercial o de Dirección según la política del hotel. Si el PMS permite ambas acciones con el mismo permiso, el acceso técnico no resuelve esa diferencia."
+    },
+    {
+      "source_id": "N16-s06-b042",
+      "kind": "paragraph",
+      "text": "El procedimiento puede haber omitido la segunda autorización porque «siempre se llama por teléfono». Esa costumbre quizá funcione de día y falle cuando no está la persona habitual. La discrepancia entre matriz, proceso y permisos revela una dependencia real."
+    },
+    {
+      "source_id": "N16-s06-b043",
+      "kind": "paragraph",
+      "text": "La respuesta aclara la decisión, su autoridad y una suplencia válida, además de los controles y la evidencia. No concede a una herramienta autoridad por descarte ni obliga a Lucía a improvisar una responsabilidad que no tiene."
+    },
+    {
+      "source_id": "N16-s06-b044",
+      "kind": "paragraph",
+      "text": "La prueba incluye ausencia y urgencia. También revisa qué se comunica al huésped: quién decide internamente no alcanza si nadie informa próxima acción, plazo y alternativa. La autoridad necesita un modo de ejercicio y de revisión."
+    },
+    {
+      "source_id": "N16-s06-b045",
+      "kind": "heading-3",
+      "text": "Primera aplicación de HH-16: revisar “entregable”"
+    },
+    {
+      "source_id": "N16-s06-b046",
+      "kind": "paragraph",
+      "text": "Lucía, Mariela, Federico y Camila siguen R-73 por proceso, estados, arquitectura, autoridad, experiencia y tablero. Esas vistas pertenecen a las familias seleccionadas en HH-15; no tienen que ser una página por familia."
+    },
+    {
+      "source_id": "N16-s06-b047",
+      "kind": "paragraph",
+      "text": "Para cada aparición de «entregable» anotan condición, evidencia, momento y acción. El tablero estaba usando limpieza terminada como indicador de entrega. Se corrige ese uso, sin quitar a Mariela la medida de preparación que sí permite evaluar su trabajo."
+    },
+    {
+      "source_id": "N16-s06-b048",
+      "kind": "paragraph",
+      "text": "El inventario conserva estados propios. La preparación no se renombra automáticamente «asignable» si faltan otras condiciones. La comunicación distingue confirmación enviada de ingreso efectivo. Los requisitos de accesibilidad se verifican como parte de la adecuación de la habitación, separados de que la cerradura funcione."
+    },
+    {
+      "source_id": "N16-s06-b049",
+      "kind": "paragraph",
+      "text": "Al relacionar las vistas aparece otro problema: una condición de acceso verificada antes puede cambiar después. La correspondencia debe tener vigencia y una señal que obligue a revisar la conclusión. No basta un tilde permanente en una casilla."
+    },
+    {
+      "source_id": "N16-s06-b050",
+      "kind": "paragraph",
+      "text": "Elena pide recorrer un caso con pérdida de esa condición antes de autorizar el piloto. HH-13 aporta tratamiento del resultado desconocido y reconciliación; HH-14, traspasos y atención. N16 conecta esas capacidades en lugar de volver a definirlas con otros nombres."
+    },
+    {
+      "source_id": "N16-s07-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 2 · Usar contradicciones para aprender y gobernar cambios"
+    },
+    {
+      "source_id": "N16-s07-b001",
+      "kind": "heading-3",
+      "text": "Un modelo contiene afirmaciones que podemos revisar"
+    },
+    {
+      "source_id": "N16-s07-b002",
+      "kind": "paragraph",
+      "text": "«La habitación está entregable» parece una descripción breve. Para usarla necesitamos algo más: para qué reserva, en qué momento, según qué condiciones y con qué evidencia. Esa versión precisa permite buscar un contraejemplo."
+    },
+    {
+      "source_id": "N16-s07-b003",
+      "kind": "paragraph",
+      "text": "No todas las piezas del modelo tienen el mismo carácter. Algunas describen observaciones; otras expresan reglas; otras son hipótesis. Revisar una observación incorrecta no es lo mismo que cuestionar una política o poner a prueba una explicación causal."
+    },
+    {
+      "source_id": "N16-s07-b004",
+      "kind": "paragraph",
+      "text": "Checkland y Poulter usan modelos conceptuales para estructurar aprendizaje entre perspectivas. Sterman insiste en examinar fronteras y supuestos al explicar comportamiento. Senge permite pensar cómo cambia la capacidad del equipo para observar, no sólo el archivo que produce."
+    },
+    {
+      "source_id": "N16-s07-b005",
+      "kind": "paragraph",
+      "text": "Edmondson aporta las condiciones para comunicar dudas y errores sin que cada hallazgo se convierta en un castigo interpersonal. Eso no significa falta de responsabilidad. Significa que ocultar una discrepancia por temor impide resolverla. Booch aporta disciplina para separar abstracciones y responsabilidades en sistemas complejos."
+    },
+    {
+      "source_id": "N16-s07-b006",
+      "kind": "paragraph",
+      "text": "Etkin y Schvarstein ayudan a distinguir coherencia de homogeneidad. Una práctica del turno puede conservar una capacidad que el procedimiento oficial no contempló. No la consideramos correcta sólo por ser local ni equivocada sólo por diferir. Preguntamos qué función cumple, qué riesgos agrega y qué se perdería al eliminarla."
+    },
+    {
+      "source_id": "N16-s07-b007",
+      "kind": "paragraph",
+      "text": "Así se reduce la defensa territorial de los modelos. No discutimos si gana el diagrama de Tecnología o el de Comercial. Discutimos qué sostiene cada afirmación y qué acción sería defendible con esa evidencia."
+    },
+    {
+      "source_id": "N16-s07-b008",
+      "kind": "heading-3",
+      "text": "Correspondencias entre vistas"
+    },
+    {
+      "source_id": "N16-s07-b009",
+      "kind": "paragraph",
+      "text": "Una **correspondencia** explica cómo se relacionan dos elementos o afirmaciones. Puede indicar equivalencia, parte de un conjunto, dependencia o traducción. No todas las relaciones significan «es lo mismo que»."
+    },
+    {
+      "source_id": "N16-s07-b010",
+      "kind": "paragraph",
+      "text": "Por ejemplo, «aprobar excepción» en el proceso se relaciona con una autoridad en la matriz, un comando en la integración y un cambio de estado. La relación permite recorrer el caso sin copiar todos esos detalles en cada página."
+    },
+    {
+      "source_id": "N16-s07-b011",
+      "kind": "paragraph",
+      "text": "Para que sirva, se aclara significado, condición y responsable. Si una condición técnica falta, la relación no debe inventar un estado confirmado. Debe mostrar la diferencia y dirigirla a la revisión correspondiente."
+    },
+    {
+      "source_id": "N16-s07-b012",
+      "kind": "paragraph",
+      "text": "Se prueba en ambos sentidos. Desde R-73 encontramos evidencias que sostienen su situación. Desde un cambio de regla encontramos vistas y decisiones que podrían resultar afectadas. La automatización puede localizar vínculos; una persona debe validar que no confundan conceptos."
+    },
+    {
+      "source_id": "N16-s07-b013",
+      "kind": "heading-3",
+      "text": "Un registro para que el desacuerdo no quede perdido en un chat"
+    },
+    {
+      "source_id": "N16-s07-b014",
+      "kind": "paragraph",
+      "text": "Cada diferencia relevante recibe un identificador, las afirmaciones en cuestión, sus fuentes, la consecuencia y un tratamiento. También se distingue quién investiga de quién puede aceptar el cierre. Reunir evidencia no concede autoridad para asumir cualquier riesgo."
+    },
+    {
+      "source_id": "N16-s07-b015",
+      "kind": "paragraph",
+      "text": "Si es un error, se corrige y verifica. Si es una diferencia válida, se documenta su alcance. Si falta conocimiento, se investiga. Si es una transición, se planifica. Si hay un conflicto de reglas, se escala. Un riesgo residual sólo puede aceptarse dentro de la autoridad y los límites aplicables, nunca como una dispensa automática de obligaciones."
+    },
+    {
+      "source_id": "N16-s07-b016",
+      "kind": "paragraph",
+      "text": "La fecha de revisión evita que el registro sea un depósito permanente. Vencer una fecha no cierra el problema: obliga a revisar la exposición, escalar o restringir el uso que todavía no puede sostenerse."
+    },
+    {
+      "source_id": "N16-s07-b017",
+      "kind": "paragraph",
+      "text": "La prioridad responde a consecuencias. Dos estilos gráficos distintos quizá no importen; sí importan si el mismo color significa «autorizado» en una vista y «pendiente» en otra. Una incompatibilidad de autoridad y ejecución puede requerir tratamiento antes de operar aunque se use pocas veces."
+    },
+    {
+      "source_id": "N16-s07-b018",
+      "kind": "paragraph",
+      "text": "El cierre deja evidencia de qué se decidió y para qué alcance. «Se conversó» no alcanza cuando la acción incompatible sigue disponible."
+    },
+    {
+      "source_id": "N16-s07-b019",
+      "kind": "heading-3",
+      "text": "Revisar el impacto desde la decisión"
+    },
+    {
+      "source_id": "N16-s07-b020",
+      "kind": "paragraph",
+      "text": "Buscar una palabra en los archivos ayuda a localizar cambios, pero no muestra todos sus efectos. Cambiar el significado de «confirmada» puede afectar mensajes, permisos, contratos, formación e indicadores, aunque algunos no usen esa palabra exacta."
+    },
+    {
+      "source_id": "N16-s07-b021",
+      "kind": "paragraph",
+      "text": "El **análisis de impacto** sigue las decisiones dependientes. ¿Qué podría hacer Lucía con la nueva señal? ¿Qué prometería Camila? ¿Qué mediría Elena? ¿Qué evidencia necesita Federico? ¿Qué resultado se atribuye a Mariela?"
+    },
+    {
+      "source_id": "N16-s07-b022",
+      "kind": "paragraph",
+      "text": "Distinguimos impacto directo, indirecto y todavía desconocido. No encontrar un archivo con el término no demuestra que no haya impacto. Lo desconocido recibe investigación o una restricción proporcional al riesgo."
+    },
+    {
+      "source_id": "N16-s07-b023",
+      "kind": "paragraph",
+      "text": "Se puede usar una cadena breve: evidencia, afirmación, modelo, decisión, acción y consecuencia. No busca documentar todo el hotel. Ayuda a comprobar que editar una representación no deja otra decisión apoyada en el significado anterior."
+    },
+    {
+      "source_id": "N16-s07-b024",
+      "kind": "heading-3",
+      "text": "Lo que pasa después de la entrega del proyecto"
+    },
+    {
+      "source_id": "N16-s07-b025",
+      "kind": "paragraph",
+      "text": "Los modelos sostienen decisiones de construcción, operación, mantenimiento y retiro. Si sólo se actualizan hasta el día del despliegue, quienes operan pueden quedarse con un mapa que ya no corresponde."
+    },
+    {
+      "source_id": "N16-s07-b026",
+      "kind": "paragraph",
+      "text": "TOGAF aporta un marco para organizar arquitectura y su cambio alrededor de necesidades y partes interesadas. Su uso aquí es acotado: localizar qué representaciones ayudan a gobernar esta decisión, no producir un inventario empresarial completo."
+    },
+    {
+      "source_id": "N16-s07-b027",
+      "kind": "paragraph",
+      "text": "La norma [ISO/IEC/IEEE 12207:2026](https://www.iso.org/standard/90219.html) aborda procesos del ciclo de vida del software, incluyendo adquisición, suministro, desarrollo, operación, mantenimiento y retiro. No impone un único modelo de ciclo de vida. Esa amplitud recuerda que una decisión de diseño puede transferir trabajo a quienes sostienen el servicio después."
+    },
+    {
+      "source_id": "N16-s07-b028",
+      "kind": "paragraph",
+      "text": "También hay dependencias de uso prohibido. Un prototipo futuro puede servir para investigar comprensión y no para instruir a Recepción como si la función ya existiera. Un indicador exploratorio puede ayudar a aprender y no estar validado para evaluar desempeño. Registrar esos límites forma parte de la coherencia."
+    },
+    {
+      "source_id": "N16-s07-b029",
+      "kind": "heading-3",
+      "text": "Baseline, versión y decisión"
+    },
+    {
+      "source_id": "N16-s07-b030",
+      "kind": "paragraph",
+      "text": "Una **baseline**, o línea base, identifica el conjunto de versiones revisadas para un uso definido. Podemos decir: con estas vistas y evidencias se autorizó este piloto, bajo estas condiciones. No afirma que el conjunto sea perfecto ni válido para cualquier situación futura."
+    },
+    {
+      "source_id": "N16-s07-b031",
+      "kind": "paragraph",
+      "text": "La línea base puede incluir modelos con fechas diferentes si se comprobó su compatibilidad para esa decisión. Lo importante no es que todos se hayan guardado el mismo día, sino qué representan y qué limitaciones conservan."
+    },
+    {
+      "source_id": "N16-s07-b032",
+      "kind": "paragraph",
+      "text": "Antes de aprobarla recorremos un escenario ordinario y otro adverso, y enumeramos diferencias abiertas. Si una contradicción crítica sigue sin tratamiento, el conjunto puede servir para investigar y no para operar. Firmar una carpeta no transforma una capacidad pendiente en una capacidad existente."
+    },
+    {
+      "source_id": "N16-s07-b033",
+      "kind": "paragraph",
+      "text": "La [ISO/IEC/IEEE 15288:2023](https://www.iso.org/standard/81702.html) organiza procesos a lo largo de la vida de sistemas y permite aplicaciones iterativas y concurrentes. No prescribe un modelo de ciclo de vida único. La usamos para pensar continuidad de decisiones y evidencia, no una secuencia obligatoria de documentos."
+    },
+    {
+      "source_id": "N16-s07-b034",
+      "kind": "paragraph",
+      "text": "La versión conserva qué cambió, por qué y qué decisiones afecta. Retirar una vista del uso vigente no borra el razonamiento anterior. Permite reconstruir qué se sabía cuando se tomó una decisión y qué apareció después."
+    },
+    {
+      "source_id": "N16-s07-b035",
+      "kind": "heading-3",
+      "text": "Los modelos no se actualizan al mismo ritmo"
+    },
+    {
+      "source_id": "N16-s07-b036",
+      "kind": "paragraph",
+      "text": "Un tablero puede renovar sus datos a cada momento. Un procedimiento puede cambiar cuando se aprueba una regla. Una investigación de experiencia requiere observaciones que no se producen automáticamente. Exigir simultaneidad total sería costoso y, a veces, inadecuado."
+    },
+    {
+      "source_id": "N16-s07-b037",
+      "kind": "paragraph",
+      "text": "Necesitamos **ventanas de compatibilidad**: períodos o condiciones durante los cuales versiones diferentes pueden convivir sin inducir acciones incompatibles. Tienen inicio, fin, responsables y límites de uso. No son permiso para mantener cualquier desactualización indefinidamente."
+    },
+    {
+      "source_id": "N16-s07-b038",
+      "kind": "paragraph",
+      "text": "Supongamos, en el caso del hotel, que el PMS cambia una definición y el tablero necesita dos días para adaptar el indicador. Si no son comparables, esa métrica no se usa mientras tanto para evaluar desempeño como si nada hubiera cambiado. Se informa el desfase y se utiliza la evidencia adecuada disponible para las decisiones que no pueden esperar."
+    },
+    {
+      "source_id": "N16-s07-b039",
+      "kind": "paragraph",
+      "text": "Una transición crítica puede exigir bloquear un uso hasta actualizarlo. Otra menor puede permitir convivencia explícita. Lo decide la consecuencia, no una tolerancia general aplicable a todo."
+    },
+    {
+      "source_id": "N16-s07-b040",
+      "kind": "paragraph",
+      "text": "Los cambios urgentes pueden abreviar pasos, pero no dispensar controles indispensables. Se registra qué revisión adicional queda pendiente, quién la hará y qué uso está permitido. La urgencia no convierte una afirmación sin evidencia en una instrucción segura."
+    },
+    {
+      "source_id": "N16-s07-b041",
+      "kind": "heading-3",
+      "text": "Ciclo de vida no significa fila rígida de etapas"
+    },
+    {
+      "source_id": "N16-s07-b042",
+      "kind": "paragraph",
+      "text": "Un modelo puede nacer como hipótesis, validarse para una exploración, revisarse para una autorización, usarse en operación y más adelante retirarse. Diferentes vistas pueden estar en estados diferentes al mismo tiempo."
+    },
+    {
+      "source_id": "N16-s07-b043",
+      "kind": "paragraph",
+      "text": "Una investigación de experiencia puede realizarse antes del software. Una arquitectura obtenida de producción puede describir lo desplegado sin validar la promesa completa. Una regla de autoridad necesita aprobación y medios para ejecutarla. Los artefactos no avanzan todos juntos sólo porque el proyecto cambió de fase."
+    },
+    {
+      "source_id": "N16-s07-b044",
+      "kind": "paragraph",
+      "text": "Royce describió riesgos del desarrollo secuencial y la necesidad de retroalimentación y comprobaciones adicionales. Boehm organizó el desarrollo en espiral alrededor del riesgo. El [Manifiesto Ágil](https://agilemanifesto.org/) prioriza software funcionando y respuesta al cambio sin declarar carentes de valor la documentación o los planes. Esas tradiciones no deben convertirse en caricaturas para elegir una etiqueta."
+    },
+    {
+      "source_id": "N16-s07-b045",
+      "kind": "paragraph",
+      "text": "La [ISO/IEC/IEEE 24748-2:2024](https://www.iso.org/standard/84661.html) guía la aplicación de 15288. Adaptar el trabajo al contexto no significa omitir sin razón lo que protege una decisión. Significa justificar qué evidencia se necesita, cuándo y con qué revisión."
+    },
+    {
+      "source_id": "N16-s07-b046",
+      "kind": "paragraph",
+      "text": "N16 no elige todavía una estrategia completa. Pide que el estado del modelo sea compatible con su uso. Un objetivo no se presenta como implementación y una operación no queda sin revisión porque terminó el proyecto que la creó."
+    },
+    {
+      "source_id": "N16-s07-b047",
+      "kind": "heading-3",
+      "text": "La inteligencia artificial puede emparejar palabras y borrar diferencias"
+    },
+    {
+      "source_id": "N16-s07-b048",
+      "kind": "paragraph",
+      "text": "Una herramienta puede detectar términos distintos, sugerir enlaces y comparar versiones. También puede reemplazar «preparada» por «entregable» porque aparecen en contextos similares. Esa semejanza no demuestra equivalencia operativa."
+    },
+    {
+      "source_id": "N16-s07-b049",
+      "kind": "paragraph",
+      "text": "Cada propuesta debe conservar las fuentes y versiones comparadas. Se comprueba con episodios y responsables de significado. La revisión también busca el problema inverso: dos vistas usan exactamente la misma palabra y habilitan acciones diferentes."
+    },
+    {
+      "source_id": "N16-s07-b050",
+      "kind": "paragraph",
+      "text": "Una herramienta que modifica documentación no obtiene por eso permiso para cambiar reglas, código o autoridad. El impacto se evalúa por separado. Proponer una correspondencia y autorizar una operación son funciones distintas."
+    },
+    {
+      "source_id": "N16-s07-b051",
+      "kind": "paragraph",
+      "text": "La ayuda automática puede reducir trabajo de búsqueda, pero el cierre de un conflicto normativo o una aceptación de riesgo siguen necesitando la autoridad correspondiente. No basta con que un segundo análisis de la misma herramienta declare que ahora todo coincide."
+    },
+    {
+      "source_id": "N16-s07-b052",
+      "kind": "heading-3",
+      "text": "Qué diferencia atender primero"
+    },
+    {
+      "source_id": "N16-s07-b053",
+      "kind": "paragraph",
+      "text": "La prioridad considera consecuencia, posibilidad de uso, dificultad de detección y reversibilidad. Una discrepancia poco frecuente puede ser crítica si permite una acción difícil de reparar."
+    },
+    {
+      "source_id": "N16-s07-b054",
+      "kind": "paragraph",
+      "text": "Cambiar una etiqueta interna puede corregirse con costo limitado. Enviar una confirmación equivocada, negar una atención o divulgar información puede dejar consecuencias que no se deshacen al editar el archivo. Cuanto menos reversible sea la acción, más importante es comprobar antes las correspondencias."
+    },
+    {
+      "source_id": "N16-s07-b055",
+      "kind": "paragraph",
+      "text": "También importa si el error se ve. Una incompatibilidad que produce un aviso inmediato tiene otra detectabilidad que un indicador que atribuye lentamente malos resultados a un equipo. La ausencia de reclamos no demuestra ausencia de consecuencias."
+    },
+    {
+      "source_id": "N16-s07-b056",
+      "kind": "paragraph",
+      "text": "La comparación no necesita un puntaje automático. Necesita una razón explícita para atender primero una entrada y para permitir o restringir ciertos usos mientras otra sigue abierta."
+    },
+    {
+      "source_id": "N16-s07-b057",
+      "kind": "paragraph",
+      "text": "No buscamos detener todo hasta una perfección documental imposible. Tampoco aceptar cualquier contradicción con la excusa de que los modelos simplifican. La respuesta es proporcional al uso y deja visible lo que todavía no está resuelto."
+    },
+    {
+      "source_id": "N16-s07-b058",
+      "kind": "heading-3",
+      "text": "Segunda aplicación de HH-16: una regla y varias decisiones afectadas"
+    },
+    {
+      "source_id": "N16-s07-b059",
+      "kind": "paragraph",
+      "text": "Para el piloto, Elena exige evidencia vigente del acceso antes de confirmar el ingreso. El caso presta especial atención a R-73 y sus requisitos de accesibilidad. Eso no significa que las demás habitaciones puedan prescindir de seguridad o acceso operativo; se trata de comprobar que la combinación requerida no quede reducida a un único estado genérico."
+    },
+    {
+      "source_id": "N16-s07-b060",
+      "kind": "paragraph",
+      "text": "La revisión afecta regla, proceso, integración, comunicación, autoridad e indicador. Federico identifica la señal técnica y su vigencia. Mariela conserva la inspección correspondiente. Lucía comprueba qué puede hacer con esas evidencias. Camila revisa lo que se comunica al huésped."
+    },
+    {
+      "source_id": "N16-s07-b061",
+      "kind": "paragraph",
+      "text": "Antes del despliegue recorren una falla fuera de horario. Lucía puede verla, pero la política no deja clara la suplencia para autorizar una alternativa. Camila tampoco tiene un camino definido para corregir una confirmación ya enviada. No son errores de dibujo: faltan capacidades y decisiones."
+    },
+    {
+      "source_id": "N16-s07-b062",
+      "kind": "paragraph",
+      "text": "Se prepara primero la atención de esas situaciones: suplencia válida, información visible y reparación autorizada. Después se prueba la nueva regla automática dentro de ese conjunto. No se posponen controles indispensables por dividir el cambio; se ordena el trabajo para no activar una promesa sin soporte."
+    },
+    {
+      "source_id": "N16-s07-b063",
+      "kind": "paragraph",
+      "text": "Elena condiciona el avance a que el caso adverso conserve identidad, señal, siguiente acción y atención. Si cambia el contrato del proveedor o aparece una nueva excepción, esa prueba debe volver a revisarse."
+    },
+    {
+      "source_id": "N16-s08-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 3 · Cerrar una cartera sin cerrar el aprendizaje"
+    },
+    {
+      "source_id": "N16-s08-b001",
+      "kind": "paragraph",
+      "text": "Cerrar la revisión de una cartera no significa afirmar que ya no cambiará. Significa saber para qué decisiones resulta suficiente, qué diferencias permanecen abiertas y cómo se detectará que dejó de servir."
+    },
+    {
+      "source_id": "N16-s08-b002",
+      "kind": "paragraph",
+      "text": "Para lograrlo necesitamos probar el uso actual, un cambio y la recuperación de una decisión pasada. Son tres preguntas distintas: ¿se puede decidir hoy?, ¿se puede mantener mañana?, ¿se puede explicar lo que se decidió ayer?"
+    },
+    {
+      "source_id": "N16-s08-b003",
+      "kind": "heading-3",
+      "text": "Instrumento HH-16: expediente de coherencia y ciclo de vida"
+    },
+    {
+      "source_id": "N16-s08-b004",
+      "kind": "paragraph",
+      "text": "El expediente reúne doce decisiones sobre un conjunto acotado de vistas. Puede ser breve si el caso es sencillo; no necesita convertirse en otro inventario total."
+    },
+    {
+      "source_id": "N16-s08-b005",
+      "kind": "list-item",
+      "text": "**Decisión y escenario.** ¿Qué caso común vamos a seguir y qué necesitamos decidir? Por ejemplo, confirmar o mantener pendiente el ingreso de R-73."
+    },
+    {
+      "source_id": "N16-s08-b006",
+      "kind": "list-item",
+      "text": "**Modelos y versiones.** ¿Qué vistas se comparan y para qué momentos valen? No se confunde actual, objetivo y transitorio."
+    },
+    {
+      "source_id": "N16-s08-b007",
+      "kind": "list-item",
+      "text": "**Afirmaciones relacionadas.** ¿Qué condiciones deberían corresponder? Preparación, asignación, acceso y promesa tienen relaciones, no identidad automática."
+    },
+    {
+      "source_id": "N16-s08-b008",
+      "kind": "list-item",
+      "text": "**Diferencias observadas.** ¿Qué no coincide? Primero se registra la diferencia sin decidir de antemano quién está equivocado."
+    },
+    {
+      "source_id": "N16-s08-b009",
+      "kind": "list-item",
+      "text": "**Clasificación.** ¿Afecta términos, frontera, tiempo, regla, medida, identidad o autoridad? Puede incluir más de un tipo."
+    },
+    {
+      "source_id": "N16-s08-b010",
+      "kind": "list-item",
+      "text": "**Evidencia.** ¿Qué sostiene cada afirmación? ¿Qué falta comprobar?"
+    },
+    {
+      "source_id": "N16-s08-b011",
+      "kind": "list-item",
+      "text": "**Consecuencia.** ¿Qué acción o persona puede verse afectada si usamos mal la relación?"
+    },
+    {
+      "source_id": "N16-s08-b012",
+      "kind": "list-item",
+      "text": "**Tratamiento.** ¿Hay que corregir, explicar, investigar, planificar, escalar o aceptar un riesgo residual dentro de límites válidos?"
+    },
+    {
+      "source_id": "N16-s08-b013",
+      "kind": "list-item",
+      "text": "**Responsabilidades.** ¿Quién reúne evidencia y quién puede decidir el cierre? No necesariamente coinciden."
+    },
+    {
+      "source_id": "N16-s08-b014",
+      "kind": "list-item",
+      "text": "**Impacto.** ¿Qué otras vistas, reglas, comunicaciones o sistemas dependen de lo que cambia?"
+    },
+    {
+      "source_id": "N16-s08-b015",
+      "kind": "list-item",
+      "text": "**Prueba de cierre.** ¿Qué caso y qué resultado demostrarán que el uso permitido ya es coherente?"
+    },
+    {
+      "source_id": "N16-s08-b016",
+      "kind": "list-item",
+      "text": "**Vida posterior.** ¿Cuándo se revisa, reemplaza o retira cada modelo? ¿Qué evidencia se conserva para reconstruir decisiones?"
+    },
+    {
+      "source_id": "N16-s08-b017",
+      "kind": "paragraph",
+      "text": "Si surge un problema fuera del alcance, se registra y vincula para tratarlo donde corresponde. No se expande indefinidamente la revisión inicial ni se pierde el nuevo hallazgo."
+    },
+    {
+      "source_id": "N16-s08-b018",
+      "kind": "paragraph",
+      "text": "Una entrada puede seguir abierta con atención y restricciones. Pero «está registrada» no vuelve aceptable una acción crítica que todavía no puede sostenerse. El expediente sirve para decidir límites, no para justificar que nada cambie."
+    },
+    {
+      "source_id": "N16-s08-b019",
+      "kind": "heading-3",
+      "text": "Seguir el mismo caso a través de las vistas"
+    },
+    {
+      "source_id": "N16-s08-b020",
+      "kind": "paragraph",
+      "text": "Se elige una identidad y un resultado, y se recorre la secuencia entre modelos. Para R-73, no cambiamos de reserva a mitad de la explicación porque otro ejemplo sea más cómodo. Cada paso conserva qué se sabe, quién actúa y qué evidencia corresponde."
+    },
+    {
+      "source_id": "N16-s08-b021",
+      "kind": "paragraph",
+      "text": "En el caso ordinario verificamos relaciones básicas. En el adverso agregamos demora, pérdida de condición, ausencia de autoridad o necesidad de reparación. La prueba puede ser un recorrido razonado, una simulación o una prueba técnica, según lo que afirmamos. Una revisión en papel no se presenta como comprobación de producción."
+    },
+    {
+      "source_id": "N16-s08-b022",
+      "kind": "paragraph",
+      "text": "El registro se organiza por decisiones y pasos, no sólo por archivos. Si Lucía debe confirmar, reunimos las afirmaciones de todas las vistas que intervienen en esa decisión. Así se ve qué falta aunque cada archivo parezca completo por separado."
+    },
+    {
+      "source_id": "N16-s08-b023",
+      "kind": "paragraph",
+      "text": "Otra persona repite el recorrido sin que el autor supla relaciones de memoria. Debe poder encontrar alcance, fuente y próxima acción. Si necesita saber una convención secreta del equipo, la correspondencia todavía no es transferible."
+    },
+    {
+      "source_id": "N16-s08-b024",
+      "kind": "paragraph",
+      "text": "Se conserva evidencia de la prueba para repetirla después de cambios relevantes. No alcanza con anotar «revisado»: debe poder saberse qué se revisó y con qué resultado."
+    },
+    {
+      "source_id": "N16-s08-b025",
+      "kind": "heading-3",
+      "text": "Probar un cambio antes de depender de él"
+    },
+    {
+      "source_id": "N16-s08-b026",
+      "kind": "paragraph",
+      "text": "Modificamos de manera controlada una regla, un rol o una dependencia. Por ejemplo, imaginamos que una aprobación deja de ser manual. Preguntamos qué cambia en control de excepciones, evidencia, permisos y reparación."
+    },
+    {
+      "source_id": "N16-s08-b027",
+      "kind": "paragraph",
+      "text": "Si no encontramos qué vistas quedan afectadas, la trazabilidad es insuficiente. Si hay que corregir muchas copias manuales idénticas, puede haber duplicación. Si una parte se actualiza automáticamente y otra requiere autorización, sus ritmos necesitan coordinación."
+    },
+    {
+      "source_id": "N16-s08-b028",
+      "kind": "paragraph",
+      "text": "Antes de la prueba definimos qué decisión debería mejorar y qué consecuencia no puede empeorar. Después comprobamos algo más que enlaces: si la identidad se conserva, si las personas reconocen la regla vigente y si una versión anterior sigue induciendo una acción incorrecta."
+    },
+    {
+      "source_id": "N16-s08-b029",
+      "kind": "paragraph",
+      "text": "Cuando un cambio sólo puede desplegarse por partes, se explican convivencia, restricciones y responsables. No se declara compatibilidad porque todas las aplicaciones siguen encendidas. La compatibilidad debe sostener las decisiones permitidas durante la transición."
+    },
+    {
+      "source_id": "N16-s08-b030",
+      "kind": "paragraph",
+      "text": "El costo de esta revisión también informa. Puede mostrar que una cartera es demasiado difícil de mantener o que necesita mejores fuentes compartidas. No demuestra que toda documentación sea innecesaria; muestra dónde el diseño de la documentación agrega dependencia."
+    },
+    {
+      "source_id": "N16-s08-b031",
+      "kind": "heading-3",
+      "text": "Retirar del uso sin borrar la historia"
+    },
+    {
+      "source_id": "N16-s08-b032",
+      "kind": "paragraph",
+      "text": "Retirar una representación significa sacarla del circuito donde podría usarse como vigente. Conservarla como antecedente permite entender decisiones pasadas. Las dos necesidades deben atenderse juntas."
+    },
+    {
+      "source_id": "N16-s08-b033",
+      "kind": "paragraph",
+      "text": "La prueba comienza donde alguien buscaría: repositorio, enlaces, material de formación, tablero y accesos directos. Una copia vieja guardada sin contexto puede reintroducir una regla que ya cambió. Se marca su condición histórica y se indica el reemplazo cuando corresponde."
+    },
+    {
+      "source_id": "N16-s08-b034",
+      "kind": "paragraph",
+      "text": "Después se intenta reconstruir una decisión anterior. ¿Encontramos el conjunto de versiones utilizado, sus evidencias y las limitaciones conocidas? Tener sólo el último dibujo no permite saber qué podía sostenerse en ese momento."
+    },
+    {
+      "source_id": "N16-s08-b035",
+      "kind": "paragraph",
+      "text": "El reemplazo declara desde cuándo y para qué casos rige. Una operación larga puede haber comenzado con condiciones previas. No se decide automáticamente que toda regla nueva se aplica hacia atrás ni que ninguna lo hace: la transición depende de la política y obligaciones correspondientes."
+    },
+    {
+      "source_id": "N16-s08-b036",
+      "kind": "paragraph",
+      "text": "En la universidad, la versión anterior ayuda a explicar cómo se procesaban inscripciones antes del cambio. La vista objetivo describe la capacidad pendiente. La vía transitoria indica cómo atender casos mientras se completa. Se pueden conservar esos tiempos sin mezclarlos."
+    },
+    {
+      "source_id": "N16-s08-b037",
+      "kind": "paragraph",
+      "text": "Una persona ajena a la modificación debería poder elegir la vista adecuada para una decisión actual y reconstruir una pasada. Si ambas búsquedas terminan en el mismo archivo sin vigencia, todavía falta gobierno del ciclo de vida."
+    },
+    {
+      "source_id": "N16-s08-b038",
+      "kind": "heading-3",
+      "text": "Revisar lo que sigue abierto"
+    },
+    {
+      "source_id": "N16-s08-b039",
+      "kind": "paragraph",
+      "text": "Las contradicciones abiertas se revisan según consecuencia y edad. La reunión pregunta qué evidencia apareció, qué decisión depende ahora de la entrada y si el tratamiento sigue siendo suficiente. No necesita repetir desde cero toda la discusión."
+    },
+    {
+      "source_id": "N16-s08-b040",
+      "kind": "paragraph",
+      "text": "Una diferencia puede perder relevancia porque se retiró una función. Otra puede volverse crítica porque el piloto se amplió a más personas. El historial explica ese cambio de prioridad."
+    },
+    {
+      "source_id": "N16-s08-b041",
+      "kind": "paragraph",
+      "text": "La cantidad abierta no es por sí sola una medida de mala calidad. Un equipo que descubre y registra problemas puede mostrar más entradas que otro que los oculta. Importan su gravedad, atención y efectos."
+    },
+    {
+      "source_id": "N16-s08-b042",
+      "kind": "paragraph",
+      "text": "También buscamos patrones. Varias discrepancias alrededor de «confirmada» pueden señalar una confusión común. Corregir diez etiquetas por separado quizá deje intacta la regla que las genera. Agrupar permite investigar el mecanismo sin borrar diferencias entre casos."
+    },
+    {
+      "source_id": "N16-s08-b043",
+      "kind": "paragraph",
+      "text": "El cierre necesita evidencia de corrección, correspondencia válida, transición realizada o decisión autorizada sobre el riesgo residual. Una investigación terminada puede cerrar la pregunta investigativa y dejar abierta una acción necesaria. No se usa ese cierre parcial para presentar todo el problema como resuelto."
+    },
+    {
+      "source_id": "N16-s08-b044",
+      "kind": "paragraph",
+      "text": "Vencer un plazo o conversar en una reunión tampoco equivale a cerrar. Si falta evidencia, se mantiene la entrada y se decide qué uso restringir o qué atención escalar. La prioridad no es producir un tablero sin pendientes, sino impedir que los pendientes se vuelvan certeza operativa por silencio."
+    },
+    {
+      "source_id": "N16-s08-b045",
+      "kind": "heading-3",
+      "text": "Tercera aplicación de HH-16: acordar cuándo una habitación puede entregarse"
+    },
+    {
+      "source_id": "N16-s08-b046",
+      "kind": "paragraph",
+      "text": "El equipo deja explícitas las condiciones. **Preparada** conserva evidencia de preparación e inspección según la regla del caso. **Asignable** expresa disponibilidad para una asignación bajo sus restricciones. **Acceso operativo** requiere las condiciones técnicas vigentes. **Adecuada para la reserva** incluye los requisitos comprometidos, entre ellos los de accesibilidad cuando corresponden. **Confirmación comunicada** indica qué se informó y no sustituye esas comprobaciones."
+    },
+    {
+      "source_id": "N16-s08-b047",
+      "kind": "paragraph",
+      "text": "«Entregable para R-73 en este momento» relaciona las condiciones necesarias y su evidencia. No se usa como etiqueta eterna de una habitación ni como mérito exclusivo de Housekeeping."
+    },
+    {
+      "source_id": "N16-s08-b048",
+      "kind": "paragraph",
+      "text": "El proceso muestra dónde se reúnen las condiciones. Los modelos de estados especifican cambios relevantes. La arquitectura localiza las fuentes y mecanismos. La matriz identifica autoridad. La experiencia muestra qué ve la persona. El tablero mide resultados definidos sin confundir preparación e ingreso."
+    },
+    {
+      "source_id": "N16-s08-b049",
+      "kind": "paragraph",
+      "text": "La prueba introduce una respuesta tardía del servicio de acceso. Lucía ve que falta confirmación suficiente; Federico verifica el estado técnico. Si todavía no se envió una confirmación al huésped, Camila evita anticiparla. Si ya se había enviado, debe corregirse la comunicación y atender la promesa, no fingir que nunca existió."
+    },
+    {
+      "source_id": "N16-s08-b050",
+      "kind": "paragraph",
+      "text": "Elena o la suplencia autorizada decide la alternativa prevista cuando supera las atribuciones ordinarias. Se conserva identidad, tiempos y reparación. La vía no depende de que esté presente quien dibujó el caso."
+    },
+    {
+      "source_id": "N16-s08-b051",
+      "kind": "paragraph",
+      "text": "Se cierra la confusión de significado cuando otra persona puede reconstruir ese recorrido y los usos permitidos quedan comprobados. No se afirma que toda falla futura esté resuelta. El cambio de proveedor, de regla o la evidencia del piloto pueden exigir otra revisión."
+    },
+    {
+      "source_id": "N16-s08-b052",
+      "kind": "paragraph",
+      "text": "Queda una pregunta diferente: cuánto invertir para anticipar dificultades y cómo combinar pruebas y cambios. Eso abre la estrategia que trabajará N17."
+    },
+    {
+      "source_id": "N16-s08-b053",
+      "kind": "heading-3",
+      "text": "Transferencia: un programa que promete análisis y evalúa memoria"
+    },
+    {
+      "source_id": "N16-s08-b054",
+      "kind": "paragraph",
+      "text": "Una carrera puede tener plan de estudios, programas, actividades y exámenes con las mismas palabras. Todos mencionan «pensamiento crítico». Pero si las actividades sólo piden repetir definiciones y la evaluación premia recuerdo literal, la coincidencia textual no demuestra que esa capacidad se enseñe."
+    },
+    {
+      "source_id": "N16-s08-b055",
+      "kind": "paragraph",
+      "text": "En este ejemplo didáctico seguimos una capacidad a través de las vistas. ¿Dónde se introduce? ¿Dónde se practica? ¿Qué producción permite observarla? ¿Qué devolución ayuda a mejorarla? No hace falta que una actividad y una evaluación sean idénticas; sus relaciones deben ser defendibles."
+    },
+    {
+      "source_id": "N16-s08-b056",
+      "kind": "paragraph",
+      "text": "Se revisa una producción de estudiante y el criterio con que fue evaluada. Si se pidió argumentación, buscamos uso de evidencia, consideración de alternativas y justificación, no sólo una lista de términos correctos."
+    },
+    {
+      "source_id": "N16-s08-b057",
+      "kind": "paragraph",
+      "text": "El tratamiento puede modificar actividades, evaluación o una promesa curricular que no tenía soporte. Tiene responsables y fecha de revisión. Cambiar «memorizar» por «analizar» en un enunciado sin cambiar la tarea sería una corrección de apariencia."
+    },
+    {
+      "source_id": "N16-s08-b058",
+      "kind": "paragraph",
+      "text": "La comparación vuelve a abrirse si cambia una correlatividad, una evaluación o lo que muestran los trabajos. La coherencia curricular se prueba en oportunidades y evidencias de aprendizaje, no sólo en documentos."
+    },
+    {
+      "source_id": "N16-s08-b059",
+      "kind": "heading-3",
+      "text": "Otro ejemplo: cancelar un turno no siempre significa lo mismo"
+    },
+    {
+      "source_id": "N16-s08-b060",
+      "kind": "paragraph",
+      "text": "Un centro de atención ofrece turnos por teléfono y web. En el ejemplo, la web confirma algunas cancelaciones directamente. Por teléfono, ciertos casos primero generan una solicitud que necesita validación. El instructivo del operador lo aclara, pero el proceso general dice que toda cancelación libera el horario de inmediato."
+    },
+    {
+      "source_id": "N16-s08-b061",
+      "kind": "paragraph",
+      "text": "La palabra es la misma; los eventos no. En un canal se recibió una intención. En otro se confirmó un cambio. Si el reporte cuenta ambos como horarios libres, podría ofrecer un turno que todavía no puede reasignarse."
+    },
+    {
+      "source_id": "N16-s08-b062",
+      "kind": "paragraph",
+      "text": "Para alinear documentos, alguien propone quitar la advertencia del instructivo. Eso los haría coincidir y dejaría peor informada a la operación. Otra propuesta llama «cancelación» a todo y modifica el indicador. La cifra cierra, pero el estado sigue sin ser equivalente."
+    },
+    {
+      "source_id": "N16-s08-b063",
+      "kind": "paragraph",
+      "text": "La revisión separa solicitud de cancelación y cancelación confirmada. El proceso representa la validación donde corresponde. La pantalla no promete liberación antes de que exista. El indicador distingue solicitudes, confirmaciones y demora entre ambas."
+    },
+    {
+      "source_id": "N16-s08-b064",
+      "kind": "paragraph",
+      "text": "Luego se prueba un caso cuya validación falla. Debe saberse quién revisa, qué se informa a la persona y qué evidencia autoriza volver a ofrecer el horario. Esa relación conecta eventos de N12, demora de N13 y recorrido de N14."
+    },
+    {
+      "source_id": "N16-s08-b065",
+      "kind": "paragraph",
+      "text": "No se necesita uniformar toda la operación de ambos canales. Se necesita que sus diferencias no habiliten conclusiones falsas."
+    },
+    {
+      "source_id": "N16-s08-b066",
+      "kind": "heading-3",
+      "text": "Una política vigente con capacidad sólo en una sede"
+    },
+    {
+      "source_id": "N16-s08-b067",
+      "kind": "paragraph",
+      "text": "Una organización ficticia aprueba revisión humana de ciertas decisiones automatizadas. Política, formulario y comunicación repiten esa posibilidad. Sin embargo, las delegaciones sólo reciben pedidos: no acceden a la evidencia ni tienen un camino efectivo para llevarlos a quien decide."
+    },
+    {
+      "source_id": "N16-s08-b068",
+      "kind": "paragraph",
+      "text": "Una auditoría de palabras encontraría coincidencia. Una prueba desde una delegación encontraría una promesa que no se puede completar. La diferencia es entre alcance aprobado y capacidad disponible, no entre frases."
+    },
+    {
+      "source_id": "N16-s08-b069",
+      "kind": "paragraph",
+      "text": "La respuesta no puede reducirse a editar la comunicación para quitar a esas personas de la promesa. Tampoco alcanza con habilitar un formulario que acumule pedidos sin revisión. Hay una decisión institucional sobre recursos, responsabilidades y una vía efectiva de atención."
+    },
+    {
+      "source_id": "N16-s08-b070",
+      "kind": "paragraph",
+      "text": "El equipo registra capacidad parcial y organiza una ruta transitoria autorizada hacia revisión central, con acceso a evidencia, seguimiento y comunicación, mientras trabaja la capacidad distribuida. Los plazos y controles se definen según consecuencias y obligaciones del contexto; no se inventa un plazo universal en esta lectura."
+    },
+    {
+      "source_id": "N16-s08-b071",
+      "kind": "paragraph",
+      "text": "La prueba usa casos de varias sedes, incluido uno urgente, y verifica que la revisión pueda completarse. Si la vía transitoria no cumple, sigue habiendo una brecha crítica. Documentarla con honestidad es necesario, pero no la vuelve aceptable por tiempo indefinido."
+    },
+    {
+      "source_id": "N16-s08-b072",
+      "kind": "paragraph",
+      "text": "El ejemplo muestra el límite de la técnica. Un mapa permite localizar la falta. La autoridad debe decidir y sostener cómo se cumple la obligación. La edición de documentos no puede reemplazar esa respuesta."
+    },
+    {
+      "source_id": "N16-s08-b073",
+      "kind": "heading-3",
+      "text": "Contraejemplo: una fuente única que repite la misma omisión"
+    },
+    {
+      "source_id": "N16-s08-b074",
+      "kind": "paragraph",
+      "text": "Una empresa genera proceso, arquitectura y responsabilidades desde un repositorio central. Todos los nombres coinciden. El informe automático no encuentra contradicciones. Mientras tanto, el turno nocturno sigue resolviendo excepciones que la base no representa."
+    },
+    {
+      "source_id": "N16-s08-b075",
+      "kind": "paragraph",
+      "text": "Las vistas no discrepan porque comparten la misma ausencia. La uniformidad produce una apariencia de control y deja fuera una parte del trabajo."
+    },
+    {
+      "source_id": "N16-s08-b076",
+      "kind": "paragraph",
+      "text": "No hace falta abandonar el repositorio. Se incorporan episodios, fuentes de operación y personas capaces de cuestionarlo. Las relaciones inferidas se distinguen de las comprobadas. Las pruebas adversas permiten encontrar lo que el camino ordinario no mostraba."
+    },
+    {
+      "source_id": "N16-s08-b077",
+      "kind": "paragraph",
+      "text": "Ahora aparecen desacuerdos. La cartera parece menos ordenada al comienzo, pero dispone de mejor información para revisar decisiones. Eso no convierte cualquier opinión en evidencia equivalente: las diferencias se investigan y se justifican."
+    },
+    {
+      "source_id": "N16-s08-b078",
+      "kind": "paragraph",
+      "text": "Una base común facilita actualización y también puede propagar un error común. Su utilidad necesita fuentes y pruebas que puedan refutarla. Coherencia interna y adecuación al trabajo real son preguntas relacionadas, no idénticas."
+    },
+    {
+      "source_id": "N16-s09-h2",
+      "kind": "heading-2",
+      "text": "Errores frecuentes"
+    },
+    {
+      "source_id": "N16-s09-b001",
+      "kind": "paragraph",
+      "text": "**Imponer una sola palabra para situaciones distintas.** Puede borrar condiciones necesarias. Antes de unificar, se comprueba si las acciones y evidencias realmente corresponden."
+    },
+    {
+      "source_id": "N16-s09-b002",
+      "kind": "paragraph",
+      "text": "**Corregir el archivo que parece más viejo.** La fecha del archivo no indica por sí sola vigencia. Puede conservar una situación histórica necesaria o describir una propuesta futura."
+    },
+    {
+      "source_id": "N16-s09-b003",
+      "kind": "paragraph",
+      "text": "**Tratar toda diferencia como error.** Distinto propósito o nivel puede justificarla. Lo importante es que no se use para sostener una conclusión que excede su alcance."
+    },
+    {
+      "source_id": "N16-s09-b004",
+      "kind": "paragraph",
+      "text": "**Celebrar el desacuerdo sin atender consecuencias.** Una contradicción crítica requiere responsable, tratamiento y límites de uso. Llamarla productiva no la resuelve."
+    },
+    {
+      "source_id": "N16-s09-b005",
+      "kind": "paragraph",
+      "text": "**Editar modelos sin revisar decisiones.** La pantalla, la regla y el permiso pueden seguir habilitando acciones incompatibles aunque los documentos ahora compartan etiqueta."
+    },
+    {
+      "source_id": "N16-s09-b006",
+      "kind": "paragraph",
+      "text": "**Confiar sólo en coincidencias automáticas.** Dos palabras iguales pueden esconder conceptos diferentes; dos nombres distintos pueden representar la misma condición."
+    },
+    {
+      "source_id": "N16-s09-b007",
+      "kind": "paragraph",
+      "text": "**Dejar versiones retiradas en el circuito operativo.** Conservar historia es valioso; permitir que se confunda con una instrucción vigente crea riesgo."
+    },
+    {
+      "source_id": "N16-s09-b008",
+      "kind": "paragraph",
+      "text": "**Usar el ciclo de vida como una fila obligatoria.** Las vistas pueden aprender y cambiar a ritmos distintos. Cada paso necesita evidencia compatible con su uso, no sólo una fecha de fase."
+    },
+    {
+      "source_id": "N16-s09-b009",
+      "kind": "paragraph",
+      "text": "**Cerrar para mejorar un indicador.** Una entrada abierta y atendida es más honesta que un cierre sin evidencia. La consecuencia, no el color del tablero, determina la prioridad."
+    },
+    {
+      "source_id": "N16-s10-h2",
+      "kind": "heading-2",
+      "text": "Consecuencias profesionales"
+    },
+    {
+      "source_id": "N16-s10-b001",
+      "kind": "paragraph",
+      "text": "La coherencia requiere una capacidad compartida. Alguien reúne evidencia, alguien valida significado, alguien puede decidir y alguien mantiene las relaciones después del cambio. No es una tarea exclusiva de quien administra archivos."
+    },
+    {
+      "source_id": "N16-s10-b002",
+      "kind": "paragraph",
+      "text": "Un profesional puede distinguir un error de cálculo de una diferencia de población, una vista futura de una actual y un permiso de una autoridad. Esa precisión evita soluciones que arreglan el síntoma documental y dejan la causa operativa."
+    },
+    {
+      "source_id": "N16-s10-b003",
+      "kind": "paragraph",
+      "text": "También puede decir qué sigue abierto sin perder control del conjunto. Registrar límites permite autorizar una exploración y bloquear un uso que todavía no se sostiene. La claridad sobre el grado de compromiso protege tanto al equipo como a quienes reciben consecuencias."
+    },
+    {
+      "source_id": "N16-s10-b004",
+      "kind": "paragraph",
+      "text": "El cierre del Bloque C deja una disciplina: elegir modelos por las preguntas que ayudan a responder, contrastarlos con evidencia y mantener visible cuándo deben revisarse. No se trata de defender los dibujos. Se trata de poder defender y corregir las decisiones que hacemos con ellos."
+    },
+    {
+      "source_id": "N16-s11-h2",
+      "kind": "heading-2",
+      "text": "Límites y tensiones"
+    },
+    {
+      "source_id": "N16-s11-b001",
+      "kind": "paragraph",
+      "text": "La trazabilidad tiene costo. Intentar vincular cada detalle puede reconstruir el modelo total que N15 rechazó. Priorizamos conceptos, afirmaciones y decisiones cuya pérdida de relación tenga consecuencias."
+    },
+    {
+      "source_id": "N16-s11-b002",
+      "kind": "paragraph",
+      "text": "La coherencia también puede usarse como una forma de control central que silencia prácticas locales. Una diferencia necesita explicación cuando cambia una decisión relevante; no toda autonomía necesita desaparecer. La revisión debe escuchar qué sostiene esa práctica y qué riesgos tiene."
+    },
+    {
+      "source_id": "N16-s11-b003",
+      "kind": "paragraph",
+      "text": "Los controles formales pueden volverse ceremoniales. Una firma sin prueba de uso no demuestra suficiencia. La exigencia se ajusta a consecuencias, vigencia y capacidad real de mantener la representación."
+    },
+    {
+      "source_id": "N16-s11-b004",
+      "kind": "paragraph",
+      "text": "La evidencia puede contener información sensible. No toda audiencia necesita todo el detalle, pero debe existir una vía autorizada para revisar afirmaciones críticas. La privacidad no se resuelve publicando todo ni dejando todo sin posibilidad de examen."
+    },
+    {
+      "source_id": "N16-s11-b005",
+      "kind": "paragraph",
+      "text": "Finalmente, una cartera coherente puede describir con precisión una estrategia equivocada o injusta. La compatibilidad de modelos no decide por sí sola qué conviene hacer. N17 abrirá esa elección, usando lo que ahora podemos explicar y lo que sabemos que falta."
+    },
+    {
+      "source_id": "N16-s12-h2",
+      "kind": "heading-2",
+      "text": "De N16 a N17: del modelado selectivo a la estrategia situada"
+    },
+    {
+      "source_id": "N16-s12-b001",
+      "kind": "paragraph",
+      "text": "HH-16 deja un conjunto de vistas utilizable para decisiones definidas, diferencias clasificadas y cuestiones abiertas con tratamiento. El equipo puede distinguir qué afirma, qué propone y qué no conoce todavía."
+    },
+    {
+      "source_id": "N16-s12-b002",
+      "kind": "paragraph",
+      "text": "N17 inicia el Bloque D. Comparará lógicas predictivas, iterativas, incrementales, adaptativas y experimentales. La pregunta ya no será sólo cómo representar el problema, sino cómo organizar la intervención según incertidumbre, consecuencias y posibilidad de revisar."
+    },
+    {
+      "source_id": "N16-s12-b003",
+      "kind": "paragraph",
+      "text": "Los modelos no se guardan al pasar de bloque. Se usan como evidencia y se siguen revisando cuando las acciones muestran algo que no habíamos comprendido."
+    },
+    {
+      "source_id": "N16-s13-h2",
+      "kind": "heading-2",
+      "text": "Una lectura situada desde América Latina"
+    },
+    {
+      "source_id": "N16-s13-b001",
+      "kind": "paragraph",
+      "text": "Mario Bunge permite exigir que una afirmación sea precisa y contrastable. En HH-16, pasar de «está lista» a condiciones observables abre la posibilidad de comprobar y discutir. Fernando Flores recuerda que las palabras también coordinan compromisos: decir «confirmado» puede cambiar lo que alguien espera y hace."
+    },
+    {
+      "source_id": "N16-s13-b002",
+      "kind": "paragraph",
+      "text": "Rolando García ayuda a estudiar relaciones que cruzan lo técnico y lo organizacional. Una diferencia de versiones puede expresar una brecha de capacidad, no sólo un retraso de documentación. Scolari permite examinar cómo la interfaz muestra la condición pendiente o la oculta detrás de una señal demasiado simple."
+    },
+    {
+      "source_id": "N16-s13-b003",
+      "kind": "paragraph",
+      "text": "Etkin y Schvarstein son especialmente pertinentes para distinguir coherencia y homogeneidad. Las áreas pueden conservar lógicas distintas y necesitar relaciones explícitas. La autonomía no es automáticamente un fallo; tampoco justifica acciones incompatibles sin atención."
+    },
+    {
+      "source_id": "N16-s13-b004",
+      "kind": "paragraph",
+      "text": "Maturana y Varela aportan una pregunta sobre cómo conocemos desde posiciones diferentes. La aplicamos para contrastar lo que un área puede observar con lo que otras evidencias muestran, sin convertir toda afirmación en igualmente válida. Sosa Escudero ayuda a revisar unidades y fuentes cuando los tableros no coinciden. Echeverría permite reconocer conversaciones que abren o cierran posibilidades de acción."
+    },
+    {
+      "source_id": "N16-s13-b005",
+      "kind": "paragraph",
+      "text": "Estas perspectivas complementan estándares y técnicas. Hacen más exigente la pregunta por coherencia: no basta que el repositorio sea consistente; el equipo debe poder explicar qué decisiones permite y qué consecuencias conserva visibles."
+    },
+    {
+      "source_id": "N16-s14-h2",
+      "kind": "heading-2",
+      "text": "Síntesis"
+    },
+    {
+      "source_id": "N16-s14-b001",
+      "kind": "paragraph",
+      "text": "Dos vistas diferentes pueden ser compatibles. Para saberlo comparamos lo que afirman, su propósito, alcance, tiempo y evidencia. No buscamos que todas repitan el mismo contenido."
+    },
+    {
+      "source_id": "N16-s14-b002",
+      "kind": "paragraph",
+      "text": "Cuando la diferencia afecta una acción, la clasificamos y tratamos. Puede requerir corregir un error, explicar una relación, investigar, organizar una transición o llevar una decisión a la autoridad correspondiente. No se resuelve automáticamente editando la palabra que más molesta."
+    },
+    {
+      "source_id": "N16-s14-b003",
+      "kind": "paragraph",
+      "text": "Los modelos cambian de uso y de vigencia. Versiones, líneas base, pruebas y retiro permiten sostener claridad presente sin borrar memoria. Una fuente común ayuda, pero necesita evidencia capaz de cuestionarla."
+    },
+    {
+      "source_id": "N16-s14-b004",
+      "kind": "paragraph",
+      "text": "HH-16 termina cuando se puede explicar qué decisiones sostiene la cartera y qué sigue abierto. Con esa base, N17 podrá elegir cómo intervenir sin confundir un dibujo coherente con una estrategia ya justificada."
+    },
+    {
+      "source_id": "N16-s15-h2",
+      "kind": "heading-2",
+      "text": "Cinco píldoras para recordar"
+    },
+    {
+      "source_id": "N16-s15-b001",
+      "kind": "list-item",
+      "text": "Coherencia no es decir lo mismo: es poder explicar cómo se relacionan las afirmaciones."
+    },
+    {
+      "source_id": "N16-s15-b002",
+      "kind": "list-item",
+      "text": "Una diferencia puede revelar una capacidad o decisión que todavía falta."
+    },
+    {
+      "source_id": "N16-s15-b003",
+      "kind": "list-item",
+      "text": "Antes de corregir, comprobá alcance, tiempo, evidencia y uso."
+    },
+    {
+      "source_id": "N16-s15-b004",
+      "kind": "list-item",
+      "text": "Retirar una vista del uso actual no obliga a borrar la historia."
+    },
+    {
+      "source_id": "N16-s15-b005",
+      "kind": "list-item",
+      "text": "Muchas vistas que coinciden pueden estar repitiendo la misma omisión."
+    },
+    {
+      "source_id": "N16-s16-h2",
+      "kind": "heading-2",
+      "text": "Glosario esencial"
+    },
+    {
+      "source_id": "N16-s16-b001",
+      "kind": "paragraph",
+      "text": "**Análisis de impacto:** revisión de decisiones, relaciones y prácticas afectadas por un cambio. Va más allá de buscar archivos con una palabra."
+    },
+    {
+      "source_id": "N16-s16-b002",
+      "kind": "paragraph",
+      "text": "**Baseline:** conjunto identificado de versiones y evidencias revisado para un uso definido. No es una declaración de verdad permanente."
+    },
+    {
+      "source_id": "N16-s16-b003",
+      "kind": "paragraph",
+      "text": "**Coherencia:** compatibilidad explicable entre afirmaciones según sus condiciones. No exige identidad de contenido."
+    },
+    {
+      "source_id": "N16-s16-b004",
+      "kind": "paragraph",
+      "text": "**Contradicción productiva:** diferencia que permite descubrir un supuesto, una brecha o una decisión y conduce a su tratamiento. Dejarla sin atención no produce aprendizaje por sí solo."
+    },
+    {
+      "source_id": "N16-s16-b005",
+      "kind": "paragraph",
+      "text": "**Correspondencia:** relación explícita entre elementos o afirmaciones de vistas distintas. Puede ser dependencia, composición o traducción, no necesariamente equivalencia."
+    },
+    {
+      "source_id": "N16-s16-b006",
+      "kind": "paragraph",
+      "text": "**Ciclo de vida:** cambios de estado y uso de un modelo: propuesta, comprobación, uso, revisión, reemplazo y retiro, entre otros. No impone una secuencia única para todos."
+    },
+    {
+      "source_id": "N16-s16-b007",
+      "kind": "paragraph",
+      "text": "**Diferencia legítima:** variación que puede explicarse por propósito, perspectiva, nivel, alcance o tiempo y no se usa indebidamente para otra conclusión."
+    },
+    {
+      "source_id": "N16-s16-b008",
+      "kind": "paragraph",
+      "text": "**Modelo actual:** representación de una situación vigente en un alcance y con una fuente identificada. La palabra «actual» necesita referencia temporal."
+    },
+    {
+      "source_id": "N16-s16-b009",
+      "kind": "paragraph",
+      "text": "**Modelo objetivo:** representación de una situación futura. Debe aclarar si es una posibilidad explorada o un objetivo aprobado; ninguna equivale a implementación."
+    },
+    {
+      "source_id": "N16-s16-b010",
+      "kind": "paragraph",
+      "text": "**Retiro:** salida de una representación del uso operativo o decisional indicado, conservando el historial necesario."
+    },
+    {
+      "source_id": "N16-s16-b011",
+      "kind": "paragraph",
+      "text": "**Trazabilidad:** capacidad de recorrer relaciones entre fuentes, afirmaciones, vistas, versiones y decisiones para revisar su fundamento e impacto."
+    },
+    {
+      "source_id": "N16-s16-b012",
+      "kind": "paragraph",
+      "text": "**Tipo de contradicción:** dimensión que ayuda a investigar una incompatibilidad: significado, frontera, tiempo, norma, operación, medida, identidad o autoridad. Un caso puede combinar varias."
+    },
+    {
+      "source_id": "N16-s16-b013",
+      "kind": "paragraph",
+      "text": "**Vigencia:** condición de tiempo, población o situación bajo la cual una vista puede utilizarse para cierto propósito."
+    },
+    {
+      "source_id": "N16-s17-h2",
+      "kind": "heading-2",
+      "text": "Preguntas de preparación"
+    },
+    {
+      "source_id": "N16-s17-b001",
+      "kind": "list-item",
+      "text": "¿Por qué un mapa de proceso y una arquitectura pueden ser distintos sin estar equivocados?"
+    },
+    {
+      "source_id": "N16-s17-b002",
+      "kind": "list-item",
+      "text": "Elegí «confirmada» o «disponible». ¿Qué significados diferentes podría tener y qué decisiones cambiarían?"
+    },
+    {
+      "source_id": "N16-s17-b003",
+      "kind": "list-item",
+      "text": "En el caso de Martina, ¿por qué no alcanza con hacer que todos los documentos copien lo que hoy permite el sistema?"
+    },
+    {
+      "source_id": "N16-s17-b004",
+      "kind": "list-item",
+      "text": "¿Cómo puede una fuente central producir muchos modelos compatibles entre sí y, aun así, incompletos?"
+    },
+    {
+      "source_id": "N16-s17-b005",
+      "kind": "list-item",
+      "text": "¿Qué evidencia pedirías antes de cerrar la diferencia sobre «entregable» en Hotel Horizonte?"
+    },
+    {
+      "source_id": "N16-s17-b006",
+      "kind": "list-item",
+      "text": "¿Cómo permitirías consultar una versión histórica sin que se use por error para una decisión actual?"
+    },
+    {
+      "source_id": "N16-s17-b007",
+      "kind": "paragraph",
+      "text": "Para el encuentro, elegí tres representaciones vinculadas de una situación conocida. Pueden ser un procedimiento, una pantalla y una tabla de responsabilidades. Recorré un caso habitual y otro con una dificultad. Registrá una diferencia, explicá qué tipo de problema podría ser, reuní evidencia y proponé tratamiento, prueba de cierre y condición de revisión."
+    },
+    {
+      "source_id": "N16-s18-h2",
+      "kind": "heading-2",
+      "text": "Referencias base"
+    },
+    {
+      "source_id": "N16-s18-b001",
+      "kind": "list-item",
+      "text": "Checkland, P. y Poulter, J. (2007). *Learning for Action*. Wiley. ISBN 978-0-470-02554-3."
+    },
+    {
+      "source_id": "N16-s18-b002",
+      "kind": "list-item",
+      "text": "Argyris, C. y Schön, D. A. (1996). *Organizational Learning II*. Addison-Wesley."
+    },
+    {
+      "source_id": "N16-s18-b003",
+      "kind": "list-item",
+      "text": "Sterman, J. D. (2000). *Business Dynamics*. McGraw-Hill."
+    },
+    {
+      "source_id": "N16-s18-b004",
+      "kind": "list-item",
+      "text": "Jackson, M. (2001). *Problem Frames*. Addison-Wesley."
+    },
+    {
+      "source_id": "N16-s18-b005",
+      "kind": "list-item",
+      "text": "Boehm, B. W. (1988). “A Spiral Model of Software Development and Enhancement”. *Computer*, 21(5), 61-72. https://doi.org/10.1109/2.59"
+    },
+    {
+      "source_id": "N16-s18-b006",
+      "kind": "list-item",
+      "text": "Royce, W. W. (1970). “Managing the Development of Large Software Systems”. *Proceedings of IEEE WESCON*. https://www.cs.umd.edu/class/spring2003/cmsc838p/Process/waterfall.pdf"
+    },
+    {
+      "source_id": "N16-s18-b007",
+      "kind": "list-item",
+      "text": "ISO/IEC/IEEE (2022). *ISO/IEC/IEEE 42010:2022 Software, systems and enterprise, Architecture description*. https://www.iso.org/standard/74393.html"
+    },
+    {
+      "source_id": "N16-s18-b008",
+      "kind": "list-item",
+      "text": "ISO/IEC/IEEE (2023). *ISO/IEC/IEEE 15288:2023 Systems and software engineering — System life cycle processes*. https://www.iso.org/standard/81702.html"
+    },
+    {
+      "source_id": "N16-s18-b009",
+      "kind": "list-item",
+      "text": "ISO/IEC/IEEE (2024). *ISO/IEC/IEEE 24748-2:2024 Systems and software engineering, Life cycle management, Part 2: Guidelines for the application of ISO/IEC/IEEE 15288 (system life cycle processes)*. https://www.iso.org/standard/84661.html"
+    },
+    {
+      "source_id": "N16-s18-b010",
+      "kind": "list-item",
+      "text": "ISO/IEC/IEEE (2026). *ISO/IEC/IEEE 12207:2026 Systems and software engineering, Software life cycle processes*. https://www.iso.org/standard/90219.html"
+    },
+    {
+      "source_id": "N16-s18-b011",
+      "kind": "list-item",
+      "text": "Beck, K. et al. (2001). *Manifesto for Agile Software Development*. https://agilemanifesto.org/"
+    },
+    {
+      "source_id": "N16-s18-b012",
+      "kind": "list-item",
+      "text": "The Open Group (2022). *TOGAF Standard, 10th Edition*. https://www.opengroup.org/togaf-standard-10th-edition-downloads"
+    },
+    {
+      "source_id": "N16-s18-b013",
+      "kind": "list-item",
+      "text": "Senge, P. M. (2006). *The Fifth Discipline*, Revised Edition. Currency."
+    },
+    {
+      "source_id": "N16-s18-b014",
+      "kind": "list-item",
+      "text": "Edmondson, A. C. (1999). “Psychological Safety and Learning Behavior in Work Teams”. *Administrative Science Quarterly*, 44(2), 350-383. https://doi.org/10.2307/2666999"
+    },
+    {
+      "source_id": "N16-s18-b015",
+      "kind": "list-item",
+      "text": "Booch, G. et al. (2007). *Object-Oriented Analysis and Design with Applications*. Addison-Wesley."
+    },
+    {
+      "source_id": "N16-s18-b016",
+      "kind": "list-item",
+      "text": "Etkin, J. y Schvarstein, L. (1989). *Identidad de las organizaciones: invariancia y cambio*. Paidós."
+    },
+    {
+      "source_id": "N16-s18-b017",
+      "kind": "list-item",
+      "text": "Bunge, M. (2004). *Emergencia y convergencia: novedad cualitativa y unidad del conocimiento*. Gedisa."
+    },
+    {
+      "source_id": "N16-s18-b018",
+      "kind": "list-item",
+      "text": "Flores, F. (1997). *Creando organizaciones para el futuro*. Dolmen."
+    },
+    {
+      "source_id": "N16-s18-b019",
+      "kind": "list-item",
+      "text": "García, R. (2006). *Sistemas complejos: conceptos, método y fundamentación epistemológica de la investigación interdisciplinaria*. Gedisa."
+    },
+    {
+      "source_id": "N16-s18-b020",
+      "kind": "list-item",
+      "text": "Scolari, C. A. (2018). *Las leyes de la interfaz: diseño, ecología, evolución, tecnología*. Gedisa."
+    },
+    {
+      "source_id": "N16-s18-b021",
+      "kind": "list-item",
+      "text": "Maturana, H. R. y Varela, F. J. (1984). *El árbol del conocimiento: las bases biológicas del entendimiento humano*. Editorial Universitaria."
+    },
+    {
+      "source_id": "N16-s18-b022",
+      "kind": "list-item",
+      "text": "Sosa Escudero, W. (2019). *Big Data: breve manual para conocer la ciencia de datos que ya invadió nuestras vidas*. Siglo XXI Editores."
+    },
+    {
+      "source_id": "N16-s18-b023",
+      "kind": "list-item",
+      "text": "Echeverría, R. (2005). *Ontología del lenguaje*. Granica."
+    }
+  ]
+}

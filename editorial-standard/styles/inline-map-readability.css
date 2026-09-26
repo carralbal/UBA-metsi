@@ -1,0 +1,24 @@
+/* Approved map-scale pilots: N02 and N03. Do not change narrative type. */
+body.document-n02 .infographic-boundaries,
+body.document-n03 .infographic-boundaries {
+  box-sizing: border-box !important;
+  width: 160mm !important;
+  max-width: 160mm !important;
+  max-height: none !important;
+  margin: 4mm auto 5mm !important;
+}
+body.document-n02 .infographic-boundaries img,
+body.document-n03 .infographic-boundaries img {
+  display: block !important;
+  width: 160mm !important;
+  max-width: 160mm !important;
+  height: auto !important;
+  margin: 0 auto !important;
+}
+body.document-n02 .infographic-boundaries img { max-height: 82mm !important; }
+body.document-n03 .infographic-boundaries img { max-height: 86mm !important; }
+body.document-n02 #section-07 .section-body > p:first-child {
+  column-span: all !important;
+  max-width: 160mm !important;
+  margin: 2mm auto 4mm !important;
+}

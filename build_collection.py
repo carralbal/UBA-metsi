@@ -3278,9 +3278,10 @@ def build_document(number:int)->dict:
             )
             if number in {9, 10}:
                 anchor = '<h3 data-source-id="N09-s07-b035">' if number == 9 else '<h3 data-source-id="N10-s08-b001">'
-                if anchor not in body:
-                    raise RuntimeError(f"No se encontró el anclaje interno de la infografía N{number:02d}")
-                body = body.replace(anchor, diagram_figure + anchor, 1)
+                if anchor in body:
+                    body = body.replace(anchor, diagram_figure + anchor, 1)
+                else:
+                    prelude += diagram_figure
             else:
                 prelude += diagram_figure
         if (number == 0 and section.title in n00_photo_after) or (number == 1 and section.title in n01_photo_after) or (number == 2 and section.title in n02_photo_after) or (number == 4 and section.title in n04_photo_after) or (number == 5 and section.title in n05_photo_after) or (number == 6 and section.title in n06_photo_after) or (number == 7 and section.title in n07_photo_after) or (number == 8 and section.title in n08_photo_after) or (number == 9 and section.title in n09_photo_after) or (number == 10 and section.title in n10_photo_after) or (number not in {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10} and idx in photo_after):
@@ -3352,10 +3353,13 @@ def build_document(number:int)->dict:
                     r'<h3 data-source-id="N08-s06-b\d+">Segunda aplicación de HH-08: separar evento, interpretación y pregunta</h3>',
                     body,
                 )
-                if not anchor_match:
-                    raise RuntimeError("No se encontró el anclaje interno de la fotografía N08")
-                anchor = anchor_match.group(0)
-                body = body.replace(anchor, photo_figure + anchor, 1)
+                if anchor_match:
+                    anchor = anchor_match.group(0)
+                    body = body.replace(anchor, photo_figure + anchor, 1)
+                else:
+                    # A new source may rename/reorder the application. Preserve
+                    # its complete prose and put the illustration after it.
+                    extra += photo_figure
             else:
                 extra += photo_figure
         if section.title == "Referencias base":
@@ -3507,6 +3511,8 @@ def build_document(number:int)->dict:
         + FULL_BLEED_AND_REFERENTS_CSS.strip()
         + "\n"
     )
+    if number in {2, 3}:
+        css_text += "\n" + (HERE / "editorial-standard/styles/inline-map-readability.css").read_text(encoding="utf-8")
     packaged_css.write_text(css_text,encoding="utf-8")
     (out / "metsi.css").write_text(css_text, encoding="utf-8")
     cover_source_label = f"assets/{cover_source.name}"

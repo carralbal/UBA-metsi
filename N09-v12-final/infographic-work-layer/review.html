@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Revisión · N09 · Mapa de recorrido accesible</title>
+  <style>
+    :root { color-scheme: light; background: #d9dad6; color: #272824; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Avenir, "Avenir Next", sans-serif; }
+    main { width: min(96vw, 1880px); margin: 28px auto 56px; }
+    header { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 24px; margin: 0 0 16px; }
+    h1 { margin: 0; font: 400 clamp(30px, 3vw, 52px)/1.02 Didot, "Bodoni 72", serif; }
+    p { max-width: 78ch; margin: 8px 0 0; font-size: 17px; line-height: 1.45; }
+    .status { padding: 8px 12px; border: 1px solid #545650; background: #cfff00; font-weight: 800; letter-spacing: .08em; }
+    figure { margin: 0; padding: 18px; border: 1px solid #9a9b95; background: #f6f4ee; box-shadow: 0 14px 42px rgba(0,0,0,.12); }
+    img { display: block; width: 100%; height: auto; }
+    figcaption { margin-top: 12px; font-size: 15px; color: #5f615c; }
+    .target { width: min(160mm, 100%); margin: 36px auto 0; }
+    .target h2 { margin: 0 0 10px; font-size: 17px; letter-spacing: .06em; text-transform: uppercase; }
+    .target figure { padding: 0; box-shadow: none; }
+    @media (max-width: 760px) {
+      header { grid-template-columns: 1fr; }
+      .status { justify-self: start; }
+      figure { padding: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>N09 · Mapa de recorrido accesible</h1>
+        <p>Revisión aislada del SVG editable y de su raster 2×. Anclaje canónico: N09-s07-b035.</p>
+      </div>
+      <div class="status">LISTO PARA REVISIÓN</div>
+    </header>
+    <figure>
+      <img src="n09-accessible-service-blueprint.svg" alt="Blueprint de servicio que conecta cuatro transiciones con ocho campos de evidencia, carga distribuida y una decisión revisable.">
+      <figcaption>Vista vectorial completa · 1800 × 1100.</figcaption>
+    </figure>
+    <section class="target">
+      <h2>Prueba de lectura al ancho de integración · 160 mm</h2>
+      <figure>
+        <img src="n09-accessible-service-blueprint.png" alt="Previsualización raster a doble resolución del mapa de recorrido accesible.">
+      </figure>
+    </section>
+  </main>
+</body>
+</html>

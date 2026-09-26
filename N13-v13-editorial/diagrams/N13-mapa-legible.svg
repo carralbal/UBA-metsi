@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1620" viewBox="0 0 1200 1620" role="img" aria-labelledby="title desc"><title id="title">La misma intención no debe duplicarse</title><desc id="desc">Los mensajes pueden repetirse, demorarse o llegar fuera de orden. No alcanza con que cada sistema tenga un registro. Deben poder sostener una misma asignación válida.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#777A76"/></marker></defs>
+<rect width="1200" height="1620" fill="#F7F6F2"/>
+<g id="header" aria-label="La misma intención no debe duplicarse">
+<path d="M52 36 H126 L116 52 H42 Z" fill="#CFFF00"/>
+<g id="document-label" aria-label="METSI · N13">
+<text x="154" y="53" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#202020">METSI · N13 · MAPA DE DECISIÓN</text>
+</g>
+<text x="52" y="118.0" font-family="Georgia,serif" font-size="50" font-weight="400" fill="#202020">La misma intención no debe duplicarse</text>
+<text x="52" y="205.0" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#202020">Los mensajes pueden repetirse, demorarse o llegar fuera de orden.</text>
+</g>
+<path d="M52 270 H1148" fill="none" stroke="#92958F" stroke-width="2"/>
+<g id="item-0" aria-label="Reconocer la intención" data-row-bottom="489.6">
+<circle cx="82" cy="344.0" r="26" fill="#CFFF00" stroke="#202020" stroke-width="2"/>
+<text x="66" y="354.0" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#202020">01</text>
+<text x="145" y="345.0" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="700" fill="#202020">Reconocer la intención</text>
+<text x="145" y="389.0" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#202020">Asignar la última habitación disponible.</text>
+<text x="145" y="434.8" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#202020">Un reintento a los ocho segundos no es una segunda reserva.</text>
+</g>
+<path id="e-item-0-item-1" d="M82 374.0 V504.6" fill="none" stroke="#92958F" stroke-width="2" marker-end="url(#arrow)"/>
+<g id="item-1" aria-label="Proteger la regla" data-row-bottom="685.2">
+<circle cx="82" cy="539.6" r="26" fill="#F7F6F2" stroke="#202020" stroke-width="2"/>
+<text x="66" y="549.6" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#202020">02</text>
+<text x="145" y="540.6" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="700" fill="#202020">Proteger la regla</text>
+<text x="145" y="584.6" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#202020">Una habitación no puede tener dos asignaciones incompatibles.</text>
+<text x="145" y="630.4" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#202020">Identidad estable, versión y autoridad protegen esa condición.</text>
+</g>
+<path id="e-item-1-item-2" d="M82 569.6 V700.2" fill="none" stroke="#92958F" stroke-width="2" marker-end="url(#arrow)"/>
+<g id="item-2" aria-label="No inventar éxito" data-row-bottom="880.8000000000001">
+<circle cx="82" cy="735.2" r="26" fill="#F7F6F2" stroke="#202020" stroke-width="2"/>
+<text x="66" y="745.2" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#202020">03</text>
+<text x="145" y="736.2" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="700" fill="#202020">No inventar éxito</text>
+<text x="145" y="780.2" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#202020">Si el resultado es ambiguo, hacerlo visible.</text>
+<text x="145" y="826.0" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#202020">No sobrescribir silenciosamente ni volver a aplicar el efecto.</text>
+</g>
+<path id="e-item-2-item-3" d="M82 765.2 V895.8000000000001" fill="none" stroke="#92958F" stroke-width="2" marker-end="url(#arrow)"/>
+<g id="item-3" aria-label="Reconciliar" data-row-bottom="1076.3999999999999">
+<circle cx="82" cy="930.8" r="26" fill="#F7F6F2" stroke="#202020" stroke-width="2"/>
+<text x="66" y="940.8" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#202020">04</text>
+<text x="145" y="931.8" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="700" fill="#202020">Reconciliar</text>
+<text x="145" y="975.8" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#202020">Comparar canal de reservas, sistema del hotel y cerradura.</text>
+<text x="145" y="1021.5999999999999" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#202020">Una cancelación tardía exige revisar qué sigue vigente.</text>
+</g>
+<path id="e-item-3-item-4" d="M82 960.8 V1091.3999999999999" fill="none" stroke="#92958F" stroke-width="2" marker-end="url(#arrow)"/>
+<g id="item-4" aria-label="Reparar" data-row-bottom="1272.0">
+<circle cx="82" cy="1126.4" r="26" fill="#F7F6F2" stroke="#202020" stroke-width="2"/>
+<text x="66" y="1136.4" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#202020">05</text>
+<text x="145" y="1127.4" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="700" fill="#202020">Reparar</text>
+<text x="145" y="1171.4" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#202020">Resolver la discrepancia y conservar su historia.</text>
+<text x="145" y="1217.2" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#202020">Registrar quién actuó y qué consecuencia tuvo.</text>
+</g>
+<g id="decision" aria-label="Criterio de cierre">
+<rect x="52" y="1370" width="1096" height="200" fill="#E5E6E0"/><rect x="52" y="1370" width="7" height="200" fill="#CFFF00"/>
+<text x="78" y="1418" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="700" fill="#202020">Criterio de cierre</text>
+<text x="78" y="1465.0" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#202020">No alcanza con que cada sistema tenga un registro. Deben poder sostener</text>
+<text x="78" y="1502.8" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#202020">una misma asignación válida.</text>
+</g>
+<g id="reading-key" aria-label="Lectura del mapa">
+<text x="52" y="1606" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" fill="#202020">Las relaciones orientan la decisión; no reemplazan la explicación del texto.</text>
+</g>
+</svg>

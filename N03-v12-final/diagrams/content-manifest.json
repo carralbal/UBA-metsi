@@ -1,0 +1,120 @@
+{
+  "title": "Frontera y bucle reforzador de Hotel Horizonte",
+  "claim": "Una mejora local puede regresar como una causa nueva y obligar a revisar la frontera del sistema observado.",
+  "source_sections": [
+    {
+      "heading": "Retroalimentación: cuando el efecto vuelve como causa",
+      "role": "main mechanism"
+    },
+    {
+      "heading": "La frontera como decisión política",
+      "role": "boundary rule"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "label": "PRESIÓN POR OCUPACIÓN",
+      "note": "aumenta el margen",
+      "type": "state",
+      "source": "Retroalimentación: cuando el efecto vuelve como causa"
+    },
+    {
+      "id": "n2",
+      "label": "SOBREVENTA",
+      "note": "eleva la exposición",
+      "type": "state",
+      "source": "Retroalimentación: cuando el efecto vuelve como causa"
+    },
+    {
+      "id": "n3",
+      "label": "REPARACIÓN MANUAL",
+      "note": "absorbe excepciones",
+      "type": "state",
+      "source": "Retroalimentación: cuando el efecto vuelve como causa"
+    },
+    {
+      "id": "n4",
+      "label": "DATOS MENOS OPORTUNOS",
+      "note": "degradan la coordinación",
+      "type": "state",
+      "source": "Retroalimentación: cuando el efecto vuelve como causa"
+    },
+    {
+      "id": "n5",
+      "label": "INCERTIDUMBRE",
+      "note": "realimenta la decisión",
+      "type": "state",
+      "source": "Retroalimentación: cuando el efecto vuelve como causa"
+    },
+    {
+      "id": "boundary",
+      "label": "Frontera del servicio observado",
+      "type": "boundary",
+      "source": "La frontera como decisión política"
+    },
+    {
+      "id": "external",
+      "label": "Reglas OTA, proveedores y jurisdicción",
+      "type": "external condition",
+      "source": "La frontera como decisión política"
+    },
+    {
+      "id": "review",
+      "label": "Revisar la frontera si cambia la explicación, el daño o la decisión",
+      "type": "decision rule",
+      "source": "La frontera como decisión política"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "relation": "aumenta",
+      "meaning": "La presión por ocupación amplía el margen para aceptar sobreventa."
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n3",
+      "relation": "exige",
+      "meaning": "La sobreventa incrementa la necesidad de reparación manual."
+    },
+    {
+      "id": "e3",
+      "from": "n3",
+      "to": "n4",
+      "relation": "demora",
+      "meaning": "La reparación manual hace menos oportunos los datos compartidos."
+    },
+    {
+      "id": "e4",
+      "from": "n4",
+      "to": "n5",
+      "relation": "incrementa",
+      "meaning": "Los datos tardíos elevan la incertidumbre de decisión."
+    },
+    {
+      "id": "e5",
+      "from": "n5",
+      "to": "n1",
+      "relation": "realimenta",
+      "meaning": "La incertidumbre vuelve a intensificar la presión por ocupación."
+    },
+    {
+      "id": "e6",
+      "from": "external",
+      "to": "boundary",
+      "relation": "condiciona",
+      "meaning": "Las condiciones externas quedan fuera del control directo pero dentro del análisis."
+    },
+    {
+      "id": "e7",
+      "from": "boundary",
+      "to": "review",
+      "relation": "activa",
+      "meaning": "La evidencia que cambia explicación, daño o decisión obliga a revisar la frontera."
+    }
+  ]
+}

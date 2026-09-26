@@ -1,0 +1,1478 @@
+{
+  "document": "N06",
+  "source": "source/N06.md",
+  "eligible_blocks": [
+    {
+      "source_id": "N06-h1",
+      "kind": "heading-1",
+      "text": "Discovery como estrategia de reducción de incertidumbre"
+    },
+    {
+      "source_id": "N06-s01-h2",
+      "kind": "heading-2",
+      "text": "Pregunta profesional"
+    },
+    {
+      "source_id": "N06-s01-b001",
+      "kind": "paragraph",
+      "text": "Cuando no hay tiempo para averiguar todo, ¿qué necesitamos saber primero para decidir sin trabajar a ciegas?"
+    },
+    {
+      "source_id": "N06-s02-h2",
+      "kind": "heading-2",
+      "text": "La médica que pidió un estudio menos"
+    },
+    {
+      "source_id": "N06-s02-b001",
+      "kind": "paragraph",
+      "text": "Imaginá esta escena, inventada para pensar cómo investigamos. Una persona llega a una consulta con una carpeta llena de estudios. Supone que, cuanto más gruesa sea la carpeta, más cerca estará de una respuesta. La médica la revisa y, antes de pedir otro estudio, hace una pregunta: «¿Qué necesitamos averiguar para decidir el próximo paso?»."
+    },
+    {
+      "source_id": "N06-s02-b002",
+      "kind": "paragraph",
+      "text": "No está diciendo que los estudios sobren ni que una conversación reemplace cualquier prueba. Está separando dos cosas: reunir información y reunir la información que hace falta. Un resultado puede responder una pregunta importante y no aclarar otra. También puede ser demasiado antiguo para la situación actual. Y dos informes distintos pueden repetir el mismo dato."
+    },
+    {
+      "source_id": "N06-s02-b003",
+      "kind": "paragraph",
+      "text": "La persona insiste: «¿No conviene hacer todo, por las dudas?». La médica explica que cada estudio tiene un propósito, un costo y límites. Pedir más no garantiza comprender mejor. Lo importante es justificar qué se busca, qué cambiaría con el resultado y qué se hará si la situación cambia. Esta escena no propone una conducta médica: muestra una forma de relacionar preguntas, evidencia y decisiones."
+    },
+    {
+      "source_id": "N06-s02-b004",
+      "kind": "paragraph",
+      "text": "Ahora cambiemos la consulta por una reunión de trabajo. Sobre la mesa hay encuestas, reclamos, informes, propuestas de proveedores y una demostración que dejó a todos entusiasmados. Alguien propone hacer veinte entrevistas. Otra persona quiere construir un prototipo. Una tercera pide más datos. Las tres propuestas pueden servir. Pero todavía falta la pregunta que ordena la reunión: ¿qué decisión necesitamos tomar y qué nos impide tomarla bien?"
+    },
+    {
+      "source_id": "N06-s02-b005",
+      "kind": "paragraph",
+      "text": "Si vamos a comprar una plataforma por cinco años, puede ser urgente saber si podremos recuperar nuestros datos al salir. Si vamos a cambiar el texto de un mensaje, quizá alcance con comprobar si las personas lo entienden. Hacer veinte entrevistas sobre preferencias de pantalla no resuelve la primera duda. Un estudio técnico de dos meses probablemente sea excesivo para la segunda."
+    },
+    {
+      "source_id": "N06-s02-b006",
+      "kind": "paragraph",
+      "text": "En desarrollo de productos suele llamarse **discovery** a este trabajo de investigar para decidir. La palabra inglesa puede sonar más complicada que la idea: antes de comprometernos con una solución, averiguamos qué problema tenemos, qué alternativas podrían servir y qué riesgos seguimos sin entender. Y continuamos aprendiendo cuando empezamos a construir y a usar la solución."
+    },
+    {
+      "source_id": "N06-s02-b007",
+      "kind": "paragraph",
+      "text": "El desafío no es preguntar mucho. Es elegir preguntas que puedan cambiar lo que vamos a hacer. A veces la respuesta permite avanzar; otras veces obliga a reducir el alcance, probar algo distinto o detener una compra. Descubrir que no conviene construir una función también puede ser un buen resultado."
+    },
+    {
+      "source_id": "N06-s02-b008",
+      "kind": "paragraph",
+      "text": "Hay dos errores opuestos. Uno es actuar sin mirar porque «nunca vamos a tener todos los datos». El otro es seguir investigando indefinidamente porque siempre aparece una duda más. N06 trabaja entre esos extremos: qué averiguar, cómo averiguarlo y cuándo ya tenemos una base suficiente para dar el próximo paso."
+    },
+    {
+      "source_id": "N06-s03-h2",
+      "kind": "heading-2",
+      "text": "Tesis"
+    },
+    {
+      "source_id": "N06-s03-b001",
+      "kind": "paragraph",
+      "text": "**Investigar sirve cuando nos ayuda a elegir mejor qué hacer.** No se trata de acumular entrevistas, llenar un tablero ni cumplir una etapa antes de programar. Se trata de reducir las dudas que pueden llevarnos a una decisión equivocada. Para eso necesitamos vincular cada pregunta con una decisión concreta."
+    },
+    {
+      "source_id": "N06-s03-b002",
+      "kind": "paragraph",
+      "text": "Supongamos que una organización quiere crear un portal porque los trámites tardan demasiado. Antes de diseñar pantallas, conviene distinguir al menos tres posibilidades: las personas cargan datos repetidos, las reglas se contradicen o nadie tiene autoridad para aprobar una excepción. Las tres producen demoras, pero no se resuelven igual. La investigación tiene valor si permite distinguirlas, no si sólo recoge opiniones favorables al portal."
+    },
+    {
+      "source_id": "N06-s03-b003",
+      "kind": "paragraph",
+      "text": "Tampoco hace falta resolver todas las dudas al mismo tiempo. Para ensayar una modificación pequeña podemos aceptar incertidumbres que serían inadmisibles al trasladar toda la operación. Cuanto más grave sea equivocarse y más difícil resulte reparar el daño, más sólida debe ser la evidencia previa. Un ensayo reversible no exige lo mismo que un contrato largo o una automatización que afecta a muchas personas."
+    },
+    {
+      "source_id": "N06-s03-b004",
+      "kind": "paragraph",
+      "text": "Por eso hablamos de **evidencia suficiente para una decisión**, no de certeza total. Suficiente para probar no significa suficiente para ampliar. Saber que una plataforma no sirve tampoco demuestra que la siguiente sí sirva. Cada conclusión tiene un alcance que debemos poder explicar sin escondernos detrás de la palabra «validado»."
+    },
+    {
+      "source_id": "N06-s03-b005",
+      "kind": "paragraph",
+      "text": "En Hotel Horizonte, la pregunta inmediata es si conviene firmar un contrato. Un prototipo atractivo puede ayudar a discutir el uso, pero no demuestra que los datos puedan recuperarse ni que el proveedor permita una transición segura. La investigación debe llegar a esas preguntas antes de que la firma vuelva costoso cambiar de rumbo."
+    },
+    {
+      "source_id": "N06-s03-b006",
+      "kind": "paragraph",
+      "text": "El resultado de N06 será un plan breve y razonado: qué decisión está pendiente, qué necesitamos aprender, qué fuentes vamos a usar y qué quedará abierto. N07 y N08 profundizarán dos de esas fuentes, las entrevistas y la observación. Primero tenemos que saber para qué las necesitamos."
+    },
+    {
+      "source_id": "N06-s04-h2",
+      "kind": "heading-2",
+      "text": "De N05 a N06: de los actores a una estrategia de aprendizaje"
+    },
+    {
+      "source_id": "N06-s04-b001",
+      "kind": "paragraph",
+      "text": "N05 mostró que una reunión puede estar llena de personas y, aun así, dejar afuera a quienes conocen una parte decisiva del trabajo. También distinguió quién propone, quién decide, quién puede bloquear un cambio y quién enfrenta sus consecuencias. Ese mapa es el punto de partida de N06."
+    },
+    {
+      "source_id": "N06-s04-b002",
+      "kind": "paragraph",
+      "text": "Ahora necesitamos ordenar las dudas. Recepción puede pedir entender por qué llegan reservas incompletas; Tecnología, saber cómo se integrará el proveedor; Dirección, conocer el costo de cambiar; una huésped, saber si podrá completar el trámite sin perder el canal de ayuda. No podemos responder todo de inmediato. Tampoco podemos elegir sólo la pregunta del área que tiene más poder."
+    },
+    {
+      "source_id": "N06-s04-b003",
+      "kind": "paragraph",
+      "text": "La estrategia consiste en justificar el orden. Primero investigamos aquello que podría cambiar un compromiso importante o evitar un daño grave. Después profundizamos las preguntas que siguen siendo necesarias. Si una alternativa queda descartada, algunas tareas de investigación dejan de tener sentido y podemos retirarlas del plan."
+    },
+    {
+      "source_id": "N06-s04-b004",
+      "kind": "paragraph",
+      "text": "El trabajo que entregaremos a N07 no será «entrevistar usuarios». Será una misión específica: reconstruir cómo se decide cuando dos sistemas muestran estados diferentes para una misma reserva. Esa misión indica a quién escuchar, qué episodios buscar y con qué otras fuentes contrastar los relatos. Una entrevista bien hecha empieza antes de la primera pregunta: empieza al saber qué necesitamos comprender."
+    },
+    {
+      "source_id": "N06-s05-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 1 · Formular incertidumbres que puedan cambiar una decisión"
+    },
+    {
+      "source_id": "N06-s05-b001",
+      "kind": "heading-3",
+      "text": "Elegir la técnica después de entender la duda"
+    },
+    {
+      "source_id": "N06-s05-b002",
+      "kind": "paragraph",
+      "text": "En Ingeniería de Software ya conocemos entrevistas, análisis de documentos, prototipos y pruebas técnicas. N06 no propone reemplazarlos. Propone dejar de elegirlos por costumbre. Antes de decir «hagamos una encuesta», preguntemos qué necesitamos saber y si una encuesta puede responderlo."
+    },
+    {
+      "source_id": "N06-s05-b003",
+      "kind": "paragraph",
+      "text": "Si queremos conocer cómo interpreta alguien una confirmación, escuchar su explicación puede ser útil. Si necesitamos saber cuánto demora realmente una actualización, tendremos que revisar tiempos y eventos. Si queremos comprobar si una reserva puede reconstruirse fuera de una plataforma, hace falta ensayar una exportación. Las tres actividades producen información, pero responden preguntas distintas."
+    },
+    {
+      "source_id": "N06-s05-b004",
+      "kind": "paragraph",
+      "text": "Goodman, Kuniavsky y Moed (2012) reúnen métodos de investigación sobre la experiencia de uso. Su variedad recuerda algo importante: no hay un instrumento que permita verlo todo. La elección depende del propósito, del contexto y de los límites de cada fuente. Una técnica prestigiosa puede ser una mala elección para la duda que tenemos enfrente."
+    },
+    {
+      "source_id": "N06-s05-b005",
+      "kind": "heading-3",
+      "text": "Hotel Horizonte tiene tres semanas"
+    },
+    {
+      "source_id": "N06-s05-b006",
+      "kind": "paragraph",
+      "text": "En HH-06, el hotel dispone de tres semanas antes de la fecha prevista para firmar un contrato de cinco años con una plataforma en la nube. El PMS es el sistema que administra reservas y otras tareas del hotel. Reemplazarlo no es simplemente instalar una pantalla nueva: compromete datos, integraciones, capacitación y continuidad del trabajo."
+    },
+    {
+      "source_id": "N06-s05-b007",
+      "kind": "paragraph",
+      "text": "El equipo propone entrevistar huéspedes, analizar reclamos, comparar proveedores y diseñar un nuevo ingreso. Todo parece razonable. Pero Federico Müller, responsable de Tecnología y Datos, plantea una duda más incómoda: «Si dentro de dos años queremos irnos, ¿podemos recuperar las reservas futuras con sus pagos y sus cambios?»."
+    },
+    {
+      "source_id": "N06-s05-b008",
+      "kind": "paragraph",
+      "text": "Esa pregunta podría modificar la firma. Elegir entre dos colores del formulario, en cambio, no cambia todavía la decisión contractual. Esto no vuelve irrelevante el diseño de la pantalla: lo ubica en otro momento. Priorizar no es declarar que algo nunca importa. Es decidir qué necesitamos saber antes del compromiso que está por ocurrir."
+    },
+    {
+      "source_id": "N06-s05-b009",
+      "kind": "paragraph",
+      "text": "También hay preguntas que pueden cuestionar el objetivo inicial. Si reemplazar el sistema deja sin atención a ciertas personas o elimina un control que evita cobros erróneos, no alcanza con mejorar las condiciones de compra. Quizá haya que cambiar el alcance. El valor de investigar no se limita a ahorrar dinero ni a producir funcionalidades."
+    },
+    {
+      "source_id": "N06-s05-b010",
+      "kind": "heading-3",
+      "text": "Tres maneras de no saber"
+    },
+    {
+      "source_id": "N06-s05-b011",
+      "kind": "paragraph",
+      "text": "Decimos «no tenemos suficiente información» para situaciones muy distintas. Separarlas ayuda a trabajar. Una cosa es no saber qué ocurre; otra es no saber qué hacer; otra, no lograr que quienes deben actuar entiendan lo mismo."
+    },
+    {
+      "source_id": "N06-s05-b012",
+      "kind": "paragraph",
+      "text": "La primera es una **incertidumbre de conocimiento**. Por ejemplo, todavía no sabemos por qué algunas llegadas tardan más. Tenemos un síntoma, pero faltan una explicación y una idea de su alcance. Podemos reconstruir episodios, observar turnos y comparar registros."
+    },
+    {
+      "source_id": "N06-s05-b013",
+      "kind": "paragraph",
+      "text": "La segunda es una **incertidumbre de acción**. Ya comprobamos que ciertos pagos no se reconocen a tiempo, pero no sabemos si conviene cambiar una regla, integrar dos sistemas o mantener una verificación manual. Entender la causa no elige automáticamente la intervención. Todavía debemos comparar costos, posibilidades y consecuencias."
+    },
+    {
+      "source_id": "N06-s05-b014",
+      "kind": "paragraph",
+      "text": "La tercera es una **incertidumbre de coordinación**. Comercial considera una reserva «pagada» cuando se recibió un comprobante; Recepción, cuando el pago aparece conciliado. Cada área tiene información, pero no comparte la misma condición para actuar. Sumar registros no resolverá por sí solo ese desacuerdo. Hace falta aclarar significados y responsabilidades."
+    },
+    {
+      "source_id": "N06-s05-b015",
+      "kind": "paragraph",
+      "text": "Las tres pueden aparecer juntas. La distinción no busca encasillar cada problema una sola vez. Sirve para no pedirle a un método una respuesta que no puede dar. Un informe técnico puede aclarar una demora sin resolver quién autoriza una excepción."
+    },
+    {
+      "source_id": "N06-s05-b016",
+      "kind": "heading-3",
+      "text": "Seis dudas que conviene reconocer en el trabajo"
+    },
+    {
+      "source_id": "N06-s05-b017",
+      "kind": "paragraph",
+      "text": "Podemos hacer una segunda distinción, más cercana al diseño de una investigación. Son seis preguntas prácticas. Cada una requiere evidencia diferente y ninguna queda resuelta sólo porque las otras tengan respuesta."
+    },
+    {
+      "source_id": "N06-s05-b018",
+      "kind": "paragraph",
+      "text": "**1. ¿Entendimos el problema?** Un portal casi no se usa. ¿Es difícil de usar, pide algo que las personas no tienen o no ofrece una ayuda necesaria? Antes de rediseñarlo conviene reconstruir intentos reales, incluyendo los de quienes nunca llegaron a la pantalla principal. Esta es la incertidumbre sobre el problema."
+    },
+    {
+      "source_id": "N06-s05-b019",
+      "kind": "paragraph",
+      "text": "**2. ¿La alternativa puede ayudar?** Ya sabemos que una pregunta del formulario se interpreta mal. Ahora comparamos otras maneras de pedir ese dato. Un prototipo permite probar comprensión sin construir todo el sistema. Es incertidumbre sobre la solución: tener un problema bien explicado no garantiza que nuestra primera idea funcione."
+    },
+    {
+      "source_id": "N06-s05-b020",
+      "kind": "paragraph",
+      "text": "**3. ¿Podemos llevarla a la práctica?** Una integración parece útil, pero no sabemos si el proveedor entrega los datos necesarios ni si el equipo puede mantenerla. Una prueba técnica, un ensayo de migración o la revisión del contrato pueden aclararlo. Esta es incertidumbre de ejecución, no una duda sobre si a las personas les gusta la idea."
+    },
+    {
+      "source_id": "N06-s05-b021",
+      "kind": "paragraph",
+      "text": "**4. ¿Podrá incorporarse al trabajo real?** Una función opera correctamente, pero exige una verificación que el turno nocturno no puede realizar. Necesitamos observar tareas, recursos y permisos, no sólo mostrar una pantalla en una reunión tranquila. Es incertidumbre sobre adopción y trabajo: usar una herramienta depende de más cosas que saber dónde hacer clic."
+    },
+    {
+      "source_id": "N06-s05-b022",
+      "kind": "paragraph",
+      "text": "**5. ¿Qué otras consecuencias producirá?** Un recordatorio puede reducir olvidos y, al mismo tiempo, enviar mensajes innecesarios o exponer información. Una automatización puede acelerar una tarea y transferir la corrección de errores a otra área. Esta es incertidumbre sobre efectos. Se investiga buscando también lo que podría empeorar, no sólo el beneficio esperado."
+    },
+    {
+      "source_id": "N06-s05-b023",
+      "kind": "paragraph",
+      "text": "**6. ¿Estamos midiendo lo que creemos?** El tablero informa menos demora desde que cambió el momento de inicio del reloj. Tal vez el trabajo no mejoró: cambió la cuenta. Hay que revisar definiciones, fuentes y casos concretos. Es incertidumbre de medición y puede volver engañosa la evaluación de cualquier solución."
+    },
+    {
+      "source_id": "N06-s05-b024",
+      "kind": "paragraph",
+      "text": "Tomemos una pregunta que parece sencilla: «¿Un asistente conversacional reducirá la carga de Recepción?». Contiene varias de estas dudas. El asistente podría responder rápido, pero equivocarse en excepciones; los huéspedes podrían repetir luego la consulta a una persona; y el tablero podría contar respuestas enviadas en lugar de problemas resueltos. Una demostración técnica no alcanza para contestar todo eso."
+    },
+    {
+      "source_id": "N06-s05-b025",
+      "kind": "heading-3",
+      "text": "Convertir una pregunta amplia en una pregunta útil"
+    },
+    {
+      "source_id": "N06-s05-b026",
+      "kind": "paragraph",
+      "text": "«¿Cómo mejoramos la experiencia?» sirve para abrir una conversación. No alcanza para organizar tres semanas de trabajo. Necesitamos precisar qué decisión está cerca y qué respuestas podrían cambiarla. No hace falta escribir una frase interminable: podemos separar la pregunta principal y sus condiciones."
+    },
+    {
+      "source_id": "N06-s05-b027",
+      "kind": "paragraph",
+      "text": "En el hotel podríamos escribir: «¿Conviene firmar ahora con este proveedor?». Después anotamos las alternativas: firmar, renegociar, postergar o descartar. Y agregamos una condición decisiva: «Antes de firmar, necesitamos comprobar si podemos recuperar una reserva futura completa fuera de su plataforma»."
+    },
+    {
+      "source_id": "N06-s05-b028",
+      "kind": "paragraph",
+      "text": "La prueba ya tiene un propósito. No vamos a pedir una exportación para marcar una tarea como terminada. Vamos a comprobar si conserva los datos y relaciones que hacen falta para seguir operando. Si falta información indispensable, la respuesta debe cambiar la decisión. De lo contrario, la prueba sería una formalidad."
+    },
+    {
+      "source_id": "N06-s05-b029",
+      "kind": "paragraph",
+      "text": "Otro ejemplo: «¿Los huéspedes quieren una app?» suele producir opiniones difíciles de usar. Una pregunta más concreta sería: «¿Preparar datos antes de llegar evita correcciones en Recepción?». Luego habría que preguntar quiénes pueden hacerlo, qué barreras aparecen y qué ocurre con quienes prefieren ayuda. Ahora podemos comparar una aplicación, un mensaje más claro y una preparación asistida, sin dar por ganadora a la app desde el comienzo."
+    },
+    {
+      "source_id": "N06-s05-b030",
+      "kind": "paragraph",
+      "text": "Toda pregunta importante necesita cuatro datos alrededor: la decisión, las alternativas, la evidencia que podría hacer cambiar de opinión y la fecha en que esa evidencia debe estar disponible. Ese pequeño registro protege la investigación de una trampa frecuente: hacer preguntas cuando ya no queda ninguna posibilidad real de cambiar."
+    },
+    {
+      "source_id": "N06-s05-b031",
+      "kind": "heading-3",
+      "text": "Cuánto vale averiguar algo"
+    },
+    {
+      "source_id": "N06-s05-b032",
+      "kind": "paragraph",
+      "text": "El **valor de la información** es el beneficio de aprender algo antes de decidir. No depende de cuántas páginas tenga el informe. Una prueba breve puede evitar una compra equivocada; un estudio extenso puede llegar tarde o responder una cuestión secundaria."
+    },
+    {
+      "source_id": "N06-s05-b033",
+      "kind": "paragraph",
+      "text": "Imaginemos dos proveedores. Uno parece más barato; del otro sabemos que permite recuperar datos y mantener ambos sistemas durante una transición. Si una prueba muestra que el primero pierde parte del historial al exportar, quizá cambie nuestra preferencia. Esa información vale porque puede alterar una decisión con consecuencias importantes."
+    },
+    {
+      "source_id": "N06-s05-b034",
+      "kind": "paragraph",
+      "text": "Para comparar investigaciones, podemos usar cinco preguntas. ¿Qué decisión podría cambiar? ¿Qué tan diferentes serían las consecuencias de elegir una alternativa u otra? ¿Cuán posible es que encontremos algo que hoy desconocemos? ¿Cuánto cuesta averiguarlo? ¿Podremos aprender después sin causar un daño difícil de reparar?"
+    },
+    {
+      "source_id": "N06-s05-b035",
+      "kind": "paragraph",
+      "text": "Hubbard (2014) desarrolla el uso de mediciones y estimaciones para mejorar decisiones incluso cuando la información es incompleta. Su aporte no obliga a inventar números precisos. Podemos trabajar con rangos y dejar claros los supuestos. Si no sabemos la probabilidad de una falla, asignarle un porcentaje arbitrario no vuelve riguroso el análisis."
+    },
+    {
+      "source_id": "N06-s05-b036",
+      "kind": "paragraph",
+      "text": "Tampoco debemos reducir toda consecuencia a dinero. La pérdida de privacidad, la exclusión de una persona o un riesgo de seguridad pueden imponer límites que una comparación económica no decide por sí sola. Averiguarlos tiene valor aunque no se traduzcan en ventas ni en ahorro de horas."
+    },
+    {
+      "source_id": "N06-s05-b037",
+      "kind": "paragraph",
+      "text": "El momento importa. Una exportación revisada antes de firmar puede cambiar el contrato. La misma revisión después de retirar el sistema anterior quizá sólo permita documentar un problema que ya no tiene una salida sencilla. Investigar a tiempo forma parte de investigar bien."
+    },
+    {
+      "source_id": "N06-s05-b038",
+      "kind": "paragraph",
+      "text": "También importa qué observamos. Para explicar demoras de llegada, veinte opiniones generales pueden aportar menos que unos pocos episodios reconstruidos con cuidado. No porque exista un número correcto de casos para cualquier situación. La diferencia es que el episodio permite conectar una reserva, un pago, una habitación, una decisión y una espera. La evidencia se acerca a la pregunta."
+    },
+    {
+      "source_id": "N06-s05-b039",
+      "kind": "heading-3",
+      "text": "Dejar lugar para encontrarnos con algo distinto"
+    },
+    {
+      "source_id": "N06-s05-b040",
+      "kind": "paragraph",
+      "text": "Cuando un equipo ya eligió su explicación favorita, tiende a mirar el resto desde ahí. Si la primera reunión concluyó que «el PMS es lento», cualquier demora puede terminar confirmando esa frase. Las llegadas rápidas quizá ni siquiera se revisen."
+    },
+    {
+      "source_id": "N06-s05-b041",
+      "kind": "paragraph",
+      "text": "Tversky y Kahneman (1974) estudiaron atajos de juicio, como dar demasiado peso a lo que recordamos con facilidad o a una estimación inicial. En nuestro trabajo, esto invita a cuidar cómo se forma la primera interpretación. Un episodio reciente y llamativo no necesariamente describe lo que pasa la mayor parte del tiempo."
+    },
+    {
+      "source_id": "N06-s05-b042",
+      "kind": "paragraph",
+      "text": "Una protección práctica es escribir, antes de investigar, la explicación que preferimos y al menos una rival. También anotamos qué hallazgo debilitaría cada una. Por ejemplo: si las demoras continúan cuando el sistema responde rápido, habrá que revisar la explicación centrada solamente en velocidad técnica."
+    },
+    {
+      "source_id": "N06-s05-b043",
+      "kind": "paragraph",
+      "text": "No se trata de convertir la investigación en una competencia para ver quién acertó. Se trata de evitar que cambiemos el significado de la hipótesis después de cada resultado para que nunca pueda fallar. Decir «esto nos sorprendió y obliga a revisar la idea» es un resultado de aprendizaje, no una derrota del equipo."
+    },
+    {
+      "source_id": "N06-s05-b044",
+      "kind": "paragraph",
+      "text": "Las discrepancias entre áreas también pueden indicar dónde buscar. Si el turno diurno afirma que una función funciona bien y el nocturno dice lo contrario, promediar ambas opiniones no resuelve nada. Tal vez trabajan con distintos permisos o apoyos. La diferencia pide nuevos casos, no una votación sobre quién tiene razón."
+    },
+    {
+      "source_id": "N06-s05-b045",
+      "kind": "heading-3",
+      "text": "Cuánto investigar antes de actuar"
+    },
+    {
+      "source_id": "N06-s05-b046",
+      "kind": "paragraph",
+      "text": "No existe una cantidad universal de entrevistas o de semanas de discovery. La exigencia depende de lo que vamos a poner en juego. Cambiar una frase informativa para un grupo pequeño no es lo mismo que migrar el único historial de reservas."
+    },
+    {
+      "source_id": "N06-s05-b047",
+      "kind": "paragraph",
+      "text": "Cuando un error puede causar daño grave y la acción es difícil de revertir, necesitamos evidencia fuerte antes de avanzar. Si la modificación es pequeña, puede observarse y tiene una salida segura, quizá una prueba acotada enseñe más que prolongar el análisis. La diferencia no es rigor contra velocidad: es usar un rigor proporcionado a las consecuencias."
+    },
+    {
+      "source_id": "N06-s05-b048",
+      "kind": "paragraph",
+      "text": "**Revertir una función no siempre repara su daño.** Podemos apagar un envío automático, pero no retirar de la memoria de sus destinatarios un mensaje con información privada. Podemos volver a una versión anterior y, aun así, dejar a personas con un cobro que deben reclamar. La reversibilidad incluye a quienes sufren las consecuencias, no sólo al código."
+    },
+    {
+      "source_id": "N06-s05-b049",
+      "kind": "paragraph",
+      "text": "Esperar también cuesta. Si un mensaje confuso genera errores todos los días, postergar una corrección sencilla durante meses tiene consecuencias. El costo de demora es lo que perdemos mientras no resolvemos algo. Debe compararse con el riesgo de actuar mal; no usarse como excusa para saltar controles."
+    },
+    {
+      "source_id": "N06-s05-b050",
+      "kind": "paragraph",
+      "text": "March (1991) distingue explorar posibilidades de aprovechar lo que ya sabemos hacer. Ambas actividades compiten por tiempo y recursos. Una organización que sólo explora nunca consolida resultados. Una que sólo repite lo conocido puede dejar de notar que el contexto cambió. Discovery ayuda a administrar esa tensión: aprender donde hace falta y comprometerse cuando ya hay una base razonable."
+    },
+    {
+      "source_id": "N06-s06-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 2 · Diseñar una cartera mínima de evidencia"
+    },
+    {
+      "source_id": "N06-s06-b001",
+      "kind": "heading-3",
+      "text": "Un conjunto pequeño de fuentes que se complementen"
+    },
+    {
+      "source_id": "N06-s06-b002",
+      "kind": "paragraph",
+      "text": "Una **cartera de evidencia** es el conjunto de investigaciones que elegimos para responder las dudas prioritarias. La palabra cartera no significa que debamos juntar todos los métodos disponibles. Significa que cada actividad tiene una función y que sabemos cómo se relaciona con las demás."
+    },
+    {
+      "source_id": "N06-s06-b003",
+      "kind": "paragraph",
+      "text": "Las entrevistas permiten conocer interpretaciones, experiencias y razones que no siempre se ven desde afuera. La observación muestra secuencias, interrupciones y formas de resolver problemas. Los documentos permiten revisar reglas y compromisos. Los registros técnicos muestran ciertos eventos, pero no necesariamente el trabajo humano que ocurrió entre ellos."
+    },
+    {
+      "source_id": "N06-s06-b004",
+      "kind": "paragraph",
+      "text": "Un prototipo hace visible una alternativa sin construirla por completo. Una simulación permite ensayar una excepción: por ejemplo, qué haría cada área si una habitación prometida todavía no está disponible. Un piloto introduce una prueba limitada en condiciones de uso. Ninguno de estos recursos responde por sí solo todas las preguntas."
+    },
+    {
+      "source_id": "N06-s06-b005",
+      "kind": "paragraph",
+      "text": "Combinar fuentes, o **triangular**, permite contrastar una interpretación con evidencias que tienen límites distintos. Si entrevistamos a cinco jefes que nunca trabajan de noche, aumentamos la cantidad de testimonios, pero podemos conservar el mismo punto ciego. Observar un turno nocturno aporta una diferencia que otra entrevista a una jefatura quizá no aporte."
+    },
+    {
+      "source_id": "N06-s06-b006",
+      "kind": "paragraph",
+      "text": "Hay otra trampa: contar una fuente varias veces. El tablero, el informe semanal y la presentación del proveedor pueden mostrar el mismo porcentaje porque los tres usan la misma consulta a la base de datos. Son tres documentos, no tres confirmaciones independientes. Si esa consulta excluye reservas corregidas manualmente, los tres repetirán la omisión."
+    },
+    {
+      "source_id": "N06-s06-b007",
+      "kind": "paragraph",
+      "text": "Por eso distinguimos el registro original de sus transformaciones. Un archivo de eventos, el gráfico construido con ese archivo y la interpretación del gráfico son piezas relacionadas, no equivalentes. También distinguimos lo observado antes de intervenir de lo que ocurre dentro de un piloto: la prueba cambia algunas condiciones y debemos conservar cuáles cambió."
+    },
+    {
+      "source_id": "N06-s06-b008",
+      "kind": "heading-3",
+      "text": "Elegir casos que nos obliguen a mirar diferencias"
+    },
+    {
+      "source_id": "N06-s06-b009",
+      "kind": "paragraph",
+      "text": "Si sólo investigamos las llegadas fáciles del turno diurno, aprenderemos sobre esas llegadas. El problema aparece al presentar la conclusión como si describiera todo el hotel. Para descubrir cómo funciona una situación, conviene buscar variaciones que puedan cambiar la explicación."
+    },
+    {
+      "source_id": "N06-s06-b010",
+      "kind": "paragraph",
+      "text": "Podemos comparar día y noche, personal nuevo y experimentado, reservas directas y de agencias en línea, demanda alta y baja, situaciones habituales y excepcionales. También necesitamos incluir necesidades de accesibilidad y casos que el sistema no registra bien. No se trata de llenar una lista: cada diferencia debe tener alguna relación con la pregunta."
+    },
+    {
+      "source_id": "N06-s06-b011",
+      "kind": "paragraph",
+      "text": "Patton (2015) llama **muestreo intencional** a elegir casos por lo que permiten aprender. Un caso excepcional puede revelar una regla que permanece oculta en cien casos fáciles. Pero esto no convierte la selección en una muestra estadísticamente representativa. Encontrar un mecanismo no demuestra con qué frecuencia ocurre en toda la población."
+    },
+    {
+      "source_id": "N06-s06-b012",
+      "kind": "paragraph",
+      "text": "Cinco entrevistas pueden mostrar que una palabra se interpreta de dos maneras. No permiten afirmar que cierto porcentaje de todos los huéspedes la entiende mal. Un millón de registros tampoco arregla una definición defectuosa: si «llegada terminada» significa cosas distintas entre turnos, primero hay que revisar qué estamos contando."
+    },
+    {
+      "source_id": "N06-s06-b013",
+      "kind": "paragraph",
+      "text": "El alcance de la conclusión debe corresponder al alcance de la evidencia. Podemos escribir: «Encontramos esta dificultad en los casos revisados; necesitamos medir su frecuencia». Es más útil que convertir una observación pequeña en una certeza general o descartarla por no ser una encuesta masiva."
+    },
+    {
+      "source_id": "N06-s06-b014",
+      "kind": "heading-3",
+      "text": "Decidir el orden de las pruebas"
+    },
+    {
+      "source_id": "N06-s06-b015",
+      "kind": "paragraph",
+      "text": "Algunas respuestas hacen falta antes de poder interpretar otras. Si no acordamos qué significa «reserva completa», comparar porcentajes de completitud sólo produce una discusión confusa. Si una alternativa no puede preservar datos esenciales, evaluar sus pantallas no resuelve su problema principal."
+    },
+    {
+      "source_id": "N06-s06-b016",
+      "kind": "paragraph",
+      "text": "En Hotel Horizonte conviene probar temprano la recuperación de datos y revisar las condiciones de salida. Si un proveedor no puede cumplir un requisito indispensable, no hace falta convocar a medio hotel para analizar detalles de su interfaz. Se evita gastar tiempo de otras personas en una alternativa que quizá deba descartarse."
+    },
+    {
+      "source_id": "N06-s06-b017",
+      "kind": "paragraph",
+      "text": "En otros casos, la primera pregunta debe ser sobre daño. Antes de ensayar una automatización sobre huéspedes reales, hay que saber qué acciones podría ejecutar por error y cómo detenerla. La prueba de uso no puede emplearse para descubrir un riesgo grave que era posible reconocer antes."
+    },
+    {
+      "source_id": "N06-s06-b018",
+      "kind": "paragraph",
+      "text": "Esto no crea una receta universal de pasos. Una entrevista temprana puede revelar qué datos buscar; unos registros pueden indicar a quién entrevistar; una simulación puede mostrar que faltaba una alternativa. El orden se revisa cuando aparece evidencia nueva. Lo que no debe faltar es una razón para la secuencia elegida."
+    },
+    {
+      "source_id": "N06-s06-b019",
+      "kind": "paragraph",
+      "text": "La fecha decisiva tampoco es siempre la que figura como «fin del proyecto». Puede ser la firma, el anuncio público, la asignación irreversible de presupuesto o el cierre del canal anterior. Si investigamos después de ese momento, quizá llegue evidencia útil para explicar el error, pero demasiado tarde para evitarlo."
+    },
+    {
+      "source_id": "N06-s06-b020",
+      "kind": "heading-3",
+      "text": "Aprender durante el trabajo, no sólo al comienzo"
+    },
+    {
+      "source_id": "N06-s06-b021",
+      "kind": "paragraph",
+      "text": "Torres (2021) propone sostener hábitos de descubrimiento continuo. En lugar de concentrar todas las conversaciones con personas al inicio y perder luego ese contacto, el equipo mantiene oportunidades de aprender mientras desarrolla el producto. El valor está en revisar decisiones, no en cumplir una cuota de entrevistas."
+    },
+    {
+      "source_id": "N06-s06-b022",
+      "kind": "paragraph",
+      "text": "Continuo no quiere decir que todo permanezca abierto. Podemos cerrar provisionalmente una decisión y establecer cuándo revisarla. Una prueba en temporada baja puede justificar una ampliación limitada, pero no demostrar que la operación soportará la temporada alta. El alcance y la vigencia de la conclusión deben quedar escritos."
+    },
+    {
+      "source_id": "N06-s06-b023",
+      "kind": "paragraph",
+      "text": "Una manera de organizarlo es avanzar por compromisos pequeños. Primero revisamos episodios y documentos. Después ensayamos una alternativa sin afectar la operación. Luego, si corresponde, hacemos un piloto limitado. Sólo ampliamos cuando la evidencia lo permite. Cada paso puede terminar en continuar, modificar o detener: no es una escalera que estemos obligados a subir hasta el final."
+    },
+    {
+      "source_id": "N06-s06-b024",
+      "kind": "paragraph",
+      "text": "En cada escalón preguntamos qué aprendemos y qué opciones perdemos. Firmar exclusividad, migrar el único historial o cerrar el canal anterior reduce nuestra capacidad de volver atrás. Mantener una opción tiene un costo, pero perderla antes de aprender también lo tiene. Esta es la idea básica de una opción: conservar la posibilidad de decidir más adelante, cuando sepamos algo más."
+    },
+    {
+      "source_id": "N06-s06-b025",
+      "kind": "heading-3",
+      "text": "Un asistente no necesita recibir toda la autoridad de una vez"
+    },
+    {
+      "source_id": "N06-s06-b026",
+      "kind": "paragraph",
+      "text": "Pensemos un posible asistente para el hotel. Podemos comenzar con documentos ficticios para detectar errores evidentes sin exponer información de huéspedes. Si esa prueba resulta útil, podemos evaluar consultas reales con las autorizaciones y protecciones correspondientes, todavía sin que el asistente responda a personas ni cambie reservas."
+    },
+    {
+      "source_id": "N06-s06-b027",
+      "kind": "paragraph",
+      "text": "Un paso posterior podría ser que sugiera respuestas a Recepción. El personal revisa, decide y registra correcciones. Sólo después tendría sentido discutir una automatización limitada de consultas estables. Poder generar una respuesta no justifica cobrar una penalidad, cancelar una reserva ni prometer una habitación."
+    },
+    {
+      "source_id": "N06-s06-b028",
+      "kind": "paragraph",
+      "text": "Cada paso necesita condiciones propias. La evaluación con documentos ficticios no demuestra desempeño con lenguaje real. La evaluación sin interacción no demuestra cómo reaccionará un huésped. El apoyo a una persona no demuestra que sea seguro actuar sin esa revisión. Una prueba no puede prestar una confianza que no produjo."
+    },
+    {
+      "source_id": "N06-s06-b029",
+      "kind": "paragraph",
+      "text": "Tampoco debemos dar por resuelta la privacidad al quitar nombres. En un hotel pequeño, una combinación de fechas, cargo y episodio puede identificar a alguien. Si no hace falta usar un dato para la prueba, la opción más prudente puede ser no incluirlo. El diseño de investigación debe reducir la exposición, no justificarla después."
+    },
+    {
+      "source_id": "N06-s06-b030",
+      "kind": "heading-3",
+      "text": "Un plan que permita sacar tareas, no sólo agregarlas"
+    },
+    {
+      "source_id": "N06-s06-b031",
+      "kind": "paragraph",
+      "text": "El equipo necesita una lista ordenada de preguntas. Para cada una alcanza con registrar la decisión, la fecha, lo que falta saber, la evidencia buscada, el método, las personas o fuentes, el responsable y la próxima revisión. Si la lista es tan pesada que nadie la mantiene, perdió su función."
+    },
+    {
+      "source_id": "N06-s06-b032",
+      "kind": "paragraph",
+      "text": "La prioridad combina gravedad, cercanía del compromiso y utilidad esperada de la respuesta. Lo fácil no siempre debe ir primero. Una revisión contractual compleja puede necesitar comenzar hoy porque lleva tiempo, aunque una encuesta permita mostrar resultados mañana. Tampoco gana automáticamente la pregunta más urgente del área con más presupuesto."
+    },
+    {
+      "source_id": "N06-s06-b033",
+      "kind": "paragraph",
+      "text": "La lista debe permitir quitar investigaciones. Si descartamos un proveedor, quizás ya no necesitemos probar su configuración avanzada. Si dos preguntas comparten una prueba, conviene coordinarlas. Si una duda puede esperar sin daño, la registramos para el momento en que sí pueda cambiar una decisión."
+    },
+    {
+      "source_id": "N06-s06-b034",
+      "kind": "paragraph",
+      "text": "Quedan también supuestos aceptados de manera provisional. Por ejemplo: «No probamos todavía la carga de temporada alta; no ampliaremos antes de hacerlo». A veces se llama a esto deuda de conocimiento. El nombre importa menos que el compromiso: quién deberá revisar ese supuesto, cuándo y antes de qué decisión."
+    },
+    {
+      "source_id": "N06-s06-b035",
+      "kind": "heading-3",
+      "text": "Qué tiene que definir un experimento"
+    },
+    {
+      "source_id": "N06-s06-b036",
+      "kind": "paragraph",
+      "text": "Mostrar una pantalla y preguntar «¿te gusta?» puede iniciar una conversación, pero no demuestra que una solución funcione. Para aprender con una prueba necesitamos anticipar qué esperamos observar y qué haríamos si ocurre otra cosa. De lo contrario, cualquier resultado puede terminar presentado como éxito."
+    },
+    {
+      "source_id": "N06-s06-b037",
+      "kind": "paragraph",
+      "text": "Ries (2011) organiza el aprendizaje alrededor de construir, medir y aprender. Construir poco permite probar antes y comprometer menos recursos. Pero construir algo pequeño no lo convierte automáticamente en un buen experimento. Siguen haciendo falta una pregunta, una comparación útil y una interpretación cuidadosa."
+    },
+    {
+      "source_id": "N06-s06-b038",
+      "kind": "paragraph",
+      "text": "En un piloto de preparación previa a la llegada, el hotel podría observar si se reducen las correcciones en Recepción. También tendría que medir el trabajo adicional y revisar qué pasa con quienes no pueden completar el trámite por su cuenta. Mantener un canal de ayuda permite aprender sin obligar a toda la población a usar la alternativa."
+    },
+    {
+      "source_id": "N06-s06-b039",
+      "kind": "paragraph",
+      "text": "Antes de comenzar, el equipo define qué casos participarán, durante cuánto tiempo, contra qué situación se comparará y qué señal obligará a detener. Los umbrales deben justificarse por la consecuencia, no elegirse al final para favorecer el resultado. No hay un porcentaje universal que autorice cualquier piloto."
+    },
+    {
+      "source_id": "N06-s06-b040",
+      "kind": "paragraph",
+      "text": "Si aumenta la cantidad de formularios completos, pero algunas personas quedan sin una forma accesible de llegar, la mejora de una cifra no alcanza para declarar éxito. Si bajan las correcciones justo cuando cambia la demanda, tampoco podemos atribuir todo a la nueva preparación. Las condiciones del ensayo deben acompañar la conclusión."
+    },
+    {
+      "source_id": "N06-s06-b041",
+      "kind": "paragraph",
+      "text": "Un experimento organizacional rara vez aísla todas las variables. Puede enseñar mucho aun sin demostrar una relación causal definitiva: revelar una excepción, mostrar que una regla se interpreta mal o descartar una alternativa. El rigor consiste en decir qué mostró y qué todavía no mostró."
+    },
+    {
+      "source_id": "N06-s06-b042",
+      "kind": "heading-3",
+      "text": "Investigar el servicio antes de enamorarnos de la pantalla"
+    },
+    {
+      "source_id": "N06-s06-b043",
+      "kind": "paragraph",
+      "text": "La investigación de diseño mira personas, actividades, espacios, reglas y objetos que participan en una experiencia. No empieza necesariamente con una interfaz. ISO 9241-210:2019 organiza el diseño centrado en las personas alrededor de comprender el contexto, involucrarlas, producir soluciones y evaluarlas de manera iterativa."
+    },
+    {
+      "source_id": "N06-s06-b044",
+      "kind": "paragraph",
+      "text": "En el hotel, comparar dos pantallas puede aclarar cuál se entiende mejor. Recorrer una llegada anticipada con Recepción y Housekeeping responde otra pregunta: si el hotel puede cumplir lo que cualquiera de esas pantallas promete. Una interfaz clara no crea una habitación disponible ni otorga autoridad para resolver una excepción."
+    },
+    {
+      "source_id": "N06-s06-b045",
+      "kind": "paragraph",
+      "text": "Por eso conviene combinar la prueba de comprensión con un ensayo del servicio. ¿Qué ocurre antes de mostrar el mensaje? ¿Quién confirma el estado? ¿Qué pasa si la habitación se bloquea después? ¿A quién puede acudir la persona? Estas preguntas impiden que una pantalla convincente esconda un proceso que todavía no funciona."
+    },
+    {
+      "source_id": "N06-s06-b046",
+      "kind": "paragraph",
+      "text": "Una maqueta muy detallada puede incluso desviar la conversación hacia colores y botones. Si lo que está en duda es una regla, quizá un esquema sencillo y una simulación de roles sean mejores. El grado de elaboración debe acompañar lo que queremos aprender, no impresionar por sí mismo."
+    },
+    {
+      "source_id": "N06-s06-b047",
+      "kind": "heading-3",
+      "text": "Primera aplicación de HH-06: qué investigar antes de firmar"
+    },
+    {
+      "source_id": "N06-s06-b048",
+      "kind": "paragraph",
+      "text": "HH-06 conserva cuatro alternativas del trabajo anterior: reemplazar el PMS, integrar sólo algunas capacidades, cambiar reglas operativas o mantener el sistema con controles mejorados. No son opciones igualmente buenas por definición. Son posibilidades que debemos comparar antes de elegir."
+    },
+    {
+      "source_id": "N06-s06-b049",
+      "kind": "paragraph",
+      "text": "La hipótesis favorable al reemplazo dice que la plataforma actual explica una parte importante de las demoras. Una rival sostiene que el problema principal está en decisiones y reglas de trabajo. Otra señala que áreas y sistemas usan estados con significados diferentes. El plan busca episodios que permitan distinguir esas explicaciones."
+    },
+    {
+      "source_id": "N06-s06-b050",
+      "kind": "paragraph",
+      "text": "Lucía Ferreyra aporta llegadas que Recepción tuvo que corregir. Mariela Benítez ayuda a reconstruir cuándo Housekeeping consideró lista una habitación y qué faltaba todavía. Federico revisa los eventos de los sistemas y prepara una prueba de exportación. Camila Duarte explica qué se prometió por los canales comerciales. Elena Acosta debe decidir qué condiciones exige antes de comprometer al hotel."
+    },
+    {
+      "source_id": "N06-s06-b051",
+      "kind": "paragraph",
+      "text": "La primera semana se concentra en dos cuestiones: por qué ocurren las demoras y si podremos salir del proveedor. Ambas pueden cambiar la firma. La segunda busca variaciones y casos que contradigan la explicación inicial. La tercera permite completar el ensayo de exportación y discutir condiciones con datos concretos, no sólo con una demostración preparada por quien vende."
+    },
+    {
+      "source_id": "N06-s06-b052",
+      "kind": "table-cell",
+      "text": "Pregunta prioritaria"
+    },
+    {
+      "source_id": "N06-s06-b053",
+      "kind": "table-cell",
+      "text": "Qué vamos a revisar"
+    },
+    {
+      "source_id": "N06-s06-b054",
+      "kind": "table-cell",
+      "text": "Qué podría cambiar"
+    },
+    {
+      "source_id": "N06-s06-b055",
+      "kind": "table-cell",
+      "text": "¿Por qué se demoran ciertas llegadas?"
+    },
+    {
+      "source_id": "N06-s06-b056",
+      "kind": "table-cell",
+      "text": "Episodios de distintos turnos, observación y registros."
+    },
+    {
+      "source_id": "N06-s06-b057",
+      "kind": "table-cell",
+      "text": "Reemplazar todo o intervenir un problema localizado."
+    },
+    {
+      "source_id": "N06-s06-b058",
+      "kind": "table-cell",
+      "text": "¿Todos entienden lo mismo por «pagado» y «liberado»?"
+    },
+    {
+      "source_id": "N06-s06-b059",
+      "kind": "table-cell",
+      "text": "Casos contradictorios, reglas y decisiones de cada área."
+    },
+    {
+      "source_id": "N06-s06-b060",
+      "kind": "table-cell",
+      "text": "Integrar sistemas o corregir significados y autoridad."
+    },
+    {
+      "source_id": "N06-s06-b061",
+      "kind": "table-cell",
+      "text": "¿Podemos reconstruir una reserva fuera del proveedor?"
+    },
+    {
+      "source_id": "N06-s06-b062",
+      "kind": "table-cell",
+      "text": "Exportación de muestra, con pagos, cambios y relaciones."
+    },
+    {
+      "source_id": "N06-s06-b063",
+      "kind": "table-cell",
+      "text": "Firmar, exigir otras condiciones o descartar."
+    },
+    {
+      "source_id": "N06-s06-b064",
+      "kind": "table-cell",
+      "text": "¿Qué tareas sostienen hoy el servicio sin aparecer en el sistema?"
+    },
+    {
+      "source_id": "N06-s06-b065",
+      "kind": "table-cell",
+      "text": "Observación de controles, planillas y reparaciones."
+    },
+    {
+      "source_id": "N06-s06-b066",
+      "kind": "table-cell",
+      "text": "Automatizar, preservar o rediseñar esas tareas."
+    },
+    {
+      "source_id": "N06-s06-b067",
+      "kind": "table-cell",
+      "text": "¿Quién podría quedar peor con el piloto?"
+    },
+    {
+      "source_id": "N06-s06-b068",
+      "kind": "table-cell",
+      "text": "Excepciones de acceso, cobro, cancelación y atención."
+    },
+    {
+      "source_id": "N06-s06-b069",
+      "kind": "table-cell",
+      "text": "Limitar alcance, agregar apoyos o no hacer la prueba."
+    },
+    {
+      "source_id": "N06-s06-b070",
+      "kind": "paragraph",
+      "text": "La regla más importante está escrita antes de probar: si no puede reconstruirse información indispensable, no se considera resuelta la salida del proveedor. Una exportación que produce un archivo no basta. El archivo debe permitir recuperar el trabajo que esa información sostiene."
+    },
+    {
+      "source_id": "N06-s06-b071",
+      "kind": "paragraph",
+      "text": "El plan también deja lugar para una sorpresa. Si encontramos demoras con información técnica correcta y oportuna, debemos revisar la explicación centrada en el PMS. Investigar no tiene que confirmar que hace falta una plataforma nueva. Tiene que aclarar qué intervención vale la pena realizar."
+    },
+    {
+      "source_id": "N06-s07-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 3 · Decidir con evidencia suficiente y riesgo residual"
+    },
+    {
+      "source_id": "N06-s07-b001",
+      "kind": "heading-3",
+      "text": "Suficiente, ¿para hacer qué?"
+    },
+    {
+      "source_id": "N06-s07-b002",
+      "kind": "paragraph",
+      "text": "«Ya validamos la solución» dice demasiado y explica demasiado poco. ¿Comprobamos que una pantalla se entiende? ¿Que la integración funciona con una muestra? ¿Que el servicio puede sostenerse durante un turno? ¿Que podemos ampliar sin excluir a nadie? Esas afirmaciones no son intercambiables."
+    },
+    {
+      "source_id": "N06-s07-b003",
+      "kind": "paragraph",
+      "text": "La **suficiencia de evidencia** depende de la decisión. Si una exportación pierde reservas indispensables, eso puede alcanzar para descartar un proveedor en las condiciones actuales. No demuestra que el otro proveedor sea adecuado. Si un piloto funciona con poca demanda, puede justificar otra prueba y no un despliegue general."
+    },
+    {
+      "source_id": "N06-s07-b004",
+      "kind": "paragraph",
+      "text": "Una decisión clara podría decir: «Vamos a probar durante dos semanas en este alcance. Estos episodios respaldan la idea; conservamos este canal de atención; estas señales obligan a detener; estos problemas siguen sin probarse». No hace falta una declaración solemne. Hace falta que otra persona pueda comprender lo que se autoriza y lo que no."
+    },
+    {
+      "source_id": "N06-s07-b005",
+      "kind": "paragraph",
+      "text": "También debe quedar claro quién puede aceptar qué riesgo. El equipo técnico puede informar sobre la prueba de integración. No puede asumir por sí solo toda consecuencia sobre accesibilidad, privacidad o condiciones de trabajo. Se necesitan las personas y competencias pertinentes, y autoridad para modificar el alcance si la evidencia lo exige."
+    },
+    {
+      "source_id": "N06-s07-b006",
+      "kind": "paragraph",
+      "text": "Aceptar una incertidumbre no significa esconderla. Significa explicar por qué es razonable dar este paso mientras sigue abierta y cómo evitaremos que se convierta en un daño sin respuesta. Cuanto más difícil sea reparar, menos alcanza una confianza basada en intuición o entusiasmo."
+    },
+    {
+      "source_id": "N06-s07-b007",
+      "kind": "heading-3",
+      "text": "Cuándo conviene dejar de investigar por ahora"
+    },
+    {
+      "source_id": "N06-s07-b008",
+      "kind": "paragraph",
+      "text": "Siempre podemos formular otra pregunta. La investigación no termina porque se agotó la curiosidad. Se detiene provisionalmente cuando la evidencia permite elegir una acción proporcionada y sabemos cómo revisar esa elección."
+    },
+    {
+      "source_id": "N06-s07-b009",
+      "kind": "paragraph",
+      "text": "Antes de avanzar, necesitamos poder explicar el problema, las alternativas consideradas y los principales supuestos. Los riesgos graves deben tener tratamiento. Debemos saber qué resultado esperamos, qué señal indicaría daño y quién responderá. Lo no investigado tiene que estar visible, especialmente si limita la población o la escala del siguiente paso."
+    },
+    {
+      "source_id": "N06-s07-b010",
+      "kind": "paragraph",
+      "text": "Existe también una razón para parar por bajo valor: otra semana de investigación probablemente no cambie la decisión y cuesta más que una prueba pequeña y segura. Pero esa conclusión debe justificarse. No es lo mismo «esto puede aprenderse durante el piloto» que «no llegamos a mirarlo y preferimos no mencionarlo»."
+    },
+    {
+      "source_id": "N06-s07-b011",
+      "kind": "paragraph",
+      "text": "El **riesgo residual** es el que permanece después de aplicar controles. Por ejemplo, el equipo puede haber comprobado la recuperación de datos y seguir sin saber cómo se comportará la operación en temporada alta. Esa duda acompaña la decisión: tiene responsable y una condición de revisión antes de ampliar."
+    },
+    {
+      "source_id": "N06-s07-b012",
+      "kind": "paragraph",
+      "text": "Si el riesgo queda escrito sólo en un informe que nadie recibe, no quedó gestionado. Debe pasar a quienes construyen, operan y deciden. Un documento no protege por su existencia; protege cuando modifica lo que esas personas están autorizadas a hacer y lo que deben observar."
+    },
+    {
+      "source_id": "N06-s07-b013",
+      "kind": "heading-3",
+      "text": "Qué pasa si la plataforma ya está elegida"
+    },
+    {
+      "source_id": "N06-s07-b014",
+      "kind": "paragraph",
+      "text": "No siempre investigamos con todas las opciones abiertas. Tal vez el contrato ya esté firmado o exista una fecha que no puede cambiarse. Eso limita la decisión, pero no elimina la necesidad de aprender. Todavía puede haber opciones sobre alcance, orden, integración, capacitación, controles y contingencias."
+    },
+    {
+      "source_id": "N06-s07-b015",
+      "kind": "paragraph",
+      "text": "La primera responsabilidad es no fingir una consulta que no existe. Podemos decir: «No estamos eligiendo plataforma; estamos decidiendo cómo incorporarla sin deteriorar estas tareas». Las personas necesitan saber qué pueden modificar con su participación. Pedir opiniones sobre una decisión cerrada y presentarlas luego como respaldo es otra cosa."
+    },
+    {
+      "source_id": "N06-s07-b016",
+      "kind": "paragraph",
+      "text": "También conviene revisar qué tipo de restricción tenemos. Una obligación externa, una promesa comercial y una preferencia interna no se negocian igual. «Tiene que salir en diciembre» no explica por sí solo por qué ni qué puede ajustarse. Antes de tratar una fecha como una ley de la naturaleza, necesitamos conocer su fundamento."
+    },
+    {
+      "source_id": "N06-s07-b017",
+      "kind": "paragraph",
+      "text": "Si no puede cancelarse una compra, quizá sí pueda postergarse una función, mantener un canal anterior o limitar el uso. Investigar permite descubrir esas posibilidades. No siempre recupera la decisión grande, pero puede evitar que una restricción inicial arrastre todas las demás sin discusión."
+    },
+    {
+      "source_id": "N06-s07-b018",
+      "kind": "heading-3",
+      "text": "Usar IA sin confundir una síntesis con evidencia"
+    },
+    {
+      "source_id": "N06-s07-b019",
+      "kind": "paragraph",
+      "text": "Una herramienta de IA puede ordenar notas, proponer categorías y ayudar a detectar contradicciones. También puede borrar matices, agrupar como iguales experiencias diferentes o producir una cita que nadie dijo. Por eso sus resultados necesitan un vínculo revisable con el material del que parten."
+    },
+    {
+      "source_id": "N06-s07-b020",
+      "kind": "paragraph",
+      "text": "Imaginemos que resume treinta entrevistas y concluye que el principal reclamo es «velocidad». Al revisar los fragmentos, el equipo encuentra algo distinto: muchas personas no pedían menos segundos, sino saber si su reserva estaba confirmada. Una síntesis que parecía razonable podría haber llevado a optimizar tiempo cuando hacía falta reducir incertidumbre para el huésped."
+    },
+    {
+      "source_id": "N06-s07-b021",
+      "kind": "paragraph",
+      "text": "El control no consiste en revisar sólo dos ejemplos fáciles. Conviene buscar excepciones, categorías pequeñas y fragmentos que no encajan. Si una voz minoritaria expresa una dificultad grave, su baja frecuencia no la vuelve irrelevante. El criterio de revisión debe considerar la consecuencia de perder esa diferencia."
+    },
+    {
+      "source_id": "N06-s07-b022",
+      "kind": "paragraph",
+      "text": "Hay tres preguntas básicas: ¿de dónde salió esta afirmación?, ¿la comprobamos en casos pertinentes?, ¿quién decide si puede usarse y cómo corrige un error? El marco de riesgos de IA de NIST (Tabassi, 2023) ayuda a organizar contexto, evaluación y gestión. En esta lectura lo traducimos en una regla concreta: la facilidad de producir una respuesta no autoriza a tratarla como conocimiento confirmado."
+    },
+    {
+      "source_id": "N06-s07-b023",
+      "kind": "paragraph",
+      "text": "El informe DORA (2025) también invita a mirar el sistema organizacional en el que se incorpora la IA, no sólo la herramienta aislada. Aquí importa una consecuencia práctica: generar más variantes puede multiplicar trabajo sin resolver mejor una pregunta. Diez prototipos no aportan diez pruebas si ninguno se contrasta con uso, datos o condiciones reales."
+    },
+    {
+      "source_id": "N06-s07-b024",
+      "kind": "heading-3",
+      "text": "De un hallazgo a una explicación que podamos poner a prueba"
+    },
+    {
+      "source_id": "N06-s07-b025",
+      "kind": "paragraph",
+      "text": "«Recepción usa una planilla» es una observación. Todavía no explica para qué sirve, qué problema resuelve ni qué riesgo introduce. Si borramos la planilla sólo porque está fuera del sistema oficial, podemos eliminar un control necesario."
+    },
+    {
+      "source_id": "N06-s07-b026",
+      "kind": "paragraph",
+      "text": "Una explicación más útil sería: «Cuando el PMS no conserva este dato de la reserva, Recepción lo anota en la planilla para que el siguiente turno no lo pierda». Ahora podemos comprobarla: buscar casos con y sin el dato, revisar qué se anota y observar cómo lo usa el turno siguiente. También podemos encontrar una explicación rival: tal vez la planilla continúe por costumbre aunque la función ya exista."
+    },
+    {
+      "source_id": "N06-s07-b027",
+      "kind": "paragraph",
+      "text": "Aprender un **mecanismo** significa comprender cómo ciertas condiciones producen un resultado. No exige conocerlo todo. Exige ir más allá de una etiqueta y proponer una relación que pueda revisarse. Esa relación permite elegir entre mejorar la herramienta, cambiar una regla, ajustar permisos o conservar temporalmente una tarea."
+    },
+    {
+      "source_id": "N06-s07-b028",
+      "kind": "paragraph",
+      "text": "Un repositorio de hallazgos sirve si conserva pregunta, evidencia, variaciones, límites y decisión afectada. Una colección de frases llamativas puede inspirar una presentación, pero deja mucho trabajo por rehacer. También hay que conservar resultados negativos: una hipótesis descartada evita que otra persona repita la misma prueba sin conocer lo ya aprendido."
+    },
+    {
+      "source_id": "N06-s07-b029",
+      "kind": "heading-3",
+      "text": "Conectar investigación y construcción"
+    },
+    {
+      "source_id": "N06-s07-b030",
+      "kind": "paragraph",
+      "text": "Si un equipo investiga y entrega conclusiones a otro que construye sin volver a conversar, se pierde parte del aprendizaje. Quien desarrolla descubre restricciones nuevas; quien observó el trabajo conoce excepciones que quizá no quedaron claras en el documento. Necesitan momentos compartidos para revisar decisiones."
+    },
+    {
+      "source_id": "N06-s07-b031",
+      "kind": "paragraph",
+      "text": "Esto no significa que todas las personas hagan todas las tareas. Significa que una entrega mantenga su relación con la pregunta que la originó. Al probar una función, además de preguntar si funciona técnicamente, debemos revisar qué aprendimos sobre el resultado esperado y qué supuesto sigue abierto."
+    },
+    {
+      "source_id": "N06-s07-b032",
+      "kind": "paragraph",
+      "text": "Schön (1983) estudia cómo los profesionales revisan su comprensión mientras actúan. Una sorpresa durante la construcción puede mostrar que interpretamos mal el problema. Ocultarla para cumplir el plan protege el calendario en apariencia y debilita la intervención. Incorporarla permite corregir mientras todavía hay margen."
+    },
+    {
+      "source_id": "N06-s07-b033",
+      "kind": "paragraph",
+      "text": "La organización también tiene que reservar tiempo para aprender. Si toda la capacidad está comprometida en producir funciones, investigar queda como una tarea extra que siempre se posterga. La proporción dependerá del contexto, pero el principio es sencillo: no se puede exigir buenas decisiones futuras si nadie tiene tiempo para reunir la evidencia que necesitarán."
+    },
+    {
+      "source_id": "N06-s07-b034",
+      "kind": "heading-3",
+      "text": "Un tablero pequeño para decisiones reales"
+    },
+    {
+      "source_id": "N06-s07-b035",
+      "kind": "paragraph",
+      "text": "El tablero de incertidumbres no necesita una casilla por cada conversación. Necesita mostrar la decisión pendiente, la duda importante, la evidencia disponible, el próximo paso, el responsable y la revisión. Tiene que ayudar a trabajar, no convertir la investigación en administración de casillas."
+    },
+    {
+      "source_id": "N06-s07-b036",
+      "kind": "paragraph",
+      "text": "Debe permitir bajar la confianza en una idea. Si todas las preguntas avanzan obligatoriamente hacia «validado», el tablero está diseñado para confirmar. También debe permitir dividir una pregunta demasiado amplia y cerrar otra porque dejó de afectar una decisión."
+    },
+    {
+      "source_id": "N06-s07-b037",
+      "kind": "paragraph",
+      "text": "En una revisión semanal, la pregunta central puede ser: «¿Qué haríamos distinto ahora que sabemos esto?». A veces la respuesta será no cambiar, pero con una justificación más sólida. Otras veces habrá que modificar una alternativa o detener una línea. Contar entrevistas no muestra esas diferencias."
+    },
+    {
+      "source_id": "N06-s07-b038",
+      "kind": "paragraph",
+      "text": "Las preguntas cerradas conservan su motivo. Si cambia el contexto, podemos recuperarlas sin empezar de cero. Una decisión revisable no es una decisión débil: es una decisión cuya base y condiciones conocemos."
+    },
+    {
+      "source_id": "N06-s07-b039",
+      "kind": "heading-3",
+      "text": "Segunda aplicación de HH-06: lo que cambia al mirar la evidencia"
+    },
+    {
+      "source_id": "N06-s07-b040",
+      "kind": "paragraph",
+      "text": "Al final de la segunda semana del caso, el equipo ya no puede sostener que todas las demoras se deben a un PMS lento. Los episodios muestran situaciones distintas. A veces el estado de una habitación llega tarde; otras veces el pago tiene significados diferentes entre áreas; en otras, Recepción descubre una promesa comercial cuando el huésped ya está enfrente."
+    },
+    {
+      "source_id": "N06-s07-b041",
+      "kind": "paragraph",
+      "text": "Esto no prueba que el sistema actual sea adecuado. Sí debilita la promesa de que reemplazarlo resolverá por sí solo el ingreso. Lucía puede mostrar qué necesita saber antes de atender. Mariela explica qué condición de la habitación todavía requiere confirmación. Camila debe revisar qué se promete. No todo puede transferirse al proveedor como un requisito técnico."
+    },
+    {
+      "source_id": "N06-s07-b042",
+      "kind": "paragraph",
+      "text": "La prueba de exportación aporta otra diferencia. Ambos proveedores entregan archivos, pero sólo uno conserva el historial y las relaciones necesarias para reconstruir reservas futuras. Federico no da por buena la exportación porque pudo abrirla: compara lo recuperado con la muestra original y comprueba qué se perdió."
+    },
+    {
+      "source_id": "N06-s07-b043",
+      "kind": "paragraph",
+      "text": "La revisión del contrato agrega un costo que no estaba en el precio inicial: el proveedor más barato limita la coexistencia y requiere servicios adicionales para una salida completa. La comparación cambia. No alcanza con mirar cuánto cuesta entrar; hay que saber qué implica operar, cambiar y salir."
+    },
+    {
+      "source_id": "N06-s07-b044",
+      "kind": "paragraph",
+      "text": "La decisión provisional del caso es postergar una semana la firma para exigir una exportación comprobable y condiciones de coexistencia. En paralelo, se corrigen dos reglas de coordinación que ningún reemplazo resolvería por sí solo. No se anuncia que el problema terminó: se define el siguiente paso con condiciones más claras."
+    },
+    {
+      "source_id": "N06-s07-b045",
+      "kind": "paragraph",
+      "text": "Siguen abiertas la temporada alta y la carga de capacitación. No impiden continuar la negociación, pero sí impiden presentar un despliegue general como si ya estuviera probado. Elena Acosta recibe una decisión que distingue lo comprobado de lo pendiente. Esa distinción es más valiosa que un informe con muchas páginas y una única palabra: «aprobado»."
+    },
+    {
+      "source_id": "N06-s07-b046",
+      "kind": "heading-3",
+      "text": "Tercera aplicación de HH-06: entregar las dudas sin perderlas"
+    },
+    {
+      "source_id": "N06-s07-b047",
+      "kind": "paragraph",
+      "text": "El cierre de HH-06 tiene que servir a quienes siguen trabajando. Por eso no entrega una lista de técnicas realizadas, sino conclusiones con alcance y preguntas que todavía tienen consecuencias."
+    },
+    {
+      "source_id": "N06-s07-b048",
+      "kind": "table-cell",
+      "text": "Qué aprendimos o no aprendimos"
+    },
+    {
+      "source_id": "N06-s07-b049",
+      "kind": "table-cell",
+      "text": "Qué hacemos con eso"
+    },
+    {
+      "source_id": "N06-s07-b050",
+      "kind": "table-cell",
+      "text": "La lentitud del PMS no explica todas las demoras revisadas."
+    },
+    {
+      "source_id": "N06-s07-b051",
+      "kind": "table-cell",
+      "text": "No justificamos un reemplazo general sólo por velocidad."
+    },
+    {
+      "source_id": "N06-s07-b052",
+      "kind": "table-cell",
+      "text": "Una exportación pierde historial y relaciones importantes."
+    },
+    {
+      "source_id": "N06-s07-b053",
+      "kind": "table-cell",
+      "text": "Exigimos una prueba completa antes de aceptar la salida del proveedor."
+    },
+    {
+      "source_id": "N06-s07-b054",
+      "kind": "table-cell",
+      "text": "Dos reglas pueden mejorarse sin migrar."
+    },
+    {
+      "source_id": "N06-s07-b055",
+      "kind": "table-cell",
+      "text": "Las cambiamos de manera acotada y observamos sus efectos."
+    },
+    {
+      "source_id": "N06-s07-b056",
+      "kind": "table-cell",
+      "text": "No se probaron temporada alta ni carga de capacitación."
+    },
+    {
+      "source_id": "N06-s07-b057",
+      "kind": "table-cell",
+      "text": "No ampliamos hasta reunir esa evidencia y definir apoyos."
+    },
+    {
+      "source_id": "N06-s07-b058",
+      "kind": "table-cell",
+      "text": "Falta comprender decisiones ante estados contradictorios."
+    },
+    {
+      "source_id": "N06-s07-b059",
+      "kind": "table-cell",
+      "text": "N07 reconstruirá episodios mediante entrevistas y contraste con otras fuentes."
+    },
+    {
+      "source_id": "N06-s07-b060",
+      "kind": "paragraph",
+      "text": "Hay una diferencia entre «no sabemos todavía» y «ya sabemos que no sirve». Otra entre «podemos negociar» y «podemos desplegar». El tablero conserva esas diferencias para que la presión por avanzar no las borre."
+    },
+    {
+      "source_id": "N06-s07-b061",
+      "kind": "paragraph",
+      "text": "La investigación de N06 termina por ahora porque permite tomar una decisión más limitada y mejor fundada. No termina porque el hotel quedó completamente comprendido. La próxima lectura toma una pregunta concreta y profundiza cómo producir evidencia a partir de lo que las personas cuentan."
+    },
+    {
+      "source_id": "N06-s08-h2",
+      "kind": "heading-2",
+      "text": "Caso de transferencia: alertas de abandono universitario"
+    },
+    {
+      "source_id": "N06-s08-b001",
+      "kind": "paragraph",
+      "text": "Consideremos un caso hipotético fuera del hotel. Una universidad quiere detectar estudiantes que podrían abandonar. Tiene registros de acceso al campus virtual y propone construir una alerta. Antes de elegir un modelo, necesita aclarar para qué se usará la señal."
+    },
+    {
+      "source_id": "N06-s08-b002",
+      "kind": "paragraph",
+      "text": "Ofrecer ayuda, priorizar una llamada y restringir una inscripción son decisiones distintas. Una alerta que podría servir para iniciar una conversación no autoriza automáticamente una medida que limite oportunidades. El daño posible cambia la evidencia exigida y los controles necesarios."
+    },
+    {
+      "source_id": "N06-s08-b003",
+      "kind": "paragraph",
+      "text": "La primera duda es qué significa poca actividad en el campus. Puede reflejar una dificultad académica, problemas de conectividad, tareas de cuidado o una forma de cursar que usa materiales descargados. Más datos del mismo sistema no necesariamente permiten distinguir esas explicaciones."
+    },
+    {
+      "source_id": "N06-s08-b004",
+      "kind": "paragraph",
+      "text": "La investigación combina revisión de definiciones, conversaciones y observación de distintas formas de cursar. Compara una regla sencilla con el modelo propuesto. Y, antes de ampliar, ensaya un contacto de apoyo cuyo efecto pueda revisarse. No basta con contar alertas correctas: hay que saber si la ayuda ofrecida llega, resulta útil y no estigmatiza."
+    },
+    {
+      "source_id": "N06-s08-b005",
+      "kind": "paragraph",
+      "text": "También se revisa a quién deja afuera la fuente. Un estudiante con dificultades puede mantener actividad digital; otro puede recibir alertas reiteradas sin necesitar la misma ayuda. Si los tutores se saturan con señales poco útiles, el sistema puede restar tiempo a quienes más lo necesitan."
+    },
+    {
+      "source_id": "N06-s08-b006",
+      "kind": "paragraph",
+      "text": "El criterio de parada no es «el modelo alcanzó una buena precisión» sin más contexto. Debe justificar un uso específico y conservar lo que falta saber. Si el piloto muestra que un grupo recibe muchas alertas, pero no logra acceder al apoyo, la solución no puede darse por suficiente sólo por acertar una clasificación."
+    },
+    {
+      "source_id": "N06-s08-b007",
+      "kind": "paragraph",
+      "text": "La lección se traslada al hotel y a otros sistemas: primero aclaramos qué decisión se tomará con la información; después evaluamos si la información sirve para ese uso. Una señal no trae incorporado el permiso para cualquier acción."
+    },
+    {
+      "source_id": "N06-s09-h2",
+      "kind": "heading-2",
+      "text": "Errores frecuentes"
+    },
+    {
+      "source_id": "N06-s09-b001",
+      "kind": "paragraph",
+      "text": "**Confundir investigación con cantidad de actividades.** Hacer talleres y entrevistas no demuestra aprendizaje por sí solo. Hay que explicar qué decisión cambió o quedó mejor respaldada y con qué evidencia."
+    },
+    {
+      "source_id": "N06-s09-b002",
+      "kind": "paragraph",
+      "text": "**Elegir una técnica antes de formular la pregunta.** Una encuesta puede contar opiniones, pero no reemplaza una prueba de recuperación de datos. El método debe responder a la duda, no al hábito del equipo."
+    },
+    {
+      "source_id": "N06-s09-b003",
+      "kind": "paragraph",
+      "text": "**Pedir preferencias sobre una solución ya elegida.** Preguntar por la app ideal puede dejar afuera una regla que evitaría construir la app. Deben mantenerse alternativas reales mientras la decisión esté abierta."
+    },
+    {
+      "source_id": "N06-s09-b004",
+      "kind": "paragraph",
+      "text": "**Buscar solamente casos favorables.** Una demostración preparada prueba algo, pero no necesariamente lo más difícil. Las excepciones y los casos que contradicen la hipótesis ayudan a conocer el límite de una alternativa."
+    },
+    {
+      "source_id": "N06-s09-b005",
+      "kind": "paragraph",
+      "text": "**Tratar tres informes derivados del mismo dato como tres confirmaciones.** Hay que seguir la procedencia. Repetir una medición defectuosa no la vuelve independiente ni más válida."
+    },
+    {
+      "source_id": "N06-s09-b006",
+      "kind": "paragraph",
+      "text": "**Esperar certeza total para una acción pequeña.** Investigar también cuesta y la situación sigue ocurriendo. Una prueba acotada puede ser razonable si permite observar, detener y reparar."
+    },
+    {
+      "source_id": "N06-s09-b007",
+      "kind": "paragraph",
+      "text": "**Usar la urgencia para justificar cualquier salto.** Que falte tiempo no vuelve reversible una migración ni elimina un riesgo grave. La urgencia puede exigir reducir alcance, no abandonar controles."
+    },
+    {
+      "source_id": "N06-s09-b008",
+      "kind": "paragraph",
+      "text": "**Dar por terminado el aprendizaje al comenzar el desarrollo.** Construir y operar revelan condiciones nuevas. Si no vuelven a las decisiones, el equipo puede seguir cumpliendo un plan que ya perdió su fundamento."
+    },
+    {
+      "source_id": "N06-s09-b009",
+      "kind": "paragraph",
+      "text": "**Escribir «validado» sin decir para qué.** Una interfaz comprensible no equivale a un servicio listo para toda la población. Cada conclusión necesita alcance, condiciones y dudas pendientes."
+    },
+    {
+      "source_id": "N06-s10-h2",
+      "kind": "heading-2",
+      "text": "Consecuencias profesionales"
+    },
+    {
+      "source_id": "N06-s10-b001",
+      "kind": "paragraph",
+      "text": "Quien organiza una investigación tiene que hacer algo más que reunir información. Debe elegir qué vale la pena averiguar primero, justificar las fuentes y cuidar el tiempo de las personas que participan. También necesita sostener preguntas incómodas cuando la organización prefiere una respuesta rápida y favorable."
+    },
+    {
+      "source_id": "N06-s10-b002",
+      "kind": "paragraph",
+      "text": "La capacidad profesional aparece al explicar decisiones concretas: por qué una duda bloquea la firma, por qué otra puede esperar hasta el piloto y qué evidencia podría cambiar esa prioridad. No alcanza con decir «faltan datos». Hay que nombrar cuáles, para qué y cómo se obtendrán."
+    },
+    {
+      "source_id": "N06-s10-b003",
+      "kind": "paragraph",
+      "text": "La responsabilidad incluye reconocer cuándo una investigación no permite concluir. Esto puede exigir limitar una promesa, retirar una recomendación o conservar una alternativa más sencilla. No es un defecto del trabajo: es parte de su honestidad."
+    },
+    {
+      "source_id": "N06-s10-b004",
+      "kind": "paragraph",
+      "text": "El mejor producto no siempre será una función nueva. Puede ser una compra que se renegocia, un daño que se evita, una regla que se corrige o una prueba que deja de hacerse porque ya no aporta. En todos los casos, la investigación debe dejar una base que otras personas puedan revisar y usar."
+    },
+    {
+      "source_id": "N06-s11-h2",
+      "kind": "heading-2",
+      "text": "Límites y tensiones"
+    },
+    {
+      "source_id": "N06-s11-b001",
+      "kind": "paragraph",
+      "text": "Investigar exige tiempo, y las organizaciones tienen fechas. La respuesta no puede ser pedir plazo indefinido ni aceptar cualquier compromiso. Conviene proponer hitos de evidencia: qué podemos saber antes de firmar, qué antes del piloto y qué antes de ampliar. Cada hito debe corresponder a una decisión real."
+    },
+    {
+      "source_id": "N06-s11-b002",
+      "kind": "paragraph",
+      "text": "También hay un costo para quienes participan. Repetir entrevistas a personas sobrecargadas sin mostrar para qué sirvieron puede agotar su confianza. Debemos reducir pedidos innecesarios, proteger información y devolver una explicación de lo aprendido. La participación no es un recurso gratuito."
+    },
+    {
+      "source_id": "N06-s11-b003",
+      "kind": "paragraph",
+      "text": "Otra tensión aparece cuando quien financia la prueba tiene interés en su resultado. Un proveedor puede ofrecer una demostración útil y seleccionar los casos que mejor lo muestran. Eso no vuelve falsa toda su evidencia; obliga a reconocer su alcance y a contrastarla de manera independiente."
+    },
+    {
+      "source_id": "N06-s11-b004",
+      "kind": "paragraph",
+      "text": "Algunos resultados seguirán siendo ambiguos. Quizá haya evidencia para descartar una explicación, pero no para elegir entre las restantes. En ese caso podemos trabajar con escenarios, controles y una decisión limitada. Forzar un sí o un no para que el tablero quede prolijo sólo oculta la duda."
+    },
+    {
+      "source_id": "N06-s11-b005",
+      "kind": "paragraph",
+      "text": "Finalmente, no todo lo importante se vuelve visible en tres semanas. La estrategia debe reconocer esa limitación sin abandonar la responsabilidad. Elegir un próximo paso pequeño puede ser mejor que prometer que una investigación breve ya cubrió efectos que sólo aparecerán con el tiempo."
+    },
+    {
+      "source_id": "N06-s12-h2",
+      "kind": "heading-2",
+      "text": "Una lectura situada desde América Latina"
+    },
+    {
+      "source_id": "N06-s12-b001",
+      "kind": "paragraph",
+      "text": "Freire y Fals Borda ayudan a cuestionar una manera extractiva de investigar: llegar, obtener relatos y retirarse con una interpretación que nadie puede discutir. En el hotel, eso ocurriría si observamos a Housekeeping, escribimos un diagnóstico sobre su trabajo y no le damos oportunidad de señalar lo que entendimos mal."
+    },
+    {
+      "source_id": "N06-s12-b002",
+      "kind": "paragraph",
+      "text": "Conocer con las personas no significa aceptar cualquier afirmación sin contraste. Significa que puedan explicar, cuestionar y revisar la lectura que se hace de su experiencia. Una supervisora puede corregir una secuencia; una trabajadora nocturna, mostrar una excepción; una huésped, advertir que la categoría usada por el equipo no describe lo que le pasó."
+    },
+    {
+      "source_id": "N06-s12-b003",
+      "kind": "paragraph",
+      "text": "Flores permite poner atención en los compromisos que se hacen mediante conversaciones. «Investiguemos eso» no organiza demasiado si nadie sabe qué debe responder, quién espera la respuesta y cuándo la necesita. Un plan de discovery también es un acuerdo de trabajo entre personas, no sólo una lista de técnicas."
+    },
+    {
+      "source_id": "N06-s12-b004",
+      "kind": "paragraph",
+      "text": "Scolari (2018) invita a mirar la interfaz como parte de un conjunto de relaciones. En el hotel, un estado de pantalla orienta acciones entre áreas. Ricaurte (2019) permite preguntar además quién define esas categorías y qué experiencias quedan fuera de ellas. Si el formulario sólo admite las opciones del proveedor, ciertos problemas pueden desaparecer del registro sin desaparecer de la vida de las personas."
+    },
+    {
+      "source_id": "N06-s12-b005",
+      "kind": "paragraph",
+      "text": "Maturana y Varela aportan una reflexión sobre cómo conocemos y sobre el papel de quien observa. Para esta lectura, la precaución es no confundir nuestra descripción con una visión completa y neutral. Registrar dónde miramos, desde qué tarea y con qué límites ayuda a que otros puedan discutirla."
+    },
+    {
+      "source_id": "N06-s12-b006",
+      "kind": "paragraph",
+      "text": "Estos aportes no reemplazan pruebas técnicas, mediciones ni la bibliografía global. Agregan preguntas que hacen más exigente su uso: quién pudo participar, qué palabras ordenaron la investigación, qué compromiso produjo y quién puede corregir una interpretación. La profundidad académica aparece al poner esas miradas a trabajar sobre una decisión, no al acumular nombres."
+    },
+    {
+      "source_id": "N06-s13-h2",
+      "kind": "heading-2",
+      "text": "Síntesis"
+    },
+    {
+      "source_id": "N06-s13-b001",
+      "kind": "paragraph",
+      "text": "Discovery consiste en aprender lo que necesitamos para decidir. Empieza al nombrar una duda que puede cambiar una acción y continúa al elegir evidencia adecuada para responderla. No todas las preguntas tienen la misma prioridad ni todos los métodos pueden contestarlas."
+    },
+    {
+      "source_id": "N06-s13-b002",
+      "kind": "paragraph",
+      "text": "En HH-06, investigar demoras y recuperación de datos cambia la discusión contractual. La evidencia no autoriza todavía un despliegue general, pero permite renegociar y corregir reglas concretas. El equipo conserva las dudas sobre temporada alta y capacitación en lugar de esconderlas detrás de una aprobación general."
+    },
+    {
+      "source_id": "N06-s13-b003",
+      "kind": "paragraph",
+      "text": "El resultado es un plan que otra persona puede seguir: decisión, alternativas, preguntas, fuentes, orden, criterio para avanzar y riesgos pendientes. N07 tomará una de esas preguntas y enseñará a reconstruir episodios mediante entrevistas. La conversación tendrá un propósito claro antes de comenzar."
+    },
+    {
+      "source_id": "N06-s14-h2",
+      "kind": "heading-2",
+      "text": "Cinco píldoras para recordar"
+    },
+    {
+      "source_id": "N06-s14-b001",
+      "kind": "list-item",
+      "text": "**Antes de investigar, nombrá la decisión que podría cambiar.** Si todas las respuestas llevan a hacer lo mismo, revisá para qué preguntás."
+    },
+    {
+      "source_id": "N06-s14-b002",
+      "kind": "list-item",
+      "text": "**Elegí la fuente según la duda.** Una opinión, un registro y una prueba técnica permiten saber cosas diferentes."
+    },
+    {
+      "source_id": "N06-s14-b003",
+      "kind": "list-item",
+      "text": "**Buscá también lo que podría contradecir tu idea.** Una explicación que nunca puede fallar no está realmente a prueba."
+    },
+    {
+      "source_id": "N06-s14-b004",
+      "kind": "list-item",
+      "text": "**Pedí evidencia proporcionada al daño y a la posibilidad de reparar.** Un ensayo pequeño no exige lo mismo que una decisión difícil de deshacer."
+    },
+    {
+      "source_id": "N06-s14-b005",
+      "kind": "list-item",
+      "text": "**Al avanzar, llevá las dudas con vos.** Lo pendiente necesita responsable y una condición de revisión; no debe perderse en el cambio de etapa."
+    },
+    {
+      "source_id": "N06-s15-h2",
+      "kind": "heading-2",
+      "text": "Glosario esencial"
+    },
+    {
+      "source_id": "N06-s15-b001",
+      "kind": "list-item",
+      "text": "**Discovery:** trabajo de investigación que ayuda a decidir antes y durante un cambio. En el hotel, incluye comprobar si una plataforma resuelve el problema y si podemos dejarla sin perder información."
+    },
+    {
+      "source_id": "N06-s15-b002",
+      "kind": "list-item",
+      "text": "**Incertidumbre:** algo relevante que todavía no sabemos. No conocer el color preferido de una pantalla y no saber si recuperaremos los pagos son dudas con consecuencias distintas."
+    },
+    {
+      "source_id": "N06-s15-b003",
+      "kind": "list-item",
+      "text": "**Valor de la información:** utilidad de aprender algo para elegir mejor. Una prueba breve vale mucho si puede evitar una firma equivocada."
+    },
+    {
+      "source_id": "N06-s15-b004",
+      "kind": "list-item",
+      "text": "**Línea de base:** situación de referencia con la que compararemos el cambio. Por ejemplo, cuántas correcciones se hacían antes, con una definición que se mantenga durante la prueba."
+    },
+    {
+      "source_id": "N06-s15-b005",
+      "kind": "list-item",
+      "text": "**Cartera de evidencia:** conjunto elegido de investigaciones que se complementan. No es hacer todo: es reunir lo necesario sin repetir el mismo punto ciego."
+    },
+    {
+      "source_id": "N06-s15-b006",
+      "kind": "list-item",
+      "text": "**Muestra:** casos seleccionados para estudiar. Elegir distintos turnos ayuda a encontrar diferencias, pero no permite afirmar automáticamente un porcentaje de todo el hotel."
+    },
+    {
+      "source_id": "N06-s15-b007",
+      "kind": "list-item",
+      "text": "**Prototipo:** representación parcial de una alternativa para aprender algo específico. Una pantalla puede probar comprensión; no demuestra que la integración real funcione."
+    },
+    {
+      "source_id": "N06-s15-b008",
+      "kind": "list-item",
+      "text": "**Piloto:** prueba limitada en condiciones de uso, con alcance y controles definidos. Debe poder terminar en ampliar, modificar o detener."
+    },
+    {
+      "source_id": "N06-s15-b009",
+      "kind": "list-item",
+      "text": "**Criterio de parada:** condición que indica cuándo hay una base suficiente para el siguiente paso o cuándo una línea de investigación deja de aportar. No equivale a haber agotado todas las dudas."
+    },
+    {
+      "source_id": "N06-s15-b010",
+      "kind": "list-item",
+      "text": "**Sesgo de confirmación:** tendencia a favorecer información que sostiene lo que ya creemos. Revisar sólo las llegadas lentas puede reforzar la idea de que el sistema siempre es lento."
+    },
+    {
+      "source_id": "N06-s15-b011",
+      "kind": "list-item",
+      "text": "**Costo de demora:** consecuencia de esperar antes de decidir o actuar. Incluye el problema que continúa mientras investigamos, no sólo el calendario del proyecto."
+    },
+    {
+      "source_id": "N06-s15-b012",
+      "kind": "list-item",
+      "text": "**Riesgo residual:** riesgo que sigue presente después de aplicar controles. Debe quedar visible y limitar, cuando corresponda, lo que podemos autorizar."
+    },
+    {
+      "source_id": "N06-s16-h2",
+      "kind": "heading-2",
+      "text": "Preguntas de preparación"
+    },
+    {
+      "source_id": "N06-s16-b001",
+      "kind": "list-item",
+      "text": "Hotel Horizonte debe decidir una firma en tres semanas. Elegí una duda que investigarías primero. Explicá qué resultado te haría firmar, postergar o cambiar condiciones."
+    },
+    {
+      "source_id": "N06-s16-b002",
+      "kind": "list-item",
+      "text": "Un proveedor muestra una pantalla de ingreso que todas las personas entienden. ¿Qué permite concluir esa prueba y qué no permite concluir sobre su plataforma? Da dos ejemplos de dudas pendientes."
+    },
+    {
+      "source_id": "N06-s16-b003",
+      "kind": "list-item",
+      "text": "El tablero, el informe semanal y la presentación comercial coinciden en un porcentaje. ¿Qué revisarías antes de tratarlos como tres confirmaciones?"
+    },
+    {
+      "source_id": "N06-s16-b004",
+      "kind": "list-item",
+      "text": "Proponé una prueba pequeña que el hotel pueda hacer mientras conserva una duda abierta. ¿Qué permitiría detenerla y qué daño no sería aceptable descubrir recién durante su uso?"
+    },
+    {
+      "source_id": "N06-s16-b005",
+      "kind": "list-item",
+      "text": "Una investigación contradice la explicación preferida de Dirección. ¿Cómo presentarías el resultado, su alcance y el próximo paso sin reemplazar una certeza falsa por otra?"
+    },
+    {
+      "source_id": "N06-s16-b006",
+      "kind": "list-item",
+      "text": "¿Qué debería recibir N07 para entrevistar sobre estados contradictorios? Indicá la decisión pendiente, los episodios a buscar y otra fuente con la que compararías los relatos."
+    },
+    {
+      "source_id": "N06-s16-b007",
+      "kind": "paragraph",
+      "text": "Para el encuentro, respondé dos preguntas en un total de hasta trescientas palabras. En una respuesta incluí un pequeño registro HH-06: decisión, duda, evidencia buscada, condición para avanzar y lo que seguiría sin saberse. No hace falta completar un formulario largo. Tiene que entenderse qué harías distinto según lo que encuentres."
+    },
+    {
+      "source_id": "N06-s17-h2",
+      "kind": "heading-2",
+      "text": "Referencias base"
+    },
+    {
+      "source_id": "N06-s17-b001",
+      "kind": "list-item",
+      "text": "DORA. (2025). *State of AI-assisted Software Development*. https://dora.dev/research/2025/dora-report/"
+    },
+    {
+      "source_id": "N06-s17-b002",
+      "kind": "list-item",
+      "text": "Hubbard, D. W. (2014). *How to Measure Anything: Finding the Value of Intangibles in Business* (3.ª ed.). Wiley. ISBN 978-1-118-53927-9."
+    },
+    {
+      "source_id": "N06-s17-b003",
+      "kind": "list-item",
+      "text": "International Organization for Standardization. (2019). *ISO 9241-210:2019. Ergonomics of human-system interaction, Part 210: Human-centred design for interactive systems*. https://www.iso.org/standard/77520.html"
+    },
+    {
+      "source_id": "N06-s17-b004",
+      "kind": "list-item",
+      "text": "Goodman, E., Kuniavsky, M. y Moed, A. (2012). *Observing the User Experience: A Practitioner’s Guide to User Research*, Second Edition. Morgan Kaufmann."
+    },
+    {
+      "source_id": "N06-s17-b005",
+      "kind": "list-item",
+      "text": "March, J. G. (1991). “Exploration and Exploitation in Organizational Learning”. *Organization Science*, 2(1), 71–87. https://doi.org/10.1287/orsc.2.1.71"
+    },
+    {
+      "source_id": "N06-s17-b006",
+      "kind": "list-item",
+      "text": "Patton, M. Q. (2015). *Qualitative Research & Evaluation Methods: Integrating Theory and Practice* (4.ª ed.). SAGE."
+    },
+    {
+      "source_id": "N06-s17-b007",
+      "kind": "list-item",
+      "text": "Ries, E. (2011). *The Lean Startup*. Crown Business."
+    },
+    {
+      "source_id": "N06-s17-b008",
+      "kind": "list-item",
+      "text": "Schön, D. A. (1983). *The Reflective Practitioner: How Professionals Think in Action*. Basic Books."
+    },
+    {
+      "source_id": "N06-s17-b009",
+      "kind": "list-item",
+      "text": "Tabassi, E. (2023). *Artificial Intelligence Risk Management Framework (AI RMF 1.0)*. National Institute of Standards and Technology. https://doi.org/10.6028/NIST.AI.100-1"
+    },
+    {
+      "source_id": "N06-s17-b010",
+      "kind": "list-item",
+      "text": "Torres, T. (2021). *Continuous Discovery Habits*. Product Talk."
+    },
+    {
+      "source_id": "N06-s17-b011",
+      "kind": "list-item",
+      "text": "Tversky, A., y Kahneman, D. (1974). “Judgment under Uncertainty: Heuristics and Biases”. *Science*, 185(4157), 1124–1131. https://doi.org/10.1126/science.185.4157.1124"
+    },
+    {
+      "source_id": "N06-s17-b012",
+      "kind": "list-item",
+      "text": "Freire, P. (2005). *Pedagogía del oprimido*. Siglo XXI Editores."
+    },
+    {
+      "source_id": "N06-s17-b013",
+      "kind": "list-item",
+      "text": "Flores, F. (1997). *Creando organizaciones para el futuro*. Dolmen."
+    },
+    {
+      "source_id": "N06-s17-b014",
+      "kind": "list-item",
+      "text": "Fals Borda, O. (1987). “The Application of Participatory Action-Research in Latin America”. *International Sociology*, 2(4), 329–347. https://doi.org/10.1177/026858098700200401"
+    },
+    {
+      "source_id": "N06-s17-b015",
+      "kind": "list-item",
+      "text": "Scolari, C. A. (2018). *Las leyes de la interfaz: diseño, ecología, evolución, tecnología*. Gedisa."
+    },
+    {
+      "source_id": "N06-s17-b016",
+      "kind": "list-item",
+      "text": "Ricaurte, P. (2019). “Data Epistemologies, the Coloniality of Power, and Resistance”. *Television & New Media*, 20(4), 350–365. https://doi.org/10.1177/1527476419831640"
+    },
+    {
+      "source_id": "N06-s17-b017",
+      "kind": "list-item",
+      "text": "Maturana, H. R. y Varela, F. J. (1984). *El árbol del conocimiento: las bases biológicas del entendimiento humano*. Editorial Universitaria."
+    }
+  ],
+  "eligible_block_count": 294,
+  "eligible_word_count": 9964
+}

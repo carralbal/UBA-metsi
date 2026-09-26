@@ -1,0 +1,1571 @@
+{
+  "document": "N15",
+  "source": "source/N15.md",
+  "eligible_blocks": [
+    {
+      "source_id": "N15-h1",
+      "kind": "heading-1",
+      "text": "Elegir modelos según la pregunta, las personas y el costo"
+    },
+    {
+      "source_id": "N15-s01-h2",
+      "kind": "heading-2",
+      "text": "Pregunta profesional"
+    },
+    {
+      "source_id": "N15-s01-b001",
+      "kind": "paragraph",
+      "text": "¿Qué conviene representar para tomar una decisión y qué detalle podemos dejar afuera sin perder algo importante?"
+    },
+    {
+      "source_id": "N15-s02-h2",
+      "kind": "heading-2",
+      "text": "Seis diagramas correctos y ninguna respuesta"
+    },
+    {
+      "source_id": "N15-s02-b001",
+      "kind": "paragraph",
+      "text": "Una universidad prepara la inscripción a exámenes. Espera mucha demanda y quiere saber si puede abrir el sistema sin dejar estudiantes con inscripciones incorrectas. En este caso ficticio, el equipo llega a la reunión con seis diagramas: servidores, servicios de software, clases, proceso de inscripción, estados de una solicitud y capacidades de la institución."
+    },
+    {
+      "source_id": "N15-s02-b002",
+      "kind": "paragraph",
+      "text": "Están prolijos. Los símbolos se usan correctamente. Dirección hace tres preguntas: «Si el sistema se cae, ¿puede inscribirse dos veces a una persona? ¿Quiénes quedarían afectados? ¿Quién puede detener la inscripción mientras se resuelve el problema?»."
+    },
+    {
+      "source_id": "N15-s02-b003",
+      "kind": "paragraph",
+      "text": "Durante veinte minutos, el equipo explica cajas y flechas. Algunas respuestas están parcialmente representadas; otras no aparecen. La reunión termina sin poder decidir."
+    },
+    {
+      "source_id": "N15-s02-b004",
+      "kind": "paragraph",
+      "text": "Una desarrolladora intenta arreglarlo agregando al diagrama de arquitectura todo lo que falta: estudiantes, reglas, turnos, autorizaciones, riesgos y responsables. La lámina crece hasta ocupar una pared. Una caja representa una aplicación; la siguiente, una oficina; otra, una tarea. Las líneas significan cosas distintas y es difícil saber por dónde empezar."
+    },
+    {
+      "source_id": "N15-s02-b005",
+      "kind": "paragraph",
+      "text": "El problema no era la falta de espacio. Era haber elegido qué dibujar antes de aclarar qué necesitaban decidir."
+    },
+    {
+      "source_id": "N15-s02-b006",
+      "kind": "paragraph",
+      "text": "El equipo vuelve a las preguntas. Para estudiar una inscripción repetida necesita representar la intención, los estados y el control que impide duplicar el efecto. Para conocer quién puede quedar fuera del canal necesita seguir experiencias y condiciones de acceso. Para saber quién detiene el proceso necesita reglas de autoridad y reemplazo. La arquitectura sigue siendo útil para localizar los componentes involucrados."
+    },
+    {
+      "source_id": "N15-s02-b007",
+      "kind": "paragraph",
+      "text": "No hace falta fundir esas respuestas en un único dibujo. Hace falta vincularlas. Todas deben referirse a la misma inscripción, al mismo período y a condiciones compatibles. Pero la vista de experiencia puede comenzar antes del formulario, mientras la de estados se concentra en aceptar o rechazar una solicitud."
+    },
+    {
+      "source_id": "N15-s02-b008",
+      "kind": "paragraph",
+      "text": "El equipo agrega a cada representación una pregunta, sus destinatarios, alcance, fuentes y fecha. También indica qué decisión puede apoyar y qué no pretende explicar. Una vista generada desde código informa relaciones técnicas; no demuestra por sí sola quién tiene autoridad para suspender el servicio."
+    },
+    {
+      "source_id": "N15-s02-b009",
+      "kind": "paragraph",
+      "text": "Para comprobar si se entiende, entrega los modelos a personas que no participaron en su construcción. Les plantea un escenario sin que el autor explique cada flecha. Dirección reconoce un riesgo, pero no encuentra quién reemplaza a la autoridad ausente. El área académica advierte esa falta. Desarrollo localiza dónde revisar el control de la inscripción. El mapa de experiencia muestra qué sucede con quien no puede usar el canal principal."
+    },
+    {
+      "source_id": "N15-s02-b010",
+      "kind": "paragraph",
+      "text": "Algunos dibujos mejoran con una etiqueta. Otros necesitan separarse porque mezclaban la situación actual con una propuesta. Uno no agrega nada a una consulta disponible y se retira de la reunión. Haberlo construido no obliga a seguir manteniéndolo."
+    },
+    {
+      "source_id": "N15-s02-b011",
+      "kind": "paragraph",
+      "text": "Ésa es la cuestión de N15. Un modelo sirve cuando conserva las relaciones que necesitamos para comprender, discutir o decidir. Puede ser pequeño y exigente. Puede ser detallado y necesario. Su calidad no se mide por cuánto entra en la página ni por lo prestigiosa que resulte la notación."
+    },
+    {
+      "source_id": "N15-s03-h2",
+      "kind": "heading-2",
+      "text": "Hotel Horizonte: el mapa que cada área quería convertir en el único"
+    },
+    {
+      "source_id": "N15-s03-b001",
+      "kind": "paragraph",
+      "text": "HH-14 mostró la diferencia entre cuatro minutos de atención en mostrador y veintisiete de espera media desde llegada hasta ingreso, dentro de los datos didácticos de doce casos. El hallazgo abre preguntas diferentes y no conviene responderlas todas con el mismo mapa."
+    },
+    {
+      "source_id": "N15-s03-b002",
+      "kind": "paragraph",
+      "text": "Ricardo Sosa quiere ver tareas, esperas y prioridades. Federico Müller necesita ubicar PMS, integrador y servicio de acceso. Camila Duarte quiere conservar la promesa que recibió el huésped. Elena Acosta necesita decidir si autoriza un piloto de validación previa opcional y asistida."
+    },
+    {
+      "source_id": "N15-s03-b003",
+      "kind": "paragraph",
+      "text": "Lucía Ferreyra pregunta cuándo puede asignar y qué hace mientras falta una condición. Mariela Benítez distingue una habitación preparada de una habitación que ya puede entregarse bajo las condiciones de una reserva. No están discutiendo sólo estética: necesitan respuestas distintas."
+    },
+    {
+      "source_id": "N15-s03-b004",
+      "kind": "paragraph",
+      "text": "El mapa de proceso muestra traspasos y colas, pero no todos los contratos técnicos. La arquitectura localiza dependencias, pero puede no mostrar la espera de la persona. Un recorrido de experiencia conserva lo que el huésped ve y hace, pero no demuestra que una asignación sea segura. Un tablero resume indicadores sin explicar necesariamente sus causas."
+    },
+    {
+      "source_id": "N15-s03-b005",
+      "kind": "paragraph",
+      "text": "HH-15 reunirá un conjunto pequeño de modelos, una **cartera**, conectado por conceptos como reserva, habitación, asignación y promesa. Cada modelo tendrá un trabajo definido. La decisión común es si se puede probar la validación previa sin bloquear a quien no use el canal digital ni prometer una habitación antes de poder sostener esa confirmación."
+    },
+    {
+      "source_id": "N15-s03-b006",
+      "kind": "paragraph",
+      "text": "El conjunto será suficiente cuando Elena pueda decidir las condiciones del piloto, Federico localizar los cambios, Lucía y Mariela recorrer las excepciones y Camila comunicar una promesa coherente. No necesitamos representar la nómina, todas las compras ni cada tabla del PMS para responder esa pregunta."
+    },
+    {
+      "source_id": "N15-s04-h2",
+      "kind": "heading-2",
+      "text": "Tesis"
+    },
+    {
+      "source_id": "N15-s04-b001",
+      "kind": "paragraph",
+      "text": "Un mapa de subte permite elegir una combinación. No sirve igual de bien para estimar cuánto caminar entre dos puntos, porque puede deformar distancias para que se entiendan las conexiones. No está fallando por omitir edificios: está seleccionando lo que necesita para una tarea."
+    },
+    {
+      "source_id": "N15-s04-b002",
+      "kind": "paragraph",
+      "text": "Con los modelos de sistemas pasa lo mismo. Un proceso ayuda a seguir trabajo. Un modelo de estados ayuda a discutir cambios permitidos. Una arquitectura ayuda a localizar dependencias. Un recorrido de experiencia ayuda a reconocer lo que una persona necesita entender y hacer. Ninguno tiene que contener toda la realidad para ser útil."
+    },
+    {
+      "source_id": "N15-s04-b003",
+      "kind": "paragraph",
+      "text": "Pero omitir exige responsabilidad. Si dejamos fuera un riesgo que cambia la decisión, el modelo puede ser claro y engañoso al mismo tiempo. Simplificar no consiste en borrar lo incómodo, sino en conservar lo que importa y declarar los límites del recorte."
+    },
+    {
+      "source_id": "N15-s04-b004",
+      "kind": "paragraph",
+      "text": "Por eso elegimos modelos a partir de una pregunta y de las personas que los usarán. Después decidimos alcance, lenguaje, nivel de detalle y evidencia. La herramienta viene más tarde. Una plantilla conocida no justifica representar algo que nadie necesita para esa decisión."
+    },
+    {
+      "source_id": "N15-s04-b005",
+      "kind": "paragraph",
+      "text": "El costo también cuenta. Dibujar es sólo una parte: hay que investigar, explicar, comprobar, actualizar y retirar versiones que ya no corresponden. Una lámina barata de producir puede salir cara si circula meses después como si siguiera vigente."
+    },
+    {
+      "source_id": "N15-s04-b006",
+      "kind": "paragraph",
+      "text": "En Hotel Horizonte, varias vistas pequeñas pueden trabajar juntas. Comparten significados y casos, pero no muestran lo mismo ni con la misma resolución. Si dos duplican exactamente una función, podemos combinarlas. Si una pregunta relevante queda sin respuesta, quizá necesitemos otra. La cantidad surge de la necesidad, no de un número ideal de diagramas."
+    },
+    {
+      "source_id": "N15-s04-b007",
+      "kind": "paragraph",
+      "text": "La prueba final es práctica. Una persona de la audiencia debe poder usar el modelo para responder la pregunta, reconocer lo que no sabe y revisar una decisión. Si necesita al autor al lado para interpretar cada línea, parte del conocimiento todavía no está en el modelo."
+    },
+    {
+      "source_id": "N15-s05-h2",
+      "kind": "heading-2",
+      "text": "De N14 a N15: del proceso real a la representación adecuada"
+    },
+    {
+      "source_id": "N15-s05-b001",
+      "kind": "paragraph",
+      "text": "En N14 elegimos un mapa de proceso para comprender secuencias, esperas y responsabilidades. Esa elección respondió a una pregunta. No convirtió al mapa de procesos en la respuesta universal para todo lo que descubrimos."
+    },
+    {
+      "source_id": "N15-s05-b002",
+      "kind": "paragraph",
+      "text": "Ahora comparamos qué representación necesita cada problema pendiente. No vamos a reconstruir otra vez las llegadas. Usamos su evidencia para decidir qué mostrar y a quién."
+    },
+    {
+      "source_id": "N15-s05-b003",
+      "kind": "paragraph",
+      "text": "HH-15 deja esa selección documentada: preguntas, vistas, fuentes, límites y costos. N16 se ocupará de estudiar las contradicciones entre modelos y sus cambios en el tiempo. Acá preparamos el conjunto para que esa comparación sea posible."
+    },
+    {
+      "source_id": "N15-s06-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 1 · Comenzar por la pregunta, no por la notación"
+    },
+    {
+      "source_id": "N15-s06-b001",
+      "kind": "heading-3",
+      "text": "Modelar es elegir qué conservar"
+    },
+    {
+      "source_id": "N15-s06-b002",
+      "kind": "paragraph",
+      "text": "Un **modelo** representa selectivamente algo para comprenderlo, comunicarlo, explorar posibilidades o decidir. Puede ser un diagrama, una tabla, un conjunto de reglas o una simulación. No todo modelo es una lámina con cajas."
+    },
+    {
+      "source_id": "N15-s06-b003",
+      "kind": "paragraph",
+      "text": "George Box mostró la importancia de evaluar la utilidad de los modelos sin confundirlos con reproducciones completas de la realidad. Su planteo no da permiso para dibujar cualquier cosa. Nos obliga a explicar qué simplificación hacemos y bajo qué condiciones sigue siendo útil."
+    },
+    {
+      "source_id": "N15-s06-b004",
+      "kind": "paragraph",
+      "text": "El plano de una vivienda permite ubicar habitaciones. Un plano eléctrico permite revisar circuitos. Ambos describen la misma casa y conservan relaciones distintas. Agregar todos los circuitos al plano que alguien usa para encontrar el baño podría dificultar esa tarea sin mejorarla."
+    },
+    {
+      "source_id": "N15-s06-b005",
+      "kind": "paragraph",
+      "text": "En sistemas, representar que una reserva se vincula con un huésped no explica cuándo puede confirmarse. Mostrar una transición de «pendiente» a «confirmada» no explica qué equipo mantiene la aplicación. Son preguntas relacionadas, pero diferentes."
+    },
+    {
+      "source_id": "N15-s06-b006",
+      "kind": "paragraph",
+      "text": "El recorte se prueba en dos direcciones. Si quitamos un elemento y no cambia ninguna respuesta importante, quizá sobraba para ese uso. Si un caso relevante no puede entenderse porque falta una relación, quizá recortamos demasiado. No es una regla mecánica de eliminación: es una forma de examinar el propósito de cada pieza."
+    },
+    {
+      "source_id": "N15-s06-b007",
+      "kind": "heading-3",
+      "text": "Una pregunta útil tiene una decisión detrás"
+    },
+    {
+      "source_id": "N15-s06-b008",
+      "kind": "paragraph",
+      "text": "«Modelar el hotel» no dice cuándo habremos terminado. «Identificar por qué se espera una inspección» orienta hacia un proceso y tiempos. «Determinar qué impide asignar dos veces una unidad» orienta hacia estados, reglas y controles de ejecución."
+    },
+    {
+      "source_id": "N15-s06-b009",
+      "kind": "paragraph",
+      "text": "Conviene completar tres frases antes de dibujar: necesitamos decidir esto; para hacerlo necesitamos ver estas relaciones; por ahora podemos dejar fuera aquello. La tercera frase ayuda a evitar que el trabajo crezca sin una razón ligada a la decisión."
+    },
+    {
+      "source_id": "N15-s06-b010",
+      "kind": "paragraph",
+      "text": "La evidencia necesaria depende del uso. Un boceto para explorar puede incluir hipótesis claramente marcadas. Una representación usada para autorizar un cambio de acceso necesita comprobaciones mucho más exigentes. Que ambos estén bien dibujados no los vuelve equivalentes."
+    },
+    {
+      "source_id": "N15-s06-b011",
+      "kind": "paragraph",
+      "text": "Además, un diagrama no demuestra por sí mismo que un mecanismo funcione. Una máquina de estados puede ayudar a especificar la condición que evita doble asignación. Para confiar en la implementación necesitamos vincularla con controles, pruebas y evidencia. Dibujar la transición correcta no elimina la posibilidad de que dos solicitudes se ejecuten de forma insegura."
+    },
+    {
+      "source_id": "N15-s06-b012",
+      "kind": "paragraph",
+      "text": "La pregunta puede quedar respondida provisionalmente. Si la información alcanza para una prueba reversible, lo dejamos indicado. No convertimos ese nivel de confianza en autorización definitiva por haber pasado el dibujo a un formato más elegante."
+    },
+    {
+      "source_id": "N15-s06-b013",
+      "kind": "heading-3",
+      "text": "Quién necesita mirar y para qué"
+    },
+    {
+      "source_id": "N15-s06-b014",
+      "kind": "paragraph",
+      "text": "Llamamos **audiencia** a quienes necesitan leer, discutir, usar o mantener una representación. Seguridad puede preguntar quién accede. Operaciones, cómo recuperarse de una falla. Dirección, qué compromiso está asumiendo. Desarrollo, qué componente debe cambiar."
+    },
+    {
+      "source_id": "N15-s06-b015",
+      "kind": "paragraph",
+      "text": "La norma [ISO/IEC/IEEE 42010:2022](https://www.iso.org/standard/74393.html) distingue la arquitectura de su descripción y organiza conceptos para expresar esta última. En ese marco, un **punto de vista** establece convenciones para construir vistas que atienden preocupaciones. La **vista** es la representación concreta construida con esas convenciones. No son dos nombres para el mismo archivo."
+    },
+    {
+      "source_id": "N15-s06-b016",
+      "kind": "paragraph",
+      "text": "Una analogía ayuda: «mostrar conexiones de transporte para planificar un viaje» establece un criterio de representación; el mapa de una red determinada es una realización concreta. En arquitectura, las convenciones pueden ser bastante más precisas que esa analogía."
+    },
+    {
+      "source_id": "N15-s06-b017",
+      "kind": "paragraph",
+      "text": "Adaptar a la audiencia no significa cambiar los hechos. Una vista para Dirección puede omitir detalles de código y debe conservar una dependencia crítica. Una vista técnica puede usar precisión sin convertir la jerga en una barrera para discutir consecuencias."
+    },
+    {
+      "source_id": "N15-s06-b018",
+      "kind": "paragraph",
+      "text": "Las preocupaciones también pueden entrar en tensión. Agregar verificaciones puede proteger una condición y aumentar la carga. El modelo puede hacer visible ese conflicto sin resolverlo. Ocultarlo para que todos «estén de acuerdo» sólo posterga la decisión."
+    },
+    {
+      "source_id": "N15-s06-b019",
+      "kind": "heading-3",
+      "text": "Alcance, nivel y detalle no son lo mismo"
+    },
+    {
+      "source_id": "N15-s06-b020",
+      "kind": "paragraph",
+      "text": "El **alcance** define qué entra: por ejemplo, el ingreso al hotel, no toda la estadía. El **nivel** define qué tipo de elementos miramos: sistemas completos o componentes dentro de uno. La **resolución** indica cuánto detalle usamos dentro de ese nivel y alcance."
+    },
+    {
+      "source_id": "N15-s06-b021",
+      "kind": "paragraph",
+      "text": "Si cambiamos de mapa de país a plano de una ciudad, cambiamos la escala de lo representado. Si, en el plano de la ciudad, agregamos nombres de calles secundarias, aumentamos detalle. En sistemas, esas decisiones también necesitan distinguirse."
+    },
+    {
+      "source_id": "N15-s06-b022",
+      "kind": "paragraph",
+      "text": "El [modelo C4 de Simon Brown](https://c4model.com/) organiza vistas de arquitectura de software con niveles de contexto, contenedores, componentes y código, además de vistas de apoyo. No depende de una herramienta única. En C4, «contenedor» alude a una aplicación o almacén de datos dentro del sistema; no equivale necesariamente a un contenedor de despliegue como Docker."
+    },
+    {
+      "source_id": "N15-s06-b023",
+      "kind": "paragraph",
+      "text": "No hace falta recorrer todos los niveles para cualquier pregunta. Si necesitamos conocer qué sistemas externos participan en una asignación, quizá alcance un contexto y una vista de aplicaciones. Si queremos modificar una función, podemos necesitar otra profundidad."
+    },
+    {
+      "source_id": "N15-s06-b024",
+      "kind": "paragraph",
+      "text": "Una flecha entre «Recepción» y «API» merece atención. ¿Representa uso por una persona, una responsabilidad o un intercambio de software? Puede ser una relación legítima si el nivel y el significado están claros. Si no, separamos vistas o explicitamos los tipos de elementos. Prohibir toda mezcla sin pensar sería tan poco útil como mezclar todo sin explicar."
+    },
+    {
+      "source_id": "N15-s06-b025",
+      "kind": "heading-3",
+      "text": "Lo que existe no es lo mismo que lo que proponemos"
+    },
+    {
+      "source_id": "N15-s06-b026",
+      "kind": "paragraph",
+      "text": "Una línea que dice «PMS informa al proveedor de acceso» puede describir el sistema actual o una integración futura. Si no lo aclaramos, alguien podría usar una capacidad que todavía no existe para prometer un resultado."
+    },
+    {
+      "source_id": "N15-s06-b027",
+      "kind": "paragraph",
+      "text": "Cada modelo necesita fecha o condición de vigencia, fuentes y responsable de revisión. Una vista histórica puede seguir siendo útil para entender una decisión anterior. No debe circular como instrucción operativa vigente."
+    },
+    {
+      "source_id": "N15-s06-b028",
+      "kind": "paragraph",
+      "text": "Podemos mantener actual y propuesto en vistas separadas y vinculadas. También se puede construir una comparación explícita con diferencias señaladas, si la audiencia la entiende. Lo que no sirve es superponer ambos tiempos sin indicación."
+    },
+    {
+      "source_id": "N15-s06-b029",
+      "kind": "paragraph",
+      "text": "La actualización depende de qué cambia. Una relación obtenida de configuración técnica puede revisarse automáticamente. Una autorización organizacional necesita otra fuente. Un recorrido de experiencia exige nueva observación si cambia el canal de atención."
+    },
+    {
+      "source_id": "N15-s06-b030",
+      "kind": "paragraph",
+      "text": "No todo archivo generado desde código es una descripción de producción: puede representar una rama de desarrollo o una configuración no desplegada. Hay que identificar a qué versión y entorno corresponde. La fecha del archivo no sustituye esa información."
+    },
+    {
+      "source_id": "N15-s06-b031",
+      "kind": "heading-3",
+      "text": "Una flecha necesita un significado"
+    },
+    {
+      "source_id": "N15-s06-b032",
+      "kind": "paragraph",
+      "text": "La **notación** establece cómo se representan y leen los elementos y sus relaciones. [UML 2.5.1](https://www.omg.org/spec/UML/2.5.1) reúne distintos tipos de diagramas, entre ellos estructura y comportamiento. BPMN se orienta a procesos y coordinación. ArchiMate conecta aspectos de arquitectura empresarial. C4 organiza abstracciones y vistas de software sin imponer una notación gráfica única."
+    },
+    {
+      "source_id": "N15-s06-b033",
+      "kind": "paragraph",
+      "text": "Daniel Moody propone evaluar las notaciones también por cómo se perciben y comprenden: si los símbolos se distinguen, si su significado resulta reconocible y si la complejidad puede manejarse. La corrección formal no garantiza lectura fácil para cualquier persona."
+    },
+    {
+      "source_id": "N15-s06-b034",
+      "kind": "paragraph",
+      "text": "Una flecha sin texto puede significar «usa», «envía», «depende de» o «autoriza». Cuando esa diferencia cambia la decisión, hay que nombrarla. «PMS envía disponibilidad a Comercial» informa más que una línea cuyo sentido sólo recuerda el autor."
+    },
+    {
+      "source_id": "N15-s06-b035",
+      "kind": "paragraph",
+      "text": "Las convenciones libres pueden alcanzar para una exploración breve si tienen significado compartido. Una notación formal puede ser necesaria para precisar comportamiento o intercambiar modelos. La elección combina precisión, aprendizaje y costo de uso."
+    },
+    {
+      "source_id": "N15-s06-b036",
+      "kind": "paragraph",
+      "text": "El diseño visual acompaña. No confiamos sólo en colores ni en íconos sin explicación. Hay orden de lectura, etiquetas legibles y una explicación textual cuando corresponde. Un modelo que exige ampliar constantemente o seguir líneas imposibles dificulta justamente el razonamiento que debería apoyar."
+    },
+    {
+      "source_id": "N15-s07-h2",
+      "kind": "heading-2",
+      "text": "Primera aplicación de HH-15: separar cuatro preguntas del ingreso"
+    },
+    {
+      "source_id": "N15-s07-b001",
+      "kind": "paragraph",
+      "text": "El equipo separa cuatro preguntas que antes estaban mezcladas. Ricardo necesita localizar esperas. Lucía y Federico necesitan precisar qué cambios de estado pueden aceptarse. Federico necesita ubicar dependencias del integrador. Camila y Elena necesitan saber quién puede sostener, modificar o reparar una promesa."
+    },
+    {
+      "source_id": "N15-s07-b002",
+      "kind": "paragraph",
+      "text": "Para empezar usan proceso, estados, arquitectura y autoridad. Son cuatro trabajos distintos, vinculados con los episodios de HH-14. El proceso no intenta describir todas las tablas del PMS; la arquitectura no intenta narrar lo que siente cada huésped."
+    },
+    {
+      "source_id": "N15-s07-b003",
+      "kind": "paragraph",
+      "text": "Mariela detecta una ausencia: entre «inspeccionada» y «entregable» puede faltar información sobre acceso y condiciones prometidas. Lucía agrega otra: ¿qué entiende el huésped mientras eso se resuelve? Una anotación en el proceso aclara la dependencia operativa, pero no permite examinar bien la comunicación y las alternativas que ve la persona."
+    },
+    {
+      "source_id": "N15-s07-b004",
+      "kind": "paragraph",
+      "text": "En la prueba didáctica del caso, el equipo decide incorporar una vista acotada de experiencia. No la presenta como resultado de investigación externa real: es parte del ejercicio que deberá contrastarse si se implementa. La cartera pasa a cinco familias porque apareció una pregunta con función propia, no porque cinco sea un estándar."
+    },
+    {
+      "source_id": "N15-s07-b005",
+      "kind": "paragraph",
+      "text": "Las vistas comparten definiciones. «Asignable» remite a las condiciones trabajadas en HH-12. Si Comercial usa «disponible» para capacidad ofrecida de otra manera, se indica esa diferencia. Cambiar todas las etiquetas por una misma palabra sin revisar su significado escondería el problema."
+    },
+    {
+      "source_id": "N15-s07-b006",
+      "kind": "heading-3",
+      "text": "Antes de dibujar la solución, mostrar qué problema debe resolver"
+    },
+    {
+      "source_id": "N15-s07-b007",
+      "kind": "paragraph",
+      "text": "Michael Jackson, mediante los *problem frames*, distingue aspectos del mundo, requisitos y la máquina que se construye para intervenir. Esa separación ayuda a evitar que el inventario de aplicaciones actuales determine de antemano qué solución parece posible."
+    },
+    {
+      "source_id": "N15-s07-b008",
+      "kind": "paragraph",
+      "text": "Por ejemplo, dibujar primero dos compromisos sobre una misma vacante permite preguntar por la regla y la autoridad necesarias. Dibujar sólo dos servidores puede empujar la conversación hacia sincronización aunque el conflicto incluya una política comercial."
+    },
+    {
+      "source_id": "N15-s07-b009",
+      "kind": "paragraph",
+      "text": "Esto no prohíbe empezar por código ante un error acotado. Si una función calcula mal una fecha y conocemos bien el alcance, una representación técnica puede ser suficiente. La exigencia es justificar el recorte, no realizar siempre una investigación organizacional completa."
+    },
+    {
+      "source_id": "N15-s07-b010",
+      "kind": "paragraph",
+      "text": "El modelo del problema también selecciona lenguaje y frontera. Se contrasta con quienes conocen los episodios. No adquiere neutralidad sólo porque todavía no incluye una tecnología."
+    },
+    {
+      "source_id": "N15-s08-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 2 · Elegir una familia de modelo y un costo defendible"
+    },
+    {
+      "source_id": "N15-s08-b001",
+      "kind": "heading-3",
+      "text": "Cuando necesitamos saber qué se relaciona con qué"
+    },
+    {
+      "source_id": "N15-s08-b002",
+      "kind": "paragraph",
+      "text": "Los **modelos de estructura** muestran elementos y relaciones relativamente estables: datos, componentes, capacidades o unidades organizacionales. Ayudan a preguntar qué existe, cómo se compone y de qué depende."
+    },
+    {
+      "source_id": "N15-s08-b003",
+      "kind": "paragraph",
+      "text": "Un modelo entidad-relación puede mostrar que una reserva incluye varias habitaciones o personas. Sirve para discutir integridad y correspondencias. No describe por sí solo cuándo una habitación puede asignarse. Una arquitectura puede localizar quién consume información del PMS, sin indicar toda la secuencia de cada solicitud."
+    },
+    {
+      "source_id": "N15-s08-b004",
+      "kind": "paragraph",
+      "text": "ArchiMate aporta un lenguaje para relacionar negocio, aplicaciones y tecnología. El [Business Architecture Core Metamodel 1.0 de OMG](https://www.omg.org/spec/BACM/1.0) ofrece conceptos de arquitectura de negocio. Son referencias para organizar una descripción, no una obligación de representar toda la empresa antes de un cambio pequeño."
+    },
+    {
+      "source_id": "N15-s08-b005",
+      "kind": "paragraph",
+      "text": "Lankhorst y sus coautores vinculan arquitectura empresarial con las necesidades de distintas partes interesadas. Esa amplitud ayuda si una decisión cruza dominios. Puede ser excesiva si basta con una dependencia técnica bien delimitada."
+    },
+    {
+      "source_id": "N15-s08-b006",
+      "kind": "paragraph",
+      "text": "La evidencia puede venir de configuraciones, repositorios, contratos y personas responsables. Se especifica qué significa cada relación: composición, uso, propiedad o dependencia no son intercambiables. Un catálogo de nombres sin esas relaciones puede ser un inventario útil, pero todavía no responde muchas preguntas de impacto."
+    },
+    {
+      "source_id": "N15-s08-b007",
+      "kind": "heading-3",
+      "text": "Cuando importa qué puede pasar y en qué orden"
+    },
+    {
+      "source_id": "N15-s08-b008",
+      "kind": "paragraph",
+      "text": "Los **modelos de comportamiento** representan cambios. Una máquina de estados muestra situaciones de una entidad y transiciones permitidas. Un diagrama de secuencia ordena intercambios entre participantes. Un proceso conecta actividades y decisiones. Una simulación explora cómo podría comportarse un sistema bajo supuestos."
+    },
+    {
+      "source_id": "N15-s08-b009",
+      "kind": "paragraph",
+      "text": "Para una reserva, los estados ayudan a discutir qué condiciones permiten confirmarla o cancelarla. Para una respuesta perdida, una secuencia permite ubicar qué solicitud salió y qué resultado se desconoció. Para una espera de inspección, el proceso hace visibles tareas y traspasos."
+    },
+    {
+      "source_id": "N15-s08-b010",
+      "kind": "paragraph",
+      "text": "No todos representan el tiempo de la misma manera. Una secuencia puede mostrar que un mensaje ocurre después de otro sin medir cuánto esperó el huésped. Una simulación puede estimar tiempos bajo ciertas distribuciones sin explicar quién tiene autoridad para autorizar una excepción."
+    },
+    {
+      "source_id": "N15-s08-b011",
+      "kind": "paragraph",
+      "text": "Si simulamos llegadas siempre regulares en un hotel que recibe grupos, podríamos obtener una espera demasiado optimista. Los resultados dependen de supuestos sobre demanda, capacidad y variación. La apariencia numérica no los vuelve observaciones."
+    },
+    {
+      "source_id": "N15-s08-b012",
+      "kind": "paragraph",
+      "text": "También hay que representar alternativas relevantes. Un único camino de éxito no permite decidir qué hacer si un proveedor no responde. Podemos comenzar por él para orientarnos, pero no usarlo como prueba suficiente de un comportamiento que incluye fallas."
+    },
+    {
+      "source_id": "N15-s08-b013",
+      "kind": "heading-3",
+      "text": "Cuando necesitamos elegir o explicar una consecuencia"
+    },
+    {
+      "source_id": "N15-s08-b014",
+      "kind": "paragraph",
+      "text": "Una **tabla de decisión** cruza condiciones con resultados. Por ejemplo: habitación preparada, acceso vigente y condiciones de reserva verificadas. Permite revisar combinaciones, detectar casos sin regla y distinguir cuándo hace falta una decisión autorizada."
+    },
+    {
+      "source_id": "N15-s08-b015",
+      "kind": "paragraph",
+      "text": "Un **árbol de decisión** muestra elecciones o condiciones que abren caminos. Puede resultar más fácil de recorrer paso a paso, aunque con muchas combinaciones crezca demasiado. La elección entre tabla y árbol depende de la pregunta y de cómo se usará."
+    },
+    {
+      "source_id": "N15-s08-b016",
+      "kind": "paragraph",
+      "text": "Un **modelo causal** propone relaciones entre cambios y efectos. Podría explorar cómo falta de información genera consultas, cómo esas consultas consumen atención y cómo eso aumenta la demora. La flecha expresa una hipótesis que necesita justificación; no prueba causalidad por estar dibujada."
+    },
+    {
+      "source_id": "N15-s08-b017",
+      "kind": "paragraph",
+      "text": "Sterman desarrolla modelos de dinámica de sistemas para estudiar relaciones, acumulaciones y retroalimentación. Checkland utiliza modelos conceptuales para aprender y discutir situaciones con perspectivas diferentes. No son técnicas idénticas. Ambas recuerdan que representar puede servir para examinar explicaciones, no sólo para describir una lista de cosas."
+    },
+    {
+      "source_id": "N15-s08-b018",
+      "kind": "paragraph",
+      "text": "Schön ayuda a entender cómo la representación cambia mientras reflexionamos sobre una práctica. Senge pone atención en modelos mentales y aprendizaje organizacional. Fowler y Booch aportan al uso de modelos de software para manejar complejidad y comunicar decisiones. Davenport conecta esa discusión con procesos e información. No se suman para llenar una lámina: ofrecen preguntas distintas sobre cómo aprendemos y actuamos con ella."
+    },
+    {
+      "source_id": "N15-s08-b019",
+      "kind": "paragraph",
+      "text": "Un lazo causal cualitativo no informa automáticamente cuánto tardará un efecto. Una tabla formalizada no explica cómo se obtuvieron sus entradas ni autoriza las decisiones que contiene. Si vamos a automatizarla, necesitamos validar reglas, evidencia, responsables y vías de revisión. Explorar una posibilidad y ejecutarla sobre personas requieren compromisos diferentes."
+    },
+    {
+      "source_id": "N15-s08-b020",
+      "kind": "heading-3",
+      "text": "Cuando necesitamos conservar lo que vive la persona"
+    },
+    {
+      "source_id": "N15-s08-b021",
+      "kind": "paragraph",
+      "text": "Los modelos de experiencia permiten seguir acciones, información, barreras y reparaciones desde una perspectiva. Stickdorn, Hormess, Lawrence y Schneider muestran cómo relacionar esa experiencia con el trabajo que la hace posible."
+    },
+    {
+      "source_id": "N15-s08-b022",
+      "kind": "paragraph",
+      "text": "Un recorrido puede revelar que la incertidumbre del huésped empezó antes de llegar: recibió una confirmación que interpretó como garantía de acceso inmediato. Si el mapa empieza en el mostrador, pierde ese antecedente."
+    },
+    {
+      "source_id": "N15-s08-b023",
+      "kind": "paragraph",
+      "text": "Hay un límite importante. «Esperó cuarenta minutos» puede apoyarse en un registro temporal. «Se sintió abandonado» requiere un relato o debe señalarse como interpretación. Una curva emocional dibujada por el equipo no reemplaza la voz de la persona."
+    },
+    {
+      "source_id": "N15-s08-b024",
+      "kind": "paragraph",
+      "text": "Cuando una perspectiva no se investigó, se declara. No se inventan testimonios para que el modelo quede completo. N05 y N09 aportan criterios para incluir a quienes reciben consecuencias y para observar barreras sin hablar por ellos."
+    },
+    {
+      "source_id": "N15-s08-b025",
+      "kind": "heading-3",
+      "text": "Recorrido, prototipo, blueprint y modelo formal"
+    },
+    {
+      "source_id": "N15-s08-b026",
+      "kind": "paragraph",
+      "text": "Un **journey map**, o mapa de recorrido, sigue etapas y puntos de contacto desde la experiencia de una persona o grupo. Es útil para localizar expectativas, esfuerzos y dificultades. No explica por sí solo todas las causas internas de una demora."
+    },
+    {
+      "source_id": "N15-s08-b027",
+      "kind": "paragraph",
+      "text": "Un **prototipo** permite experimentar una alternativa antes de construirla completa. Puede ser una secuencia de pantallas en papel o un ensayo con roles. Si la duda es quién puede autorizar una excepción, actuar la escena puede enseñar más que una interfaz con terminaciones perfectas."
+    },
+    {
+      "source_id": "N15-s08-b028",
+      "kind": "paragraph",
+      "text": "Un **service blueprint** relaciona acciones de la persona, atención visible y trabajo interno de apoyo. En el hotel puede mostrar que una respuesta de Recepción depende de inspección y acceso. Es útil cuando la decisión necesita conectar esas capas, no sólo describir una pantalla."
+    },
+    {
+      "source_id": "N15-s08-b029",
+      "kind": "paragraph",
+      "text": "**BPMN** permite precisar coordinación mediante una semántica compartida para actividades, eventos, participantes, mensajes y alternativas. Puede servir para acordar rutas de excepción. No pretende ser un mapa emocional ni reemplazar toda descripción de arquitectura."
+    },
+    {
+      "source_id": "N15-s08-b030",
+      "kind": "paragraph",
+      "text": "Una **máquina de estados** se concentra en la vida de una entidad. Una **tabla de decisión**, en combinaciones de condiciones y resultados. Un **diagrama de secuencia**, en intercambios. Un **modelo causal**, en relaciones explicativas. La mejor elección conserva aquello que no podemos perder para la pregunta planteada."
+    },
+    {
+      "source_id": "N15-s08-b031",
+      "kind": "paragraph",
+      "text": "Scolari ofrece una lectura adicional: las interfaces organizan relaciones entre personas y tecnologías. Podemos usar esa idea para examinar los propios modelos como medios de conversación. Una vista que sólo un especialista entiende puede dejar fuera a quienes necesitan objetar una promesa. La claridad influye en quién puede participar."
+    },
+    {
+      "source_id": "N15-s08-b032",
+      "kind": "paragraph",
+      "text": "Una prueba útil es retirar temporalmente una vista. ¿Qué pregunta deja de poder responderse? Si sin el recorrido de experiencia no vemos el bloqueo previo al formulario, tiene una función propia. Si una tabla y un diagrama responden lo mismo con la misma evidencia, quizá convenga conservar el de menor costo de uso."
+    },
+    {
+      "source_id": "N15-s08-b033",
+      "kind": "paragraph",
+      "text": "El criterio no es que cada disciplina tenga su dibujo por derecho adquirido. Es que las preguntas importantes estén cubiertas sin obligar a una sola página a usar varios lenguajes incompatibles."
+    },
+    {
+      "source_id": "N15-s08-b034",
+      "kind": "heading-3",
+      "text": "Traducir sin cambiar el significado"
+    },
+    {
+      "source_id": "N15-s08-b035",
+      "kind": "paragraph",
+      "text": "Elena puede comenzar por el riesgo y abrir después la evidencia. Federico puede comenzar por el componente y llegar al mismo riesgo desde su contrato. Son recorridos de lectura distintos sobre conceptos relacionados."
+    },
+    {
+      "source_id": "N15-s08-b036",
+      "kind": "paragraph",
+      "text": "Siempre que sea posible conviene derivar vistas de una base compartida, en lugar de mantener copias manuales contradictorias. Pero no toda evidencia pertenece a una base única: una observación, una norma y un repositorio técnico requieren fuentes y cuidados diferentes."
+    },
+    {
+      "source_id": "N15-s08-b037",
+      "kind": "paragraph",
+      "text": "La traducción se prueba con el mismo caso. Cada audiencia debería poder reconocer de qué reserva, asignación o excepción se habla. Si cambian los nombres, hay correspondencias explícitas."
+    },
+    {
+      "source_id": "N15-s08-b038",
+      "kind": "paragraph",
+      "text": "Cuando Tecnología llama «éxito» a recibir un comando y Comercial a confirmar una estadía, no alcanza un reemplazo de palabras. Hay que distinguir hechos y compromisos. La traducción puede revelar un desacuerdo real que merece una decisión, no una corrección cosmética."
+    },
+    {
+      "source_id": "N15-s08-b039",
+      "kind": "heading-3",
+      "text": "Lo que cuesta mantener una representación"
+    },
+    {
+      "source_id": "N15-s08-b040",
+      "kind": "paragraph",
+      "text": "El costo total incluye investigar, construir, explicar, probar, actualizar y retirar. También incluye decisiones equivocadas por usar algo ambiguo o viejo. Por eso «lo genero en un minuto» no resuelve la cuestión de si conviene tenerlo."
+    },
+    {
+      "source_id": "N15-s08-b041",
+      "kind": "paragraph",
+      "text": "Un diagrama automático puede mostrar cientos de dependencias y exigir mucho trabajo de lectura. Un taller puede costar más al principio y descubrir una responsabilidad ausente. Se comparan uso esperado, consecuencias y esfuerzo a lo largo de la vida del modelo."
+    },
+    {
+      "source_id": "N15-s08-b042",
+      "kind": "paragraph",
+      "text": "Llamamos **deuda de modelo** al costo y riesgo que acumula una representación cuando continúa circulando sin la revisión que necesita. Una arquitectura vieja con apariencia oficial puede ser más peligrosa que una ausencia reconocida, porque induce confianza."
+    },
+    {
+      "source_id": "N15-s08-b043",
+      "kind": "paragraph",
+      "text": "Mantener vistas sin uso también desplaza otras tareas: observar casos, hacer pruebas o reparar documentación realmente consultada. El esfuerzo ya gastado no justifica por sí solo seguir invirtiendo."
+    },
+    {
+      "source_id": "N15-s08-b044",
+      "kind": "paragraph",
+      "text": "La herramienta elegida agrega condiciones. Hay que considerar acceso, exportación, búsqueda, versiones y legibilidad. Un archivo que sólo una persona puede abrir o modificar crea una dependencia que debe justificarse."
+    },
+    {
+      "source_id": "N15-s08-b045",
+      "kind": "paragraph",
+      "text": "El conjunto mínimo no es el más pequeño imaginable. Es el menor que permite responder con suficiente precisión, reconocer límites y sostener la actualización necesaria. Si achicamos más y ocultamos un riesgo decisivo, dejó de ser suficiente."
+    },
+    {
+      "source_id": "N15-s08-b046",
+      "kind": "heading-3",
+      "text": "Representaciones producidas con inteligencia artificial"
+    },
+    {
+      "source_id": "N15-s08-b047",
+      "kind": "paragraph",
+      "text": "Si usamos una herramienta para generar un diagrama desde texto, código o registros, revisamos tanto la salida como la fuente. Desde código puede omitir decisiones manuales. Desde un relato puede completar una relación que nadie afirmó. Desde eventos puede confundir lo frecuente con lo importante."
+    },
+    {
+      "source_id": "N15-s08-b048",
+      "kind": "paragraph",
+      "text": "La verificación comprueba elementos, relaciones, niveles, versión y evidencia. No consiste únicamente en preguntarle a la misma herramienta si su dibujo es correcto. Se contrasta con las fuentes y con quienes pueden validar su significado."
+    },
+    {
+      "source_id": "N15-s08-b049",
+      "kind": "paragraph",
+      "text": "Puede ser útil pedir una propuesta de organización, detectar nombres diferentes para un mismo concepto o producir vistas desde datos estructurados. La propuesta no obtiene autoridad para declarar cómo funciona la organización."
+    },
+    {
+      "source_id": "N15-s08-b050",
+      "kind": "paragraph",
+      "text": "Además, producir más rápido facilita acumular. Antes de revisar veinte diagramas nuevos, conviene preguntar cuáles responden una decisión pendiente. Reducir costo de generación no elimina costo de comprensión ni mantenimiento."
+    },
+    {
+      "source_id": "N15-s09-h2",
+      "kind": "heading-2",
+      "text": "Segunda aplicación de HH-15: reducir una cartera que creció sin control"
+    },
+    {
+      "source_id": "N15-s09-b001",
+      "kind": "paragraph",
+      "text": "Antes de decidir el piloto, Elena pide revisar los diagramas que circulan. El caso propone un inventario ficticio de diecisiete: hay copias con nombres distintos, versiones pasadas y recorridos de experiencia sin evidencia identificable, además de vistas útiles."
+    },
+    {
+      "source_id": "N15-s09-b002",
+      "kind": "paragraph",
+      "text": "Federico revisa fuentes y vigencia técnica. Ricardo y Mariela contrastan el proceso con el trabajo observado. Lucía y Camila examinan excepciones y promesas. No deciden sólo por la fecha del archivo: una vista reciente también puede contener información vieja."
+    },
+    {
+      "source_id": "N15-s09-b003",
+      "kind": "paragraph",
+      "text": "Sobre los diecisiete originales, archivan seis fuera del uso operativo, combinan cuatro en dos, actualizan tres y mantienen cuatro que siguen siendo pertinentes. Quedan nueve vistas activas para diferentes necesidades del hotel. La cartera del piloto seleccionará dentro de ese material y lo que falte; no se confunde el inventario institucional con las cinco familias necesarias para una decisión concreta."
+    },
+    {
+      "source_id": "N15-s09-b004",
+      "kind": "paragraph",
+      "text": "El historial y los motivos se conservan. Retirar de uso no significa borrar conocimiento. Una vista puede volver a ser útil si regresa su pregunta, pero deberá revisarse antes de usarse nuevamente."
+    },
+    {
+      "source_id": "N15-s09-b005",
+      "kind": "paragraph",
+      "text": "El ejercicio también descubre un problema de colaboración: cada área defendía «su mapa». La revisión cambia la pregunta de quién es dueño del dibujo a quién aporta evidencia, quién valida significado y quién lo mantiene. Se pueden conservar perspectivas diferentes sin preservar copias contradictorias por pertenencia."
+    },
+    {
+      "source_id": "N15-s09-b006",
+      "kind": "paragraph",
+      "text": "Las vistas actualizadas vuelven a probarse con escenarios. Cambiar fecha y responsable no demuestra que recuperaron utilidad. Si no permiten responder la pregunta para la que se conservan, todavía necesitan trabajo."
+    },
+    {
+      "source_id": "N15-s09-b007",
+      "kind": "heading-3",
+      "text": "Construir, corregir o no construir"
+    },
+    {
+      "source_id": "N15-s09-b008",
+      "kind": "paragraph",
+      "text": "Antes de empezar, comprobamos si la pregunta está abierta, qué decisión cambia y qué agrega la representación frente a un texto, una consulta o una prueba. También preguntamos qué evidencia tenemos y si el costo es proporcional a las consecuencias."
+    },
+    {
+      "source_id": "N15-s09-b009",
+      "kind": "paragraph",
+      "text": "Una respuesta válida puede ser «no construir». Si una consulta reproducible responde qué versión está desplegada, dibujar cada despliegue a mano podría agregar errores. Otra puede ser «hacer un boceto para esta reunión y conservarlo como antecedente», sin convertirlo en documentación permanente."
+    },
+    {
+      "source_id": "N15-s09-b010",
+      "kind": "paragraph",
+      "text": "Después de construir, probamos comprensión y uso. Si el modelo duplica otra vista, perdió vigencia o no puede mantenerse, se corrige o retira. El motivo queda registrado: «la consulta vigente responde mejor esta pregunta» enseña más que «no se usa»."
+    },
+    {
+      "source_id": "N15-s09-b011",
+      "kind": "paragraph",
+      "text": "La suficiencia siempre depende del compromiso. Un boceto puede alcanzar para explorar y no para autorizar una operación de alto riesgo. Se marca esa diferencia para que una imagen de taller no termine circulando como una regla aprobada."
+    },
+    {
+      "source_id": "N15-s10-h2",
+      "kind": "heading-2",
+      "text": "Movimiento 3 · Construir una cartera mínima y probar su utilidad"
+    },
+    {
+      "source_id": "N15-s10-b001",
+      "kind": "paragraph",
+      "text": "Ya distinguimos familias y costos. El siguiente paso es elegir un conjunto para una decisión concreta y probarlo con quienes deben usarlo. No buscamos completar una colección de notaciones. Buscamos cubrir preguntas sin agregar trabajo innecesario."
+    },
+    {
+      "source_id": "N15-s10-b002",
+      "kind": "paragraph",
+      "text": "Hay dos controles diferentes. Uno examina si cada vista sirve. El otro examina si el conjunto deja huecos o duplica funciones. Una lámina puede ser útil por separado y resultar redundante dentro de la cartera."
+    },
+    {
+      "source_id": "N15-s11-h2",
+      "kind": "heading-2",
+      "text": "Instrumento HH-15: ficha de selección de modelo"
+    },
+    {
+      "source_id": "N15-s11-b001",
+      "kind": "paragraph",
+      "text": "La ficha plantea diez decisiones. Puede completarse de manera breve, pero con respuestas específicas."
+    },
+    {
+      "source_id": "N15-s11-b002",
+      "kind": "list-item",
+      "text": "**Pregunta.** ¿Qué necesitamos entender? Por ejemplo, qué pasa con una llegada cuando no pudo completar la validación digital."
+    },
+    {
+      "source_id": "N15-s11-b003",
+      "kind": "list-item",
+      "text": "**Decisión.** ¿Qué podríamos hacer de otra manera al saberlo? Autorizar el piloto, cambiar su alcance o detenerlo."
+    },
+    {
+      "source_id": "N15-s11-b004",
+      "kind": "list-item",
+      "text": "**Audiencia.** ¿Quién necesita interpretar, discutir y mantener? No siempre son las mismas personas."
+    },
+    {
+      "source_id": "N15-s11-b005",
+      "kind": "list-item",
+      "text": "**Objeto y alcance.** ¿Qué caso, sistema y período entran? ¿Qué queda fuera? La llegada no incluye automáticamente toda la estadía."
+    },
+    {
+      "source_id": "N15-s11-b006",
+      "kind": "list-item",
+      "text": "**Relaciones necesarias.** ¿Buscamos estructura, secuencia, condiciones, autoridad, experiencia o posibles causas?"
+    },
+    {
+      "source_id": "N15-s11-b007",
+      "kind": "list-item",
+      "text": "**Familia y notación.** ¿Qué representación permite examinar esas relaciones con suficiente precisión?"
+    },
+    {
+      "source_id": "N15-s11-b008",
+      "kind": "list-item",
+      "text": "**Evidencia.** ¿De dónde salen elementos y conexiones? Una hipótesis puede aparecer, pero marcada como tal."
+    },
+    {
+      "source_id": "N15-s11-b009",
+      "kind": "list-item",
+      "text": "**Nivel y detalle.** ¿Qué necesita ver la audiencia y qué se consulta en una vista vinculada?"
+    },
+    {
+      "source_id": "N15-s11-b010",
+      "kind": "list-item",
+      "text": "**Costo y vigencia.** ¿Quién construye, revisa y actualiza? ¿Qué cambio obliga a revisarla o retirarla de uso?"
+    },
+    {
+      "source_id": "N15-s11-b011",
+      "kind": "list-item",
+      "text": "**Prueba de utilidad.** ¿Qué caso y qué respuesta mostrarían que sirve? También indicamos qué resultado revelaría una limitación."
+    },
+    {
+      "source_id": "N15-s11-b012",
+      "kind": "paragraph",
+      "text": "La ficha puede terminar sin un diagrama. Puede justificar una tabla o una prueba directa. Eso no es trabajo incompleto si la alternativa responde mejor a la necesidad."
+    },
+    {
+      "source_id": "N15-s11-b013",
+      "kind": "paragraph",
+      "text": "También puede definir una vida corta. Un modelo construido para comparar dos opciones hoy se conserva como evidencia de esa discusión, pero no necesariamente como instrucción para operar mañana. La fecha y el propósito evitan confundir ambos usos."
+    },
+    {
+      "source_id": "N15-s11-b014",
+      "kind": "heading-3",
+      "text": "Comparar preguntas y modelos sin fabricar un puntaje mágico"
+    },
+    {
+      "source_id": "N15-s11-b015",
+      "kind": "paragraph",
+      "text": "Una matriz pregunta-modelo es una tabla sencilla: las filas contienen preguntas y las columnas, representaciones candidatas. En cada cruce explicamos si la representación responde bien, parcialmente o no responde. Agregamos evidencia necesaria, audiencia y costo."
+    },
+    {
+      "source_id": "N15-s11-b016",
+      "kind": "paragraph",
+      "text": "Por ejemplo, una tabla de tiempos calcula duración por tramo. Un proceso muestra además secuencia y responsabilidad. Un relato permite comprender una experiencia singular. Ninguno gana por definición: depende de qué necesitamos decidir."
+    },
+    {
+      "source_id": "N15-s11-b017",
+      "kind": "paragraph",
+      "text": "La comparación incluye lo que se perdería. Una arquitectura puede ser suficiente para localizar una dependencia y dejar invisible una barrera del canal. Si esa barrera cambia la autorización del piloto, la omisión importa aunque el diagrama técnico sea excelente."
+    },
+    {
+      "source_id": "N15-s11-b018",
+      "kind": "paragraph",
+      "text": "No sumamos coberturas como si cada casillero valiera lo mismo. Una vista que responde un poco de diez preguntas podría no responder lo suficiente de la más crítica. El argumento que justifica la elección se conserva junto con la comparación."
+    },
+    {
+      "source_id": "N15-s11-b019",
+      "kind": "paragraph",
+      "text": "Si hacen falta muchas vistas, revisamos si mezclamos varias decisiones. A veces la complejidad es real y el conjunto amplio se justifica. Otras veces una pregunta demasiado vaga está generando documentación sin un final reconocible."
+    },
+    {
+      "source_id": "N15-s11-b020",
+      "kind": "heading-3",
+      "text": "La comparación aplicada a la validación previa"
+    },
+    {
+      "source_id": "N15-s11-b021",
+      "kind": "paragraph",
+      "text": "En HH-15, la primera pregunta es dónde se forma la espera de una llegada. Recepción y Operaciones necesitan un proceso apoyado en los episodios de HH-14. La tabla de tiempos lo acompaña; no hace falta convertirla en otro modelo independiente con los mismos datos."
+    },
+    {
+      "source_id": "N15-s11-b022",
+      "kind": "paragraph",
+      "text": "La segunda pregunta trata cambios válidos: cuándo una reserva está en condiciones de continuar y qué protege la asignación. Lucía y Federico necesitan estados y reglas. Se distinguen entidades: una identidad verificada no equivale a una habitación asignada. Los estados se vinculan donde hay una condición compartida, sin fusionarlos en un único «aprobado»."
+    },
+    {
+      "source_id": "N15-s11-b023",
+      "kind": "paragraph",
+      "text": "La tercera pregunta es qué dependencia podría impedir obtener acceso. Federico y el proveedor necesitan arquitectura y contratos pertinentes. Una lista de aplicaciones no alcanza si no muestra qué intercambio y qué respuesta sostienen la capacidad."
+    },
+    {
+      "source_id": "N15-s11-b024",
+      "kind": "paragraph",
+      "text": "La cuarta pregunta trata autoridad: quién puede detener, autorizar una alternativa o asumir una reparación. Una matriz de decisiones por rol puede responder con menos costo que un organigrama detallado. El cargo no explica automáticamente qué puede decidir en ese episodio."
+    },
+    {
+      "source_id": "N15-s11-b025",
+      "kind": "paragraph",
+      "text": "La quinta pregunta es qué ve y qué puede hacer la persona mientras espera o cuando no usa el canal digital. Una vista acotada de experiencia conserva ese recorrido. No se inventan sentimientos: se distinguen acciones observadas, relatos y preguntas todavía no investigadas."
+    },
+    {
+      "source_id": "N15-s11-b026",
+      "kind": "paragraph",
+      "text": "La selección compara alternativas no gráficas. Una consulta al PMS puede contar asignaciones repetidas registradas. No sustituye una especificación de qué transiciones deben rechazarse ni las pruebas de su implementación. Un relato de llegada puede revelar una barrera, pero puede ser difícil usarlo solo para comparar varios casos y responsabilidades."
+    },
+    {
+      "source_id": "N15-s11-b027",
+      "kind": "paragraph",
+      "text": "También compara costo real. La matriz de autoridad puede ocupar media página y exigir validación cuidadosa. La arquitectura puede generarse en parte, pero requiere identificar entorno y significado. El proceso reutiliza HH-14. El recorrido de experiencia necesita volver a observar si cambia el canal. Una representación breve no siempre es barata de sostener."
+    },
+    {
+      "source_id": "N15-s11-b028",
+      "kind": "paragraph",
+      "text": "El tablero que pidió Elena se trata como una síntesis derivada mientras no abra otra pregunta. Puede mostrar indicadores y vínculos a evidencia sin convertirse en un sexto modelo mantenido por separado. Lo que decide es qué agrega al piloto, no quién lo solicitó."
+    },
+    {
+      "source_id": "N15-s11-b029",
+      "kind": "heading-3",
+      "text": "La prueba sin el autor al lado"
+    },
+    {
+      "source_id": "N15-s11-b030",
+      "kind": "paragraph",
+      "text": "Entregamos una vista, un caso y una pregunta a alguien de su audiencia. Le pedimos que indique qué puede concluir y qué no. El autor no completa cada significado durante la primera lectura."
+    },
+    {
+      "source_id": "N15-s11-b031",
+      "kind": "paragraph",
+      "text": "Para el hotel podemos usar una llegada ordinaria, otra con un proveedor sin respuesta y otra que necesita canal asistido. La persona debería reconocer el alcance, encontrar la información pertinente y no tratar lo desconocido como confirmado."
+    },
+    {
+      "source_id": "N15-s11-b032",
+      "kind": "paragraph",
+      "text": "Si interpreta una flecha de manera diferente, investigamos por qué. Tal vez falta un verbo. Tal vez un mismo color significa dos cosas. Tal vez el concepto tiene sentidos distintos en las áreas. No todo desacuerdo se arregla cambiando el tamaño de letra."
+    },
+    {
+      "source_id": "N15-s11-b033",
+      "kind": "paragraph",
+      "text": "No exigimos que todos extraigan idénticas opiniones. Sí necesitamos compatibilidad en el significado operativo de lo que usan para decidir. Dos roles pueden discrepar sobre qué riesgo aceptar y, aun así, comprender correctamente la misma evidencia. Ocultar esa diferencia no mejoraría el modelo."
+    },
+    {
+      "source_id": "N15-s11-b034",
+      "kind": "paragraph",
+      "text": "Una segunda lectura comprueba si la corrección ayudó. Si hace falta mucha formación para usar una notación, ese costo se evalúa. Puede ser razonable para una tarea especializada y resultar excesivo para una consulta cotidiana de Recepción."
+    },
+    {
+      "source_id": "N15-s11-b035",
+      "kind": "paragraph",
+      "text": "La prueba no obliga a que cualquier persona entienda cualquier vista sin preparación. Obliga a comprobar que la audiencia prevista pueda usarla con el apoyo y el aprendizaje que realmente tendrá disponibles."
+    },
+    {
+      "source_id": "N15-s11-b036",
+      "kind": "heading-3",
+      "text": "Probar el conjunto, no sólo sus piezas"
+    },
+    {
+      "source_id": "N15-s11-b037",
+      "kind": "paragraph",
+      "text": "El equipo compara dos o más carteras sobre los mismos escenarios. Una primera alternativa combina proceso, arquitectura y tablero. Permite explicar parte de la operación, pero deja poco visible la autoridad y la experiencia de quien no usa el canal digital."
+    },
+    {
+      "source_id": "N15-s11-b038",
+      "kind": "paragraph",
+      "text": "Una segunda incorpora estados, autoridad y experiencia, y conserva el tablero como resumen derivado. Tiene más costo de construcción, pero permite discutir preguntas que la primera no cubría. Después se intenta llevar esas aclaraciones dentro del proceso. Si la lámina se vuelve confusa y mezcla lenguajes, hay una razón concreta para mantener vistas separadas."
+    },
+    {
+      "source_id": "N15-s11-b039",
+      "kind": "paragraph",
+      "text": "La comparación registra respuestas correctas, preguntas abiertas, errores de interpretación y esfuerzo de lectura. No gana automáticamente la cartera más extensa ni la que se explica más rápido. Gana, provisionalmente, la que permite la decisión con suficiente evidencia y costo sostenible."
+    },
+    {
+      "source_id": "N15-s11-b040",
+      "kind": "paragraph",
+      "text": "Luego se simula un cambio: el canal previo agrega una alternativa asistida o el proveedor modifica una condición de acceso. ¿Podemos encontrar qué vistas hay que revisar? ¿Quién puede hacerlo? ¿Qué decisión queda en suspenso? En N15 esto estima el costo de la selección; N16 profundizará la coherencia entre versiones."
+    },
+    {
+      "source_id": "N15-s11-b041",
+      "kind": "paragraph",
+      "text": "También se prueba no modelar. Si una pregunta se responde mejor con una consulta o un ensayo de servicio, se conserva esa alternativa. «Queda mejor en un gráfico» no justifica por sí solo otra pieza permanente."
+    },
+    {
+      "source_id": "N15-s11-b042",
+      "kind": "paragraph",
+      "text": "La elección final registra qué se descartó y por qué podría revisarse. Una nueva audiencia o una decisión más exigente pueden volver insuficiente una cartera que antes servía. Eso no demuestra necesariamente que la elección anterior estuviera mal: cambió su uso."
+    },
+    {
+      "source_id": "N15-s11-b043",
+      "kind": "heading-3",
+      "text": "Conectar sin apilar todo en una lámina"
+    },
+    {
+      "source_id": "N15-s11-b044",
+      "kind": "paragraph",
+      "text": "La **trazabilidad** permite ir de una decisión a las vistas y evidencias que la sostienen, y volver desde un elemento a las decisiones que afecta. No exige que todo se vea al mismo tiempo."
+    },
+    {
+      "source_id": "N15-s11-b045",
+      "kind": "paragraph",
+      "text": "La reserva R-73 puede aparecer como instancia en un proceso y como ejemplo de transición en un modelo de estados. La arquitectura representa los sistemas que la procesan, no una reserva individual como si fuera un componente. Un vínculo explica esa correspondencia entre niveles."
+    },
+    {
+      "source_id": "N15-s11-b046",
+      "kind": "paragraph",
+      "text": "Un índice liviano puede indicar pregunta, vista, fuente y responsable. Sirve para orientarse en el conjunto; no pretende ser otro modelo total de la organización."
+    },
+    {
+      "source_id": "N15-s11-b047",
+      "kind": "paragraph",
+      "text": "Los conceptos compartidos necesitan definiciones claras. Si «confirmada» refiere a un compromiso comercial en una vista y a recepción técnica en otra, se conserva la diferencia o se corrige la confusión. Un identificador igual no resuelve por sí solo un significado incompatible."
+    },
+    {
+      "source_id": "N15-s11-b048",
+      "kind": "paragraph",
+      "text": "La trazabilidad tiene un nivel proporcional. Vinculamos afirmaciones y relaciones cuya modificación cambia decisiones. No hace falta atribuir cada píxel. Tampoco prometemos que enlazar archivos los mantenga sincronizados: alguien debe revisar cuando cambia la evidencia."
+    },
+    {
+      "source_id": "N15-s12-h2",
+      "kind": "heading-2",
+      "text": "Tercera aplicación de HH-15: cinco familias de representación para una decisión de llegada"
+    },
+    {
+      "source_id": "N15-s12-b001",
+      "kind": "paragraph",
+      "text": "Elena debe decidir las condiciones del piloto. La cartera seleccionada reúne proceso, estados, arquitectura, autoridad y experiencia. Puede contener más de una vista dentro de una familia: el proceso actual y el propuesto se mantienen separados y vinculados para compararlos."
+    },
+    {
+      "source_id": "N15-s12-b002",
+      "kind": "paragraph",
+      "text": "Los estados de identidad y de asignación también se distinguen cuando responden preguntas diferentes. Compartir cartera no significa declarar que una validación documental garantiza disponibilidad. Esa separación evita que una comprobación previa se transforme en una promesa de habitación todavía no sostenible."
+    },
+    {
+      "source_id": "N15-s12-b003",
+      "kind": "paragraph",
+      "text": "Lucía y Mariela recorren casos de HH-14. Un recorrido propuesto reduce carga en mostrador, pero deja sin una vía clara a quien no completó el canal digital. La vista de experiencia vuelve visible la barrera; la matriz de autoridad indica quién puede habilitar la atención alternativa; la arquitectura localiza las dependencias que esa alternativa necesita."
+    },
+    {
+      "source_id": "N15-s12-b004",
+      "kind": "paragraph",
+      "text": "El problema no demuestra que todo piloto digital excluya. Demuestra que esa propuesta, con esas condiciones, necesita cambiar. La recomendación conserva validación previa opcional y asistencia. Camila ajusta la comunicación para no anticipar una confirmación más fuerte que la evidencia disponible."
+    },
+    {
+      "source_id": "N15-s12-b005",
+      "kind": "paragraph",
+      "text": "Se dejan fuera del alcance el modelo de datos completo, el organigrama de todo el hotel y un mapa empresarial general. Las fuentes siguen accesibles cuando puedan responder otra pregunta. No se eliminan por principio: no son necesarias para esta decisión inmediata."
+    },
+    {
+      "source_id": "N15-s12-b006",
+      "kind": "paragraph",
+      "text": "Cada vista tiene condición de revisión. El proceso se contrasta al finalizar el piloto. Los estados se revisan si cambia una regla o su implementación. La arquitectura, cuando cambian integraciones. La autoridad, cuando cambian roles o atribuciones. La experiencia, cuando aparecen barreras nuevas o se modifica el canal."
+    },
+    {
+      "source_id": "N15-s12-b007",
+      "kind": "paragraph",
+      "text": "Si los episodios muestran exclusión o no sostienen la hipótesis de menor espera, la decisión vuelve a abrirse. La cartera justificó su costo al permitir ver y discutir esas condiciones; no necesita presentarse como prueba de un éxito todavía no comprobado."
+    },
+    {
+      "source_id": "N15-s13-h2",
+      "kind": "heading-2",
+      "text": "Caso de transferencia: seleccionar modelos para una alerta de fraude"
+    },
+    {
+      "source_id": "N15-s13-b001",
+      "kind": "paragraph",
+      "text": "En un ejemplo didáctico, una entidad evalúa cómo revisar una alerta sobre una operación. No se propone aquí una política financiera concreta ni criterios de bloqueo. La selección y uso real requieren validación especializada, controles y obligaciones aplicables."
+    },
+    {
+      "source_id": "N15-s13-b002",
+      "kind": "paragraph",
+      "text": "Una arquitectura puede mostrar de dónde llegan datos y dónde se produce un puntaje. Una tabla puede mostrar cómo se usa ese puntaje junto con otras condiciones para enviar a revisión. Una representación de autoridad indica quién puede decidir y corregir. Un recorrido permite estudiar cómo se informa a la persona y cómo puede cuestionar un error."
+    },
+    {
+      "source_id": "N15-s13-b003",
+      "kind": "paragraph",
+      "text": "Son piezas diferentes: el modelo predictivo estima algo; una regla institucional usa esa estimación; una autoridad responde por la decisión. Explicar técnicamente el puntaje no equivale a justificar todo lo que la institución hace con él."
+    },
+    {
+      "source_id": "N15-s13-b004",
+      "kind": "paragraph",
+      "text": "La cartera se prueba con una alerta pertinente, una equivocada y un pedido de revisión. Si encontramos el umbral, pero no cómo reparar una falsa alerta, falta una relación importante. No se arregla agregando servidores al diagrama."
+    },
+    {
+      "source_id": "N15-s13-b005",
+      "kind": "paragraph",
+      "text": "Un modelo causal puede explorar si las decisiones modifican conductas y datos futuros. Es una hipótesis a investigar, no una prueba obtenida por dibujar un lazo. El ejemplo muestra por qué las consecuencias determinan la exigencia de evidencia y no sólo la cantidad de vistas."
+    },
+    {
+      "source_id": "N15-s14-h2",
+      "kind": "heading-2",
+      "text": "Contraejemplo: el repositorio empresarial que nadie podía usar"
+    },
+    {
+      "source_id": "N15-s14-b001",
+      "kind": "paragraph",
+      "text": "Una organización del ejemplo exige representar capacidades, procesos, aplicaciones, datos y tecnología antes de cualquier cambio. Usa ArchiMate y acumula modelos durante tres años. Varias relaciones no tienen fuente clara. Los equipos actualizan para cumplir y, cuando necesitan decidir, vuelven a pizarras informales."
+    },
+    {
+      "source_id": "N15-s14-b002",
+      "kind": "paragraph",
+      "text": "El problema no es la notación. Es haber confundido cobertura con utilidad y haber perdido el vínculo con preguntas, audiencia y vigencia. La apariencia completa crea una confianza que las fuentes no sostienen."
+    },
+    {
+      "source_id": "N15-s14-b003",
+      "kind": "paragraph",
+      "text": "La organización conserva un panorama general para orientarse y elige vistas específicas para decisiones. Marca relaciones inciertas, automatiza parte de las dependencias técnicas y retira del uso vigente las vistas sin función comprobada, conservando el historial necesario."
+    },
+    {
+      "source_id": "N15-s14-b004",
+      "kind": "paragraph",
+      "text": "El conjunto más acotado permite detectar cambios que antes se perdían entre cientos de relaciones. No porque menos sea siempre mejor, sino porque ahora hay responsables y pruebas de uso para lo que se mantiene."
+    },
+    {
+      "source_id": "N15-s14-b005",
+      "kind": "paragraph",
+      "text": "Puede existir una obligación contractual o regulatoria de conservar documentación extensa. En ese caso debe verificarse y cumplirse en su alcance. Eso no obliga a que toda persona use el mismo documento para cada decisión. Se puede distinguir archivo requerido, fuentes y vistas de trabajo, con vínculos y controles adecuados."
+    },
+    {
+      "source_id": "N15-s15-h2",
+      "kind": "heading-2",
+      "text": "Errores frecuentes"
+    },
+    {
+      "source_id": "N15-s15-b001",
+      "kind": "paragraph",
+      "text": "**Elegir primero la herramienta.** Abrir una plantilla no define qué necesitamos decidir. La pregunta y el uso deben orientar la selección."
+    },
+    {
+      "source_id": "N15-s15-b002",
+      "kind": "paragraph",
+      "text": "**Buscar una lámina que lo contenga todo.** Mezclar componentes, experiencias, estados y autoridad puede volver invisibles sus relaciones en lugar de aclararlas."
+    },
+    {
+      "source_id": "N15-s15-b003",
+      "kind": "paragraph",
+      "text": "**Simplificar borrando incertidumbre.** Una vista breve puede conservar una dependencia crítica y mostrar qué falta saber. Claridad no significa certeza inventada."
+    },
+    {
+      "source_id": "N15-s15-b004",
+      "kind": "paragraph",
+      "text": "**Usar símbolos sin significado estable.** Si una línea representa cosas distintas, hay que aclararlas. La leyenda no es un detalle decorativo."
+    },
+    {
+      "source_id": "N15-s15-b005",
+      "kind": "paragraph",
+      "text": "**Mezclar actual y propuesto.** Una integración futura no puede sostener una decisión operativa de hoy. Las versiones y comparaciones deben distinguirse."
+    },
+    {
+      "source_id": "N15-s15-b006",
+      "kind": "paragraph",
+      "text": "**Generar más modelos de los que podemos revisar.** La producción rápida puede dejar una cartera lenta de leer y costosa de mantener."
+    },
+    {
+      "source_id": "N15-s15-b007",
+      "kind": "paragraph",
+      "text": "**Tomar código o registros por la realidad completa.** Son fuentes valiosas que pueden omitir trabajo manual, autoridad y experiencia."
+    },
+    {
+      "source_id": "N15-s15-b008",
+      "kind": "paragraph",
+      "text": "**Delegar el propósito a una herramienta.** Una salida automática necesita una pregunta humana, validación y responsabilidad por su uso."
+    },
+    {
+      "source_id": "N15-s15-b009",
+      "kind": "paragraph",
+      "text": "**Conservar por el esfuerzo ya gastado.** Si una vista no tiene función vigente, mantenerla puede aumentar riesgo y quitar recursos a otras comprobaciones."
+    },
+    {
+      "source_id": "N15-s16-h2",
+      "kind": "heading-2",
+      "text": "Consecuencias profesionales"
+    },
+    {
+      "source_id": "N15-s16-b001",
+      "kind": "paragraph",
+      "text": "Analizar un sistema incluye decidir qué no representar. No es falta de rigor: es concentrar el esfuerzo en relaciones que cambian comprensión, decisiones o riesgos. La exclusión se justifica y se revisa si cambia la pregunta."
+    },
+    {
+      "source_id": "N15-s16-b002",
+      "kind": "paragraph",
+      "text": "El profesional puede explicar por qué eligió un proceso y no una arquitectura, por qué separó estados de experiencia y qué evidencia necesita para cada uno. No alcanza con conocer los nombres de las notaciones."
+    },
+    {
+      "source_id": "N15-s16-b003",
+      "kind": "paragraph",
+      "text": "También organiza colaboración. Una persona puede construir la vista, otra validar un concepto y otra mantener una fuente. Esas responsabilidades se hacen explícitas. El modelado no debería ocurrir aislado durante semanas para pedir después una aprobación general que nadie puede revisar."
+    },
+    {
+      "source_id": "N15-s16-b004",
+      "kind": "paragraph",
+      "text": "Cuando un concepto afecta varias vistas, se necesita coordinación sobre su significado. «Reserva confirmada» puede sostener una promesa comercial, una regla de operación y una interfaz. Cambiarla exige revisar esos usos, no crear un comité para cada palabra."
+    },
+    {
+      "source_id": "N15-s16-b005",
+      "kind": "paragraph",
+      "text": "La competencia incluye reconocer falta de evidencia. Un dibujo incompleto, con preguntas marcadas, puede orientar una investigación. Rellenar cada hueco con una relación plausible puede dar una seguridad injustificada."
+    },
+    {
+      "source_id": "N15-s16-b006",
+      "kind": "paragraph",
+      "text": "A veces conviene detener la producción y probar una alternativa directamente. Si el riesgo es acotado y la decisión reversible, un ensayo puede enseñar más que otra lámina. En decisiones de mayor consecuencia, hacen falta comprobaciones proporcionales. No modelar por ahora no significa actuar sin criterio."
+    },
+    {
+      "source_id": "N15-s16-b007",
+      "kind": "paragraph",
+      "text": "La cartera debe ser transferible. Otra persona necesita poder comprender el propósito, cuestionar una omisión y revisar una fuente sin empezar de cero. Cuando sólo la entiende quien la hizo, seguimos dependiendo de conocimiento personal, aunque los archivos estén compartidos."
+    },
+    {
+      "source_id": "N15-s17-h2",
+      "kind": "heading-2",
+      "text": "Límites y tensiones"
+    },
+    {
+      "source_id": "N15-s17-b001",
+      "kind": "paragraph",
+      "text": "Un modelo sencillo puede ampliar la participación y omitir un detalle decisivo. La prueba con casos límite permite distinguir claridad de una simplificación que engaña. No toda complejidad debe borrarse; parte necesita explicarse mejor o mostrarse en otra vista."
+    },
+    {
+      "source_id": "N15-s17-b002",
+      "kind": "paragraph",
+      "text": "Incluir perspectivas lleva tiempo. No todas las personas deben revisar cada componente, pero quienes reciben consecuencias necesitan una vía pertinente para intervenir. La audiencia no se define sólo por quienes ocupan la reunión inicial."
+    },
+    {
+      "source_id": "N15-s17-b003",
+      "kind": "paragraph",
+      "text": "Una base común facilita coherencia y puede imponer categorías que no representan bien el trabajo local. Se conservan conceptos compartidos donde hace falta y correspondencias explícitas donde hay diferencias legítimas."
+    },
+    {
+      "source_id": "N15-s17-b004",
+      "kind": "paragraph",
+      "text": "La generación automática favorece lo observable en sus fuentes. Si la fuente no registra una autorización informal, la herramienta no puede verificarla sólo por inferencia. Hay que buscar otra evidencia, no compensar la ausencia con más dibujo."
+    },
+    {
+      "source_id": "N15-s17-b005",
+      "kind": "paragraph",
+      "text": "También importa el acceso. Una vista de dependencias puede revelar información sensible. Se decide quién necesita qué detalle, sin usar confidencialidad como excusa para ocultar riesgos a quienes deben resolverlos."
+    },
+    {
+      "source_id": "N15-s17-b006",
+      "kind": "paragraph",
+      "text": "Finalmente, el conjunto mínimo no dura para siempre. Cambian sistemas, personas y preguntas. Diseñar la revisión desde el principio es parte del modelo, no una tarea de orden que se deja para cuando sobre tiempo."
+    },
+    {
+      "source_id": "N15-s18-h2",
+      "kind": "heading-2",
+      "text": "De N15 a N16: de seleccionar vistas a aprender de sus contradicciones"
+    },
+    {
+      "source_id": "N15-s18-b001",
+      "kind": "paragraph",
+      "text": "HH-15 deja vistas con propósito, alcance, evidencia y vínculos. Al ponerlas juntas pueden aparecer nombres distintos, condiciones incompatibles o diferencias de fecha."
+    },
+    {
+      "source_id": "N15-s18-b002",
+      "kind": "paragraph",
+      "text": "No toda diferencia es un error. El proceso actual y el propuesto deben diferir. Una perspectiva del huésped no coincide punto por punto con una arquitectura de software. Pero si dos vistas vigentes autorizan acciones incompatibles sobre la misma reserva, tenemos algo que resolver."
+    },
+    {
+      "source_id": "N15-s18-b003",
+      "kind": "paragraph",
+      "text": "N16 distinguirá esas situaciones y trabajará la coherencia entre modelos y ciclos de vida. Cerrará el Bloque C sin convertir coherencia en uniformidad ni agregar diagramas por reflejo."
+    },
+    {
+      "source_id": "N15-s19-h2",
+      "kind": "heading-2",
+      "text": "Una lectura situada desde América Latina"
+    },
+    {
+      "source_id": "N15-s19-b001",
+      "kind": "paragraph",
+      "text": "Mario Bunge ayuda a pedir precisión: qué representa una caja, qué afirma una flecha y qué evidencia sostiene esa afirmación. Fernando Flores permite reconocer compromisos que una representación puramente técnica puede omitir. En el hotel, «confirmar» no es sólo cambiar un valor."
+    },
+    {
+      "source_id": "N15-s19-b002",
+      "kind": "paragraph",
+      "text": "Rolando García aporta una mirada sobre relaciones entre partes y contexto. Ayuda a evitar que el límite de una herramienta se convierta sin discusión en el límite del problema. Scolari permite examinar las representaciones como interfaces que facilitan unas conversaciones y dificultan otras."
+    },
+    {
+      "source_id": "N15-s19-b003",
+      "kind": "paragraph",
+      "text": "Maturana y Varela invitan a revisar desde qué posición conocemos. Podemos usar esa pregunta para distinguir una vista del operador de una vista del huésped, sin atribuir a esos autores una notación de arquitectura. Etkin y Schvarstein aportan al análisis de reglas e identidad organizacional, relevantes cuando cada área conserva su propio modelo como territorio."
+    },
+    {
+      "source_id": "N15-s19-b004",
+      "kind": "paragraph",
+      "text": "Sosa Escudero ayuda a interrogar las fuentes y el alcance de indicadores que alimentan modelos. Echeverría aporta a la comprensión del lenguaje como parte de la acción: una etiqueta puede organizar una expectativa, una decisión o una responsabilidad."
+    },
+    {
+      "source_id": "N15-s19-b005",
+      "kind": "paragraph",
+      "text": "Varsavsky permite agregar una pregunta sobre fines y prioridades: ¿qué problemas elegimos representar y para quién son importantes? Aplicada acá, esa pregunta evita que sólo entren al modelo las preocupaciones más fáciles de medir o las de quien tiene más autoridad formal. No reemplaza la precisión técnica; ayuda a orientar para qué la buscamos."
+    },
+    {
+      "source_id": "N15-s20-h2",
+      "kind": "heading-2",
+      "text": "Síntesis"
+    },
+    {
+      "source_id": "N15-s20-b001",
+      "kind": "paragraph",
+      "text": "Elegir un modelo es decidir qué relaciones necesitamos conservar para una pregunta. Primero aclaramos decisión, audiencia y evidencia. Después elegimos familia, notación, alcance y detalle."
+    },
+    {
+      "source_id": "N15-s20-b002",
+      "kind": "paragraph",
+      "text": "Estructura, comportamiento, decisiones, causalidad y experiencia permiten ver aspectos distintos. Pueden complementarse sin superponerse en una única lámina. Las correspondencias y las fuentes sostienen la relación entre vistas."
+    },
+    {
+      "source_id": "N15-s20-b003",
+      "kind": "paragraph",
+      "text": "La selección incluye costo de lectura, validación y mantenimiento. Una vista puede corregirse, retirarse o no construirse si otra forma de evidencia responde mejor. El trabajo ya invertido no garantiza utilidad futura."
+    },
+    {
+      "source_id": "N15-s20-b004",
+      "kind": "paragraph",
+      "text": "HH-15 comprueba cada vista y el conjunto con escenarios. El resultado buscado es que las personas puedan decidir, reconocer límites y revisar lo que cambió. N16 usará esas conexiones para trabajar contradicciones sin esconderlas."
+    },
+    {
+      "source_id": "N15-s21-h2",
+      "kind": "heading-2",
+      "text": "Cinco píldoras para recordar"
+    },
+    {
+      "source_id": "N15-s21-b001",
+      "kind": "list-item",
+      "text": "Un buen modelo deja cosas afuera y explica por qué."
+    },
+    {
+      "source_id": "N15-s21-b002",
+      "kind": "list-item",
+      "text": "La pregunta orienta el dibujo; la plantilla no debería inventar la pregunta."
+    },
+    {
+      "source_id": "N15-s21-b003",
+      "kind": "list-item",
+      "text": "Dos vistas pueden ser distintas y compatibles si conservan significados y límites claros."
+    },
+    {
+      "source_id": "N15-s21-b004",
+      "kind": "list-item",
+      "text": "El costo no termina al dibujar: también hay que leer, comprobar y mantener."
+    },
+    {
+      "source_id": "N15-s21-b005",
+      "kind": "list-item",
+      "text": "Varias vistas vinculadas pueden ser más comprensibles que una lámina que intenta mostrarlo todo."
+    },
+    {
+      "source_id": "N15-s22-h2",
+      "kind": "heading-2",
+      "text": "Glosario esencial"
+    },
+    {
+      "source_id": "N15-s22-b001",
+      "kind": "paragraph",
+      "text": "**Alcance:** frontera de lo que se representa, incluyendo sistema, personas, período y situación. Por ejemplo, llegada y acceso, no toda la estadía."
+    },
+    {
+      "source_id": "N15-s22-b002",
+      "kind": "paragraph",
+      "text": "**Audiencia:** quienes necesitan interpretar, discutir, usar o mantener una representación. Puede haber varias con necesidades diferentes."
+    },
+    {
+      "source_id": "N15-s22-b003",
+      "kind": "paragraph",
+      "text": "**Cartera de modelos:** conjunto de representaciones vinculadas, con propósito y revisión definidos. No es simplemente una carpeta de dibujos."
+    },
+    {
+      "source_id": "N15-s22-b004",
+      "kind": "paragraph",
+      "text": "**Concern:** preocupación relevante de una parte interesada en la terminología de arquitectura. «Cómo recuperar acceso si falla el proveedor» es una preocupación concreta."
+    },
+    {
+      "source_id": "N15-s22-b005",
+      "kind": "paragraph",
+      "text": "**Deuda de modelo:** costo y riesgo de conservar representaciones ambiguas o desactualizadas que siguen usándose para decidir."
+    },
+    {
+      "source_id": "N15-s22-b006",
+      "kind": "paragraph",
+      "text": "**Familia de modelo:** grupo de representaciones orientadas a ciertas relaciones, como estructura, comportamiento o experiencia. Las familias pueden complementarse."
+    },
+    {
+      "source_id": "N15-s22-b007",
+      "kind": "paragraph",
+      "text": "**Modelo:** representación selectiva construida para un propósito. Puede ser gráfica, textual, tabular o ejecutable."
+    },
+    {
+      "source_id": "N15-s22-b008",
+      "kind": "paragraph",
+      "text": "**Notación:** convenciones sobre elementos, relaciones y forma de lectura. Usarla correctamente no demuestra por sí solo que lo representado sea verdadero."
+    },
+    {
+      "source_id": "N15-s22-b009",
+      "kind": "paragraph",
+      "text": "**Resolución:** cantidad de detalle dentro de un nivel y alcance. Se elige según lo que la decisión necesita distinguir."
+    },
+    {
+      "source_id": "N15-s22-b010",
+      "kind": "paragraph",
+      "text": "**Trazabilidad:** posibilidad de recorrer vínculos entre fuentes, afirmaciones, modelos y decisiones. Enlazar archivos no asegura que estén actualizados."
+    },
+    {
+      "source_id": "N15-s22-b011",
+      "kind": "paragraph",
+      "text": "**Punto de vista (*viewpoint*):** convenciones para construir vistas que atienden determinadas preocupaciones. Define una manera de representar, no una instancia concreta."
+    },
+    {
+      "source_id": "N15-s22-b012",
+      "kind": "paragraph",
+      "text": "**Vista:** representación concreta desde un punto de vista. Muestra aspectos pertinentes para ciertas preguntas y audiencias."
+    },
+    {
+      "source_id": "N15-s22-b013",
+      "kind": "paragraph",
+      "text": "**Vigencia:** condición o período en que una representación puede usarse para el propósito indicado. Una vista histórica puede conservar valor sin estar vigente para operar."
+    },
+    {
+      "source_id": "N15-s23-h2",
+      "kind": "heading-2",
+      "text": "Preguntas de preparación"
+    },
+    {
+      "source_id": "N15-s23-b001",
+      "kind": "list-item",
+      "text": "¿Para qué sirve un mapa de subte y para qué no? Usá esa diferencia para explicar por qué más detalle no siempre mejora un modelo."
+    },
+    {
+      "source_id": "N15-s23-b002",
+      "kind": "list-item",
+      "text": "En un modelo del ingreso al hotel, ¿qué sería cambiar alcance, cambiar nivel y agregar detalle?"
+    },
+    {
+      "source_id": "N15-s23-b003",
+      "kind": "list-item",
+      "text": "Elegí una pregunta que necesite proceso, otra estados y otra arquitectura. ¿Qué perderías si usaras sólo una de esas vistas?"
+    },
+    {
+      "source_id": "N15-s23-b004",
+      "kind": "list-item",
+      "text": "¿Cómo probarías que Lucía puede usar una representación sin tener al autor al lado?"
+    },
+    {
+      "source_id": "N15-s23-b005",
+      "kind": "list-item",
+      "text": "¿Qué evidencia te llevaría a retirar de uso un modelo que llevó mucho trabajo construir?"
+    },
+    {
+      "source_id": "N15-s23-b006",
+      "kind": "list-item",
+      "text": "Si una herramienta genera una arquitectura desde código, ¿qué podría faltar y cómo lo comprobarías?"
+    },
+    {
+      "source_id": "N15-s23-b007",
+      "kind": "paragraph",
+      "text": "Para el encuentro, elegí una decisión conocida y formulá tres preguntas que necesites responder. Compará al menos cuatro familias de representación y una alternativa no gráfica. Proponé un conjunto pequeño: explicá quién lo usará, de dónde sale la evidencia, qué omite, cómo se mantendrá y con qué caso probarías su utilidad."
+    },
+    {
+      "source_id": "N15-s24-h2",
+      "kind": "heading-2",
+      "text": "Referencias base"
+    },
+    {
+      "source_id": "N15-s24-b001",
+      "kind": "list-item",
+      "text": "Box, G. E. P. (1976). “Science and Statistics”. *Journal of the American Statistical Association*, 71(356), 791 a 799. https://doi.org/10.1080/01621459.1976.10480949"
+    },
+    {
+      "source_id": "N15-s24-b002",
+      "kind": "list-item",
+      "text": "Checkland, P. y Poulter, J. (2007). *Learning for Action*. Wiley. ISBN 978-0-470-02554-3."
+    },
+    {
+      "source_id": "N15-s24-b003",
+      "kind": "list-item",
+      "text": "Sterman, J. D. (2000). *Business Dynamics*. McGraw-Hill."
+    },
+    {
+      "source_id": "N15-s24-b004",
+      "kind": "list-item",
+      "text": "Moody, D. (2009). “The ‘Physics’ of Notations: Toward a Scientific Basis for Constructing Visual Notations in Software Engineering”. *IEEE Transactions on Software Engineering*, 35(6), 756 a 779. https://doi.org/10.1109/TSE.2009.67"
+    },
+    {
+      "source_id": "N15-s24-b005",
+      "kind": "list-item",
+      "text": "ISO/IEC/IEEE (2022). *ISO/IEC/IEEE 42010:2022 Software, systems and enterprise: Architecture description*. https://www.iso.org/standard/74393.html"
+    },
+    {
+      "source_id": "N15-s24-b006",
+      "kind": "list-item",
+      "text": "Object Management Group (2017). *Unified Modeling Language, Version 2.5.1*. https://www.omg.org/spec/UML/2.5.1"
+    },
+    {
+      "source_id": "N15-s24-b007",
+      "kind": "list-item",
+      "text": "Object Management Group (2014). *Business Process Model and Notation, Version 2.0.2*. https://www.omg.org/spec/BPMN/2.0.2"
+    },
+    {
+      "source_id": "N15-s24-b008",
+      "kind": "list-item",
+      "text": "Scolari, C. A. (2018). *Las leyes de la interfaz: diseño, ecología, evolución, tecnología*. Gedisa."
+    },
+    {
+      "source_id": "N15-s24-b009",
+      "kind": "list-item",
+      "text": "Stickdorn, M., Hormess, M. E., Lawrence, A. y Schneider, J. (2018). *This Is Service Design Doing*. O’Reilly Media."
+    },
+    {
+      "source_id": "N15-s24-b010",
+      "kind": "list-item",
+      "text": "The Open Group (2022). *ArchiMate Specification, Version 3.2*. https://www.opengroup.org/archimate-licensed-downloads"
+    },
+    {
+      "source_id": "N15-s24-b011",
+      "kind": "list-item",
+      "text": "Brown, S. (s. f.). *The C4 Model for Visualising Software Architecture*. Consultado el 8 de septiembre de 2026. https://c4model.com/"
+    },
+    {
+      "source_id": "N15-s24-b012",
+      "kind": "list-item",
+      "text": "Lankhorst, M. et al. (2017). *Enterprise Architecture at Work*. Springer. https://doi.org/10.1007/978-3-662-53933-0"
+    },
+    {
+      "source_id": "N15-s24-b013",
+      "kind": "list-item",
+      "text": "Jackson, M. (2001). *Problem Frames*. Addison-Wesley."
+    },
+    {
+      "source_id": "N15-s24-b014",
+      "kind": "list-item",
+      "text": "Object Management Group (2024). *Business Architecture Core Metamodel, Version 1.0*. https://www.omg.org/spec/BACM/1.0"
+    },
+    {
+      "source_id": "N15-s24-b015",
+      "kind": "list-item",
+      "text": "Schön, D. A. (1983). *The Reflective Practitioner*. Basic Books."
+    },
+    {
+      "source_id": "N15-s24-b016",
+      "kind": "list-item",
+      "text": "Senge, P. M. (2006). *The Fifth Discipline*, Revised Edition. Currency."
+    },
+    {
+      "source_id": "N15-s24-b017",
+      "kind": "list-item",
+      "text": "Fowler, M. (2003). *UML Distilled*. Addison-Wesley."
+    },
+    {
+      "source_id": "N15-s24-b018",
+      "kind": "list-item",
+      "text": "Booch, G. et al. (2007). *Object-Oriented Analysis and Design with Applications*. Addison-Wesley."
+    },
+    {
+      "source_id": "N15-s24-b019",
+      "kind": "list-item",
+      "text": "Davenport, T. H. (1993). *Process Innovation: Reengineering Work through Information Technology*. Harvard Business School Press."
+    },
+    {
+      "source_id": "N15-s24-b020",
+      "kind": "list-item",
+      "text": "Bunge, M. (2004). *Emergencia y convergencia: novedad cualitativa y unidad del conocimiento*. Gedisa."
+    },
+    {
+      "source_id": "N15-s24-b021",
+      "kind": "list-item",
+      "text": "Flores, F. (1997). *Creando organizaciones para el futuro*. Dolmen."
+    },
+    {
+      "source_id": "N15-s24-b022",
+      "kind": "list-item",
+      "text": "García, R. (2006). *Sistemas complejos: conceptos, método y fundamentación epistemológica de la investigación interdisciplinaria*. Gedisa."
+    },
+    {
+      "source_id": "N15-s24-b023",
+      "kind": "list-item",
+      "text": "Maturana, H. R. y Varela, F. J. (1984). *El árbol del conocimiento: las bases biológicas del entendimiento humano*. Editorial Universitaria."
+    },
+    {
+      "source_id": "N15-s24-b024",
+      "kind": "list-item",
+      "text": "Etkin, J. y Schvarstein, L. (1989). *Identidad de las organizaciones: invariancia y cambio*. Paidós."
+    },
+    {
+      "source_id": "N15-s24-b025",
+      "kind": "list-item",
+      "text": "Sosa Escudero, W. (2019). *Big Data: breve manual para conocer la ciencia de datos que ya invadió nuestras vidas*. Siglo XXI Editores."
+    },
+    {
+      "source_id": "N15-s24-b026",
+      "kind": "list-item",
+      "text": "Echeverría, R. (2005). *Ontología del lenguaje*. Granica."
+    },
+    {
+      "source_id": "N15-s24-b027",
+      "kind": "list-item",
+      "text": "Varsavsky, O. (1972). *Hacia una política científica nacional*. Ediciones Periferia."
+    }
+  ]
+}

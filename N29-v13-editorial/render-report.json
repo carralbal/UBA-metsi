@@ -1,0 +1,1227 @@
+{
+  "missingImages": [],
+  "hiddenSourceBlocks": [],
+  "sourceBlocks": [
+    {
+      "id": "N29-h1",
+      "text": "Cambiar el sistema sin perder el control del servicio"
+    },
+    {
+      "id": "N29-s01-h2",
+      "text": "Pregunta profesional"
+    },
+    {
+      "id": "N29-s01-b001",
+      "text": "¿Cómo ponemos un cambio en funcionamiento y qué hacemos si volver a la versión anterior ya no alcanza para resolver el problema?"
+    },
+    {
+      "id": "N29-s02-h2",
+      "text": "Volvió el programa anterior. Los pagos seguían duplicados"
+    },
+    {
+      "id": "N29-s02-b001",
+      "text": "Imaginá una empresa de pagos ficticia. El equipo prepara una nueva versión del servicio que calcula comisiones y confirma transferencias. Las pruebas pasan y el cambio se habilita para una parte de las operaciones. Veinte minutos después, Atención empieza a recibir reclamos: algunas personas ven movimientos duplicados."
+    },
+    {
+      "id": "N29-s02-b002",
+      "text": "El equipo activa la vuelta a la versión anterior, conocida como rollback. El programa viejo queda funcionando otra vez. Pero los reclamos continúan. ¿Cómo puede ser, si ya se deshizo el cambio?"
+    },
+    {
+      "id": "N29-s02-b003",
+      "text": "En realidad, sólo se deshizo una parte. La versión nueva había transformado datos. También había enviado mensajes que seguían esperando procesamiento. Y un proveedor estaba repitiendo solicitudes porque no había recibido una respuesta. El programa podía volver atrás; todo lo que había ocurrido alrededor no volvía con él."
+    },
+    {
+      "id": "N29-s02-b004",
+      "text": "Es como corregir el archivo de una invitación después de haberla enviado. El archivo queda bien, pero quienes recibieron la primera versión todavía tienen la fecha equivocada. Hay que identificar a esas personas y comunicar la corrección. Recuperar el archivo y reparar la consecuencia son acciones diferentes."
+    },
+    {
+      "id": "N29-s02-b005",
+      "text": "En la empresa de pagos, esa diferencia es mucho más delicada. No corresponde borrar movimientos ni restaurar una copia sin saber qué operaciones legítimas se perderían. El equipo necesita reconstruir cuáles se iniciaron, cuáles se confirmaron y qué efectos produjo cada una. La decisión requiere competencias técnicas, operativas y financieras dentro de sus responsabilidades."
+    },
+    {
+      "id": "N29-s02-b006",
+      "text": "Aparecen dos opciones. Una es restaurar un estado anterior y reconciliar lo ocurrido después. Otra es conservar el estado actual y corregir los registros afectados. Ninguna es buena por definición: depende de qué se sabe, qué puede recuperarse y qué daño adicional podría generar la intervención."
+    },
+    {
+      "id": "N29-s02-b007",
+      "text": "La empresa limita nuevas operaciones afectadas, conserva evidencia y prepara una reparación controlada. Las correcciones se verifican para no duplicar de nuevo un efecto. Los casos ambiguos no se resuelven adivinando. Se derivan a una revisión autorizada."
+    },
+    {
+      "id": "N29-s02-b008",
+      "text": "La investigación también encuentra un problema previo. La aprobación había mirado sobre todo el código y sus pruebas. No había preguntado suficientemente por datos, mensajes pendientes, configuración del proveedor ni capacidad de Atención para responder. La automatización había hecho lo programado; el plan era incompleto."
+    },
+    {
+      "id": "N29-s02-b009",
+      "text": "N29 trabaja sobre esa diferencia. Poner un programa en producción es una parte del cambio. La responsabilidad más amplia consiste en saber quién recibirá sus efectos, con qué evidencia se autoriza y cómo se recuperará el servicio si falla."
+    },
+    {
+      "id": "N29-s03-h2",
+      "text": "Hotel Horizonte: el botón de volver no desbloqueaba las habitaciones"
+    },
+    {
+      "id": "N29-s03-b001",
+      "text": "HH-28 había mostrado que la marca general de accesibilidad no alcanzaba para comprobar condiciones específicas. También dejó escenarios de calidad que debían respetarse al corregir el sistema. HH-29 toma esas condiciones y prepara una nueva versión de la asignación."
+    },
+    {
+      "id": "N29-s03-b002",
+      "text": "Federico despliega el cambio en una sede piloto. La cadena de construcción y pruebas termina sin errores. Poco después, Lucía informa que algunas habitaciones quedan bloqueadas. La pantalla técnica está en verde, pero el servicio no funciona como se esperaba."
+    },
+    {
+      "id": "N29-s03-b003",
+      "text": "El equipo revisa qué cambió. Una migración transformó estados del PMS, el sistema de gestión hotelera. Una regla de cerraduras ya utiliza la nueva interpretación. La planilla de Mariela sigue enviando «liberada» para indicar limpieza terminada. Ese uso no era incorrecto en sí mismo: N27 había separado limpieza de condición completa para asignar. El problema está en cómo conviven esas representaciones durante la transición."
+    },
+    {
+      "id": "N29-s03-b004",
+      "text": "Volver únicamente la aplicación puede empeorar la situación si la versión anterior interpreta mal los datos nuevos. Antes de hacerlo, Federico debe comprobar compatibilidad. Ricardo, por su parte, necesita saber qué procedimiento puede usar el turno mientras se investiga."
+    },
+    {
+      "id": "N29-s03-b005",
+      "text": "Camila confirma que la sede siguió vendiendo durante la ventana. No se habían detenido las obligaciones que el servicio debía atender. Por eso una copia anterior tampoco puede restaurarse sin considerar reservas y mensajes producidos después."
+    },
+    {
+      "id": "N29-s03-b006",
+      "text": "La respuesta limita la exposición del cambio a una franja de habitaciones y congela modificaciones comerciales que agregarían incertidumbre durante esa ventana. No borra las reservas ya tomadas ni suspende su atención. Las personas afectadas requieren una alternativa y una explicación de lo que ocurre."
+    },
+    {
+      "id": "N29-s03-b007",
+      "text": "Elena asigna a Ricardo autoridad para detener la exposición dentro del alcance acordado. Federico reconstruye versiones, configuración y transformaciones; Lucía verifica el resultado en Recepción; Mariela comprueba condiciones materiales. Las decisiones que exceden esas funciones deben escalarse a la competencia correspondiente."
+    },
+    {
+      "id": "N29-s03-b008",
+      "text": "El plan distingue tres acciones: volver una versión cuando es compatible, corregir datos hacia adelante cuando no conviene restaurarlos y reparar consecuencias que ya recibió una persona. No las reúne bajo una promesa vaga de «tenemos rollback»."
+    },
+    {
+      "id": "N29-s03-b009",
+      "text": "Las primeras cincuenta transiciones serán una ventana de revisión, no una autorización automática para ampliar. Una discrepancia entre PMS y cerradura exige actuar antes. La ampliación requiere evidencia de los escenarios relevantes, no sólo que el contador llegue a cincuenta."
+    },
+    {
+      "id": "N29-s04-h2",
+      "text": "Tesis"
+    },
+    {
+      "id": "N29-s04-b001",
+      "text": "Un cambio está bajo control cuando podemos responder cinco preguntas: qué cambió, quién lo está usando, por qué se autorizó, quién puede detenerlo y cómo se recuperará el servicio. Saber únicamente qué versión de código se instaló deja demasiadas consecuencias afuera."
+    },
+    {
+      "id": "N29-s04-b002",
+      "text": "El programa funciona junto con datos, parámetros, permisos, infraestructura y personas. Cambiar una regla de configuración puede alterar el resultado sin modificar una línea de código. Una migración puede dejar datos que una versión anterior ya no entiende. Una promesa enviada puede seguir vigente aunque se apague la función que la produjo."
+    },
+    {
+      "id": "N29-s04-b003",
+      "text": "Automatizar ayuda cuando hace repetibles los pasos y produce evidencia confiable. No convierte un plan incompleto en un plan correcto. Si la cadena no comprueba la compatibilidad con los datos o la capacidad del turno, un resultado favorable no demuestra esas propiedades."
+    },
+    {
+      "id": "N29-s04-b004",
+      "text": "Tampoco se resuelve agregando una firma manual a cada paso. Una aprobación aporta valor si alguien examina una pregunta relevante y puede cambiar la decisión. Si sólo copia el color del tablero, agrega espera sin necesariamente mejorar el control."
+    },
+    {
+      "id": "N29-s04-b005",
+      "text": "La entrega puede ser frecuente y cuidadosa a la vez. Cambios pequeños, pruebas pertinentes y recuperación preparada permiten aprender antes y localizar mejor los problemas. Pero la frecuencia no es un mérito aislado: liberar muchas veces mientras crecen las reparaciones nocturnas no demuestra una mejora del sistema."
+    },
+    {
+      "id": "N29-s04-b006",
+      "text": "La meta no es volver siempre atrás. Algunas consecuencias no se pueden deshacer. La meta es reconocer esa situación antes de exponer, limitar lo que haga falta y disponer de una reparación comprobable, sin borrar lo ocurrido ni descargarlo silenciosamente sobre Operaciones."
+    },
+    {
+      "id": "N29-s05-h2",
+      "text": "De la calidad esperada a la decisión de liberar"
+    },
+    {
+      "id": "N29-s05-b001",
+      "text": "N28 definió qué necesitaba demostrar el servicio. N29 convierte esas condiciones en un proceso concreto de cambio. Vincula pruebas y decisiones con una versión, un entorno y un alcance de uso."
+    },
+    {
+      "id": "N29-s05-b002",
+      "text": "Conviene separar tres momentos. Integrar combina trabajo en una base compartida. Desplegar instala un artefacto en un ambiente. Liberar habilita una capacidad para un uso determinado. Pueden ocurrir muy cerca, pero responden preguntas diferentes."
+    },
+    {
+      "id": "N29-s05-b003",
+      "text": "La separación tampoco vuelve inocuo el despliegue. Un programa instalado con su función visible apagada puede ejecutar tareas de fondo, consumir recursos o transformar datos. Hay que examinar todos sus efectos, no sólo si apareció un botón nuevo."
+    },
+    {
+      "id": "N29-s05-b004",
+      "text": "N30 observará lo que ocurra después. Para interpretar sus señales necesitará saber qué combinación de versiones y condiciones recibió cada población. Esa información empieza a construirse aquí, no cuando aparece el primer incidente."
+    },
+    {
+      "id": "N29-s06-h2",
+      "text": "Las ideas que sostienen el recorrido"
+    },
+    {
+      "id": "N29-s06-b001",
+      "text": "Humble y Farley desarrollan la entrega continua como capacidad de mantener software preparado para liberarse mediante un proceso confiable. Beck y Fowler ayudan a comprender por qué integrar, probar y modificar en pasos pequeños reduce la acumulación de diferencias difíciles de revisar."
+    },
+    {
+      "id": "N29-s06-b002",
+      "text": "Forsgren, Humble y Kim, junto con la investigación DORA, relacionan prácticas de entrega con desempeño y estabilidad. Sus resultados no significan que cualquier organización deba copiar una frecuencia ni que una correlación apruebe un cambio concreto. Sirven para estudiar cómo se entrega y se aprende."
+    },
+    {
+      "id": "N29-s06-b003",
+      "text": "NIST aborda desarrollo seguro y cadena de suministro. SLSA organiza garantías sobre origen y construcción. Esas fuentes hacen preguntas que una prueba funcional no responde: de dónde vino el artefacto, cómo se produjo y qué confianza merece su historia."
+    },
+    {
+      "id": "N29-s06-b004",
+      "text": "Las fuentes de gestión de servicios y seguridad aportan responsabilidades y controles. OpenGitOps describe principios para gestionar estados declarados mediante versiones y reconciliación. Git y GitHub aportan mecanismos diferentes para historia y colaboración, que veremos sin confundirlos con el gobierno completo del cambio."
+    },
+    {
+      "id": "N29-s06-b005",
+      "text": "Edmondson permite examinar si alguien puede advertir una falla y detener una liberación sin que la presión lo silencie. Flores, Bunge y García ayudan a relacionar esa práctica con compromisos, explicaciones y condiciones organizacionales. Una cadena técnica puede estar bien diseñada y fallar si nadie puede discutir lo que está por hacer."
+    },
+    {
+      "id": "N29-s07-h2",
+      "text": "Movimiento 1 · Saber exactamente qué estamos cambiando"
+    },
+    {
+      "id": "N29-s07-b001",
+      "text": "Si dos personas dicen «estamos usando la versión nueva», todavía falta saber de qué hablan. Pueden compartir aplicación y tener parámetros, permisos o datos distintos. Antes de aprobar necesitamos identificar la combinación que produce el comportamiento."
+    },
+    {
+      "id": "N29-s07-b002",
+      "text": "Integración continua: encontrar diferencias cuando todavía son pequeñas"
+    },
+    {
+      "id": "N29-s07-b003",
+      "text": "Pensá en un trabajo grupal. Si cada integrante escribe durante un mes sin mirar a los demás, al juntar todo aparecen definiciones distintas, repeticiones y partes incompatibles. Revisar pequeños avances juntos permite detectar antes esos problemas."
+    },
+    {
+      "id": "N29-s07-b004",
+      "text": "La integración continua, o CI, mantiene cambios pequeños incorporados y verificados con frecuencia en una base compartida. No significa solamente tener una herramienta que ejecuta pruebas. Requiere que el trabajo se integre realmente y que las fallas reciban atención."
+    },
+    {
+      "id": "N29-s07-b005",
+      "text": "El mecanismo es sencillo: cuanto menos tiempo permanecen separados los cambios, menos diferencias se acumulan antes de contrastarlas. Si una verificación falla después de un cambio pequeño, suele ser más fácil localizar qué lo produjo. No es una garantía de ausencia de errores; es una forma de reducir demora y ambigüedad del diagnóstico."
+    },
+    {
+      "id": "N29-s07-b006",
+      "text": "En HH-29, modificar la interpretación de un estado exige revisar pruebas del intercambio y de los consumidores afectados. Si sólo se comprueba que el código compila, la integración puede pasar y conservar el error de significado."
+    },
+    {
+      "id": "N29-s07-b007",
+      "text": "Una base con verificaciones fallidas necesita una política: corregir, retirar el cambio o registrar una excepción justificada con control. Acumular cambios sobre un estado que nadie confía vuelve menos útil cada resultado siguiente."
+    },
+    {
+      "id": "N29-s07-b008",
+      "text": "También hay que investigar las pruebas intermitentes. Si una prueba pasa y falla sin una explicación conocida, no conviene resolverlo repitiéndola hasta obtener verde. Puede haber un problema del producto, del ambiente o de la propia prueba. Distinguirlo recupera la confianza en la señal."
+    },
+    {
+      "id": "N29-s07-b009",
+      "text": "El resultado de CI prepara evidencia. No autoriza por sí solo una exposición a huéspedes. Esa decisión agrega preguntas sobre datos, operación, riesgos y recuperación."
+    },
+    {
+      "id": "N29-s07-b010",
+      "text": "CI/CD: preparado para liberar no es lo mismo que liberar automáticamente"
+    },
+    {
+      "id": "N29-s07-b011",
+      "text": "La sigla CD se usa para dos ideas relacionadas. Entrega continua, continuous delivery, significa mantener los cambios en condiciones de poder liberarse mediante un proceso confiable. Puede conservar una decisión explícita antes de producción. Despliegue continuo, continuous deployment, lleva automáticamente a producción los cambios que superan los controles definidos."
+    },
+    {
+      "id": "N29-s07-b012",
+      "text": "La diferencia importa. Un equipo puede practicar entrega continua sin poner cada modificación inmediatamente al alcance de todos. Puede necesitar una ventana coordinada, una habilitación gradual o una revisión del riesgo."
+    },
+    {
+      "id": "N29-s07-b013",
+      "text": "Una cadena automatizada, también llamada pipeline, reúne pasos como construir, probar, verificar y desplegar. Automatiza una secuencia acordada. Su capacidad depende de las condiciones que representa y de la confianza en sus herramientas, permisos y resultados."
+    },
+    {
+      "id": "N29-s07-b014",
+      "text": "En el hotel, la cadena puede preparar y comprobar el artefacto. La habilitación de una nueva regla puede esperar a que estén disponibles el procedimiento de Recepción y la compatibilidad de datos. No es una contradicción: entrega preparada y exposición autorizada son estados distintos."
+    },
+    {
+      "id": "N29-s07-b015",
+      "text": "Si se opta por despliegue continuo, la autoridad no desaparece. Se expresa en reglas, permisos, criterios y mecanismos de detención previamente establecidos. Quienes los definen necesitan revisar si siguen siendo apropiados. «Fue automático» describe cómo ocurrió, no quién respondió por la política."
+    },
+    {
+      "id": "N29-s07-b016",
+      "text": "Tampoco se debe considerar manual igual a inseguro. Un cambio infrecuente puede usar pasos manuales claros y verificables. La pregunta es qué riesgo de variación, error y demora introduce cada método, y cómo se controla. La automatización es una herramienta para mejorar esa capacidad, no un objetivo que justifica cualquier exposición."
+    },
+    {
+      "id": "N29-s07-b017",
+      "text": "Git y GitHub: historia por un lado, colaboración por otro"
+    },
+    {
+      "id": "N29-s07-b018",
+      "text": "Git registra versiones de archivos y relaciones entre cambios. Permite comparar, recuperar y trabajar con líneas de desarrollo. GitHub es una plataforma que utiliza repositorios y agrega colaboración, revisiones y automatizaciones. No son dos nombres de lo mismo."
+    },
+    {
+      "id": "N29-s07-b019",
+      "text": "En Git, un commit identifica una revisión registrada. Una rama permite trabajar sobre una línea de cambios y una etiqueta puede señalar un punto relevante. Esta historia ayuda a reconstruir diferencias, pero no demuestra que cada cambio haya sido correcto o aprobado. [Pro Git, Chacon y Straub](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)."
+    },
+    {
+      "id": "N29-s07-b020",
+      "text": "Una solicitud de cambio en GitHub puede reunir la diferencia propuesta, su explicación, pruebas y comentarios. Las protecciones de rama permiten exigir controles o revisiones y restringir ciertas operaciones; deben configurarse de acuerdo con la política que se quiere sostener. [Documentación de ramas protegidas](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches)."
+    },
+    {
+      "id": "N29-s07-b021",
+      "text": "En HH-29, la propuesta necesita explicar qué cambia en la asignación y qué riesgo trata. Federico revisa implementación; Lucía ayuda a contrastar el comportamiento con la atención; la autoridad correspondiente evalúa exposición. No todos tienen que revisar el mismo detalle ni hacer de expertos en todo."
+    },
+    {
+      "id": "N29-s07-b022",
+      "text": "La revisión agrega valor cuando puede producir una objeción que cambie algo. Dos aprobaciones rápidas de personas sin contexto pueden ofrecer menos control que una revisión pertinente. La cantidad de firmas no mide automáticamente independencia o calidad."
+    },
+    {
+      "id": "N29-s07-b023",
+      "text": "La historia también necesita límites. Una configuración cambiada directamente en producción puede alterar el servicio sin aparecer en el repositorio. Por eso hay que conectar lo registrado con lo que realmente está funcionando. Y no corresponde guardar credenciales en archivos versionados para mejorar la trazabilidad: se registra su referencia y gestión, no el secreto expuesto."
+    },
+    {
+      "id": "N29-s07-b024",
+      "text": "Artefacto: identificar la unidad que realmente se instala"
+    },
+    {
+      "id": "N29-s07-b025",
+      "text": "Una receta no es la torta. El código fuente describe qué construir; el artefacto es la unidad resultante que se distribuye o instala, como un paquete o una imagen de aplicación. Entre ambos intervienen herramientas y dependencias."
+    },
+    {
+      "id": "N29-s07-b026",
+      "text": "Si se reconstruye para cada ambiente, pueden introducirse diferencias. Una biblioteca descargada después podría tener otro contenido o una opción de construcción podría cambiar. Por eso es valioso construir una vez, identificar el resultado y promover esa misma unidad por los controles correspondientes."
+    },
+    {
+      "id": "N29-s07-b027",
+      "text": "Un identificador por contenido, como un hash, ayuda a comprobar que dos copias tienen el mismo contenido bajo el mecanismo utilizado. No identifica por sí solo a un autor confiable ni prueba que el programa sea correcto. Una firma y su cadena de confianza responden otras preguntas."
+    },
+    {
+      "id": "N29-s07-b028",
+      "text": "El artefacto candidato a liberación se relaciona con fuente, dependencias, proceso de construcción y resultados de prueba. «Está listo» significa listo para un alcance y unas condiciones, no libre de todo defecto imaginable."
+    },
+    {
+      "id": "N29-s07-b029",
+      "text": "En el hotel, el registro debe permitir verificar que la unidad desplegada corresponde a la examinada. Si se descarga parte del sistema en tiempo de ejecución, esa dependencia también requiere identificación y control. No se presenta todo como inmutable cuando una parte puede cambiar fuera del artefacto."
+    },
+    {
+      "id": "N29-s07-b030",
+      "text": "Promover la misma unidad no produce necesariamente el mismo comportamiento. Datos, configuración y permisos siguen importando. La identidad del artefacto es un punto de apoyo para la investigación, no una descripción completa del sistema."
+    },
+    {
+      "id": "N29-s07-b031",
+      "text": "Ambiente y configuración: lo que cambia aunque el código sea igual"
+    },
+    {
+      "id": "N29-s07-b032",
+      "text": "Dos teléfonos del mismo modelo pueden comportarse distinto si tienen permisos, conexión y ajustes diferentes. Del mismo modo, una aplicación depende de las condiciones en que se ejecuta."
+    },
+    {
+      "id": "N29-s07-b033",
+      "text": "El ambiente incluye infraestructura, red, servicios, datos y capacidades disponibles. La configuración establece parámetros y opciones de comportamiento. Un límite de espera, una regla de cerradura o una bandera de funcionalidad pueden cambiar el resultado sin modificar el código principal."
+    },
+    {
+      "id": "N29-s07-b034",
+      "text": "HH-29 necesita conocer tanto la aplicación como la regla que interpreta un estado para emitir acceso. Si una cambia y la otra no, el comportamiento conjunto puede dejar de ser válido. Probar cada componente por separado no necesariamente revela esa incompatibilidad."
+    },
+    {
+      "id": "N29-s07-b035",
+      "text": "Prueba y producción nunca son idénticas en todo. La tarea consiste en identificar diferencias relevantes: volumen de datos, permisos, demoras externas, versiones, tareas de fondo y patrones de uso. Se eligen ensayos que examinen los mecanismos que esas diferencias podrían afectar."
+    },
+    {
+      "id": "N29-s07-b036",
+      "text": "Los datos de ensayo deben prepararse con protección adecuada. No se copia información personal sin necesidad y sin condiciones de uso válidas sólo para conseguir realismo. Datos sintéticos bien diseñados pueden representar muchas excepciones; cuando no alcanzan, cualquier prueba con condiciones reales requiere alcance, autorización y cuidado específicos."
+    },
+    {
+      "id": "N29-s07-b037",
+      "text": "La deriva aparece cuando el estado real se aparta de la definición controlada. Puede deberse a una emergencia legítima o a una modificación no autorizada. Detectarla no implica sobrescribir a ciegas. Primero se determina qué ocurrió y qué acción segura corresponde; después se reconcilia la situación con la fuente gobernada."
+    },
+    {
+      "id": "N29-s07-b038",
+      "text": "Infraestructura como código: poder reconstruir, no sólo describir"
+    },
+    {
+      "id": "N29-s07-b039",
+      "text": "Si instalar un ambiente depende de recordar una secuencia de clics, repetirlo durante un incidente puede ser difícil. La infraestructura como código expresa recursos y reglas mediante definiciones que pueden revisarse y ejecutarse."
+    },
+    {
+      "id": "N29-s07-b040",
+      "text": "Eso permite comparar qué se propone cambiar y conservar su historia. Pero una definición válida puede crear un recurso equivocado, cortar una conexión necesaria o eliminar datos. La revisión necesita mirar el efecto, no sólo que la sintaxis sea correcta."
+    },
+    {
+      "id": "N29-s07-b041",
+      "text": "Antes de aplicar, el equipo examina qué se creará, modificará o retirará. Las operaciones destructivas requieren un tratamiento especial. El alcance aprobado debe coincidir con el plan y con lo que después se observa."
+    },
+    {
+      "id": "N29-s07-b042",
+      "text": "La reconstrucción se ensaya en un entorno controlado. Si faltan permisos, secretos o pasos manuales, se corrige el procedimiento o se documentan excepciones concretas. La mera existencia de archivos no demuestra que otra persona pueda levantar el servicio dentro del tiempo necesario."
+    },
+    {
+      "id": "N29-s07-b043",
+      "text": "GitOps agrega una forma particular de gestionar el estado deseado: declararlo, mantenerlo versionado, obtenerlo automáticamente desde la fuente y reconciliarlo con el estado observado. No es sinónimo de cualquier uso de Git ni de toda infraestructura como código. [Principios OpenGitOps](https://opengitops.dev/)."
+    },
+    {
+      "id": "N29-s07-b044",
+      "text": "La reconciliación también necesita límites operativos. Una corrección de emergencia no debe ser deshecha de manera peligrosa por un controlador que desconoce su razón. Se diseñan procedimientos de suspensión, excepción y retorno. Automatizar el estado equivocado puede repetir el error con mucha consistencia."
+    },
+    {
+      "id": "N29-s08-h2",
+      "text": "DevOps: construir y operar sin pasarse el problema"
+    },
+    {
+      "id": "N29-s08-b001",
+      "text": "Imaginá que un equipo entrega un equipo de sonido y se retira cuando se enciende. Quienes organizan el evento descubren después que nadie sabe resolver una interferencia. La entrega técnica ocurrió; la capacidad de uso quedó incompleta."
+    },
+    {
+      "id": "N29-s08-b002",
+      "text": "DevOps aborda esa separación entre desarrollo y operación. Reúne prácticas de colaboración, automatización, retroalimentación y aprendizaje para poder cambiar y sostener servicios. No queda definido por comprar una herramienta ni por llamar DevOps a un puesto."
+    },
+    {
+      "id": "N29-s08-b003",
+      "text": "En HH-29, Federico necesita conocer qué ve Lucía ante un resultado desconocido y qué puede hacer el turno. Operaciones participa antes de recibir la versión, ayudando a definir pruebas y recuperación. La información vuelve al diseño en lugar de quedar como una queja posterior."
+    },
+    {
+      "id": "N29-s08-b004",
+      "text": "Esa colaboración no borra competencias ni separaciones necesarias. Quien desarrolla no debe tener por defecto toda autoridad para aprobar, modificar producción y eliminar evidencia. Compartir responsabilidad por el resultado requiere roles claros, no acceso ilimitado de todos a todo."
+    },
+    {
+      "id": "N29-s08-b005",
+      "text": "El beneficio se observa en el recorrido: menos espera inútil, diagnóstico más rápido, cambios comprensibles y recuperación efectiva. No se demuestra sólo con frecuencia de despliegues. Si cada versión transfiere horas de conciliación a Recepción, el trabajo total puede estar empeorando."
+    },
+    {
+      "id": "N29-s08-b006",
+      "text": "La perspectiva de The DevOps Handbook y Accelerate ayuda a mirar flujo y aprendizaje. La de Edmondson agrega una condición organizacional: alguien debe poder decir que el cambio no está listo o que el resultado no coincide. Sin esa posibilidad, las herramientas pueden acelerar un silencio peligroso."
+    },
+    {
+      "id": "N29-s09-h2",
+      "text": "Movimiento 2 · Decidir quién recibe el cambio y bajo qué condiciones"
+    },
+    {
+      "id": "N29-s09-b001",
+      "text": "Hasta aquí identificamos lo que cambia. Ahora toca decidir cómo se usa. No todos los cambios requieren el mismo proceso, pero todos necesitan un alcance y una forma de responder si producen un resultado no previsto."
+    },
+    {
+      "id": "N29-s09-b002",
+      "text": "Aprobación según riesgo: revisar lo importante, no contar firmas"
+    },
+    {
+      "id": "N29-s09-b003",
+      "text": "Cambiar un texto informativo y cambiar la regla que autoriza una llave pueden requerir muy distinto cuidado, aunque ambos ocupen una sola línea. El tamaño del archivo no mide la consecuencia."
+    },
+    {
+      "id": "N29-s09-b004",
+      "text": "Una aprobación basada en riesgo considera población, datos, efectos externos, dificultad de detectar la falla y posibilidad de recuperarse. Con esa información define controles y autoridad. No significa que todo cambio pequeño pase automáticamente ni que todo cambio grande necesite un comité."
+    },
+    {
+      "id": "N29-s09-b005",
+      "text": "Una puerta de decisión es el punto donde se evalúa si se cumplen condiciones para asumir el siguiente compromiso. Puede estar parcialmente automatizada. Lo esencial es que tenga criterios, resultados posibles y responsables: avanzar, limitar, pedir más evidencia o rechazar."
+    },
+    {
+      "id": "N29-s09-b006",
+      "text": "En HH-29, los escenarios de N28 forman parte de esa puerta. Si la prueba sólo demuestra que el PMS acepta el estado, falta comprobar la relación con cerraduras, equipamiento y turno. La fecha prevista no reemplaza esa evidencia."
+    },
+    {
+      "id": "N29-s09-b007",
+      "text": "Un riesgo conocido puede requerir una limitación o una excepción autorizada, siempre dentro de las obligaciones aplicables. La excepción debe decir qué cambia, cuánto dura y cómo se observa. No sirve un campo «acepto el riesgo» que nadie relaciona con una consecuencia."
+    },
+    {
+      "id": "N29-s09-b008",
+      "text": "También se revisan los controles. Que un control nunca haya bloqueado un cambio no demuestra por sí solo que sea inútil: podría estar previniendo problemas o cubrir un riesgo poco frecuente. Hay que examinar su propósito y evidencia antes de retirarlo. Del mismo modo, un control que sólo reproduce información ya disponible puede rediseñarse para reducir espera."
+    },
+    {
+      "id": "N29-s09-b009",
+      "text": "Separar funciones sin impedir una respuesta urgente"
+    },
+    {
+      "id": "N29-s09-b010",
+      "text": "La segregación de funciones evita que una sola persona pueda completar sin control una combinación peligrosa de acciones. Por ejemplo, proponer un cambio, aprobarlo, ejecutarlo y borrar los rastros sin que nadie pueda advertirlo."
+    },
+    {
+      "id": "N29-s09-b011",
+      "text": "No exige convertir cada operación en una peregrinación de firmas. Se diseña sobre riesgos: permisos mínimos, revisión pertinente, identificación de quien actúa y protección de la evidencia. Dos firmas de personas que no pueden ver ni cuestionar el cambio no crean una separación efectiva."
+    },
+    {
+      "id": "N29-s09-b012",
+      "text": "HH-29 distingue propuesta técnica, verificación operativa y aceptación del alcance. Lucía no tiene que auditar cada biblioteca para comprobar que Recepción puede interpretar y reparar una reserva. Federico no puede declarar resuelta esa capacidad sólo porque compiló el programa."
+    },
+    {
+      "id": "N29-s09-b013",
+      "text": "Un equipo pequeño puede necesitar controles compensatorios. En una urgencia autorizada, por ejemplo, acceso temporal limitado, observación y registro reforzados pueden acompañar una intervención que no admite toda la secuencia ordinaria. Su suficiencia depende del caso; no es una autorización genérica para saltear controles obligatorios."
+    },
+    {
+      "id": "N29-s09-b014",
+      "text": "Después se verifica lo actuado, se reconcilia la configuración y se retiran los permisos extraordinarios, no los permisos permanentes necesarios para trabajar. La revisión posterior no convierte retroactivamente cualquier acción en legítima: examina lo ocurrido y sus consecuencias."
+    },
+    {
+      "id": "N29-s09-b015",
+      "text": "Si las emergencias se vuelven habituales, hay que revisar el proceso normal. Tal vez sea demasiado lento, falte capacidad o se estén clasificando urgencias para evitar preguntas. Mantener privilegios excepcionales sin límite no resuelve ninguna de esas causas."
+    },
+    {
+      "id": "N29-s09-b016",
+      "text": "Exposición progresiva: aprender sin extender de golpe el problema"
+    },
+    {
+      "id": "N29-s09-b017",
+      "text": "Una nueva regla puede instalarse y habilitarse primero en un alcance limitado. Una cohorte es el conjunto seleccionado para esa etapa. Un canario es una exposición inicial reducida que se observa antes de ampliar. Una bandera de funcionalidad permite habilitar o deshabilitar un comportamiento bajo condiciones definidas."
+    },
+    {
+      "id": "N29-s09-b018",
+      "text": "Los mecanismos no son equivalentes ni suficientes por sí solos. Una bandera apagada puede no detener tareas de fondo. Un canario pequeño puede usar la misma base y afectar indirectamente a personas que no pertenecen a su cohorte. La frontera real del impacto se investiga, no se supone."
+    },
+    {
+      "id": "N29-s09-b019",
+      "text": "En HH-29 se elige una franja de habitaciones con soporte y condiciones conocidas. Antes se comprueban riesgos relevantes en ensayos protegidos. No se usa a una población vulnerable como material de prueba ni se omiten todos los casos difíciles para conseguir resultados favorables."
+    },
+    {
+      "id": "N29-s09-b020",
+      "text": "La ampliación se apoya en señales técnicas, operativas y de experiencia. Una tasa baja de errores no habilita avanzar si aparece una asignación incompatible o un procedimiento manual que el turno no puede sostener. Los criterios se definen antes para que la presión de calendario no los cambie silenciosamente."
+    },
+    {
+      "id": "N29-s09-b021",
+      "text": "El tiempo de observación también necesita razón. Hay patrones que no aparecen en unos minutos y dependencias que se utilizan poco. Cincuenta transiciones pueden permitir una primera revisión, pero no demostrar cobertura de todo. Si el resultado es inconcluso, se mantiene o reduce alcance mientras se investiga."
+    },
+    {
+      "id": "N29-s09-b022",
+      "text": "La exposición gradual no siempre es técnicamente posible tal como se desea. Un cambio compartido puede requerir compatibilidad adicional, una migración por etapas o una ventana coordinada. En lugar de fingir un canario aislado, se reconoce esa restricción y se prepara el control correspondiente."
+    },
+    {
+      "id": "N29-s10-h2",
+      "text": "Movimiento 3 · Volver, corregir y reparar son acciones distintas"
+    },
+    {
+      "id": "N29-s10-b001",
+      "text": "Antes de liberar, el equipo necesita saber qué cambios puede deshacer y cuáles dejan efectos. No es pesimismo: es una condición para elegir rápido y con información cuando aparece un problema."
+    },
+    {
+      "id": "N29-s10-b002",
+      "text": "Rollback: volver una parte a un estado anterior"
+    },
+    {
+      "id": "N29-s10-b003",
+      "text": "Un rollback devuelve una versión o un estado al anterior dentro de un alcance definido. Puede referirse sólo a la aplicación. No es incorrecto llamarlo rollback de código; lo incorrecto es prometer que por eso quedó recuperado todo el servicio."
+    },
+    {
+      "id": "N29-s10-b004",
+      "text": "Volvamos a la invitación. Recuperar el archivo anterior es posible. Retirar de la memoria de todos la fecha que leyeron, no. El efecto externo necesita otra acción. Lo mismo ocurre con una llave emitida, una reserva comunicada o un cobro confirmado."
+    },
+    {
+      "id": "N29-s10-b005",
+      "text": "El plan de vuelta pregunta primero si la versión anterior entiende los datos actuales y puede convivir con las dependencias que ya cambiaron. Si no, reinstalarla puede agregar errores. Tener guardado el binario es necesario para ciertas reversiones, pero no demuestra que usarlas sea seguro."
+    },
+    {
+      "id": "N29-s10-b006",
+      "text": "Las copias de respaldo también necesitan prueba. Hay que saber qué contienen, si se pueden restaurar y qué operaciones posteriores quedarían afuera. Una restauración que recupera ayer y pierde reservas válidas de hoy no resuelve automáticamente la situación."
+    },
+    {
+      "id": "N29-s10-b007",
+      "text": "HH-29 separa el tiempo técnico de volver la aplicación del tiempo hasta recuperar el servicio y atender consecuencias. Federico puede terminar su paso mientras Lucía todavía revisa reservas. Ambos tiempos importan, pero no describen lo mismo."
+    },
+    {
+      "id": "N29-s10-b008",
+      "text": "La decisión puede ser no volver. Si el estado actual está mejor comprendido y una corrección acotada protege más, puede convenir avanzar. El criterio es recuperar una condición segura y explicable, no cumplir la promesa de usar el botón que se había preparado."
+    },
+    {
+      "id": "N29-s10-b009",
+      "text": "Migrar datos sin perder la posibilidad de convivir"
+    },
+    {
+      "id": "N29-s10-b010",
+      "text": "Cambiar el significado de un estado es más difícil que cambiar su nombre. Mientras distintas versiones conviven, cada una debe interpretar correctamente los datos que recibe."
+    },
+    {
+      "id": "N29-s10-b011",
+      "text": "Una estrategia es expandir y contraer. Primero se agrega una representación nueva compatible con el funcionamiento existente. Después se adaptan lectores y escritores, se migran datos con controles y, cuando hay evidencia suficiente, se retira la forma antigua. El orden depende del sistema; no es una receta idéntica para cualquier base."
+    },
+    {
+      "id": "N29-s10-b012",
+      "text": "En el hotel podría mantenerse la señal de limpieza mientras se incorpora una representación más completa de condiciones para asignar. No corresponde traducir «limpia» como «asignable» sólo para evitar un cambio en el consumidor. Esa traducción inventaría una garantía que la señal original no contiene."
+    },
+    {
+      "id": "N29-s10-b013",
+      "text": "Si durante una transición se escribe en dos representaciones, aparece otro riesgo: que diverjan. Hay que definir cuál decide en cada situación, cómo se detectan diferencias y cómo se reconcilian. La doble escritura no es segura por el solo hecho de existir."
+    },
+    {
+      "id": "N29-s10-b014",
+      "text": "El plan también marca cuándo deja de ser posible una vuelta sencilla. Antes de retirar un campo, una versión anterior puede seguir leyendo. Después de eliminarlo o cambiar irreversiblemente su significado, quizá ya no. Ese punto debe conocerse antes de ejecutar."
+    },
+    {
+      "id": "N29-s10-b015",
+      "text": "El ensayo usa datos controlados y recorre también casos ambiguos: escritura parcial, consumidor antiguo y mensaje demorado. No se fuerza una pérdida de reservas reales para comprobar si el procedimiento funciona. La prueba debe reducir incertidumbre sin crear un daño innecesario."
+    },
+    {
+      "id": "N29-s10-b016",
+      "text": "Rollforward y reparación: corregir desde donde estamos"
+    },
+    {
+      "id": "N29-s10-b017",
+      "text": "El rollforward introduce una corrección hacia adelante cuando volver no es la mejor opción o ya no restituye un estado válido. No significa seguir desplegando hasta que algo funcione. Necesita diagnóstico, alcance y comprobaciones."
+    },
+    {
+      "id": "N29-s10-b018",
+      "text": "En HH-29 puede requerirse corregir registros transformados, adaptar una regla y reconciliar mensajes pendientes. Primero se identifica el conjunto afectado. Los casos claros pueden seguir una operación preparada; los ambiguos necesitan revisión. No se transforma toda la base porque aparecieron algunos bloqueos."
+    },
+    {
+      "id": "N29-s10-b019",
+      "text": "Una operación de reparación debe poder repetirse de forma segura cuando sea posible. La idempotencia, trabajada en N27, ayuda a evitar que un reintento vuelva a producir el mismo efecto. Su alcance debe quedar definido: una corrección idempotente en la base no asegura que una notificación externa no se envíe dos veces."
+    },
+    {
+      "id": "N29-s10-b020",
+      "text": "Se compara antes y después, se verifica con el turno y se detiene si aparece otra interpretación no prevista. Las copias y registros necesarios se protegen con acceso y conservación adecuados. Guardar todo indiscriminadamente también puede crear riesgos."
+    },
+    {
+      "id": "N29-s10-b021",
+      "text": "La reparación a la persona es más amplia que la corrección técnica. Si recibió una promesa equivocada, necesita conocer su situación y una respuesta dentro de las responsabilidades aplicables. No se declara reparada porque un campo volvió a su valor correcto."
+    },
+    {
+      "id": "N29-s10-b022",
+      "text": "Después, la solución de emergencia vuelve al proceso controlado: revisión, pruebas, configuración y documentación. Si queda como una secuencia privada que sólo recuerda una persona, la próxima liberación puede repetir el problema o deshacer la corrección sin saberlo."
+    },
+    {
+      "id": "N29-s10-b023",
+      "text": "Procedencia: poder explicar de dónde salió lo que funciona"
+    },
+    {
+      "id": "N29-s10-b024",
+      "text": "Cuando un alimento tiene un problema, interesa conocer su lote y origen. En software, la procedencia conecta una unidad con su fuente, dependencias y proceso de construcción. Ayuda a investigar qué recibió una población y qué otras versiones pueden estar afectadas."
+    },
+    {
+      "id": "N29-s10-b025",
+      "text": "Una SBOM, lista de materiales de software, describe componentes conocidos del producto. Una firma permite comprobar propiedades de integridad y autoría bajo una cadena de confianza. Una atestación declara hechos sobre un proceso o artefacto y puede verificarse según su formato y confianza. Responden preguntas diferentes."
+    },
+    {
+      "id": "N29-s10-b026",
+      "text": "La lista no demuestra que cada componente sea seguro. La firma no demuestra que el uso sea adecuado. La atestación necesita evaluar a quien la produce y aquello que realmente acredita. Autenticar un artefacto defectuoso permite saber mejor qué ocurrió, pero no elimina el defecto."
+    },
+    {
+      "id": "N29-s10-b027",
+      "text": "SLSA 1.2 organiza niveles y rutas para mejorar garantías de cadena de suministro, incluyendo fuente, construcción y formatos de atestación. Se utiliza aquí como marco de procedencia, no como certificación de toda la calidad del hotel. [Especificación SLSA 1.2](https://slsa.dev/spec/v1.2/)."
+    },
+    {
+      "id": "N29-s10-b028",
+      "text": "NIST SP 800-204D estudia cómo incorporar seguridad de cadena de suministro en procesos CI/CD. Su aporte amplía la mirada a herramientas y pasos de construcción y entrega. No basta con examinar el código principal si el entorno que lo transforma o distribuye está comprometido. [NIST SP 800-204D](https://csrc.nist.gov/pubs/sp/800/204/d/final)."
+    },
+    {
+      "id": "N29-s10-b029",
+      "text": "La investigación va en dos sentidos. Desde la fuente, identifica qué se construyó. Desde la operación, identifica qué artefacto y condiciones estaban activos. Una firma válida de un archivo que nunca llegó a esa sede no explica su incidente."
+    },
+    {
+      "id": "N29-s10-b030",
+      "text": "Un aviso de vulnerabilidad pone a prueba la historia"
+    },
+    {
+      "id": "N29-s10-b031",
+      "text": "Supongamos, como ejercicio, que se informa una vulnerabilidad en una biblioteca. El equipo no debería responder únicamente «usamos esa tecnología» o «todavía no hubo incidentes»."
+    },
+    {
+      "id": "N29-s10-b032",
+      "text": "Primero identifica qué artefactos incluyen la versión afectada y qué evidencia respalda el inventario. Después localiza dónde están desplegados y bajo qué configuración. También verifica dependencias dinámicas que podrían no aparecer en una lista desactualizada."
+    },
+    {
+      "id": "N29-s10-b033",
+      "text": "La evaluación especializada determina exposición, condiciones de explotación y medidas apropiadas. La severidad publicada orienta atención, pero no reemplaza el contexto. A la inversa, no conocer una explotación local no demuestra ausencia de riesgo."
+    },
+    {
+      "id": "N29-s10-b034",
+      "text": "La respuesta puede ser actualizar, limitar una función, aislar o retirar, según el caso. La alternativa elegida necesita conocer sus propias consecuencias: apagar una dependencia puede cortar una capacidad crítica. Seguridad y continuidad deben coordinarse, no resolverse mediante decisiones aisladas."
+    },
+    {
+      "id": "N29-s10-b035",
+      "text": "El registro de procedencia reduce el alcance de la búsqueda y permite una respuesta más precisa. Si no se sabe qué se instaló, primero habrá que producir esa información. La incertidumbre no debe transformarse en una falsa afirmación de que nadie está expuesto."
+    },
+    {
+      "id": "N29-s11-h2",
+      "text": "Instrumento HH-29: el plan de cambio y recuperación"
+    },
+    {
+      "id": "N29-s11-b001",
+      "text": "La ficha conecta doce decisiones. Su utilidad se prueba cuando otra persona puede reconstruir el cambio y reconocer qué hacer ante una falla, sin depender de explicaciones privadas del autor."
+    },
+    {
+      "id": "N29-s11-b002",
+      "text": "Cambio y alcance: qué comportamiento se modifica, para quién y qué queda fuera. Se incluyen efectos indirectos previsibles, no sólo usuarios del botón nuevo."
+    },
+    {
+      "id": "N29-s11-b003",
+      "text": "Artefacto: qué unidad se instala y cómo se relaciona con fuente, dependencias y pruebas. Se distingue identidad de corrección."
+    },
+    {
+      "id": "N29-s11-b004",
+      "text": "Ambientes: qué diferencias entre ensayo y uso real podrían cambiar el resultado."
+    },
+    {
+      "id": "N29-s11-b005",
+      "text": "Configuración: qué parámetros y permisos intervienen. Se registran referencias y gestión de secretos, no credenciales expuestas en la ficha."
+    },
+    {
+      "id": "N29-s11-b006",
+      "text": "Datos: qué se transforma, qué versiones podrán leerlo y qué ocurrirá con operaciones durante la ventana."
+    },
+    {
+      "id": "N29-s11-b007",
+      "text": "Infraestructura: qué recursos cambian y cómo se verificará su estado sin asumir que una ejecución exitosa demuestra servicio."
+    },
+    {
+      "id": "N29-s11-b008",
+      "text": "Contratos: qué significados, formatos, tiempos y respuestas deben conservarse entre participantes."
+    },
+    {
+      "id": "N29-s11-b009",
+      "text": "Evidencia: qué escenarios de calidad se comprobaron, cuáles fallaron y qué incertidumbres siguen abiertas."
+    },
+    {
+      "id": "N29-s11-b010",
+      "text": "Aprobación: quién autoriza qué alcance y dentro de qué competencia. Se conserva la razón, no sólo el nombre."
+    },
+    {
+      "id": "N29-s11-b011",
+      "text": "Exposición: cómo se habilita el cambio, qué se observa y qué señal detiene o impide ampliar."
+    },
+    {
+      "id": "N29-s11-b012",
+      "text": "Recuperación: cuándo conviene volver, cuándo corregir hacia adelante y cómo se atenderán consecuencias externas."
+    },
+    {
+      "id": "N29-s11-b013",
+      "text": "Cierre: qué demuestra que la operación puede sostener la versión y qué apoyos temporarios siguen siendo necesarios."
+    },
+    {
+      "id": "N29-s11-b014",
+      "text": "Completada para HH-29, la ficha no dice sólo «desplegar asignable». Identifica qué representación se incorpora, cómo convive con «liberada», qué regla de cerradura participa y qué reserva puede estar afectada. La unidad de cambio conserva relaciones, no pretende reunirlo todo en un único archivo."
+    },
+    {
+      "id": "N29-s11-b015",
+      "text": "El árbol de recuperación empieza por preguntas observables. ¿La versión anterior entiende los datos actuales? ¿Se emitieron accesos o mensajes externos? ¿Existe una corrección confiable para el conjunto afectado? ¿Qué casos permanecen ambiguos? Cada respuesta conduce a una acción autorizada y una comprobación posterior."
+    },
+    {
+      "id": "N29-s11-b016",
+      "text": "Si el equipo no puede responder, la ficha no está lista para justificar una ampliación. Puede necesitar más prueba, menor alcance o una protección diferente. No se completa la incertidumbre con «se resolverá en operación»."
+    },
+    {
+      "id": "N29-s11-b017",
+      "text": "La revisión cruza la ficha con lo que realmente se ejecutó. Si el artefacto coincide pero una regla se cambió fuera de la secuencia, hay una diferencia que investigar. Si el alcance aprobado era una franja y la configuración habilitó toda la sede, el control falló aunque nadie haya informado todavía un incidente."
+    },
+    {
+      "id": "N29-s12-h2",
+      "text": "Ensayar una recuperación antes de necesitarla"
+    },
+    {
+      "id": "N29-s12-b001",
+      "text": "El ensayo del hotel utiliza un ambiente controlado con reservas de prueba. Se instala una unidad identificada y se simula una migración parcial junto con un consumidor que todavía usa la representación anterior."
+    },
+    {
+      "id": "N29-s12-b002",
+      "text": "Federico comprueba si la aplicación vieja puede interpretar los datos nuevos. Lucía y Mariela revisan el procedimiento desde sus funciones: qué se ve, qué se puede confirmar y qué exige detener. Ricardo coordina acciones y autoridad. No se prueba sólo una orden de restauración."
+    },
+    {
+      "id": "N29-s12-b003",
+      "text": "Si volver el código deja estados ambiguos, se prueba la rama de corrección hacia adelante. El ejercicio debe demostrar que identifica el conjunto afectado, no duplica operaciones y permite verificar el estado final. Los casos dudosos se conservan para revisión, no se fuerzan a una categoría favorable."
+    },
+    {
+      "id": "N29-s12-b004",
+      "text": "También se ensaya una situación donde faltan señales para saber qué ocurrió. Esa es una prueba importante del plan: un incidente real no siempre llega con diagnóstico. Debe existir una forma segura de limitar efectos mientras se obtiene información."
+    },
+    {
+      "id": "N29-s12-b005",
+      "text": "Después se comparan tiempo técnico, tiempo hasta servicio recuperado y tareas de reparación. Una ejecución rápida que deja horas de trabajo invisible necesita rediseño o una capacidad explícita que la sostenga."
+    },
+    {
+      "id": "N29-s12-b006",
+      "text": "El aprendizaje puede cambiar el contrato de N27 o las pruebas de N28. No todo problema descubierto pertenece a la herramienta de despliegue. A veces la recuperación muestra que el significado de un estado nunca estuvo suficientemente resuelto."
+    },
+    {
+      "id": "N29-s13-h2",
+      "text": "Cerrar la liberación sin retirar el apoyo demasiado pronto"
+    },
+    {
+      "id": "N29-s13-b001",
+      "text": "Una versión puede funcionar bien durante el piloto porque hay especialistas adicionales, vigilancia manual y menos demanda. Antes de retirar ese apoyo hay que comprobar qué depende de él."
+    },
+    {
+      "id": "N29-s13-b002",
+      "text": "El cierre de liberación confirma que la versión puede sostenerse bajo las condiciones previstas. Incluye señales, permisos, procedimientos, responsabilidades y tratamiento de pendientes. No coincide necesariamente con terminar el pipeline o habilitar todo el tráfico."
+    },
+    {
+      "id": "N29-s13-b003",
+      "text": "Si Lucía sólo puede resolver un bloqueo llamando a Federico, todavía existe una dependencia que debe reconocerse. Puede ser un apoyo temporal autorizado, una capacidad que deba organizarse de manera permanente o una razón para limitar el uso. No se elimina del registro para declarar terminado el proyecto."
+    },
+    {
+      "id": "N29-s13-b004",
+      "text": "Las tareas pendientes se distinguen por consecuencia. Una mejora conveniente puede pasar a la cartera. Una falla que impide detectar una asignación incorrecta puede bloquear la ampliación. Llamarlas a todas «deuda» no permite decidir."
+    },
+    {
+      "id": "N29-s13-b005",
+      "text": "La autoridad para detener el servicio afectado sigue vigente después del cierre. También se conserva quién recibirá las señales y cómo actuará. N30 desarrollará ese seguimiento. Cerrar una etapa no extingue la responsabilidad por la operación."
+    },
+    {
+      "id": "N29-s13-b006",
+      "text": "El cierre necesita un equilibrio: no retirar apoyo por calendario, pero tampoco mantener un piloto especial indefinido sin decidir qué capacidad permanente hace falta. La evidencia debe permitir pasar de una excepción vigilada a una operación gobernada."
+    },
+    {
+      "id": "N29-s14-h2",
+      "text": "Transferencia: una regla de liquidación bancaria"
+    },
+    {
+      "id": "N29-s14-b001",
+      "text": "Consideremos un cambio bancario como ejercicio conceptual de sistemas, no como procedimiento financiero listo para ejecutar. Una regla de liquidación relaciona aplicación, registros, mensajería y participantes externos. Su tratamiento real requiere controles y autoridades especializados."
+    },
+    {
+      "id": "N29-s14-b002",
+      "text": "Si ya se emitió una transferencia, instalar la aplicación anterior no deshace ese efecto. El plan debe distinguir operaciones pendientes, confirmadas y de estado desconocido, y reconciliarlas con las partes pertinentes. Borrar registros para que los saldos parezcan anteriores destruiría información necesaria."
+    },
+    {
+      "id": "N29-s14-b003",
+      "text": "Una exposición limitada puede reducir alcance, pero sólo si la frontera es real y adecuada. Un monto pequeño no vuelve aceptable cualquier error ni sustituye obligaciones. La selección requiere condiciones específicas y no se copia del ejemplo hotelero."
+    },
+    {
+      "id": "N29-s14-b004",
+      "text": "Ante una diferencia, la organización puede limitar nuevos envíos afectados mientras investiga los realizados. Una corrección necesita evitar duplicaciones, mantener evidencia y respetar las autorizaciones aplicables. La comunicación a personas y áreas involucradas forma parte del tratamiento de consecuencias."
+    },
+    {
+      "id": "N29-s14-b005",
+      "text": "La lección que se transfiere es la distinción entre componente y efecto. Podemos recuperar software y seguir teniendo una obligación pendiente o un estado externo distinto. Antes de liberar necesitamos saber qué evidencia permitirá reconocer y tratar esas diferencias."
+    },
+    {
+      "id": "N29-s14-b006",
+      "text": "No se exige que el estudiante diseñe aquí un protocolo de liquidación. Se le pide reconocer qué preguntas faltan cuando alguien promete «si falla, volvemos la versión». Esa pregunta bien formulada puede evitar una decisión técnicamente sencilla y operativamente riesgosa."
+    },
+    {
+      "id": "N29-s15-h2",
+      "text": "Contraejemplo: automatizar todos los pasos equivocados"
+    },
+    {
+      "id": "N29-s15-b001",
+      "text": "Una organización logra que cada cambio se construya, pruebe y despliegue sin intervención manual. El tablero informa éxito. Sin embargo, las pruebas usan datos viejos y ningún paso controla una modificación directa de configuración realizada el día anterior."
+    },
+    {
+      "id": "N29-s15-b002",
+      "text": "La automatización funcionó como estaba diseñada. Lo que no funcionó fue la suposición de que representaba todo el sistema. Al liberar, una regla nueva se combinó con una configuración no prevista."
+    },
+    {
+      "id": "N29-s15-b003",
+      "text": "Agregar una firma al final tampoco resolvería por sí solo esa falta. Si quien firma sólo ve el mismo tablero, seguirá sin conocer la diferencia. Hace falta detectar configuración real, conectarla con el alcance y comprobar la combinación relevante."
+    },
+    {
+      "id": "N29-s15-b004",
+      "text": "El contraejemplo no niega el valor de automatizar. Muestra dónde termina su evidencia. Un proceso automático bien observado puede ser más consistente que uno manual. Pero su consistencia no compensa una pregunta ausente."
+    },
+    {
+      "id": "N29-s16-h2",
+      "text": "Errores frecuentes"
+    },
+    {
+      "id": "N29-s16-b001",
+      "text": "Confundir instalación con autorización de uso. Desplegar y liberar pueden separarse, pero el despliegue también puede tener efectos de fondo que deben controlarse."
+    },
+    {
+      "id": "N29-s16-b002",
+      "text": "Creer que CI/CD significa siempre lo mismo. Aclarar entrega continua y despliegue continuo evita promesas contradictorias sobre cuándo un cambio llega a producción."
+    },
+    {
+      "id": "N29-s16-b003",
+      "text": "Equiparar hash con confianza total. Identificar contenido no demuestra autor confiable, corrección ni adecuación al servicio."
+    },
+    {
+      "id": "N29-s16-b004",
+      "text": "Olvidar configuración y datos. La misma aplicación puede comportarse distinto con otra regla, permiso o esquema. Registrá la combinación relevante."
+    },
+    {
+      "id": "N29-s16-b005",
+      "text": "Versionar secretos para dejar evidencia. Conservá referencias, responsables y proceso de provisión; no expongas credenciales en el repositorio ni en el informe."
+    },
+    {
+      "id": "N29-s16-b006",
+      "text": "Aprobar por cantidad de firmas. La revisión necesita información y capacidad de objetar. Repetir una aprobación sin contexto no crea independencia."
+    },
+    {
+      "id": "N29-s16-b007",
+      "text": "Retirar controles porque nunca fallaron. Su ausencia de bloqueos no prueba inutilidad. Revisá qué riesgo cubren y cómo aportan prevención o evidencia."
+    },
+    {
+      "id": "N29-s16-b008",
+      "text": "Suponer que el canario está aislado. Una base o dependencia compartida puede extender efectos fuera de la cohorte. Comprobá la frontera real."
+    },
+    {
+      "id": "N29-s16-b009",
+      "text": "Prometer rollback de todo porque existe un binario anterior. Verificá compatibilidad y efectos externos. Puede corresponder una corrección y reparación, no una vuelta completa."
+    },
+    {
+      "id": "N29-s16-b010",
+      "text": "Restaurar una copia sin reconciliar lo posterior. Las operaciones legítimas realizadas desde el respaldo no desaparecen de la responsabilidad del servicio."
+    },
+    {
+      "id": "N29-s16-b011",
+      "text": "Cerrar al llegar al contador del piloto. Cincuenta transiciones organizan una revisión; no demuestran todas las condiciones de calidad."
+    },
+    {
+      "id": "N29-s16-b012",
+      "text": "Dejar la emergencia fuera de la historia. Integrá la corrección, verificá el estado y cerrá permisos extraordinarios. Si no, la siguiente versión puede desconocer lo que funciona realmente."
+    },
+    {
+      "id": "N29-s17-h2",
+      "text": "Consecuencias profesionales"
+    },
+    {
+      "id": "N29-s17-b001",
+      "text": "La entrega deja de medirse sólo por instalar versiones. El equipo debe mostrar una relación entre cambio, evidencia y resultado. Eso hace posible discutir qué riesgo se aceptó y qué control faltó sin reconstruir todo desde recuerdos."
+    },
+    {
+      "id": "N29-s17-b002",
+      "text": "También cambia el momento de involucrar a Operaciones. No se espera al final para enseñar botones. Quienes sostienen el servicio participan en escenarios, contingencias y criterios de cierre. Su conocimiento puede modificar el diseño antes de que el cambio llegue a una persona."
+    },
+    {
+      "id": "N29-s17-b003",
+      "text": "La aprobación se vuelve más precisa. Cambios de bajo riesgo pueden avanzar con controles estables y autoridad delegada. Los de mayor consecuencia requieren atención específica. La diferencia se justifica por efectos y condiciones, no por preferencias de un comité ni por el tamaño del pedido."
+    },
+    {
+      "id": "N29-s17-b004",
+      "text": "La recuperación se financia y ensaya como capacidad. No se deja como una frase optimista del proyecto. Puede incluir herramientas, permisos, copias verificadas, procedimientos y personas disponibles. Si eso tiene un costo, debe entrar en la decisión de cambio."
+    },
+    {
+      "id": "N29-s17-b005",
+      "text": "Finalmente, el aprendizaje vuelve al sistema de entrega. Un incidente puede mostrar una prueba ausente, un contrato confuso, una aprobación mal ubicada o una configuración no controlada. La respuesta no debería ser agregar automáticamente una firma más: debe corregir el mecanismo que produjo o amplificó el problema."
+    },
+    {
+      "id": "N29-s18-h2",
+      "text": "Límites y tensiones"
+    },
+    {
+      "id": "N29-s18-b001",
+      "text": "Cambiar en pasos pequeños suele facilitar comprensión y recuperación, pero no elimina dependencias compartidas. Algunas modificaciones necesitan preparación coordinada. La solución es reconocer y tratar esa coordinación, no dividir tareas de manera artificial y llamar independiente a lo que no lo es."
+    },
+    {
+      "id": "N29-s18-b002",
+      "text": "La automatización puede reducir variación y concentrar poder. Una credencial de ejecución demasiado amplia o una regla incorrecta puede afectar muchos sistemas rápidamente. El diseño necesita permisos proporcionados, observación y formas de detenerse. No todo problema se resuelve agregando más velocidad."
+    },
+    {
+      "id": "N29-s18-b003",
+      "text": "La urgencia puede impedir obtener toda la evidencia deseada antes de actuar. Debe explicitarse qué falta, por qué la espera sería peor y qué límites compensan esa incertidumbre. No se afirma que una vía rápida conserva mágicamente la misma evidencia; tampoco se usa la urgencia como permiso para borrar trazabilidad u obligaciones."
+    },
+    {
+      "id": "N29-s18-b004",
+      "text": "La reversibilidad cambia con el tiempo. A medida que el servicio produce datos y compromisos, aumenta lo que no vuelve con una instalación. Por eso el plan debe revisar sus ramas después de ciertos eventos, no sólo después de una cantidad fija de minutos."
+    },
+    {
+      "id": "N29-s18-b005",
+      "text": "En 2026, herramientas de IA pueden proponer código, configuración o reparaciones. En esta lectura, la pregunta específica es cómo entra esa propuesta en la cadena controlada. Su origen no reemplaza revisión ni prueba, y una sugerencia de migración no debe ejecutarse sobre datos reales por parecer convincente. La autoridad y la evidencia se vinculan al efecto, no a la fluidez de la explicación generada."
+    },
+    {
+      "id": "N29-s18-b006",
+      "text": "El mismo cuidado vale para una reparación automática. Si no se puede reconocer el conjunto afectado o verificar el resultado, automatizar puede extender una interpretación equivocada. Primero se limita y se investiga; después se decide qué parte puede ejecutarse con seguridad."
+    },
+    {
+      "id": "N29-s19-h2",
+      "text": "Una lectura situada desde América Latina"
+    },
+    {
+      "id": "N29-s19-b001",
+      "text": "Flores y Echeverría permiten distinguir cerrar una tarea de cumplir un compromiso. Federico puede haber instalado correctamente una versión y el hotel seguir debiendo una respuesta al huésped. La reparación no desaparece cuando termina el trabajo técnico."
+    },
+    {
+      "id": "N29-s19-b002",
+      "text": "Bunge exige explicar cómo se produjo el resultado. Un pipeline favorable no es una causa suficiente de buen servicio: depende de lo que verifica y de condiciones que pueden quedar afuera. García permite reconstruir esas relaciones sin reducirlas a una falla aislada de una persona."
+    },
+    {
+      "id": "N29-s19-b003",
+      "text": "Etkin y Schvarstein ayudan a observar prioridades organizacionales. Si la empresa premia únicamente cumplir fechas, quienes conocen un riesgo pueden sentirse empujados a callarlo o trasladarlo. Cambiar la herramienta de despliegue no corrige por sí solo ese incentivo."
+    },
+    {
+      "id": "N29-s19-b004",
+      "text": "Scolari recuerda que las interfaces forman parte de relaciones más amplias. Una nueva pantalla modifica cómo se coordinan Recepción, Housekeeping y huéspedes. La migración también es de prácticas y significados, aunque no todo ese cambio quede en código."
+    },
+    {
+      "id": "N29-s19-b005",
+      "text": "Varsavsky permite discutir qué capacidad técnica conviene construir y para qué necesidades. La CEPAL aporta contexto sobre capacidades desiguales: no todos los equipos cuentan con especialistas de guardia o infraestructura duplicada. Eso no justifica controles ficticios; exige diseñar un alcance que la organización realmente pueda sostener."
+    },
+    {
+      "id": "N29-s19-b006",
+      "text": "Maturana y Varela invitan a examinar las distinciones con las que observamos. Si llamamos «entrega terminada» al despliegue, dejaremos fuera conciliación y reparación. Cambiar esa definición modifica qué trabajo se reconoce y quién puede advertir que todavía falta algo."
+    },
+    {
+      "id": "N29-s20-h2",
+      "text": "De N29 a N30"
+    },
+    {
+      "id": "N29-s20-b001",
+      "text": "HH-29 deja una versión identificable, un alcance autorizado y una recuperación ensayada. Todavía falta observar cómo se comporta durante el uso habitual, con turnos, demanda y dependencias que siguen variando."
+    },
+    {
+      "id": "N29-s20-b002",
+      "text": "N30 trabajará sobre señales, objetivos de servicio e incidentes. Necesitará distinguir salud de componentes y resultado para las personas. La historia del cambio permitirá investigar sin atribuir automáticamente toda dificultad al último despliegue."
+    },
+    {
+      "id": "N29-s21-h2",
+      "text": "Síntesis"
+    },
+    {
+      "id": "N29-s21-b001",
+      "text": "Integrar, desplegar y liberar son pasos diferentes. Una cadena automatizada puede ejecutarlos de manera confiable, pero sólo demuestra las condiciones que realmente verifica. Código, configuración, datos y operación deben relacionarse para comprender el cambio."
+    },
+    {
+      "id": "N29-s21-b002",
+      "text": "La recuperación también tiene partes. Volver una aplicación puede ser correcto y resultar insuficiente. Corregir datos, reconciliar mensajes y atender consecuencias externas requieren otras acciones. El plan debe reconocer cuándo corresponde cada una."
+    },
+    {
+      "id": "N29-s21-b003",
+      "text": "HH-29 convierte esas distinciones en una práctica: identificar, probar, autorizar un alcance, observar y responder. La velocidad tiene valor cuando reduce incertidumbre y facilita reparar; no cuando vuelve más rápida una exposición que nadie puede explicar."
+    },
+    {
+      "id": "N29-s22-h2",
+      "text": "Cinco píldoras para recordar"
+    },
+    {
+      "id": "N29-s22-b001",
+      "text": "Instalar una versión no demuestra que el servicio esté listo para usarla."
+    },
+    {
+      "id": "N29-s22-b002",
+      "text": "CI/CD necesita aclarar qué se automatiza y dónde se autoriza la exposición."
+    },
+    {
+      "id": "N29-s22-b003",
+      "text": "El mismo código puede producir otro resultado con distintos datos, permisos o configuración."
+    },
+    {
+      "id": "N29-s22-b004",
+      "text": "Volver el programa no deshace todos los efectos que ya produjo."
+    },
+    {
+      "id": "N29-s22-b005",
+      "text": "Una liberación termina cuando la operación puede sostenerla, no cuando el tablero se pone verde."
+    },
+    {
+      "id": "N29-s23-h2",
+      "text": "Glosario esencial"
+    },
+    {
+      "id": "N29-s23-b001",
+      "text": "Integración continua, CI: incorporación y verificación frecuente de cambios pequeños en una base compartida."
+    },
+    {
+      "id": "N29-s23-b002",
+      "text": "Entrega continua: capacidad de mantener cambios preparados para liberarse mediante un proceso confiable, con la decisión de exposición que corresponda."
+    },
+    {
+      "id": "N29-s23-b003",
+      "text": "Despliegue continuo: paso automático a producción de cambios que superan controles definidos. La autoridad queda expresada en políticas y mecanismos, no desaparece."
+    },
+    {
+      "id": "N29-s23-b004",
+      "text": "Pipeline: secuencia automatizada de pasos de construcción, prueba o entrega. Su resultado depende de lo que comprueba."
+    },
+    {
+      "id": "N29-s23-b005",
+      "text": "Git: sistema de control de versiones. Conserva historia y relaciones entre revisiones; no aprueba por sí solo su calidad."
+    },
+    {
+      "id": "N29-s23-b006",
+      "text": "GitHub: plataforma de colaboración que agrega revisiones, automatizaciones y gestión alrededor de repositorios."
+    },
+    {
+      "id": "N29-s23-b007",
+      "text": "Artefacto: unidad construida que se distribuye o instala. Debe identificarse y vincularse con fuente, dependencias y pruebas."
+    },
+    {
+      "id": "N29-s23-b008",
+      "text": "Configuración: parámetros y opciones que influyen en el comportamiento. Puede cambiar consecuencias sin cambiar el código principal."
+    },
+    {
+      "id": "N29-s23-b009",
+      "text": "Deriva: diferencia entre estado real y estado controlado esperado. Requiere investigar antes de corregir automáticamente."
+    },
+    {
+      "id": "N29-s23-b010",
+      "text": "Infraestructura como código: definiciones revisables y ejecutables de recursos y reglas. Tenerlas no demuestra que la recuperación esté ensayada."
+    },
+    {
+      "id": "N29-s23-b011",
+      "text": "Puerta de decisión: evaluación de condiciones para asumir el siguiente compromiso, con autoridad y resultados posibles."
+    },
+    {
+      "id": "N29-s23-b012",
+      "text": "Segregación de funciones: separación de capacidades sensibles para reducir abuso o error sin detectar."
+    },
+    {
+      "id": "N29-s23-b013",
+      "text": "Exposición progresiva: habilitación por alcances controlados, con señales y condiciones de ampliación o detención."
+    },
+    {
+      "id": "N29-s23-b014",
+      "text": "Rollback: vuelta a una versión o estado anterior dentro de un alcance. Puede ser sólo de código y no recuperar todo el servicio."
+    },
+    {
+      "id": "N29-s23-b015",
+      "text": "Rollforward: corrección hacia adelante desde el estado actual. Necesita alcance y verificación, no improvisación."
+    },
+    {
+      "id": "N29-s23-b016",
+      "text": "SBOM: lista de materiales de software. Ayuda a identificar componentes, pero no certifica su seguridad."
+    },
+    {
+      "id": "N29-s23-b017",
+      "text": "Procedencia: relación entre artefacto, origen y transformaciones. Debe conectarse con lo realmente desplegado."
+    },
+    {
+      "id": "N29-s23-b018",
+      "text": "Cierre de liberación: comprobación de que el cambio puede sostenerse en operación, con responsabilidades y pendientes tratados."
+    },
+    {
+      "id": "N29-s24-h2",
+      "text": "Preguntas de preparación"
+    },
+    {
+      "id": "N29-s24-b001",
+      "text": "¿Qué diferencia hay entre CI, entrega continua y despliegue continuo? Mostralo con una regla nueva del hotel."
+    },
+    {
+      "id": "N29-s24-b002",
+      "text": "¿Cómo comprobarías que el artefacto instalado es el que se examinó? ¿Qué seguiría sin demostrar esa identidad?"
+    },
+    {
+      "id": "N29-s24-b003",
+      "text": "¿Qué modificación de configuración podría cambiar el servicio sin modificar la aplicación?"
+    },
+    {
+      "id": "N29-s24-b004",
+      "text": "¿Qué información necesitás antes de decidir un rollback de HH-29?"
+    },
+    {
+      "id": "N29-s24-b005",
+      "text": "¿Qué efectos requieren reparación aunque vuelva la versión anterior?"
+    },
+    {
+      "id": "N29-s24-b006",
+      "text": "¿Cómo comprobarías que la cohorte del piloto no afecta indirectamente a otras personas?"
+    },
+    {
+      "id": "N29-s24-b007",
+      "text": "¿Qué tendría que saber y poder hacer Recepción antes de retirar el apoyo reforzado?"
+    },
+    {
+      "id": "N29-s24-b008",
+      "text": "Para el encuentro, describí un cambio plausible. Separá lo que se instala, lo que se transforma y lo que recibe una persona. Diseñá dos ramas de recuperación: una donde se pueda volver y otra donde sea necesario corregir hacia adelante. En ambas, indicá cómo reconocerías que el servicio quedó recuperado."
+    },
+    {
+      "id": "N29-s25-h2",
+      "text": "Referencias base"
+    },
+    {
+      "id": "N29-s25-b001",
+      "text": "Humble, J. y Farley, D. (2010). Continuous Delivery. Addison-Wesley."
+    },
+    {
+      "id": "N29-s25-b002",
+      "text": "Forsgren, N., Humble, J. y Kim, G. (2018). Accelerate. IT Revolution."
+    },
+    {
+      "id": "N29-s25-b003",
+      "text": "DeBellis, D. et al. (2024). DORA Accelerate State of DevOps 2024 Report. https://research.google/pubs/dora-accelerate-state-of-devops-2024-report/"
+    },
+    {
+      "id": "N29-s25-b004",
+      "text": "Scarfone, K., Souppaya, M. y Dodson, D. (2022). Secure Software Development Framework (SSDF) Version 1.1: Recommendations for Mitigating the Risk of Software Vulnerabilities. NIST SP 800-218. https://doi.org/10.6028/NIST.SP.800-218"
+    },
+    {
+      "id": "N29-s25-b005",
+      "text": "Boyens, J. M., Smith, A., Bartol, N., Winkler, K., Holbrook, A. y Fallon, M. (2024). Cybersecurity Supply Chain Risk Management Practices for Systems and Organizations. NIST SP 800-161 Rev. 1 Update 1. https://doi.org/10.6028/NIST.SP.800-161r1-upd1"
+    },
+    {
+      "id": "N29-s25-b006",
+      "text": "Chandramouli, R., Kautz, F. y Torres-Arias, S. (2024). Strategies for the Integration of Software Supply Chain Security in DevSecOps CI/CD Pipelines. NIST SP 800-204D. https://doi.org/10.6028/NIST.SP.800-204D"
+    },
+    {
+      "id": "N29-s25-b007",
+      "text": "SLSA (2025). SLSA Specification 1.2. https://slsa.dev/spec/v1.2/"
+    },
+    {
+      "id": "N29-s25-b008",
+      "text": "CISA (2023). Shifting the Balance of Cybersecurity Risk: Principles and Approaches for Secure by Design Software. https://www.cisa.gov/resources-tools/resources/secure-by-design"
+    },
+    {
+      "id": "N29-s25-b009",
+      "text": "ISO/IEC (2022). ISO/IEC 27001:2022 Information security, cybersecurity and privacy protection: Information security management systems requirements. https://www.iso.org/standard/27001"
+    },
+    {
+      "id": "N29-s25-b010",
+      "text": "ISO/IEC (2018). ISO/IEC 20000-1:2018 Information technology, Service management, Part 1: Service management system requirements. https://www.iso.org/standard/70636.html"
+    },
+    {
+      "id": "N29-s25-b011",
+      "text": "OpenGitOps (2021). GitOps Principles 1.0. https://opengitops.dev/"
+    },
+    {
+      "id": "N29-s25-b012",
+      "text": "Kim, G., Humble, J., Debois, P. y Willis, J. (2021). The DevOps Handbook, Second Edition. IT Revolution."
+    },
+    {
+      "id": "N29-s25-b013",
+      "text": "Beck, K. (2004). Extreme Programming Explained, Second Edition. Addison-Wesley."
+    },
+    {
+      "id": "N29-s25-b014",
+      "text": "Fowler, M. (2018). Refactoring: Improving the Design of Existing Code (2.ª ed.). Addison-Wesley."
+    },
+    {
+      "id": "N29-s25-b015",
+      "text": "Edmondson, A. C. (1999). “Psychological Safety and Learning Behavior in Work Teams”. Administrative Science Quarterly, 44(2), 350 a 383. https://doi.org/10.2307/2666999"
+    },
+    {
+      "id": "N29-s25-b016",
+      "text": "Vogels, W. (2009). “Eventually Consistent”. Communications of the ACM, 52(1), 40 a 44. https://doi.org/10.1145/1435417.1435432"
+    },
+    {
+      "id": "N29-s25-b017",
+      "text": "Chacon, S. y Straub, B. (2014). Pro Git (2.ª ed.). Apress. https://git-scm.com/book/en/v2"
+    },
+    {
+      "id": "N29-s25-b018",
+      "text": "GitHub (2026). About protected branches. https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches"
+    },
+    {
+      "id": "N29-s25-b019",
+      "text": "Flores, F. (1997). Creando organizaciones para el futuro. Dolmen."
+    },
+    {
+      "id": "N29-s25-b020",
+      "text": "Bunge, M. (2004). Emergencia y convergencia: novedad cualitativa y unidad del conocimiento. Gedisa."
+    },
+    {
+      "id": "N29-s25-b021",
+      "text": "García, R. (2006). Sistemas complejos: conceptos, método y fundamentación epistemológica de la investigación interdisciplinaria. Gedisa."
+    },
+    {
+      "id": "N29-s25-b022",
+      "text": "Scolari, C. A. (2018). Las leyes de la interfaz: diseño, ecología, evolución, tecnología. Gedisa."
+    },
+    {
+      "id": "N29-s25-b023",
+      "text": "Etkin, J. y Schvarstein, L. (1989). Identidad de las organizaciones: invariancia y cambio. Paidós."
+    },
+    {
+      "id": "N29-s25-b024",
+      "text": "Maturana, H. R. y Varela, F. J. (1984). El árbol del conocimiento: las bases biológicas del entendimiento humano. Editorial Universitaria."
+    },
+    {
+      "id": "N29-s25-b025",
+      "text": "Varsavsky, O. (1972). Hacia una política científica nacional. Ediciones Periferia."
+    },
+    {
+      "id": "N29-s25-b026",
+      "text": "CEPAL (2022). Un camino digital para el desarrollo sostenible de América Latina y el Caribe. Naciones Unidas."
+    },
+    {
+      "id": "N29-s25-b027",
+      "text": "Echeverría, R. (2005). Ontología del lenguaje. Granica."
+    }
+  ],
+  "headings": [
+    "Contenido",
+    "Referentes",
+    "Pregunta profesional",
+    "Volvió el programa anterior. Los pagos seguían duplicados",
+    "Hotel Horizonte: el botón de volver no desbloqueaba las habitaciones",
+    "Tesis",
+    "De la calidad esperada a la decisión de liberar",
+    "Las ideas que sostienen el recorrido",
+    "Movimiento 1 · Saber exactamente qué estamos cambiando",
+    "DevOps: construir y operar sin pasarse el problema",
+    "Movimiento 2 · Decidir quién recibe el cambio y bajo qué condiciones",
+    "Movimiento 3 · Volver, corregir y reparar son acciones distintas",
+    "Instrumento HH-29: el plan de cambio y recuperación",
+    "Ensayar una recuperación antes de necesitarla",
+    "Cerrar la liberación sin retirar el apoyo demasiado pronto",
+    "Transferencia: una regla de liquidación bancaria",
+    "Contraejemplo: automatizar todos los pasos equivocados",
+    "Errores frecuentes",
+    "Consecuencias profesionales",
+    "Límites y tensiones",
+    "Una lectura situada desde América Latina",
+    "De N29 a N30",
+    "Síntesis",
+    "Cinco píldoras para recordar",
+    "Glosario esencial",
+    "Preguntas de preparación",
+    "Referencias base"
+  ]
+}
