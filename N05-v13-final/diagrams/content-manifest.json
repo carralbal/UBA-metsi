@@ -1,0 +1,146 @@
+{
+  "title": "Mapa Actor, Decisión, Consecuencia",
+  "claim": "Analizar actores exige reconstruir su relación efectiva con la decisión, el conocimiento y las consecuencias, no sólo enumerar cargos.",
+  "source_sections": [
+    {
+      "id": "s1",
+      "heading": "Instrumento de decisión: mapa Actor, Decisión, Consecuencia",
+      "summary": "Registra poder, conocimiento, exposición y reparación."
+    },
+    {
+      "id": "s2",
+      "heading": "Autoridad, responsabilidad y capacidad",
+      "summary": "Distingue capacidades que no conviene confundir."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "define",
+      "label": "DEFINIR",
+      "role": "actor",
+      "purpose": "Enmarca el problema y vuelve visibles unas relaciones",
+      "source": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "id": "know",
+      "label": "CONOCER",
+      "role": "actor",
+      "purpose": "Aporta experiencia situada, datos o saber experto",
+      "source": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "id": "authorize",
+      "label": "AUTORIZAR",
+      "role": "actor",
+      "purpose": "Aprueba recursos, reglas y límites de acción",
+      "source": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "id": "execute",
+      "label": "EJECUTAR",
+      "role": "actor",
+      "purpose": "Configura, opera y sostiene la intervención",
+      "source": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "id": "experience",
+      "label": "EXPERIMENTAR",
+      "role": "actor",
+      "purpose": "Recibe beneficios, cargas, errores y daños",
+      "source": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "id": "contest",
+      "label": "OBJETAR Y REPARAR",
+      "role": "actor",
+      "purpose": "Puede cuestionar, detener, corregir o reclamar",
+      "source": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "define",
+      "to": "decision",
+      "relation": "authority",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "meaning": "Enmarca el problema y vuelve visibles unas relaciones"
+    },
+    {
+      "id": "e2",
+      "from": "know",
+      "to": "decision",
+      "relation": "authority",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "meaning": "Aporta experiencia situada, datos o saber experto"
+    },
+    {
+      "id": "e3",
+      "from": "authorize",
+      "to": "decision",
+      "relation": "authority",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "meaning": "Aprueba recursos, reglas y límites de acción"
+    },
+    {
+      "id": "e4",
+      "from": "execute",
+      "to": "decision",
+      "relation": "authority",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "meaning": "Configura, opera y sostiene la intervención"
+    },
+    {
+      "id": "e5",
+      "from": "experience",
+      "to": "decision",
+      "relation": "authority",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "meaning": "Recibe beneficios, cargas, errores y daños"
+    },
+    {
+      "id": "e6",
+      "from": "contest",
+      "to": "decision",
+      "relation": "authority",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "meaning": "Puede cuestionar, detener, corregir o reclamar"
+    }
+  ]
+}

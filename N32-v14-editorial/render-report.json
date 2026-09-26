@@ -1,0 +1,1079 @@
+{
+  "missingImages": [],
+  "hiddenSourceBlocks": [],
+  "sourceBlocks": [
+    {
+      "id": "N32-h1",
+      "text": "¿Está lista esta IA para usarla?"
+    },
+    {
+      "id": "N32-s01-h2",
+      "text": "Pregunta profesional"
+    },
+    {
+      "id": "N32-s01-b001",
+      "text": "¿Qué tenemos que comprobar antes de permitir que una IA decida o actúe con menos revisión humana?"
+    },
+    {
+      "id": "N32-s02-h2",
+      "text": "Acertaba casi siempre, pero dejaba pasar los casos importantes"
+    },
+    {
+      "id": "N32-s02-b001",
+      "text": "Imaginemos una red de salud que recibe mensajes de pacientes. El equipo quiere ordenar mejor las consultas y prueba una herramienta que les asigna prioridad. El informe anuncia un 92% de coincidencia con las clasificaciones anteriores. También indica que leer los mensajes lleva menos tiempo. A primera vista, parece una mejora clara."
+    },
+    {
+      "id": "N32-s02-b002",
+      "text": "En esta situación ficticia, durante la prueba dos consultas que requerían atención profesional oportuna terminan en una cola de menor prioridad. La herramienta funcionó como se esperaba en muchos mensajes comunes y falló en casos cuya demora podía importar mucho más. El 92% no era necesariamente una cuenta mal hecha. Era una cuenta insuficiente para autorizar el uso propuesto."
+    },
+    {
+      "id": "N32-s02-b003",
+      "text": "El ejemplo permite discutir evaluación de sistemas; no establece criterios de urgencia ni protocolos de atención médica. Esas decisiones requieren profesionales, validación clínica y las autorizaciones correspondientes. Justamente por eso, un equipo de tecnología no puede deducirlas de una cifra general de coincidencia."
+    },
+    {
+      "id": "N32-s02-b004",
+      "text": "Al revisar la prueba aparecen tres problemas. Primero, el conjunto incluía sobre todo consultas habituales y muy pocas situaciones difíciles. Segundo, se comparaba la salida con decisiones históricas que también podían tener errores. Tercero, se evaluaba cada mensaje aislado, aunque en el trabajo real una persona podía necesitar antecedentes o una aclaración para interpretarlo."
+    },
+    {
+      "id": "N32-s02-b005",
+      "text": "Cada problema pide una corrección distinta. Agregar más mensajes parecidos no resuelve la falta de casos importantes. Cambiar de modelo no convierte las etiquetas históricas en verdades indiscutibles. Mejorar un clasificador no asegura que la interfaz permita a un profesional detectar a tiempo una prioridad equivocada."
+    },
+    {
+      "id": "N32-s02-b006",
+      "text": "El equipo redefine la prueba. Examina el episodio completo: qué información estaba disponible, qué hizo la herramienta, qué vio la persona, cómo intervino y qué ocurrió después. Los casos se eligen por el uso previsto y por las fallas que necesitan detectarse. Los resultados se separan por tipo de situación, en lugar de esconder todas las diferencias en un promedio."
+    },
+    {
+      "id": "N32-s02-b007",
+      "text": "También se ensaya el trabajo con demanda alta, sin exponer pacientes a un experimento inseguro. Una revisión que funcionaba con pocos casos puede volverse rutinaria cuando llegan muchos. Si nadie puede comprobar las sugerencias a tiempo, escribir «con supervisión profesional» en el proyecto no crea esa capacidad."
+    },
+    {
+      "id": "N32-s02-b008",
+      "text": "La pregunta cambia. Ya no es «¿qué puntaje obtuvo el modelo?», sino «¿qué uso permite defender esta evidencia?». Tal vez la herramienta sirva para preparar información y no para decidir prioridades por sí sola. Tal vez ciertas tareas requieran otro diseño. Una prueba útil permite llegar a esas conclusiones, aunque no coincidan con la demostración inicial."
+    },
+    {
+      "id": "N32-s03-h2",
+      "text": "Hotel Horizonte: el 91% escondía cinco fallas en doce pedidos"
+    },
+    {
+      "id": "N32-s03-b001",
+      "text": "En HH-31, Elena Acosta había autorizado una prueba limitada: el asistente podía localizar condiciones y preparar propuestas, pero no cambiar reservas por su cuenta. HH-32 examina si esa ayuda funciona de manera suficiente para mantenerla o ampliar alguna capacidad. No parte de la obligación de aprobarla."
+    },
+    {
+      "id": "N32-s03-b002",
+      "text": "El primer resumen informa un 91% de respuestas consideradas correctas y una mejora del tiempo medio. Camila Duarte ve un resultado prometedor. Lucía Ferreyra pide abrir la cuenta: en doce pedidos vinculados con accesibilidad, el asistente falló en cinco. Además, algunas respuestas del turno nocturno fueron inconsistentes. Las correcciones exigieron más trabajo que el de una consulta ordinaria."
+    },
+    {
+      "id": "N32-s03-b003",
+      "text": "Los números pertenecen al caso didáctico. No son resultados de un estudio real. Su función es mostrar por qué un resultado agregado puede ser verdadero y, a la vez, insuficiente para decidir. El 91% describe el conjunto evaluado; los cinco casos muestran un problema que ese conjunto puede hacer parecer pequeño."
+    },
+    {
+      "id": "N32-s03-b004",
+      "text": "Mariela Benítez revisa qué significaba cada error. No es lo mismo una frase poco clara que una propuesta que pierde una condición necesaria de la habitación. Federico Müller separa la respuesta inicial, la corrección humana y cualquier acción posterior. En esta fase no hay autorización para que el asistente ejecute modificaciones autónomas: una propuesta impropia ya es una falla que debe detectarse antes de comunicarla o convertirla en compromiso."
+    },
+    {
+      "id": "N32-s03-b005",
+      "text": "El equipo prueba consultas por canal, horario, idioma utilizado y tipo de reserva. Incluye situaciones con información incompleta y casos preparados para comprobar límites. No incorpora datos personales innecesarios para producir una tabla más detallada. Cada diferencia que se observa debe poder relacionarse con el uso y sus consecuencias."
+    },
+    {
+      "id": "N32-s03-b006",
+      "text": "Ricardo Sosa agrega una medición que faltaba: cuánto lleva verificar las respuestas. Al incluir revisión y reparación, la ventaja temporal inicial desaparece en las condiciones observadas. Eso no demuestra que toda asistencia sea inútil. Sí elimina una de las razones que se estaban usando para pedir más autonomía."
+    },
+    {
+      "id": "N32-s03-b007",
+      "text": "Elena decide no ampliarla. Se mantiene, con revisión y alcance acotado, la preparación de información para consultas generales. No se habilitan acciones sobre condiciones de accesibilidad ni compensaciones. Cuando falta una fuente aplicable, el asistente debe señalarlo y transferir la consulta con contexto a una persona con atribuciones para resolverla."
+    },
+    {
+      "id": "N32-s03-b008",
+      "text": "La decisión incluye qué debe volver a probarse: errores de los doce pedidos, variaciones nocturnas y capacidad real de revisión. Una nueva versión no se acepta sólo porque mantenga el nombre del producto. HH-33 retomará justamente ese problema: cómo sostener la autorización cuando cambian fuentes, modelo, herramientas o forma de uso."
+    },
+    {
+      "id": "N32-s04-h2",
+      "text": "Tesis"
+    },
+    {
+      "id": "N32-s04-b001",
+      "text": "Evaluar una IA no es ponerle una nota general. Es reunir evidencia para decidir qué podemos dejarle hacer, para quiénes y bajo qué condiciones. La calidad de una respuesta importa, pero también importan la información que recibe la persona, el permiso que usa el sistema y la consecuencia de equivocarse."
+    },
+    {
+      "id": "N32-s04-b002",
+      "text": "Un ejemplo sencillo: una ayuda escribe nueve respuestas correctas y una incorrecta. Si la incorrecta contiene una falta de ortografía, una revisión breve puede alcanzar. Si promete una habitación que no satisface una necesidad confirmada, la misma proporción de aciertos significa algo muy distinto. Contar errores sin examinar sus consecuencias deja afuera lo que necesitamos decidir."
+    },
+    {
+      "id": "N32-s04-b003",
+      "text": "También debemos saber qué representa la prueba. Muchas consultas fáciles no demuestran desempeño en situaciones ausentes. Una prueba con tiempo ilimitado no demuestra que Recepción pueda revisar bajo presión. Una comparación contra documentos viejos no demuestra ventaja respecto de un buscador bien mantenido. La evidencia vale para las condiciones que realmente cubre, no para cualquier uso imaginable."
+    },
+    {
+      "id": "N32-s04-b004",
+      "text": "De ahí surgen tres exigencias. Primero, definir la tarea y la alternativa antes de elegir las métricas. Segundo, mirar gravedad, distribución y variación de los errores. Tercero, probar cómo trabaja el conjunto de personas y herramientas, no deducir su resultado de componentes evaluados por separado."
+    },
+    {
+      "id": "N32-s04-b005",
+      "text": "El límite de esta tesis no es pedir certeza absoluta. Ninguna prueba recorre todo el futuro. Se busca un fundamento proporcionado a la decisión y una forma de reconocer cuándo deja de valer. Un resultado inconcluso puede justificar una prueba más pequeña, una restricción o una alternativa distinta. No debe transformarse por comodidad en aprobación ni en rechazo universal."
+    },
+    {
+      "id": "N32-s04-b006",
+      "text": "En Hotel Horizonte, esto permite una conclusión precisa: un desempeño favorable en respuestas generales no habilita cambios autónomos sobre reservas. La evaluación debe justificar exactamente el permiso que concede, sin hacerle decir al promedio más de lo que demuestra."
+    },
+    {
+      "id": "N32-s05-h2",
+      "text": "Para orientar la lectura"
+    },
+    {
+      "id": "N32-s05-b001",
+      "text": "Primero definí qué respuesta considerarías correcta y aplicá ese criterio a casos concretos. Abrí el 91 % y probá el conjunto de personas y herramienta. Robustez, pruebas adversariales, repetición y diseños comparativos amplían la evaluación. El primer ejercicio pide justificar un permiso con evidencia, no construir una batería completa de todas las técnicas."
+    },
+    {
+      "id": "N32-s06-h2",
+      "text": "Qué se evalúa: una respuesta, una tarea y su consecuencia"
+    },
+    {
+      "id": "N32-s06-b001",
+      "text": "Supongamos que el asistente redacta correctamente una condición, pero la pantalla oculta que es una propuesta pendiente de aprobación. El huésped cree que ya está confirmada. Si puntuamos sólo el texto, el caso parece correcto. Si seguimos el servicio, encontramos un problema de diseño y comunicación."
+    },
+    {
+      "id": "N32-s06-b002",
+      "text": "La unidad de evaluación es aquello que tomamos como caso para juzgar el resultado. Puede ser una respuesta para una prueba acotada del modelo. Para decidir un uso operativo suele necesitar más: consulta, contexto disponible, fuente, propuesta, revisión, acción y resultado. Elegir la unidad establece qué podremos concluir."
+    },
+    {
+      "id": "N32-s06-b003",
+      "text": "No hace falta incluir toda la historia del hotel en cada caso. Hay que conservar el tramo necesario para observar la consecuencia relevante. Si la decisión consiste en permitir borradores internos, se prueba su revisión. Si consiste en enviar ofertas, se examina además qué entiende el huésped y qué compromiso se produce. Si cambia el permiso, cambia lo que debemos demostrar."
+    },
+    {
+      "id": "N32-s06-b004",
+      "text": "Conviene mantener niveles separados. El modelo puede fallar y la persona detectar el error. En ese caso hubo un defecto del componente y un control que funcionó. El modelo puede responder bien y la persona interpretar mal una condición por una interfaz confusa. En ese caso no se arregla el resultado sólo entrenando o reemplazando el modelo."
+    },
+    {
+      "id": "N32-s06-b005",
+      "text": "Una ficha de episodio ayuda a reconstruir la secuencia. Registra qué se sabía en ese momento, no lo que descubrimos después. Así evitamos juzgar a Lucía como si hubiera visto una fuente que la pantalla no mostraba. También evitamos atribuir al asistente una información que llegó recién después de su respuesta."
+    },
+    {
+      "id": "N32-s06-b006",
+      "text": "El contraejemplo es cambiar de unidad en medio de la comparación: contar mensajes en la ruta automática y reservas completas en la alternativa. Una reserva puede requerir varios mensajes. Las cifras ya no responden la misma pregunta. Si el diseño obliga a cambiar la unidad, se documenta el cambio y se vuelve a establecer una comparación válida."
+    },
+    {
+      "id": "N32-s07-h2",
+      "text": "Cobertura: a quiénes y a qué situaciones llegó la prueba"
+    },
+    {
+      "id": "N32-s07-b001",
+      "text": "Si querés comprobar una linterna, no alcanza con encenderla cien veces en una habitación iluminada. También interesa cómo funciona donde la vas a necesitar. Con una IA ocurre algo parecido: repetir casos cómodos aumenta el número de pruebas, pero puede dejar intactos los huecos importantes."
+    },
+    {
+      "id": "N32-s07-b002",
+      "text": "La cobertura describe los usos y condiciones representados. En el hotel incluye tipos de consulta, turnos, canales, fuentes disponibles y necesidades que cambian las consecuencias. No se reduce a un porcentaje mágico. Debe permitir ver qué se probó y qué no."
+    },
+    {
+      "id": "N32-s07-b003",
+      "text": "Camila puede aportar consultas comerciales frecuentes. Mariela puede identificar errores posibles en condiciones de habitación. Lucía conoce preguntas que llegan incompletas y casos que no encajan en las opciones de un formulario. Federico agrega situaciones donde una herramienta responde tarde o una fuente no está disponible. Ninguna de esas perspectivas reemplaza por sí sola a las demás."
+    },
+    {
+      "id": "N32-s07-b004",
+      "text": "El conjunto histórico muestra parte de lo que ocurrió. Puede omitir a personas que abandonaron el canal, consultas no registradas y necesidades nuevas. Por eso se combina con selección dirigida y casos preparados. Esa combinación no significa mezclar todas las pruebas en una sola tasa: cada origen de evidencia responde preguntas diferentes."
+    },
+    {
+      "id": "N32-s07-b005",
+      "text": "Una muestra elegida para estimar la frecuencia habitual necesita representar el uso que describe. Una colección dirigida de casos difíciles sirve para buscar fallas y probar controles. No se usa su proporción de errores como si reflejara la frecuencia de toda la operación. Encontrar problemas en una prueba exigente es valioso aunque no permita calcular cuántos ocurrirán por mes."
+    },
+    {
+      "id": "N32-s07-b006",
+      "text": "Tampoco se exige probar todas las combinaciones de idioma, turno, tarifa y necesidad. Se priorizan las que tienen razones plausibles para fallar o consecuencias relevantes. El resto queda como límite declarado. Decir «no tenemos evidencia para esta situación» es más útil que esconderla bajo la cantidad total."
+    },
+    {
+      "id": "N32-s07-b007",
+      "text": "ARIA, en su piloto publicado por NIST en 2025, combina pruebas del modelo, ejercicios adversos y pruebas de campo. Esa distinción recuerda que desempeño aislado, resistencia a intentos de falla e interacción en uso son preguntas complementarias. No se reemplazan acumulando ejemplos de una sola clase. [NIST, ARIA: informe del piloto](https://www.nist.gov/publications/assessing-risks-and-impacts-ai-aria-pilot-evaluation-report)."
+    },
+    {
+      "id": "N32-s07-b008",
+      "text": "El borrador inicial TEVV-Athlon de 2026 propone una evaluación adaptable al propósito y a las aplicaciones. Se cita aquí como borrador, no como norma definitiva ni certificación exigible. Su aporte es evitar una prueba única pretendidamente adecuada para cualquier uso. [NIST, TEVV-Athlon](https://www.nist.gov/artificial-intelligence/ai-research/tevv-athlon-framework-evaluating-ai-systems)."
+    },
+    {
+      "id": "N32-s08-h2",
+      "text": "Cuántos casos hacen falta depende de lo que querés afirmar"
+    },
+    {
+      "id": "N32-s08-b001",
+      "text": "Una prueba pequeña puede encontrar un defecto grave. No por eso estima con precisión su frecuencia futura. Esta diferencia es central en los doce pedidos de accesibilidad de HH-32. Cinco fallas muestran que hay problemas concretos que requieren corrección. No permiten afirmar sin más que el asistente fallará en la misma proporción en toda la población."
+    },
+    {
+      "id": "N32-s08-b002",
+      "text": "Para estimar una tasa importan el tamaño, la selección de casos, su independencia y la estabilidad de las condiciones. Para probar que un permiso puede exceder una restricción, un episodio bien reconstruido puede ser suficiente como contraejemplo. El tipo de afirmación determina el tipo de evidencia."
+    },
+    {
+      "id": "N32-s08-b003",
+      "text": "Supongamos un ensayo controlado donde una herramienta tiene prohibido modificar tarifas. Una sola modificación no autorizada demuestra que ese control no se sostuvo en el caso probado. No necesitamos esperar a calcular una tasa estable para limitar el permiso. En cambio, ese episodio no demuestra que todas las respuestas informativas sean incorrectas."
+    },
+    {
+      "id": "N32-s08-b004",
+      "text": "Cuando el grupo es pequeño se informan cuentas completas y límites: cinco fallas entre doce pedidos examinados, cómo se eligieron y qué consecuencias tuvieron. Si el diseño permite estimación estadística, pueden usarse intervalos apropiados. Un intervalo no corrige una selección sesgada ni vuelve representativa una muestra dirigida."
+    },
+    {
+      "id": "N32-s08-b005",
+      "text": "Una salida prudente puede combinar dos medidas: restringir la acción que mostró una falla y mejorar la evidencia para las demás. La falta de precisión no obliga a esperar pasivamente ante un daño conocido. Tampoco autoriza a presentar el peor caso como frecuencia inevitable de todos los usos."
+    },
+    {
+      "id": "N32-s09-h2",
+      "text": "Comparar con la mejor alternativa que el equipo puede sostener"
+    },
+    {
+      "id": "N32-s09-b001",
+      "text": "N31 ya estableció que una IA debe compararse con algo practicable. N32 convierte esa idea en una prueba. Para consultas generales, el hotel puede contrastar generación asistida con búsqueda guiada y atención habitual mejorada. Todas las rutas necesitan acceso equivalente a la información pertinente, salvo que la diferencia de acceso sea justamente lo que se estudia."
+    },
+    {
+      "id": "N32-s09-b002",
+      "text": "La línea de base no es una persona ideal que nunca se cansa. Es una alternativa real con tiempos, errores y restricciones. Si el turno actual está sobrecargado, esa condición debe medirse. Si la ruta nueva recibe más capacitación o personal adicional, no se atribuye todo su resultado al modelo."
+    },
+    {
+      "id": "N32-s09-b003",
+      "text": "Para comparar se define qué casos recibe cada ruta y qué resultados se observan. Cuando una asignación controlada o aleatoria es posible y adecuada, puede ayudar a reducir diferencias previas. Cuando no lo es, se buscan grupos o períodos comparables y se declaran las limitaciones. La seguridad y las obligaciones del servicio delimitan qué pruebas pueden realizarse con personas reales."
+    },
+    {
+      "id": "N32-s09-b004",
+      "text": "Hay un problema adicional: aprendizaje. Si alguien resuelve primero un caso con una herramienta y después sin ella, ya conoce información que no tenía al comienzo. El orden puede favorecer a la segunda ruta. La prueba debe controlar ese efecto mediante casos equivalentes, orden compensado u otro diseño apropiado, no ignorarlo porque el cálculo sea cómodo."
+    },
+    {
+      "id": "N32-s09-b005",
+      "text": "También se registran cambios simultáneos. Quizás durante el piloto se aclaró una política que causaba muchas consultas. Si todas las rutas mejoran, parte de la ganancia proviene de esa corrección. El informe puede reconocerlo sin quitar valor al proyecto. Lo que no debe hacer es adjudicar a la IA un efecto cuya causa no se distinguió."
+    },
+    {
+      "id": "N32-s09-b006",
+      "text": "Una línea de base puede mejorar después. Si aparece un buscador más útil o se simplifica el proceso, la ventaja anterior merece revisión. La decisión se defiende frente a las opciones disponibles hoy, no frente a una fotografía antigua elegida porque era fácil de superar."
+    },
+    {
+      "id": "N32-s10-h2",
+      "text": "La medida tiene que representar lo que importa"
+    },
+    {
+      "id": "N32-s10-b001",
+      "text": "Un estudiante puede copiar una explicación sin comprenderla. Si la evaluación cuenta coincidencias de palabras, quizás obtenga una nota alta. El problema no es la precisión de la cuenta; es la distancia entre lo que medimos y lo que decimos evaluar."
+    },
+    {
+      "id": "N32-s10-b002",
+      "text": "La validez de constructo pregunta justamente por esa relación. Un constructo es una idea que queremos estudiar, como comprensión, utilidad o calidad de una respuesta. Necesitamos indicadores, pero ningún nombre de columna transforma automáticamente una cuenta en una medida válida de esa idea."
+    },
+    {
+      "id": "N32-s10-b003",
+      "text": "En el hotel, puntuar extensión, amabilidad y gramática puede servir para algunos aspectos de comunicación. No alcanza para medir si una respuesta es correcta para la reserva y respeta la autoridad disponible. Una promesa imposible puede ser breve, clara y muy cordial."
+    },
+    {
+      "id": "N32-s10-b004",
+      "text": "El equipo prepara una rúbrica, es decir, criterios con ejemplos para juzgar respuestas. Distingue fuente aplicable, afirmación respaldada, condiciones conservadas, claridad y respeto de permisos. Incluye deliberadamente un texto convincente pero incorrecto y otro menos elegante que reconoce un límite. Si el primero obtiene mejor evaluación general sólo por su tono, la rúbrica necesita corregirse."
+    },
+    {
+      "id": "N32-s10-b005",
+      "text": "Algunos criterios funcionan como condiciones indispensables, no como puntos compensables. Una respuesta no debería aprobar una promesa no autorizada porque fue excelente en amabilidad. Puede informarse una puntuación lingüística favorable y, al mismo tiempo, un resultado operativo no aceptable. Mantener ambas dimensiones evita que una media borre la falla decisiva."
+    },
+    {
+      "id": "N32-s10-b006",
+      "text": "Dos evaluadores pueden discrepar sobre si una explicación es suficiente. Se examinan sus razones y se aclaran los criterios. El acuerdo aporta consistencia, pero no prueba por sí solo que ambos estén evaluando lo correcto. Dos personas pueden compartir la misma interpretación equivocada de una política."
+    },
+    {
+      "id": "N32-s10-b007",
+      "text": "Si la rúbrica cambia después de ver resultados, se conserva la versión anterior y se explica por qué cambió. Puede ser una mejora legítima del instrumento. Lo que no corresponde es comparar puntajes de versiones distintas como si significaran lo mismo o ajustar el criterio hasta que la herramienta deseada apruebe."
+    },
+    {
+      "id": "N32-s11-h2",
+      "text": "Abrir el 91% sin perder de vista los casos"
+    },
+    {
+      "id": "N32-s11-b001",
+      "text": "Hagamos una cuenta ilustrativa para entender el promedio del caso. Supongamos cien consultas evaluadas: doce de accesibilidad y ochenta y ocho de otros tipos. De las primeras, siete cumplen los criterios y cinco fallan. De las otras, ochenta y cuatro cumplen y cuatro fallan. El total es noventa y una respuestas aceptables entre cien: 91%."
+    },
+    {
+      "id": "N32-s11-b002",
+      "text": "La cuenta es coherente. No hay que alterarla para mostrar el problema. Hay que agregar la información que necesita quien decide: dónde están las nueve fallas, qué ocurrió en cada una y qué podía hacer la persona revisora. Los doce casos no desaparecen porque las otras consultas hayan salido mejor."
+    },
+    {
+      "id": "N32-s11-b003",
+      "text": "En esta distribución didáctica, cuatro fallas entre ochenta y ocho consultas y cinco entre doce no describen la misma situación. Tampoco sabemos automáticamente por qué difieren. Puede faltar información operativa, haber una categoría inadecuada o variar la capacidad de revisión. El siguiente paso es investigar mecanismos, no atribuir una causa sólo mirando porcentajes."
+    },
+    {
+      "id": "N32-s11-b004",
+      "text": "Ahora imaginemos que el hotel agrega novecientas consultas fáciles y todas salen bien. El porcentaje agregado subiría, pero los cinco problemas de accesibilidad seguirían exactamente donde estaban. Agregar aciertos de otro tipo no corrige el permiso que falló. Este es el riesgo de usar un promedio como puerta única para ampliar autonomía."
+    },
+    {
+      "id": "N32-s11-b005",
+      "text": "El análisis necesita además separar etapas. Una respuesta inicialmente defectuosa que Lucía corrige no cuenta como acierto inicial del modelo. Puede contar como resultado final correcto del conjunto, acompañado por tiempo y esfuerzo de corrección. Si mezclamos ambos niveles, dejamos de ver qué está sosteniendo realmente la calidad."
+    },
+    {
+      "id": "N32-s11-b006",
+      "text": "Lo mismo ocurre con la detección humana. Su denominador son los errores relevantes que la persona tuvo oportunidad de revisar, no todas las respuestas. «Corrigió casi todo» necesita mostrar cuántos errores había, cuántos detectó y cuáles escaparon. No se publica una tasa precisa sin una cuenta que la respalde."
+    },
+    {
+      "id": "N32-s12-h2",
+      "text": "Gravedad: no todos los errores se compensan entre sí"
+    },
+    {
+      "id": "N32-s12-b001",
+      "text": "Escribir mal una palabra y ofrecer una habitación inadecuada son errores, pero no equivalentes. La severidad describe la gravedad de la consecuencia posible o producida. Para juzgarla miramos a quién afecta, durante cuánto tiempo, con qué alcance y qué reparación existe."
+    },
+    {
+      "id": "N32-s12-b002",
+      "text": "La frecuencia responde otra pregunta: cuántas veces ocurre. Un defecto frecuente puede ser leve; uno infrecuente puede exigir una restricción estricta. Multiplicar categorías arbitrarias de frecuencia y gravedad no convierte automáticamente esos juicios en una medida exacta. Conviene conservar qué representa cada dimensión y qué decisión se deriva de ella."
+    },
+    {
+      "id": "N32-s12-b003",
+      "text": "En HH-32, Mariela y Lucía ayudan a describir niveles con episodios concretos. Una frase poco natural que se corrige antes de enviar. Una condición omitida que obliga a aclarar. Una oferta incompatible con una necesidad confirmada. Cada caso demanda acciones distintas y puede tener efectos diferentes según cuándo se detecte."
+    },
+    {
+      "id": "N32-s12-b004",
+      "text": "También se registra la detectabilidad: la posibilidad de advertir el error antes de que produzca daño. Una frase evidentemente incoherente puede detener a quien revisa. Una promesa falsa pero convincente puede pasar sin objeciones. La buena apariencia puede volver más difícil el control en lugar de reducir el riesgo."
+    },
+    {
+      "id": "N32-s12-b005",
+      "text": "La reparación tiene límites. Restaurar el dato de una reserva no devuelve el tiempo perdido ni elimina una situación de exposición personal. Por eso no se concede una acción riesgosa sólo porque técnicamente exista un botón para deshacer. N29 ya distinguió volver una versión de reparar sus efectos."
+    },
+    {
+      "id": "N32-s12-b006",
+      "text": "Los casos graves no se quitan del total para mejorar el promedio. Permanecen contados y se analizan además por separado, con condiciones de detención propias. Una falla puede impedir ampliar un permiso aunque otros indicadores mejoren. Eso es distinto de declarar inútil todo el sistema: se identifica exactamente qué acción no está justificada."
+    },
+    {
+      "id": "N32-s13-h2",
+      "text": "Mirar diferencias sin convertirlas en conclusiones apresuradas"
+    },
+    {
+      "id": "N32-s13-b001",
+      "text": "Desagregar significa abrir los resultados por grupos o situaciones relevantes. En el hotel puede importar el turno, el canal, el idioma de la consulta o una necesidad de accesibilidad. Los cortes se eligen porque hay razones para esperar diferencias en fuentes, interacción, consecuencias o capacidad de respuesta."
+    },
+    {
+      "id": "N32-s13-b002",
+      "text": "Una disparidad es una diferencia observada. Un sesgo, en el análisis del sistema, puede referirse a un mecanismo sistemático que distorsiona su representación o sus resultados. Una diferencia perjudicial e injustificada requiere además examinar obligaciones, oportunidades y distribución del daño. No son tres nombres intercambiables para cualquier porcentaje distinto."
+    },
+    {
+      "id": "N32-s13-b003",
+      "text": "Supongamos que el turno nocturno muestra más errores. Tal vez recibe consultas más difíciles; tal vez tiene menos apoyo; tal vez la fuente que usa está desactualizada. También puede haber variación por el número reducido de casos. El resultado abre una investigación. No demuestra por sí solo que las personas de ese turno trabajen peor."
+    },
+    {
+      "id": "N32-s13-b004",
+      "text": "El estudio Gender Shades, de Buolamwini y Gebru, evaluó sistemas comerciales de clasificación de género a partir de imágenes faciales y mostró diferencias importantes entre subgrupos definidos en su investigación. Su lección para esta lectura es metodológica: un agregado puede ocultar brechas que aparecen al examinar intersecciones. No convierte esas categorías de estudio en una definición completa de identidad ni demuestra por sí solo cómo funcionará cualquier otro sistema. [Gender Shades](https://proceedings.mlr.press/v81/buolamwini18a.html)."
+    },
+    {
+      "id": "N32-s13-b005",
+      "text": "Las diferencias también pueden esconderse con tasas iguales. Dos grupos pueden recibir el mismo porcentaje de respuestas equivocadas y tener posibilidades muy distintas de pedir corrección. Si uno obtiene reparación enseguida y el otro debe insistir por un canal que no puede usar, la igualdad numérica no describe igualdad de experiencia."
+    },
+    {
+      "id": "N32-s13-b006",
+      "text": "Friedman y Hendry permiten discutir valores y personas afectadas antes de elegir una métrica de equidad. O’Neil advierte sobre daños que crecen con escala, opacidad y pocas posibilidades de apelación. ISO/IEC TR 24027 organiza fuentes de sesgo a lo largo del ciclo de vida. En conjunto, estas miradas amplían la pregunta: no sólo quién recibe un error, sino por qué y con qué salida."
+    },
+    {
+      "id": "N32-s13-b007",
+      "text": "La desagregación exige cuidar la privacidad. Un grupo muy pequeño puede volver identificable a una persona si se publican detalles de turno, reserva y necesidad. No se resuelve ocultando su problema. Se puede conservar evidencia protegida para la revisión, comunicar límites sin exponer identidades y usar casos preparados para comprobar el mecanismo. La protección de datos y la visibilidad del daño necesitan diseñarse juntas."
+    },
+    {
+      "id": "N32-s13-b008",
+      "text": "También se distingue análisis previsto de exploración posterior. Si examinamos decenas de cortes y mostramos sólo el más llamativo, podemos exagerar una diferencia casual. Si aparece una señal nueva, se informa como exploratoria y se investiga. No hay que ignorarla ni presentarla inmediatamente como prueba causal definitiva."
+    },
+    {
+      "id": "N32-s14-h2",
+      "text": "Robustez: cambiar la forma sin cambiar injustificadamente la decisión"
+    },
+    {
+      "id": "N32-s14-b001",
+      "text": "Una persona escribe «necesito ingresar sin escalones»; otra describe la misma necesidad con más palabras y errores de tipeo. Si el significado relevante es equivalente, no debería desaparecer una condición importante por cómo se escribió. Esa es una pregunta de robustez: si el comportamiento se mantiene aceptable ante variaciones que el servicio debe poder manejar."
+    },
+    {
+      "id": "N32-s14-b002",
+      "text": "No se busca que todas las respuestas tengan idénticas palabras. Se busca que conserven lo necesario: fuente aplicable, condición, límite y acción permitida. Un sistema puede variar la explicación y seguir siendo correcto. También puede repetir siempre la misma frase y fallar de manera sistemática."
+    },
+    {
+      "id": "N32-s14-b003",
+      "text": "La prueba distingue cambios de forma y cambios de significado. Reordenar información equivalente puede requerir la misma decisión. Cambiar una fecha, la tarifa o una necesidad puede requerir otra. Exigir invariancia frente a cualquier modificación sería incorrecto: un sistema robusto también debe responder a diferencias que sí importan."
+    },
+    {
+      "id": "N32-s14-b004",
+      "text": "Las pruebas metamórficas expresan relaciones entre versiones de un caso cuando no existe una única respuesta textual esperada. Por ejemplo: si agregamos un detalle irrelevante, no debería cambiar el permiso; si retiramos una condición necesaria, no debería mantenerse una confirmación que dependía de ella. La relación debe estar justificada por el caso, no por una transformación mecánica del texto."
+    },
+    {
+      "id": "N32-s14-b005",
+      "text": "En el hotel se ensayan abreviaturas habituales, preguntas incompletas y distinto orden de documentos recuperados. También se observa si una fuente vencida pero muy parecida desplaza a la vigente. Los resultados permiten localizar si la fragilidad está en recuperación, interpretación, interacción o ejecución."
+    },
+    {
+      "id": "N32-s14-b006",
+      "text": "Hay un límite: tolerar ruido no demuestra validez frente a una política nueva. Si cambió la regla aplicable, no alcanza con probar paráfrasis de consultas anteriores. Hace falta revisar la evidencia relacionada. Robustez frente a variaciones esperables y adaptación a cambios del servicio son problemas conectados, pero no idénticos."
+    },
+    {
+      "id": "N32-s14-b007",
+      "text": "Un sistema que se abstiene siempre puede evitar muchas respuestas incorrectas y no resolver ninguna tarea. Por eso se observan conjuntamente errores, abstenciones, derivaciones y carga posterior. No se premia seguridad aparente producida simplemente por trasladar todo el trabajo a una cola sin capacidad."
+    },
+    {
+      "id": "N32-s15-h2",
+      "text": "Ampliación · Buscar fallas de manera controlada"
+    },
+    {
+      "id": "N32-s15-b001",
+      "text": "Las pruebas ordinarias muestran cómo funciona el sistema en situaciones previstas. Las pruebas adversas buscan intencionalmente que falle un control. No consisten en inventar frases extravagantes para sorprender al modelo; parten de un efecto que necesitamos impedir y de una vía plausible por la que podría ocurrir."
+    },
+    {
+      "id": "N32-s15-b002",
+      "text": "En HH-32 se puede comprobar si el asistente conserva el límite ante una solicitud insistente de excepción, si trata una instrucción dentro de un documento como contenido y no como autoridad, o si intenta acceder a una reserva fuera del permiso concedido. Son pruebas acotadas, con datos ficticios o aislados y autorización para realizar el ensayo. No se usan huéspedes reales como material de experimentación insegura."
+    },
+    {
+      "id": "N32-s15-b003",
+      "text": "El modelo de amenaza describe quién podría intentar qué, con qué acceso y qué consecuencia buscamos evitar. Puede incluir una persona externa, una cuenta autorizada usada fuera de propósito o una fuente alterada. Esa descripción ayuda a elegir controles y a no confundir curiosidades del lenguaje con fallas relevantes del servicio."
+    },
+    {
+      "id": "N32-s15-b004",
+      "text": "El resultado se observa hasta la herramienta. Si el asistente promete una acción prohibida, hay una falla de comunicación. Si además la ejecuta, falló otra defensa. Si el servicio bloquea la acción, ese control aporta evidencia favorable aunque la respuesta del modelo siga necesitando corrección. Separar capas permite saber qué protección funcionó."
+    },
+    {
+      "id": "N32-s15-b005",
+      "text": "Después se corrige y se repite el escenario, junto con variantes razonables. Un hallazgo sin responsable ni comprobación posterior no reduce exposición. Tampoco una prueba superada demuestra resistencia a todo abuso futuro. Se documenta qué se intentó, qué se observó, qué cambió y qué sigue fuera de cobertura, sin difundir innecesariamente datos o detalles que faciliten daño."
+    },
+    {
+      "id": "N32-s16-h2",
+      "text": "Ampliación · Repetir para saber si vimos un resultado o una casualidad favorable"
+    },
+    {
+      "id": "N32-s16-b001",
+      "text": "Si una demostración responde bien una vez, sabemos que esa ejecución respondió bien. No sabemos todavía con qué frecuencia lo hará en condiciones comparables. En sistemas que pueden variar entre ejecuciones, elegir el mejor resultado de varios intentos y mostrarlo como desempeño habitual es una forma de ocultar información."
+    },
+    {
+      "id": "N32-s16-b002",
+      "text": "La repetición conserva lo que puede conservarse: versión, instrucciones, fuentes, herramientas, parámetros y entorno. Algunos servicios externos no permiten reproducir exactamente todos sus detalles. Esa limitación se registra. No se promete identidad literal por fijar un parámetro o reducir la variación de generación."
+    },
+    {
+      "id": "N32-s16-b003",
+      "text": "Lo que interesa repetir es el comportamiento relevante. Puede cambiar una frase sin cambiar la decisión. Pero si una ejecución deriva una excepción y otra ofrece una compensación sin autoridad, la variación afecta el permiso que estamos evaluando. Ambas respuestas pueden sonar profesionales; sólo una respeta el alcance."
+    },
+    {
+      "id": "N32-s16-b004",
+      "text": "La confiabilidad, en este análisis, requiere desempeño suficientemente consistente para el uso previsto. No se confunde con validez: una respuesta puede repetirse siempre y estar equivocada. Ni se reduce a determinismo: cierta diversidad puede ser apropiada al explorar opciones y resultar improcedente al aplicar una condición obligatoria."
+    },
+    {
+      "id": "N32-s16-b005",
+      "text": "El equipo registra todos los intentos pertinentes del ensayo, no sólo la captura más convincente. Si descubre variación, investiga sus fuentes. Puede venir del modelo, de los documentos recuperados, de la disponibilidad de herramientas o de datos que cambian. Mantener el nombre del modelo no asegura que se haya repetido el mismo sistema."
+    },
+    {
+      "id": "N32-s16-b006",
+      "text": "La cantidad de repeticiones depende de la afirmación, la variabilidad y las consecuencias. No existe un número universal que vuelva confiable cualquier tarea. Las pruebas deben justificar qué pueden concluir y qué incertidumbre queda. Si el permiso solicitado no tolera la variación observada, se restringe, se rediseña o se usa otra alternativa."
+    },
+    {
+      "id": "N32-s17-h2",
+      "text": "Probar a las personas y a la herramienta trabajando juntas"
+    },
+    {
+      "id": "N32-s17-b001",
+      "text": "Una persona puede detectar errores que el modelo no reconoce. También puede confiar de más en una sugerencia presentada con seguridad. Por eso no alcanza con evaluar por separado una buena herramienta y un buen equipo y suponer que juntos necesariamente obtendrán un resultado mejor."
+    },
+    {
+      "id": "N32-s17-b002",
+      "text": "En el hotel se observa cuándo Recepción acepta, corrige, rechaza o pide ayuda. Se registra cuánto tarda, qué información consulta y qué sucede después. La revisión incluye los errores del asistente que escaparon y las propuestas correctas que una persona modificó equivocadamente. No se parte de la idea de que todo cambio humano mejora la salida."
+    },
+    {
+      "id": "N32-s17-b003",
+      "text": "Un ejemplo didáctico ayuda a ver el conjunto. Imaginemos cien respuestas iniciales: noventa correctas y diez incorrectas. La revisión corrige ocho de las diez, pero altera equivocadamente dos de las noventa que estaban bien. Quedan noventa y seis resultados correctos y cuatro incorrectos. El resultado final mejoró respecto del modelo solo, aunque hubo fallas de revisión y trabajo adicional. Cada capa necesita su propia cuenta."
+    },
+    {
+      "id": "N32-s17-b004",
+      "text": "Si informáramos «la supervisión corrigió el 80% de los errores», describiríamos ocho de diez errores iniciales. No estaríamos diciendo que el 80% de todas las respuestas mejoró ni que la revisión no introdujo problemas. Es importante nombrar el denominador y conservar las dos alteraciones incorrectas, en lugar de esconderlas bajo la mejora neta."
+    },
+    {
+      "id": "N32-s17-b005",
+      "text": "Ahora agreguemos el tiempo. Si revisar cada respuesta exige dos minutos, son doscientos minutos de trabajo, además de las reparaciones. Quizás valgan la pena para cierto propósito; quizás una búsqueda guiada resuelva mejor. La conclusión depende de la comparación completa y de qué errores quedan, no sólo de que el resultado suba de noventa a noventa y seis."
+    },
+    {
+      "id": "N32-s17-b006",
+      "text": "El equipo evaluado incluye a quienes no usan la interfaz. Mariela puede dedicar tiempo a corregir información que alimenta al asistente. Federico puede mantener fuentes y resolver fallas. Otro turno puede recibir consultas derivadas. Si esos esfuerzos quedan afuera, una mejora local puede ocultar una sobrecarga distribuida."
+    },
+    {
+      "id": "N32-s17-b007",
+      "text": "También se observa cómo cambia el uso con el tiempo. Al comienzo la gente revisa con especial atención; después aparecen confianza, atajos o criterios mejores. Una única sesión acompañada por especialistas no representa necesariamente la operación de varias semanas. La evaluación necesita combinar ensayo controlado y observación adecuada del uso, sin confundir presencia de apoyo extraordinario con capacidad habitual."
+    },
+    {
+      "id": "N32-s18-h2",
+      "text": "La supervisión debe resistir la carga del turno"
+    },
+    {
+      "id": "N32-s18-b001",
+      "text": "Poner una persona en el diagrama no demuestra que podrá intervenir. En HH-32, la prueba debe incluir demanda prevista, interrupciones razonables, relevo y acceso real a fuentes. No se busca agotar a las personas para ver hasta dónde llegan; se busca diseñar un trabajo que puedan sostener."
+    },
+    {
+      "id": "N32-s18-b002",
+      "text": "Ricardo define qué capacidad de revisión está disponible. Lucía comprueba si se puede abrir la fuente, entender el cambio y rechazarlo antes de enviarlo. Federico verifica permisos y continuidad técnica. Elena decide el alcance autorizado a partir de esa evidencia. Ninguno reemplaza las tareas de los demás por figurar como responsable general."
+    },
+    {
+      "id": "N32-s18-b003",
+      "text": "Un rechazo correcto no debería convertirse automáticamente en mala productividad. Si el indicador individual premia aprobar rápido, la organización puede producir la conducta que luego culpa a la persona por tener. La prueba debe mirar esos incentivos además de los botones."
+    },
+    {
+      "id": "N32-s18-b004",
+      "text": "Elish analiza cómo un operador puede terminar recibiendo responsabilidad por un sistema sobre el que tenía control limitado. Esa advertencia obliga a examinar quién definió permisos, carga e interfaz, en lugar de atribuir todo a quien hizo el último clic. [Moral Crumple Zones](https://estsjournal.org/index.php/ests/article/view/260)."
+    },
+    {
+      "id": "N32-s18-b005",
+      "text": "En el hotel, si Lucía no pudo ver la condición omitida y tenía segundos para aprobar, «debió revisar mejor» no explica suficientemente el episodio. Puede haber una acción individual a revisar, pero también hay decisiones de diseño y organización. Reconstruirlas permite cambiar controles en lugar de limitarse a buscar a quién señalar."
+    },
+    {
+      "id": "N32-s18-b006",
+      "text": "Una supervisión que aporta poco puede rediseñarse. No se la elimina automáticamente porque consuma tiempo: quizá está evitando un daño importante. Tampoco se la conserva como símbolo si nadie puede ejercerla. Si no existe una protección alternativa suficiente, la respuesta puede ser reducir la automatización, no ampliar permisos para que el proceso parezca más rápido."
+    },
+    {
+      "id": "N32-s19-h2",
+      "text": "Convertir resultados en permisos concretos"
+    },
+    {
+      "id": "N32-s19-b001",
+      "text": "Al final de una evaluación alguien debe decidir qué puede hacerse. «El modelo aprobó» es demasiado amplio. Puede habilitar indebidamente usos que nunca se probaron. Una decisión útil nombra tarea, población, configuración, condición y autoridad."
+    },
+    {
+      "id": "N32-s19-b002",
+      "text": "En HH-32 podemos separar tres decisiones. Para consultas generales, mantener preparación de borradores con revisión bajo las condiciones evaluadas. Para pedidos de accesibilidad, no habilitar recomendaciones concluyentes ni acciones que cambien condiciones; transferir con fuentes y contexto para verificación humana. Para compensaciones, preparar información sin ejecutar beneficios cuando no existe la autorización requerida."
+    },
+    {
+      "id": "N32-s19-b003",
+      "text": "Esa diferenciación no significa negar atención a los casos que la IA no cubre. Se limita la herramienta, no el compromiso del servicio con la persona. La alternativa necesita capacidad efectiva; de lo contrario, la restricción podría desplazar el perjuicio a otra cola."
+    },
+    {
+      "id": "N32-s19-b004",
+      "text": "Los permisos no forman necesariamente una escalera que deba subirse completa. Informar, preparar, recomendar y ejecutar son acciones con condiciones distintas. Tal vez una comprobación estable pueda automatizarse ampliamente, mientras una explicación ambigua sigue necesitando revisión. El análisis es por tarea, no por deseo de alcanzar el máximo nivel de autonomía."
+    },
+    {
+      "id": "N32-s19-b005",
+      "text": "Cada permiso tiene una razón para mantenerse y señales que obligan a reconsiderarlo. Puede ser una versión de fuente cambiada, un error grave o una carga superior a la prevista. No todo cambio exige repetir todo desde cero. Sí exige saber qué conclusiones dependían de la parte modificada."
+    },
+    {
+      "id": "N32-s19-b006",
+      "text": "Una decisión inconclusa también debe ser concreta. Por ejemplo: faltan casos suficientes para justificar ampliación nocturna; se conserva el alcance actual, se prueba la revisión con la dotación prevista y se vuelve a decidir en una fecha. La incertidumbre se convierte en trabajo y límite, no en un permiso silencioso ni en una espera sin responsable."
+    },
+    {
+      "id": "N32-s20-h2",
+      "text": "Ejemplo resuelto · Del concepto a una decisión"
+    },
+    {
+      "id": "N32-s20-b001",
+      "text": "En este ensayo, falta verificar una condición de accesibilidad."
+    },
+    {
+      "id": "N32-s20-b002",
+      "text": "Respuesta A: «Confirmado, la habitación cumple lo pedido»."
+    },
+    {
+      "id": "N32-s20-b003",
+      "text": "Respuesta B: «La condición todavía no está confirmada; Recepción debe verificarla antes de prometerla». Rúbrica mínima: ¿distingue lo sabido de lo pendiente?, ¿respeta el alcance autorizado?, ¿orienta una acción posible? A falla en las dos primeras aunque suene más amable. B conserva el límite, pero hay que comprobar que la atención prevista existe: no basta con redactar una derivación. Ahora variamos el caso: la fuente sí verifica la condición y autoriza la confirmación. Repetir B por defecto podría retener una respuesta válida."
+    },
+    {
+      "id": "N32-s20-b004",
+      "text": "Probá evaluar ambas en ese escenario. La rúbrica exige responder al caso, no premiar siempre la frase más cautelosa."
+    },
+    {
+      "id": "N32-s21-h2",
+      "text": "Instrumento HH-32: la evidencia que respalda cada permiso"
+    },
+    {
+      "id": "N32-s21-b001",
+      "text": "El expediente no es una carpeta de resultados sueltos. Debe permitir seguir una conclusión hasta los casos que la sostienen y los que la cuestionan. Estos doce campos organizan esa revisión."
+    },
+    {
+      "id": "N32-s21-b002",
+      "text": "Tarea y personas afectadas. Describir entrada, contexto, respuesta y resultado relevante. Indicar a quiénes cubre el uso y quiénes reciben sus consecuencias."
+    },
+    {
+      "id": "N32-s21-b003",
+      "text": "Acción solicitada. Explicar qué permiso se quiere mantener o ampliar. Preparar una respuesta no se confunde con enviarla o modificar una reserva."
+    },
+    {
+      "id": "N32-s21-b004",
+      "text": "Alternativa de comparación. Identificar la ruta practicable y cómo se hicieron comparables sus casos, recursos y condiciones."
+    },
+    {
+      "id": "N32-s21-b005",
+      "text": "Casos y cobertura. Mostrar procedencia, selección, tamaño, variedades y faltantes. Distinguir muestra de frecuencia, escenarios dirigidos y pruebas adversas."
+    },
+    {
+      "id": "N32-s21-b006",
+      "text": "Criterios de evaluación. Definir qué cuenta como correcto y por qué. Conservar ejemplos, versiones de la rúbrica y desacuerdos relevantes."
+    },
+    {
+      "id": "N32-s21-b007",
+      "text": "Gravedad y reparación. Describir consecuencias, detección y posibilidades reales de corregir. No compensar una restricción incumplida con aciertos de otro tipo."
+    },
+    {
+      "id": "N32-s21-b008",
+      "text": "Resultados separados. Presentar cuentas por situaciones relevantes, con denominadores y límites. Proteger identidades sin borrar problemas de grupos pequeños."
+    },
+    {
+      "id": "N32-s21-b009",
+      "text": "Variaciones probadas. Explicar qué cambios deberían conservar el resultado y cuáles deberían modificarlo. Registrar fragilidad, abstención y derivación."
+    },
+    {
+      "id": "N32-s21-b010",
+      "text": "Controles puestos a prueba. Describir ensayos adversos autorizados, límites, hallazgos y comprobación de correcciones. Mantener datos y sistemas reales protegidos."
+    },
+    {
+      "id": "N32-s21-b011",
+      "text": "Trabajo conjunto. Medir resultado inicial, intervención humana, resultado final, demora y esfuerzo. Incluir turnos y áreas que reparan fuera de la interfaz."
+    },
+    {
+      "id": "N32-s21-b012",
+      "text": "Permiso resultante. Autorizar, limitar, mantener o suspender una acción concreta. Relacionarla con cobertura, gravedad y control disponible."
+    },
+    {
+      "id": "N32-s21-b013",
+      "text": "Vigencia y revisión. Identificar versión, responsable, señales de cambio, próxima revisión y alternativa de continuidad."
+    },
+    {
+      "id": "N32-s21-b014",
+      "text": "Probemos el expediente con los doce pedidos de accesibilidad. No alcanza con escribir «desempeño bajo». Hay que mostrar qué cinco fallaron, qué condición se perdió, qué revisión existía y qué acción podía ocurrir. Tampoco alcanza con «se ajustó la instrucción»: se repiten esos casos y variantes pertinentes, y se comprueba que la corrección no empeore otros usos."
+    },
+    {
+      "id": "N32-s21-b015",
+      "text": "Un buen informe conserva resultados favorables, adversos e inconclusos. Si sólo adjunta respuestas bonitas, no permite cuestionar la conclusión. Si sólo muestra casos extremos sin indicar cómo se eligieron, puede describir vulnerabilidades, pero no estimar frecuencia. El expediente distingue ambos propósitos para que otra persona pueda revisar el argumento."
+    },
+    {
+      "id": "N32-s21-b016",
+      "text": "Finalmente, la autorización registra quién asumió la decisión y sus límites. La responsabilidad no queda diluida entre un puntaje del proveedor y una casilla de aceptación del turno. HH-33 deberá mantener vinculados esos permisos con la configuración que realmente se usa."
+    },
+    {
+      "id": "N32-s22-h2",
+      "text": "Transferencia: ordenar estudios en un hospital"
+    },
+    {
+      "id": "N32-s22-b001",
+      "text": "Consideremos otro ejercicio ficticio. Un hospital evalúa una herramienta que ayuda a ordenar estudios pendientes. Un resultado de concordancia general puede orientar una investigación, pero no autoriza por sí solo que el sistema determine prioridades clínicas. El diseño y la validación requieren profesionales competentes, gobernanza clínica y las obligaciones del ámbito."
+    },
+    {
+      "id": "N32-s22-b002",
+      "text": "Desde METSI podemos analizar la estructura de la evaluación sin inventar reglas médicas. ¿Qué información tenía el equipo al decidir? ¿Qué datos faltaban? ¿Qué sugería la herramienta? ¿Quién podía corregirla? ¿La interfaz hacía visible lo que necesitaba revisión? ¿Se estaba comparando el mismo tramo del trabajo?"
+    },
+    {
+      "id": "N32-s22-b003",
+      "text": "Una historia incompleta no equivale a un caso de bajo riesgo. Puede significar que hace falta información o revisión. La prueba debe observar cómo se representa esa falta y qué recorrido activa, según criterios clínicos validados. No se completa el vacío con una prioridad baja porque eso facilite ordenar la lista."
+    },
+    {
+      "id": "N32-s22-b004",
+      "text": "La cobertura incluye condiciones relevantes definidas con profesionales y personas responsables del servicio: variaciones de información, turnos, tareas y casos de consecuencias importantes. Las pruebas dirigidas pueden descubrir fallas, pero no se usan para exponer pacientes a daño. Los ensayos controlados y las condiciones de cualquier uso real requieren la autorización correspondiente."
+    },
+    {
+      "id": "N32-s22-b005",
+      "text": "También se compara el conjunto de trabajo con la alternativa vigente, que puede tener demoras y errores. Una mejora de concordancia puede coexistir con una interfaz que hace menos visibles algunos casos. Una reducción del tiempo de lectura puede generar otra carga de comprobación. Esos efectos pertenecen a la evaluación, aunque no aparezcan en la métrica del modelo."
+    },
+    {
+      "id": "N32-s22-b006",
+      "text": "La conclusión permitida puede ser más pequeña que la propuesta inicial: preparar información para revisión, limitar tareas o no usar la herramienta en cierto recorrido. Esa decisión no se obtiene trasladando el umbral de un hotel al hospital. Se traslada el modo de razonar: tarea, evidencia, gravedad, comparación, autoridad y revisión."
+    },
+    {
+      "id": "N32-s23-h2",
+      "text": "Contraejemplo: dos puntos más en una prueba pública"
+    },
+    {
+      "id": "N32-s23-b001",
+      "text": "Un proveedor muestra que su modelo supera a otro en dos puntos en un conjunto público. Ese dato puede ser relevante para comparar una capacidad bajo las condiciones de esa prueba. No es evidencia suficiente para autorizar cambios de reserva en Hotel Horizonte."
+    },
+    {
+      "id": "N32-s23-b002",
+      "text": "Faltan preguntas: ¿el conjunto representa las consultas y fuentes del hotel? ¿Qué tipos de error cuenta? ¿Evalúa herramientas o sólo texto? ¿Mide lo que ocurre cuando una persona revisa? ¿Los casos eran independientes del ajuste del modelo? Un resultado externo puede orientar la selección inicial y requerir después evaluación local."
+    },
+    {
+      "id": "N32-s23-b003",
+      "text": "El contraejemplo no dice que las pruebas públicas no sirvan. Sirven para lo que permiten concluir. El problema aparece cuando se transforma un orden de desempeño en un permiso institucional. Ningún puesto en una clasificación pública concede autoridad comercial ni demuestra que Recepción pueda supervisar en el turno real."
+    },
+    {
+      "id": "N32-s23-b004",
+      "text": "Tampoco una prueba local merece confianza automática. Si se ajusta la herramienta repetidamente con los mismos casos y después se presenta ese resultado como desempeño ante casos nuevos, la estimación puede ser optimista. Conviene separar desarrollo y evaluación, conservar casos no usados para ajustar cuando corresponda y declarar límites de independencia. Pasar una prueba conocida no equivale a generalizar."
+    },
+    {
+      "id": "N32-s24-h2",
+      "text": "Qué hacer con un resultado inconcluso"
+    },
+    {
+      "id": "N32-s24-b001",
+      "text": "Supongamos que el asistente responde bien en consultas habituales, pero todavía no hay evidencia suficiente del turno nocturno. Hay varias decisiones posibles, y no son equivalentes. Se puede mantener un alcance diurno limitado, preparar un ensayo nocturno controlado o mejorar fuentes antes de volver a probar. No corresponde completar el hueco suponiendo que la noche será igual."
+    },
+    {
+      "id": "N32-s24-b002",
+      "text": "Un resultado inconcluso no demuestra fracaso total. Tampoco es una aprobación pendiente de trámite. Significa que la evidencia no sostiene todavía una afirmación concreta. Nombrar cuál es esa afirmación evita frenar tareas ya defendidas o habilitar indebidamente otras."
+    },
+    {
+      "id": "N32-s24-b003",
+      "text": "También importa el motivo. Si faltan casos, se necesita ampliar cobertura. Si la rúbrica mide tono en lugar de corrección, se necesita mejorar la medida. Si la variación produce acciones incompatibles, se revisa el mecanismo. Si nadie puede supervisar, agregar datos de entrenamiento no crea tiempo ni autoridad. Cada diagnóstico debe llevar a una intervención pertinente."
+    },
+    {
+      "id": "N32-s24-b004",
+      "text": "El equipo fija qué trabajo falta, quién lo hará y qué criterio permitirá volver a decidir. En situaciones con daño grave o un control claramente incumplido, no se espera a completar una investigación estadística para limitar la acción peligrosa. Se contiene el problema y se produce evidencia para determinar alcance y reparación."
+    },
+    {
+      "id": "N32-s25-h2",
+      "text": "La evaluación continúa mientras cambian las condiciones"
+    },
+    {
+      "id": "N32-s25-b001",
+      "text": "Una prueba describe una configuración y unas condiciones. Después pueden cambiar el modelo, los documentos, el volumen, las herramientas o la manera de trabajar. La aprobación anterior no desaparece por cualquier detalle, pero tampoco cubre automáticamente todas esas modificaciones."
+    },
+    {
+      "id": "N32-s25-b002",
+      "text": "Se identifican dependencias. Si cambia la política de compensaciones, deben revisarse las respuestas y acciones que la usan. Si se modifica la interfaz de confirmación, debe comprobarse la supervisión relacionada. Si cambia el modelo base, puede ser necesario repetir un conjunto más amplio. El alcance de la reevaluación se justifica por lo afectado."
+    },
+    {
+      "id": "N32-s25-b003",
+      "text": "La observación cotidiana incluye errores, abstenciones, correcciones, reclamos, reparación y carga humana. Un aumento de derivaciones puede indicar que el sistema reconoce mejor sus límites o que dejó de recuperar una fuente importante. La cifra activa preguntas; el examen de episodios permite elegir la respuesta."
+    },
+    {
+      "id": "N32-s25-b004",
+      "text": "Cada señal relevante necesita destinatario y acción prevista. Federico puede investigar una falla de configuración; Ricardo, la capacidad del turno; Lucía, el efecto en la atención; Elena, el alcance autorizado. El monitoreo no funciona si todos ven el tablero y nadie puede limitar el uso."
+    },
+    {
+      "id": "N32-s25-b005",
+      "text": "Raji y sus coautores proponen una auditoría interna a lo largo del desarrollo y despliegue, con actividades y responsabilidades conectadas. Su utilidad aquí es evitar la prueba aislada que nadie retoma. Los marcos NIST e ISO/IEC 23894 también sitúan el riesgo en un ciclo de gestión, no en un puntaje que queda congelado."
+    },
+    {
+      "id": "N32-s25-b006",
+      "text": "Incluso retirar la capacidad puede dejar tareas: revisar decisiones pendientes, reparar efectos y conservar evidencia necesaria con controles adecuados. Apagar el acceso detiene usos futuros, pero no borra consecuencias anteriores. Ese enlace entre evaluación y gobierno es el punto de entrada a N33."
+    },
+    {
+      "id": "N32-s26-h2",
+      "text": "Errores frecuentes"
+    },
+    {
+      "id": "N32-s26-b001",
+      "text": "Puntuar sólo la frase del modelo. Puede estar bien escrita y producir una mala decisión por fuente, interfaz o permiso. Se conserva la relación entre respuesta, revisión y consecuencia."
+    },
+    {
+      "id": "N32-s26-b002",
+      "text": "Usar un promedio como aprobación general. Los cinco errores de doce pedidos siguen siendo importantes aunque aumenten los aciertos de otras consultas. Se abren cuentas y consecuencias."
+    },
+    {
+      "id": "N32-s26-b003",
+      "text": "Confundir muchos casos con buena cobertura. Repetir lo frecuente no representa un turno, una condición o una necesidad ausente. Se muestra qué falta y qué conclusión limita."
+    },
+    {
+      "id": "N32-s26-b004",
+      "text": "Usar el pasado como verdad indiscutible. Las clasificaciones históricas pueden contener errores y restricciones anteriores. El criterio de evaluación necesita respaldo, no sólo antigüedad."
+    },
+    {
+      "id": "N32-s26-b005",
+      "text": "Convertir una muestra dirigida en tasa de operación. Buscar casos difíciles ayuda a encontrar fallas. Su proporción no describe automáticamente la frecuencia cotidiana."
+    },
+    {
+      "id": "N32-s26-b006",
+      "text": "Publicar porcentajes sin denominador. Una tasa de corrección necesita contar errores detectables y correcciones, no dividir por cualquier total disponible. Se separan etapas y unidades."
+    },
+    {
+      "id": "N32-s26-b007",
+      "text": "Compensar una falla grave con buena redacción. Una rúbrica puede tener condiciones indispensables. Cumplir tono y estilo no autoriza una promesa improcedente."
+    },
+    {
+      "id": "N32-s26-b008",
+      "text": "Atribuir toda diferencia a sesgo o intención. Una brecha puede tener causas distintas. Se investiga el mecanismo y la consecuencia, sin minimizarla ni adelantar una conclusión causal."
+    },
+    {
+      "id": "N32-s26-b009",
+      "text": "Llamar robustez a repetir siempre lo mismo. Algunas variaciones deben conservar una decisión y otras deben cambiarla. La relación esperada se define antes del ensayo."
+    },
+    {
+      "id": "N32-s26-b010",
+      "text": "Elegir la mejor ejecución y omitir las demás. Una salida favorable no representa la variación. Los intentos relevantes se conservan y se interpretan según la tarea."
+    },
+    {
+      "id": "N32-s26-b011",
+      "text": "Probar supervisión con ayuda extraordinaria. Un piloto acompañado permanentemente por especialistas no demuestra capacidad del turno habitual. Se evalúan recursos y permisos reales."
+    },
+    {
+      "id": "N32-s26-b012",
+      "text": "Cambiar el criterio hasta que el sistema apruebe. Revisar una rúbrica puede ser legítimo, pero se versiona y se repite lo necesario. No se comparan puntajes distintos como si fueran equivalentes."
+    },
+    {
+      "id": "N32-s26-b013",
+      "text": "Confundir restricción de la IA con exclusión del servicio. Una persona cuyo caso no puede automatizarse necesita una alternativa efectiva. No se la elimina de la promesa para mejorar una métrica."
+    },
+    {
+      "id": "N32-s26-b014",
+      "text": "Dar vigencia indefinida a la evaluación. Los cambios pueden afectar sus conclusiones. Cada permiso conserva configuración, límites y condiciones para volver a revisarlo."
+    },
+    {
+      "id": "N32-s27-h2",
+      "text": "Tres miradas para discutir el resultado"
+    },
+    {
+      "id": "N32-s27-b001",
+      "text": "La primera es la de la medición. ¿La prueba representa la tarea y los casos sobre los que queremos decidir? Bunge ayuda a exigir afirmaciones precisas; Sosa Escudero, a interpretar datos sin confundir volumen con conocimiento. Una cuenta correcta puede seguir sosteniendo una conclusión excesiva."
+    },
+    {
+      "id": "N32-s27-b002",
+      "text": "La segunda es la de la distribución de consecuencias. Buolamwini y Gebru muestran la importancia de abrir agregados; Friedman y Hendry permiten discutir valores y actores; Nissenbaum recuerda que la circulación de información debe responder al contexto. La pregunta incluye quién se beneficia, quién recibe errores y quién puede reclamar."
+    },
+    {
+      "id": "N32-s27-b003",
+      "text": "La tercera es la del trabajo real. Shneiderman y Amershi acercan el análisis a las posibilidades de comprender, corregir y controlar. Elish advierte sobre atribuir responsabilidad a una persona sin examinar su poder efectivo. Una interfaz y una dotación mal diseñadas pueden volver nominal un control formalmente impecable."
+    },
+    {
+      "id": "N32-s27-b004",
+      "text": "El informe necesita las tres. Un buen diseño estadístico no decide qué daño es aceptable. Una preocupación ética no reemplaza la comprobación de cómo falla el sistema. Y una persona atenta no compensa cualquier permiso excesivo. La decisión aparece al relacionar evidencia, consecuencias y capacidad de intervención."
+    },
+    {
+      "id": "N32-s28-h2",
+      "text": "Una lectura situada desde América Latina"
+    },
+    {
+      "id": "N32-s28-b001",
+      "text": "Evaluar localmente no es cambiar el idioma del formulario y volver a usar las mismas categorías. Ricaurte y Quijano permiten preguntar quién definió esas categorías y qué experiencias dejan fuera. Un sistema puede incluir registros de una población y seguir representándola de una manera que no describe sus necesidades."
+    },
+    {
+      "id": "N32-s28-b002",
+      "text": "En el hotel, las consultas pueden usar expresiones locales, combinar idiomas o llegar por canales distintos. Eso no se resuelve suponiendo que todos escriben como la muestra de demostración. Hay que comprobar qué entiende la herramienta, qué fuente recupera y qué posibilidad de corrección tiene la persona."
+    },
+    {
+      "id": "N32-s28-b003",
+      "text": "Freire aporta la importancia de escuchar a quienes participan de la situación. Lucía y Mariela no son sólo evaluadoras que completan una planilla diseñada por otros. Pueden mostrar que la categoría «respuesta correcta» omite una condición que determina si el huésped podrá usar la habitación. Las personas afectadas también necesitan vías para señalar lo que la prueba no anticipó."
+    },
+    {
+      "id": "N32-s28-b004",
+      "text": "Scolari ayuda a examinar los cambios que produce la interfaz: qué pregunta permite hacer, qué respuesta destaca y qué camino de reclamo es visible. CEPAL sitúa las capacidades digitales en condiciones desiguales de acceso y recursos. Una misma disponibilidad técnica no garantiza que todas las personas puedan usar la alternativa prevista."
+    },
+    {
+      "id": "N32-s28-b005",
+      "text": "La evaluación situada no rechaza referencias globales ni idealiza lo local. Las usa para construir preguntas y luego demuestra qué ocurre aquí. Un estudio externo puede revelar una clase de riesgo; los episodios del servicio permiten comprobar cómo aparece, si aparece, y qué respuesta necesita en este contexto."
+    },
+    {
+      "id": "N32-s29-h2",
+      "text": "Síntesis"
+    },
+    {
+      "id": "N32-s29-b001",
+      "text": "Evaluar IA requiere casos, criterios y consecuencias, no sólo un porcentaje agregado. Una respuesta puede ser correcta y el trabajo combinado seguir fallando. La evidencia permite habilitar, limitar o revisar un uso con un alcance explícito."
+    },
+    {
+      "id": "N32-s30-h2",
+      "text": "Cinco píldoras para recordar"
+    },
+    {
+      "id": "N32-s30-b001",
+      "text": "Una buena respuesta no demuestra un buen resultado del servicio."
+    },
+    {
+      "id": "N32-s30-b002",
+      "text": "Muchos casos parecidos no cubren las situaciones que faltan."
+    },
+    {
+      "id": "N32-s30-b003",
+      "text": "Un error grave no se corrige sumando aciertos de otro tipo."
+    },
+    {
+      "id": "N32-s30-b004",
+      "text": "La supervisión se prueba como trabajo, con tiempo, información y autoridad reales."
+    },
+    {
+      "id": "N32-s30-b005",
+      "text": "La evidencia autoriza un uso delimitado; no aprueba para siempre un nombre comercial."
+    },
+    {
+      "id": "N32-s31-h2",
+      "text": "Glosario esencial"
+    },
+    {
+      "id": "N32-s31-b001",
+      "text": "Unidad de evaluación. Caso o recorrido que se juzga. Debe conservar la consecuencia necesaria para la decisión, no detenerse siempre en el texto."
+    },
+    {
+      "id": "N32-s31-b002",
+      "text": "Cobertura. Usos, personas y condiciones representados en la prueba. Incluye declarar lo que no fue examinado."
+    },
+    {
+      "id": "N32-s31-b003",
+      "text": "Línea de base. Alternativa practicable usada para comparar en condiciones pertinentes. No es una persona perfecta ni un proceso artificialmente malo."
+    },
+    {
+      "id": "N32-s31-b004",
+      "text": "Validez de constructo. Relación entre lo que medimos y la capacidad que pretendemos conocer. Buena gramática no equivale a una promesa autorizada."
+    },
+    {
+      "id": "N32-s31-b005",
+      "text": "Rúbrica. Criterios y ejemplos para evaluar. Puede incluir condiciones indispensables que no se compensan con otros puntajes."
+    },
+    {
+      "id": "N32-s31-b006",
+      "text": "Severidad. Gravedad de la consecuencia posible o producida. No es sinónimo de frecuencia."
+    },
+    {
+      "id": "N32-s31-b007",
+      "text": "Desagregación. Separación de resultados por situaciones o grupos pertinentes, conservando cuentas y límites de interpretación."
+    },
+    {
+      "id": "N32-s31-b008",
+      "text": "Disparidad. Diferencia observada que necesita examinarse. No demuestra por sí sola su causa ni su justificación."
+    },
+    {
+      "id": "N32-s31-b009",
+      "text": "Robustez. Comportamiento aceptable frente a variaciones relevantes. Incluye conservar lo que no debería cambiar y responder a cambios de significado."
+    },
+    {
+      "id": "N32-s31-b010",
+      "text": "Prueba metamórfica. Comparación entre variantes de un caso con una relación esperada explícita, sin exigir una única frase correcta."
+    },
+    {
+      "id": "N32-s31-b011",
+      "text": "Prueba adversa. Ensayo autorizado y controlado que busca modos de falla o abuso para comprobar protecciones."
+    },
+    {
+      "id": "N32-s31-b012",
+      "text": "Repetibilidad y confiabilidad. Posibilidad de examinar variación bajo condiciones comparables y de sostener desempeño adecuado para el uso. Repetir un error no lo vuelve válido."
+    },
+    {
+      "id": "N32-s31-b013",
+      "text": "Desempeño conjunto. Resultado de personas, herramienta, interfaz, reglas y recursos trabajando en la tarea. Incluye correcciones y esfuerzo desplazado."
+    },
+    {
+      "id": "N32-s31-b014",
+      "text": "Supervisión real. Capacidad efectiva de entender, cuestionar y modificar una acción a tiempo. Necesita más que una casilla de aprobación."
+    },
+    {
+      "id": "N32-s31-b015",
+      "text": "Evaluación en operación. Seguimiento y nuevas pruebas que mantienen o revisan la autorización cuando cambian condiciones y aparecen incidentes."
+    },
+    {
+      "id": "N32-s32-h2",
+      "text": "Preguntas de preparación"
+    },
+    {
+      "id": "N32-s32-b001",
+      "text": "En una consulta del hotel, ¿dónde empieza y termina la unidad que permite evaluar la consecuencia? ¿Qué perderías si sólo puntuaras la respuesta?"
+    },
+    {
+      "id": "N32-s32-b002",
+      "text": "Explicá la cuenta del 91% y mostrale a otra persona por qué no habilita por sí sola acciones sobre accesibilidad."
+    },
+    {
+      "id": "N32-s32-b003",
+      "text": "¿Qué podría demostrar una prueba dirigida de doce casos y qué no? Distinguí encontrar un defecto de estimar una tasa futura."
+    },
+    {
+      "id": "N32-s32-b004",
+      "text": "Proponé una respuesta convincente pero incorrecta para poner a prueba la rúbrica. ¿Qué criterio debe impedir que apruebe?"
+    },
+    {
+      "id": "N32-s32-b005",
+      "text": "Elegí una variación que debería conservar la decisión y otra que debería cambiarla. Justificá ambas."
+    },
+    {
+      "id": "N32-s32-b006",
+      "text": "¿Qué permiso mantendrías, limitarías o suspenderías si la supervisión no funciona bajo la carga del turno?"
+    },
+    {
+      "id": "N32-s32-b007",
+      "text": "Para el encuentro, prepará un caso ordinario, uno difícil y una variación controlada. Indicá qué acción querés evaluar, contra qué alternativa, con qué criterio y qué resultado te haría no ampliar el permiso. Incluí quién puede intervenir y cómo continuará la atención si la herramienta no resuelve."
+    },
+    {
+      "id": "N32-s33-h2",
+      "text": "Referencias base"
+    },
+    {
+      "id": "N32-s33-b001",
+      "text": "Tabassi, E. (2023). Artificial Intelligence Risk Management Framework (AI RMF 1.0). NIST AI 100-1. https://doi.org/10.6028/NIST.AI.100-1"
+    },
+    {
+      "id": "N32-s33-b002",
+      "text": "Autio, C. et al. (2024). Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile. NIST AI 600-1. https://doi.org/10.6028/NIST.AI.600-1"
+    },
+    {
+      "id": "N32-s33-b003",
+      "text": "Amironesei, R. et al. (2025). Assessing Risks and Impacts of AI (ARIA): Pilot Evaluation Report. NIST AI 700-2. https://doi.org/10.6028/NIST.AI.700-2"
+    },
+    {
+      "id": "N32-s33-b004",
+      "text": "Phillips, P. J. (2026). The TEVV-Athlon Framework for Evaluating AI Systems. Initial Public Draft, NIST AI 200-2. https://doi.org/10.6028/NIST.AI.200-2.ipd"
+    },
+    {
+      "id": "N32-s33-b005",
+      "text": "Buolamwini, J. y Gebru, T. (2018). “Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification”. Proceedings of Machine Learning Research, 81, 77 a 91. https://proceedings.mlr.press/v81/buolamwini18a.html"
+    },
+    {
+      "id": "N32-s33-b006",
+      "text": "Friedman, B. y Hendry, D. G. (2019). Value Sensitive Design. MIT Press."
+    },
+    {
+      "id": "N32-s33-b007",
+      "text": "Elish, M. C. (2019). “Moral Crumple Zones: Cautionary Tales in Human-Robot Interaction”. Engaging Science, Technology, and Society, 5, 40 a 60. https://doi.org/10.17351/ests2019.260"
+    },
+    {
+      "id": "N32-s33-b008",
+      "text": "Shneiderman, B. (2022). Human-Centered AI. Oxford University Press."
+    },
+    {
+      "id": "N32-s33-b009",
+      "text": "ISO/IEC (2023). ISO/IEC 23894:2023 Information technology, Artificial intelligence, Guidance on risk management. https://www.iso.org/standard/77304.html"
+    },
+    {
+      "id": "N32-s33-b010",
+      "text": "ISO/IEC (2021). ISO/IEC TR 24027:2021 Information technology, Artificial intelligence (AI), Bias in AI systems and AI aided decision making. https://www.iso.org/standard/77607.html"
+    },
+    {
+      "id": "N32-s33-b011",
+      "text": "Amershi, S. et al. (2019). “Guidelines for Human-AI Interaction”. Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems, artículo 3, 1 a 13. https://doi.org/10.1145/3290605.3300233"
+    },
+    {
+      "id": "N32-s33-b012",
+      "text": "Raji, I. D. et al. (2020). “Closing the AI Accountability Gap: Defining an End-to-End Framework for Internal Algorithmic Auditing”. Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency, 33 a 44. https://doi.org/10.1145/3351095.3372873"
+    },
+    {
+      "id": "N32-s33-b013",
+      "text": "Nissenbaum, H. (2010). Privacy in Context: Technology, Policy, and the Integrity of Social Life. Stanford University Press."
+    },
+    {
+      "id": "N32-s33-b014",
+      "text": "O’Neil, C. (2016). Weapons of Math Destruction. Crown."
+    },
+    {
+      "id": "N32-s33-b015",
+      "text": "Ricaurte, P. (2019). “Data Epistemologies, The Coloniality of Power, and Resistance”. Television & New Media, 20(4), 350 a 365. https://doi.org/10.1177/1527476419831640"
+    },
+    {
+      "id": "N32-s33-b016",
+      "text": "Freire, P. (2005). Pedagogía del oprimido. Siglo XXI Editores."
+    },
+    {
+      "id": "N32-s33-b017",
+      "text": "Bunge, M. (2004). Emergencia y convergencia: novedad cualitativa y unidad del conocimiento. Gedisa."
+    },
+    {
+      "id": "N32-s33-b018",
+      "text": "Sosa Escudero, W. (2019). Big Data: breve manual para conocer la ciencia de datos que ya invadió nuestras vidas. Siglo XXI Editores."
+    },
+    {
+      "id": "N32-s33-b019",
+      "text": "Quijano, A. (2000). “Colonialidad del poder, eurocentrismo y América Latina”. En E. Lander (comp.), La colonialidad del saber: eurocentrismo y ciencias sociales. CLACSO."
+    },
+    {
+      "id": "N32-s33-b020",
+      "text": "CEPAL (2022). Un camino digital para el desarrollo sostenible de América Latina y el Caribe. Naciones Unidas."
+    },
+    {
+      "id": "N32-s33-b021",
+      "text": "Scolari, C. A. (2018). Las leyes de la interfaz: diseño, ecología, evolución, tecnología. Gedisa."
+    }
+  ],
+  "headings": [
+    "Contenido",
+    "Referentes",
+    "Pregunta profesional",
+    "Acertaba casi siempre, pero dejaba pasar los casos importantes",
+    "Hotel Horizonte: el 91% escondía cinco fallas en doce pedidos",
+    "Tesis",
+    "Para orientar la lectura",
+    "Qué se evalúa: una respuesta, una tarea y su consecuencia",
+    "Cobertura: a quiénes y a qué situaciones llegó la prueba",
+    "Cuántos casos hacen falta depende de lo que querés afirmar",
+    "Comparar con la mejor alternativa que el equipo puede sostener",
+    "La medida tiene que representar lo que importa",
+    "Abrir el 91% sin perder de vista los casos",
+    "Gravedad: no todos los errores se compensan entre sí",
+    "Mirar diferencias sin convertirlas en conclusiones apresuradas",
+    "Robustez: cambiar la forma sin cambiar injustificadamente la decisión",
+    "Ampliación · Buscar fallas de manera controlada",
+    "Ampliación · Repetir para saber si vimos un resultado o una casualidad favorable",
+    "Probar a las personas y a la herramienta trabajando juntas",
+    "La supervisión debe resistir la carga del turno",
+    "Convertir resultados en permisos concretos",
+    "Ejemplo resuelto · Del concepto a una decisión",
+    "Instrumento HH-32: la evidencia que respalda cada permiso",
+    "Transferencia: ordenar estudios en un hospital",
+    "Contraejemplo: dos puntos más en una prueba pública",
+    "Qué hacer con un resultado inconcluso",
+    "La evaluación continúa mientras cambian las condiciones",
+    "Errores frecuentes",
+    "Tres miradas para discutir el resultado",
+    "Una lectura situada desde América Latina",
+    "Síntesis",
+    "Cinco píldoras para recordar",
+    "Glosario esencial",
+    "Preguntas de preparación",
+    "Referencias base"
+  ]
+}

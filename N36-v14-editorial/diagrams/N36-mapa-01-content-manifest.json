@@ -1,0 +1,37 @@
+{
+  "title": "El resultado no cierra el aprendizaje",
+  "claim": "Un resultado favorable sólo se convierte en aprendizaje profesional cuando una sorpresa contrasta teorías rivales, modifica una práctica, una regla, una autoridad o el sistema de aprendizaje y vuelve a una prueba observable.",
+  "source_sections": [
+    {"id":"thesis","heading":"Tesis","summary":"El resultado no valida la explicación ni demuestra aprendizaje por sí solo."},
+    {"id":"surprise","heading":"Sorpresa","summary":"La diferencia entre expectativa y observación obliga a reabrir el encuadre."},
+    {"id":"theories","heading":"Teoría declarada y teoría en uso","summary":"Las razones declaradas se contrastan con la regla que efectivamente organizó la acción."},
+    {"id":"loops","heading":"Aprendizaje de bucle simple y doble","summary":"El aprendizaje puede corregir una acción o revisar objetivos, reglas y autoridad."},
+    {"id":"system","heading":"Sistema de aprendizaje profesional","summary":"El aprendizaje colectivo integra registro, conversación, práctica, devolución y revisión continua."},
+    {"id":"ai","heading":"IA como interlocutora crítica","summary":"La herramienta amplía hipótesis y objeciones, pero las personas verifican y deciden."},
+    {"id":"instrument","heading":"Instrumento HH-36","summary":"Cada cambio conserva responsable, evidencia y un próximo episodio donde pueda fallar."}
+  ],
+  "nodes": [
+    {"id":"expectation","label":"Expectativa","role":"episode_evidence","source":["surprise","instrument"],"purpose":"Conservar qué se esperaba y qué se sabía entonces."},
+    {"id":"observed_result","label":"Resultado favorable","role":"episode_evidence","source":["thesis","surprise"],"purpose":"Separar la consecuencia observada de la explicación causal."},
+    {"id":"invisible_work","label":"Trabajo manual invisible","role":"rival_mechanism","source":["surprise"],"purpose":"Mostrar un mecanismo rival no registrado por la explicación inicial."},
+    {"id":"productive_surprise","label":"Sorpresa productiva","role":"reframing_gate","source":["surprise"],"purpose":"Reabrir la explicación cuando expectativa y consecuencia no encajan."},
+    {"id":"espoused_theory","label":"Teoría declarada","role":"theory","source":["theories"],"purpose":"Registrar la regla que la organización dice seguir."},
+    {"id":"theory_in_use","label":"Teoría en uso","role":"theory","source":["theories"],"purpose":"Inferir la regla que organizó decisiones observables."},
+    {"id":"single_loop","label":"Bucle simple","role":"learning_level","source":["loops"],"purpose":"Corregir una acción sin cambiar el objetivo."},
+    {"id":"double_loop","label":"Doble bucle","role":"learning_level","source":["loops"],"purpose":"Revisar regla, objetivo y autoridad."},
+    {"id":"learning_system","label":"Sistema de aprendizaje","role":"learning_level","source":["system"],"purpose":"Modificar cómo la organización registra, conversa, practica y revisa."},
+    {"id":"ai_assistance","label":"Asistencia de IA acotada","role":"support","source":["ai"],"purpose":"Proponer rivales, objeciones y comparaciones sin asumir decisión."},
+    {"id":"future_test","label":"Próximo episodio","role":"test_gate","source":["instrument"],"purpose":"Permitir que la teoría modificada vuelva a fallar de manera observable."},
+    {"id":"observable_capacity","label":"Capacidad observable","role":"outcome","source":["thesis","instrument"],"purpose":"Demostrar que la mejora deja de depender de esfuerzo invisible o memoria individual."}
+  ],
+  "edges": [
+    {"id":"compares","from":"expectation","to":"observed_result","relation":"compares_with","source":["surprise"],"meaning":"La reflexión conserva lo esperado y lo compara con la consecuencia."},
+    {"id":"contradicts","from":"invisible_work","to":"productive_surprise","relation":"contradicts_explanation","source":["surprise"],"meaning":"El trabajo invisible impide atribuir automáticamente la mejora al sistema formal."},
+    {"id":"reopens_theories","from":"productive_surprise","to":"theory_in_use","relation":"reopens","source":["theories"],"meaning":"La sorpresa obliga a contrastar teoría declarada y teoría en uso."},
+    {"id":"supports_single","from":"theory_in_use","to":"single_loop","relation":"may_require","source":["loops"],"meaning":"Una falla dentro del marco vigente puede requerir corregir la acción."},
+    {"id":"supports_double","from":"theory_in_use","to":"double_loop","relation":"may_require","source":["loops"],"meaning":"Una falla del marco puede exigir revisar objetivo, regla y autoridad."},
+    {"id":"supports_system","from":"theory_in_use","to":"learning_system","relation":"may_require","source":["system"],"meaning":"Una falla recurrente puede exigir cambiar el sistema de aprendizaje."},
+    {"id":"assists","from":"ai_assistance","to":"productive_surprise","relation":"proposes_questions","source":["ai"],"meaning":"La IA puede ampliar hipótesis, pero no validar la explicación."},
+    {"id":"tests_change","from":"future_test","to":"observable_capacity","relation":"tests","source":["instrument"],"meaning":"El cambio se demuestra cuando vuelve a una situación donde puede fallar."}
+  ]
+}

@@ -1,0 +1,1218 @@
+{
+  "document": "N02",
+  "source": "source/N02.md",
+  "eligible_blocks": [
+    {
+      "source_id": "N02-h1",
+      "kind": "heading-1",
+      "text": "Un sistema es mucho más que una aplicación"
+    },
+    {
+      "source_id": "N02-s01-h2",
+      "kind": "heading-2",
+      "text": "Pregunta profesional"
+    },
+    {
+      "source_id": "N02-s01-b001",
+      "kind": "paragraph",
+      "text": "Una pantalla dice que está todo bien, pero la persona no recibe lo que le prometieron. ¿Qué tenemos que mirar, además del programa, para entender qué pasó y decidir qué cambiar?"
+    },
+    {
+      "source_id": "N02-s02-h2",
+      "kind": "heading-2",
+      "text": "La valija que el sistema había embarcado"
+    },
+    {
+      "source_id": "N02-s02-b001",
+      "kind": "paragraph",
+      "text": "Martina aterriza y va a buscar su valija. En la cinta aparecen las de los demás pasajeros. La suya, no. Abre la aplicación de la aerolínea: «Equipaje embarcado». Muestra el mensaje en el mostrador. La empleada consulta otra pantalla y encuentra el mismo estado. Las dos pantallas coinciden, pero eso no demuestra que el dato sea correcto. Ninguna sabe todavía dónde está la valija."
+    },
+    {
+      "source_id": "N02-s02-b002",
+      "kind": "paragraph",
+      "text": "La escena es ficticia. Antes de la salida del avión, alguien había escaneado la etiqueta y puesto la valija en un carro. El sistema interpretó ese escaneo como embarque, aunque sólo acreditaba la recepción en rampa. Después llegó una tormenta. El carro fue movido y el equipaje quedó junto a otra puerta. El movimiento posterior no quedó registrado. El avión salió sin la valija. Hay dos problemas distintos: se atribuyó al escaneo un significado que no tenía y luego se perdió información sobre el traslado. No basta con actualizar más rápido el mismo estado equivocado."
+    },
+    {
+      "source_id": "N02-s02-b003",
+      "kind": "paragraph",
+      "text": "Una empleada llama al personal de rampa. Otra compara etiquetas. Encuentran la valija y coordinan un envío. A las 23:18, Martina la recibe en el hotel. La aplicación todavía muestra el estado anterior. El problema se resolvió gracias a información que circuló por una llamada, personas que pudieron interpretarla y alguien que estaba autorizado a organizar la entrega."
+    },
+    {
+      "source_id": "N02-s02-b004",
+      "kind": "paragraph",
+      "text": "Ahora preguntémonos: ¿dónde estaba «el sistema»? Si respondemos «en la aplicación», no podemos explicar ni la pérdida ni la recuperación. Para hacerlo necesitamos incluir el escaneo, el traslado físico, el procedimiento frente a la tormenta, la comunicación entre equipos y la responsabilidad de entregar el equipaje. El programa importa mucho. Pero no hace todo eso solo."
+    },
+    {
+      "source_id": "N02-s02-b005",
+      "kind": "paragraph",
+      "text": "Tampoco sería correcto concluir que hace falta una aplicación nueva. Quizás alcanza con registrar un movimiento que hoy se pierde. Quizás el registro existe, pero llega tarde. Quizás nadie sabe quién debe actuar ante una diferencia. Las tres situaciones pueden producir la misma pantalla y exigir cambios distintos. Antes de elegir, necesitamos reconstruir lo que efectivamente pasó."
+    },
+    {
+      "source_id": "N02-s02-b006",
+      "kind": "paragraph",
+      "text": "La idea que vamos a desarrollar es sencilla: **para entender un resultado, hay que seguir el trabajo que lo produce, no quedarse mirando la herramienta que lo registra**. Después veremos cómo convertir esa idea en un análisis riguroso, sin terminar dibujando un mapa de todo el mundo."
+    },
+    {
+      "source_id": "N02-s03-h2",
+      "kind": "heading-2",
+      "text": "Primera aplicación de HH-02: una reserva confirmada que no alcanza"
+    },
+    {
+      "source_id": "N02-s03-b001",
+      "kind": "paragraph",
+      "text": "En Hotel Horizonte ocurre algo parecido. Son las 13:06. Una huésped llega con el correo de confirmación de su reserva. La página donde compró también le ofreció ingreso temprano. Sin embargo, Lucía Ferreyra, responsable de Recepción, no puede entregarle la habitación: en el programa figura ocupada."
+    },
+    {
+      "source_id": "N02-s03-b002",
+      "kind": "paragraph",
+      "text": "Ese programa es el **PMS**, la aplicación con la que el hotel administra reservas, habitaciones y cargos. El nombre técnico no cambia el problema: una persona tiene una promesa de alojamiento y quienes deben cumplirla encuentran información que no coincide."
+    },
+    {
+      "source_id": "N02-s03-b003",
+      "kind": "paragraph",
+      "text": "Mariela Benítez, de Housekeeping —el equipo encargado de la limpieza y preparación de las habitaciones—, muestra una planilla. La habitación aparece en verde desde las 12:42. Para su equipo, eso significa que terminó la limpieza. Mantenimiento informa que cerró una orden de reparación de la cerradura. La agencia de viajes en línea, u **OTA**, confirma que vendió el ingreso temprano. Cada área puede mostrar algo que hizo correctamente. La huésped sigue esperando."
+    },
+    {
+      "source_id": "N02-s03-b004",
+      "kind": "paragraph",
+      "text": "Una supervisora consigue otra habitación. Deja una nota y bloquea la venta de la original para que no vuelva a asignarse mientras se revisa el caso. La salida del problema depende de una conversación y una decisión que no aparecen completas en ninguna de las pantallas."
+    },
+    {
+      "source_id": "N02-s03-b005",
+      "kind": "paragraph",
+      "text": "No sabemos todavía cuál fue la causa. Tal vez el PMS recibió tarde el cambio. Tal vez «limpia» y «lista para entregar» se estaban usando como si fueran lo mismo. Tal vez se vendió una condición que el hotel no podía asegurar. HH-02 empieza ahí: no eligiendo un culpable, sino ordenando qué tendríamos que observar para distinguir esas explicaciones."
+    },
+    {
+      "source_id": "N02-s04-h2",
+      "kind": "heading-2",
+      "text": "Tesis"
+    },
+    {
+      "source_id": "N02-s04-b001",
+      "kind": "paragraph",
+      "text": "**Un sistema de información no es solamente una aplicación. Es la manera en que personas, herramientas y reglas producen y usan información para hacer un trabajo.** En un hotel, ese trabajo incluye ofrecer una habitación, reservarla, prepararla, asignarla, cobrar y responder si algo sale mal. La información sirve cuando permite coordinar esas acciones. No alcanza con que esté guardada."
+    },
+    {
+      "source_id": "N02-s04-b002",
+      "kind": "paragraph",
+      "text": "Pensá en un grupo que organiza una salida. Puede tener una planilla impecable con nombres, horarios y pagos. Pero si alguien cambia el punto de encuentro por un mensaje que no todos leen, la planilla no evita que una persona espere en el lugar equivocado. Para entender la falla hay que mirar también quién comunica los cambios, por qué canal y cómo se confirma que llegaron. Ese conjunto es más amplio que el archivo."
+    },
+    {
+      "source_id": "N02-s04-b003",
+      "kind": "paragraph",
+      "text": "En una organización sucede lo mismo, con más actores y consecuencias. Una reserva puede estar bien registrada y no ser cumplible. Una autorización puede existir y no haber llegado a quien debe actuar. Una persona puede tener permiso técnico para tocar un botón, pero no autoridad para decidir lo que ese botón hace. Son diferencias que se pierden cuando llamamos «el sistema» a la pantalla."
+    },
+    {
+      "source_id": "N02-s04-b004",
+      "kind": "paragraph",
+      "text": "La consecuencia metodológica es concreta: debemos decidir qué personas, relaciones y condiciones vamos a incluir en el análisis. A esa decisión la llamamos **frontera del sistema**. No se trata de sumar todo lo que existe. Se trata de incluir lo necesario para explicar el problema y comparar alternativas de solución."
+    },
+    {
+      "source_id": "N02-s04-b005",
+      "kind": "paragraph",
+      "text": "Por ejemplo, si una búsqueda tarda porque falta un índice en la base de datos, puede ser suficiente una investigación técnica acotada. Si el hotel quiere reemplazar su PMS, esa misma frontera resulta demasiado pequeña: el cambio también afecta contratos, tareas, datos, integraciones y formas de atender excepciones. La amplitud del análisis depende de la decisión que está en juego."
+    },
+    {
+      "source_id": "N02-s04-b006",
+      "kind": "paragraph",
+      "text": "Esta lectura propone, entonces, un doble cuidado. No reducir el problema al software, pero tampoco ampliar tanto el análisis que se vuelva imposible decidir. Un buen mapa tiene que ayudar a explicar un caso, localizar la evidencia que falta y elegir el siguiente paso. Si solo agrega nombres y flechas, todavía no está haciendo ese trabajo."
+    },
+    {
+      "source_id": "N02-s05-h2",
+      "kind": "heading-2",
+      "text": "Para orientar la lectura"
+    },
+    {
+      "source_id": "N02-s05-b001",
+      "kind": "paragraph",
+      "text": "La pregunta central es qué trabajo hace posible cumplir una reserva. Empezá por la valija, la primera aplicación del hotel y la tesis; seguí con los cinco objetos y la segunda aplicación. El método de seis movimientos sirve para construir tu respuesta. Los desarrollos de IA y transferencia amplían el análisis; ERP y channel manager son términos de consulta, no requisitos para explicar el caso."
+    },
+    {
+      "source_id": "N02-s06-h2",
+      "kind": "heading-2",
+      "text": "De HH-01 a HH-02: del pedido revisable al sistema relevante"
+    },
+    {
+      "source_id": "N02-s06-b001",
+      "kind": "paragraph",
+      "text": "En HH-01 aprendimos a no tomar «necesitamos una plataforma nueva» como una conclusión. Era un pedido que había que investigar. La Dirección había autorizado esa investigación, no el reemplazo del programa. HH-02 conserva ese límite y da un paso más: ¿qué tenemos que mirar para investigar bien?"
+    },
+    {
+      "source_id": "N02-s06-b002",
+      "kind": "paragraph",
+      "text": "El equipo podría empezar por un inventario: PMS, planillas, mensajería y página de reservas. Sería útil para saber qué herramientas existen, pero insuficiente para explicar la espera de la huésped. Falta reconstruir qué hizo cada persona, qué información tenía en ese momento y qué decisión podía tomar."
+    },
+    {
+      "source_id": "N02-s06-b003",
+      "kind": "paragraph",
+      "text": "Por eso el primer mapa se organiza alrededor de una tarea completa: **prometer y entregar alojamiento en las condiciones acordadas**. Desde ahí, el equipo sigue la oferta comercial, la reserva, la preparación de la habitación, la asignación y la respuesta ante un incumplimiento. Agrega a un proveedor o a un área cuando su participación puede cambiar la explicación, no porque figure en el organigrama."
+    },
+    {
+      "source_id": "N02-s06-b004",
+      "kind": "paragraph",
+      "text": "El resultado es provisional. Si aparece una relación que no habíamos considerado —por ejemplo, una restricción de Mantenimiento que Recepción no recibe—, el mapa cambia. Corregirlo no es reconocer que la investigación fracasó. Es usar lo aprendido para investigar mejor. Lo importante es dejar claro por qué se incorporó esa relación y qué pregunta nueva permite responder."
+    },
+    {
+      "source_id": "N02-s07-h2",
+      "kind": "heading-2",
+      "text": "Lo que Ingeniería de Software ya nos dio y lo que ahora falta"
+    },
+    {
+      "source_id": "N02-s07-b001",
+      "kind": "paragraph",
+      "text": "Ingeniería de Software nos ofrece herramientas indispensables: describir requisitos, diseñar componentes, organizar datos, construir interfaces, probar comportamientos y mantener aplicaciones. Sin ese trabajo, muchas organizaciones no podrían operar. METSI no lo reemplaza. Pregunta qué hace falta entender para que ese esfuerzo técnico apunte al problema adecuado."
+    },
+    {
+      "source_id": "N02-s07-b002",
+      "kind": "paragraph",
+      "text": "Veamos un requisito aparentemente claro: «Cuando Housekeeping libere una habitación, el PMS debe marcarla como disponible». Se puede programar y probar. Pero antes necesitamos responder qué significa «liberar». ¿Terminó la limpieza? ¿Se revisó que funcionen la cerradura y el baño? ¿Alguien autorizó que se asigne a una reserva? Si distintas personas entienden cosas diferentes, automatizar la frase puede transmitir el error más rápido."
+    },
+    {
+      "source_id": "N02-s07-b003",
+      "kind": "paragraph",
+      "text": "Conviene separar tres condiciones. Una habitación puede estar **limpia**, porque el equipo terminó su tarea; **habilitada físicamente**, porque no tiene una restricción que impida usarla; y **autorizada para asignar**, porque cumple las reglas de la reserva. A veces las tres coinciden. Otras veces, no. La diferencia no se resuelve eligiendo un mejor nombre de variable."
+    },
+    {
+      "source_id": "N02-s07-b004",
+      "kind": "paragraph",
+      "text": "Un trabajo técnico correcto necesita decisiones organizacionales claras: quién declara cada estado, qué comprobación lo respalda y quién resuelve una contradicción. Después, el diseño puede hacer que esas decisiones sean visibles, comprobables y más fáciles de ejecutar. Si salteamos esa conversación, corremos el riesgo de construir muy bien una regla que nadie acordó."
+    },
+    {
+      "source_id": "N02-s07-b005",
+      "kind": "paragraph",
+      "text": "El mismo criterio aparece fuera del hotel. Un sistema universitario puede emitir una constancia de inscripción aunque todavía falte comprobar una condición académica. La constancia fue generada sin errores, pero el estudiante interpreta que su vacante está asegurada. El problema puede estar en la regla, en el mensaje o en el momento de la validación. Probar que el PDF se descarga no alcanza para saber si la inscripción quedó bien resuelta."
+    },
+    {
+      "source_id": "N02-s08-h2",
+      "kind": "heading-2",
+      "text": "Cinco objetos que no conviene llamar simplemente “el sistema”"
+    },
+    {
+      "source_id": "N02-s08-b001",
+      "kind": "paragraph",
+      "text": "Usamos la palabra «sistema» para hablar de cosas diferentes. No es un problema de vocabulario solamente: según qué entendamos, vamos a buscar causas y soluciones en lugares distintos. Conviene separar cinco objetos."
+    },
+    {
+      "source_id": "N02-s08-b002",
+      "kind": "paragraph",
+      "text": "**La aplicación.** Es el programa: pantallas, código, reglas y datos que procesa. El PMS es una aplicación. Podemos investigar si guarda una reserva correctamente o si calcula mal un cargo. Son preguntas concretas sobre su funcionamiento."
+    },
+    {
+      "source_id": "N02-s08-b003",
+      "kind": "paragraph",
+      "text": "**El sistema técnico.** Incluye varias aplicaciones y los medios que las conectan: dispositivos, redes, servicios e integraciones. Si el PMS y la página de ventas no intercambian cambios a tiempo, mirar cada programa por separado puede dejar afuera la falla de comunicación."
+    },
+    {
+      "source_id": "N02-s08-b004",
+      "kind": "paragraph",
+      "text": "**El sistema de información.** Incluye también a quienes producen, interpretan y usan la información. Una planilla, una llamada y una regla de autorización pueden ser parte de él. La pregunta ya no es solo si llegó un dato, sino qué entendió alguien y qué pudo hacer con ese dato."
+    },
+    {
+      "source_id": "N02-s08-b005",
+      "kind": "paragraph",
+      "text": "**El sistema de trabajo.** Es el conjunto de actividades, participantes y recursos con el que se produce un bien o un servicio. En el hotel incluye tanto la reserva como la preparación física de la habitación y la entrega a la huésped. La información participa del trabajo, pero el trabajo no consiste únicamente en mover información."
+    },
+    {
+      "source_id": "N02-s08-b006",
+      "kind": "paragraph",
+      "text": "**La situación problemática.** Es lo que todavía estamos tratando de comprender. Puede haber desacuerdos sobre qué está mal, a quién perjudica y qué sería una mejora. Comercial puede ver una oportunidad perdida; Recepción, una promesa imposible; la huésped, un incumplimiento. Antes de establecer un único objetivo, hay que escuchar esas diferencias."
+    },
+    {
+      "source_id": "N02-s08-b007",
+      "kind": "paragraph",
+      "text": "No son cinco escalones donde el último siempre sea mejor. Son formas de mirar una situación. Para investigar un error de cálculo necesitamos precisión sobre la aplicación. Para revisar una promesa de servicio necesitamos otras relaciones. El error no es trabajar en un nivel pequeño. Es creer que ese nivel explica por sí solo cualquier problema."
+    },
+    {
+      "source_id": "N02-s08-b008",
+      "kind": "paragraph",
+      "text": "Alter propone estudiar los sistemas de información dentro de los sistemas de trabajo. Checkland y Poulter ayudan a tratar situaciones donde las personas no comparten una única definición del problema. Los enfoques socio-técnicos, desarrollados entre otros por Trist y Bamforth, Mumford y Clegg, estudian juntas las decisiones sobre tecnología y organización del trabajo. Cada tradición agrega una pregunta; ninguna nos entrega automáticamente la frontera correcta."
+    },
+    {
+      "source_id": "N02-s09-h2",
+      "kind": "heading-2",
+      "text": "El error de buscar el sistema dentro del software"
+    },
+    {
+      "source_id": "N02-s09-b001",
+      "kind": "paragraph",
+      "text": "Imaginá que dos programas se comunican mediante una **API**, una interfaz que permite a un programa pedir datos o acciones a otro. El segundo responde que recibió y procesó una solicitud. ¿Eso demuestra que la huésped recibió la habitación prometida? No. Demuestra algo sobre una operación técnica. El resultado del servicio exige otras comprobaciones."
+    },
+    {
+      "source_id": "N02-s09-b002",
+      "kind": "paragraph",
+      "text": "La diferencia es parecida a enviar un mensaje. Que el teléfono muestre «enviado» no significa que la otra persona lo haya leído, entendido y hecho lo que necesitabas. Cada paso agrega una condición. Si los confundimos, podemos tener indicadores en verde mientras el trabajo sigue detenido."
+    },
+    {
+      "source_id": "N02-s09-b003",
+      "kind": "paragraph",
+      "text": "Tampoco alcanza con agregar un dibujo de personas alrededor del software. Decir «hay personas y tecnología» no explica qué relación produce una dificultad. El enfoque socio-técnico exige mostrar, por ejemplo, que una regla obliga a esperar una aprobación, que esa aprobación solo puede darla una persona por turno y que la aplicación no permite conocer cuándo estará disponible. Ahí aparece un mecanismo: una forma concreta de producir la espera."
+    },
+    {
+      "source_id": "N02-s09-b004",
+      "kind": "paragraph",
+      "text": "La revisión de Polojärvi sobre sistemas socio-técnicos advierte que el término se usa de maneras diversas. Por eso, en esta materia, no lo vamos a tomar como una etiqueta que vuelve completo cualquier análisis. Vamos a pedir acciones observables: quién hace qué, con qué información, bajo qué regla y con qué consecuencia."
+    },
+    {
+      "source_id": "N02-s09-b005",
+      "kind": "paragraph",
+      "text": "También hay que evitar la conclusión inversa: «como todo depende de personas, los detalles técnicos son secundarios». No lo son. Un mensaje perdido, una base de datos mal diseñada o una demora de integración pueden ser decisivos. La mirada amplia sirve para ubicar el defecto técnico en el trabajo que afecta y comprobar si corregirlo mejora ese trabajo. No sirve para quitarle importancia a la ingeniería."
+    },
+    {
+      "source_id": "N02-s10-h2",
+      "kind": "heading-2",
+      "text": "Del inventario de componentes a una explicación"
+    },
+    {
+      "source_id": "N02-s10-b001",
+      "kind": "paragraph",
+      "text": "Escribir «Recepción, PMS, Housekeeping, Mantenimiento y huésped» nos dice quiénes o qué elementos participan. Todavía no nos dice qué ocurre entre ellos. Para dar ese paso hacen falta verbos: Housekeeping **declara** que terminó la limpieza; Mantenimiento **informa** una restricción; Recepción **consulta** el estado; una supervisora **autoriza** una excepción."
+    },
+    {
+      "source_id": "N02-s10-b002",
+      "kind": "paragraph",
+      "text": "Cada verbo abre preguntas. ¿Qué tiene que haber pasado para declarar terminada la limpieza? ¿Cuánto tarda en llegar la restricción? ¿Quién puede corregir un estado equivocado? ¿Qué hace Recepción si las respuestas no coinciden? Las relaciones empiezan a explicar el caso cuando incluyen significado, tiempo y autoridad."
+    },
+    {
+      "source_id": "N02-s10-b003",
+      "kind": "paragraph",
+      "text": "Podemos ordenar la observación en seis grupos: participantes, información, tecnologías, actividades, productos o servicios, y condiciones del entorno. Las reglas y la autoridad atraviesan todos esos grupos. No agregamos una casilla de «personas» para completar un formulario: seguimos su participación en decisiones que cambian el resultado."
+    },
+    {
+      "source_id": "N02-s10-b004",
+      "kind": "paragraph",
+      "text": "Un ejemplo sencillo ayuda. En un supermercado, una cajera puede tener un botón para aplicar un descuento. Eso no significa que esté autorizada a usarlo en cualquier compra. Tal vez necesite la aprobación de una supervisora. Si la supervisora está atendiendo otro problema, la caja espera. El botón funciona; la decisión no está disponible. Para explicar esa espera tenemos que mirar el permiso, la regla y la distribución del trabajo."
+    },
+    {
+      "source_id": "N02-s10-b005",
+      "kind": "paragraph",
+      "text": "En términos académicos, pasamos de describir componentes a proponer un **mecanismo explicativo**. Un mecanismo muestra cómo ciertas condiciones podrían producir un resultado. Todavía hay que comprobarlo. Si encontramos una aprobación inmediata y la caja sigue detenida, nuestra explicación necesita revisión. Como plantea Bunge, nombrar partes no sustituye explicar sus relaciones."
+    },
+    {
+      "source_id": "N02-s11-h2",
+      "kind": "heading-2",
+      "text": "Elegir la frontera por la promesa, no por el organigrama"
+    },
+    {
+      "source_id": "N02-s11-b001",
+      "kind": "paragraph",
+      "text": "Una frontera es una decisión sobre qué vamos a mirar de cerca y qué vamos a tratar como una condición externa. Es como encuadrar una foto: lo que queda afuera puede importar, aunque no aparezca. Por eso el encuadre debe responder a la pregunta que queremos resolver."
+    },
+    {
+      "source_id": "N02-s11-b002",
+      "kind": "paragraph",
+      "text": "Para dibujar una primera frontera, conviene escribir tres frases. **Qué queremos que pueda ocurrir:** entregar una habitación en las condiciones confirmadas. **Quién puede decir si ocurrió:** la huésped y quienes pueden comprobar esas condiciones. **Qué no podemos explicar si dejamos algo afuera:** por ejemplo, el ingreso temprano, si no miramos la regla con la que se vende."
+    },
+    {
+      "source_id": "N02-s11-b003",
+      "kind": "paragraph",
+      "text": "El organigrama puede orientar, pero no define la frontera. La OTA no pertenece al hotel y, sin embargo, puede influir directamente en la promesa. Una conversación informal no pertenece a una aplicación y puede evitar una segunda asignación. A la vez, puede haber áreas del hotel que no necesitemos incluir para la decisión concreta que estamos estudiando."
+    },
+    {
+      "source_id": "N02-s11-b004",
+      "kind": "paragraph",
+      "text": "Rolando García ayuda a entender que el sistema relevante se construye durante la investigación: elegimos relaciones porque permiten explicar el problema. Eso no vuelve arbitraria la elección. Tenemos que justificarla con la pregunta, los casos observados y las consecuencias de excluir algo. Trabajar entre disciplinas tampoco consiste en juntar informes separados; exige investigar una pregunta compartida."
+    },
+    {
+      "source_id": "N02-s11-b005",
+      "kind": "paragraph",
+      "text": "Veamos dos investigaciones bancarias hipotéticas. Si queremos saber por qué una pantalla carga lentamente, podemos empezar por la consulta y la infraestructura que la ejecuta. Si queremos explicar por qué una persona recibió un pago duplicado, necesitamos seguir la solicitud, los reintentos, los registros y la conciliación con quien recibió el dinero. La segunda pregunta exige otra frontera, aunque use la misma pantalla."
+    },
+    {
+      "source_id": "N02-s11-b006",
+      "kind": "paragraph",
+      "text": "La norma ISO/IEC/IEEE 15288 ofrece un marco para considerar procesos del ciclo de vida de los sistemas. Ayuda a no olvidar operación, mantenimiento o retiro. No decide por nosotros cuánto incluir en cada caso. Esa decisión debe ser proporcional al cambio: cuanto más amplio e irreversible sea, más relaciones tendremos que comprobar antes de actuar."
+    },
+    {
+      "source_id": "N02-s12-h2",
+      "kind": "heading-2",
+      "text": "El sistema efectivo incluye trabajo que no figura en arquitectura"
+    },
+    {
+      "source_id": "N02-s12-b001",
+      "kind": "paragraph",
+      "text": "En muchos trabajos hay una distancia entre el procedimiento escrito y lo que permite llegar al final del día. Una planilla guarda datos que la aplicación no admite. Un llamado aclara una excepción. Una persona experimentada recuerda una restricción que nadie documentó. Si borramos eso del análisis, estudiamos una organización que no existe."
+    },
+    {
+      "source_id": "N02-s12-b002",
+      "kind": "paragraph",
+      "text": "No significa que debamos conservar todas esas prácticas. Primero hay que entender qué hacen. Algunas permiten adaptarse a una excepción; otras conservan memoria; otras funcionan como control adicional. También pueden generar riesgo: duplicar información, exponer datos o hacer que todo dependa de alguien que no puede faltar."
+    },
+    {
+      "source_id": "N02-s12-b003",
+      "kind": "paragraph",
+      "text": "En Hotel Horizonte, la planilla de Mariela puede estar sosteniendo una diferencia que el PMS no representa. Eliminarla sin averiguar esa función puede empeorar la coordinación. Pero mantener dos registros que se contradicen tampoco es una solución. El objetivo es conservar la información y la capacidad necesarias, con una forma de trabajo más confiable."
+    },
+    {
+      "source_id": "N02-s12-b004",
+      "kind": "paragraph",
+      "text": "Imaginá un restaurante donde falla la impresora de comandas. El equipo acuerda una marca en el papel para señalar una restricción alimentaria. La marca puede evitar un error, pero una persona nueva quizás no la conozca. El análisis tiene que considerar ambas cosas: qué protección ofrece y de qué conocimiento no escrito depende. No alcanza con elogiar la creatividad ni con prohibir el papel."
+    },
+    {
+      "source_id": "N02-s12-b005",
+      "kind": "paragraph",
+      "text": "Mumford destaca la participación de quienes realizan el trabajo en el diseño de cambios. Su aporte no se reduce a pedirles que aprueben una pantalla. Quienes trabajan pueden explicar qué condiciones aparecen de verdad, qué tarea se hace por fuera del procedimiento y qué se perdería con una nueva regla."
+    },
+    {
+      "source_id": "N02-s12-b006",
+      "kind": "paragraph",
+      "text": "También pueden discrepar entre sí. Una práctica cómoda para un equipo puede agregar carga a otro. Por eso hay que preguntar quién gana tiempo, quién hace el trabajo adicional y quién queda excluido del canal informal. Observar el trabajo real no es romantizarlo: es entenderlo lo suficiente para poder mejorarlo sin borrar las funciones que lo sostienen."
+    },
+    {
+      "source_id": "N02-s13-h2",
+      "kind": "heading-2",
+      "text": "Cómo emerge un resultado que ningún componente controla"
+    },
+    {
+      "source_id": "N02-s13-b001",
+      "kind": "paragraph",
+      "text": "Un equipo de fútbol puede tener buenos jugadores y jugar mal. La calidad del conjunto depende también de cómo se coordinan. En las organizaciones pasa algo parecido: una reserva confiable no se explica solo por tener un buen PMS, una buena recepción o una buena página de ventas. Depende de cómo trabajan juntos."
+    },
+    {
+      "source_id": "N02-s13-b002",
+      "kind": "paragraph",
+      "text": "A este tipo de resultado lo llamamos **propiedad emergente**. No es algo misterioso. Es una propiedad que aparece por las interacciones y no se explica suficientemente mirando una parte aislada. La confiabilidad, la accesibilidad o la capacidad de recuperarse de un incidente suelen exigir esa mirada."
+    },
+    {
+      "source_id": "N02-s13-b003",
+      "kind": "paragraph",
+      "text": "En HH-02, el PMS puede guardar correctamente lo que recibió; la OTA, vender el cupo informado; y Housekeeping, completar la limpieza. Aun así, la huésped puede esperar porque «disponible» significa cosas distintas o porque un cambio llega después de la asignación. Todas las partes pueden cumplir una medida local mientras el servicio incumple la promesa."
+    },
+    {
+      "source_id": "N02-s13-b004",
+      "kind": "paragraph",
+      "text": "Además, una dificultad puede alimentar otra. Una inconsistencia genera llamadas. Las llamadas interrumpen a quienes actualizan los estados. Las actualizaciones se demoran y aparecen más inconsistencias. Si solo pedimos que trabajen más rápido, podemos aumentar la presión sin cortar esa cadena. Tal vez convenga aclarar un estado, registrar un evento a tiempo o reservar a alguien para atender excepciones. N03 estudiará estos circuitos con más detalle."
+    },
+    {
+      "source_id": "N02-s13-b005",
+      "kind": "paragraph",
+      "text": "Que intervengan muchas partes no significa que nadie deba responder. Hay que separar cuatro preguntas: qué contribuyó a causar el problema; quién tenía autoridad para cambiar la regla; quién podía detectarlo o prevenirlo; y quién debe atender y reparar frente a la persona afectada. Las respuestas pueden señalar a actores diferentes."
+    },
+    {
+      "source_id": "N02-s13-b006",
+      "kind": "paragraph",
+      "text": "Un proveedor puede haber demorado un mensaje y el hotel seguir siendo responsable de ofrecer una alternativa a la huésped. Lucía puede resolver el caso sin haber diseñado la regla que lo provocó. Confundir esas responsabilidades lleva a dos errores: culpar a la última persona visible o decir «fue el sistema» como si eso cerrara la conversación."
+    },
+    {
+      "source_id": "N02-s14-h2",
+      "kind": "heading-2",
+      "text": "Optimización local y desplazamiento del problema"
+    },
+    {
+      "source_id": "N02-s14-b001",
+      "kind": "paragraph",
+      "text": "Una mejora local hace que una parte funcione mejor. Puede ser valiosa: una consulta más rápida, menos carga manual o una tarea menos repetitiva. El cuidado consiste en comprobar si mejoró el servicio completo o si simplemente le pasó el trabajo a otra persona."
+    },
+    {
+      "source_id": "N02-s14-b002",
+      "kind": "paragraph",
+      "text": "Por ejemplo, el hotel pide completar un formulario antes de llegar. El tiempo de atención en la pantalla baja. Pero el formulario no permite indicar acompañantes ni ciertas necesidades de asistencia. Esos casos deben corregirse en el mostrador. El promedio mejora mientras algunas personas esperan más y Recepción trabaja bajo mayor presión. El indicador cuenta una parte de la historia."
+    },
+    {
+      "source_id": "N02-s14-b003",
+      "kind": "paragraph",
+      "text": "Antes de celebrar, hagamos tres preguntas. Si la mejora funciona como esperamos, ¿qué debería cambiar para la huésped? ¿Quién hará la tarea que desaparece de la pantalla? ¿Qué observaríamos si la demora solo se hubiera trasladado? Responder obliga a mirar casos normales y excepciones, no únicamente el promedio."
+    },
+    {
+      "source_id": "N02-s14-b004",
+      "kind": "paragraph",
+      "text": "Podemos probarlo siguiendo reservas completas antes y después del cambio. Además del tiempo de carga, registraríamos esperas, correcciones, pedidos de ayuda y casos no resueltos. Si las personas que necesitan asistencia empeoran, no corresponde esconderlas dentro de un resultado agregado favorable. Tenemos que revisar la solución o las condiciones en que se usa."
+    },
+    {
+      "source_id": "N02-s14-b005",
+      "kind": "paragraph",
+      "text": "Lo mismo ocurre con un asistente de IA. Puede escribir respuestas en segundos, pero alguien tiene que revisarlas y corregirlas. Contar mensajes producidos sin contar ese trabajo atribuye todo el ahorro a la herramienta y deja el costo fuera de la medición. La pregunta útil es cuánto esfuerzo hace falta para entregar una respuesta correcta y cómo se detecta una que no lo es."
+    },
+    {
+      "source_id": "N02-s15-h2",
+      "kind": "heading-2",
+      "text": "2026: cuando la aplicación también propone y actúa"
+    },
+    {
+      "source_id": "N02-s15-b001",
+      "kind": "paragraph",
+      "text": "Hasta aquí hablamos de aplicaciones que guardan o muestran información. Un asistente de IA puede, además, proponer una respuesta o ejecutar una acción. Esa diferencia cambia lo que tenemos que investigar. No es lo mismo explicar una política de cancelación que cancelar una reserva."
+    },
+    {
+      "source_id": "N02-s15-b002",
+      "kind": "paragraph",
+      "text": "La interfaz puede ser la misma: una ventana de conversación. Por detrás intervienen instrucciones, documentos consultados, un modelo, un proveedor, permisos y herramientas. Si dejamos todo dentro de una caja llamada «chatbot», no podemos saber en qué paso se produjo un error ni quién podía detenerlo."
+    },
+    {
+      "source_id": "N02-s15-b003",
+      "kind": "paragraph",
+      "text": "Conviene seguir la cadena con acciones concretas. El asistente **consulta** una política; el modelo **redacta** una propuesta; la aplicación **verifica** identidad y permiso; alguien **confirma** una operación; una herramienta **modifica** la reserva; el servicio **registra** lo ocurrido y ofrece una forma de corregirlo. No todos los asistentes realizan todos esos pasos. Justamente por eso hay que describir el que estamos evaluando."
+    },
+    {
+      "source_id": "N02-s15-b004",
+      "kind": "paragraph",
+      "text": "Los marcos de NIST sobre gestión de riesgos de IA y su perfil para IA generativa ayudan a examinar riesgos a lo largo del diseño, el uso y la evaluación. No convierten en segura a una herramienta por haberlos citado. Sirven para organizar preguntas sobre personas afectadas, controles, seguimiento y respuesta ante errores."
+    },
+    {
+      "source_id": "N02-s15-b005",
+      "kind": "paragraph",
+      "text": "Los trabajos de Alter y de Hofmann y colaboradores amplían la mirada hacia sistemas de trabajo donde personas y agentes reciben tareas y coordinan acciones. La revisión de Nguyen y Elbanna también permite examinar cómo influyen la organización, la participación humana y los datos en esa colaboración. El punto común para esta lectura es modesto pero importante: una buena respuesta aislada no demuestra que el servicio funcione bien."
+    },
+    {
+      "source_id": "N02-s15-b006",
+      "kind": "paragraph",
+      "text": "La investigación de DORA sobre desarrollo asistido por IA invita a mirar la organización completa y las tensiones entre producir más, verificar y mantener la estabilidad. En METSI no usamos ese planteo para prometer un resultado automático. Lo tomamos como una pregunta de evaluación: ¿la herramienta elimina una dificultad o hace más rápido un proceso que ya estaba mal coordinado?"
+    },
+    {
+      "source_id": "N02-s15-b007",
+      "kind": "paragraph",
+      "text": "Volvamos al hotel. Si el asistente informa una habitación como accesible a partir de una descripción desactualizada, no basta con mejorar la redacción. Hay que revisar quién mantiene esa información, cómo se verifica y qué puede hacer el asistente cuando no tiene una respuesta confiable. N31 y N32 profundizarán estos problemas. Aquí necesitamos reconocer que agregar IA no elimina el sistema de trabajo: agrega relaciones que deben quedar a la vista."
+    },
+    {
+      "source_id": "N02-s16-h2",
+      "kind": "heading-2",
+      "text": "Segunda aplicación de HH-02: una autopsia del episodio"
+    },
+    {
+      "source_id": "N02-s16-b001",
+      "kind": "paragraph",
+      "text": "Vamos a revisar el caso de las 13:06 como quien vuelve a mirar una jugada: ordenando lo que ocurrió, sin dar por cierta la primera explicación. Tenemos tres hipótesis. Una hipótesis es una respuesta posible que todavía debemos poner a prueba."
+    },
+    {
+      "source_id": "N02-s16-b002",
+      "kind": "heading-3",
+      "text": "Explicación A: el PMS está desactualizado"
+    },
+    {
+      "source_id": "N02-s16-b003",
+      "kind": "paragraph",
+      "text": "La limpieza terminó a las 12:42, pero el cambio no llegó al PMS o llegó tarde. Para comprobarlo, Federico Müller, de Tecnología y Datos, necesita comparar registros y horarios: cuándo se declaró el cambio, cuándo se envió y cuándo se recibió. Si el PMS ya tenía la información correcta antes de que Lucía la consultara, esta explicación pierde fuerza."
+    },
+    {
+      "source_id": "N02-s16-b004",
+      "kind": "paragraph",
+      "text": "Si encontramos un mensaje perdido o demorado, puede ser razonable corregir la integración. La prueba debe comprobar también qué ocurre si el mensaje se repite o llega fuera de orden. No buscamos simplemente «conectar sistemas», sino conseguir que una información necesaria llegue de manera confiable a quien debe usarla."
+    },
+    {
+      "source_id": "N02-s16-b005",
+      "kind": "heading-3",
+      "text": "Explicación B: “liberada” no significa lo mismo"
+    },
+    {
+      "source_id": "N02-s16-b006",
+      "kind": "paragraph",
+      "text": "Mariela usa «liberada» para decir «terminamos la limpieza». Lucía necesita saber «se puede entregar a esta huésped». Esa segunda condición puede exigir que la cerradura funcione y que no exista otra restricción. Las dos pantallas podrían estar actualizadas y, aun así, inducir decisiones diferentes."
+    },
+    {
+      "source_id": "N02-s16-b007",
+      "kind": "paragraph",
+      "text": "Para comprobar esta hipótesis hay que pedir a cada equipo que explique sus estados usando casos concretos. ¿Marcaría en verde una habitación limpia con una reparación pendiente? ¿La asignaría Recepción? Si las respuestas difieren, acelerar el intercambio no resuelve la diferencia de significado. Primero hace falta acordar las condiciones y quién puede declararlas."
+    },
+    {
+      "source_id": "N02-s16-b008",
+      "kind": "heading-3",
+      "text": "Explicación C: la promesa comercial antecede al sistema de trabajo"
+    },
+    {
+      "source_id": "N02-s16-b009",
+      "kind": "paragraph",
+      "text": "La agencia vende ingreso temprano sin comprobar que el hotel pueda ofrecerlo en esa reserva. En ese caso, el problema empieza antes de que termine la limpieza. Camila Duarte, de Comercial, debe revisar qué se ofreció, con qué regla y bajo qué condiciones. También importa cuántas veces se cumple y qué se hace cuando no es posible."
+    },
+    {
+      "source_id": "N02-s16-b010",
+      "kind": "paragraph",
+      "text": "Si la promesa respeta las restricciones del hotel y luego se pierde un cambio de estado, esta hipótesis se debilita. Si se ofrece como garantía algo que Operaciones solo puede confirmar más tarde, hay que revisar la política comercial. Reemplazar el PMS no modifica por sí solo una promesa que se sigue vendiendo igual."
+    },
+    {
+      "source_id": "N02-s16-b011",
+      "kind": "table-cell",
+      "text": "Posible explicación"
+    },
+    {
+      "source_id": "N02-s16-b012",
+      "kind": "table-cell",
+      "text": "Qué necesitamos comprobar"
+    },
+    {
+      "source_id": "N02-s16-b013",
+      "kind": "table-cell",
+      "text": "Primer cambio que podríamos probar"
+    },
+    {
+      "source_id": "N02-s16-b014",
+      "kind": "table-cell",
+      "text": "La información llega tarde."
+    },
+    {
+      "source_id": "N02-s16-b015",
+      "kind": "table-cell",
+      "text": "Horarios y registros del cambio entre los equipos y el PMS."
+    },
+    {
+      "source_id": "N02-s16-b016",
+      "kind": "table-cell",
+      "text": "Corregir el envío, detectar fallas y comparar registros cuando no coinciden."
+    },
+    {
+      "source_id": "N02-s16-b017",
+      "kind": "table-cell",
+      "text": "La misma palabra significa cosas distintas."
+    },
+    {
+      "source_id": "N02-s16-b018",
+      "kind": "table-cell",
+      "text": "Qué condiciones exige cada área para decir «liberada» o «disponible»."
+    },
+    {
+      "source_id": "N02-s16-b019",
+      "kind": "table-cell",
+      "text": "Acordar estados, reglas y responsables antes de automatizar su intercambio."
+    },
+    {
+      "source_id": "N02-s16-b020",
+      "kind": "table-cell",
+      "text": "Se promete algo que todavía no se puede asegurar."
+    },
+    {
+      "source_id": "N02-s16-b021",
+      "kind": "table-cell",
+      "text": "Oferta, condiciones de venta y capacidad real para cumplirlas."
+    },
+    {
+      "source_id": "N02-s16-b022",
+      "kind": "table-cell",
+      "text": "Revisar qué se ofrece, cuándo se confirma y qué alternativa se garantiza."
+    },
+    {
+      "source_id": "N02-s16-b023",
+      "kind": "paragraph",
+      "text": "Las tres pueden coexistir. La tabla no elige una ganadora: evita que interpretemos cualquier dato como prueba de que hay que cambiar el programa. Para cada explicación, debemos buscar también lo que podría demostrar que estamos equivocados."
+    },
+    {
+      "source_id": "N02-s16-b024",
+      "kind": "paragraph",
+      "text": "El mapa inicial incluye a la huésped, Reservas, Recepción, Housekeeping, Mantenimiento, Finanzas y supervisión. Incluye terceros cuando importan: la OTA, la pasarela de pagos, el proveedor del PMS o el servicio de cerraduras. Sigue la reserva, la condición vendida, el estado de la habitación, la asignación y la reparación. Cada relación debe ayudar a entender una de las hipótesis."
+    },
+    {
+      "source_id": "N02-s16-b025",
+      "kind": "paragraph",
+      "text": "Si dibujamos todas esas partes sin mostrar qué hacen entre sí, seguimos teniendo una lista. Si dibujamos únicamente el recorrido sin problemas, no explicamos la escena inicial. Un mapa útil permite seguir la excepción: dónde se detecta, quién puede decidir y qué recibe finalmente la persona que esperaba."
+    },
+    {
+      "source_id": "N02-s17-h2",
+      "kind": "heading-2",
+      "text": "Método de construcción: una frontera móvil en seis movimientos"
+    },
+    {
+      "source_id": "N02-s17-b001",
+      "kind": "heading-3",
+      "text": "1. Nombrar una capacidad y su receptor"
+    },
+    {
+      "source_id": "N02-s17-b002",
+      "kind": "paragraph",
+      "text": "Empezá por algo que una persona necesite que ocurra. «Entregar el alojamiento en las condiciones confirmadas» sirve mejor que «sistema de reservas», porque no supone de entrada cuál será la herramienta. Nombrá también quién recibe el resultado y quién soporta las consecuencias si no llega."
+    },
+    {
+      "source_id": "N02-s17-b003",
+      "kind": "paragraph",
+      "text": "Esto ayuda a evitar objetivos demasiado vagos. «Mejorar la experiencia» puede significar muchas cosas. «Que la persona pueda ingresar en la condición y el horario acordados» permite preguntar qué pasó en una reserva concreta. Después podremos discutir otras dimensiones de la experiencia sin perder ese punto de apoyo."
+    },
+    {
+      "source_id": "N02-s17-b004",
+      "kind": "heading-3",
+      "text": "2. Reconstruir un episodio completo"
+    },
+    {
+      "source_id": "N02-s17-b005",
+      "kind": "paragraph",
+      "text": "Elegí un caso y contalo desde el comienzo hasta la resolución. No saltees la espera, el llamado ni la corrección manual. Anotá quién actuó, qué sabía y qué cambió. Si no hay registro de un paso, marcá esa falta: no completes la historia con lo que debería haber ocurrido según el procedimiento."
+    },
+    {
+      "source_id": "N02-s17-b006",
+      "kind": "paragraph",
+      "text": "Un caso no demuestra qué pasa siempre, pero muestra qué relaciones investigar. Después habrá que compararlo con otros: casos que salieron bien, casos parecidos y excepciones. Si todos se reconstruyen con el mismo criterio, las diferencias empiezan a dar pistas sobre la causa."
+    },
+    {
+      "source_id": "N02-s17-b007",
+      "kind": "heading-3",
+      "text": "3. Dibujar relaciones con verbos y tiempos"
+    },
+    {
+      "source_id": "N02-s17-b008",
+      "kind": "paragraph",
+      "text": "No unas «Recepción» y «PMS» con una flecha sin explicación. Escribí «Recepción consulta el estado antes de asignar». Si la demora importa, registrala. Si hace falta autorización, indicá quién la da. Otra persona debería poder contar lo que ocurre siguiendo el dibujo."
+    },
+    {
+      "source_id": "N02-s17-b009",
+      "kind": "paragraph",
+      "text": "La precisión también permite discutir. «Los equipos no se comunican» es una queja amplia. «Mantenimiento cierra la orden, pero Recepción no recibe esa información antes de entregar la llave» señala una relación que podemos observar, confirmar o corregir."
+    },
+    {
+      "source_id": "N02-s17-b010",
+      "kind": "heading-3",
+      "text": "4. Agregar lo informal y lo ausente"
+    },
+    {
+      "source_id": "N02-s17-b011",
+      "kind": "paragraph",
+      "text": "Preguntá qué se detendría si mañana desaparecieran las planillas, los mensajes o la persona que siempre recuerda las excepciones. Eso ayuda a descubrir tareas que no figuran en el diseño oficial. Preguntá también quién recibe las consecuencias pero no participó de las entrevistas."
+    },
+    {
+      "source_id": "N02-s17-b012",
+      "kind": "paragraph",
+      "text": "No se trata de incorporar cada chat al mapa. Se trata de reconocer una función necesaria: advertir un bloqueo, conservar una restricción o conseguir una autorización. Después podremos buscar una forma más segura de cumplirla."
+    },
+    {
+      "source_id": "N02-s17-b013",
+      "kind": "heading-3",
+      "text": "5. Formular al menos dos explicaciones rivales"
+    },
+    {
+      "source_id": "N02-s17-b014",
+      "kind": "paragraph",
+      "text": "Una habitación puede figurar ocupada porque un cambio llegó tarde o porque dos áreas usan estados diferentes. Ambas explicaciones son posibles al comienzo. Para distinguirlas hacen falta observaciones diferentes. Escribí qué dato buscarías y qué resultado te haría abandonar cada hipótesis."
+    },
+    {
+      "source_id": "N02-s17-b015",
+      "kind": "paragraph",
+      "text": "Si el mapa solo puede confirmar la solución que alguien quería desde el inicio, revisalo. Un instrumento de investigación tiene que permitirnos aprender algo que no esperábamos, no solamente presentar mejor una decisión ya tomada."
+    },
+    {
+      "source_id": "N02-s17-b016",
+      "kind": "heading-3",
+      "text": "6. Revisar frontera según la decisión"
+    },
+    {
+      "source_id": "N02-s17-b017",
+      "kind": "paragraph",
+      "text": "Para cada parte, preguntá si incluirla podría cambiar la explicación o la alternativa elegida. Si no, quizás pueda quedar como condición externa. Si excluirla oculta a quien paga el costo de la solución, probablemente deba entrar."
+    },
+    {
+      "source_id": "N02-s17-b018",
+      "kind": "paragraph",
+      "text": "Dejá escrita la razón. Por ejemplo: «Incluimos la OTA porque define la condición de ingreso que recibe la huésped. Por ahora no estudiamos otras campañas comerciales, porque no cambian este episodio». Esa justificación permite ampliar o reducir el análisis sin que la frontera parezca una preferencia personal."
+    },
+    {
+      "source_id": "N02-s17-b019",
+      "kind": "heading-3",
+      "text": "Tercera aplicación de HH-02: una frontera lista para ser revisada"
+    },
+    {
+      "source_id": "N02-s17-b020",
+      "kind": "paragraph",
+      "text": "Al terminar esta primera reconstrucción, el equipo ya no habla de «el sistema» como un único programa. Puede mostrar cómo se relacionan la oferta de Camila, la reserva, la preparación de Mariela, las restricciones de Mantenimiento, la consulta de Lucía y la autorización de una excepción. Todavía no sabe cuánto explica cada relación, pero sabe dónde buscar."
+    },
+    {
+      "source_id": "N02-s17-b021",
+      "kind": "paragraph",
+      "text": "HH-02 propone observar durante dos semanas una muestra de episodios. La investigación tiene tres preguntas: si los cambios llegan a tiempo, si los estados significan lo mismo y si la condición comercial puede cumplirse. No autoriza reemplazar el PMS, conectar indiscriminadamente todas las planillas ni automatizar decisiones de reparación."
+    },
+    {
+      "source_id": "N02-s17-b022",
+      "kind": "paragraph",
+      "text": "También fija una señal para revisar el mapa: si una mejora reduce el problema en un área pero reaparecen la espera, el riesgo o el trabajo en otra, habrá que ampliar la frontera. El mapa debe poder cambiar cuando el caso lo exija. Esa es la base que recibirá N03."
+    },
+    {
+      "source_id": "N02-s18-h2",
+      "kind": "heading-2",
+      "text": "Objeciones y límites: ampliar la frontera también cuesta"
+    },
+    {
+      "source_id": "N02-s18-b001",
+      "kind": "paragraph",
+      "text": "Alguien podría objetar: «Si para cambiar cualquier cosa tenemos que estudiar toda la organización, no vamos a terminar nunca». Tiene razón en señalar el riesgo. Una mirada sistémica no obliga a investigar todo. Obliga a justificar cuánto necesitamos investigar para una decisión concreta."
+    },
+    {
+      "source_id": "N02-s18-b002",
+      "kind": "paragraph",
+      "text": "Para corregir una consulta lenta, quizás alcance con comprobar el defecto técnico y sus efectos. Para reemplazar una plataforma que varias áreas usan todos los días, necesitamos estudiar migración, integraciones, trabajo informal y continuidad. La diferencia no depende de qué enfoque nos gusta más, sino de lo que podría cambiar o salir mal."
+    },
+    {
+      "source_id": "N02-s18-b003",
+      "kind": "paragraph",
+      "text": "Tampoco toda práctica debe transformarse en un procedimiento rígido. Algunas conversaciones necesitan flexibilidad. Formalizarlas de más puede aumentar vigilancia, burocracia o demoras. Dos áreas pueden necesitar vistas diferentes del mismo trabajo; el objetivo no es que todas usen las mismas palabras para todo, sino que puedan coordinar las decisiones compartidas sin confundirse."
+    },
+    {
+      "source_id": "N02-s18-b004",
+      "kind": "paragraph",
+      "text": "Otra objeción es que siempre podremos encontrar algo más para estudiar. Por eso hay que establecer una condición de suficiencia: el mapa debe permitir comparar las hipótesis relevantes, localizar la evidencia necesaria y elegir un paso proporcionado. La incertidumbre que queda se registra junto con las condiciones de revisión. No se usa para fingir certeza ni para postergar indefinidamente."
+    },
+    {
+      "source_id": "N02-s18-b005",
+      "kind": "paragraph",
+      "text": "Por último, un buen dibujo puede dar una falsa sensación de conocimiento. Las flechas son afirmaciones que necesitan respaldo. Si nadie observó cómo se autoriza una excepción, el mapa debe mostrarlo como algo por comprobar. La prolijidad gráfica no reemplaza la investigación."
+    },
+    {
+      "source_id": "N02-s19-h2",
+      "kind": "heading-2",
+      "text": "Comprobación: ¿el mapa permite decidir algo distinto?"
+    },
+    {
+      "source_id": "N02-s19-b001",
+      "kind": "paragraph",
+      "text": "Probá el mapa con estas preguntas. Si una respuesta falta, no agregues decoración: volvé al caso y buscá la relación que todavía no entendiste."
+    },
+    {
+      "source_id": "N02-s19-b002",
+      "kind": "list-item",
+      "text": "¿Se entiende qué debe recibir una persona, además de qué programas participan?"
+    },
+    {
+      "source_id": "N02-s19-b003",
+      "kind": "list-item",
+      "text": "¿Las flechas dicen quién hace qué, cuándo y con qué autorización?"
+    },
+    {
+      "source_id": "N02-s19-b004",
+      "kind": "list-item",
+      "text": "¿Podemos seguir un caso completo, incluida una falla y su resolución?"
+    },
+    {
+      "source_id": "N02-s19-b005",
+      "kind": "list-item",
+      "text": "¿Hay al menos dos explicaciones posibles y evidencia para compararlas?"
+    },
+    {
+      "source_id": "N02-s19-b006",
+      "kind": "list-item",
+      "text": "¿Aparece el trabajo informal que resulta necesario para terminar la tarea?"
+    },
+    {
+      "source_id": "N02-s19-b007",
+      "kind": "list-item",
+      "text": "¿Se ve quién obtiene una mejora y quién podría recibir más carga o riesgo?"
+    },
+    {
+      "source_id": "N02-s19-b008",
+      "kind": "list-item",
+      "text": "¿Podemos considerar cambios en reglas, coordinación, capacidad o contratos, además del software?"
+    },
+    {
+      "source_id": "N02-s19-b009",
+      "kind": "list-item",
+      "text": "¿Está escrito qué dejamos afuera y por qué?"
+    },
+    {
+      "source_id": "N02-s19-b010",
+      "kind": "paragraph",
+      "text": "La prueba final es simple: ¿el mapa nos hace preguntar, observar o decidir algo diferente? Si no cambia nada, puede estar ilustrando lo que ya creíamos. Si siempre lleva al reemplazo del programa, incluso antes de comparar hipótesis, probablemente haya escondido esa solución en la forma de dibujar el problema."
+    },
+    {
+      "source_id": "N02-s20-h2",
+      "kind": "heading-2",
+      "text": "Caso de transferencia: medicación hospitalaria"
+    },
+    {
+      "source_id": "N02-s20-b001",
+      "kind": "paragraph",
+      "text": "Consideremos un caso hipotético de organización del trabajo, no una indicación clínica. Un hospital registra errores y propone reemplazar el software de administración de medicamentos. El programa merece revisión, pero seguir solo sus pantallas deja afuera parte del proceso que puede explicar lo ocurrido."
+    },
+    {
+      "source_id": "N02-s20-b002",
+      "kind": "paragraph",
+      "text": "Una indicación debe ser interpretada y revisada por profesionales con funciones distintas. También hacen falta disponibilidad física, identificación, comunicación y coordinación entre turnos. Las interrupciones, las etiquetas y los dispositivos pueden influir. La información correcta necesita llegar a quien debe actuar en el momento oportuno."
+    },
+    {
+      "source_id": "N02-s20-b003",
+      "kind": "paragraph",
+      "text": "Supongamos que el programa detecta una situación y bloquea una operación para que sea revisada. Técnicamente, el control funcionó. Pero si el equipo que debe resolverla no recibe el contexto, el trabajo queda detenido. La seguridad no depende únicamente de que aparezca la alerta: también depende de quién la interpreta, quién está autorizado a decidir y cómo continúa el proceso."
+    },
+    {
+      "source_id": "N02-s20-b004",
+      "kind": "paragraph",
+      "text": "No corresponde deducir de este ejemplo qué tratamiento dar ni qué control eliminar. Esas decisiones requieren conocimientos, evidencia y responsabilidades clínicas específicas. Lo que sí podemos transferir desde el hotel es la forma de investigar: definir el resultado, seguir un episodio completo, revisar significados y asignar responsabilidades claras."
+    },
+    {
+      "source_id": "N02-s20-b005",
+      "kind": "paragraph",
+      "text": "La diferencia de gravedad importa. Un mismo error de coordinación puede tener consecuencias mucho más severas en salud. Por eso tampoco podemos copiar plazos, tolerancias o soluciones del hotel. Transferir un criterio no es trasladar una receta: es usar una pregunta útil y volver a investigar las condiciones del nuevo caso."
+    },
+    {
+      "source_id": "N02-s21-h2",
+      "kind": "heading-2",
+      "text": "De HH-02 a N03: un mapa con consecuencias abiertas"
+    },
+    {
+      "source_id": "N02-s21-b001",
+      "kind": "paragraph",
+      "text": "HH-02 queda preparado cuando otra persona puede explicar la promesa, reconstruir la espera de la huésped y mostrar las tres hipótesis sin depender de quien hizo el mapa. También debe poder decir qué evidencia falta y qué decisión todavía no está autorizada."
+    },
+    {
+      "source_id": "N02-s21-b002",
+      "kind": "paragraph",
+      "text": "N03 tomará esas relaciones para estudiar qué pasa cuando una mejora vuelve a afectar el punto de partida: por ejemplo, cuando más ventas generan más excepciones y esas excepciones demoran la actualización de las habitaciones. Aquí dejamos señalado el problema; en la próxima lectura vamos a examinar demoras, retroalimentación y efectos que aparecen después."
+    },
+    {
+      "source_id": "N02-s21-b003",
+      "kind": "paragraph",
+      "text": "El paso entre ambas lecturas no consiste en agregar complejidad porque sí. Consiste en seguir una pregunta que el caso ya hizo necesaria: si cambiamos una parte, ¿dónde más podrían aparecer las consecuencias?"
+    },
+    {
+      "source_id": "N02-s22-h2",
+      "kind": "heading-2",
+      "text": "Una lectura situada desde América Latina"
+    },
+    {
+      "source_id": "N02-s22-b001",
+      "kind": "paragraph",
+      "text": "Rolando García ayuda a elegir relaciones relevantes para una pregunta, en lugar de tomar como sistema una lista ya armada. En el hotel, eso significa justificar por qué la oferta de una agencia externa entra en el análisis, aunque la agencia no pertenezca a la empresa. Su participación puede explicar una promesa que después nadie logra cumplir."
+    },
+    {
+      "source_id": "N02-s22-b002",
+      "kind": "paragraph",
+      "text": "Mario Bunge pide ir más allá de la frase «todo está relacionado». Necesitamos mostrar cómo se produciría un efecto y qué observación pondría en duda la explicación. Si afirmamos que el problema es la demora de integración, tenemos que comparar tiempos. Si los registros llegaron antes de la consulta, no podemos seguir defendiendo la misma causa sin revisar el argumento."
+    },
+    {
+      "source_id": "N02-s22-b003",
+      "kind": "paragraph",
+      "text": "Maturana y Varela permiten reflexionar sobre cómo quien observa distingue e interpreta lo que ve. En términos de esta lectura, Lucía y Mariela pueden mirar el mismo estado y relacionarlo con tareas diferentes. Esto no vuelve igualmente correcta cualquier interpretación: nos obliga a explicitar qué significa cada una y contrastarla con el trabajo observado."
+    },
+    {
+      "source_id": "N02-s22-b004",
+      "kind": "paragraph",
+      "text": "Etkin y Schvarstein ayudan a reconocer que las organizaciones conservan reglas, identidades y tensiones aun cuando cambian sus herramientas. Una pantalla nueva no elimina por sí sola el desacuerdo entre vender más y asegurar lo vendido. Hace falta discutir cómo se toman esas decisiones y quién asume sus consecuencias."
+    },
+    {
+      "source_id": "N02-s22-b005",
+      "kind": "paragraph",
+      "text": "Estos aportes no se agregan por procedencia geográfica solamente. Sirven para discutir decisiones del caso. También nos recuerdan que una organización concreta trabaja con su historia, sus recursos y sus relaciones de poder. Una solución que funcionó en otro lugar es una alternativa para investigar, no una garantía de resultado."
+    },
+    {
+      "source_id": "N02-s23-h2",
+      "kind": "heading-2",
+      "text": "Ejemplo resuelto · Del concepto a una decisión"
+    },
+    {
+      "source_id": "N02-s23-b001",
+      "kind": "paragraph",
+      "text": "En un ejercicio, el PMS recibe «limpia» a las 13:06. La reserva exige una condición que todavía debe verificarse."
+    },
+    {
+      "source_id": "N02-s23-b002",
+      "kind": "paragraph",
+      "text": "**Lo que sabemos:** terminó la limpieza."
+    },
+    {
+      "source_id": "N02-s23-b003",
+      "kind": "paragraph",
+      "text": "**Lo que no sabemos:** si esa habitación sirve para esa reserva. El mapa mínimo une a Housekeeping con Recepción mediante el dato de limpieza, y a Recepción con la verificación de la condición antes de confirmar. La decisión es conservar ambos estados, no acelerar el envío y llamarlo «asignable». Si la verificación ya estaba hecha y sólo llegó tarde, cambia el diagnóstico: hay que investigar la demora."
+    },
+    {
+      "source_id": "N02-s23-b004",
+      "kind": "paragraph",
+      "text": "**Probá** señalar qué dato distinguiría estas dos explicaciones. Tu mapa alcanza cuando permite elegir una intervención distinta según la evidencia."
+    },
+    {
+      "source_id": "N02-s24-h2",
+      "kind": "heading-2",
+      "text": "Síntesis"
+    },
+    {
+      "source_id": "N02-s24-b001",
+      "kind": "paragraph",
+      "text": "El programa participa de un sistema de trabajo. Para explicar un resultado hay que relacionar información, tareas, interpretación y autoridad. Ampliar la mirada sirve cuando cambia el diagnóstico o la decisión, no cuando sólo agrega componentes."
+    },
+    {
+      "source_id": "N02-s25-h2",
+      "kind": "heading-2",
+      "text": "Cinco píldoras para recordar"
+    },
+    {
+      "source_id": "N02-s25-b001",
+      "kind": "list-item",
+      "text": "**Que la pantalla diga «correcto» no prueba que la persona recibió lo prometido.**"
+    },
+    {
+      "source_id": "N02-s25-b002",
+      "kind": "list-item",
+      "text": "**Cada parte puede cumplir su tarea y, aun así, el conjunto fallar.**"
+    },
+    {
+      "source_id": "N02-s25-b003",
+      "kind": "list-item",
+      "text": "**Un mapa explica cuando sus flechas dicen quién hace qué, cuándo y con qué autoridad.**"
+    },
+    {
+      "source_id": "N02-s25-b004",
+      "kind": "list-item",
+      "text": "**No hay que mirar todo: hay que justificar qué necesitamos mirar para decidir.**"
+    },
+    {
+      "source_id": "N02-s25-b005",
+      "kind": "list-item",
+      "text": "**Antes de borrar una planilla o un llamado, averiguá qué trabajo están resolviendo.**"
+    },
+    {
+      "source_id": "N02-s26-h2",
+      "kind": "heading-2",
+      "text": "Glosario esencial"
+    },
+    {
+      "source_id": "N02-s26-b001",
+      "kind": "list-item",
+      "text": "**API:** forma acordada para que un programa pida datos o acciones a otro. Que una solicitud termine bien no garantiza que todo el servicio haya terminado bien."
+    },
+    {
+      "source_id": "N02-s26-b002",
+      "kind": "list-item",
+      "text": "**Autoridad:** atribución reconocida para decidir o aprobar algo. Poder tocar un botón no significa estar autorizado a decidir lo que hace."
+    },
+    {
+      "source_id": "N02-s26-b003",
+      "kind": "list-item",
+      "text": "**Chatbot:** servicio con el que se conversa por mensajes. Puede limitarse a informar o usar herramientas que realizan acciones; hay que distinguir ambas funciones."
+    },
+    {
+      "source_id": "N02-s26-b004",
+      "kind": "list-item",
+      "text": "**Check-in:** llegada y admisión de la persona huésped. Incluye comprobar condiciones, asignar alojamiento y entregarlo, no solo completar un formulario."
+    },
+    {
+      "source_id": "N02-s26-b005",
+      "kind": "list-item",
+      "text": "**Channel manager:** herramienta que distribuye tarifas y disponibilidad entre los canales de venta del hotel."
+    },
+    {
+      "source_id": "N02-s26-b006",
+      "kind": "list-item",
+      "text": "**Entorno:** condiciones y actores que influyen, pero que tratamos como externos para una investigación determinada. Debemos dejar explícita esa decisión."
+    },
+    {
+      "source_id": "N02-s26-b007",
+      "kind": "list-item",
+      "text": "**ERP:** plataforma que reúne datos y procesos de distintas áreas, como compras, finanzas o inventario. No contiene por sí sola todo el trabajo de la organización."
+    },
+    {
+      "source_id": "N02-s26-b008",
+      "kind": "list-item",
+      "text": "**Frontera del sistema:** elección de qué relaciones incluimos para explicar un problema y cuáles dejamos fuera. Puede revisarse cuando aparece evidencia nueva."
+    },
+    {
+      "source_id": "N02-s26-b009",
+      "kind": "list-item",
+      "text": "**IA:** técnicas que permiten producir, entre otras cosas, predicciones, recomendaciones o contenido. Su uso se analiza junto con permisos, datos, personas y controles."
+    },
+    {
+      "source_id": "N02-s26-b010",
+      "kind": "list-item",
+      "text": "**Infraestructura:** recursos compartidos que permiten trabajar, como redes, dispositivos, edificios o servicios de cómputo."
+    },
+    {
+      "source_id": "N02-s26-b011",
+      "kind": "list-item",
+      "text": "**Mecanismo:** explicación de cómo unas condiciones pueden producir un resultado. «El cambio llegó tarde y Recepción decidió con el estado anterior» propone un mecanismo que podemos comprobar."
+    },
+    {
+      "source_id": "N02-s26-b012",
+      "kind": "list-item",
+      "text": "**OTA:** agencia de viajes en línea que vende reservas y establece condiciones de comercialización."
+    },
+    {
+      "source_id": "N02-s26-b013",
+      "kind": "list-item",
+      "text": "**Outcome:** cambio que importa en el uso o en la vida de quienes reciben el servicio. En este caso, poder ingresar en las condiciones acordadas, no simplemente instalar un programa."
+    },
+    {
+      "source_id": "N02-s26-b014",
+      "kind": "list-item",
+      "text": "**PMS:** aplicación que administra reservas, habitaciones y cargos del hotel. Es una parte central, pero no el servicio completo."
+    },
+    {
+      "source_id": "N02-s26-b015",
+      "kind": "list-item",
+      "text": "**Propiedad emergente:** resultado que depende de cómo se relacionan las partes. Una reserva confiable necesita coordinación, no solo componentes correctos por separado."
+    },
+    {
+      "source_id": "N02-s26-b016",
+      "kind": "list-item",
+      "text": "**Reconciliación:** comparación de registros que no coinciden para decidir qué debe corregirse y cómo resolver la diferencia."
+    },
+    {
+      "source_id": "N02-s26-b017",
+      "kind": "list-item",
+      "text": "**Sistema de trabajo:** conjunto de personas, actividades y recursos con el que se produce un bien o un servicio."
+    },
+    {
+      "source_id": "N02-s26-b018",
+      "kind": "list-item",
+      "text": "**Socio-técnico:** enfoque que estudia juntas la tecnología y la organización del trabajo: reglas, personas, autoridad y relaciones entre ellas."
+    },
+    {
+      "source_id": "N02-s26-b019",
+      "kind": "list-item",
+      "text": "**Stakeholder o parte interesada:** persona o grupo que participa, influye o recibe consecuencias, aunque no tenga poder para aprobar el proyecto."
+    },
+    {
+      "source_id": "N02-s27-h2",
+      "kind": "heading-2",
+      "text": "Preguntas de preparación"
+    },
+    {
+      "source_id": "N02-s27-b001",
+      "kind": "list-item",
+      "text": "Lucía y Mariela muestran estados diferentes de una habitación. ¿Qué mirarías para saber si la información llegó tarde o si están usando palabras con significados distintos?"
+    },
+    {
+      "source_id": "N02-s27-b002",
+      "kind": "list-item",
+      "text": "¿Qué resuelve la planilla de Housekeeping? ¿Qué tendría que conservar una alternativa antes de eliminarla?"
+    },
+    {
+      "source_id": "N02-s27-b003",
+      "kind": "list-item",
+      "text": "Dibujá dos fronteras: una para investigar una demora técnica y otra para investigar el incumplimiento de la reserva. ¿Qué cambia y por qué?"
+    },
+    {
+      "source_id": "N02-s27-b004",
+      "kind": "list-item",
+      "text": "Proponé una mejora que ahorre tiempo a un equipo y pueda agregar espera a otro. Explicá cómo ocurriría y qué observarías para comprobarlo."
+    },
+    {
+      "source_id": "N02-s27-b005",
+      "kind": "list-item",
+      "text": "Si la falla empieza en un proveedor, ¿quién debe atender a la huésped y ofrecer una reparación? Separá esa obligación de la investigación de la causa."
+    },
+    {
+      "source_id": "N02-s27-b006",
+      "kind": "list-item",
+      "text": "Elegí otro trabajo que conozcas. ¿Qué llamada, mensaje o tarea informal faltaría si lo dibujaras mirando únicamente sus aplicaciones?"
+    },
+    {
+      "source_id": "N02-s27-b007",
+      "kind": "paragraph",
+      "text": "Para el encuentro, respondé por escrito dos preguntas. Elegí además la que más te costó y explicá dónde apareció la dificultad. No hace falta ocultar una duda: tiene que estar lo bastante clara como para poder discutirla."
+    },
+    {
+      "source_id": "N02-s28-h2",
+      "kind": "heading-2",
+      "text": "Referencias base"
+    },
+    {
+      "source_id": "N02-s28-b001",
+      "kind": "list-item",
+      "text": "Alter, S. (2002). “The Work System Method for Understanding Information Systems and Information System Research”. *Communications of the Association for Information Systems*, 9, 90–104. https://doi.org/10.17705/1CAIS.00906"
+    },
+    {
+      "source_id": "N02-s28-b002",
+      "kind": "list-item",
+      "text": "Checkland, P., & Poulter, J. (2007). *Learning for Action: A Short Definitive Account of Soft Systems Methodology and Its Use for Practitioners, Teachers and Students*. Wiley. ISBN 978-0-470-02554-3."
+    },
+    {
+      "source_id": "N02-s28-b003",
+      "kind": "list-item",
+      "text": "Clegg, C. W. (2000). “Sociotechnical principles for system design”. *Applied Ergonomics*, 31(5), 463–477. https://doi.org/10.1016/S0003-6870(00)00009-0"
+    },
+    {
+      "source_id": "N02-s28-b004",
+      "kind": "list-item",
+      "text": "Mumford, E. (2003). *Redesigning Human Systems*. IRM Press. Capítulos sobre diseño socio-técnico y método ETHICS."
+    },
+    {
+      "source_id": "N02-s28-b005",
+      "kind": "list-item",
+      "text": "Trist, E. L., & Bamforth, K. W. (1951). “Some Social and Psychological Consequences of the Longwall Method of Coal-Getting”. *Human Relations*, 4(1), 3–38. https://doi.org/10.1177/001872675100400101"
+    },
+    {
+      "source_id": "N02-s28-b006",
+      "kind": "list-item",
+      "text": "Baxter, G., & Sommerville, I. (2011). “Socio-technical systems: From design methods to systems engineering”. *Interacting with Computers*, 23(1), 4–17. https://doi.org/10.1016/j.intcom.2010.07.003"
+    },
+    {
+      "source_id": "N02-s28-b007",
+      "kind": "list-item",
+      "text": "ACM/AIS (2020). *IS2020: A Competency Model for Undergraduate Programs in Information Systems*. https://is2020.hosting2.acm.org/wp-content/uploads/2021/06/is2020.pdf"
+    },
+    {
+      "source_id": "N02-s28-b008",
+      "kind": "list-item",
+      "text": "Tabassi, E. (2023). *Artificial Intelligence Risk Management Framework (AI RMF 1.0)*. NIST AI 100-1. https://doi.org/10.6028/NIST.AI.100-1"
+    },
+    {
+      "source_id": "N02-s28-b009",
+      "kind": "list-item",
+      "text": "DORA (2025). *State of AI-assisted Software Development*. https://dora.dev/research/2025/dora-report/"
+    },
+    {
+      "source_id": "N02-s28-b010",
+      "kind": "list-item",
+      "text": "DORA (2026). “Balancing AI tensions: Moving from AI adoption to effective SDLC use”. https://dora.dev/insights/balancing-ai-tensions/"
+    },
+    {
+      "source_id": "N02-s28-b011",
+      "kind": "list-item",
+      "text": "Alter, S. (2024). “Re-Conceptualizing Information System Usage as Usage by (Increasingly Automated) Work Systems”. *Communications of the Association for Information Systems*, 54, 1094–1123. https://doi.org/10.17705/1CAIS.05446"
+    },
+    {
+      "source_id": "N02-s28-b012",
+      "kind": "list-item",
+      "text": "Polojärvi, D. (2023). “A systematic literature review of sociotechnical systems in systems engineering”. *Systems Engineering*, 26(4), 482–504. https://doi.org/10.1002/sys.21664"
+    },
+    {
+      "source_id": "N02-s28-b013",
+      "kind": "list-item",
+      "text": "ISO/IEC/IEEE (2023). *15288:2023 Systems and software engineering — System life cycle processes*. https://www.iso.org/standard/81702.html"
+    },
+    {
+      "source_id": "N02-s28-b014",
+      "kind": "list-item",
+      "text": "Autio, C., Schwartz, R., Dunietz, J., Jain, S., Stanley, M., Tabassi, E., Hall, P., & Roberts, K. (2024). *Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile*, NIST AI 600-1. https://doi.org/10.6028/NIST.AI.600-1"
+    },
+    {
+      "source_id": "N02-s28-b015",
+      "kind": "list-item",
+      "text": "Hofmann, P., Urbach, N., Lanzl, J., et al. (2024). “AI-enabled information systems: Teaming up with intelligent agents in networked business”. *Electronic Markets*, 34, 52. https://doi.org/10.1007/s12525-024-00734-y"
+    },
+    {
+      "source_id": "N02-s28-b016",
+      "kind": "list-item",
+      "text": "Nguyen, T., & Elbanna, A. (2025). “Understanding Human-AI Augmentation in the Workplace: A Review and a Future Research Agenda”. *Information Systems Frontiers*. https://doi.org/10.1007/s10796-025-10591-5"
+    },
+    {
+      "source_id": "N02-s28-b017",
+      "kind": "list-item",
+      "text": "NIST (2026). *AI Risk Management Framework: Critical Infrastructure Profile development and resources*. https://www.nist.gov/programs-projects/concept-note-ai-rmf-profile-trustworthy-ai-critical-infrastructure"
+    },
+    {
+      "source_id": "N02-s28-b018",
+      "kind": "list-item",
+      "text": "García, R. (2006). *Sistemas complejos: conceptos, método y fundamentación epistemológica de la investigación interdisciplinaria*. Gedisa."
+    },
+    {
+      "source_id": "N02-s28-b019",
+      "kind": "list-item",
+      "text": "Bunge, M. (2004). *Emergencia y convergencia: novedad cualitativa y unidad del conocimiento*. Gedisa."
+    },
+    {
+      "source_id": "N02-s28-b020",
+      "kind": "list-item",
+      "text": "Maturana, H. R. y Varela, F. J. (1984). *El árbol del conocimiento: las bases biológicas del entendimiento humano*. Editorial Universitaria."
+    },
+    {
+      "source_id": "N02-s28-b021",
+      "kind": "list-item",
+      "text": "Etkin, J. y Schvarstein, L. (1989). *Identidad de las organizaciones: invariancia y cambio*. Paidós."
+    },
+    {
+      "source_id": "N02-s28-b022",
+      "kind": "list-item",
+      "text": "Flores, F. (1997). *Creando organizaciones para el futuro*. Dolmen."
+    },
+    {
+      "source_id": "N02-s28-b023",
+      "kind": "list-item",
+      "text": "Freire, P. (2005). *Pedagogía del oprimido*. Siglo XXI Editores."
+    },
+    {
+      "source_id": "N02-s28-b024",
+      "kind": "list-item",
+      "text": "Varsavsky, O. (1972). *Hacia una política científica nacional*. Ediciones Periferia."
+    },
+    {
+      "source_id": "N02-s28-b025",
+      "kind": "list-item",
+      "text": "Echeverría, R. (2005). *Ontología del lenguaje*. Granica."
+    },
+    {
+      "source_id": "N02-s28-b026",
+      "kind": "list-item",
+      "text": "Fals Borda, O. (1987). “The Application of Participatory Action-Research in Latin America”. *International Sociology*, 2(4), 329–347. https://doi.org/10.1177/026858098700200401"
+    }
+  ],
+  "eligible_block_count": 242,
+  "eligible_word_count": 7997
+}

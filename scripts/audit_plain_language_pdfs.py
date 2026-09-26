@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Geometric/coverage checks on each complete revised PDF; not a prose score."""
 from pathlib import Path
+import os
 import argparse, collections, hashlib, json, re, subprocess, unicodedata
 import pdfplumber
 from pypdf import PdfReader, PdfWriter
@@ -8,7 +9,7 @@ from PIL import Image, ImageDraw
 from concurrent.futures import ThreadPoolExecutor
 
 ROOT=Path(__file__).resolve().parents[1]
-EDITION=ROOT/'pedagogy/plain-language-edition'
+EDITION=ROOT/os.environ.get('METSI_REVIEW_DIR','pedagogy/plain-language-edition')
 
 def words(text):
     text=unicodedata.normalize('NFKD',text).casefold()

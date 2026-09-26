@@ -5,6 +5,7 @@ import argparse
 import hashlib
 import html
 import json
+import os
 import re
 import shutil
 import sys
@@ -15,6 +16,9 @@ import build_collection as first
 import build_block_c_editorial as later
 
 EDITION = ROOT / 'pedagogy/plain-language-edition'
+REVIEW = os.environ.get('METSI_REVIEW_DIR')
+RELEASE = ROOT / REVIEW if REVIEW else EDITION
+TITLES = json.loads((RELEASE/'titles.json').read_text()) if (RELEASE/'titles.json').exists() else {}
 MAPS = ROOT / 'editorial-standard/approved-infographics/collection-legible-2026-09'
 VERSIONS = {1:19, 2:16, 3:11, 4:10, 5:11, 6:11, 7:11, 8:11, 9:11, 10:10}
 ORIGINAL_CLASSES = first.section_classes
@@ -34,10 +38,21 @@ def classes(number, index, title):
     return result
 
 def core(number, index, title):
-    return index <= 4 or title.startswith(('Movimiento', 'Hotel Horizonte', 'Instrumento', 'Producto mínimo')) or title in {'Síntesis', 'Preguntas de preparación'}
+    if title.startswith('Ampliación'): return False
+    focused = {
+        23: ('Un instrumento de doce preguntas',),
+        24: ('Un registro que muestre',),
+        31: ('Cinco operaciones', 'Comparar contra una alternativa', 'Definir cuándo no usar', 'Tres preguntas que ninguna'),
+        32: ('Qué se evalúa', 'Cobertura:', 'La medida tiene', 'Abrir el 91%', 'Gravedad:', 'Probar a las personas', 'Convertir resultados'),
+        33: ('Inventariar usos', 'Responsables que puedan', 'Clasificar para decidir', 'Cambios pequeños', 'Un sistema de gestión'),
+    }
+    if title.startswith(focused.get(number, ())): return True
+    return index <= 4 or title.startswith(('Movimiento', 'Hotel Horizonte', 'Instrumento', 'Producto mínimo', 'Para orientar', 'Ejemplo resuelto')) or title in {'Síntesis', 'Preguntas de preparación'}
 
 def build(number):
     source = EDITION / f'N{number:02d}.md'
+    if number == 25:
+        source = ROOT / 'pedagogy/readability-pilots/N25/N25-lectura-pedagogica-v1.md'
     assert source.is_file(), source
     first.section_classes = classes
     first.prioritized_contents_core = core
@@ -47,17 +62,19 @@ def build(number):
     first.keep_n08_observation_instrument_together = lambda body: body
     if number <= 10:
         old = ROOT / f'N{number:02d}-v{VERSIONS[number]}-final'
-        out = ROOT / f'N{number:02d}-v{VERSIONS[number]+1}-final'
+        version = VERSIONS[number] + (2 if REVIEW else 1)
+        out = ROOT / f'N{number:02d}-v{version}-final'
         if not out.exists():
             shutil.copytree(old, out, ignore=shutil.ignore_patterns('output', 'source'))
         first.SOURCE_PATH_OVERRIDES[number] = source
         first.OUTPUT_ROOT_OVERRIDES[number] = out
-        first.PACKAGE_VERSION_LABELS[number] = f'v{VERSIONS[number]+1}-final'
+        first.PACKAGE_VERSION_LABELS[number] = f'v{version}-final'
         first.build_document(number)
     else:
-        out = ROOT / f'N{number:02d}-v13-editorial'
+        version = 14 if REVIEW else 13
+        out = ROOT / f'N{number:02d}-v{version}-editorial'
         later.SOURCES[number] = source
-        later.PACKAGE_VERSION = 13
+        later.PACKAGE_VERSION = version
         later.BASELINE_VERSION = 10
         # New h2 headings are real editorial units, not unrecognized additions
         # to the short question opener from the old edition.
@@ -80,6 +97,9 @@ def build(number):
     title, sections = first.parse_source(source)
     clean_title = re.sub(r'^N\d+\s*[·—-]\s*', '', title)
     content = re.sub(r'(<h1\b[^>]*>).*?(</h1>)', lambda m:m[1]+html.escape(clean_title)+m[2], content, count=1, flags=re.S)
+    subtitle = TITLES.get(f'N{number:02d}', {}).get('subtitle')
+    if subtitle:
+        content = content.replace('</h1>', '</h1><p class="cover-academic-subtitle">'+html.escape(subtitle)+'</p>', 1)
 
     map_dir = MAPS / f'N{number:02d}'
     if map_dir.exists():
@@ -127,8 +147,57 @@ def build(number):
         return re.sub(r'(<div class="section-marker">.*?</div>)',lambda marker:re.sub(r'<em>[^<]*</em>',f'<em>{route}</em>',marker[0],count=1),fragment,count=1,flags=re.S)
     content=re.sub(r'<section class="[^\"]*reading-section[^\"]*"[^>]*>.*?</section>',route_label,content,flags=re.S)
     content = content.replace('</head>', '<link rel="stylesheet" href="edition.css"></head>', 1)
+    if REVIEW and number in {2, 9}:
+        # Keep the approved photo, but attach it to the new orientation instead
+        # of leaving it alone between the thesis and the full-page decision map.
+        thesis = next(m for m in re.finditer(r'<section class="[^"]*reading-section[^"]*"[^>]*>.*?</section>', content, re.S) if '>Tesis</h2>' in m[0])
+        photo = re.search(r'<figure class="photo-band">.*?</figure>', thesis[0], re.S)
+        if photo:
+            content = content[:thesis.start()] + thesis[0].replace(photo[0], '') + content[thesis.end():]
+            orientation = next(m for m in re.finditer(r'<section class="[^"]*reading-section[^"]*"[^>]*>.*?</section>', content, re.S) if '>Para orientar la lectura</h2>' in m[0])
+            content = content[:orientation.start()] + orientation[0].replace('</section>', photo[0]+'</section>') + content[orientation.end():]
+    if REVIEW and number in {5, 8, 10}:
+        # The observation photo belongs to movement 2. Move it to its opening
+        # so it cannot create an almost empty page just before the pause.
+        photo_movement = 1 if number == 5 else 2
+        movement = next(m for m in re.finditer(r'<section class="[^"]*reading-section[^"]*"[^>]*>.*?</section>', content, re.S) if f'>Movimiento {photo_movement}' in m[0])
+        photo = re.search(r'<figure class="photo-band">.*?</figure>', movement[0], re.S)
+        if photo:
+            updated = movement[0].replace(photo[0], '')
+            updated = updated.replace('<div class="section-body">', photo[0]+'<div class="section-body">', 1)
+            content = content[:movement.start()] + updated + content[movement.end():]
+    if REVIEW and number in {5, 15, 16}:
+        # Put the second photographic pause at a section boundary, not after
+        # a short continuation or between a movement's opening and development.
+        pauses = list(re.finditer(r'<section class="full-bleed full-bleed-quote[^"]*">.*?</section>', content, re.S))
+        if len(pauses) == 2:
+            pause = pauses[1]
+            content = content[:pause.start()] + content[pause.end():]
+            movement_number = 3 if number == 16 else 2
+            movement = next(m for m in re.finditer(r'<section class="[^"]*reading-section[^"]*"[^>]*>.*?</section>', content, re.S) if f'>Movimiento {movement_number}' in m[0])
+            content = content[:movement.start()] + pause[0] + content[movement.start():]
+    def worked_table(match):
+        table = match[0]
+        if any(label in table for label in ('Qué llega', 'Situación encontrada', '¿cuál es el margen aritmético')):
+            table = table.replace('<table', '<table data-worked="true"', 1)
+            if 'Qué llega' in table:
+                table = table.replace('data-worked="true"', 'data-worked="sequence"')
+        return table
+    content = re.sub(r'<table\b[^>]*>.*?</table>', worked_table, content, flags=re.S)
     (out / 'index.html').write_text(content)
     shutil.copy2(EDITION / 'edition.css', out / 'edition.css')
+    if subtitle:
+        with (out / 'edition.css').open('a') as css:
+            css.write('\nbody#plain-edition .cover-academic-subtitle{font:400 12pt/1.4 Arial,sans-serif!important;color:#fff!important;max-width:155mm!important;margin:4mm 0 0!important;}\n')
+            css.write('\nbody#plain-edition .reading-section table[data-worked]{table-layout:fixed;width:100%;column-span:all;break-inside:avoid;} body#plain-edition .reading-section table[data-worked] :is(th,td){padding:2mm!important;font-size:10.5pt!important;line-height:1.35!important;vertical-align:top;overflow-wrap:anywhere;} body#plain-edition table[data-worked="sequence"] :is(th,td):first-child{width:8%!important;}\n')
+            if number in {8, 10, 11, 25}:
+                css.write('\nbody#plain-edition .thesis-standard{break-before:page!important;}\n')
+            if number in {10, 25}:
+                css.write('\nbody#plain-edition .thesis-standard p{margin-bottom:2mm!important;line-height:1.38!important;}\n')
+            if number == 10:
+                css.write('\nbody#plain-edition .thesis-standard p{margin-bottom:1.5mm!important;line-height:1.30!important;}\n')
+            if number == 32:
+                css.write('\nbody#plain-edition .contents-page li{padding:1.5mm 1mm!important;margin-bottom:.5mm!important;}\n')
     # Actual source coverage, independent of the builder's historical audit flag.
     manifest = json.loads((out / 'source-manifest.json').read_text())
     ids = re.findall(r'data-source-id="([^\"]+)"', content)
@@ -145,9 +214,10 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('numbers', nargs='*', type=int)
     args = parser.parse_args()
-    plan_file = EDITION/'release-plan.json'
+    RELEASE.mkdir(parents=True, exist_ok=True)
+    plan_file = RELEASE/'release-plan.json'
     plans = {r['code']:r for r in json.loads(plan_file.read_text())} if plan_file.exists() else {}
-    for n in args.numbers or [i for i in range(1,37) if i != 25]:
+    for n in args.numbers or [i for i in range(1,37) if REVIEW or i != 25]:
         result = build(n)
         plans[result['code']] = result
         plan_file.write_text(json.dumps(sorted(plans.values(), key=lambda r:r['code']), ensure_ascii=False, indent=2)+'\n')

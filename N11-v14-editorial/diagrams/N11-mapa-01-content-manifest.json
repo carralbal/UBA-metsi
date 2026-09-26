@@ -1,0 +1,126 @@
+{
+  "title": "La fuerza del dato depende del expediente",
+  "claim": "Un dato se vuelve evidencia para una decisión sólo cuando un expediente reconstruible delimita la afirmación, conserva su rastro y declara el alcance que autoriza.",
+  "source_sections": [
+    {
+      "id": "thesis",
+      "heading": "Tesis",
+      "summary": "La evidencia relaciona fenómeno, población, período, reglas, transformaciones y decisión."
+    },
+    {
+      "id": "trace",
+      "heading": "Movimiento 2 · Reconstruir cómo el dato llegó a ser evidencia",
+      "summary": "Procedencia, transformaciones, ausencias e incertidumbre vuelven evaluable la historia del dato."
+    },
+    {
+      "id": "decision",
+      "heading": "Movimiento 3 · Decidir cuánta evidencia alcanza y dejar la revisión preparada",
+      "summary": "La suficiencia depende de la acción, del costo de error y de una condición explícita de revisión."
+    },
+    {
+      "id": "hh11",
+      "heading": "Tercera aplicación de HH-11: tres puertas de decisión",
+      "summary": "La diferencia observada permite revisar integraciones, pero no atribuir causalidad a todos los canales de terceros."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "available_data",
+      "label": "Dato disponible: valor, estado o tasa",
+      "role": "evidence",
+      "source": ["thesis"],
+      "purpose": "Distinguir un registro disponible de una evidencia defendible."
+    },
+    {
+      "id": "claim_layer",
+      "label": "Afirmación: fenómeno, población y período",
+      "role": "evidence",
+      "source": ["thesis"],
+      "purpose": "Delimitar qué se pretende sostener."
+    },
+    {
+      "id": "trace_layer",
+      "label": "Rastro: procedencia, transformación y ausencias",
+      "role": "evidence",
+      "source": ["trace"],
+      "purpose": "Conservar cómo se produjo la representación y qué quedó fuera."
+    },
+    {
+      "id": "limit_layer",
+      "label": "Límite: incertidumbre, uso y condición de revisión",
+      "role": "constraint",
+      "source": ["decision"],
+      "purpose": "Declarar el alcance de la evidencia y qué hallazgo obliga a revisarla."
+    },
+    {
+      "id": "decision_gate",
+      "label": "¿Alcanza para esta decisión?",
+      "role": "decision",
+      "source": ["decision"],
+      "purpose": "Evaluar suficiencia contra una acción concreta."
+    },
+    {
+      "id": "authorized_action",
+      "label": "Autoriza una acción proporcional",
+      "role": "outcome",
+      "source": ["decision"],
+      "purpose": "Mostrar la salida legítima cuando la evidencia alcanza."
+    },
+    {
+      "id": "scope_limit",
+      "label": "No autoriza exceder el alcance",
+      "role": "constraint",
+      "source": ["decision"],
+      "purpose": "Hacer visible que una evidencia útil puede seguir siendo insuficiente para otra acción."
+    },
+    {
+      "id": "hh11_example",
+      "label": "La demora por canal permite revisar integraciones; no autoriza atribuir una causa a todos los terceros",
+      "role": "evidence",
+      "source": ["hh11"],
+      "purpose": "Aplicar la distinción al caso longitudinal."
+    }
+  ],
+  "edges": [
+    {
+      "id": "reconstruct",
+      "from": "available_data",
+      "to": "claim_layer",
+      "relation": "transformation",
+      "source": ["thesis", "trace"],
+      "meaning": "El dato debe reconstruirse dentro de un expediente antes de funcionar como evidencia."
+    },
+    {
+      "id": "evaluate",
+      "from": "limit_layer",
+      "to": "decision_gate",
+      "relation": "evidence",
+      "source": ["decision"],
+      "meaning": "El expediente se evalúa contra una decisión concreta."
+    },
+    {
+      "id": "authorize",
+      "from": "decision_gate",
+      "to": "authorized_action",
+      "relation": "authority",
+      "source": ["decision"],
+      "meaning": "La suficiencia autoriza una acción proporcional."
+    },
+    {
+      "id": "limit",
+      "from": "decision_gate",
+      "to": "scope_limit",
+      "relation": "boundary",
+      "source": ["decision"],
+      "meaning": "La misma evidencia prohíbe exceder el alcance declarado."
+    },
+    {
+      "id": "review",
+      "from": "scope_limit",
+      "to": "limit_layer",
+      "relation": "feedback",
+      "source": ["decision"],
+      "meaning": "Nueva evidencia o una acción distinta obligan a volver al expediente."
+    }
+  ]
+}

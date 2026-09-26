@@ -1,0 +1,1240 @@
+{
+  "missingImages": [],
+  "hiddenSourceBlocks": [],
+  "sourceBlocks": [
+    {
+      "id": "N12-h1",
+      "text": "Pedir no es confirmar"
+    },
+    {
+      "id": "N12-s01-h2",
+      "text": "Pregunta profesional"
+    },
+    {
+      "id": "N12-s01-b001",
+      "text": "¿Cómo distinguir lo que alguien pidió, lo que realmente ocurrió, lo que hoy se considera válido y quién podía decidirlo?"
+    },
+    {
+      "id": "N12-s02-h2",
+      "text": "La inscripción que estaba aceptada y no existía"
+    },
+    {
+      "id": "N12-s02-b001",
+      "text": "Queda una vacante en una materia. A las nueve abre la inscripción. Martina presiona «Inscribirme» y ve un círculo verde: «Solicitud procesada». Dos segundos después recibe un correo que dice «Inscripción confirmada». Cierra la computadora tranquila."
+    },
+    {
+      "id": "N12-s02-b002",
+      "text": "Julián también intentó inscribirse. Su solicitud llegó primero al servicio que administra los cupos y obtuvo la vacante. La de Martina llegó después y fue rechazada. Sin embargo, otro componente envió el correo apenas recibió su pedido, antes de conocer la decisión sobre el cupo."
+    },
+    {
+      "id": "N12-s02-b003",
+      "text": "La historia es ficticia. El lunes, Martina no aparece en la lista docente y presenta el correo. Administración encuentra tres cosas: la pantalla registró un envío exitoso, el servicio de cupos rechazó la solicitud y la lista tiene a Julián. No hace falta que alguien haya inventado un registro para que exista una contradicción grave. Los registros hablan de acciones distintas, pero las presentaron como si fueran lo mismo."
+    },
+    {
+      "id": "N12-s02-b004",
+      "text": "«Los sistemas no coinciden» describe parte del problema. Para corregirlo necesitamos preguntas más precisas. ¿Qué confirmó el círculo verde: que se envió el pedido o que se obtuvo la vacante? ¿Quién podía aceptarlo? ¿Qué prueba el correo? ¿Qué respuesta debe recibir Martina después de una comunicación equivocada de la institución?"
+    },
+    {
+      "id": "N12-s02-b005",
+      "text": "Presionar el botón produjo un comando: un pedido para intentar una inscripción. El resultado fue otro hecho: la solicitud quedó rechazada por falta de cupo. Ese resultado puede registrarse como un evento. La lista actual muestra un estado: quién figura inscripto. El correo es evidencia de lo comunicado, aunque no demuestre por sí solo una aceptación válida. La autoridad para reconocer una inscripción depende de reglas y responsabilidades institucionales, no de qué componente pudo mandar un mensaje."
+    },
+    {
+      "id": "N12-s02-b006",
+      "text": "Podemos decirlo sin términos técnicos: Martina pidió, un servicio decidió, una pantalla mostró algo y la universidad comunicó otra cosa. El diseño debe conservar esas diferencias. Si las mezcla, la persona recibe una promesa que la organización no sabe cumplir."
+    },
+    {
+      "id": "N12-s02-b007",
+      "text": "El equipo no necesita empezar cambiando toda la arquitectura. Primero acuerda qué significa cada respuesta. «Recibimos tu solicitud» no debe presentarse como «Tenés la vacante». La confirmación se emite después de la aceptación correspondiente. Si falta una respuesta, se informa que está pendiente en lugar de mostrar un éxito inventado."
+    },
+    {
+      "id": "N12-s02-b008",
+      "text": "La reparación también necesita una decisión. No corresponde concluir automáticamente que hay que quitarle la vacante a Julián ni que el correo de Martina carece de importancia. La institución debe revisar sus reglas, responsabilidades y alternativas. Si una persona autorizada concede una excepción, se registra el fundamento sin borrar la secuencia original."
+    },
+    {
+      "id": "N12-s02-b009",
+      "text": "La lista docente puede seguir siendo una vista simple. No hace falta mostrarle toda la historia a cada usuario. Pero quienes investiguen deben poder reconstruir cómo se llegó a ella, qué se prometió y cómo se respondió al error. Simplicidad de uso y claridad del modelo pueden convivir."
+    },
+    {
+      "id": "N12-s02-b010",
+      "text": "N12 trabaja esas distinciones. No son cinco etiquetas para memorizar ni una invitación a registrar todo. Sirven para que un sistema no confunda pedir con hacer, informar con autorizar o corregir una pantalla con reparar una consecuencia."
+    },
+    {
+      "id": "N12-s03-h2",
+      "text": "Hotel Horizonte: una habitación lista en tres sistemas"
+    },
+    {
+      "id": "N12-s03-b001",
+      "text": "HH-11 dejó una hipótesis para probar: ciertas discrepancias de disponibilidad entre el hotel y dos agencias contribuyen a las reparaciones de llegada. Ahora el equipo sigue un episodio concreto para entender qué significa declarar una habitación «lista»."
+    },
+    {
+      "id": "N12-s03-b002",
+      "text": "En esta escena didáctica, la limpieza de la 412 termina a las 13:42 y se registra a las 13:47. A las 13:55 se aprueba la inspección bajo el protocolo P4. A las 14:03 el PMS recibe «disponible». A las 14:04 Lucía Ferreyra solicita asignarla a la reserva R73. A las 14:05 aparece un aviso de batería insuficiente en la cerradura. Comercial había prometido ingreso desde las 14:00."
+    },
+    {
+      "id": "N12-s03-b003",
+      "text": "¿La habitación estaba lista? Si preguntamos si terminó la limpieza, sí. Si preguntamos si podía entregarse con acceso operativo, hay una dificultad que el estado «disponible» no representó. La misma palabra intentó resumir condiciones diferentes."
+    },
+    {
+      "id": "N12-s03-b004",
+      "text": "Mariela Benítez puede informar el trabajo de Housekeeping. La inspección reconoce otras condiciones. Lucía pide una asignación para una reserva concreta. El aviso de cerradura informa una falla o alerta de acceso que necesita interpretación y acción según el procedimiento. Ninguna de esas piezas, aislada, prueba que toda la promesa esté cumplida."
+    },
+    {
+      "id": "N12-s03-b005",
+      "text": "Aquí conviene evitar otra confusión: acceso operativo significa que el medio de entrada funciona bajo las condiciones verificadas. No es sinónimo de accesibilidad, que incluye la posibilidad de uso de la persona y sus necesidades. Una cerradura que abre no demuestra que la habitación sea accesible para cualquier huésped."
+    },
+    {
+      "id": "N12-s03-b006",
+      "text": "HH-12 separará esas condiciones, los pedidos y los resultados. No busca llenar la recepción de palabras nuevas. Busca que Lucía sepa qué puede hacer, qué falta comprobar y a quién recurrir sin prometer algo que todavía no está respaldado."
+    },
+    {
+      "id": "N12-s04-h2",
+      "text": "Tesis"
+    },
+    {
+      "id": "N12-s04-b001",
+      "text": "En muchos sistemas, un mismo «OK» puede significar que se recibió un pedido, que se aceptó una decisión o que terminó una tarea. Para la computadora son mensajes. Para la persona pueden ser promesas muy diferentes. Por eso necesitamos distinguir cinco funciones."
+    },
+    {
+      "id": "N12-s04-b002",
+      "text": "Un comando pide intentar una acción. Un evento afirma que ocurrió algo relevante. Un estado muestra una condición reconocida ahora, bajo ciertas reglas. La evidencia permite revisar si esa afirmación está respaldada. La autoridad define quién puede decidir y con qué alcance."
+    },
+    {
+      "id": "N12-s04-b003",
+      "text": "Pensá en una devolución de una compra. «Solicitar devolución» no significa que el comercio la aprobó. «Devolución aprobada» no significa que el dinero ya se acreditó. «Dinero acreditado» necesita otra evidencia. Si la pantalla mezcla esos pasos, puede mostrar tranquilidad cuando la persona todavía no recibió el resultado."
+    },
+    {
+      "id": "N12-s04-b004",
+      "text": "Separarlos cambia decisiones concretas. Podemos explicar una espera, mostrar un rechazo con su motivo, revisar una autorización o reparar un error. Si sólo guardamos «resuelto», después tendremos que adivinar qué pasó y quién podía actuar."
+    },
+    {
+      "id": "N12-s04-b005",
+      "text": "Tampoco basta con usar los nombres correctos. Un evento llamado «Inspección aprobada» puede haber sido emitido por error. Un usuario con acceso a modificar una reserva puede carecer de autorización para conceder una excepción. Una firma humana puede ser inútil si quien firma no tiene información ni capacidad de cambiar el curso."
+    },
+    {
+      "id": "N12-s04-b006",
+      "text": "Estas distinciones no obligan a adoptar una arquitectura orientada a eventos ni a almacenar cada interacción. Una base tradicional con un estado claro y una historia selectiva puede alcanzar. La pregunta es qué necesitamos conservar para cumplir una promesa y responder si algo sale mal."
+    },
+    {
+      "id": "N12-s04-b007",
+      "text": "En Hotel Horizonte, «limpia», «inspeccionada», «asignable para esta reserva» y «con acceso operativo» no son sinónimos. El modelo debe relacionarlas sin dejar que una sustituya a las demás. Al mismo tiempo, puede comunicar al huésped una respuesta sencilla y comprensible."
+    },
+    {
+      "id": "N12-s04-b008",
+      "text": "El límite es importante: si construimos una clasificación perfecta que nadie usa para decidir mejor, agregamos trabajo sin valor. Modelamos las diferencias que cambian una acción, una responsabilidad o una reparación. N13 tomará esas transiciones y estudiará qué pasa cuando los mensajes se demoran, se repiten o se cruzan."
+    },
+    {
+      "id": "N12-s05-h2",
+      "text": "Para orientar la lectura"
+    },
+    {
+      "id": "N12-s05-b001",
+      "text": "Lo esencial es distinguir solicitud, hecho y estado, conservando quién puede cambiarlo y cuándo ocurrió. Seguí una transición antes de estudiar arquitecturas de eventos. CQRS, event sourcing y especificaciones de intercambio son ampliaciones técnicas: el primer ejercicio pide reconstruir una acción, no implementar esos patrones."
+    },
+    {
+      "id": "N12-s06-h2",
+      "text": "De N11 a N12: de la afirmación a la transición"
+    },
+    {
+      "id": "N12-s06-b001",
+      "text": "N11 preguntó si los datos del tablero respaldaban las afirmaciones sobre la espera. N12 mira un cambio particular: cómo una habitación pasa a considerarse asignada o entregable. A ese paso entre situaciones lo llamamos transición."
+    },
+    {
+      "id": "N12-s06-b002",
+      "text": "«Se pidió asignar la 412», «se aceptó la asignación» y «la 412 está asignada a R73» expresan cosas distintas. La primera registra una intención, la segunda un resultado de decisión y la tercera una situación vigente. Además, necesitamos saber quién podía aceptar y qué condiciones se comprobaron."
+    },
+    {
+      "id": "N12-s06-b003",
+      "text": "No repetimos la frontera general de N03 ni la auditoría de cifras de N11. Tomamos una parte del trabajo y preguntamos qué representaciones permiten explicarla. Esa precisión será necesaria cuando N13 examine fallas parciales y concurrencia, es decir, acciones que pueden superponerse."
+    },
+    {
+      "id": "N12-s06-b004",
+      "text": "HH-12 será un mapa de una transición, desde la situación previa hasta una posible reparación. Puede combinar registros técnicos con decisiones humanas. El límite de una aplicación no tiene por qué coincidir con el comienzo o el final de la decisión real."
+    },
+    {
+      "id": "N12-s07-h2",
+      "text": "Movimiento 1 · Separar intención, ocurrencia y situación vigente"
+    },
+    {
+      "id": "N12-s07-b001",
+      "text": "Evento: algo que el sistema afirma que ocurrió"
+    },
+    {
+      "id": "N12-s07-b002",
+      "text": "«Limpieza terminada» está dicho en pasado. No ordena limpiar ni promete que se limpiará mañana. Afirma una ocurrencia. Ésa es la función de un evento relevante para el trabajo, también llamado evento de dominio."
+    },
+    {
+      "id": "N12-s07-b003",
+      "text": "Para interpretarlo necesitamos saber qué habitación, cuándo, según qué fuente y con qué criterio. «Se actualizó el registro» informa una operación técnica, pero puede no alcanzar: la actualización pudo venir de una limpieza, una corrección o una migración. Si esos motivos cambian decisiones, deben distinguirse."
+    },
+    {
+      "id": "N12-s07-b004",
+      "text": "El evento no se vuelve indiscutible porque se guarde de forma inalterable. Puede documentar que una fuente afirmó algo equivocado. Conservarlo permite investigar; no transforma automáticamente su contenido en verdad."
+    },
+    {
+      "id": "N12-s07-b005",
+      "text": "Por ejemplo, una puerta detecta una apertura. Eso permite registrar «apertura detectada». No demuestra por sí solo que ingresó el huésped correspondiente, que quedó satisfecho o que aceptó las condiciones. El nombre debe ajustarse a lo que la fuente realmente puede sostener."
+    },
+    {
+      "id": "N12-s07-b006",
+      "text": "Comando: algo que pedimos hacer"
+    },
+    {
+      "id": "N12-s07-b007",
+      "text": "«Asignar la 412 a R73» solicita una acción. Todavía puede ser rechazada porque la habitación está ocupada, falta una condición o la persona no tiene autoridad. Si el sistema confirma apenas recibió el mensaje, convierte un pedido en un resultado que aún no conoce."
+    },
+    {
+      "id": "N12-s07-b008",
+      "text": "Un comando necesita un destinatario responsable, el actor que lo emite, el objeto sobre el que actúa y reglas para decidir. También necesita resultados posibles: aceptado, rechazado, pendiente o revisión requerida. El rechazo debe dar información suficiente para continuar sin exponer datos que no corresponde mostrar."
+    },
+    {
+      "id": "N12-s07-b009",
+      "text": "No todo pedido es un comando en este sentido. Preguntar qué habitaciones hay no intenta asignarlas. Si al abrir la lista se bloquea una habitación temporalmente, existe además una acción que debe ser explícita. No conviene esconder cambios detrás de algo que parece una simple consulta."
+    },
+    {
+      "id": "N12-s07-b010",
+      "text": "La separación entre lectura y cambio es una idea útil. No obliga a implementar CQRS, patrón que separa modelos de consulta y actualización y que agrega costos de diseño. Fowler advierte que su conveniencia depende del dominio y de la complejidad que resuelve. [Referencia sobre CQRS](https://martinfowler.com/bliki/CQRS.html)."
+    },
+    {
+      "id": "N12-s07-b011",
+      "text": "Estado: qué condición se reconoce ahora"
+    },
+    {
+      "id": "N12-s07-b012",
+      "text": "Un estado responde una pregunta vigente: ¿la reserva está confirmada?, ¿la habitación está asignada?, ¿el pago está conciliado? Puede guardarse directamente o calcularse a partir de registros anteriores. En ambos casos depende de reglas y de información disponible."
+    },
+    {
+      "id": "N12-s07-b013",
+      "text": "Dos reservas pueden figurar «confirmadas» por caminos distintos: una tiene pago anticipado y otra garantía corporativa. Si esa diferencia afecta qué puede hacerse después, debemos conservar el vínculo con las condiciones pertinentes. El mismo estado visible no necesariamente resume todos los compromisos."
+    },
+    {
+      "id": "N12-s07-b014",
+      "text": "También puede haber varias respuestas válidas para preguntas distintas. Housekeeping necesita saber si terminó la limpieza. Recepción necesita saber si puede asignar a cierta reserva. No se resuelve obligando a ambas áreas a usar una palabra única que pierda esas diferencias."
+    },
+    {
+      "id": "N12-s07-b015",
+      "text": "Una máquina de estados, como las que permite modelar UML, representa estados y cambios bajo ciertos disparadores y condiciones. Es útil cuando aclara qué pasos son válidos. El diagrama no reemplaza la pregunta por quién puede reconocerlos ni por la evidencia necesaria para hacerlo."
+    },
+    {
+      "id": "N12-s07-b016",
+      "text": "Consulta: conocer sin decidir por detrás"
+    },
+    {
+      "id": "N12-s07-b017",
+      "text": "«¿Qué habitaciones cumplen estas condiciones?» es una consulta. Su respuesta puede ser una lista construida para Recepción. «Asigná esta habitación» es otra operación. Separarlas permite no tomar decisiones que la persona cree que todavía está evaluando."
+    },
+    {
+      "id": "N12-s07-b018",
+      "text": "La consulta puede informar «pendiente de verificación» o «actualizado hasta las 14:03». No necesita inventar certeza. Si falta un dato sobre la cerradura, eso no demuestra automáticamente una falla ni que esté operativa. La acción prudente dependerá de la regla aplicable, pero la información debe distinguir desconocido de confirmado."
+    },
+    {
+      "id": "N12-s07-b019",
+      "text": "Esto no significa que consultar sea neutral en todo sentido. El orden de una lista orienta la atención y puede exponer información sensible. Lo que distingue la consulta es que su contrato no pretende cambiar la condición de negocio. Si reserva cupo o consume una oportunidad, hay un efecto que debe nombrarse y gobernarse."
+    },
+    {
+      "id": "N12-s07-b020",
+      "text": "Evidencia: qué permite revisar la afirmación"
+    },
+    {
+      "id": "N12-s07-b021",
+      "text": "Un evento dice «se aprobó la inspección». Para evaluar esa afirmación puede hacer falta identificar quién inspeccionó, qué criterio aplicó, qué resultado registró y a qué habitación correspondía. El nivel de evidencia depende del efecto que queremos habilitar."
+    },
+    {
+      "id": "N12-s07-b022",
+      "text": "Un clic demuestra una interacción, no necesariamente que hubo una inspección completa o una comprensión suficiente. Una confirmación de un procesador de pagos puede respaldar una etapa del cobro, no todos los efectos posteriores. Debemos preguntar exactamente qué prueba cada pieza."
+    },
+    {
+      "id": "N12-s07-b023",
+      "text": "No conviene guardar todo «por las dudas». Videos continuos, conversaciones completas o datos personales pueden agregar riesgos y carga sin mejorar una revisión. El criterio es conservar lo necesario para sostener, cuestionar y reparar la transición, con acceso y retención adecuados."
+    },
+    {
+      "id": "N12-s07-b024",
+      "text": "La evidencia también puede estar fuera de la aplicación: un comprobante, una regla vigente o una observación documentada. Lo importante es que pueda localizarse e interpretarse por quienes corresponda. Un registro protegido que nadie autorizado logra consultar cuando lo necesita puede fallar como apoyo de decisión."
+    },
+    {
+      "id": "N12-s07-b025",
+      "text": "Autoridad: poder hacerlo no equivale a estar autorizado"
+    },
+    {
+      "id": "N12-s07-b026",
+      "text": "Una persona puede tener permiso técnico para modificar una nota académica y no tener autoridad institucional para cambiarla por cualquier motivo. El permiso controla una operación; la autoridad depende de reglas, responsabilidades y contexto."
+    },
+    {
+      "id": "N12-s07-b027",
+      "text": "El control de acceso basado en roles, desarrollado por Ferraiolo, Kuhn, Sandhu y otros, organiza usuarios, roles, permisos y restricciones. Es una herramienta importante para implementar decisiones de acceso. Pero antes debemos definir qué facultad de acción corresponde realmente a cada rol."
+    },
+    {
+      "id": "N12-s07-b028",
+      "text": "En el hotel, una supervisora puede aprobar una inspección dentro de su alcance y no conceder una devolución económica. Recepción puede reasignar bajo reglas y necesitar apoyo para una excepción que no puede resolver. Comercial puede comprometer una categoría dentro de una política, pero no declarar que una falla de acceso dejó de existir."
+    },
+    {
+      "id": "N12-s07-b029",
+      "text": "La autoridad necesita límites: qué decisión, sobre qué casos, durante cuánto tiempo y bajo qué condiciones. También requiere una forma de revisar y reparar. Si sólo sabemos que una cuenta tenía permiso de escritura, todavía no sabemos si la decisión estaba justificada."
+    },
+    {
+      "id": "N12-s07-b030",
+      "text": "Transición: seguir el cambio de principio a fin"
+    },
+    {
+      "id": "N12-s07-b031",
+      "text": "Tomemos una asignación. Antes deben existir una reserva vigente, una habitación compatible y las condiciones de operación y uso necesarias. Lucía solicita asignarla. El responsable de aceptar evalúa las reglas y registra un resultado. Si se acepta, la vista muestra la relación entre reserva y habitación. Si se rechaza o falta evidencia, debe mostrarlo con una vía para continuar."
+    },
+    {
+      "id": "N12-s07-b032",
+      "text": "Ésa es la transición completa. Incluye estado previo, pedido, evaluación, resultado, estado posterior, evidencia y autoridad. No necesitamos que cada parte sea una tabla o un mensaje distinto. Necesitamos poder explicarlas sin inventar lo que el sistema no conserva."
+    },
+    {
+      "id": "N12-s07-b033",
+      "text": "Un servicio puede funcionar técnicamente y la transición fallar. Quizá evalúa con rapidez una regla incompleta. Quizá comunica «entregable» aunque sólo comprobó limpieza. Quizá acepta un actor que tenía credenciales pero no la delegación vigente. Las pruebas de cada componente no detectan necesariamente ese salto."
+    },
+    {
+      "id": "N12-s07-b034",
+      "text": "También puede haber una transición con conversación, aprobación y carga posterior. No debemos borrarla del análisis porque no ocurrió dentro de una API. Hay que reconocer sus piezas y sus límites: cuándo se decidió, quién podía hacerlo y qué comunicación recibió la persona afectada."
+    },
+    {
+      "id": "N12-s08-h2",
+      "text": "BPMN representa coordinación, no prueba ejecución"
+    },
+    {
+      "id": "N12-s08-b001",
+      "text": "Un diagrama de proceso ayuda a conversar sobre quién hace qué y en qué secuencia. BPMN ofrece actividades, eventos, compuertas y mensajes para representar esa coordinación. Los participantes pueden mostrarse en pools; las responsabilidades dentro de ellos, en lanes. Los flujos de secuencia y de mensaje cumplen funciones distintas."
+    },
+    {
+      "id": "N12-s08-b002",
+      "text": "Pensemos en el hotel. Podemos dibujar que Recepción solicita una asignación, Housekeeping informa condiciones y otro servicio aporta datos de acceso. Una decisión evalúa si están las condiciones necesarias. Ese dibujo permite detectar una verificación ausente o una responsabilidad sin asignar."
+    },
+    {
+      "id": "N12-s08-b003",
+      "text": "Pero una compuerta dibujada no verifica por sí sola la habitación. Una lane no prueba que el área recibió el caso. Un mensaje recibido no equivale a una solicitud aceptada. El diagrama representa cómo creemos que debe coordinarse el trabajo; para afirmar que ocurrió así necesitamos evidencia."
+    },
+    {
+      "id": "N12-s08-b004",
+      "text": "Si usamos símbolos de sincronización, hay que distinguir reunir respuestas de evaluar su contenido. Recibir tres mensajes no demuestra que las tres condiciones sean favorables. Esa diferencia debe aparecer en las reglas, no quedar supuesta dentro de una figura."
+    },
+    {
+      "id": "N12-s08-b005",
+      "text": "Winograd y Flores agregan una perspectiva útil: algunas comunicaciones no sólo transportan datos, también coordinan compromisos. Pedir, prometer, aceptar o declarar cumplimiento cambian lo que las personas esperan unas de otras. No cualquier mensaje tiene autoridad para producir cualquier compromiso, y un acuerdo puede existir antes de que alguien lo cargue."
+    },
+    {
+      "id": "N12-s08-b006",
+      "text": "Por eso vinculamos el diagrama con episodios. Para cada paso importante preguntamos qué se pidió, quién respondió, qué obligación se asumió y cómo se comprobaría el cumplimiento. BPMN ayuda a ordenar la conversación; no la reemplaza."
+    },
+    {
+      "id": "N12-s09-h2",
+      "text": "Primera aplicación de HH-12: desarmar “habitación disponible”"
+    },
+    {
+      "id": "N12-s09-b001",
+      "text": "El equipo separa cuatro condiciones que el PMS estaba resumiendo en una etiqueta. Limpieza terminada: concluyó esa tarea. Inspección aprobada: se verificaron ciertas condiciones bajo un criterio. Asignable para una reserva: las reglas permiten vincular la habitación con ese caso. Acceso operativo: existe un medio de ingreso en condiciones verificadas."
+    },
+    {
+      "id": "N12-s09-b002",
+      "text": "Ninguna condición debe prometer más de lo que se comprobó. La inspección tiene un alcance y una vigencia. La asignabilidad depende también de la reserva, sus requisitos y la ausencia de una asignación incompatible. El acceso operativo no sustituye las condiciones de accesibilidad de la persona."
+    },
+    {
+      "id": "N12-s09-b003",
+      "text": "«Declarar limpieza terminada» y «aprobar inspección» no son el mismo acto. «Solicitar asignación» y «asignación aceptada» tampoco. El aviso de batería insuficiente no cancela automáticamente la reserva; puede impedir la entrega ordinaria y abrir una verificación o reparación según reglas."
+    },
+    {
+      "id": "N12-s09-b004",
+      "text": "Las consultas muestran ahora diferencias útiles. La lista de habitaciones limpias puede ser más amplia que la de habitaciones entregables para R73. Si una condición sigue desconocida, se comunica esa falta en lugar de convertirla sin explicación en un sí o un no definitivo."
+    },
+    {
+      "id": "N12-s09-b005",
+      "text": "Al huésped no hace falta mostrarle cuatro columnas internas. Sí una respuesta comprensible: qué está confirmado, qué falta y cómo será atendido. La simplicidad de la comunicación se apoya en un modelo preciso; no en borrar diferencias que después tendrá que resolver Lucía a mano."
+    },
+    {
+      "id": "N12-s10-h2",
+      "text": "Movimiento 2 · Conservar tiempo, significado y responsabilidad"
+    },
+    {
+      "id": "N12-s10-b001",
+      "text": "Tres tiempos, no una hora que pretende explicar todo"
+    },
+    {
+      "id": "N12-s10-b002",
+      "text": "La limpieza terminó a las 13:42, se registró a las 13:47 y llegó al PMS a las 14:03. Si preguntamos cuánto duró la tarea, importa el primer tiempo. Si preguntamos qué podía ver Recepción a las 14:00, importa el tercero. Usar la hora de sincronización para ambas preguntas deforma la historia."
+    },
+    {
+      "id": "N12-s10-b003",
+      "text": "También necesitamos cuidado con el orden. Dos eventos con la misma hora registrada pueden no haber ocurrido simultáneamente. Los relojes pueden tener diferencias y los registros pueden tener poca resolución. No corresponde inventar una secuencia porque una lista ordenada necesita un primer renglón."
+    },
+    {
+      "id": "N12-s10-b004",
+      "text": "Lamport ofrece una base fundamental para pensar orden causal en sistemas distribuidos. Su relación «ocurrió antes que» permite establecer ciertos órdenes sin suponer que un reloj único describe todo. Para esta lectura importa una consecuencia: estar cerca en el tiempo no demuestra qué acción produjo cuál."
+    },
+    {
+      "id": "N12-s10-b005",
+      "text": "N13 desarrollará el problema técnico. Aquí debemos conservar qué tiempo expresa cada marca, qué precisión tiene y qué vínculos de decisión conocemos. Si no podemos determinar el orden de dos hechos, esa incertidumbre queda visible."
+    },
+    {
+      "id": "N12-s10-b006",
+      "text": "Cómo sabemos que los mensajes pertenecen al mismo caso"
+    },
+    {
+      "id": "N12-s10-b007",
+      "text": "La reserva puede tener un identificador en el PMS, otro en la agencia y otro en el pago. Necesitamos relacionarlos sin confundir a dos personas con igual nombre ni exponer más datos personales de los necesarios. Esa vinculación permite reconstruir el episodio."
+    },
+    {
+      "id": "N12-s10-b008",
+      "text": "En este contexto, correlación significa asociar mensajes y acciones de un mismo caso mediante identificadores. No es exactamente el mismo uso estadístico de la palabra que vimos en N11. Tampoco demuestra causalidad: dos mensajes de la misma reserva pueden corresponder a acciones diferentes."
+    },
+    {
+      "id": "N12-s10-b009",
+      "text": "CloudEvents aporta un formato común para el contexto de eventos, con atributos como identificador, fuente y tipo. AsyncAPI describe interfaces basadas en mensajes, incluyendo canales, operaciones y elementos de correlación. Estos acuerdos ayudan a intercambiar e interpretar la estructura técnica, pero no deciden qué significa «lista» ni quién puede declararlo. [Especificación AsyncAPI 3.1.0](https://www.asyncapi.com/docs/reference/specification/v3.1.0)."
+    },
+    {
+      "id": "N12-s10-b010",
+      "text": "Un sobre bien formado no vuelve correcto su contenido. Además de identificar el caso, debemos conservar cuando corresponda la relación entre el pedido, la evaluación y el resultado. Si sólo juntamos todo lo que menciona R73, tendremos una carpeta de mensajes, no necesariamente una explicación de la decisión."
+    },
+    {
+      "id": "N12-s10-b011",
+      "text": "Poner nombres que no exageren lo ocurrido"
+    },
+    {
+      "id": "N12-s10-b012",
+      "text": "«Registro actualizado» puede significar muchas cosas. «Inspección aprobada bajo P4» permite una pregunta más precisa. «Asignación rechazada porque falta verificación de acceso» explica un resultado y orienta qué falta resolver."
+    },
+    {
+      "id": "N12-s10-b013",
+      "text": "Los nombres deben ser compartidos entre quienes conocen el trabajo y quienes desarrollan el sistema. Ésta es una preocupación central del lenguaje ubicuo en el diseño dirigido por el dominio de Eric Evans. No se trata de elegir palabras elegantes, sino de reducir traducciones ocultas que terminan en reglas diferentes."
+    },
+    {
+      "id": "N12-s10-b014",
+      "text": "Booch aporta una disciplina de abstracciones y responsabilidades: seleccionamos las propiedades relevantes para el modelo y aclaramos qué responsabilidad representa cada elemento. Si un nombre agrupa decisiones incompatibles, la simplificación dejó de ayudar."
+    },
+    {
+      "id": "N12-s10-b015",
+      "text": "Hay que cuidar especialmente las inferencias. Un modelo puede informar «documento clasificado como válido según esta evaluación». Eso no equivale automáticamente a «identidad verificada» si el proceso requiere otras comprobaciones. Un sensor puede informar apertura, no satisfacción. El nombre debe mantenerse dentro de lo que sabemos."
+    },
+    {
+      "id": "N12-s10-b016",
+      "text": "Una historia puede alimentar varias vistas"
+    },
+    {
+      "id": "N12-s10-b017",
+      "text": "Recepción necesita saber qué puede asignar ahora. Mantenimiento necesita ver fallas de acceso. Dirección quiere estudiar tiempos de preparación. Podemos construir vistas diferentes a partir de fuentes comunes. A esas representaciones orientadas a una pregunta las llamamos proyecciones."
+    },
+    {
+      "id": "N12-s10-b018",
+      "text": "No son falsas por resumir. Son útiles si declaran qué incluyen, bajo qué reglas y hasta qué momento están actualizadas. «Actualizado a las 14:03» puede ser más honesto que «en tiempo real» cuando la información llega mediante procesos con demora."
+    },
+    {
+      "id": "N12-s10-b019",
+      "text": "El patrón event sourcing conserva los cambios como una secuencia de eventos que permite reconstruir estados. Puede ser útil cuando esa historia es central. También introduce trabajo de evolución, consulta y operación; no es una conclusión obligatoria de distinguir eventos y estados. [Descripción de Fowler](https://martinfowler.com/eaaDev/EventSourcing.html)."
+    },
+    {
+      "id": "N12-s10-b020",
+      "text": "Una base con estado actual e historial selectivo puede ser suficiente. Si necesitamos explicar una devolución, conservamos la autorización y las condiciones relevantes. No por eso debemos almacenar toda consulta de una preferencia trivial. La elección depende de la consecuencia de perder la historia y del costo de conservarla."
+    },
+    {
+      "id": "N12-s10-b021",
+      "text": "Tres formas diferentes de corregir"
+    },
+    {
+      "id": "N12-s10-b022",
+      "text": "Una rectificación corrige una afirmación anterior. Se registró la habitación 412 pero la inspección correspondía a la 418; aclaramos el error y vinculamos la corrección. Una retractación retira una afirmación que ya no podemos sostener, por ejemplo una inspección declarada sin respaldo suficiente. Una compensación actúa sobre los efectos: reasignar o devolver un importe después de una falla."
+    },
+    {
+      "id": "N12-s10-b023",
+      "text": "No son intercambiables. Si se canceló una reserva por error y luego se restaura, pudieron enviarse correos o liberarse cupos. Volver a mostrar «confirmada» no hace desaparecer esas consecuencias. Debemos saber qué ocurrió y qué parte se reparó."
+    },
+    {
+      "id": "N12-s10-b024",
+      "text": "Compensar no significa viajar al pasado. Una devolución puede restituir dinero y no recuperar una oportunidad perdida. Una nueva habitación puede resolver alojamiento y no borrar una espera. La explicación al huésped debe reconocerlo, no limitarse a «el sistema ya está actualizado»."
+    },
+    {
+      "id": "N12-s10-b025",
+      "text": "No se exige conservar información personal sin límite para mantener esa historia. Deben combinarse reglas de rectificación, retención y acceso. La idea es evitar el borrado silencioso que impide comprender un cambio relevante, no prohibir toda eliminación legítima de datos."
+    },
+    {
+      "id": "N12-s10-b026",
+      "text": "Tener un registro de auditoría no garantiza poder explicar"
+    },
+    {
+      "id": "N12-s10-b027",
+      "text": "Un registro puede mostrar usuario y hora sin motivo, regla ni resultado. Sabremos quién modificó un campo y seguiremos sin saber por qué podía hacerlo. La evidencia se diseña según la afirmación que necesitaremos revisar."
+    },
+    {
+      "id": "N12-s10-b028",
+      "text": "Para sostener que se aprobó una inspección bajo un protocolo, pueden hacer falta identidad, versión, resultado y vínculo con la habitación. Grabar toda la actividad no es necesariamente mejor ni proporcionado. Importa conservar lo que respalda ese acto."
+    },
+    {
+      "id": "N12-s10-b029",
+      "text": "También hacen falta integridad, acceso y retención adecuados. Si sólo el proveedor puede leer los rastros y no los entrega cuando hay un incidente, la organización queda limitada. Si desaparecen antes de la revisión pertinente, la existencia previa del registro no alcanza."
+    },
+    {
+      "id": "N12-s10-b030",
+      "text": "Algunas piezas pueden tener custodia distinta por seguridad o privacidad. HH-12 debe saber cómo relacionarlas y quién puede acceder, no concentrar todo indiscriminadamente. Un historial técnico es una parte de la evidencia, no su equivalente universal."
+    },
+    {
+      "id": "N12-s10-b031",
+      "text": "La decisión cruza áreas"
+    },
+    {
+      "id": "N12-s10-b032",
+      "text": "Comercial promete condiciones. Housekeeping informa trabajo realizado. Supervisión valida dentro de su alcance. Recepción asigna. Otros roles verifican acceso o autorizan devoluciones. La transición de llegada puede necesitar varias responsabilidades sin que ninguna aplicación tenga toda la autoridad."
+    },
+    {
+      "id": "N12-s10-b033",
+      "text": "Separar funciones puede prevenir errores o abusos. Pero, si nadie tiene capacidad de resolver una excepción, el huésped queda esperando entre áreas. Diseñar autoridad incluye el caso ordinario, la revisión y la reparación, también fuera de horario."
+    },
+    {
+      "id": "N12-s10-b034",
+      "text": "Una excepción tampoco puede significar permiso ilimitado para ignorar protecciones. Puede habilitar una alternativa segura y comprobada dentro de reglas, no convertir una condición insegura en aceptable por una firma. El alcance debe quedar claro."
+    },
+    {
+      "id": "N12-s10-b035",
+      "text": "Leveson propone mirar la seguridad desde el control del sistema sociotécnico, no sólo desde fallas aisladas de componentes. Esa perspectiva ayuda a revisar si las restricciones, la información de retorno y las responsabilidades permiten sostener la transición. Un software puede ejecutar exactamente una regla y la regla ser insuficiente para la situación."
+    },
+    {
+      "id": "N12-s11-h2",
+      "text": "Agentes de inteligencia artificial: proponer no es decidir"
+    },
+    {
+      "id": "N12-s11-b001",
+      "text": "Un asistente puede recomendar la habitación 412 después de leer una reserva. Otro componente puede enviar el pedido de asignación. El sistema responsable puede aceptarlo o rechazarlo. Son tres pasos diferentes: recomendación, comando y resultado. Que una herramienta pueda encadenarlos no demuestra que deba tener permiso para todos."
+    },
+    {
+      "id": "N12-s11-b002",
+      "text": "La palabra «agente» describe capacidades de actuación, no autoridad institucional. La organización debe decidir qué información puede consultar, qué puede proponer, qué acciones puede ejecutar y cuáles necesitan revisión. También debe definir cómo se detiene y qué ocurre si ya produjo un efecto."
+    },
+    {
+      "id": "N12-s11-b003",
+      "text": "En Hotel Horizonte puede ser útil reunir evidencia y sugerir una conciliación. No corresponde declarar cumplida una condición de accesibilidad sin la información y verificación necesarias. Tampoco una recomendación convincente reemplaza las reglas para rechazar una reserva o modificar una promesa."
+    },
+    {
+      "id": "N12-s11-b004",
+      "text": "El AI RMF de NIST y su perfil de IA generativa aportan referencias de roles, evaluación y gestión de riesgos. El reglamento europeo citado en la bibliografía trata obligaciones según su ámbito y clases de uso; no se aplica aquí como una regla jurídica universal para el hotel. La pregunta metodológica es qué capacidad de revisión existe realmente."
+    },
+    {
+      "id": "N12-s11-b005",
+      "text": "Una aprobación humana no alcanza si llega después del efecto irreversible, si la persona no entiende lo que revisa o si sólo puede aceptar. Debe tener información pertinente, tiempo, competencia y autoridad para cambiar el curso. Si esas condiciones faltan, agregamos una firma pero no un control efectivo."
+    },
+    {
+      "id": "N12-s11-b006",
+      "text": "HH-12 registra quién propuso, quién pidió, quién aceptó y qué pasó después. Así puede evaluarse la responsabilidad sin atribuir al modelo una autoridad que la organización nunca definió."
+    },
+    {
+      "id": "N12-s12-h2",
+      "text": "Segunda aplicación de HH-12: reconstruir un episodio sin inventar orden"
+    },
+    {
+      "id": "N12-s12-b001",
+      "text": "Volvamos a la 412 y reunamos las piezas del ejercicio. La limpieza terminó a las 13:42 y se registró a las 13:47. La aprobación de inspección se emitió a las 13:55 bajo P4. El PMS mostró disponibilidad a las 14:03. Lucía pidió la asignación a las 14:04. A las 14:05 hay un aviso de batería insuficiente y un registro de asignación aceptada. A las 14:12 se autorizó reasignar a la 418."
+    },
+    {
+      "id": "N12-s12-b002",
+      "text": "La lista no demuestra qué se supo primero durante ese minuto de las 14:05. Debemos revisar los tiempos de detección, registro y recepción y las relaciones entre mensajes. Si no alcanza la resolución de los registros, conservamos la duda. No atribuimos a Lucía conocimiento de un aviso que quizá todavía no podía ver."
+    },
+    {
+      "id": "N12-s12-b003",
+      "text": "El equipo descubre que la regla de asignación no comprobaba acceso y que P4 tampoco lo incluía. No es simplemente que alguien olvidó mirar una alerta. Había una condición importante que la transición no reunía de forma explícita."
+    },
+    {
+      "id": "N12-s12-b004",
+      "text": "Federico propone agregar una verificación; Ricardo debe definir quién responde cuando está pendiente o falla. Mariela aclara qué cubre la inspección y qué no. Lucía necesita una alternativa de atención. Camila debe revisar la comunicación de ingreso prometida. Elena debe aprobar el alcance de las reglas y los recursos de reparación."
+    },
+    {
+      "id": "N12-s12-b005",
+      "text": "El nuevo estado «entregable» se vincula con una reserva, condiciones verificadas y un momento. No es una propiedad eterna de la habitación. Si aparece evidencia posterior de una falla, hay que revisar la entrega y responder a sus consecuencias."
+    },
+    {
+      "id": "N12-s12-b006",
+      "text": "La lección no es sumar campos sin límite. Es identificar qué condición faltante cambia la acción. Si el nuevo campo sólo reproduce otro «OK» sin fuente, vigencia ni responsable, habremos movido la confusión a una columna distinta."
+    },
+    {
+      "id": "N12-s13-h2",
+      "text": "Movimiento 3 · Diseñar transiciones que puedan explicarse y repararse"
+    },
+    {
+      "id": "N12-s13-b001",
+      "text": "Hasta acá distinguimos piezas. Ahora necesitamos conectarlas en un cambio que pueda ponerse a prueba. La pregunta ya no es «¿sé definir evento?», sino «¿puedo explicar qué debe pasar antes de confirmar una entrega y qué hacemos si falla?»."
+    },
+    {
+      "id": "N12-s13-b002",
+      "text": "Un modelo útil cubre el camino habitual y los que interrumpen ese camino. La persona no debería quedar atrapada porque el diseño sólo imaginó éxito. El trabajo profesional incluye respuestas para rechazo, espera, información incompleta, corrección y reparación."
+    },
+    {
+      "id": "N12-s14-h2",
+      "text": "Ejemplo resuelto · Del concepto a una decisión"
+    },
+    {
+      "id": "N12-s14-b001",
+      "text": "Ensayo con una habitación:"
+    },
+    {
+      "id": "N12-s14-b002",
+      "text": "estado anterior, limpieza pendiente;"
+    },
+    {
+      "id": "N12-s14-b003",
+      "text": "solicitud, registrar su finalización;"
+    },
+    {
+      "id": "N12-s14-b004",
+      "text": "condición, informa una persona habilitada sobre la habitación correcta;"
+    },
+    {
+      "id": "N12-s14-b005",
+      "text": "hecho, la limpieza terminó a las 13:42;"
+    },
+    {
+      "id": "N12-s14-b006",
+      "text": "registro, se cargó a las 13:47 y el PMS lo conoció a las 14:03. A las 13:50, el PMS no puede afirmar que ya conoce ese hecho. A las 14:03 puede informar limpieza terminada, pero no deducir que toda reserva puede asignarse."
+    },
+    {
+      "id": "N12-s14-b007",
+      "text": "Decisión: conservar momento del hecho y del conocimiento, y comprobar las demás condiciones antes de asignar."
+    },
+    {
+      "id": "N12-s14-b008",
+      "text": "Probá cambiar «limpieza terminada» por «se pidió limpiar»: ahora tenés una solicitud, no evidencia del trabajo terminado."
+    },
+    {
+      "id": "N12-s15-h2",
+      "text": "Instrumento HH-12: mapa de transición verificable"
+    },
+    {
+      "id": "N12-s15-b001",
+      "text": "El mapa organiza nueve decisiones. Puede expresarse en texto, diagrama o una combinación. El formato importa menos que la posibilidad de seguir el razonamiento."
+    },
+    {
+      "id": "N12-s15-b002",
+      "text": "1. Propósito. ¿Qué promesa protege el cambio? Para la entrega, no basta emitir una llave: necesitamos permitir el ingreso en las condiciones acordadas para esa reserva. Si el propósito está mal definido, las pruebas pueden aprobar algo distinto de lo prometido."
+    },
+    {
+      "id": "N12-s15-b003",
+      "text": "2. Situación previa. ¿Qué debe estar confirmado antes de intentar? Identificá reserva, condiciones de habitación y restricciones pertinentes. No escribas sólo «todo correcto»: nombrá lo que puede cambiar la aceptación y qué evidencia necesita."
+    },
+    {
+      "id": "N12-s15-b004",
+      "text": "3. Comando. ¿Qué acción se solicita y sobre qué caso? «Asignar 412 a R73» es más preciso que «actualizar». Si primero hay que verificar condiciones, separá esa verificación del efecto de asignar o declarar entregabilidad."
+    },
+    {
+      "id": "N12-s15-b005",
+      "text": "4. Emisor y autoridad. ¿Quién pide y quién puede aceptar? Pueden no ser la misma persona. Indicá fuente de autorización, alcance y vigencia. Un permiso heredado por error no debería convertirse en una justificación institucional."
+    },
+    {
+      "id": "N12-s15-b006",
+      "text": "5. Reglas y resultados posibles. ¿Qué permite aceptar, qué obliga a rechazar y qué deja pendiente? Diferenciá falta de evidencia de evidencia de una falla. Aclarar la respuesta no significa permitir una acción riesgosa mientras falta información; significa explicar por qué no puede confirmarse todavía."
+    },
+    {
+      "id": "N12-s15-b007",
+      "text": "6. Evento. ¿Qué resultado se registra? El nombre debe corresponder al hecho reconocido. Si sólo recibimos la solicitud, no registramos «asignación completada». Si se rechazó, conservamos el resultado y una razón adecuada."
+    },
+    {
+      "id": "N12-s15-b008",
+      "text": "7. Estado y vistas. ¿Qué queda vigente y qué necesita ver cada persona? Recepción puede necesitar una acción y un motivo; Housekeeping, una condición pendiente; el huésped, una explicación simple y un próximo paso. Las vistas no deben contradecir la decisión que representan."
+    },
+    {
+      "id": "N12-s15-b009",
+      "text": "8. Evidencia y tiempo. ¿Qué respalda el cambio y cuándo fue conocido? Conservá fuentes, identificadores, regla y marcas pertinentes. No pidas más datos personales de los necesarios ni supongas que la hora del servidor es la hora del hecho."
+    },
+    {
+      "id": "N12-s15-b010",
+      "text": "9. Excepción y reparación. ¿Quién puede revisar, corregir o compensar? Indicá qué pasa fuera de horario y cómo se atiende a la persona afectada. La reparación debe poder realizarse sin una modificación oculta que borre lo sucedido."
+    },
+    {
+      "id": "N12-s15-b011",
+      "text": "Al completar el mapa podemos descubrir que una excepción cuestiona la situación previa o que una evidencia insuficiente limita una aceptación automática. Es normal volver atrás. No es un formulario lineal que garantice calidad porque todos sus campos tengan texto."
+    },
+    {
+      "id": "N12-s15-b012",
+      "text": "Comprobar nombre, regla y consecuencia"
+    },
+    {
+      "id": "N12-s15-b013",
+      "text": "Supongamos que el evento dice «habitación entregable», pero la regla sólo verifica limpieza. El nombre promete más que la comprobación. Debemos corregir la regla o limitar el nombre y sus efectos."
+    },
+    {
+      "id": "N12-s15-b014",
+      "text": "Ahora supongamos que la regla sí incluye todas las condiciones necesarias, pero cualquier cuenta puede confirmar. Falta alinear la autoridad. Y si la decisión es válida pero la pantalla sigue mostrando una versión anterior, falta revisar la comunicación y la vigencia de la vista."
+    },
+    {
+      "id": "N12-s15-b015",
+      "text": "La comprobación atraviesa capas: qué dice el botón, qué pide el mensaje, qué evalúa el responsable, qué resultado registra y qué entiende quien recibe la respuesta. Si cada componente aprueba su prueba aislada pero usa «confirmada» con sentidos distintos, el conjunto sigue fallando."
+    },
+    {
+      "id": "N12-s15-b016",
+      "text": "Por último, preguntá qué hacemos si mañana se descubre un error. Si sólo podemos editar directamente una fila y esperar que nadie note la historia perdida, falta diseñar la reparación. Una operación de corrección controlada puede modificar datos; lo que evitamos es una modificación sin fundamento, autorización ni rastro pertinente."
+    },
+    {
+      "id": "N12-s16-h2",
+      "text": "Matriz de autoridad y reparación"
+    },
+    {
+      "id": "N12-s16-b001",
+      "text": "Para cada acción sensible conviene distinguir cinco funciones: solicitar, aceptar, ejecutar, revisar y reparar. Una persona puede ocupar varias cuando el riesgo lo permite. No es necesario multiplicar firmas, pero sí reconocer conflictos y dependencias."
+    },
+    {
+      "id": "N12-s16-b002",
+      "text": "La matriz no copia sin pensar el organigrama. Una gerencia puede autorizar presupuesto y no estar en condiciones de comprobar una habitación. Una supervisora puede validar una inspección y no aprobar una compensación económica. La autoridad se define por la acción y su contexto."
+    },
+    {
+      "id": "N12-s16-b003",
+      "text": "También importa la disponibilidad real. Si sólo una persona puede resolver y no trabaja de noche, el procedimiento nocturno está incompleto. Compartir su contraseña no es una delegación válida. Hace falta una alternativa con alcance, vigencia y responsabilidad explícitos."
+    },
+    {
+      "id": "N12-s16-b004",
+      "text": "Una delegación de turno debe vencer cuando corresponda. Una regla automática necesita aprobación, versión y un responsable capaz de modificarla. «Lo decidió el sistema» no explica quién autorizó la regla ni quién responde por sus efectos."
+    },
+    {
+      "id": "N12-s16-b005",
+      "text": "La matriz permite ver dos fallas opuestas. A veces demasiadas personas pueden aceptar y nadie se hace cargo. Otras, todos ven la dificultad pero nadie puede resolver. Ambas empujan al trabajo informal. El objetivo no es centralizar todo, sino distribuir capacidad y responsabilidad de forma comprensible."
+    },
+    {
+      "id": "N12-s16-b006",
+      "text": "Condiciones, invariantes y metas"
+    },
+    {
+      "id": "N12-s16-b007",
+      "text": "Una condición se comprueba para aceptar una acción: la habitación debe reunir los requisitos vigentes de acceso antes de la entrega. Una invariante es una restricción que debe mantenerse en las transiciones válidas: no asignar simultáneamente la misma habitación a dos reservas incompatibles para el mismo período."
+    },
+    {
+      "id": "N12-s16-b008",
+      "text": "La diferencia con una meta es importante. «Entregar todas las habitaciones antes de las 14:00» expresa un objetivo de servicio que puede incumplirse y requerir reparación. No es la misma clase de regla que evitar que una llave vigente permita entrar a una habitación reasignada a otra reserva. Las consecuencias y los controles no son equivalentes."
+    },
+    {
+      "id": "N12-s16-b009",
+      "text": "Una invariante debe tener alcance preciso. «Nunca hay dos filas activas» puede cumplirse en una base mientras dos canales prometen la misma capacidad. Necesitamos relacionar la restricción técnica con la promesa real, el período y la clase de compromiso."
+    },
+    {
+      "id": "N12-s16-b010",
+      "text": "La política de sobreventa vuelve visible otra diferencia. Confirmar una categoría según una política de ocupación no equivale a haber asignado una habitación específica. Si el hotel usa ambas prácticas, no puede mantener un estado que oculte esa distinción y después culpar al dato por la confusión."
+    },
+    {
+      "id": "N12-s16-b011",
+      "text": "Las excepciones no deberían autorizar violaciones de seguridad por simple conveniencia. Pueden activar otra regla y otra alternativa válida: reasignar, verificar por un procedimiento aprobado o reparar antes de entregar. Hay que distinguir flexibilidad para resolver de permiso para ignorar una protección."
+    },
+    {
+      "id": "N12-s17-h2",
+      "text": "Probar la transición, no sólo el componente"
+    },
+    {
+      "id": "N12-s17-b001",
+      "text": "Una prueba de una función puede demostrar que emite cierto mensaje ante una entrada. Una prueba de contrato puede verificar estructura y compatibilidad esperadas. Ambas son útiles. Ninguna prueba sola demuestra que la persona recibió una promesa correcta y que la organización podía cumplirla."
+    },
+    {
+      "id": "N12-s17-b002",
+      "text": "Para HH-12 usamos episodios completos. En el caso ordinario hay condiciones verificadas, actor autorizado, pedido, aceptación y una vista coherente. Debemos comprobar también qué recibe el huésped y qué evidencia queda para revisión."
+    },
+    {
+      "id": "N12-s17-b003",
+      "text": "Después probamos un rechazo: la habitación ya está asignada de forma incompatible. El sistema no debe anunciar éxito ni dejar a Recepción sin explicación. La alternativa debe respetar las reglas y la atención a la persona."
+    },
+    {
+      "id": "N12-s17-b004",
+      "text": "Probamos una espera: falta una confirmación. No confundimos «aún no sabemos» con «se comprobó que no». La acción puede permanecer bloqueada mientras se verifica, con una comunicación honesta y una vía de atención."
+    },
+    {
+      "id": "N12-s17-b005",
+      "text": "Probamos una autorización inválida: la cuenta existe, pero su delegación venció o no cubre ese tipo de excepción. El control debe evaluar el alcance pertinente, no sólo que hubo una autenticación."
+    },
+    {
+      "id": "N12-s17-b006",
+      "text": "Y probamos una reparación: después de una aceptación aparece una falla. Alguien autorizado debe poder revisar, cambiar la acción, actualizar las vistas y conservar lo necesario para explicar qué ocurrió. Una casilla que dice «plan de reversión» no equivale a haberlo ensayado."
+    },
+    {
+      "id": "N12-s17-b007",
+      "text": "UML y BPMN ofrecen lenguajes para representar partes de estas pruebas. No se elige el diagrama por su prestigio, sino por lo que ayuda a discutir. La prueba final es si el equipo puede reconocer un error de significado o responsabilidad antes de que lo absorba informalmente quien atiende."
+    },
+    {
+      "id": "N12-s18-h2",
+      "text": "Tercera aplicación de HH-12: “entregable” como transición defendible"
+    },
+    {
+      "id": "N12-s18-b001",
+      "text": "La propuesta final del ejercicio busca no prometer ingreso sin comprobar condiciones de asignación y uso para la reserva concreta. «Entregable» deja de ser otro nombre para «limpia»."
+    },
+    {
+      "id": "N12-s18-b002",
+      "text": "Antes de confirmar se revisan limpieza, inspección vigente, reserva, ausencia de asignación incompatible y condiciones pertinentes de acceso y accesibilidad. El detalle de cada comprobación depende de reglas operativas acordadas y de sus fuentes; no se inventa una garantía absoluta a partir de una señal aislada."
+    },
+    {
+      "id": "N12-s18-b003",
+      "text": "El comando solicita verificar y declarar la condición para R73. Puede aceptarse automáticamente sólo dentro de reglas aprobadas y con evidencia suficiente y vigente. Si falta una condición o el caso requiere revisión, no se fabrica una confirmación."
+    },
+    {
+      "id": "N12-s18-b004",
+      "text": "Los resultados distinguen: entregable bajo las condiciones evaluadas, no entregable, evidencia pendiente o revisión requerida. Recepción ve qué puede hacer y por qué. Las otras áreas ven qué les corresponde resolver. El huésped recibe una comunicación simple que no expone detalles internos innecesarios."
+    },
+    {
+      "id": "N12-s18-b005",
+      "text": "Si hay una excepción, la autoridad competente puede aprobar una alternativa que preserve las protecciones. No puede convertir una condición insegura en segura mediante una autorización. La decisión necesita evidencia de la alternativa y una respuesta para la persona."
+    },
+    {
+      "id": "N12-s18-b006",
+      "text": "Si después aparece información que invalida la entrega, se registra la revisión y se actúa: corregir, reasignar o compensar según corresponda. Se mantiene la relación con el episodio original y con las consecuencias que no se pudieron deshacer."
+    },
+    {
+      "id": "N12-s18-b007",
+      "text": "Todavía quedan problemas técnicos abiertos. Dos pedidos pueden competir por la misma habitación; un aviso puede llegar tarde; un mensaje puede repetirse. N12 deja identificadas las transiciones y restricciones para que N13 examine cómo sostenerlas en esas condiciones."
+    },
+    {
+      "id": "N12-s19-h2",
+      "text": "Caso de transferencia: administrar una medicación hospitalaria"
+    },
+    {
+      "id": "N12-s19-b001",
+      "text": "Consideremos una escena hipotética para estudiar representaciones, no para indicar una práctica clínica. Un equipo hospitalario necesita distinguir una indicación, sus revisiones, la preparación y la administración efectiva. Las reglas clínicas y las competencias profesionales deben definirse con especialistas; no se deducen de un ejemplo hotelero."
+    },
+    {
+      "id": "N12-s19-b002",
+      "text": "Si el sistema resume todo como «medicación dada», puede confundir algo solicitado con algo efectivamente realizado. La intención y el resultado necesitan representaciones distintas. Registrar una preparación tampoco demuestra administración."
+    },
+    {
+      "id": "N12-s19-b003",
+      "text": "Un lector de códigos puede aportar evidencia sobre lo que leyó y las correspondencias verificadas. No reemplaza por sí mismo toda la evaluación profesional. Una herramienta que recomienda revisar tampoco adquiere autoridad clínica por emitir una alerta acertada."
+    },
+    {
+      "id": "N12-s19-b004",
+      "text": "Ante una discrepancia, es importante saber quién podía decidir, qué información tenía y qué ocurrió realmente. Corregir el registro no debe fabricar una administración que no sucedió ni borrar sin explicación una decisión relevante. La forma de atender el caso depende de los procedimientos y responsabilidades del servicio."
+    },
+    {
+      "id": "N12-s19-b005",
+      "text": "La transferencia es limitada pero útil: separar pedido, evaluación, acción y evidencia. No trasladamos umbrales, permisos ni soluciones. Precisamente porque las consecuencias son diferentes, cambian las exigencias de verificación y control."
+    },
+    {
+      "id": "N12-s20-h2",
+      "text": "Contraejemplo: conservar todos los eventos y perder la verdad"
+    },
+    {
+      "id": "N12-s20-b001",
+      "text": "Una empresa decide guardar cada cambio para conseguir «auditoría total». Sus servicios emiten miles de mensajes llamados «estado actualizado», con identificadores y horarios. Cuando hay un incidente, el equipo encuentra todos los mensajes pero no sabe qué decisión representaba cada uno ni quién podía tomarla."
+    },
+    {
+      "id": "N12-s20-b002",
+      "text": "No faltan registros. Falta significado. El historial permite seguir operaciones técnicas y no necesariamente reconstruir la promesa o la autoridad. La empresa debe volver al trabajo real para entender qué estaba afirmando cada estado."
+    },
+    {
+      "id": "N12-s20-b003",
+      "text": "La corrección empieza por tres transiciones críticas, no por registrar todavía más. El equipo les da nombres pertinentes, relaciona pedidos con resultados, define responsabilidades y establece cómo corregir. Mantiene otros rastros como información técnica de operación, sin presentarlos como prueba de decisiones que no explican."
+    },
+    {
+      "id": "N12-s20-b004",
+      "text": "Éste es un contraejemplo a la idea de que una arquitectura orientada a eventos garantiza responsabilidad. Puede facilitar ciertas reconstrucciones, pero necesita un modelo adecuado. Una solución más sencilla con historia relevante puede ser mejor que una colección exhaustiva de mensajes opacos."
+    },
+    {
+      "id": "N12-s21-h2",
+      "text": "Errores frecuentes"
+    },
+    {
+      "id": "N12-s21-b001",
+      "text": "Confirmar cuando sólo recibimos"
+    },
+    {
+      "id": "N12-s21-b002",
+      "text": "Enviar un comando no significa que fue aceptado. Si el resultado sigue pendiente, la interfaz debe decirlo. Una confirmación prematura no se arregla sólo corrigiendo después la base: ya pudo crear una expectativa."
+    },
+    {
+      "id": "N12-s21-b003",
+      "text": "Leer un estado como una verdad permanente"
+    },
+    {
+      "id": "N12-s21-b004",
+      "text": "«Asignable» depende de condiciones y de un momento. Una falla posterior puede cambiarlo. Conservá alcance, vigencia y una vía de revisión; no dejes que una etiqueta sobreviva a la evidencia que la sostenía."
+    },
+    {
+      "id": "N12-s21-b005",
+      "text": "Guardar cambios sin explicar lo que significan"
+    },
+    {
+      "id": "N12-s21-b006",
+      "text": "«Actualizado» puede ser suficiente para un registro técnico y pobre para una decisión de negocio. Cuando importa distinguir aprobación, rechazo o rectificación, representá esa diferencia. Más mensajes no compensan un significado ausente."
+    },
+    {
+      "id": "N12-s21-b007",
+      "text": "Confundir acceso con autoridad"
+    },
+    {
+      "id": "N12-s21-b008",
+      "text": "Tener una cuenta habilitada no demuestra que una persona pueda autorizar cualquier operación. Revisá rol, caso, alcance y delegación. Alineá los permisos con las reglas que justifican la decisión."
+    },
+    {
+      "id": "N12-s21-b009",
+      "text": "Inventar el orden por las horas"
+    },
+    {
+      "id": "N12-s21-b010",
+      "text": "Dos marcas cercanas pueden provenir de relojes o momentos distintos. Reconstruí vínculos y tiempos relevantes. Cuando el orden no puede determinarse, no atribuyas conocimiento o responsabilidad como si fuera seguro."
+    },
+    {
+      "id": "N12-s21-b011",
+      "text": "Borrar el episodio al corregir"
+    },
+    {
+      "id": "N12-s21-b012",
+      "text": "Volver a «confirmada» no elimina un correo de cancelación ya recibido ni una reparación necesaria. Distinguí el dato corregido, la afirmación retirada y los efectos compensados. Conservá la historia pertinente con límites de privacidad."
+    },
+    {
+      "id": "N12-s21-b013",
+      "text": "Agregar una firma humana sin capacidad de revisión"
+    },
+    {
+      "id": "N12-s21-b014",
+      "text": "La persona necesita tiempo, información y autoridad para objetar. Si sólo confirma una acción ya consumada, su intervención puede ser decorativa. Diseñá el control antes del compromiso que busca proteger."
+    },
+    {
+      "id": "N12-s21-b015",
+      "text": "Elegir una arquitectura por moda"
+    },
+    {
+      "id": "N12-s21-b016",
+      "text": "Separar intención y resultado no obliga a adoptar event sourcing o CQRS. Evaluá qué reconstrucción necesitás y qué complejidad agregás. El patrón sirve al problema, no al revés."
+    },
+    {
+      "id": "N12-s21-b017",
+      "text": "Dibujar únicamente el éxito"
+    },
+    {
+      "id": "N12-s21-b018",
+      "text": "Si no hay respuesta prevista para rechazo, demora o evidencia incompleta, alguien tendrá que improvisarla. La reparación forma parte del diseño del servicio. No es una tarea secundaria que se delega al final."
+    },
+    {
+      "id": "N12-s22-h2",
+      "text": "Consecuencias profesionales"
+    },
+    {
+      "id": "N12-s22-b001",
+      "text": "El nombre de un botón puede prometer de más. Un estado puede ocultar una restricción. Un permiso puede dar capacidad sin responsabilidad. Por eso estas decisiones no pertenecen únicamente a quien programa o diseña una base."
+    },
+    {
+      "id": "N12-s22-b002",
+      "text": "Análisis reconstruye episodios; Producto revisa promesas y mensajes; Desarrollo implementa reglas y rastros; Seguridad configura permisos y controles; Operaciones aporta condiciones y excepciones; Dirección define autoridad y capacidad de reparación. El trabajo exige conexiones entre esos aportes."
+    },
+    {
+      "id": "N12-s22-b003",
+      "text": "Un modelo útil permite preguntar cómo se llegó al valor actual, qué se intentó, quién podía aceptarlo y qué ocurre si estaba equivocado. Esa capacidad mejora soporte, evaluación y cambio. También permite discutir una decisión sin depender únicamente de la memoria de quien estaba ese día."
+    },
+    {
+      "id": "N12-s22-b004",
+      "text": "No significa convertir cada gesto en burocracia. En acciones de bajo riesgo puede bastar una estructura simple. El esfuerzo se concentra donde confundir intención, resultado o autoridad produce consecuencias importantes."
+    },
+    {
+      "id": "N12-s23-h2",
+      "text": "Límites y tensiones"
+    },
+    {
+      "id": "N12-s23-b001",
+      "text": "Conservar historia tiene costos y riesgos. Una política de inmutabilidad no autoriza guardar datos personales indefinidamente. Debemos decidir qué evidencia es necesaria, quién accede, durante cuánto tiempo y cómo se atienden correcciones o eliminaciones que correspondan."
+    },
+    {
+      "id": "N12-s23-b002",
+      "text": "Modelar autoridad tampoco significa aceptar sin crítica la distribución existente. Podemos descubrir que quienes sufren el daño no tienen posibilidad de objetar o que un rol recibe responsabilidades sin recursos. N05 sigue vigente: el modelo ayuda a hacer visible ese problema y a discutirlo."
+    },
+    {
+      "id": "N12-s23-b003",
+      "text": "No todo puede capturarse automáticamente. Una conversación, una interpretación o un cuidado pueden ser decisivos. Forzarlos a una categoría puede empobrecer el caso. Conviene conservar espacio para relato y revisión cuando realmente cambian la decisión, sin recopilar información íntima innecesaria."
+    },
+    {
+      "id": "N12-s23-b004",
+      "text": "Separar conceptos también puede aumentar complejidad. Si el modelo cuesta más que la dificultad que ayuda a resolver, debe simplificarse. El criterio no es representar el mundo completo. Es no perder las diferencias que importan para actuar responsablemente."
+    },
+    {
+      "id": "N12-s24-h2",
+      "text": "De N12 a N13: cuando las transiciones viajan y se cruzan"
+    },
+    {
+      "id": "N12-s24-b001",
+      "text": "HH-12 dejó pedidos que pueden rechazarse, resultados con significado, estados con alcance, evidencia y responsables. Ahora aparecen las condiciones de funcionamiento: mensajes que llegan tarde, avisos repetidos y solicitudes que compiten."
+    },
+    {
+      "id": "N12-s24-b002",
+      "text": "Dos recepcionistas pueden intentar asignar la misma habitación antes de ver el cambio de la otra. Un servicio puede aceptar y no lograr comunicar la respuesta a tiempo. Reintentar puede ser necesario, pero no debería duplicar efectos sensibles."
+    },
+    {
+      "id": "N12-s24-b003",
+      "text": "N13 trabajará demoras, concurrencia, consistencia, idempotencia y reconciliación. No empieza de cero: usará las reglas y transiciones de HH-12. Para discutir cómo mantenerlas bajo falla parcial, primero necesitábamos saber qué significan y qué promesa protegen."
+    },
+    {
+      "id": "N12-s25-h2",
+      "text": "Una lectura situada desde América Latina"
+    },
+    {
+      "id": "N12-s25-b001",
+      "text": "Mario Bunge ayuda a distinguir conceptos y explicaciones. «El sistema está inconsistente» puede ser un comienzo, pero necesitamos identificar qué hechos o reglas se contradicen. La precisión no consiste en agregar nombres; consiste en que las diferencias permitan investigar y actuar."
+    },
+    {
+      "id": "N12-s25-b002",
+      "text": "Fernando Flores, en su trabajo con Winograd, y Rafael Echeverría aportan una mirada sobre lenguaje y acción. Una confirmación puede organizar expectativas y compromisos. Por eso no alcanza con que un mensaje viaje correctamente: debemos comprender qué afirma, quién puede decirlo y qué respuesta corresponde si no se cumple."
+    },
+    {
+      "id": "N12-s25-b003",
+      "text": "Rolando García permite pensar las relaciones entre tecnología y organización sin reducir una a la otra. La falla de llegada involucra estados, trabajo y autoridad. Carlos Scolari ayuda a mirar cómo una interfaz hace visibles algunas de esas relaciones y oculta otras. Un botón «confirmar» puede condensar una decisión que el proceso todavía no tomó."
+    },
+    {
+      "id": "N12-s25-b004",
+      "text": "Maturana y Varela permiten reflexionar sobre las distinciones con las que observamos. En esta aplicación, nos llevan a explicitar qué diferencia hace «limpia» frente a «entregable». No significa que las condiciones materiales dependan sólo de las palabras: significa que una categoría debe responder por lo que selecciona y deja afuera."
+    },
+    {
+      "id": "N12-s25-b005",
+      "text": "Etkin y Schvarstein ayudan a reconocer reglas organizacionales que se mantienen aunque cambie el software. Una configuración nueva puede conservar una distribución confusa de autoridad. Sosa Escudero aporta una vía para discutir críticamente datos y modelos: acumular registros no elimina la necesidad de comprender qué representan."
+    },
+    {
+      "id": "N12-s25-b006",
+      "text": "Estas perspectivas se complementan con los aportes técnicos sin reemplazarlos. El modelo debe funcionar, pero también debe expresar una decisión que las personas puedan entender, cumplir y cuestionar."
+    },
+    {
+      "id": "N12-s26-h2",
+      "text": "Síntesis"
+    },
+    {
+      "id": "N12-s26-b001",
+      "text": "Pedir, hacer y registrar son cosas distintas. Un modelo útil conserva esa diferencia junto con identidad, tiempo y autoridad; así una pantalla no convierte una intención en un hecho."
+    },
+    {
+      "id": "N12-s27-h2",
+      "text": "Cinco píldoras para recordar"
+    },
+    {
+      "id": "N12-s27-b001",
+      "text": "«Solicitado» no significa «aceptado» ni «completado»."
+    },
+    {
+      "id": "N12-s27-b002",
+      "text": "Un estado es una respuesta para cierta pregunta y cierto momento."
+    },
+    {
+      "id": "N12-s27-b003",
+      "text": "El registro debe afirmar sólo lo que su evidencia permite."
+    },
+    {
+      "id": "N12-s27-b004",
+      "text": "Un permiso técnico debe responder a una autoridad con alcance definido."
+    },
+    {
+      "id": "N12-s27-b005",
+      "text": "La transición está incompleta si no sabemos cómo rechazar, revisar y reparar."
+    },
+    {
+      "id": "N12-s28-h2",
+      "text": "Glosario esencial"
+    },
+    {
+      "id": "N12-s28-b001",
+      "text": "Comando: pedido para intentar una acción, como asignar una habitación. Puede aceptarse, rechazarse o quedar pendiente."
+    },
+    {
+      "id": "N12-s28-b002",
+      "text": "Evento: registro que afirma que ocurrió algo relevante, como una inspección aprobada. Su contenido puede necesitar verificación o corrección."
+    },
+    {
+      "id": "N12-s28-b003",
+      "text": "Estado: condición reconocida para una entidad o proceso según reglas e información disponible. No equivale a toda su historia."
+    },
+    {
+      "id": "N12-s28-b004",
+      "text": "Consulta: pedido de información cuyo contrato no pretende cambiar la condición de negocio. Si produce una reserva temporal, ese efecto debe hacerse explícito."
+    },
+    {
+      "id": "N12-s28-b005",
+      "text": "Evidencia: información que permite sostener o cuestionar una afirmación. Se define según lo que queremos comprobar."
+    },
+    {
+      "id": "N12-s28-b006",
+      "text": "Autoridad: capacidad reconocida para decidir dentro de un alcance y contexto. No surge sólo de poder usar una función."
+    },
+    {
+      "id": "N12-s28-b007",
+      "text": "Permiso: habilitación técnica para realizar una operación. Debe alinearse con las responsabilidades pertinentes."
+    },
+    {
+      "id": "N12-s28-b008",
+      "text": "Transición: cambio reconocido entre situaciones, con reglas, resultado y responsabilidades que pueden reconstruirse."
+    },
+    {
+      "id": "N12-s28-b009",
+      "text": "Correlación de mensajes: vínculo que reúne piezas del mismo episodio. No demuestra por sí solo que una haya causado otra."
+    },
+    {
+      "id": "N12-s28-b010",
+      "text": "Proyección: vista de información preparada para una pregunta o audiencia, con cierto alcance y actualización."
+    },
+    {
+      "id": "N12-s28-b011",
+      "text": "Rectificación: corrección explícita de una afirmación previa, vinculada con lo que se corrige."
+    },
+    {
+      "id": "N12-s28-b012",
+      "text": "Retractación: retiro de una afirmación que ya no se sostiene, aunque no exista todavía una alternativa confirmada."
+    },
+    {
+      "id": "N12-s28-b013",
+      "text": "Compensación: acción que atiende efectos de lo ocurrido, como reasignar o devolver un importe. No borra toda consecuencia."
+    },
+    {
+      "id": "N12-s28-b014",
+      "text": "Excepción: caso que requiere otro camino autorizado porque la regla ordinaria no lo resuelve. No es permiso ilimitado para ignorar protecciones."
+    },
+    {
+      "id": "N12-s28-b015",
+      "text": "Invariante: restricción que debe mantenerse en las transiciones válidas dentro del alcance definido."
+    },
+    {
+      "id": "N12-s28-b016",
+      "text": "Máquina de estados: modelo de situaciones y cambios, con disparadores y condiciones. Ayuda a reconocer qué pasos son válidos."
+    },
+    {
+      "id": "N12-s29-h2",
+      "text": "Preguntas de preparación"
+    },
+    {
+      "id": "N12-s29-b001",
+      "text": "Martina recibe «solicitud procesada» y entiende que está inscripta. ¿Qué diferencias necesita conservar la interfaz? Proponé mensajes que no confundan recepción y aceptación."
+    },
+    {
+      "id": "N12-s29-b002",
+      "text": "Un registro dice «inspección aprobada». ¿Qué puede demostrar y qué evidencia adicional necesitarías para autorizar una entrega concreta?"
+    },
+    {
+      "id": "N12-s29-b003",
+      "text": "Una cuenta permite reasignar habitaciones, pero la delegación del turno venció. ¿Qué distingue capacidad técnica de autoridad? ¿Cómo debería revisarse el caso?"
+    },
+    {
+      "id": "N12-s29-b004",
+      "text": "En la 412 hay dos registros a las 14:05. ¿Por qué no alcanza esa hora para atribuir conocimiento? Indicá qué tiempos y vínculos buscarías."
+    },
+    {
+      "id": "N12-s29-b005",
+      "text": "Un agente recomienda una habitación y puede enviar el comando. ¿Qué habría que definir antes de habilitarlo? Separá recomendación, aceptación y reparación."
+    },
+    {
+      "id": "N12-s29-b006",
+      "text": "Elegí una acción en la que importe conservar historia y otra donde baste un estado actual con un registro acotado. Justificá por consecuencias, no por preferencias de arquitectura."
+    },
+    {
+      "id": "N12-s29-b007",
+      "text": "Para el encuentro, elegí una transición universitaria, laboral o cotidiana. Describí qué había antes, qué se pidió, quién podía aceptar, qué se comprobó, qué pasó y cómo se mostró. Agregá un rechazo y una reparación. Señalá dónde podría confundirse la intención con el resultado."
+    },
+    {
+      "id": "N12-s30-h2",
+      "text": "Referencias base"
+    },
+    {
+      "id": "N12-s30-b001",
+      "text": "Evans, E. (2003). Domain-Driven Design: Tackling Complexity in the Heart of Software. Addison-Wesley."
+    },
+    {
+      "id": "N12-s30-b002",
+      "text": "Booch, G. et al. (2007). Object-Oriented Analysis and Design with Applications. Addison-Wesley."
+    },
+    {
+      "id": "N12-s30-b003",
+      "text": "Lamport, L. (1978). “Time, Clocks, and the Ordering of Events in a Distributed System”. Communications of the ACM, 21(7), 558-565. https://doi.org/10.1145/359545.359563"
+    },
+    {
+      "id": "N12-s30-b004",
+      "text": "Fowler, M. (2005). “Event Sourcing”. martinfowler.com. https://martinfowler.com/eaaDev/EventSourcing.html"
+    },
+    {
+      "id": "N12-s30-b005",
+      "text": "Fowler, M. (2011). “CQRS”. martinfowler.com. https://martinfowler.com/bliki/CQRS.html"
+    },
+    {
+      "id": "N12-s30-b006",
+      "text": "Ferraiolo, D. F. y Kuhn, D. R. (1992). “Role-Based Access Controls”. 15th National Computer Security Conference, 554-563. https://csrc.nist.gov/projects/role-based-access-control"
+    },
+    {
+      "id": "N12-s30-b007",
+      "text": "Sandhu, R. S., Coyne, E. J., Feinstein, H. L. y Youman, C. E. (1996). “Role-Based Access Control Models”. Computer, 29(2), 38-47. https://csrc.nist.gov/csrc/media/projects/role-based-access-control/documents/sandhu96.pdf"
+    },
+    {
+      "id": "N12-s30-b008",
+      "text": "Leveson, N. (2011). Engineering a Safer World: Systems Thinking Applied to Safety. MIT Press. https://doi.org/10.7551/mitpress/8179.001.0001"
+    },
+    {
+      "id": "N12-s30-b009",
+      "text": "Object Management Group (2017). Unified Modeling Language, Version 2.5.1. https://www.omg.org/spec/UML/2.5.1"
+    },
+    {
+      "id": "N12-s30-b010",
+      "text": "Object Management Group (2014). Business Process Model and Notation, Version 2.0.2. https://www.omg.org/spec/BPMN/2.0.2"
+    },
+    {
+      "id": "N12-s30-b011",
+      "text": "Winograd, T. y Flores, F. (1986). Understanding Computers and Cognition: A New Foundation for Design. Ablex."
+    },
+    {
+      "id": "N12-s30-b012",
+      "text": "Cloud Native Computing Foundation (2022). CloudEvents Specification, Version 1.0.2. https://github.com/cloudevents/spec/tree/ce@v1.0.2"
+    },
+    {
+      "id": "N12-s30-b013",
+      "text": "AsyncAPI Initiative (2026). AsyncAPI Specification, Version 3.1.0. https://www.asyncapi.com/docs/reference/specification/v3.1.0"
+    },
+    {
+      "id": "N12-s30-b014",
+      "text": "Tabassi, E. (2023). Artificial Intelligence Risk Management Framework (AI RMF 1.0). NIST AI 100-1. https://doi.org/10.6028/NIST.AI.100-1"
+    },
+    {
+      "id": "N12-s30-b015",
+      "text": "Autio, C. et al. (2024). Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile. NIST AI 600-1. https://doi.org/10.6028/NIST.AI.600-1"
+    },
+    {
+      "id": "N12-s30-b016",
+      "text": "Unión Europea (2024). Reglamento (UE) 2024/1689 por el que se establecen normas armonizadas en materia de inteligencia artificial. https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+    },
+    {
+      "id": "N12-s30-b017",
+      "text": "Bunge, M. (2004). Emergencia y convergencia: novedad cualitativa y unidad del conocimiento. Gedisa."
+    },
+    {
+      "id": "N12-s30-b018",
+      "text": "García, R. (2006). Sistemas complejos: conceptos, método y fundamentación epistemológica de la investigación interdisciplinaria. Gedisa."
+    },
+    {
+      "id": "N12-s30-b019",
+      "text": "Scolari, C. A. (2018). Las leyes de la interfaz: diseño, ecología, evolución, tecnología. Gedisa."
+    },
+    {
+      "id": "N12-s30-b020",
+      "text": "Maturana, H. R. y Varela, F. J. (1984). El árbol del conocimiento: las bases biológicas del entendimiento humano. Editorial Universitaria."
+    },
+    {
+      "id": "N12-s30-b021",
+      "text": "Etkin, J. y Schvarstein, L. (1989). Identidad de las organizaciones: invariancia y cambio. Paidós."
+    },
+    {
+      "id": "N12-s30-b022",
+      "text": "Sosa Escudero, W. (2019). Big Data: breve manual para conocer la ciencia de datos que ya invadió nuestras vidas. Siglo XXI Editores."
+    },
+    {
+      "id": "N12-s30-b023",
+      "text": "Echeverría, R. (2005). Ontología del lenguaje. Granica."
+    }
+  ],
+  "headings": [
+    "Contenido",
+    "Referentes",
+    "Pregunta profesional",
+    "La inscripción que estaba aceptada y no existía",
+    "Hotel Horizonte: una habitación lista en tres sistemas",
+    "Tesis",
+    "Para orientar la lectura",
+    "De N11 a N12: de la afirmación a la transición",
+    "Movimiento 1 · Separar intención, ocurrencia y situación vigente",
+    "BPMN representa coordinación, no prueba ejecución",
+    "Primera aplicación de HH-12: desarmar “habitación disponible”",
+    "Movimiento 2 · Conservar tiempo, significado y responsabilidad",
+    "Agentes de inteligencia artificial: proponer no es decidir",
+    "Segunda aplicación de HH-12: reconstruir un episodio sin inventar orden",
+    "Movimiento 3 · Diseñar transiciones que puedan explicarse y repararse",
+    "Ejemplo resuelto · Del concepto a una decisión",
+    "Instrumento HH-12: mapa de transición verificable",
+    "Matriz de autoridad y reparación",
+    "Probar la transición, no sólo el componente",
+    "Tercera aplicación de HH-12: “entregable” como transición defendible",
+    "Caso de transferencia: administrar una medicación hospitalaria",
+    "Contraejemplo: conservar todos los eventos y perder la verdad",
+    "Errores frecuentes",
+    "Consecuencias profesionales",
+    "Límites y tensiones",
+    "De N12 a N13: cuando las transiciones viajan y se cruzan",
+    "Una lectura situada desde América Latina",
+    "Síntesis",
+    "Cinco píldoras para recordar",
+    "Glosario esencial",
+    "Preguntas de preparación",
+    "Referencias base"
+  ]
+}

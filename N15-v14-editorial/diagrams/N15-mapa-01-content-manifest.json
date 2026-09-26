@@ -1,0 +1,30 @@
+{
+  "title":"La pregunta elige la vista",
+  "claim":"Una cartera mínima selecciona representaciones por pregunta, decisión, audiencia, evidencia, costo y vigencia, y prueba su utilidad sin depender de la explicación del autor.",
+  "source_sections":[
+    {"id":"thesis","heading":"Tesis","summary":"Un modelo es una representación selectiva construida para una pregunta y una decisión; más detalle no garantiza mayor utilidad."},
+    {"id":"hh15","heading":"Hotel Horizonte: el mapa que cada área quería convertir en el único","summary":"HH-15 construye una cartera mínima vinculada por identidades comunes y justificada por decisiones distintas."},
+    {"id":"selection","heading":"Pregunta, decisión y carga de prueba","summary":"La pregunta determina relaciones visibles y la decisión delimita suficiencia y evidencia."},
+    {"id":"test","heading":"Prueba de lectura y decisión","summary":"Una vista se prueba con la audiencia sin la explicación oral de quien la construyó."}
+  ],
+  "nodes":[
+    {"id":"question","label":"Pregunta sobre validación previa sin exclusión ni sobrepromesa","role":"decision","source":["hh15"],"purpose":"Delimitar la decisión antes de elegir una notación."},
+    {"id":"criteria","label":"Decisión, audiencia, evidencia, costo y vigencia","role":"constraint","source":["thesis","selection"],"purpose":"Filtrar representaciones por utilidad y costo defendible."},
+    {"id":"process","label":"Proceso: dónde espera el huésped","role":"evidence","source":["hh15"],"purpose":"Representar secuencia, espera y responsabilidad."},
+    {"id":"states","label":"Estados: cuándo puede confirmarse","role":"evidence","source":["hh15"],"purpose":"Representar transiciones válidas y estados ambiguos."},
+    {"id":"architecture","label":"Arquitectura: qué dependencia puede fallar","role":"evidence","source":["hh15"],"purpose":"Localizar componentes y dependencias técnicas."},
+    {"id":"authority","label":"Autoridad: quién decide la excepción","role":"authority","source":["hh15"],"purpose":"Hacer visible quién puede decidir, suspender o reparar."},
+    {"id":"experience","label":"Experiencia: quién encuentra una barrera","role":"evidence","source":["hh15"],"purpose":"Representar acceso, percepción y reparación desde la población afectada."},
+    {"id":"shared_identity","label":"Identidades y fuentes compartidas entre vistas","role":"constraint","source":["hh15"],"purpose":"Permitir navegación y contraste sin fabricar un modelo total."},
+    {"id":"reader_test","label":"Prueba sin autor: la audiencia puede decidir","role":"outcome","source":["test"],"purpose":"Comprobar utilidad, claridad y límites de la cartera."}
+  ],
+  "edges":[
+    {"id":"select_by_question","from":"question","to":"criteria","relation":"decision","source":["selection"],"meaning":"La pregunta y la decisión anteceden a la notación."},
+    {"id":"select_process","from":"criteria","to":"process","relation":"selection","source":["hh15"],"meaning":"El proceso se elige para estudiar espera y secuencia."},
+    {"id":"select_states","from":"criteria","to":"states","relation":"selection","source":["hh15"],"meaning":"Los estados se eligen para estudiar confirmación y transición."},
+    {"id":"select_architecture","from":"criteria","to":"architecture","relation":"selection","source":["hh15"],"meaning":"La arquitectura se elige para localizar dependencias."},
+    {"id":"select_authority","from":"criteria","to":"authority","relation":"selection","source":["hh15"],"meaning":"La autoridad se representa para decidir excepciones."},
+    {"id":"select_experience","from":"criteria","to":"experience","relation":"selection","source":["hh15"],"meaning":"La experiencia se representa para reconocer barreras."},
+    {"id":"link_views","from":"shared_identity","to":"reader_test","relation":"evidence","source":["hh15","test"],"meaning":"Las identidades compartidas permiten probar la cartera como conjunto gobernado."}
+  ]
+}

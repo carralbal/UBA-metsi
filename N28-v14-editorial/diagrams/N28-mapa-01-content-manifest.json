@@ -1,0 +1,27 @@
+{
+  "title": "La calidad se aprueba por escenario, no por promedio",
+  "claim": "Un resultado agregado no autoriza una promesa general cuando una población crítica, una consecuencia severa o una capacidad de reparación exigen evidencia propia.",
+  "source_sections": [
+    {"id":"problem","heading":"Todas las pruebas pasaron y la promesa falló","summary":"La evidencia funcional no cubrió accesibilidad, recuperabilidad ni operabilidad."},
+    {"id":"hh28","heading":"Hotel Horizonte: el promedio ocultaba a quienes más dependían del servicio","summary":"El 97 por ciento agregado ocultó dos demoras severas entre cuatro llegadas accesibles."},
+    {"id":"movement1","heading":"Movimiento 1 · Situar calidad en escenarios y riesgos","summary":"La calidad se delimita por población, escenario, atributo y consecuencia."},
+    {"id":"movement2","heading":"Movimiento 2 · Convertir reclamos en evidencia suficiente","summary":"Cada reclamo exige umbral, diversidad de evidencia y autoridad."},
+    {"id":"movement3","heading":"Movimiento 3 · Decidir tensiones y gobernar la aceptación","summary":"La aceptación autoriza un alcance y conserva riesgo residual y revisión."}
+  ],
+  "nodes": [
+    {"id":"aggregate","label":"194 de 200","role":"aggregate_metric","source":["hh28"],"purpose":"Mostrar el resultado correcto que no autoriza por sí solo una promesa general."},
+    {"id":"ordinary","label":"Ingreso ordinario","role":"quality_scenario","source":["hh28","movement1"],"purpose":"Vincular velocidad con integridad y carga observada."},
+    {"id":"accessible","label":"Llegada accesible","role":"quality_scenario","source":["hh28","movement1"],"purpose":"Proteger condiciones concretas y una alternativa practicable."},
+    {"id":"identity","label":"Caída de identidad","role":"quality_scenario","source":["hh28","movement1"],"purpose":"Exigir autoridad, continuidad limitada y reconciliación."},
+    {"id":"evidence","label":"Arquitectura de evidencia","role":"evidence_assembly","source":["hh28","movement2"],"purpose":"Combinar contrato, eventos, bitácoras, control material, observación y relato."},
+    {"id":"scope","label":"Alcance autorizado","role":"decision_output","source":["movement3"],"purpose":"Limitar, detener o sostener la promesa según el escenario probado."}
+  ],
+  "edges": [
+    {"id":"disaggregates","from":"aggregate","to":"ordinary","relation":"is_disaggregated_into","source":["hh28"],"meaning":"El promedio se reinterpreta dentro del escenario ordinario."},
+    {"id":"reveals","from":"aggregate","to":"accessible","relation":"is_challenged_by","source":["hh28"],"meaning":"La población accesible revela una consecuencia que el agregado diluye."},
+    {"id":"extends","from":"aggregate","to":"identity","relation":"is_tested_under","source":["hh28"],"meaning":"La caída de identidad exige evidencia de continuidad y reparación."},
+    {"id":"supports","from":"evidence","to":"ordinary","relation":"supports","source":["movement2"],"meaning":"Las fuentes sostienen y limitan el reclamo ordinario."},
+    {"id":"authorizes","from":"accessible","to":"scope","relation":"constrains","source":["movement3"],"meaning":"Una condición no demostrada detiene la promesa accesible."},
+    {"id":"limits","from":"identity","to":"scope","relation":"limits","source":["movement3"],"meaning":"La recuperación con doble registro sólo autoriza exposición limitada."}
+  ]
+}

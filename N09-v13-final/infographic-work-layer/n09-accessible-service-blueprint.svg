@@ -1,0 +1,271 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100" role="img" aria-labelledby="title desc">
+  <title id="title">N09 · Mapa de recorrido accesible</title>
+  <desc id="desc">Blueprint de servicio y atlas de evidencia. Cuatro transiciones del recorrido muestran el paso desde una necesidad hasta un resultado o una reparación. La transición entre llegar al hotel y recibir una habitación compatible se amplía en tres planos: interacción visible, trabajo interno, y riesgo y recuperación. Ocho campos conectan propósito, condiciones, señal, acción, trabajo, evidencia, modo de falla y alternativa con reparación. Un riel registra tiempo, esfuerzo, asistencia y error, y una puerta de decisión permite continuar, modificar, limitar, investigar o retirar.</desc>
+
+  <defs>
+    <style>
+      text { font-family: Avenir, "Avenir Next", sans-serif; fill: #272824; }
+      .display { font-family: Didot, "Bodoni 72", serif; font-size: 56px; font-weight: 400; letter-spacing: -0.7px; }
+      .kicker { font-size: 28px; font-weight: 800; letter-spacing: 4px; }
+      .subtitle { font-size: 30px; font-weight: 400; fill: #5F615C; }
+      .section { font-size: 32px; font-weight: 800; letter-spacing: 0.2px; }
+      .group-label { font-size: 29px; font-weight: 800; letter-spacing: 1.3px; }
+      .node-label { font-size: 28px; font-weight: 700; }
+      .node-value { font-size: 28px; font-weight: 450; }
+      .micro { font-size: 28px; font-weight: 500; fill: #62645F; }
+      .inverse { fill: #F6F4EE; }
+      .volt { fill: #CFFF00; }
+      .journey { fill: none; stroke: #4F514C; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+      .journey-focus { fill: none; stroke: #CFFF00; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+      .dependency { fill: none; stroke: #7B7D77; stroke-width: 2.5; stroke-dasharray: 3 10; stroke-linecap: round; stroke-linejoin: round; }
+      .evidence-route { fill: none; stroke: #555752; stroke-width: 2.7; stroke-dasharray: 2 9; stroke-linecap: round; stroke-linejoin: round; }
+      .feedback { fill: none; stroke: #272824; stroke-width: 2.7; stroke-dasharray: 10 9; stroke-linecap: round; stroke-linejoin: round; }
+      .panel { fill: #FFFFFF; stroke: #6E706A; stroke-width: 1.8; }
+      .panel-soft { fill: #E5E5E1; stroke: #696B66; stroke-width: 1.8; }
+      .panel-mid { fill: #C9CAC5; stroke: #62645F; stroke-width: 1.8; }
+      .port { fill: #F6F4EE; stroke: #4E504B; stroke-width: 2; }
+      .port-volt { fill: #CFFF00; stroke: #343632; stroke-width: 2; }
+    </style>
+    <filter id="paper" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.74" numOctaves="2" seed="9" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0" result="gray"/>
+      <feComponentTransfer in="gray" result="fade"><feFuncA type="table" tableValues="0 0.025"/></feComponentTransfer>
+      <feBlend in="SourceGraphic" in2="fade" mode="multiply"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M1 1 L11 6 L1 11 Z" fill="#4F514C"/>
+    </marker>
+    <marker id="arrow-volt" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M1 1 L11 6 L1 11 Z" fill="#CFFF00" stroke="#343632" stroke-width="0.6"/>
+    </marker>
+    <marker id="arrow-dark" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M1 1 L11 6 L1 11 Z" fill="#272824"/>
+    </marker>
+  </defs>
+
+  <rect width="1800" height="1100" fill="#F6F4EE" filter="url(#paper)"/>
+  <rect x="42" y="40" width="1716" height="1020" rx="22" fill="none" stroke="#B5B6B0" stroke-width="1.5"/>
+
+  <!-- Encabezado editorial -->
+  <g id="header">
+    <path d="M80 78 H202 L192 92 H70 Z" fill="#CFFF00"/>
+    <text x="225" y="91" class="kicker">N09 · INSTRUMENTO DE DECISIÓN</text>
+    <text x="78" y="151" class="display">Mapa de recorrido accesible</text>
+    <text x="80" y="190" class="subtitle">La unidad mínima no es la pantalla: es una transición que debe sostener capacidad, evidencia y reparación.</text>
+    <line x1="80" y1="215" x2="1720" y2="215" stroke="#92938D" stroke-width="1.5"/>
+  </g>
+
+  <!-- Conectores: siempre detrás de los objetos y de las etiquetas -->
+  <g id="connectors" aria-hidden="true">
+    <!-- Cuatro transiciones del recorrido -->
+    <path id="e_journey_1" class="journey" d="M160 330 H333" marker-end="url(#arrow)"/>
+    <path id="e_journey_2" class="journey" d="M535 330 H708" marker-end="url(#arrow)"/>
+    <path id="e_journey_3" class="journey-focus" d="M915 330 H1118" marker-end="url(#arrow-volt)"/>
+    <path id="e_journey_4" class="journey" d="M1350 330 H1570" marker-end="url(#arrow)"/>
+
+    <!-- Ampliación de la tercera transición -->
+    <path id="e_focus" class="dependency" d="M660 438 C575 447 492 464 418 486" marker-end="url(#arrow-dark)"/>
+
+    <!-- Relaciones dentro del blueprint -->
+    <path id="e_conditions_signal" class="dependency" d="M840 540 H854" marker-end="url(#arrow-dark)"/>
+    <path id="e_action_work" class="journey" d="M1330 540 H1382 V620 H540 V628" marker-end="url(#arrow)"/>
+    <path id="e_work_evidence" class="evidence-route" d="M790 676 H808" marker-end="url(#arrow-dark)"/>
+    <path id="e_evidence_signal" class="evidence-route" d="M1330 674 H1382 V540 H1065" marker-end="url(#arrow-dark)"/>
+    <path id="e_evidence_failure" class="evidence-route" d="M810 676 H776 V740 H710 V794" marker-end="url(#arrow-dark)"/>
+    <path id="e_failure_alternative" class="journey" d="M710 812 H728" marker-end="url(#arrow)"/>
+
+    <!-- Carga distribuida y decisión -->
+    <path id="e_evidence_decision" class="evidence-route" d="M1330 674 H1408" marker-end="url(#arrow-dark)"/>
+    <path id="e_alternative_decision" class="journey" d="M1330 812 H1408" marker-end="url(#arrow)"/>
+    <path id="e_burden_decision" class="evidence-route" d="M1340 962 H1378 C1420 962 1468 928 1514 875" marker-end="url(#arrow-dark)"/>
+    <path id="e_decision_revision" class="feedback" d="M1672 470 H1740 V1006 H56 V540 H550" marker-end="url(#arrow-dark)"/>
+  </g>
+
+  <!-- Recorrido vivido: las parejas son transiciones explícitas, no una cadena genérica -->
+  <g id="journey" aria-label="Cuatro transiciones del recorrido vivido">
+    <text x="80" y="258" class="section">RECORRIDO VIVIDO</text>
+
+    <g id="transition-1">
+      <text x="245" y="302" text-anchor="middle" class="kicker">TRANSICIÓN 01</text>
+      <g id="j_need" aria-label="Necesito alojamiento">
+        <circle cx="145" cy="330" r="14" class="port"/>
+        <text x="145" y="377" text-anchor="middle" class="node-label"><tspan x="145">Necesito</tspan><tspan x="145" dy="31">alojamiento</tspan></text>
+      </g>
+      <g id="j_compare" aria-label="Puedo comparar">
+        <circle cx="350" cy="330" r="14" class="port"/>
+        <text x="350" y="377" text-anchor="middle" class="node-label"><tspan x="350">Puedo</tspan><tspan x="350" dy="31">comparar</tspan></text>
+      </g>
+    </g>
+
+    <line x1="430" y1="270" x2="430" y2="418" stroke="#C9CAC5" stroke-width="1.5"/>
+
+    <g id="transition-2">
+      <text x="620" y="302" text-anchor="middle" class="kicker">TRANSICIÓN 02</text>
+      <g id="j_choose" aria-label="Elijo una opción">
+        <circle cx="520" cy="330" r="14" class="port"/>
+        <text x="520" y="377" text-anchor="middle" class="node-label"><tspan x="520">Elijo una</tspan><tspan x="520" dy="31">opción</tspan></text>
+      </g>
+      <g id="j_understand" aria-label="Comprendo qué se promete">
+        <circle cx="725" cy="330" r="14" class="port"/>
+        <text x="725" y="377" text-anchor="middle" class="node-label"><tspan x="725">Comprendo qué</tspan><tspan x="725" dy="31">se promete</tspan></text>
+      </g>
+    </g>
+
+    <line x1="810" y1="270" x2="810" y2="418" stroke="#C9CAC5" stroke-width="1.5"/>
+
+    <g id="transition-3">
+      <text x="1015" y="302" text-anchor="middle" class="kicker">TRANSICIÓN 03</text>
+      <g id="j_arrive" aria-label="Llego al hotel">
+        <circle cx="900" cy="330" r="16" class="port-volt"/>
+        <text x="900" y="377" text-anchor="middle" class="node-label"><tspan x="900">Llego al</tspan><tspan x="900" dy="31">hotel</tspan></text>
+      </g>
+      <g id="j_receive" aria-label="Recibo una habitación compatible">
+        <circle cx="1135" cy="330" r="16" class="port-volt"/>
+        <text x="1135" y="377" text-anchor="middle" class="node-label"><tspan x="1135">Recibo una habitación</tspan><tspan x="1135" dy="31">compatible</tspan></text>
+      </g>
+    </g>
+
+    <line x1="1245" y1="270" x2="1245" y2="418" stroke="#C9CAC5" stroke-width="1.5"/>
+
+    <g id="transition-4">
+      <text x="1475" y="302" text-anchor="middle" class="kicker">TRANSICIÓN 04</text>
+      <g id="j_fail" aria-label="Algo falla">
+        <circle cx="1335" cy="330" r="14" fill="#272824" stroke="#272824" stroke-width="2"/>
+        <text x="1335" y="377" text-anchor="middle" class="node-label"><tspan x="1335">Algo</tspan><tspan x="1335" dy="31">falla</tspan></text>
+      </g>
+      <g id="j_repair" aria-label="Puedo obtener reparación">
+        <circle cx="1587" cy="330" r="14" class="port"/>
+        <text x="1587" y="377" text-anchor="middle" class="node-label"><tspan x="1587">Puedo obtener</tspan><tspan x="1587" dy="31">reparación</tspan></text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Blueprint ampliado en tres planos -->
+  <g id="service-blueprint" aria-label="Ocho campos de una transición HH-09">
+    <rect x="650" y="424" width="780" height="43" fill="#F6F4EE"/>
+    <text x="1040" y="456" text-anchor="middle" class="kicker">AMPLIACIÓN HH-09 · OCHO CAMPOS</text>
+
+    <!-- Plano visible -->
+    <path d="M270 470 H1325 L1360 490 V602 H305 L270 582 Z" fill="#ECECE8" stroke="#777973" stroke-width="1.8"/>
+    <path d="M270 582 L305 602 H1360 L1325 582 Z" fill="#C9CAC5" stroke="#777973" stroke-width="1.3"/>
+    <path d="M80 482 H246 L258 494 V592 H80 Z" fill="#FFFFFF" stroke="#777973" stroke-width="1.8"/>
+    <path d="M80 482 H96 V592 H80 Z" fill="#CFFF00"/>
+    <text x="112" y="523" class="group-label"><tspan x="112">PLANO</tspan><tspan x="112" dy="34">VISIBLE</tspan></text>
+
+    <g id="f_purpose" aria-label="Propósito: confirmar compatibilidad">
+      <rect x="290" y="486" width="245" height="106" class="panel"/>
+      <text x="310" y="521" class="node-label">01 · PROPÓSITO</text>
+      <text x="310" y="557" class="node-value"><tspan x="310">confirmar</tspan><tspan x="310" dy="31">compatibilidad</tspan></text>
+      <circle cx="522" cy="500" r="7" class="port-volt"/>
+    </g>
+    <g id="f_conditions" aria-label="Condiciones: movilidad, teclado y conectividad">
+      <path d="M550 486 H823 L840 503 V592 H550 Z" class="panel-soft"/>
+      <text x="570" y="521" class="node-label">02 · CONDICIONES</text>
+      <text x="570" y="557" class="node-value"><tspan x="570">movilidad · teclado</tspan><tspan x="570" dy="31">conectividad</tspan></text>
+      <circle cx="550" cy="540" r="7" class="port"/>
+      <circle cx="826" cy="500" r="7" class="port"/>
+    </g>
+    <g id="f_signal" aria-label="Señal: etiqueta adaptada">
+      <rect x="855" y="486" width="210" height="106" class="panel"/>
+      <text x="875" y="521" class="node-label">03 · SEÑAL</text>
+      <text x="875" y="557" class="node-value"><tspan x="875">etiqueta</tspan><tspan x="875" dy="31">“adaptada”</tspan></text>
+      <circle cx="1065" cy="540" r="7" class="port"/>
+      <circle cx="1051" cy="500" r="7" class="port"/>
+    </g>
+    <g id="f_action" aria-label="Acción: reservar y confirmar">
+      <path d="M1080 486 H1313 L1330 503 V592 H1080 Z" class="panel-soft"/>
+      <text x="1100" y="521" class="node-label">04 · ACCIÓN</text>
+      <text x="1100" y="557" class="node-value"><tspan x="1100">reservar</tspan><tspan x="1100" dy="31">y confirmar</tspan></text>
+      <circle cx="1330" cy="540" r="7" class="port"/>
+      <circle cx="1316" cy="500" r="7" class="port"/>
+    </g>
+
+    <!-- Plano interno -->
+    <path d="M270 612 H1325 L1360 632 V738 H305 L270 718 Z" fill="#DADBD6" stroke="#676964" stroke-width="1.8"/>
+    <path d="M270 718 L305 738 H1360 L1325 718 Z" fill="#B7B9B3" stroke="#676964" stroke-width="1.3"/>
+    <path d="M80 624 H246 L258 636 V728 H80 Z" fill="#E5E5E1" stroke="#6E706A" stroke-width="1.8"/>
+    <path d="M80 624 H96 V728 H80 Z" fill="#8A8C86"/>
+    <text x="112" y="666" class="group-label"><tspan x="112">TRABAJO</tspan><tspan x="112" dy="34">INTERNO</tspan></text>
+
+    <g id="f_work" aria-label="Trabajo: verificar atributos y disponibilidad">
+      <path d="M290 628 H772 L790 646 V722 H290 Z" class="panel"/>
+      <text x="314" y="667" class="node-label">05 · TRABAJO QUE SOSTIENE</text>
+      <text x="314" y="706" class="node-value">verificar atributos y disponibilidad</text>
+      <circle cx="774" cy="643" r="8" class="port"/>
+    </g>
+    <g id="f_evidence" aria-label="Evidencia: procedencia, vigencia y autoridad">
+      <path d="M810 628 H1312 L1330 646 V722 H810 Z" fill="#272824" stroke="#272824" stroke-width="1.8"/>
+      <text x="834" y="667" class="node-label inverse">06 · EVIDENCIA CRÍTICA</text>
+      <text x="834" y="706" class="node-value inverse">procedencia · vigencia · autoridad</text>
+      <circle cx="810" cy="676" r="8" class="port-volt"/>
+      <circle cx="1312" cy="643" r="8" class="port-volt"/>
+    </g>
+
+    <!-- Plano de riesgo y recuperación -->
+    <path d="M270 742 H1325 L1360 762 V898 H305 L270 878 Z" fill="#C9CAC5" stroke="#5F615C" stroke-width="1.8"/>
+    <path d="M270 878 L305 898 H1360 L1325 878 Z" fill="#A7A9A3" stroke="#5F615C" stroke-width="1.3"/>
+    <path d="M80 756 H246 L258 768 V888 H80 Z" fill="#272824" stroke="#272824" stroke-width="1.8"/>
+    <path d="M80 756 H96 V888 H80 Z" fill="#CFFF00"/>
+    <text x="112" y="805" class="group-label inverse"><tspan x="112">FALLA Y</tspan><tspan x="112" dy="34">SALIDA</tspan></text>
+
+    <g id="f_failure" aria-label="Modo de falla: la etiqueta produce una promesa falsa">
+      <path d="M290 756 H692 L710 774 V878 H290 Z" fill="#272824" stroke="#272824" stroke-width="1.8"/>
+      <text x="314" y="794" class="node-label inverse">07 · MODO DE FALLA</text>
+      <text x="314" y="831" class="node-value inverse"><tspan x="314">la etiqueta produce</tspan><tspan x="314" dy="31">una promesa falsa</tspan></text>
+      <circle cx="710" cy="794" r="8" class="port-volt"/>
+      <circle cx="710" cy="812" r="8" class="port-volt"/>
+      <circle cx="692" cy="771" r="8" class="port-volt"/>
+    </g>
+    <g id="f_alternative" aria-label="Alternativa y reparación: verificación, plazo y respuesta trazable">
+      <path d="M730 756 H1312 L1330 774 V878 H730 Z" class="panel"/>
+      <path d="M730 756 H745 V878 H730 Z" fill="#CFFF00"/>
+      <text x="770" y="805" class="node-label">08 · ALTERNATIVA Y REPARACIÓN</text>
+      <text x="770" y="844" class="node-value">verificación · plazo · respuesta trazable</text>
+      <circle cx="1312" cy="771" r="8" class="port-volt"/>
+    </g>
+  </g>
+
+  <!-- Puerta de decisión -->
+  <g id="d_decision" aria-label="Continuar, modificar, limitar, investigar o retirar">
+    <path d="M1410 470 H1684 L1722 508 V838 L1684 876 H1410 Z" fill="#272824" stroke="#272824" stroke-width="2"/>
+    <path d="M1410 470 H1542 L1530 488 H1410 Z" fill="#CFFF00"/>
+    <text x="1440" y="530" class="kicker inverse">DECISIÓN</text>
+    <text x="1440" y="568" class="micro inverse">La evidencia habilita:</text>
+    <g transform="translate(1442 600)">
+      <circle cx="9" cy="0" r="8" class="port-volt"/><text x="34" y="9" class="node-label inverse">Continuar</text>
+      <circle cx="9" cy="54" r="8" class="port-volt"/><text x="34" y="63" class="node-label inverse">Modificar</text>
+      <circle cx="9" cy="108" r="8" class="port-volt"/><text x="34" y="117" class="node-label inverse">Limitar</text>
+      <circle cx="9" cy="162" r="8" class="port-volt"/><text x="34" y="171" class="node-label inverse">Investigar</text>
+      <circle cx="9" cy="216" r="8" class="port-volt"/><text x="34" y="225" class="node-label inverse">Retirar</text>
+    </g>
+    <circle cx="1410" cy="674" r="9" class="port-volt"/>
+    <circle cx="1410" cy="812" r="9" class="port-volt"/>
+    <circle cx="1514" cy="876" r="9" class="port-volt"/>
+    <circle cx="1672" cy="470" r="9" class="port-volt"/>
+  </g>
+
+  <!-- Riel distributivo -->
+  <g id="m_burden" aria-label="Tiempo, esfuerzo, asistencia y error">
+    <path d="M80 920 H1315 L1340 945 V1000 H105 L80 975 Z" fill="#FFFFFF" stroke="#6E706A" stroke-width="1.8"/>
+    <path d="M80 920 H412 L400 940 H80 Z" fill="#CFFF00"/>
+    <text x="108" y="969" class="group-label">CARGA DISTRIBUIDA</text>
+    <g transform="translate(520 960)">
+      <circle cx="0" cy="0" r="12" class="port"/><text x="24" y="10" class="node-label">Tiempo</text>
+      <circle cx="198" cy="0" r="12" class="port"/><text x="222" y="10" class="node-label">Esfuerzo</text>
+      <circle cx="426" cy="0" r="12" class="port"/><text x="450" y="10" class="node-label">Asistencia</text>
+      <circle cx="690" cy="0" r="12" class="port"/><text x="714" y="10" class="node-label">Error</text>
+    </g>
+  </g>
+
+  <!-- Leyenda y tesis visual -->
+  <g id="footer-legend">
+    <line x1="80" y1="1020" x2="1720" y2="1020" stroke="#92938D" stroke-width="1.4"/>
+    <path class="journey" d="M82 1040 H132" marker-end="url(#arrow)"/>
+    <text x="148" y="1049" class="micro">transición</text>
+    <path class="evidence-route" d="M334 1040 H394" marker-end="url(#arrow-dark)"/>
+    <text x="410" y="1049" class="micro">evidencia</text>
+    <path class="feedback" d="M590 1040 H650" marker-end="url(#arrow-dark)"/>
+    <text x="666" y="1049" class="micro">revisión</text>
+    <text x="1718" y="1049" text-anchor="end" class="node-label">La pantalla puede funcionar y el recorrido fracasar.</text>
+  </g>
+</svg>

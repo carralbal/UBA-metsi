@@ -1,0 +1,3 @@
+# Texto alternativo
+
+El mapa contrasta dos mediciones del check-in de Hotel Horizonte: cuatro minutos de atención visibles en el mostrador y veintisiete minutos promedio desde la llegada hasta el acceso a la habitación. Una línea sigue una instancia completa. Primero aparece una cola de habitaciones que esperan inspección. Luego un handoff cambia la responsabilidad de Housekeeping a Recepción. Una decisión de identidad separa el camino ordinario de una variante no conciliada que requiere autoridad y una vía de devolución. El recorrido continúa con asignación y acceso vigentes. El cierre ocurre cuando la llave abre o existe una reparación visible. Una línea inferior reúne trabajo, espera y retrabajo entre el evento inicial y el cierre verificable.

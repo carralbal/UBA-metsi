@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100" role="img" aria-labelledby="title desc">
+  <title id="title">N12, anatomía de una transición verificable</title>
+  <desc id="desc">Un comando parte de un estado previo y entra en un núcleo de transición. La autoridad y las reglas determinan si se acepta, rechaza o escala. La evidencia sostiene el resultado. A la derecha, el evento conserva lo ocurrido y el estado muestra qué se considera vigente. Una excepción activa una reparación que vuelve sobre la transición sin borrar la historia.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#6F716E"/>
+    </marker>
+    <style>
+      .sans{font-family:Inter,Arial,Helvetica,sans-serif;fill:#202020}
+      .serif{font-family:Georgia,'Times New Roman',serif;fill:#202020}
+      .eyebrow{font-size:25px;font-weight:700;letter-spacing:7px}
+      .title{font-size:58px;letter-spacing:-1.5px}
+      .subtitle{font-size:27px;fill:#5F615E}
+      .section{font-size:24px;font-weight:700;letter-spacing:4px}
+      .label{font-size:29px;font-weight:700}
+      .body{font-size:23px;fill:#4F514E}
+      .small{font-size:20px;fill:#666864}
+      .number{font-size:21px;font-weight:700;letter-spacing:3px}
+      .rule{stroke:#A9ABA7;stroke-width:2}
+      .outline{fill:none;stroke:#777A76;stroke-width:2.2}
+      .route{fill:none;stroke:#6F716E;stroke-width:3;marker-end:url(#arrow)}
+      .return{fill:none;stroke:#8A8C88;stroke-width:2.5;stroke-dasharray:7 10;marker-end:url(#arrow)}
+    </style>
+  </defs>
+
+  <rect width="1800" height="1100" fill="#F7F7F4"/>
+  <rect x="36" y="36" width="1728" height="1028" rx="20" fill="none" stroke="#C6C8C4" stroke-width="2"/>
+
+  <path d="M72 74 H210 L196 94 H58 Z" fill="#CFFF00"/>
+  <text x="238" y="94" class="sans eyebrow">N12 · MAPA DE TRANSICIÓN</text>
+  <text x="72" y="170" class="serif title">Lo pedido, lo ocurrido y lo vigente no son lo mismo</text>
+  <text x="74" y="214" class="sans subtitle">Una transición defendible conecta intención, autoridad, evidencia, resultado y reparación.</text>
+  <line x1="72" y1="248" x2="1728" y2="248" class="rule"/>
+
+  <text x="84" y="306" class="sans section">PUNTO DE PARTIDA</text>
+  <g aria-label="Estado previo">
+    <path d="M84 340 H430 L454 364 V488 H84 Z" fill="#E4E6E3" stroke="#777A76" stroke-width="2.2"/>
+    <text x="112" y="382" class="sans number">01</text>
+    <text x="178" y="385" class="sans label">ESTADO PREVIO</text>
+    <text x="112" y="430" class="sans body">qué se considera vigente</text>
+    <text x="112" y="462" class="sans small">bajo reglas y hasta cierto momento</text>
+  </g>
+  <g aria-label="Comando">
+    <path d="M84 536 H430 L454 560 V712 H84 Z" fill="#FFFFFF" stroke="#777A76" stroke-width="2.2"/>
+    <rect x="84" y="536" width="10" height="176" fill="#CFFF00"/>
+    <text x="112" y="578" class="sans number">02</text>
+    <text x="178" y="581" class="sans label">COMANDO</text>
+    <text x="112" y="626" class="sans body">intención que puede aceptarse,</text>
+    <text x="112" y="658" class="sans body">rechazarse o quedar pendiente</text>
+    <circle cx="454" cy="622" r="10" fill="#CFFF00" stroke="#202020" stroke-width="2"/>
+  </g>
+
+  <path d="M470 622 H548" class="route"/>
+
+  <text x="566" y="306" class="sans section">NÚCLEO DE TRANSICIÓN</text>
+  <g aria-label="Núcleo de transición">
+    <path d="M566 340 H1178 L1210 372 V764 H566 Z" fill="#FFFFFF" stroke="#777A76" stroke-width="2.2"/>
+    <path d="M1178 340 V372 H1210" fill="none" stroke="#777A76" stroke-width="2.2"/>
+
+    <g aria-label="Autoridad">
+      <path d="M606 378 H1168 L1188 398 V472 H606 Z" fill="#F1F2EF" stroke="#9A9C98" stroke-width="1.8"/>
+      <text x="632" y="412" class="sans number">03</text>
+      <text x="696" y="415" class="sans label">AUTORIDAD</text>
+      <text x="696" y="451" class="sans body">quién puede aceptar y asumir consecuencias</text>
+    </g>
+
+    <g aria-label="Reglas y resultados">
+      <path d="M660 510 H1114 L1142 538 V626 L1114 654 H660 L632 626 V538 Z" fill="#E4E6E3" stroke="#777A76" stroke-width="2.2"/>
+      <path d="M660 510 H820 L806 528 H646 Z" fill="#CFFF00"/>
+      <text x="704" y="560" class="sans label">¿QUÉ RESULTADO</text>
+      <text x="704" y="598" class="sans label">RECONOCE LA REGLA?</text>
+      <text x="704" y="632" class="sans small">aceptar · rechazar · esperar · escalar</text>
+    </g>
+
+    <g aria-label="Evidencia y tiempo">
+      <line x1="606" y1="676" x2="1170" y2="676" class="rule"/>
+      <text x="620" y="708" class="sans number">04 · EVIDENCIA Y TIEMPO</text>
+      <text x="620" y="740" class="sans small">qué sostiene el resultado y cuándo estuvo disponible</text>
+      <circle cx="1210" cy="622" r="10" fill="#CFFF00" stroke="#202020" stroke-width="2"/>
+    </g>
+  </g>
+
+  <path d="M1230 622 H1288" class="route"/>
+  <text x="1296" y="306" class="sans section">DOS REPRESENTACIONES</text>
+  <g aria-label="Evento y estado resultante">
+    <path d="M1296 340 H1704 L1728 364 V508 H1296 Z" fill="#F1F2EF" stroke="#777A76" stroke-width="2.2"/>
+    <text x="1324" y="382" class="sans number">05</text>
+    <text x="1390" y="385" class="sans label">EVENTO</text>
+    <text x="1324" y="430" class="sans body">afirma qué ocurrió</text>
+    <text x="1324" y="462" class="sans small">y conserva la historia del resultado</text>
+
+    <path d="M1296 544 H1704 L1728 568 V712 H1296 Z" fill="#FFFFFF" stroke="#777A76" stroke-width="2.2"/>
+    <text x="1324" y="586" class="sans number">06</text>
+    <text x="1390" y="589" class="sans label">ESTADO</text>
+    <text x="1324" y="634" class="sans body">muestra qué se considera vigente</text>
+    <text x="1324" y="666" class="sans small">para una audiencia y un propósito</text>
+    <circle cx="1728" cy="624" r="10" fill="#CFFF00" stroke="#202020" stroke-width="2"/>
+  </g>
+
+  <g aria-label="Aplicación Hotel Horizonte">
+    <line x1="72" y1="812" x2="1728" y2="812" class="rule"/>
+    <text x="88" y="858" class="sans number">HH-12</text>
+    <text x="208" y="858" class="sans label">“Limpieza terminada” no equivale a “habitación entregable”.</text>
+    <text x="208" y="896" class="sans body">La segunda exige inspección, asignación, acceso, autoridad y evidencia vigentes.</text>
+  </g>
+
+  <g aria-label="Excepción y reparación">
+    <path d="M1728 636 V984 H1160 V776" class="return"/>
+    <circle cx="1728" cy="984" r="7" fill="#CFFF00" stroke="#202020" stroke-width="2"/>
+    <text x="1010" y="1022" class="sans small">EXCEPCIÓN · REPARAR SIN BORRAR LA HISTORIA</text>
+    <text x="1670" y="1024" class="sans small" text-anchor="end">N12 · METSI</text>
+  </g>
+</svg>

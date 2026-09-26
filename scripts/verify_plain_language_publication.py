@@ -4,12 +4,13 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 import hashlib
 import json
+import os
 from pathlib import Path
 import subprocess
 import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
-EDITION = ROOT / 'pedagogy/plain-language-edition'
+EDITION = ROOT / os.environ.get('METSI_REVIEW_DIR', 'pedagogy/plain-language-edition')
 BASE = 'https://carralbal.github.io/UBA-metsi/'
 
 def save(path, data):
@@ -39,7 +40,12 @@ def main():
     with urllib.request.urlopen(BASE + '?v=' + release['revision'], timeout=60) as response:
         homepage = response.read().decode()
     for item in release['documents']:
-        if item['code'] != 'N25': assert item['public'] in homepage, item['code']
+        if item['code'] != 'N25' or os.environ.get('METSI_REVIEW_DIR'):
+            assert item['public'] in homepage, item['code']
+        if 'title' in item:
+            import html
+            assert html.escape(item['title']) in homepage, item['code']
+            assert next(r for r in catalogue['readings'] if r['code']==item['code'])['title'] == item['title']
     checked_at = datetime.now(timezone.utc).isoformat()
     receipt = dict(status='PASS', revision=release['revision'], checked_at=checked_at,
                    deployed_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
@@ -52,9 +58,10 @@ def main():
         item['published'] = True
         save(ROOT / item['package'] / 'edition-manifest.json', item)
     save(EDITION / 'release-plan.json', plan)
-    inventory = json.loads((EDITION / 'inventory.json').read_text())
-    for item in inventory['documents']: item['this_edition_published_and_verified'] = True
-    save(EDITION / 'inventory.json', inventory)
+    if (EDITION / 'inventory.json').exists():
+        inventory = json.loads((EDITION / 'inventory.json').read_text())
+        for item in inventory['documents']: item['this_edition_published_and_verified'] = True
+        save(EDITION / 'inventory.json', inventory)
     print('PASS: 36 PDFs, catalogue and home verified.', flush=True)
 
 if __name__ == '__main__': main()

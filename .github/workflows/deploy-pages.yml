@@ -31,7 +31,8 @@ jobs:
           cp site/index.html site/metsi.css site/metsi.js site/favicon.svg site/og.png site/course-manifest.json public/
           cp -R site/covers site/pdf public/
           test "$(find public/pdf -maxdepth 1 -name '*.pdf' | wc -l | tr -d ' ')" = "11"
-          for pdf in public/pdf/*.pdf; do
+          test "$(find public/pdf/publicados -maxdepth 1 -name '*.pdf' | wc -l | tr -d ' ')" = "26"
+          for pdf in public/pdf/*.pdf public/pdf/publicados/*.pdf; do
             test "$(head -c 4 "$pdf")" = "%PDF"
             test "$(wc -c < "$pdf")" -gt 1000000
           done

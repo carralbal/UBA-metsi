@@ -1,0 +1,25 @@
+{
+  "title":"Una estrategia combina lógicas, no etiquetas",
+  "claim":"Una intervención situada asigna lógicas predictiva, iterativa, incremental, adaptativa o experimental según conocimiento, costo del error, reversibilidad y evidencia, y aumenta compromiso mediante una puerta explícita.",
+  "source_sections":[
+    {"id":"thesis","heading":"Tesis","summary":"N17 separa las lógicas por el modo en que producen conocimiento y compromiso."},
+    {"id":"hh17","heading":"Hotel Horizonte: cinco lógicas para una misma intervención","summary":"Contratos, estados, pisos, secuencia y confirmación anticipada reciben lógicas diferentes con evidencias y salidas propias."},
+    {"id":"movement1","heading":"Movimiento 1 · Separar lógicas antes de combinarlas","summary":"La incertidumbre, el costo del error y la reversibilidad anteceden a la etiqueta metodológica."},
+    {"id":"movement2","heading":"Movimiento 2 · Diseñar combinaciones gobernables","summary":"Un híbrido es una arquitectura de decisiones y no una suma de ceremonias."}
+  ],
+  "nodes":[
+    {"id":"frame","label":"¿Qué se sabe? ¿Qué cuesta errar? ¿Qué puede revertirse?","role":"constraint","source":["movement1"],"purpose":"Encuadrar la decisión antes de elegir una lógica."},
+    {"id":"predictive","label":"Predictiva: contratos, migración y ventana","role":"decision","source":["hh17"],"purpose":"Anticipar compromisos costosos de cambiar tarde."},
+    {"id":"iterative","label":"Iterativa: regla compartida de estados","role":"evidence","source":["hh17"],"purpose":"Refinar forma y comprensión con versiones comparables."},
+    {"id":"incremental","label":"Incremental: capacidad completa en dos pisos","role":"outcome","source":["hh17"],"purpose":"Ampliar población sin dividir solamente componentes."},
+    {"id":"adaptive","label":"Adaptativa: secuencia según señales críticas","role":"change","source":["hh17"],"purpose":"Cambiar curso con memoria, límites y autoridad."},
+    {"id":"experimental","label":"Experimental: confirmación anticipada protegida","role":"evidence","source":["hh17"],"purpose":"Distinguir hipótesis con interrupción y reparación."},
+    {"id":"gate","label":"Semántica estable, reparación suficiente y autoridad operable","role":"authority","source":["hh17","movement2"],"purpose":"Decidir expandir, observar o interrumpir."},
+    {"id":"record","label":"Propósito, evidencia, autoridad y salida","role":"governance","source":["thesis"],"purpose":"Conservar trazabilidad entre lógicas distintas."}
+  ],
+  "edges":[
+    {"id":"frame_portfolio","from":"frame","to":"predictive","relation":"decision","source":["movement1"],"meaning":"El encuadre justifica la lógica asignada."},
+    {"id":"portfolio_gate","from":"experimental","to":"gate","relation":"decision","source":["hh17"],"meaning":"La evidencia de cada tramo alimenta la puerta de compromiso."},
+    {"id":"gate_record","from":"gate","to":"record","relation":"governance","source":["thesis","movement2"],"meaning":"La salida queda registrada con propósito, evidencia y autoridad."}
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "title": "La tesis permanece; el recorrido cambia con la decisión",
+  "claim": "Una comunicación profesional adapta el recorrido a la decisión de cada audiencia sin alterar la afirmación, la evidencia, la garantía, el límite, la objeción ni la condición de revisión.",
+  "source_sections": [
+    {"id":"thesis","heading":"Tesis","summary":"La fidelidad consiste en conservar evidencia, límites y revisión mientras cambia el recorrido para cada audiencia."},
+    {"id":"audience","heading":"Audiencia y decisión","summary":"Una audiencia se define por la decisión, el conocimiento, la responsabilidad y la exposición que enfrenta."},
+    {"id":"argument","heading":"Afirmación, evidencia y garantía","summary":"Una defensa conserva el puente entre afirmación, evidencia, garantía, calificador, objeción y revisión."},
+    {"id":"objection","heading":"Objeción","summary":"Una objeción fundada reabre el elemento preciso del argumento que necesita evidencia o una decisión explícita."},
+    {"id":"transfer","heading":"Transferencia por criterios y comprobación por reexplicación","summary":"La transferencia se demuestra cuando otra persona reconstruye el criterio y actúa responsablemente en un caso nuevo."}
+  ],
+  "nodes": [
+    {"id":"stable_thesis","label":"Decisión acotada","role":"shared_claim","source":["thesis","argument"],"purpose":"Mantener una misma afirmación discutible entre audiencias."},
+    {"id":"argument_spine","label":"Columna vertebral argumental","role":"integrity_guard","source":["argument"],"purpose":"Conservar afirmación, evidencia, garantía, límite, objeción y revisión."},
+    {"id":"direction","label":"Dirección","role":"audience_route","source":["audience"],"purpose":"Decidir exposición y recursos."},
+    {"id":"technical","label":"Revisión técnica","role":"audience_route","source":["audience"],"purpose":"Decidir reproducibilidad."},
+    {"id":"operations","label":"Operaciones","role":"audience_route","source":["audience"],"purpose":"Decidir si puede actuar, detener y reparar."},
+    {"id":"commercial","label":"Comercial","role":"audience_route","source":["audience"],"purpose":"Decidir una promesa sostenible."},
+    {"id":"affected","label":"Personas afectadas","role":"audience_route","source":["audience"],"purpose":"Poder aceptar, objetar o solicitar revisión."},
+    {"id":"objection_gate","label":"Objeción fundada","role":"argument_test","source":["objection"],"purpose":"Reabrir el enlace exacto que se cuestiona sin borrar la pregunta."},
+    {"id":"new_case","label":"Caso distinto","role":"transfer_test","source":["transfer"],"purpose":"Forzar una diferencia de población, regla o autoridad."},
+    {"id":"transferred","label":"Capacidad transferida","role":"test_outcome","source":["transfer"],"purpose":"Demostrar que el equipo puede reexplicar, actuar, detener y revisar sin copiar."}
+  ],
+  "edges": [
+    {"id":"preserves","from":"stable_thesis","to":"argument_spine","relation":"preserves","source":["thesis","argument"],"meaning":"Cada versión conserva la misma estructura verificable."},
+    {"id":"routes_direction","from":"argument_spine","to":"direction","relation":"adapts_to_decision","source":["audience"],"meaning":"La forma ejecutiva prioriza valor, riesgo y compromiso."},
+    {"id":"routes_technical","from":"argument_spine","to":"technical","relation":"adapts_to_decision","source":["audience"],"meaning":"La defensa técnica permite reproducir y cuestionar."},
+    {"id":"routes_operations","from":"argument_spine","to":"operations","relation":"adapts_to_decision","source":["audience"],"meaning":"La transferencia operativa habilita observar, actuar y reparar."},
+    {"id":"routes_commercial","from":"argument_spine","to":"commercial","relation":"adapts_to_decision","source":["audience"],"meaning":"La comunicación comercial conserva población, límite y consecuencia."},
+    {"id":"routes_affected","from":"argument_spine","to":"affected","relation":"adapts_to_decision","source":["audience"],"meaning":"La explicación permite comprender, objetar y obtener revisión."},
+    {"id":"reopens","from":"objection_gate","to":"argument_spine","relation":"reopens","source":["objection"],"meaning":"La objeción identifica qué afirmación, evidencia, garantía, límite o autoridad necesita revisión."},
+    {"id":"tests","from":"new_case","to":"transferred","relation":"tests_transfer","source":["transfer"],"meaning":"Un caso nuevo distingue criterio apropiado de solución copiada."}
+  ]
+}

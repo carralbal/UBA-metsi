@@ -1,0 +1,100 @@
+/* Revised prose: measured typography and natural page flow, not fixed text boxes. */
+@page content { size:A4; margin:16mm 18mm 19mm;
+  @bottom-left { content:counter(page, decimal-leading-zero); font:8pt Arial; color:#666; }
+  @bottom-right { content:"Diego Carralbal, 2026 · linkedin.com/in/carralbal"; font:8pt Arial; color:#555; }
+}
+@page fullbleed { size:A4; margin:0; }
+@page edition-map { size:A4; margin:17mm 18mm 20mm; }
+body#plain-edition .reading { max-width:174mm; width:100%; margin:0 auto; }
+body#plain-edition .reading-section {
+  page:content!important; display:block!important; position:static!important;
+  width:auto!important; min-width:0!important; height:auto!important; min-height:0!important; max-height:none!important;
+  margin:0 0 8mm!important; padding:5mm 0 0!important; border:0!important;
+  border-top:.25mm solid #acafaa!important; border-radius:0!important;
+  background:none!important; color:#202220!important; overflow:visible!important;
+  break-before:auto!important; break-after:auto!important; break-inside:auto!important;
+}
+body#plain-edition .reading-section .section-body {
+  display:block!important; height:auto!important; min-height:0!important; max-height:none!important;
+  width:auto!important; margin:0!important; padding:0!important; overflow:visible!important;
+  columns:2!important; column-gap:8mm!important; column-rule:.2mm solid #d4d6d1!important;
+  column-fill:balance!important; break-inside:auto!important;
+}
+body#plain-edition .reading-section :is(p,li,dd,td) {
+  font:400 11.5pt/1.43 Georgia,serif!important; color:inherit!important;
+  position:static!important; height:auto!important; min-height:0!important; max-height:none!important;
+  margin-top:0!important; margin-bottom:3.5mm!important; padding:0!important;
+  break-inside:auto!important; widows:3; orphans:3; overflow-wrap:break-word;
+}
+body#plain-edition .reading-section h2 {
+  font:400 29pt/1.08 Didot,Georgia,serif!important; letter-spacing:-.025em!important;
+  max-width:100%!important; width:auto!important; margin:3mm 0 6mm!important;
+  color:#202220!important; position:static!important; transform:none!important;
+}
+body#plain-edition .reading-section h3 {
+  font:700 13pt/1.2 Georgia,serif!important; margin:5mm 0 3mm!important; color:inherit!important;
+  break-after:avoid-page!important; break-inside:avoid!important;
+}
+body#plain-edition .reading-section .section-heading { display:block!important; position:static!important; margin:0!important; padding:0!important; break-after:avoid!important; }
+body#plain-edition .reading-section .editorial-icon {display:none!important;}
+body#plain-edition .reading-section .section-marker { margin:0!important; }
+body#plain-edition .section-marker>span {color:#202220!important; background:#f8f8f4!important; border-color:#202220!important;}
+body#plain-edition .references .section-marker>span {width:auto!important;min-width:0!important;height:auto!important;flex:0 0 auto!important;border:0!important;border-radius:0!important;background:none!important;white-space:nowrap!important;font:700 8pt/1.3 Arial!important;letter-spacing:.08em!important;}
+body#plain-edition .reading-section :is(.subsection-unit,.editorial-close,.error-card,.hotel-continuation) {display:block!important; break-inside:auto!important; height:auto!important; min-height:0!important; margin:0!important; padding:0!important; background:none!important;}
+body#plain-edition :is(.consequences-limits-page,.handoff-synthesis-page,.pills-glossary-page) {display:block!important; page:content!important; height:auto!important; min-height:0!important; break-inside:auto!important; break-before:auto!important;}
+body#plain-edition .reading-section :is(ol,ul,dl) {display:block!important; columns:auto!important; grid-template-rows:none!important; grid-auto-flow:row!important; height:auto!important;}
+body#plain-edition .reading-section .section-lead {columns:auto!important; font-size:13pt!important; margin-bottom:5mm!important;}
+body#plain-edition .edition-question {break-before:page!important; padding:12mm 0!important; margin-bottom:10mm!important;}
+body#plain-edition .edition-question .section-body {columns:auto!important;}
+body#plain-edition .edition-question p {font:400 29pt/1.18 Didot,Georgia,serif!important;}
+body#plain-edition .reading-section :is(.photo-band,.photo-diptych) {column-span:all; height:auto!important; max-height:none!important; margin:6mm 0!important; break-inside:avoid!important;}
+body#plain-edition .reading-section .photo-band img {height:65mm!important; width:100%!important; object-fit:cover!important;}
+body#plain-edition .reading-section figcaption {font:9pt/1.3 Arial!important; margin:2mm 0 4mm!important;}
+body#plain-edition .hotel-voices-compact {break-before:page!important; break-after:page!important; break-inside:avoid!important; padding:0!important; margin:0!important; background:#eff0eb!important;}
+body#plain-edition .hotel-voices-grid {display:grid!important; grid-template-columns:1fr 1fr!important; gap:5mm!important;}
+body#plain-edition .hotel-voices-grid article {display:grid!important; grid-template-columns:25mm 1fr!important; min-height:56mm!important; gap:3mm!important; padding:2mm!important;}
+body#plain-edition .hotel-voices-grid :is(img,.hotel-portrait) {width:25mm!important; height:37mm!important; object-fit:cover!important;}
+body#plain-edition .hotel-voices-grid h3 {font:17pt/1.1 Didot,serif!important; margin:1mm 0 2mm!important;}
+body#plain-edition .hotel-voices-grid p {font:9pt/1.35 Arial!important;}
+body#plain-edition .hotel-voices-grid span {font:700 7pt/1.3 Arial!important;}
+body#plain-edition .hotel-voices-compact header p {font:24pt/1.1 Didot,serif!important; margin:4mm 0 8mm!important;}
+body#plain-edition .edition-map {page:edition-map!important; display:block!important; width:173mm!important; height:234mm!important; margin:0 auto!important; padding:0!important; column-span:all!important; break-before:page!important; break-after:page!important; break-inside:avoid!important; border:0!important; background:#f7f6f2!important;}
+body#plain-edition .edition-map img {display:block!important; width:173mm!important; height:233.55mm!important; max-height:none!important; object-fit:contain!important;}
+body#plain-edition .edition-map figcaption {display:none!important;}
+body#plain-edition .native-flow {height:auto!important; min-height:232mm!important; background:#f7f6f2!important; padding:6mm!important; font-family:Arial,sans-serif;}
+body#plain-edition .native-flow header {border-top:.5mm solid #202220;padding-top:4mm;}
+body#plain-edition .native-flow header>span {font:700 9pt/1.2 Arial;letter-spacing:.12em;}
+body#plain-edition .native-flow h2 {font:400 27pt/1.1 Didot,serif!important;margin:5mm 0 3mm!important;}
+body#plain-edition .native-flow h3 {font:700 13.5pt/1.2 Arial!important;margin:0 0 2mm!important;}
+body#plain-edition .native-flow p {font:400 11.5pt/1.4 Arial!important;margin:0!important;}
+body#plain-edition .native-flow ol {list-style:none;display:block!important;columns:auto!important;padding:0!important;margin:5mm 0!important;}
+body#plain-edition .native-flow li {display:grid!important;grid-template-columns:13mm 1fr;gap:5mm;padding:3.5mm 0!important;margin:0!important;border-top:.2mm solid #ccc;break-inside:avoid!important;}
+body#plain-edition .native-flow li>b {font:700 12pt/1 Arial;align-self:start;padding:3mm 1mm;text-align:center;border:1px solid #202220;border-radius:50%;}
+body#plain-edition .native-flow li:first-child>b {background:#cfff00;}
+body#plain-edition .native-flow .evidence-criteria {border-left:1.5mm solid #cfff00;background:#e5e6e0;padding:4mm;margin:5mm 0;}
+body#plain-edition .native-flow footer {border-top:.4mm solid #202220;padding-top:4mm;}
+body#plain-edition .contents-page {height:auto!important; min-height:0!important; page:content!important; break-before:page!important; break-after:page!important; padding:0!important; width:174mm!important;}
+body#plain-edition .contents-page .contents-layout {display:block!important; height:auto!important;}
+body#plain-edition .contents-page figure {display:none!important;}
+body#plain-edition .contents-page ol {columns:2!important; column-gap:9mm!important; height:auto!important; max-height:none!important;}
+body#plain-edition .contents-page li {font:9.2pt/1.25 Arial!important; min-height:0!important; padding:2.1mm 1mm!important; margin:0 0 1mm!important; break-inside:avoid!important;}
+body#plain-edition .contents-page .contents-sinnum-note {position:static!important; margin-top:6mm!important;}
+body#plain-edition .collection-cover {page:fullbleed!important; width:210mm!important; height:297mm!important; margin:0!important; break-after:page!important;}
+body#plain-edition .collection-cover h1 {font-size:32pt!important; line-height:1.03!important;}
+body#plain-edition .collection-cover .cover-title {left:18mm!important; right:18mm!important; bottom:22mm!important; width:174mm!important; max-width:174mm!important;}
+body#plain-edition .collection-cover .cover-title h1 {max-width:160mm!important;}
+body#plain-edition .collection-cover .cover-title>span {font:8pt/1.4 Arial!important;}
+body#plain-edition .collection-cover .cover-thesis {top:132mm!important; bottom:auto!important; left:auto!important; right:18mm!important; width:64mm!important; max-width:64mm!important;}
+body#plain-edition .collection-cover .cover-thesis p {font:400 15pt/1.12 Didot,Georgia,serif!important;}
+body#plain-edition .collection-cover .cover-shade {background:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.3) 35%,rgba(0,0,0,.6) 65%,rgba(0,0,0,.7))!important;}
+body#plain-edition .full-bleed {page:fullbleed!important; width:210mm!important; height:297mm!important; margin:0!important; left:auto!important; break-before:page!important; break-after:page!important;}
+body#plain-edition .full-bleed>img {position:absolute!important; inset:0!important; width:100%!important; height:100%!important; object-fit:cover!important;}
+@media screen {body.plain-edition {max-width:210mm;margin:auto;} .reading {padding:16mm 0;} }
+
+body#plain-edition .cover-academic-subtitle{font:400 12pt/1.4 Arial,sans-serif!important;color:#fff!important;max-width:155mm!important;margin:4mm 0 0!important;}
+
+body#plain-edition .reading-section table[data-worked]{table-layout:fixed;width:100%;column-span:all;break-inside:avoid;} body#plain-edition .reading-section table[data-worked] :is(th,td){padding:2mm!important;font-size:10.5pt!important;line-height:1.35!important;vertical-align:top;overflow-wrap:anywhere;} body#plain-edition table[data-worked="sequence"] :is(th,td):first-child{width:8%!important;}
+
+body#plain-edition .thesis-standard{break-before:page!important;}
+
+body#plain-edition .thesis-standard p{margin-bottom:2mm!important;line-height:1.38!important;}

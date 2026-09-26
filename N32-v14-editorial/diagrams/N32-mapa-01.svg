@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600" role="img" aria-labelledby="title desc">
+  <title id="title">N32, el permiso se asigna a tareas y no al promedio</title>
+  <desc id="desc">El expediente contrapone el 91 por ciento de respuestas correctas con cinco fallas en doce pedidos de accesibilidad y respuestas inconsistentes durante el turno nocturno. Organiza la evaluación en tres capas: representación del uso, exposición y distribución del daño, y capacidad real del equipo para supervisar y reparar. La decisión final asigna permisos diferentes a consultas generales, accesibilidad y compensaciones.</desc>
+  <defs>
+    <style>
+      .sans{font-family:Inter,Arial,Helvetica,sans-serif;fill:#202020}.serif{font-family:Georgia,'Times New Roman',serif;fill:#202020}.eyebrow{font-size:22px;font-weight:700;letter-spacing:6px}.title{font-size:47px;letter-spacing:-1.2px}.subtitle{font-size:20px;fill:#5E605D}.section{font-size:18px;font-weight:700;letter-spacing:4px}.label{font-size:18px;font-weight:700}.body{font-size:16px;fill:#4F524F}.small{font-size:14px;fill:#646764}.number{font-size:14px;font-weight:700;letter-spacing:3px}.metric{font-size:54px}.rule{stroke:#A8AAA6;stroke-width:2}.outline{fill:#FFFFFF;stroke:#777A76;stroke-width:2}.pale{fill:#E4E6E3;stroke:#777A76;stroke-width:2}.soft{fill:#F1F2EF;stroke:#A8AAA6;stroke-width:2}.arrow{fill:none;stroke:#737673;stroke-width:3}.volt{fill:#CFFF00;stroke:#202020;stroke-width:2}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#737673"/></marker>
+  </defs>
+  <rect width="1200" height="1600" fill="#F7F7F4"/><rect x="34" y="34" width="1132" height="1532" rx="18" fill="none" stroke="#C6C8C4" stroke-width="2"/>
+  <path d="M68 72 H188 L176 92 H56 Z" fill="#CFFF00"/><text x="214" y="91" class="sans eyebrow">N32 · EXPEDIENTE DE AUTONOMÍA</text>
+  <text x="68" y="155" class="serif title">El permiso se asigna a tareas, no al promedio</text><text x="70" y="196" class="sans subtitle">La evaluación debe representar el uso, el daño y la capacidad de reparación.</text><path d="M68 226 H1132" class="rule"/>
+
+  <g aria-label="Promedio y excepciones">
+    <text x="72" y="270" class="sans section">HH-32 · EL RESULTADO AGREGADO OCULTABA LA FALLA QUE MÁS IMPORTABA</text>
+    <g aria-label="Desempeño medio"><rect x="72" y="302" width="328" height="154" class="pale"/><text x="104" y="340" class="sans number">DESEMPEÑO MEDIO</text><text x="104" y="402" class="serif metric">91 %</text><text x="104" y="432" class="sans body">respuestas consideradas correctas</text></g>
+    <g aria-label="Fallas en accesibilidad"><rect x="436" y="302" width="328" height="154" class="outline"/><text x="468" y="340" class="sans number">ACCESIBILIDAD</text><text x="468" y="402" class="serif metric">5 / 12</text><text x="468" y="432" class="sans body">pedidos con fallas</text><circle cx="730" cy="334" r="9" class="volt"/></g>
+    <g aria-label="Inconsistencia nocturna"><rect x="800" y="302" width="328" height="154" class="pale"/><text x="832" y="340" class="sans number">TURNO NOCTURNO</text><text x="832" y="390" class="sans label">respuestas inconsistentes</text><text x="832" y="424" class="sans body">menos respaldo y mayor reparación</text></g>
+  </g>
+  <path d="M600 458 V496" class="arrow" marker-end="url(#arrow)"/>
+
+  <g aria-label="Programa de evaluación en tres capas">
+    <text x="72" y="530" class="sans section">TRES CAPAS CONVIERTEN EL PUNTAJE EN EVIDENCIA DE DECISIÓN</text>
+    <g aria-label="Capa de representación"><rect x="72" y="562" width="1056" height="176" class="outline"/>
+    <circle cx="122" cy="612" r="25" class="volt"/><text x="122" y="618" class="sans number" text-anchor="middle">01</text><text x="170" y="602" class="sans number">REPRESENTAR EL USO</text><text x="170" y="638" class="serif" font-size="23">unidad · cobertura</text><text x="170" y="671" class="serif" font-size="23">línea de base · validez</text>
+    <path d="M672 584 V716" class="rule"/><text x="708" y="602" class="sans number">REPRESENTACIÓN</text><text x="708" y="638" class="sans label">¿qué tarea, población y consecuencia</text><text x="708" y="668" class="sans label">están realmente representadas?</text><text x="708" y="704" class="sans small">lo ausente no obtiene evidencia favorable</text></g>
+
+    <g aria-label="Capa de exposición"><rect x="72" y="762" width="1056" height="176" class="pale"/>
+    <circle cx="122" cy="812" r="25" fill="#FFFFFF" stroke="#202020" stroke-width="2"/><text x="122" y="818" class="sans number" text-anchor="middle">02</text><text x="170" y="802" class="sans number">EXPONER EL DAÑO</text><text x="170" y="838" class="serif" font-size="23">severidad · desigualdad</text><text x="170" y="871" class="serif" font-size="23">robustez · prueba adversa</text>
+    <path d="M672 784 V916" class="rule"/><text x="708" y="802" class="sans number">DAÑO</text><text x="708" y="838" class="sans label">¿qué falla rara cambia la decisión</text><text x="708" y="868" class="sans label">aunque no mueva el promedio?</text><text x="708" y="904" class="sans small">frecuencia y gravedad permanecen separadas</text></g>
+
+    <g aria-label="Capa de equipo real"><rect x="72" y="962" width="1056" height="176" class="outline"/>
+    <circle cx="122" cy="1012" r="25" fill="#FFFFFF" stroke="#202020" stroke-width="2"/><text x="122" y="1018" class="sans number" text-anchor="middle">03</text><text x="170" y="1002" class="sans number">PROBAR EL EQUIPO REAL</text><text x="170" y="1038" class="serif" font-size="23">confiabilidad · supervisión</text><text x="170" y="1071" class="serif" font-size="23">carga · reparación</text>
+    <path d="M672 984 V1116" class="rule"/><text x="708" y="1002" class="sans number">SUPERVISIÓN</text><text x="708" y="1038" class="sans label">¿alguien puede detectar, disentir</text><text x="708" y="1068" class="sans label">y reparar antes de la consecuencia?</text><text x="708" y="1104" class="sans small">una aprobación rutinaria no es control significativo</text></g>
+  </g>
+  <path d="M600 1140 V1178" class="arrow" marker-end="url(#arrow)"/>
+
+  <g aria-label="Permisos por tarea y condición">
+    <text x="72" y="1210" class="sans section">LA MATRIZ ASIGNA UN PERMISO REVISABLE A CADA TAREA</text>
+    <g aria-label="Permiso para consultas generales"><rect x="72" y="1242" width="1056" height="72" class="soft"/><text x="102" y="1271" class="sans number">TAREA</text><text x="430" y="1271" class="sans number">EVIDENCIA DECISIVA</text><text x="842" y="1271" class="sans number">PERMISO HH-32</text><text x="102" y="1299" class="sans label">consultas generales</text><text x="430" y="1299" class="sans body">96 %, corrección humana a tiempo</text><text x="842" y="1299" class="sans label">borrador + confirmación</text></g>
+    <g aria-label="Permiso para accesibilidad"><rect x="72" y="1328" width="1056" height="100" class="outline"/><text x="102" y="1368" class="sans label">accesibilidad</text><text x="430" y="1368" class="sans body">5 de 12 fallas, dos propuestas impropias</text><text x="842" y="1368" class="sans label">no actuar</text><text x="842" y="1398" class="sans body">escalar con fuente visible</text><circle cx="1092" cy="1360" r="11" class="volt"/></g>
+    <g aria-label="Permiso para compensaciones"><rect x="72" y="1442" width="1056" height="82" class="pale"/><text x="102" y="1476" class="sans label">compensaciones</text><text x="430" y="1476" class="sans body">autoridad nocturna no disponible</text><text x="842" y="1476" class="sans label">preparar información</text><text x="842" y="1504" class="sans body">sin ejecutar</text></g>
+    <text x="600" y="1550" class="sans small" text-anchor="middle">cambio de modelo, población, fuente o supervisión reabre la evaluación</text>
+  </g>
+</svg>
