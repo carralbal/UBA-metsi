@@ -1,0 +1,223 @@
+{
+  "title": "La reserva está confirmada. La familia todavía no puede entrar.",
+  "claim": "El hotel necesita acuerdos verificables con servicios autónomos y una contingencia autorizada para responder por el ingreso completo.",
+  "topology": "Mapa de ecosistema con frontera de confianza; recorrido de contingencia y responsabilidades concretas.",
+  "source": "N26-v10-editorial/source/N26_ecosistema_de_servicios_plataformas_y_terceros-content-canonical-v3-regional-v1.md",
+  "source_sha256": "dd6f83a6759bd458358e7cee72bccd9379f183e9780011c58cace9fa892175a8",
+  "source_sections": [
+    {
+      "id": "caso",
+      "heading": "Hotel Horizonte: la reserva confirmada que nadie podía ejecutar",
+      "summary": "Hotel Horizonte: la reserva confirmada que nadie podía ejecutar"
+    },
+    {
+      "id": "capacidades",
+      "heading": "Movimiento 1 · Delimitar promesa, capacidades y participantes",
+      "summary": "Movimiento 1 · Delimitar promesa, capacidades y participantes"
+    },
+    {
+      "id": "confianza",
+      "heading": "Movimiento 2 · Asignar responsabilidad, confianza y capacidad de respuesta",
+      "summary": "Movimiento 2 · Asignar responsabilidad, confianza y capacidad de respuesta"
+    },
+    {
+      "id": "contingencia",
+      "heading": "Movimiento 3 · Diseñar degradación, salida y gobernanza",
+      "summary": "Movimiento 3 · Diseñar degradación, salida y gobernanza"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "hotel",
+      "label": "CAPACIDADES DEL HOTEL",
+      "role": "system",
+      "source": [
+        "capacidades"
+      ],
+      "purpose": "Agrupar capacidades internas sin reducirlas a software."
+    },
+    {
+      "id": "canal",
+      "label": "Canal de reservas",
+      "role": "system",
+      "source": [
+        "caso"
+      ],
+      "purpose": "Participante externo que confirma una venta."
+    },
+    {
+      "id": "identidad",
+      "label": "Servicio de identidad",
+      "role": "system",
+      "source": [
+        "caso"
+      ],
+      "purpose": "Participante externo que valida a la persona."
+    },
+    {
+      "id": "cerraduras",
+      "label": "Cerraduras",
+      "role": "system",
+      "source": [
+        "caso"
+      ],
+      "purpose": "Dependencia que permite emitir una llave."
+    },
+    {
+      "id": "frontera",
+      "label": "En cada intercambio se acuerda qué dato aceptar, quién puede corregirlo y qué hacer si no alcanza.",
+      "role": "boundary",
+      "source": [
+        "confianza"
+      ],
+      "purpose": "Explicar frontera de confianza sin equipararla a una simple frontera jurídica."
+    },
+    {
+      "id": "verificar",
+      "label": "Verificación presencial",
+      "role": "process",
+      "source": [
+        "caso"
+      ],
+      "purpose": "Primera acción de la contingencia autorizada."
+    },
+    {
+      "id": "llave",
+      "label": "Llave limitada con autorización",
+      "role": "process",
+      "source": [
+        "caso"
+      ],
+      "purpose": "Conservar autoridad y límites de la excepción."
+    },
+    {
+      "id": "registro",
+      "label": "Doble registro del episodio",
+      "role": "evidence",
+      "source": [
+        "caso"
+      ],
+      "purpose": "Conservar evidencia técnica y operativa."
+    },
+    {
+      "id": "posterior",
+      "label": "Revisión posterior y aviso al canal",
+      "role": "process",
+      "source": [
+        "caso"
+      ],
+      "purpose": "Reconciliar y avisar después de la respuesta inmediata."
+    },
+    {
+      "id": "ricardo",
+      "label": "Ricardo · Autoriza la respuesta operativa.",
+      "role": "actor",
+      "source": [
+        "caso"
+      ],
+      "purpose": "Nombrar autoridad."
+    },
+    {
+      "id": "lucia",
+      "label": "Lucía · Registra lo ocurrido en Recepción.",
+      "role": "actor",
+      "source": [
+        "caso"
+      ],
+      "purpose": "Conservar la evidencia del episodio."
+    },
+    {
+      "id": "federico",
+      "label": "Federico · Conserva la traza técnica.",
+      "role": "actor",
+      "source": [
+        "caso"
+      ],
+      "purpose": "Hacer reconstruible la intervención técnica."
+    },
+    {
+      "id": "camila",
+      "label": "Camila · Ajusta lo que promete el canal.",
+      "role": "actor",
+      "source": [
+        "caso"
+      ],
+      "purpose": "No seguir prometiendo ingreso instantáneo."
+    },
+    {
+      "id": "revision",
+      "label": "Revisar tras 20 ingresos o ante una identidad discutida.",
+      "role": "decision",
+      "source": [
+        "caso"
+      ],
+      "purpose": "Conservar el umbral y la excepción de revisión."
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-canal",
+      "from": "canal",
+      "to": "hotel",
+      "source": [
+        "confianza"
+      ],
+      "meaning": "El hotel recibe una afirmación de reserva; debe verificar procedencia y vigencia.",
+      "relation": "dependency"
+    },
+    {
+      "id": "e-identidad",
+      "from": "identidad",
+      "to": "hotel",
+      "source": [
+        "confianza"
+      ],
+      "meaning": "La validación externa requiere reglas para evidencia incompleta o contradictoria.",
+      "relation": "dependency"
+    },
+    {
+      "id": "e-cerraduras",
+      "from": "cerraduras",
+      "to": "hotel",
+      "source": [
+        "confianza"
+      ],
+      "meaning": "La capacidad de acceso depende de la autorización de la cerradura.",
+      "relation": "dependency"
+    },
+    {
+      "id": "e-verificar",
+      "from": "verificar",
+      "to": "llave",
+      "source": [
+        "caso"
+      ],
+      "meaning": "La verificación presencial y la autorización habilitan una llave limitada.",
+      "relation": "flow"
+    },
+    {
+      "id": "e-llave",
+      "from": "llave",
+      "to": "registro",
+      "source": [
+        "caso"
+      ],
+      "meaning": "La excepción se documenta, no se entrega una llave sin rastro.",
+      "relation": "flow"
+    },
+    {
+      "id": "e-registro",
+      "from": "registro",
+      "to": "posterior",
+      "source": [
+        "caso"
+      ],
+      "meaning": "Los registros permiten reconciliar y avisar al canal.",
+      "relation": "flow"
+    }
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_px": 28,
+  "minimum_content_font_pt": 11.44,
+  "status": "REVIEW_NOT_INTEGRATED"
+}

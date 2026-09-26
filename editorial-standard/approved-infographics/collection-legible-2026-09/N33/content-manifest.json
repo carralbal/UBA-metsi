@@ -1,0 +1,192 @@
+{
+  "title": "La aprobación tiene condiciones",
+  "claim": "Autorizar un uso una vez no autoriza cualquier versión futura.",
+  "topology": "loop",
+  "source": "N33-v10-editorial/diagrams/N33-mapa-01.svg",
+  "source_sha256": "96125651b382d453b626453e420a54a7366fde106e512ba41d5c32c8320e14ea",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "La aprobación tiene condiciones",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "La aprobación tiene condiciones"
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N33",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N33"
+    },
+    {
+      "id": "item-0",
+      "label": "Registrar el uso",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Registrar el uso"
+    },
+    {
+      "id": "item-1",
+      "label": "Conservar la configuración",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Conservar la configuración"
+    },
+    {
+      "id": "item-2",
+      "label": "Observar cambios e incidentes",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Observar cambios e incidentes"
+    },
+    {
+      "id": "item-3",
+      "label": "Responder",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Responder"
+    },
+    {
+      "id": "item-4",
+      "label": "Retirar cuando corresponde",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Retirar cuando corresponde"
+    },
+    {
+      "id": "decision",
+      "label": "Volver al registro",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "Volver al registro"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-item-1",
+      "from": "item-0",
+      "to": "item-1",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-1-item-2",
+      "from": "item-1",
+      "to": "item-2",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-2-item-3",
+      "from": "item-2",
+      "to": "item-3",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-3-item-4",
+      "from": "item-3",
+      "to": "item-4",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-4-item-0",
+      "from": "item-4",
+      "to": "item-0",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "El efecto vuelve a modificar las condiciones iniciales."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N33 · MAPA DE DECISIÓN",
+    "La aprobación tiene condiciones",
+    "Autorizar un uso una vez no autoriza cualquier versión futura.",
+    "01",
+    "Registrar el uso",
+    "Propósito, población, autoridad y riesgos.",
+    "Nombrar qué se permite y bajo qué límites.",
+    "02",
+    "Conservar la configuración",
+    "Modelo, fuentes, permisos y proveedor.",
+    "Poder reconstruir con qué versión se tomó una decisión.",
+    "03",
+    "Observar cambios e incidentes",
+    "Una fuente contradictoria o un permiso nuevo cambian el uso.",
+    "Reevaluar; reducir exposición si la evidencia dejó de valer.",
+    "04",
+    "Responder",
+    "Contener, explicar y reparar.",
+    "Cambiar la regla y probarla antes de volver a ampliar.",
+    "05",
+    "Retirar cuando corresponde",
+    "Revocar permisos y sostener continuidad.",
+    "Preservar evidencia legítima y quitar dependencias residuales.",
+    "Volver al registro",
+    "La respuesta al incidente actualiza las condiciones de uso. Una",
+    "autorización sin seguimiento no equivale a gobierno.",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}

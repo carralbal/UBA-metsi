@@ -1,0 +1,184 @@
+{
+  "title": "Cambiar el recorrido, no el argumento",
+  "claim": "Cada audiencia necesita una entrada diferente a la misma intervención.",
+  "topology": "converge",
+  "source": "N35-v10-editorial/diagrams/N35-mapa-01.svg",
+  "source_sha256": "fc1271f88035476a591d63cab701ed77cf48b4526aa900a3db5be0a736eb5f35",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "Cambiar el recorrido, no el argumento",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Cambiar el recorrido, no el argumento"
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N35",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N35"
+    },
+    {
+      "id": "item-0",
+      "label": "Argumento que se conserva",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Argumento que se conserva"
+    },
+    {
+      "id": "item-1",
+      "label": "Recorridos por audiencia",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Recorridos por audiencia"
+    },
+    {
+      "id": "item-2",
+      "label": "Personas afectadas",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Personas afectadas"
+    },
+    {
+      "id": "item-3",
+      "label": "Transferencia",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Transferencia"
+    },
+    {
+      "id": "relation-key",
+      "label": "Relaciones entre condiciones",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Relaciones entre condiciones"
+    },
+    {
+      "id": "decision",
+      "label": "Prueba de comprensión",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "Prueba de comprensión"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-decision",
+      "from": "item-0",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-1-decision",
+      "from": "item-1",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-2-decision",
+      "from": "item-2",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-3-decision",
+      "from": "item-3",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N35 · MAPA DE DECISIÓN",
+    "Cambiar el recorrido, no el argumento",
+    "Cada audiencia necesita una entrada diferente a la misma intervención.",
+    "Argumento que se",
+    "conserva",
+    "Afirmación, evidencia, razón, límite,",
+    "objeción y revisión.",
+    "La tesis del caso mantiene un alcance",
+    "asistido y una salida.",
+    "Recorridos por",
+    "audiencia",
+    "Dirección: recursos y riesgo.",
+    "Tecnología: reconstrucción.",
+    "Operaciones: actuar y reparar.",
+    "Comercial: promesa sostenible.",
+    "Personas afectadas",
+    "Entender la consecuencia y poder",
+    "objetarla.",
+    "Una objeción debe reabrir la afirmación",
+    "que pone en duda.",
+    "Transferencia",
+    "Explicar el criterio en un caso nuevo.",
+    "Actuar, detener o reparar sin copiar la",
+    "solución anterior.",
+    "CONDICIONES QUE SE LEEN EN CONJUNTO",
+    "Prueba de comprensión",
+    "¿La otra persona puede justificar qué conservaría y qué cambiaría en",
+    "otra situación? Repetir una frase no demuestra que pueda intervenir.",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "title": "Dos modelos distintos no siempre se contradicen",
+  "claim": "Primero hay que comparar el mismo episodio.",
+  "topology": "flow",
+  "source": "N16-v10-editorial/diagrams/N16-mapa-01.svg",
+  "source_sha256": "2b7e73594af8f72e06738b7c9fac40797dcb6eea65a410fe73b25036bf6e67b1",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "Dos modelos distintos no siempre se contradicen",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Dos modelos distintos no siempre se contradicen"
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N16",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N16"
+    },
+    {
+      "id": "item-0",
+      "label": "Alinear la comparación",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Alinear la comparación"
+    },
+    {
+      "id": "item-1",
+      "label": "Clasificar la diferencia",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Clasificar la diferencia"
+    },
+    {
+      "id": "item-2",
+      "label": "Asignar un tratamiento",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Asignar un tratamiento"
+    },
+    {
+      "id": "item-3",
+      "label": "Cerrar con evidencia",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Cerrar con evidencia"
+    },
+    {
+      "id": "decision",
+      "label": "La coherencia se prueba",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "La coherencia se prueba"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-item-1",
+      "from": "item-0",
+      "to": "item-1",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-1-item-2",
+      "from": "item-1",
+      "to": "item-2",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-2-item-3",
+      "from": "item-2",
+      "to": "item-3",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N16 · MAPA DE DECISIÓN",
+    "Dos modelos distintos no siempre se",
+    "contradicen",
+    "Primero hay que comparar el mismo episodio.",
+    "01",
+    "Alinear la comparación",
+    "Misma reserva, momento y evidencia.",
+    "Una confirmación recibida y una limpieza terminada no son lo",
+    "mismo.",
+    "02",
+    "Clasificar la diferencia",
+    "Distinto propósito, error, desfase temporal o tensión abierta.",
+    "No corregir un modelo sólo porque no se parece al otro.",
+    "03",
+    "Asignar un tratamiento",
+    "Corregir, investigar, decidir o aceptar un riesgo explícito.",
+    "Cada opción exige una razón diferente.",
+    "04",
+    "Cerrar con evidencia",
+    "Responsable, plazo y efecto comprobable.",
+    "Actualizar las representaciones que dependían de la diferencia.",
+    "La coherencia se prueba",
+    "En HH-16, proceso, estados, experiencia y tablero hablan del mismo",
+    "episodio. La comparación debe mostrar qué afirmación hace cada uno.",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}

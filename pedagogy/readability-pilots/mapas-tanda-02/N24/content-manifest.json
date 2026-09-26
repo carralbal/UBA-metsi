@@ -1,0 +1,189 @@
+{
+  "title": "Todo parece urgente. ¿Qué hacemos primero?",
+  "claim": "Priorizar requiere proteger condiciones del servicio, limitar el trabajo activo y explicar qué espera y cuándo se revisará.",
+  "topology": "Atlas de decisión: protección previa, cuatro opciones con decisiones diferentes y registro de renuncias.",
+  "source": "N24-v10-editorial/source/N24_priorizar_es_renunciar_valor_costo_de_demora_y_limites-content-canonical-v4-regional-v1.md",
+  "source_sha256": "8eb0713d8a87770317735d30df6df06c0ed79747fa367d163e8dfd6a40943ac4",
+  "source_sections": [
+    {
+      "id": "caso",
+      "heading": "Hotel Horizonte: priorizar también nombra a quién esperar",
+      "summary": "Hotel Horizonte: priorizar también nombra a quién esperar"
+    },
+    {
+      "id": "limite",
+      "heading": "Movimiento 1 · Hacer visibles demora, capacidad y obligación",
+      "summary": "Movimiento 1 · Hacer visibles demora, capacidad y obligación"
+    },
+    {
+      "id": "revision",
+      "heading": "Movimiento 3 · Revisar prioridades con evidencia y límites",
+      "summary": "Movimiento 3 · Revisar prioridades con evidencia y límites"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "proteccion",
+      "label": "La accesibilidad no compite como una mejora opcional.",
+      "role": "constraint",
+      "source": [
+        "caso"
+      ],
+      "purpose": "Distinguir protección institucional de una obligación jurídica todavía no validada."
+    },
+    {
+      "id": "opcion-accesibilidad",
+      "label": "Completar cobertura accesible",
+      "role": "process",
+      "source": [
+        "caso"
+      ],
+      "purpose": "Evitar una exclusión en los turnos sin cobertura."
+    },
+    {
+      "id": "opcion-eventos",
+      "label": "Registrar mejor lo que ocurre",
+      "role": "process",
+      "source": [
+        "caso"
+      ],
+      "purpose": "Traducir instrumentación de eventos sin perder el concepto técnico."
+    },
+    {
+      "id": "opcion-canales",
+      "label": "Sumar canales externos",
+      "role": "process",
+      "source": [
+        "caso"
+      ],
+      "purpose": "Hacer visible la oportunidad comercial y su dependencia de un servicio estable."
+    },
+    {
+      "id": "opcion-sobreventa",
+      "label": "Automatizar la sobreventa",
+      "role": "process",
+      "source": [
+        "caso"
+      ],
+      "purpose": "Distinguir una apuesta todavía no probada."
+    },
+    {
+      "id": "ahora-accesibilidad",
+      "label": "AHORA · Protege el servicio",
+      "role": "decision",
+      "source": [
+        "caso"
+      ],
+      "purpose": "Primera decisión de capacidad."
+    },
+    {
+      "id": "ahora-eventos",
+      "label": "AHORA · Permite aprender",
+      "role": "decision",
+      "source": [
+        "caso"
+      ],
+      "purpose": "Segunda decisión de capacidad."
+    },
+    {
+      "id": "espera-canales",
+      "label": "ESPERA · Se posterga la expansión",
+      "role": "decision",
+      "source": [
+        "caso"
+      ],
+      "purpose": "No confundir postergación con abandono."
+    },
+    {
+      "id": "no-sobreventa",
+      "label": "NO AVANZA · Faltan pruebas sobre sus efectos",
+      "role": "decision",
+      "source": [
+        "caso"
+      ],
+      "purpose": "Retirar por ahora una opción no suficientemente probada."
+    },
+    {
+      "id": "reserva",
+      "label": "Se reserva capacidad para incidentes y soporte.",
+      "role": "constraint",
+      "source": [
+        "caso"
+      ],
+      "purpose": "No ocupar toda la capacidad teórica con iniciativas."
+    },
+    {
+      "id": "quien",
+      "label": "Quién espera",
+      "role": "evidence",
+      "source": [
+        "revision"
+      ],
+      "purpose": "Nombrar personas o áreas afectadas."
+    },
+    {
+      "id": "consecuencia",
+      "label": "Qué se pierde",
+      "role": "evidence",
+      "source": [
+        "revision"
+      ],
+      "purpose": "Registrar el efecto de demorar."
+    },
+    {
+      "id": "revisar",
+      "label": "Cuándo revisar",
+      "role": "decision",
+      "source": [
+        "revision"
+      ],
+      "purpose": "Fijar fecha y señales para reconsiderar."
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-accesibilidad",
+      "from": "opcion-accesibilidad",
+      "to": "ahora-accesibilidad",
+      "source": [
+        "caso"
+      ],
+      "meaning": "Se asigna capacidad a una protección institucional.",
+      "relation": "transformation"
+    },
+    {
+      "id": "e-eventos",
+      "from": "opcion-eventos",
+      "to": "ahora-eventos",
+      "source": [
+        "caso"
+      ],
+      "meaning": "Se asigna capacidad a producir evidencia útil.",
+      "relation": "transformation"
+    },
+    {
+      "id": "e-canales",
+      "from": "opcion-canales",
+      "to": "espera-canales",
+      "source": [
+        "caso"
+      ],
+      "meaning": "Se posterga la expansión comercial.",
+      "relation": "transformation"
+    },
+    {
+      "id": "e-sobreventa",
+      "from": "opcion-sobreventa",
+      "to": "no-sobreventa",
+      "source": [
+        "caso"
+      ],
+      "meaning": "Se descarta por ahora la automatización hasta tener evidencia suficiente.",
+      "relation": "transformation"
+    }
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_px": 28,
+  "minimum_content_font_pt": 11.44,
+  "status": "REVIEW_NOT_INTEGRATED"
+}

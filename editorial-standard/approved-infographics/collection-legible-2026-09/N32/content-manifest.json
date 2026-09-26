@@ -1,0 +1,158 @@
+{
+  "title": "El permiso depende de la tarea",
+  "claim": "Un 91% promedio puede ocultar errores graves en un grupo pequeño.",
+  "topology": "matrix",
+  "source": "N32-v10-editorial/diagrams/N32-mapa-01.svg",
+  "source_sha256": "d0bfd6d21c967f6035c622f3d266b5a61f8ad47f3a88df3522ca60e449a060ab",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "El permiso depende de la tarea",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "El permiso depende de la tarea"
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N32",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N32"
+    },
+    {
+      "id": "item-0",
+      "label": "Consulta general",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Consulta general"
+    },
+    {
+      "id": "item-1",
+      "label": "Solicitud accesible",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Solicitud accesible"
+    },
+    {
+      "id": "item-2",
+      "label": "Compensación nocturna",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Compensación nocturna"
+    },
+    {
+      "id": "relation-key",
+      "label": "Relaciones entre condiciones",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Relaciones entre condiciones"
+    },
+    {
+      "id": "decision",
+      "label": "Reevaluar al cambiar el contexto",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "Reevaluar al cambiar el contexto"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-decision",
+      "from": "item-0",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-1-decision",
+      "from": "item-1",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-2-decision",
+      "from": "item-2",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N32 · MAPA DE DECISIÓN",
+    "El permiso depende de la tarea",
+    "Un 91% promedio puede ocultar errores graves en un grupo pequeño.",
+    "Consulta general",
+    "96% de desempeño observado y tiempo",
+    "para revisar.",
+    "Se admite preparar un borrador con",
+    "confirmación humana.",
+    "Solicitud accesible",
+    "Fallan cinco de doce casos; dos",
+    "respuestas son impropias.",
+    "No autorizar acción autónoma.",
+    "Escalar con la fuente visible.",
+    "Compensación nocturna",
+    "Falta autoridad disponible para",
+    "confirmar.",
+    "Permitir preparación, no ejecución.",
+    "CONDICIONES QUE SE LEEN EN CONJUNTO",
+    "Reevaluar al cambiar el contexto",
+    "Modelo, población, tarea o supervisión nuevos requieren otra prueba.",
+    "Importa si el equipo puede detectar el error y reparar antes del efecto.",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}

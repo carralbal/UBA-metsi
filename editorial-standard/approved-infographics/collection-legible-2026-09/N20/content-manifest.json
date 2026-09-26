@@ -1,0 +1,162 @@
+{
+  "title": "Una estrategia necesita puertas de decisión",
+  "claim": "Un hito no es sólo una fecha: debe cambiar lo que estamos autorizados a hacer.",
+  "topology": "flow",
+  "source": "N20-v10-editorial/diagrams/N20-mapa-01.svg",
+  "source_sha256": "6cb3a50b96aafc34c7c8d8ae930189322483a29b64ba35fc63309bf9d49b90a6",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "Una estrategia necesita puertas de decisión",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Una estrategia necesita puertas de decisión"
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N20",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N20"
+    },
+    {
+      "id": "item-0",
+      "label": "Comprender",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Comprender"
+    },
+    {
+      "id": "item-1",
+      "label": "Preparar",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Preparar"
+    },
+    {
+      "id": "item-2",
+      "label": "Probar",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Probar"
+    },
+    {
+      "id": "item-3",
+      "label": "Transferir",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Transferir"
+    },
+    {
+      "id": "decision",
+      "label": "Si una puerta no abre",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "Si una puerta no abre"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-item-1",
+      "from": "item-0",
+      "to": "item-1",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-1-item-2",
+      "from": "item-1",
+      "to": "item-2",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-2-item-3",
+      "from": "item-2",
+      "to": "item-3",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N20 · MAPA DE DECISIÓN",
+    "Una estrategia necesita puertas de",
+    "decisión",
+    "Un hito no es sólo una fecha: debe cambiar lo que estamos autorizados a",
+    "hacer.",
+    "01",
+    "Comprender",
+    "Reconstruir episodios, evidencia e hipótesis.",
+    "No comprometer una solución antes de sostener el encuadre.",
+    "02",
+    "Preparar",
+    "Asegurar personas, permisos y contingencia.",
+    "Una prueba necesita condiciones para detenerse o reparar.",
+    "03",
+    "Probar",
+    "Observar el caso normal, la falla y la reparación.",
+    "La demostración favorable no alcanza por sí sola.",
+    "04",
+    "Transferir",
+    "Operaciones puede sostener el uso y detenerlo.",
+    "El equipo no debe depender del conocimiento privado de quien",
+    "diseñó.",
+    "Si una puerta no abre",
+    "Investigar, reducir alcance, reparar o retirar. Ampliar no es la única",
+    "salida posible; debe justificarse con evidencia.",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}

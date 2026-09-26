@@ -1,0 +1,150 @@
+{
+  "title": "Un mensaje válido no alcanza para entregar la llave.",
+  "claim": "Forma, significado, tiempo y acción deben acordarse juntos para que el mismo mensaje no produzca decisiones incompatibles.",
+  "topology": "Cuatro capas del mismo contrato que convergen en una única condición de aceptación; no son cuatro etapas cronológicas.",
+  "source": "N27-v10-editorial/source/N27_contratos_sintacticos_semanticos_temporales_y_operacionales-content-canonical-v4-regional-v1.md",
+  "source_sha256": "ef335e78fcf3677013a6d716ff50e90885cb34312f0f604859b77f4e3e91e39e",
+  "source_sections": [
+    {
+      "id": "caso",
+      "heading": "Hotel Horizonte: «liberada» no significaba lo mismo para todos",
+      "summary": "Hotel Horizonte: «liberada» no significaba lo mismo para todos"
+    },
+    {
+      "id": "capas",
+      "heading": "Movimiento 1 · Acordar forma, significado, tiempo y efecto",
+      "summary": "Movimiento 1 · Acordar forma, significado, tiempo y efecto"
+    },
+    {
+      "id": "fallas",
+      "heading": "Movimiento 2 · Proteger invariantes frente a duplicados, demoras y errores",
+      "summary": "Movimiento 2 · Proteger invariantes frente a duplicados, demoras y errores"
+    },
+    {
+      "id": "pruebas",
+      "heading": "Movimiento 3 · Evolucionar y probar contratos sin quebrar consumidores",
+      "summary": "Movimiento 3 · Evolucionar y probar contratos sin quebrar consumidores"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "distincion",
+      "label": "Limpieza terminada ≠ habitación lista para entregar.",
+      "role": "constraint",
+      "source": [
+        "caso"
+      ],
+      "purpose": "Hacer concreta la diferencia entre liberada y asignable."
+    },
+    {
+      "id": "forma",
+      "label": "Forma (sintaxis)",
+      "role": "constraint",
+      "source": [
+        "capas"
+      ],
+      "purpose": "Definir estructura, campos, tipos y versión."
+    },
+    {
+      "id": "significado",
+      "label": "Significado (semántica)",
+      "role": "constraint",
+      "source": [
+        "caso"
+      ],
+      "purpose": "No atribuir al mensaje una afirmación que no contiene."
+    },
+    {
+      "id": "tiempo",
+      "label": "Tiempo (vigencia y orden)",
+      "role": "constraint",
+      "source": [
+        "fallas"
+      ],
+      "purpose": "No repetir el efecto ni inventar éxito ante demora."
+    },
+    {
+      "id": "accion",
+      "label": "Acción (operación)",
+      "role": "constraint",
+      "source": [
+        "capas"
+      ],
+      "purpose": "Asignar decisión, comunicación y reparación."
+    },
+    {
+      "id": "aceptacion",
+      "label": "Todos anticipan la misma consecuencia",
+      "role": "outcome",
+      "source": [
+        "capas"
+      ],
+      "purpose": "Reunir las cuatro capas; un mensaje aceptado no basta."
+    },
+    {
+      "id": "prueba",
+      "label": "Prueba: duplicar, demorar, desordenar y cambiar la versión.",
+      "role": "evidence",
+      "source": [
+        "pruebas"
+      ],
+      "purpose": "Probar más que el caso en que todo funciona."
+    },
+    {
+      "id": "revision",
+      "label": "Revisar tras 30 transiciones o ante una entrega incorrecta.",
+      "role": "decision",
+      "source": [
+        "caso"
+      ],
+      "purpose": "Conservar condición de revisión."
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-forma",
+      "from": "forma",
+      "to": "aceptacion",
+      "source": [
+        "capas"
+      ],
+      "meaning": "El acuerdo sobre la forma es necesario para compartir la consecuencia.",
+      "relation": "dependency"
+    },
+    {
+      "id": "e-significado",
+      "from": "significado",
+      "to": "aceptacion",
+      "source": [
+        "capas"
+      ],
+      "meaning": "El acuerdo sobre el significado es necesario para compartir la consecuencia.",
+      "relation": "dependency"
+    },
+    {
+      "id": "e-tiempo",
+      "from": "tiempo",
+      "to": "aceptacion",
+      "source": [
+        "capas"
+      ],
+      "meaning": "El acuerdo sobre el tiempo es necesario para compartir la consecuencia.",
+      "relation": "dependency"
+    },
+    {
+      "id": "e-accion",
+      "from": "accion",
+      "to": "aceptacion",
+      "source": [
+        "capas"
+      ],
+      "meaning": "El acuerdo sobre la operación es necesario para compartir la consecuencia.",
+      "relation": "dependency"
+    }
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_px": 28,
+  "minimum_content_font_pt": 11.44,
+  "status": "USER_APPROVED",
+  "approval": "Aprobados. Continuar con los 36 y publicar."
+}

@@ -1,0 +1,205 @@
+{
+  "title": "De una pregunta a una decisión",
+  "claim": "La evidencia sirve cuando cambia lo que podemos afirmar y hacer.",
+  "topology": "flow",
+  "source": "N07-v11-final/diagrams/N07-mapa-decision.svg",
+  "source_sha256": "f3e8fedacccaed9cf30ad00dd15485a04cbbd31c4bd840e14ec660c00161d8bc",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "De una pregunta a una decisión",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "De una pregunta a una decisión"
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N07",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N07"
+    },
+    {
+      "id": "item-0",
+      "label": "Definir la pregunta",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Definir la pregunta"
+    },
+    {
+      "id": "item-1",
+      "label": "Reunir rastros",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Reunir rastros"
+    },
+    {
+      "id": "item-2",
+      "label": "Comparar",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Comparar"
+    },
+    {
+      "id": "item-3",
+      "label": "Calibrar",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Calibrar"
+    },
+    {
+      "id": "item-4",
+      "label": "Sostener una afirmación",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Sostener una afirmación"
+    },
+    {
+      "id": "item-5",
+      "label": "Decidir y volver a mirar",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Decidir y volver a mirar"
+    },
+    {
+      "id": "decision",
+      "label": "No alcanza con acumular datos",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "No alcanza con acumular datos"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-item-1",
+      "from": "item-0",
+      "to": "item-1",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-1-item-2",
+      "from": "item-1",
+      "to": "item-2",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-2-item-3",
+      "from": "item-2",
+      "to": "item-3",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-3-item-4",
+      "from": "item-3",
+      "to": "item-4",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-4-item-5",
+      "from": "item-4",
+      "to": "item-5",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N07 · MAPA DE DECISIÓN",
+    "De una pregunta a una decisión",
+    "La evidencia sirve cuando cambia lo que podemos afirmar y hacer.",
+    "01",
+    "Definir la pregunta",
+    "¿Qué decisión necesita evidencia?",
+    "Una pregunta concreta permite elegir qué observar.",
+    "02",
+    "Reunir rastros",
+    "Episodios, registros, contexto y fuentes independientes.",
+    "Buscá también un caso que contradiga la explicación.",
+    "03",
+    "Comparar",
+    "¿Qué coincide y qué no?",
+    "Un desacuerdo puede revelar una diferencia importante.",
+    "04",
+    "Calibrar",
+    "¿Hasta dónde llega lo encontrado?",
+    "Una pista no es todavía un patrón ni una causa demostrada.",
+    "05",
+    "Sostener una afirmación",
+    "Explicar qué la apoya y qué la debilita.",
+    "Conservar dudas y explicaciones rivales.",
+    "06",
+    "Decidir y volver a mirar",
+    "Actuar en proporción a lo que sabemos.",
+    "Definir qué comprobar después y cuándo revisar la decisión.",
+    "No alcanza con acumular datos",
+    "La próxima observación debe poder cambiar la interpretación o la acción.",
+    "Si nada puede cambiar, no estamos investigando.",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}

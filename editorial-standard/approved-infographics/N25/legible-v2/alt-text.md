@@ -1,0 +1,1 @@
+Mapa en cuatro franjas. Primero sigue la misma modificación desde la demanda hasta el uso, con dos relojes: necesidad y compromiso. Después separa 46 días en 8 de trabajo y 38 de espera, desglosados en cuatro causas. Compara cuatro decisiones antes y después. Cierra con un circuito de señal, autoridad, decisión, cambio y efecto observado.

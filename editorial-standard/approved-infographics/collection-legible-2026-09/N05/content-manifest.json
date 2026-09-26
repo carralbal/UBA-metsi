@@ -1,0 +1,224 @@
+{
+  "title": "Participar no es tener el mismo poder",
+  "claim": "Un mapa de actores muestra quién puede actuar y quién carga con las consecuencias.",
+  "topology": "taxonomy",
+  "source": "N05-v11-final/diagrams/N05-mapa-decision.svg",
+  "source_sha256": "8196a2528aca6bf75a14f2188991e4994c976a71f52f8247e6b9e40ee4143378",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "Participar no es tener el mismo poder",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Participar no es tener el mismo poder"
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N05",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N05"
+    },
+    {
+      "id": "item-0",
+      "label": "Definir",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Definir"
+    },
+    {
+      "id": "item-1",
+      "label": "Conocer",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Conocer"
+    },
+    {
+      "id": "item-2",
+      "label": "Autorizar",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Autorizar"
+    },
+    {
+      "id": "item-3",
+      "label": "Ejecutar",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Ejecutar"
+    },
+    {
+      "id": "item-4",
+      "label": "Recibir las consecuencias",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Recibir las consecuencias"
+    },
+    {
+      "id": "item-5",
+      "label": "Objetar y reparar",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Objetar y reparar"
+    },
+    {
+      "id": "relation-key",
+      "label": "Relaciones entre condiciones",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Relaciones entre condiciones"
+    },
+    {
+      "id": "decision",
+      "label": "Contrapesos necesarios",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "Contrapesos necesarios"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-decision",
+      "from": "item-0",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-1-decision",
+      "from": "item-1",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-2-decision",
+      "from": "item-2",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-3-decision",
+      "from": "item-3",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-4-decision",
+      "from": "item-4",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-5-decision",
+      "from": "item-5",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N05 · MAPA DE DECISIÓN",
+    "Participar no es tener el mismo poder",
+    "Un mapa de actores muestra quién puede actuar y quién carga con las",
+    "consecuencias.",
+    "Definir",
+    "Quién logra instalar un problema.",
+    "Su versión puede excluir otras",
+    "experiencias.",
+    "Conocer",
+    "Quién tiene información y experiencia sobre",
+    "lo que ocurre.",
+    "Saber no siempre da autoridad para decidir.",
+    "Autorizar",
+    "Quién habilita recursos o excepciones.",
+    "Cada decisión necesita un responsable.",
+    "Ejecutar",
+    "Quién hace el trabajo y resuelve",
+    "dificultades.",
+    "Puede advertir lo que el plan no contempló.",
+    "Recibir las",
+    "consecuencias",
+    "Quién recibe beneficios, costos o daños.",
+    "Puede ser alguien que no fue escuchado.",
+    "Objetar y reparar",
+    "Quién puede cuestionar y pedir respuestas.",
+    "Escuchar exige poder corregir lo que falla.",
+    "CONDICIONES QUE SE LEEN EN CONJUNTO",
+    "Contrapesos necesarios",
+    "Participación, decisiones reconstruibles y vías de objeción y",
+    "reparación. Cambiar una regla también redistribuye poder.",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}

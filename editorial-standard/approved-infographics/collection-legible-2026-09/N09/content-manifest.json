@@ -1,0 +1,183 @@
+{
+  "title": "Accesible de principio a fin",
+  "claim": "Una etiqueta en la pantalla no garantiza que la persona pueda completar el recorrido.",
+  "topology": "flow",
+  "source": "N09-v11-final/diagrams/N09-mapa-decision.svg",
+  "source_sha256": "df62972fcd8d4ce05a68eb5d7b74a570e33a3f15bde8dc080e9d4bbd170a12c0",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "Accesible de principio a fin",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Accesible de principio a fin"
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N09",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N09"
+    },
+    {
+      "id": "item-0",
+      "label": "Propósito y condiciones",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Propósito y condiciones"
+    },
+    {
+      "id": "item-1",
+      "label": "Señal y acción",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Señal y acción"
+    },
+    {
+      "id": "item-2",
+      "label": "Trabajo que sostiene la oferta",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Trabajo que sostiene la oferta"
+    },
+    {
+      "id": "item-3",
+      "label": "Evidencia",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Evidencia"
+    },
+    {
+      "id": "item-4",
+      "label": "Falla y respuesta",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Falla y respuesta"
+    },
+    {
+      "id": "decision",
+      "label": "La prueba es el recorrido completo",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "La prueba es el recorrido completo"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-item-1",
+      "from": "item-0",
+      "to": "item-1",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-1-item-2",
+      "from": "item-1",
+      "to": "item-2",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-2-item-3",
+      "from": "item-2",
+      "to": "item-3",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-3-item-4",
+      "from": "item-3",
+      "to": "item-4",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N09 · MAPA DE DECISIÓN",
+    "Accesible de principio a fin",
+    "Una etiqueta en la pantalla no garantiza que la persona pueda completar el",
+    "recorrido.",
+    "01",
+    "Propósito y condiciones",
+    "Confirmar que el alojamiento sea compatible.",
+    "Considerar movilidad, teclado, conectividad y apoyos.",
+    "02",
+    "Señal y acción",
+    "La pantalla ofrece una habitación adaptada.",
+    "La persona reserva y recibe una confirmación.",
+    "03",
+    "Trabajo que sostiene la oferta",
+    "Verificar atributos y disponibilidad reales.",
+    "No alcanza con que la etiqueta esté cargada.",
+    "04",
+    "Evidencia",
+    "Saber de dónde viene el dato y si sigue vigente.",
+    "Identificar quién puede confirmarlo o corregirlo.",
+    "05",
+    "Falla y respuesta",
+    "Una promesa falsa puede impedir el ingreso.",
+    "Dar una alternativa verificable, un plazo y un responsable.",
+    "La prueba es el recorrido completo",
+    "Incluí la excepción y la reparación. El servicio no es accesible si sólo",
+    "funciona cuando todo sale bien.",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}

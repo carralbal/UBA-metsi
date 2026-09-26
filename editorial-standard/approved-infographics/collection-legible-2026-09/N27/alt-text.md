@@ -1,0 +1,1 @@
+El estado liberada sólo confirma limpieza terminada, no una habitación asignable. Cuatro franjas distinguen forma o sintaxis, significado o semántica, tiempo y acción operacional. Las cuatro confluyen en un contrato que permite anticipar la misma consecuencia y responder ante fallas. Se proponen pruebas de duplicación, demora, desorden y versión.

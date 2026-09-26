@@ -1,0 +1,1 @@
+A la izquierda están las capacidades del hotel; a la derecha, canal de reservas, identidad y cerraduras. Tres intercambios cruzan una frontera de confianza. Debajo, la contingencia pasa por verificación presencial, llave limitada autorizada, doble registro y revisión posterior. Cuatro personas conservan responsabilidades distintas y se fija una condición de revisión.

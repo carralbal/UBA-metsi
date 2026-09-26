@@ -1,0 +1,203 @@
+{
+  "title": "La pregunta elige el dibujo",
+  "claim": "Cada representación permite ver unas relaciones y deja otras afuera.",
+  "topology": "matrix",
+  "source": "N15-v10-editorial/diagrams/N15-mapa-01.svg",
+  "source_sha256": "5da1e7535871700a8475f7b3faef355d502d334f4a6ab041e02e55bb19aff3a0",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "La pregunta elige el dibujo",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "La pregunta elige el dibujo"
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N15",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N15"
+    },
+    {
+      "id": "item-0",
+      "label": "¿Dónde esperamos?",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "¿Dónde esperamos?"
+    },
+    {
+      "id": "item-1",
+      "label": "¿Qué está confirmado?",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "¿Qué está confirmado?"
+    },
+    {
+      "id": "item-2",
+      "label": "¿De qué dependemos?",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "¿De qué dependemos?"
+    },
+    {
+      "id": "item-3",
+      "label": "¿Quién puede decidir?",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "¿Quién puede decidir?"
+    },
+    {
+      "id": "item-4",
+      "label": "¿Quién encuentra una barrera?",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "¿Quién encuentra una barrera?"
+    },
+    {
+      "id": "relation-key",
+      "label": "Relaciones entre condiciones",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Relaciones entre condiciones"
+    },
+    {
+      "id": "decision",
+      "label": "Probar la utilidad",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "Probar la utilidad"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-decision",
+      "from": "item-0",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-1-decision",
+      "from": "item-1",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-2-decision",
+      "from": "item-2",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-3-decision",
+      "from": "item-3",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-4-decision",
+      "from": "item-4",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N15 · MAPA DE DECISIÓN",
+    "La pregunta elige el dibujo",
+    "Cada representación permite ver unas relaciones y deja otras afuera.",
+    "¿Dónde esperamos?",
+    "Vista de proceso.",
+    "Seguir trabajo, colas y traspasos de",
+    "responsabilidad.",
+    "¿Qué está confirmado?",
+    "Vista de estados.",
+    "Distinguir solicitudes, hechos y",
+    "condiciones vigentes.",
+    "¿De qué dependemos?",
+    "Vista de arquitectura.",
+    "Mostrar componentes, intercambios y",
+    "restricciones.",
+    "¿Quién puede decidir?",
+    "Vista de autoridad.",
+    "Precisar permisos y tratamiento de",
+    "excepciones.",
+    "¿Quién encuentra una",
+    "barrera?",
+    "Vista de experiencia.",
+    "Reconstruir condiciones reales de uso y",
+    "consecuencias.",
+    "CONDICIONES QUE SE LEEN EN CONJUNTO",
+    "Probar la utilidad",
+    "Usá los mismos identificadores de reserva, habitación y episodio. ¿La",
+    "audiencia puede decidir con la vista sin que su autor la traduzca?",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}

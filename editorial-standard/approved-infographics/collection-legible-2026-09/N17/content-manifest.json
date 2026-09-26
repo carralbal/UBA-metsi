@@ -1,0 +1,206 @@
+{
+  "title": "Cinco lógicas para decisiones distintas",
+  "claim": "Se pueden combinar, pero hay que explicar qué aporta cada una.",
+  "topology": "matrix",
+  "source": "N17-v10-editorial/diagrams/N17-mapa-01.svg",
+  "source_sha256": "a662d7c35fa0ee743dfd162d881f21d7c815c498b83caf12aaccef38c25defec",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "Cinco lógicas para decisiones distintas",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Cinco lógicas para decisiones distintas"
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N17",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N17"
+    },
+    {
+      "id": "item-0",
+      "label": "Predictiva",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Predictiva"
+    },
+    {
+      "id": "item-1",
+      "label": "Iterativa",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Iterativa"
+    },
+    {
+      "id": "item-2",
+      "label": "Incremental",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Incremental"
+    },
+    {
+      "id": "item-3",
+      "label": "Adaptativa",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Adaptativa"
+    },
+    {
+      "id": "item-4",
+      "label": "Experimental",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Experimental"
+    },
+    {
+      "id": "relation-key",
+      "label": "Relaciones entre condiciones",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Relaciones entre condiciones"
+    },
+    {
+      "id": "decision",
+      "label": "Antes de ampliar",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "Antes de ampliar"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-decision",
+      "from": "item-0",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-1-decision",
+      "from": "item-1",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-2-decision",
+      "from": "item-2",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-3-decision",
+      "from": "item-3",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-4-decision",
+      "from": "item-4",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N17 · MAPA DE DECISIÓN",
+    "Cinco lógicas para decisiones distintas",
+    "Se pueden combinar, pero hay que explicar qué aporta cada una.",
+    "Predictiva",
+    "Planificar compromisos costosos de cambiar.",
+    "Por ejemplo, contratos, migración y",
+    "ventanas de intervención.",
+    "Iterativa",
+    "Revisar una solución en versiones",
+    "sucesivas.",
+    "Por ejemplo, mejorar una regla compartida",
+    "sobre estados.",
+    "Incremental",
+    "Ampliar una capacidad que ya funciona",
+    "completa.",
+    "Por ejemplo, pasar de dos pisos a una",
+    "población mayor.",
+    "Adaptativa",
+    "Cambiar la secuencia según las señales.",
+    "No sostener el plan si la situación que lo",
+    "justificaba cambió.",
+    "Experimental",
+    "Probar una hipótesis con exposición",
+    "protegida.",
+    "Por ejemplo, comprobar una promesa de",
+    "llegada anticipada.",
+    "CONDICIONES QUE SE LEEN EN CONJUNTO",
+    "Antes de ampliar",
+    "La evidencia debe alcanzar, la reparación debe funcionar y Recepción",
+    "debe poder detener el uso. Elegí según conocimiento, costo del error y",
+    "reversibilidad.",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}

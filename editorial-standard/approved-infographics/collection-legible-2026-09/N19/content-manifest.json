@@ -1,0 +1,161 @@
+{
+  "title": "Comparar soluciones completas",
+  "claim": "No comparar sólo precio o tecnología: todas deben pasar la misma prueba.",
+  "topology": "converge",
+  "source": "N19-v10-editorial/diagrams/N19-mapa-01.svg",
+  "source_sha256": "badbb16373741710e89b293bbb752a7b0f09266a3b3480cc09b6a96c8d45275e",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "Comparar soluciones completas",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Comparar soluciones completas"
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N19",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N19"
+    },
+    {
+      "id": "item-0",
+      "label": "Opciones de realización",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Opciones de realización"
+    },
+    {
+      "id": "item-1",
+      "label": "Una misma capacidad",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Una misma capacidad"
+    },
+    {
+      "id": "item-2",
+      "label": "Una misma prueba adversa",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Una misma prueba adversa"
+    },
+    {
+      "id": "relation-key",
+      "label": "Relaciones entre condiciones",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Relaciones entre condiciones"
+    },
+    {
+      "id": "decision",
+      "label": "Probar la salida",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "Probar la salida"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-decision",
+      "from": "item-0",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-1-decision",
+      "from": "item-1",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-2-decision",
+      "from": "item-2",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N19 · MAPA DE DECISIÓN",
+    "Comparar soluciones completas",
+    "No comparar sólo precio o tecnología: todas deben pasar la misma prueba.",
+    "Opciones de",
+    "realización",
+    "Configurar · integrar · construir ·",
+    "contratar.",
+    "También considerar una respuesta",
+    "manual o no automatizar.",
+    "Una misma capacidad",
+    "Confirmar ingreso accesible con",
+    "estados compatibles.",
+    "Una persona debe poder corregir y",
+    "Recepción debe poder detener.",
+    "Una misma prueba",
+    "adversa",
+    "Qué ocurre cuando falla, cómo se",
+    "repara y cómo se sale.",
+    "La alternativa más atractiva puede",
+    "ocultar una dependencia costosa.",
+    "CONDICIONES QUE SE LEEN EN CONJUNTO",
+    "Probar la salida",
+    "Exportar reglas y eventos y reconstruirlos en otra solución. Medir",
+    "pérdida de significado, tiempo y costo antes de aceptar la dependencia.",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}

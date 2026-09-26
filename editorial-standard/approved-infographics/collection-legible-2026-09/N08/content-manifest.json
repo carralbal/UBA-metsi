@@ -1,0 +1,198 @@
+{
+  "title": "Observar antes de explicar",
+  "claim": "Separar lo que pasó de lo que creemos que significa ayuda a investigar mejor.",
+  "topology": "layers",
+  "source": "N08-v11-final/diagrams/N08-mapa-decision.svg",
+  "source_sha256": "ec883deab6147e6f1fa85048e631be14650799177c008f71f9e030cabd4029e6",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "Observar antes de explicar",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Observar antes de explicar"
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N08",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N08"
+    },
+    {
+      "id": "item-0",
+      "label": "Contexto y evento",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Contexto y evento"
+    },
+    {
+      "id": "item-1",
+      "label": "Interpretación e incertidumbre",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Interpretación e incertidumbre"
+    },
+    {
+      "id": "item-2",
+      "label": "Contraste",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Contraste"
+    },
+    {
+      "id": "item-3",
+      "label": "Función y consecuencia",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Función y consecuencia"
+    },
+    {
+      "id": "item-4",
+      "label": "Decisión",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Decisión"
+    },
+    {
+      "id": "relation-key",
+      "label": "Relaciones entre condiciones",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Relaciones entre condiciones"
+    },
+    {
+      "id": "decision",
+      "label": "Pregunta de control",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "Pregunta de control"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-decision",
+      "from": "item-0",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-1-decision",
+      "from": "item-1",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-2-decision",
+      "from": "item-2",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-3-decision",
+      "from": "item-3",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-4-decision",
+      "from": "item-4",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N08 · MAPA DE DECISIÓN",
+    "Observar antes de explicar",
+    "Separar lo que pasó de lo que creemos que significa ayuda a investigar",
+    "mejor.",
+    "Contexto y evento",
+    "Dónde, cuándo y en qué condiciones ocurrió.",
+    "Registrá la escena antes de atribuir una causa.",
+    "Interpretación e incertidumbre",
+    "Qué explicación proponemos y qué falta saber.",
+    "La interpretación es una hipótesis, no el hecho observado.",
+    "Contraste",
+    "Otras personas, otros rastros y nuevos episodios.",
+    "Buscá qué confirma o contradice esa interpretación.",
+    "Función y consecuencia",
+    "Para qué sirve la práctica y qué efectos produce.",
+    "Algo incómodo puede estar protegiendo una condición necesaria.",
+    "Decisión",
+    "Conservar, cambiar o hacer una prueba.",
+    "Volvé a observar el resultado de esa decisión.",
+    "CONDICIONES QUE SE LEEN EN CONJUNTO",
+    "Pregunta de control",
+    "¿Otra persona puede distinguir en el registro qué vimos y qué estamos",
+    "suponiendo?",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}

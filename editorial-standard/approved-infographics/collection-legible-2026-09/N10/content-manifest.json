@@ -1,0 +1,161 @@
+{
+  "title": "Antes de aprobar una intervención",
+  "claim": "Nueve campos se controlan entre sí. No son casilleros para completar sin discutir.",
+  "topology": "matrix",
+  "source": "N10-v10-final/diagrams/N10-HH10-encuadre-puerta-decision.svg",
+  "source_sha256": "8eae98d3624777f9b0d631852fb75584504ccf22fd550c1ef41a995f75f1c707",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "Antes de aprobar una intervención",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Antes de aprobar una intervención"
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N10",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N10"
+    },
+    {
+      "id": "item-0",
+      "label": "Situar el cambio",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Situar el cambio"
+    },
+    {
+      "id": "item-1",
+      "label": "Sostener el argumento",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Sostener el argumento"
+    },
+    {
+      "id": "item-2",
+      "label": "Limitar el compromiso",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Limitar el compromiso"
+    },
+    {
+      "id": "relation-key",
+      "label": "Relaciones entre condiciones",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Relaciones entre condiciones"
+    },
+    {
+      "id": "decision",
+      "label": "Puerta de decisión",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "Puerta de decisión"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-decision",
+      "from": "item-0",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-1-decision",
+      "from": "item-1",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-2-decision",
+      "from": "item-2",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N10 · MAPA DE DECISIÓN",
+    "Antes de aprobar una intervención",
+    "Nueve campos se controlan entre sí. No son casilleros para completar sin",
+    "discutir.",
+    "Situar el cambio",
+    "Situación observada · personas",
+    "afectadas · resultado esperado.",
+    "Qué pasa, para quién y qué debería",
+    "cambiar en una ventana definida.",
+    "Sostener el argumento",
+    "Explicaciones rivales · evidencia y",
+    "vacíos · frontera.",
+    "Qué podría explicar lo observado,",
+    "qué lo apoya y qué quedó afuera.",
+    "Limitar el compromiso",
+    "Restricciones y preferencias ·",
+    "protección y reparación · revisión.",
+    "Qué no debe degradarse y qué",
+    "hallazgo obliga a volver al",
+    "encuadre.",
+    "CONDICIONES QUE SE LEEN EN CONJUNTO",
+    "Puerta de decisión",
+    "¿La evidencia alcanza para esta acción? Aprobar, devolver, dividir o",
+    "reformular antes de asumir un costo irreversible.",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}

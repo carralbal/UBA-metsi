@@ -1,0 +1,183 @@
+{
+  "title": "Cambiar la pieza sin perder la protección",
+  "claim": "Una práctica heredada puede conservar algo valioso aunque su implementación sea reemplazable.",
+  "topology": "comparison",
+  "source": "N18-v10-editorial/diagrams/N18-mapa-01.svg",
+  "source_sha256": "6f8ab0bfab3c96901d91401f41aec3b1498e4d15b38df7a2f6e75610bc10f183",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "Cambiar la pieza sin perder la protección",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Cambiar la pieza sin perder la protección"
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N18",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N18"
+    },
+    {
+      "id": "item-0",
+      "label": "Llamada antes de reasignar",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Llamada antes de reasignar"
+    },
+    {
+      "id": "item-1",
+      "label": "Posible obligación",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Posible obligación"
+    },
+    {
+      "id": "item-2",
+      "label": "Autoridad concentrada",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Autoridad concentrada"
+    },
+    {
+      "id": "item-3",
+      "label": "Historial y versiones",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Historial y versiones"
+    },
+    {
+      "id": "relation-key",
+      "label": "Relaciones entre condiciones",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Relaciones entre condiciones"
+    },
+    {
+      "id": "decision",
+      "label": "Prueba de modernización",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "Prueba de modernización"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-decision",
+      "from": "item-0",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-1-decision",
+      "from": "item-1",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-2-decision",
+      "from": "item-2",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-3-decision",
+      "from": "item-3",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N18 · MAPA DE DECISIÓN",
+    "Cambiar la pieza sin perder la",
+    "protección",
+    "Una práctica heredada puede conservar algo valioso aunque su implementación",
+    "sea reemplazable.",
+    "Llamada antes de",
+    "reasignar",
+    "Conservar la protección del compromiso",
+    "con el huésped.",
+    "Reemplazar la llamada sólo si otra",
+    "solución protege lo mismo.",
+    "Posible obligación",
+    "Verificar su fuente y alcance.",
+    "No tratar una interpretación pendiente",
+    "como un requisito confirmado.",
+    "Autoridad concentrada",
+    "Hacer explícito quién puede autorizar.",
+    "Distribuir permisos sin dejar decisiones",
+    "sin responsable.",
+    "Historial y versiones",
+    "Preservar los hechos y su significado.",
+    "Migrar sin borrar la posibilidad de",
+    "reconstruir lo ocurrido.",
+    "CONDICIONES QUE SE LEEN EN CONJUNTO",
+    "Prueba de modernización",
+    "Relacioná fuente, interpretación, diseño y ensayo. Retirá la práctica",
+    "anterior cuando se haya probado que la protección continúa.",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}

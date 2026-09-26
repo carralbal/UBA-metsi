@@ -1,0 +1,194 @@
+{
+  "title": "Salir bien no siempre significa aprender",
+  "claim": "Una mejora puede depender de trabajo invisible que la explicación inicial no contempló.",
+  "topology": "loop",
+  "source": "N36-v10-editorial/diagrams/N36-mapa-01.svg",
+  "source_sha256": "5af2bb4aac8abd53168383f92444ba998ba044c4fb87a49f367995baff0e6602",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "Salir bien no siempre significa aprender",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Salir bien no siempre significa aprender"
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N36",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N36"
+    },
+    {
+      "id": "item-0",
+      "label": "Resultado esperado",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Resultado esperado"
+    },
+    {
+      "id": "item-1",
+      "label": "Sorpresa",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Sorpresa"
+    },
+    {
+      "id": "item-2",
+      "label": "Revisar la práctica",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Revisar la práctica"
+    },
+    {
+      "id": "item-3",
+      "label": "Cambiar algo comprobable",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Cambiar algo comprobable"
+    },
+    {
+      "id": "item-4",
+      "label": "Comprobar transferencia",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Comprobar transferencia"
+    },
+    {
+      "id": "decision",
+      "label": "Volver a poner a prueba",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "Volver a poner a prueba"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-item-1",
+      "from": "item-0",
+      "to": "item-1",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-1-item-2",
+      "from": "item-1",
+      "to": "item-2",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-2-item-3",
+      "from": "item-2",
+      "to": "item-3",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-3-item-4",
+      "from": "item-3",
+      "to": "item-4",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-4-item-0",
+      "from": "item-4",
+      "to": "item-0",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "El efecto vuelve a modificar las condiciones iniciales."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N36 · MAPA DE DECISIÓN",
+    "Salir bien no siempre significa aprender",
+    "Una mejora puede depender de trabajo invisible que la explicación inicial",
+    "no contempló.",
+    "01",
+    "Resultado esperado",
+    "La integración debería reducir el trabajo manual.",
+    "Ese es el mecanismo que se quiere poner a prueba.",
+    "02",
+    "Sorpresa",
+    "Baja la espera, pero Recepción anticipa excepciones en silencio.",
+    "El buen resultado no demuestra que la integración lo explique",
+    "sola.",
+    "03",
+    "Revisar la práctica",
+    "Un bucle: ajustar la acción.",
+    "Dos bucles: revisar también objetivo, reglas y autoridad.",
+    "04",
+    "Cambiar algo comprobable",
+    "Acción, responsable y próximo episodio que puede refutarla.",
+    "La IA puede proponer preguntas; las personas verifican y deciden.",
+    "05",
+    "Comprobar transferencia",
+    "Otra persona puede sostener el criterio en una situación nueva.",
+    "El aprendizaje debe aparecer en la práctica, no sólo en el relato.",
+    "Volver a poner a prueba",
+    "El nuevo episodio puede confirmar o cuestionar el cambio. Aprender",
+    "incluye conservar esa posibilidad abierta.",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}

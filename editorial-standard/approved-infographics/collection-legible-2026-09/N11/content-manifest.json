@@ -1,0 +1,157 @@
+{
+  "title": "Un dato no habla por sí solo",
+  "claim": "Para usarlo como evidencia hay que poder reconstruir qué permite afirmar.",
+  "topology": "converge",
+  "source": "N11-v10-editorial/diagrams/N11-mapa-01.svg",
+  "source_sha256": "b5bd65ca3dcc558b5d19ec9e1c9142d97565774d9462acfbd98da5bbae392efc",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "Un dato no habla por sí solo",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Un dato no habla por sí solo"
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N11",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N11"
+    },
+    {
+      "id": "item-0",
+      "label": "Afirmación",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Afirmación"
+    },
+    {
+      "id": "item-1",
+      "label": "Rastro",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Rastro"
+    },
+    {
+      "id": "item-2",
+      "label": "Límite",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Límite"
+    },
+    {
+      "id": "relation-key",
+      "label": "Relaciones entre condiciones",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Relaciones entre condiciones"
+    },
+    {
+      "id": "decision",
+      "label": "¿Alcanza para esta decisión?",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "¿Alcanza para esta decisión?"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-decision",
+      "from": "item-0",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-1-decision",
+      "from": "item-1",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-2-decision",
+      "from": "item-2",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N11 · MAPA DE DECISIÓN",
+    "Un dato no habla por sí solo",
+    "Para usarlo como evidencia hay que poder reconstruir qué permite afirmar.",
+    "Afirmación",
+    "Delimitar qué se sostiene.",
+    "Sobre qué fenómeno, población y",
+    "período estamos hablando.",
+    "Rastro",
+    "Conservar cómo se obtuvo y",
+    "transformó el dato.",
+    "Fuente, registros, operaciones",
+    "realizadas y faltantes.",
+    "Límite",
+    "Explicitar hasta dónde sirve.",
+    "Incertidumbre, condiciones de uso y",
+    "señales para revisar.",
+    "CONDICIONES QUE SE LEEN EN CONJUNTO",
+    "¿Alcanza para esta decisión?",
+    "Las demoras por canal permiten revisar una integración. No prueban, por",
+    "sí solas, que todos los terceros sean la causa.",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "title": "Una afirmación necesita su historia",
+  "claim": "No es lo mismo observar algo que explicar por qué pasó o decidir qué hacer.",
+  "topology": "flow",
+  "source": "N04-v10-final/diagrams/N04-mapa-decision.svg",
+  "source_sha256": "4b55e920e3f0665dfc6aff487ccf2fbad3a7051203e35808e032fa74d434d692",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "Una afirmación necesita su historia",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Una afirmación necesita su historia"
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N04",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N04"
+    },
+    {
+      "id": "item-0",
+      "label": "Fuente",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Fuente"
+    },
+    {
+      "id": "item-1",
+      "label": "Registro",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Registro"
+    },
+    {
+      "id": "item-2",
+      "label": "Dato",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Dato"
+    },
+    {
+      "id": "item-3",
+      "label": "Interpretación",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Interpretación"
+    },
+    {
+      "id": "item-4",
+      "label": "Hipótesis",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Hipótesis"
+    },
+    {
+      "id": "item-5",
+      "label": "Decisión",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Decisión"
+    },
+    {
+      "id": "decision",
+      "label": "En cada paso",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "En cada paso"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-item-1",
+      "from": "item-0",
+      "to": "item-1",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-1-item-2",
+      "from": "item-1",
+      "to": "item-2",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-2-item-3",
+      "from": "item-2",
+      "to": "item-3",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-3-item-4",
+      "from": "item-3",
+      "to": "item-4",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-4-item-5",
+      "from": "item-4",
+      "to": "item-5",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N04 · MAPA DE DECISIÓN",
+    "Una afirmación necesita su historia",
+    "No es lo mismo observar algo que explicar por qué pasó o decidir qué hacer.",
+    "01",
+    "Fuente",
+    "Persona, sensor o documento.",
+    "¿De dónde salió la información?",
+    "02",
+    "Registro",
+    "Captura situada y parcial.",
+    "¿Qué se anotó y en qué condiciones?",
+    "03",
+    "Dato",
+    "Registro codificado según una definición.",
+    "¿Qué significa cada valor?",
+    "04",
+    "Interpretación",
+    "Significado que atribuimos a lo registrado.",
+    "¿Qué lectura hacemos y qué otras son posibles?",
+    "05",
+    "Hipótesis",
+    "Explicación que puede ponerse a prueba.",
+    "¿Qué evidencia podría mostrar que estamos equivocados?",
+    "06",
+    "Decisión",
+    "Acción con una condición de revisión.",
+    "¿Quién decide y cuándo volveremos a evaluar?",
+    "En cada paso",
+    "Conservá procedencia, definiciones, incertidumbre y responsables. Una",
+    "transformación no debe borrar la anterior.",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}

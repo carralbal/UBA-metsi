@@ -1,0 +1,183 @@
+{
+  "title": "Volver atrás no siempre repara",
+  "claim": "Una liberación cambia más que el código.",
+  "topology": "branch",
+  "source": "N29-v10-editorial/diagrams/N29-mapa-01.svg",
+  "source_sha256": "d347f368fd9eeba33597f555e683218377cd91e397dca896a8750fa3c702e5cb",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "Volver atrás no siempre repara",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Volver atrás no siempre repara"
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N29",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N29"
+    },
+    {
+      "id": "item-0",
+      "label": "Antes de exponer",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Antes de exponer"
+    },
+    {
+      "id": "item-1",
+      "label": "Sin cambios persistidos",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Sin cambios persistidos"
+    },
+    {
+      "id": "item-2",
+      "label": "Con datos transformados",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Con datos transformados"
+    },
+    {
+      "id": "item-3",
+      "label": "Con una promesa ya recibida",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Con una promesa ya recibida"
+    },
+    {
+      "id": "relation-key",
+      "label": "Relaciones entre condiciones",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Relaciones entre condiciones"
+    },
+    {
+      "id": "decision",
+      "label": "Límite del piloto",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "Límite del piloto"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-decision",
+      "from": "item-0",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-1-decision",
+      "from": "item-1",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-2-decision",
+      "from": "item-2",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-3-decision",
+      "from": "item-3",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N29 · MAPA DE DECISIÓN",
+    "Volver atrás no siempre repara",
+    "Una liberación cambia más que el código.",
+    "Antes de exponer",
+    "Código, configuración, infraestructura,",
+    "datos, terceros y operación.",
+    "Probar el mismo artefacto que después se",
+    "va a utilizar.",
+    "Sin cambios",
+    "persistidos",
+    "Volver a la versión anterior: rollback.",
+    "Verificar que el servicio realmente se",
+    "recuperó.",
+    "Con datos",
+    "transformados",
+    "Corregir hacia adelante y reconciliar.",
+    "Restaurar código puede dejar datos",
+    "incompatibles.",
+    "Con una promesa ya",
+    "recibida",
+    "Aislar, comunicar, reparar o compensar.",
+    "No se puede deshacer lo que el huésped",
+    "ya vivió.",
+    "CONDICIONES QUE SE LEEN EN CONJUNTO",
+    "Límite del piloto",
+    "Cincuenta transiciones o la primera discrepancia. Ricardo detiene; Lucía",
+    "comprueba el resultado antes de ampliar.",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}

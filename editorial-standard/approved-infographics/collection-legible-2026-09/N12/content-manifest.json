@@ -1,0 +1,182 @@
+{
+  "title": "Pedir no es confirmar que ocurrió",
+  "claim": "Comando, evento y estado cumplen funciones diferentes.",
+  "topology": "flow",
+  "source": "N12-v10-editorial/diagrams/N12-mapa-01.svg",
+  "source_sha256": "7e217f8283aa6c7b7fec752f70828753dccbb745855f6108dc5bd4d357ac876b",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "Pedir no es confirmar que ocurrió",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Pedir no es confirmar que ocurrió"
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N12",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N12"
+    },
+    {
+      "id": "item-0",
+      "label": "Estado anterior",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Estado anterior"
+    },
+    {
+      "id": "item-1",
+      "label": "Comando",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Comando"
+    },
+    {
+      "id": "item-2",
+      "label": "Condiciones para actuar",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Condiciones para actuar"
+    },
+    {
+      "id": "item-3",
+      "label": "Evento",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Evento"
+    },
+    {
+      "id": "item-4",
+      "label": "Estado vigente",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Estado vigente"
+    },
+    {
+      "id": "decision",
+      "label": "Hotel Horizonte",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "Hotel Horizonte"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-item-1",
+      "from": "item-0",
+      "to": "item-1",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-1-item-2",
+      "from": "item-1",
+      "to": "item-2",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-2-item-3",
+      "from": "item-2",
+      "to": "item-3",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-3-item-4",
+      "from": "item-3",
+      "to": "item-4",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N12 · MAPA DE DECISIÓN",
+    "Pedir no es confirmar que ocurrió",
+    "Comando, evento y estado cumplen funciones diferentes.",
+    "01",
+    "Estado anterior",
+    "Qué se considera válido antes de actuar.",
+    "Debe poder reconocerse sin reconstrucciones informales.",
+    "02",
+    "Comando",
+    "Una solicitud de cambio.",
+    "Puede quedar pendiente o ser rechazada: todavía no es un hecho.",
+    "03",
+    "Condiciones para actuar",
+    "Autoridad, reglas, evidencia y tiempo.",
+    "Quién puede habilitar el cambio y con qué respaldo.",
+    "04",
+    "Evento",
+    "Registro de lo que efectivamente ocurrió.",
+    "Conserva el hecho, no sólo la intención de producirlo.",
+    "05",
+    "Estado vigente",
+    "Qué vale después de la transición.",
+    "Si hay un error, se repara sin borrar la historia.",
+    "Hotel Horizonte",
+    "“Limpieza terminada” no significa “lista para entregar”. También",
+    "importan inspección, asignación, acceso y autorización.",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}

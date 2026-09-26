@@ -1,0 +1,192 @@
+{
+  "title": "Un efecto puede volver como causa",
+  "claim": "La sobreventa puede reforzar el mismo problema que intenta resolver.",
+  "topology": "loop",
+  "source": "N03-v11-final/diagrams/N03-mapa-decision.svg",
+  "source_sha256": "3b2d5c1a199bc98ea654f7e1db996ab5be5ca8903ef96fa8044b675d566630dd",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "Un efecto puede volver como causa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Un efecto puede volver como causa"
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N03",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N03"
+    },
+    {
+      "id": "item-0",
+      "label": "Presión por ocupación",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Presión por ocupación"
+    },
+    {
+      "id": "item-1",
+      "label": "Sobreventa",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Sobreventa"
+    },
+    {
+      "id": "item-2",
+      "label": "Reparación manual",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Reparación manual"
+    },
+    {
+      "id": "item-3",
+      "label": "Datos menos oportunos",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Datos menos oportunos"
+    },
+    {
+      "id": "item-4",
+      "label": "Más incertidumbre",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Más incertidumbre"
+    },
+    {
+      "id": "decision",
+      "label": "El ciclo vuelve al inicio",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "El ciclo vuelve al inicio"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-item-1",
+      "from": "item-0",
+      "to": "item-1",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-1-item-2",
+      "from": "item-1",
+      "to": "item-2",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-2-item-3",
+      "from": "item-2",
+      "to": "item-3",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-3-item-4",
+      "from": "item-3",
+      "to": "item-4",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-4-item-0",
+      "from": "item-4",
+      "to": "item-0",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "El efecto vuelve a modificar las condiciones iniciales."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N03 · MAPA DE DECISIÓN",
+    "Un efecto puede volver como causa",
+    "La sobreventa puede reforzar el mismo problema que intenta resolver.",
+    "01",
+    "Presión por ocupación",
+    "Se busca vender más habitaciones.",
+    "Aumenta el margen de sobreventa.",
+    "02",
+    "Sobreventa",
+    "Aumenta la exposición a reservas incompatibles.",
+    "Aparecen más excepciones que resolver.",
+    "03",
+    "Reparación manual",
+    "El equipo dedica tiempo a reubicar y corregir.",
+    "Queda menos atención para actualizar los estados.",
+    "04",
+    "Datos menos oportunos",
+    "La información llega tarde o queda incompleta.",
+    "La coordinación pierde una base confiable.",
+    "05",
+    "Más incertidumbre",
+    "Comercial percibe más incertidumbre sobre la ocupación.",
+    "Esa incertidumbre puede impulsar más sobreventa.",
+    "El ciclo vuelve al inicio",
+    "Incluí en el análisis reglas de canales, proveedores y otras condiciones",
+    "externas, aunque no las controles.",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}

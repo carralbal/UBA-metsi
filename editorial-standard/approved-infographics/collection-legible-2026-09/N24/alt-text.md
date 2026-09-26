@@ -1,0 +1,1 @@
+De arriba abajo: se protege la accesibilidad; de cuatro opciones avanzan cobertura accesible e instrumentación de eventos, esperan los canales externos y no avanza por ahora la automatización de sobreventa. Se reserva capacidad para incidentes. Toda postergación registra personas afectadas, consecuencia y revisión.

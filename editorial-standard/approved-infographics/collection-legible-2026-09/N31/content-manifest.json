@@ -1,0 +1,204 @@
+{
+  "title": "Primero la tarea. Después la IA.",
+  "claim": "Una capacidad se justifica frente a una alternativa práctica, no por novedad.",
+  "topology": "taxonomy",
+  "source": "N31-v10-editorial/diagrams/N31-mapa-01.svg",
+  "source_sha256": "48b0c6196fd3877bea3f2c9546b2ea52d89adfc2bcd31d58aebf2e650fbc12a8",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "Primero la tarea. Después la IA.",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Primero la tarea. Después la IA."
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N31",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N31"
+    },
+    {
+      "id": "item-0",
+      "label": "Validar",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Validar"
+    },
+    {
+      "id": "item-1",
+      "label": "Buscar",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Buscar"
+    },
+    {
+      "id": "item-2",
+      "label": "Predecir",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Predecir"
+    },
+    {
+      "id": "item-3",
+      "label": "Generar",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Generar"
+    },
+    {
+      "id": "item-4",
+      "label": "Actuar",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Actuar"
+    },
+    {
+      "id": "relation-key",
+      "label": "Relaciones entre condiciones",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Relaciones entre condiciones"
+    },
+    {
+      "id": "decision",
+      "label": "Límite del caso",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "Límite del caso"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-decision",
+      "from": "item-0",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-1-decision",
+      "from": "item-1",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-2-decision",
+      "from": "item-2",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-3-decision",
+      "from": "item-3",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-4-decision",
+      "from": "item-4",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N31 · MAPA DE DECISIÓN",
+    "Primero la tarea. Después la IA.",
+    "Una capacidad se justifica frente a una alternativa práctica, no por",
+    "novedad.",
+    "Validar",
+    "Reglas explícitas y comprobaciones",
+    "deterministas.",
+    "Útil cuando la condición puede definirse",
+    "con precisión.",
+    "Buscar",
+    "Recuperar una política y su fuente.",
+    "La respuesta debe permitir comprobar",
+    "procedencia y vigencia.",
+    "Predecir",
+    "Estimar un resultado con incertidumbre.",
+    "Evaluar calibración y costo de equivocarse.",
+    "Generar",
+    "Preparar un borrador.",
+    "Verificar, corregir o abstenerse antes de",
+    "usarlo.",
+    "Actuar",
+    "Modificar una reserva u otra condición",
+    "real.",
+    "Requiere permisos, límites y capacidad de",
+    "reparación.",
+    "CONDICIONES QUE SE LEEN EN CONJUNTO",
+    "Límite del caso",
+    "El asistente prepara; Recepción y Comercial confirman. Comparar valor,",
+    "supervisión y reparación con reglas, búsqueda y trabajo humano.",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "title": "Cuatro minutos no cuentan toda la espera",
+  "claim": "El mostrador ve una parte. La familia vive el recorrido completo.",
+  "topology": "timeline",
+  "source": "N14-v10-editorial/diagrams/N14-mapa-01.svg",
+  "source_sha256": "4499493e9efb6b153171bc3d23af18206fda26505c6f2b08519966cce6436b11",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "Cuatro minutos no cuentan toda la espera",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Cuatro minutos no cuentan toda la espera"
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N14",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N14"
+    },
+    {
+      "id": "item-0",
+      "label": "Llegada",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Llegada"
+    },
+    {
+      "id": "item-1",
+      "label": "Esperas y traspasos",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Esperas y traspasos"
+    },
+    {
+      "id": "item-2",
+      "label": "Asignación y acceso",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Asignación y acceso"
+    },
+    {
+      "id": "item-3",
+      "label": "Excepción o reparación",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Excepción o reparación"
+    },
+    {
+      "id": "decision",
+      "label": "Dos mediciones distintas",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "Dos mediciones distintas"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-item-1",
+      "from": "item-0",
+      "to": "item-1",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-1-item-2",
+      "from": "item-1",
+      "to": "item-2",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-2-item-3",
+      "from": "item-2",
+      "to": "item-3",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N14 · MAPA DE DECISIÓN",
+    "Cuatro minutos no cuentan toda la espera",
+    "El mostrador ve una parte. La familia vive el recorrido completo.",
+    "01",
+    "Llegada",
+    "El reloj empieza cuando comienza la necesidad de ingreso.",
+    "No cuando un sector decide iniciar su medición.",
+    "02",
+    "Esperas y traspasos",
+    "Inspección, identidad, cerradura y autorizaciones.",
+    "Hacer visible quién recibe el caso y quién debe responder.",
+    "03",
+    "Asignación y acceso",
+    "Confirmar una habitación y habilitar la llave.",
+    "Seguir la misma llegada a través de todas las áreas.",
+    "04",
+    "Excepción o reparación",
+    "Una identidad discutida necesita autoridad y una respuesta.",
+    "El recorrido termina con ingreso efectivo o reparación.",
+    "Dos mediciones distintas",
+    "Cuatro minutos en el mostrador pueden formar parte de una llegada que",
+    "demora 27 minutos. Mejorar una tarea no asegura mejorar el conjunto.",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}

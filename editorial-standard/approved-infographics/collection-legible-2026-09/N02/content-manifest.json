@@ -1,0 +1,198 @@
+{
+  "title": "El sistema no termina en la pantalla",
+  "claim": "Son cinco objetos relacionados. Confundirlos cambia el problema que intentamos resolver.",
+  "topology": "nested",
+  "source": "N02-v16-final/diagrams/N02-mapa-decision.svg",
+  "source_sha256": "9bab3dd253a966aad90fd393f099df6e8e5118067587af98560c39db1a892c10",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "El sistema no termina en la pantalla",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "El sistema no termina en la pantalla"
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N02",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N02"
+    },
+    {
+      "id": "item-0",
+      "label": "Situación problemática",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Situación problemática"
+    },
+    {
+      "id": "item-1",
+      "label": "Sistema de trabajo",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Sistema de trabajo"
+    },
+    {
+      "id": "item-2",
+      "label": "Sistema de información",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Sistema de información"
+    },
+    {
+      "id": "item-3",
+      "label": "Sistema técnico",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Sistema técnico"
+    },
+    {
+      "id": "item-4",
+      "label": "Aplicación",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Aplicación"
+    },
+    {
+      "id": "relation-key",
+      "label": "Relaciones entre condiciones",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Relaciones entre condiciones"
+    },
+    {
+      "id": "decision",
+      "label": "Elegir la frontera",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "Elegir la frontera"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-decision",
+      "from": "item-0",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-1-decision",
+      "from": "item-1",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-2-decision",
+      "from": "item-2",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-3-decision",
+      "from": "item-3",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    },
+    {
+      "id": "e-item-4-decision",
+      "from": "item-4",
+      "to": "decision",
+      "relation": "dependency",
+      "source": [
+        "original"
+      ],
+      "meaning": "Esta condición contribuye al criterio conjunto de decisión."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N02 · MAPA DE DECISIÓN",
+    "El sistema no termina en la pantalla",
+    "Son cinco objetos relacionados. Confundirlos cambia el problema que",
+    "intentamos resolver.",
+    "Situación problemática",
+    "Incluye tensiones, perspectivas, restricciones e historia.",
+    "Es el contexto que vuelve necesario intervenir.",
+    "Sistema de trabajo",
+    "Personas y actividades producen un servicio.",
+    "La tecnología participa, pero no trabaja sola.",
+    "Sistema de información",
+    "Se produce, interpreta y usa información.",
+    "Importa quién la entiende, la corrige y decide con ella.",
+    "Sistema técnico",
+    "Aplicaciones, integraciones, dispositivos y redes.",
+    "Es la infraestructura que permite parte del trabajo.",
+    "Aplicación",
+    "Es una pieza del sistema técnico.",
+    "Que funcione no demuestra que el servicio cumpla su promesa.",
+    "CONDICIONES QUE SE LEEN EN CONJUNTO",
+    "Elegir la frontera",
+    "Para probar una función miramos la aplicación. Para explicar una promesa",
+    "incumplida, ampliamos la mirada.",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}

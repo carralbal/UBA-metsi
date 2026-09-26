@@ -1,0 +1,182 @@
+{
+  "title": "La misma intención no debe duplicarse",
+  "claim": "Los mensajes pueden repetirse, demorarse o llegar fuera de orden.",
+  "topology": "flow",
+  "source": "N13-v10-editorial/diagrams/N13-mapa-01.svg",
+  "source_sha256": "8d22ba619f1a08227fa7464707dc0df5b702ed86aa5c64b361a7f6248a255ef1",
+  "source_sections": [
+    {
+      "id": "original",
+      "heading": "Mapa de decisión canónico",
+      "summary": "Relaciones del mapa original, contrastadas con la lectura canónica."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "label": "La misma intención no debe duplicarse",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "La misma intención no debe duplicarse"
+    },
+    {
+      "id": "document-label",
+      "label": "METSI · N13",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "METSI · N13"
+    },
+    {
+      "id": "item-0",
+      "label": "Reconocer la intención",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Reconocer la intención"
+    },
+    {
+      "id": "item-1",
+      "label": "Proteger la regla",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Proteger la regla"
+    },
+    {
+      "id": "item-2",
+      "label": "No inventar éxito",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "No inventar éxito"
+    },
+    {
+      "id": "item-3",
+      "label": "Reconciliar",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Reconciliar"
+    },
+    {
+      "id": "item-4",
+      "label": "Reparar",
+      "role": "process",
+      "source": [
+        "original"
+      ],
+      "purpose": "Reparar"
+    },
+    {
+      "id": "decision",
+      "label": "Criterio de cierre",
+      "role": "decision",
+      "source": [
+        "original"
+      ],
+      "purpose": "Criterio de cierre"
+    },
+    {
+      "id": "reading-key",
+      "label": "Lectura del mapa",
+      "role": "annotation",
+      "source": [
+        "original"
+      ],
+      "purpose": "Lectura del mapa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-item-0-item-1",
+      "from": "item-0",
+      "to": "item-1",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-1-item-2",
+      "from": "item-1",
+      "to": "item-2",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-2-item-3",
+      "from": "item-2",
+      "to": "item-3",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    },
+    {
+      "id": "e-item-3-item-4",
+      "from": "item-3",
+      "to": "item-4",
+      "relation": "flow",
+      "source": [
+        "original"
+      ],
+      "meaning": "La consecuencia o evidencia habilita el paso siguiente."
+    }
+  ],
+  "visible_labels": [
+    "METSI · N13 · MAPA DE DECISIÓN",
+    "La misma intención no debe duplicarse",
+    "Los mensajes pueden repetirse, demorarse o llegar fuera de orden.",
+    "01",
+    "Reconocer la intención",
+    "Asignar la última habitación disponible.",
+    "Un reintento a los ocho segundos no es una segunda reserva.",
+    "02",
+    "Proteger la regla",
+    "Una habitación no puede tener dos asignaciones incompatibles.",
+    "Identidad estable, versión y autoridad protegen esa condición.",
+    "03",
+    "No inventar éxito",
+    "Si el resultado es ambiguo, hacerlo visible.",
+    "No sobrescribir silenciosamente ni volver a aplicar el efecto.",
+    "04",
+    "Reconciliar",
+    "Comparar canal de reservas, sistema del hotel y cerradura.",
+    "Una cancelación tardía exige revisar qué sigue vigente.",
+    "05",
+    "Reparar",
+    "Resolver la discrepancia y conservar su historia.",
+    "Registrar quién actuó y qué consecuencia tuvo.",
+    "Criterio de cierre",
+    "No alcanza con que cada sistema tenga un registro. Deben poder sostener",
+    "una misma asignación válida.",
+    "Las relaciones orientan la decisión; no reemplazan la explicación del texto."
+  ],
+  "target_width_mm": 173,
+  "minimum_content_font_pt": 11.44,
+  "minimum_metadata_font_pt": 9.81,
+  "status": "AUTHORIZED_COLLECTION_REVISION",
+  "page_plan": {
+    "purpose": "Mapa de decisión legible",
+    "layout": "diagram-feature",
+    "source_ids": [
+      "original"
+    ],
+    "dominant_mass": "Relaciones y explicación gráfica",
+    "secondary_mass": "Criterio para decidir",
+    "reason_full_page": "La cantidad de relaciones y el cuerpo mínimo de 11,44 pt requieren una lámina de consulta completa. Se elimina el gran titular externo duplicado."
+  }
+}
