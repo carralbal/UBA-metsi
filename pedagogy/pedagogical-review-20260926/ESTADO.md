@@ -20,4 +20,10 @@ Esta revisión no reemplaza una prueba con estudiantes reales. La comprobación 
 
 ## Publicación
 
-**Estos cambios todavía no están publicados.** No se modificó el catálogo público ni el manifiesto de la edición en línea. Se conservaron los paquetes anteriores. Para publicar, corresponde incorporar los paquetes nuevos, actualizar las referencias y títulos del sitio, y verificar la descarga tras el despliegue.
+**Publicado y verificado.** Se actualizaron los 36 PDF, las portadas, los títulos y el catálogo público. Se conservaron los paquetes anteriores y se archivó el catálogo previo.
+
+- Edición: revision-pedagogica-20260926.
+- Commit desplegado: 5d3e669c5a1603d5056cd67a693b90cd7d4b9b67.
+- Despliegue correcto: https://github.com/carralbal/UBA-metsi/actions/runs/36277623540
+- Colección: https://carralbal.github.io/UBA-metsi/?v=revision-pedagogica-20260926#biblioteca
+- Se descargaron y compararon los 36 PDF públicos con sus huellas aprobadas; también se verificaron el catálogo y los títulos del home. Evidencia: public-verification.json.

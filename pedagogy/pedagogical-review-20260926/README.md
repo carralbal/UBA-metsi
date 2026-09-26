@@ -29,4 +29,4 @@ Corrección selectiva sobre la edición de lectura clara publicada el 26 de sept
 - Los controles de composición y las revisiones visuales se registran sobre los PDF nuevos, no se heredan de la edición anterior.
 - La presencia de un ejemplo o un apartado no mide comprensión. Conviene comprobar con alumnos si pueden resolver la variación sin copiar.
 
-Esta carpeta no acredita publicación. El estado de entrega se registra por separado al terminar la verificación.
+La publicación está completada y verificada. El resultado del despliegue y la comparación de las 36 descargas públicas se registran en ESTADO.md y public-verification.json.
