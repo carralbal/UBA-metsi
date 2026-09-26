@@ -24,8 +24,9 @@ Un estado no sustituye al siguiente. No se declara terminada la colección hasta
 
 ## Avance de redacción — 26 de septiembre de 2026
 
-- N01–N24 y N26–N36: reescritura completa y revisión de contenido, continuidad académica, composición y control visual terminadas. Publicación pendiente de verificación remota.
+- N01–N24 y N26–N36: reescritura completa y revisión de contenido, continuidad académica, composición y control visual terminadas. Publicadas en GitHub Pages y verificadas mediante descarga y comparación SHA-256 de los 36 PDF, incluido el N25 aprobado.
 - N25: se conserva el texto aprobado.
+- Publicación: commit `7d5acd1`; despliegue de Pages `36269434038`, completado correctamente. Recibo completo en `public-verification.json`; también se comprobó la versión del catálogo y los enlaces del home. N00 permanece sin modificaciones.
 - Las 35 nuevas ediciones conservan el texto completo, la bibliografía y los recursos editoriales. Se revisaron las hojas de contacto de todas sus páginas y ampliaciones de páginas críticas. El control automático no detectó páginas vacías, texto fuera de página ni candidatos a superposición. La verificación de publicación se registra por separado, mediante hashes de los 36 PDF descargados del sitio.
 
 El inventario generado separa existencia del borrador de las revisiones de calidad. No acredita revisión pedagógica ni publicación por contar palabras o encontrar archivos.
