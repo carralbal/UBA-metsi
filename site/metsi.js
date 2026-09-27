@@ -80,6 +80,135 @@
     });
   });
 
+  // This preference personalizes a public site; it is not an access credential.
+  const profileDialog = document.getElementById('profile-dialog');
+  const profileSwitch = document.querySelector('[data-profile-switch]');
+  if (profileDialog && profileSwitch && typeof profileDialog.showModal === 'function') {
+    const storageKey = 'metsi.audience.v1';
+    const profiles = {
+      student: {
+        label: 'Estudiante', tab: 'estudiantes', title: 'Llegá a clase con una idea propia.',
+        intro: 'Empezá por la guía. Después elegí la lectura del encuentro y prepará tus preguntas.',
+        deck: 'Vas a aprender a entender un problema antes de salir a resolverlo. Las lecturas, los ejemplos y el caso Hotel Horizonte te ayudan a preparar la clase y a probar tus propias decisiones.',
+        actions: [['Empezar por N00','pdf/N00-METSI-lectura-previa-v3-final.pdf'],['Explorar las lecturas','#biblioteca'],['Cómo se aprende','#experiencia']],
+        route: [['Prepará el próximo encuentro','La guía N00 explica cómo leer y qué llevar a clase.','pdf/N00-METSI-lectura-previa-v3-final.pdf'],['Elegí tu lectura','36 lecturas con explicaciones, ejemplos y ejercicios.','#biblioteca'],['Ubicá cada concepto','El atlas conecta las prácticas con secciones de las lecturas.','#atlas-practicas']]
+      },
+      teacher: {
+        label: 'Docente', tab: 'docencia', title: 'Prepará el encuentro, no sólo la explicación.',
+        intro: 'Conectá la lectura previa, el trabajo en clase y la evaluación. Los materiales docentes son públicos por ahora.',
+        deck: 'Las lecturas preparan el encuentro para que haya más tiempo de discutir, resolver y revisar. Encontrá materiales y ejemplos para explicar de distintas maneras y acompañar las preguntas del grupo.',
+        actions: [['Ver el piloto de clase N01','pdf/presentaciones/N01/'],['Preparar el encuentro','#experiencia'],['Consultar el programa','#programa']],
+        route: [['Probá la presentación N01','Piloto de clase con videos y notas de orador en otra pestaña.','pdf/presentaciones/N01/'],['Diseñá el encuentro','Lectura previa, discusión del caso y aplicación en clase.','#experiencia'],['Conectá enseñanza y evaluación','Revisá los objetivos y los criterios del programa.','#programa']]
+      },
+      authority: {
+        label: 'Autoridad académica', tab: 'carrera', title: 'Conocé el aporte de METSI a la carrera.',
+        intro: 'Revisá qué aprende el estudiante, cómo se organiza el recorrido y qué fundamentos lo sostienen.',
+        deck: 'METSI conecta la formación técnica con la investigación, el diseño y la gestión. El programa, las lecturas y los casos muestran cómo se construye el criterio para intervenir en problemas profesionales.',
+        actions: [['Consultar el programa','#programa'],['Recorrer los ocho bloques','#mapa'],['Ver referentes','#referentes']],
+        route: [['Revisá el programa','Propósitos, contenidos, carga y criterios de evaluación.','#programa'],['Recorré la arquitectura curricular','Ocho bloques que conectan los aprendizajes de la materia.','#mapa'],['Conocé el respaldo académico','Referentes argentinos, latinoamericanos y globales.','#referentes']]
+      },
+      visitor: {
+        label: 'Me interesa la propuesta', tab: 'catedra', title: 'Llevá estas preguntas a tu propio contexto.',
+        intro: 'Si trabajás con tecnología, equipos u organizaciones, podés empezar por el enfoque y seguir por el tema que te interese.',
+        deck: 'A veces el pedido llega como una solución: una app, un sistema nuevo, una herramienta de IA. METSI propone empezar antes: entender qué pasa, comparar alternativas y comprobar si el cambio sirve.',
+        actions: [['Conocer la propuesta','#propuesta'],['Explorar las prácticas','#atlas-practicas'],['Elegir una lectura','#biblioteca']],
+        route: [['Descubrí el enfoque','Qué significa entender el problema antes de elegir una solución.','#propuesta'],['Conectá prácticas y problemas','Marcos y herramientas según la decisión que ayudan a tomar.','#atlas-practicas'],['Elegí una lectura','Buscá un tema y probá sus preguntas en tu contexto.','#biblioteca']]
+      }
+    };
+    const choices = [...profileDialog.querySelectorAll('[data-profile-choice]')];
+    let selected = null;
+    let opener = null;
+    let lockedScroll = null;
+    let choosing = false;
+    const validProfile = key => Object.hasOwn(profiles, key);
+    const setDestination = (link, href) => {
+      link.href = href;
+      if (!href.startsWith('#')) { link.target = '_blank'; link.rel = 'noopener'; }
+      else { link.removeAttribute('target'); link.removeAttribute('rel'); }
+    };
+    const applyProfile = key => {
+      if (!validProfile(key)) return;
+      selected = key;
+      const profile = profiles[key];
+      document.body.dataset.audience = key;
+      document.querySelector('.hero-deck').textContent = profile.deck;
+      document.querySelectorAll('.hero-actions a').forEach((link, i) => {
+        link.textContent = profile.actions[i][0];
+        setDestination(link, profile.actions[i][1]);
+      });
+      document.querySelector('[data-profile-label]').textContent = `Tu recorrido · ${profile.label}`;
+      document.getElementById('profile-route-title').textContent = profile.title;
+      document.querySelector('[data-profile-intro]').textContent = profile.intro;
+      const route = document.querySelector('[data-profile-route]');
+      route.replaceChildren(...profile.route.map(([title, description, href]) => {
+        const li = document.createElement('li');
+        const link = document.createElement('a');
+        const copy = document.createElement('span');
+        const heading = document.createElement('strong');
+        const detail = document.createElement('small');
+        const arrow = document.createElement('span');
+        heading.textContent = title; detail.textContent = description;
+        arrow.textContent = href.startsWith('#') ? '↓' : '↗';
+        arrow.setAttribute('aria-hidden','true');
+        copy.append(heading, detail); link.append(copy, arrow);
+        setDestination(link, href); li.append(link); return li;
+      }));
+      document.querySelector('.profile-route').hidden = false;
+      choices.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.profileChoice === key)));
+      profileSwitch.setAttribute('aria-label', `Cambiar perfil. Perfil actual: ${profile.label}`);
+      const tab = tabs.find(item => item.dataset.tab === profile.tab);
+      if (tab) activateTab(tab);
+    };
+    const unlockScroll = () => {
+      if (!lockedScroll) return;
+      const { x, y, style } = lockedScroll;
+      Object.assign(document.body.style, style);
+      lockedScroll = null;
+      window.scrollTo({left:x, top:y, behavior:'instant'});
+    };
+    const openProfiles = () => {
+      if (profileDialog.open || choosing) return;
+      opener = selected ? document.activeElement : null;
+      closeMenu();
+      const style = {};
+      for (const property of ['position','top','left','width']) style[property] = document.body.style[property];
+      lockedScroll = {x:window.scrollX, y:window.scrollY, style};
+      Object.assign(document.body.style, {position:'fixed', top:`-${lockedScroll.y}px`, left:'0', width:'100%'});
+      profileDialog.showModal();
+      document.getElementById('profile-dialog-title').focus({preventScroll:true});
+    };
+    profileDialog.addEventListener('cancel', event => event.preventDefault());
+    profileDialog.addEventListener('keydown', event => {
+      if (event.key !== 'Tab') return;
+      const first = choices[0], last = choices[choices.length - 1];
+      if (event.shiftKey && (document.activeElement === first || document.activeElement.id === 'profile-dialog-title')) {
+        event.preventDefault(); last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault(); first.focus();
+      }
+    });
+    profileDialog.addEventListener('close', unlockScroll);
+    choices.forEach(button => button.addEventListener('click', async () => {
+      if (choosing) return;
+      choosing = true;
+      applyProfile(button.dataset.profileChoice);
+      try { localStorage.setItem(storageKey, selected); } catch { /* Session-only when storage is unavailable. */ }
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && profileDialog.animate) {
+        await profileDialog.animate([{opacity:1},{opacity:0}], {duration:160}).finished.catch(() => {});
+      }
+      profileDialog.close();
+      unlockScroll();
+      (opener?.isConnected ? opener : document.querySelector('.hero-actions a')).focus({preventScroll:true});
+      choosing = false;
+    }));
+    profileSwitch.hidden = false;
+    profileSwitch.addEventListener('click', openProfiles);
+    let saved;
+    try { saved = localStorage.getItem(storageKey); } catch { /* First visit without persistent storage. */ }
+    if (validProfile(saved)) applyProfile(saved);
+    else openProfiles();
+  }
+
   const practiceBlocks = document.querySelector('[data-practice-blocks]');
   const practiceField = document.querySelector('[data-practice-field]');
   const practiceAtlas = document.querySelector('[data-practice-atlas]');
