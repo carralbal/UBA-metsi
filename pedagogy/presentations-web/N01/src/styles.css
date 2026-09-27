@@ -92,4 +92,22 @@ footer{position:absolute;left:5.8%;right:5.8%;bottom:4.1%;display:flex;justify-c
   .slide-08 .definition-grid>div{display:block}.slide-08 .definition-grid h2{margin-top:.35rem}.slide-08 .definition-grid p{display:none}
   .slide-10 .reflection-grid{margin-top:2.4rem}
 }
+.touch-navigation{display:none}
+@media(max-width:900px),(pointer:coarse){
+  .presentation{display:flex;flex-direction:column}
+  .presentation>.stage{flex:1;min-height:0;height:auto;touch-action:pan-y pinch-zoom}
+  .touch-navigation{flex:none;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.25rem max(1.25rem,env(safe-area-inset-right)) max(.3rem,env(safe-area-inset-bottom)) max(1.25rem,env(safe-area-inset-left));border-top:1px solid var(--line);background:var(--ink)}
+  .touch-navigation button{display:grid;place-items:center;min-width:48px;min-height:48px;padding:0;border:0;background:transparent;color:var(--paper);cursor:pointer;touch-action:manipulation}
+  .touch-navigation button:active{color:var(--volt)}
+  .touch-navigation button:focus-visible{outline:2px solid var(--volt);outline-offset:-3px}
+  .touch-navigation button:disabled{opacity:.25;cursor:default}
+  .touch-chevron{width:10px;height:10px;border-top:1.5px solid currentColor;border-right:1.5px solid currentColor;transform:rotate(45deg)}
+  .touch-chevron.previous{transform:rotate(-135deg)}
+  .touch-navigation>div{text-align:center;font-size:.68rem;letter-spacing:.12em;font-variant-numeric:tabular-nums;color:var(--volt)}
+  .touch-navigation small{display:block;margin-top:.15rem;font-size:.58rem;letter-spacing:.04em;color:var(--soft)}
+}
+@media(max-width:650px),(pointer:coarse) and (max-height:500px){
+  .stage .slide-copy{justify-content:flex-start;justify-content:safe center;overflow-y:auto}
+  .stage .slide-copy>*{flex-shrink:0}
+}
 @media(prefers-reduced-motion:reduce){.controls,.video-toggle{transition:none}.background-video{display:none}.stage{background:#111}}

@@ -343,6 +343,54 @@ function usePresentationKeys({ next, previous, first, last, openNotes, toggleFul
   }, [next, previous, first, last, openNotes, toggleFullscreen]);
 }
 
+function useTouchNavigation(rootRef, { next, previous }, enabled) {
+  useEffect(() => {
+    const root = rootRef.current;
+    if (!enabled || !root) return undefined;
+    let gesture = null;
+    const cancel = () => { gesture = null; };
+    const start = (event) => {
+      cancel();
+      if (event.touches.length !== 1 || event.target.closest('button,a,input,textarea,select,nav,[contenteditable]')) return;
+      const touch = event.touches[0];
+      // Leave the browser's back/forward edge gesture and pinch zoom alone.
+      if (touch.clientX < 24 || touch.clientX > window.innerWidth - 24) return;
+      gesture = { id: touch.identifier, x: touch.clientX, y: touch.clientY, time: Date.now(), direction: null };
+    };
+    const move = (event) => {
+      if (!gesture) return;
+      if (event.touches.length !== 1) { cancel(); return; }
+      const touch = event.touches[0];
+      const dx = Math.abs(touch.clientX - gesture.x), dy = Math.abs(touch.clientY - gesture.y);
+      if (!gesture.direction && Math.max(dx, dy) > 12) {
+        if (dx > dy * 1.4) gesture.direction = 'horizontal';
+        else if (dy > dx) gesture.direction = 'vertical';
+      }
+      if (gesture.direction === 'horizontal' && event.cancelable) event.preventDefault();
+    };
+    const end = (event) => {
+      if (!gesture) return;
+      const current = gesture; cancel();
+      const touch = [...event.changedTouches].find(item => item.identifier === current.id);
+      if (!touch || event.touches.length || current.direction !== 'horizontal' || Date.now() - current.time > 1200) return;
+      const dx = touch.clientX - current.x, dy = touch.clientY - current.y;
+      if (Math.abs(dx) < Math.max(50, Math.min(90, window.innerWidth * .12)) || Math.abs(dx) < Math.abs(dy) * 1.4) return;
+      if (window.getSelection()?.toString()) return;
+      if (dx < 0) next(); else previous();
+    };
+    root.addEventListener('touchstart', start, { passive: true });
+    root.addEventListener('touchmove', move, { passive: false });
+    root.addEventListener('touchend', end, { passive: true });
+    root.addEventListener('touchcancel', cancel, { passive: true });
+    return () => {
+      root.removeEventListener('touchstart', start);
+      root.removeEventListener('touchmove', move);
+      root.removeEventListener('touchend', end);
+      root.removeEventListener('touchcancel', cancel);
+    };
+  }, [rootRef, next, previous, enabled]);
+}
+
 function SlideBody({ slide }) {
   if (slide.layout === "opening") return <div className="opening-layout"><h1>{slide.title}</h1><p className="main-prompt">{slide.prompt}</p><p className="aside">{slide.aside}</p></div>;
   if (slide.layout === "decision") return <><h1>{slide.title}</h1><div className="decision-grid">{slide.options.map((item) => <div key={item}><strong>{item}</strong><span>una razón</span></div>)}</div><p className="main-prompt">{slide.prompt}</p></>;
@@ -376,6 +424,7 @@ function App() {
     toggleFullscreen: () => document.fullscreenElement ? document.exitFullscreen() : rootRef.current?.requestFullscreen(),
   }), [index, notesHref]);
   usePresentationKeys(controls);
+  useTouchNavigation(rootRef, controls, !presenterMode);
 
   useEffect(() => {
     if (!("BroadcastChannel" in window)) return undefined;
@@ -472,6 +521,11 @@ function App() {
         <button onClick={controls.toggleFullscreen} aria-label="Pantalla completa">□</button>
       </nav>
     </section>
+    <nav className="touch-navigation" aria-label="Cambiar diapositiva">
+      <button type="button" onClick={controls.previous} disabled={index === 0} aria-label="Diapositiva anterior"><span className="touch-chevron previous" aria-hidden="true" /></button>
+      <div><span aria-live="polite" aria-atomic="true">{String(index + 1).padStart(2, '0')} / {String(slides.length).padStart(2, '0')}</span><small>Deslizá para cambiar</small></div>
+      <button type="button" onClick={controls.next} disabled={index === slides.length - 1} aria-label="Diapositiva siguiente"><span className="touch-chevron" aria-hidden="true" /></button>
+    </nav>
   </main>;
 }
 
