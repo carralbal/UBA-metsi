@@ -17,6 +17,9 @@ for (const width of [1440,768,390]) {
  assert.equal(await page.locator('.nucleus a').count(),0);
  assert.deepEqual(await page.locator('.block summary strong').allTextContents(),expected.blocks.map(b=>b.title));
  assert.deepEqual(await page.locator('.program-units span').allTextContents(),expected.blocks.map(b=>b.title));
+ await page.locator('.practice-radial').scrollIntoViewIfNeeded();
+ // Let the entrance animation finish before measuring block-to-block shifts.
+ await page.waitForTimeout(1000);
  let count=0,positions=[];
  for(let b=1;b<=8;b++) {
    await page.locator('[data-practice-block="'+b+'"]').click();
@@ -30,7 +33,7 @@ for (const width of [1440,768,390]) {
      assert(!overflow, 'Panel overflow '+width+' '+item.id);
    }
  }
- assert(positions.every(p=>Math.abs(p.y-positions[0].y)<2&&Math.abs(p.x-positions[0].x)<2),'Radial moved at '+width);
+ assert(positions.every(p=>Math.abs(p.y-positions[0].y)<2&&Math.abs(p.x-positions[0].x)<2),'Radial moved at '+width+': '+JSON.stringify(positions));
  assert.equal(await page.locator('.reading-reference-grid li').count(),36);
  await page.locator('.reference-index details').first().locator('summary').click();
  assert.equal(await page.locator('.reference-index details').first().locator('li').count(),24);

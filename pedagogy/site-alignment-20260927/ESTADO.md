@@ -24,3 +24,15 @@
 3. Ejecutar scripts/qa_site_alignment.mjs contra la vista previa o la URL pública.
 
 No se modifican el régimen académico ni las condiciones de evaluación. Su aprobación institucional sigue siendo una instancia separada de esta alineación editorial.
+
+## Publicación verificada
+
+- Repositorio: https://github.com/carralbal/UBA-metsi
+- Commit de publicación: 6ad14ced859fa40b90b1aaa1ef1d05d136e365b0.
+- GitHub Pages: https://github.com/carralbal/UBA-metsi/actions/runs/36345433677 (completado correctamente).
+- Sitio: https://carralbal.github.io/UBA-metsi/?v=6ad14ce
+- Atlas: https://carralbal.github.io/UBA-metsi/?v=6ad14ce#atlas-practicas
+- Programa: https://carralbal.github.io/UBA-metsi/covers/programa/programa-metsi-2026.pdf?v=alineacion-20260927
+- Seis archivos públicos contrastados por SHA-256 con la versión local, incluido el PDF del programa. Las 36 lecturas responden HTTP 200 como PDF.
+- Navegador público verificado a 1440, 768 y 390 píxeles: las mismas 41 prácticas y 70 destinos, sin errores de ejecución ni desbordamiento horizontal. El control de estabilidad del radial se toma una vez finalizada la animación de entrada, para no confundirla con un desplazamiento por selección.
+- Evidencia: live-verification.json y browser-qa.json.
