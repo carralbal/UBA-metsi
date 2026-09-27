@@ -15,6 +15,7 @@
 - Escape y pulsaciones fuera del panel no omiten la selección, de acuerdo con el pedido.
 - Las cuatro opciones se operan con teclado. Sin JavaScript o sin soporte de diálogo, el contenido original sigue siendo legible: no se trata de una barrera de seguridad.
 - Respeta movimiento reducido. En pantallas bajas el panel permite desplazarse sin desbordarse lateralmente.
+- Ajuste posterior: las flechas se dibujan con trazos CSS, sin glifos que iOS pueda representar como emojis. Marca superior y numeración volt visibles también sin hover. Abarca selector, Cambiar perfil y enlaces del recorrido recomendado.
 
 ## Verificación
 

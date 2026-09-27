@@ -19,9 +19,9 @@
   <meta name="twitter:image" content="https://carralbal.github.io/UBA-metsi/og.png">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" as="image" href="covers/hero-metsi-fce-bw-v2.webp?v=20260915-1" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="metsi.css?v=20260927-perfiles-1">
+  <link rel="stylesheet" href="metsi.css?v=20260927-perfiles-2">
   <script defer src="covers/atlas-data.js?v=20260927-1"></script>
-  <script src="metsi.js?v=20260927-perfiles-1" defer></script>
+  <script src="metsi.js?v=20260927-perfiles-2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#recorrido">Ir al recorrido</a>
@@ -40,18 +40,19 @@
       <a href="#programa">Programa</a>
       <a class="mobile-collection-link" href="#biblioteca">Explorar la colección</a>
     </nav>
-    <button class="profile-switch" type="button" data-profile-switch aria-haspopup="dialog" aria-controls="profile-dialog" hidden>Cambiar perfil <span aria-hidden="true">↗</span></button>
+    <button class="profile-switch" type="button" data-profile-switch aria-haspopup="dialog" aria-controls="profile-dialog" hidden>Cambiar perfil <span class="profile-arrow" aria-hidden="true"></span></button>
   </header>
 
   <dialog class="profile-dialog" id="profile-dialog" aria-labelledby="profile-dialog-title" aria-describedby="profile-dialog-description">
+    <span class="profile-entry-accent" aria-hidden="true"></span>
     <p class="profile-eyebrow">METSI · FCE UBA <span>Acceso público</span></p>
     <h2 id="profile-dialog-title" tabindex="-1" autofocus>¿Desde dónde querés<br>conocer METSI?</h2>
     <p id="profile-dialog-description">Elegí tu perfil para encontrar un recorrido pensado para vos.</p>
     <div class="profile-choices" role="group" aria-label="Elegir perfil">
-      <button type="button" data-profile-choice="student" aria-pressed="false"><span class="profile-choice-number">01 <span aria-hidden="true">↗</span></span><strong>Estudiante</strong><span>Preparar la clase, entender y practicar.</span></button>
-      <button type="button" data-profile-choice="teacher" aria-pressed="false"><span class="profile-choice-number">02 <span aria-hidden="true">↗</span></span><strong>Docente</strong><span>Preparar encuentros y acompañar el aprendizaje.</span></button>
-      <button type="button" data-profile-choice="authority" aria-pressed="false"><span class="profile-choice-number">03 <span aria-hidden="true">↗</span></span><strong>Autoridad académica</strong><span>Conocer el programa y su aporte a la carrera.</span></button>
-      <button type="button" data-profile-choice="visitor" aria-pressed="false"><span class="profile-choice-number">04 <span aria-hidden="true">↗</span></span><strong>Me interesa la propuesta</strong><span>Explorar ideas y llevarlas a otros contextos.</span></button>
+      <button type="button" data-profile-choice="student" aria-pressed="false"><span class="profile-choice-number">01 <span class="profile-arrow" aria-hidden="true"></span></span><strong>Estudiante</strong><span>Preparar la clase, entender y practicar.</span></button>
+      <button type="button" data-profile-choice="teacher" aria-pressed="false"><span class="profile-choice-number">02 <span class="profile-arrow" aria-hidden="true"></span></span><strong>Docente</strong><span>Preparar encuentros y acompañar el aprendizaje.</span></button>
+      <button type="button" data-profile-choice="authority" aria-pressed="false"><span class="profile-choice-number">03 <span class="profile-arrow" aria-hidden="true"></span></span><strong>Autoridad académica</strong><span>Conocer el programa y su aporte a la carrera.</span></button>
+      <button type="button" data-profile-choice="visitor" aria-pressed="false"><span class="profile-choice-number">04 <span class="profile-arrow" aria-hidden="true"></span></span><strong>Me interesa la propuesta</strong><span>Explorar ideas y llevarlas a otros contextos.</span></button>
     </div>
     <p class="profile-dialog-note">Todo el contenido sigue disponible. Podés cambiar de perfil en cualquier momento.</p>
   </dialog>

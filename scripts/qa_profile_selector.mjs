@@ -12,6 +12,10 @@ try {
   const errors = []; page.on('pageerror', e=>errors.push(e.message));
   await page.goto(base, {waitUntil:'networkidle'});
   const dialog = page.locator('#profile-dialog');
+  assert(!(await dialog.textContent()).includes('↗'),'Emoji-capable arrows in dialog');
+  assert.equal(await dialog.locator('.profile-arrow').count(),4);
+  assert.equal(await dialog.locator('.profile-entry-accent').evaluate(e=>getComputedStyle(e).backgroundColor),'rgb(207, 255, 0)');
+  assert.equal(await dialog.locator('.profile-choice-number').first().evaluate(e=>getComputedStyle(e).color),'rgb(207, 255, 0)');
   assert(await dialog.evaluate(d=>d.open));
   assert.equal(await page.evaluate(()=>document.activeElement.id),'profile-dialog-title');
   await page.keyboard.press('Escape');

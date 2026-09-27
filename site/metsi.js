@@ -148,7 +148,7 @@
         const detail = document.createElement('small');
         const arrow = document.createElement('span');
         heading.textContent = title; detail.textContent = description;
-        arrow.textContent = href.startsWith('#') ? '↓' : '↗';
+        arrow.className = href.startsWith('#') ? 'profile-arrow profile-arrow-down' : 'profile-arrow';
         arrow.setAttribute('aria-hidden','true');
         copy.append(heading, detail); link.append(copy, arrow);
         setDestination(link, href); li.append(link); return li;

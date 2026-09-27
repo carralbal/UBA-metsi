@@ -34,6 +34,11 @@ nav a{position:relative;padding:.55rem 0}nav a::after{content:"";position:absolu
 .menu-toggle,.mobile-collection-link{display:none}
 .profile-switch{justify-self:end;display:flex;align-items:center;gap:.8rem;border:0;border-bottom:2px solid var(--volt);padding:.6rem 0;background:transparent;color:inherit;font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
 .profile-switch[hidden],.profile-route[hidden]{display:none}
+.profile-arrow{position:relative;display:inline-block;width:.85rem;height:.85rem;flex:0 0 .85rem;color:currentColor}
+.profile-arrow::before{content:"";position:absolute;left:0;top:50%;width:100%;height:1px;background:currentColor;transform:rotate(-45deg)}
+.profile-arrow::after{content:"";position:absolute;top:14%;right:14%;width:55%;height:55%;border-top:1px solid currentColor;border-right:1px solid currentColor}
+.profile-arrow-down{transform:rotate(135deg)}
+.profile-entry-accent{display:block;width:2.8rem;height:.3rem;margin-bottom:1.25rem;background:var(--volt);clip-path:polygon(8% 0,100% 0,92% 100%,0 100%)}
 .profile-dialog{width:min(66rem,calc(100% - 2rem));max-height:calc(100dvh - 2rem);margin:auto;padding:clamp(1.4rem,4vw,3.5rem);border:0;background:linear-gradient(115deg,rgba(13,15,13,.94),rgba(13,15,13,.81));color:var(--white);box-shadow:0 2rem 7rem #0004;overflow-y:auto;overscroll-behavior:contain;color-scheme:dark}
 .profile-dialog::backdrop{background:rgba(10,11,10,.42);backdrop-filter:grayscale(1) blur(5px);-webkit-backdrop-filter:grayscale(1) blur(5px)}
 .profile-dialog[open]{animation:profile-appear .22s ease-out}
@@ -49,7 +54,9 @@ nav a{position:relative;padding:.55rem 0}nav a::after{content:"";position:absolu
 .profile-choices button{display:flex;flex-direction:column;align-items:stretch;gap:1rem;min-width:0;text-align:left;padding:1rem 0 1.4rem;border:0;border-bottom:1px solid #71766a;background:transparent;color:var(--white);cursor:pointer;transition:color .16s ease,border-color .16s ease}
 .profile-choices button:hover,.profile-choices button:focus-visible,.profile-choices button[aria-pressed="true"]{color:var(--volt);border-bottom-color:var(--volt)}
 .profile-choices button:focus-visible{outline:2px solid var(--volt);outline-offset:6px}
-.profile-choice-number{display:flex;justify-content:space-between;font:700 .65rem/1 var(--sans);letter-spacing:.08em;color:#b7bab1}
+.profile-choice-number{display:flex;justify-content:space-between;align-items:center;font:700 .65rem/1 var(--sans);letter-spacing:.08em;color:var(--volt)}
+.profile-choice-number .profile-arrow{color:#b7bab1}
+.profile-choices button:is(:hover,:focus-visible,[aria-pressed="true"]) .profile-arrow{color:var(--volt)}
 .profile-choices button:is(:hover,:focus-visible,[aria-pressed="true"]) .profile-choice-number{color:var(--volt)}
 .profile-choices strong{font:400 clamp(1.4rem,2.4vw,1.9rem)/1.1 var(--serif);letter-spacing:-.025em;min-height:2.3em;margin-top:.5rem}
 .profile-choices button>span:last-child{font-size:.77rem;line-height:1.5;color:#c4c7be}
