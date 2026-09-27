@@ -14,6 +14,8 @@
 
 La carga de 108 horas corresponde al plan publicado. El calendario 2026 organiza 46 encuentros efectivos de dos horas informados por la cátedra. Antes de elevar el programa debe documentarse la equivalencia entre horas formales, horas reloj, encuentros, evaluaciones y actividades virtuales según el criterio institucional; el cronograma operativo no modifica por sí mismo la carga aprobada del plan.
 
+En el sitio y los materiales, METSI identifica la propuesta «Metodología del Estudio de Sistemas de Información». Se conserva arriba la denominación formal de la asignatura: «Metodología de los Sistemas de Información».
+
 ## Encuadre general
 
 Metodología de los Sistemas de Información aborda el estudio y la intervención de sistemas de información organizacionales entendidos como sistemas socio-técnicos. Su foco no se limita al desarrollo de software: integra personas, decisiones, procesos, datos, reglas, tecnologías, estructuras, incentivos, proveedores, controles y efectos emergentes.
@@ -34,7 +36,7 @@ La asignatura contribuye así al perfil del Licenciado en Sistemas de Informaci�
 
 ## Propósito general
 
-Formar profesionales capaces de comprender, diseñar, conducir, evaluar y hacer evolucionar intervenciones en sistemas de información organizacionales mediante estrategias metodológicas situadas, rigurosas, adaptativas y responsables.
+Formar profesionales capaces de comprender un problema organizacional, justificar qué conviene cambiar, llevar ese cambio a la práctica y evaluar sus consecuencias. Las decisiones deben apoyarse en evidencia, reconocer lo que todavía no se sabe y poder revisarse.
 
 ## Objetivos generales
 
@@ -68,41 +70,59 @@ Al aprobar la asignatura, el estudiante será capaz de:
 
 ## Contenidos
 
-### Unidad 1 - Sistemas de información e intervención socio-técnica
+### Unidad 1 · Bloque A - Comprender el sistema
+
+N01 a N04. Campo académico: Sistemas de información e intervención socio-técnica.
 
 Sistema de información, sistema informático y organización. Propósito, capacidades, servicios y resultados. Actores, afectados, decisiones, procesos, datos, reglas, tecnologías e instituciones. Fronteras analíticas y de responsabilidad. Emergencia, retroalimentación, demoras y efectos no intencionales. Metodología, intervención, evidencia y juicio profesional. Pedido, síntoma, problema y oportunidad.
 
-### Unidad 2 - Investigación y construcción del problema
+### Unidad 2 · Bloque B - Investigar el problema
+
+N05 a N10. Campo académico: Investigación y construcción del problema.
 
 Discovery y reducción de incertidumbre. Stakeholders, usuarios, operadores, decisores y afectados. Poder, incentivos, conflictos y perspectivas. Entrevistas, observación, shadowing, análisis documental y triangulación. Experiencia de usuario y de empleado. Accesibilidad e inclusión. Hechos, interpretaciones, supuestos e hipótesis. Problem framing. Outcomes, restricciones, riesgos y criterios de éxito. Ética de la investigación y tratamiento de información con IA.
 
-### Unidad 3 - Información, procesos y modelado selectivo
+### Unidad 3 · Bloque C - Modelar para decidir
+
+N11 a N16. Campo académico: Información, procesos y modelado selectivo.
 
 Información, significado, evidencia y acción. Eventos, estados, reglas, decisiones, autoridades y excepciones. Procesos end-to-end, handoffs, colas, retrabajo y trabajo invisible. Calidad, procedencia y responsabilidad sobre datos. Propósito, audiencia, fidelidad y vigencia de los modelos. Modelado colaborativo. Diagramas de contexto, procesos, dominio, interacción y arquitectura. UML, BPMN y C4 en función de problemas concretos. Consistencia, trazabilidad y validación de modelos.
 
-### Unidad 4 - Ciclos de vida y estrategia de intervención
+### Unidad 4 · Bloque D - Decidir cómo intervenir
+
+N17 a N20. Campo académico: Ciclos de vida y estrategia de intervención.
 
 Ciclo de vida como organización del riesgo y del aprendizaje. Enfoques secuenciales, predictivos, iterativos, incrementales, adaptativos y experimentales. Legado crítico, regulación, compliance y documentación. Incertidumbre, criticidad, reversibilidad, costo de cambio y costo de demora. Selección y combinación de prácticas. Construcción, compra, configuración, integración, tercerización, low-code y continuidad manual. Selección y evaluación de paquetes. Riesgo de adopción, gestión del cambio e hitos de decisión.
 
-### Unidad 5 - Producto, flujo y entrega adaptativa
+### Unidad 5 · Bloque E - Entregar valor y aprender
+
+N21 a N25. Campo académico: Producto, flujo y entrega adaptativa.
 
 Proyecto, producto, servicio y plataforma. Valor, actividad, output, outcome e impacto. Hipótesis, experimentos y validación temprana. Requisitos, historias, ejemplos y criterios de aceptación. Atributos de calidad. Backlog como conjunto de opciones. Priorización por valor, riesgo, aprendizaje y costo de demora. Scrum, Kanban y Lean como mecanismos. Trabajo en curso, colas, feedback y métricas de flujo. Value Stream Mapping. Coordinación y escalado. Integración, entrega y automatización continuas.
 
-### Unidad 6 - Ecosistemas, calidad y operación
+### Unidad 6 · Bloque F - Operar y mejorar el servicio
+
+N26 a N30. Campo académico: Ecosistemas, calidad y operación.
 
 Servicios, plataformas y ecosistemas. Interoperabilidad, APIs, eventos, contratos y dependencias. Límites de responsabilidad y modelos compartidos. Modos de falla, resiliencia, degradación, contingencia y recuperación. Calidad basada en riesgos. Estrategias y niveles de prueba. Despliegue, configuración e infraestructura automatizable. Observabilidad técnica, funcional y organizacional. Indicadores, niveles de servicio, incidentes y postmortems. Adopción, uso, resultados y mejora continua.
 
-### Unidad 7 - Sistemas con IA, automatización y gobierno
+### Unidad 7 · Bloque G - Gobernar el uso de IA
+
+N31 a N33. Campo académico: Sistemas con IA, automatización y gobierno.
 
 Automatización determinística, modelos predictivos, IA generativa y agentes. IA como componente del sistema y como instrumento del trabajo profesional. Datos, modelos, prompts, herramientas, memoria, contexto y proveedores. Requisitos y evaluación de sistemas no determinísticos. Utilidad, exactitud, robustez, sesgo, privacidad, seguridad y procedencia. Impactos sobre personas, trabajo, derechos y ambiente. Límites de autonomía, autoridad de acción, supervisión, escalamiento, fallback y parada segura. Pruebas previas, monitoreo continuo, incidentes e inventario de IA. Citizen development y gobierno de low-code. Trazabilidad y responsabilidad.
 
-### Unidad 8 - Integración, transferencia y actuación responsable
+### Unidad 8 · Bloque H - Integrar y compartir lo aprendido
+
+N34 a N36. Campo académico: Integración, transferencia y actuación responsable.
 
 Trazabilidad entre evidencia, problema, modelos, decisiones, entregas, operación y gobierno. Consistencia y evolución de artefactos. Límites de validez. Comunicación con audiencias técnicas y no técnicas. Facilitación, negociación y crítica entre pares. Defensa de decisiones. Transferencia entre dominios. Ética y responsabilidad profesional. Retrospectiva de la intervención y del método.
 
 ## Estrategia de enseñanza
 
-La asignatura adopta un enfoque invertido, práctico y experiencial. Los contenidos conceptuales principales se trabajan mediante lecturas previas de densidad universitaria. Los encuentros presenciales se destinan a recuperar y discutir conceptos, resolver ambigüedades, analizar evidencia, modelar, experimentar, comparar alternativas, criticar artefactos y defender decisiones.
+La asignatura combina lectura previa y práctica en clase. Las 36 lecturas conservan profundidad universitaria, pero parten de situaciones concretas y usan lenguaje directo. La guía N00 explica cómo prepararse. Cada N ofrece una ruta de lectura; lo esencial se distingue de las ampliaciones. Las explicaciones se acompañan con ejemplos, contraejemplos y aplicaciones, incluidos ejercicios resueltos que permiten ver cómo se llega a una respuesta.
+
+En los encuentros, los estudiantes comparan interpretaciones, analizan evidencia, construyen modelos, prueban alternativas y justifican decisiones. No se busca repetir el documento: se busca usar las ideas para resolver un caso y reconocer cuándo una explicación necesita revisarse.
 
 Hotel Horizonte funciona como caso longitudinal: cada bloque agrega evidencia, tensiones y restricciones que obligan a revisar el trabajo anterior. Microcasos de salud, sector público, educación, finanzas, comercio, industria, logística y pequeñas organizaciones permiten evaluar transferencia.
 
@@ -170,42 +190,114 @@ Estas condiciones fueron contrastadas en agosto de 2026 con el régimen de FCE-U
 
 ## Referentes y bibliografía
 
-La bibliografía se organiza por unidad y función pedagógica. Esta selección común hace visible la conversación intelectual que sostiene el programa; cada lectura N incorpora además las fuentes específicas necesarias para su problema. No constituye un canon cerrado ni una lista de herramientas: reúne perspectivas que pueden complementarse, contradecirse y obligar a revisar una decisión.
+La bibliografía reúne una selección general y fuentes específicas por lectura. Esta selección común hace visible la conversación intelectual que sostiene el programa; cada lectura N incorpora además las fuentes específicas necesarias para su problema. No constituye un canon cerrado ni una lista de herramientas: reúne perspectivas que pueden complementarse, contradecirse y obligar a revisar una decisión.
 
 ### Pensamiento argentino y latinoamericano
 
 - García, R. (2006). *Sistemas complejos: conceptos, método y fundamentación epistemológica de la investigación interdisciplinaria*. Gedisa. Aporta una forma rigurosa de construir sistemas de estudio mediante preguntas, relaciones y evidencia.
+
+Lecturas que citan esta obra y año: N01–N04, N08–N24, N26–N30, N34–N36.
+
 - Etkin, J. y Schvarstein, L. (1989). *Identidad de las organizaciones: invariancia y cambio*. Paidós. Permite estudiar tensiones entre identidad, estructura, poder y transformación organizacional.
+
+Lecturas que citan esta obra y año: N01–N05, N09, N11–N24, N26–N30, N34–N36.
+
 - Scolari, C. A. (2018). *Las leyes de la interfaz: diseño, ecología, evolución, tecnología*. Gedisa. Amplía la interfaz desde la pantalla hacia una red de relaciones, prácticas y mediaciones.
+
+Lecturas que citan esta obra y año: N06–N16, N21–N24, N26–N34.
+
 - Winograd, T. y Flores, F. (1986). *Understanding Computers and Cognition: A New Foundation for Design*. Ablex. Introduce compromisos, lenguaje y acción como dimensiones centrales del diseño de sistemas.
+
+Lecturas que citan esta obra y año: N12, N14, N27.
+
 - Varsavsky, O. (1974). *Estilos tecnológicos: propuestas para la selección de tecnologías bajo racionalidad socialista*. Periferia. Vuelve discutibles la neutralidad tecnológica, la dependencia y los criterios de selección.
+
+Lecturas que citan esta obra y año: N19–N20.
+
 - Ricaurte, P. (2019). “Data Epistemologies, The Coloniality of Power, and Resistance”. *Television & New Media*, 20(4), 350–365. https://doi.org/10.1177/1527476419831640
+
+Lecturas que citan esta obra y año: N05–N10, N31–N33.
+
 - Freire, P. (2005). *Pedagogy of the Oppressed*, 30th Anniversary Edition. Continuum. Vincula reflexión, diálogo y acción transformadora sin reducir el aprendizaje a recibir respuestas.
+
+Lecturas que citan esta obra y año: N34–N36.
+
 
 ### Referentes globales
 
 - Churchman, C. W. (1968). *The Systems Approach*. Delacorte Press.
+
+Lecturas que citan esta obra y año: N03.
+
 - Checkland, P. y Poulter, J. (2007). *Learning for Action*. Wiley.
+
+Lecturas que citan esta obra y año: N01–N02, N15–N16, N34–N35.
+
 - Meadows, D. H. (2008). *Thinking in Systems: A Primer*. Chelsea Green Publishing.
+
+Lecturas que citan esta obra y año: N03.
+
 - Schön, D. A. (1983). *The Reflective Practitioner*. Basic Books.
+
+Lecturas que citan esta obra y año: N01, N04, N06, N15, N17, N20, N34–N36.
+
 - Suchman, L. A. (2007). *Human-Machine Reconfigurations: Plans and Situated Actions*. Cambridge University Press.
+
+Lecturas que citan esta obra y año: N01, N07–N09.
+
 - Norman, D. A. (2013). *The Design of Everyday Things: Revised and Expanded Edition*. Basic Books.
+
+Lecturas que citan esta obra y año: N09, N35.
+
 - Freeman, R. E. (1984). *Strategic Management: A Stakeholder Approach*. Pitman.
+
+Lecturas que citan esta obra y año: N05.
+
 - Mumford, E. (2003). *Redesigning Human Systems*. IRM Press.
+
+Lecturas que citan esta obra y año: N02, N05.
+
 - Leveson, N. G. (2012). *Engineering a Safer World: Systems Thinking Applied to Safety*. MIT Press.
+
+Lecturas que citan esta obra y año: N03.
+
 - Edmondson, A. C. (1999). “Psychological Safety and Learning Behavior in Work Teams”. *Administrative Science Quarterly*, 44(2), 350–383. https://doi.org/10.2307/2666999
+
+Lecturas que citan esta obra y año: N16–N17, N25, N28–N30, N34–N36.
+
 
 ### Marcos, estándares y evidencia profesional
 
 - Project Management Institute (2025). *A Guide to the Project Management Body of Knowledge, PMBOK Guide, Eighth Edition, and The Standard for Project Management*. PMI. https://www.pmi.org/standards/pmbok
+
+Lecturas que citan esta obra y año: N01, N17, N20–N21.
+
 - Schwaber, K. y Sutherland, J. (2020). *The Scrum Guide*. https://scrumguides.org/scrum-guide.html
+
+Lecturas que citan esta obra y año: N17, N23, N25.
+
 - Object Management Group (2017). *Unified Modeling Language, Version 2.5.1*. https://www.omg.org/spec/UML/2.5.1
+
+Lecturas que citan esta obra y año: N12, N15.
+
 - Object Management Group (2014). *Business Process Model and Notation, Version 2.0.2*. https://www.omg.org/spec/BPMN/2.0.2
+
+Lecturas que citan esta obra y año: N12, N14–N15.
+
 - W3C (2024). *Web Content Accessibility Guidelines (WCAG) 2.2*. https://www.w3.org/TR/WCAG22/
+
+Lecturas que citan esta obra y año: N09.
+
 - Tabassi, E. (2023). *Artificial Intelligence Risk Management Framework (AI RMF 1.0)*. NIST AI 100-1. https://doi.org/10.6028/NIST.AI.100-1
+
+Lecturas que citan esta obra y año: N01–N02, N04, N06, N11–N12, N17, N19–N20, N22, N31–N34, N36.
+
 - DeBellis, D. et al. (2024). *DORA Accelerate State of DevOps 2024 Report*. https://research.google/pubs/dora-accelerate-state-of-devops-2024-report/
 
-Cada referencia registra edición o versión, vigencia, fragmento requerido y razón de inclusión. Se evita usar manuales de herramientas comerciales como base conceptual. La matriz completa forma parte del registro de revisión docente.
+Lecturas que citan esta obra y año: N21, N23–N24, N29.
+
+
+La selección general no reemplaza la bibliografía de cada lectura. El sitio permite localizar las obras en la sección Referencias base de N01 a N36. Allí se indica la edición utilizada: dos lecturas pueden recurrir a ediciones distintas de una misma obra. Los marcos se estudian por lo que ayudan a comprender o decidir; mencionarlos no equivale a ofrecer una formación completa sobre cada herramienta.
 
 ## Revisión y actualización
 

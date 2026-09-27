@@ -4,6 +4,10 @@
 from __future__ import annotations
 
 import re
+from html import escape
+import shutil
+import json
+import hashlib
 from pathlib import Path
 
 from pypdf import PdfReader, PdfWriter
@@ -36,6 +40,7 @@ LINE = colors.HexColor("#B9BCB4")
 
 
 def clean_inline(text: str) -> str:
+    text = escape(text)
     text = text.replace("–", "-").replace("—", "-").replace("‑", "-")
     text = re.sub(r"`([^`]+)`", r"<font name='Courier'>\1</font>", text)
     text = re.sub(r"\*([^*]+)\*", r"<i>\1</i>", text)
@@ -90,7 +95,7 @@ def styles():
         "cover_deck": ParagraphStyle("cover_deck", parent=base["Normal"], fontName="Helvetica", fontSize=12, leading=18, textColor=colors.HexColor("#D7D8D2"), spaceAfter=18),
         "h1": ParagraphStyle("h1", parent=base["Heading1"], fontName="Times-Roman", fontSize=25, leading=27, textColor=INK, spaceBefore=5, spaceAfter=11),
         "h2": ParagraphStyle("h2", parent=base["Heading2"], fontName="Times-Roman", fontSize=18, leading=20, textColor=INK, spaceBefore=13, spaceAfter=6),
-        "h3": ParagraphStyle("h3", parent=base["Heading3"], fontName="Helvetica-Bold", fontSize=10, leading=13, textColor=INK, spaceBefore=11, spaceAfter=5),
+        "h3": ParagraphStyle("h3", parent=base["Heading3"], fontName="Helvetica-Bold", fontSize=10, leading=13, textColor=INK, spaceBefore=11, spaceAfter=5, keepWithNext=True),
         "body": ParagraphStyle("body", parent=base["BodyText"], fontName="Times-Roman", fontSize=9.6, leading=13.4, textColor=INK, spaceAfter=5.5),
         "bullet": ParagraphStyle("bullet", parent=base["BodyText"], fontName="Times-Roman", fontSize=9.3, leading=12.8, textColor=INK, leftIndent=12, firstLineIndent=-8, spaceAfter=4),
         "small": ParagraphStyle("small", parent=base["BodyText"], fontName="Helvetica", fontSize=8, leading=11, textColor=MUTED, spaceAfter=5),
@@ -143,8 +148,10 @@ def markdown_story(text: str, s):
                 in_list = False
             continue
         if line.startswith("### "):
+            in_list = False
             story.append(Paragraph(clean_inline(line[4:]), s["h3"]))
         elif line.startswith("## "):
+            in_list = False
             story.append(Paragraph(clean_inline(line[3:]), s["h1"]))
         elif re.match(r"^\d+\.\s", line):
             number, item = line.split(". ", 1)
@@ -154,7 +161,7 @@ def markdown_story(text: str, s):
             story.append(Paragraph(f"• {clean_inline(line[2:])}", s["bullet"]))
             in_list = True
         else:
-            style = s["small"] if line.startswith("Estas condiciones fueron") else s["body"]
+            style = s["small"] if line.startswith(("Estas condiciones fueron", "Lecturas que citan esta obra")) else s["body"]
             story.append(Paragraph(clean_inline(line), style))
     return story
 
@@ -177,6 +184,17 @@ def main() -> None:
     with sanitized.open("wb") as stream:
         writer.write(stream)
     sanitized.replace(OUTPUT)
+    public = ROOT / "site/covers/programa/programa-metsi-2026.pdf"
+    public.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(OUTPUT, public)
+    catalog_path = ROOT / "site/course-manifest.json"
+    catalog = json.loads(catalog_path.read_text())
+    catalog["program"].update(pages=len(reader.pages), pdf="covers/programa/programa-metsi-2026.pdf?v=alineacion-20260927", sha256=hashlib.sha256(public.read_bytes()).hexdigest())
+    catalog_path.write_text(json.dumps(catalog, ensure_ascii=False, indent=2)+"\n")
+    home_path = ROOT / "site/index.html"
+    home = home_path.read_text()
+    home = re.sub(r'covers/programa/programa-metsi-2026\.pdf(?:\?v=[^"#]+)?', "covers/programa/programa-metsi-2026.pdf?v=alineacion-20260927", home)
+    home_path.write_text(home)
     print(OUTPUT)
 
 
