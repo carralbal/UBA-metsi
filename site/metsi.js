@@ -414,4 +414,44 @@
     }, { rootMargin: '-25% 0px -45% 0px', threshold: 0.1 });
     journeyItems.forEach((item) => journeyObserver.observe(item));
   }
+
+  const heroVideo = document.querySelector('.hero [data-ambient-video]');
+  if (heroVideo) {
+    const hero = heroVideo.closest('.hero');
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    const conserveData = () => Boolean(connection?.saveData || ['slow-2g','2g'].includes(connection?.effectiveType));
+    const updateVideo = () => {
+      const box = hero.getBoundingClientRect();
+      const visible = box.top < innerHeight * .82 && box.bottom > innerHeight * .18;
+      if (document.hidden || motion.matches || conserveData() || !visible) {
+        heroVideo.pause();
+        return;
+      }
+      const source = heroVideo.querySelector('source');
+      if (source?.dataset.src && !source.hasAttribute('src')) {
+        source.src = source.dataset.src;
+        heroVideo.load();
+      }
+      if (heroVideo.paused) heroVideo.play().catch(() => {});
+    };
+    heroVideo.addEventListener('playing', () => {
+      heroVideo.classList.add('is-playing');
+      hero.classList.add('video-active');
+    });
+    heroVideo.addEventListener('pause', () => {
+      heroVideo.classList.remove('is-playing');
+      hero.classList.remove('video-active');
+    });
+    heroVideo.addEventListener('error', () => {
+      heroVideo.classList.remove('is-playing');
+      hero.classList.remove('video-active');
+    });
+    motion.addEventListener?.('change', updateVideo);
+    connection?.addEventListener?.('change', updateVideo);
+    document.addEventListener('visibilitychange', updateVideo);
+    window.addEventListener('scroll', updateVideo, {passive:true});
+    window.addEventListener('resize', updateVideo);
+    updateVideo();
+  }
 })();
