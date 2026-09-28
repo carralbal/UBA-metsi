@@ -415,43 +415,44 @@
     journeyItems.forEach((item) => journeyObserver.observe(item));
   }
 
-  const heroVideo = document.querySelector('.hero [data-ambient-video]');
-  if (heroVideo) {
-    const hero = heroVideo.closest('.hero');
+  const ambientVideos = [...document.querySelectorAll('.hero [data-ambient-video], .case-study [data-ambient-video], .closing [data-ambient-video]')];
+  if (ambientVideos.length) {
     const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
     const conserveData = () => Boolean(connection?.saveData || ['slow-2g','2g'].includes(connection?.effectiveType));
-    const updateVideo = () => {
-      const box = hero.getBoundingClientRect();
+    const updateVideos = () => ambientVideos.forEach((video) => {
+      const section = video.parentElement;
+      const box = section.getBoundingClientRect();
       const visible = box.top < innerHeight * .82 && box.bottom > innerHeight * .18;
       if (document.hidden || motion.matches || conserveData() || !visible) {
-        heroVideo.pause();
-        return;
+        video.pause();
+      } else {
+        const source = video.querySelector('source');
+        if (source?.dataset.src && !source.hasAttribute('src')) {
+          source.src = source.dataset.src;
+          video.load();
+        }
+        if (video.paused) video.play().catch(() => {});
       }
-      const source = heroVideo.querySelector('source');
-      if (source?.dataset.src && !source.hasAttribute('src')) {
-        source.src = source.dataset.src;
-        heroVideo.load();
-      }
-      if (heroVideo.paused) heroVideo.play().catch(() => {});
-    };
-    heroVideo.addEventListener('playing', () => {
-      heroVideo.classList.add('is-playing');
-      hero.classList.add('video-active');
     });
-    heroVideo.addEventListener('pause', () => {
-      heroVideo.classList.remove('is-playing');
-      hero.classList.remove('video-active');
+    ambientVideos.forEach((video) => {
+      const section = video.parentElement;
+      video.addEventListener('playing', () => {
+        video.classList.add('is-playing');
+        section.classList.add('video-active');
+      });
+      const conceal = () => {
+        video.classList.remove('is-playing');
+        section.classList.remove('video-active');
+      };
+      video.addEventListener('pause', conceal);
+      video.addEventListener('error', conceal);
     });
-    heroVideo.addEventListener('error', () => {
-      heroVideo.classList.remove('is-playing');
-      hero.classList.remove('video-active');
-    });
-    motion.addEventListener?.('change', updateVideo);
-    connection?.addEventListener?.('change', updateVideo);
-    document.addEventListener('visibilitychange', updateVideo);
-    window.addEventListener('scroll', updateVideo, {passive:true});
-    window.addEventListener('resize', updateVideo);
-    updateVideo();
+    motion.addEventListener?.('change', updateVideos);
+    connection?.addEventListener?.('change', updateVideos);
+    document.addEventListener('visibilitychange', updateVideos);
+    window.addEventListener('scroll', updateVideos, {passive:true});
+    window.addEventListener('resize', updateVideos);
+    updateVideos();
   }
 })();
