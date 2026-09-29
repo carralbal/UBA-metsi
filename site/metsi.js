@@ -87,28 +87,28 @@
     const storageKey = 'metsi.audience.v1';
     const profiles = {
       student: {
-        label: 'Estudiante', tab: 'estudiantes', title: 'Llegá a clase con una idea propia.',
+        label: 'Estudiante', shortLabel: 'Estudiante', tab: 'estudiantes', title: 'Llegá a clase con una idea propia.',
         intro: 'Empezá por la guía. Después elegí la lectura del encuentro y prepará tus preguntas.',
         deck: 'Vas a aprender a entender un problema antes de salir a resolverlo. Las lecturas, los ejemplos y el caso Hotel Horizonte te ayudan a preparar la clase y a probar tus propias decisiones.',
         actions: [['Empezar por N00','pdf/N00-METSI-lectura-previa-v3-final.pdf'],['Explorar las lecturas','#biblioteca'],['Cómo se aprende','#experiencia']],
         route: [['Prepará el próximo encuentro','La guía N00 explica cómo leer y qué llevar a clase.','pdf/N00-METSI-lectura-previa-v3-final.pdf'],['Elegí tu lectura','36 lecturas con explicaciones, ejemplos y ejercicios.','#biblioteca'],['Ubicá cada concepto','El atlas conecta las prácticas con secciones de las lecturas.','#atlas-practicas']]
       },
       teacher: {
-        label: 'Docente', tab: 'docencia', title: 'Prepará el encuentro, no sólo la explicación.',
+        label: 'Docente', shortLabel: 'Docente', tab: 'docencia', title: 'Prepará el encuentro, no sólo la explicación.',
         intro: 'Conectá la lectura previa, el trabajo en clase y la evaluación. Los materiales docentes son públicos por ahora.',
         deck: 'Las lecturas preparan el encuentro para que haya más tiempo de discutir, resolver y revisar. Encontrá materiales y ejemplos para explicar de distintas maneras y acompañar las preguntas del grupo.',
         actions: [['Ver el piloto de clase N01','pdf/presentaciones/N01/'],['Preparar el encuentro','#experiencia'],['Consultar el programa','#programa']],
         route: [['Probá la presentación N01','Piloto de clase con videos y notas de orador en otra pestaña.','pdf/presentaciones/N01/'],['Diseñá el encuentro','Lectura previa, discusión del caso y aplicación en clase.','#experiencia'],['Conectá enseñanza y evaluación','Revisá los objetivos y los criterios del programa.','#programa']]
       },
       authority: {
-        label: 'Autoridad académica', tab: 'carrera', title: 'Conocé el aporte de METSI a la carrera.',
+        label: 'Autoridad académica', shortLabel: 'Autoridad', tab: 'carrera', title: 'Conocé el aporte de METSI a la carrera.',
         intro: 'Revisá qué aprende el estudiante, cómo se organiza el recorrido y qué fundamentos lo sostienen.',
         deck: 'METSI conecta la formación técnica con la investigación, el diseño y la gestión. El programa, las lecturas y los casos muestran cómo se construye el criterio para intervenir en problemas profesionales.',
         actions: [['Consultar el programa','#programa'],['Recorrer los ocho bloques','#mapa'],['Ver referentes','#referentes']],
         route: [['Revisá el programa','Propósitos, contenidos, carga y criterios de evaluación.','#programa'],['Recorré la arquitectura curricular','Ocho bloques que conectan los aprendizajes de la materia.','#mapa'],['Conocé el respaldo académico','Referentes argentinos, latinoamericanos y globales.','#referentes']]
       },
       visitor: {
-        label: 'Me interesa la propuesta', tab: 'catedra', title: 'Llevá estas preguntas a tu propio contexto.',
+        label: 'Me interesa la propuesta', shortLabel: 'Interés general', tab: 'catedra', title: 'Llevá estas preguntas a tu propio contexto.',
         intro: 'Si trabajás con tecnología, equipos u organizaciones, podés empezar por el enfoque y seguir por el tema que te interese.',
         deck: 'A veces el pedido llega como una solución: una app, un sistema nuevo, una herramienta de IA. METSI propone empezar antes: entender qué pasa, comparar alternativas y comprobar si el cambio sirve.',
         actions: [['Conocer la propuesta','#propuesta'],['Explorar las prácticas','#atlas-practicas'],['Elegir una lectura','#biblioteca']],
@@ -155,7 +155,9 @@
       }));
       document.querySelector('.profile-route').hidden = false;
       choices.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.profileChoice === key)));
-      profileSwitch.setAttribute('aria-label', `Cambiar perfil. Perfil actual: ${profile.label}`);
+      profileSwitch.querySelector('[data-profile-current]').textContent = profile.label;
+      profileSwitch.querySelector('[data-profile-current-short]').textContent = profile.shortLabel;
+      profileSwitch.setAttribute('aria-label', `Perfil actual: ${profile.label}. Cambiar perfil`);
       const tab = tabs.find(item => item.dataset.tab === profile.tab);
       if (tab) activateTab(tab);
     };

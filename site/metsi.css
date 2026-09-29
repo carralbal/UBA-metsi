@@ -32,7 +32,12 @@ nav a,.header-cta{font-size:.66rem;font-weight:700;letter-spacing:.13em;text-dec
 nav a{position:relative;padding:.55rem 0}nav a::after{content:"";position:absolute;left:0;right:100%;bottom:.25rem;height:2px;background:var(--volt);transition:right .2s ease}nav a:hover::after,nav a:focus-visible::after{right:0}
 .header-cta{justify-self:end;border-bottom:2px solid var(--volt);padding:.35rem 0}
 .menu-toggle,.mobile-collection-link{display:none}
-.profile-switch{justify-self:end;display:flex;align-items:center;gap:.8rem;border:0;border-bottom:2px solid var(--volt);padding:.6rem 0;background:transparent;color:inherit;font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.profile-switch{justify-self:end;display:flex;align-items:center;gap:.7rem;border:0;border-bottom:2px solid var(--volt);padding:.6rem 0;background:transparent;color:inherit;font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;white-space:nowrap}
+.profile-switch-current{display:inline-flex;gap:.3rem;align-items:baseline}
+.profile-switch-prefix{opacity:.62;font-weight:400}
+.profile-switch-action{border-left:1px solid currentColor;padding-left:.7rem}
+.profile-switch [data-profile-current-short]{display:none}
+.profile-switch:focus-visible{outline:2px solid var(--volt);outline-offset:5px}
 .profile-switch[hidden],.profile-route[hidden]{display:none}
 .profile-arrow{position:relative;display:inline-block;width:.85rem;height:.85rem;flex:0 0 .85rem;color:currentColor}
 .profile-arrow::before{content:"";position:absolute;left:0;top:50%;width:100%;height:1px;background:currentColor;transform:rotate(-45deg)}
@@ -72,8 +77,8 @@ nav a{position:relative;padding:.55rem 0}nav a::after{content:"";position:absolu
 .profile-route li strong{display:block;font:400 clamp(1.25rem,2vw,1.7rem)/1.15 var(--serif);margin-bottom:.35rem}
 .profile-route li small{font-size:.85rem;line-height:1.5;color:var(--muted)}
 .profile-route li a:hover strong{text-decoration:underline;text-underline-offset:.2em}
-@media(max-width:900px){.site-header:has(.profile-switch){grid-template-columns:1fr auto auto;gap:1rem}.site-header .profile-switch{grid-column:2;grid-row:1;font-size:.6rem}.site-header .menu-toggle{grid-column:3!important;grid-row:1}.profile-choices{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem 1.8rem}.profile-choices strong{min-height:0}.profile-route{grid-template-columns:1fr;gap:1.5rem}}
-@media(max-width:420px){.site-header:has(.profile-switch){gap:.65rem}.profile-switch{letter-spacing:0}.profile-dialog{padding:1.35rem}.profile-dialog h2{font-size:2.1rem;margin:1.1rem 0 .8rem}.profile-choices{margin-top:1.2rem;gap:.8rem 1.3rem}.profile-choices button{padding:.9rem 0 1.1rem;gap:.65rem}.profile-choices strong{font-size:1.35rem;min-height:2.2em}.profile-dialog .profile-dialog-note{font-size:.7rem}.profile-eyebrow{font-size:.6rem;letter-spacing:.08em}}
+@media(max-width:900px){.site-header:has(.profile-switch){grid-template-columns:1fr auto auto;gap:1rem}.site-header .profile-switch{grid-column:2;grid-row:1;font-size:.6rem}.site-header .menu-toggle{grid-column:3!important;grid-row:1}.profile-switch [data-profile-current]{display:none}.profile-switch [data-profile-current-short]{display:inline}.profile-switch-action{font-size:0}.profile-switch-action::after{content:'Cambiar';font-size:.6rem}.profile-choices{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem 1.8rem}.profile-choices strong{min-height:0}.profile-route{grid-template-columns:1fr;gap:1.5rem}}
+@media(max-width:420px){.site-header:has(.profile-switch){gap:.65rem}.profile-switch{display:grid;grid-template-columns:auto .85rem;column-gap:.35rem;row-gap:.2rem;letter-spacing:0;text-align:left}.profile-switch-current{grid-column:1;grid-row:1}.profile-switch-action{grid-column:1;grid-row:2;border-left:0;padding-left:0;opacity:.72}.profile-switch .profile-arrow{grid-column:2;grid-row:1/3;align-self:center}.profile-dialog{padding:1.35rem}.profile-dialog h2{font-size:2.1rem;margin:1.1rem 0 .8rem}.profile-choices{margin-top:1.2rem;gap:.8rem 1.3rem}.profile-choices button{padding:.9rem 0 1.1rem;gap:.65rem}.profile-choices strong{font-size:1.35rem;min-height:2.2em}.profile-dialog .profile-dialog-note{font-size:.7rem}.profile-eyebrow{font-size:.6rem;letter-spacing:.08em}}
 @media(prefers-reduced-motion:reduce){.profile-dialog[open]{animation:none}.profile-choices button{transition:none}}
 .menu-toggle{width:2.8rem;height:2.8rem;border:1px solid currentColor;background:transparent;color:inherit;padding:.67rem;cursor:pointer}
 .menu-toggle span{display:block;height:2px;background:currentColor;margin:.27rem 0;transition:transform .2s ease,opacity .2s ease}
