@@ -1,0 +1,1453 @@
+/* Editorial recovery fixes only. Preserve the original magazine vocabulary. */
+
+/* N11's expanded glossary is a single list. The earlier two-cell grid placed
+   that whole list in half the page and clipped seven definitions at the foot. */
+body.document-n11.block-c .pills-glossary-page .glossary-two-column .section-body {
+  display: block !important;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+body.document-n11.block-c .pills-glossary-page .glossary-two-column .section-body ul {
+  columns: 3 !important;
+  column-count: 3 !important;
+  column-gap: 7mm !important;
+  column-rule: .2mm solid #c5c7c5 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style-position: inside !important;
+}
+body.document-n11.block-c .pills-glossary-page .glossary-two-column .section-body li {
+  break-inside: avoid-column !important;
+  page-break-inside: avoid !important;
+  margin-bottom: 2.5mm !important;
+}
+
+/* The original 2×3 print grid fragments badly when a revised question grows:
+   Chromium can collapse its tracks into word-wide columns across three pages.
+   Balanced text columns keep the six questions readable and paginate naturally. */
+body.premium-magazine .questions .section-body {
+  display: block !important;
+  columns: auto !important;
+  column-count: auto !important;
+}
+body.premium-magazine .questions .section-body ol {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  columns: 2 !important;
+  column-count: 2 !important;
+  column-gap: 12mm !important;
+  column-fill: balance !important;
+  break-inside: auto !important;
+  page-break-inside: auto !important;
+  grid-template-columns: none !important;
+  grid-template-rows: none !important;
+}
+body.premium-magazine .questions .section-body li {
+  display: list-item !important;
+  width: auto !important;
+  margin: 0 0 7mm !important;
+  break-inside: avoid-column !important;
+  page-break-inside: avoid !important;
+}
+
+/* N06–N10 inherit two columns on the parent and three on the glossary list.
+   That multiplication produced six unreadably narrow strips. */
+body.premium-magazine.document-n06 .glossary-two-column .section-body,
+body.premium-magazine.document-n07 .glossary-two-column .section-body,
+body.premium-magazine.document-n08 .glossary-two-column .section-body,
+body.premium-magazine.document-n09 .glossary-two-column .section-body,
+body.premium-magazine.document-n10 .glossary-two-column .section-body {
+  columns: auto !important;
+  column-count: auto !important;
+  column-rule: none !important;
+}
+
+/* Long reference URLs must wrap before the physical column edge. */
+.premium-magazine .references .reference-url,
+.premium-magazine .block-c-references .reference-url,
+.premium-magazine .reference-url .url-segment {
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+  white-space: normal !important;
+}
+
+/* The tiny ornamental rule after references can fall alone onto a new page,
+   creating an otherwise blank leaf before the closing image. */
+body.block-c .block-c-references::after {
+  display: none !important;
+  content: none !important;
+}
+body.block-c .block-c-references {
+  min-height: 0 !important;
+  height: auto !important;
+}
+body.block-c .block-c-references .section-body ul {
+  display: block !important;
+  columns: 2 !important;
+  column-count: 2 !important;
+  column-gap: 9mm !important;
+  min-height: 0 !important;
+  grid-template-columns: none !important;
+  grid-template-rows: none !important;
+}
+body.block-c .block-c-references .section-body li {
+  display: list-item !important;
+  margin-bottom: 3.5mm !important;
+  break-inside: avoid-column !important;
+}
+
+/* A tiny decorative after-rule was receiving an entire blank leaf in N17. */
+body.document-n17 section.stone-card[data-section="17"]::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* N12's regional synthesis kept its first paragraphs on one leaf and orphaned
+   only the final three lines on the next. An editorial two-column treatment
+   keeps the argument and its title together without shrinking the type. */
+body.document-n12 section.stone-card[data-section="23"] .section-body {
+  columns: 2 !important;
+  column-count: 2 !important;
+  column-gap: 8mm !important;
+  column-rule: .2mm solid #b9bcb9 !important;
+  font-size: 10pt !important;
+  line-height: 1.3 !important;
+}
+
+body.document-n17 section.stone-card[data-section="17"] .section-body,
+body.document-n18 section.reading-section[data-section="14"] .section-body {
+  font-size: 10pt !important;
+  line-height: 1.3 !important;
+}
+
+/* N29 has an unusually long bibliography. Keep its heading and entries on
+   one leaf by tightening bibliography spacing, not by cutting references. */
+body.document-n29 .block-c-references .section-body,
+body.document-n29 .block-c-references .section-body li {
+  font-size: 8.7pt !important;
+  line-height: 1.25 !important;
+}
+body.document-n29 .block-c-references .section-body li {
+  margin-bottom: 2mm !important;
+}
+
+/* The revised argument overran its original two-column leaf by one paragraph
+   in N03 and N10. The body stays at a normal magazine reading size. */
+body.document-n03 .n03-movement-one .section-body,
+body.document-n10 .n10-movement-one .section-body {
+  font-size: 10pt !important;
+  line-height: 1.32 !important;
+}
+body.document-n03 .n03-movement-two,
+body.document-n10 .n10-movement-two {
+  break-before: auto !important;
+  page-break-before: auto !important;
+}
+
+/* N12/N14 shared a large portrait continuation followed by a tiny transition.
+   Recover room on that leaf, so the transition is not stranded by itself. */
+body.block-c:is(.document-n12,.document-n14) .hotel-voices-grid {
+  gap: 2mm 4mm !important;
+}
+body.block-c:is(.document-n12,.document-n14) .hotel-voices-grid article {
+  min-height: 34mm !important;
+}
+body.block-c:is(.document-n12,.document-n14) .hotel-voices-grid .hotel-portrait,
+body.block-c:is(.document-n12,.document-n14) .hotel-voices-grid img {
+  height: 34mm !important;
+}
+body.block-c:is(.document-n12,.document-n14) .hotel-continuation-body p {
+  margin-bottom: 1.5mm !important;
+}
+body.block-c:is(.document-n12,.document-n14) .movement-3 .section-heading h2 {
+  font-size: 30pt !important;
+}
+body.block-c:is(.document-n12,.document-n14) .movement-3 .section-body {
+  font-size: 10pt !important;
+  line-height: 1.32 !important;
+}
+
+/* N02's thesis photograph otherwise becomes a lone image on the next leaf.
+   Preserve it as a compact panorama attached to the thesis argument. */
+body.premium-magazine.document-n02 .thesis-standard .photo-band {
+  margin-top: 2mm !important;
+  margin-bottom: 1mm !important;
+}
+body.premium-magazine.document-n02 .thesis-standard .photo-band img {
+  height: 35mm !important;
+}
+
+/* Three revised arguments each left a final paragraph stranded on a new
+   leaf. Use the N00 thesis reading size, retaining every word and image. */
+body.premium-magazine.document-n04 .n04-movement-one .section-body,
+body.premium-magazine.document-n06 section[data-section="05"] .section-body,
+body.premium-magazine.document-n08 section[data-section="02"] .section-body {
+  font-size: 10.7pt !important;
+  line-height: 1.4 !important;
+}
+body.premium-magazine.document-n04 .n04-movement-one .section-body p,
+body.premium-magazine.document-n06 section[data-section="05"] .section-body p,
+body.premium-magazine.document-n08 section[data-section="02"] .section-body p {
+  margin-bottom: 3.2mm !important;
+}
+
+/* Keep the final conceptual paragraph with its argument, rather than making
+   it a new page. These local adjustments remain within the editorial type
+   scale and leave the reading text unchanged. */
+body.premium-magazine.document-n10 .thesis-standard .section-body {
+  font-size: 10.3pt !important;
+  line-height: 1.35 !important;
+}
+body.premium-magazine.document-n10 .thesis-standard .section-body p {
+  margin-bottom: 3mm !important;
+}
+body.premium-magazine.document-n11 section[data-section="16"] .section-body,
+body.premium-magazine.document-n20 .block-c-movement.movement-3 .section-body,
+body.premium-magazine.document-n22 .block-c-movement.movement-3 .section-body {
+  font-size: 10.7pt !important;
+  line-height: 1.4 !important;
+}
+body.premium-magazine.document-n11 section[data-section="16"] .section-body p,
+body.premium-magazine.document-n20 .block-c-movement.movement-3 .section-body p,
+body.premium-magazine.document-n22 .block-c-movement.movement-3 .section-body p {
+  margin-bottom: 3.2mm !important;
+}
+
+/* The regional reading in these three consecutive nuclei was spilling one
+   final paragraph into an otherwise empty page. */
+body.premium-magazine:is(.document-n20,.document-n21,.document-n22)
+  section[data-section="18"] .section-body {
+  font-size: 10.5pt !important;
+  line-height: 1.35 !important;
+}
+body.premium-magazine:is(.document-n20,.document-n21,.document-n22)
+  section[data-section="18"] .section-body p {
+  margin-bottom: 2.8mm !important;
+}
+
+/* The twelve HH-14 fields belong to one instrument. Preserve its readable
+   two-column list; shorten the preceding photographic band to recover room. */
+body.premium-magazine.document-n14 section[data-section="13"]
+  .hotel-primary-photo .photo-viewport {
+  height: 44mm !important;
+}
+/* HH-32 is too dense for a photo plus twelve fields on one leaf. Give the
+   photograph its own deliberate opener and keep the complete instrument on
+   the facing leaf instead of leaving four fields on a blank continuation. */
+body.premium-magazine.document-n32 section[data-section="19"]
+  .hotel-primary-photo .photo-viewport {
+  height: 160mm !important;
+}
+body.premium-magazine.document-n32 section[data-section="19"] .hotel-bridge {
+  break-before: page !important;
+  page-break-before: always !important;
+  margin-top: 8mm !important;
+  font-size: 10.7pt !important;
+  line-height: 1.42 !important;
+}
+body.premium-magazine.document-n32 section[data-section="19"] .hotel-bridge li {
+  margin-bottom: 3mm !important;
+}
+
+body.premium-magazine.document-n12 section[data-section="07"] .section-body,
+body.premium-magazine.document-n21 section[data-section="13"] .section-body,
+body.premium-magazine.document-n27 section[data-section="20"] .section-body {
+  font-size: 10pt !important;
+  line-height: 1.3 !important;
+}
+body.premium-magazine.document-n12 section[data-section="07"] .section-body p,
+body.premium-magazine.document-n21 section[data-section="13"] .section-body p,
+body.premium-magazine.document-n27 section[data-section="20"] .section-body p {
+  margin-bottom: 2.2mm !important;
+}
+body.premium-magazine.document-n21 section[data-section="12"] .section-body,
+body.premium-magazine.document-n27 section[data-section="19"] .section-body {
+  font-size: 10.7pt !important;
+  line-height: 1.4 !important;
+}
+body.premium-magazine.document-n21 section[data-section="12"] .section-body p,
+body.premium-magazine.document-n27 section[data-section="19"] .section-body p {
+  margin-bottom: 3.2mm !important;
+}
+body.premium-magazine.document-n27 section[data-section="19"] .section-body {
+  font-size: 10pt !important;
+  line-height: 1.3 !important;
+}
+body.premium-magazine.document-n27 section[data-section="19"] .section-body p {
+  margin-bottom: 2.2mm !important;
+}
+
+/* The five takeaways are a designed reading pause in N11 and N22, not tiny
+   type stranded at the top of a 236-mm panel. Give each idea a clear line. */
+body.block-c:is(.document-n11,.document-n12,.document-n22) .pill-summary .section-body ol {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  grid-template-rows: repeat(5, 1fr) !important;
+  gap: 0 !important;
+  min-height: 175mm !important;
+  padding: 0 !important;
+  list-style: none !important;
+  counter-reset: takeaway;
+}
+body.block-c:is(.document-n11,.document-n12,.document-n22) .pill-summary .section-body li {
+  display: grid !important;
+  grid-template-columns: 14mm 1fr !important;
+  align-items: center !important;
+  gap: 5mm !important;
+  margin: 0 !important;
+  padding: 4mm 0 !important;
+  border-bottom: .2mm solid #bfc1bd !important;
+  font: 400 15pt/1.22 Baskerville, Georgia, serif !important;
+  counter-increment: takeaway;
+}
+body.block-c:is(.document-n11,.document-n12,.document-n22) .pill-summary .section-body li::before {
+  content: counter(takeaway, decimal-leading-zero);
+  color: #6f8f00;
+  font: 700 8pt/1 Avenir, sans-serif;
+  letter-spacing: .12em;
+}
+
+/* Two sentences were divided by a page turn after their penultimate word.
+   Retain a complete paragraph in each editorial panel. */
+body.premium-magazine.document-n33 section[data-section="08"] .section-body,
+body.premium-magazine.document-n33 section[data-section="23"] .section-body,
+body.premium-magazine.document-n34 section[data-section="11"] .section-body {
+  font-size: 10.7pt !important;
+  line-height: 1.4 !important;
+}
+body.premium-magazine.document-n33 section[data-section="08"] .section-body p,
+body.premium-magazine.document-n33 section[data-section="23"] .section-body p,
+body.premium-magazine.document-n34 section[data-section="11"] .section-body p {
+  margin-bottom: 3.2mm !important;
+}
+
+/* HH-35 also needs a deliberate image opener and a complete, readable
+   twelve-field matrix on the following leaf. */
+body.premium-magazine.document-n35 section[data-section="13"]
+  .hotel-primary-photo .photo-viewport {
+  height: 160mm !important;
+}
+body.premium-magazine.document-n35 section[data-section="13"] .hotel-bridge {
+  break-before: page !important;
+  page-break-before: always !important;
+  margin-top: 8mm !important;
+  font-size: 10.7pt !important;
+  line-height: 1.42 !important;
+}
+body.premium-magazine.document-n35 section[data-section="13"] .hotel-bridge li {
+  margin-bottom: 3mm !important;
+}
+
+/* Keep the transfer-case sentences whole where the preceding portrait or
+   concept panel ends near the page boundary. */
+body.premium-magazine p[data-source-id="N14-s16-b002"],
+body.premium-magazine p[data-source-id="N17-s11-b002"],
+body.premium-magazine p[data-source-id="N23-s11-b001"] {
+  break-inside: avoid-page !important;
+  page-break-inside: avoid !important;
+}
+body.premium-magazine.document-n17 section[data-section="12"] .section-body {
+  font-size: 10.2pt !important;
+  line-height: 1.33 !important;
+}
+body.premium-magazine.document-n17 section[data-section="12"] .section-body p {
+  margin-bottom: 2.8mm !important;
+}
+
+/* HH-29 must not leave the last four fields on an almost empty leaf. Make
+   the image an intentional opener and the twelve-field instrument a whole. */
+body.premium-magazine.document-n29 section[data-section="11"]
+  .hotel-primary-photo .photo-viewport {
+  height: 160mm !important;
+}
+body.premium-magazine.document-n29 section[data-section="11"] .hotel-bridge {
+  break-before: page !important;
+  page-break-before: always !important;
+  margin-top: 8mm !important;
+  font-size: 10.7pt !important;
+  line-height: 1.42 !important;
+  columns: auto !important;
+  column-count: auto !important;
+  column-rule: none !important;
+}
+body.premium-magazine.document-n29 section[data-section="11"] .hotel-bridge li {
+  margin-bottom: 3mm !important;
+}
+body.premium-magazine.document-n29 section[data-section="11"] .hotel-bridge ol {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-template-rows: repeat(6, minmax(0, 1fr)) !important;
+  grid-auto-flow: column !important;
+  gap: 2mm 10mm !important;
+  min-height: 190mm !important;
+  padding-left: 5mm !important;
+}
+
+/* The outgoing bridge in N35 is short enough to follow the glossary.
+   Do not stretch the study apparatus into a full leaf and orphan it. */
+body.premium-magazine.document-n35 .pills-glossary-page {
+  height: auto !important;
+  min-height: 0 !important;
+  display: block !important;
+  grid-template-rows: none !important;
+  break-after: auto !important;
+  page-break-after: auto !important;
+}
+body.premium-magazine.document-n35 .pills-glossary-page .glossary-two-column {
+  margin-top: 5mm !important;
+}
+
+/* N31's regional essay is one argument, not a tiny extra leaf. Use the same
+   10-point reading scale as N00 and keep its source paragraphs intact. */
+body.premium-magazine.document-n31 section[data-section="21"] .section-body {
+  font-size: 10.2pt !important;
+  line-height: 1.38 !important;
+}
+body.premium-magazine.document-n31 section[data-section="21"] .section-body p {
+  margin-bottom: 3mm !important;
+}
+
+/* N34's long worked example was crammed into one dense leaf and left the
+   closing contrast alone. A roomier reading scale balances the spread. */
+body.premium-magazine.document-n34 section[data-section="09"]
+  .section-body:not(.section-lead) {
+  font-size: 10.7pt !important;
+  line-height: 1.4 !important;
+}
+body.premium-magazine.document-n34 section[data-section="09"]
+  .section-body:not(.section-lead) p {
+  margin-bottom: 3.2mm !important;
+}
+
+/* Recover the compact continuation of the six-person case in N20 without
+   shrinking its reading text: the second portrait row was oversized. */
+body.premium-magazine.document-n20 .hotel-voices-grid {
+  gap: 2mm 4mm !important;
+}
+body.premium-magazine.document-n20 .hotel-voices-grid article {
+  min-height: 30mm !important;
+}
+body.premium-magazine.document-n20 .hotel-voices-grid .hotel-portrait,
+body.premium-magazine.document-n20 .hotel-voices-grid img {
+  height: 30mm !important;
+}
+body.premium-magazine.document-n20 .hotel-continuation-body p {
+  margin-bottom: 1.5mm !important;
+}
+
+/* N11/N26 stranded two concluding paragraphs after an otherwise complete
+   argument. Keep the adjacent worked example at the established 10-point
+   body scale so its conclusion remains on the same reading leaf. */
+body.premium-magazine.document-n11 section[data-section="15"] .section-body,
+body.premium-magazine.document-n26 section[data-section="20"] .section-body,
+body.premium-magazine.document-n26 section[data-section="21"] .section-body {
+  font-size: 10pt !important;
+  line-height: 1.32 !important;
+}
+body.premium-magazine.document-n11 section[data-section="15"] .section-body p,
+body.premium-magazine.document-n26 section[data-section="20"] .section-body p,
+body.premium-magazine.document-n26 section[data-section="21"] .section-body p {
+  margin-bottom: 2.6mm !important;
+}
+
+/* In four later readings the five takeaways were printed as five small lines
+   atop an otherwise blank page. Give the deliberate recap a magazine rhythm. */
+body.premium-magazine.document-n23 section[data-section="20"] .section-body,
+body.premium-magazine.document-n24 section[data-section="21"] .section-body,
+body.premium-magazine.document-n26 section[data-section="26"] .section-body,
+body.premium-magazine.document-n27 section[data-section="25"] .section-body {
+  columns: auto !important;
+  column-count: auto !important;
+  column-rule: none !important;
+}
+body.premium-magazine.document-n23 section[data-section="20"] .section-body ol,
+body.premium-magazine.document-n24 section[data-section="21"] .section-body ol,
+body.premium-magazine.document-n26 section[data-section="26"] .section-body ol,
+body.premium-magazine.document-n27 section[data-section="25"] .section-body ol {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  grid-template-rows: repeat(5, 1fr) !important;
+  gap: 0 !important;
+  min-height: 184mm !important;
+  margin: 6mm 0 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  counter-reset: takeaway;
+}
+body.premium-magazine.document-n23 section[data-section="20"] .section-body li,
+body.premium-magazine.document-n24 section[data-section="21"] .section-body li,
+body.premium-magazine.document-n26 section[data-section="26"] .section-body li,
+body.premium-magazine.document-n27 section[data-section="25"] .section-body li {
+  display: grid !important;
+  grid-template-columns: 14mm 1fr !important;
+  align-items: center !important;
+  gap: 5mm !important;
+  margin: 0 !important;
+  padding: 4mm 0 !important;
+  border-bottom: .2mm solid #bfc1bd !important;
+  font: 400 15pt/1.22 Baskerville, Georgia, serif !important;
+  counter-increment: takeaway;
+  break-inside: avoid-page !important;
+}
+body.premium-magazine.document-n23 section[data-section="20"] .section-body li::before,
+body.premium-magazine.document-n24 section[data-section="21"] .section-body li::before,
+body.premium-magazine.document-n26 section[data-section="26"] .section-body li::before,
+body.premium-magazine.document-n27 section[data-section="25"] .section-body li::before {
+  content: counter(takeaway, decimal-leading-zero);
+  color: #6f8f00;
+  font: 700 8pt/1 Avenir, sans-serif;
+  letter-spacing: .12em;
+}
+body.premium-magazine.document-n12 .pill-summary .section-body ol {
+  min-height: 205mm !important;
+}
+
+/* N07: the last two preparation questions must not become a mostly blank
+   continuation. This is a dedicated worksheet page, with all six questions
+   on a legible two-column grid. */
+body.premium-magazine.document-n07 section[data-section="14"].questions {
+  break-before: page !important;
+  page-break-before: always !important;
+}
+body.premium-magazine.document-n07 section[data-section="14"].questions .section-body ol {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-template-rows: repeat(3, minmax(0, 1fr)) !important;
+  grid-auto-flow: column !important;
+  min-height: 155mm !important;
+  gap: 4mm 11mm !important;
+  columns: auto !important;
+  column-count: auto !important;
+}
+body.premium-magazine.document-n07 section[data-section="14"].questions .section-body li {
+  margin: 0 !important;
+  padding: 4mm 1mm !important;
+  border-bottom: .2mm solid #bfc1bd !important;
+  font-size: 11pt !important;
+  line-height: 1.35 !important;
+}
+
+/* N15 has a short third movement that is meant as a transition. Treat it as
+   a typographic pause instead of a tiny paragraph marooned at page top. */
+body.premium-magazine.document-n15 section[data-section="10"] {
+  min-height: 218mm !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+body.premium-magazine.document-n15 section[data-section="10"] .section-body {
+  margin: auto 0 !important;
+  columns: auto !important;
+  column-count: auto !important;
+  max-width: 145mm !important;
+  font-size: 17pt !important;
+  line-height: 1.35 !important;
+}
+body.premium-magazine.document-n15 section[data-section="10"] .section-body p {
+  margin-bottom: 11mm !important;
+}
+
+/* N02 has the same six-question continuation as N07. Keep a complete,
+   well-spaced preparation worksheet on one leaf. */
+body.premium-magazine.document-n02 section[data-section="25"].questions {
+  break-before: page !important;
+  page-break-before: always !important;
+}
+body.premium-magazine.document-n02 section[data-section="25"].questions .section-body ol {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-template-rows: repeat(3, minmax(0, 1fr)) !important;
+  grid-auto-flow: column !important;
+  min-height: 155mm !important;
+  gap: 4mm 11mm !important;
+  columns: auto !important;
+  column-count: auto !important;
+}
+body.premium-magazine.document-n02 section[data-section="25"].questions .section-body li {
+  margin: 0 !important;
+  padding: 4mm 1mm !important;
+  border-bottom: .2mm solid #bfc1bd !important;
+  font-size: 11pt !important;
+  line-height: 1.35 !important;
+}
+
+/* N32's regional argument ended with two paragraphs on a bare page. */
+body.premium-magazine.document-n32 section[data-section="26"] .section-body {
+  columns: 2 !important;
+  column-count: 2 !important;
+  column-gap: 8mm !important;
+  column-rule: .2mm solid #bfc1bd !important;
+  font-size: 10.2pt !important;
+  line-height: 1.38 !important;
+}
+body.premium-magazine.document-n32 section[data-section="26"] .section-body p {
+  margin-bottom: 3mm !important;
+}
+body.premium-magazine.document-n32 section[data-section="25"] .section-body {
+  font-size: 10.2pt !important;
+  line-height: 1.35 !important;
+}
+body.premium-magazine.document-n32 section[data-section="25"] .section-body p {
+  margin-bottom: 2.8mm !important;
+}
+
+/* Keep HH-33's twelve fields as one complete instrument facing its photo. */
+body.premium-magazine.document-n33 section[data-section="19"]
+  .hotel-primary-photo .photo-viewport {
+  height: 160mm !important;
+}
+body.premium-magazine.document-n33 section[data-section="19"] .hotel-bridge {
+  break-before: page !important;
+  page-break-before: always !important;
+  margin-top: 8mm !important;
+  columns: auto !important;
+  column-count: auto !important;
+  column-rule: none !important;
+  font-size: 10.7pt !important;
+  line-height: 1.42 !important;
+}
+body.premium-magazine.document-n33 section[data-section="19"] .hotel-bridge ol {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-template-rows: repeat(6, minmax(0, 1fr)) !important;
+  grid-auto-flow: column !important;
+  gap: 2mm 10mm !important;
+  min-height: 190mm !important;
+  padding-left: 5mm !important;
+}
+
+/* N34 and N36 had the same fixed-height study apparatus as N35. Let the
+   short handoff follow it, instead of allocating a near-empty new page. */
+body.premium-magazine:is(.document-n34,.document-n36) .pills-glossary-page {
+  height: auto !important;
+  min-height: 0 !important;
+  display: block !important;
+  grid-template-rows: none !important;
+  break-after: auto !important;
+  page-break-after: auto !important;
+}
+body.premium-magazine:is(.document-n34,.document-n36)
+  .pills-glossary-page .glossary-two-column {
+  margin-top: 5mm !important;
+}
+
+/* N10's opening case was set much larger than its surrounding 10-point
+   articles, pushing only the closing 112 words onto a blank page. */
+body.premium-magazine.document-n10 section[data-section="02"] .section-body {
+  font-size: 10pt !important;
+  line-height: 1.35 !important;
+}
+body.premium-magazine.document-n10 section[data-section="02"] .section-body p {
+  margin-bottom: 2.8mm !important;
+}
+
+/* HH-36 is a twelve-question instrument, not eight questions followed by a
+   detached four-item fragment. Pair its image with a complete matrix. */
+body.premium-magazine.document-n36 section[data-section="14"]
+  .hotel-primary-photo .photo-viewport {
+  height: 160mm !important;
+}
+body.premium-magazine.document-n36 section[data-section="14"] .hotel-bridge {
+  break-before: page !important;
+  page-break-before: always !important;
+  margin-top: 8mm !important;
+  columns: auto !important;
+  column-count: auto !important;
+  column-rule: none !important;
+  font-size: 10.7pt !important;
+  line-height: 1.42 !important;
+}
+body.premium-magazine.document-n36 section[data-section="14"] .hotel-bridge ol {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-template-rows: repeat(6, minmax(0, 1fr)) !important;
+  grid-auto-flow: column !important;
+  gap: 2mm 10mm !important;
+  min-height: 190mm !important;
+  padding-left: 5mm !important;
+}
+
+/* HH-34 had the same mid-list page break; keep all twelve fields together. */
+body.premium-magazine.document-n34 section[data-section="10"]
+  .hotel-primary-photo .photo-viewport {
+  height: 160mm !important;
+}
+body.premium-magazine.document-n34 section[data-section="10"] .hotel-bridge {
+  break-before: page !important;
+  page-break-before: always !important;
+  margin-top: 8mm !important;
+  columns: auto !important;
+  column-count: auto !important;
+  column-rule: none !important;
+  font-size: 10.7pt !important;
+  line-height: 1.42 !important;
+}
+body.premium-magazine.document-n34 section[data-section="10"] .hotel-bridge ol {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-template-rows: repeat(6, minmax(0, 1fr)) !important;
+  grid-auto-flow: column !important;
+  gap: 2mm 10mm !important;
+  min-height: 190mm !important;
+  padding-left: 5mm !important;
+}
+
+/* N11's short third movement is a conceptual turning point. Set it as a
+   deliberate typographic pause instead of three tiny paragraphs at the top. */
+body.premium-magazine.document-n11 section[data-section="11"] {
+  min-height: 218mm !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+body.premium-magazine.document-n11 section[data-section="11"] .section-heading {
+  margin-bottom: 9mm !important;
+}
+body.premium-magazine.document-n11 section[data-section="11"] .section-body {
+  columns: auto !important;
+  column-count: auto !important;
+  max-width: 146mm !important;
+  font-size: 15pt !important;
+  line-height: 1.38 !important;
+}
+body.premium-magazine.document-n11 section[data-section="11"] .section-body p {
+  margin-bottom: 7mm !important;
+}
+
+/* N32 §07 can read as a two-column feature. This recovers room for the two
+   following connected arguments and removes a 147-word orphan leaf. */
+body.premium-magazine.document-n32 section[data-section="07"] .section-body {
+  columns: 2 !important;
+  column-count: 2 !important;
+  column-gap: 8mm !important;
+  column-rule: .2mm solid #bfc1bd !important;
+  font-size: 10.2pt !important;
+  line-height: 1.35 !important;
+}
+body.premium-magazine.document-n32 section[data-section="07"] .section-body p {
+  margin-bottom: 3mm !important;
+}
+body.premium-magazine.document-n32 section[data-section="08"] .section-body {
+  columns: 2 !important;
+  column-count: 2 !important;
+  column-gap: 8mm !important;
+  column-rule: .2mm solid #bfc1bd !important;
+  font-size: 10pt !important;
+  line-height: 1.32 !important;
+}
+body.premium-magazine.document-n32 section[data-section="08"] .section-body p {
+  margin-bottom: 2.5mm !important;
+}
+body.premium-magazine.document-n32 section[data-section="09"] .section-body {
+  font-size: 10.1pt !important;
+  line-height: 1.3 !important;
+}
+body.premium-magazine.document-n32 section[data-section="09"] .section-body p {
+  margin-bottom: 2.4mm !important;
+}
+
+/* N15's transfer case and its counterexample are complementary editorial
+   essays. Each deserves a complete page; the earlier small type stranded the
+   last three paragraphs of the counterexample on an empty continuation. */
+body.premium-magazine.document-n15 section[data-section="14"] {
+  break-before: page !important;
+  page-break-before: always !important;
+}
+body.premium-magazine.document-n15 section:is([data-section="13"],[data-section="14"]) .section-body {
+  columns: auto !important;
+  column-count: auto !important;
+  column-rule: none !important;
+  max-width: 150mm !important;
+  font-size: 13.2pt !important;
+  line-height: 1.42 !important;
+}
+body.premium-magazine.document-n15 section:is([data-section="13"],[data-section="14"]) .section-body p {
+  margin-bottom: 5mm !important;
+}
+
+/* N35 §12 is a connected demonstration. Keep it as an entire editorial
+   checkpoint rather than splitting its final two paragraphs from the claim. */
+body.premium-magazine.document-n35 section[data-section="12"] {
+  break-before: page !important;
+  page-break-before: always !important;
+  min-height: 218mm !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+body.premium-magazine.document-n35 section[data-section="12"] .section-body {
+  columns: auto !important;
+  column-count: auto !important;
+  max-width: 150mm !important;
+  font-size: 13pt !important;
+  line-height: 1.4 !important;
+}
+body.premium-magazine.document-n35 section[data-section="12"] .section-body p {
+  margin-bottom: 5mm !important;
+}
+
+/* The final transfer test in N35 works better as a spacious editorial
+   checkpoint than as three detached paragraphs after a page break. */
+body.premium-magazine.document-n35 section[data-section="16"] {
+  break-before: page !important;
+  page-break-before: always !important;
+  min-height: 218mm !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+body.premium-magazine.document-n35 section[data-section="16"] .section-body {
+  columns: auto !important;
+  column-count: auto !important;
+  max-width: 150mm !important;
+  font-size: 14.5pt !important;
+  line-height: 1.4 !important;
+}
+body.premium-magazine.document-n35 section[data-section="16"] .section-body p {
+  margin-bottom: 6mm !important;
+}
+
+/* N36's diary and incident review are two distinct essays. A dedicated leaf
+   for each is more legible than forcing both into a cramped lower half-page. */
+body.premium-magazine.document-n36 section[data-section="09"] {
+  break-before: page !important;
+  page-break-before: always !important;
+}
+body.premium-magazine.document-n36 section:is([data-section="08"],[data-section="09"]) .section-body {
+  columns: auto !important;
+  column-count: auto !important;
+  column-rule: none !important;
+  max-width: 150mm !important;
+  font-size: 13.2pt !important;
+  line-height: 1.42 !important;
+}
+body.premium-magazine.document-n36 section:is([data-section="08"],[data-section="09"]) .section-body p {
+  margin-bottom: 5mm !important;
+}
+
+/* N23's professional limits and regional lens are two distinct arguments.
+   Preserve each as a readable article, rather than cutting the latter after
+   its opening sentences and leaving an unlabelled continuation. */
+body.premium-magazine.document-n23 section[data-section="18"] {
+  break-before: page !important;
+  page-break-before: always !important;
+}
+body.premium-magazine.document-n23 section:is([data-section="17"],[data-section="18"]) .section-body {
+  columns: auto !important;
+  column-count: auto !important;
+  column-rule: none !important;
+  max-width: 150mm !important;
+  font-size: 13pt !important;
+  line-height: 1.4 !important;
+}
+body.premium-magazine.document-n23 section:is([data-section="17"],[data-section="18"]) .section-body p {
+  margin-bottom: 5mm !important;
+}
+
+/* N24 has the same regional-essay fracture after professional tensions. */
+body.premium-magazine.document-n24 section[data-section="19"] {
+  break-before: page !important;
+  page-break-before: always !important;
+}
+body.premium-magazine.document-n24 section:is([data-section="18"],[data-section="19"]) .section-body {
+  columns: auto !important;
+  column-count: auto !important;
+  column-rule: none !important;
+  max-width: 150mm !important;
+  font-size: 13pt !important;
+  line-height: 1.4 !important;
+}
+body.premium-magazine.document-n24 section:is([data-section="18"],[data-section="19"]) .section-body p {
+  margin-bottom: 5mm !important;
+}
+
+/* N26–N27 repeat the same broken regional-reading pattern. */
+body.premium-magazine.document-n26 section[data-section="24"],
+body.premium-magazine.document-n27 section[data-section="23"] {
+  break-before: page !important;
+  page-break-before: always !important;
+}
+body.premium-magazine.document-n26 section:is([data-section="23"],[data-section="24"]) .section-body,
+body.premium-magazine.document-n27 section:is([data-section="22"],[data-section="23"]) .section-body {
+  columns: auto !important;
+  column-count: auto !important;
+  column-rule: none !important;
+  max-width: 150mm !important;
+  font-size: 13pt !important;
+  line-height: 1.4 !important;
+}
+body.premium-magazine.document-n26 section:is([data-section="23"],[data-section="24"]) .section-body p,
+body.premium-magazine.document-n27 section:is([data-section="22"],[data-section="23"]) .section-body p {
+  margin-bottom: 5mm !important;
+}
+
+/* HH-31's twelve questions were split six/six across an empty continuation. */
+body.premium-magazine.document-n31 section[data-section="15"]
+  .hotel-primary-photo .photo-viewport {
+  height: 160mm !important;
+}
+body.premium-magazine.document-n31 section[data-section="15"] .hotel-bridge {
+  break-before: page !important;
+  page-break-before: always !important;
+  margin-top: 8mm !important;
+  columns: auto !important;
+  column-count: auto !important;
+  column-rule: none !important;
+  font-size: 10.7pt !important;
+  line-height: 1.42 !important;
+}
+body.premium-magazine.document-n31 section[data-section="15"] .hotel-bridge ol {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-template-rows: repeat(6, minmax(0, 1fr)) !important;
+  grid-auto-flow: column !important;
+  gap: 2mm 10mm !important;
+  min-height: 190mm !important;
+  padding-left: 5mm !important;
+}
+
+/* N31's two connected comparisons can run as paired-column features; the
+   third then starts with its heading rather than ending as an orphan leaf. */
+body.premium-magazine.document-n31 section:is([data-section="07"],[data-section="08"]) .section-body {
+  columns: 2 !important;
+  column-count: 2 !important;
+  column-gap: 8mm !important;
+  column-rule: .2mm solid #bfc1bd !important;
+  font-size: 10pt !important;
+  line-height: 1.32 !important;
+}
+body.premium-magazine.document-n31 section:is([data-section="07"],[data-section="08"]) .section-body p {
+  margin-bottom: 2.5mm !important;
+}
+body.premium-magazine.document-n31 section[data-section="09"] .section-body {
+  font-size: 10.2pt !important;
+  line-height: 1.34 !important;
+}
+body.premium-magazine.document-n31 section[data-section="09"] .section-body p {
+  margin-bottom: 2.5mm !important;
+}
+
+/* HH-21 and HH-22 also left the second half of their twelve-question
+   instrument on an almost empty page. Keep the complete instrument together. */
+body.premium-magazine.document-n21 section[data-section="10"] .hotel-primary-photo .photo-viewport,
+body.premium-magazine.document-n22 section[data-section="10"] .hotel-primary-photo .photo-viewport {
+  height: 160mm !important;
+}
+body.premium-magazine.document-n21 section[data-section="10"] .hotel-bridge,
+body.premium-magazine.document-n22 section[data-section="10"] .hotel-bridge {
+  break-before: page !important;
+  page-break-before: always !important;
+  margin-top: 8mm !important;
+  columns: auto !important;
+  column-count: auto !important;
+  column-rule: none !important;
+  font-size: 10.7pt !important;
+  line-height: 1.42 !important;
+}
+body.premium-magazine.document-n21 section[data-section="10"] .hotel-bridge ol,
+body.premium-magazine.document-n22 section[data-section="10"] .hotel-bridge ol {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-template-rows: repeat(6, minmax(0, 1fr)) !important;
+  grid-auto-flow: column !important;
+  gap: 2mm 10mm !important;
+  min-height: 190mm !important;
+  padding-left: 5mm !important;
+}
+body.premium-magazine.document-n22 section[data-section="10"] .hotel-bridge {
+  font-size: 10.1pt !important;
+  line-height: 1.34 !important;
+}
+body.premium-magazine.document-n22 section[data-section="10"] .hotel-bridge ol {
+  grid-template-rows: repeat(6, max-content) !important;
+  align-content: space-between !important;
+  gap: 1mm 10mm !important;
+  min-height: 182mm !important;
+}
+
+/* HH-17 is another twelve-part decision instrument split after item seven. */
+body.premium-magazine.document-n17 section[data-section="10"]
+  .hotel-primary-photo .photo-viewport {
+  height: 160mm !important;
+}
+body.premium-magazine.document-n17 section[data-section="10"] .hotel-bridge {
+  break-before: page !important;
+  page-break-before: always !important;
+  margin-top: 8mm !important;
+  columns: auto !important;
+  column-count: auto !important;
+  column-rule: none !important;
+  font-size: 9.9pt !important;
+  line-height: 1.32 !important;
+}
+body.premium-magazine.document-n17 section[data-section="10"] .hotel-bridge ol {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-template-rows: repeat(6, max-content) !important;
+  grid-auto-flow: column !important;
+  align-content: space-between !important;
+  gap: 1mm 10mm !important;
+  min-height: 188mm !important;
+  padding-left: 5mm !important;
+}
+
+/* N22's integral test lost its heading and first half to the preceding
+   counterexample. Treat the two as complete articles, with different rhythm. */
+body.premium-magazine.document-n22 section[data-section="13"] {
+  break-before: page !important;
+  page-break-before: always !important;
+  min-height: 216mm !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+body.premium-magazine.document-n22 section:is([data-section="12"],[data-section="13"]) .section-body {
+  columns: auto !important;
+  column-count: auto !important;
+  column-rule: none !important;
+  max-width: 150mm !important;
+  font-size: 13pt !important;
+  line-height: 1.4 !important;
+}
+body.premium-magazine.document-n22 section:is([data-section="12"],[data-section="13"]) .section-body p {
+  margin-bottom: 5mm !important;
+}
+body.premium-magazine.document-n22 section[data-section="12"] .section-body {
+  font-size: 11.8pt !important;
+  line-height: 1.3 !important;
+}
+body.premium-magazine.document-n22 section[data-section="12"] .section-body p {
+  margin-bottom: 2.5mm !important;
+}
+
+/* N11's regional reading must not end as two tiny columns on an empty page.
+   The bridge to N12 and the Latin American lens are separate editorial leaves. */
+body.premium-magazine.document-n11 section[data-section="21"] {
+  break-before: page !important;
+  page-break-before: always !important;
+}
+body.premium-magazine.document-n11 section:is([data-section="20"],[data-section="21"]) {
+  min-height: 215mm !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+body.premium-magazine.document-n11 section:is([data-section="20"],[data-section="21"]) .section-body {
+  columns: auto !important;
+  column-count: auto !important;
+  column-rule: none !important;
+  max-width: 150mm !important;
+  font-size: 13pt !important;
+  line-height: 1.4 !important;
+}
+body.premium-magazine.document-n11 section:is([data-section="20"],[data-section="21"]) .section-body p {
+  margin-bottom: 5mm !important;
+}
+body.premium-magazine.document-n11 section[data-section="20"] .section-body {
+  font-size: 15pt !important;
+}
+body.premium-magazine.document-n11 section[data-section="21"] {
+  min-height: 0 !important;
+  display: block !important;
+  padding-bottom: 8mm !important;
+}
+body.premium-magazine.document-n11 section[data-section="21"] .section-body {
+  font-size: 11.8pt !important;
+  line-height: 1.34 !important;
+}
+body.premium-magazine.document-n11 section[data-section="21"] .section-body p {
+  margin-bottom: 3.5mm !important;
+}
+
+/* N29's counterexample is a short, consequential argument: set it as a
+   deliberate single-column magazine page, not two tiny columns at the top. */
+body.premium-magazine.document-n29 section[data-section="15"] {
+  min-height: 205mm !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+body.premium-magazine.document-n29 section[data-section="15"] .section-body {
+  columns: auto !important;
+  column-count: auto !important;
+  column-rule: none !important;
+  max-width: 145mm !important;
+  font-size: 15pt !important;
+  line-height: 1.43 !important;
+}
+body.premium-magazine.document-n29 section[data-section="15"] .section-body p {
+  margin-bottom: 5mm !important;
+}
+
+/* The old fixed jump in N03 followed only one introductory example and left
+   two tiny columns on the continuation. Let the next subheading fill it. */
+body.premium-magazine.document-n03 .n03-movement-two .section-body h3:nth-of-type(2) {
+  break-before: auto !important;
+  page-break-before: auto !important;
+}
+body.premium-magazine.document-n03 section[data-section="06"] .section-body > p:last-child {
+  column-span: all !important;
+  margin-top: 3mm !important;
+  padding-top: 2mm !important;
+  border-top: .25mm solid #9da09d !important;
+  font-size: 11pt !important;
+  line-height: 1.34 !important;
+}
+body.premium-magazine.document-n03 section[data-section="06"] {
+  break-after: page !important;
+  page-break-after: always !important;
+}
+body.premium-magazine.document-n03:not(.document-n00) .full-bleed-quote {
+  page: content !important;
+  box-sizing: border-box !important;
+  width: 174mm !important;
+  height: 245mm !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 auto !important;
+  break-before: page !important;
+  page-break-before: always !important;
+  break-after: page !important;
+  page-break-after: always !important;
+}
+
+/* N14's first movement was crammed into microtype, then stranded its last
+   example. More readable type redistributes that argument across the spread. */
+body.premium-magazine.document-n14 section[data-section="06"] .section-body:not(.section-lead) {
+  font-size: 11.2pt !important;
+  line-height: 1.36 !important;
+}
+body.premium-magazine.document-n14 section[data-section="06"] .section-body:not(.section-lead) p {
+  margin-bottom: 2.7mm !important;
+}
+
+/* The same dense-then-empty movement rhythm recurs in N15 and N20. */
+body.premium-magazine.document-n15 section[data-section="06"] .section-body:not(.section-lead),
+body.premium-magazine.document-n20 section[data-section="09"] .section-body:not(.section-lead) {
+  font-size: 11.1pt !important;
+  line-height: 1.34 !important;
+}
+body.premium-magazine.document-n15 section[data-section="06"] .section-body:not(.section-lead) p,
+body.premium-magazine.document-n20 section[data-section="09"] .section-body:not(.section-lead) p {
+  margin-bottom: 2.6mm !important;
+}
+
+/* N17's short counterexample should start with its own headline, instead of
+   being split after the opening two sentences. */
+body.premium-magazine.document-n17 section[data-section="12"] {
+  break-before: page !important;
+  page-break-before: always !important;
+}
+body.premium-magazine.document-n17 section[data-section="12"] .section-body {
+  columns: auto !important;
+  column-count: auto !important;
+  column-rule: none !important;
+  max-width: 150mm !important;
+  font-size: 13pt !important;
+  line-height: 1.4 !important;
+}
+body.premium-magazine.document-n17 section[data-section="12"] .section-body p {
+  margin-bottom: 5mm !important;
+}
+
+/* N27's conditions are a complete distinction, not a fragment hanging after
+   the previous section's examples. */
+body.premium-magazine.document-n27 section[data-section="09"] {
+  break-before: auto !important;
+  page-break-before: auto !important;
+}
+body.premium-magazine.document-n27 section[data-section="09"] .section-body:not(.section-lead) {
+  break-before: page !important;
+  page-break-before: always !important;
+  font-size: 12.3pt !important;
+  line-height: 1.43 !important;
+}
+body.premium-magazine.document-n27 section[data-section="09"] .movement-two-photo .diptych-viewport {
+  height: 68mm !important;
+}
+body.premium-magazine.document-n27 section[data-section="08"] .section-body:not(.section-lead) {
+  font-size: 12pt !important;
+  line-height: 1.42 !important;
+}
+
+/* The closing test in N14 already has its own page. Give it a clear display
+   heading and reader-sized type instead of leaving microtype at the top. */
+body.premium-magazine.document-n14 section[data-section="14"] .section-body h3:last-of-type {
+  break-before: page !important;
+  page-break-before: always !important;
+  margin-top: 31mm !important;
+  font-size: 24pt !important;
+  line-height: 1.04 !important;
+}
+body.premium-magazine.document-n14 section[data-section="14"] .section-body h3:last-of-type ~ p {
+  max-width: 150mm !important;
+  font-size: 13pt !important;
+  line-height: 1.4 !important;
+  margin-bottom: 5mm !important;
+}
+body.premium-magazine.document-n14 section[data-section="14"] .section-body h3:first-of-type {
+  break-before: page !important;
+  page-break-before: always !important;
+  margin-top: 31mm !important;
+  font-size: 24pt !important;
+  line-height: 1.04 !important;
+}
+body.premium-magazine.document-n14 section[data-section="14"] .section-body h3:first-of-type ~ p {
+  max-width: 150mm !important;
+  font-size: 13pt !important;
+  line-height: 1.4 !important;
+  margin-bottom: 5mm !important;
+}
+
+/* Make the people panel a proper magazine plate rather than a thumbnail
+   stranded on an otherwise empty N02 page. */
+body.premium-magazine.document-n02 .hotel-voices-compact {
+  min-height: 205mm !important;
+  box-sizing: border-box !important;
+  padding: 10mm 8mm !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+body.premium-magazine.document-n02 .hotel-voices-compact header h2 {
+  font-size: 31pt !important;
+}
+body.premium-magazine.document-n02 .hotel-voices-compact header p {
+  font-size: 12pt !important;
+}
+body.premium-magazine.document-n02 .hotel-voices-grid {
+  gap: 5mm !important;
+  margin-top: 7mm !important;
+}
+body.premium-magazine.document-n02 .hotel-voices-grid article {
+  grid-template-columns: 35mm 1fr !important;
+  min-height: 62mm !important;
+}
+body.premium-magazine.document-n02 .hotel-voices-grid img {
+  width: 35mm !important;
+  height: 62mm !important;
+}
+body.premium-magazine.document-n02 .hotel-voices-grid h3 {
+  font-size: 17pt !important;
+}
+body.premium-magazine.document-n02 .hotel-voices-grid p {
+  font-size: 10.5pt !important;
+  line-height: 1.35 !important;
+}
+
+/* The last N08 paragraph and image deserve a photo essay beat, not a
+   32-mm ribbon followed by two thirds of a blank page. */
+body.premium-magazine.document-n08 section[data-section="06"] .photo-band img {
+  height: 150mm !important;
+  object-position: center 35% !important;
+}
+
+/* Use the deliberate exercise-page height already reserved in the template. */
+body.premium-magazine.document-n04 .questions .section-body ol {
+  min-height: 170mm !important;
+  row-gap: 26mm !important;
+}
+
+/* A photographic pause needs the scale of a magazine photograph. */
+body.premium-magazine.document-n01 section[data-section="02"] .photo-band img {
+  height: 210mm !important;
+  object-position: center 45% !important;
+}
+
+/* The N03 cast occupies an otherwise empty leaf, like its N02 counterpart. */
+body.premium-magazine.document-n03 .hotel-voices-compact {
+  min-height: 205mm !important;
+  box-sizing: border-box !important;
+  padding: 10mm 8mm !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+body.premium-magazine.document-n03 .hotel-voices-compact header h2 {
+  font-size: 31pt !important;
+  font-family: Didot, "Bodoni 72", Georgia, serif !important;
+  font-weight: 400 !important;
+}
+body.premium-magazine.document-n03 .hotel-voices-compact header p {
+  font-size: 12pt !important;
+}
+body.premium-magazine.document-n03 .hotel-voices-grid {
+  gap: 5mm !important;
+  margin-top: 7mm !important;
+}
+body.premium-magazine.document-n03 .hotel-voices-grid article {
+  grid-template-columns: 35mm 1fr !important;
+  min-height: 62mm !important;
+}
+body.premium-magazine.document-n03 .hotel-voices-grid img {
+  width: 35mm !important;
+  height: 62mm !important;
+}
+body.premium-magazine.document-n03 .hotel-voices-grid h3 {
+  font-size: 17pt !important;
+}
+body.premium-magazine.document-n03 .hotel-voices-grid p {
+  font-size: 10.5pt !important;
+  line-height: 1.35 !important;
+}
+
+/* N22 has six roles. A two-column, three-row atlas gives each person room. */
+body.block-c.premium-magazine.document-n22 .hotel-voices-compact {
+  min-height: 210mm !important;
+  box-sizing: border-box !important;
+  padding: 10mm 8mm !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+body.block-c.premium-magazine.document-n22 .hotel-voices-compact .hotel-voices-title {
+  font-size: 28pt !important;
+}
+body.block-c.premium-magazine.document-n22 .hotel-voices-grid {
+  grid-template-columns: repeat(2,minmax(0,1fr)) !important;
+  gap: 4mm 6mm !important;
+  margin-top: 8mm !important;
+}
+body.block-c.premium-magazine.document-n22 .hotel-voices-grid article {
+  grid-template-columns: 27mm 1fr !important;
+  min-height: 50mm !important;
+}
+body.block-c.premium-magazine.document-n22 .hotel-voices-grid .hotel-portrait,
+body.block-c.premium-magazine.document-n22 .hotel-voices-grid img {
+  width: 27mm !important;
+  height: 50mm !important;
+}
+body.block-c.premium-magazine.document-n22 .hotel-voices-grid h3 {
+  font-size: 13pt !important;
+}
+body.block-c.premium-magazine.document-n22 .hotel-voices-grid p {
+  font-size: 8.3pt !important;
+  line-height: 1.22 !important;
+}
+
+/* Give the N07 recap and N10 glossary the same reading scale as the essay. */
+body.premium-magazine.document-n07 section[data-section="12"] {
+  min-height: 160mm !important;
+  box-sizing: border-box !important;
+  padding: 12mm 8mm !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+body.premium-magazine.document-n07 section[data-section="12"] .section-body {
+  font-size: 12pt !important;
+  line-height: 1.35 !important;
+}
+body.premium-magazine.document-n10 section[data-section="15"] {
+  min-height: 205mm !important;
+  box-sizing: border-box !important;
+  background: #e5e7e5 !important;
+  padding: 12mm 8mm !important;
+}
+body.premium-magazine.document-n10 section[data-section="15"] .section-body ul {
+  font-size: 11pt !important;
+  line-height: 1.34 !important;
+}
+body.premium-magazine.document-n10 section[data-section="15"] .section-body li {
+  margin-bottom: 5mm !important;
+}
+
+/* The N22 case continuation has enough material for two readable columns;
+   the inherited three-column microtype leaves half the page empty. */
+body.block-c.premium-magazine.document-n22 .hotel-case-long .hotel-continuation-body {
+  columns: 2 !important;
+  column-count: 2 !important;
+  column-gap: 8mm !important;
+  font-size: 11.1pt !important;
+  line-height: 1.34 !important;
+}
+body.block-c.premium-magazine.document-n22 .hotel-case-long .hotel-continuation-body p {
+  font-size: 11.1pt !important;
+  line-height: 1.34 !important;
+  margin-bottom: 3mm !important;
+}
+
+/* Keep the N03 glossary as one legible reference spread, rather than
+   leaving its first four entries attached to the preceding recap. */
+body.premium-magazine.document-n03 section[data-section="11"] {
+  break-before: page !important;
+  page-break-before: always !important;
+  min-height: 205mm !important;
+}
+body.premium-magazine.document-n03 section[data-section="11"] .section-body ul {
+  font-size: 11pt !important;
+  line-height: 1.35 !important;
+}
+body.premium-magazine.document-n03 section[data-section="11"] .section-body li {
+  margin-bottom: 4mm !important;
+}
+body.premium-magazine.document-n03 .questions .section-body ol {
+  row-gap: 22mm !important;
+}
+body.premium-magazine.document-n04 section[data-section="11"] .section-body ul {
+  font-size: 10.9pt !important;
+  line-height: 1.34 !important;
+}
+body.premium-magazine.document-n04 section[data-section="11"] .section-body li {
+  margin-bottom: 3mm !important;
+}
+
+/* N04's cast shares a page with the opening argument: enlarge the plate
+   within that leaf without forcing the preceding conclusion to stand alone. */
+body.premium-magazine.document-n04 .hotel-voices-compact {
+  min-height: 185mm !important;
+  box-sizing: border-box !important;
+  padding: 7mm 6mm !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+body.premium-magazine.document-n04 .hotel-voices-compact header h2 {
+  font-family: Didot, "Bodoni 72", Georgia, serif !important;
+  font-weight: 400 !important;
+  font-size: 28pt !important;
+}
+body.premium-magazine.document-n04 .hotel-voices-grid {
+  gap: 4mm !important;
+  margin-top: 4mm !important;
+}
+body.premium-magazine.document-n04 .hotel-voices-grid article {
+  grid-template-columns: 30mm 1fr !important;
+  min-height: 62mm !important;
+}
+body.premium-magazine.document-n04 .hotel-voices-grid img {
+  width: 30mm !important;
+  height: 62mm !important;
+}
+body.premium-magazine.document-n04 .hotel-voices-grid h3 {
+  font-size: 13pt !important;
+}
+body.premium-magazine.document-n04 .hotel-voices-grid p {
+  font-size: 8.8pt !important;
+  line-height: 1.25 !important;
+}
+
+/* Photographic leaves after the argument and after the references were
+   being printed as small bands on otherwise empty pages. */
+body.premium-magazine.document-n01 section[data-section="20"] .photo-band img {
+  height: 210mm !important;
+  object-position: center 45% !important;
+}
+body.premium-magazine.document-n07 section[data-section="02"] .photo-band img {
+  height: 145mm !important;
+  object-position: center 48% !important;
+}
+body.premium-magazine.document-n07 section[data-section="02"] .photo-band figcaption,
+body.premium-magazine.document-n04 .references-inline figcaption {
+  max-width: 150mm !important;
+  padding-top: 8mm !important;
+  font-family: Didot, "Bodoni 72", Georgia, serif !important;
+  font-size: 15pt !important;
+  line-height: 1.18 !important;
+}
+body.premium-magazine.document-n04 .references-inline img {
+  height: 160mm !important;
+  object-position: center 48% !important;
+}
