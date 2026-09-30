@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 STAGE = Path("/private/tmp/metsi-editorial-recovery.LQBs9R")
 EDITION = ROOT / "pedagogy/editorial-recovery-20260929"
 MANIFEST = ROOT / "course-manifest.json"
+PUBLIC_MANIFEST = ROOT / "site/course-manifest.json"
 
 
 def digest(path: Path) -> str:
@@ -61,6 +62,20 @@ def main() -> None:
     if len(qa) != 36:
         raise ValueError("Manifest lacks one or more N01–N36 entries")
     MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
+    public_manifest = json.loads(PUBLIC_MANIFEST.read_text())
+    public_count = 0
+    for reading in public_manifest["readings"]:
+        code = reading["code"]
+        if code not in rows:
+            continue
+        path = ROOT / rows[code]["path"]
+        reading["pages"] = len(PdfReader(path).pages)
+        reading["pdf"] = f'{path.relative_to(ROOT / "site")}?v=editorial-recuperada-20260929'
+        reading["revision"] = "editorial-recuperada-20260929"
+        public_count += 1
+    if public_count != 36:
+        raise ValueError(f"Public manifest contains only {public_count} updated readings")
+    PUBLIC_MANIFEST.write_text(json.dumps(public_manifest, ensure_ascii=False, indent=2) + "\n")
     (EDITION / "qa-summary.json").write_text(json.dumps({
         "edition": "editorial-recuperada-20260929",
         "rollback_tag": "pre-editorial-recovery-20260929",
@@ -73,7 +88,7 @@ def main() -> None:
         },
         "stage_report": str(STAGE / "approved-cover-verification.json"),
     }, ensure_ascii=False, indent=2) + "\n")
-    print(f"Updated manifest and QA summary for {len(qa)} PDFs")
+    print(f"Updated both manifests and QA summary for {len(qa)} PDFs")
 
 
 if __name__ == "__main__":
