@@ -1448,6 +1448,56 @@ body.premium-magazine.document-n04 .references-inline figcaption {
   line-height: 1.18 !important;
 }
 body.premium-magazine.document-n04 .references-inline img {
-  height: 160mm !important;
+  height: 205mm !important;
   object-position: center 48% !important;
+}
+/* The references photograph cannot fit below this long bibliography. Treat
+   it as a deliberate image-and-caption leaf, not a small orphaned band. */
+body.premium-magazine.document-n04 .references-inline {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  break-inside: avoid !important;
+  page-break-inside: avoid !important;
+}
+
+/* N28's last two bibliography entries were marooned on a page of their own.
+   Recover that leaf with a small, references-only spacing adjustment; the
+   body type, cover and editorial plates remain unchanged. */
+body.block-c.premium-magazine.document-n28 .block-c-references .section-body {
+  font-size: 8.8pt !important;
+  line-height: 1.25 !important;
+}
+body.block-c.premium-magazine.document-n28 .block-c-references .section-body li {
+  font-size: 8.8pt !important;
+  line-height: 1.25 !important;
+  margin-bottom: 2.2mm !important;
+}
+
+/* A measured photographic interruption in two long argument runs.
+   The visuals are from each document's existing asset package. Keep their
+   physical width legible and their captions out of the text columns. */
+body.premium-magazine .editorial-argument-pause {
+  column-span: all !important;
+  display: block !important;
+  width: 100% !important;
+  margin: 7mm 0 8mm !important;
+  break-inside: avoid !important;
+  page-break-inside: avoid !important;
+  clear: both !important;
+}
+body.premium-magazine .editorial-argument-pause.photo img {
+  display: block !important;
+  width: 100% !important;
+  height: 68mm !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  filter: grayscale(1) !important;
+}
+body.premium-magazine .editorial-argument-pause figcaption {
+  margin-top: 2mm !important;
+  padding-left: 0 !important;
+  font-family: Didot, "Bodoni 72", Georgia, serif !important;
+  font-size: 12.5pt !important;
+  line-height: 1.2 !important;
+  color: #4f5350 !important;
 }

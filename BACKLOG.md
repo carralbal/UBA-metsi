@@ -1,6 +1,6 @@
 # Backlog de cierre y puesta en marcha de METSI
 
-Actualizado el 14 de septiembre de 2026.
+Actualizado el 30 de septiembre de 2026.
 
 Este backlog comienza después del cierre editorial de las lecturas N00 a N36. Distingue lo que ya existe de la pasada de diseño, prueba y publicación que todavía debe realizarse.
 
@@ -51,6 +51,18 @@ Paquete docente v3 construido y auditado nuevamente el 14 de septiembre de 2026.
 Cada encuentro puede ser facilitado por otra persona del equipo docente sin depender de explicaciones orales del autor, y reserva más tiempo para producir, contrastar y revisar que para exponer conceptos ya leídos.
 
 El criterio técnico está cumplido. La prueba piloto con ayudantes queda como validación situada previa a declarar versión de cohorte.
+
+## P1 bis. Cruce de las lecturas con el METSI actual y las notas de posgrado
+
+**Estado:** pendiente; realizar después del cierre de la pasada de dirección de arte de N01–N36.
+
+- Releer las 36 lecturas N frente al material docente vigente de METSI y las notas de orador de posgrados y maestrías.
+- Identificar en esas notas ejemplos, decisiones profesionales, matices, preguntas y maneras de explicar que aporten valor a la formación de grado y aún no estén bien representados en las lecturas.
+- Registrar por documento qué conviene incorporar, adaptar al nivel de grado o dejar exclusivamente para posgrado; distinguir aportes sustantivos de repeticiones.
+- Proponer cambios de contenido primero en una matriz trazable, sin reemplazar automáticamente los PDFs ni perder la claridad de lectura conseguida.
+- Validar con el equipo docente las incorporaciones antes de una nueva edición de N01–N36.
+
+**Criterio de cierre:** cada N tiene una comparación explícita con el material actual y una decisión justificada sobre qué valor de las notas de orador se integra, se adapta o se reserva para otro nivel.
 
 ## P2. Sistema de trabajo estudiantil para Hotel Horizonte
 

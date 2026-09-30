@@ -138,6 +138,47 @@ def restore_hotel_spreads(number: int, source: str, package: Path) -> tuple[str,
     return source, restored
 
 
+def restore_mid_argument_visual(number: int, source: str, package: Path) -> tuple[str, int]:
+    """Give the longest arguments one source-relevant visual breathing point.
+
+    These assets already belong to the approved document packages. The
+    intervention changes only placement, never a source paragraph or its ID.
+    """
+
+    choices = {
+        3: ("06", "assets/editorial-02.jpg", "La frontera organiza lo visible; un efecto puede reaparecer del otro lado.", "photo"),
+        4: ("06", "assets/editorial-02.jpg", "Antes de aceptar una afirmación, conviene mirar qué estructura la sostiene.", "photo"),
+    }
+    if number not in choices:
+        return source, 0
+    section_id, image_path, caption, kind = choices[number]
+    if not (package / image_path).is_file():
+        raise FileNotFoundError(package / image_path)
+    pattern = re.compile(
+        rf'<section class="[^"]*\breading-section\b[^"]*"[^>]*data-section="{section_id}"[^>]*>.*?</section>',
+        re.S,
+    )
+
+    def insert(match: re.Match[str]) -> str:
+        section = lxml_html.fromstring(match[0])
+        body = section.xpath("./div[contains(@class,'section-body')]")[0]
+        paragraphs = body.xpath("./p")
+        if len(paragraphs) < 12:
+            raise ValueError(f"N{number:02d}: section {section_id} is too short for a visual pause")
+        anchor = paragraphs[len(paragraphs) // 2]
+        figure = lxml_html.Element("figure", {"class": f"editorial-argument-pause {kind}"})
+        image = lxml_html.Element("img", {"src": image_path, "alt": caption or "Mapa de la evidencia y las decisiones que puede cambiar"})
+        figure.append(image)
+        if caption:
+            label = lxml_html.Element("figcaption")
+            label.text = caption
+            figure.append(label)
+        anchor.addnext(figure)
+        return lxml_html.tostring(section, encoding="unicode", method="html")
+
+    return pattern.subn(insert, source, count=1)
+
+
 def prepare(number: int, destination: Path) -> dict:
     package = PACKAGE_BY_NUMBER[number]
     if not package.is_dir():
@@ -174,6 +215,9 @@ def prepare(number: int, destination: Path) -> dict:
         raise ValueError(f"N{number:02d}: body was not recovered")
     source, restored_sections = restore_section_classes(number, source)
     source, restored_hotel_spreads = restore_hotel_spreads(number, source, package)
+    source, restored_mid_visuals = restore_mid_argument_visual(number, source, package)
+    if number in (3, 4) and restored_mid_visuals != 1:
+        raise ValueError(f"N{number:02d}: editorial visual pause was not inserted")
     if number == 3:
         # The closing interpretation belongs to the immediately preceding
         # evidence table. Keep its exact wording and source ID, but move it
@@ -207,6 +251,7 @@ def prepare(number: int, destination: Path) -> dict:
         "candidate_html": str(target / "index.html"),
         "restored_section_classes": restored_sections,
         "restored_hotel_spreads": restored_hotel_spreads,
+        "restored_mid_visuals": restored_mid_visuals,
         "source_blocks": len(re.findall(r'data-source-id="[^"]+"', source)),
         "status": "candidate_not_approved",
     }

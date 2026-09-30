@@ -20,7 +20,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 2 · Observar cómo regresan los efectos",
           "page": 14,
           "title": "Resolver acá, complicar allá",
-          "href": "pdf/N03-METSI-lectura-previa-v11-final.pdf?v=portadas-metaforicas-20260928#page=14"
+          "href": "pdf/N03-METSI-lectura-previa-v11-final.pdf?v=editorial-final-20260930#page=14"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -56,14 +56,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Decidir y dejar abierta la revisión",
           "page": 24,
           "title": "Antes de decidir, ¿qué sabemos?",
-          "href": "pdf/N04-METSI-lectura-previa-v10-final.pdf?v=portadas-metaforicas-20260928#page=24"
+          "href": "pdf/N04-METSI-lectura-previa-v10-final.pdf?v=editorial-final-20260930#page=24"
         },
         {
           "code": "N28",
           "section": "Movimiento 1 · Convertir «funciona bien» en una pregunta concreta",
           "page": 13,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=portadas-metaforicas-20260928#page=13"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=editorial-final-20260930#page=13"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -217,7 +217,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Evaluar propiedades sin perder a las personas",
           "page": 20,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=portadas-metaforicas-20260928#page=20"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=editorial-final-20260930#page=20"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -596,14 +596,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Convertir «funciona bien» en una pregunta concreta",
           "page": 13,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=portadas-metaforicas-20260928#page=13"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=editorial-final-20260930#page=13"
         },
         {
           "code": "N28",
           "section": "Movimiento 2 · Elegir evidencia que responda a la decisión",
           "page": 16,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=portadas-metaforicas-20260928#page=16"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=editorial-final-20260930#page=16"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -750,7 +750,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 2 · Elegir evidencia que responda a la decisión",
           "page": 16,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=portadas-metaforicas-20260928#page=16"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=editorial-final-20260930#page=16"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -768,7 +768,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Evaluar propiedades sin perder a las personas",
           "page": 20,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=portadas-metaforicas-20260928#page=20"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=editorial-final-20260930#page=20"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
