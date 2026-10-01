@@ -8,6 +8,7 @@ Every candidate still requires source-integrity and page-by-page visual QA.
 from __future__ import annotations
 
 import argparse
+import copy
 import html
 import json
 import re
@@ -179,6 +180,88 @@ def restore_mid_argument_visual(number: int, source: str, package: Path) -> tupl
     return pattern.subn(insert, source, count=1)
 
 
+def restore_approved_photography(number: int, source: str, package: Path) -> tuple[str, int]:
+    """Recover photographs omitted by the plain-language rebuild.
+
+    The figure is copied from the last editorial edition, while all current
+    headings and source-bearing prose remain untouched. When a section was
+    retitled or divided, the target follows its *subject*, not its old number.
+    """
+
+    approved = {
+        1: ("N01-v19-final", [("21", "21", "hotel-photo", "after-heading")]),
+        2: ("N02-v16-final", [("15", "15", "hotel-photo", "after-heading")]),
+        31: ("N31-v10-editorial", [("08", "08", "movement-two-photo", "after-lead")]),
+        32: ("N32-v10-editorial", [("08", "10", "movement-two-photo", "after-lead")]),
+        33: (
+            "N33-v10-editorial",
+            [
+                ("08", "11", "movement-two-photo", "after-lead"),
+                ("09", "15", "movement-three-tail-photo", "after-body"),
+            ],
+        ),
+        34: ("N34-v10-editorial", [("05", "05", "traditions-evidence-photo", "after-body")]),
+    }
+    if number not in approved:
+        return source, 0
+
+    old_package, restorations = approved[number]
+    original = lxml_html.parse(str(ROOT / old_package / "index.html"))
+    restored = 0
+    for old_section, current_section, figure_class, position in restorations:
+        previous = original.xpath(
+            f'//section[@data-section="{old_section}"]'
+            f'//figure[contains(concat(" ", normalize-space(@class), " "), " {figure_class} ")]'
+        )
+        if len(previous) != 1:
+            raise ValueError(f"N{number:02d}: approved {figure_class} is missing or ambiguous")
+        for image in previous[0].xpath(".//img"):
+            asset = package / image.get("src")
+            if not asset.is_file():
+                raise FileNotFoundError(asset)
+
+        pattern = re.compile(
+            rf'<section class="[^"]*\breading-section\b[^"]*"[^>]*'
+            rf'data-section="{current_section}"[^>]*>.*?</section>',
+            re.S,
+        )
+
+        def insert(match: re.Match[str]) -> str:
+            nonlocal restored
+            section = lxml_html.fromstring(match[0])
+            if section.xpath(
+                f'.//figure[contains(concat(" ", normalize-space(@class), " "), " {figure_class} ")]'
+            ):
+                raise ValueError(f"N{number:02d}: {figure_class} already present")
+            figure = copy.deepcopy(previous[0])
+            heading = section.xpath("./div[contains(@class,'section-heading')]")
+            bodies = section.xpath("./div[contains(@class,'section-body')]")
+            if len(heading) != 1 or not bodies:
+                raise ValueError(f"N{number:02d}: unexpected section {current_section} structure")
+            if position == "after-heading":
+                heading[0].addnext(figure)
+            elif position == "after-lead":
+                body = bodies[0]
+                paragraphs = body.xpath("./p")
+                if len(paragraphs) < 2:
+                    raise ValueError(f"N{number:02d}: no lead to precede {figure_class}")
+                lead = lxml_html.Element("div", {"class": "section-body section-lead"})
+                body.addprevious(lead)
+                lead.append(paragraphs[0])
+                lead.addnext(figure)
+            else:
+                bodies[-1].addnext(figure)
+            restored += 1
+            return lxml_html.tostring(section, encoding="unicode", method="html")
+
+        source, matches = pattern.subn(insert, source, count=1)
+        if matches != 1:
+            raise ValueError(f"N{number:02d}: section {current_section} not found")
+    if restored != len(restorations):
+        raise ValueError(f"N{number:02d}: incomplete photographic recovery")
+    return source, restored
+
+
 def prepare(number: int, destination: Path) -> dict:
     package = PACKAGE_BY_NUMBER[number]
     if not package.is_dir():
@@ -216,6 +299,7 @@ def prepare(number: int, destination: Path) -> dict:
     source, restored_sections = restore_section_classes(number, source)
     source, restored_hotel_spreads = restore_hotel_spreads(number, source, package)
     source, restored_mid_visuals = restore_mid_argument_visual(number, source, package)
+    source, restored_approved_photos = restore_approved_photography(number, source, package)
     if number in (3, 4) and restored_mid_visuals != 1:
         raise ValueError(f"N{number:02d}: editorial visual pause was not inserted")
     if number == 3:
@@ -252,6 +336,7 @@ def prepare(number: int, destination: Path) -> dict:
         "restored_section_classes": restored_sections,
         "restored_hotel_spreads": restored_hotel_spreads,
         "restored_mid_visuals": restored_mid_visuals,
+        "restored_approved_photos": restored_approved_photos,
         "source_blocks": len(re.findall(r'data-source-id="[^"]+"', source)),
         "status": "candidate_not_approved",
     }

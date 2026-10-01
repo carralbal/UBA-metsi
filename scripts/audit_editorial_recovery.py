@@ -23,6 +23,19 @@ def words(text: str) -> list[str]:
 def audit(number: int, stage: Path) -> dict:
     folder = stage / f"N{number:02d}"
     source = html.parse(str(folder / "index.html"))
+    original_path = Path(json.loads((folder / "recovery.json").read_text())["original_package"]) / "index.html"
+    original = html.parse(str(original_path))
+    def source_texts(document):
+        return {
+            block.get("data-source-id"): " ".join(block.text_content().split())
+            for block in document.xpath("//*[@data-source-id]")
+        }
+    current_texts = source_texts(source)
+    original_texts = source_texts(original)
+    changed_source_ids = [
+        key for key in sorted(set(current_texts) | set(original_texts))
+        if current_texts.get(key) != original_texts.get(key)
+    ]
     pdf = PdfReader(str(folder / "candidate.pdf"))
     extracted = " ".join(words(" ".join(page.extract_text() for page in pdf.pages)))
     compact = extracted.replace(" ", "")
@@ -53,6 +66,7 @@ def audit(number: int, stage: Path) -> dict:
         "images": sum(len(page.images) for page in pdf.pages),
         "missing_start": missing_start,
         "missing_end": missing_end,
+        "changed_source_ids": changed_source_ids,
     }
     (folder / "text-audit.json").write_text(json.dumps(result, indent=2) + "\n")
     return result
@@ -69,5 +83,6 @@ if __name__ == "__main__":
             f"N{number:02d} {result['pages']:2} pp; "
             f"{result['source_blocks']:3} blocks; "
             f"missing start/end {len(result['missing_start'])}/"
-            f"{len(result['missing_end'])}"
+            f"{len(result['missing_end'])}; "
+            f"changed source {len(result['changed_source_ids'])}"
         )
