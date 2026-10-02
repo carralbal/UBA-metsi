@@ -1,5 +1,270 @@
 /* Editorial recovery fixes only. Preserve the original magazine vocabulary. */
 
+/* A source paragraph can carry a decisive turn in an argument. Give it the
+   same visual authority as a magazine pull quote without duplicating text. */
+body.premium-magazine .editorial-decision-pivot {
+  box-sizing: border-box !important;
+  display: grid !important;
+  grid-template-columns: 24mm minmax(0, 1fr) !important;
+  gap: 7mm !important;
+  align-items: start !important;
+  width: 100% !important;
+  margin: 9mm 0 11mm !important;
+  padding: 10mm 11mm !important;
+  break-inside: avoid !important;
+  page-break-inside: avoid !important;
+  border-top: .25mm solid #858784 !important;
+  border-bottom: .25mm solid #858784 !important;
+}
+body.premium-magazine .editorial-decision-pivot-label {
+  display: block !important;
+  color: #6a6d67 !important;
+  font-family: Avenir, Arial, sans-serif !important;
+  font-size: 8pt !important;
+  font-weight: 800 !important;
+  letter-spacing: .12em !important;
+  line-height: 1.35 !important;
+}
+body.premium-magazine .editorial-decision-pivot p {
+  margin: 0 !important;
+  color: #171917 !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 17pt !important;
+  line-height: 1.19 !important;
+  orphans: 3 !important;
+  widows: 3 !important;
+}
+body.premium-magazine .editorial-decision-pivot.ink {
+  background: #171917 !important;
+  border-top: 1.8mm solid #cfff00 !important;
+  border-bottom: 0 !important;
+}
+body.premium-magazine .editorial-decision-pivot.ink p { color: #f4f3ee !important; }
+body.premium-magazine .editorial-decision-pivot.ink .editorial-decision-pivot-label { color: #cfff00 !important; }
+body.premium-magazine .editorial-decision-pivot.paper {
+  background: #e6e8e4 !important;
+  border: 0 !important;
+  border-left: 1.8mm solid #cfff00 !important;
+}
+body.premium-magazine .editorial-decision-pivot.rule {
+  background: transparent !important;
+  border-top: .25mm solid #171917 !important;
+  border-bottom: .25mm solid #171917 !important;
+}
+
+body.premium-magazine.document-n06 .editorial-evidence-plate {
+  box-sizing: border-box !important;
+  display: block !important;
+  width: 100% !important;
+  margin: 6mm 0 7mm !important;
+  padding: 3mm 0 0 !important;
+  border-top: .5mm solid #171917 !important;
+  background: #f4f3ef !important;
+  break-inside: avoid-page !important;
+  page-break-inside: avoid !important;
+}
+body.premium-magazine.document-n06 .editorial-evidence-plate img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 133mm !important;
+  object-fit: contain !important;
+}
+body.premium-magazine.document-n06 .editorial-evidence-plate figcaption {
+  margin: 2mm 0 0 !important;
+  font: 400 7.5pt/1.25 Avenir, Arial, sans-serif !important;
+  color: #555953 !important;
+}
+
+/* Six different uncertainties are an argument map, not six more paragraphs
+   in the stone field. Keep their original explanations at reading size. */
+body.premium-magazine.document-n06 .n06-uncertainty-atlas {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  margin: 8mm 0 9mm !important;
+  padding: 6mm 7mm 5mm !important;
+  background: #f7f7f3 !important;
+  border-top: 1.7mm solid #171917 !important;
+  border-bottom: .25mm solid #999c96 !important;
+  break-inside: avoid-page !important;
+  page-break-inside: avoid !important;
+}
+body.premium-magazine.document-n06 .n06-uncertainty-atlas h3 {
+  margin: 0 0 2mm !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 25pt !important;
+  line-height: 1.05 !important;
+}
+body.premium-magazine.document-n06 .n06-uncertainty-atlas > p {
+  max-width: 130mm !important;
+  margin: 0 0 5mm !important;
+  font-size: 9.3pt !important;
+  line-height: 1.34 !important;
+  color: #545852 !important;
+}
+body.premium-magazine.document-n06 .n06-uncertainty-entries {
+  columns: 2 !important;
+  column-gap: 9mm !important;
+  column-rule: .25mm solid #bbbfba !important;
+}
+body.premium-magazine.document-n06 .n06-uncertainty-entries p {
+  margin: 0 0 3.5mm !important;
+  font-size: 9.1pt !important;
+  line-height: 1.32 !important;
+  break-inside: avoid-column !important;
+  page-break-inside: avoid !important;
+}
+body.premium-magazine.document-n06 .n06-uncertainty-entries strong {
+  color: #171917 !important;
+  font-weight: 800 !important;
+}
+
+/* N04: the three claims are not interchangeable evidence. Set the existing
+   example paragraphs as a full-width comparison between prose columns. */
+body.premium-magazine.document-n04 .n04-claim-triptych {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  margin: 8mm 0 !important;
+  padding: 6mm 0 5mm !important;
+  border-top: 1.5mm solid #171917 !important;
+  border-bottom: .25mm solid #9da09b !important;
+  break-inside: avoid-page !important;
+  page-break-inside: avoid !important;
+}
+body.premium-magazine.document-n04 .n04-claim-triptych h3 {
+  margin: 0 0 2mm !important;
+  font: 400 27pt/1.04 'Cormorant Garamond', Georgia, serif !important;
+}
+body.premium-magazine.document-n04 .n04-claim-triptych > p {
+  margin: 0 0 4mm !important;
+  max-width: 135mm !important;
+  font-size: 9.8pt !important;
+  line-height: 1.36 !important;
+}
+body.premium-magazine.document-n04 .n04-claim-triptych > p:last-child {
+  margin: 4mm 0 0 !important;
+  padding-left: 4mm !important;
+  border-left: 1.2mm solid #cfff00 !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 15pt !important;
+  line-height: 1.2 !important;
+}
+body.premium-magazine.document-n04 .n04-claim-columns {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 5mm !important;
+}
+body.premium-magazine.document-n04 .n04-claim-column {
+  border-top: .25mm solid #9da09b !important;
+  padding-top: 3mm !important;
+}
+body.premium-magazine.document-n04 .n04-claim-column p {
+  margin: 0 !important;
+  font-size: 9.1pt !important;
+  line-height: 1.34 !important;
+}
+body.premium-magazine.document-n04 .n04-claim-column strong {
+  color: #171917 !important;
+}
+
+/* N30: three telemetry signals form one comparison; none alone explains the
+   guest's episode. Preserve the original explanatory paragraphs and scale. */
+body.premium-magazine.document-n30 .n30-telemetry-feature {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  margin: 8mm 0 9mm !important;
+  padding: 6mm 7mm 7mm !important;
+  background: #e6e8e4 !important;
+  border-left: 1.6mm solid #cfff00 !important;
+  break-inside: avoid-page !important;
+  page-break-inside: avoid !important;
+}
+body.premium-magazine.document-n30 .n30-telemetry-feature .subsection-lead {
+  display: block !important;
+  margin: 0 0 6mm !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+body.premium-magazine.document-n30 .n30-telemetry-feature h3 {
+  margin: 0 0 2mm !important;
+  font: 400 25pt/1.05 'Cormorant Garamond', Georgia, serif !important;
+}
+body.premium-magazine.document-n30 .n30-telemetry-feature .subsection-lead p {
+  margin: 0 !important;
+  max-width: 140mm !important;
+  font-size: 9.4pt !important;
+  line-height: 1.34 !important;
+}
+body.premium-magazine.document-n30 .n30-telemetry-entries {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 6mm !important;
+}
+body.premium-magazine.document-n30 .n30-telemetry-entry {
+  min-width: 0 !important;
+  padding-top: 3mm !important;
+  border-top: .25mm solid #818681 !important;
+}
+body.premium-magazine.document-n30 .n30-telemetry-entry::before {
+  content: attr(data-sequence) !important;
+  display: block !important;
+  margin-bottom: 2mm !important;
+  color: #6e8700 !important;
+  font: 800 8pt/1 Avenir, Arial, sans-serif !important;
+  letter-spacing: .12em !important;
+}
+body.premium-magazine.document-n30 .n30-telemetry-entry p {
+  margin: 0 !important;
+  font-size: 9.15pt !important;
+  line-height: 1.34 !important;
+}
+
+/* The final source paragraph of section 09 formerly occupied six lines on
+   an otherwise blank sheet. It now becomes an intentional ink pause. */
+body.premium-magazine.document-n30 .n30-alert-pause {
+  page: fullbleed !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  width: 210mm !important;
+  height: 297mm !important;
+  margin: 0 !important;
+  padding: 32mm 24mm !important;
+  background: #171917 !important;
+  color: #f4f3ee !important;
+  break-before: page !important;
+  break-after: page !important;
+  page-break-before: always !important;
+  page-break-after: always !important;
+}
+body.premium-magazine.document-n30 .n30-alert-pause::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 24mm !important;
+  left: 24mm !important;
+  width: 22mm !important;
+  height: 2.8mm !important;
+  background: #cfff00 !important;
+  transform: skewX(-24deg) !important;
+}
+body.premium-magazine.document-n30 .n30-alert-pause-kicker {
+  display: block !important;
+  margin-bottom: 13mm !important;
+  color: #cfff00 !important;
+  font: 800 8pt/1 Avenir, Arial, sans-serif !important;
+  letter-spacing: .16em !important;
+}
+body.premium-magazine.document-n30 .n30-alert-pause p {
+  max-width: 148mm !important;
+  margin: 0 !important;
+  color: #f4f3ee !important;
+  font: 400 27pt/1.12 'Cormorant Garamond', Georgia, serif !important;
+  letter-spacing: -.02em !important;
+}
+
 /* N11's expanded glossary is a single list. The earlier two-cell grid placed
    that whole list in half the page and clipped seven definitions at the foot. */
 body.document-n11.block-c .pills-glossary-page .glossary-two-column .section-body {
@@ -103,6 +368,87 @@ body.block-c .block-c-references .section-body li {
 body.document-n17 section.stone-card[data-section="17"]::after {
   display: none !important;
   content: none !important;
+}
+
+/* N17's final strategy argument ended in two dense columns occupying only
+   the top half of the leaf before a full-bleed pause. The two source groups
+   now become one deliberately composed pair, without duplicating prose. */
+body.premium-magazine.block-c.document-n17 section.block-c-movement.movement-3[data-section="09"] .section-body:not(.section-lead) {
+  font-size: 10pt !important;
+  line-height: 1.32 !important;
+}
+body.premium-magazine.block-c.document-n17 section.block-c-movement.movement-3[data-section="09"] .section-body:not(.section-lead) p {
+  margin-bottom: 2.2mm !important;
+}
+body.premium-magazine.document-n17 .n17-supervision-limit {
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-height: 75mm !important;
+  margin: 9mm 0 7mm !important;
+  padding: 10mm 13mm !important;
+  background: #191a19 !important;
+  color: #f7f7f2 !important;
+  border-left: 1.5mm solid #cfff00 !important;
+  break-inside: avoid !important;
+  page-break-inside: avoid !important;
+}
+body.premium-magazine.document-n17 .n17-supervision-limit-label {
+  display: block !important;
+  margin-bottom: 5mm !important;
+  font: 700 8pt/1.1 Arial, Helvetica, sans-serif !important;
+  letter-spacing: .18em !important;
+  color: #cfff00 !important;
+}
+body.premium-magazine.document-n17 .n17-supervision-limit p {
+  max-width: 155mm !important;
+  margin: 0 !important;
+  font: 400 20pt/1.12 'Cormorant Garamond', Georgia, serif !important;
+  color: inherit !important;
+}
+body.premium-magazine.document-n17 .n17-strategy-pair {
+  box-sizing: border-box !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 9mm !important;
+  width: 100% !important;
+  min-height: 229mm !important;
+  margin: 0 !important;
+  padding: 7mm 6mm 6mm !important;
+  background: #e7e9e6 !important;
+  border-top: 1.5mm solid #cfff00 !important;
+  break-before: auto !important;
+  page-break-before: auto !important;
+  break-inside: avoid !important;
+  page-break-inside: avoid !important;
+}
+body.premium-magazine.document-n17 .n17-strategy-pair-column {
+  min-width: 0 !important;
+  font: 400 9.8pt/1.27 Baskerville, Georgia, serif !important;
+}
+body.premium-magazine.document-n17 .n17-strategy-pair-column + .n17-strategy-pair-column {
+  border-left: .2mm solid #b9bbb8 !important;
+  padding-left: 9mm !important;
+}
+body.premium-magazine.document-n17 .n17-strategy-pair .subsection-lead h3 {
+  margin: 0 0 5mm !important;
+  padding: 0 !important;
+  border: 0 !important;
+  font: 400 23pt/1.04 'Cormorant Garamond', Georgia, serif !important;
+}
+body.premium-magazine.document-n17 .n17-strategy-pair p {
+  margin: 0 0 3.3mm !important;
+  font: inherit !important;
+}
+body.block-c.document-n17 article.reading:has(+ .block-c-pause) {
+  break-after: auto !important;
+  page-break-after: auto !important;
+}
+body.block-c.document-n17 article.reading + .block-c-pause {
+  break-before: auto !important;
+  page-break-before: auto !important;
 }
 
 /* N12's regional synthesis kept its first paragraphs on one leaf and orphaned
@@ -880,6 +1226,13 @@ body.premium-magazine.document-n23 section:is([data-section="17"],[data-section=
 body.premium-magazine.document-n23 section:is([data-section="17"],[data-section="18"]) .section-body p {
   margin-bottom: 5mm !important;
 }
+body.premium-magazine.document-n23 section[data-section="17"] .section-body {
+  font-size: 12.35pt !important;
+  line-height: 1.34 !important;
+}
+body.premium-magazine.document-n23 section[data-section="17"] .section-body p {
+  margin-bottom: 3.5mm !important;
+}
 
 /* N24 has the same regional-essay fracture after professional tensions. */
 body.premium-magazine.document-n24 section[data-section="19"] {
@@ -1528,6 +1881,9 @@ body.premium-magazine .editorial-argument-pause.photo img {
   object-position: center !important;
   filter: grayscale(1) !important;
 }
+body.premium-magazine .editorial-argument-pause.photo.curated-short img {
+  height: 54mm !important;
+}
 body.premium-magazine .editorial-argument-pause figcaption {
   margin-top: 2mm !important;
   padding-left: 0 !important;
@@ -1535,4 +1891,11 @@ body.premium-magazine .editorial-argument-pause figcaption {
   font-size: 12.5pt !important;
   line-height: 1.2 !important;
   color: #4f5350 !important;
+}
+
+/* The labyrinth photograph in N01 is supplied in colour, unlike the rest of
+   the edition's architectural photography. Keep its detail but not its green
+   cast, which competes with the deliberate volt accents. */
+body.premium-magazine.document-n01 section[data-section="08"] .photo-band img {
+  filter: grayscale(1) !important;
 }

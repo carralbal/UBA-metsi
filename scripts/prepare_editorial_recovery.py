@@ -262,6 +262,445 @@ def restore_approved_photography(number: int, source: str, package: Path) -> tup
     return source, restored
 
 
+def restore_editorial_interludes(number: int, source: str, package: Path) -> tuple[str, int]:
+    """Keep the visual interludes that disappeared during the prose rewrite.
+
+    N01's six Hotel Horizonte voices are a distinct visual cast, not another
+    paragraph of the case. N23 had a photographic pause at consequences; its
+    rewritten text combines consequences and limits into one section, so the
+    photograph follows that section's heading without importing old prose.
+    N24 already repeats that photograph in the adjacent errors section; adding
+    the old second occurrence would create a visibly redundant spread.
+    """
+
+    if number not in (1, 23):
+        return source, 0
+    approved = ROOT / ("N01-v19-final" if number == 1 else f"N{number:02d}-v10-editorial")
+    original = lxml_html.parse(str(approved / "index.html"))
+    if number == 1:
+        voices = original.xpath('//aside[contains(@class,"hotel-voices-compact")]')
+        if len(voices) != 1:
+            raise ValueError("N01: approved Hotel voices missing or ambiguous")
+        for image in voices[0].xpath('.//img'):
+            if not (package / image.get("src")).is_file():
+                raise FileNotFoundError(package / image.get("src"))
+        if 'class="hotel-voices-compact"' in source:
+            raise ValueError("N01: Hotel voices already present")
+        anchor = re.compile(r'(<section class="[^"]*\bhotel-case\b[^"]*"[^>]*data-section="21"[^>]*>.*?</section>)', re.S)
+        source, count = anchor.subn(
+            lambda match: match[1] + lxml_html.tostring(copy.deepcopy(voices[0]), encoding="unicode", method="html"),
+            source,
+            count=1,
+        )
+        if count != 1:
+            raise ValueError("N01: Hotel section 21 not found")
+        return source, count
+
+    figures = original.xpath('//figure[contains(@class,"consequence-photo")]')
+    if len(figures) != 1:
+        raise ValueError(f"N{number:02d}: approved consequence image missing or ambiguous")
+    figure = copy.deepcopy(figures[0])
+    for image in figure.xpath('.//img'):
+        if not (package / image.get("src")).is_file():
+            raise FileNotFoundError(package / image.get("src"))
+    # The approved caption is retained; only its placement changes to suit the
+    # newer combined section. The 2026 explanatory prose stays untouched.
+    figure.set("class", figure.get("class", "") + " editorial-argument-pause photo")
+    target = "17"
+    pattern = re.compile(
+        rf'<section class="[^"]*\breading-section\b[^"]*"[^>]*data-section="{target}"[^>]*>.*?</section>',
+        re.S,
+    )
+
+    def insert(match: re.Match[str]) -> str:
+        section = lxml_html.fromstring(match[0])
+        heading = section.xpath('./div[contains(@class,"section-heading")]')
+        if len(heading) != 1:
+            raise ValueError(f"N{number:02d}: unexpected consequence heading")
+        heading[0].addnext(figure)
+        return lxml_html.tostring(section, encoding="unicode", method="html")
+
+    source, count = pattern.subn(insert, source, count=1)
+    if count != 1:
+        raise ValueError(f"N{number:02d}: consequence section {target} not found")
+    return source, count
+
+
+def promote_decision_paragraphs(number: int, source: str) -> tuple[str, int]:
+    """Turn existing decision pivots into full-width magazine pauses.
+
+    The paragraph itself moves, rather than being quoted a second time. Its
+    source ID and exact wording remain in the reading sequence. This gives
+    the longest all-text arguments a different visual register without
+    inventing a diagram or adding explanatory prose.
+    """
+
+    pivots = {
+        3: (("06", "N03-s06-b032", "EL INDICADOR", "ink"),),
+        6: (
+            ("06", "N06-s06-b028", "LA PRUEBA", "paper"),
+            ("07", "N06-s07-b026", "LA EXPLICACIÓN", "rule"),
+        ),
+        8: (("06", "N08-s06-b025", "OBSERVAR Y EXPLICAR", "ink"),),
+        10: (("08", "N10-s08-b032", "LA DECISIÓN", "paper"),),
+        27: (("07", "N27-s07-b013", "EL CONTRATO", "rule"),),
+    }
+    if number not in pivots:
+        return source, 0
+    count = 0
+    for section_number, paragraph_id, label, variant in pivots[number]:
+        pattern = re.compile(
+            rf'<section class="[^"]*\breading-section\b[^"]*"[^>]*data-section="{section_number}"[^>]*>.*?</section>',
+            re.S,
+        )
+
+        def promote(match: re.Match[str]) -> str:
+            nonlocal count
+            section = lxml_html.fromstring(match[0])
+            matches = section.xpath(f'.//p[@data-source-id="{paragraph_id}"]')
+            if len(matches) != 1:
+                raise ValueError(f"N{number:02d}: pivot {paragraph_id} missing or ambiguous")
+            paragraph = matches[0]
+            body = paragraph.getparent()
+            if "section-body" not in body.get("class", "").split():
+                raise ValueError(f"N{number:02d}: pivot {paragraph_id} has unexpected parent")
+            at = list(body).index(paragraph)
+            before = list(body)[:at]
+            after = list(body)[at + 1 :]
+            if not before or not after:
+                raise ValueError(f"N{number:02d}: pivot {paragraph_id} is not mid-argument")
+            continuation = lxml_html.Element("div", {"class": body.get("class", "section-body") + " editorial-continuation"})
+            for element in after:
+                continuation.append(element)
+            aside = lxml_html.Element("aside", {"class": f"editorial-decision-pivot {variant}"})
+            kicker = lxml_html.Element("span", {"class": "editorial-decision-pivot-label"})
+            kicker.text = label
+            aside.append(kicker)
+            aside.append(paragraph)
+            body.addnext(aside)
+            aside.addnext(continuation)
+            count += 1
+            return lxml_html.tostring(section, encoding="unicode", method="html")
+
+        source, matches = pattern.subn(promote, source, count=1)
+        if matches != 1:
+            raise ValueError(f"N{number:02d}: section {section_number} missing")
+    return source, count
+
+
+def insert_n06_evidence_plate(number: int, source: str) -> tuple[str, int]:
+    """Place a source-grounded evidence map at the turn of N06's second movement."""
+
+    if number != 6:
+        return source, 0
+    pattern = re.compile(
+        r'<section class="[^"]*\breading-section\b[^"]*"[^>]*data-section="06"[^>]*>.*?</section>',
+        re.S,
+    )
+
+    def insert(match: re.Match[str]) -> str:
+        section = lxml_html.fromstring(match[0])
+        anchors = section.xpath('.//p[@data-source-id="N06-s06-b013"]')
+        if len(anchors) != 1:
+            raise ValueError("N06: evidence map anchor missing or ambiguous")
+        anchor = anchors[0]
+        body = anchor.getparent()
+        if "section-body" not in body.get("class", "").split():
+            raise ValueError("N06: evidence map anchor has unexpected parent")
+        original_children = list(body)
+        position = original_children.index(anchor)
+        following = original_children[position + 1 :]
+        if not following:
+            raise ValueError("N06: evidence map has no subsequent argument")
+        continuation = lxml_html.Element("div", {"class": body.get("class", "section-body") + " editorial-continuation"})
+        for element in following:
+            continuation.append(element)
+        figure = lxml_html.Element("figure", {"class": "editorial-evidence-plate"})
+        image = lxml_html.Element("img", {
+            "src": "infographics/N06/cartera-evidencia-inline.svg",
+            "alt": "Cuatro fuentes de evidencia llegan a un contraste controlado por independencia y variación de casos; la conclusión declara su alcance.",
+        })
+        figure.append(image)
+        caption = lxml_html.Element("figcaption")
+        caption.text = "N06 · La cartera responde dudas prioritarias y no cuenta varias veces una misma fuente."
+        figure.append(caption)
+        body.addnext(figure)
+        figure.addnext(continuation)
+        return lxml_html.tostring(section, encoding="unicode", method="html")
+
+    return pattern.subn(insert, source, count=1)
+
+
+def compose_n06_uncertainty_atlas(number: int, source: str) -> tuple[str, int]:
+    """Set the existing six practical doubts as a readable editorial taxonomy.
+
+    The six original paragraphs, their wording, and their source identifiers
+    stay in sequence. Only their page-level composition changes.
+    """
+
+    if number != 6:
+        return source, 0
+    pattern = re.compile(
+        r'<section class="[^"]*\breading-section\b[^"]*"[^>]*data-section="05"[^>]*>.*?</section>',
+        re.S,
+    )
+
+    def compose(match: re.Match[str]) -> str:
+        section = lxml_html.fromstring(match[0])
+        headings = section.xpath('.//h3[@data-source-id="N06-s05-b016"]')
+        paragraphs = [
+            section.xpath(f'.//p[@data-source-id="N06-s05-b{index:03d}"]')
+            for index in range(17, 24)
+        ]
+        if len(headings) != 1 or any(len(group) != 1 for group in paragraphs):
+            raise ValueError("N06: six-doubt taxonomy is incomplete")
+        heading = headings[0]
+        lead = paragraphs[0][0]
+        entries = [group[0] for group in paragraphs[1:]]
+        body = heading.getparent()
+        original = list(body)
+        positions = [original.index(item) for item in (heading, lead, *entries)]
+        if positions != list(range(positions[0], positions[0] + 8)):
+            raise ValueError("N06: taxonomy is no longer contiguous")
+        atlas = lxml_html.Element("div", {"class": "n06-uncertainty-atlas"})
+        body.insert(positions[0], atlas)
+        atlas.append(heading)
+        atlas.append(lead)
+        entries_container = lxml_html.Element("div", {"class": "n06-uncertainty-entries"})
+        atlas.append(entries_container)
+        for entry in entries:
+            entries_container.append(entry)
+        return lxml_html.tostring(section, encoding="unicode", method="html")
+
+    return pattern.subn(compose, source, count=1)
+
+
+def compose_n04_claims(number: int, source: str) -> tuple[str, int]:
+    """Compare three Hotel claims without replacing their source prose."""
+
+    if number != 4:
+        return source, 0
+    pattern = re.compile(
+        r'<section class="[^"]*\breading-section\b[^"]*"[^>]*data-section="05"[^>]*>.*?</section>',
+        re.S,
+    )
+
+    def compose(match: re.Match[str]) -> str:
+        section = lxml_html.fromstring(match[0])
+        nodes = []
+        for index, tag in [(17, "h3"), (18, "p"), (19, "p"), (20, "p"), (21, "p"), (22, "p")]:
+            found = section.xpath(f'.//{tag}[@data-source-id="N04-s05-b{index:03d}"]')
+            if len(found) != 1:
+                raise ValueError(f"N04: claim component b{index:03d} missing")
+            nodes.append(found[0])
+        body = nodes[0].getparent()
+        original = list(body)
+        positions = [original.index(node) for node in nodes]
+        if positions != list(range(positions[0], positions[0] + len(nodes))):
+            raise ValueError("N04: claims are no longer contiguous")
+        following = original[positions[-1] + 1 :]
+        continuation = lxml_html.Element("div", {"class": body.get("class", "section-body") + " editorial-continuation"})
+        for element in following:
+            continuation.append(element)
+        feature = lxml_html.Element("div", {"class": "n04-claim-triptych"})
+        feature.append(nodes[0])
+        feature.append(nodes[1])
+        columns = lxml_html.Element("div", {"class": "n04-claim-columns"})
+        feature.append(columns)
+        for node in nodes[2:5]:
+            column = lxml_html.Element("div", {"class": "n04-claim-column"})
+            column.append(node)
+            columns.append(column)
+        feature.append(nodes[5])
+        body.addnext(feature)
+        feature.addnext(continuation)
+        return lxml_html.tostring(section, encoding="unicode", method="html")
+
+    return pattern.subn(compose, source, count=1)
+
+
+def compose_n30_telemetry(number: int, source: str) -> tuple[str, int]:
+    """Turn the existing metric/log/trace explanations into a visual key."""
+
+    if number != 30:
+        return source, 0
+    pattern = re.compile(
+        r'<section class="[^"]*\breading-section\b[^"]*"[^>]*data-section="07"[^>]*>.*?</section>',
+        re.S,
+    )
+
+    def compose(match: re.Match[str]) -> str:
+        section = lxml_html.fromstring(match[0])
+        headings = section.xpath('.//div[contains(@class,"subsection-lead")][.//h3[@data-source-id="N30-s07-b016"]]')
+        paragraphs = [section.xpath(f'.//p[@data-source-id="N30-s07-b{index:03d}"]') for index in (18, 19, 20)]
+        if len(headings) != 1 or any(len(group) != 1 for group in paragraphs):
+            raise ValueError("N30: telemetry comparison is incomplete")
+        heading = headings[0]
+        entries = [group[0] for group in paragraphs]
+        body = heading.getparent()
+        original = list(body)
+        positions = [original.index(node) for node in (heading, *entries)]
+        if positions != list(range(positions[0], positions[0] + 4)):
+            raise ValueError("N30: telemetry explanation is no longer contiguous")
+        following = original[positions[-1] + 1 :]
+        continuation = lxml_html.Element("div", {"class": body.get("class", "section-body") + " editorial-continuation"})
+        for element in following:
+            continuation.append(element)
+        feature = lxml_html.Element("div", {"class": "n30-telemetry-feature"})
+        feature.append(heading)
+        rows = lxml_html.Element("div", {"class": "n30-telemetry-entries"})
+        feature.append(rows)
+        for index, entry in enumerate(entries, start=1):
+            column = lxml_html.Element("div", {"class": "n30-telemetry-entry", "data-sequence": f"{index:02d}"})
+            column.append(entry)
+            rows.append(column)
+        body.addnext(feature)
+        feature.addnext(continuation)
+        return lxml_html.tostring(section, encoding="unicode", method="html")
+
+    return pattern.subn(compose, source, count=1)
+
+
+def compose_n30_alert_pause(number: int, source: str) -> tuple[str, int]:
+    """Give the final alert criterion a deliberate ink page, not an orphan leaf.
+
+    The paragraph is moved once, unchanged and with its source identifier.
+    """
+
+    if number != 30:
+        return source, 0
+    pattern = re.compile(
+        r'<section class="[^"]*\breading-section\b[^"]*"[^>]*data-section="09"[^>]*>.*?</section>',
+        re.S,
+    )
+
+    def compose(match: re.Match[str]) -> str:
+        section = lxml_html.fromstring(match[0])
+        paragraphs = section.xpath('.//p[@data-source-id="N30-s09-b007"]')
+        if len(paragraphs) != 1 or paragraphs[0].getnext() is not None:
+            raise ValueError("N30: final alert criterion is not the final paragraph")
+        paragraph = paragraphs[0]
+        paragraph.getparent().remove(paragraph)
+        pause = lxml_html.Element("section", {"class": "full-bleed n30-alert-pause"})
+        kicker = lxml_html.Element("span", {"class": "n30-alert-pause-kicker"})
+        kicker.text = "METSI · N30 / 09 · ALERTAS"
+        pause.append(kicker)
+        pause.append(paragraph)
+        return (
+            lxml_html.tostring(section, encoding="unicode", method="html")
+            + lxml_html.tostring(pause, encoding="unicode", method="html")
+        )
+
+    return pattern.subn(compose, source, count=1)
+
+
+def restore_curated_argument_photography(number: int, source: str, package: Path) -> tuple[str, int]:
+    """Use existing, unused photographs at individually chosen argument turns.
+
+    These are per-reading placements and captions, not a generated template.
+    The photographs remain in their original asset packages.
+    """
+
+    choices_by_number = {
+        16: (("07", "N16-s07-b002", "assets/editorial-02.png", "Una contradicción del trabajo real obliga a revisar el modelo, no a ocultar la excepción."),),
+        18: (("08", "N18-s08-b002", "assets/editorial-02.png", "Las obligaciones se negocian dentro de una operación que ya tiene personas, reglas y tecnología."),),
+        32: (
+            ("12", "N32-s12-b003", "assets/editorial-04.png", "Desagregar el resultado permite mirar qué casos y personas quedan detrás del promedio."),
+            ("17", "N32-s17-b002", "assets/editorial-05.png", "La supervisión sólo existe si una persona puede reconocer, discutir y corregir la salida."),
+        ),
+    }
+    if number not in choices_by_number:
+        return source, 0
+    restored = 0
+    for section_id, anchor_id, image_path, caption in choices_by_number[number]:
+        if not (package / image_path).is_file():
+            raise FileNotFoundError(package / image_path)
+        pattern = re.compile(
+            rf'<section class="[^"]*\breading-section\b[^"]*"[^>]*data-section="{section_id}"[^>]*>.*?</section>',
+            re.S,
+        )
+
+        def insert(match: re.Match[str]) -> str:
+            section = lxml_html.fromstring(match[0])
+            anchors = section.xpath(f'.//p[@data-source-id="{anchor_id}"]')
+            if len(anchors) != 1:
+                raise ValueError(f"N{number:02d}: photographic anchor {anchor_id} missing or ambiguous")
+            figure = lxml_html.Element("figure", {"class": "editorial-argument-pause photo curated-short" if number != 32 else "editorial-argument-pause photo"})
+            image = lxml_html.Element("img", {"src": image_path, "alt": caption})
+            label = lxml_html.Element("figcaption")
+            label.text = caption
+            figure.append(image)
+            figure.append(label)
+            # The image belongs *after* the complete section. A full-width
+            # figure inside CSS columns left a fragment of the previous page's
+            # gray rule at the top of the new sheet in Chromium print output.
+            return lxml_html.tostring(section, encoding="unicode", method="html") + lxml_html.tostring(figure, encoding="unicode", method="html")
+
+        source, count = pattern.subn(insert, source, count=1)
+        if count != 1:
+            raise ValueError(f"N{number:02d}: section {section_id} not found")
+        restored += count
+    return source, restored
+
+
+def compose_n17_strategy_pair(number: int, source: str) -> tuple[str, int]:
+    """Set N17's two final decisions as one intentional facing-page feature.
+
+    In the current edition they were a short, unheaded continuation before a
+    full photographic pause. Moving the two existing subsection groups into a
+    paired composition changes neither their sequence nor their source text.
+    """
+
+    if number != 17:
+        return source, 0
+    pattern = re.compile(
+        r'<section class="[^"]*\breading-section\b[^"]*"[^>]*data-section="09"[^>]*>.*?</section>',
+        re.S,
+    )
+
+    def compose(match: re.Match[str]) -> str:
+        section = lxml_html.fromstring(match[0])
+        bodies = section.xpath('./div[contains(@class,"section-body") and not(contains(@class,"section-lead"))]')
+        if len(bodies) != 1:
+            raise ValueError("N17: strategy argument body missing or ambiguous")
+        body = bodies[0]
+        starts = []
+        for prefix in ("Elegir cuántas apuestas", "Cambiar de idea sin borrar"):
+            matches = [
+                element for element in body
+                if "subsection-lead" in element.get("class", "").split()
+                and element.text_content().lstrip().startswith(prefix)
+            ]
+            if len(matches) != 1:
+                raise ValueError(f"N17: decision group {prefix!r} missing or ambiguous")
+            starts.append(matches[0])
+        original_children = list(body)
+        start_indices = [original_children.index(element) for element in starts]
+        if start_indices[0] >= start_indices[1] or start_indices[1] >= len(body) - 1:
+            raise ValueError("N17: final decision pair has unexpected order")
+        feature = lxml_html.Element("div", {"class": "n17-strategy-pair"})
+        for first, last in ((start_indices[0], start_indices[1]), (start_indices[1], len(original_children))):
+            column = lxml_html.Element("div", {"class": "n17-strategy-pair-column"})
+            for element in original_children[first:last]:
+                column.append(element)
+            feature.append(column)
+        pivots = body.xpath('./p[@data-source-id="N17-s09-b031"]')
+        if len(pivots) != 1:
+            raise ValueError("N17: supervision limit pivot missing or ambiguous")
+        pivot = pivots[0]
+        body.remove(pivot)
+        aside = lxml_html.Element("aside", {"class": "n17-supervision-limit"})
+        kicker = lxml_html.Element("span", {"class": "n17-supervision-limit-label"})
+        kicker.text = "LÍMITE DE AUTOMATIZACIÓN"
+        aside.append(kicker)
+        aside.append(pivot)
+        body.addnext(aside)
+        aside.addnext(feature)
+        return lxml_html.tostring(section, encoding="unicode", method="html")
+
+    return pattern.subn(compose, source, count=1)
+
+
 def prepare(number: int, destination: Path) -> dict:
     package = PACKAGE_BY_NUMBER[number]
     if not package.is_dir():
@@ -300,6 +739,15 @@ def prepare(number: int, destination: Path) -> dict:
     source, restored_hotel_spreads = restore_hotel_spreads(number, source, package)
     source, restored_mid_visuals = restore_mid_argument_visual(number, source, package)
     source, restored_approved_photos = restore_approved_photography(number, source, package)
+    source, restored_interludes = restore_editorial_interludes(number, source, package)
+    source, promoted_decision_pivots = promote_decision_paragraphs(number, source)
+    source, n06_evidence_plate = insert_n06_evidence_plate(number, source)
+    source, n06_uncertainty_atlas = compose_n06_uncertainty_atlas(number, source)
+    source, n04_claim_triptych = compose_n04_claims(number, source)
+    source, n30_telemetry_feature = compose_n30_telemetry(number, source)
+    source, n30_alert_pause = compose_n30_alert_pause(number, source)
+    source, curated_argument_photography = restore_curated_argument_photography(number, source, package)
+    source, n17_strategy_pair = compose_n17_strategy_pair(number, source)
     if number in (3, 4) and restored_mid_visuals != 1:
         raise ValueError(f"N{number:02d}: editorial visual pause was not inserted")
     if number == 3:
@@ -325,6 +773,11 @@ def prepare(number: int, destination: Path) -> dict:
             link = target / name
             if not link.exists() and not link.is_symlink():
                 link.symlink_to(original)
+    if number == 6:
+        infographic_link = target / "infographics"
+        infographic_source = ROOT / "pedagogy/editorial-recovery-20260929/infographics"
+        if not infographic_link.exists() and not infographic_link.is_symlink():
+            infographic_link.symlink_to(infographic_source)
     recovery_link = target / "recovery.css"
     if not recovery_link.exists() and not recovery_link.is_symlink():
         recovery_link.symlink_to(RECOVERY_CSS)
@@ -337,6 +790,15 @@ def prepare(number: int, destination: Path) -> dict:
         "restored_hotel_spreads": restored_hotel_spreads,
         "restored_mid_visuals": restored_mid_visuals,
         "restored_approved_photos": restored_approved_photos,
+        "restored_interludes": restored_interludes,
+        "promoted_decision_pivots": promoted_decision_pivots,
+        "n06_evidence_plate": n06_evidence_plate,
+        "n06_uncertainty_atlas": n06_uncertainty_atlas,
+        "n04_claim_triptych": n04_claim_triptych,
+        "n30_telemetry_feature": n30_telemetry_feature,
+        "n30_alert_pause": n30_alert_pause,
+        "curated_argument_photography": curated_argument_photography,
+        "n17_strategy_pair": n17_strategy_pair,
         "source_blocks": len(re.findall(r'data-source-id="[^"]+"', source)),
         "status": "candidate_not_approved",
     }

@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title description">
+  <title id="title">N06 · Una cartera mínima de evidencia para la página interior</title>
+  <desc id="description">Cuatro fuentes con funciones distintas y dos controles sobre independencia y variación alimentan un contraste. La conclusión limita su alcance a los casos efectivamente revisados.</desc>
+  <defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M1 1 L7 4.5 L1 8" fill="none" stroke="#626962" stroke-width="2"/></marker></defs>
+  <rect width="1200" height="900" fill="#f4f3ef"/>
+  <g id="routes" fill="none" stroke="#7b827b" stroke-width="2.3">
+    <path d="M315 630 V678" marker-end="url(#arrow)"/>
+    <path d="M885 630 V678" marker-end="url(#arrow)"/>
+    <path d="M600 763 V778" marker-end="url(#arrow)"/>
+  </g>
+  <g id="header" font-family="Avenir Next,Arial,sans-serif" fill="#1b1d1a">
+    <path d="M55 41 H1145" stroke="#999e98" stroke-width="2"/>
+    <path d="M55 61 H145" stroke="#cfff00" stroke-width="10"/>
+    <text x="165" y="73" font-size="20" font-weight="800" letter-spacing="3">METSI · N06 · MAPA DE EVIDENCIA</text>
+    <text x="55" y="137" font-size="43" font-weight="600">Una cartera mínima no es una pila de métodos</text>
+    <text x="55" y="178" font-size="25" fill="#566056">Las fuentes tienen límites; la conclusión también.</text>
+  </g>
+  <g id="question" font-family="Avenir Next,Arial,sans-serif" fill="#1b1d1a">
+    <rect x="55" y="210" width="1090" height="70" fill="#e1e5e0"/>
+    <rect x="55" y="210" width="9" height="70" fill="#cfff00"/>
+    <text x="80" y="236" font-size="18" font-weight="800" letter-spacing="2">PUNTO DE PARTIDA</text>
+    <text x="80" y="264" font-size="27" font-weight="600">¿Qué duda podría cambiar la próxima decisión?</text>
+  </g>
+  <g id="sources" font-family="Avenir Next,Arial,sans-serif" fill="#1b1d1a">
+    <text x="55" y="326" font-size="20" font-weight="800" letter-spacing="2">FUENTES CON LÍMITES DISTINTOS</text>
+    <path d="M55 339 H572" stroke="#979d96" stroke-width="2"/>
+    <g id="interviews">
+      <rect x="55" y="354" width="517" height="63" fill="#fbfbf8"/>
+      <rect x="55" y="354" width="7" height="63" fill="#77877f"/>
+      <text x="77" y="381" font-size="26" font-weight="600">Entrevistas</text>
+      <text x="77" y="407" font-size="19" fill="#545c54">Interpretaciones y experiencias</text>
+    </g>
+    <g id="observation">
+      <rect x="55" y="424" width="517" height="63" fill="#e6e9e5"/>
+      <rect x="55" y="424" width="7" height="63" fill="#77877f"/>
+      <text x="77" y="451" font-size="26" font-weight="600">Observación</text>
+      <text x="77" y="477" font-size="19" fill="#545c54">Secuencias e interrupciones</text>
+    </g>
+    <g id="documents">
+      <rect x="55" y="494" width="517" height="63" fill="#fbfbf8"/>
+      <rect x="55" y="494" width="7" height="63" fill="#77877f"/>
+      <text x="77" y="521" font-size="26" font-weight="600">Documentos</text>
+      <text x="77" y="547" font-size="19" fill="#545c54">Reglas y compromisos</text>
+    </g>
+    <g id="records">
+      <rect x="55" y="564" width="517" height="63" fill="#e6e9e5"/>
+      <rect x="55" y="564" width="7" height="63" fill="#77877f"/>
+      <text x="77" y="591" font-size="26" font-weight="600">Registros</text>
+      <text x="77" y="617" font-size="19" fill="#545c54">Eventos, no todo el trabajo</text>
+    </g>
+    <circle cx="315" cy="630" r="7" fill="#f4f3ef" stroke="#7b827b" stroke-width="2"/>
+  </g>
+  <g id="checks" font-family="Avenir Next,Arial,sans-serif" fill="#1b1d1a">
+    <text x="628" y="326" font-size="20" font-weight="800" letter-spacing="2">CONTROLES ANTES DE AFIRMAR</text>
+    <path d="M628 339 H1145" stroke="#979d96" stroke-width="2"/>
+    <g id="independence">
+      <rect x="628" y="354" width="517" height="132" fill="#eae5da"/>
+      <text x="650" y="387" font-size="27" font-weight="600">¿Son independientes?</text>
+      <text x="650" y="420" font-size="20">Tablero, informe y presentación</text>
+      <text x="650" y="446" font-size="20">pueden repetir la misma consulta.</text>
+    </g>
+    <g id="variation">
+      <rect x="628" y="495" width="517" height="132" fill="#dfe6e0"/>
+      <text x="650" y="528" font-size="27" font-weight="600">¿Qué casos faltan?</text>
+      <text x="650" y="561" font-size="20">Turnos, canales y excepciones</text>
+      <text x="650" y="587" font-size="20">pueden cambiar la explicación.</text>
+    </g>
+    <circle cx="885" cy="630" r="7" fill="#f4f3ef" stroke="#7b827b" stroke-width="2"/>
+  </g>
+  <g id="synthesis" font-family="Avenir Next,Arial,sans-serif" fill="#1b1d1a">
+    <path d="M55 681 H1145 V762 H55 Z" fill="#dde2dd" stroke="#7b827b" stroke-width="2"/>
+    <circle cx="102" cy="722" r="21" fill="none" stroke="#737b72" stroke-width="2"/>
+    <circle cx="102" cy="722" r="7" fill="#cfff00" stroke="#1b1d1a" stroke-width="2"/>
+    <text x="146" y="727" font-size="33" font-weight="600">Contrastar</text>
+    <text x="420" y="725" font-size="22" fill="#525a52">sin contar dos veces la misma fuente</text>
+  </g>
+  <g id="conclusion" font-family="Avenir Next,Arial,sans-serif">
+    <rect x="55" y="784" width="1090" height="92" fill="#1b1d1a"/>
+    <rect x="55" y="784" width="1090" height="8" fill="#cfff00"/>
+    <text x="78" y="817" font-size="18" font-weight="800" letter-spacing="2" fill="#cfff00">CONCLUSIÓN SITUADA</text>
+    <text x="78" y="850" font-size="25" fill="#f6f5f0">El alcance de lo que afirmamos sigue al de la evidencia.</text>
+  </g>
+</svg>

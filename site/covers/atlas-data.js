@@ -18,9 +18,9 @@ window.METSI_ATLAS = {
         {
           "code": "N03",
           "section": "Movimiento 2 · Observar cómo regresan los efectos",
-          "page": 14,
+          "page": 12,
           "title": "Resolver acá, complicar allá",
-          "href": "pdf/N03-METSI-lectura-previa-v11-final.pdf?v=editorial-final-20260930#page=14"
+          "href": "pdf/N03-METSI-lectura-previa-v11-final.pdf?v=editorial-arte-20261001#page=12"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -54,9 +54,9 @@ window.METSI_ATLAS = {
         {
           "code": "N04",
           "section": "Movimiento 3 · Decidir y dejar abierta la revisión",
-          "page": 24,
+          "page": 22,
           "title": "Antes de decidir, ¿qué sabemos?",
-          "href": "pdf/N04-METSI-lectura-previa-v10-final.pdf?v=editorial-final-20260930#page=24"
+          "href": "pdf/N04-METSI-lectura-previa-v10-final.pdf?v=editorial-arte-20261001#page=22"
         },
         {
           "code": "N28",
@@ -122,16 +122,16 @@ window.METSI_ATLAS = {
         {
           "code": "N06",
           "section": "Movimiento 1 · Formular incertidumbres que puedan cambiar una decisión",
-          "page": 10,
+          "page": 9,
           "title": "Investigar antes de apostar",
-          "href": "pdf/N06-METSI-lectura-previa-v11-final.pdf?v=portadas-metaforicas-20260928#page=10"
+          "href": "pdf/N06-METSI-lectura-previa-v11-final.pdf?v=editorial-arte-20261001#page=9"
         },
         {
           "code": "N06",
           "section": "Movimiento 2 · Diseñar una cartera mínima de evidencia",
-          "page": 16,
+          "page": 15,
           "title": "Investigar antes de apostar",
-          "href": "pdf/N06-METSI-lectura-previa-v11-final.pdf?v=portadas-metaforicas-20260928#page=16"
+          "href": "pdf/N06-METSI-lectura-previa-v11-final.pdf?v=editorial-arte-20261001#page=15"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -258,9 +258,9 @@ window.METSI_ATLAS = {
         {
           "code": "N27",
           "section": "Una API no es una promesa genérica de éxito",
-          "page": 15,
+          "page": 14,
           "title": "Entender lo mismo antes de conectar",
-          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=portadas-metaforicas-20260928#page=15"
+          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=editorial-arte-20261001#page=14"
         },
         {
           "code": "N13",
@@ -308,9 +308,9 @@ window.METSI_ATLAS = {
         {
           "code": "N17",
           "section": "PMI, PMBOK, Scrum y Kanban: nombres distintos, aportes distintos",
-          "page": 18,
+          "page": 14,
           "title": "No todos los cambios se hacen igual",
-          "href": "pdf/publicados/N17-METSI-lectura-previa-v10-final.pdf?v=portadas-metaforicas-20260928#page=18"
+          "href": "pdf/publicados/N17-METSI-lectura-previa-v10-final.pdf?v=editorial-arte-20261001#page=14"
         },
         {
           "code": "N20",
@@ -333,9 +333,9 @@ window.METSI_ATLAS = {
         {
           "code": "N17",
           "section": "PMI, PMBOK, Scrum y Kanban: nombres distintos, aportes distintos",
-          "page": 18,
+          "page": 14,
           "title": "No todos los cambios se hacen igual",
-          "href": "pdf/publicados/N17-METSI-lectura-previa-v10-final.pdf?v=portadas-metaforicas-20260928#page=18"
+          "href": "pdf/publicados/N17-METSI-lectura-previa-v10-final.pdf?v=editorial-arte-20261001#page=14"
         },
         {
           "code": "N20",
@@ -358,16 +358,16 @@ window.METSI_ATLAS = {
         {
           "code": "N17",
           "section": "PMI, PMBOK, Scrum y Kanban: nombres distintos, aportes distintos",
-          "page": 18,
+          "page": 14,
           "title": "No todos los cambios se hacen igual",
-          "href": "pdf/publicados/N17-METSI-lectura-previa-v10-final.pdf?v=portadas-metaforicas-20260928#page=18"
+          "href": "pdf/publicados/N17-METSI-lectura-previa-v10-final.pdf?v=editorial-arte-20261001#page=14"
         },
         {
           "code": "N23",
           "section": "Movimiento 2 · Cortar a través de las partes necesarias",
-          "page": 15,
+          "page": 13,
           "title": "Una entrega pequeña que ya sirva",
-          "href": "pdf/publicados/N23-METSI-lectura-previa-v10-final.pdf?v=portadas-metaforicas-20260928#page=15"
+          "href": "pdf/publicados/N23-METSI-lectura-previa-v10-final.pdf?v=editorial-arte-20261001#page=13"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -415,9 +415,9 @@ window.METSI_ATLAS = {
         {
           "code": "N27",
           "section": "Movimiento 3 · Cambiar el acuerdo sin romper a quienes lo usan",
-          "page": 22,
+          "page": 20,
           "title": "Entender lo mismo antes de conectar",
-          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=portadas-metaforicas-20260928#page=22"
+          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=editorial-arte-20261001#page=20"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -508,9 +508,9 @@ window.METSI_ATLAS = {
         {
           "code": "N17",
           "section": "PMI, PMBOK, Scrum y Kanban: nombres distintos, aportes distintos",
-          "page": 18,
+          "page": 14,
           "title": "No todos los cambios se hacen igual",
-          "href": "pdf/publicados/N17-METSI-lectura-previa-v10-final.pdf?v=portadas-metaforicas-20260928#page=18"
+          "href": "pdf/publicados/N17-METSI-lectura-previa-v10-final.pdf?v=editorial-arte-20261001#page=14"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -551,9 +551,9 @@ window.METSI_ATLAS = {
         {
           "code": "N23",
           "section": "MVP: mínimo para aprender, no mínimo cuidado",
-          "page": 17,
+          "page": 14,
           "title": "Una entrega pequeña que ya sirva",
-          "href": "pdf/publicados/N23-METSI-lectura-previa-v10-final.pdf?v=portadas-metaforicas-20260928#page=17"
+          "href": "pdf/publicados/N23-METSI-lectura-previa-v10-final.pdf?v=editorial-arte-20261001#page=14"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -569,9 +569,9 @@ window.METSI_ATLAS = {
         {
           "code": "N10",
           "section": "Movimiento 2 · Formular outcomes, protecciones y evidencia de revisión",
-          "page": 18,
+          "page": 15,
           "title": "Del síntoma al problema",
-          "href": "pdf/N10-METSI-lectura-previa-v10-final.pdf?v=portadas-metaforicas-20260928#page=18"
+          "href": "pdf/N10-METSI-lectura-previa-v10-final.pdf?v=editorial-arte-20261001#page=15"
         },
         {
           "code": "N22",
@@ -705,16 +705,16 @@ window.METSI_ATLAS = {
         {
           "code": "N30",
           "section": "Fuentes para observar y aprender",
-          "page": 12,
+          "page": 11,
           "title": "Detectar, responder y aprender",
-          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=portadas-metaforicas-20260928#page=12"
+          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=editorial-arte-20261001#page=11"
         },
         {
           "code": "N30",
           "section": "Movimiento 2 · Acordar qué medir y qué hacer cuando empeora",
-          "page": 16,
+          "page": 14,
           "title": "Detectar, responder y aprender",
-          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=portadas-metaforicas-20260928#page=16"
+          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=editorial-arte-20261001#page=14"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -730,9 +730,9 @@ window.METSI_ATLAS = {
         {
           "code": "N30",
           "section": "Movimiento 1 · Pasar de datos sueltos a un recorrido que pueda reconstruirse",
-          "page": 13,
+          "page": 12,
           "title": "Detectar, responder y aprender",
-          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=portadas-metaforicas-20260928#page=13"
+          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=editorial-arte-20261001#page=12"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -791,9 +791,9 @@ window.METSI_ATLAS = {
         {
           "code": "N27",
           "section": "Movimiento 3 · Cambiar el acuerdo sin romper a quienes lo usan",
-          "page": 22,
+          "page": 20,
           "title": "Entender lo mismo antes de conectar",
-          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=portadas-metaforicas-20260928#page=22"
+          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=editorial-arte-20261001#page=20"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -816,9 +816,9 @@ window.METSI_ATLAS = {
         {
           "code": "N27",
           "section": "Movimiento 3 · Cambiar el acuerdo sin romper a quienes lo usan",
-          "page": 22,
+          "page": 20,
           "title": "Entender lo mismo antes de conectar",
-          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=portadas-metaforicas-20260928#page=22"
+          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=editorial-arte-20261001#page=20"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -884,9 +884,9 @@ window.METSI_ATLAS = {
         {
           "code": "N30",
           "section": "Movimiento 3 · Responder sin esperar a conocer toda la causa",
-          "page": 24,
+          "page": 20,
           "title": "Detectar, responder y aprender",
-          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=portadas-metaforicas-20260928#page=24"
+          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=editorial-arte-20261001#page=20"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"

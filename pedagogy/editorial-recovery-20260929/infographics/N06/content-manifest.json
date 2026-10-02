@@ -1,0 +1,40 @@
+{
+  "title": "N06 · Una cartera mínima de evidencia",
+  "claim": "Distintas fuentes permiten responder preguntas distintas, pero una conclusión sólo es defendible si se contrastan fuentes independientes, se incluyen variaciones pertinentes y se explicita su alcance.",
+  "source_sections": [
+    {
+      "id": "N06-s06-b002-b007",
+      "heading": "Movimiento 2 · Diseñar una cartera mínima de evidencia",
+      "summary": "Entrevistas, observación, documentos y registros aportan perspectivas diferentes; derivados del mismo registro no son confirmaciones independientes."
+    },
+    {
+      "id": "N06-s06-b009-b013",
+      "heading": "Elegir variaciones y limitar la conclusión",
+      "summary": "Comparar turnos, canales, situaciones y excepciones permite revelar mecanismos; no autoriza inferir automáticamente su frecuencia en toda la población."
+    }
+  ],
+  "nodes": [
+    {"id": "q", "label": "Pregunta prioritaria", "role": "decision", "source": ["N06-s06-b002-b007"], "purpose": "Orienta la selección de evidencia."},
+    {"id": "interviews", "label": "Entrevistas", "role": "evidence", "source": ["N06-s06-b002-b007"], "purpose": "Revelan interpretaciones y experiencias."},
+    {"id": "observation", "label": "Observación", "role": "evidence", "source": ["N06-s06-b002-b007"], "purpose": "Revela secuencias y arreglos del trabajo."},
+    {"id": "documents", "label": "Documentos", "role": "evidence", "source": ["N06-s06-b002-b007"], "purpose": "Muestran reglas y compromisos escritos."},
+    {"id": "records", "label": "Registros", "role": "evidence", "source": ["N06-s06-b002-b007"], "purpose": "Muestran ciertos eventos y dejan otros fuera."},
+    {"id": "independence", "label": "Independencia de fuentes", "role": "constraint", "source": ["N06-s06-b002-b007"], "purpose": "Evita contar derivados de una consulta como confirmaciones nuevas."},
+    {"id": "variation", "label": "Variación pertinente", "role": "process", "source": ["N06-s06-b009-b013"], "purpose": "Incorpora casos capaces de desafiar la explicación."},
+    {"id": "synthesis", "label": "Contraste", "role": "process", "source": ["N06-s06-b002-b007", "N06-s06-b009-b013"], "purpose": "Reúne evidencias con límites distintos."},
+    {"id": "conclusion", "label": "Conclusión situada", "role": "outcome", "source": ["N06-s06-b009-b013"], "purpose": "Ajusta el alcance de la afirmación al alcance de la evidencia."}
+  ],
+  "edges": [
+    {"id": "e1", "from": "q", "to": "interviews", "relation": "dependency", "source": ["N06-s06-b002-b007"], "meaning": "La pregunta define si una entrevista aporta algo."},
+    {"id": "e2", "from": "q", "to": "observation", "relation": "dependency", "source": ["N06-s06-b002-b007"], "meaning": "La pregunta define qué observar."},
+    {"id": "e3", "from": "q", "to": "documents", "relation": "dependency", "source": ["N06-s06-b002-b007"], "meaning": "La pregunta define qué reglas revisar."},
+    {"id": "e4", "from": "q", "to": "records", "relation": "dependency", "source": ["N06-s06-b002-b007"], "meaning": "La pregunta define qué eventos buscar."},
+    {"id": "e5", "from": "interviews", "to": "synthesis", "relation": "evidence", "source": ["N06-s06-b002-b007"], "meaning": "Las entrevistas aportan una interpretación con límites propios."},
+    {"id": "e6", "from": "observation", "to": "synthesis", "relation": "evidence", "source": ["N06-s06-b002-b007"], "meaning": "La observación contrasta lo declarado con la práctica."},
+    {"id": "e7", "from": "documents", "to": "synthesis", "relation": "evidence", "source": ["N06-s06-b002-b007"], "meaning": "Los documentos aportan reglas declaradas."},
+    {"id": "e8", "from": "records", "to": "synthesis", "relation": "evidence", "source": ["N06-s06-b002-b007"], "meaning": "Los registros aportan eventos observables pero no todo el trabajo humano."},
+    {"id": "e9", "from": "independence", "to": "synthesis", "relation": "boundary", "source": ["N06-s06-b002-b007"], "meaning": "Se separa una fuente original de sus derivados."},
+    {"id": "e10", "from": "variation", "to": "synthesis", "relation": "evidence", "source": ["N06-s06-b009-b013"], "meaning": "Los casos diferentes someten a prueba la explicación."},
+    {"id": "e11", "from": "synthesis", "to": "conclusion", "relation": "transformation", "source": ["N06-s06-b009-b013"], "meaning": "El contraste permite una afirmación cuyo alcance se declara."}
+  ]
+}
