@@ -701,6 +701,103 @@ def compose_n17_strategy_pair(number: int, source: str) -> tuple[str, int]:
     return pattern.subn(compose, source, count=1)
 
 
+# An individually selected argument in each of the readings that did not
+# receive an interior art pass in the previous release.  These are source
+# paragraphs, not newly written summaries: the feature moves each paragraph
+# once, preserving its identifier, order and exact wording.
+EDITORIAL_FIELD_NOTES = {
+    2: (7, 2, 6, "Cinco fronteras distintas", "taxonomy"),
+    5: (5, 7, 11, "Quién falta en la conversación", "voices"),
+    7: (7, 3, 5, "De una frase a una decisión", "sequence"),
+    9: (7, 3, 5, "Medir sin esconder a las personas", "measure"),
+    11: (6, 9, 13, "Cinco niveles de afirmación", "claims"),
+    12: (6, 3, 5, "Qué prueba un evento", "sequence"),
+    13: (8, 3, 5, "Antes de corregir: comparar", "sequence"),
+    14: (8, 3, 6, "Un traspaso tiene que poder usarse", "handoff"),
+    15: (8, 3, 3, "La estructura no explica por sí sola", "architecture"),
+    19: (9, 3, 5, "Más allá del precio de entrada", "ledger"),
+    20: (7, 3, 3, "La estrategia como hipótesis", "theory"),
+    21: (7, 3, 6, "Un proyecto termina; el servicio sigue", "horizons"),
+    22: (7, 3, 6, "Del deseo a una prueba", "hypothesis"),
+    24: (14, 2, 13, "Doce preguntas antes de decidir", "register"),
+    25: (11, 1, 5, "46 días: separar trabajo y espera", "time"),
+    26: (18, 2, 13, "Doce preguntas para mirar la red", "register"),
+    28: (9, 4, 6, "Tres dimensiones de la experiencia", "taxonomy"),
+    29: (7, 4, 7, "Integrar para detectar pronto", "pipeline"),
+    31: (6, 6, 7, "Una regla no es un asistente", "contrast"),
+    33: (18, 1, 3, "Gobernar es poder revisar", "governance"),
+    34: (7, 3, 6, "Una afirmación debe poder rastrearse", "argument"),
+    35: (9, 3, 6, "Nombrar la incertidumbre", "uncertainty"),
+    36: (10, 3, 4, "Practicar, recibir devolución, revisar", "practice"),
+}
+
+
+def compose_editorial_field_note(number: int, source: str) -> tuple[str, int]:
+    """Make one source-grounded visual argument in every previously untouched N.
+
+    The treatment follows the content: ordered reasoning becomes a sequence,
+    lists of distinctions become an atlas, and decision questions a register.
+    No new academic claim is inserted into the reading.
+    """
+
+    if number not in EDITORIAL_FIELD_NOTES:
+        return source, 0
+    section_number, first, last, title, family = EDITORIAL_FIELD_NOTES[number]
+    pattern = re.compile(
+        rf'<section class="[^"]*\breading-section\b[^"]*"[^>]*data-section="{section_number:02d}"[^>]*>.*?</section>',
+        re.S,
+    )
+
+    def compose(match: re.Match[str]) -> str:
+        section = lxml_html.fromstring(match[0])
+        ids = [f"N{number:02d}-s{section_number:02d}-b{index:03d}" for index in range(first, last + 1)]
+        blocks = []
+        for identifier in ids:
+            matches = section.xpath(f'.//p[@data-source-id="{identifier}"]')
+            if len(matches) != 1:
+                raise ValueError(f"N{number:02d}: field note block {identifier} missing")
+            blocks.append(matches[0])
+        body = blocks[0].getparent()
+        if any(block.getparent() is not body for block in blocks):
+            raise ValueError(f"N{number:02d}: field note spans different editorial bodies")
+        positions = [list(body).index(block) for block in blocks]
+        if positions != list(range(positions[0], positions[0] + len(blocks))):
+            raise ValueError(f"N{number:02d}: field note is not a contiguous argument")
+        before, after = list(body)[:positions[0]], list(body)[positions[-1] + 1:]
+        if not before and not after:
+            raise ValueError(f"N{number:02d}: no surrounding argument")
+        def plate(part: list, heading_text: str, continuation: bool = False):
+            variant = " register-part-two" if continuation else ""
+            feature = lxml_html.Element("div", {"class": f"editorial-field-note field-{family}{variant}"})
+            label = lxml_html.Element("span", {"class": "field-note-kicker"})
+            label.text = f"METSI · N{number:02d} / LECTURA VISUAL" + (" · CONTINÚA" if continuation else "")
+            heading = lxml_html.Element("h3")
+            heading.text = heading_text
+            feature.extend((label, heading))
+            grid = lxml_html.Element("div", {"class": "field-note-grid"})
+            feature.append(grid)
+            for block in part:
+                grid.append(block)
+            return feature
+
+        if family == "register":
+            features = [plate(blocks[:6], title), plate(blocks[6:], "Preguntas 07–12", True)]
+        else:
+            features = [plate(blocks, title)]
+        continuation = lxml_html.Element("div", {"class": body.get("class", "section-body") + " editorial-continuation"})
+        for element in after:
+            continuation.append(element)
+        anchor = body
+        for feature in features:
+            anchor.addnext(feature)
+            anchor = feature
+        if after:
+            anchor.addnext(continuation)
+        return lxml_html.tostring(section, encoding="unicode", method="html")
+
+    return pattern.subn(compose, source, count=1)
+
+
 def prepare(number: int, destination: Path) -> dict:
     package = PACKAGE_BY_NUMBER[number]
     if not package.is_dir():
@@ -748,6 +845,9 @@ def prepare(number: int, destination: Path) -> dict:
     source, n30_alert_pause = compose_n30_alert_pause(number, source)
     source, curated_argument_photography = restore_curated_argument_photography(number, source, package)
     source, n17_strategy_pair = compose_n17_strategy_pair(number, source)
+    source, editorial_field_note = compose_editorial_field_note(number, source)
+    if number in EDITORIAL_FIELD_NOTES and editorial_field_note != 1:
+        raise ValueError(f"N{number:02d}: curated editorial field note was not composed")
     if number in (3, 4) and restored_mid_visuals != 1:
         raise ValueError(f"N{number:02d}: editorial visual pause was not inserted")
     if number == 3:
@@ -799,6 +899,7 @@ def prepare(number: int, destination: Path) -> dict:
         "n30_alert_pause": n30_alert_pause,
         "curated_argument_photography": curated_argument_photography,
         "n17_strategy_pair": n17_strategy_pair,
+        "editorial_field_note": editorial_field_note,
         "source_blocks": len(re.findall(r'data-source-id="[^"]+"', source)),
         "status": "candidate_not_approved",
     }

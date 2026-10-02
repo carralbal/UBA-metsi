@@ -1,5 +1,193 @@
 /* Editorial recovery fixes only. Preserve the original magazine vocabulary. */
 
+/* Source-grounded full-width argument plates.  They interrupt the repetitive
+   two-column rhythm; each paragraph is moved, not copied or abbreviated. */
+body.premium-magazine .editorial-field-note {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  margin: 8mm 0 9mm !important;
+  padding: 8mm 9mm 9mm !important;
+  color: #171917 !important;
+  background: #e7e9e5 !important;
+  border-top: 1.5mm solid #171917 !important;
+  break-inside: avoid-page !important;
+  page-break-inside: avoid !important;
+}
+body.premium-magazine .editorial-field-note .field-note-kicker {
+  display: block !important;
+  margin: 0 0 3mm !important;
+  color: #4b5049 !important;
+  font: 800 7.3pt/1.2 Avenir, Arial, sans-serif !important;
+  letter-spacing: .13em !important;
+}
+body.premium-magazine .editorial-field-note h3 {
+  margin: 0 0 6mm !important;
+  max-width: 160mm !important;
+  color: inherit !important;
+  font: 400 25pt/1.02 'Cormorant Garamond', Georgia, serif !important;
+  letter-spacing: -.015em !important;
+  break-after: avoid !important;
+}
+body.premium-magazine .editorial-field-note .field-note-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 0 8mm !important;
+  counter-reset: field-step !important;
+}
+body.premium-magazine .editorial-field-note .field-note-grid > p {
+  position: relative !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 4mm 0 5mm 8mm !important;
+  color: inherit !important;
+  border-top: .22mm solid #aeb2ac !important;
+  font: 400 10.4pt/1.38 'Cormorant Garamond', Georgia, serif !important;
+  break-inside: avoid !important;
+  orphans: 3 !important;
+  widows: 3 !important;
+  counter-increment: field-step !important;
+}
+body.premium-magazine .editorial-field-note .field-note-grid > p::before {
+  content: counter(field-step, decimal-leading-zero) !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 4.5mm !important;
+  color: #4e5841 !important;
+  font: 800 7pt/1 Avenir, Arial, sans-serif !important;
+  letter-spacing: .06em !important;
+}
+body.premium-magazine .editorial-field-note.field-voices,
+body.premium-magazine .editorial-field-note.field-claims,
+body.premium-magazine .editorial-field-note.field-architecture,
+body.premium-magazine .editorial-field-note.field-horizons,
+body.premium-magazine .editorial-field-note.field-time,
+body.premium-magazine .editorial-field-note.field-pipeline,
+body.premium-magazine .editorial-field-note.field-governance,
+body.premium-magazine .editorial-field-note.field-practice {
+  background: #171917 !important;
+  color: #f5f5ef !important;
+  border-top-color: #cfff00 !important;
+}
+body.premium-magazine .editorial-field-note.field-voices .field-note-kicker,
+body.premium-magazine .editorial-field-note.field-claims .field-note-kicker,
+body.premium-magazine .editorial-field-note.field-architecture .field-note-kicker,
+body.premium-magazine .editorial-field-note.field-horizons .field-note-kicker,
+body.premium-magazine .editorial-field-note.field-time .field-note-kicker,
+body.premium-magazine .editorial-field-note.field-pipeline .field-note-kicker,
+body.premium-magazine .editorial-field-note.field-governance .field-note-kicker,
+body.premium-magazine .editorial-field-note.field-practice .field-note-kicker,
+body.premium-magazine .editorial-field-note.field-voices p::before,
+body.premium-magazine .editorial-field-note.field-claims p::before,
+body.premium-magazine .editorial-field-note.field-architecture p::before,
+body.premium-magazine .editorial-field-note.field-horizons p::before,
+body.premium-magazine .editorial-field-note.field-time p::before,
+body.premium-magazine .editorial-field-note.field-pipeline p::before,
+body.premium-magazine .editorial-field-note.field-governance p::before,
+body.premium-magazine .editorial-field-note.field-practice p::before {
+  color: #cfff00 !important;
+}
+body.premium-magazine .editorial-field-note.field-voices p,
+body.premium-magazine .editorial-field-note.field-claims p,
+body.premium-magazine .editorial-field-note.field-architecture p,
+body.premium-magazine .editorial-field-note.field-horizons p,
+body.premium-magazine .editorial-field-note.field-time p,
+body.premium-magazine .editorial-field-note.field-pipeline p,
+body.premium-magazine .editorial-field-note.field-governance p,
+body.premium-magazine .editorial-field-note.field-practice p {
+  border-top-color: #61665f !important;
+}
+body.premium-magazine .editorial-field-note.field-sequence,
+body.premium-magazine .editorial-field-note.field-theory,
+body.premium-magazine .editorial-field-note.field-argument {
+  background: #f7f7f3 !important;
+  border-top: .4mm solid #171917 !important;
+  border-bottom: .4mm solid #171917 !important;
+}
+body.premium-magazine .editorial-field-note.field-sequence .field-note-grid,
+body.premium-magazine .editorial-field-note.field-theory .field-note-grid,
+body.premium-magazine .editorial-field-note.field-argument .field-note-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 5mm !important;
+}
+body.premium-magazine .editorial-field-note.field-register .field-note-grid {
+  gap: 0 9mm !important;
+}
+body.premium-magazine .editorial-field-note.field-register {
+  break-inside: avoid-page !important;
+  page-break-inside: avoid !important;
+  padding-top: 6mm !important;
+  padding-bottom: 6mm !important;
+}
+body.premium-magazine .editorial-field-note.register-part-two {
+  break-before: page !important;
+  page-break-before: always !important;
+}
+body.premium-magazine .editorial-field-note.field-register h3 {
+  margin-bottom: 3mm !important;
+  font-size: 23pt !important;
+}
+body.premium-magazine .editorial-field-note.field-register .field-note-grid > p {
+  padding-top: 1.8mm !important;
+  padding-left: 0 !important;
+  padding-bottom: 2.2mm !important;
+  font-size: 9.15pt !important;
+  line-height: 1.23 !important;
+}
+body.premium-magazine .editorial-field-note.field-register .field-note-grid > p::before {
+  content: none !important;
+}
+body.premium-magazine .editorial-field-note.field-time .field-note-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 0 8mm !important;
+}
+body.premium-magazine .editorial-field-note.field-time .field-note-grid > p {
+  padding: 5mm 0 4mm 9mm !important;
+  font-size: 13pt !important;
+  border-top-color: #cfff00 !important;
+}
+body.premium-magazine .editorial-field-note.field-time .field-note-grid > p::before {
+  top: 5mm !important;
+}
+body.premium-magazine .editorial-field-note.field-contrast .field-note-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+/* N20's closing theoretical observation is a single argument, not a
+   three-part sequence.  Set it as one readable editorial column. */
+body.premium-magazine.document-n20 .editorial-field-note.field-theory .field-note-grid {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+body.premium-magazine.document-n20 .editorial-field-note.field-theory .field-note-grid > p {
+  max-width: 150mm !important;
+  padding: 4mm 0 2mm !important;
+  font-size: 14.5pt !important;
+  line-height: 1.24 !important;
+}
+body.premium-magazine.document-n20 .editorial-field-note.field-theory .field-note-grid > p::before {
+  content: none !important;
+}
+body.premium-magazine.document-n15 .editorial-field-note.field-architecture .field-note-grid {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+body.premium-magazine.document-n15 .editorial-field-note.field-architecture .field-note-grid > p {
+  max-width: 152mm !important;
+  padding: 3mm 0 1mm !important;
+  font-size: 13pt !important;
+  line-height: 1.22 !important;
+}
+body.premium-magazine.document-n15 .editorial-field-note.field-architecture .field-note-grid > p::before {
+  content: none !important;
+}
+/* The full-width arguments in N15 and N20 must not strand a final paragraph
+   on a nearly empty page before the following photo essay. */
+body.premium-magazine.document-n15 section[data-section="08"] .section-body:not(.section-lead),
+body.premium-magazine.document-n20 section[data-section="09"] .section-body:not(.section-lead) {
+  line-height: 1.28 !important;
+}
+body.premium-magazine.document-n15 section[data-section="08"] .section-body:not(.section-lead) p,
+body.premium-magazine.document-n20 section[data-section="09"] .section-body:not(.section-lead) p {
+  margin-bottom: 1.6mm !important;
+}
+
 /* A source paragraph can carry a decisive turn in an argument. Give it the
    same visual authority as a magazine pull quote without duplicating text. */
 body.premium-magazine .editorial-decision-pivot {
@@ -1512,13 +1700,11 @@ body.premium-magazine.document-n14 section[data-section="06"] .section-body:not(
 }
 
 /* The same dense-then-empty movement rhythm recurs in N15 and N20. */
-body.premium-magazine.document-n15 section[data-section="06"] .section-body:not(.section-lead),
-body.premium-magazine.document-n20 section[data-section="09"] .section-body:not(.section-lead) {
+body.premium-magazine.document-n15 section[data-section="06"] .section-body:not(.section-lead) {
   font-size: 11.1pt !important;
   line-height: 1.34 !important;
 }
-body.premium-magazine.document-n15 section[data-section="06"] .section-body:not(.section-lead) p,
-body.premium-magazine.document-n20 section[data-section="09"] .section-body:not(.section-lead) p {
+body.premium-magazine.document-n15 section[data-section="06"] .section-body:not(.section-lead) p {
   margin-bottom: 2.6mm !important;
 }
 
