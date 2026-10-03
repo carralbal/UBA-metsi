@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>METSI · Lo que vas aprendiendo a hacer · Piloto N00–N10</title>
+  <meta name="description" content="Maqueta editorial del recorrido de aprendizaje de METSI: N00 y los bloques A y B.">
+  <style>
+    :root{--paper:#f1f0ea;--soft:#e5e5de;--ink:#171817;--muted:#62655f;--line:#b9bcb4;--volt:#cfff00;--white:#fbfaf5;--serif:Georgia,'Times New Roman',serif;--sans:Arial,Helvetica,sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#171817;color:var(--ink);font-family:var(--sans);text-rendering:optimizeLegibility}button{font:inherit}a{color:inherit}::selection{background:var(--volt)}
+    .review-top{max-width:1680px;margin:auto;padding:1.2rem 2rem;display:flex;justify-content:space-between;align-items:center;gap:2rem;color:var(--white);font-size:.72rem;letter-spacing:.13em;text-transform:uppercase}
+    .review-top strong{font:400 2rem/1 var(--serif);letter-spacing:.08em}.review-top span{color:#b9bcb4}.review-top a{padding:.8rem 0;text-decoration:none;border-bottom:2px solid var(--volt)}
+    main{max-width:1680px;margin:0 auto 5rem;background:var(--paper);border-top:5px solid var(--volt)}
+    .paper-head{padding:clamp(2rem,4.5vw,5rem) clamp(1.5rem,5.4vw,5.5rem) 0}
+    .meta{display:flex;align-items:center;gap:1.2rem;font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}.slash{width:3.7rem;height:.55rem;background:var(--volt);transform:skew(-24deg)}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(19rem,.45fr);gap:clamp(2rem,6vw,8rem);align-items:end;padding:3rem 0 2.4rem;border-bottom:1px solid var(--line)}
+    h1{max-width:13ch;margin:0;font:400 clamp(4rem,7vw,8.7rem)/.9 var(--serif);letter-spacing:-.055em}.hero-deck{max-width:51ch;margin:1.5rem 0 0;color:var(--muted);font:400 clamp(1.05rem,1.35vw,1.4rem)/1.45 var(--serif)}
+    .hero-side{border-left:1px solid var(--line);padding:0 0 .4rem 2rem}.hero-side b{display:block;font:700 2.8rem/1 var(--sans);letter-spacing:.08em}.hero-side p{max-width:34ch;margin:1rem 0 0;color:var(--muted);font:400 clamp(1.1rem,1.5vw,1.5rem)/1.45 var(--serif)}
+    .route-figure{margin:0;padding:2.7rem clamp(1.5rem,5.4vw,5.5rem) 1.8rem}.route-figure img{display:block;width:100%;height:auto}.route-figure figcaption{max-width:75ch;margin:1.1rem 0 0;color:var(--muted);font-size:.8rem;line-height:1.55}
+    .mobile-route{display:none}
+    .explorer{margin:0 clamp(1.5rem,5.4vw,5.5rem) 0;border-top:1px solid var(--line);padding-bottom:4rem}
+    .explorer-head{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:3rem;padding:2.4rem 0}.explorer-head h2{margin:0;font:400 clamp(2.6rem,4.4vw,5rem)/1 var(--serif);letter-spacing:-.035em}.explorer-head p{margin:0;align-self:end;max-width:56ch;font-size:1rem;line-height:1.55;color:var(--muted)}
+    .screen-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+    .screen-controls button{display:grid;grid-template-columns:auto 1fr;gap:.8rem;align-items:baseline;text-align:left;min-height:7.2rem;padding:1.35rem 1.4rem;border:0;border-right:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}.screen-controls button:last-child{border-right:0}.screen-controls button[aria-selected=true]{background:var(--soft);box-shadow:inset 0 .38rem var(--volt)}.screen-controls button:hover{background:#e8e8e1}.screen-controls button:focus-visible{outline:3px solid var(--volt);outline-offset:-3px}.screen-controls b{font:400 2.1rem/1 var(--serif)}.screen-controls span{font-size:.7rem;line-height:1.4;letter-spacing:.09em;text-transform:uppercase;font-weight:700}.screen-controls small{grid-column:2;display:block;color:var(--muted);font-size:.76rem;letter-spacing:0;text-transform:none;font-weight:400}
+    .route-panel{background:var(--soft);padding:clamp(2rem,4vw,4rem)}.route-panel section[hidden]{display:none}.panel-head{display:grid;grid-template-columns:6.5rem 1fr;gap:1.6rem;align-items:start;border-bottom:1px solid var(--line);padding-bottom:1.7rem}.panel-letter{width:5.8rem;height:5.8rem;display:grid;place-items:center;background:var(--volt);font:400 3.7rem/1 var(--serif)}.panel-head h3{margin:.1rem 0 .6rem;font:400 clamp(2.8rem,4vw,5rem)/1 var(--serif);letter-spacing:-.04em}.panel-head p{max-width:45ch;margin:0;color:var(--muted);font:400 1.1rem/1.5 var(--serif)}
+    .reading-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 2.6rem;margin:1.3rem 0 0;padding:0;list-style:none}.reading-grid li{display:grid;grid-template-columns:3rem 1fr;gap:1rem;padding:1.5rem 0;border-bottom:1px solid var(--line)}.reading-grid .number{font-size:.68rem;letter-spacing:.12em;font-weight:800;color:#5c7900;padding-top:.25rem}.reading-grid h4{margin:0 0 .5rem;font:400 1.5rem/1.12 var(--serif)}.reading-grid p{margin:0;font-size:.94rem;line-height:1.55;color:#353833}
+    .note{display:flex;gap:1rem;align-items:start;margin:1.7rem 0 0;color:var(--muted);font-size:.79rem;line-height:1.5}.note span{color:#5c7900;font-weight:800}.print-only{display:none}
+    .paper-foot{display:flex;justify-content:space-between;gap:1rem;margin:0 clamp(1.5rem,5.4vw,5.5rem);padding:1.6rem 0 2.2rem;border-top:1px solid var(--line);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+    @media(max-width:800px){.review-top{padding:1rem 1.3rem}.review-top span{display:none}.hero-grid{grid-template-columns:1fr;gap:2.5rem}.hero-side{border-left:0;border-top:1px solid var(--line);padding:1.4rem 0 0}.route-figure{display:none}.mobile-route{display:block;margin:2rem 1.5rem;padding:1.2rem 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}.mobile-route p{margin:0;padding:.8rem 0;font:400 1.3rem/1.25 var(--serif)}.mobile-route span{display:inline-grid;place-items:center;width:2rem;height:2rem;margin-right:.8rem;border:1px solid var(--ink);border-radius:50%;font:700 .82rem/1 var(--sans)}.mobile-route p:first-child span{background:var(--volt)}.explorer-head{grid-template-columns:1fr;gap:1rem}.reading-grid{grid-template-columns:1fr}}
+    @media(max-width:560px){.review-top strong{font-size:1.55rem}.review-top a{font-size:.61rem}.paper-head{padding-top:2.2rem}h1{font-size:clamp(3rem,15vw,3.8rem)}.hero-side b{font-size:2.4rem}.screen-controls button{display:block;min-height:5rem;padding:1rem .5rem}.screen-controls b{font-size:1.7rem}.screen-controls span{display:block;margin-top:.45rem;font-size:.6rem}.screen-controls small{display:none}.route-panel{padding:1.5rem}.panel-head{grid-template-columns:3.6rem 1fr;gap:.8rem}.panel-letter{width:3.5rem;height:3.5rem;font-size:2.3rem}.panel-head h3{font-size:2.5rem}.reading-grid li{grid-template-columns:2.6rem 1fr;gap:.5rem}.reading-grid h4{font-size:1.35rem}.reading-grid p{font-size:.9rem}.paper-foot{line-height:1.4}}
+    @media print{ @page{size:A3 landscape;margin:0} html,body{width:420mm;height:297mm;margin:0;background:var(--paper);print-color-adjust:exact;-webkit-print-color-adjust:exact} .review-top,.mobile-route,.screen-controls,.explorer-head,.note,.paper-foot{display:none!important} main{width:420mm;max-width:none;height:297mm;margin:0;border-top:2mm solid var(--volt);overflow:hidden}.paper-head{padding:11mm 16mm 0}.meta{font-size:8pt}.slash{width:12mm;height:2mm}.hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:15mm;align-items:end;padding:7mm 0 4mm}.hero-grid h1{font-size:42pt;line-height:.94;max-width:none}.hero-deck{font-size:10pt;line-height:1.35;margin:2mm 0 0;max-width:none}.hero-side{padding-left:7mm}.hero-side b{font-size:21pt}.hero-side p{font-size:10pt;line-height:1.35;margin:2mm 0 0;max-width:none}.route-figure{display:block;padding:5mm 16mm 0}.route-figure img{width:388mm}.route-figure figcaption{display:none}.explorer{margin:0 16mm;border-top:0;padding:0}.route-panel{background:transparent;padding:0}.route-panel section[hidden]{display:block}.route-panel section[data-view=n00]{display:none}.route-panel{display:grid;grid-template-columns:1fr 1fr;gap:11mm}.panel-head{display:flex;align-items:baseline;gap:3mm;padding:0 0 2mm}.panel-letter{width:10mm;height:10mm;font-size:21pt}.panel-head h3{font-size:21pt;margin:0}.panel-head p{display:none}.reading-grid{display:block;margin:0}.reading-grid li{display:grid;grid-template-columns:13mm 1fr;gap:2mm;padding:2mm 0;border-bottom:1px solid var(--line)}.reading-grid .number{font-size:8pt;padding-top:.3mm}.reading-grid h4{display:none}.reading-grid p{font-size:9.5pt;line-height:1.25;color:var(--ink)}.print-only{display:block} }
+  </style>
+</head>
+<body>
+  <div class="review-top"><strong>METSI</strong><span>Maqueta para validar · no reemplaza N00 ni la web actual</span><a href="piloto-n00-a-b.pdf" target="_blank" rel="noopener">Abrir prueba PDF ↗</a></div>
+  <main>
+    <div class="paper-head">
+      <div class="meta"><span class="slash" aria-hidden="true"></span><span>Guía N00 · Primeras dos estaciones</span></div>
+      <div class="hero-grid">
+        <div class="hero-primary"><h1>Lo que vas aprendiendo a hacer.</h1><p class="hero-deck">El recorrido va de entender qué está pasando a mejorar cómo se trabaja, comprobar si el cambio sirve y aprender de los resultados.</p></div>
+        <div class="hero-side"><b>N00</b><p>Preparamos el recorrido: cómo vamos a aprender y cuál es el hotel que usaremos como ejemplo.</p></div>
+      </div>
+    </div>
+    <figure class="route-figure"><img src="mapa.svg" width="1600" height="650" alt="N00 prepara el recorrido. N01 a N04 ayudan a comprender el sistema. N05 a N10 ayudan a investigar y definir el problema."><figcaption>Una línea para orientarse, no una receta: cada nueva evidencia puede hacernos volver a una pregunta anterior. En esta maqueta se desarrollan sólo N00 y los bloques A–B.</figcaption></figure>
+    <div class="mobile-route" aria-hidden="true"><p><span>00</span>Preparar la experiencia</p><p><span>A</span>Comprender el sistema · N01–N04</p><p><span>B</span>Investigar el problema · N05–N10</p></div>
+    <div class="explorer">
+      <div class="explorer-head"><h2>Lectura a lectura.</h2><p>El mapa muestra el movimiento general; acá podés ver qué aporta cada documento. Elegí una estación. Para la versión impresa, las dos primeras aparecen juntas.</p></div>
+      <div class="screen-controls" role="tablist" aria-label="Estaciones del piloto">
+        <button type="button" role="tab" id="tab-n00" aria-controls="panel-n00" aria-selected="false" data-tab="n00"><b>00</b><span>Antes de empezar</span><small>La guía de la experiencia</small></button>
+        <button type="button" role="tab" id="tab-a" aria-controls="panel-a" aria-selected="true" data-tab="a"><b>A</b><span>Comprender</span><small>N01–N04 · el sistema y sus efectos</small></button>
+        <button type="button" role="tab" id="tab-b" aria-controls="panel-b" aria-selected="false" data-tab="b"><b>B</b><span>Investigar</span><small>N05–N10 · las personas y el problema</small></button>
+      </div>
+      <div class="route-panel">
+        <section id="panel-n00" data-view="n00" role="tabpanel" aria-labelledby="tab-n00" hidden><div class="panel-head"><span class="panel-letter">00</span><div><h3>Preparar el recorrido</h3><p>N00 es la guía, no una lectura más de la colección.</p></div></div><ol class="reading-grid"><li><span class="number">N00</span><div><h4>Antes de empezar</h4><p>Preparamos el recorrido: cómo vamos a aprender y cuál es el hotel que usaremos como ejemplo.</p></div></li></ol></section>
+        <section id="panel-a" data-view="a" role="tabpanel" aria-labelledby="tab-a"><div class="panel-head"><span class="panel-letter">A</span><div><h3>Comprender</h3><p>Primero entendemos qué está pasando y qué puede salir mal si resolvemos demasiado rápido.</p></div></div><ol class="reading-grid">
+          <li><span class="number">N01</span><div><h4>Intervenir sin recetas</h4><p>Antes de salir a resolver, aprendemos a hacer buenas preguntas y elegir un primer paso que tenga sentido.</p></div></li>
+          <li><span class="number">N02</span><div><h4>Mirar el sistema completo</h4><p>Ampliamos la mirada: para entender un problema hay que mirar a las personas, las tareas y las herramientas que usan.</p></div></li>
+          <li><span class="number">N03</span><div><h4>Ver las consecuencias</h4><p>Vemos cómo una mejora en un lugar puede crear un problema en otro. Aprendemos a mirar esas consecuencias antes de avanzar.</p></div></li>
+          <li><span class="number">N04</span><div><h4>Separar pruebas de supuestos</h4><p>Separamos lo que sabemos de lo que suponemos y de lo que nos contaron. Buscamos pruebas para decidir mejor.</p></div></li>
+        </ol></section>
+        <section id="panel-b" data-view="b" role="tabpanel" aria-labelledby="tab-b" hidden><div class="panel-head"><span class="panel-letter">B</span><div><h3>Investigar</h3><p>Escuchamos y observamos antes de decidir qué problema conviene resolver.</p></div></div><ol class="reading-grid">
+          <li><span class="number">N05</span><div><h4>Escuchar las voces</h4><p>Escuchamos a quienes deciden, hacen el trabajo y reciben sus consecuencias. Sus opiniones pueden cambiar lo que proponemos.</p></div></li>
+          <li><span class="number">N06</span><div><h4>Elegir qué averiguar</h4><p>Elegimos qué necesitamos averiguar antes de comprometernos con una solución. Investigamos lo que puede cambiar nuestra decisión.</p></div></li>
+          <li><span class="number">N07</span><div><h4>Preguntar sin inducir</h4><p>Aprendemos a preguntar sin llevar a la otra persona hacia la respuesta que queremos escuchar.</p></div></li>
+          <li><span class="number">N08</span><div><h4>Observar el trabajo real</h4><p>Observamos cómo se trabaja de verdad, incluidos los pequeños arreglos que no aparecen en los manuales ni en las pantallas.</p></div></li>
+          <li><span class="number">N09</span><div><h4>Seguir la experiencia de uso</h4><p>Nos ponemos en el lugar de quien usa el servicio. Buscamos que pueda completar lo que necesita, aunque tenga dificultades o necesite ayuda.</p></div></li>
+          <li><span class="number">N10</span><div><h4>Definir el problema</h4><p>Con todo lo aprendido, definimos cuál es el problema que vale la pena resolver y cómo reconoceremos una mejora.</p></div></li>
+        </ol></section>
+      </div>
+      <p class="note"><span>01</span>Maqueta de dirección de arte: aún no se incorpora al N00 publicado ni modifica el recorrido actual de la página.</p>
+    </div>
+    <div class="paper-foot"><span>METSI · Facultad de Ciencias Económicas · UBA</span><span>Piloto editorial · N00 + A–B</span></div>
+  </main>
+  <script>
+    const tabs = [...document.querySelectorAll('[data-tab]')];
+    function selectTab(id, focus = false) {
+      for (const tab of tabs) {
+        const chosen = tab.dataset.tab === id;
+        tab.setAttribute('aria-selected', String(chosen));
+        document.getElementById(`panel-${tab.dataset.tab}`).hidden = !chosen;
+        if (chosen && focus) tab.focus();
+      }
+      history.replaceState(null, '', `#${id}`);
+    }
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => selectTab(tab.dataset.tab));
+      tab.addEventListener('keydown', (event) => {
+        if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
+        event.preventDefault();
+        const next = tabs[(index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length];
+        selectTab(next.dataset.tab, true);
+      });
+    });
+    const initial = location.hash.slice(1);
+    if (['n00', 'a', 'b'].includes(initial)) selectTab(initial);
+  </script>
+</body>
+</html>

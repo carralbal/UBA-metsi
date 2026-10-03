@@ -1,0 +1,3 @@
+# Descripción accesible del mapa piloto
+
+Un trazo editorial recorre N00 y las primeras diez lecturas de izquierda a derecha. N00 aparece como una puerta de entrada: prepara la experiencia de aprendizaje y presenta el caso Hotel Horizonte. El bloque A reúne N01–N04 para aprender a preguntar, mirar el sistema, anticipar efectos y distinguir pruebas. El bloque B reúne N05–N10 para escuchar voces, decidir qué averiguar, entrevistar sin inducir, observar el trabajo, seguir la experiencia de uso y formular un problema investigable. La línea termina en un resultado provisional, no en una solución elegida. El recorrido puede volver a etapas anteriores cuando aparece evidencia nueva.

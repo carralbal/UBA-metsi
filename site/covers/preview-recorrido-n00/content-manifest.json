@@ -1,0 +1,39 @@
+{
+  "title": "Lo que vas aprendiendo a hacer · piloto N00, A y B",
+  "claim": "Preparar la lectura, comprender el sistema e investigar a las personas permite definir un problema antes de elegir una solución.",
+  "source_sections": [
+    {"id":"user-intro","heading":"El recorrido","summary":"Ir de entender qué pasa a comprobar cambios y aprender de sus resultados."},
+    {"id":"user-n00","heading":"N00","summary":"Preparar cómo aprender y presentar Hotel Horizonte como caso recurrente."},
+    {"id":"user-a","heading":"N01–N04","summary":"Preguntar, ampliar la mirada, anticipar consecuencias y distinguir pruebas de supuestos."},
+    {"id":"user-b","heading":"N05–N10","summary":"Escuchar, investigar, entrevistar, observar, cuidar la experiencia de uso y definir el problema."}
+  ],
+  "nodes": [
+    {"id":"n00","label":"N00 · Prepararse para aprender","role":"process","source":["user-n00"],"purpose":"Separar la guía de la secuencia de 36 lecturas."},
+    {"id":"a","label":"A · Comprender","role":"process","source":["user-a"],"purpose":"Agrupar las cuatro primeras transformaciones de juicio."},
+    {"id":"n01","label":"N01 · Primer paso","role":"process","source":["user-a"],"purpose":"Preguntar antes de resolver."},
+    {"id":"n02","label":"N02 · Sistema","role":"process","source":["user-a"],"purpose":"Ampliar la mirada a personas, tareas y herramientas."},
+    {"id":"n03","label":"N03 · Efectos","role":"process","source":["user-a"],"purpose":"Reconocer consecuencias desplazadas."},
+    {"id":"n04","label":"N04 · Pruebas","role":"evidence","source":["user-a"],"purpose":"Distinguir evidencia, relatos y supuestos."},
+    {"id":"b","label":"B · Investigar","role":"process","source":["user-b"],"purpose":"Agrupar las seis lecturas que construyen el problema investigable."},
+    {"id":"n05","label":"N05 · Voces","role":"process","source":["user-b"],"purpose":"Incluir a quienes deciden, trabajan y reciben consecuencias."},
+    {"id":"n06","label":"N06 · Averiguar","role":"process","source":["user-b"],"purpose":"Elegir qué falta saber antes de apostar."},
+    {"id":"n07","label":"N07 · Entrevistar","role":"process","source":["user-b"],"purpose":"Preguntar sin inducir respuestas."},
+    {"id":"n08","label":"N08 · Observar","role":"evidence","source":["user-b"],"purpose":"Ver el trabajo real y sus arreglos invisibles."},
+    {"id":"n09","label":"N09 · Usar","role":"outcome","source":["user-b"],"purpose":"Seguir la experiencia de quien utiliza el servicio."},
+    {"id":"n10","label":"N10 · Definir","role":"decision","source":["user-b"],"purpose":"Formular el problema y la señal de mejora."},
+    {"id":"result","label":"Problema que se puede investigar","role":"outcome","source":["user-b"],"purpose":"Mostrar el resultado provisional del piloto A–B, no una solución elegida."}
+  ],
+  "edges": [
+    {"id":"e00","from":"n00","to":"n01","relation":"transformation","source":["user-n00","user-a"],"meaning":"La preparación habilita el primer paso de lectura."},
+    {"id":"e01","from":"n01","to":"n02","relation":"transformation","source":["user-a"],"meaning":"De la pregunta inicial a la mirada sistémica."},
+    {"id":"e02","from":"n02","to":"n03","relation":"transformation","source":["user-a"],"meaning":"De la mirada ampliada a sus consecuencias."},
+    {"id":"e03","from":"n03","to":"n04","relation":"evidence","source":["user-a"],"meaning":"Los efectos exigen distinguir pruebas de supuestos."},
+    {"id":"e04","from":"n04","to":"n05","relation":"transformation","source":["user-a","user-b"],"meaning":"La primera lectura del sistema se contrasta con las voces afectadas."},
+    {"id":"e05","from":"n05","to":"n06","relation":"evidence","source":["user-b"],"meaning":"Las perspectivas abren preguntas para investigar."},
+    {"id":"e06","from":"n06","to":"n07","relation":"flow","source":["user-b"],"meaning":"La investigación incluye entrevistas no inductivas."},
+    {"id":"e07","from":"n07","to":"n08","relation":"evidence","source":["user-b"],"meaning":"La conversación se contrasta con observación directa."},
+    {"id":"e08","from":"n08","to":"n09","relation":"flow","source":["user-b"],"meaning":"El trabajo real se sigue hasta la experiencia de uso."},
+    {"id":"e09","from":"n09","to":"n10","relation":"transformation","source":["user-b"],"meaning":"La experiencia aporta criterios para definir el problema."},
+    {"id":"e10","from":"n10","to":"result","relation":"transformation","source":["user-b"],"meaning":"N10 produce una formulación y una señal observable de mejora."}
+  ]
+}

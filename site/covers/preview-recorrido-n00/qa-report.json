@@ -1,0 +1,22 @@
+{
+  "status": "pilot_ready_for_visual_review",
+  "scope": "Standalone N00–N10 preview only; no replacement of published N00 or the current website",
+  "source": "User-provided plain-language learning-route copy for N00–N36; this pilot covers N00 and blocks A–B",
+  "svg_validation": {
+    "result": "PASS",
+    "warning": "Seven path elements; recommendation of eight is not applicable to this deliberately minimal route"
+  },
+  "responsive_check": {
+    "widths_px": [320, 390, 768, 1440],
+    "horizontal_overflow": false,
+    "n00_and_b_tabs": "pass",
+    "mobile_layout": "Vertical route; no scaled-down diagram"
+  },
+  "pdf_check": {
+    "pages": 1,
+    "format": "A3 landscape",
+    "rendered_and_visually_inspected": true,
+    "cut_off_content": false
+  },
+  "artifacts": ["index.html", "mapa.svg", "mapa-preview.png", "piloto-n00-a-b.pdf", "alt-text.md", "content-manifest.json"]
+}
