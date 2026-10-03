@@ -143,6 +143,17 @@ h1{margin:0;max-width:13ch;font-size:clamp(3.7rem,7.2vw,8rem);line-height:.88;le
 .journey-index{position:relative;z-index:2;width:4.3rem;height:4.3rem;border:1px solid var(--ink);border-radius:50%;background:var(--paper);display:grid;place-items:center;font-size:.64rem;font-weight:700;letter-spacing:.1em}.journey-track li.is-visible .journey-index{background:var(--volt);transition:background .6s ease}
 .journey-kicker{margin:.15rem 0 .75rem;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}.journey-track h3{margin:0;max-width:18ch;font-size:clamp(2.5rem,5vw,5rem);line-height:1}.journey-track li div>p:last-child{max-width:40rem;margin:1.3rem 0 0;color:var(--muted);font:400 1.05rem/1.6 var(--serif)}
 .journey-outcome{margin:-2rem 0 0 clamp(0rem,13vw,12rem);padding:1.4rem 0;border-top:1px solid var(--ink);font:italic 400 clamp(2rem,3.7vw,3.8rem)/1.1 var(--serif);text-align:right}.journey-outcome span{margin-right:.6rem;color:#719000;font-style:normal}
+.journey-learning-link{display:grid;grid-template-columns:3.5rem minmax(11rem,.55fr) minmax(0,1.45fr) 2rem;gap:1.5rem;align-items:center;margin:3.3rem 0 0 clamp(0rem,13vw,12rem);padding:1.3rem 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);color:var(--ink);text-decoration:none}
+.journey-learning-accent{width:2.8rem;height:.5rem;background:var(--volt);transform:skew(-24deg)}
+.journey-learning-kicker{font-size:.66rem;font-weight:700;line-height:1.35;letter-spacing:.13em;text-transform:uppercase}
+.journey-learning-link strong{font:400 clamp(1.4rem,2.5vw,2.4rem)/1.12 var(--serif);letter-spacing:-.025em}
+.journey-learning-arrow{justify-self:end;font-size:1.55rem;line-height:1}
+.journey-learning-link:hover strong,.journey-learning-link:focus-visible strong{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.15em}
+.journey-learning-link:focus-visible{outline:2px solid var(--ink);outline-offset:5px}
+.guide-route-link{display:block;width:max-content;max-width:100%;margin-top:.65rem;padding:.55rem 0;border-bottom:1px solid var(--ink);font-size:.68rem;font-weight:700;letter-spacing:.12em;text-decoration:none;text-transform:uppercase}
+.guide-route-link:hover,.guide-route-link:focus-visible{text-decoration:underline;text-underline-offset:.15em}
+@media(max-width:900px){.journey-learning-link{grid-template-columns:2.5rem 1fr 2rem;gap:1rem}.journey-learning-kicker{grid-column:2}.journey-learning-link strong{grid-column:2;grid-row:2}.journey-learning-arrow{grid-column:3;grid-row:1/3}.journey-learning-accent{grid-row:1/3;width:2rem}}
+@media(max-width:650px){.journey-learning-link{margin-left:0}}
 
 .curriculum{background:var(--ink);color:var(--white)}
 .curriculum-head{padding-bottom:3rem}.curriculum h2{color:var(--white)}.curriculum .two-up>p{color:#c4c6bf}.curriculum .section-marker::after{background:var(--white)}

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171817">
+  <meta name="description" content="Recorrido visual e interactivo de la guía N00 y las 36 lecturas de METSI.">
+  <title>METSI · Recorrido de aprendizaje N00–N36</title>
+  <style>
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#171817;color:#f1f0ea}
+    .route-nav{max-width:1120px;margin:auto;padding:19px clamp(20px,4vw,48px);display:flex;align-items:center;justify-content:space-between;gap:20px;font-family:Arial,Helvetica,sans-serif}
+    .route-nav a{color:#f1f0ea;text-decoration:none}
+    .route-nav-brand{font:400 30px/1 Georgia,'Times New Roman',serif;letter-spacing:.06em}
+    .route-nav-return{font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;border-bottom:2px solid #cfff00;padding-bottom:6px}
+    .route-nav a:focus-visible{outline:2px solid #cfff00;outline-offset:5px}
+    @media(max-width:390px){.route-nav-brand{font-size:25px}.route-nav-return{font-size:9px}}
+  </style>
+</head>
+<body>
+  <nav class="route-nav" aria-label="Navegación del recorrido"><a class="route-nav-brand" href="../../">METSI</a><a class="route-nav-return" href="../../#viaje">Volver al sitio ↗</a></nav>
+<div id="metsi-viaje-vertical" class="metsi-viaje">
+  <style>
+    #metsi-viaje-vertical{--paper:#f1f0ea;--paper-2:#e5e5de;--ink:#171817;--muted:#62655f;--line:#b9bcb4;--volt:#cfff00;box-sizing:border-box;width:100%;max-width:1024px;margin:0 auto;padding:clamp(20px,4vw,48px);background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;text-rendering:optimizeLegibility}
+    #metsi-viaje-vertical *{box-sizing:border-box}
+    #metsi-viaje-vertical .kicker{display:flex;gap:14px;align-items:center;margin:0 0 26px;font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
+    #metsi-viaje-vertical .slash{width:45px;height:7px;background:var(--volt);transform:skew(-25deg);flex:none}
+    #metsi-viaje-vertical h2,#metsi-viaje-vertical h3,#metsi-viaje-vertical h4{font-family:Georgia,'Times New Roman',serif;font-weight:400}
+    #metsi-viaje-vertical h2{max-width:11ch;margin:0;font-size:clamp(46px,7vw,78px);line-height:.94;letter-spacing:-.05em}
+    #metsi-viaje-vertical .lead{display:grid;grid-template-columns:1fr minmax(230px,.48fr);gap:36px;align-items:end;margin:18px 0 35px}
+    #metsi-viaje-vertical .lead p{max-width:58ch;margin:0;color:var(--muted);font:400 19px/1.4 Georgia,'Times New Roman',serif}
+    #metsi-viaje-vertical .lead small{border-left:1px solid var(--line);padding-left:20px;color:var(--muted);font-size:13px;line-height:1.5}
+    #metsi-viaje-vertical .macro{display:grid;grid-template-columns:2fr 1fr 2fr 2fr 1fr;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);margin-bottom:34px}
+    #metsi-viaje-vertical .macro span{min-width:0;padding:11px 7px 11px 0;border-right:1px solid var(--line);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    #metsi-viaje-vertical .macro span:last-child{border-right:0}
+    #metsi-viaje-vertical .macro b{display:block;margin:0 0 5px;color:var(--ink);font-size:11px}
+    #metsi-viaje-vertical .guide{display:grid;grid-template-columns:130px 1fr;gap:20px;align-items:center;margin:0 0 0 43px;padding:22px 27px;background:var(--ink);color:#f1f0ea;position:relative}
+    #metsi-viaje-vertical .guide::before{content:"";position:absolute;left:-43px;top:50%;width:43px;height:2px;background:var(--ink)}
+    #metsi-viaje-vertical .guide .guide-code{font-size:41px;font-weight:700;letter-spacing:.07em;color:#f1f0ea}
+    #metsi-viaje-vertical .guide h3{margin:0 0 5px;font-size:27px;line-height:1}
+    #metsi-viaje-vertical .guide p{max-width:55ch;margin:0;color:#d0d1cb;font-size:14px;line-height:1.5}
+    #metsi-viaje-vertical .stations{position:relative;padding:12px 0 0}
+    #metsi-viaje-vertical .stations::before{content:"";position:absolute;left:27px;top:0;bottom:0;width:2px;background:var(--ink)}
+    #metsi-viaje-vertical .station{position:relative;margin:0 0 0 43px;padding:33px 0 31px 25px;border-bottom:1px solid var(--line)}
+    #metsi-viaje-vertical .station::before{content:"";position:absolute;left:-16px;top:63px;width:16px;height:2px;background:var(--ink)}
+    #metsi-viaje-vertical .letter{position:absolute;left:-43px;top:36px;display:grid;place-items:center;width:53px;height:53px;background:var(--paper);color:var(--ink);font:400 42px/1 Georgia,'Times New Roman',serif}
+    #metsi-viaje-vertical .station-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,.75fr);gap:20px;align-items:center}
+    #metsi-viaje-vertical .range{margin:0 0 8px;color:var(--ink);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+    #metsi-viaje-vertical h3{margin:0;font-size:clamp(34px,4vw,47px);line-height:.98;letter-spacing:-.045em}
+    #metsi-viaje-vertical .change{margin:11px 0 0;color:var(--muted);font:italic 400 18px/1.25 Georgia,'Times New Roman',serif}
+    #metsi-viaje-vertical .diagram{width:100%;max-width:340px;justify-self:end;display:block;overflow:visible}
+    #metsi-viaje-vertical .diagram text{font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;fill:var(--ink)}
+    #metsi-viaje-vertical .diagram .muted{fill:var(--muted);font-weight:400}
+    #metsi-viaje-vertical .diagram .line{stroke:var(--ink);stroke-width:1.5;fill:none}
+    #metsi-viaje-vertical .diagram .soft{stroke:var(--line);stroke-width:1.5;fill:none}
+    #metsi-viaje-vertical .diagram .dash{stroke:var(--ink);stroke-width:1.5;stroke-dasharray:3 5;fill:none}
+    #metsi-viaje-vertical .diagram .volt{fill:var(--volt)}
+    #metsi-viaje-vertical .diagram .paper{fill:var(--paper)}
+    #metsi-viaje-vertical .diagram .shade{fill:var(--paper-2)}
+    #metsi-viaje-vertical .n-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:0;margin:17px 0 0;border-top:1px solid var(--line)}
+    #metsi-viaje-vertical .n-button{min-height:48px;display:flex;gap:8px;align-items:center;text-align:left;padding:9px 7px 9px 0;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink);font-size:13px;line-height:1.2;cursor:pointer}
+    #metsi-viaje-vertical .n-button b{flex:none;font-size:11px;letter-spacing:.08em;color:var(--ink)}
+    #metsi-viaje-vertical .n-button:hover,#metsi-viaje-vertical .n-button[aria-pressed="true"]{background:var(--paper-2)}
+    #metsi-viaje-vertical .n-button[aria-pressed="true"]{box-shadow:inset 0 4px var(--volt)}
+    #metsi-viaje-vertical .n-button:focus-visible{outline:3px solid var(--ink);outline-offset:-3px}
+    #metsi-viaje-vertical .readout{margin:18px 0 0;padding:17px 19px;background:var(--paper-2);border-left:5px solid var(--volt)}
+    #metsi-viaje-vertical .readout[hidden]{display:none}
+    #metsi-viaje-vertical .readout strong{display:block;margin:0 0 8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+    #metsi-viaje-vertical .readout p{max-width:72ch;margin:0;font:400 19px/1.4 Georgia,'Times New Roman',serif}
+    #metsi-viaje-vertical .outcome{display:flex;gap:13px;align-items:baseline;margin:19px 0 0}
+    #metsi-viaje-vertical .outcome span{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+    #metsi-viaje-vertical .outcome b{font-size:12px;font-weight:400;color:var(--muted)}
+    #metsi-viaje-vertical .finish{margin:0 0 0 43px;padding:25px 27px 17px;border-bottom:4px solid var(--volt);background:var(--ink);color:#f1f0ea}
+    #metsi-viaje-vertical .finish span{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#f1f0ea}
+    #metsi-viaje-vertical .finish p{max-width:46ch;margin:7px 0 0;font:400 25px/1.18 Georgia,'Times New Roman',serif}
+    @media(max-width:620px){#metsi-viaje-vertical{padding:22px 17px}#metsi-viaje-vertical .lead{display:block;margin-bottom:23px}#metsi-viaje-vertical .lead small{display:block;margin-top:17px}#metsi-viaje-vertical .macro{display:none}#metsi-viaje-vertical .guide{grid-template-columns:1fr;gap:8px;margin-left:35px;padding:19px}#metsi-viaje-vertical .guide::before{left:-35px;width:35px}#metsi-viaje-vertical .stations::before{left:20px}#metsi-viaje-vertical .station{margin-left:35px;padding-left:17px}#metsi-viaje-vertical .letter{left:-35px;width:44px;height:44px;font-size:34px}#metsi-viaje-vertical .station::before{left:-15px}#metsi-viaje-vertical .station-top{grid-template-columns:1fr;gap:12px}#metsi-viaje-vertical .diagram{justify-self:start;max-width:300px}#metsi-viaje-vertical .n-list{grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}#metsi-viaje-vertical .finish{margin-left:35px}}
+  </style>
+  <div class="kicker"><span class="slash" aria-hidden="true"></span>METSI · MAPA DE APRENDIZAJE</div>
+  <h2>Un recorrido que cambia cómo decidís.</h2>
+  <div class="lead"><p>De entender qué pasa a comprobar si el cambio sirve y aprender de sus resultados.</p><small>N00 prepara el viaje. Las 36 lecturas lo desarrollan en ocho estaciones. Cada tramo deja algo que se puede usar en el siguiente.</small></div>
+  <div class="macro" aria-label="Cinco movimientos del recorrido"><span><b>A–B</b>Entender</span><span><b>C</b>Representar</span><span><b>D–E</b>Cambiar</span><span><b>F–G</b>Sostener</span><span><b>H</b>Aprender</span></div>
+  <div class="guide"><div class="guide-code">N00</div><div><h3>Preparar el viaje.</h3><p>Cómo vamos a aprender y cuál es el hotel que usaremos como ejemplo. Es la guía, no una lectura más.</p></div></div>
+  <div class="stations" id="metsi-viaje-stations"></div>
+  <noscript><p>Para explorar cada lectura activá JavaScript. También podés consultar el mapa completo a continuación.</p><img src="mapa.svg" alt="Mapa vertical de la guía N00 y las 36 lecturas distribuidas en ocho estaciones." style="display:block;width:100%;height:auto"></noscript>
+  <div class="finish"><span>Después de N36 · Volver a empezar mejor</span><p>Lo aprendido cambia la próxima pregunta, no sólo la respuesta anterior.</p></div>
+  <script>
+    (() => {
+      const root = document.getElementById('metsi-viaje-vertical');
+      const readings = {
+        N01:['Primer paso','Antes de salir a resolver, aprendemos a hacer buenas preguntas y elegir un primer paso que tenga sentido.'],
+        N02:['Ampliar la mirada','Ampliamos la mirada: para entender un problema hay que mirar a las personas, las tareas y las herramientas que usan.'],
+        N03:['Prever efectos','Vemos cómo una mejora en un lugar puede crear un problema en otro. Aprendemos a mirar esas consecuencias antes de avanzar.'],
+        N04:['Buscar pruebas','Separamos lo que sabemos de lo que suponemos y de lo que nos contaron. Buscamos pruebas para decidir mejor.'],
+        N05:['Escuchar voces','Escuchamos a quienes deciden, hacen el trabajo y reciben sus consecuencias. Sus opiniones pueden cambiar lo que proponemos.'],
+        N06:['Elegir qué averiguar','Elegimos qué necesitamos averiguar antes de comprometernos con una solución. Investigamos lo que puede cambiar nuestra decisión.'],
+        N07:['Preguntar sin inducir','Aprendemos a preguntar sin llevar a la otra persona hacia la respuesta que queremos escuchar.'],
+        N08:['Observar el trabajo','Observamos cómo se trabaja de verdad, incluidos los pequeños arreglos que no aparecen en los manuales ni en las pantallas.'],
+        N09:['Seguir el uso','Nos ponemos en el lugar de quien usa el servicio. Buscamos que pueda completar lo que necesita, aunque tenga dificultades o necesite ayuda.'],
+        N10:['Definir el problema','Con todo lo aprendido, definimos cuál es el problema que vale la pena resolver y cómo reconoceremos una mejora.'],
+        N11:['Leer los datos','Revisamos de dónde vienen los datos y qué nos dicen. Un número puede estar bien calculado y aun así no responder nuestra pregunta.'],
+        N12:['Distinguir estados','Distinguimos pedir algo, que realmente ocurra y cómo quedan las cosas después. También aclaramos quién puede autorizarlo y cómo comprobarlo.'],
+        N13:['Prever concurrencia','Vemos qué pasa cuando una respuesta tarda, un pedido llega dos veces o dos personas actúan al mismo tiempo. Buscamos evitar que se haga algo de más o quede información contradictoria.'],
+        N14:['Seguir el trabajo','Seguimos un trabajo de principio a fin para encontrar dónde se frena, dónde pasa de una mano a otra y qué ocurre cuando algo sale de lo habitual.'],
+        N15:['Elegir una vista','Elegimos cómo mostrar lo que pasa: un dibujo, una secuencia o una tabla, según lo que necesitamos entender.'],
+        N16:['Contrastar modelos','Comparamos esas formas de mostrar el trabajo para detectar contradicciones. Las corregimos y mantenemos al día.'],
+        N17:['Elegir el cambio','Elegimos cómo hacer el cambio: qué conviene planificar, qué probar y qué entregar de a poco.'],
+        N18:['Cuidar lo existente','Revisamos lo que ya existe para cambiarlo sin perder aquello que todavía resulta útil o evita problemas.'],
+        N19:['Comparar opciones','Comparamos opciones: comprar una herramienta, adaptar una existente, conectar varias o construir algo propio. También puede convenir mantener una tarea manual.'],
+        N20:['Ordenar decisiones','Organizamos el trabajo para saber cuándo avanzar, cuándo frenar y cuándo dar por terminada una etapa.'],
+        N21:['Pensar la continuidad','Distinguimos lo que termina con la entrega de lo que deberá seguir funcionando. Acordamos quién lo va a cuidar y mejorar después.'],
+        N22:['Poner a prueba','Ponemos la propuesta a prueba y aceptamos que los resultados puedan mostrarnos que hay que cambiarla o abandonarla.'],
+        N23:['Entregar un corte útil','Buscamos una primera entrega pequeña que ya permita resolver una necesidad completa.'],
+        N24:['Hacer lugar','Elegimos qué hacer primero con el tiempo y las personas disponibles. Dejamos claro qué tendrá que esperar y qué consecuencias tiene esa espera.'],
+        N25:['Terminar más','Aprendemos a empezar menos cosas a la vez para terminar más. Buscamos reducir las tareas acumuladas y las esperas.'],
+        N26:['Coordinar terceros','Miramos qué pasa cuando el servicio depende de varias organizaciones. Acordamos quién responde si algo falla y qué alternativas tenemos.'],
+        N27:['Acordar mensajes','Antes de conectar herramientas y equipos, acordamos qué significa cada mensaje y qué debe hacer quien lo recibe.'],
+        N28:['Probar el servicio','Comprobamos si el servicio funciona bien para quienes lo necesitan. Probamos situaciones reales, incluidas las difíciles.'],
+        N29:['Poner en marcha','Preparamos la puesta en marcha del cambio sin dejar de atender. También ensayamos cómo recuperar el servicio si algo falla.'],
+        N30:['Responder y mejorar','Aprendemos a detectar problemas a tiempo, responder y aprovechar lo ocurrido para mejorar.'],
+        N31:['Delimitar la IA','Evaluamos si la inteligencia artificial ayuda en una tarea concreta. Definimos qué puede hacer y dónde necesita control humano.'],
+        N32:['Probar la IA','Probamos esa inteligencia artificial con distintos casos antes de darle más libertad. Miramos especialmente los errores que pueden causar más daño.'],
+        N33:['Gobernarla en uso','Seguimos revisándola mientras se usa, porque puede cambiar. Acordamos quién la controla y cuándo corregirla, limitarla o retirarla.'],
+        N34:['Unir el recorrido','Unimos todo el recorrido para comprobar que las decisiones respondan al problema original y al resultado que buscamos.'],
+        N35:['Compartir lo decidido','Explicamos lo decidido de una manera que otras personas puedan entender, discutir y usar. Comprobamos que sepan cómo continuar.'],
+        N36:['Aprender del resultado','Volvemos sobre lo que hicimos para entender qué aprendimos, incluso si salió bien. Elegimos qué conservar y qué hacer distinto la próxima vez.']
+      };
+      const stages = [
+        {id:'a',letter:'A',name:'Comprender',range:'N01–N04',change:'Del pedido a una pregunta sobre el sistema.',outcome:'Una pregunta contrastada con pruebas.',ns:['N01','N02','N03','N04']},
+        {id:'b',letter:'B',name:'Investigar',range:'N05–N10',change:'De voces dispersas a un problema investigable.',outcome:'Problema definido y señal de mejora.',ns:['N05','N06','N07','N08','N09','N10']},
+        {id:'c',letter:'C',name:'Modelar',range:'N11–N16',change:'De relatos y datos a modelos que se pueden discutir.',outcome:'Estados, flujos y contradicciones visibles.',ns:['N11','N12','N13','N14','N15','N16']},
+        {id:'d',letter:'D',name:'Decidir',range:'N17–N20',change:'De opciones posibles a una secuencia de cambio.',outcome:'Una estrategia con criterios para avanzar o frenar.',ns:['N17','N18','N19','N20']},
+        {id:'e',letter:'E',name:'Construir',range:'N21–N25',change:'De tareas abiertas a una capacidad útil y terminada.',outcome:'Corte completo, probado y con flujo visible.',ns:['N21','N22','N23','N24','N25']},
+        {id:'f',letter:'F',name:'Operar',range:'N26–N30',change:'De la entrega al servicio que resiste fallas.',outcome:'Responsables, señales y recuperación ensayada.',ns:['N26','N27','N28','N29','N30']},
+        {id:'g',letter:'G',name:'Gobernar IA',range:'N31–N33',change:'De una promesa de IA a un uso limitado y vigilado.',outcome:'Control humano y criterios de corrección o retiro.',ns:['N31','N32','N33']},
+        {id:'h',letter:'H',name:'Integrar',range:'N34–N36',change:'De decisiones aisladas a aprendizaje compartido.',outcome:'Criterios que otras personas pueden usar y revisar.',ns:['N34','N35','N36']}
+      ];
+      const diagrams = {
+        a:`<svg class="diagram" viewBox="0 0 300 130" role="img" aria-label="El pedido se abre en personas, tareas y herramientas y termina en una pregunta con pruebas"><path class="line" d="M20 64H70M70 64L107 25M70 64H107M70 64L107 103M211 25L247 64M211 64H247M211 103L247 64M247 64H282"/><rect class="shade" x="6" y="48" width="55" height="31"/><text x="11" y="68">PEDIDO</text><text x="112" y="30">personas</text><text x="112" y="69">tareas</text><text x="112" y="108">herramientas</text><rect class="volt" x="250" y="47" width="41" height="35"/><text x="255" y="68">¿?</text></svg>`,
+        b:`<svg class="diagram" viewBox="0 0 300 130" role="img" aria-label="Voces, observación y experiencia de uso aportan evidencia para definir el problema"><text x="9" y="28">voces</text><text x="9" y="66">trabajo</text><text x="9" y="104">uso</text><path class="dash" d="M85 24L156 65M85 63H156M85 101L156 65"/><path class="line" d="M156 40L205 56V74L156 89Z"/><path class="line" d="M205 65H220"/><rect class="volt" x="220" y="46" width="79" height="38"/><text x="225" y="69">problema</text></svg>`,
+        c:`<svg class="diagram" viewBox="0 0 300 130" role="img" aria-label="Se distingue solicitud, hecho y estado, con una ruta de excepción que vuelve al modelo"><path class="line" d="M15 54H285"/><path class="line" d="M115 46L126 54L115 62M209 46L220 54L209 62"/><text x="12" y="37">solicitud</text><text x="116" y="37">hecho</text><text x="222" y="37">estado</text><rect class="volt" x="16" y="50" width="11" height="11"/><rect class="shade" x="121" y="49" width="11" height="11"/><rect class="shade" x="224" y="49" width="11" height="11"/><path class="dash" d="M233 68V101H117V75"/><text class="muted" x="153" y="119">excepción · revisar</text></svg>`,
+        d:`<svg class="diagram" viewBox="0 0 300 130" role="img" aria-label="Se comparan comprar, adaptar, conectar, construir y mantener una tarea manual antes de decidir"><text x="6" y="68">opciones</text><path class="line" d="M72 64H105M105 64L151 18M105 64L151 41M105 64H151M105 64L151 87M105 64L151 110"/><text x="160" y="21">comprar</text><text x="160" y="44">adaptar</text><text x="160" y="67">conectar</text><text x="160" y="90">construir</text><text x="160" y="113">manual</text><path class="line" d="M264 15V116"/><rect class="volt" x="256" y="54" width="18" height="18"/><text x="246" y="12">decidir</text></svg>`,
+        e:`<svg class="diagram" viewBox="0 0 300 130" role="img" aria-label="Un corte útil atraviesa datos, reglas, tecnología y personas antes de ponerse en uso"><text x="9" y="22">datos</text><text x="9" y="49">reglas</text><text x="9" y="76">tecnología</text><text x="9" y="103">personas</text><path class="soft" d="M118 15H269M118 42H269M118 69H269M118 96H269"/><path class="line" d="M186 6V109"/><path class="line" d="M180 101L186 109L192 101"/><rect class="volt" x="161" y="48" width="51" height="17"/><text x="209" y="126">en uso</text></svg>`,
+        f:`<svg class="diagram" viewBox="0 0 300 130" role="img" aria-label="El servicio atraviesa organizaciones, produce señales y activa una ruta de recuperación"><path class="line" d="M9 60H286"/><path class="line" d="M70 46L80 60L70 74M178 46L188 60L178 74"/><path class="soft" d="M93 14V111M200 14V111"/><text x="13" y="34">equipo</text><text x="107" y="34">tercero</text><text x="211" y="34">servicio</text><path class="dash" d="M256 75V105H54V79"/><rect class="volt" x="247" y="53" width="18" height="16"/><text class="muted" x="101" y="123">detectar · recuperar</text></svg>`,
+        g:`<svg class="diagram" viewBox="0 0 300 130" role="img" aria-label="La inteligencia artificial tiene un límite, revisión humana y monitoreo que puede detenerla"><text x="9" y="59">tarea</text><path class="line" d="M49 55H82M138 55H181M240 55H284"/><rect class="shade" x="82" y="34" width="56" height="40"/><text x="95" y="60">IA</text><path class="line" d="M181 29V80M176 29H186M176 80H186"/><text x="188" y="21">control</text><rect class="volt" x="181" y="38" width="59" height="35"/><text x="186" y="60">humano</text><path class="dash" d="M253 72V105H108V81"/><text class="muted" x="137" y="123">vigilar · corregir · retirar</text></svg>`,
+        h:`<svg class="diagram" viewBox="0 0 300 130" role="img" aria-label="Decisión, transferencia, uso y aprendizaje forman un ciclo que mejora la próxima pregunta"><path class="line" d="M46 38H132M170 38H254M265 54V100H43V54"/><path class="line" d="M245 32L254 38L245 44M43 63L43 54L52 63"/><text x="16" y="27">decidir</text><text x="112" y="27">compartir</text><text x="226" y="27">usar</text><rect class="volt" x="113" y="82" width="80" height="34"/><text x="121" y="104">aprender</text><text class="muted" x="7" y="121">próxima pregunta</text></svg>`
+      };
+      const host = root.querySelector('#metsi-viaje-stations');
+      host.innerHTML = stages.map(s => `<section class="station" id="metsi-etapa-${s.id}" aria-labelledby="metsi-titulo-${s.id}"><span class="letter" aria-hidden="true">${s.letter}</span><div class="station-top"><div><p class="range">${s.range} · ESTACIÓN ${s.letter}</p><h3 id="metsi-titulo-${s.id}">${s.name}</h3><p class="change">${s.change}</p></div>${diagrams[s.id]}</div><div class="n-list" aria-label="Lecturas de ${s.name}">${s.ns.map(n => `<button class="n-button" type="button" data-reading="${n}" aria-pressed="false"><b>${n}</b><span>${readings[n][0]}</span></button>`).join('')}</div><div class="readout" hidden aria-live="polite"><strong></strong><p></p></div><p class="outcome"><span>Sale con</span><b>${s.outcome}</b></p></section>`).join('');
+      host.addEventListener('click', (event) => {
+        const button = event.target.closest('[data-reading]');
+        if (!button || !host.contains(button)) return;
+        const station = button.closest('.station');
+        const readout = station.querySelector('.readout');
+        const id = button.dataset.reading;
+        const isOpen = button.getAttribute('aria-pressed') === 'true';
+        station.querySelectorAll('[data-reading]').forEach(b => b.setAttribute('aria-pressed','false'));
+        if (isOpen) { readout.hidden = true; return; }
+        button.setAttribute('aria-pressed','true');
+        readout.querySelector('strong').textContent = `${id} · ${readings[id][0]}`;
+        readout.querySelector('p').textContent = readings[id][1];
+        readout.hidden = false;
+      });
+    })();
+  </script>
+</div>
+</body>
+</html>

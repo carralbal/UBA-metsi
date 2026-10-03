@@ -1,0 +1,924 @@
+{
+  "title": "METSI · recorrido vertical N00–N36",
+  "claim": "Las 36 lecturas transforman una pregunta inicial en una capacidad de intervenir, sostener el cambio y aprender de sus resultados; N00 prepara ese recorrido sin ser una lectura más.",
+  "source_sections": [
+    {
+      "id": "user-intro",
+      "heading": "El recorrido",
+      "summary": "Entender, mejorar, comprobar y aprender."
+    },
+    {
+      "id": "user-n00",
+      "heading": "N00",
+      "summary": "Preparar la experiencia y presentar el hotel de ejemplo."
+    },
+    {
+      "id": "user-a",
+      "heading": "N01–N04",
+      "summary": "Preguntar, ampliar la mirada, prever efectos y distinguir pruebas."
+    },
+    {
+      "id": "user-b",
+      "heading": "N05–N10",
+      "summary": "Escuchar, investigar, observar, cuidar el uso y definir el problema."
+    },
+    {
+      "id": "user-c",
+      "heading": "N11–N16",
+      "summary": "Trazar datos, sucesos, estados y trabajos de modo consistente."
+    },
+    {
+      "id": "user-d",
+      "heading": "N17–N20",
+      "summary": "Elegir y ordenar una estrategia de cambio."
+    },
+    {
+      "id": "user-e",
+      "heading": "N21–N25",
+      "summary": "Definir continuidad, probar, entregar una capacidad completa y limitar el trabajo abierto."
+    },
+    {
+      "id": "user-f",
+      "heading": "N26–N30",
+      "summary": "Coordinar dependencias, integración, pruebas, despliegue y operación."
+    },
+    {
+      "id": "user-g",
+      "heading": "N31–N33",
+      "summary": "Evaluar, probar y gobernar la inteligencia artificial en uso."
+    },
+    {
+      "id": "user-h",
+      "heading": "N34–N36",
+      "summary": "Integrar decisiones, transferirlas y aprender."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n00",
+      "label": "N00 · Preparar el recorrido",
+      "role": "process",
+      "source": [
+        "user-n00"
+      ],
+      "purpose": "Distinguir la guía del cuerpo de 36 lecturas."
+    },
+    {
+      "id": "a",
+      "label": "A · Comprender · N01–N04",
+      "role": "process",
+      "source": [
+        "user-a"
+      ],
+      "purpose": "Mostrar el paso del pedido a una pregunta sobre el sistema."
+    },
+    {
+      "id": "b",
+      "label": "B · Investigar · N05–N10",
+      "role": "evidence",
+      "source": [
+        "user-b"
+      ],
+      "purpose": "Mostrar cómo voces y observaciones ayudan a definir el problema."
+    },
+    {
+      "id": "c",
+      "label": "C · Modelar · N11–N16",
+      "role": "process",
+      "source": [
+        "user-c"
+      ],
+      "purpose": "Mostrar cómo se hacen discutibles datos, sucesos, estados y flujo de trabajo."
+    },
+    {
+      "id": "d",
+      "label": "D · Decidir · N17–N20",
+      "role": "decision",
+      "source": [
+        "user-d"
+      ],
+      "purpose": "Representar la elección de estrategia y secuencia."
+    },
+    {
+      "id": "e",
+      "label": "E · Construir · N21–N25",
+      "role": "process",
+      "source": [
+        "user-e"
+      ],
+      "purpose": "Representar el corte completo y el trabajo que llega a salida."
+    },
+    {
+      "id": "f",
+      "label": "F · Operar · N26–N30",
+      "role": "system",
+      "source": [
+        "user-f"
+      ],
+      "purpose": "Representar el servicio entre organizaciones y su recuperación."
+    },
+    {
+      "id": "g",
+      "label": "G · Gobernar IA · N31–N33",
+      "role": "boundary",
+      "source": [
+        "user-g"
+      ],
+      "purpose": "Hacer visible el límite humano y el control continuo."
+    },
+    {
+      "id": "h",
+      "label": "H · Integrar · N34–N36",
+      "role": "outcome",
+      "source": [
+        "user-h"
+      ],
+      "purpose": "Cerrar el ciclo en transferencia y aprendizaje."
+    },
+    {
+      "id": "n01",
+      "label": "N01 · Primer paso",
+      "role": "process",
+      "source": [
+        "user-a"
+      ],
+      "purpose": "Antes de salir a resolver, aprendemos a hacer buenas preguntas y elegir un primer paso que tenga sentido."
+    },
+    {
+      "id": "n02",
+      "label": "N02 · Ampliar la mirada",
+      "role": "process",
+      "source": [
+        "user-a"
+      ],
+      "purpose": "Ampliamos la mirada: para entender un problema hay que mirar a las personas, las tareas y las herramientas que usan."
+    },
+    {
+      "id": "n03",
+      "label": "N03 · Prever efectos",
+      "role": "process",
+      "source": [
+        "user-a"
+      ],
+      "purpose": "Vemos cómo una mejora en un lugar puede crear un problema en otro. Aprendemos a mirar esas consecuencias antes de avanzar."
+    },
+    {
+      "id": "n04",
+      "label": "N04 · Buscar pruebas",
+      "role": "process",
+      "source": [
+        "user-a"
+      ],
+      "purpose": "Separamos lo que sabemos de lo que suponemos y de lo que nos contaron. Buscamos pruebas para decidir mejor."
+    },
+    {
+      "id": "n05",
+      "label": "N05 · Escuchar voces",
+      "role": "process",
+      "source": [
+        "user-b"
+      ],
+      "purpose": "Escuchamos a quienes deciden, hacen el trabajo y reciben sus consecuencias. Sus opiniones pueden cambiar lo que proponemos."
+    },
+    {
+      "id": "n06",
+      "label": "N06 · Elegir qué averiguar",
+      "role": "process",
+      "source": [
+        "user-b"
+      ],
+      "purpose": "Elegimos qué necesitamos averiguar antes de comprometernos con una solución. Investigamos lo que puede cambiar nuestra decisión."
+    },
+    {
+      "id": "n07",
+      "label": "N07 · Preguntar sin inducir",
+      "role": "process",
+      "source": [
+        "user-b"
+      ],
+      "purpose": "Aprendemos a preguntar sin llevar a la otra persona hacia la respuesta que queremos escuchar."
+    },
+    {
+      "id": "n08",
+      "label": "N08 · Observar el trabajo",
+      "role": "process",
+      "source": [
+        "user-b"
+      ],
+      "purpose": "Observamos cómo se trabaja de verdad, incluidos los pequeños arreglos que no aparecen en los manuales ni en las pantallas."
+    },
+    {
+      "id": "n09",
+      "label": "N09 · Seguir el uso",
+      "role": "process",
+      "source": [
+        "user-b"
+      ],
+      "purpose": "Nos ponemos en el lugar de quien usa el servicio. Buscamos que pueda completar lo que necesita, aunque tenga dificultades o necesite ayuda."
+    },
+    {
+      "id": "n10",
+      "label": "N10 · Definir el problema",
+      "role": "process",
+      "source": [
+        "user-b"
+      ],
+      "purpose": "Con todo lo aprendido, definimos cuál es el problema que vale la pena resolver y cómo reconoceremos una mejora."
+    },
+    {
+      "id": "n11",
+      "label": "N11 · Leer los datos",
+      "role": "process",
+      "source": [
+        "user-c"
+      ],
+      "purpose": "Revisamos de dónde vienen los datos y qué nos dicen. Un número puede estar bien calculado y aun así no responder nuestra pregunta."
+    },
+    {
+      "id": "n12",
+      "label": "N12 · Distinguir estados",
+      "role": "process",
+      "source": [
+        "user-c"
+      ],
+      "purpose": "Distinguimos pedir algo, que realmente ocurra y cómo quedan las cosas después. También aclaramos quién puede autorizarlo y cómo comprobarlo."
+    },
+    {
+      "id": "n13",
+      "label": "N13 · Prever concurrencia",
+      "role": "process",
+      "source": [
+        "user-c"
+      ],
+      "purpose": "Vemos qué pasa cuando una respuesta tarda, un pedido llega dos veces o dos personas actúan al mismo tiempo. Buscamos evitar que se haga algo de más o quede información contradictoria."
+    },
+    {
+      "id": "n14",
+      "label": "N14 · Seguir el trabajo",
+      "role": "process",
+      "source": [
+        "user-c"
+      ],
+      "purpose": "Seguimos un trabajo de principio a fin para encontrar dónde se frena, dónde pasa de una mano a otra y qué ocurre cuando algo sale de lo habitual."
+    },
+    {
+      "id": "n15",
+      "label": "N15 · Elegir una vista",
+      "role": "process",
+      "source": [
+        "user-c"
+      ],
+      "purpose": "Elegimos cómo mostrar lo que pasa: un dibujo, una secuencia o una tabla, según lo que necesitamos entender."
+    },
+    {
+      "id": "n16",
+      "label": "N16 · Contrastar modelos",
+      "role": "process",
+      "source": [
+        "user-c"
+      ],
+      "purpose": "Comparamos esas formas de mostrar el trabajo para detectar contradicciones. Las corregimos y mantenemos al día."
+    },
+    {
+      "id": "n17",
+      "label": "N17 · Elegir el cambio",
+      "role": "process",
+      "source": [
+        "user-d"
+      ],
+      "purpose": "Elegimos cómo hacer el cambio: qué conviene planificar, qué probar y qué entregar de a poco."
+    },
+    {
+      "id": "n18",
+      "label": "N18 · Cuidar lo existente",
+      "role": "process",
+      "source": [
+        "user-d"
+      ],
+      "purpose": "Revisamos lo que ya existe para cambiarlo sin perder aquello que todavía resulta útil o evita problemas."
+    },
+    {
+      "id": "n19",
+      "label": "N19 · Comparar opciones",
+      "role": "process",
+      "source": [
+        "user-d"
+      ],
+      "purpose": "Comparamos opciones: comprar una herramienta, adaptar una existente, conectar varias o construir algo propio. También puede convenir mantener una tarea manual."
+    },
+    {
+      "id": "n20",
+      "label": "N20 · Ordenar decisiones",
+      "role": "process",
+      "source": [
+        "user-d"
+      ],
+      "purpose": "Organizamos el trabajo para saber cuándo avanzar, cuándo frenar y cuándo dar por terminada una etapa."
+    },
+    {
+      "id": "n21",
+      "label": "N21 · Pensar la continuidad",
+      "role": "process",
+      "source": [
+        "user-e"
+      ],
+      "purpose": "Distinguimos lo que termina con la entrega de lo que deberá seguir funcionando. Acordamos quién lo va a cuidar y mejorar después."
+    },
+    {
+      "id": "n22",
+      "label": "N22 · Poner a prueba",
+      "role": "process",
+      "source": [
+        "user-e"
+      ],
+      "purpose": "Ponemos la propuesta a prueba y aceptamos que los resultados puedan mostrarnos que hay que cambiarla o abandonarla."
+    },
+    {
+      "id": "n23",
+      "label": "N23 · Entregar un corte útil",
+      "role": "process",
+      "source": [
+        "user-e"
+      ],
+      "purpose": "Buscamos una primera entrega pequeña que ya permita resolver una necesidad completa."
+    },
+    {
+      "id": "n24",
+      "label": "N24 · Hacer lugar",
+      "role": "process",
+      "source": [
+        "user-e"
+      ],
+      "purpose": "Elegimos qué hacer primero con el tiempo y las personas disponibles. Dejamos claro qué tendrá que esperar y qué consecuencias tiene esa espera."
+    },
+    {
+      "id": "n25",
+      "label": "N25 · Terminar más",
+      "role": "process",
+      "source": [
+        "user-e"
+      ],
+      "purpose": "Aprendemos a empezar menos cosas a la vez para terminar más. Buscamos reducir las tareas acumuladas y las esperas."
+    },
+    {
+      "id": "n26",
+      "label": "N26 · Coordinar terceros",
+      "role": "process",
+      "source": [
+        "user-f"
+      ],
+      "purpose": "Miramos qué pasa cuando el servicio depende de varias organizaciones. Acordamos quién responde si algo falla y qué alternativas tenemos."
+    },
+    {
+      "id": "n27",
+      "label": "N27 · Acordar mensajes",
+      "role": "process",
+      "source": [
+        "user-f"
+      ],
+      "purpose": "Antes de conectar herramientas y equipos, acordamos qué significa cada mensaje y qué debe hacer quien lo recibe."
+    },
+    {
+      "id": "n28",
+      "label": "N28 · Probar el servicio",
+      "role": "process",
+      "source": [
+        "user-f"
+      ],
+      "purpose": "Comprobamos si el servicio funciona bien para quienes lo necesitan. Probamos situaciones reales, incluidas las difíciles."
+    },
+    {
+      "id": "n29",
+      "label": "N29 · Poner en marcha",
+      "role": "process",
+      "source": [
+        "user-f"
+      ],
+      "purpose": "Preparamos la puesta en marcha del cambio sin dejar de atender. También ensayamos cómo recuperar el servicio si algo falla."
+    },
+    {
+      "id": "n30",
+      "label": "N30 · Responder y mejorar",
+      "role": "process",
+      "source": [
+        "user-f"
+      ],
+      "purpose": "Aprendemos a detectar problemas a tiempo, responder y aprovechar lo ocurrido para mejorar."
+    },
+    {
+      "id": "n31",
+      "label": "N31 · Delimitar la IA",
+      "role": "process",
+      "source": [
+        "user-g"
+      ],
+      "purpose": "Evaluamos si la inteligencia artificial ayuda en una tarea concreta. Definimos qué puede hacer y dónde necesita control humano."
+    },
+    {
+      "id": "n32",
+      "label": "N32 · Probar la IA",
+      "role": "process",
+      "source": [
+        "user-g"
+      ],
+      "purpose": "Probamos esa inteligencia artificial con distintos casos antes de darle más libertad. Miramos especialmente los errores que pueden causar más daño."
+    },
+    {
+      "id": "n33",
+      "label": "N33 · Gobernarla en uso",
+      "role": "process",
+      "source": [
+        "user-g"
+      ],
+      "purpose": "Seguimos revisándola mientras se usa, porque puede cambiar. Acordamos quién la controla y cuándo corregirla, limitarla o retirarla."
+    },
+    {
+      "id": "n34",
+      "label": "N34 · Unir el recorrido",
+      "role": "process",
+      "source": [
+        "user-h"
+      ],
+      "purpose": "Unimos todo el recorrido para comprobar que las decisiones respondan al problema original y al resultado que buscamos."
+    },
+    {
+      "id": "n35",
+      "label": "N35 · Compartir lo decidido",
+      "role": "process",
+      "source": [
+        "user-h"
+      ],
+      "purpose": "Explicamos lo decidido de una manera que otras personas puedan entender, discutir y usar. Comprobamos que sepan cómo continuar."
+    },
+    {
+      "id": "n36",
+      "label": "N36 · Aprender del resultado",
+      "role": "process",
+      "source": [
+        "user-h"
+      ],
+      "purpose": "Volvemos sobre lo que hicimos para entender qué aprendimos, incluso si salió bien. Elegimos qué conservar y qué hacer distinto la próxima vez."
+    }
+  ],
+  "edges": [
+    {
+      "id": "e00a",
+      "from": "n00",
+      "to": "a",
+      "relation": "dependency",
+      "source": [
+        "user-n00",
+        "user-a"
+      ],
+      "meaning": "La guía prepara la primera lectura."
+    },
+    {
+      "id": "eab",
+      "from": "a",
+      "to": "b",
+      "relation": "evidence",
+      "source": [
+        "user-a",
+        "user-b"
+      ],
+      "meaning": "La pregunta sistémica se contrasta con personas y observaciones."
+    },
+    {
+      "id": "ebc",
+      "from": "b",
+      "to": "c",
+      "relation": "transformation",
+      "source": [
+        "user-b",
+        "user-c"
+      ],
+      "meaning": "El problema investigado se expresa en modelos revisables."
+    },
+    {
+      "id": "ecd",
+      "from": "c",
+      "to": "d",
+      "relation": "dependency",
+      "source": [
+        "user-c",
+        "user-d"
+      ],
+      "meaning": "El modelo informa la estrategia de cambio."
+    },
+    {
+      "id": "ede",
+      "from": "d",
+      "to": "e",
+      "relation": "transformation",
+      "source": [
+        "user-d",
+        "user-e"
+      ],
+      "meaning": "La estrategia se convierte en entregas y capacidad útil."
+    },
+    {
+      "id": "eef",
+      "from": "e",
+      "to": "f",
+      "relation": "flow",
+      "source": [
+        "user-e",
+        "user-f"
+      ],
+      "meaning": "La capacidad entregada requiere operación y reparación."
+    },
+    {
+      "id": "efg",
+      "from": "f",
+      "to": "g",
+      "relation": "boundary",
+      "source": [
+        "user-f",
+        "user-g"
+      ],
+      "meaning": "La IA entra como una capacidad limitada y gobernada, no como sustituto del servicio."
+    },
+    {
+      "id": "egh",
+      "from": "g",
+      "to": "h",
+      "relation": "feedback",
+      "source": [
+        "user-g",
+        "user-h"
+      ],
+      "meaning": "La revisión del uso se integra al aprendizaje del recorrido."
+    },
+    {
+      "id": "ehnew",
+      "from": "h",
+      "to": "a",
+      "relation": "feedback",
+      "source": [
+        "user-intro",
+        "user-h"
+      ],
+      "meaning": "Lo aprendido vuelve a mejorar la próxima formulación del problema."
+    },
+    {
+      "id": "belongs-a-n01",
+      "from": "a",
+      "to": "n01",
+      "relation": "dependency",
+      "source": [
+        "user-a"
+      ],
+      "meaning": "N01 forma parte de la estación A."
+    },
+    {
+      "id": "belongs-a-n02",
+      "from": "a",
+      "to": "n02",
+      "relation": "dependency",
+      "source": [
+        "user-a"
+      ],
+      "meaning": "N02 forma parte de la estación A."
+    },
+    {
+      "id": "belongs-a-n03",
+      "from": "a",
+      "to": "n03",
+      "relation": "dependency",
+      "source": [
+        "user-a"
+      ],
+      "meaning": "N03 forma parte de la estación A."
+    },
+    {
+      "id": "belongs-a-n04",
+      "from": "a",
+      "to": "n04",
+      "relation": "dependency",
+      "source": [
+        "user-a"
+      ],
+      "meaning": "N04 forma parte de la estación A."
+    },
+    {
+      "id": "belongs-b-n05",
+      "from": "b",
+      "to": "n05",
+      "relation": "dependency",
+      "source": [
+        "user-b"
+      ],
+      "meaning": "N05 forma parte de la estación B."
+    },
+    {
+      "id": "belongs-b-n06",
+      "from": "b",
+      "to": "n06",
+      "relation": "dependency",
+      "source": [
+        "user-b"
+      ],
+      "meaning": "N06 forma parte de la estación B."
+    },
+    {
+      "id": "belongs-b-n07",
+      "from": "b",
+      "to": "n07",
+      "relation": "dependency",
+      "source": [
+        "user-b"
+      ],
+      "meaning": "N07 forma parte de la estación B."
+    },
+    {
+      "id": "belongs-b-n08",
+      "from": "b",
+      "to": "n08",
+      "relation": "dependency",
+      "source": [
+        "user-b"
+      ],
+      "meaning": "N08 forma parte de la estación B."
+    },
+    {
+      "id": "belongs-b-n09",
+      "from": "b",
+      "to": "n09",
+      "relation": "dependency",
+      "source": [
+        "user-b"
+      ],
+      "meaning": "N09 forma parte de la estación B."
+    },
+    {
+      "id": "belongs-b-n10",
+      "from": "b",
+      "to": "n10",
+      "relation": "dependency",
+      "source": [
+        "user-b"
+      ],
+      "meaning": "N10 forma parte de la estación B."
+    },
+    {
+      "id": "belongs-c-n11",
+      "from": "c",
+      "to": "n11",
+      "relation": "dependency",
+      "source": [
+        "user-c"
+      ],
+      "meaning": "N11 forma parte de la estación C."
+    },
+    {
+      "id": "belongs-c-n12",
+      "from": "c",
+      "to": "n12",
+      "relation": "dependency",
+      "source": [
+        "user-c"
+      ],
+      "meaning": "N12 forma parte de la estación C."
+    },
+    {
+      "id": "belongs-c-n13",
+      "from": "c",
+      "to": "n13",
+      "relation": "dependency",
+      "source": [
+        "user-c"
+      ],
+      "meaning": "N13 forma parte de la estación C."
+    },
+    {
+      "id": "belongs-c-n14",
+      "from": "c",
+      "to": "n14",
+      "relation": "dependency",
+      "source": [
+        "user-c"
+      ],
+      "meaning": "N14 forma parte de la estación C."
+    },
+    {
+      "id": "belongs-c-n15",
+      "from": "c",
+      "to": "n15",
+      "relation": "dependency",
+      "source": [
+        "user-c"
+      ],
+      "meaning": "N15 forma parte de la estación C."
+    },
+    {
+      "id": "belongs-c-n16",
+      "from": "c",
+      "to": "n16",
+      "relation": "dependency",
+      "source": [
+        "user-c"
+      ],
+      "meaning": "N16 forma parte de la estación C."
+    },
+    {
+      "id": "belongs-d-n17",
+      "from": "d",
+      "to": "n17",
+      "relation": "dependency",
+      "source": [
+        "user-d"
+      ],
+      "meaning": "N17 forma parte de la estación D."
+    },
+    {
+      "id": "belongs-d-n18",
+      "from": "d",
+      "to": "n18",
+      "relation": "dependency",
+      "source": [
+        "user-d"
+      ],
+      "meaning": "N18 forma parte de la estación D."
+    },
+    {
+      "id": "belongs-d-n19",
+      "from": "d",
+      "to": "n19",
+      "relation": "dependency",
+      "source": [
+        "user-d"
+      ],
+      "meaning": "N19 forma parte de la estación D."
+    },
+    {
+      "id": "belongs-d-n20",
+      "from": "d",
+      "to": "n20",
+      "relation": "dependency",
+      "source": [
+        "user-d"
+      ],
+      "meaning": "N20 forma parte de la estación D."
+    },
+    {
+      "id": "belongs-e-n21",
+      "from": "e",
+      "to": "n21",
+      "relation": "dependency",
+      "source": [
+        "user-e"
+      ],
+      "meaning": "N21 forma parte de la estación E."
+    },
+    {
+      "id": "belongs-e-n22",
+      "from": "e",
+      "to": "n22",
+      "relation": "dependency",
+      "source": [
+        "user-e"
+      ],
+      "meaning": "N22 forma parte de la estación E."
+    },
+    {
+      "id": "belongs-e-n23",
+      "from": "e",
+      "to": "n23",
+      "relation": "dependency",
+      "source": [
+        "user-e"
+      ],
+      "meaning": "N23 forma parte de la estación E."
+    },
+    {
+      "id": "belongs-e-n24",
+      "from": "e",
+      "to": "n24",
+      "relation": "dependency",
+      "source": [
+        "user-e"
+      ],
+      "meaning": "N24 forma parte de la estación E."
+    },
+    {
+      "id": "belongs-e-n25",
+      "from": "e",
+      "to": "n25",
+      "relation": "dependency",
+      "source": [
+        "user-e"
+      ],
+      "meaning": "N25 forma parte de la estación E."
+    },
+    {
+      "id": "belongs-f-n26",
+      "from": "f",
+      "to": "n26",
+      "relation": "dependency",
+      "source": [
+        "user-f"
+      ],
+      "meaning": "N26 forma parte de la estación F."
+    },
+    {
+      "id": "belongs-f-n27",
+      "from": "f",
+      "to": "n27",
+      "relation": "dependency",
+      "source": [
+        "user-f"
+      ],
+      "meaning": "N27 forma parte de la estación F."
+    },
+    {
+      "id": "belongs-f-n28",
+      "from": "f",
+      "to": "n28",
+      "relation": "dependency",
+      "source": [
+        "user-f"
+      ],
+      "meaning": "N28 forma parte de la estación F."
+    },
+    {
+      "id": "belongs-f-n29",
+      "from": "f",
+      "to": "n29",
+      "relation": "dependency",
+      "source": [
+        "user-f"
+      ],
+      "meaning": "N29 forma parte de la estación F."
+    },
+    {
+      "id": "belongs-f-n30",
+      "from": "f",
+      "to": "n30",
+      "relation": "dependency",
+      "source": [
+        "user-f"
+      ],
+      "meaning": "N30 forma parte de la estación F."
+    },
+    {
+      "id": "belongs-g-n31",
+      "from": "g",
+      "to": "n31",
+      "relation": "dependency",
+      "source": [
+        "user-g"
+      ],
+      "meaning": "N31 forma parte de la estación G."
+    },
+    {
+      "id": "belongs-g-n32",
+      "from": "g",
+      "to": "n32",
+      "relation": "dependency",
+      "source": [
+        "user-g"
+      ],
+      "meaning": "N32 forma parte de la estación G."
+    },
+    {
+      "id": "belongs-g-n33",
+      "from": "g",
+      "to": "n33",
+      "relation": "dependency",
+      "source": [
+        "user-g"
+      ],
+      "meaning": "N33 forma parte de la estación G."
+    },
+    {
+      "id": "belongs-h-n34",
+      "from": "h",
+      "to": "n34",
+      "relation": "dependency",
+      "source": [
+        "user-h"
+      ],
+      "meaning": "N34 forma parte de la estación H."
+    },
+    {
+      "id": "belongs-h-n35",
+      "from": "h",
+      "to": "n35",
+      "relation": "dependency",
+      "source": [
+        "user-h"
+      ],
+      "meaning": "N35 forma parte de la estación H."
+    },
+    {
+      "id": "belongs-h-n36",
+      "from": "h",
+      "to": "n36",
+      "relation": "dependency",
+      "source": [
+        "user-h"
+      ],
+      "meaning": "N36 forma parte de la estación H."
+    }
+  ]
+}
