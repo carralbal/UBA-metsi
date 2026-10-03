@@ -46,7 +46,7 @@ try {
     const intermediate = join(temporary, `${portrait.id}.png`);
     const processed = spawnSync('ffmpeg', [
       '-hide_banner', '-loglevel', 'error', '-y', '-i', input,
-      '-vf', 'scale=420:420:force_original_aspect_ratio=increase,crop=420:420,format=gray',
+      '-vf', `${portrait.crop ? `${portrait.crop},` : ''}scale=420:420:force_original_aspect_ratio=increase,crop=420:420,format=gray`,
       '-frames:v', '1', intermediate,
     ], { encoding: 'utf8' });
     if (processed.status !== 0) throw new Error(`${portrait.name}: ${processed.stderr}`);

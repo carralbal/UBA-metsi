@@ -39,7 +39,7 @@ try {
       const viewportOverflow = section.scrollWidth > document.documentElement.clientWidth + 1;
       return { broken, overlap, viewportOverflow, imageCount: imgs.length };
     });
-    if (result.broken.length || result.overlap.length || result.viewportOverflow || result.imageCount !== 11) {
+    if (result.broken.length || result.overlap.length || result.viewportOverflow || result.imageCount !== 18) {
       failures.push({ width, ...result });
     }
     if ([390, 1440].includes(width)) {
