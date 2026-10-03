@@ -5,7 +5,7 @@ import { join, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
 
 const repo = resolve(import.meta.dirname, '..');
-const directory = join(repo, 'site/media/referentes');
+const directory = join(repo, 'site/covers/referentes');
 const portraits = JSON.parse(await readFile(join(directory, 'manifest.json'), 'utf8'));
 const temporary = await mkdtemp(join(tmpdir(), 'metsi-referentes-'));
 
