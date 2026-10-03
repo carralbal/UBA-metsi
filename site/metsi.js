@@ -90,8 +90,8 @@
         label: 'Estudiante', shortLabel: 'Estudiante', tab: 'estudiantes', title: 'Llegá a clase con una idea propia.',
         intro: 'Empezá por la guía. Después elegí la lectura del encuentro y prepará tus preguntas.',
         deck: 'Vas a aprender a entender un problema antes de salir a resolverlo. Las lecturas, los ejemplos y el caso Hotel Horizonte te ayudan a preparar la clase y a probar tus propias decisiones.',
-        actions: [['Empezar por N00','pdf/N00-METSI-lectura-previa-v3-final.pdf'],['Explorar las lecturas','#biblioteca'],['Cómo se aprende','#experiencia']],
-        route: [['Prepará el próximo encuentro','La guía N00 explica cómo leer y qué llevar a clase.','pdf/N00-METSI-lectura-previa-v3-final.pdf'],['Elegí tu lectura','36 lecturas con explicaciones, ejemplos y ejercicios.','#biblioteca'],['Ubicá cada concepto','El atlas conecta las prácticas con secciones de las lecturas.','#atlas-practicas']]
+        actions: [['Empezar por N00','pdf/publicados/N00-METSI-lectura-previa-v4-recorrido.pdf'],['Explorar las lecturas','#biblioteca'],['Cómo se aprende','#experiencia']],
+        route: [['Prepará el próximo encuentro','La guía N00 explica cómo leer y qué llevar a clase.','pdf/publicados/N00-METSI-lectura-previa-v4-recorrido.pdf'],['Elegí tu lectura','36 lecturas con explicaciones, ejemplos y ejercicios.','#biblioteca'],['Ubicá cada concepto','El atlas conecta las prácticas con secciones de las lecturas.','#atlas-practicas']]
       },
       teacher: {
         label: 'Docente', shortLabel: 'Docente', tab: 'docencia', title: 'Prepará el encuentro, no sólo la explicación.',

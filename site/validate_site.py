@@ -32,7 +32,7 @@ DYNAMIC_QA_ROOT = "qa-reports/n11-n36-v9"
 DYNAMIC_QA_VALIDATOR = "validate_n11_n36_v6.py"
 
 PDF_FILES = {
-    "N00": "N00-METSI-lectura-previa-v3-final.pdf",
+    "N00": "publicados/N00-METSI-lectura-previa-v4-recorrido.pdf",
     "N01": "N01-METSI-lectura-previa-v18-final.pdf",
     "N02": "N02-METSI-lectura-previa-v15-final.pdf",
     "N03": "N03-METSI-lectura-previa-v10-final.pdf",
@@ -55,7 +55,7 @@ COVER_FILES = {
 }
 
 LOCKED_PAGES = {
-    "N00": 44,
+    "N00": 50,
     "N01": 32,
     "N02": 33,
     "N03": 31,
