@@ -417,7 +417,7 @@ footer{padding:3rem clamp(1.4rem,7vw,7rem);display:grid;grid-template-columns:1f
 .case-study::before{display:none}
 .case-study .case-grid{align-items:stretch;grid-template-columns:minmax(0,1fr) minmax(18rem,.63fr);gap:clamp(2rem,7vw,7rem)}
 .case-study .case-copy{margin-top:3.5rem;max-width:42rem}
-.case-video-frame{position:relative;min-height:42rem;overflow:hidden;background:var(--ink) url('covers/case-hotel-lobby-v3.webp') center/cover no-repeat}
+.case-video-frame{position:relative;min-height:42rem;overflow:hidden;background:var(--ink) url('covers/case-hotel-atrium-v4.webp') center/cover no-repeat}
 .case-video-frame::after{content:"";position:absolute;left:1.5rem;top:1.5rem;width:3.3rem;height:.35rem;background:var(--volt);z-index:1}
 .case-video-frame>.ambient-video,.closing>.ambient-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;z-index:0;opacity:0;transition:opacity .8s ease}
 .case-video-frame>.ambient-video.is-playing,.closing>.ambient-video.is-playing{opacity:1}
