@@ -217,6 +217,11 @@ h1{margin:0;max-width:13ch;font-size:clamp(3.7rem,7.2vw,8rem);line-height:.88;le
 .practice-detail li{color:var(--muted);font-size:.64rem;line-height:1.35}.practice-detail li a,.practice-detail li strong{color:var(--ink);font-weight:700;text-underline-offset:.2rem}
 .practice-detail[data-status="contextual"] .practice-detail-heading>span{color:#666962}
 .practice-atlas-caption{display:grid;grid-template-columns:2rem minmax(0,1fr);gap:.8rem;max-width:64rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);color:var(--muted);font-size:.68rem;line-height:1.5}.practice-atlas-caption span{color:#6f8e00;font-weight:700;letter-spacing:.1em}
+.learning-map-section{padding:clamp(2.5rem,5vw,5rem) 0;background:#f1f0ea;color:#171817;scroll-margin-top:5rem}
+.learning-map-section #metsi-viaje-vertical h2{color:#171817}
+.learning-map-open{max-width:1024px;margin:1rem auto 0;padding:0 clamp(20px,4vw,48px);text-align:right}
+.learning-map-open a{color:#171817;font-size:.68rem;font-weight:700;letter-spacing:.11em;text-decoration:none;text-transform:uppercase;border-bottom:2px solid #cfff00;padding-bottom:.4rem}
+.learning-map-open a:hover,.learning-map-open a:focus-visible{text-decoration:underline;text-underline-offset:.2rem}
 .block-map{padding-top:1rem;max-width:var(--page);margin:auto}
 .block{border-top:1px solid rgba(255,255,255,.25)}.block:last-child{border-bottom:1px solid rgba(255,255,255,.25)}
 .block summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:5rem 1fr auto 2rem;align-items:center;gap:1.4rem;padding:1.5rem 0}.block summary::-webkit-details-marker{display:none}.block summary::after{content:"+";font:400 2rem/1 var(--serif);margin-left:1.2rem}.block[open] summary::after{content:"−"}.block summary:focus-visible{outline:2px solid var(--volt);outline-offset:5px}
