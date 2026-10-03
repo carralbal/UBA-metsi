@@ -260,7 +260,7 @@ window.METSI_ATLAS = {
           "section": "Una API no es una promesa genérica de éxito",
           "page": 15,
           "title": "Entender lo mismo antes de conectar",
-          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=15"
+          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=six-approved-20261003#page=15"
         },
         {
           "code": "N13",
@@ -292,7 +292,7 @@ window.METSI_ATLAS = {
           "section": "Procedencia: saber de dónde salió y qué se cambió",
           "page": 17,
           "title": "La IA cambió. ¿Sigue siendo confiable?",
-          "href": "pdf/publicados/N33-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=17"
+          "href": "pdf/publicados/N33-METSI-lectura-previa-v10-final.pdf?v=six-approved-20261003#page=17"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -392,7 +392,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Mostrar los límites y comprobar qué se transfiere",
           "page": 17,
           "title": "Explicar para que otros puedan actuar",
-          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=17"
+          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=six-approved-20261003#page=17"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -417,7 +417,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Cambiar el acuerdo sin romper a quienes lo usan",
           "page": 22,
           "title": "Entender lo mismo antes de conectar",
-          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=22"
+          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=six-approved-20261003#page=22"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -707,14 +707,14 @@ window.METSI_ATLAS = {
           "section": "Fuentes para observar y aprender",
           "page": 12,
           "title": "Detectar, responder y aprender",
-          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=12"
+          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=six-approved-20261003#page=12"
         },
         {
           "code": "N30",
           "section": "Movimiento 2 · Acordar qué medir y qué hacer cuando empeora",
           "page": 15,
           "title": "Detectar, responder y aprender",
-          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=15"
+          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=six-approved-20261003#page=15"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -732,7 +732,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Pasar de datos sueltos a un recorrido que pueda reconstruirse",
           "page": 13,
           "title": "Detectar, responder y aprender",
-          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=13"
+          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=six-approved-20261003#page=13"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -793,7 +793,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Cambiar el acuerdo sin romper a quienes lo usan",
           "page": 22,
           "title": "Entender lo mismo antes de conectar",
-          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=22"
+          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=six-approved-20261003#page=22"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -818,7 +818,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Cambiar el acuerdo sin romper a quienes lo usan",
           "page": 22,
           "title": "Entender lo mismo antes de conectar",
-          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=22"
+          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=six-approved-20261003#page=22"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -836,7 +836,7 @@ window.METSI_ATLAS = {
           "section": "Inventariar usos, no solamente licencias",
           "page": 12,
           "title": "La IA cambió. ¿Sigue siendo confiable?",
-          "href": "pdf/publicados/N33-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=12"
+          "href": "pdf/publicados/N33-METSI-lectura-previa-v10-final.pdf?v=six-approved-20261003#page=12"
         }
       ],
       "referenceLabel": "Lectura relacionada · no desarrolla COBIT"
@@ -886,7 +886,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Responder sin esperar a conocer toda la causa",
           "page": 22,
           "title": "Detectar, responder y aprender",
-          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=22"
+          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=six-approved-20261003#page=22"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -904,14 +904,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Empezar por la decisión, no por las diapositivas",
           "page": 12,
           "title": "Explicar para que otros puedan actuar",
-          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=12"
+          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=six-approved-20261003#page=12"
         },
         {
           "code": "N35",
           "section": "Movimiento 3 · Mostrar los límites y comprobar qué se transfiere",
           "page": 17,
           "title": "Explicar para que otros puedan actuar",
-          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=17"
+          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=six-approved-20261003#page=17"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -929,14 +929,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Volver a la experiencia sin maquillarla",
           "page": 9,
           "title": "¿Qué aprendimos de lo que hicimos?",
-          "href": "pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=9"
+          "href": "pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf?v=six-approved-20261003#page=9"
         },
         {
           "code": "N36",
           "section": "Movimiento 2 · Decidir qué conviene corregir",
           "page": 12,
           "title": "¿Qué aprendimos de lo que hicimos?",
-          "href": "pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=12"
+          "href": "pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf?v=six-approved-20261003#page=12"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"

@@ -1039,13 +1039,13 @@
       "code": "N27",
       "status": "closed",
       "pdf": "site/pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf",
-      "tag": "approved-covers-20261003",
+      "tag": "six-approved-20261003",
       "public_pdf": "site/pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N27.jpg",
       "pages": 39,
-      "bytes": 5840816,
-      "sha256": "ec2c4cb7057a680d0858d4f2c1789dde5bea154ff41ff15865087b98c8cd68f5",
-      "cover_sha256": "36fe0093cda1046187ed4dc356f5b2f8becb3738ef3d8cc8ee390f09645704a6",
+      "bytes": 6254686,
+      "sha256": "d12f0ee9c9eea1ca1059592f4628c2c5834ef2974a5cf11451ccac1f00139761",
+      "cover_sha256": "6020f0b72c39f970aef8f0e24af270ca3258e10531314cfd9709114ce538d5af",
       "canonical_source": "pedagogy/plain-language-edition/N27.md",
       "canonical_sha256": "8bdf6a45a7f0d92f24494d3975b754ec47a6e0d40fa25eb56abbeeef2816d9cb",
       "package_files": 40,
@@ -1054,16 +1054,20 @@
       "qa_checks": 9,
       "qa_validator": "scripts/audit_editorial_recovery.py + scripts/audit_editorial_geometry.py + scripts/verify_editorial_cover_lock.py",
       "source_version": "editorial-arte-20261001",
-      "editorial_revision": "approved-covers-20261003",
+      "editorial_revision": "six-approved-20261003",
       "title": "Entender lo mismo antes de conectar",
       "subtitle": "APIs y contratos de intercambio: significado, tiempo y operación",
-      "publication_revision": "approved-covers-20261003",
+      "publication_revision": "six-approved-20261003",
       "publication_assembly": {
         "mode": "replace_cover",
-        "input_pdf_sha256": "63ee73476f3d642e0fcc6e6569f714f166af30ce8e182a83561e5af68612aa00",
-        "locked_cover_sha256": "5b9acf58e9d17679033c8131c0efb2bf21c3a1286381977527069b64cdbd016f",
-        "interior_pages_signature_sha256": "6b4989389f1cd61520d5657072ecd84435bbe7f7738a6d1a436ff57db30d23da",
-        "cover_alt_added": true
+        "input_pdf_sha256": "ec2c4cb7057a680d0858d4f2c1789dde5bea154ff41ff15865087b98c8cd68f5",
+        "approved_cover_svg_sha256": "2caeb8c771b6b9f556567faa57ac644d9b425ce231599d1b03a62e5359075007",
+        "approved_cover_png_sha256": "f2cc623bce5d22208b5c2c5f4c02ccce0cf0ae54b51433714a206c1f5ac651d4",
+        "source_authority_sha256": "85873e347788c7b53166f3590d0d4aef6246c039cf9bed1271f230d7091f5c19",
+        "proof_sha256": "90159663376ac0b80ca9ef038370491393f8a1f114a013257f046c3a3af7f58f",
+        "cover_alt_added": true,
+        "locked_cover_sha256": "e8242561e7cc2688de1039d933e7b5615da5d014aa7385138b039689e0d67fd4",
+        "interior_pages_signature_sha256": "6b4989389f1cd61520d5657072ecd84435bbe7f7738a6d1a436ff57db30d23da"
       },
       "previous_publication": {
         "pdf": "site/pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf",
@@ -1072,7 +1076,48 @@
         "bytes": 14576981,
         "sha256": "6059be40d9c0d03f32e088027179d0db80a833f7d90a3f8fcd9b2ba01b41580f",
         "tag": "editorial-arte-20261001"
-      }
+      },
+      "publication_history": [
+        {
+          "code": "N27",
+          "status": "closed",
+          "pdf": "site/pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf",
+          "tag": "approved-covers-20261003",
+          "public_pdf": "site/pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf",
+          "cover": "site/covers/N27.jpg",
+          "pages": 39,
+          "bytes": 5840816,
+          "sha256": "ec2c4cb7057a680d0858d4f2c1789dde5bea154ff41ff15865087b98c8cd68f5",
+          "cover_sha256": "36fe0093cda1046187ed4dc356f5b2f8becb3738ef3d8cc8ee390f09645704a6",
+          "canonical_source": "pedagogy/plain-language-edition/N27.md",
+          "canonical_sha256": "8bdf6a45a7f0d92f24494d3975b754ec47a6e0d40fa25eb56abbeeef2816d9cb",
+          "package_files": 40,
+          "qa_report": "pedagogy/editorial-recovery-20260929/art-pass-20261001.json",
+          "qa_status": "PASS",
+          "qa_checks": 9,
+          "qa_validator": "scripts/audit_editorial_recovery.py + scripts/audit_editorial_geometry.py + scripts/verify_editorial_cover_lock.py",
+          "source_version": "editorial-arte-20261001",
+          "editorial_revision": "approved-covers-20261003",
+          "title": "Entender lo mismo antes de conectar",
+          "subtitle": "APIs y contratos de intercambio: significado, tiempo y operación",
+          "publication_revision": "approved-covers-20261003",
+          "publication_assembly": {
+            "mode": "replace_cover",
+            "input_pdf_sha256": "63ee73476f3d642e0fcc6e6569f714f166af30ce8e182a83561e5af68612aa00",
+            "locked_cover_sha256": "5b9acf58e9d17679033c8131c0efb2bf21c3a1286381977527069b64cdbd016f",
+            "interior_pages_signature_sha256": "6b4989389f1cd61520d5657072ecd84435bbe7f7738a6d1a436ff57db30d23da",
+            "cover_alt_added": true
+          },
+          "previous_publication": {
+            "pdf": "site/pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf",
+            "public_pdf": "site/pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf",
+            "pages": 34,
+            "bytes": 14576981,
+            "sha256": "6059be40d9c0d03f32e088027179d0db80a833f7d90a3f8fcd9b2ba01b41580f",
+            "tag": "editorial-arte-20261001"
+          }
+        }
+      ]
     },
     {
       "code": "N28",
@@ -1156,13 +1201,13 @@
       "code": "N30",
       "status": "closed",
       "pdf": "site/pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf",
-      "tag": "approved-covers-20261003",
+      "tag": "six-approved-20261003",
       "public_pdf": "site/pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N30.jpg",
       "pages": 40,
-      "bytes": 5772032,
-      "sha256": "055874dd680e9e70c337fa0f825727f467f0caa6e07822e7e0c0f95951255da2",
-      "cover_sha256": "dac4b479ecb71a6fafe219aa7370ea0288060d860c96148258af92c548b7ff3b",
+      "bytes": 6396184,
+      "sha256": "0895109a0916e165b2d0cd09f169d802230792975288ba734a3b9e37b168ffba",
+      "cover_sha256": "aaafbce9e26a4ce0b7e0101ec6438db802f05ac4ca5eb5ad41f160fbc7ae56d1",
       "canonical_source": "pedagogy/plain-language-edition/N30.md",
       "canonical_sha256": "c2e24d23fa8de0eef92bbfa72b2405beb10bee6d0fef043f517b248846f94af8",
       "package_files": 41,
@@ -1171,16 +1216,20 @@
       "qa_checks": 9,
       "qa_validator": "scripts/audit_editorial_recovery.py + scripts/audit_editorial_geometry.py + scripts/verify_editorial_cover_lock.py",
       "source_version": "editorial-arte-20261001",
-      "editorial_revision": "approved-covers-20261003",
+      "editorial_revision": "six-approved-20261003",
       "title": "Detectar, responder y aprender",
       "subtitle": "Observabilidad, objetivos de servicio, incidentes y aprendizaje operativo",
-      "publication_revision": "approved-covers-20261003",
+      "publication_revision": "six-approved-20261003",
       "publication_assembly": {
         "mode": "replace_cover",
-        "input_pdf_sha256": "4e9a024b79e7a956f6734e132000488aea1a9865ca0eb4f7a707a94f7f7a7776",
-        "locked_cover_sha256": "77566b3c4bbac796e5bc822dfc69d0bd5426a601c6fbf335daa91cc7e94d15df",
-        "interior_pages_signature_sha256": "1b53083e336c0c093f07948dafeea22eb8bee49f09e49f3464aa7b96f4ad6b95",
-        "cover_alt_added": true
+        "input_pdf_sha256": "055874dd680e9e70c337fa0f825727f467f0caa6e07822e7e0c0f95951255da2",
+        "approved_cover_svg_sha256": "2c571cdac31f6f07fabd2ad134c2e7d8540d0fde63e8b561a14f996f37cab8f1",
+        "approved_cover_png_sha256": "43c82ec261112cfe5f1293a3ba453607d116a89d9a4d77c304dbc958ba0d5a9c",
+        "source_authority_sha256": "85873e347788c7b53166f3590d0d4aef6246c039cf9bed1271f230d7091f5c19",
+        "proof_sha256": "090ded33de872aeb29a5c02892395d30baf914d6adcf5ed1b446dcd8971e329c",
+        "cover_alt_added": true,
+        "locked_cover_sha256": "f04272a452e445ca7e52286175a444dbd291b33d397fee55e03d03115ccdacd7",
+        "interior_pages_signature_sha256": "1b53083e336c0c093f07948dafeea22eb8bee49f09e49f3464aa7b96f4ad6b95"
       },
       "previous_publication": {
         "pdf": "site/pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf",
@@ -1189,7 +1238,48 @@
         "bytes": 14146589,
         "sha256": "9d170cece7085c3793463a14b7d0b8dbd6beb7f46c9ae168ac03af2211e3691a",
         "tag": "editorial-arte-20261001"
-      }
+      },
+      "publication_history": [
+        {
+          "code": "N30",
+          "status": "closed",
+          "pdf": "site/pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf",
+          "tag": "approved-covers-20261003",
+          "public_pdf": "site/pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf",
+          "cover": "site/covers/N30.jpg",
+          "pages": 40,
+          "bytes": 5772032,
+          "sha256": "055874dd680e9e70c337fa0f825727f467f0caa6e07822e7e0c0f95951255da2",
+          "cover_sha256": "dac4b479ecb71a6fafe219aa7370ea0288060d860c96148258af92c548b7ff3b",
+          "canonical_source": "pedagogy/plain-language-edition/N30.md",
+          "canonical_sha256": "c2e24d23fa8de0eef92bbfa72b2405beb10bee6d0fef043f517b248846f94af8",
+          "package_files": 41,
+          "qa_report": "pedagogy/editorial-recovery-20260929/art-pass-20261001.json",
+          "qa_status": "PASS",
+          "qa_checks": 9,
+          "qa_validator": "scripts/audit_editorial_recovery.py + scripts/audit_editorial_geometry.py + scripts/verify_editorial_cover_lock.py",
+          "source_version": "editorial-arte-20261001",
+          "editorial_revision": "approved-covers-20261003",
+          "title": "Detectar, responder y aprender",
+          "subtitle": "Observabilidad, objetivos de servicio, incidentes y aprendizaje operativo",
+          "publication_revision": "approved-covers-20261003",
+          "publication_assembly": {
+            "mode": "replace_cover",
+            "input_pdf_sha256": "4e9a024b79e7a956f6734e132000488aea1a9865ca0eb4f7a707a94f7f7a7776",
+            "locked_cover_sha256": "77566b3c4bbac796e5bc822dfc69d0bd5426a601c6fbf335daa91cc7e94d15df",
+            "interior_pages_signature_sha256": "1b53083e336c0c093f07948dafeea22eb8bee49f09e49f3464aa7b96f4ad6b95",
+            "cover_alt_added": true
+          },
+          "previous_publication": {
+            "pdf": "site/pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf",
+            "public_pdf": "site/pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf",
+            "pages": 32,
+            "bytes": 14146589,
+            "sha256": "9d170cece7085c3793463a14b7d0b8dbd6beb7f46c9ae168ac03af2211e3691a",
+            "tag": "editorial-arte-20261001"
+          }
+        }
+      ]
     },
     {
       "code": "N31",
@@ -1234,13 +1324,13 @@
       "code": "N32",
       "status": "closed",
       "pdf": "site/pdf/publicados/N32-METSI-lectura-previa-v10-final.pdf",
-      "tag": "approved-covers-20261003",
+      "tag": "six-approved-20261003",
       "public_pdf": "site/pdf/publicados/N32-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N32.jpg",
       "pages": 44,
-      "bytes": 6604708,
-      "sha256": "debce3ade574c5f4091325815383961a60bca38f38dd5883dc67e187d9bdbd2a",
-      "cover_sha256": "112bca7117eb75f28f00af5374712a2b8b76fab9041ffe03769b8dea70fa29e6",
+      "bytes": 7288714,
+      "sha256": "07d4c114452c34852d415b7e1463921a7c000dadaeeed13b789d0667d8b3155a",
+      "cover_sha256": "296373eb3cc86f9ea54213f4dd10f79138418d2f5217c80d0af2c37181c6e053",
       "canonical_source": "pedagogy/plain-language-edition/N32.md",
       "canonical_sha256": "326190ec04866f01e87913e61fdfd2602437f9fec356bd24ecd6b7c85db484c9",
       "package_files": 40,
@@ -1249,16 +1339,20 @@
       "qa_checks": 9,
       "qa_validator": "scripts/audit_editorial_recovery.py + scripts/audit_editorial_geometry.py + scripts/verify_editorial_cover_lock.py",
       "source_version": "editorial-arte-20261001",
-      "editorial_revision": "approved-covers-20261003",
+      "editorial_revision": "six-approved-20261003",
       "title": "¿Está lista esta IA para usarla?",
       "subtitle": "Evaluación situada, cobertura, gravedad de errores y supervisión",
-      "publication_revision": "approved-covers-20261003",
+      "publication_revision": "six-approved-20261003",
       "publication_assembly": {
         "mode": "replace_cover",
-        "input_pdf_sha256": "405be586aeb44026cc446dd147de80566db621fee1971cf72825df5e4b039747",
-        "locked_cover_sha256": "59d5877da2a1df1ae29266332b23430458bb16dc1942302895fd698b4cfe7ad4",
-        "interior_pages_signature_sha256": "4bfac366dfe4925cd64ea5c380356bb297d60acd3bec960e00c72889a9fc7cc3",
-        "cover_alt_added": true
+        "input_pdf_sha256": "debce3ade574c5f4091325815383961a60bca38f38dd5883dc67e187d9bdbd2a",
+        "approved_cover_svg_sha256": "6e32f2a10a191d647ddb3e384b23886678e5e0f497c5a73d1b393e31d708a5a7",
+        "approved_cover_png_sha256": "8b2086210d810b6eda2b0bd28338d79e626395019e6b9c6922a19ad4d17b39d0",
+        "source_authority_sha256": "85873e347788c7b53166f3590d0d4aef6246c039cf9bed1271f230d7091f5c19",
+        "proof_sha256": "026ba33bbf290ae29335d340531df0636c7705fd86487409082a46fae61089c2",
+        "cover_alt_added": true,
+        "locked_cover_sha256": "b1992c0092a8683305ee7cd2691af6e30678f8831a3f19019a91330ba777a309",
+        "interior_pages_signature_sha256": "4bfac366dfe4925cd64ea5c380356bb297d60acd3bec960e00c72889a9fc7cc3"
       },
       "previous_publication": {
         "pdf": "site/pdf/publicados/N32-METSI-lectura-previa-v10-final.pdf",
@@ -1267,19 +1361,60 @@
         "bytes": 18712061,
         "sha256": "e9c5389aebda6d978f11a2a3078a02661c631e66e8040fdb06539b677f05885e",
         "tag": "editorial-arte-20261001"
-      }
+      },
+      "publication_history": [
+        {
+          "code": "N32",
+          "status": "closed",
+          "pdf": "site/pdf/publicados/N32-METSI-lectura-previa-v10-final.pdf",
+          "tag": "approved-covers-20261003",
+          "public_pdf": "site/pdf/publicados/N32-METSI-lectura-previa-v10-final.pdf",
+          "cover": "site/covers/N32.jpg",
+          "pages": 44,
+          "bytes": 6604708,
+          "sha256": "debce3ade574c5f4091325815383961a60bca38f38dd5883dc67e187d9bdbd2a",
+          "cover_sha256": "112bca7117eb75f28f00af5374712a2b8b76fab9041ffe03769b8dea70fa29e6",
+          "canonical_source": "pedagogy/plain-language-edition/N32.md",
+          "canonical_sha256": "326190ec04866f01e87913e61fdfd2602437f9fec356bd24ecd6b7c85db484c9",
+          "package_files": 40,
+          "qa_report": "pedagogy/editorial-recovery-20260929/art-pass-20261001.json",
+          "qa_status": "PASS",
+          "qa_checks": 9,
+          "qa_validator": "scripts/audit_editorial_recovery.py + scripts/audit_editorial_geometry.py + scripts/verify_editorial_cover_lock.py",
+          "source_version": "editorial-arte-20261001",
+          "editorial_revision": "approved-covers-20261003",
+          "title": "¿Está lista esta IA para usarla?",
+          "subtitle": "Evaluación situada, cobertura, gravedad de errores y supervisión",
+          "publication_revision": "approved-covers-20261003",
+          "publication_assembly": {
+            "mode": "replace_cover",
+            "input_pdf_sha256": "405be586aeb44026cc446dd147de80566db621fee1971cf72825df5e4b039747",
+            "locked_cover_sha256": "59d5877da2a1df1ae29266332b23430458bb16dc1942302895fd698b4cfe7ad4",
+            "interior_pages_signature_sha256": "4bfac366dfe4925cd64ea5c380356bb297d60acd3bec960e00c72889a9fc7cc3",
+            "cover_alt_added": true
+          },
+          "previous_publication": {
+            "pdf": "site/pdf/publicados/N32-METSI-lectura-previa-v10-final.pdf",
+            "public_pdf": "site/pdf/publicados/N32-METSI-lectura-previa-v10-final.pdf",
+            "pages": 37,
+            "bytes": 18712061,
+            "sha256": "e9c5389aebda6d978f11a2a3078a02661c631e66e8040fdb06539b677f05885e",
+            "tag": "editorial-arte-20261001"
+          }
+        }
+      ]
     },
     {
       "code": "N33",
       "status": "closed",
       "pdf": "site/pdf/publicados/N33-METSI-lectura-previa-v10-final.pdf",
-      "tag": "approved-covers-20261003",
+      "tag": "six-approved-20261003",
       "public_pdf": "site/pdf/publicados/N33-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N33.jpg",
       "pages": 42,
-      "bytes": 6283580,
-      "sha256": "6f485cb3fbd5c4ce38e731e02c3e980d21f22a8c937c1f98635181fb886c6bdd",
-      "cover_sha256": "9b8a7880451ce50510983b50b556f8c9a67e49f3779720353490a06ce5d67766",
+      "bytes": 6451984,
+      "sha256": "ab9651402abff7205e1bf624255a35ed00d958af0277c57cbe5638a4824b3908",
+      "cover_sha256": "d589d7ddae8b400d5a85a3c1a4290113bcaa26340c72ea1c70ca58ce5a55ab4e",
       "canonical_source": "pedagogy/plain-language-edition/N33.md",
       "canonical_sha256": "f826e7d2a2080cadf1b1f8ba2f898bdb3f56cb6708ff30ead3349f780bda8753",
       "package_files": 40,
@@ -1288,16 +1423,20 @@
       "qa_checks": 9,
       "qa_validator": "scripts/audit_editorial_recovery.py + scripts/audit_editorial_geometry.py + scripts/verify_editorial_cover_lock.py",
       "source_version": "editorial-completo-20261002",
-      "editorial_revision": "approved-covers-20261003",
+      "editorial_revision": "six-approved-20261003",
       "title": "La IA cambió. ¿Sigue siendo confiable?",
       "subtitle": "Gobierno del uso, seguimiento de cambios, incidentes y retiro",
-      "publication_revision": "approved-covers-20261003",
+      "publication_revision": "six-approved-20261003",
       "publication_assembly": {
         "mode": "replace_cover",
-        "input_pdf_sha256": "6df7df32c64014ef3d374ba09424f68dff7e45a9a35c3b25a63f3c0f6e018618",
-        "locked_cover_sha256": "7b672be05e33092f5fd16feb952088b7fdcad61d0cebb4f215a655751f8d13aa",
-        "interior_pages_signature_sha256": "bfa1f5a1b86cdc6b780569eda9d94fa0d1af5270c0e1df463b53fb420f4a6932",
-        "cover_alt_added": true
+        "input_pdf_sha256": "6f485cb3fbd5c4ce38e731e02c3e980d21f22a8c937c1f98635181fb886c6bdd",
+        "approved_cover_svg_sha256": "fef059129c5bb1a98614c1de59d99de149e9925cb2a339422d5594a250870444",
+        "approved_cover_png_sha256": "9fd30f00cda96bea5def95bdfbc1b2b6bc197309a44c3ddfdb09494ad3ea9f8b",
+        "source_authority_sha256": "85873e347788c7b53166f3590d0d4aef6246c039cf9bed1271f230d7091f5c19",
+        "proof_sha256": "371d12608c789ae94fd4f8077e8666a3c412d1d4e734bac1c1fa8913cb1bc2e8",
+        "cover_alt_added": true,
+        "locked_cover_sha256": "8701895133c151973d3a43aea77c4d1141467e1012d0710d7dc88c1fcd224468",
+        "interior_pages_signature_sha256": "bfa1f5a1b86cdc6b780569eda9d94fa0d1af5270c0e1df463b53fb420f4a6932"
       },
       "previous_publication": {
         "pdf": "site/pdf/publicados/N33-METSI-lectura-previa-v10-final.pdf",
@@ -1306,7 +1445,48 @@
         "bytes": 16414663,
         "sha256": "d38cfa1d1a2feafc2b5ce4815cd031fe80f65dfb2f0f2a3270253353aa5c72ee",
         "tag": "editorial-completo-20261002"
-      }
+      },
+      "publication_history": [
+        {
+          "code": "N33",
+          "status": "closed",
+          "pdf": "site/pdf/publicados/N33-METSI-lectura-previa-v10-final.pdf",
+          "tag": "approved-covers-20261003",
+          "public_pdf": "site/pdf/publicados/N33-METSI-lectura-previa-v10-final.pdf",
+          "cover": "site/covers/N33.jpg",
+          "pages": 42,
+          "bytes": 6283580,
+          "sha256": "6f485cb3fbd5c4ce38e731e02c3e980d21f22a8c937c1f98635181fb886c6bdd",
+          "cover_sha256": "9b8a7880451ce50510983b50b556f8c9a67e49f3779720353490a06ce5d67766",
+          "canonical_source": "pedagogy/plain-language-edition/N33.md",
+          "canonical_sha256": "f826e7d2a2080cadf1b1f8ba2f898bdb3f56cb6708ff30ead3349f780bda8753",
+          "package_files": 40,
+          "qa_report": "pedagogy/editorial-recovery-20260929/completion-20261002.json",
+          "qa_status": "PASS",
+          "qa_checks": 9,
+          "qa_validator": "scripts/audit_editorial_recovery.py + scripts/audit_editorial_geometry.py + scripts/verify_editorial_cover_lock.py",
+          "source_version": "editorial-completo-20261002",
+          "editorial_revision": "approved-covers-20261003",
+          "title": "La IA cambió. ¿Sigue siendo confiable?",
+          "subtitle": "Gobierno del uso, seguimiento de cambios, incidentes y retiro",
+          "publication_revision": "approved-covers-20261003",
+          "publication_assembly": {
+            "mode": "replace_cover",
+            "input_pdf_sha256": "6df7df32c64014ef3d374ba09424f68dff7e45a9a35c3b25a63f3c0f6e018618",
+            "locked_cover_sha256": "7b672be05e33092f5fd16feb952088b7fdcad61d0cebb4f215a655751f8d13aa",
+            "interior_pages_signature_sha256": "bfa1f5a1b86cdc6b780569eda9d94fa0d1af5270c0e1df463b53fb420f4a6932",
+            "cover_alt_added": true
+          },
+          "previous_publication": {
+            "pdf": "site/pdf/publicados/N33-METSI-lectura-previa-v10-final.pdf",
+            "public_pdf": "site/pdf/publicados/N33-METSI-lectura-previa-v10-final.pdf",
+            "pages": 37,
+            "bytes": 16414663,
+            "sha256": "d38cfa1d1a2feafc2b5ce4815cd031fe80f65dfb2f0f2a3270253353aa5c72ee",
+            "tag": "editorial-completo-20261002"
+          }
+        }
+      ]
     },
     {
       "code": "N34",
@@ -1351,13 +1531,13 @@
       "code": "N35",
       "status": "closed",
       "pdf": "site/pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf",
-      "tag": "approved-covers-20261003",
+      "tag": "six-approved-20261003",
       "public_pdf": "site/pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N35.jpg",
       "pages": 40,
-      "bytes": 6275500,
-      "sha256": "bfbfadb2d7a5298f9cd3858300672a63aba116b7700c96e36c256bab3e9cd0db",
-      "cover_sha256": "8bef9f06593703eb3833f274682116acce05db532bb4e31184c99bda2a25f460",
+      "bytes": 6317111,
+      "sha256": "0c37e3926e3e379f3316e8f78f0316306284fb79fd748e9589210aa832aacfb7",
+      "cover_sha256": "3ca9fe4cb4236232538b3c0722c50f070f1ab68be89fb10d2a6cae64f94f946e",
       "canonical_source": "pedagogy/plain-language-edition/N35.md",
       "canonical_sha256": "08a181fe38bacdfb1ea2b218e63174829b34081ff6188bbd594ce00cb8df803a",
       "package_files": 40,
@@ -1366,16 +1546,20 @@
       "qa_checks": 9,
       "qa_validator": "scripts/audit_editorial_recovery.py + scripts/audit_editorial_geometry.py + scripts/verify_editorial_cover_lock.py",
       "source_version": "editorial-completo-20261002",
-      "editorial_revision": "approved-covers-20261003",
+      "editorial_revision": "six-approved-20261003",
       "title": "Explicar para que otros puedan actuar",
       "subtitle": "Argumentación, comunicación y transferencia de decisiones",
-      "publication_revision": "approved-covers-20261003",
+      "publication_revision": "six-approved-20261003",
       "publication_assembly": {
         "mode": "replace_cover",
-        "input_pdf_sha256": "4762d3669c76008e866e9591acfdeddda062e547ee9b4bfe584d100af0247712",
-        "locked_cover_sha256": "654b48b0a5e79ffce72ccecc9a19a48a3267cdd108984465446081bccdb61944",
-        "interior_pages_signature_sha256": "e491d589371f6597df97a0200893ea624d52882c523ecc1c0a6aed04effb4eac",
-        "cover_alt_added": true
+        "input_pdf_sha256": "bfbfadb2d7a5298f9cd3858300672a63aba116b7700c96e36c256bab3e9cd0db",
+        "approved_cover_svg_sha256": "f5ea806fac96ce575d312fa9548268546681952ab7d5bb2b98f005917e025f97",
+        "approved_cover_png_sha256": "5b2997bee9598c6880581c3a3afa652cf2967350a710f5c0dd47cb7300136ed9",
+        "source_authority_sha256": "85873e347788c7b53166f3590d0d4aef6246c039cf9bed1271f230d7091f5c19",
+        "proof_sha256": "e3606af345fce881eeabbdce4c54476af474ed6dcd37271ad8f5ae387cc86bad",
+        "cover_alt_added": true,
+        "locked_cover_sha256": "b032d5a38d8eb8eaa47681347ae49ad72dabcd3c463abc256e10ab2174d8fae3",
+        "interior_pages_signature_sha256": "e491d589371f6597df97a0200893ea624d52882c523ecc1c0a6aed04effb4eac"
       },
       "previous_publication": {
         "pdf": "site/pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf",
@@ -1384,19 +1568,60 @@
         "bytes": 16442892,
         "sha256": "8316c8bbe75f8ecfa9208e870b5cd070c3447d9df032c4599cfe204a9d42d404",
         "tag": "editorial-completo-20261002"
-      }
+      },
+      "publication_history": [
+        {
+          "code": "N35",
+          "status": "closed",
+          "pdf": "site/pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf",
+          "tag": "approved-covers-20261003",
+          "public_pdf": "site/pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf",
+          "cover": "site/covers/N35.jpg",
+          "pages": 40,
+          "bytes": 6275500,
+          "sha256": "bfbfadb2d7a5298f9cd3858300672a63aba116b7700c96e36c256bab3e9cd0db",
+          "cover_sha256": "8bef9f06593703eb3833f274682116acce05db532bb4e31184c99bda2a25f460",
+          "canonical_source": "pedagogy/plain-language-edition/N35.md",
+          "canonical_sha256": "08a181fe38bacdfb1ea2b218e63174829b34081ff6188bbd594ce00cb8df803a",
+          "package_files": 40,
+          "qa_report": "pedagogy/editorial-recovery-20260929/completion-20261002.json",
+          "qa_status": "PASS",
+          "qa_checks": 9,
+          "qa_validator": "scripts/audit_editorial_recovery.py + scripts/audit_editorial_geometry.py + scripts/verify_editorial_cover_lock.py",
+          "source_version": "editorial-completo-20261002",
+          "editorial_revision": "approved-covers-20261003",
+          "title": "Explicar para que otros puedan actuar",
+          "subtitle": "Argumentación, comunicación y transferencia de decisiones",
+          "publication_revision": "approved-covers-20261003",
+          "publication_assembly": {
+            "mode": "replace_cover",
+            "input_pdf_sha256": "4762d3669c76008e866e9591acfdeddda062e547ee9b4bfe584d100af0247712",
+            "locked_cover_sha256": "654b48b0a5e79ffce72ccecc9a19a48a3267cdd108984465446081bccdb61944",
+            "interior_pages_signature_sha256": "e491d589371f6597df97a0200893ea624d52882c523ecc1c0a6aed04effb4eac",
+            "cover_alt_added": true
+          },
+          "previous_publication": {
+            "pdf": "site/pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf",
+            "public_pdf": "site/pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf",
+            "pages": 34,
+            "bytes": 16442892,
+            "sha256": "8316c8bbe75f8ecfa9208e870b5cd070c3447d9df032c4599cfe204a9d42d404",
+            "tag": "editorial-completo-20261002"
+          }
+        }
+      ]
     },
     {
       "code": "N36",
       "status": "closed",
       "pdf": "site/pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf",
-      "tag": "approved-covers-20261003",
+      "tag": "six-approved-20261003",
       "public_pdf": "site/pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N36.jpg",
       "pages": 43,
-      "bytes": 6260813,
-      "sha256": "19e94336d0187f25b5b79d858c56e69a6895e2893e63bc225337d88deb3547bf",
-      "cover_sha256": "46c5a5cea63440b780cee13efd9deb17e929c6d71c04334f5d6e7acc25d0b751",
+      "bytes": 6554060,
+      "sha256": "5b7a422d6543316c5ac138fd8bed7b3e7381e04fc9045d674716576681be3039",
+      "cover_sha256": "838f9704516672db1cb998007a611ebbb12d26febff631cf5b096e789b108221",
       "canonical_source": "pedagogy/plain-language-edition/N36.md",
       "canonical_sha256": "67cb9a48f7aa216dd19ac88c437cfcdfe0054e6e8028d34fa03eea26438ed446",
       "package_files": 40,
@@ -1405,16 +1630,20 @@
       "qa_checks": 9,
       "qa_validator": "scripts/audit_editorial_recovery.py + scripts/audit_editorial_geometry.py + scripts/verify_editorial_cover_lock.py",
       "source_version": "editorial-completo-20261002",
-      "editorial_revision": "approved-covers-20261003",
+      "editorial_revision": "six-approved-20261003",
       "title": "¿Qué aprendimos de lo que hicimos?",
       "subtitle": "Reflexión sobre la práctica, revisión y aprendizaje profesional",
-      "publication_revision": "approved-covers-20261003",
+      "publication_revision": "six-approved-20261003",
       "publication_assembly": {
         "mode": "replace_cover",
-        "input_pdf_sha256": "ba25faa131f37ca3719e9abcfbd564a80f77fa8dad219f8b891975371093e59b",
-        "locked_cover_sha256": "bd838d1bd3098b39e7c95227bd92520ba686795a9872f5f9dee1c722ffbdbd80",
-        "interior_pages_signature_sha256": "8e857d958efa089a9ee1d12a48aa4c60c2b4ae65735e5ba8d65b2f5dcfe92431",
-        "cover_alt_added": true
+        "input_pdf_sha256": "19e94336d0187f25b5b79d858c56e69a6895e2893e63bc225337d88deb3547bf",
+        "approved_cover_svg_sha256": "9f60708aef6f08e9a9240b40add8f243169d4ded8387eb8afc7a71e0376c2f33",
+        "approved_cover_png_sha256": "1fba78e4c050cb2d54ad9bcb759e55b25f867f943247bac19bf4c8d1948cb11f",
+        "source_authority_sha256": "85873e347788c7b53166f3590d0d4aef6246c039cf9bed1271f230d7091f5c19",
+        "proof_sha256": "a4bdb5f6aff885b0d7d10178b4d869ca725a20547f315f703c33acf68c2e3a6d",
+        "cover_alt_added": true,
+        "locked_cover_sha256": "365fa8a3833b74331cc68ad33ee5c3abcdccd5f97bca28c08fa07f7d1316c621",
+        "interior_pages_signature_sha256": "8e857d958efa089a9ee1d12a48aa4c60c2b4ae65735e5ba8d65b2f5dcfe92431"
       },
       "previous_publication": {
         "pdf": "site/pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf",
@@ -1423,16 +1652,57 @@
         "bytes": 17392456,
         "sha256": "46a977f43aeea7709d5c69c1ccc00179295402a23779f4efab103d10e1c58af2",
         "tag": "editorial-completo-20261002"
-      }
+      },
+      "publication_history": [
+        {
+          "code": "N36",
+          "status": "closed",
+          "pdf": "site/pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf",
+          "tag": "approved-covers-20261003",
+          "public_pdf": "site/pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf",
+          "cover": "site/covers/N36.jpg",
+          "pages": 43,
+          "bytes": 6260813,
+          "sha256": "19e94336d0187f25b5b79d858c56e69a6895e2893e63bc225337d88deb3547bf",
+          "cover_sha256": "46c5a5cea63440b780cee13efd9deb17e929c6d71c04334f5d6e7acc25d0b751",
+          "canonical_source": "pedagogy/plain-language-edition/N36.md",
+          "canonical_sha256": "67cb9a48f7aa216dd19ac88c437cfcdfe0054e6e8028d34fa03eea26438ed446",
+          "package_files": 40,
+          "qa_report": "pedagogy/editorial-recovery-20260929/completion-20261002.json",
+          "qa_status": "PASS",
+          "qa_checks": 9,
+          "qa_validator": "scripts/audit_editorial_recovery.py + scripts/audit_editorial_geometry.py + scripts/verify_editorial_cover_lock.py",
+          "source_version": "editorial-completo-20261002",
+          "editorial_revision": "approved-covers-20261003",
+          "title": "¿Qué aprendimos de lo que hicimos?",
+          "subtitle": "Reflexión sobre la práctica, revisión y aprendizaje profesional",
+          "publication_revision": "approved-covers-20261003",
+          "publication_assembly": {
+            "mode": "replace_cover",
+            "input_pdf_sha256": "ba25faa131f37ca3719e9abcfbd564a80f77fa8dad219f8b891975371093e59b",
+            "locked_cover_sha256": "bd838d1bd3098b39e7c95227bd92520ba686795a9872f5f9dee1c722ffbdbd80",
+            "interior_pages_signature_sha256": "8e857d958efa089a9ee1d12a48aa4c60c2b4ae65735e5ba8d65b2f5dcfe92431",
+            "cover_alt_added": true
+          },
+          "previous_publication": {
+            "pdf": "site/pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf",
+            "public_pdf": "site/pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf",
+            "pages": 35,
+            "bytes": 17392456,
+            "sha256": "46a977f43aeea7709d5c69c1ccc00179295402a23779f4efab103d10e1c58af2",
+            "tag": "editorial-completo-20261002"
+          }
+        }
+      ]
     }
   ],
   "site_publication": {
     "range": "N00-N36",
-    "source_version": "approved-covers-20261003",
+    "source_version": "six-approved-20261003",
     "public_route_contract": "existing-public-filenames-preserved",
     "release_manifest": "audits/approved-covers-release-20261003.json",
-    "release_sha256": "86650c36e490270df19728d3f13c9409e1e830b4913853c5c702842817d77588"
+    "release_sha256": "fa90212b5d859e655b2fede9eae333fbb80b281d80ce17f436214893ac61aae8"
   },
-  "publication_revision": "approved-covers-20261003",
-  "publication_revision_scope": "N00-N36"
+  "publication_revision": "six-approved-20261003",
+  "publication_revision_scope": "N27,N30,N32,N33,N35,N36"
 }
