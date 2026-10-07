@@ -1,7 +1,7 @@
 {
   "course": "UBA METSI",
   "repository": "UBA-metsi",
-  "updated_at": "2026-10-03",
+  "updated_at": "2026-10-07",
   "documents": [
     {
       "code": "N00",
@@ -33,8 +33,8 @@
       "pdf": "site/pdf/N01-METSI-lectura-previa-v19-final.pdf",
       "tag": "approved-covers-20261003",
       "pages": 36,
-      "bytes": 9424334,
-      "sha256": "7d297ce1d1f006e9b8d03818b7af2a2d14fc4425b3dbc60a2ab52614c5b77553",
+      "bytes": 12931787,
+      "sha256": "3b72cc5dfac8e7d899a9e4449eb74d21f8cfbac3fe65b3d20fa8f89237f0bb10",
       "public_pdf": "site/pdf/N01-METSI-lectura-previa-v19-final.pdf",
       "source_version": "editorial-arte-20261001",
       "canonical_source": "pedagogy/plain-language-edition/N01.md",
@@ -47,7 +47,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "Intervenir sin recetas",
       "subtitle": "Metodología y juicio profesional cuando el problema todavía no está claro",
-      "publication_revision": "portraits-20261004",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "16f31ff0a5fe6e2fc5c6523ad25a9714771d209b285b961c1f91b2dffe7386fd",
@@ -74,6 +74,20 @@
           132
         ],
         "cover_and_other_pages_preserved": true
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          18,
+          36
+        ],
+        "previous_sha256": "7d297ce1d1f006e9b8d03818b7af2a2d14fc4425b3dbc60a2ab52614c5b77553",
+        "paper_panel_restyled": true,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N01-METSI-lectura-previa-v19-final.pdf"
       }
     },
     {
@@ -83,8 +97,8 @@
       "public_pdf": "site/pdf/N02-METSI-lectura-previa-v16-final.pdf",
       "cover": "site/covers/N02.png",
       "pages": 36,
-      "bytes": 9606504,
-      "sha256": "1bd52dd85e36b5c414ff73412f35064691ecb10b214a343285d3e714d2a61622",
+      "bytes": 15869502,
+      "sha256": "d8a6d515dccc344372de0f0eb1fbc9893e46ac50115113c96558a822983faff2",
       "tag": "approved-covers-20261003",
       "source_version": "editorial-completo-20261002",
       "canonical_source": "pedagogy/plain-language-edition/N02.md",
@@ -97,7 +111,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "Un sistema es mucho más que una aplicación",
       "subtitle": "Personas, reglas, información y tecnología en un sistema de información",
-      "publication_revision": "portraits-20261004",
+      "publication_revision": "fullbleed-editorial-20261007",
       "cover_sha256": "c07d9aa36c33dd5823a0d50cccc301cca57016a5af8c5a181dab7d0dd14ef7ee",
       "publication_assembly": {
         "mode": "replace_cover",
@@ -124,6 +138,20 @@
           120
         ],
         "cover_and_other_pages_preserved": true
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          19,
+          36
+        ],
+        "previous_sha256": "1bd52dd85e36b5c414ff73412f35064691ecb10b214a343285d3e714d2a61622",
+        "paper_panel_restyled": true,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N02-METSI-lectura-previa-v16-final.pdf"
       }
     },
     {
@@ -133,8 +161,8 @@
       "public_pdf": "site/pdf/N03-METSI-lectura-previa-v11-final.pdf",
       "cover": "site/covers/N03.png",
       "pages": 34,
-      "bytes": 5916656,
-      "sha256": "43203f2053951328f7609d9ad51fe0a84aa860bed0d5ad35b69cbb5853c365c6",
+      "bytes": 7334833,
+      "sha256": "1469e844321b2fda4e4bdd956dcfbd48270af763e1c96c9112e33d929bb3f025",
       "tag": "approved-covers-20261003",
       "source_version": "editorial-arte-20261001",
       "canonical_source": "pedagogy/plain-language-edition/N03.md",
@@ -147,7 +175,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "Resolver acá, complicar allá",
       "subtitle": "Fronteras del sistema, retroalimentación y efectos no intencionales",
-      "publication_revision": "portraits-20261004",
+      "publication_revision": "fullbleed-editorial-20261007",
       "cover_sha256": "62a53e355259729f7ff28f6d7f93fde0515b5d1c7116588e6fee458c55a775a5",
       "publication_assembly": {
         "mode": "replace_cover",
@@ -174,6 +202,19 @@
           107
         ],
         "cover_and_other_pages_preserved": true
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          34
+        ],
+        "previous_sha256": "43203f2053951328f7609d9ad51fe0a84aa860bed0d5ad35b69cbb5853c365c6",
+        "paper_panel_restyled": true,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N03-METSI-lectura-previa-v11-final.pdf"
       }
     },
     {
@@ -182,8 +223,8 @@
       "pdf": "site/pdf/N04-METSI-lectura-previa-v10-final.pdf",
       "tag": "approved-covers-20261003",
       "pages": 35,
-      "bytes": 9763714,
-      "sha256": "4b9b863a065c50987a8e47a31afae8f8bb67a1d09e19ce43bedfda8f19f90713",
+      "bytes": 16745735,
+      "sha256": "8c0bc4d5767486836e5fdb933cc727ccd4b356da534b5781b1a29eba9f623112",
       "public_pdf": "site/pdf/N04-METSI-lectura-previa-v10-final.pdf",
       "source_version": "editorial-arte-20261001",
       "canonical_source": "pedagogy/plain-language-edition/N04.md",
@@ -196,7 +237,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "Antes de decidir, ¿qué sabemos?",
       "subtitle": "Cómo distinguir hechos, síntomas, relatos, hipótesis y decisiones",
-      "publication_revision": "portraits-20261004",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "7830a734ff9f4d4b315270b5c2e9524aa06c76bf1789edec56c43096c1383167",
@@ -222,6 +263,20 @@
           107
         ],
         "cover_and_other_pages_preserved": true
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          22,
+          35
+        ],
+        "previous_sha256": "4b9b863a065c50987a8e47a31afae8f8bb67a1d09e19ce43bedfda8f19f90713",
+        "paper_panel_restyled": true,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N04-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -231,8 +286,8 @@
       "public_pdf": "site/pdf/N05-METSI-lectura-previa-v11-final.pdf",
       "cover": "site/covers/N05.png",
       "pages": 32,
-      "bytes": 6159802,
-      "sha256": "aa00214f25b432e796a6dc72d63f93d02fef190c82a15f14e1b2e70d1e4104d7",
+      "bytes": 8859781,
+      "sha256": "8193de5d3d3e2ff04a72a7a61c9b6459cea4ce537448f189cadd09bf0864a08e",
       "tag": "approved-covers-20261003",
       "source_version": "editorial-completo-20261002",
       "canonical_source": "pedagogy/plain-language-edition/N05.md",
@@ -245,7 +300,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "No todos ven el mismo problema",
       "subtitle": "Actores, personas afectadas, poder y perspectivas",
-      "publication_revision": "approved-covers-20261003",
+      "publication_revision": "fullbleed-editorial-20261007",
       "cover_sha256": "d51f1e0b7b05a30463144ca6121baa592f55756157e6dc03ef3f2ab465ce9859",
       "publication_assembly": {
         "mode": "replace_cover",
@@ -261,6 +316,20 @@
         "bytes": 10683932,
         "sha256": "f4190ef0b169f0bc5f2e18e0def5eddd76bc950d52d0bf7ef731d16888e72db6",
         "tag": "editorial-completo-20261002"
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          19,
+          32
+        ],
+        "previous_sha256": "aa00214f25b432e796a6dc72d63f93d02fef190c82a15f14e1b2e70d1e4104d7",
+        "paper_panel_restyled": true,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N05-METSI-lectura-previa-v11-final.pdf"
       }
     },
     {
@@ -270,8 +339,8 @@
       "public_pdf": "site/pdf/N06-METSI-lectura-previa-v11-final.pdf",
       "cover": "site/covers/N06.png",
       "pages": 34,
-      "bytes": 6140599,
-      "sha256": "1c5d68123571e289cff543906d72351b93334bb7e27f96971cddff4590188001",
+      "bytes": 9134155,
+      "sha256": "14042809e4ef669c7c64ed5ed596b61f2a8bdf7c4a0a02bdbd7e3d5ff00d3963",
       "tag": "approved-covers-20261003",
       "source_version": "editorial-arte-20261001",
       "canonical_source": "pedagogy/plain-language-edition/N06.md",
@@ -284,7 +353,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "Investigar antes de apostar",
       "subtitle": "Discovery: reducir incertidumbre para elegir el siguiente paso",
-      "publication_revision": "approved-covers-20261003",
+      "publication_revision": "fullbleed-editorial-20261007",
       "cover_sha256": "2b97496ab3170105ec7042b94354103e3bae149eb9f64e53d5689d7e947444c8",
       "publication_assembly": {
         "mode": "replace_cover",
@@ -300,6 +369,20 @@
         "bytes": 13906981,
         "sha256": "0eacb3ceaab50608f6d0337f1cdde3dd74539a2da27eae4b844e672b32116756",
         "tag": "editorial-arte-20261001"
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          14,
+          34
+        ],
+        "previous_sha256": "1c5d68123571e289cff543906d72351b93334bb7e27f96971cddff4590188001",
+        "paper_panel_restyled": false,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N06-METSI-lectura-previa-v11-final.pdf"
       }
     },
     {
@@ -309,8 +392,8 @@
       "public_pdf": "site/pdf/N07-METSI-lectura-previa-v11-final.pdf",
       "cover": "site/covers/N07.png",
       "pages": 35,
-      "bytes": 5776130,
-      "sha256": "e8e5c9c482a197c5bcdbfe8a21e8ac9e15b898ddb2f9073c671a1cc27cc05833",
+      "bytes": 9029692,
+      "sha256": "dc0c94140dc756305b4a0f8648c09d9018b18d49208e0247602f5d2453aac19c",
       "tag": "approved-covers-20261003",
       "source_version": "editorial-completo-20261002",
       "canonical_source": "pedagogy/plain-language-edition/N07.md",
@@ -323,7 +406,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "Preguntar para entender",
       "subtitle": "Entrevistas, evidencia y necesidades más allá del pedido de requisitos",
-      "publication_revision": "approved-covers-20261003",
+      "publication_revision": "fullbleed-editorial-20261007",
       "cover_sha256": "49ca0352bea9148482fa2c7202a752694ce802603e209b32ea807b33281ebbd0",
       "publication_assembly": {
         "mode": "replace_cover",
@@ -339,6 +422,20 @@
         "bytes": 14366262,
         "sha256": "7cf14c102d2b0e0af253ecfffc719455b628b7c51f6aae7d78ad1a88e67d6bb9",
         "tag": "editorial-completo-20261002"
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          14,
+          35
+        ],
+        "previous_sha256": "e8e5c9c482a197c5bcdbfe8a21e8ac9e15b898ddb2f9073c671a1cc27cc05833",
+        "paper_panel_restyled": false,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N07-METSI-lectura-previa-v11-final.pdf"
       }
     },
     {
@@ -348,8 +445,8 @@
       "public_pdf": "site/pdf/N08-METSI-lectura-previa-v11-final.pdf",
       "cover": "site/covers/N08.png",
       "pages": 33,
-      "bytes": 5371370,
-      "sha256": "2013f322a4f5f87259cd4443b78094e0328dc907acd8252e155329623cdd25a1",
+      "bytes": 8431346,
+      "sha256": "b9f3ebe28451192cbab747a3d26177fa4e9799b4bad75ecf2c73c31a71499c65",
       "tag": "approved-covers-20261003",
       "source_version": "editorial-arte-20261001",
       "canonical_source": "pedagogy/plain-language-edition/N08.md",
@@ -362,7 +459,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "El trabajo que no aparece en la pantalla",
       "subtitle": "Observación de la actividad, excepciones y coordinación cotidiana",
-      "publication_revision": "approved-covers-20261003",
+      "publication_revision": "fullbleed-editorial-20261007",
       "cover_sha256": "042fe72a5aadb624c9bb4185fdb5d4d83dbed4e8a342ee23657adcb77c30e4bc",
       "publication_assembly": {
         "mode": "replace_cover",
@@ -378,6 +475,20 @@
         "bytes": 15548146,
         "sha256": "67f44d6deb8aa10812a5c9eca79ef8cebcb4d42baf286dddd253e58c54126d24",
         "tag": "editorial-arte-20261001"
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          18,
+          33
+        ],
+        "previous_sha256": "2013f322a4f5f87259cd4443b78094e0328dc907acd8252e155329623cdd25a1",
+        "paper_panel_restyled": false,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N08-METSI-lectura-previa-v11-final.pdf"
       }
     },
     {
@@ -387,8 +498,8 @@
       "public_pdf": "site/pdf/N09-METSI-lectura-previa-v11-final.pdf",
       "cover": "site/covers/N09.png",
       "pages": 33,
-      "bytes": 5705932,
-      "sha256": "07c82de4c40db79aa3471ddced5b9ef593ce6bcb8b13e31bfe4f3da62e2e8cf9",
+      "bytes": 9109420,
+      "sha256": "47a541124698c2ab0a51e253d17221ad46b015e23832c865b6cfe70f71f7f26b",
       "tag": "approved-covers-20261003",
       "source_version": "editorial-completo-20261002",
       "canonical_source": "pedagogy/plain-language-edition/N09.md",
@@ -401,7 +512,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "Diseñar para quienes lo van a usar",
       "subtitle": "Experiencia, accesibilidad y adopción a lo largo del servicio",
-      "publication_revision": "approved-covers-20261003",
+      "publication_revision": "fullbleed-editorial-20261007",
       "cover_sha256": "44a2de786aeaf7f015f0c69b2f19d40aac57a72301e00c0a5e93e19b22cb87a2",
       "publication_assembly": {
         "mode": "replace_cover",
@@ -417,6 +528,20 @@
         "bytes": 13764364,
         "sha256": "e3ed1031e9cc06473a5951d8b2140480d6ecfb56ba95eeb6b6c4a283e0936ad2",
         "tag": "editorial-completo-20261002"
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          16,
+          33
+        ],
+        "previous_sha256": "07c82de4c40db79aa3471ddced5b9ef593ce6bcb8b13e31bfe4f3da62e2e8cf9",
+        "paper_panel_restyled": false,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N09-METSI-lectura-previa-v11-final.pdf"
       }
     },
     {
@@ -425,8 +550,8 @@
       "pdf": "site/pdf/N10-METSI-lectura-previa-v10-final.pdf",
       "tag": "approved-covers-20261003",
       "pages": 38,
-      "bytes": 5651220,
-      "sha256": "7019c43ddbd9ef3f67c92885ff7677a114a653860beecebc3cbcefc927c55e17",
+      "bytes": 8713122,
+      "sha256": "fcf7ba7753dabac61ade03a8eb3743dce81e9f483398a5553e295512fddfa4e3",
       "public_pdf": "site/pdf/N10-METSI-lectura-previa-v10-final.pdf",
       "source_version": "editorial-arte-20261001",
       "canonical_source": "pedagogy/plain-language-edition/N10.md",
@@ -439,7 +564,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "Del síntoma al problema",
       "subtitle": "Construcción del problema y definición de resultados verificables",
-      "publication_revision": "approved-covers-20261003",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "preserve_document",
         "input_pdf_sha256": "7019c43ddbd9ef3f67c92885ff7677a114a653860beecebc3cbcefc927c55e17",
@@ -454,6 +579,20 @@
         "bytes": 14750007,
         "sha256": "08b06853745a75933c4a7eda44fcdf75cff59199a709a0835256561d2ebb7e78",
         "tag": "editorial-arte-20261001"
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          22,
+          38
+        ],
+        "previous_sha256": "7019c43ddbd9ef3f67c92885ff7677a114a653860beecebc3cbcefc927c55e17",
+        "paper_panel_restyled": false,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N10-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -464,8 +603,8 @@
       "public_pdf": "site/pdf/publicados/N11-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N11.jpg",
       "pages": 48,
-      "bytes": 7019377,
-      "sha256": "d163fd725b6e526546340255cbeed11f979eb8abd2d34b85c09390c31f432d96",
+      "bytes": 11004116,
+      "sha256": "d253f5de2b63f6a3347896746250f83fdf596c81d422b1799e2c72a5285d7f8b",
       "cover_sha256": "313426a116b00d4458bf253599536e11c5052e368ca689522ca6c6597800b7b7",
       "canonical_source": "pedagogy/plain-language-edition/N11.md",
       "canonical_sha256": "10c7efd295ac16c975b051b5b3033113d1b026c084b886906abf8e6ce08b0359",
@@ -478,7 +617,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "¿Qué demuestra este dato?",
       "subtitle": "Calidad de la evidencia, inferencias y límites de una afirmación",
-      "publication_revision": "portraits-20261004",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "df093ef12cfcc445fa15ecad15b39b4282c7ec86e5b7407b11962e3b447c5edc",
@@ -504,6 +643,20 @@
           122
         ],
         "cover_and_other_pages_preserved": true
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          23,
+          48
+        ],
+        "previous_sha256": "d163fd725b6e526546340255cbeed11f979eb8abd2d34b85c09390c31f432d96",
+        "paper_panel_restyled": false,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N11-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -514,8 +667,8 @@
       "public_pdf": "site/pdf/publicados/N12-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N12.jpg",
       "pages": 39,
-      "bytes": 9202269,
-      "sha256": "7538fd5657a59754472ebbd488096cdee9ae719a57f466079b9fad64bc260ad7",
+      "bytes": 12319189,
+      "sha256": "80a2361f2ef9fa8bf2634b7fb81034e91556cc1fade06e3f946aced06178cbc0",
       "cover_sha256": "27ac58a00c21cf51f4ea571f6640cc79ab4e0b345ec63cca2dd3305d4113eb34",
       "canonical_source": "pedagogy/plain-language-edition/N12.md",
       "canonical_sha256": "678522b98dfae8abe35faacf7e692f864cc2c6bef7ae245d02b6b8ab0a059e7a",
@@ -528,7 +681,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "Pedir no es confirmar",
       "subtitle": "Eventos, estados, comandos y autoridad para cambiar un sistema",
-      "publication_revision": "approved-covers-20261003",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "9f2eada2fd05d6762515467114f494af8ed76e8c810e733d1c21d46980e5a3fe",
@@ -543,6 +696,20 @@
         "bytes": 19757136,
         "sha256": "b1a3fb2ea710462a02dee63122bed6f096d70bedba607e305619b3cde052f4fd",
         "tag": "editorial-completo-20261002"
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          20,
+          39
+        ],
+        "previous_sha256": "7538fd5657a59754472ebbd488096cdee9ae719a57f466079b9fad64bc260ad7",
+        "paper_panel_restyled": false,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N12-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -553,8 +720,8 @@
       "public_pdf": "site/pdf/publicados/N13-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N13.jpg",
       "pages": 38,
-      "bytes": 6145813,
-      "sha256": "320127e91414b807ed805fbc6ceafb870f652ab9d84d31ef5ad9dd9ab54dfaf3",
+      "bytes": 9650504,
+      "sha256": "d6224e92a63ed32f29a97f9a06321b44f20f89039ab05fd7a32319237e5029a2",
       "cover_sha256": "922c178383634fdd4b6f4644b2763861c5914cdf8c581dd57cd44ac335c1b067",
       "canonical_source": "pedagogy/plain-language-edition/N13.md",
       "canonical_sha256": "75747fe447373e85253ecf1c75e684a1b55e52e02258341c601898f348c86f40",
@@ -567,7 +734,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "¿Qué pasa si el pedido llega dos veces?",
       "subtitle": "Demoras, concurrencia, consistencia, idempotencia y reconciliación",
-      "publication_revision": "portraits-20261004",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "a6608ce9be757eee8720081f2d78d44b589f5c035c585ed1120740dcf6ce1057",
@@ -593,6 +760,20 @@
           118
         ],
         "cover_and_other_pages_preserved": true
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          27,
+          38
+        ],
+        "previous_sha256": "320127e91414b807ed805fbc6ceafb870f652ab9d84d31ef5ad9dd9ab54dfaf3",
+        "paper_panel_restyled": true,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N13-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -603,8 +784,8 @@
       "public_pdf": "site/pdf/publicados/N14-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N14.jpg",
       "pages": 51,
-      "bytes": 7399123,
-      "sha256": "c24754abde984bcb21a0d0828bcb9c9be1aed974ac56e72dbbb08ecec4930fce",
+      "bytes": 10961446,
+      "sha256": "5897043c1789fff6c9a5f35dd458147cd251e5d34880c22cfa0333ba5c2dea92",
       "cover_sha256": "a95dc4afaec75044cc0421378c899d5f425616b08f74d545e4eba62eb1f1848d",
       "canonical_source": "pedagogy/plain-language-edition/N14.md",
       "canonical_sha256": "67bfb025300ce4ae54349b55e26272152765a78617eb2423af5c97b1eb3d86f7",
@@ -617,7 +798,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "De un área a otra: dónde se frena el trabajo",
       "subtitle": "Procesos de principio a fin, traspasos, esperas y excepciones",
-      "publication_revision": "portraits-20261004",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "581feb312a6b467ed57786a96abaaa82b2fed586994f6960a89851880f800a3d",
@@ -643,6 +824,20 @@
           127
         ],
         "cover_and_other_pages_preserved": true
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          22,
+          51
+        ],
+        "previous_sha256": "c24754abde984bcb21a0d0828bcb9c9be1aed974ac56e72dbbb08ecec4930fce",
+        "paper_panel_restyled": true,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N14-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -653,8 +848,8 @@
       "public_pdf": "site/pdf/publicados/N15-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N15.jpg",
       "pages": 49,
-      "bytes": 7124192,
-      "sha256": "0abef4faa8902552a1bb8c3d9d688606e78b7a8e9a6d6c59f4b3b1e80c65a2a4",
+      "bytes": 10339557,
+      "sha256": "0b1b6d5eb0c39a129ede6ad22c0ea1e5d5950594480ce1a5508f9e631e25641f",
       "cover_sha256": "c1dda7ea7571facef8c40a6bb4e0ba8832396a967bb07b505a8356264e7168d5",
       "canonical_source": "pedagogy/plain-language-edition/N15.md",
       "canonical_sha256": "3e7cb792f0f7c87b03bfe5570e6b24725f0150d8dce78a17c0a4a3d7b7a05f84",
@@ -667,7 +862,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "Un modelo para cada pregunta",
       "subtitle": "Selección de modelos según el propósito, las personas y el costo",
-      "publication_revision": "portraits-20261004",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "e80865693defaf3c9b2e2e234ebc05f96409e3a44b63bc7242f7f67c8494078a",
@@ -693,6 +888,20 @@
           124
         ],
         "cover_and_other_pages_preserved": true
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          25,
+          49
+        ],
+        "previous_sha256": "0abef4faa8902552a1bb8c3d9d688606e78b7a8e9a6d6c59f4b3b1e80c65a2a4",
+        "paper_panel_restyled": true,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N15-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -703,8 +912,8 @@
       "public_pdf": "site/pdf/publicados/N16-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N16.jpg",
       "pages": 38,
-      "bytes": 6262657,
-      "sha256": "a385c050f80b9b1385f53ae4d4b4235034d7becdabe9e607db59fa235d1b40e9",
+      "bytes": 9564985,
+      "sha256": "03411b3fb9afd7334231e1cc58672b93ea64f7a7174ebeeaabb43a2aac018c5e",
       "cover_sha256": "8295b590d54fbdbd827ae1171b9706d83db12d70772f1a72e5d4247a61489bda",
       "canonical_source": "pedagogy/plain-language-edition/N16.md",
       "canonical_sha256": "75731d51d98691026f73d01851acbf709d1d46f35ba09d7d3e27c674608d8d49",
@@ -717,7 +926,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "Cuando los modelos no coinciden",
       "subtitle": "Contradicciones, validación y mantenimiento de representaciones",
-      "publication_revision": "portraits-20261004",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "f12a3126e11610898ccf2d69a1876fbab84de3908586794e1fe185220ad430c2",
@@ -743,6 +952,20 @@
           118
         ],
         "cover_and_other_pages_preserved": true
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          28,
+          38
+        ],
+        "previous_sha256": "a385c050f80b9b1385f53ae4d4b4235034d7becdabe9e607db59fa235d1b40e9",
+        "paper_panel_restyled": true,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N16-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -753,8 +976,8 @@
       "public_pdf": "site/pdf/publicados/N17-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N17.jpg",
       "pages": 44,
-      "bytes": 7125623,
-      "sha256": "1310f51b1cf20f0679b5cba0cfd4396fe45685b4b0f61fa138e26076f8a63c2f",
+      "bytes": 10693528,
+      "sha256": "08cc8352971f35e1fcc9692e8f76f74731238c2086959548e33fa870a21d66d5",
       "cover_sha256": "73f8eeb8071712d5d45e5ac840ed75d671f677674d7a1d076fe99db9cc835e2b",
       "canonical_source": "pedagogy/plain-language-edition/N17.md",
       "canonical_sha256": "703006f8350c28c7cafc197978912614a7ab9261b2907dad354a6df804c41564",
@@ -767,7 +990,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "No todos los cambios se hacen igual",
       "subtitle": "Lógicas predictiva, iterativa, incremental, experimental y adaptativa",
-      "publication_revision": "portraits-20261004",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "461055d1a84dcf16460970cd2124310d1eec1d18ae00f68d3f3ad309400f1c87",
@@ -793,6 +1016,20 @@
           124
         ],
         "cover_and_other_pages_preserved": true
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          26,
+          44
+        ],
+        "previous_sha256": "1310f51b1cf20f0679b5cba0cfd4396fe45685b4b0f61fa138e26076f8a63c2f",
+        "paper_panel_restyled": true,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N17-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -803,8 +1040,8 @@
       "public_pdf": "site/pdf/publicados/N18-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N18.jpg",
       "pages": 40,
-      "bytes": 6515469,
-      "sha256": "a8617c81133422a553c0cf0b24a10b8f2eaba871afd9a74ba24bc0e99a43e41f",
+      "bytes": 10097928,
+      "sha256": "0aa4b77f61d3433185fe690eba2f206cfeb43cbf3ae50136c68ab8169f7221bc",
       "cover_sha256": "222871112643bb079507f7dba6375dc333d9d190693f96e56dd2f4055ee82ade",
       "canonical_source": "pedagogy/plain-language-edition/N18.md",
       "canonical_sha256": "db8482bc56726ec3896f08481a4670c4e9b63cd793337f9461dbf60cb05eb19b",
@@ -817,7 +1054,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "Cambiar sin romper lo que funciona",
       "subtitle": "Legado, restricciones y capacidades que vale la pena conservar",
-      "publication_revision": "portraits-20261004",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "3f59c0a738af7ec1186f50e05832c730eecc32cf3624a1b4b4dc92a8b7d08bb3",
@@ -843,6 +1080,20 @@
           121
         ],
         "cover_and_other_pages_preserved": true
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          27,
+          40
+        ],
+        "previous_sha256": "a8617c81133422a553c0cf0b24a10b8f2eaba871afd9a74ba24bc0e99a43e41f",
+        "paper_panel_restyled": true,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N18-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -853,8 +1104,8 @@
       "public_pdf": "site/pdf/publicados/N19-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N19.jpg",
       "pages": 38,
-      "bytes": 6405608,
-      "sha256": "31604054552bdd3e4523179b358650fd353fbf82f1782f68e7119b2765f7bb15",
+      "bytes": 10169400,
+      "sha256": "ccb32fdfcabe78095c0afe7da024843407115b30eeddf29e9970dc78d640d505",
       "cover_sha256": "9d100fa976323fdd09d06169cdb1ad62226c8667fd7b3b361a28a96646238676",
       "canonical_source": "pedagogy/plain-language-edition/N19.md",
       "canonical_sha256": "de19d5dccf003f17ea0bdad718d7b213922e91c140dc531db4f0c051f3ee558f",
@@ -867,7 +1118,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "¿Comprar, construir o no automatizar?",
       "subtitle": "Alternativas de realización, integración, costos y condiciones de salida",
-      "publication_revision": "portraits-20261004",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "ab9b25c00e666b907742e3a9ef9cdf91cb348fe13bbf17faeb7f00dcda9f6638",
@@ -893,6 +1144,20 @@
           120
         ],
         "cover_and_other_pages_preserved": true
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          26,
+          38
+        ],
+        "previous_sha256": "31604054552bdd3e4523179b358650fd353fbf82f1782f68e7119b2765f7bb15",
+        "paper_panel_restyled": true,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N19-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -903,8 +1168,8 @@
       "public_pdf": "site/pdf/publicados/N20-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N20.jpg",
       "pages": 39,
-      "bytes": 6533494,
-      "sha256": "540cbf5dafa985880ec48e402bb9fb38ab56eae000fb9e24393bcea6ed614c8f",
+      "bytes": 10168940,
+      "sha256": "d8b57bc930e3d896f90e4fdb7ca29046523c744bd18a2e1e500a4c748dd28893",
       "cover_sha256": "4792040c449f7bae87050729b0162747517ad304484d6caaa2de007bfe039d84",
       "canonical_source": "pedagogy/plain-language-edition/N20.md",
       "canonical_sha256": "53ae03f491aa485faffd5d95849e6b5071d21bc7879a00049d29d976021d88b0",
@@ -917,7 +1182,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "Del plan a las decisiones",
       "subtitle": "Estrategia de intervención, hitos, autoridad y criterios de cierre",
-      "publication_revision": "portraits-20261004",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "c68a51dc5509e64b6b83136d9e5dfe8e8a1358524addf6812322f8b65866bbde",
@@ -943,6 +1208,20 @@
           124
         ],
         "cover_and_other_pages_preserved": true
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          21,
+          39
+        ],
+        "previous_sha256": "540cbf5dafa985880ec48e402bb9fb38ab56eae000fb9e24393bcea6ed614c8f",
+        "paper_panel_restyled": true,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N20-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -953,8 +1232,8 @@
       "public_pdf": "site/pdf/publicados/N21-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N21.jpg",
       "pages": 40,
-      "bytes": 6246377,
-      "sha256": "7bd36392c4565848bf0797bc7af8eda57d2617bb525efccdaa1246d4e80028b9",
+      "bytes": 10277549,
+      "sha256": "9bda2dc8033083e8738421ea6fe756c82548b7b3f918407ba00642e82287920f",
       "cover_sha256": "7bb326642a77cb4b8cec40b003d9a14122b4841b56eba8a4d30bec2b96dcf46b",
       "canonical_source": "pedagogy/plain-language-edition/N21.md",
       "canonical_sha256": "f5a220ac6409165d36c17cb739b437e3892544957a7ce950c85745486ab6cbeb",
@@ -967,7 +1246,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "El proyecto termina. El servicio sigue.",
       "subtitle": "Proyecto, producto, servicio y plataforma: responsabilidades que continúan",
-      "publication_revision": "approved-covers-20261003",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "897d5b838a66e1e8e97544b1ec8ddb1fb464da9f5913704816e84c1e1c13ce1e",
@@ -982,6 +1261,20 @@
         "bytes": 16865004,
         "sha256": "b6469016bd5ff59b12558b82f187fb32aed4f9167d19dc293d482cb3385a86dd",
         "tag": "editorial-completo-20261002"
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          22,
+          40
+        ],
+        "previous_sha256": "7bd36392c4565848bf0797bc7af8eda57d2617bb525efccdaa1246d4e80028b9",
+        "paper_panel_restyled": true,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N21-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -992,8 +1285,8 @@
       "public_pdf": "site/pdf/publicados/N22-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N22.jpg",
       "pages": 39,
-      "bytes": 5957887,
-      "sha256": "8fc55294b4ba1425cd5454fcc547553b0c645a6afe961b86be06c5ca200f1f3c",
+      "bytes": 9232921,
+      "sha256": "12acd645d40affec8f6fe70c689df642e4cdff6bcc5185e9330a4a50386d4a66",
       "cover_sha256": "fb59a6c0c81312bb3a320c44682db71262be60e235c749f2d7da5d0345901cc0",
       "canonical_source": "pedagogy/plain-language-edition/N22.md",
       "canonical_sha256": "46f0ca9b8e1af607f45acadf5752aa5851bb91cd2d85d01e830b129f1cff9080",
@@ -1006,7 +1299,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "Probar antes de ir más lejos",
       "subtitle": "Hipótesis de valor, evaluación y decisiones sobre una iniciativa",
-      "publication_revision": "approved-covers-20261003",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "b71f74316e02205e37439c3daa1babd8afd3f060f7125699ac9836afcba3b66d",
@@ -1021,6 +1314,20 @@
         "bytes": 18186653,
         "sha256": "1ca641e7897d9f8dbc7c08f275005bf560d26928d26020a5e7d7900f56bd4a3b",
         "tag": "editorial-completo-20261002"
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          21,
+          39
+        ],
+        "previous_sha256": "8fc55294b4ba1425cd5454fcc547553b0c645a6afe961b86be06c5ca200f1f3c",
+        "paper_panel_restyled": true,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N22-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -1031,8 +1338,8 @@
       "public_pdf": "site/pdf/publicados/N23-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N23.jpg",
       "pages": 34,
-      "bytes": 5078577,
-      "sha256": "dc5378feec1b430a33a8945426cac4ab098dba8d5ad3952af8a1de55318945eb",
+      "bytes": 8477608,
+      "sha256": "826503abf87e03318b236c23fe7ab5d2ead4560d03cdfdbda483e1909d5e0f0a",
       "cover_sha256": "2e08085bc3c7e3f36adedcd6122f529de487ebdd4db3c82cfb0d74e45cb205b4",
       "canonical_source": "pedagogy/plain-language-edition/N23.md",
       "canonical_sha256": "f0462b9a3729e439b16425e439701403982e6079265f723906654ad4fcaeb159",
@@ -1045,7 +1352,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "Una entrega pequeña que ya sirva",
       "subtitle": "Cortes de punta a punta, MVP y aprendizaje con uso real",
-      "publication_revision": "approved-covers-20261003",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "aebcaa6f0649b2a174e5cbe5715887ac335b5b5e883b8bfd3372865f6c45fb60",
@@ -1060,6 +1367,20 @@
         "bytes": 15256871,
         "sha256": "e8fba5783e2e1f7a56e208a64c6708b02b08206b846ef63ca72bfe10354e0a30",
         "tag": "editorial-arte-20261001"
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          18,
+          34
+        ],
+        "previous_sha256": "dc5378feec1b430a33a8945426cac4ab098dba8d5ad3952af8a1de55318945eb",
+        "paper_panel_restyled": true,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N23-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -1070,8 +1391,8 @@
       "public_pdf": "site/pdf/publicados/N24-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N24.jpg",
       "pages": 37,
-      "bytes": 6086027,
-      "sha256": "2e23486d0d172e21d3aeb87e91d7f0f22e1fed478f05e6d60f8eb4986da89ec5",
+      "bytes": 9644962,
+      "sha256": "151b91dcc1ec0e7d9512343d42964d8cd7cf8432d79e450d4e338685dce67865",
       "cover_sha256": "bc7e04ee9f73833c69333d896f931e26623b781241b84e41540b5e0ebaaa0bc9",
       "canonical_source": "pedagogy/plain-language-edition/N24.md",
       "canonical_sha256": "24311ca2cb47c1e8c0cdeccb07348681426280e13ce095b5d37affbf7b4c24a9",
@@ -1084,7 +1405,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "Si todo es urgente, ¿qué va primero?",
       "subtitle": "Priorización, capacidad, dependencias y costo de demora",
-      "publication_revision": "approved-covers-20261003",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "a8a362cb219ffd14ff327c8da8bc197997c99c235cee479804037b9d36768010",
@@ -1099,6 +1420,20 @@
         "bytes": 15503499,
         "sha256": "404037ea5b0c10426a79a156efb4b0b3381876ec773c5c97fc19048e9850c8f8",
         "tag": "editorial-completo-20261002"
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          17,
+          37
+        ],
+        "previous_sha256": "2e23486d0d172e21d3aeb87e91d7f0f22e1fed478f05e6d60f8eb4986da89ec5",
+        "paper_panel_restyled": true,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N24-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -1109,8 +1444,8 @@
       "public_pdf": "site/pdf/publicados/N25-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N25.jpg",
       "pages": 33,
-      "bytes": 5513487,
-      "sha256": "24f6d4d0bc3767c3c2b58143dcf0db70c0ecc71ffa4fb9a101428d0a3faec151",
+      "bytes": 9203022,
+      "sha256": "5994f0f2465c5f39582723ef4b74cf2531000fe2b25e8b3e87291d974c526518",
       "cover_sha256": "edfae2e9536a5fdcaed74519a216b1e1340435d3d7135aa6b1e531e1540a557f",
       "canonical_source": "pedagogy/readability-pilots/N25/N25-lectura-pedagogica-v1.md",
       "canonical_sha256": "1b6ac5d55aa6a545be97f4484efea04affb09e46509febbca07e1c5e82a411bb",
@@ -1123,7 +1458,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "Empezar menos, terminar más",
       "subtitle": "Flujo de trabajo, límites de WIP, colas, lotes y retroalimentación",
-      "publication_revision": "approved-covers-20261003",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "1ca0fb421394117ee212bbd43b9635be1e43bd52c1835ea513b173a1231e1509",
@@ -1138,6 +1473,20 @@
         "bytes": 15781558,
         "sha256": "f2bffc6fd086cd6ee522325af019f9b050aa5c1d974180aac4548f75d92c69fb",
         "tag": "editorial-completo-20261002"
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          18,
+          33
+        ],
+        "previous_sha256": "24f6d4d0bc3767c3c2b58143dcf0db70c0ecc71ffa4fb9a101428d0a3faec151",
+        "paper_panel_restyled": false,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N25-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -1148,8 +1497,8 @@
       "public_pdf": "site/pdf/publicados/N26-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N26.jpg",
       "pages": 37,
-      "bytes": 5581086,
-      "sha256": "55c8fd2f7563479172264b017232420ec5d895991ca01f944e9cb50ffd807a14",
+      "bytes": 9226340,
+      "sha256": "2570170eab0707317c18d6c75a4d3d1994e8ec27780de1526b97e2a7174128b8",
       "cover_sha256": "cfeda4a8925fee864ab2bd10de7f8065cd6d3ec1bbde1f1cc574025369f2b729",
       "canonical_source": "pedagogy/plain-language-edition/N26.md",
       "canonical_sha256": "42b114afc166add843cbeaec6687d778fa268e71269c7a664187042bd1d3d051",
@@ -1162,7 +1511,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "Un servicio, muchas organizaciones",
       "subtitle": "Arquitectura de servicios, plataformas y dependencias de terceros",
-      "publication_revision": "portraits-20261004",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "e1e156b52e41bbb40791fcde1282d8ee0a5f86e80b564fe45710d52fd704785b",
@@ -1188,6 +1537,20 @@
           126
         ],
         "cover_and_other_pages_preserved": true
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          16,
+          37
+        ],
+        "previous_sha256": "55c8fd2f7563479172264b017232420ec5d895991ca01f944e9cb50ffd807a14",
+        "paper_panel_restyled": false,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N26-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -1198,8 +1561,8 @@
       "public_pdf": "site/pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N27.jpg",
       "pages": 39,
-      "bytes": 6373731,
-      "sha256": "c07f132372439b89a8677dbfba6844fd71901674b3084e10ec8066dd96ce068a",
+      "bytes": 9618385,
+      "sha256": "788bc0ba44f00a03b088eaad27ae079defbf61197f5ba921f8eb8a0bbc2ea9f6",
       "cover_sha256": "6020f0b72c39f970aef8f0e24af270ca3258e10531314cfd9709114ce538d5af",
       "canonical_source": "pedagogy/plain-language-edition/N27.md",
       "canonical_sha256": "8bdf6a45a7f0d92f24494d3975b754ec47a6e0d40fa25eb56abbeeef2816d9cb",
@@ -1212,7 +1575,7 @@
       "editorial_revision": "six-approved-20261003",
       "title": "Entender lo mismo antes de conectar",
       "subtitle": "APIs y contratos de intercambio: significado, tiempo y operación",
-      "publication_revision": "portraits-20261004",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "ec2c4cb7057a680d0858d4f2c1789dde5bea154ff41ff15865087b98c8cd68f5",
@@ -1283,6 +1646,20 @@
           87
         ],
         "cover_and_other_pages_preserved": true
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          19,
+          39
+        ],
+        "previous_sha256": "c07f132372439b89a8677dbfba6844fd71901674b3084e10ec8066dd96ce068a",
+        "paper_panel_restyled": false,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N27-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -1293,8 +1670,8 @@
       "public_pdf": "site/pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N28.jpg",
       "pages": 39,
-      "bytes": 5778831,
-      "sha256": "749896aedb84f895431a5655d760c152a08cb831cbcc294f345e63998d632169",
+      "bytes": 9101619,
+      "sha256": "2a5e28b736add4e7eb84c7fe24a5d50a50ffde2ced5cbe44e0eaa90636ac6eb0",
       "cover_sha256": "2cef7ab25a558398ba3d057d29b7d5166092bda6675c9fd2712664d1478e97a4",
       "canonical_source": "pedagogy/plain-language-edition/N28.md",
       "canonical_sha256": "badfc42e467577aeb2e2566a1a28adf7d6c87869219632b2ebab1c987f060d24",
@@ -1307,7 +1684,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "Funciona, pero ¿funciona bien?",
       "subtitle": "Atributos de calidad y evidencia de un servicio adecuado al uso",
-      "publication_revision": "portraits-20261004",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "102c1af120fbcc7a155f7993d63009a9dd9fa7886bca564e53287a237770e5c5",
@@ -1333,6 +1710,20 @@
           121
         ],
         "cover_and_other_pages_preserved": true
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          22,
+          39
+        ],
+        "previous_sha256": "749896aedb84f895431a5655d760c152a08cb831cbcc294f345e63998d632169",
+        "paper_panel_restyled": false,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N28-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -1343,8 +1734,8 @@
       "public_pdf": "site/pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N29.jpg",
       "pages": 41,
-      "bytes": 6198550,
-      "sha256": "869773c0c64406ccf7d02e09ded174ad1a5496b54c437716c440311f5935a9a0",
+      "bytes": 9841099,
+      "sha256": "6fbf6442fd20a8781b4d3c6682312e73abc480e28527b59d14819e168b0219e9",
       "cover_sha256": "d1704b4460b5ad72680bf89c03841413785623031dd8a08f9c2391c4f50b60da",
       "canonical_source": "pedagogy/plain-language-edition/N29.md",
       "canonical_sha256": "3be644d8ca36c681a39fc7b37c0699fd621e4aa7ee5405e4c07149a301e6c621",
@@ -1357,7 +1748,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "Cambiar sin dejar de atender",
       "subtitle": "Entrega continua, exposición, recuperación y control del cambio",
-      "publication_revision": "portraits-20261004",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "88697054c131ef2c9e1f4ce3bca397efd3c959ffe707a9b0b67fa80ada578e36",
@@ -1383,6 +1774,20 @@
           122
         ],
         "cover_and_other_pages_preserved": true
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          19,
+          41
+        ],
+        "previous_sha256": "869773c0c64406ccf7d02e09ded174ad1a5496b54c437716c440311f5935a9a0",
+        "paper_panel_restyled": false,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N29-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -1393,8 +1798,8 @@
       "public_pdf": "site/pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N30.jpg",
       "pages": 40,
-      "bytes": 6487362,
-      "sha256": "d571508fe44b12aebf9a2cbc860184dfbc679600e6084690c2514084c85dc574",
+      "bytes": 9657861,
+      "sha256": "c0d5f571e5567aa418e49d0e37b9d8743bfe46b0fe36ae7e2fa7fe2b88fa2d9e",
       "cover_sha256": "aaafbce9e26a4ce0b7e0101ec6438db802f05ac4ca5eb5ad41f160fbc7ae56d1",
       "canonical_source": "pedagogy/plain-language-edition/N30.md",
       "canonical_sha256": "c2e24d23fa8de0eef92bbfa72b2405beb10bee6d0fef043f517b248846f94af8",
@@ -1407,7 +1812,7 @@
       "editorial_revision": "six-approved-20261003",
       "title": "Detectar, responder y aprender",
       "subtitle": "Observabilidad, objetivos de servicio, incidentes y aprendizaje operativo",
-      "publication_revision": "portraits-20261004",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "055874dd680e9e70c337fa0f825727f467f0caa6e07822e7e0c0f95951255da2",
@@ -1478,6 +1883,20 @@
           84
         ],
         "cover_and_other_pages_preserved": true
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          21,
+          40
+        ],
+        "previous_sha256": "d571508fe44b12aebf9a2cbc860184dfbc679600e6084690c2514084c85dc574",
+        "paper_panel_restyled": false,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N30-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -1488,8 +1907,8 @@
       "public_pdf": "site/pdf/publicados/N31-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N31.jpg",
       "pages": 40,
-      "bytes": 6043361,
-      "sha256": "189d640553463fba46ca7243952c299af7e09642aa8d18898098214edda2b4fd",
+      "bytes": 9389481,
+      "sha256": "9c7c9fcaf3a89ed6b5cbb5545358b6866808d15446258f2009f1f04337dffe4d",
       "cover_sha256": "d06da62c3c6875fdcd9fa7605d696f27f2c9e6e7fe90c76e6c56058ccf781035",
       "canonical_source": "pedagogy/plain-language-edition/N31.md",
       "canonical_sha256": "632baecf1b3a579ba80d5ded5959d36a0f228f2a0bffcad04bcc6d057ca1fb45",
@@ -1502,7 +1921,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "¿Para qué usar IA y hasta dónde?",
       "subtitle": "Selección de usos, capacidades y límites de autonomía",
-      "publication_revision": "portraits-20261004",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "c64d78d88d6e008dcc50d5f86fb5b6a3f7bd584956c4688ad8d474febaa7cf81",
@@ -1528,6 +1947,20 @@
           127
         ],
         "cover_and_other_pages_preserved": true
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          19,
+          40
+        ],
+        "previous_sha256": "189d640553463fba46ca7243952c299af7e09642aa8d18898098214edda2b4fd",
+        "paper_panel_restyled": false,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N31-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -1538,8 +1971,8 @@
       "public_pdf": "site/pdf/publicados/N32-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N32.jpg",
       "pages": 44,
-      "bytes": 7406622,
-      "sha256": "5603d5d0639475a717ffeab062fec4cab1e94b434f238fca08190666c34893d4",
+      "bytes": 10987614,
+      "sha256": "579483585e21369d4cd7f0d1371638146afe81af6769498cb186f874c4074708",
       "cover_sha256": "296373eb3cc86f9ea54213f4dd10f79138418d2f5217c80d0af2c37181c6e053",
       "canonical_source": "pedagogy/plain-language-edition/N32.md",
       "canonical_sha256": "326190ec04866f01e87913e61fdfd2602437f9fec356bd24ecd6b7c85db484c9",
@@ -1552,7 +1985,7 @@
       "editorial_revision": "six-approved-20261003",
       "title": "¿Está lista esta IA para usarla?",
       "subtitle": "Evaluación situada, cobertura, gravedad de errores y supervisión",
-      "publication_revision": "portraits-20261004",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "debce3ade574c5f4091325815383961a60bca38f38dd5883dc67e187d9bdbd2a",
@@ -1623,6 +2056,20 @@
           94
         ],
         "cover_and_other_pages_preserved": true
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          17,
+          44
+        ],
+        "previous_sha256": "5603d5d0639475a717ffeab062fec4cab1e94b434f238fca08190666c34893d4",
+        "paper_panel_restyled": false,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N32-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -1633,8 +2080,8 @@
       "public_pdf": "site/pdf/publicados/N33-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N33.jpg",
       "pages": 42,
-      "bytes": 6545259,
-      "sha256": "26424bdf715dfa54f1c4addb03650f370fb85eacceaf5dcba4138c9169432df8",
+      "bytes": 10153165,
+      "sha256": "08e2ee29a6757a650e5bec5b172bf3ee9649d6e5efbc05934556620186303c21",
       "cover_sha256": "d589d7ddae8b400d5a85a3c1a4290113bcaa26340c72ea1c70ca58ce5a55ab4e",
       "canonical_source": "pedagogy/plain-language-edition/N33.md",
       "canonical_sha256": "f826e7d2a2080cadf1b1f8ba2f898bdb3f56cb6708ff30ead3349f780bda8753",
@@ -1647,7 +2094,7 @@
       "editorial_revision": "six-approved-20261003",
       "title": "La IA cambió. ¿Sigue siendo confiable?",
       "subtitle": "Gobierno del uso, seguimiento de cambios, incidentes y retiro",
-      "publication_revision": "portraits-20261004",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "6f485cb3fbd5c4ce38e731e02c3e980d21f22a8c937c1f98635181fb886c6bdd",
@@ -1718,6 +2165,20 @@
           96
         ],
         "cover_and_other_pages_preserved": true
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          16,
+          42
+        ],
+        "previous_sha256": "26424bdf715dfa54f1c4addb03650f370fb85eacceaf5dcba4138c9169432df8",
+        "paper_panel_restyled": false,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N33-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -1728,8 +2189,8 @@
       "public_pdf": "site/pdf/publicados/N34-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N34.jpg",
       "pages": 40,
-      "bytes": 6515715,
-      "sha256": "503dc08150b6d46c275fd97dab95aa7295bc7079f948ea00b84485a7b49749c7",
+      "bytes": 10417001,
+      "sha256": "cc90487e2a3b26065fe1ece25078fefba388e5ab470b5feecc59d9676384434a",
       "cover_sha256": "0d76e095ab52e17c04aeb378e2b0598beea5521c1a5af86290ccdaa8b519abca",
       "canonical_source": "pedagogy/plain-language-edition/N34.md",
       "canonical_sha256": "f458a49e2ba63bc979874391f8beee1fec773c7de096f4eb2395f4bbe3aed50f",
@@ -1742,7 +2203,7 @@
       "editorial_revision": "approved-covers-20261003",
       "title": "Que las decisiones encajen",
       "subtitle": "Trazabilidad del problema, la evidencia, las decisiones y los resultados",
-      "publication_revision": "approved-covers-20261003",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "efab1bb99c2250638e68a1e081f60ef35dacdf0579bf7a2640c07590b12c40bb",
@@ -1757,6 +2218,20 @@
         "bytes": 18766994,
         "sha256": "1b710653f628b16a677ce719f181a7ba1954a689b449c2efade5b6b3b1cb04bd",
         "tag": "editorial-completo-20261002"
+      },
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          21,
+          40
+        ],
+        "previous_sha256": "503dc08150b6d46c275fd97dab95aa7295bc7079f948ea00b84485a7b49749c7",
+        "paper_panel_restyled": false,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N34-METSI-lectura-previa-v10-final.pdf"
       }
     },
     {
@@ -1767,8 +2242,8 @@
       "public_pdf": "site/pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N35.jpg",
       "pages": 40,
-      "bytes": 6317111,
-      "sha256": "0c37e3926e3e379f3316e8f78f0316306284fb79fd748e9589210aa832aacfb7",
+      "bytes": 9639220,
+      "sha256": "ad38b61b54348726e514d54a2758d3e27890ade1655c8691dc841e6203ca582e",
       "cover_sha256": "3ca9fe4cb4236232538b3c0722c50f070f1ab68be89fb10d2a6cae64f94f946e",
       "canonical_source": "pedagogy/plain-language-edition/N35.md",
       "canonical_sha256": "08a181fe38bacdfb1ea2b218e63174829b34081ff6188bbd594ce00cb8df803a",
@@ -1781,7 +2256,7 @@
       "editorial_revision": "six-approved-20261003",
       "title": "Explicar para que otros puedan actuar",
       "subtitle": "Argumentación, comunicación y transferencia de decisiones",
-      "publication_revision": "six-approved-20261003",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "bfbfadb2d7a5298f9cd3858300672a63aba116b7700c96e36c256bab3e9cd0db",
@@ -1841,7 +2316,21 @@
             "tag": "editorial-completo-20261002"
           }
         }
-      ]
+      ],
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          21,
+          40
+        ],
+        "previous_sha256": "0c37e3926e3e379f3316e8f78f0316306284fb79fd748e9589210aa832aacfb7",
+        "paper_panel_restyled": false,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N35-METSI-lectura-previa-v10-final.pdf"
+      }
     },
     {
       "code": "N36",
@@ -1851,8 +2340,8 @@
       "public_pdf": "site/pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf",
       "cover": "site/covers/N36.jpg",
       "pages": 43,
-      "bytes": 6554060,
-      "sha256": "5b7a422d6543316c5ac138fd8bed7b3e7381e04fc9045d674716576681be3039",
+      "bytes": 10123339,
+      "sha256": "1c5140600668814bab62a1bdb7abb7e1f63c4903eb888e5e5e943a682fa67393",
       "cover_sha256": "838f9704516672db1cb998007a611ebbb12d26febff631cf5b096e789b108221",
       "canonical_source": "pedagogy/plain-language-edition/N36.md",
       "canonical_sha256": "67cb9a48f7aa216dd19ac88c437cfcdfe0054e6e8028d34fa03eea26438ed446",
@@ -1865,7 +2354,7 @@
       "editorial_revision": "six-approved-20261003",
       "title": "¿Qué aprendimos de lo que hicimos?",
       "subtitle": "Reflexión sobre la práctica, revisión y aprendizaje profesional",
-      "publication_revision": "six-approved-20261003",
+      "publication_revision": "fullbleed-editorial-20261007",
       "publication_assembly": {
         "mode": "replace_cover",
         "input_pdf_sha256": "19e94336d0187f25b5b79d858c56e69a6895e2893e63bc225337d88deb3547bf",
@@ -1925,7 +2414,21 @@
             "tag": "editorial-completo-20261002"
           }
         }
-      ]
+      ],
+      "fullbleed_correction": {
+        "revision": "fullbleed-editorial-20261007",
+        "changed_pages": [
+          4,
+          5,
+          16,
+          43
+        ],
+        "previous_sha256": "5b7a422d6543316c5ac138fd8bed7b3e7381e04fc9045d674716576681be3039",
+        "paper_panel_restyled": false,
+        "approved_cover_and_prose_preserved": true,
+        "proof_manifest": "output/pdf/METSI-N00-N36-fullbleed-editorial-2026-10-07/manifest.json",
+        "rollback_copy": "output/pdf/METSI-N01-N36-rollback-before-fullbleed-2026-10-07/N36-METSI-lectura-previa-v10-final.pdf"
+      }
     }
   ],
   "site_publication": {

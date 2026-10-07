@@ -13,14 +13,14 @@ window.METSI_ATLAS = {
           "section": "Cómo emerge un resultado que ningún componente controla",
           "page": 17,
           "title": "Un sistema es mucho más que una aplicación",
-          "href": "pdf/N02-METSI-lectura-previa-v16-final.pdf?v=portraits-20261004#page=17"
+          "href": "pdf/N02-METSI-lectura-previa-v16-final.pdf?v=fullbleed-editorial-20261007#page=17"
         },
         {
           "code": "N03",
           "section": "Movimiento 2 · Observar cómo regresan los efectos",
           "page": 13,
           "title": "Resolver acá, complicar allá",
-          "href": "pdf/N03-METSI-lectura-previa-v11-final.pdf?v=portraits-20261004#page=13"
+          "href": "pdf/N03-METSI-lectura-previa-v11-final.pdf?v=fullbleed-editorial-20261007#page=13"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -38,7 +38,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Pasar de interesados genéricos a relaciones de poder",
           "page": 9,
           "title": "No todos ven el mismo problema",
-          "href": "pdf/N05-METSI-lectura-previa-v11-final.pdf?v=approved-covers-20261003#page=9"
+          "href": "pdf/N05-METSI-lectura-previa-v11-final.pdf?v=fullbleed-editorial-20261007#page=9"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -56,14 +56,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Decidir y dejar abierta la revisión",
           "page": 23,
           "title": "Antes de decidir, ¿qué sabemos?",
-          "href": "pdf/N04-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=23"
+          "href": "pdf/N04-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=23"
         },
         {
           "code": "N28",
           "section": "Movimiento 1 · Convertir «funciona bien» en una pregunta concreta",
           "page": 13,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=13"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=13"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -81,14 +81,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Separar intención, ocurrencia y situación vigente",
           "page": 11,
           "title": "Pedir no es confirmar",
-          "href": "pdf/publicados/N12-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=11"
+          "href": "pdf/publicados/N12-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=11"
         },
         {
           "code": "N15",
           "section": "Movimiento 1 · Comenzar por la pregunta, no por la notación",
           "page": 12,
           "title": "Un modelo para cada pregunta",
-          "href": "pdf/publicados/N15-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=12"
+          "href": "pdf/publicados/N15-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=12"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -106,7 +106,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Comenzar por la pregunta, no por la notación",
           "page": 12,
           "title": "Un modelo para cada pregunta",
-          "href": "pdf/publicados/N15-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=12"
+          "href": "pdf/publicados/N15-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=12"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -124,14 +124,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Formular incertidumbres que puedan cambiar una decisión",
           "page": 9,
           "title": "Investigar antes de apostar",
-          "href": "pdf/N06-METSI-lectura-previa-v11-final.pdf?v=approved-covers-20261003#page=9"
+          "href": "pdf/N06-METSI-lectura-previa-v11-final.pdf?v=fullbleed-editorial-20261007#page=9"
         },
         {
           "code": "N06",
           "section": "Movimiento 2 · Diseñar una cartera mínima de evidencia",
           "page": 15,
           "title": "Investigar antes de apostar",
-          "href": "pdf/N06-METSI-lectura-previa-v11-final.pdf?v=approved-covers-20261003#page=15"
+          "href": "pdf/N06-METSI-lectura-previa-v11-final.pdf?v=fullbleed-editorial-20261007#page=15"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -149,7 +149,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Seguir el recorrido completo y reconocer barreras sistémicas",
           "page": 10,
           "title": "Diseñar para quienes lo van a usar",
-          "href": "pdf/N09-METSI-lectura-previa-v11-final.pdf?v=approved-covers-20261003#page=10"
+          "href": "pdf/N09-METSI-lectura-previa-v11-final.pdf?v=fullbleed-editorial-20261007#page=10"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -167,7 +167,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Seguir el recorrido completo y reconocer barreras sistémicas",
           "page": 10,
           "title": "Diseñar para quienes lo van a usar",
-          "href": "pdf/N09-METSI-lectura-previa-v11-final.pdf?v=approved-covers-20261003#page=10"
+          "href": "pdf/N09-METSI-lectura-previa-v11-final.pdf?v=fullbleed-editorial-20261007#page=10"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -185,14 +185,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Seguir el recorrido completo y reconocer barreras sistémicas",
           "page": 10,
           "title": "Diseñar para quienes lo van a usar",
-          "href": "pdf/N09-METSI-lectura-previa-v11-final.pdf?v=approved-covers-20261003#page=10"
+          "href": "pdf/N09-METSI-lectura-previa-v11-final.pdf?v=fullbleed-editorial-20261007#page=10"
         },
         {
           "code": "N14",
           "section": "Movimiento 1 · Definir el proceso desde la promesa y seguir casos completos",
           "page": 12,
           "title": "De un área a otra: dónde se frena el trabajo",
-          "href": "pdf/publicados/N14-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=12"
+          "href": "pdf/publicados/N14-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=12"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -210,14 +210,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 2 · Diseñar con diversidad y comprender la adopción",
           "page": 13,
           "title": "Diseñar para quienes lo van a usar",
-          "href": "pdf/N09-METSI-lectura-previa-v11-final.pdf?v=approved-covers-20261003#page=13"
+          "href": "pdf/N09-METSI-lectura-previa-v11-final.pdf?v=fullbleed-editorial-20261007#page=13"
         },
         {
           "code": "N28",
           "section": "Movimiento 3 · Evaluar propiedades sin perder a las personas",
           "page": 17,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=17"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=17"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -235,14 +235,14 @@ window.METSI_ATLAS = {
           "section": "BPMN y nivel de detalle",
           "page": 31,
           "title": "De un área a otra: dónde se frena el trabajo",
-          "href": "pdf/publicados/N14-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=31"
+          "href": "pdf/publicados/N14-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=31"
         },
         {
           "code": "N12",
           "section": "BPMN representa coordinación, no prueba ejecución",
           "page": 14,
           "title": "Pedir no es confirmar",
-          "href": "pdf/publicados/N12-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=14"
+          "href": "pdf/publicados/N12-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=14"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -260,14 +260,14 @@ window.METSI_ATLAS = {
           "section": "Una API no es una promesa genérica de éxito",
           "page": 15,
           "title": "Entender lo mismo antes de conectar",
-          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=15"
+          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=15"
         },
         {
           "code": "N13",
           "section": "Movimiento 2 · Elegir consistencia e idempotencia por consecuencia",
           "page": 14,
           "title": "¿Qué pasa si el pedido llega dos veces?",
-          "href": "pdf/publicados/N13-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=14"
+          "href": "pdf/publicados/N13-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=14"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -285,14 +285,14 @@ window.METSI_ATLAS = {
           "section": "Citar una fuente no significa tener razón",
           "page": 22,
           "title": "¿Para qué usar IA y hasta dónde?",
-          "href": "pdf/publicados/N31-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=22"
+          "href": "pdf/publicados/N31-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=22"
         },
         {
           "code": "N33",
           "section": "Procedencia: saber de dónde salió y qué se cambió",
           "page": 17,
           "title": "La IA cambió. ¿Sigue siendo confiable?",
-          "href": "pdf/publicados/N33-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=17"
+          "href": "pdf/publicados/N33-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=17"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -310,14 +310,14 @@ window.METSI_ATLAS = {
           "section": "PMI, PMBOK, Scrum y Kanban: nombres distintos, aportes distintos",
           "page": 17,
           "title": "No todos los cambios se hacen igual",
-          "href": "pdf/publicados/N17-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=17"
+          "href": "pdf/publicados/N17-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=17"
         },
         {
           "code": "N20",
           "section": "Las ideas que sostienen el recorrido",
           "page": 12,
           "title": "Del plan a las decisiones",
-          "href": "pdf/publicados/N20-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=12"
+          "href": "pdf/publicados/N20-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=12"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -335,14 +335,14 @@ window.METSI_ATLAS = {
           "section": "PMI, PMBOK, Scrum y Kanban: nombres distintos, aportes distintos",
           "page": 17,
           "title": "No todos los cambios se hacen igual",
-          "href": "pdf/publicados/N17-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=17"
+          "href": "pdf/publicados/N17-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=17"
         },
         {
           "code": "N20",
           "section": "Movimiento 1 · Partir de decisiones, incertidumbre y contexto",
           "page": 13,
           "title": "Del plan a las decisiones",
-          "href": "pdf/publicados/N20-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=13"
+          "href": "pdf/publicados/N20-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=13"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -360,14 +360,14 @@ window.METSI_ATLAS = {
           "section": "PMI, PMBOK, Scrum y Kanban: nombres distintos, aportes distintos",
           "page": 17,
           "title": "No todos los cambios se hacen igual",
-          "href": "pdf/publicados/N17-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=17"
+          "href": "pdf/publicados/N17-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=17"
         },
         {
           "code": "N23",
           "section": "Movimiento 2 · Cortar a través de las partes necesarias",
           "page": 14,
           "title": "Una entrega pequeña que ya sirva",
-          "href": "pdf/publicados/N23-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=14"
+          "href": "pdf/publicados/N23-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=14"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -385,14 +385,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 2 · Componer prácticas con puertas verificables",
           "page": 16,
           "title": "Del plan a las decisiones",
-          "href": "pdf/publicados/N20-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=16"
+          "href": "pdf/publicados/N20-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=16"
         },
         {
           "code": "N35",
           "section": "Movimiento 3 · Mostrar los límites y comprobar qué se transfiere",
           "page": 17,
           "title": "Explicar para que otros puedan actuar",
-          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=six-approved-20261003#page=17"
+          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=17"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -410,14 +410,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Gobernar dependencia, transición y salida",
           "page": 18,
           "title": "¿Comprar, construir o no automatizar?",
-          "href": "pdf/publicados/N19-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=18"
+          "href": "pdf/publicados/N19-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=18"
         },
         {
           "code": "N27",
           "section": "Movimiento 3 · Cambiar el acuerdo sin romper a quienes lo usan",
           "page": 22,
           "title": "Entender lo mismo antes de conectar",
-          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=22"
+          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=22"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -435,7 +435,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Separar la capacidad del artefacto que la realiza",
           "page": 13,
           "title": "¿Comprar, construir o no automatizar?",
-          "href": "pdf/publicados/N19-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=13"
+          "href": "pdf/publicados/N19-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=13"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -453,14 +453,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Distinguir proyecto, producto, servicio y plataforma",
           "page": 13,
           "title": "El proyecto termina. El servicio sigue.",
-          "href": "pdf/publicados/N21-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=13"
+          "href": "pdf/publicados/N21-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=13"
         },
         {
           "code": "N24",
           "section": "Movimiento 1 · Convertir pedidos en opciones claras",
           "page": 13,
           "title": "Si todo es urgente, ¿qué va primero?",
-          "href": "pdf/publicados/N24-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=13"
+          "href": "pdf/publicados/N24-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=13"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -478,14 +478,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 2 · Reducir trabajo en curso, lotes y esperas",
           "page": 15,
           "title": "Empezar menos, terminar más",
-          "href": "pdf/publicados/N25-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=15"
+          "href": "pdf/publicados/N25-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=15"
         },
         {
           "code": "N22",
           "section": "Movimiento 2 · Diseñar evidencia que distinga explicaciones rivales",
           "page": 16,
           "title": "Probar antes de ir más lejos",
-          "href": "pdf/publicados/N22-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=16"
+          "href": "pdf/publicados/N22-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=16"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -503,14 +503,14 @@ window.METSI_ATLAS = {
           "section": "Kanban: más que columnas",
           "page": 20,
           "title": "Si todo es urgente, ¿qué va primero?",
-          "href": "pdf/publicados/N24-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=20"
+          "href": "pdf/publicados/N24-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=20"
         },
         {
           "code": "N17",
           "section": "PMI, PMBOK, Scrum y Kanban: nombres distintos, aportes distintos",
           "page": 17,
           "title": "No todos los cambios se hacen igual",
-          "href": "pdf/publicados/N17-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=17"
+          "href": "pdf/publicados/N17-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=17"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -528,14 +528,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Limitar compromisos y revisar lo decidido",
           "page": 20,
           "title": "Si todo es urgente, ¿qué va primero?",
-          "href": "pdf/publicados/N24-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=20"
+          "href": "pdf/publicados/N24-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=20"
         },
         {
           "code": "N25",
           "section": "Movimiento 2 · Reducir trabajo en curso, lotes y esperas",
           "page": 15,
           "title": "Empezar menos, terminar más",
-          "href": "pdf/publicados/N25-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=15"
+          "href": "pdf/publicados/N25-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=15"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -553,7 +553,7 @@ window.METSI_ATLAS = {
           "section": "MVP: mínimo para aprender, no mínimo cuidado",
           "page": 15,
           "title": "Una entrega pequeña que ya sirva",
-          "href": "pdf/publicados/N23-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=15"
+          "href": "pdf/publicados/N23-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=15"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -571,14 +571,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 2 · Formular outcomes, protecciones y evidencia de revisión",
           "page": 17,
           "title": "Del síntoma al problema",
-          "href": "pdf/N10-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=17"
+          "href": "pdf/N10-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=17"
         },
         {
           "code": "N22",
           "section": "Movimiento 1 · Convertir la iniciativa en una afirmación refutable",
           "page": 13,
           "title": "Probar antes de ir más lejos",
-          "href": "pdf/publicados/N22-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=13"
+          "href": "pdf/publicados/N22-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=13"
         }
       ],
       "referenceLabel": "Lecturas relacionadas · no desarrollan OKR"
@@ -596,14 +596,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Convertir «funciona bien» en una pregunta concreta",
           "page": 13,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=13"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=13"
         },
         {
           "code": "N28",
           "section": "Movimiento 2 · Elegir evidencia que responda a la decisión",
           "page": 15,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=15"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=15"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -621,14 +621,14 @@ window.METSI_ATLAS = {
           "section": "Fuentes que permiten mirar distintas partes de la red",
           "page": 12,
           "title": "Un servicio, muchas organizaciones",
-          "href": "pdf/publicados/N26-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=12"
+          "href": "pdf/publicados/N26-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=12"
         },
         {
           "code": "N21",
           "section": "Las ideas que sostienen el recorrido",
           "page": 12,
           "title": "El proyecto termina. El servicio sigue.",
-          "href": "pdf/publicados/N21-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=12"
+          "href": "pdf/publicados/N21-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=12"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -646,7 +646,7 @@ window.METSI_ATLAS = {
           "section": "DevOps: construir y operar sin pasarse el problema",
           "page": 16,
           "title": "Cambiar sin dejar de atender",
-          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=16"
+          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=16"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -664,7 +664,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Saber exactamente qué estamos cambiando",
           "page": 13,
           "title": "Cambiar sin dejar de atender",
-          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=13"
+          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=13"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -682,14 +682,14 @@ window.METSI_ATLAS = {
           "section": "Las ideas que sostienen el recorrido",
           "page": 12,
           "title": "Cambiar sin dejar de atender",
-          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=12"
+          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=12"
         },
         {
           "code": "N25",
           "section": "Tradiciones y marcos utilizados en el argumento",
           "page": 12,
           "title": "Empezar menos, terminar más",
-          "href": "pdf/publicados/N25-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=12"
+          "href": "pdf/publicados/N25-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=12"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -707,14 +707,14 @@ window.METSI_ATLAS = {
           "section": "Fuentes para observar y aprender",
           "page": 12,
           "title": "Detectar, responder y aprender",
-          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=12"
+          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=12"
         },
         {
           "code": "N30",
           "section": "Movimiento 2 · Acordar qué medir y qué hacer cuando empeora",
           "page": 15,
           "title": "Detectar, responder y aprender",
-          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=15"
+          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=15"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -732,7 +732,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Pasar de datos sueltos a un recorrido que pueda reconstruirse",
           "page": 13,
           "title": "Detectar, responder y aprender",
-          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=13"
+          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=13"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -750,7 +750,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 2 · Elegir evidencia que responda a la decisión",
           "page": 15,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=15"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=15"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -768,7 +768,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Evaluar propiedades sin perder a las personas",
           "page": 17,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=17"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=17"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -786,14 +786,14 @@ window.METSI_ATLAS = {
           "section": "Las ideas que sostienen el recorrido",
           "page": 12,
           "title": "Cambiar sin dejar de atender",
-          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=12"
+          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=12"
         },
         {
           "code": "N27",
           "section": "Movimiento 3 · Cambiar el acuerdo sin romper a quienes lo usan",
           "page": 22,
           "title": "Entender lo mismo antes de conectar",
-          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=22"
+          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=22"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -811,14 +811,14 @@ window.METSI_ATLAS = {
           "section": "Las ideas que sostienen el recorrido",
           "page": 12,
           "title": "Cambiar sin dejar de atender",
-          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=12"
+          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=12"
         },
         {
           "code": "N27",
           "section": "Movimiento 3 · Cambiar el acuerdo sin romper a quienes lo usan",
           "page": 22,
           "title": "Entender lo mismo antes de conectar",
-          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=22"
+          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=22"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -836,7 +836,7 @@ window.METSI_ATLAS = {
           "section": "Inventariar usos, no solamente licencias",
           "page": 12,
           "title": "La IA cambió. ¿Sigue siendo confiable?",
-          "href": "pdf/publicados/N33-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=12"
+          "href": "pdf/publicados/N33-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=12"
         }
       ],
       "referenceLabel": "Lectura relacionada · no desarrolla COBIT"
@@ -854,14 +854,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 2 · Revisar lo que sostiene la cadena",
           "page": 16,
           "title": "Que las decisiones encajen",
-          "href": "pdf/publicados/N34-METSI-lectura-previa-v10-final.pdf?v=approved-covers-20261003#page=16"
+          "href": "pdf/publicados/N34-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=16"
         },
         {
           "code": "N26",
           "section": "Movimiento 2 · Saber quién puede actuar cuando las partes discrepan",
           "page": 17,
           "title": "Un servicio, muchas organizaciones",
-          "href": "pdf/publicados/N26-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=17"
+          "href": "pdf/publicados/N26-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=17"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -879,14 +879,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Volver, corregir y reparar son acciones distintas",
           "page": 20,
           "title": "Cambiar sin dejar de atender",
-          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=20"
+          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=20"
         },
         {
           "code": "N30",
           "section": "Movimiento 3 · Responder sin esperar a conocer toda la causa",
           "page": 22,
           "title": "Detectar, responder y aprender",
-          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=portraits-20261004#page=22"
+          "href": "pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=22"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -904,14 +904,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Empezar por la decisión, no por las diapositivas",
           "page": 12,
           "title": "Explicar para que otros puedan actuar",
-          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=six-approved-20261003#page=12"
+          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=12"
         },
         {
           "code": "N35",
           "section": "Movimiento 3 · Mostrar los límites y comprobar qué se transfiere",
           "page": 17,
           "title": "Explicar para que otros puedan actuar",
-          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=six-approved-20261003#page=17"
+          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=17"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -929,14 +929,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Volver a la experiencia sin maquillarla",
           "page": 9,
           "title": "¿Qué aprendimos de lo que hicimos?",
-          "href": "pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf?v=six-approved-20261003#page=9"
+          "href": "pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=9"
         },
         {
           "code": "N36",
           "section": "Movimiento 2 · Decidir qué conviene corregir",
           "page": 12,
           "title": "¿Qué aprendimos de lo que hicimos?",
-          "href": "pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf?v=six-approved-20261003#page=12"
+          "href": "pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=12"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
