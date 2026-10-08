@@ -147,3 +147,18 @@ Tras aprobar el piloto N02, el usuario pidió rehacer **todas** las crónicas N0
 ### Reproducción exacta en un nuevo chat
 
 Usar el Python de runtime `/Users/diegocarralbal/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3` (el `python3` del sistema no tiene Pillow). Desde `work/UBA-metsi-publication`, ejecutar `scripts/build_cronicas.py` y luego `scripts/verify_cronicas.py` con ese intérprete. No ejecutar de nuevo la etapa de curación salvo que se cambien fotos: los 37 originales y sus metadatos ya están preservados. El verificador deja PNGs y contactos en `/private/tmp/metsi-cronicas-final-qa/`. La fuente narrativa es `narratives.py`; `articles.py` sigue siendo la ficha de título, caso y URL primaria. Para publicar, stage selectivo: scripts de crónicas, carpeta `pedagogy/cronicas-20261008/`, `site/covers/cronicas/index.html`, `images/cards/`, `images/story/`, `pdf/`, `site/index.html` y `site/metsi.js`; no stage global.
+
+### Publicación y verificación final de esta ronda · cerrado
+
+- Commit de producto **`6c5ac8de37c630c5b4a9369e7672829f8bb457dd`** en `origin/main` (push correcto con 74 objetos Git LFS: 37 fotos fuente y 37 PDF, 47 MB transferidos). Sólo se incluyeron las 123 rutas de esta entrega; no se tocaron los archivos extraños/sin seguimiento del árbol compartido.
+- Workflow de GitHub Pages [37842608728](https://github.com/carralbal/UBA-metsi/actions/runs/37842608728): **completed/success**, pasos Checkout, Assemble publication, Upload artifact y Deploy completos. El índice público `https://carralbal.github.io/UBA-metsi/covers/cronicas/` contiene las 37 rutas `images/cards/N??.webp?v=narrativas-20261008`.
+- Comprobación pública exhaustiva: **37/37 PDF HTTP 200** y **37/37 WebP de ficha HTTP 200**. Se descargó además `N02.pdf` completo: HTTP 200, `application/pdf`, 1.256.680 bytes, no puntero LFS. La fotografía N02 WebP se descargó como `image/webp`, 76.892 bytes. La equivalencia entre cada imagen del PDF y la fuente de su tarjeta ya fue probada por `verify_cronicas.py` con 0 fallos.
+- `node --check site/metsi.js`, `git diff --check` y `git diff --cached --check` terminaron sin errores antes del commit. La generación final produjo 37 PDF y la compilación de 74 páginas.
+
+### En proceso tras la entrega
+
+Nada de implementación pendiente. La serie pública queda disponible para la revisión editorial del usuario. Cualquier cambio posterior de estilo, longitud, caso, foto o diagramación es **nueva iteración** y debe preservar la correspondencia 1:1 PDF/ficha y la procedencia de fotos, sin volver a usar portadas N/Hotel Horizonte.
+
+### Falta / opcional, no bloqueante
+
+Una inspección visual de Safari móvil en producción podría confirmar el comportamiento del índice sticky; no es necesaria para validar esta entrega porque el CSS del índice no cambió en esta ronda y el despliegue/archivos fueron verificados. Si el usuario prefiere volver a una sola carilla por crónica, habrá que condensar texto o cambiar formato; hacerlo sin bajar legibilidad requiere una decisión editorial explícita. La elección vigente son dos páginas por artículo para conservar narrativa y tamaño de letra.
