@@ -55,3 +55,39 @@ Corregir la fotografía en color del segundo piloto (N25) y producir **37 artíc
 - La mayoría de las fuentes son gubernamentales y primarias. Dos pilotos previamente aprobados tratan Horizon (UK) y la unidad de alta hospitalaria de St Thomas' (UK). N33 utiliza informe NIST 2026. Las URLs de las 37 fuentes están en `articles.py` y se incluyen como enlaces en los PDF.
 - La única relación bidireccional necesaria: lectura larga ↔ crónica. Desde `site/covers/cronicas/index.html` cada tarjeta enlaza a ambas; desde la colección principal el JS inserta el enlace de crónica en cada tarjeta; N00 tiene enlace HTML directo.
 - El CSS/JS del sitio usa cache bust `?v=cronicas-20261008` en `site/index.html`; no reutilizar versión vieja tras publicación.
+
+## Ajuste del índice solicitado el 2026-10-08 (continuación)
+
+### Pedido y diagnóstico exactos
+
+El usuario validó la serie de 37 crónicas, pero señaló tres defectos en `https://carralbal.github.io/UBA-metsi/covers/cronicas/`: (1) el vínculo «Volver a la colección» debía verse durante todo el desplazamiento; (2) N00 exhibía un rectángulo gris sin contenido a la derecha; (3) cada tarjeta debía mostrar la fotografía de su artículo. El gris no era una imagen fallida: era el fondo de la grilla de tres columnas, expuesto porque N00 era su único ítem y ocupaba sólo la primera columna.
+
+### Cerrado en el commit de producto `d70e0f48c999ab044e74ef64f4c81dff12fa8ee2`
+
+1. `site/covers/cronicas/style.css`: encabezado `.top` ahora es `position: sticky`, con `top: 0`, z-index y fondo opaco paper. La navegación de regreso permanece visible al recorrer la colección. N00 se diseñó como `article.card.feature` de ancho completo, texto a la izquierda y foto a la derecha en desktop; se apila en móvil. Así desaparece la zona gris de la grilla vacía.
+2. `scripts/build_cronicas.py`: el índice ahora incorpora un enlace fotográfico por tarjeta, con imagen local, alt, tamaño intrínseco y carga diferida salvo N00. `--index-only` permite regenerar únicamente índice/miniaturas sin tocar los PDF. La selección usa exactamente la fuente visual aprobada para cada artículo: N00, N02 y N25 utilizan sus imágenes especiales; N09/N10 usan las fotos editoriales de sus lecturas; el resto las fotos B&N de sus portadas. Se generan 37 recortes WebP de 840×525, gris neutro, en `site/covers/cronicas/images/cards/`.
+3. `site/covers/cronicas/index.html` regenerado con 37 fotos, sus enlaces a la crónica/lectura y `style.css?v=cards-20261008` para evitar caché vieja. Se modificaron sólo estas 40 rutas (índice, CSS, generador y 37 WebP); ningún PDF ni la web principal se editó.
+4. QA local: 37 tarjetas, 37 fotos existentes, 37 enlaces a PDF existentes, N00 marcado como una sola tarjeta destacada, CSS con llaves equilibradas, `git diff --check` correcto. Las miniaturas se inspeccionaron en dos planchas de contacto; no hay cuadros vacíos ni imágenes color. La desviación media máxima entre canales RGB de las miniaturas WebP fue 0,0242/255. Total de miniaturas: ~1,2 MB. Se confirmó que el commit no incluye PDF ni archivos ajenos.
+5. Remoto validado: cuenta GitHub `carralbal`, repositorio público `carralbal/UBA-metsi`, rama `main`, remoto `https://github.com/carralbal/UBA-metsi.git`. Push de `d70e0f4` exitoso.
+
+### Publicación comprobada: cerrado
+
+- Despliegue de Pages de `d70e0f4`: `https://github.com/carralbal/UBA-metsi/actions/runs/37800634956`, estado **completed/success**. Checkout, ensamblado, subida del artefacto y Deploy terminaron correctamente.
+- URL pública final: `https://carralbal.github.io/UBA-metsi/covers/cronicas/`. La página viva contiene **37 tarjetas, 37 referencias a imágenes distintas `images/cards/N??.webp`, una única `card feature` N00** y la versión CSS `cards-20261008`.
+- CSS público: HTTP 200 `text/css` y contiene `.top{position:sticky;top:0` y `.card.feature{grid-column:1/-1`. Esto verifica la publicación de las reglas, aunque no se hizo captura visual de un navegador en producción.
+- Muestras públicas N00, N02, N25 y N36: todas HTTP 200 `image/webp`, con tamaños reales de 37.948, 42.876, 47.826 y 45.702 bytes. El índice en vivo mostró las 37 rutas; las 37 imágenes existen en el artefacto local publicado por `cp -R site/covers`.
+- Ninguna lectura N ni PDF de crónica fue reeditado para este ajuste. El índice y sus archivos nuevos están publicados; no queda ningún trabajo de implementación abierto.
+
+### En proceso
+
+Nada. El usuario revisará directamente la versión pública y podrá pedir ajustes nuevos.
+
+### Falta / sólo si hay una nueva iteración
+
+1. Recoger la opinión del usuario sobre el diseño de tarjetas y fotos. No cambiar títulos, artículos ni PDF sin un pedido nuevo.
+2. Si se regenera el índice, usar el Python del runtime con Pillow/ReportLab/pypdf y ejecutar `scripts/build_cronicas.py --index-only`; esta opción conserva los PDF. Revisar que N02/N25 sigan usando sus fotos piloto especiales y que N00 abarque toda la fila.
+3. Opcional no bloqueante: inspección visual en navegador móvil/escritorio. La estructura, las fotos y el CSS se verificaron local y públicamente; no hay captura de navegador en esta continuación.
+
+### Precaución sobre la puerta de publicación heredada
+
+Se intentó la verificación global `verify_publishable.py` de la skill sobre toda la carpeta de trabajo, pero reporta decenas de archivos **preexistentes, no incluidos en este commit**: PDF locales de impresión >100 MiB y symlinks en carpetas temporales o `node_modules`. No borrar ni mover esos trabajos del usuario sólo para hacer pasar el escaneo global. La carga publicada se limita a `site/` mediante el workflow existente; se inspeccionó el staged diff y se verificaron las 40 rutas nuevas/modificadas. El gate global no es una señal de fallo de estas miniaturas.
