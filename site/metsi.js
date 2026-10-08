@@ -457,4 +457,18 @@
     window.addEventListener('resize', updateVideos);
     updateVideos();
   }
+  // A short journalistic companion sits beside each reading, without changing
+  // the existing collection or its download links.
+  document.querySelectorAll('.cover-library article').forEach((card) => {
+    const number = card.querySelector('img')?.alt.match(/N\d\d/)?.[0];
+    const download = card.querySelector('a[download]:last-child');
+    if (!number || !download) return;
+    const link = document.createElement('a');
+    link.className = 'chronicle-inline';
+    link.href = `covers/cronicas/pdf/${number}.pdf`;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.textContent = 'Leer la crónica ↗';
+    card.insertBefore(link, download);
+  });
 })();
