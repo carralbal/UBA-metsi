@@ -162,3 +162,34 @@ Nada de implementación pendiente. La serie pública queda disponible para la re
 ### Falta / opcional, no bloqueante
 
 Una inspección visual de Safari móvil en producción podría confirmar el comportamiento del índice sticky; no es necesaria para validar esta entrega porque el CSS del índice no cambió en esta ronda y el despliegue/archivos fueron verificados. Si el usuario prefiere volver a una sola carilla por crónica, habrá que condensar texto o cambiar formato; hacerlo sin bajar legibilidad requiere una decisión editorial explícita. La elección vigente son dos páginas por artículo para conservar narrativa y tamaño de letra.
+
+## Crónicas integradas en el home y grilla sin huecos · 2026-10-08
+
+### Pedido y diagnóstico
+
+El usuario mostró un hueco gris enorme junto a N04 en la colección de crónicas y pidió dos cambios: eliminar **todos** esos espacios grises y hacer visible la colección completa en la página principal, **por encima** de los documentos N, sin obligar a entrar en `/covers/cronicas/`. La zona gris no era una foto fallida: la grilla tenía tres columnas, cuatro tarjetas en A, y pintaba las dos celdas vacías con `--line`. Los bloques D/F de cinco tarjetas podían producir otro hueco.
+
+### Cerrado en el árbol local
+
+1. `site/covers/cronicas/style.css`: grilla de seis pistas con tarjetas normales de dos, última tarjeta sola a ancho completo con texto/foto en composición horizontal, y dos tarjetas finales a media anchura cada una. El fondo de la grilla ahora es paper, no gris. Las reglas residuales de escritorio se limitan a `min-width:851px`; en tableta se recompone en dos columnas y en móvil en una. El N00 sigue siendo destacado. El enlace sticky «Volver a la colección» ahora apunta directamente a `/#cronicas` del sitio principal.
+2. `site/index.html`: la sección 10 empieza con introducción conjunta y muestra **las 37 crónicas en línea**, ordenadas N00, A–H; recién después aparece el bloque `id=lecturas` con guía N00 y las 36 tapas N. El antiguo banner de salida hacia la página separada se eliminó. La navegación principal incorpora «Crónicas» (`#cronicas`) y «Lecturas» (`#lecturas`); el CTA de descargar apunta a las lecturas. Fotos, títulos, bajadas y dos enlaces por ficha son visibles sin salir del home.
+3. `site/metsi.css`: nuevo componente editorial `chronicles-home` con portada visual N00, grupos, tarjetas con foto y fondos paper/ink/Volt. Usa también seis pistas y reglas para llenar la última fila en escritorio, dos columnas en tablet y una en móvil. Las imágenes `loading=lazy` en el home evitan cargar las 37 fotografías al iniciar la página.
+4. `scripts/build_cronicas.py`: una sola función `card_sections()` genera tanto el índice legado como el bloque del home, con rutas relativas correctas; `static_home_collection()` reemplaza sólo el contenido entre `<!-- BEGIN home chronicles cards -->` y `<!-- END home chronicles cards -->`. `--index-only` regenera ambas vistas **sin reescribir los 37 PDF ni las 37 fotografías**. Jerarquía semántica del home: título de sección h2, Crónicas h3, grupos h4, tarjetas h5.
+5. `scripts/verify_cronicas.py` ahora verifica además 37 fichas y 37 fotos/PDF en el home, anclas distintas para crónicas/lecturas, orden correcto y ausencia del banner antiguo. La verificación previa de 37 PDF A4 de dos páginas, contenido íntegro y coincidencia visual entre fotografía de PDF y tarjeta sigue vigente.
+
+### QA local hecha / límites
+
+- El generador `--index-only` terminó correctamente; no hay PDF ni WebP modificados en el diff. `lxml` parseó el home: **37 fichas**, grupos `[1,4,6,6,5,4,5,3,3]`, `#cronicas` antes de `#lecturas`. Las llaves CSS están equilibradas; `git diff --check` correcto.
+- La puerta global de publicación aplicada al árbol completo falla por PDFs/ZIP >100 MiB y symlinks **preexistentes, ajenos a este cambio y fuera del artefacto de Pages**. Para verificar el objeto que realmente se publica, se hizo una copia temporal copy-on-write de `site/` con manifest y workflow en `/private/tmp/metsi-site-gate-dR8wpN`; `verify_publishable.py` devolvió **ok:true, 373 archivos, 580.594.766 bytes, 0 errores**. Único aviso: no hay licencia general del repositorio, coherente con no conceder reutilización automáticamente. No se borró ni incluyó material ajeno para sortear el escaneo.
+- Se intentó abrir una vista local mediante el navegador integrado, pero su comprobación de seguridad administrativa no autorizó `http://127.0.0.1:8765`; se cerró el servidor de prueba y **no se intentó sortear esa política**. La inspección visual final debe hacerse sobre la URL pública si el navegador lo permite; en lo local se verificó estructura, reglas de grilla y archivos.
+- No se modificaron textos de crónicas, PDFs N, imágenes fuente ni tapas N. Hay numerosos archivos sin seguimiento de tareas previas; no incluirlos ni borrarlos.
+
+### En proceso
+
+- Terminar la última ejecución de `scripts/verify_cronicas.py`, revisar el diff acotado, commit, push a `origin/main`, esperar Pages y comprobar que el home público contenga las 37 fichas antes de dar por cerrado.
+
+### Falta / continuación exacta
+
+1. Publicar sólo `scripts/build_cronicas.py`, `scripts/verify_cronicas.py`, `site/covers/cronicas/index.html`, `site/covers/cronicas/style.css`, `site/index.html`, `site/metsi.css` y este handoff. No stage global.
+2. Después del despliegue, abrir `https://carralbal.github.io/UBA-metsi/#cronicas`, comprobar presencia de N00–N36 y que `#lecturas` quede después; revisar también `https://carralbal.github.io/UBA-metsi/covers/cronicas/` para asegurar que N04 ya no deje una gran zona gris. Registrar commit/run y HTTP aquí.
+3. Si un navegador público permite inspección visual, verificar desktop y móvil. Si no, no afirmar una captura visual; sí se puede cerrar con QA estructural, CSS comprobado y despliegue exitoso.

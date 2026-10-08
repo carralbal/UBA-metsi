@@ -43,8 +43,19 @@ def main() -> None:
     assert sum(a["region"] in {"Argentina", "América Latina"} for a in articles) >= 26
     by_id = {item["section_id"]: item for item in images}
     index = (SERIES / "index.html").read_text(encoding="utf-8")
+    homepage = (ROOT / "site/index.html").read_text(encoding="utf-8")
+    home_cards = homepage.split("<!-- BEGIN home chronicles cards -->", 1)[1].split(
+        "<!-- END home chronicles cards -->", 1)[0]
     failures = []
     report = []
+    if homepage.count('id="cronicas"') != 1 or homepage.count('id="lecturas"') != 1:
+        failures.append("Homepage is missing distinct chronicles/readings anchors")
+    if homepage.index('id="cronicas"') > homepage.index('id="lecturas"'):
+        failures.append("Chronicles do not precede N readings on homepage")
+    if home_cards.count('<article class="card') != 37:
+        failures.append("Homepage does not expose exactly 37 chronicle cards")
+    if 'chronicles-entry' in homepage:
+        failures.append("Old off-page chronicles entry remains on homepage")
     for article in articles:
         number = article["id"]
         pdf = SERIES / "pdf" / f"{number}.pdf"
@@ -87,6 +98,9 @@ def main() -> None:
                 failures.append(f"{number}: story photo is not neutral B&W")
         if f"images/cards/{number}.webp" not in index or f"pdf/{number}.pdf" not in index:
             failures.append(f"{number}: index link missing")
+        if (f"covers/cronicas/images/cards/{number}.webp" not in home_cards or
+                f"covers/cronicas/pdf/{number}.pdf" not in home_cards):
+            failures.append(f"{number}: homepage card image or PDF link missing")
         if by_id[number]["license_url"] != "https://unsplash.com/license":
             failures.append(f"{number}: missing photo license provenance")
         annotations = [a.get_object().get("/A", {}).get("/URI", "") for page in reader.pages

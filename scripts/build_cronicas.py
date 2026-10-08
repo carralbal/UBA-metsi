@@ -436,8 +436,8 @@ def render_article(article: dict) -> Path:
     return path
 
 
-def static_index(articles: list[dict]) -> None:
-    build_card_images(articles)
+def card_sections(articles: list[dict], prefix: str = "", heading_level: int = 2) -> str:
+    """One ordered set of cards for the homepage and the legacy series URL."""
     cards = []
     groups = [
         ("Antes de empezar", range(0, 1)),
@@ -452,32 +452,53 @@ def static_index(articles: list[dict]) -> None:
     ]
     by_id = {a["id"]: a for a in articles}
     for label, numbers in groups:
-        cards.append(f'<section class="group"><h2>{html.escape(label)}</h2><div class="grid">')
+        cards.append(f'<section class="group"><h{heading_level}>{html.escape(label)}</h{heading_level}><div class="grid">')
         for n in numbers:
             a = by_id[f"N{n:02d}"]
             number = a["id"]
             featured = " feature" if number == "N00" else ""
-            loading = "eager" if number == "N00" else "lazy"
+            loading = "eager" if not prefix and number == "N00" else "lazy"
             cards.append(
                 f'<article class="card{featured}">'
-                f'<a class="card-media" href="pdf/{number}.pdf?v={RELEASE}" target="_blank" rel="noopener" '
+                f'<a class="card-media" href="{prefix}pdf/{number}.pdf?v={RELEASE}" target="_blank" rel="noopener" '
                 f'aria-label="Abrir crónica {number}: {html.escape(a["title"], quote=True)}">'
-                f'<img src="images/cards/{number}.webp?v={RELEASE}" alt="Imagen editorial ilustrativa de la crónica {number}" '
+                f'<img src="{prefix}images/cards/{number}.webp?v={RELEASE}" alt="Imagen editorial ilustrativa de la crónica {number}" '
                 f'width="840" height="525" loading="{loading}" decoding="async"></a>'
                 f'<div class="card-copy"><span>{number} · {html.escape(a["region"])}</span>'
-                f'<h3>{html.escape(a["title"])}</h3><p>{html.escape(a["deck"])}</p>'
-                f'<div class="actions"><a href="pdf/{number}.pdf?v={RELEASE}" target="_blank" rel="noopener">Leer la crónica ↗</a>'
+                f'<h{heading_level+1}>{html.escape(a["title"])}</h{heading_level+1}><p>{html.escape(a["deck"])}</p>'
+                f'<div class="actions"><a href="{prefix}pdf/{number}.pdf?v={RELEASE}" target="_blank" rel="noopener">Leer la crónica ↗</a>'
                 f'<a href="{html.escape(a["reading_url"], quote=True)}" target="_blank" rel="noopener">Lectura {number} ↗</a></div></div></article>'
             )
         cards.append("</div></section>")
+    return "\n".join(cards)
+
+
+def static_home_collection(articles: list[dict]) -> None:
+    homepage = ROOT / "site/index.html"
+    source = homepage.read_text(encoding="utf-8")
+    begin = "<!-- BEGIN home chronicles cards -->"
+    end = "<!-- END home chronicles cards -->"
+    if source.count(begin) != 1 or source.count(end) != 1:
+        raise ValueError("Homepage chronicles markers missing or duplicated")
+    start = source.index(begin) + len(begin)
+    finish = source.index(end, start)
+    new_source = (source[:start] + "\n" + card_sections(
+        articles, prefix="covers/cronicas/", heading_level=4) + "\n" + source[finish:])
+    homepage.write_text(new_source, encoding="utf-8")
+
+
+def static_index(articles: list[dict]) -> None:
+    build_card_images(articles)
+    cards = card_sections(articles)
     page = '''<!doctype html><html lang="es-AR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Crónicas METSI · 37 historias para pensar los sistemas</title><meta name="description" content="37 crónicas periodísticas: casos reales, preguntas incómodas y lecturas METSI para entender mejor los sistemas de información.">
-<link rel="stylesheet" href="style.css?v=cards-20261008"></head><body><header class="top"><a class="brand" href="../../">METSI</a><a href="../../#biblioteca">Volver a la colección ↗</a></header>
+<link rel="stylesheet" href="style.css?v=cards-no-gray-20261008"></head><body><header class="top"><a class="brand" href="../../">METSI</a><a href="../../#cronicas">Volver a la colección ↗</a></header>
 <main><div class="hero"><p class="eyebrow"><i></i> UNA SERIE EDITORIAL COMPLEMENTARIA</p><h1>Los sistemas también<br>son historias de personas.</h1>
 <p class="lead">Una crónica por cada lectura N00–N36. Casos reales, preguntas incómodas y una idea central para seguir pensando. Son una puerta de entrada: no reemplazan las lecturas.</p>
 <p class="method">Las imágenes son ilustrativas y están en blanco y negro. Los hechos y las citas remiten a fuentes enlazadas en cada PDF. La mayoría de los casos procede de Argentina y América Latina.</p></div>
-''' + "\n".join(cards) + '''</main><footer>METSI · Diego Carralbal · FCE UBA <a href="../../">Volver al sitio</a></footer></body></html>'''
+''' + cards + '''</main><footer>METSI · Diego Carralbal · FCE UBA <a href="../../">Volver al sitio</a></footer></body></html>'''
     (CHRONICLES / "index.html").write_text(page, encoding="utf-8")
+    static_home_collection(articles)
 
 
 def main() -> None:
