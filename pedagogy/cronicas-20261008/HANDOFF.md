@@ -91,3 +91,59 @@ Nada. El usuario revisará directamente la versión pública y podrá pedir ajus
 ### Precaución sobre la puerta de publicación heredada
 
 Se intentó la verificación global `verify_publishable.py` de la skill sobre toda la carpeta de trabajo, pero reporta decenas de archivos **preexistentes, no incluidos en este commit**: PDF locales de impresión >100 MiB y symlinks en carpetas temporales o `node_modules`. No borrar ni mover esos trabajos del usuario sólo para hacer pasar el escaneo global. La carga publicada se limita a `site/` mediante el workflow existente; se inspeccionó el staged diff y se verificaron las 40 rutas nuevas/modificadas. El gate global no es una señal de fallo de estas miniaturas.
+
+## Nueva ronda editorial: piloto narrativo N02 · 2026-10-08
+
+### Pedido y alcance exactos
+
+El usuario aprobó **la estética visual** de cada crónica, pero rechazó su escritura: poco profunda, telegráfica, sin un hilo conductor atrapante ni placer de lectura. Pidió volver a empezar con **un solo piloto**, elegido por Codex, escrito «con tinta de periodista y contador de historias». La tarea actual es únicamente el texto para que él evalúe el rumbo; **no autoriza aún** a reescribir los 37 PDF ni a publicar esta versión.
+
+### Decisión editorial y fundamento
+
+Se eligió N02, sobre el escándalo Horizon del correo británico, porque el usuario había elegido explícitamente su hook «Avisaron que el sistema fallaba. Los acusaron a ellos». Se conserva el título. Se usó la historia documentada de Lee Castleton: llamadas de enero de 2004, auditoría de marzo, litigio de 2007, consecuencias para la familia, hallazgos generales sobre Horizon en 2019, informe de la investigación pública en 2025 y litigio aún activo en 2026. El texto evita una afirmación no probada: **el fallo general de 2019 no demuestra por sí solo qué originó cada discrepancia concreta en la sucursal de Castleton**. Esa cautela es parte del argumento central sobre investigación y juicio profesional, no una nota técnica que deba omitirse.
+
+### Cerrado en esta ronda
+
+1. Se leyó el PDF N02 actualmente publicado (`site/covers/cronicas/pdf/N02.pdf`) para comparar. Tiene una primera escena genérica, cita institucional y explicación conceptual correcta, pero demasiados saltos y poca vida narrativa. No se modificó.
+2. Se verificaron fuentes primarias oficiales: declaración de Anne Chambers ante la investigación (llamados del 14, 21 y 28 de enero de 2004); expediente de la auditoría y litigio; informe oficial Volume 1 de 2025 (deuda y afectación de Millie Castleton); fallo de 2019; palabras de Sir Wyn Williams de julio de 2025; ficha judicial del nuevo litigio de 2026. Las URLs y la precisión factual están al pie del nuevo piloto.
+3. Se redactó un piloto completo con escena cronológica, escalada de la cifra hasta la quiebra, consecuencia familiar, giro interpretativo, concepto explícito de N02 y analogía cercana con inscripción universitaria. El cierre es una pregunta que retoma el conflicto, no un resumen en tono de manual. Texto íntegro guardado en `pedagogy/cronicas-20261008/N02-piloto-reescritura.md` para revisión y posible producción posterior. El artículo tiene unas 570 palabras antes de las fuentes (el archivo completo, con fuentes y nota de estado, tiene 731 palabras).
+4. No se tocaron `articles.py`, el generador, el sitio, los PDF ni ningún archivo de producción. No hubo commit ni push por este piloto.
+
+### En proceso
+
+- Presentar el texto N02 completo en la respuesta de chat, con enlaces a fuentes oficiales cerca de los hechos, y recoger evaluación editorial del usuario. Como el usuario pidió una prueba, no debe darse por aprobada ni publicar en esta ronda.
+
+### Falta / ruta de continuación exacta
+
+1. Si el usuario pide ajustes, revisar el texto del piloto preservando los hechos verificados, su cautela causal y el hook aprobado; evitar hacerlo más corto hasta que vuelva a sonar a telegrama. Preguntar sólo si un giro estilístico depende de una preferencia material que no se pueda inferir.
+2. Si aprueba el tono, definir la longitud definitiva compatible con una carilla y luego adaptar el contenido de N02 al PDF **sin cambiar su estética aprobada**. Antes de remaquetar 37 piezas, producir una prueba real y comprobar que el texto entra sin reducir tipografía a tamaño ilegible ni cortar contenido. Posteriormente escalar el método a N00–N36 con casos ya documentados y el balance de ~70% Argentina/LATAM, citando fuentes primarias; revisar cada texto y render.
+3. No modificar las lecturas largas N00–N36 ni sus portadas: esta ronda concierne sólo a las crónicas periodísticas complementarias. No publicar el piloto sin una instrucción nueva y explícita de hacerlo.
+
+## Reescritura integral y fotografías propias de la serie · 2026-10-08
+
+### Pedido vigente y alcance
+
+Tras aprobar el piloto N02, el usuario pidió rehacer **todas** las crónicas N00–N36 con más profundidad y un hilo narrativo periodístico. Exigió que la imagen de cada ficha del índice sea la misma que la del PDF correspondiente, y que **no** se reutilicen las imágenes habituales de Hotel Horizonte ni las portadas de las lecturas N. La estética base de la crónica y del índice ya estaba aprobada; no se rediseñó el sitio principal ni se tocaron las 37 lecturas largas.
+
+### Cerrado y verificable en el árbol de trabajo
+
+1. `pedagogy/cronicas-20261008/narratives.py`: 37 historias completas, aproximadamente 318–567 palabras cada una, con apertura de escena, secuencia causal, caso documentado, concepto explícito de la N y cierre que retoma la pregunta. N02 conserva el texto del piloto aprobado de Lee Castleton/Horizon. El balance de casos es 27/37 Argentina o América Latina (73%). Las fuentes primarias de los casos siguen en `articles.py`; se contrastaron adicionalmente los pasajes de N25, N28, N32 y N34 con las fuentes oficiales. Ninguna historia menciona Hotel Horizonte ni presenta fotografías ilustrativas como registro del caso.
+2. `scripts/curate_cronica_photos.py` y tres manifiestos `image-candidates.json`, `image-selection.json`, `image-manifest.json`: búsqueda documentada de 209 candidatas; selección final de **37 fotografías distintas** de Unsplash con URL, creador, licencia y hash. Copias locales monocromáticas en `site/covers/cronicas/images/story/N00.jpg` a `N36.jpg`. Son fotografías editoriales específicas de esta serie; no proceden del hotel ni de las tapas N. Los créditos y la aclaración de que son ilustrativas constan en cada PDF. No se generaron fotografías de personas o casos ficticios.
+3. `scripts/build_cronicas.py`: cada PDF N00–N36 usa su `images/story/N??.jpg` y la tarjeta web deriva su WebP `images/cards/N??.webp` **del mismo archivo**. El índice se regeneró con las 37 tarjetas y una versión de caché `narrativas-20261008` en imágenes/PDF. El enlace desde el sitio principal también usa la versión nueva en `site/index.html` y `site/metsi.js`.
+4. Se conservó el lenguaje visual paper/ink/Volt, Didot/Baskerville/Avenir, foto panorámica, líneas finas y mucho aire. Para no volver al tono telegráfico ni hacer la letra ilegible, cada artículo ocupa **dos A4**: apertura/foto/primer desarrollo en la primera página y continuación/cierre editorial en la segunda. Son 74 páginas en total. La compilación local, no enlazada públicamente, está en `../../output/pdf/METSI-cronicas-N00-N36.pdf` relativa al repo y pesa ~26 MB.
+5. `scripts/verify_cronicas.py` verificó **37 artículos, 74 páginas A4, 37 pares fotografía PDF/tarjeta, 0 fallos**: presencia de todo el texto en el PDF, título, ausencia de Hotel Horizonte, imagen derivada de la fuente exacta, 37 rutas y enlaces, licencias, fuente y lectura original. Renderizó las 74 páginas y siete planchas de contacto en `/private/tmp/metsi-cronicas-final-qa/`; se revisaron las siete sin desborde visible. El render inicial reveló un espaciado de caracteres acumulado en la continuación; se corrigió en `tracked()` y N02 volvió a revisarse a página completa, limpio.
+6. El índice conserva la cabecera de regreso siempre visible, la tarjeta N00 destacada y la estética de la ronda previa. Las nuevas fotos están ya en la zona visual de cada tarjeta; no hay rectángulos de relleno vacíos.
+
+### En proceso al escribir esta sección
+
+- Preparar un commit acotado a esta serie, publicarlo en `main` y verificar GitHub Pages. El árbol compartido contiene **muchos archivos sin seguimiento de tareas anteriores** (auditorías de preimpresión, videos, pilotos de lecturas); no incluirlos ni borrarlos. Sólo stage de rutas de crónicas, handoff y versiones de enlaces de la web principal.
+
+### Falta para cerrar la entrega
+
+1. Ejecutar comprobación sintáctica de `site/metsi.js`, `git diff --check`, verificar exactamente los staged paths, commit y push a `origin/main`.
+2. Esperar el workflow de Pages, comprobar el índice público y muestras de PDF/WebP con HTTP 200 y archivos reales. Si Pages falla, no afirmar publicación.
+3. Registrar aquí commit, workflow y URLs verificadas. Avisar de forma transparente que el formato creció a dos páginas por artículo para sostener profundidad y lectura cómoda.
+
+### Reproducción exacta en un nuevo chat
+
+Usar el Python de runtime `/Users/diegocarralbal/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3` (el `python3` del sistema no tiene Pillow). Desde `work/UBA-metsi-publication`, ejecutar `scripts/build_cronicas.py` y luego `scripts/verify_cronicas.py` con ese intérprete. No ejecutar de nuevo la etapa de curación salvo que se cambien fotos: los 37 originales y sus metadatos ya están preservados. El verificador deja PNGs y contactos en `/private/tmp/metsi-cronicas-final-qa/`. La fuente narrativa es `narratives.py`; `articles.py` sigue siendo la ficha de título, caso y URL primaria. Para publicar, stage selectivo: scripts de crónicas, carpeta `pedagogy/cronicas-20261008/`, `site/covers/cronicas/index.html`, `images/cards/`, `images/story/`, `pdf/`, `site/index.html` y `site/metsi.js`; no stage global.

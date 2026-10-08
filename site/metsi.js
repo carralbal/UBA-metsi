@@ -465,7 +465,7 @@
     if (!number || !download) return;
     const link = document.createElement('a');
     link.className = 'chronicle-inline';
-    link.href = `covers/cronicas/pdf/${number}.pdf`;
+    link.href = `covers/cronicas/pdf/${number}.pdf?v=narrativas-20261008`;
     link.target = '_blank';
     link.rel = 'noopener';
     link.textContent = 'Leer la crónica ↗';
