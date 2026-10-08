@@ -12,9 +12,10 @@ import importlib.util
 import json
 import re
 import shutil
+import sys
 from pathlib import Path
 
-from PIL import Image
+from PIL import Image, ImageOps
 from pypdf import PdfReader, PdfWriter
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import A4
@@ -73,6 +74,29 @@ def cover_photo(number: str) -> Path:
     # Version numbers are chronological, unlike lexicographic ordering.
     return max(matches, key=lambda p: (int(re.search(r"-v(\d+)-", p.parts[-3]).group(1)),
                                        int(re.search(r"-v(\d+)\.png$", p.name).group(1))))
+
+
+def card_photo(number: str) -> Path:
+    """Use the same illustrative photograph shown in each finished article."""
+    if number == "N02":
+        return CHRONICLES / "images/N02-bw.jpg"
+    if number == "N25":
+        return CHRONICLES / "images/N25-bw.png"
+    return cover_photo(number)
+
+
+def build_card_images(articles: list[dict]) -> None:
+    """Make small, neutral monochrome web crops without changing the PDFs."""
+    destination = CHRONICLES / "images/cards"
+    destination.mkdir(parents=True, exist_ok=True)
+    for article in articles:
+        number = article["id"]
+        with Image.open(card_photo(number)) as source:
+            crop = ImageOps.fit(
+                source.convert("L"), (840, 525), method=Image.Resampling.LANCZOS,
+                centering=(0.5, 0.47),
+            )
+            crop.save(destination / f"{number}.webp", "WEBP", quality=82, method=6)
 
 
 def draw_photo(c: canvas.Canvas, src: Path, x: float, y: float, w: float, h: float) -> None:
@@ -259,6 +283,7 @@ def render_article(article: dict) -> Path:
 
 
 def static_index(articles: list[dict]) -> None:
+    build_card_images(articles)
     cards = []
     groups = [
         ("Antes de empezar", range(0, 1)),
@@ -276,16 +301,24 @@ def static_index(articles: list[dict]) -> None:
         cards.append(f'<section class="group"><h2>{html.escape(label)}</h2><div class="grid">')
         for n in numbers:
             a = by_id[f"N{n:02d}"]
+            number = a["id"]
+            featured = " feature" if number == "N00" else ""
+            loading = "eager" if number == "N00" else "lazy"
             cards.append(
-                f'<article class="card"><span>{a["id"]} · {html.escape(a["region"])}</span>'
+                f'<article class="card{featured}">'
+                f'<a class="card-media" href="pdf/{number}.pdf" target="_blank" rel="noopener" '
+                f'aria-label="Abrir crónica {number}: {html.escape(a["title"], quote=True)}">'
+                f'<img src="images/cards/{number}.webp" alt="Imagen editorial ilustrativa de la crónica {number}" '
+                f'width="840" height="525" loading="{loading}" decoding="async"></a>'
+                f'<div class="card-copy"><span>{number} · {html.escape(a["region"])}</span>'
                 f'<h3>{html.escape(a["title"])}</h3><p>{html.escape(a["deck"])}</p>'
-                f'<div class="actions"><a href="pdf/{a["id"]}.pdf" target="_blank" rel="noopener">Leer la crónica ↗</a>'
-                f'<a href="{html.escape(a["reading_url"], quote=True)}" target="_blank" rel="noopener">Lectura {a["id"]} ↗</a></div></article>'
+                f'<div class="actions"><a href="pdf/{number}.pdf" target="_blank" rel="noopener">Leer la crónica ↗</a>'
+                f'<a href="{html.escape(a["reading_url"], quote=True)}" target="_blank" rel="noopener">Lectura {number} ↗</a></div></div></article>'
             )
         cards.append("</div></section>")
     page = '''<!doctype html><html lang="es-AR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Crónicas METSI · 37 historias para pensar los sistemas</title><meta name="description" content="37 artículos de una página: casos reales, preguntas incómodas y lecturas METSI para entender mejor los sistemas de información.">
-<link rel="stylesheet" href="style.css"></head><body><header class="top"><a class="brand" href="../../">METSI</a><a href="../../#biblioteca">Volver a la colección ↗</a></header>
+<link rel="stylesheet" href="style.css?v=cards-20261008"></head><body><header class="top"><a class="brand" href="../../">METSI</a><a href="../../#biblioteca">Volver a la colección ↗</a></header>
 <main><div class="hero"><p class="eyebrow"><i></i> UNA SERIE EDITORIAL COMPLEMENTARIA</p><h1>Los sistemas también<br>son historias de personas.</h1>
 <p class="lead">Una crónica por cada lectura N00–N36. Casos reales, preguntas incómodas y una idea central para seguir pensando. Son una puerta de entrada: no reemplazan las lecturas.</p>
 <p class="method">Las imágenes son ilustrativas y están en blanco y negro. Los hechos y las citas remiten a fuentes enlazadas en cada PDF. La mayoría de los casos procede de Argentina y América Latina.</p></div>
@@ -297,6 +330,10 @@ def main() -> None:
     assert len(ARTICLES) == 37, f"Expected 37 articles, got {len(ARTICLES)}"
     assert [a["id"] for a in ARTICLES] == [f"N{i:02d}" for i in range(37)]
     assert sum(a["region"] in {"Argentina", "América Latina"} for a in ARTICLES) >= 26
+    if sys.argv[1:] == ["--index-only"]:
+        static_index(ARTICLES)
+        print(f"Built {len(ARTICLES)} indexed cards and image previews; PDFs unchanged")
+        return
     OUTPUT.mkdir(parents=True, exist_ok=True)
     for a in ARTICLES:
         if "pilot_pdf" in a:
