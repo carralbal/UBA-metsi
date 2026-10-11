@@ -230,3 +230,22 @@ El usuario vio en Safari de iPhone el icono azul de sistema (`↗` interpretado 
 1. Stage **sólo** los archivos enumerados arriba, el nuevo gate y este handoff; hay muchos archivos sin seguimiento de tareas anteriores, incluidos PDF pesados de preimpresión, que pertenecen al usuario y no deben tocarse. El cambio al workflow **no** debe quedar en el diff final por la limitación de permiso. Si GitHub rechaza también una historia que contenga el commit anterior aunque esté revertido en la punta, se necesitará preparar una rama limpia desde `origin/main` o solicitar autorización de `workflow`, sin borrar trabajo ajeno.
 2. Verificar que ningún PDF, WebP ni JPEG entre en el commit; registrar SHA y Actions run exitoso en esta sección.
 3. Comprobar por HTTP el HTML nuevo del home y el índice de crónicas, contando los SVG de las 37 tarjetas. Si el navegador integrado sigue sin permiso para inspección visual, no saltar el control ni decir que se hizo captura. Ofrecer al usuario la URL con `?v=<SHA>` para saltar caché de HTML en Safari.
+
+### Publicación final y control de regresión · cerrado
+
+- **Producto en `origin/main`:** la punta es `0d893779c2105f6b5bcac2b0ac3c51855dd5f55b` (el commit `ac07ee1` introdujo el cambio y `0d89377` retiró únicamente el intento de modificar el workflow). El diff neto contra la base no altera `.github/workflows/deploy-pages.yml`, PDFs, WebP ni JPEG. Se hizo push sin ampliar los permisos de GitHub.
+- **Pages:** [ejecución 38154315738](https://github.com/carralbal/UBA-metsi/actions/runs/38154315738), `completed/success`. La URL pública es `https://carralbal.github.io/UBA-metsi/?v=0d89377#cronicas` y el índice autónomo sigue en `https://carralbal.github.io/UBA-metsi/covers/cronicas/`.
+- **Comprobación del contenido realmente publicado:** la descarga pública del home contiene 37 tarjetas, 74 flechas SVG `editorial-arrow` y cero caracteres U+2197; el índice autónomo contiene 37 tarjetas, 75 SVG (incluida su cabecera) y cero U+2197. El JavaScript y CSS públicos llevan la versión `editorial-arrow-20261011`; la función dinámica de crónicas usa SVG y la regla de tamaño/alineación está publicada.
+- **Comprobación visual:** el navegador integrado abrió el home público con `?v=0d89377#cronicas` y mostró la cabecera y tarjetas N00 sin iconos azules. La herramienta no expone una simulación de viewport móvil, por lo que **no** se afirma una captura de Safari iPhone. El DOM/HTML público y los recursos versionados sí permiten comprobar que el carácter que iOS convertía en emoji ya no está.
+- **Regresión automática:** `scripts/verify_editorial_icons.py` pasa y se llama desde `build_cronicas.py` y `sync_learning_route.py`. Detecta si un generador reintroduce U+2197/emoji o si alguna tarjeta pierde sus SVG. No se añadió gate al workflow de Pages porque el token OAuth disponible carece de permiso `workflow`; GitHub rechazó ese intento. Un cambio manual directo en el HTML podría escapar al gate de los generadores y necesitaría revisión adicional, pero el mecanismo que causó esta repetición sí quedó bloqueado.
+- **Estado del árbol compartido:** persisten numerosos archivos ajenos sin seguimiento y dos borrados locales de `pedagogy/presentations-web/N01/dist/assets/` provocados por la compilación; no se incluyeron en la publicación ni se borró contenido de otras tareas. El entrypoint público de N01 apunta a los bundles nuevos bajo `site/pdf/presentaciones/N01/`.
+
+### En proceso
+
+Nada de implementación. Sólo queda registrar esta actualización del handoff en el repositorio; el cambio de producto ya está en producción.
+
+### Falta / límites explícitos
+
+1. Si se quiere un **bloqueo también en cada despliegue de GitHub Pages**, hace falta autorizar una sesión con permiso `workflow` para poder modificar `.github/workflows/deploy-pages.yml`; no ampliar permisos por cuenta propia. El bloqueo de regeneración y la prueba manual ya funcionan.
+2. Una observación desde el Safari del iPhone del usuario puede descartar caché local persistente. Usar el enlace con `?v=0d89377`, recargar y confirmar que las flechas son monocromas; si no, pedir captura y URL exacta antes de tocar de nuevo los estilos.
+3. Mantener fuera de cualquier commit posterior los archivos sin seguimiento de preimpresión, videos y pilotos, así como los borrados del `dist` local, salvo que su dueño pida tratarlos expresamente.
