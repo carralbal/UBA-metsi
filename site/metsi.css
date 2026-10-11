@@ -147,7 +147,9 @@ h1{margin:0;max-width:13ch;font-size:clamp(3.7rem,7.2vw,8rem);line-height:.88;le
 .journey-learning-accent{width:2.8rem;height:.5rem;background:var(--volt);transform:skew(-24deg)}
 .journey-learning-kicker{font-size:.66rem;font-weight:700;line-height:1.35;letter-spacing:.13em;text-transform:uppercase}
 .journey-learning-link strong{font:400 clamp(1.4rem,2.5vw,2.4rem)/1.12 var(--serif);letter-spacing:-.025em}
-.journey-learning-arrow{justify-self:end;font-size:1.55rem;line-height:1}
+.journey-learning-arrow{justify-self:end;line-height:1}
+.journey-learning-arrow .editorial-arrow{width:1.55rem;height:1.55rem;margin-left:0}
+.editorial-arrow{display:inline-block;width:1em;height:1em;margin-left:.35em;vertical-align:-.12em;color:inherit}
 .journey-learning-link:hover strong,.journey-learning-link:focus-visible strong{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.15em}
 .journey-learning-link:focus-visible{outline:2px solid var(--ink);outline-offset:5px}
 .guide-route-link{display:block;width:max-content;max-width:100%;margin-top:.65rem;padding:.55rem 0;border-bottom:1px solid var(--ink);font-size:.68rem;font-weight:700;letter-spacing:.12em;text-decoration:none;text-transform:uppercase}

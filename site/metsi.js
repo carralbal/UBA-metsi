@@ -468,7 +468,7 @@
     link.href = `covers/cronicas/pdf/${number}.pdf?v=narrativas-20261008`;
     link.target = '_blank';
     link.rel = 'noopener';
-    link.textContent = 'Leer la crónica ↗';
+    link.innerHTML = 'Leer la crónica <svg class="editorial-arrow" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M3 13 13 3M5 3h8v8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"/></svg>';
     card.insertBefore(link, download);
   });
 })();

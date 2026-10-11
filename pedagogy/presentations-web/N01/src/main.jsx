@@ -495,7 +495,7 @@ function App() {
       </section>
       <nav aria-label="Navegación desde las notas">
         <button onClick={controls.previous} disabled={index === 0}>← Anterior</button>
-        <a href={`${location.pathname}?slide=${index + 1}`} target="_blank" rel="noopener">Abrir presentación ↗</a>
+        <a href={`${location.pathname}?slide=${index + 1}`} target="_blank" rel="noopener">Abrir presentación <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M3 13 13 3M5 3h8v8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" strokeLinejoin="miter" /></svg></a>
         <button onClick={controls.next} disabled={index === slides.length - 1}>Siguiente →</button>
       </nav>
     </main>;

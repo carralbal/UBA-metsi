@@ -199,3 +199,34 @@ El usuario mostró un hueco gris enorme junto a N04 en la colección de crónica
 - **Cerrado:** commit de producto `fe3cdff4acf3db1db5ebdb72817445a4f210743d` publicado en `origin/main`. El workflow [Deploy GitHub Pages 37850045682](https://github.com/carralbal/UBA-metsi/actions/runs/37850045682) terminó `success` con Deploy completo. El home público respondió correctamente al descargarlo y contiene exactamente **37 rutas de fotos de crónicas**. En el HTML publicado, `id="cronicas"` aparece antes de `id="lecturas"` (líneas 629 y 690 de la descarga de control) y se carga la versión nueva de CSS `cronicas-inline-20261008`. El verificador integral local terminó en **37 artículos, 74 páginas, 37 pares foto/PDF, cero fallos**. La colección independiente sigue enlazada, pero ya no es un paso obligatorio para encontrar las crónicas.
 - **En proceso:** nada de implementación ni publicación. Esta adenda deja constancia del resultado posterior al commit de producto.
 - **Falta / límite explícito:** no existe captura visual nueva del sitio. El navegador integrado rechazó tanto la URL local como la pública porque no pudo verificar su política administrativa; no se intentó sortearla. Una revisión visual de escritorio y móvil por el usuario sigue siendo deseable, sobre todo para confirmar ritmo y composición, aunque el CSS, el HTML público y Pages se verificaron. No cambiar historias, PDFs ni fotos como parte de esa revisión salvo pedido nuevo.
+
+## Flechas editoriales fijas, sin emoji del sistema · 2026-10-11
+
+### Pedido y causa precisa
+
+El usuario vio en Safari de iPhone el icono azul de sistema (`↗` interpretado como emoji) al lado de «Leer la crónica» y «Lectura N00» en las tarjetas del home. Había habido arreglos visuales anteriores, pero `scripts/build_cronicas.py` seguía escribiendo ese carácter en **todas** las tarjetas regeneradas; `site/metsi.js` lo hacía también en el enlace dinámico de cada portada N. Por eso una regeneración restauraba el problema. El mismo carácter persistía en algunas rutas auxiliares y en las notas del piloto de presentación N01.
+
+### Cerrado técnicamente en el árbol de trabajo
+
+1. `scripts/site_icons.py` define una flecha SVG pequeña con trazo `currentColor`, sin caracteres dependientes del sistema operativo. `scripts/build_cronicas.py` la usa en los 74 enlaces de tarjetas de cada vista (37 crónicas + 37 lecturas) y en la cabecera del índice separado. Se regeneraron `site/index.html` y `site/covers/cronicas/index.html` con `--index-only`: **no** se rehicieron los PDF ni se cambiaron las imágenes.
+2. `site/metsi.js` usa el mismo SVG en el enlace dinámico «Leer la crónica» de las tapas N. `site/metsi.css` y `site/covers/cronicas/style.css` dan tamaño y alineación al vector en ink/currentColor. Los nombres de caché de CSS y JS del home, y el CSS del índice de crónicas, se actualizaron a `editorial-arrow-20261011` para que Safari no reaproveche esos recursos antiguos.
+3. La flecha del acceso al mapa, el enlace al recorrido autónomo y el enlace adicional N00 del home dejaron de usar `↗`. `scripts/sync_learning_route.py` quedó corregido para no reintroducirlo al sincronizar. También se corrigió `site/covers/recorrido/index.html` y la maqueta pública `site/covers/preview-recorrido-n00/index.html`.
+4. El código fuente de notas de la presentación N01 (`pedagogy/presentations-web/N01/src/main.jsx` y `src/styles.css`) también usa SVG. `npm run build` produjo los bundles nuevos, copiados a `site/pdf/presentaciones/N01/` con el `index.html` apuntando a ellos. Los bundles viejos siguen en disco para no hacer una eliminación riesgosa, pero el entrypoint activo **no** los carga.
+5. `scripts/verify_editorial_icons.py` es una prueba rápida de regresión: rechaza `↗` y otros caracteres de emoji en páginas y generadores activos; comprueba que las 37 tarjetas de cada vista tienen sus dos SVG y que el bundle activo N01 no contiene esos caracteres. `.github/workflows/deploy-pages.yml` ejecuta esta prueba **antes** de subir el artefacto a GitHub Pages: un futuro cambio que reintroduzca el icono azul falla el despliegue en vez de llegar a producción.
+
+### QA cerrada
+
+- `python3 scripts/verify_editorial_icons.py`: **pass**, 37 tarjetas del home, 37 del índice autónomo, presentación activa sin glifos de sistema.
+- `scripts/verify_cronicas.py`: **37 artículos, 74 páginas, 37 pares imagen PDF/tarjeta, 0 fallos**.
+- `node --check site/metsi.js`: pass. `python3 -m py_compile` de los generadores: pass. `npm run build` de N01: pass.
+- El gate global de publicación sobre el árbol completo vuelve a fallar por PDF/ZIP >100 MiB y symlinks **preexistentes y ajenos a esta tarea**. No borrar trabajos para aparentar un gate limpio. Una copia copy-on-write de lo que publica Pages (`site/`, manifiesto y workflow) en `/private/tmp/metsi-icon-gate-KSRREe` pasó `verify_publishable.py`: **ok:true, 375 archivos, 580.891.697 bytes, 0 errores**. Único warning: no hay licencia general del repo.
+
+### En proceso
+
+- Revisar el diff/staging acotado, hacer commit y push a `origin/main`, esperar `Deploy GitHub Pages` y comprobar URL viva. El sitio público aún no debe darse por actualizado mientras esto no esté hecho.
+
+### Falta / continuación exacta
+
+1. Stage **sólo** los archivos enumerados arriba, el nuevo gate y este handoff; hay muchos archivos sin seguimiento de tareas anteriores, incluidos PDF pesados de preimpresión, que pertenecen al usuario y no deben tocarse.
+2. Verificar que ningún PDF, WebP ni JPEG entre en el commit; registrar SHA y Actions run exitoso en esta sección.
+3. Comprobar por HTTP el HTML nuevo del home y el índice de crónicas, contando los SVG de las 37 tarjetas. Si el navegador integrado sigue sin permiso para inspección visual, no saltar el control ni decir que se hizo captura. Ofrecer al usuario la URL con `?v=<SHA>` para saltar caché de HTML en Safari.

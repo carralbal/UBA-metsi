@@ -2,6 +2,7 @@
 """Embed the approved N00–N36 route in the home without duplicating its source."""
 
 from pathlib import Path
+from site_icons import EXTERNAL_ARROW
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -22,7 +23,8 @@ def main() -> None:
         f'{BEGIN}\n'
         '      <div class="learning-map-section" id="mapa-recorrido">\n'
         f'{component}\n'
-        '        <p class="learning-map-open"><a href="covers/recorrido/">Abrir el recorrido en una página independiente ↗</a></p>\n'
+        '        <p class="learning-map-open"><a href="covers/recorrido/">Abrir el recorrido en una página independiente '
+        f'{EXTERNAL_ARROW}</a></p>\n'
         '      </div>\n'
         f'{END}'
     )
