@@ -3,6 +3,7 @@
 
 from pathlib import Path
 from site_icons import EXTERNAL_ARROW
+from verify_editorial_icons import main as verify_editorial_icons
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,6 +41,7 @@ def main() -> None:
     home = home.replace('class="journey-learning-link" href="covers/recorrido/"', 'class="journey-learning-link" href="#mapa-recorrido"')
     home = home.replace('class="guide-route-link" href="covers/recorrido/"', 'class="guide-route-link" href="#mapa-recorrido"')
     HOME.write_text(home, encoding="utf-8")
+    verify_editorial_icons()
 
 
 if __name__ == "__main__":

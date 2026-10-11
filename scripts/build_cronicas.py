@@ -13,6 +13,7 @@ import json
 import re
 import sys
 from site_icons import EXTERNAL_ARROW
+from verify_editorial_icons import main as verify_editorial_icons
 from pathlib import Path
 
 from PIL import Image, ImageOps
@@ -500,6 +501,7 @@ def static_index(articles: list[dict]) -> None:
 ''' + cards + '''</main><footer>METSI · Diego Carralbal · FCE UBA <a href="../../">Volver al sitio</a></footer></body></html>'''
     (CHRONICLES / "index.html").write_text(page, encoding="utf-8")
     static_home_collection(articles)
+    verify_editorial_icons()
 
 
 def main() -> None:

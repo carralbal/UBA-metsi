@@ -212,7 +212,7 @@ El usuario vio en Safari de iPhone el icono azul de sistema (`↗` interpretado 
 2. `site/metsi.js` usa el mismo SVG en el enlace dinámico «Leer la crónica» de las tapas N. `site/metsi.css` y `site/covers/cronicas/style.css` dan tamaño y alineación al vector en ink/currentColor. Los nombres de caché de CSS y JS del home, y el CSS del índice de crónicas, se actualizaron a `editorial-arrow-20261011` para que Safari no reaproveche esos recursos antiguos.
 3. La flecha del acceso al mapa, el enlace al recorrido autónomo y el enlace adicional N00 del home dejaron de usar `↗`. `scripts/sync_learning_route.py` quedó corregido para no reintroducirlo al sincronizar. También se corrigió `site/covers/recorrido/index.html` y la maqueta pública `site/covers/preview-recorrido-n00/index.html`.
 4. El código fuente de notas de la presentación N01 (`pedagogy/presentations-web/N01/src/main.jsx` y `src/styles.css`) también usa SVG. `npm run build` produjo los bundles nuevos, copiados a `site/pdf/presentaciones/N01/` con el `index.html` apuntando a ellos. Los bundles viejos siguen en disco para no hacer una eliminación riesgosa, pero el entrypoint activo **no** los carga.
-5. `scripts/verify_editorial_icons.py` es una prueba rápida de regresión: rechaza `↗` y otros caracteres de emoji en páginas y generadores activos; comprueba que las 37 tarjetas de cada vista tienen sus dos SVG y que el bundle activo N01 no contiene esos caracteres. `.github/workflows/deploy-pages.yml` ejecuta esta prueba **antes** de subir el artefacto a GitHub Pages: un futuro cambio que reintroduzca el icono azul falla el despliegue en vez de llegar a producción.
+5. `scripts/verify_editorial_icons.py` es una prueba rápida de regresión: rechaza `↗` y otros caracteres de emoji en páginas y generadores activos; comprueba que las 37 tarjetas de cada vista tienen sus dos SVG y que el bundle activo N01 no contiene esos caracteres. `scripts/build_cronicas.py` y `scripts/sync_learning_route.py` la ejecutan **automáticamente después de regenerar**: un cambio que reintroduzca ese carácter falla la generación, en vez de quedar oculto hasta la revisión móvil.
 
 ### QA cerrada
 
@@ -223,10 +223,10 @@ El usuario vio en Safari de iPhone el icono azul de sistema (`↗` interpretado 
 
 ### En proceso
 
-- Revisar el diff/staging acotado, hacer commit y push a `origin/main`, esperar `Deploy GitHub Pages` y comprobar URL viva. El sitio público aún no debe darse por actualizado mientras esto no esté hecho.
+- El commit local inicial `ac07ee1` incluyó un paso de esta prueba en `.github/workflows/deploy-pages.yml`, pero GitHub rechazó el push porque la sesión OAuth no tiene alcance `workflow`. Se quitó **sólo** ese cambio del workflow y se vinculó el gate a los dos generadores. Se debe intentar publicar el producto sin pedir al usuario un permiso más amplio. El sitio público aún no debe darse por actualizado hasta push + Pages exitosos.
 
 ### Falta / continuación exacta
 
-1. Stage **sólo** los archivos enumerados arriba, el nuevo gate y este handoff; hay muchos archivos sin seguimiento de tareas anteriores, incluidos PDF pesados de preimpresión, que pertenecen al usuario y no deben tocarse.
+1. Stage **sólo** los archivos enumerados arriba, el nuevo gate y este handoff; hay muchos archivos sin seguimiento de tareas anteriores, incluidos PDF pesados de preimpresión, que pertenecen al usuario y no deben tocarse. El cambio al workflow **no** debe quedar en el diff final por la limitación de permiso. Si GitHub rechaza también una historia que contenga el commit anterior aunque esté revertido en la punta, se necesitará preparar una rama limpia desde `origin/main` o solicitar autorización de `workflow`, sin borrar trabajo ajeno.
 2. Verificar que ningún PDF, WebP ni JPEG entre en el commit; registrar SHA y Actions run exitoso en esta sección.
 3. Comprobar por HTTP el HTML nuevo del home y el índice de crónicas, contando los SVG de las 37 tarjetas. Si el navegador integrado sigue sin permiso para inspección visual, no saltar el control ni decir que se hizo captura. Ofrecer al usuario la URL con `?v=<SHA>` para saltar caché de HTML en Safari.
