@@ -2,4 +2,6 @@
 *.png filter=lfs diff=lfs merge=lfs -text
 *.pdf filter=lfs diff=lfs merge=lfs -text
 *.mp4 filter=lfs diff=lfs merge=lfs -text
+# N30 digital revision: publish this approved PDF as a normal Git blob.
+site/pdf/publicados/N30-METSI-lectura-previa-v10-final.pdf -filter -diff -merge -text
 N00/source/N00_como_leer_metsi.md whitespace=-trailing-space
