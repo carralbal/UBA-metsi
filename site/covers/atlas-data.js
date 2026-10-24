@@ -621,7 +621,7 @@ window.METSI_ATLAS = {
           "section": "Fuentes que permiten mirar distintas partes de la red",
           "page": 12,
           "title": "Un servicio, muchas organizaciones",
-          "href": "pdf/publicados/N26-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=12"
+          "href": "pdf/publicados/N26-METSI-lectura-previa-v10-final.pdf?v=n26-digital-20261024#page=12"
         },
         {
           "code": "N21",
@@ -861,7 +861,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 2 · Saber quién puede actuar cuando las partes discrepan",
           "page": 17,
           "title": "Un servicio, muchas organizaciones",
-          "href": "pdf/publicados/N26-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=17"
+          "href": "pdf/publicados/N26-METSI-lectura-previa-v10-final.pdf?v=n26-digital-20261024#page=17"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
