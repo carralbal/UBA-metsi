@@ -38,7 +38,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Pasar de interesados genéricos a relaciones de poder",
           "page": 9,
           "title": "No todos ven el mismo problema",
-          "href": "pdf/N05-METSI-lectura-previa-v11-final.pdf?v=fullbleed-editorial-20261007#page=9"
+          "href": "pdf/N05-METSI-lectura-previa-v11-final.pdf?v=n05-digital-20261023#page=9"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
