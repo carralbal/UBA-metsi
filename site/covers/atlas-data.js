@@ -190,9 +190,9 @@ window.METSI_ATLAS = {
         {
           "code": "N14",
           "section": "Movimiento 1 · Definir el proceso desde la promesa y seguir casos completos",
-          "page": 12,
+          "page": 11,
           "title": "De un área a otra: dónde se frena el trabajo",
-          "href": "pdf/publicados/N14-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=12"
+          "href": "pdf/publicados/N14-METSI-lectura-previa-v10-final.pdf?v=n14-digital-20261024#page=11"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -233,9 +233,9 @@ window.METSI_ATLAS = {
         {
           "code": "N14",
           "section": "BPMN y nivel de detalle",
-          "page": 31,
+          "page": 30,
           "title": "De un área a otra: dónde se frena el trabajo",
-          "href": "pdf/publicados/N14-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=31"
+          "href": "pdf/publicados/N14-METSI-lectura-previa-v10-final.pdf?v=n14-digital-20261024#page=30"
         },
         {
           "code": "N12",
