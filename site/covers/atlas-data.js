@@ -13,7 +13,7 @@ window.METSI_ATLAS = {
           "section": "Cómo emerge un resultado que ningún componente controla",
           "page": 17,
           "title": "Un sistema es mucho más que una aplicación",
-          "href": "pdf/N02-METSI-lectura-previa-v16-final.pdf?v=fullbleed-editorial-20261007#page=17"
+          "href": "pdf/N02-METSI-lectura-previa-v16-final.pdf?v=n02-digital-20261023#page=17"
         },
         {
           "code": "N03",
