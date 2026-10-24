@@ -460,7 +460,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Convertir pedidos en opciones claras",
           "page": 13,
           "title": "Si todo es urgente, ¿qué va primero?",
-          "href": "pdf/publicados/N24-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=13"
+          "href": "pdf/publicados/N24-METSI-lectura-previa-v10-final.pdf?v=n24-digital-20261024#page=13"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -503,7 +503,7 @@ window.METSI_ATLAS = {
           "section": "Kanban: más que columnas",
           "page": 20,
           "title": "Si todo es urgente, ¿qué va primero?",
-          "href": "pdf/publicados/N24-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=20"
+          "href": "pdf/publicados/N24-METSI-lectura-previa-v10-final.pdf?v=n24-digital-20261024#page=20"
         },
         {
           "code": "N17",
@@ -528,7 +528,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Limitar compromisos y revisar lo decidido",
           "page": 20,
           "title": "Si todo es urgente, ¿qué va primero?",
-          "href": "pdf/publicados/N24-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=20"
+          "href": "pdf/publicados/N24-METSI-lectura-previa-v10-final.pdf?v=n24-digital-20261024#page=20"
         },
         {
           "code": "N25",
