@@ -124,14 +124,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Formular incertidumbres que puedan cambiar una decisión",
           "page": 9,
           "title": "Investigar antes de apostar",
-          "href": "pdf/N06-METSI-lectura-previa-v11-final.pdf?v=fullbleed-editorial-20261007#page=9"
+          "href": "pdf/N06-METSI-lectura-previa-v11-final.pdf?v=n06-digital-20261024#page=9"
         },
         {
           "code": "N06",
           "section": "Movimiento 2 · Diseñar una cartera mínima de evidencia",
           "page": 15,
           "title": "Investigar antes de apostar",
-          "href": "pdf/N06-METSI-lectura-previa-v11-final.pdf?v=fullbleed-editorial-20261007#page=15"
+          "href": "pdf/N06-METSI-lectura-previa-v11-final.pdf?v=n06-digital-20261024#page=15"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
