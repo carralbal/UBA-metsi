@@ -392,7 +392,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Mostrar los límites y comprobar qué se transfiere",
           "page": 17,
           "title": "Explicar para que otros puedan actuar",
-          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=17"
+          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=n35-digital-20261024#page=17"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -904,14 +904,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Empezar por la decisión, no por las diapositivas",
           "page": 12,
           "title": "Explicar para que otros puedan actuar",
-          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=12"
+          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=n35-digital-20261024#page=12"
         },
         {
           "code": "N35",
           "section": "Movimiento 3 · Mostrar los límites y comprobar qué se transfiere",
           "page": 17,
           "title": "Explicar para que otros puedan actuar",
-          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=17"
+          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=n35-digital-20261024#page=17"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
