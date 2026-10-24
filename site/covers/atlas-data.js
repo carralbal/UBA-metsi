@@ -929,14 +929,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Volver a la experiencia sin maquillarla",
           "page": 9,
           "title": "¿Qué aprendimos de lo que hicimos?",
-          "href": "pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=9"
+          "href": "pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf?v=n36-digital-20261024#page=9"
         },
         {
           "code": "N36",
           "section": "Movimiento 2 · Decidir qué conviene corregir",
           "page": 12,
           "title": "¿Qué aprendimos de lo que hicimos?",
-          "href": "pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=12"
+          "href": "pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf?v=n36-digital-20261024#page=12"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
