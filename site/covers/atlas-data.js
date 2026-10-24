@@ -569,9 +569,9 @@ window.METSI_ATLAS = {
         {
           "code": "N10",
           "section": "Movimiento 2 · Formular outcomes, protecciones y evidencia de revisión",
-          "page": 17,
+          "page": 16,
           "title": "Del síntoma al problema",
-          "href": "pdf/N10-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=17"
+          "href": "pdf/N10-METSI-lectura-previa-v10-final.pdf?v=n10-digital-20261024#page=16"
         },
         {
           "code": "N22",
