@@ -149,7 +149,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Seguir el recorrido completo y reconocer barreras sistémicas",
           "page": 10,
           "title": "Diseñar para quienes lo van a usar",
-          "href": "pdf/N09-METSI-lectura-previa-v11-final.pdf?v=fullbleed-editorial-20261007#page=10"
+          "href": "pdf/N09-METSI-lectura-previa-v11-final.pdf?v=n09-digital-20261024#page=10"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -167,7 +167,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Seguir el recorrido completo y reconocer barreras sistémicas",
           "page": 10,
           "title": "Diseñar para quienes lo van a usar",
-          "href": "pdf/N09-METSI-lectura-previa-v11-final.pdf?v=fullbleed-editorial-20261007#page=10"
+          "href": "pdf/N09-METSI-lectura-previa-v11-final.pdf?v=n09-digital-20261024#page=10"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -185,7 +185,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Seguir el recorrido completo y reconocer barreras sistémicas",
           "page": 10,
           "title": "Diseñar para quienes lo van a usar",
-          "href": "pdf/N09-METSI-lectura-previa-v11-final.pdf?v=fullbleed-editorial-20261007#page=10"
+          "href": "pdf/N09-METSI-lectura-previa-v11-final.pdf?v=n09-digital-20261024#page=10"
         },
         {
           "code": "N14",
@@ -210,7 +210,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 2 · Diseñar con diversidad y comprender la adopción",
           "page": 13,
           "title": "Diseñar para quienes lo van a usar",
-          "href": "pdf/N09-METSI-lectura-previa-v11-final.pdf?v=fullbleed-editorial-20261007#page=13"
+          "href": "pdf/N09-METSI-lectura-previa-v11-final.pdf?v=n09-digital-20261024#page=13"
         },
         {
           "code": "N28",
