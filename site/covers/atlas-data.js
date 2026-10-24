@@ -854,7 +854,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 2 · Revisar lo que sostiene la cadena",
           "page": 16,
           "title": "Que las decisiones encajen",
-          "href": "pdf/publicados/N34-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=16"
+          "href": "pdf/publicados/N34-METSI-lectura-previa-v10-final.pdf?v=n34-digital-20261024#page=16"
         },
         {
           "code": "N26",
