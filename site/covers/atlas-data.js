@@ -260,7 +260,7 @@ window.METSI_ATLAS = {
           "section": "Una API no es una promesa genérica de éxito",
           "page": 15,
           "title": "Entender lo mismo antes de conectar",
-          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=15"
+          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=n27-digital-20261024#page=15"
         },
         {
           "code": "N13",
@@ -417,7 +417,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Cambiar el acuerdo sin romper a quienes lo usan",
           "page": 22,
           "title": "Entender lo mismo antes de conectar",
-          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=22"
+          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=n27-digital-20261024#page=22"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -793,7 +793,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Cambiar el acuerdo sin romper a quienes lo usan",
           "page": 22,
           "title": "Entender lo mismo antes de conectar",
-          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=22"
+          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=n27-digital-20261024#page=22"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -818,7 +818,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Cambiar el acuerdo sin romper a quienes lo usan",
           "page": 22,
           "title": "Entender lo mismo antes de conectar",
-          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=22"
+          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=n27-digital-20261024#page=22"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
