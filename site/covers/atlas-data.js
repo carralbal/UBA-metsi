@@ -63,7 +63,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Convertir «funciona bien» en una pregunta concreta",
           "page": 13,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=13"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=n28-digital-20261024#page=13"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -217,7 +217,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Evaluar propiedades sin perder a las personas",
           "page": 17,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=17"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=n28-digital-20261024#page=17"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -596,14 +596,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Convertir «funciona bien» en una pregunta concreta",
           "page": 13,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=13"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=n28-digital-20261024#page=13"
         },
         {
           "code": "N28",
           "section": "Movimiento 2 · Elegir evidencia que responda a la decisión",
           "page": 15,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=15"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=n28-digital-20261024#page=15"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -750,7 +750,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 2 · Elegir evidencia que responda a la decisión",
           "page": 15,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=15"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=n28-digital-20261024#page=15"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -768,7 +768,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Evaluar propiedades sin perder a las personas",
           "page": 17,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=17"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=n28-digital-20261024#page=17"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
