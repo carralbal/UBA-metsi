@@ -54,9 +54,9 @@ window.METSI_ATLAS = {
         {
           "code": "N04",
           "section": "Movimiento 3 · Decidir y dejar abierta la revisión",
-          "page": 23,
+          "page": 22,
           "title": "Antes de decidir, ¿qué sabemos?",
-          "href": "pdf/N04-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=23"
+          "href": "pdf/N04-METSI-lectura-previa-v10-final.pdf?v=n04-digital-20261023#page=22"
         },
         {
           "code": "N28",
