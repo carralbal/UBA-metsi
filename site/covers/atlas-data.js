@@ -367,7 +367,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 2 · Cortar a través de las partes necesarias",
           "page": 14,
           "title": "Una entrega pequeña que ya sirva",
-          "href": "pdf/publicados/N23-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=14"
+          "href": "pdf/publicados/N23-METSI-lectura-previa-v10-final.pdf?v=n23-digital-20261023#page=14"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -553,7 +553,7 @@ window.METSI_ATLAS = {
           "section": "MVP: mínimo para aprender, no mínimo cuidado",
           "page": 15,
           "title": "Una entrega pequeña que ya sirva",
-          "href": "pdf/publicados/N23-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=15"
+          "href": "pdf/publicados/N23-METSI-lectura-previa-v10-final.pdf?v=n23-digital-20261023#page=15"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
