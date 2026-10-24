@@ -483,9 +483,9 @@ window.METSI_ATLAS = {
         {
           "code": "N22",
           "section": "Movimiento 2 · Diseñar evidencia que distinga explicaciones rivales",
-          "page": 16,
+          "page": 15,
           "title": "Probar antes de ir más lejos",
-          "href": "pdf/publicados/N22-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=16"
+          "href": "pdf/publicados/N22-METSI-lectura-previa-v10-final.pdf?v=n22-digital-20261023#page=15"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -578,7 +578,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Convertir la iniciativa en una afirmación refutable",
           "page": 13,
           "title": "Probar antes de ir más lejos",
-          "href": "pdf/publicados/N22-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=13"
+          "href": "pdf/publicados/N22-METSI-lectura-previa-v10-final.pdf?v=n22-digital-20261023#page=13"
         }
       ],
       "referenceLabel": "Lecturas relacionadas · no desarrollan OKR"
