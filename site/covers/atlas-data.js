@@ -644,9 +644,9 @@ window.METSI_ATLAS = {
         {
           "code": "N29",
           "section": "DevOps: construir y operar sin pasarse el problema",
-          "page": 16,
+          "page": 15,
           "title": "Cambiar sin dejar de atender",
-          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=16"
+          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=n29-digital-20261024#page=15"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -662,9 +662,9 @@ window.METSI_ATLAS = {
         {
           "code": "N29",
           "section": "Movimiento 1 · Saber exactamente qué estamos cambiando",
-          "page": 13,
+          "page": 12,
           "title": "Cambiar sin dejar de atender",
-          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=13"
+          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=n29-digital-20261024#page=12"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -680,9 +680,9 @@ window.METSI_ATLAS = {
         {
           "code": "N29",
           "section": "Las ideas que sostienen el recorrido",
-          "page": 12,
+          "page": 11,
           "title": "Cambiar sin dejar de atender",
-          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=12"
+          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=n29-digital-20261024#page=11"
         },
         {
           "code": "N25",
@@ -784,9 +784,9 @@ window.METSI_ATLAS = {
         {
           "code": "N29",
           "section": "Las ideas que sostienen el recorrido",
-          "page": 12,
+          "page": 11,
           "title": "Cambiar sin dejar de atender",
-          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=12"
+          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=n29-digital-20261024#page=11"
         },
         {
           "code": "N27",
@@ -809,9 +809,9 @@ window.METSI_ATLAS = {
         {
           "code": "N29",
           "section": "Las ideas que sostienen el recorrido",
-          "page": 12,
+          "page": 11,
           "title": "Cambiar sin dejar de atender",
-          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=12"
+          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=n29-digital-20261024#page=11"
         },
         {
           "code": "N27",
@@ -877,9 +877,9 @@ window.METSI_ATLAS = {
         {
           "code": "N29",
           "section": "Movimiento 3 · Volver, corregir y reparar son acciones distintas",
-          "page": 20,
+          "page": 19,
           "title": "Cambiar sin dejar de atender",
-          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=20"
+          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=n29-digital-20261024#page=19"
         },
         {
           "code": "N30",
