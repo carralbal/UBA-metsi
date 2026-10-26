@@ -1,0 +1,111 @@
+/* Shared system extracted from the approved N12 v7; content remains document-specific. */
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 {font-family:Baskerville,serif;color:#171917;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 a,body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 a:link,body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 a:visited,body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 a:hover,body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 a:focus {text-decoration:none!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 h1,body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 h2,body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 h3 {font-family:Didot,serif!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 [data-v7-body] * {font-family:inherit!important;font-size:inherit!important;line-height:inherit!important;letter-spacing:0!important;word-spacing:0!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 [data-v7-body] strong,body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 [data-v7-body] b {font-weight:700!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .reading-section,body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .reading-section .section-body {height:auto!important;max-height:none!important;min-height:0!important;overflow:visible!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .handoff-synthesis-page,
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .pills-glossary-page,
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .consequences-limits-page {display:block!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;break-inside:auto!important;page-break-inside:auto!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .block-c-synthesis,
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .glossary-two-column {display:block!important;break-inside:auto!important;page-break-inside:auto!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .block-c-synthesis .synthesis-photo {margin:5mm 0 0!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .authors-page,body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .contents-page {height:auto!important;min-height:297mm!important;overflow:visible!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .authors-page .contributor {height:auto!important;min-height:0!important;break-inside:avoid!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .authors-page cite {min-height:0!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .authors-page .contributor-work small {font:8.2pt/1.25 Avenir,sans-serif!important;color:#4f534f!important;margin-top:1.2mm!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .section-marker {gap:3mm!important;white-space:normal!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .edition-question::before {top:12mm!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .edition-question {min-height:297mm!important;justify-content:flex-end!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .section-marker>span:first-child {flex-shrink:0!important;aspect-ratio:1/1;width:8mm!important;height:8mm!important;min-width:8mm!important;flex:0 0 8mm!important;border-radius:50%!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;font:700 10pt/1 Avenir,sans-serif!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .section-marker b,body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .section-marker em,body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .contributor-role,body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .field-note-kicker {font:8pt/1.2 Avenir,sans-serif!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .v7-route-label {margin-left:auto;font:8pt/1.2 Avenir,sans-serif!important;letter-spacing:.025em;white-space:nowrap;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .block-c-handoff-out {display:block!important;padding:6mm!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .block-c-handoff-out .section-heading {width:100%!important;max-width:none!important;margin:0 0 4mm!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .block-c-handoff-out .section-heading h2 {font:25pt/1.08 Didot,serif!important;max-width:none!important;margin:3mm 0 0!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .block-c-handoff-out .section-body {columns:2!important;column-gap:8mm!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .contents-layout {grid-template-columns:minmax(0,.55fr) minmax(0,1.45fr)!important;gap:6mm!important;height:auto!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .contents-layout {display:grid!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .contents-layout>ol {grid-column:2!important;grid-row:1!important;min-width:0!important;columns:2!important;column-gap:5mm!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .contents-layout>figure {grid-column:1!important;grid-row:1!important;align-self:start!important;display:block!important;height:auto!important;min-width:0!important;width:100%!important;max-width:none!important;margin:0!important;overflow:visible!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .contents-layout .contents-photo-viewport {height:173mm!important;width:100%!important;overflow:hidden!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .contents-layout .contents-photo-viewport img {position:static!important;transform:none!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;filter:grayscale(1)!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .contents-layout>figure>img {display:block!important;width:100%!important;height:173mm!important;object-fit:cover!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .contents-layout figure figcaption {font:8pt/1.2 Avenir,sans-serif!important;padding:3mm 0 0!important;background:none!important;position:static!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n00 .contents-layout {display:block!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .contents-layout li,body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .contents-layout a {font:9.2pt/1.2 Avenir,sans-serif!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .contents-layout li {padding:.65mm 0!important;break-inside:avoid!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .contents-layout small,body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .contents-layout .nav-page {font:8pt/1.15 Avenir,sans-serif!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .contents-layout ol {column-gap:5mm!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .contents-sinnum-note {position:static!important;margin-top:4mm!important;padding-top:1.5mm!important;font:8pt/1.2 Avenir,sans-serif!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .pill-summary {padding:5mm 6mm!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .pill-summary .section-heading h2 {font:26pt/1.06 Didot,serif!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .pill-summary .section-body {columns:auto!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .pill-summary ol {display:block!important;list-style:none!important;padding:0!important;counter-reset:pill!important;height:auto!important;min-height:0!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .pill-summary li {position:relative!important;counter-increment:pill!important;padding:2mm 3mm 2mm 15mm!important;min-height:11mm!important;box-sizing:border-box!important;display:block!important;break-inside:avoid!important;border-color:transparent!important;background:transparent!important;box-shadow:none!important;color:#171917!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .pill-summary li::marker {content:''!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .pill-summary li::before {content:counter(pill)!important;position:absolute!important;left:1mm!important;top:1mm!important;width:9mm!important;height:9mm!important;border-radius:50%!important;display:grid!important;place-items:center!important;background:#171917!important;color:#CFFF00!important;font:700 12pt/1 Baskerville,serif!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .hotel-voices-grid article {height:auto!important;min-height:0!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .hotel-voices-grid p:not([data-v7-body]),body.document-n01.metsi-v7.metsi-v7.metsi-v7 .hotel-voices-compact>header>p:not([data-v7-body]) {font:11.2pt/1.4 Baskerville,serif!important;letter-spacing:0!important;word-spacing:0!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .hotel-voices-grid .hotel-role,body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .hotel-voices-grid .hotel-voice-role {font:600 8.2pt/1.2 Avenir,sans-serif!important;letter-spacing:0!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .hotel-voices-grid article>div>span {display:block!important;font:600 8.2pt/1.2 Avenir,sans-serif!important;letter-spacing:0!important;min-height:0!important;margin-bottom:2mm!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .hotel-voices-kicker,body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .hotel-voices>header>b {font:8.2pt/1.2 Avenir,sans-serif!important;letter-spacing:.04em!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .references .section-body {column-gap:8mm!important;column-fill:balance!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .references li {break-inside:avoid!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .references {break-inside:auto!important;page-break-inside:auto!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .references .section-body {display:block!important;columns:2!important;column-gap:8mm!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .references .section-body>ul {display:block!important;columns:auto!important;break-inside:auto!important;page-break-inside:auto!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .references .section-marker>span:first-child {width:auto!important;min-width:0!important;height:auto!important;flex:0 1 auto!important;aspect-ratio:auto!important;border:0!important;border-radius:0!important;display:inline!important;font:8pt/1.2 Avenir,sans-serif!important;letter-spacing:.06em!important;white-space:normal!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .v7-support,body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .rev-preparation-product,body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .v7-product {border-left:1.2mm solid #CFFF00;padding:4mm 5mm;margin:4mm 0;background:#e3e6e4;break-inside:avoid;column-span:all;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .v7-support h3,body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .v7-product h3 {font:20pt/1.1 Didot,serif!important;margin:0 0 3mm!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .v7-support p:last-child,body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .v7-product p:last-child {margin-bottom:0!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .v7-synthesis-page {break-before:page!important;break-after:page!important;padding:0!important;background:#fafaf8!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .v7-synthesis-page .section-heading {margin:0 0 3mm!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .v7-synthesis-page h2 {font:27pt/1.08 Didot,serif!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .v7-synthesis-page figure {margin:0!important;padding:0!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .v7-synthesis-page svg {display:block;width:100%;height:222mm;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .v7-synthesis-page figcaption {font:8.2pt/1.3 Avenir,sans-serif!important;color:#4f534f!important;margin:2mm 0 0!important;}
+/* Full photograph, no veil. Same positioning roles as the locked N12 v7 cover. */
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .collection-cover {height:297mm!important;min-height:297mm!important;width:210mm!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .collection-cover>img {filter:grayscale(1)!important;object-fit:cover!important;object-position:center!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .collection-cover .cover-shade {display:none!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .collection-masthead {top:15mm!important;left:0!important;right:0!important;font:58pt/.9 Didot,serif!important;letter-spacing:.06em!important;color:white!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .cover-meta {top:18mm!important;font:7.5pt/1.2 Avenir,sans-serif!important;letter-spacing:.08em!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .cover-meta-left {left:18mm!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .cover-meta-right {right:18mm!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .cover-parallelogram {top:55mm!important;right:18mm!important;width:15mm!important;height:4mm!important;background:#CFFF00!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .cover-title {left:18mm!important;bottom:23mm!important;width:174mm!important;padding:0!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .cover-title i {width:28mm!important;height:2mm!important;margin:0 0 6mm!important;background:#CFFF00!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .cover-title>span {font:8pt/1.2 Avenir,sans-serif!important;letter-spacing:.1em!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .cover-title h1 {font:31pt/1.03 Didot,serif!important;letter-spacing:-.015em!important;color:white!important;margin:5mm 0 3mm!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .cover-subtitle {font:11pt/1.25 Avenir,sans-serif!important;color:white!important;margin:0!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .cover-thesis {right:18mm!important;bottom:74mm!important;width:75mm!important;text-align:right!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .cover-thesis b {width:14.82mm!important;height:14.82mm!important;box-sizing:border-box!important;margin:0 0 5mm!important;border:.25mm solid #CFFF00!important;font:700 12pt/1 Avenir,sans-serif!important;color:#CFFF00!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .cover-thesis p {font:700 16.5pt/1.24 Didot,serif!important;color:#CFFF00!important;margin:0!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .cover-credit {position:absolute!important;left:18mm!important;bottom:9mm!important;z-index:5;font:9.5pt/1.2 Avenir,sans-serif!important;color:white!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .cover-credit a {color:inherit!important;}
+
+/* Verified N17: parent columns keep heading with glossary/references. */
+/* Prueba independiente N17: un único contexto de columnas con encabezado abarcante. */
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .glossary-two-column,
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .references {
+  columns: 2 !important;
+  column-gap: 8mm !important;
+}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .glossary-two-column .section-body,
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .references .section-body {
+  display: contents !important;
+}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .glossary-two-column .section-heading,
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .references .section-heading {
+  column-span: all !important;
+}
+/* N00–N11 use a list inside the glossary: one column context, never 2×3. */
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .glossary-two-column .section-body>ul,
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .glossary-two-column .section-body>ol {
+  display:block!important;columns:auto!important;column-count:auto!important;
+  height:auto!important;min-height:0!important;break-inside:auto!important;
+}
+/* Residual: actual compact-panel heading, consistent with N12 metadata size. */
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .hotel-voices-compact > header > b {font:700 8.2pt/1.2 Avenir,sans-serif!important;}

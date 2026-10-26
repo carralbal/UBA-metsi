@@ -1,0 +1,27 @@
+{
+  "document": "N14",
+  "diagrams": [
+    {
+      "file": "diagrams/N14-mapa-01.svg",
+      "title": "La tarea visible no es el tiempo del servicio",
+      "labels": [
+        "Cuatro minutos de atención en mostrador",
+        "Veintisiete minutos promedio desde llegada hasta acceso",
+        "Llegada como evento inicial",
+        "Cola de inspección con edad y responsable",
+        "Transferencia de responsabilidad de Housekeeping a Recepción",
+        "Identidad",
+        "Asignación y acceso vigentes",
+        "La llave abre o existe una reparación visible",
+        "Identidad no conciliada como excepción frecuente"
+      ],
+      "claim": "Un proceso de punta a punta se define por la promesa y debe seguir instancias completas para hacer visibles trabajo, espera, handoffs, colas, excepciones y reparación.",
+      "caption": "El tiempo de servicio reúne trabajo, espera, handoffs y excepciones entre el evento inicial y un cierre verificable.",
+      "family": "flow-map",
+      "sha256": "4499493e9efb6b153171bc3d23af18206fda26505c6f2b08519966cce6436b11",
+      "approved": true,
+      "source_manifest": "diagrams/N14-mapa-01-content-manifest.json",
+      "alt_text": "diagrams/N14-mapa-01-alt-text.md"
+    }
+  ]
+}

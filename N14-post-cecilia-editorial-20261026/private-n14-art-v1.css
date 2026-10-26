@@ -1,0 +1,50 @@
+/* N14 private editorial proof: no source copy or approved cover changes. */
+body.premium-magazine.document-n14 img[src$=".png"],
+body.premium-magazine.document-n14 img[src$=".jpg"],
+body.premium-magazine.document-n14 img[src$=".jpeg"] {
+  filter: grayscale(1) !important;
+}
+
+/* Keep the eleven-paragraph certificate case on one readable leaf. */
+body.premium-magazine.document-n14 #section-02 .section-body {
+  column-gap: 6mm !important;
+}
+
+/* The error photograph is a visual pause, not a postcard on an empty page. */
+body.block-c.premium-magazine.document-n14 #section-18 .errors-photo {
+  margin: 0 !important;
+  padding: 0 !important;
+  break-before: page !important;
+  page-break-before: always !important;
+  background: #171917 !important;
+  color: #fff !important;
+  height: 262mm !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+}
+body.block-c.premium-magazine.document-n14 #section-18 .errors-photo .photo-viewport {
+  height: 210mm !important;
+  flex: 0 0 210mm !important;
+}
+body.block-c.premium-magazine.document-n14 #section-18 .errors-photo .photo-viewport img {
+  height: 100% !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+body.block-c.premium-magazine.document-n14 #section-18 .errors-photo figcaption {
+  color: #fff !important;
+  padding: 5mm 8mm 8mm !important;
+  margin: 0 !important;
+  font-size: 16pt !important;
+  line-height: 1.2 !important;
+}
+
+/* Preserve the complete concluding sentence across the consequence spread. */
+body.block-c.premium-magazine.document-n14 .consequences-limits-page.has-consequence-photo {
+  gap: 1mm !important;
+  padding: 4mm 7mm !important;
+}
+body.block-c.premium-magazine.document-n14 .consequences-limits-page.has-consequence-photo .block-c-limits {
+  padding-top: 1mm !important;
+}

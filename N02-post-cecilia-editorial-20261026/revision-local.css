@@ -1,0 +1,183 @@
+/* Apoyos pedagógicos propios; el sistema tipográfico global se aplica después. */
+.v7-learning-support { margin: 5mm 0; padding: 4mm 5mm; border-left: 1.2mm solid #CFFF00; background: #f3f4ee; column-span: all; break-inside: auto; }
+.v7-learning-support h3 { margin: 0 0 3mm; break-after: avoid; }
+.v7-learning-support p { margin: 0 0 2.5mm; }
+.v7-worked-example { width: 100%; border-collapse: collapse; table-layout: fixed; margin: 3mm 0; }
+.v7-worked-example caption { text-align: left; font-family: Avenir, sans-serif; font-size: 8.2pt; margin-bottom: 2mm; }
+.v7-worked-example th { width: 29%; text-align: left; vertical-align: top; }
+.v7-worked-example td { vertical-align: top; }
+.v7-worked-example th, .v7-worked-example td { padding: 2.4mm; border-bottom: .25mm solid #ced2c8; }
+.v7-worked-example tr { break-inside: avoid; }
+.v7-learning-support a { text-decoration: none !important; }
+
+/* QA visual local: contraste, fragmentación y escala; prosa 11.2pt intacta. */
+body.document-n02 #v7-N02-cover .cover-subtitle, body.document-n02 #v7-N02-cover .cover-credit { color:#171917!important; }
+body.document-n02 #v7-N02-producto-box, body.document-n02 #v7-N02-producto-box * { color:#171917!important; }
+
+/* Ronda residual: metadato del caso registrado a5.7pt. */
+body.document-n02.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .hotel-voices-compact > header > b { font:700 8.2pt/1.2 Avenir,sans-serif!important; letter-spacing:.08em!important; }
+/* Ensayo privado N02: cerrar la explicación de emergencia en el pliego,
+   conservando los seis párrafos, el cuerpo aprobado y el campo stone. */
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n02 #section-12 .section-body {
+  columns: 2 !important;
+  column-gap: 5mm !important;
+  column-rule: .2mm solid rgba(40, 40, 38, .28) !important;
+}
+
+/* Apertura ink: el apoyo se integra en la superficie, sin caja paper. */
+@media print {
+  body.document-n02.metsi-v7.metsi-v7 #section-01 #v7-N02-producto-box {
+    background: transparent !important;
+    border-left: 0 !important;
+    border-top: 1.2mm solid #cfff00 !important;
+    padding: 4mm 0 0 !important;
+    color: #f7f6f2 !important;
+  }
+  body.document-n02.metsi-v7.metsi-v7 #section-01 #v7-N02-producto-box *,
+  body.document-n02.metsi-v7.metsi-v7 #section-01 #v7-N02-producto-box a {
+    color: #f7f6f2 !important;
+  }
+}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n02 #section-12 .section-body > p {
+  break-inside: avoid-column !important;
+  margin-bottom: 1mm !important;
+}
+/* Sólo aire interno de esta pieza: no se toca tamaño ni interlínea del cuerpo. */
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n02 #section-12 {
+  padding-top: 2mm !important;
+  padding-bottom: 2mm !important;
+}
+body.metsi-v7.metsi-v7.metsi-v7.document-n02 #section-11 .photo-band img {
+  height: 18mm !important;
+}
+
+/* Ensayo v7: referencias en una sola hoja, sin dejar seis entradas huérfanas.
+   Se conserva el texto y la jerarquía; se compacta sólo el aparato bibliográfico. */
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n02 #referencias {
+  columns: 2 !important;
+  column-count: 2 !important;
+}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n02 #referencias .section-body {
+  display: block !important;
+  columns: 1 !important;
+  column-count: 1 !important;
+}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n02 #referencias .section-body > ul {
+  columns: 1 !important;
+  column-count: 1 !important;
+}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n02 #referencias .section-body li {
+  zoom: .85;
+}
+
+/* Ensayo post-Cecilia: recuperar la doble columna editorial del relato de
+   apertura. La restricción v8 a 105 mm producía un folio estrecho y vacío. */
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n02 #section-02 .section-body {
+  columns: 2 !important;
+  column-count: 2 !important;
+  column-gap: 8mm !important;
+  column-rule: .2mm solid #c5c7c5 !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n02 #section-03 {
+  break-before: page !important;
+  page-break-before: always !important;
+}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n02 #section-03 .section-body {
+  columns: 2 !important;
+  column-count: 2 !important;
+  column-gap: 8mm !important;
+  column-rule: .2mm solid #c5c7c5 !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n02 #section-13 .section-body {
+  max-width: 130mm !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n02 #section-14 {
+  break-before: page !important;
+  page-break-before: always !important;
+}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n02 #section-14 .section-body {
+  columns: 1 !important;
+  column-count: 1 !important;
+  max-width: 135mm !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n02 .hotel-voices-compact {
+  min-height: 245mm !important;
+}
+
+/* v9, ensayo privado: que la taxonomía arranque junto a su presentación
+   en lugar de dejar el título aislado antes de una hoja vacía. */
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n02 #section-07 .field-taxonomy {
+  break-inside: auto !important;
+  page-break-inside: auto !important;
+}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n02 #section-07 .field-taxonomy .field-note-grid {
+  break-inside: auto !important;
+  page-break-inside: auto !important;
+}
+
+
+/* N02 v3, ensayo editorial privado: las secciones narrativas mantienen la
+   tipografía y los seis/cinco párrafos; los nuevos apoyos son microcopy aparte. */
+@media print {
+  body.document-n02 .n02-opening-rails {
+    display:block !important; box-sizing:border-box !important;
+    width:176mm !important; min-height:77mm !important;
+    margin:12mm auto 0 !important; padding:4mm 0 0 !important;
+    border-top:.4mm solid #191919 !important; break-inside:avoid !important;
+    color:#191919 !important; background:transparent !important;
+  }
+  body.document-n02 .n02-opening-rails .n02-rails-kicker {
+    font:700 7.5pt/1.25 Avenir,Arial,sans-serif !important;
+    letter-spacing:.12em !important; margin-bottom:3mm !important;
+  }
+  body.document-n02 .n02-opening-rails h3 {
+    font:400 20pt/1.06 Baskerville,Georgia,serif !important;
+    margin:0 0 5mm !important;
+  }
+  body.document-n02 .n02-opening-rails .n02-rail {
+    display:grid !important; grid-template-columns:32mm 1fr !important;
+    gap:5mm !important; border-top:.2mm solid #a6a9a5 !important;
+    padding:2.2mm 0 !important;
+  }
+  body.document-n02 .n02-opening-rails .n02-rail b {
+    font:700 8pt/1.2 Avenir,Arial,sans-serif !important;
+    text-transform:uppercase !important; letter-spacing:.05em !important;
+  }
+  body.document-n02 .n02-opening-rails .n02-rail span {
+    font:400 10.2pt/1.25 Baskerville,Georgia,serif !important;
+  }
+  body.document-n02 .n02-opening-rails figcaption {
+    margin-top:2.5mm !important; font:400 7.5pt/1.25 Avenir,Arial,sans-serif !important;
+    color:#575754 !important;
+  }
+  body.document-n02 .n02-hotel-ink {
+    display:flex !important; flex-direction:column !important;
+    justify-content:center !important; box-sizing:border-box !important;
+    width:176mm !important; min-height:74mm !important;
+    margin:10mm auto 0 !important; padding:9mm 11mm !important;
+    background:#191919 !important; color:#f7f6f2 !important;
+    break-inside:avoid !important;
+  }
+  body.document-n02 .n02-hotel-ink span {
+    font:700 7.5pt/1.25 Avenir,Arial,sans-serif !important;
+    letter-spacing:.12em !important; color:#cfff00 !important;
+  }
+  body.document-n02 .n02-hotel-ink blockquote {
+    font:400 20pt/1.09 Baskerville,Georgia,serif !important;
+    margin:5mm 0 0 !important; max-width:150mm !important;
+  }
+  body.document-n02 .n02-hotel-ink figcaption {
+    font:400 8pt/1.25 Avenir,Arial,sans-serif !important;
+    margin-top:5mm !important; color:#d2d2cf !important;
+  }
+}

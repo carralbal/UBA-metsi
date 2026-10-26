@@ -77,3 +77,6 @@ site/pdf/publicados/N00-METSI-lectura-previa-v4-recorrido.pdf -filter -diff -mer
 # N25 digital revision: normal Git blob while LFS quota is exhausted.
 site/pdf/publicados/N25-METSI-lectura-previa-v10-final.pdf -filter -diff -merge -text
 N00/source/N00_como_leer_metsi.md whitespace=-trailing-space
+# Fuente editable de la revisión N02/N14: imágenes como Git normal durante cuota LFS agotada.
+N02-post-cecilia-editorial-20261026/assets/** -filter -diff -merge -text
+N14-post-cecilia-editorial-20261026/assets/** -filter -diff -merge -text

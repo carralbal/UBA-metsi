@@ -13,7 +13,7 @@ window.METSI_ATLAS = {
           "section": "Cómo emerge un resultado que ningún componente controla",
           "page": 17,
           "title": "Un sistema es mucho más que una aplicación",
-          "href": "pdf/N02-METSI-lectura-previa-v16-final.pdf?v=n02-digital-20261023#page=17"
+          "href": "pdf/N02-METSI-lectura-previa-v16-final.pdf?v=n02-editorial-20261026#page=17"
         },
         {
           "code": "N03",
@@ -192,7 +192,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Definir el proceso desde la promesa y seguir casos completos",
           "page": 11,
           "title": "De un área a otra: dónde se frena el trabajo",
-          "href": "pdf/publicados/N14-METSI-lectura-previa-v10-final.pdf?v=n14-digital-20261024#page=11"
+          "href": "pdf/publicados/N14-METSI-lectura-previa-v10-final.pdf?v=n14-editorial-20261026#page=11"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -235,7 +235,7 @@ window.METSI_ATLAS = {
           "section": "BPMN y nivel de detalle",
           "page": 30,
           "title": "De un área a otra: dónde se frena el trabajo",
-          "href": "pdf/publicados/N14-METSI-lectura-previa-v10-final.pdf?v=n14-digital-20261024#page=30"
+          "href": "pdf/publicados/N14-METSI-lectura-previa-v10-final.pdf?v=n14-editorial-20261026#page=31"
         },
         {
           "code": "N12",
@@ -453,7 +453,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Distinguir proyecto, producto, servicio y plataforma",
           "page": 13,
           "title": "El proyecto termina. El servicio sigue.",
-          "href": "pdf/publicados/N21-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=13"
+          "href": "pdf/publicados/N21-METSI-lectura-previa-v10-final.pdf?v=n21-verified-20261026#page=13"
         },
         {
           "code": "N24",
@@ -628,7 +628,7 @@ window.METSI_ATLAS = {
           "section": "Las ideas que sostienen el recorrido",
           "page": 12,
           "title": "El proyecto termina. El servicio sigue.",
-          "href": "pdf/publicados/N21-METSI-lectura-previa-v10-final.pdf?v=fullbleed-editorial-20261007#page=12"
+          "href": "pdf/publicados/N21-METSI-lectura-previa-v10-final.pdf?v=n21-verified-20261026#page=12"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"

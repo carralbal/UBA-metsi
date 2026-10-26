@@ -1,0 +1,139 @@
+{
+  "status": "PASS",
+  "scope": "N02, N14, N21 public PDF artifacts; visual page review recorded separately",
+  "documents": [
+    {
+      "code": "N02",
+      "path": "site/pdf/N02-METSI-lectura-previa-v16-final.pdf",
+      "pages": 34,
+      "bytes": 29205387,
+      "sha256": "fb28ff04fe6837c7b08394600f6d4a781facde01f58281926906130f26e7307c",
+      "a4_pages": 34,
+      "nonempty_pages": 34,
+      "tagged_document": true,
+      "cover_structure": true,
+      "named_destinations": 28,
+      "ink_opening": {
+        "samples": [
+          [
+            25,
+            25,
+            25
+          ],
+          [
+            25,
+            25,
+            25
+          ],
+          [
+            25,
+            25,
+            25
+          ],
+          [
+            94,
+            94,
+            92
+          ]
+        ],
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "code": "N14",
+      "path": "site/pdf/publicados/N14-METSI-lectura-previa-v10-final.pdf",
+      "pages": 50,
+      "bytes": 29100595,
+      "sha256": "ccc38b0b7c4c6213af78755b6ffde2a104d83e170ad2016b5349d63ab64af19e",
+      "a4_pages": 50,
+      "nonempty_pages": 50,
+      "tagged_document": true,
+      "cover_structure": true,
+      "named_destinations": 30,
+      "ink_opening": {
+        "samples": [
+          [
+            25,
+            25,
+            25
+          ],
+          [
+            25,
+            25,
+            25
+          ],
+          [
+            25,
+            25,
+            25
+          ],
+          [
+            25,
+            25,
+            25
+          ]
+        ],
+        "pass": true
+      },
+      "pass": true,
+      "five_routes_at_page_22": true
+    },
+    {
+      "code": "N21",
+      "path": "site/pdf/publicados/N21-METSI-lectura-previa-v10-final.pdf",
+      "pages": 40,
+      "bytes": 16062709,
+      "sha256": "a32fb3327cc3081e7c0a655424390f63b715bb38a5ea78f8587f32d0f7d965ec",
+      "a4_pages": 40,
+      "nonempty_pages": 40,
+      "tagged_document": true,
+      "cover_structure": true,
+      "named_destinations": 24,
+      "ink_opening": {
+        "samples": [
+          [
+            27,
+            27,
+            27
+          ],
+          [
+            27,
+            27,
+            27
+          ],
+          [
+            27,
+            27,
+            27
+          ],
+          [
+            27,
+            27,
+            27
+          ]
+        ],
+        "pass": true
+      },
+      "pass": true
+    }
+  ],
+  "site_links": {
+    "N02": {
+      "url": "pdf/N02-METSI-lectura-previa-v16-final.pdf?v=n02-editorial-20261026",
+      "pages": 34,
+      "pass": true
+    },
+    "N14": {
+      "url": "pdf/publicados/N14-METSI-lectura-previa-v10-final.pdf?v=n14-editorial-20261026",
+      "pages": 50,
+      "pass": true,
+      "bibliography_page_49": true
+    },
+    "N21": {
+      "url": "pdf/publicados/N21-METSI-lectura-previa-v10-final.pdf?v=n21-verified-20261026",
+      "pages": 40,
+      "pass": true
+    }
+  }
+}
