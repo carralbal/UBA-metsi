@@ -1,0 +1,357 @@
+/* N12 only. Preserve METSI's existing display/body fonts and black/stone/volt palette. */
+body.document-n12 .rev-anchor-alias { position:relative; }
+body.document-n12 .rev-case {
+  background:#e3e6e4!important; padding:9mm!important; margin:0 0 8mm!important;
+  break-before:page!important; page-break-before:always!important;
+}
+body.document-n12 .rev-case .section-body { columns:2!important;column-gap:8mm!important;font:11.2pt/1.43 Baskerville,Baskerville,serif!important; }
+body.document-n12 .rev-case .section-body p { font:inherit!important; margin:0 0 4mm!important; }
+body.document-n12 .rev-case .section-heading h2 { font-size:29pt!important; }
+body.document-n12 .rev-case .case-application-icon { width:15mm!important;height:15mm!important; }
+body.document-n12 .rev-case-11 .section-body { columns:auto!important; }
+body.document-n12 .rev-evidence { border-top:.45mm solid #171917; border-bottom:.25mm solid #aeb1ad; padding:4mm 0; margin:0 0 5mm; break-inside:avoid; }
+body.document-n12 .rev-evidence h3 { font:18pt/1.15 'Didot',Baskerville,serif!important;margin:0 0 2mm!important; }
+body.document-n12 .rev-evidence p:last-child { margin:0!important; }
+body.document-n12 .rev-label {font:8.5pt/1.35 Avenir,sans-serif!important;letter-spacing:0!important;margin:0 0 4mm!important;}
+body.document-n12 .rev-transition {margin:7mm 0 0!important;padding:6mm!important;background:#e3e6e4;break-before:page;break-inside:avoid;}
+body.document-n12 .rev-transition figcaption {position:static!important;background:none!important;padding:0!important;color:#171917!important;}
+body.document-n12 .rev-transition h3 {font:20pt/1.13 'Didot',Baskerville,serif!important;margin:0 0 3mm!important;}
+body.document-n12 .rev-transition p {font:11pt/1.4 Baskerville,Baskerville,serif!important;margin:0 0 3mm!important;}
+body.document-n12 .rev-transition .rev-label {font:8.5pt/1.35 Avenir,sans-serif!important;}
+body.document-n12 .rev-flow-start {max-width:145mm;margin:0 auto 5mm;}
+body.document-n12 .rev-flow-arrow {text-align:center;font:18pt/1 Avenir,sans-serif;margin:2mm 0 3mm;}
+body.document-n12 .rev-branches {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5mm;border-top:.25mm solid #878b87;padding-top:5mm;}
+body.document-n12 .rev-branch {position:relative;border-top:1mm solid #171917;padding-top:3mm;}
+body.document-n12 .rev-branch h3 {font:11pt/1.2 Avenir,sans-serif!important;font-weight:700!important;}
+body.document-n12 .rev-effect {border-left:1.2mm solid #cfff00;padding:4mm 0 1mm 4mm;margin:4mm 0;}
+body.document-n12 .rev-caution {font:9.6pt/1.36 Baskerville,Baskerville,serif!important;border-top:.25mm solid #aeb1ad;padding-top:3mm;margin:4mm 0 0!important;}
+body.document-n12 .rev-instrument {margin:0!important;padding:0!important;background:none!important;break-before:page!important;page:content!important;}
+body.document-n12 .rev-instrument-map {break-after:page;page-break-after:always;}
+body.document-n12 .rev-instrument .section-heading {margin:0 0 5mm!important;}
+body.document-n12 .rev-instrument .section-heading h2 {font:31pt/1.04 'Didot',Baskerville,serif!important;margin:2mm 0 0!important;max-width:150mm!important;}
+body.document-n12 .rev-instrument .case-application-icon {display:none!important;}
+body.document-n12 .rev-instrument p {font:10.8pt/1.43 Baskerville,Baskerville,serif!important;margin:0 0 3mm!important;}
+body.document-n12 .rev-instrument .rev-label {font:8.5pt/1.35 Avenir,sans-serif!important;}
+body.document-n12 .rev-instrument-map>p[data-source-id] {font-size:11.5pt!important;margin-bottom:3mm!important;}
+body.document-n12 .rev-instrument-map>p.rev-label {font-size:8.5pt!important;}
+body.document-n12 .rev-field-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3mm 5mm;}
+body.document-n12 .rev-field {border-top:.25mm solid #aeb1ad;padding-top:2.5mm;break-inside:avoid;}
+body.document-n12 .rev-field h3 {font:700 10.2pt/1.2 Avenir,sans-serif!important;margin:0 0 2mm!important;min-height:8mm!important;border:0!important;padding:0!important;}
+body.document-n12 .rev-field p {margin:0 0 2mm!important;}
+body.document-n12 .rev-field .rev-field-question {font-style:italic!important;min-height:10mm;}
+body.document-n12 .rev-instrument-close {break-before:page;page-break-before:always;}
+body.document-n12 .rev-continuation-label {font:8pt/1.3 Avenir,sans-serif;letter-spacing:.1em;border-left:6mm solid #cfff00;padding-left:3mm;margin:0 0 5mm;}
+body.document-n12 .rev-instrument-close>h3 {font:28pt/1.05 'Didot',Baskerville,serif!important;margin:0 0 5mm!important;padding:0!important;border:0!important;}
+body.document-n12 .rev-closure-prose {columns:2;column-gap:7mm;margin-top:4mm;}
+body.document-n12 .rev-worked {background:#e3e6e4;padding:5mm;margin:5mm 0;break-inside:avoid;}
+body.document-n12 .rev-worked h3 {font:20pt/1.1 'Didot',Baskerville,serif!important;border:0!important;padding:0!important;margin:0 0 3mm!important;}
+body.document-n12 .rev-worked-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5mm;}
+body.document-n12 .rev-worked-grid h3 {font:700 10.2pt/1.2 Avenir,sans-serif!important;}
+body.document-n12 .rev-worked-grid p {font-size:10.8pt!important;line-height:1.4!important;margin:0!important;}
+body.document-n12 .rev-variant {border-left:1.2mm solid #cfff00;padding:2mm 0 2mm 4mm;}
+body.document-n12 .rev-authority {column-span:all;break-before:page;margin:6mm 0!important;break-inside:avoid;}
+body.document-n12 .rev-authority h3 {font:24pt/1.1 'Didot',Baskerville,serif!important;margin:0 0 3mm!important;}
+body.document-n12 .rev-authority table {width:100%;border-collapse:collapse;font:10.8pt/1.4 Baskerville,Baskerville,serif;}
+body.document-n12 .rev-authority th {text-align:left;font:700 9pt/1.3 Avenir,sans-serif;border-top:.45mm solid #171917;border-bottom:.25mm solid #171917;padding:3mm 2mm;}
+body.document-n12 .rev-authority td {vertical-align:top;padding:4mm 2mm;border-bottom:.25mm solid #aeb1ad;}
+body.document-n12 .rev-authority td:first-child {width:22%;font:700 10pt/1.3 Avenir,sans-serif;}
+body.document-n12 .rev-authority td:nth-child(2) {width:34%;}
+body.document-n12 .questions .section-body>ol {gap:7mm 10mm!important;font-size:11pt!important;line-height:1.38!important;}
+body.document-n12 .questions .section-body>ol a {font:8.2pt/1.3 Avenir,sans-serif;display:block;margin-top:2mm;}
+body.document-n12 .rev-preparation-product {margin-top:7mm;padding:5mm;border-top:.6mm solid #171917;border-left:1.2mm solid #cfff00;background:#fafaf8;break-inside:avoid;}
+body.document-n12 .rev-preparation-product h3 {font:20pt/1.1 'Didot',Baskerville,serif!important;margin:0 0 3mm!important;}
+body.document-n12 .rev-preparation-product p {font:10.8pt/1.4 Baskerville,Baskerville,serif!important;margin:0 0 3mm!important;}
+body.document-n12 .rev-preparation-product .rev-label {font:8.5pt/1.35 Avenir,sans-serif!important;}
+body.document-n12 .questions .section-body .rev-checks {display:block!important;columns:auto!important;margin:0!important;padding-left:5mm!important;font:10.4pt/1.35 Baskerville,Baskerville,serif!important;}
+body.document-n12 .questions .section-body .rev-checks li {margin:0 0 2mm!important;}
+@media screen and (max-width:700px) {
+  body.document-n12 .rev-field-grid,body.document-n12 .rev-worked-grid,body.document-n12 .rev-branches {grid-template-columns:1fr;}
+  body.document-n12 .rev-case .section-body,body.document-n12 .rev-closure-prose {columns:auto!important;}
+}
+/* Final sequence QA: keep whole arguments together without reducing their text. */
+body.document-n12 .rev-case-11 {padding:6mm 8mm!important;margin-bottom:4mm!important;}
+body.document-n12 .rev-case-11 .section-heading {margin-bottom:4mm!important;}
+body.document-n12 .rev-case-11 .section-heading h2 {font-size:25pt!important;}
+body.document-n12 .rev-case-analysis {columns:2;column-gap:8mm;}
+body.document-n12 .rev-case-11 .section-body p {font-size:10.8pt!important;line-height:1.38!important;margin-bottom:3mm!important;}
+body.document-n12 #section-12 {break-before:auto!important;page-break-before:auto!important;min-height:0!important;padding-top:0!important;}
+body.document-n12 #section-12 .section-heading h2 {font-size:25pt!important;line-height:1.06!important;}
+body.document-n12 #section-12 .section-body {columns:auto!important;font-size:10.8pt!important;line-height:1.4!important;}
+body.document-n12 #section-12 .section-body p {font-size:10.8pt!important;line-height:1.4!important;margin-bottom:2.5mm!important;}
+body.document-n12 .rev-authority-intro {columns:2;column-gap:8mm;}
+body.document-n12 .rev-authority-intro p {font-size:10.8pt!important;line-height:1.38!important;margin-bottom:3mm!important;}
+body.document-n12 .rev-authority {break-before:auto!important;margin:4mm 0!important;}
+body.document-n12 .rev-authority table {table-layout:fixed!important;}
+body.document-n12 .rev-authority th:first-child,body.document-n12 .rev-authority td:first-child {width:18%!important;}
+body.document-n12 .rev-authority th:nth-child(2),body.document-n12 .rev-authority td:nth-child(2) {width:35%!important;}
+body.document-n12 .rev-authority th:nth-child(3),body.document-n12 .rev-authority td:nth-child(3) {width:47%!important;}
+body.document-n12 .rev-authority td {padding:2.6mm 2mm!important;}
+body.document-n12 #section-14 .subsection-lead {break-before:page!important;page-break-before:always!important;}
+body.document-n12 #section-17 .section-body {columns:2!important;column-gap:8mm!important;}
+body.document-n12 #section-17 .section-body p {font-size:11.2pt!important;line-height:1.4!important;margin-bottom:3mm!important;}
+body.document-n12 #section-18 {break-inside:avoid!important;page-break-inside:avoid!important;}
+body.document-n12 .rev-instrument-close {break-inside:avoid!important;page-break-inside:avoid!important;}
+body.document-n12 .rev-continuation-label {break-inside:avoid!important;page-break-inside:avoid!important;}
+body.document-n12 .rev-case-11 {margin-bottom:2mm!important;}
+body.document-n12 .rev-case-11 .section-heading {margin-bottom:2mm!important;}
+body.document-n12 .rev-case-11 .section-heading h2 {font-size:23.5pt!important;line-height:1.02!important;}
+body.document-n12 .rev-case-11 .section-body p {line-height:1.32!important;margin-bottom:2mm!important;}
+body.document-n12 .rev-case-11 .rev-evidence {padding:2.5mm 0;margin-bottom:2.5mm;}
+body.document-n12 #section-12 {break-inside:avoid!important;page-break-inside:avoid!important;}
+body.document-n12 #section-12 .section-heading {margin-bottom:3mm!important;}
+body.document-n12 .rev-conditions {break-before:page!important;page-break-before:always!important;}
+body.document-n12 .rev-conditions-prose {columns:2;column-gap:8mm;}
+body.document-n12 .rev-conditions-prose p {font-size:10.8pt!important;line-height:1.38!important;margin-bottom:3mm!important;}
+body.document-n12 #section-15 .section-body p {font-size:11.2pt!important;line-height:1.4!important;margin-bottom:3mm!important;}
+body.document-n12 #section-17 .section-heading h2,body.document-n12 #section-18 .section-heading h2 {font-size:25pt!important;line-height:1.06!important;}
+body.document-n12 #section-18 .section-body p {font-size:10.8pt!important;line-height:1.38!important;margin-bottom:3mm!important;}
+body.document-n12 #section-15 .section-heading h2 {font-size:23.5pt!important;line-height:1.04!important;}
+body.document-n12 #section-15 .section-heading {margin-bottom:3mm!important;}
+body.document-n12 #section-15 .section-body p {font-size:10.8pt!important;line-height:1.34!important;margin-bottom:2.5mm!important;}
+body.document-n12 #section-17 .section-body p {font-size:10.8pt!important;line-height:1.34!important;margin-bottom:2.5mm!important;}
+body.document-n12 #section-18 .section-heading h2 {font-size:23.5pt!important;line-height:1.04!important;}
+body.document-n12 #section-18 .section-heading {margin-bottom:3mm!important;}
+/* An inline volt marker does not paint the preceding fragment's lower edge. */
+body.document-n12 .rev-continuation-label {border-left:0;padding-left:0;}
+body.document-n12 .rev-continuation-label::before {content:"";display:inline-block;width:6mm;height:1.5mm;background:#cfff00;margin-right:3mm;vertical-align:middle;}
+
+/* Diego's second review: local N12 changes only. */
+body.document-n12 #section-06 .editorial-field-note {height:auto!important;min-height:0!important;break-before:auto!important;page-break-before:auto!important;margin:4mm 0!important;padding:5mm!important;}
+body.document-n12 #section-06 .editorial-continuation {break-before:auto!important;page-break-before:auto!important;}
+body.document-n12 #section-06 .editorial-continuation>h3:first-child {break-before:auto!important;page-break-before:auto!important;}
+body.document-n12 #section-07 {height:auto!important;min-height:0!important;padding:6mm!important;}
+body.document-n12 #section-07>.section-body {columns:2!important;column-gap:8mm!important;font:11.2pt/1.42 Baskerville,Baskerville,serif!important;}
+body.document-n12 #section-07 .rev-transition {break-before:auto!important;page-break-before:auto!important;margin-top:5mm!important;padding:5mm!important;}
+body.document-n12 #section-07 .rev-flow-start {display:grid;grid-template-columns:1fr 1fr;gap:6mm;margin-bottom:2mm!important;}
+body.document-n12 #section-07 .rev-flow-arrow {display:none;}
+body.document-n12 #section-07 .rev-branches {padding-top:3mm!important;gap:5mm;}
+body.document-n12 #section-07 .rev-transition p {font-size:10.8pt!important;line-height:1.36!important;}
+body.document-n12 #section-10 {height:auto!important;min-height:0!important;padding-bottom:5mm!important;}
+body.document-n12 .rev-case-11 {break-before:auto!important;page-break-before:auto!important;break-inside:auto!important;}
+body.document-n12 #section-16 {height:auto!important;min-height:0!important;margin-bottom:5mm!important;}
+body.document-n12 #section-17 {break-before:auto!important;page-break-before:auto!important;}
+body.document-n12 #section-24 {height:auto!important;min-height:0!important;display:block!important;padding:6mm!important;}
+body.document-n12 #section-24 .synthesis-photo {margin-top:4mm!important;}
+body.document-n12 #section-24 .synthesis-photo .photo-viewport {height:45mm!important;}
+body.document-n12 #section-25 {break-before:auto!important;page-break-before:auto!important;padding:5mm 6mm!important;}
+body.document-n12 #section-25 .section-heading {margin-bottom:3mm!important;}
+body.document-n12 #section-25 .section-heading h2 {font:26pt/1.06 Didot,serif!important;}
+body.document-n12 #section-25 ol {display:grid!important;grid-template-columns:1fr!important;list-style:none!important;padding:0!important;counter-reset:pill!important;gap:2mm!important;}
+body.document-n12 #section-25 li {position:relative!important;counter-increment:pill!important;padding:3mm 3mm 3mm 15mm!important;min-height:15mm!important;border-top:.25mm solid #aeb1ad!important;font:11.2pt/1.35 Baskerville,serif!important;background:#fafaf8!important;color:#171917!important;}
+body.document-n12 #section-25 li::marker {content:''!important;}
+body.document-n12 #section-25 li::before {content:counter(pill)!important;position:absolute!important;left:1mm!important;top:2.5mm!important;width:9mm!important;height:9mm!important;border-radius:50%!important;display:grid!important;place-items:center!important;background:#171917!important;color:white!important;font:800 12pt/1 Avenir,Avenir,sans-serif!important;}
+body.document-n12 .n12-summary-map {height:auto!important;min-height:0!important;break-before:page!important;break-after:page!important;padding:0!important;background:#fafaf8!important;}
+body.document-n12 .n12-summary-map figure {margin:0!important;padding:0!important;}
+body.document-n12 .n12-summary-map img {display:block!important;width:100%!important;height:244mm!important;object-fit:contain!important;}
+body.document-n12 .contents-photo-viewport img {object-position:50% 50%!important;filter:grayscale(1)!important;}
+body.document-n12 .authors-page .portrait-frame {overflow:hidden!important;}
+body.document-n12 .authors-page img[src*="bunge-documental"] {object-fit:cover!important;object-position:50% 40%!important;transform:scale(1.06)!important;}
+body.document-n12 .authors-page img[src*="lamport-documental"] {object-fit:cover!important;object-position:50% 28%!important;transform:scale(1.22)!important;transform-origin:50% 30%!important;}
+body.document-n12 .hotel-portrait {overflow:hidden!important;background:#dadeda!important;}
+body.document-n12 .hotel-portrait img {transform-origin:50% 30%!important;}
+body.document-n12 .hotel-portrait img[src*="hotel-elena"] {transform:scale(1.25)!important;object-position:50% 35%!important;}
+body.document-n12 .hotel-portrait img[src*="hotel-lucia"] {transform:scale(1.0)!important;object-fit:cover!important;object-position:50% 35%!important;}
+body.document-n12 .hotel-portrait img[src*="hotel-ricardo"] {transform:scale(1.43)!important;object-position:50% 30%!important;}
+body.document-n12 .hotel-portrait img[src*="hotel-federico"] {transform:scale(1.53)!important;object-position:50% 30%!important;}
+body.document-n12 .hotel-portrait img[src*="hotel-mariela"] {transform:scale(1.37)!important;object-position:50% 30%!important;}
+body.document-n12 .hotel-portrait img[src*="hotel-camila"] {transform:scale(1.50)!important;object-position:50% 28%!important;}
+
+body.document-n12 #section-05 .section-heading h2 {font:26pt/1.06 Didot,serif!important;}
+body.document-n12 #section-05 .section-body {columns:2!important;column-gap:8mm!important;font:11.2pt/1.42 Baskerville,serif!important;}
+body.document-n12 #section-05 .section-body p {font:inherit!important;}
+body.document-n12 #section-07 .section-heading h2 {font:26pt/1.08 Didot,serif!important;}
+body.document-n12 #section-07 .rev-transition {break-inside:auto!important;page-break-inside:auto!important;}
+body.document-n12 #section-07 .rev-flow-start,body.document-n12 #section-07 .rev-branches,body.document-n12 #section-07 .rev-effect {break-inside:avoid!important;page-break-inside:avoid!important;}
+body.document-n12 #section-08 {break-before:auto!important;page-break-before:auto!important;}
+body.document-n12 #section-10 .section-heading h2 {font:26pt/1.08 Didot,serif!important;}
+body.document-n12 #section-10 .section-body {width:auto!important;max-width:none!important;columns:2!important;column-gap:8mm!important;font:11.2pt/1.42 Baskerville,serif!important;}
+body.document-n12 #section-10 .section-body p {font:inherit!important;}
+body.document-n12 #section-16 .section-heading h2 {font:25pt/1.06 Didot,serif!important;}
+body.document-n12 #section-17 {padding-top:4mm!important;}
+body.document-n12 #section-17 .section-heading h2 {font:23.5pt/1.06 Didot,serif!important;}
+body.document-n12 #section-25 ol {height:auto!important;min-height:0!important;grid-auto-rows:auto!important;align-content:start!important;}
+body.document-n12 #section-25 li {display:block!important;height:auto!important;min-height:15mm!important;}
+body.document-n12 #section-25 li strong {font:inherit!important;}
+
+/* Final balanced reflow after the requested page review. */
+body.document-n12 .authors-page img[src*="referent-grady-booch"] {transform:scale(1.65)!important;transform-origin:55% 35%!important;}
+body.document-n12 #section-05 {padding:4mm 6mm!important;}
+body.document-n12 #section-05 .section-heading {margin-bottom:3mm!important;}
+body.document-n12 #section-05 .section-heading h2 {font-size:23pt!important;line-height:1.02!important;}
+body.document-n12 #section-05 .section-body {line-height:1.35!important;}
+body.document-n12 #section-05 .section-body p {margin-bottom:2mm!important;}
+body.document-n12 #section-06 .editorial-field-note {padding:4mm!important;}
+body.document-n12 #section-06 .editorial-field-note h3 {font:22pt/1.02 Didot,serif!important;margin-bottom:3mm!important;}
+body.document-n12 #section-06 .field-note-grid {display:block!important;columns:2!important;column-gap:7mm!important;}
+body.document-n12 #section-06 .field-note-grid>p {font:11.2pt/1.35 Baskerville,serif!important;padding:0!important;border:0!important;margin:0 0 2.5mm!important;break-inside:auto!important;}
+body.document-n12 #section-06 .field-note-grid>p::before {display:none!important;}
+body.document-n12 #section-08 {break-before:page!important;page-break-before:always!important;}
+
+body.document-n12 .inline-n12-mapa {display:block!important;width:100%!important;height:auto!important;}
+body.document-n12 .inline-n12-sintesis {display:block!important;width:100%!important;height:244mm!important;}
+
+/* R3: retain one reading size; allow content to occupy its required space. */
+body.document-n12 .reading-section,body.document-n12 .authors-page {height:auto!important;min-height:0!important;overflow:visible!important;}
+body.document-n12 .reading-section .section-body {height:auto!important;max-height:none!important;}
+body.document-n12 .authors-page .contributor {height:auto!important;min-height:0!important;break-inside:avoid!important;}
+body.document-n12 .authors-page .contributor cite {min-height:0!important;}
+body.document-n12 .hotel-voices-grid article {height:auto!important;min-height:0!important;}
+body.document-n12 .rev-field h3,body.document-n12 .rev-field .rev-field-question {min-height:0!important;}
+body.document-n12 .rev-field-grid {gap:4mm 5mm!important;}
+body.document-n12 .rev-worked-grid {gap:5mm!important;}
+body.document-n12 .block-c-references,.document-n12 .questions {height:auto!important;min-height:0!important;}
+
+body.document-n12 #section-02 {padding:4mm 5mm!important;}
+body.document-n12 #section-02 .section-body {column-gap:7mm!important;}
+body.document-n12 .hotel-continuation {break-inside:auto!important;}
+body.document-n12 .hotel-continuation-body {column-gap:6mm!important;}
+body.document-n12 .rev-authority {break-inside:auto!important;}
+body.document-n12 .rev-authority table {break-inside:avoid!important;}
+body.document-n12 #section-16 {break-before:auto!important;page-break-before:auto!important;}
+body.document-n12 #section-20 {break-before:auto!important;page-break-before:auto!important;}
+/* Reflow whole arguments at the common type size; no size reductions. */
+body.document-n12 .rev-conditions {break-before:auto!important;page-break-before:auto!important;}
+body.document-n12 .consequences-limits-page {break-before:auto!important;page-break-before:auto!important;}
+body.document-n12 #section-06 .editorial-field-note {break-inside:auto!important;page-break-inside:auto!important;}
+body.document-n12 #section-08 {break-before:auto!important;page-break-before:auto!important;}
+body.document-n12 #section-23 {break-before:page!important;page-break-before:always!important;}
+body.document-n12 .references .section-body {column-fill:balance!important;}
+body.document-n12 [data-n12-standard-body] * {font-family:inherit!important;font-size:inherit!important;line-height:inherit!important;letter-spacing:0!important;word-spacing:0!important;}
+
+body.document-n12 #section-06 .field-note-grid {display:block!important;columns:auto!important;}
+body.document-n12 .field-note-kicker {break-after:avoid!important;page-break-after:avoid!important;}
+body.document-n12 #section-09 .r3-topic-page {break-before:page!important;page-break-before:always!important;}
+body.document-n12 .references .section-body {display:block!important;columns:2!important;column-gap:8mm!important;}
+body.document-n12 .references .section-body>ul {display:block!important;columns:auto!important;break-inside:auto!important;page-break-inside:auto!important;}
+body.document-n12 .references li {break-inside:avoid!important;page-break-inside:avoid!important;}
+body.document-n12 .r3-synthesis-layout {display:grid!important;grid-template-columns:1.65fr 1fr;gap:7mm;align-items:start;}
+body.document-n12 #section-24 .r3-synthesis-layout .section-body {columns:auto!important;}
+body.document-n12 #section-24 .r3-synthesis-layout .synthesis-photo {margin:0!important;}
+body.document-n12 #section-24 .r3-synthesis-layout .photo-viewport {height:auto!important;background:transparent!important;}
+body.document-n12 #section-24 .r3-synthesis-layout .photo-viewport img {display:block!important;width:100%!important;height:auto!important;object-fit:contain!important;}
+/* Keep the evaluation diagram and the first hotel application intact. */
+body.document-n12 #section-07 .rev-transition {break-inside:avoid!important;page-break-inside:avoid!important;}
+body.document-n12 #section-08 {break-inside:avoid!important;page-break-inside:avoid!important;}
+/* Compact the pill containers, preserving the common reading size and black circles. */
+body.document-n12 #section-25 li {box-sizing:border-box!important;min-height:11mm!important;padding:2mm 3mm 2mm 15mm!important;}
+body.document-n12 #section-25 li::before {top:1mm!important;}
+
+/* Audited N12: legibility, route and balanced pagination; common body size preserved. */
+body.document-n12 .contents-layout {grid-template-columns:minmax(0,.55fr) minmax(0,1.45fr)!important;gap:6mm!important;height:auto!important;}
+body.document-n12 .contents-layout li,body.document-n12 .contents-layout a {font-family:Avenir,sans-serif!important;font-size:9.2pt!important;line-height:1.2!important;}
+body.document-n12 .contents-layout li {padding:1.1mm 0!important;break-inside:avoid!important;}
+body.document-n12 .contents-layout small,body.document-n12 .contents-layout .nav-page {font-size:8pt!important;line-height:1.15!important;}
+body.document-n12 .contents-layout ol {column-gap:5mm!important;}
+body.document-n12 .audit-product {margin:2mm 0 4mm!important;}
+body.document-n12 .audit-route-label {margin-left:auto!important;font:8pt/1.1 Avenir,sans-serif!important;letter-spacing:.04em!important;color:inherit!important;white-space:nowrap;}
+body.document-n12 .hotel-voices-grid article>.audit-role {grid-column:1/-1;font:600 8.2pt/1.15 Avenir,sans-serif!important;letter-spacing:0!important;min-height:8mm;padding:2mm 0 1mm;}
+body.document-n12 .hotel-voices-grid article>div {padding-top:0!important;}
+body.document-n12 .section-marker b,body.document-n12 .section-marker em,body.document-n12 .contributor-work cite,body.document-n12 .contributor-role,body.document-n12 .field-note-kicker {font-size:8pt!important;line-height:1.2!important;}
+body.document-n12 #section-09 .r3-topic-page {break-before:auto!important;page-break-before:auto!important;}
+body.document-n12 #section-09 .section-body {column-fill:balance!important;}
+body.document-n12 #section-18 {break-before:auto!important;page-break-before:auto!important;break-inside:avoid!important;page-break-inside:avoid!important;}
+body.document-n12 #section-15 {break-inside:avoid!important;page-break-inside:avoid!important;}
+body.document-n12 #section-06 [data-source-id="N12-s06-b030"] {break-before:page!important;page-break-before:always!important;}
+body.document-n12 #section-06 .audit-transition-topic {break-before:page!important;page-break-before:always!important;columns:2!important;column-gap:8mm!important;}
+body.document-n12 #section-06 [data-source-id="N12-s06-b030"] {break-before:auto!important;page-break-before:auto!important;}
+body.document-n12 .rev-worked {padding:4mm!important;margin:3mm 0!important;}
+body.document-n12 .rev-instrument-close>h3 {font-size:26pt!important;margin-bottom:3mm!important;}
+body.document-n12 .rev-authority {break-inside:avoid!important;page-break-inside:avoid!important;}
+body.document-n12 #section-16 {break-inside:avoid!important;page-break-inside:avoid!important;}
+body.document-n12 #section-17 {break-before:page!important;page-break-before:always!important;}
+body.document-n12 #section-18 {margin-top:5mm!important;}
+body.document-n12 #section-14 {padding:3mm 0!important;}
+body.document-n12 #section-14 .section-heading {margin-bottom:3mm!important;}
+body.document-n12 #section-14 .section-heading h2 {font-size:26pt!important;}
+body.document-n12 .rev-authority {margin:2mm 0!important;}
+body.document-n12 .rev-authority h3 {font-size:22pt!important;}
+body.document-n12 .rev-authority td {padding:2.5mm 2mm!important;}
+body.document-n12 .rev-authority th {padding:2mm!important;}
+body.document-n12 #section-17 {padding:3mm 0!important;margin-bottom:3mm!important;}
+body.document-n12 #section-17 .section-heading h2,body.document-n12 #section-18 .section-heading h2 {font-size:23pt!important;line-height:1.04!important;}
+body.document-n12 #section-17 .section-heading,body.document-n12 #section-18 .section-heading {margin-bottom:3mm!important;}
+body.document-n12 #section-18 {padding:3mm 0!important;margin-top:2mm!important;}
+body.document-n12 .references {padding:4mm 0!important;}
+body.document-n12 .references .section-heading {margin-bottom:3mm!important;}
+body.document-n12 .references .section-heading h2 {font-size:26pt!important;}
+body.document-n12 #section-07>.section-body {column-gap:6mm!important;}
+body.document-n12 .rev-conditions {margin:2mm 0!important;padding:0!important;}
+body.document-n12 .rev-conditions h3 {font-size:22pt!important;line-height:1.05!important;margin:0 0 3mm!important;}
+body.document-n12 #section-15 {padding:3mm 0!important;margin-bottom:2mm!important;}
+body.document-n12 #section-15 .section-heading {margin-bottom:3mm!important;}
+body.document-n12 #section-15 .section-heading h2 {font-size:23pt!important;line-height:1.05!important;}
+/* Keep the orientation legend clear of both index columns. */
+body.document-n12 .contents-layout li {padding:.65mm 0!important;}
+body.document-n12 .contents-page .contents-sinnum-note {bottom:10mm!important;padding-top:1.5mm!important;font:8pt/1.2 Avenir,sans-serif!important;}
+
+/* N12 v7 preparation: approved change only in the five reminder pills. */
+body.document-n12 #section-25 li {
+  background:transparent!important;
+}
+body.document-n12 #section-25 li::before {
+  color:#CFFF00!important;
+  background:#171917!important;
+  font-family:Baskerville,serif!important;
+  font-weight:700!important;
+}
+body.document-n12 #section-25 li {
+  border-color:transparent!important;
+  box-shadow:none!important;
+}
+/* Keep links active and readable; suppress only their visual underline. */
+body.document-n12 a,
+body.document-n12 a:link,
+body.document-n12 a:visited,
+body.document-n12 a:hover,
+body.document-n12 a:focus {
+  text-decoration:none!important;
+}
+/* Final scoped audit: true circles, readable handoff and publication labels. */
+body.document-n12 .block-c-handoff .section-marker>span:first-child {
+  flex-shrink:0!important;
+  aspect-ratio:1/1;
+}
+body.document-n12 .block-c-handoff-out {
+  display:block!important;
+  padding:6mm!important;
+}
+body.document-n12 .block-c-handoff-out .section-heading {
+  width:100%!important;
+  max-width:none!important;
+  margin:0 0 4mm!important;
+}
+body.document-n12 .block-c-handoff-out .section-marker {
+  width:100%!important;
+  gap:3mm!important;
+  white-space:normal!important;
+}
+body.document-n12 .block-c-handoff-out .section-marker>span:first-child {
+  width:8mm!important;
+  height:8mm!important;
+  min-width:8mm!important;
+  flex:0 0 8mm!important;
+}
+body.document-n12 .block-c-handoff-out .section-marker b,
+body.document-n12 .block-c-handoff-out .section-marker em {
+  font-size:8pt!important;
+  line-height:1.2!important;
+  white-space:normal!important;
+}
+body.document-n12 .block-c-handoff-out .section-heading h2 {
+  font:25pt/1.08 Didot,serif!important;
+  max-width:none!important;
+  margin:3mm 0 0!important;
+}
+body.document-n12 .block-c-handoff-out .section-body {
+  columns:2!important;
+  column-gap:8mm!important;
+}
+body.document-n12 .authors-page .contributor-work small {
+  font:8.2pt/1.25 Avenir,sans-serif!important;
+  color:#4f534f!important;
+  margin-top:1.2mm!important;
+}
+/* The inherited vertical gray stripe is decorative and competes with the portraits. */
+body.document-n12 .authors-page {
+  background:#fafaf8!important;
+}

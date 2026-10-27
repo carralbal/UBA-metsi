@@ -1,0 +1,28 @@
+/* N12 internal two-page case use. No changes to approved sections. */
+.n12-case-use-private { page: content; box-sizing: border-box; break-before: page;
+  break-after: page; color: #1b1b1b; border: 0; margin: 0;
+  background: #f7f6f2; padding: 5mm 0 0; }
+.n12-case-use-private .n12-case-rule { width: 31mm; height: 2.2mm;
+  background: #cfff00; transform: skewX(-24deg); margin: 0 0 5mm; }
+.n12-case-kicker { display: flex; justify-content: space-between; gap: 3mm;
+  font: 700 7.3pt/1.1 Avenir, sans-serif; letter-spacing: .12em; }
+.n12-case-use-private h2 { font: 31pt/1.02 Didot, serif; letter-spacing: -.02em;
+  max-width: 155mm; margin: 5mm 0 4mm; }
+.n12-case-second h3[data-source-id="N12-add-uc-h3-02"] {
+  font: 29pt/1.04 Didot, serif; letter-spacing: -.02em;
+  text-transform: none; margin: 7mm 0 4mm; max-width: 160mm; }
+.n12-case-use-private > p { font: 12pt/1.39 Baskerville, serif;
+  max-width: 157mm; margin: 0 0 3mm; }
+.n12-case-use-private > p:nth-of-type(2) { color: #54544f; }
+.n12-case-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 7mm;
+  border-top: .4pt solid #a8a8a3; padding-top: 4mm; margin-top: 5mm; }
+.n12-case-columns > div { min-width: 0; }
+.n12-case-columns > div + div { border-left: .35pt solid #b5b5b0; padding-left: 7mm; }
+.n12-case-columns h3 { font: 700 8pt/1.24 Avenir, sans-serif;
+  text-transform: uppercase; letter-spacing: .10em; margin: 0 0 4mm; }
+.n12-case-columns p { font: 11pt/1.4 Baskerville, serif;
+  margin: 0 0 3.1mm; text-wrap: pretty; hyphens: auto; }
+.n12-case-columns p strong { font-weight: 700; }
+.n12-case-columns p:last-child { border-top: .35pt solid #a8a8a3;
+  padding-top: 3mm; margin-top: 3.5mm; }
+.n12-case-second .n12-case-columns { margin-top: 7mm; }

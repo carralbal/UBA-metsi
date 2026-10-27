@@ -1,0 +1,156 @@
+/* Approved reading repairs, 2 October 2026. Existing typography and imagery remain. */
+@media print {
+  /* A fixed-height grid let text exceed a track and paint beneath the photo.
+     Natural flow reserves each section's actual height before the next starts. */
+  body.premium-magazine.block-c .consequences-limits-page {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+  body.premium-magazine.block-c .consequences-limits-page > .reading-section {
+    margin-bottom: 5mm !important;
+    display: flow-root !important;
+  }
+  body.premium-magazine.block-c .consequences-limits-page .section-body {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  body.premium-magazine.block-c .consequences-limits-page .section-lead {
+    columns: auto !important;
+    column-count: auto !important;
+    column-rule: none !important;
+    max-width: none !important;
+  }
+  body.premium-magazine.block-c .consequences-limits-page .layout-accent-column::after {
+    content: none !important;
+  }
+  body.premium-magazine.block-c .consequences-limits-page .consequence-photo {
+    display: block !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin-top: 5mm !important;
+    break-inside: avoid !important;
+  }
+  body.premium-magazine.block-c .consequences-limits-page .consequence-photo .photo-viewport {
+    height: 38mm !important;
+    min-height: 38mm !important;
+  }
+  body.premium-magazine.document-n18 .consequences-limits-page .consequence-photo .photo-viewport,
+  body.premium-magazine.document-n20 .consequences-limits-page .consequence-photo .photo-viewport {
+    height: 32mm !important;
+    min-height: 32mm !important;
+  }
+  body.premium-magazine.document-n18 .consequences-limits-page,
+  body.premium-magazine.document-n20 .consequences-limits-page {
+    padding: 6mm 7mm !important;
+  }
+  body.premium-magazine.document-n05 .n05-movement-three .section-body,
+  body.premium-magazine.document-n08 .n08-movement-two .section-body {
+    column-rule: none !important;
+  }
+  /* Prevent inherited prose columns from subdividing numbered grids again. */
+  body.premium-magazine.block-c .pills-glossary-page {
+    padding: 7mm !important;
+  }
+  body.premium-magazine.block-c .pills-glossary-page .pill-summary .section-body,
+  body.premium-magazine.block-c .pills-glossary-page .glossary-two-column .section-body {
+    columns: auto !important;
+    column-count: auto !important;
+    column-rule: none !important;
+    width: 100% !important;
+  }
+  body.premium-magazine.block-c .pills-glossary-page .pill-summary .section-body ol {
+    grid-auto-flow: row !important;
+    grid-template-rows: none !important;
+  }
+  body.premium-magazine.document-n07 .pill-summary {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+  body.premium-magazine.document-n11 section[data-section="12"] .hotel-continuation-body {
+    column-rule: none !important;
+  }
+  /* Headings must travel with the beginning of their explanation in both
+     page and column contexts. The source rules only prevented page breaks. */
+  body.premium-magazine .section-heading,
+  body.premium-magazine h2,
+  body.premium-magazine h3,
+  body.premium-magazine h4 {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+    break-inside: avoid !important;
+  }
+}
+
+.contents-layout a.revision-toc-link {
+  color: inherit;
+  text-decoration: none;
+}
+.contents-layout a.revision-toc-link:hover { text-decoration: underline; }
+.reference-url { overflow-wrap: anywhere; }
+
+/* Keep the existing white captions readable over pale interior photographs. */
+body.premium-magazine:is(.document-n09,.document-n10) .full-bleed-quote::after {
+  background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,.70) 82%, rgba(0,0,0,.78) 100%) !important;
+}
+
+/* Navigation-only addition for the coordinator's corrections.css.
+   Does not change reading font size, reference column widths, or cover rules. */
+body.premium-magazine .contents-layout li {
+  display: block;
+}
+body.premium-magazine .contents-layout li > a.nav-link {
+  display: grid;
+  grid-template-columns: 7mm minmax(0, 1fr) 7.5mm;
+  column-gap: 1.2mm;
+  align-items: start;
+  color: inherit;
+  text-decoration: none;
+}
+body.premium-magazine .contents-layout li.contents-part > a.nav-link {
+  grid-template-columns: minmax(0, 1fr) 7.5mm;
+}
+body.premium-magazine .contents-layout li > a.nav-link > span:not(.nav-page) {
+  min-width: 0;
+}
+body.premium-magazine .contents-layout .nav-page {
+  display: block;
+  min-width: 7.5mm;
+  white-space: nowrap;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: inherit;
+}
+body.premium-magazine .nav-order-note {
+  display: block;
+  margin: 1.5mm 0 0;
+  font-family: Avenir, Arial, sans-serif;
+  font-size: 7.2pt;
+  line-height: 1.25;
+}
+body.premium-magazine .navigation-references .section-marker > span {
+  display: inline-block;
+  width: auto;
+  min-width: 0;
+  height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  white-space: nowrap;
+  font: inherit;
+}
+body.premium-magazine .navigation-references .section-heading {
+  break-inside: avoid-page;
+  break-after: avoid-page;
+  page-break-after: avoid;
+}
+@media screen {
+  body.premium-magazine [id^="nav-"] { scroll-margin-top: 1rem; }
+  body.premium-magazine .nav-link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+}
