@@ -2,7 +2,7 @@
 
 ## Resultado local
 
-**Apto para publicación digital tras cotejo remoto; no certificado de imprenta ni de aprobación académica.** PDF candidato final `N12-post-cecilia-20261027/fullbleed-v2/N12-METSI-fullbleed-editorial-A4.pdf`, 41 páginas A4, SHA-256 `1da95afa5096c4c7ffaf89498e28554e8fcfb62f2b63a3ad9cc54cbac323a8ef`.
+**Publicado y verificado para lectura digital; no certificado de imprenta ni de aprobación académica.** PDF candidato final `N12-post-cecilia-20261027/fullbleed-v2/N12-METSI-fullbleed-editorial-A4.pdf`, 41 páginas A4, SHA-256 `1da95afa5096c4c7ffaf89498e28554e8fcfb62f2b63a3ad9cc54cbac323a8ef`.
 
 ## Fidelidad y contenido
 
@@ -19,4 +19,4 @@
 
 ## Publicación
 
-El PDF público no debe considerarse verificado por este recibo local. Agregar commit, Pages, HTTP/bytes y SHA remoto exacto sólo después del push; si cualquiera falla, mantener el estado en proceso y no avisar «publicado».
+El PDF y su paquete editable se publicaron en el commit `144b6bdbcc522fe3b8784870e3ccb8eff6f8c397` de `main`. El despliegue de GitHub Pages `40592093423` terminó en `success`. La URL [N12 post-Cecilia](https://carralbal.github.io/UBA-metsi/pdf/publicados/N12-METSI-lectura-previa-v10-final.pdf?v=n12-post-cecilia-20261027) respondió HTTP 200, `content-length: 15694778`; la descarga pública devolvió SHA-256 `1da95afa5096c4c7ffaf89498e28554e8fcfb62f2b63a3ad9cc54cbac323a8ef`, idéntico al local. El manifiesto servido por Pages informa N12 de 41 páginas y revisión `n12-post-cecilia-20261027`. Es verificación de publicación, no aprobación del taller, accesibilidad humana o impresión.
