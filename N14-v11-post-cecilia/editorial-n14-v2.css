@@ -1,0 +1,72 @@
+@import url("editorial-n14-v1.css");
+
+/* Existing general PDF rules set filter:none !important: win specifically. */
+body.block-c.premium-magazine.document-n14 img[src$=".png"],
+body.block-c.premium-magazine.document-n14 img[src$=".jpg"],
+body.block-c.premium-magazine.document-n14 img[src$=".jpeg"],
+body.block-c.premium-magazine.document-n14 .hotel-canonical-anchor img,
+body.block-c.premium-magazine.document-n14 .editorial-photo-band .photo-viewport > img {
+  filter: grayscale(1) contrast(1.03) !important;
+}
+
+/* A university corridor makes the process discussion a visual argument. */
+body.block-c.premium-magazine.document-n14 #section-14 p[data-source-id="N14-s14-b016"]::after {
+  content: "";
+  display: block;
+  height: 165mm;
+  margin: 8mm 0 0;
+  background: url("assets/editorial-08.png") center 44% / cover no-repeat;
+  filter: grayscale(1);
+  break-inside: avoid;
+}
+
+/* Give the two applied essays a clear magazine hierarchy. */
+body.block-c.premium-magazine.document-n14 #section-14 h3[data-source-id="N14-s14-b017"],
+body.block-c.premium-magazine.document-n14 #section-14 h3[data-source-id="N14-s14-b023"] {
+  font: 400 25pt/1.03 Didot, serif !important;
+  letter-spacing: -.02em !important;
+  max-width: 125mm !important;
+  border-top: .75mm solid #171917 !important;
+  padding-top: 5mm !important;
+  margin-top: 4mm !important;
+  margin-bottom: 5mm !important;
+  break-after: avoid !important;
+}
+body.block-c.premium-magazine.document-n14 #section-14 h3[data-source-id="N14-s14-b017"]::before,
+body.block-c.premium-magazine.document-n14 #section-14 h3[data-source-id="N14-s14-b023"]::before {
+  content: "";
+  display: block;
+  width: 19mm;
+  height: 2mm;
+  background: #cfff00;
+  margin-bottom: 7mm;
+}
+
+/* Let the six service voices read as a deliberately composed portrait spread. */
+body.block-c.premium-magazine.document-n14 #section-15 .hotel-voices-grid {
+  gap: 5mm 5mm !important;
+}
+body.block-c.premium-magazine.document-n14 #section-15 .hotel-voices-grid article {
+  grid-template-columns: 36mm 1fr !important;
+  min-height: 62mm !important;
+}
+body.block-c.premium-magazine.document-n14 #section-15 .hotel-voices-grid img,
+body.block-c.premium-magazine.document-n14 #section-15 .hotel-voices-grid .hotel-portrait {
+  width: 36mm !important;
+  height: 62mm !important;
+}
+body.block-c.premium-magazine.document-n14 #section-15 .hotel-voices-grid h3 {
+  font-size: 13pt !important;
+}
+body.block-c.premium-magazine.document-n14 #section-15 .hotel-voices-grid p {
+  font-size: 7pt !important;
+  line-height: 1.22 !important;
+}
+
+/* Reclaim enough of the lower spread for its last paragraph. */
+body.block-c.premium-magazine.document-n14 .consequences-limits-page.has-consequence-photo .consequence-photo {
+  min-height: 32mm !important;
+}
+body.block-c.premium-magazine.document-n14 .consequences-limits-page.has-consequence-photo .consequence-photo .photo-viewport {
+  height: 32mm !important;
+}

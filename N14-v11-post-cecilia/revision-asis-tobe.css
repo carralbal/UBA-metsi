@@ -1,0 +1,7 @@
+/* Private layout experiment: keep the comparable process case on a fresh page. */
+@media print {
+  #section-asis-tobe {
+    break-before: page;
+    page-break-before: always;
+  }
+}

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="1760" viewBox="0 0 1200 1760" role="img" aria-labelledby="title desc">
+  <title id="title">Una constancia, cinco recorridos</title>
+  <desc id="desc">Mapa editorial de un mismo trámite de constancia con cinco rutas: cierre ordinario, observación respondida, aviso fallido, baja y comunicación final fallida. Cada ruta distingue evento, evidencia y estado permitido.</desc>
+  <defs>
+    <style><![CDATA[
+      .ink{fill:#191a18}.soft{fill:#676963}.paper{fill:#f4f3ed}.faint{fill:#e5e5df}.line{stroke:#b6b9b1;stroke-width:2;fill:none}.route{stroke:#262725;stroke-width:2.2;fill:none}.dash{stroke:#777a73;stroke-width:2;fill:none;stroke-dasharray:6 7}.sans{font-family:'Avenir Next',Avenir,Arial,sans-serif}.serif{font-family:'Baskerville','Times New Roman',serif}
+    ]]></style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#262725" stroke-width="1.5"/></marker>
+    <marker id="arrowSoft" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#777a73" stroke-width="1.5"/></marker>
+  </defs>
+  <rect width="1200" height="1760" class="paper"/>
+  <g id="header">
+    <path d="M60 66 H136 L124 82 H60 Z" fill="#d5ff00"/>
+    <text x="154" y="82" class="sans ink" font-size="21" font-weight="700" letter-spacing="4">METSI · N14 · PROCESO DE PUNTA A PUNTA</text>
+    <text x="60" y="163" class="serif ink" font-size="61">Una constancia, cinco recorridos</text>
+    <text x="60" y="214" class="sans soft" font-size="25">El cierre visible depende del evento que realmente ocurrió.</text>
+    <path d="M60 248 H1140" class="line"/>
+  </g>
+  <g id="shared-boundary">
+    <text x="60" y="293" class="sans ink" font-size="20" font-weight="700" letter-spacing="2">MISMA UNIDAD · UN TRÁMITE IDENTIFICADO</text>
+    <path d="M355 337 H425" class="route" marker-end="url(#arrow)"/>
+    <path d="M625 337 H783" class="route" marker-end="url(#arrow)"/>
+    <g id="n00"><circle cx="75" cy="337" r="8" fill="#d5ff00" stroke="#191a18" stroke-width="2"/><text x="95" y="344" class="sans ink" font-size="27" font-weight="600">Solicitud registrada</text></g>
+    <g id="n01"><circle cx="450" cy="337" r="8" fill="#fff" stroke="#191a18" stroke-width="2"/><text x="470" y="344" class="sans ink" font-size="27" font-weight="600">Recibido</text></g>
+    <g id="n02"><circle cx="808" cy="337" r="8" fill="#191a18"/><text x="829" y="344" class="sans ink" font-size="27" font-weight="600">En revisión</text></g>
+    <text x="60" y="386" class="sans soft" font-size="21">«Formulario completo» no es un cierre. Las cinco rutas siguientes son alternativas o ciclos.</text>
+  </g>
+  <g id="route-lines" aria-hidden="true">
+    <path d="M60 416 H1140 M60 638 H1140 M60 860 H1140 M60 1082 H1140 M60 1304 H1140 M60 1570 H1140" class="line"/>
+    <path d="M474 544 H512" class="route" marker-end="url(#arrow)"/>
+    <path d="M808 544 H846" class="route" marker-end="url(#arrow)"/>
+    <path d="M474 766 H512" class="route" marker-end="url(#arrow)"/>
+    <path d="M808 766 H846" class="route" marker-end="url(#arrow)"/>
+    <path d="M474 988 H512" class="route" marker-end="url(#arrow)"/>
+    <path d="M808 988 H846" class="route" marker-end="url(#arrow)"/>
+    <path d="M474 1210 H512" class="route" marker-end="url(#arrow)"/>
+    <path d="M808 1210 H846" class="route" marker-end="url(#arrow)"/>
+    <path d="M474 1442 H512" class="route" marker-end="url(#arrow)"/>
+    <path d="M808 1442 H846" class="route" marker-end="url(#arrow)"/>
+  </g>
+  <g id="route-ordinary">
+    <circle cx="87" cy="460" r="24" fill="#d5ff00"/><text x="74" y="469" class="sans ink" font-size="24" font-weight="700">01</text>
+    <text x="132" y="470" class="serif ink" font-size="38">Decisión ordinaria</text>
+    <text x="132" y="508" class="sans soft" font-size="20">La firma sola todavía no alcanza.</text>
+    <g id="n11"><text x="132" y="556" class="sans ink" font-size="29" font-weight="600">Decisión firmada</text><text x="132" y="590" class="sans soft" font-size="20">Secretaría deja constancia.</text></g>
+    <g id="n12"><text x="523" y="556" class="sans ink" font-size="29" font-weight="600">Comunicación</text><text x="523" y="588" class="sans ink" font-size="29" font-weight="600">válida</text></g>
+    <g id="n13"><rect x="857" y="514" width="271" height="95" fill="#191a18"/><path d="M857 514 H1128" stroke="#d5ff00" stroke-width="7"/><text x="879" y="570" class="sans" fill="#fff" font-size="28" font-weight="700">Resuelto</text><text x="879" y="596" class="sans" fill="#fff" font-size="17">Firma + comunicación</text></g>
+  </g>
+  <g id="route-observation">
+    <circle cx="87" cy="682" r="24" fill="#fff" stroke="#191a18" stroke-width="2"/><text x="74" y="691" class="sans ink" font-size="24" font-weight="700">02</text>
+    <text x="132" y="692" class="serif ink" font-size="38">Falta información</text>
+    <text x="132" y="730" class="sans soft" font-size="20">La respuesta reabre el trabajo; no resuelve el trámite.</text>
+    <g id="n21"><text x="132" y="778" class="sans ink" font-size="27" font-weight="600">Observación</text><text x="132" y="810" class="sans ink" font-size="27" font-weight="600">activa</text></g>
+    <g id="n22"><text x="523" y="778" class="sans ink" font-size="27" font-weight="600">Aviso entregado</text><text x="523" y="810" class="sans soft" font-size="20">Entrega verificable</text></g>
+    <g id="n23"><rect x="857" y="736" width="271" height="91" fill="#e3e4de" stroke="#b6b9b1" stroke-width="1.5"/><path d="M857 736 H1128" stroke="#d5ff00" stroke-width="7"/><text x="879" y="776" class="sans ink" font-size="26" font-weight="700">Requiere acción</text><text x="879" y="805" class="sans soft" font-size="19">Sólo ahora</text></g>
+    <g id="n24"><text x="523" y="842" class="sans soft" font-size="19">Respuesta registrada en el mismo ID: vuelve a revisión.</text></g>
+  </g>
+  <g id="route-notice-failure">
+    <circle cx="87" cy="904" r="24" fill="#fff" stroke="#191a18" stroke-width="2"/><text x="74" y="913" class="sans ink" font-size="24" font-weight="700">03</text>
+    <text x="132" y="914" class="serif ink" font-size="38">El aviso no llega</text>
+    <text x="132" y="952" class="sans soft" font-size="20">Un envío sin entrega no traslada la obligación a la persona.</text>
+    <g id="n31"><text x="132" y="1000" class="sans ink" font-size="27" font-weight="600">Aviso no entregado</text><text x="132" y="1033" class="sans soft" font-size="20">Fallo registrado</text></g>
+    <g id="n32"><text x="523" y="1000" class="sans ink" font-size="27" font-weight="600">Asistencia y</text><text x="523" y="1032" class="sans ink" font-size="27" font-weight="600">reparación</text></g>
+    <g id="n33"><rect x="857" y="958" width="271" height="91" fill="#e3e4de" stroke="#b6b9b1" stroke-width="1.5"/><text x="879" y="998" class="sans ink" font-size="26" font-weight="700">Sigue en revisión</text><text x="879" y="1027" class="sans soft" font-size="18">No «Requiere acción»</text></g>
+  </g>
+  <g id="route-withdrawal">
+    <circle cx="87" cy="1126" r="24" fill="#fff" stroke="#191a18" stroke-width="2"/><text x="74" y="1135" class="sans ink" font-size="24" font-weight="700">04</text>
+    <text x="132" y="1136" class="serif ink" font-size="38">La persona pide la baja</text>
+    <text x="132" y="1174" class="sans soft" font-size="20">Salida alternativa desde cualquier estado activo.</text>
+    <g id="n41"><text x="132" y="1222" class="sans ink" font-size="27" font-weight="600">Baja solicitada</text><text x="132" y="1255" class="sans soft" font-size="20">Mismo trámite</text></g>
+    <g id="n42"><text x="523" y="1222" class="sans ink" font-size="27" font-weight="600">Fecha y actor</text><text x="523" y="1254" class="sans ink" font-size="27" font-weight="600">registrados</text></g>
+    <g id="n43"><rect x="857" y="1180" width="271" height="91" fill="#191a18"/><text x="879" y="1220" class="sans" fill="#fff" font-size="26" font-weight="700">Baja registrada</text><text x="879" y="1249" class="sans" fill="#fff" font-size="18">No es «Resuelto»</text></g>
+  </g>
+  <g id="route-communication-failure">
+    <circle cx="87" cy="1358" r="24" fill="#fff" stroke="#191a18" stroke-width="2"/><text x="74" y="1367" class="sans ink" font-size="24" font-weight="700">05</text>
+    <text x="132" y="1368" class="serif ink" font-size="38">La decisión no se comunica</text>
+    <text x="132" y="1406" class="sans soft" font-size="20">El expediente puede tener una firma y seguir abierto ante la persona.</text>
+    <g id="n51"><text x="132" y="1454" class="sans ink" font-size="27" font-weight="600">Decisión firmada</text><text x="132" y="1486" class="sans soft" font-size="20">Intento de aviso</text></g>
+    <g id="n52"><text x="523" y="1454" class="sans ink" font-size="27" font-weight="600">Comunicación</text><text x="523" y="1486" class="sans ink" font-size="27" font-weight="600">fallida</text></g>
+    <g id="n53"><text x="857" y="1454" class="sans ink" font-size="27" font-weight="600">Reparar y</text><text x="857" y="1486" class="sans ink" font-size="27" font-weight="600">comunicar</text></g>
+    <g id="n54"><path d="M858 1511 H1127" stroke="#d5ff00" stroke-width="7"/><text x="857" y="1540" class="sans ink" font-size="20" font-weight="700">Resuelto sólo entonces</text></g>
+  </g>
+  <g id="footer">
+    <text x="60" y="1618" class="sans ink" font-size="21" font-weight="700" letter-spacing="2">LO QUE HABRÍA QUE MEDIR EN EL PILOTO</text>
+    <text x="60" y="1655" class="sans soft" font-size="21">Contactos por trámite, tiempos, contradicciones, abandono y asistencia.</text>
+    <text x="60" y="1690" class="sans soft" font-size="20">El TO-BE todavía no demuestra una mejora. Caso y cifras de base: didácticos.</text>
+    <path d="M60 1716 H1140" class="line"/>
+    <text x="60" y="1743" class="sans soft" font-size="17">METSI · N14 · MAPA DIDÁCTICO · CINCO RECORRIDOS</text>
+  </g>
+</svg>
