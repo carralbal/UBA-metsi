@@ -13,7 +13,7 @@ window.METSI_ATLAS = {
           "section": "Cómo emerge un resultado que ningún componente controla",
           "page": 17,
           "title": "Un sistema es mucho más que una aplicación",
-          "href": "pdf/N02-METSI-lectura-previa-v16-final.pdf?v=n02-editorial-20261026#page=17"
+          "href": "pdf/N02-METSI-lectura-previa-v16-final.pdf?v=n02-editorial-fix-20261026#page=17"
         },
         {
           "code": "N03",
@@ -192,7 +192,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Definir el proceso desde la promesa y seguir casos completos",
           "page": 11,
           "title": "De un área a otra: dónde se frena el trabajo",
-          "href": "pdf/publicados/N14-METSI-lectura-previa-v10-final.pdf?v=n14-editorial-20261026#page=11"
+          "href": "pdf/publicados/N14-METSI-lectura-previa-v10-final.pdf?v=n14-editorial-fix-20261026#page=11"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -233,9 +233,9 @@ window.METSI_ATLAS = {
         {
           "code": "N14",
           "section": "BPMN y nivel de detalle",
-          "page": 30,
+          "page": 27,
           "title": "De un área a otra: dónde se frena el trabajo",
-          "href": "pdf/publicados/N14-METSI-lectura-previa-v10-final.pdf?v=n14-editorial-20261026#page=31"
+          "href": "pdf/publicados/N14-METSI-lectura-previa-v10-final.pdf?v=n14-editorial-fix-20261026#page=27"
         },
         {
           "code": "N12",

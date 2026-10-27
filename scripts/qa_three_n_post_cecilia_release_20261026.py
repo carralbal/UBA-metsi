@@ -14,7 +14,7 @@ from pypdf import PdfReader
 ROOT = Path(__file__).resolve().parents[1]
 ROWS = (
     ("N02", "site/pdf/N02-METSI-lectura-previa-v16-final.pdf", 34),
-    ("N14", "site/pdf/publicados/N14-METSI-lectura-previa-v10-final.pdf", 50),
+    ("N14", "site/pdf/publicados/N14-METSI-lectura-previa-v10-final.pdf", 44),
     ("N21", "site/pdf/publicados/N21-METSI-lectura-previa-v10-final.pdf", 40),
 )
 
@@ -75,9 +75,9 @@ def inspect(code: str, relative: str, expected_pages: int) -> dict:
 
 def main() -> None:
     receipts = [inspect(*row) for row in ROWS]
-    n14_text = PdfReader(ROOT / ROWS[1][1], strict=True).pages[21].extract_text() or ""
-    receipts[1]["five_routes_at_page_22"] = "Una constancia, cinco recorridos" in n14_text
-    receipts[1]["pass"] = receipts[1]["pass"] and receipts[1]["five_routes_at_page_22"]
+    n14_text = PdfReader(ROOT / ROWS[1][1], strict=True).pages[20].extract_text() or ""
+    receipts[1]["five_routes_at_page_21"] = "Una constancia, cinco recorridos" in n14_text
+    receipts[1]["pass"] = receipts[1]["pass"] and receipts[1]["five_routes_at_page_21"]
     catalog = {row["code"]: row for row in json.loads((ROOT / "site/course-manifest.json").read_text(encoding="utf-8"))["readings"]}
     homepage = (ROOT / "site/index.html").read_text(encoding="utf-8")
     site_links = {}
@@ -88,10 +88,10 @@ def main() -> None:
         good = (row["pages"] == receipt["pages"] and url in homepage
                 and url.split("?", 1)[0] == receipt["path"].removeprefix("site/"))
         site_links[code] = {"url": url, "pages": row["pages"], "pass": good}
-    site_links["N14"]["bibliography_page_49"] = (
-        "N14-METSI-lectura-previa-v10-final.pdf?v=n14-editorial-20261026#page=49" in homepage
-        and "Bibliografía de N14, página 48" not in homepage)
-    site_links["N14"]["pass"] &= site_links["N14"]["bibliography_page_49"]
+    site_links["N14"]["bibliography_page_43"] = (
+        "N14-METSI-lectura-previa-v10-final.pdf?v=n14-editorial-fix-20261026#page=43" in homepage
+        and "Bibliografía de N14, página 49" not in homepage)
+    site_links["N14"]["pass"] &= site_links["N14"]["bibliography_page_43"]
     output = {"status": "PASS" if all(row["pass"] for row in receipts) else "FAIL",
               "scope": "N02, N14, N21 public PDF artifacts; visual page review recorded separately",
               "documents": receipts, "site_links": site_links}

@@ -7,3 +7,129 @@ body.block-c.premium-magazine.document-n14 .consequences-limits-page.has-consequ
 body.block-c.premium-magazine.document-n14 .consequences-limits-page.has-consequence-photo .consequence-photo .photo-viewport {
   height: 25mm !important;
 }
+
+/* El elenco completo se presenta una vez, en la primera escena. En las
+   aplicaciones siguientes el relato avanza sin repetir seis retratos. */
+@media print {
+  body.document-n14 #section-07 .hotel-voices-compact,
+  body.document-n14 #section-11 .hotel-voices-compact,
+  body.document-n14 #section-13 .hotel-voices-compact,
+  body.document-n14 #section-15 .hotel-voices-compact {
+    display:none !important;
+  }
+  /* La fachada fija el lugar una vez. Repetir la misma fotografía en cada
+     aplicación detiene el relato sin aportar información nueva. */
+  body.document-n14 #section-07 .hotel-canonical-anchor,
+  body.document-n14 #section-11 .hotel-canonical-anchor,
+  body.document-n14 #section-13 .hotel-canonical-anchor,
+  body.document-n14 #section-15 .hotel-canonical-anchor {
+    display:none !important;
+  }
+  body.block-c.document-n14 #section-07 .hotel-continuation,
+  body.block-c.document-n14 #section-11 .hotel-continuation,
+  body.block-c.document-n14 #section-13 .hotel-continuation,
+  body.block-c.document-n14 #section-15 .hotel-continuation {
+    break-before:auto !important;
+    page-break-before:auto !important;
+    break-inside:auto !important;
+    page-break-inside:auto !important;
+    display:block !important;
+    padding-top:5mm !important;
+  }
+  body.block-c.document-n14 #section-07 .hotel-continuation-body,
+  body.block-c.document-n14 #section-11 .hotel-continuation-body,
+  body.block-c.document-n14 #section-13 .hotel-continuation-body,
+  body.block-c.document-n14 #section-15 .hotel-continuation-body {
+    display:block !important;
+    columns:2 !important;
+    column-count:2 !important;
+    column-gap:8mm !important;
+    column-rule:.2mm solid #c5c7c5 !important;
+  }
+  body.block-c.document-n14 #section-07 .hotel-continuation-body .hotel-text-column,
+  body.block-c.document-n14 #section-11 .hotel-continuation-body .hotel-text-column,
+  body.block-c.document-n14 #section-13 .hotel-continuation-body .hotel-text-column,
+  body.block-c.document-n14 #section-15 .hotel-continuation-body .hotel-text-column {
+    border-right:0 !important;
+    padding-right:0 !important;
+    break-inside:auto !important;
+  }
+  /* El instrumento continúa la explicación previa: empezar obligatoriamente
+     en otra hoja dejaba un párrafo aislado en la página anterior. */
+  body.block-c.document-n14 #section-13 {
+    break-before:auto !important;
+    page-break-before:auto !important;
+  }
+  /* The measured-result essay was stranded in the upper half of a page.
+     A pull quotation from its own argument gives the page an editorial
+     cadence without inventing a new claim or inserting a paper card. */
+  body.block-c.premium-magazine.document-n14 #section-14 p[data-source-id="N14-s14-b022"]::after {
+    content:"Si se inspecciona más rápido pero falta acceso, el resultado sigue pendiente.";
+    display:block;
+    margin:12mm 0 0;
+    padding:5mm 0 0;
+    border-top:.7mm solid #171917;
+    font:400 22pt/1.14 Didot, Baskerville, Georgia, serif;
+    letter-spacing:-.02em;
+    color:#171917;
+  }
+  /* N21 mostró que el índice a dos columnas sin foto permite leer títulos y
+     páginas de un vistazo; se usa la misma escala que en el N02 corregido. */
+  body.document-n14 .contents-page .contents-layout {
+    display:block !important;
+    height:auto !important;
+    margin-top:5mm !important;
+  }
+  body.document-n14 .contents-page .contents-layout ol {
+    width:100% !important;
+    columns:2 !important;
+    column-count:2 !important;
+    column-gap:9mm !important;
+    column-rule:.2mm solid #c5c7c5 !important;
+  }
+  body.document-n14 .contents-page .contents-layout li {
+    display:block !important;
+    grid-template-columns:none !important;
+    break-inside:avoid !important;
+    padding:1.15mm 0 !important;
+    font-size:8.8pt !important;
+    line-height:1.22 !important;
+  }
+  body.document-n14 .contents-page .contents-layout li > a {
+    display:grid !important;
+    grid-template-columns:7mm minmax(0,1fr) 11mm !important;
+    gap:1.5mm !important;
+    width:100% !important;
+    color:inherit !important;
+    text-decoration:none !important;
+  }
+  body.document-n14 .contents-page .contents-layout li > a > b { grid-column:1 !important; }
+  body.document-n14 .contents-page .contents-layout li > a > span:not(.nav-page) { grid-column:2 !important; }
+  body.document-n14 .contents-page .contents-layout li > a > .nav-page {
+    grid-column:3 !important;
+    text-align:right !important;
+    white-space:nowrap !important;
+  }
+  body.document-n14 .contents-page .contents-layout li small {
+    font-size:6.7pt !important;
+    margin-left:1mm !important;
+  }
+  body.document-n14 .contents-page .contents-layout figure { display:none !important; }
+  body.block-c.editorial-variant-4.document-n14 .block-c-contents .contents-layout {
+    display:block !important;
+    grid-template-columns:none !important;
+    height:auto !important;
+  }
+  body.block-c.editorial-variant-4.document-n14 .block-c-contents .contents-layout ol {
+    width:100% !important;
+    column-gap:9mm !important;
+  }
+  body.block-c.editorial-variant-4.document-n14 .block-c-contents .contents-layout figure {
+    display:none !important;
+  }
+  /* Igual que N02: los referentes no necesitan una banda gris que atraviese
+     rostros, títulos y folio. La jerarquía la dan las columnas y los filetes. */
+  body.document-n14 .authors-page {
+    background:#FAFAF8 !important;
+  }
+}

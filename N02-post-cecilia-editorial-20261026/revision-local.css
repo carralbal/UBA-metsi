@@ -99,6 +99,21 @@ body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n02 #section-13 .section-body 
   margin-left: auto !important;
   margin-right: auto !important;
 }
+/* Turn the otherwise empty lower half of the local-optimization essay into
+   a deliberate editorial pause. This restates its own conclusion, not a new
+   source assertion, and remains on paper rather than a paper card on ink. */
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n02 #section-13 .section-body::after {
+  content: "El indicador cuenta una parte de la historia.";
+  display: block;
+  column-span: all;
+  clear: both;
+  margin: 13mm 0 0;
+  padding: 5mm 0 0;
+  border-top: .7mm solid #171917;
+  font: 400 24pt/1.08 Didot, Baskerville, Georgia, serif;
+  letter-spacing: -.02em;
+  color: #171917;
+}
 body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n02 #section-14 {
   break-before: page !important;
   page-break-before: always !important;
@@ -179,5 +194,66 @@ body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n02 #section-07 .field-taxonom
   body.document-n02 .n02-hotel-ink figcaption {
     font:400 8pt/1.25 Avenir,Arial,sans-serif !important;
     margin-top:5mm !important; color:#d2d2cf !important;
+  }
+}
+
+/* Corrección de cierre: el índice necesita un ancho de lectura real.
+   La grilla antigua se aplicaba al <li>, dejando su único <a> en 7 mm. */
+@media print {
+  body.document-n02 .contents-page .contents-layout {
+    display:block !important;
+    height:auto !important;
+    margin-top:5mm !important;
+  }
+  body.document-n02 .contents-page .contents-layout ol {
+    width:100% !important;
+    columns:2 !important;
+    column-count:2 !important;
+    column-gap:9mm !important;
+    column-rule:.2mm solid #c5c7c5 !important;
+  }
+  body.document-n02 .contents-page .contents-layout li {
+    display:block !important;
+    grid-template-columns:none !important;
+    break-inside:avoid !important;
+    padding:1.45mm 0 !important;
+    font-size:8.8pt !important;
+    line-height:1.24 !important;
+  }
+  body.document-n02 .contents-page .contents-layout li > a {
+    display:grid !important;
+    grid-template-columns:7mm minmax(0,1fr) 11mm !important;
+    gap:1.5mm !important;
+    width:100% !important;
+    color:inherit !important;
+    text-decoration:none !important;
+  }
+  body.document-n02 .contents-page .contents-layout li > a > b { grid-column:1 !important; }
+  body.document-n02 .contents-page .contents-layout li > a > span:not(.nav-page) { grid-column:2 !important; }
+  body.document-n02 .contents-page .contents-layout li > a > .nav-page {
+    grid-column:3 !important;
+    text-align:right !important;
+    white-space:nowrap !important;
+  }
+  body.document-n02 .contents-page .contents-layout li small {
+    font-size:6.7pt !important;
+    margin-left:1mm !important;
+  }
+  body.document-n02 .contents-page .contents-layout figure { display:none !important; }
+  /* Distribuir la lectura de cierre en las dos columnas del pliego. */
+  body.document-n02 #section-07 .editorial-continuation {
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    column-gap:8mm !important;
+    max-width:none !important;
+  }
+  body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n02 #section-08 {
+    break-before:page !important;
+    page-break-before:always !important;
+  }
+  /* La banda gris central de la página de referentes no aporta jerarquía y
+     atraviesa títulos, rostros y pies de página. Mantener un único paper. */
+  body.document-n02 .authors-page {
+    background:#FAFAF8 !important;
   }
 }
