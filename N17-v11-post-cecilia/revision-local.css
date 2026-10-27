@@ -1,0 +1,42 @@
+/* Recursos pedagógicos propios N13–N18: tipografía del maestro N12 v7. */
+.rev-reading-guide{margin-top:7mm;padding:5mm 6mm;border-top:1.3pt solid #171917;background:#f4f4ee;break-inside:avoid;}
+.rev-reading-guide h3{font:700 12pt/1.25 "Avenir Next",Avenir,sans-serif!important;margin:0 0 2mm!important;color:#171917;}
+.rev-reading-guide p{font:11.2pt/1.4 Baskerville,serif!important;margin:0 0 2.5mm!important;color:#171917;}
+.rev-worked-example{display:block!important;break-before:page;padding:7mm 0;columns:auto!important;column-count:1!important;background:#fff;color:#171917;}
+.rev-worked-example h2{font:700 25pt/1.08 Didot,serif!important;margin:0 0 5mm!important;break-after:avoid;}
+.rev-worked-example h3{font:700 14pt/1.2 "Avenir Next",Avenir,sans-serif!important;margin:5mm 0 3mm!important;break-after:avoid;}
+.rev-worked-example p,.rev-worked-example td,.rev-worked-example th{font:11.2pt/1.4 Baskerville,serif!important;}
+.rev-worked-example p{margin:0 0 2.5mm!important;}
+.rev-worked-example strong,.rev-worked-example th{font-weight:700!important;}
+.rev-worked-example .rev-example-kicker{font:700 8.2pt/1.25 Avenir,sans-serif!important;letter-spacing:.08em;margin-bottom:3mm!important;}
+.rev-example-table{border-collapse:collapse;width:100%;table-layout:fixed;margin:3mm 0 5mm;break-inside:auto;}
+.rev-example-table th,.rev-example-table td{border:0;border-bottom:.5pt solid #bbc0b4;padding:3mm 3mm;vertical-align:top;text-align:left;overflow-wrap:break-word;}
+.rev-example-table thead th{background:#171917;color:#CFFF00;}
+.rev-example-table tr{break-inside:avoid;}
+.rev-example-table thead{display:table-header-group;}
+.rev-example-table th:first-child{width:26%;}
+.rev-local-figure{margin:4mm 0 6mm;break-inside:avoid;}
+.rev-local-figure img{width:100%;height:auto;display:block;object-fit:contain;}
+.rev-local-figure figcaption{font:8.2pt/1.3 Avenir,sans-serif!important;color:#4f534f;margin-top:2mm;}
+
+/* QA visual local: contraste sobre la foto intacta, sin velos ni sombras. */
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .collection-masthead, body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .cover-meta{color:#171917!important;}
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .cover-thesis{width:40mm!important;right:78mm!important;bottom:95mm!important;}
+
+/* Residual autorizado: selector real del kicker HH; metadato al tamaño N12 v7. */
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .hotel-voices-compact > header > b {
+  font-size: 8.2pt !important;
+  line-height: 1.2 !important;
+  letter-spacing: .04em !important;
+}
+
+/* Residual autorizado: el final de Referencias no debe arrastrar una hoja sin texto. */
+body.metsi-v7 #section-22.references {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* La banda vertical gris de Referentes es puramente decorativa. */
+body.document-n17 .authors-page {
+  background: #fafaf8 !important;
+}

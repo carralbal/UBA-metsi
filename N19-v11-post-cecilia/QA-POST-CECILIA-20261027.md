@@ -2,7 +2,7 @@
 
 ## Alcance y decisión
 
-**Aprobado técnicamente para publicación digital, pendiente de verificación remota.** No se declara validación académica ni preprensa. La variante privada v17 de 37 páginas fue rechazada porque perdía contenido del PDF público; se construyó una fusión desde la fuente fiel pública, no desde ese PDF incompleto.
+**Publicado y verificado técnicamente para lectura digital.** Commit `49a360a376881ff49c4d3c091a989d06fc57d5b7`; GitHub Pages run `40597585096` concluyó en `success`. El PDF remoto respondió HTTP 200, 23.265.872 bytes y SHA-256 `0f5414faa83c9a2f622995af420f09f43d3e8ff48cc833d1728981aba60f6054`, idéntico al archivo local revisado. No se declara validación académica ni preprensa. La variante privada v17 de 37 páginas fue rechazada porque perdía contenido del PDF público; se construyó una fusión desde la fuente fiel pública, no desde ese PDF incompleto.
 
 ## Integridad curricular
 
@@ -20,4 +20,4 @@
 
 ## Pendientes externos
 
-Verificar GitHub Pages, HTTP, bytes y SHA remoto tras el push. Obtener revisión académica, ensayo de carga de lectura, accesibilidad humana y prueba de impresión antes de llamar la edición «definitiva» para todo uso.
+Obtener revisión académica, ensayo de carga de lectura, accesibilidad humana y prueba de impresión antes de llamar la edición «definitiva» para todo uso.

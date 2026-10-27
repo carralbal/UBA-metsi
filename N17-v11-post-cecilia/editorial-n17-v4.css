@@ -1,0 +1,20 @@
+/* The ink opening is one continuous field: no paper-colored inset card. */
+@media print {
+  body.document-n17 section.block-c-question .rev-reading-guide {
+    background: transparent !important;
+    border: 0 !important;
+    border-top: 1.5mm solid #cfff00 !important;
+    border-bottom: .2mm solid #777d77 !important;
+    color: #f7f7f2 !important;
+    padding: 5mm 0 4mm !important;
+  }
+  body.document-n17 section.block-c-question .rev-reading-guide h3,
+  body.document-n17 section.block-c-question .rev-reading-guide p,
+  body.document-n17 section.block-c-question .rev-reading-guide strong,
+  body.document-n17 section.block-c-question .rev-reading-guide a {
+    color: #f7f7f2 !important;
+  }
+  body.document-n17 section.block-c-question .rev-reading-guide a {
+    text-decoration-color: #cfff00 !important;
+  }
+}
