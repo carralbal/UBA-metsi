@@ -22,4 +22,4 @@ Claves de caché nuevas en las cinco superficies web: `n07-editorial-20261028`, 
 
 ## Publicación
 
-Pendiente al redactar: commit, run de Pages, 37/37 SHA remotos y 37/37 enlaces. Completar con recibo antes de retirar las seis capturas PNG temporales.
+Commit `d1db7785064906c2e960dc27791eda5fdf62e749` subido a `origin/main`; Pages `40769215021` terminó `completed/success`. `AUDITORIA-REMOTA-SHA-37-N-POST-N07-N09-20261028.json` descargó los **37/37 PDF** y constató SHA idéntico al final local. `AUDITORIA-ENLACES-SITIO-37-N-POST-N07-N09-20261028.json` constató **37/37 enlaces** del sitio. Las seis capturas temporales de este lote se retiran después de estos cotejos; no se elimina ninguna fuente ni PDF.
