@@ -260,7 +260,7 @@ window.METSI_ATLAS = {
           "section": "Una API no es una promesa genérica de éxito",
           "page": 15,
           "title": "Entender lo mismo antes de conectar",
-          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=n27-digital-20261024#page=15"
+          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=n27-referentes-20261028#page=15"
         },
         {
           "code": "N13",
@@ -417,7 +417,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Cambiar el acuerdo sin romper a quienes lo usan",
           "page": 22,
           "title": "Entender lo mismo antes de conectar",
-          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=n27-digital-20261024#page=22"
+          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=n27-referentes-20261028#page=22"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -621,7 +621,7 @@ window.METSI_ATLAS = {
           "section": "Fuentes que permiten mirar distintas partes de la red",
           "page": 12,
           "title": "Un servicio, muchas organizaciones",
-          "href": "pdf/publicados/N26-METSI-lectura-previa-v10-final.pdf?v=n26-digital-20261024#page=12"
+          "href": "pdf/publicados/N26-METSI-lectura-previa-v10-final.pdf?v=n26-referentes-20261028#page=12"
         },
         {
           "code": "N21",
@@ -793,7 +793,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Cambiar el acuerdo sin romper a quienes lo usan",
           "page": 22,
           "title": "Entender lo mismo antes de conectar",
-          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=n27-digital-20261024#page=22"
+          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=n27-referentes-20261028#page=22"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -818,7 +818,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Cambiar el acuerdo sin romper a quienes lo usan",
           "page": 22,
           "title": "Entender lo mismo antes de conectar",
-          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=n27-digital-20261024#page=22"
+          "href": "pdf/publicados/N27-METSI-lectura-previa-v10-final.pdf?v=n27-referentes-20261028#page=22"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -861,7 +861,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 2 · Saber quién puede actuar cuando las partes discrepan",
           "page": 17,
           "title": "Un servicio, muchas organizaciones",
-          "href": "pdf/publicados/N26-METSI-lectura-previa-v10-final.pdf?v=n26-digital-20261024#page=17"
+          "href": "pdf/publicados/N26-METSI-lectura-previa-v10-final.pdf?v=n26-referentes-20261028#page=17"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
