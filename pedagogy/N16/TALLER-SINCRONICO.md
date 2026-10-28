@@ -1,60 +1,61 @@
-# N16 · Taller sincrónico
+# N16 · Taller sincrónico de 120 minutos · ajuste post-Cecilia
 
 ## Resultado del encuentro
 
-Cada equipo entrega un expediente de coherencia de HH-16 con contradicciones clasificadas, impacto, tratamiento, prueba de cierre y ciclo de vida de los modelos.
+Cada equipo entrega **una sola ficha HH-16**: qué decisión está en juego para R-73, qué afirman proceso/inventario/tablero, qué evidencia falta, una contradicción con consecuencia, tratamiento y prueba de cierre. El boceto de constancias es **ejercicio desechable de aula**, no segundo producto del portfolio. No se presenta la notación ni los supuestos A/P1 como reglas de la FCE; no se simula una implantación real.
 
 ## Duración base
 
-Ciento veinte minutos.
+Ciento veinte minutos. Los ocho apartados de abajo son cortes de tiempo de **seis operaciones**, no ocho entregas nuevas.
 
 ## Preparación docente
 
-- Seleccionar tríos de modelos con diferencias reales de propósito y tiempo.
-- Preparar un escenario ordinario y uno adverso de “entregable”.
-- Preparar una regla nueva que afecte varias vistas.
-- Disponer de tarjetas de tratamiento, responsables, versiones y retiro.
+- Tener a mano N16 pp. 25–29 y p. 39. En pp. 28–29 hay un **modelo conceptual**, no tablas físicas ni ER validado: usarlo como punto de partida, no como solución incuestionable.
+- Mostrar un esqueleto corto de proceso para la constancia (solicitar → revisar → observar o decidir → comunicar → terminar), con responsables aún sin asignar y con la condición de entrega del aviso deliberadamente abierta. Preparar tarjetas de «generado», «entregado», «fallido», «observación nueva» y «firma». Se puede usar papel o una herramienta libre; ofrecer tabla estructurada equivalente.
+- Llevar las dos contrapruebas de p. 27: C-103 (cambiar a «Requiere acción» antes de entregar) y C-107 (usar el aviso de una observación anterior para la nueva). Reservar HH-16 para transferir el método, no mezclar las identidades de ambos casos.
+- Disponer de una plantilla de ficha HH-16 de doce campos del documento; se completan **sólo los campos decisivos** en clase. El resto queda como lectura/consulta, no tarea agregada.
 
 ## Secuencia
 
-### 1. Caza de contradicciones, 10 minutos
+### 1. Pregunta de decisión, 10 minutos
 
-Cada persona marca diferencias entre tres modelos sin corregirlas. Debe escribir qué decisión podría verse afectada.
+Ante proceso, inventario y tablero de HH-16, cada persona escribe si confirmaría R-73 y qué dato todavía no autoriza hacerlo. Nadie debe confundir marca de limpieza con acceso comprobado.
 
-### 2. Mesa de clasificación, 15 minutos
+### 2. Demostración del proceso, 10 minutos
 
-Los equipos separan diferencias terminológicas, temporales, normativas, cuantitativas, de identidad, frontera y autoridad. Registran también propósito y versión.
+En la constancia ficticia, el docente muestra un subconjunto BPMN: evento inicial/final, tarea, responsable, compuerta y ruta de excepción. No dicta el catálogo completo. La pregunta es quién hace qué y qué pasa cuando falla un aviso.
 
-### 3. Clínica de coherencia, 10 minutos
+### 3. Demostración de datos y estados, 10 minutos
 
-El docente contrasta igualdad, compatibilidad y contradicción productiva con casos hallados por los equipos.
+Sobre pp. 28–29, el docente diferencia identidad de trámite/observación/aviso y condición para mostrar «Requiere acción» o «Resuelto». Cada vista responde una pregunta distinta y ninguna reemplaza a otra.
 
-### 4. Recorrido transversal de escenarios, 22 minutos
+### 4. Completar un proceso mínimo, 15 minutos
 
-Un caso ordinario y uno adverso atraviesan proceso, estados y vista de experiencia. El equipo registra dónde los modelos dejan de corresponder y qué evidencia revela el desacuerdo.
+En pares, asignar Secretaría, Mesa de ayuda y estudiante al esqueleto; hacer visible aviso fallido, reparación y retorno. La primera versión queda en borrador de aula, no en el portfolio.
 
-### 5. Propagación de una regla nueva, 18 minutos
+### 5. Romper y corregir con C-103, 15 minutos
 
-Se modifica la definición de entregable. Los equipos trazan impacto en modelos, decisiones, pruebas, operación y responsabilidad. No pueden actualizar archivos sin identificar efectos.
+Otro par aplica el caso de p. 27: una ruta adelanta «Requiere acción» cuando el aviso apenas se generó. Mover la transición detrás de entrega verificable, conservar fallo y asignar responsable. Si sólo se cambia una etiqueta, la prueba vuelve a fallar.
 
-### 6. Junta de contradicciones, 18 minutos
+### 6. Cruzar identidad, regla y C-107, 20 minutos
 
-Otro equipo prioriza por consecuencia, reversibilidad y urgencia. Para cada diferencia elige aceptar, traducir, corregir, escalar o posponer, y define prueba de cierre.
+Marcar las identidades mínimas de trámite, observación, respuesta, aviso y reparación. Escribir a qué observación y finalidad refiere cada aviso. Una segunda observación no puede heredar la entrega de la primera ni cerrarse por ella; P1 impide «Resuelto» con observación activa. El equipo debe señalar la referencia y transición que prohíben el error.
 
-### 7. Simulacro de retiro y recuperación, 19 minutos
+### 7. Transferir el método a HH-16, 30 minutos
 
-El equipo retira una vista y descubre un uso no declarado. Debe decidir si restituir, reemplazar o migrar, conservar memoria y evitar que una versión obsoleta siga autorizando decisiones.
+Sin trasladar las reglas de constancias al hotel, corregir la respuesta inicial: actividad que produce evidencia de acceso, identidad que la une a R-73, estado que impide confirmar sin una condición comprometida, responsable y contraprueba. Completar esos campos en la **misma ficha HH-16**.
 
-### 8. Cierre y puente, 8 minutos
+### 8. Corrección ajena y puente, 10 minutos
 
-Cada persona identifica qué estrategia de trabajo exige la incertidumbre restante, preparando N17 y el Bloque D.
+Otro equipo intenta ejecutar la contraprueba sin explicación oral del autor. Cada persona anota un límite abierto y una decisión metodológica para N17. El receptor debe poder reconstruir la decisión o señalar un hueco concreto.
+
+La demostración, construcción y corrección **reemplazan** la vieja mesa extensa de siete clases de contradicción, el mapa amplio de impacto y el simulacro de retiro; esos contenidos permanecen como extensión de lectura.
 
 ## Evidencias para el portfolio
 
-- diferencias iniciales;
-- clasificación con propósito y versión;
-- recorrido transversal;
-- mapa de impacto del cambio;
-- registro de contradicciones;
-- decisión de retiro y transición a N17.
+Una sola ficha HH-16: decisión inicial y revisada, evidencia que falta, correspondencia proceso/datos/estados, tratamiento, responsable, contraprueba y límite. Los borradores de constancia se descartan al terminar la clase.
+
+## Si el tiempo real no alcanza
+
+Conservar C-103, C-107, una corrección del proceso y la transferencia a R-73. Reducir a una observación y un aviso, sin suprimir la identidad ni la evidencia de entrega. No bajar el estándar de la prueba; reducir el número de ramas. Registrar tiempos efectivos y errores para decidir con el equipo si el taller cabe en la cursada. **Todavía no se ejecutó ese ensayo docente.**
 

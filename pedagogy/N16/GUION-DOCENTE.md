@@ -1,58 +1,47 @@
-# N16 · Guion visual y notas docentes
+# N16 · Guion docente · modelo que permite decidir
 
-## Función del soporte visual
+Este guion acompaña al taller post-Cecilia de 120 minutos y al PDF público N16 de 41 A4. El deck de clase anterior, si se reutiliza, debe ajustarse a esta secuencia: sus ocho actividades antiguas **ya no son la consigna vigente**.
 
-El soporte compara vistas, tiempos y decisiones. No utiliza diferencias visuales como prueba automática de inconsistencia.
+## Secuencia visual para actualizar el deck de diez pantallas
 
 | Pantalla | Qué se ve | Nota de orador | Señal para avanzar |
 |---:|---|---|---|
-| 1 | Pregunta profesional de N16 | Pedir una diferencia y la decisión que afecta. | La comparación tiene consecuencia. |
-| 2 | Siete clases de contradicción | Clasificar después de revisar propósito, frontera y tiempo. | Las diferencias dejan de ser una categoría única. |
-| 3 | Igualdad y coherencia | Mostrar modelos distintos pero compatibles. | El grupo no busca duplicación literal. |
-| 4 | Escenario ordinario | Recorrer correspondencias entre vistas. | Se localizan contratos y huecos. |
-| 5 | Escenario adverso | Introducir excepción y autoridad disputada. | Aparece una contradicción con evidencia. |
-| 6 | Regla nueva | Exigir mapa de impacto antes de editar. | Decisiones y operaciones afectadas son visibles. |
-| 7 | Registro de contradicciones | Pedir consecuencia, evidencia, tratamiento y responsable. | Cada diferencia puede gobernarse. |
-| 8 | Prueba de cierre | Evitar cerrar sólo porque coinciden los archivos. | El escenario y la decisión funcionan. |
-| 9 | Retiro de modelo | Revelar un uso no registrado. | Hay recuperación, migración y memoria. |
-| 10 | Puente a N17 | Preguntar qué lógica de trabajo corresponde a lo todavía incierto. | Surge una elección estratégica. |
+| 1 | R-73: ¿confirmar ahora? | Pedir hecho, inferencia y evidencia ausente. | Nadie iguala limpieza y acceso. |
+| 2 | Tres vistas, tres preguntas | Ubicar proceso, datos y estado sin exigir un dibujo único. | Cada vista tiene un uso. |
+| 3 | Esqueleto de proceso | Nombrar responsables y ruta de falla. | Hay acción y reparación con dueño. |
+| 4 | Identidades del aviso | Distinguir solicitud, observación y finalidad. | Un aviso refiere a un objeto. |
+| 5 | Estado y evidencia | Contrastar generado, entregado y comunicado. | La transición tiene condición. |
+| 6 | C-103 | Solicitar que otro par rompa el proceso. | El cambio ya no es prematuro. |
+| 7 | C-107 y P1 | Probar observación nueva con aviso viejo. | No se reutiliza la entrega anterior. |
+| 8 | Regreso a HH-16 | Preguntar qué método sí se transfiere. | Las reglas de la constancia no se importan. |
+| 9 | Ficha única y contraprueba | Dejar que un equipo ajeno reconstruya. | El artefacto no necesita defensa oral. |
+| 10 | N17: qué falta decidir | Identificar incertidumbre y estrategia próxima. | Hay puente, no nueva entrega. |
 
-## Preguntas de sondeo
+## Hilo oral, en primera persona
 
-- ¿Los modelos tienen el mismo propósito y fecha?
-- ¿La diferencia es terminológica, temporal o sustantiva?
-- ¿Qué decisión cambia si se acepta una vista?
-- ¿Qué evidencia permitiría cerrar la contradicción?
-- ¿Qué modelos dependen de esta regla?
-- ¿Quién puede aceptar o escalar la diferencia?
-- ¿Qué ocurre si se retira esta vista?
+«Hoy no vamos a premiar el diagrama más prolijo. Vamos a hacer una pregunta más incómoda: ¿qué decisión permite tomar y qué dato todavía no alcanza? En R-73, limpieza terminada no equivale a acceso operativo. Si confirmamos con una sola de esas marcas, la consistencia de los archivos puede ser perfecta y la promesa, falsa.
 
-## Errores esperables
+Para verlo sin repetir el hotel, probaremos una constancia ficticia. Una solicitud puede estar recibida mientras una observación sigue sin llegar a la estudiante. Voy a mostrarles tres vistas de la misma historia. El proceso necesita responsables y una ruta de reparación. Los datos necesitan identidades: ¿de qué observación habla cada aviso? Los estados necesitan condiciones y evidencia: ¿qué puede ver la estudiante en cada momento? Ninguna vista reemplaza a las otras.
 
-### Forzar una definición única
+Primero vamos a completar un proceso pequeño y después intentaremos romperlo. Si cambiamos a “Requiere acción” apenas generamos un mensaje, C-103 nos derrota. Si usamos la entrega de un aviso viejo para dar por comunicada una observación nueva, C-107 nos derrota. La corrección debe verse tanto en el camino como en la relación de datos y en la transición de estado.
 
-Intervención: distinguir traducción suficiente de identidad innecesaria.
+Recién entonces volveremos a R-73. No copiaremos las reglas de la constancia al hotel. Usaremos el mismo modo de razonar: ubicar la evidencia de acceso, unirla a la reserva correcta, impedir una confirmación prematura y dejar una reparación visible. La entrega sigue siendo una sola ficha HH-16. Si otro equipo no puede reconstruir nuestra decisión sin que se la expliquemos, todavía tenemos trabajo.»
 
-### Corregir el modelo aparentemente viejo
+## Intervenciones clave
 
-Intervención: verificar versión, propósito, autoridad y evidencia.
+| Momento | Pregunta | Si aparece el error, intervenir así |
+|---|---|---|
+| Distinción inicial | «¿Cuál es el hecho y cuál la inferencia?» | No permitir que «preparada», «asignable» y «entregable para R-73» se vuelvan sinónimos. |
+| Proceso mínimo | «¿Quién detecta el fallo del aviso y quién vuelve a intentar?» | Exigir un responsable y una salida; una flecha sin dueño no repara. |
+| Datos | «¿Qué observación autoriza este aviso?» | Pedir identidad del objeto y finalidad, no sólo texto igual o fecha cercana. |
+| Estado | «¿Qué evidencia habilita mostrar “Requiere acción” o “Resuelto”?» | Marcar diferencia entre mensaje generado y entregado; entre decisión firmada y comunicada. |
+| Transferencia | «¿Qué parte del método vale para R-73 y qué regla no trasladamos?» | Separar analogía metodológica de política inventada para el hotel o la FCE. |
+| Revisión ajena | «¿Dónde fallaría el primer intento?» | No arreglarlo oralmente; pedir corrección del artefacto y de su contraprueba. |
 
-### Registrar sin consecuencia
+## Controles metodológicos y límites
 
-Intervención: exigir decisión, riesgo y prioridad afectados.
-
-### Actualizar archivos sin impacto
-
-Intervención: recorrer escenario, pruebas, operación y responsabilidad.
-
-### Fuente única como garantía
-
-Intervención: mostrar cómo propaga coherencia y también error común.
-
-## Decisiones de facilitación
-
-- Si la comparación se vuelve revisión gráfica, asignar un escenario y una decisión.
-- Si todo se marca como urgente, ordenar por consecuencia y reversibilidad.
-- Si retirar parece borrar historia, exigir memoria y trazabilidad.
-- Si falta tiempo, reducir contradicciones tratadas, no el cambio ni el simulacro de retiro.
+- El proceso de clase emplea un **subconjunto** BPMN 2.0.2; un dibujo visualmente parecido no certifica conformidad. El modelo A/P1 versionado en la fuente de N16 pasó control estructural y XSD, pero **no** importación independiente en un modelador; no prometerla.
+- Las pp. 28–29 son una **vista conceptual de identidades e historia**, no un esquema físico de base de datos. P1 y la regla de cierre son hipótesis del ejercicio; si cambian, se conservan versión, decisión y prueba que las sustentan.
+- Ofrecer tabla estructurada accesible para participantes que no trabajen cómodamente con diagramas. Los mismos criterios aplican a ambos formatos.
+- No afirmar que C-103/C-107 ocurrieron realmente ni que HH-16 fue verificado en producción. La corrección ciega y el cronometraje con ayudantes son pruebas aún pendientes.
 
