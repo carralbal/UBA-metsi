@@ -1,0 +1,12 @@
+# N25 · cotejo de contenido y edición digital · 28/10/2026
+
+**Alcance:** PDF público para pantalla, sin candidata privada persistente. No sustituye ensayo docente, accesibilidad humana ni preprensa.
+
+- Ruta `site/pdf/publicados/N25-METSI-lectura-previa-v10-final.pdf`, 33 A4, SHA-256 `19cd382b9ea34ef09878dbc0e4ccfa4502740e809e524b9015df360e8adeb241`.
+- Se recorrió una plancha de 33/33 páginas y se cotejaron completos pp. 21–23, 29 y 31. No se detectó corte ni razón para reemplazar el PDF. Referentes p. 3 conserva la franja gris de la familia de 30.
+- HH25-01 sigue **una modificación**, no un huésped: 46 días desde la demanda hasta el uso, 8 activos y 38 de espera. La espera se descompone en 9 + 12 + 11 + 6 = 38. La lectura distingue inicio desde la demanda, compromiso de capacidad, disponibilidad técnica y uso en todos los turnos; no adelanta artificialmente el comienzo del reloj.
+- La submuestra didáctica de diez unidades es aritméticamente coherente: tiempos totales suman 582 días-unidad, activos 83, reaperturas 14, mediana (46+52)/2 = 49, y 83/582 ≈ 14,3 %. El texto advierte que 582 no es la duración del proyecto porque las unidades pueden superponerse, y que las cifras no prueban causalidad ni identifican espera eliminable por sí solas.
+- P. 23 prueba una urgencia, ausencia de capacidad, solicitud fuera del tablero y caso extremo, además de horas extra y reparación. Pp. 29/31 exigen **un** mapa de una unidad, dos relojes/esperas y una política con efecto esperado, riesgo y revisión. No es una segunda entrega ni una orden de suprimir controles protectores.
+- El recibo histórico `work/UBA-metsi-publication/pedagogy/N25/QA-DIGITAL-v7-20261024.md` registra publicación exacta, 33 páginas, 89 anotaciones y 23 destinos. Importante: la edición digital de octubre fue una corrección localizada **a nivel PDF** sobre el PDF público anterior; las reconstrucciones HTML v2–v5 se rechazaron por cambiar portada/paginación. Por tanto, no hay fuente HTML única comprobada que regenere el PDF actual. Antes de editar N25, recuperar el PDF público exacto y la secuencia de parches/QA de ese recibo; no producirlo desde uno de esos HTML rechazados. Consolidar una fuente reproducible sigue pendiente.
+
+**Dictamen:** conservar el PDF público sin cambios. Ensayar con docentes si el alumnado distingue ambos relojes y el costo de trasladar una cola; revisar franja de Referentes como decisión de colección. La aptitud de imprenta y lector asistido continúan sin certificar.
