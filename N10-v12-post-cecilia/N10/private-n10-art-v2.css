@@ -1,0 +1,44 @@
+/* Give the four N10 voices a photographic magazine scale, not a grey stub. */
+body.premium-magazine.document-n10 #voices-N10 {
+  background: transparent !important;
+  border-top: .65mm solid #171917 !important;
+  border-bottom: .25mm solid #888a84 !important;
+  padding: 5mm 0 4mm !important;
+  margin-top: 6mm !important;
+}
+body.premium-magazine.document-n10 #voices-N10 header {
+  margin-bottom: 5mm !important;
+}
+body.premium-magazine.document-n10 #voices-N10 header h2 {
+  font-size: 25pt !important;
+  margin: 1.5mm 0 1mm !important;
+}
+body.premium-magazine.document-n10 #voices-N10 .hotel-voices-grid {
+  gap: 4mm 5mm !important;
+}
+body.premium-magazine.document-n10 #voices-N10 .hotel-voices-grid article {
+  grid-template-columns: 37mm 1fr !important;
+  min-height: 49mm !important;
+  border-top: .3mm solid #777 !important;
+}
+body.premium-magazine.document-n10 #voices-N10 .hotel-voices-grid img {
+  width: 37mm !important;
+  height: 49mm !important;
+}
+body.premium-magazine.document-n10 #voices-N10 .hotel-voices-grid article div {
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 3mm 2.5mm 2mm !important;
+}
+body.premium-magazine.document-n10 #voices-N10 .hotel-voices-grid span {
+  font-size: 6.7pt !important;
+}
+body.premium-magazine.document-n10 #voices-N10 .hotel-voices-grid h3 {
+  font-size: 15pt !important;
+  line-height: 1.05 !important;
+  margin: 1.6mm 0 auto !important;
+}
+body.premium-magazine.document-n10 #voices-N10 .hotel-voices-grid p {
+  font-size: 8.8pt !important;
+  line-height: 1.18 !important;
+}
