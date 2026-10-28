@@ -2,7 +2,7 @@
 
 ## Estado
 
-Versión digital candidata, comprobada localmente; **la publicación y el cotejo remoto todavía deben registrarse aquí**. No es aprobación académica docente ni prueba de imprenta.
+Versión digital publicada y comprobada localmente y en el archivo servido por GitHub Pages. No es aprobación académica docente ni prueba de imprenta.
 
 ## Fuente fiel y cambio curricular
 
@@ -20,6 +20,13 @@ Versión digital candidata, comprobada localmente; **la publicación y el cotejo
 - Planchas de contacto de 37/37 páginas inspeccionadas; pp. 26 (transferencia) y 28 (HH-10) abiertas ampliadas. No se observaron solapes o cortes. `pdfplumber`: cero caracteres fuera de A4, cero caracteres de menos de 5 pt. Advertencia no fatal `FontBBox` durante el acabado; PDF abierto y renderizado.
 - La comparación de texto con el PDF público anterior conserva 37/37 páginas. Las diferencias sustantivas se concentran en pp. 26, 28, 32 y 35; cambios mínimos en otras hojas son de extracción/maquetación, no se detectó pérdida de contenido en los 274 bloques reconciliados.
 
+## Publicación comprobada
+
+- Commit de contenido: `865f8379a83b889eba5bb8fc70324c087d010fa3` en `main`.
+- GitHub Pages: ejecución `40608878541`, `completed/success`; el PDF se descargó desde la URL pública.
+- URL: `https://carralbal.github.io/UBA-metsi/pdf/N10-METSI-lectura-previa-v10-final.pdf?v=n10-post-cecilia-20261027-verified`.
+- Descarga pública y PDF local: SHA-256 idéntico `6bf82a6b99e137467c8f2ac71bb92dd548e410da2bcb7895cf5bc323b3e2a5fc`.
+
 ## Pendiente
 
-Publicar PDF y fuente, verificar GitHub Pages y cotejar SHA de descarga remota. Ensayar con docentes la lectura N01→N10 y el tiempo de la misma ficha; no declarar aprobación académica, validación humana de accesibilidad o aptitud de imprenta por este control.
+Ensayar con docentes la lectura N01→N10 y el tiempo de la misma ficha; no declarar aprobación académica, validación humana de accesibilidad o aptitud de imprenta por este control.
