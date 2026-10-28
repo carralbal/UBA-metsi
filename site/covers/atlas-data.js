@@ -453,7 +453,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Distinguir proyecto, producto, servicio y plataforma",
           "page": 13,
           "title": "El proyecto termina. El servicio sigue.",
-          "href": "pdf/publicados/N21-METSI-lectura-previa-v10-final.pdf?v=n21-verified-20261026#page=13"
+          "href": "pdf/publicados/N21-METSI-lectura-previa-v10-final.pdf?v=n21-referentes-neutral-20261028#page=13"
         },
         {
           "code": "N24",
@@ -628,7 +628,7 @@ window.METSI_ATLAS = {
           "section": "Las ideas que sostienen el recorrido",
           "page": 12,
           "title": "El proyecto termina. El servicio sigue.",
-          "href": "pdf/publicados/N21-METSI-lectura-previa-v10-final.pdf?v=n21-verified-20261026#page=12"
+          "href": "pdf/publicados/N21-METSI-lectura-previa-v10-final.pdf?v=n21-referentes-neutral-20261028#page=12"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"

@@ -1,0 +1,25 @@
+{
+  "title": "Una capacidad convive con cuatro gobiernos",
+  "claim": "Proyecto, producto, servicio y plataforma comparten capacidades, pero exigen horizontes, evidencia, autoridad y cierres diferentes.",
+  "source_sections": [
+    {"id":"thesis","heading":"Tesis","summary":"Los cuatro objetos requieren gobiernos distintos aunque compartan una misma capacidad."},
+    {"id":"hh21","heading":"Hotel Horizonte: cuatro objetos alrededor de una promesa","summary":"HH-21 separa transición, aprendizaje de producto, promesa de servicio y capacidades de plataforma."},
+    {"id":"movement1","heading":"Movimiento 1 · Distinguir proyecto, producto, servicio y plataforma","summary":"La clasificación se define por la relación que se pretende sostener, no por la apariencia del artefacto."},
+    {"id":"movement2","heading":"Movimiento 2 · Alinear valor, autoridad y financiación con cada objeto","summary":"Cada objeto cambia horizonte, unidad de valor, ownership, operación y financiación."}
+  ],
+  "nodes": [
+    {"id":"capacity","label":"Entregar una habitación utilizable o una reparación definida","role":"shared_capacity","source":["hh21"],"purpose":"Fijar el resultado común sin adjudicarlo a una sola capa."},
+    {"id":"project","label":"Proyecto","role":"object","source":["movement1"],"purpose":"Coordinar una transición temporal y transferir capacidad."},
+    {"id":"product","label":"Producto","role":"object","source":["movement1"],"purpose":"Aprender sobre valor para una población y revisar inversión."},
+    {"id":"service","label":"Servicio","role":"object","source":["movement1"],"purpose":"Sostener una promesa en uso, soporte, excepción y reparación."},
+    {"id":"platform","label":"Plataforma","role":"object","source":["movement1"],"purpose":"Gobernar capacidades, contratos, evolución y salida compartidos."},
+    {"id":"decision","label":"Limitar población y conservar salida","role":"decision","source":["hh21"],"purpose":"Resolver el conflicto sin confundir el cumplimiento de una capa con el resultado común."}
+  ],
+  "edges": [
+    {"id":"govern","from":"capacity","to":"project","relation":"coexists","source":["hh21"],"meaning":"La capacidad requiere varias perspectivas de gobierno simultáneas."},
+    {"id":"learn","from":"capacity","to":"product","relation":"coexists","source":["hh21"],"meaning":"El producto conserva aprendizaje y decisión sobre valor."},
+    {"id":"operate","from":"capacity","to":"service","relation":"coexists","source":["hh21"],"meaning":"El servicio mantiene la promesa luego del cierre temporal."},
+    {"id":"share","from":"capacity","to":"platform","relation":"coexists","source":["hh21"],"meaning":"La plataforma ofrece capacidades y reglas a múltiples consumidores."},
+    {"id":"resolve","from":"service","to":"decision","relation":"conflict_resolution","source":["hh21"],"meaning":"La decisión integra restricciones sin borrar responsabilidades distintas."}
+  ]
+}
