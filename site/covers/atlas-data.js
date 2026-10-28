@@ -20,7 +20,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 2 · Observar cómo regresan los efectos",
           "page": 13,
           "title": "Resolver acá, complicar allá",
-          "href": "pdf/N03-METSI-lectura-previa-v11-final.pdf?v=n03-digital-20261023#page=13"
+          "href": "pdf/N03-METSI-lectura-previa-v11-final.pdf?v=n03-editorial-20261028#page=13"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
