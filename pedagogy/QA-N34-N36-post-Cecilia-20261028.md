@@ -18,7 +18,7 @@ Fecha: 28/10/2026. Alcance: edición digital para pantalla; **no** aprobación d
 
 Las tres p. 3 «Referentes» exhibían la misma franja gris de centro en `paper`, un relleno heredado del rectángulo `[0,2336,794,1123]`. `scripts/normalize_n34_n36_referentes_20261028.py` exige SHA y estructura esperada y anula **sólo** esa operación de relleno en cada PDF final; no recompone la página ni crea copia privada retenida. Verificó texto, anotaciones, geometría y estructura etiquetada en **39/39**, **40/40**, **41/41** páginas, y que los streams de las demás páginas no cambiasen. Las tres p. 3 se renderizaron a 1800 px y se inspeccionaron: fondo uniforme, seis retratos y pie de página íntegros. Los deltas de fuente se registran en `pedagogy/source-overrides/referentes-paper-n34-n36.css`; no se editó el checkout histórico con trabajo preexistente.
 
-Se mantienen rutas públicas; cambian sólo claves de caché a `n34-editorial-20261028`, `n35-editorial-20261028`, `n36-editorial-20261028` en portada, manifiesto, atlas y crónicas. **No afirmar despliegue hasta éxito de Pages y SHA remoto.**
+Se mantienen rutas públicas; cambiaron sólo claves de caché a `n34-editorial-20261028`, `n35-editorial-20261028`, `n36-editorial-20261028` en portada, manifiesto, atlas y crónicas. Commit `11e5060e8530d2fd7f58c9dbca43f37d306e6b0c` en `origin/main`; Pages run `40758508820` terminó `completed/success`. `AUDITORIA-REMOTA-SHA-37-N-POST-N34-N36-20261028.json` comprobó **37/37 PDF byte idénticos**, incluidos N34–N36; `AUDITORIA-ENLACES-SITIO-37-N-POST-N34-N36-20261028.json` comprobó **37/37 rutas** de la portada. Los nueve PNG efímeros de QA N34–N36 se retiraron después del SHA. No quedó PDF candidato privado.
 
 ## Límites
 
