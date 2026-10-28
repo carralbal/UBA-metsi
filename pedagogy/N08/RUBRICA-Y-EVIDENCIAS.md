@@ -18,7 +18,7 @@
 | Adaptación | ¿Analiza función y riesgo? | Evita clasificar automáticamente como error o buena práctica. |
 | Invisibilidad | ¿Reconoce verificaciones, microdecisiones y reparación? | Explica qué desaparecería al retirar trabajo no documentado. |
 | Posición ética | ¿La observación evita castigo y exposición? | Declara propósito, límites, protección y devolución. |
-| Transformación | ¿El cambio conserva capacidad y produce evidencia? | Incluye hipótesis, señal posterior y límite de generalización. |
+| Transformación u oportunidad | ¿La señal permite investigar sin preelegir herramienta? | Incluye hipótesis rival, próxima evidencia, función a conservar y límite de generalización; no proclama beneficio no medido. |
 
 ## Evidencia de aprendizaje
 

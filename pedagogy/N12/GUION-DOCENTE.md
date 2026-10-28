@@ -2,19 +2,19 @@
 
 ## Función del soporte visual
 
-El soporte coordina una transición y revela registros parciales. No presenta una máquina de estados terminada para copiar.
+El soporte coordina una transición y revela registros parciales. No presenta una máquina de estados terminada para copiar. La historia debe terminar en un **RF, un RNF y pruebas de aceptación refutables**, como N12 pp. 7–8, sin prometer que un mensaje equivale a aceptación.
 
 | Pantalla | Qué se ve | Nota de orador | Señal para avanzar |
 |---:|---|---|---|
 | 1 | Pregunta profesional de N12 | Pedir cuándo una habitación está realmente disponible. | Aparecen reglas y autoridades distintas. |
-| 2 | Cinco funciones mezcladas | Exigir justificación de comando, evento, estado, consulta y evidencia. | Los casos ambiguos quedan explícitos. |
+| 2 | Cinco funciones mezcladas | Exigir justificación de comando, evento, estado, consulta y evidencia; preguntar cuál afirmación necesita RF. | Los casos ambiguos quedan explícitos. |
 | 3 | Coreografía vacía | Distribuir solicitud, validación, decisión, observación y reparación. | La transición expresa responsabilidades. |
 | 4 | Permiso y autoridad | Introducir una credencial válida sin legitimidad para decidir. | El grupo separa ambas capacidades. |
 | 5 | Tres líneas temporales | No ordenar por marca horaria sin analizar relojes y conocimiento. | Se declara qué orden está probado. |
 | 6 | Proyecciones divergentes | Preguntar qué eventos conoce cada vista. | La divergencia produce una pregunta verificable. |
 | 7 | Corrección y compensación | Recordar que corregir estado no borra consecuencias. | La reparación incluye actor y evidencia. |
 | 8 | Matriz de autoridad | Incluir propuesta de IA sin autoridad final. | Cada acción tiene límite y escalamiento. |
-| 9 | Casos de prueba | Ejecutar éxito, rechazo, duplicado y corrección. | El modelo conserva invariantes e historia. |
+| 9 | RF/RNF y aceptación | Ejecutar éxito, rechazo, duplicado y corrección; trazar cada requisito a una prueba que pueda fallar. | Una interfaz verde no sustituye decisión ni uso accesible. |
 | 10 | Puente a N13 | Retirar una respuesta o cruzar dos intenciones válidas. | Surge un estado ambiguo. |
 
 ## Preguntas de sondeo
@@ -26,6 +26,7 @@ El soporte coordina una transición y revela registros parciales. No presenta un
 - ¿Qué eventos conoce esta proyección?
 - ¿Qué invariante debe mantenerse?
 - ¿Cómo se rechaza, corrige y repara?
+- ¿Qué RF/RNF sostiene la afirmación y qué prueba concreta la refutaría?
 
 ## Errores esperables
 
@@ -48,6 +49,10 @@ Intervención: presentar una operación técnicamente posible pero institucional
 ### Reparación reducida a sobrescritura
 
 Intervención: preguntar qué consecuencia ya ocurrió y quién debe responder.
+
+### «Solicitud recibida» tratada como aceptación
+
+Intervención: usar Martina/Julián de pp. 7–8 para separar pedido, decisión de cupo, estado mostrado y correo entregado; no inventar una política institucional ausente.
 
 ## Decisiones de facilitación
 

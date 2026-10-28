@@ -13,9 +13,9 @@ Cada criterio se observa en cuatro niveles:
 
 | Criterio | Pregunta de evaluación | Evidencia de nivel 3 |
 |---|---|---|
-| Separación conceptual | ¿Distingue pedido, propósito, problema posible y solución preferida? | Ningún elemento ocupa dos funciones sin justificación. |
+| Separación conceptual | ¿Distingue origen por pedido o señal, propósito, problema posible y solución preferida? | Ningún elemento ocupa dos funciones sin justificación; la señal tampoco prueba una causa. |
 | Incertidumbre | ¿La incertidumbre está vinculada con una decisión? | Declara qué todavía no puede decidirse y por qué. |
-| Procedencia | ¿Puede reconstruirse de dónde proviene cada afirmación? | Distingue pedido, observación, relato, inferencia y supuesto. |
+| Procedencia | ¿Puede reconstruirse de dónde proviene cada afirmación? | Distingue pedido, observación, relato, inferencia y supuesto, incluso sin solicitante formal. |
 | Proporcionalidad | ¿La próxima acción corresponde al riesgo y a la evidencia disponible? | Autoriza aprendizaje real sin comprometer una solución total. |
 | Autoridad | ¿Está claro quién puede decidir, revisar, detener y reparar? | La distribución de autoridad forma parte del memo. |
 | Revisabilidad | ¿Existe evidencia adversa capaz de cambiar el camino? | La condición es concreta, observable y relevante para la decisión. |

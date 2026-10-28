@@ -2,12 +2,12 @@
 
 ## Propósito
 
-Llegar al encuentro con una primera transformación del pedido de Hotel Horizonte. La tarea no consiste en resumir la lectura, sino en declarar qué todavía no se sabe y qué decisión resulta prematura.
+Llegar al encuentro con una primera transformación de **uno de dos orígenes**: un pedido de solución o una oportunidad observada sin encargo. La tarea no consiste en resumir la lectura, sino en declarar qué todavía no se sabe y qué decisión resulta prematura. N01 público ofrece ambas puertas y **una misma ficha HH-01**.
 
 ## Insumos
 
 - N01, *Metodología sin recetas: intervenir cuando el problema todavía no está claro*.
-- Pedido inicial de Hotel Horizonte y personajes del caso.
+- Pedido inicial de Hotel Horizonte **o** señal observada sin pedido, y personajes del caso. No se trabajan dos fichas.
 - Plantilla HH-01 incluida al final de esta guía.
 
 ## Producción requerida
@@ -16,7 +16,7 @@ Elegí dos de las siete preguntas de preparación de N01 y respondelas con refer
 
 | Campo | Primera versión |
 |---|---|
-| Pedido recibido | |
+| Origen: pedido recibido o señal observada (y su fuente) | |
 | Propósito que podría justificar una intervención | |
 | Incertidumbres que impiden comprometer una solución | |
 | Evidencia disponible | |
@@ -28,7 +28,7 @@ Marcá el campo que te resultó más difícil y explicá en dos o tres líneas p
 
 ## Criterios de entrada al encuentro
 
-- El pedido y el propósito no aparecen como equivalentes.
+- El pedido o la señal no se confunden con el problema ya demostrado ni con el propósito.
 - Las soluciones solicitadas se conservan como alternativas o restricciones, no como causas demostradas.
 - La incertidumbre está vinculada con una decisión.
 - La condición de revisión describe evidencia posible y no una opinión genérica.

@@ -11,14 +11,14 @@
 
 | Criterio | Pregunta de evaluación | Evidencia de nivel 3 |
 |---|---|---|
-| Distinciones | ¿Separa pedido, síntoma, mecanismo, problema y solución? | Cada elemento cumple una función y admite evidencia diferente. |
+| Distinciones | ¿Separa origen —pedido o señal sin encargo—, síntoma, mecanismo, problema y solución? | Cada elemento cumple una función y admite evidencia diferente, aun sin cliente que haya formulado un pedido. |
 | Población | ¿Declara quién experimenta el fenómeno? | Incluye variación, exclusiones y afectados con poca voz. |
 | Mecanismo | ¿Explica cómo se produce el resultado actual? | Puede contrastarse contra mecanismos rivales. |
 | Outcome | ¿Nombra cambio, población y horizonte? | No depende de entregar una tecnología específica. |
 | Protección | ¿Declara qué éxito no autoriza? | Incluye anti-outcome, daño y señal observable. |
 | Evidencia | ¿Integra N01 a N09 con procedencia? | Cada pieza sostiene o debilita una afirmación del encuadre. |
 | Rivalidad | ¿Puede otra explicación cambiar la intervención? | Existen prueba discriminante y condición de división. |
-| Puerta | ¿La decisión es proporcional y revisable? | Distingue aprobar, devolver, dividir o reformular y lo que sigue prohibido. |
+| Puerta | ¿La decisión es proporcional y revisable? | Distingue iniciar una investigación, investigar más, no iniciar, dividir o reformular y lo que sigue prohibido. |
 
 ## Evidencia de aprendizaje
 

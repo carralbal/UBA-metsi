@@ -7,7 +7,7 @@ Las pantallas coordinan la actividad. No reproducen el contenido de N01. Cada pa
 | Pantalla | Qué se ve | Nota de orador | Señal para avanzar |
 |---:|---|---|---|
 | 1 | Pregunta profesional de N01 | Pedir una respuesta antes de explicar. Registrar palabras usadas para nombrar el problema. | Existe diversidad real de respuestas. |
-| 2 | `¿Comprar el PMS ahora? Sí, no o todavía no` | No aceptar una opción sin razón y evidencia faltante. | Todas las personas tomaron posición. |
+| 2 | «Pedido de PMS» / «señal sin encargo»: ¿comprometer solución? | Repartir orígenes, una misma ficha; no aceptar opción sin razón y evidencia faltante. | Todas las personas tomaron posición sin preelegir herramienta. |
 | 3 | Tres columnas: pedido, problema, solución | Ubicar ejemplos aportados por el grupo. No corregir todavía los casos ambiguos. | Aparecen al menos dos clasificaciones discutibles. |
 | 4 | Dos HH-01 anónimos y contrastantes | Preguntar qué diferencia cambia una decisión. Evitar elegir el más prolijo. | El grupo identifica una consecuencia concreta. |
 | 5 | Prueba metodológica en cuatro preguntas | Explicar sólo las confusiones observadas. Conectar incertidumbre y decisión. | Los equipos pueden aplicarla a su memo. |
@@ -20,6 +20,7 @@ Las pantallas coordinan la actividad. No reproducen el contenido de N01. Cada pa
 ## Preguntas de sondeo
 
 - ¿Qué dato del pedido funciona como evidencia y cuál sólo expresa una preferencia?
+- Si nadie pidió nada, ¿qué observación abre una pregunta y qué todavía no demuestra?
 - ¿Qué tendría que ocurrir para abandonar esta explicación?
 - ¿Quién puede detener o revisar la próxima acción?
 - ¿Qué actor no está representado en el propósito formulado?

@@ -2,7 +2,7 @@
 
 ## Resultado del encuentro
 
-Cada equipo entrega un registro estratificado de HH-08 y un service blueprint que hace visible trabajo, transferencias, adaptaciones, autoridad y reparación sin convertir la observación en auditoría punitiva.
+Cada equipo entrega **una ficha HH-08 con registro y blueprint integrados**: trabajo, transferencias, adaptaciones, autoridad y reparación. También puede abrir una investigación **sin pedido de solución**, sin convertir una cifra observada en diagnóstico causal ni la observación en auditoría punitiva.
 
 ## Duración base
 
@@ -43,7 +43,7 @@ Los equipos formulan preguntas sobre decisiones observadas, sin acusar ni romant
 
 ### 7. Transformación responsable, 17 minutos
 
-Cada equipo propone un cambio que conserve la función útil y reduzca riesgo o carga. Declara qué deberá observarse después y qué no puede concluirse con una escena.
+Cada equipo formula una **oportunidad de investigación o cambio provisional** que conserve la función útil y reduzca riesgo/carga. Usa la señal ficticia de N08 p. 25 (60 trámites, 24 contactos, 16 «Completo» prematuros) como prueba de que puede surgir una pregunta sin encargo; distingue dato, explicación rival y decisión aún no autorizada. Declara qué observaría después y qué no puede concluirse con una escena.
 
 ### 8. Cierre y puente, 8 minutos
 
@@ -55,5 +55,5 @@ Cada persona identifica una barrera vivida por quien recibe el servicio y una ca
 - registros individuales de observación;
 - service blueprint estratificado;
 - comparación entre ambas escenas;
-- propuesta de transformación y barrera para N09.
+- oportunidad/pregunta o propuesta provisional, evidencia faltante y barrera para N09; todo dentro de **una ficha HH-08**.
 

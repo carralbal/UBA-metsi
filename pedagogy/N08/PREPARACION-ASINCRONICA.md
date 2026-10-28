@@ -2,7 +2,7 @@
 
 ## Propósito
 
-Llegar con una guía para observar un episodio completo sin confundir procedimiento, descripción, interpretación y evaluación de personas.
+Llegar con una guía para observar un episodio completo sin confundir procedimiento, descripción, interpretación y evaluación de personas. La observación también puede **abrir una oportunidad sin pedido**; N08 p. 25 muestra una señal didáctica, no una mejora probada.
 
 ## Producción requerida
 
@@ -17,6 +17,8 @@ Elegí una unidad observable de HH-08 y prepará un registro en capas:
 - función que sostiene cada adaptación;
 - riesgo o deuda que introduce;
 - pregunta abierta y decisión que podría cambiar.
+
+Si nadie pidió una solución, anotá qué patrón observado justificaría investigar y qué explicación rival podría producir la misma señal. Esto ocupa el campo de pregunta abierta de la **misma ficha HH-08**, no otro informe.
 
 ## Posición de observación
 

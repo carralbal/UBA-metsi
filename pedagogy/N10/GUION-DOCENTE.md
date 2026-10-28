@@ -6,7 +6,7 @@ El soporte reúne la evidencia acumulada y muestra decisiones de encuadre. No pr
 
 | Pantalla | Qué se ve | Nota de orador | Señal para avanzar |
 |---:|---|---|---|
-| 1 | Pregunta profesional de N10 | Entregar un mandato y pedir decisión inicial. | Pedido, evidencia y solución aparecen mezclados. |
+| 1 | Pregunta profesional de N10 | Entregar un pedido o una señal sin encargo y pedir decisión inicial. | Origen, evidencia y posible solución aparecen distinguidos. |
 | 2 | Cuatro categorías | Separar pedido, síntoma, mecanismo y problema. | Cada frase tiene función explícita. |
 | 3 | Museo de encuadres | Preguntar qué intervención vuelve probable cada marco. | Se reconocen consecuencias del encuadre. |
 | 4 | Outcome y protecciones | Corregir outputs disfrazados y éxito sin límite. | La formulación incluye población, cambio y horizonte. |
@@ -14,7 +14,7 @@ El soporte reúne la evidencia acumulada y muestra decisiones de encuadre. No pr
 | 6 | Prueba de dos horas | Pedir acciones de aprendizaje anteriores a la solución. | El problema permite investigar mecanismos rivales. |
 | 7 | Evidencia adversa | No indicar si corresponde dividir o reformular. | El equipo modifica algo sustantivo o justifica conservarlo. |
 | 8 | Nueve decisiones del frame | Revisar coherencia entre población, mecanismo, outcome, protección y evidencia. | No hay contradicciones silenciosas. |
-| 9 | Puerta de decisión | Exigir decisión permitida, prohibida y condición de revisión. | El comité emite un acta argumentada. |
+| 9 | Puerta de decisión | Exigir iniciar, investigar más o no iniciar, con decisión prohibida y condición de revisión. | El comité emite un acta argumentada también para señales proactivas. |
 | 10 | Puente al Bloque C | Preguntar qué concepto necesita un modelo o dato más preciso. | Surge una necesidad de representación verificable. |
 
 ## Preguntas de sondeo
@@ -27,6 +27,7 @@ El soporte reúne la evidencia acumulada y muestra decisiones de encuadre. No pr
 - ¿Qué haría durante las primeras dos horas?
 - ¿Cuándo conviene dividir el problema?
 - ¿Qué compromiso continúa vedado?
+- Si nadie pidió una herramienta, ¿qué señal justifica investigar y qué todavía no sabemos?
 
 ## Errores esperables
 

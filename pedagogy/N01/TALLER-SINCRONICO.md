@@ -2,7 +2,7 @@
 
 ## Resultado del encuentro
 
-Cada equipo entrega una segunda versión de HH-01 capaz de distinguir pedido, propósito, incertidumbre, evidencia y autoridad. La versión debe incluir una decisión provisional y una condición concreta que pueda revisarla.
+Cada equipo entrega una segunda versión de **la misma ficha HH-01** capaz de distinguir origen por pedido **o** señal sin encargo, propósito, incertidumbre, evidencia y autoridad. La versión incluye decisión provisional y condición concreta que pueda revisarla. No hay dos recorridos ni dos entregas.
 
 ## Duración base
 
@@ -14,12 +14,13 @@ Ciento veinte minutos. La secuencia puede dividirse entre un encuentro virtual y
 - Preparar las seis piezas de evidencia de la ronda 2.
 - Imprimir o habilitar una plantilla grande de HH-01 por equipo.
 - Conservar una copia de cada primera versión para comparar al cierre.
+- Asignar a parte de los equipos una señal observada sin solicitud de PMS y al resto el pedido reactivo. Mantener iguales los siete campos y criterios de revisión.
 
 ## Secuencia
 
 ### 1. Decisión inicial, 10 minutos
 
-Consigna individual: decidir si el equipo debería iniciar ya la compra de un nuevo PMS. La respuesta sólo admite `sí`, `no` o `todavía no`, acompañada por una razón y una evidencia faltante.
+Consigna individual: ante **su origen asignado**, decidir si corresponde comprometer ya una solución —compra de PMS para unos equipos, elección de herramienta para otros—. La respuesta admite `sí`, `no` o `todavía no`, con razón y evidencia faltante. La señal observada no autoriza por sí misma una compra.
 
 El docente releva la distribución sin debatir cuál opción es correcta.
 
@@ -31,14 +32,14 @@ En grupos de cuatro, cada persona comparte el campo más difícil de HH-01. El g
 
 El docente trabaja únicamente sobre dos confusiones observadas:
 
-- pedido como prueba del problema;
+- pedido **o señal** como prueba del problema;
 - actividad como evidencia de aprendizaje.
 
 La intervención termina con la prueba de calidad metodológica: qué incertidumbre se reduce, antes de qué decisión, mediante qué evidencia y qué resultado modificaría el camino.
 
 ### 4. Reconstrucción de HH-01, 23 minutos
 
-Cada equipo produce una versión común. Debe conservar desacuerdos relevantes y declarar qué actor podría cuestionar su propósito.
+Cada equipo produce una versión común de HH-01. Debe conservar desacuerdos relevantes, procedencia de pedido/señal y qué actor podría cuestionar su propósito. Al intercambiar, otro equipo puede recibir el **otro origen** sin cambiar el instrumento.
 
 ### 5. Perturbación, 20 minutos
 

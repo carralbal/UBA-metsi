@@ -2,7 +2,7 @@
 
 ## Resultado del encuentro
 
-Cada equipo entrega un mapa de transición verificable para la habitación 412 de HH-12, con semántica, tiempos, autoridad, invariantes y reparación.
+Cada equipo entrega **un mapa HH-12** para la habitación 412 con semántica, tiempos, autoridad, invariante y reparación, más una especificación breve **dentro del mismo mapa**: RF, RNF y pruebas de aceptación que puedan fallar. No se agrega otro producto.
 
 ## Duración base
 
@@ -19,7 +19,7 @@ Ciento veinte minutos.
 
 ### 1. Clasificación de afirmaciones, 10 minutos
 
-Cada persona clasifica frases como comando, evento, estado, consulta o evidencia. Debe justificar dos casos ambiguos.
+Cada persona clasifica frases como comando, evento, estado, consulta o evidencia, y señala cuál afirmación requerirá un RF y una prueba adversa. Debe justificar dos casos ambiguos; no convertir «recibido» en «aceptado».
 
 ### 2. Coreografía de transición, 15 minutos
 
@@ -43,7 +43,7 @@ Para declarar, corregir, retractar y compensar, el equipo asigna autoridad, evid
 
 ### 7. Prueba de transición, 20 minutos
 
-Otro equipo ejecuta camino exitoso, rechazo, duplicado y corrección. Registra si el modelo protege invariantes y conserva una historia explicable.
+Otro equipo ejecuta camino exitoso, rechazo, duplicado y corrección. Del mismo mapa extrae **un RF, un RNF y dos pruebas refutables**; marca qué fuente autoriza la regla, qué resultado prueba cada caso y dónde fallaría aun con una pantalla correcta. Registra si el modelo protege invariantes e historia.
 
 ### 8. Cierre y puente, 8 minutos
 
@@ -56,5 +56,5 @@ Cada persona identifica una respuesta perdida o dos comandos concurrentes que N1
 - línea de tres tiempos;
 - análisis de proyecciones;
 - matriz de autoridad y reparación;
-- mapa probado y falla de transición para N13.
+- un solo mapa HH-12 con RF/RNF, trazas de aceptación y falla de transición para N13.
 

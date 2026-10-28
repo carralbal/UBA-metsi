@@ -12,14 +12,14 @@ Ciento veinte minutos.
 
 - Seleccionar pares de encuadres que conduzcan a intervenciones distintas.
 - Preparar un muro con evidencias acumuladas de N01 a N09.
-- Preparar cuatro mandatos ejecutivos: reemplazar PMS, lanzar IA, reducir espera y recuperar margen.
+- Preparar tres mandatos ejecutivos (reemplazar PMS, lanzar IA, reducir espera) y una señal **sin pedido** de oportunidad de mejora; todos deben tener evidencia rival.
 - Preparar una evidencia que contradiga cada encuadre dominante.
 
 ## Secuencia
 
-### 1. Mandato y primera decisión, 10 minutos
+### 1. Dos orígenes y primera decisión, 10 minutos
 
-Cada equipo recibe un mandato y debe escribir qué aprobaría hoy. Luego separa pedido, solución preferida, restricción y evidencia.
+Cada equipo recibe un mandato o una señal observada sin encargo y debe escribir qué aprobaría hoy. Luego separa origen, fenómeno, solución preferida si la hay, restricción, evidencia y lo que todavía no autoriza. La señal no se convierte automáticamente en proyecto.
 
 ### 2. Museo de encuadres rivales, 15 minutos
 
@@ -43,7 +43,7 @@ Se introduce evidencia que fortalece un mecanismo y debilita otro. El equipo dec
 
 ### 7. Comité de puerta, 21 minutos
 
-Cada equipo presenta su problem frame en nueve decisiones. El comité elige aprobar una investigación o piloto, devolver por evidencia insuficiente, dividir o reformular. Debe indicar qué decisión mayor sigue prohibida.
+Cada equipo presenta su problem frame en nueve decisiones. El comité elige iniciar una investigación o piloto, investigar más antes de comprometerse, no iniciar, dividir o reformular. Debe indicar qué decisión mayor sigue prohibida. Una oportunidad proactiva pasa por la misma puerta de evidencia que un pedido.
 
 ### 8. Cierre del bloque, 8 minutos
 
@@ -51,7 +51,7 @@ Cada persona traza qué cambió desde su memo N01 hasta el encuadre N10 y regist
 
 ## Evidencias para el portfolio
 
-- decisión bajo mandato;
+- decisión según origen —pedido u oportunidad sin encargo—;
 - marcas del museo;
 - mapa de procedencia N01 a N09;
 - prueba de las primeras dos horas;

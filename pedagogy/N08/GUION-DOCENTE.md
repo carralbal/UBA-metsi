@@ -13,8 +13,8 @@ El soporte administra focos de observación y capas del trabajo. No muestra el b
 | 5 | Primera reconstrucción | Preguntar qué quedó invisible para cada observador. | Aparecen transferencias y microdecisiones. |
 | 6 | Escena perturbada | Retirar una práctica que parecía informal. | Se identifica la función que sostenía. |
 | 7 | Consulta no punitiva | Pedir decisión y restricción, no justificar conducta personal. | Las interpretaciones pueden corregirse. |
-| 8 | Prueba de transformación | Conservar capacidad y reducir riesgo o carga. | El cambio incluye evidencia posterior. |
-| 9 | Límite de inferencia | Recordar muestra, reactividad y condiciones observadas. | No se generaliza desde un caso sin declarar alcance. |
+| 8 | Señal sin encargo | Usar 60/24/16 de p. 25 para formular oportunidad, rival y próxima investigación, no compra. | Hay pregunta proactiva sin causalidad inventada. |
+| 9 | Límite de inferencia | Recordar muestra, reactividad y condiciones observadas. | No se generaliza ni se proclama mejora desde un caso. |
 | 10 | Puente a N09 | Seguir el episodio desde quien recibe el servicio. | Aparecen barrera, asistencia y reparación. |
 
 ## Preguntas de sondeo
@@ -26,6 +26,7 @@ El soporte administra focos de observación y capas del trabajo. No muestra el b
 - ¿Quién autoriza esta microdecisión?
 - ¿Qué cambia al retirar la práctica informal?
 - ¿Qué debería observarse después del rediseño?
+- Si nadie pidió una herramienta, ¿qué señal abre investigación y qué todavía no autoriza?
 
 ## Errores esperables
 
