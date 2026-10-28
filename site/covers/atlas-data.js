@@ -63,7 +63,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Convertir «funciona bien» en una pregunta concreta",
           "page": 13,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=n28-digital-20261024#page=13"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=n28-editorial-20261028#page=13"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -217,7 +217,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Evaluar propiedades sin perder a las personas",
           "page": 17,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=n28-digital-20261024#page=17"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=n28-editorial-20261028#page=17"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -596,14 +596,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Convertir «funciona bien» en una pregunta concreta",
           "page": 13,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=n28-digital-20261024#page=13"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=n28-editorial-20261028#page=13"
         },
         {
           "code": "N28",
           "section": "Movimiento 2 · Elegir evidencia que responda a la decisión",
           "page": 15,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=n28-digital-20261024#page=15"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=n28-editorial-20261028#page=15"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -646,7 +646,7 @@ window.METSI_ATLAS = {
           "section": "DevOps: construir y operar sin pasarse el problema",
           "page": 15,
           "title": "Cambiar sin dejar de atender",
-          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=n29-digital-20261024#page=15"
+          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=n29-editorial-20261028#page=15"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -664,7 +664,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Saber exactamente qué estamos cambiando",
           "page": 12,
           "title": "Cambiar sin dejar de atender",
-          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=n29-digital-20261024#page=12"
+          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=n29-editorial-20261028#page=12"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -682,7 +682,7 @@ window.METSI_ATLAS = {
           "section": "Las ideas que sostienen el recorrido",
           "page": 11,
           "title": "Cambiar sin dejar de atender",
-          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=n29-digital-20261024#page=11"
+          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=n29-editorial-20261028#page=11"
         },
         {
           "code": "N25",
@@ -750,7 +750,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 2 · Elegir evidencia que responda a la decisión",
           "page": 15,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=n28-digital-20261024#page=15"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=n28-editorial-20261028#page=15"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -768,7 +768,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Evaluar propiedades sin perder a las personas",
           "page": 17,
           "title": "Funciona, pero ¿funciona bien?",
-          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=n28-digital-20261024#page=17"
+          "href": "pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=n28-editorial-20261028#page=17"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -786,7 +786,7 @@ window.METSI_ATLAS = {
           "section": "Las ideas que sostienen el recorrido",
           "page": 11,
           "title": "Cambiar sin dejar de atender",
-          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=n29-digital-20261024#page=11"
+          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=n29-editorial-20261028#page=11"
         },
         {
           "code": "N27",
@@ -811,7 +811,7 @@ window.METSI_ATLAS = {
           "section": "Las ideas que sostienen el recorrido",
           "page": 11,
           "title": "Cambiar sin dejar de atender",
-          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=n29-digital-20261024#page=11"
+          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=n29-editorial-20261028#page=11"
         },
         {
           "code": "N27",
@@ -879,7 +879,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Volver, corregir y reparar son acciones distintas",
           "page": 19,
           "title": "Cambiar sin dejar de atender",
-          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=n29-digital-20261024#page=19"
+          "href": "pdf/publicados/N29-METSI-lectura-previa-v10-final.pdf?v=n29-editorial-20261028#page=19"
         },
         {
           "code": "N30",
