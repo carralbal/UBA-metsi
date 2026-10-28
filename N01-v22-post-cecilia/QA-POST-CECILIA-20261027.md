@@ -2,7 +2,7 @@
 
 ## Estado
 
-**Versión digital lista para publicación; falta cotejo remoto de GitHub Pages.** No equivale a aprobación académica del equipo docente/Cecilia ni a preprensa.
+**Versión digital publicada y cotejada con GitHub Pages.** No equivale a aprobación académica del equipo docente/Cecilia ni a preprensa.
 
 ## Procedencia y reconciliación
 
@@ -20,6 +20,13 @@
 - Planchas de contacto de las 36 páginas inspeccionadas; se abrieron además pp. 4, 27, 28, 34 y 35 ampliadas y las cuatro páginas con acabado. No se observaron cortes ni solapamientos. `pdfplumber`: cero caracteres fuera de página y cero caracteres de tamaño menor a 5 pt. Las seis imágenes de referentes de p. 3 están presentes. Una advertencia no fatal `FontBBox` ocurrió durante el acabado; el PDF abre, conserva texto y renderiza.
 - El paquete editable se reimprimió de forma independiente: 36/36 páginas y texto normalizado idéntico al HTML ensayado, 223 bloques visibles, cero imágenes faltantes.
 
+## Publicación comprobada
+
+- Commit de contenido: `78075cf8719778b860e5d75387562148bce15ba7` en `main`.
+- GitHub Pages: ejecución `40606228045`, resultado `success`.
+- URL: `https://carralbal.github.io/UBA-metsi/pdf/N01-METSI-lectura-previa-v19-final.pdf?v=n01-post-cecilia-20261027-verified`.
+- Descarga pública y PDF local: SHA-256 idéntico `53be797ea45234a654a29dbf445173cbbe23355a2a98948a6c72103cc28f6821`.
+
 ## Pendiente
 
-Publicar, esperar Pages y comparar la descarga remota en bytes/SHA; probar con docentes la carga real de N01→N10 y comprobar que la segunda puerta no agrega una entrega al cuatrimestre. La validación humana de accesibilidad y la preprensa no forman parte de este recibo.
+Probar con docentes la carga real de N01→N10 y comprobar que la segunda puerta no agrega una entrega al cuatrimestre. La validación humana de accesibilidad y la preprensa no forman parte de este recibo.
