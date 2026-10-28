@@ -292,7 +292,7 @@ window.METSI_ATLAS = {
           "section": "Procedencia: saber de dónde salió y qué se cambió",
           "page": 16,
           "title": "La IA cambió. ¿Sigue siendo confiable?",
-          "href": "pdf/publicados/N33-METSI-lectura-previa-v10-final.pdf?v=n33-digital-20261024#page=16"
+          "href": "pdf/publicados/N33-METSI-lectura-previa-v10-final.pdf?v=n33-editorial-20261028#page=16"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -836,7 +836,7 @@ window.METSI_ATLAS = {
           "section": "Inventariar usos, no solamente licencias",
           "page": 11,
           "title": "La IA cambió. ¿Sigue siendo confiable?",
-          "href": "pdf/publicados/N33-METSI-lectura-previa-v10-final.pdf?v=n33-digital-20261024#page=11"
+          "href": "pdf/publicados/N33-METSI-lectura-previa-v10-final.pdf?v=n33-editorial-20261028#page=11"
         }
       ],
       "referenceLabel": "Lectura relacionada · no desarrolla COBIT"

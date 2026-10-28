@@ -1,0 +1,16 @@
+/* Apply after the exact recovered N32/N33 stylesheets when regenerating.
+   Canonical PDF corrections of 2026-10-28; neither historical source was
+   edited in place because those checkouts contain unrelated work. */
+.premium-magazine .authors-page {
+  background: #FAFAF8 !important;
+}
+
+/* Both historical revision-local.css files zoomed Mario Bunge's original
+   200px portrait 2.7x, yielding a blurry eye crop. Same original photo as
+   already-published N28, where the full face is framed correctly. */
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n32 #referentes .contributor-mario-bunge .portrait-frame img,
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n33 #referentes .contributor-mario-bunge .portrait-frame img {
+  object-position: 50% 28% !important;
+  transform: none !important;
+  transform-origin: center !important;
+}
