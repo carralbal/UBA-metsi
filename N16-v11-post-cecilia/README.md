@@ -1,6 +1,6 @@
 # N16 · revisión post-Cecilia, versión publicada
 
-Esta carpeta es la fuente editable única de la revisión publicada de N16. El PDF visible en el sitio es `site/pdf/publicados/N16-METSI-lectura-previa-v10-final.pdf` (41 páginas; SHA-256 `d3a1926e5bd2a838c1d7154c543061cf981addd9acf19be2aef04afbebb16020`). Se conserva el nombre de la ruta pública para no romper enlaces anteriores; la revisión vigente es `n16-post-cecilia-20261028`.
+Esta carpeta es la fuente editable única de la revisión publicada de N16. El PDF visible en el sitio es `site/pdf/publicados/N16-METSI-lectura-previa-v10-final.pdf` (41 páginas; SHA-256 `cdfa170d4f3c55183e69d37abe3dbff452ede32ec6cf5c191d456d2d7a9f54fc` tras la corrección editorial de p. 3 del 28/10). Se conserva el nombre de la ruta pública para no romper enlaces anteriores; la revisión vigente se identifica como `n16-editorial-20261028`.
 
 ## Qué se incorporó
 
@@ -11,6 +11,8 @@ Esta carpeta es la fuente editable única de la revisión publicada de N16. El P
 - Dos láminas aprobadas por el usuario, páginas 28–29, con paleta METSI monocroma y acento volt.
 
 `N16/index.html` es el interior editable; las hojas de estilo, imágenes y SVG se resuelven dentro de esta carpeta. `protected-covers/definitive/N16.pdf` guarda sólo la primera página aprobada. La portada definitiva se toma de ese archivo al ensamblar, no del marcador impreso del HTML.
+
+La corrección de la página «Referentes» se incorporó también al editable: `N16/private-n16-art-v2.css` neutraliza la franja gris, y el crédito de Peter Senge en `N16/index.html` ya no tiene coma inicial huérfana. `scripts/normalize_n15_n16_referentes_20261028.py` registró la misma corrección en el PDF canónico de forma directa. La fuente no se volvió a imprimir en esta edición localizada: el PDF existente conservó todos los otros streams, enlaces, texto y etiquetas. Al regenerar en el futuro, repetir la auditoría integral antes de reemplazarlo.
 
 `modelo/` contiene el BPMN V11, las reglas relacionales y las pruebas de casos. `qa/` conserva los resultados automáticos. El PDF final pasó el control digital de 41 páginas, 316 bloques fuente conservados, 21 destinos de índice, 34 enlaces internos, 83 externos, geometría y color. La inspección visual se hizo sobre las 41 páginas; las páginas 4, 5, 27–31 y 40–41 se examinaron además individualmente. No hay aún prueba con docentes, importación en un modelador independiente, auditoría de lector de pantalla ni preprensa; no atribuirle esas validaciones.
 

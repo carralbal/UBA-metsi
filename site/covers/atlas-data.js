@@ -88,7 +88,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Comenzar por la pregunta, no por la notación",
           "page": 11,
           "title": "Un modelo para cada pregunta",
-          "href": "pdf/publicados/N15-METSI-lectura-previa-v10-final.pdf?v=n15-digital-20261024#page=11"
+          "href": "pdf/publicados/N15-METSI-lectura-previa-v10-final.pdf?v=n15-editorial-20261028#page=11"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -106,7 +106,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Comenzar por la pregunta, no por la notación",
           "page": 11,
           "title": "Un modelo para cada pregunta",
-          "href": "pdf/publicados/N15-METSI-lectura-previa-v10-final.pdf?v=n15-digital-20261024#page=11"
+          "href": "pdf/publicados/N15-METSI-lectura-previa-v10-final.pdf?v=n15-editorial-20261028#page=11"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
