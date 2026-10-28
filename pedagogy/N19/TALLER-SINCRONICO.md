@@ -2,7 +2,7 @@
 
 ## Resultado del encuentro
 
-Cada equipo entrega una arquitectura provisional de realización para HH-19 con responsabilidades, dependencias, pruebas y salidas explícitas.
+Cada equipo entrega **un expediente HH-19**: capacidad, alternativas comparables, excluyente fijado antes de ofertas, dos supuestos, prueba ordinaria y adversa, costos conocidos y omitidos, salida, autoridad y recomendación **condicional**. La arquitectura de realización queda dentro del mismo expediente, no como segunda entrega. No se simula adjudicación ni contrato real.
 
 ## Duración base
 
@@ -10,51 +10,49 @@ Ciento veinte minutos.
 
 ## Preparación docente
 
-- Preparar seis alternativas con fortalezas y límites distintos.
-- Preparar una demostración favorable que omita excepciones.
-- Preparar cláusulas de datos, historial, continuidad y salida.
-- Preparar un incidente nocturno y una caída del proveedor.
+- Tener N19 pp. 24–25 y 35–37: necesidad común, tres ofertas **ficticias**, tres excluyentes y pesos definidos antes de abrirlas.
+- Mostrar las ofertas sólo después de que cada equipo fije necesidad, episodio ordinario/adverso y excluyentes. Conservar una copia de esa primera versión para impedir ajuste retrospectivo.
+- Preparar una prueba de salida de historial/correcciones y tarjetas de costos omitidos: migración, formación, impuestos, soporte, tratamiento de datos y continuidad.
+- Permitir cálculo manual o planilla accesible; las cuentas son didácticas y no cotizaciones.
 
 ## Secuencia
 
-### 1. Decisión después de la demo, 10 minutos
+### 1. Necesidad y excluyentes antes de ofertas, 10 minutos
 
-Cada persona elige una oferta y registra qué capacidad cree haber visto.
+Cada persona escribe la capacidad, un episodio ordinario/adverso y una condición necesaria sin ver proveedor ni precio. La primera versión se conserva para comparar al cierre.
 
-### 2. Despiece de capacidad, 15 minutos
+### 2. Alternativas para la misma capacidad, 15 minutos
 
-Los equipos separan flujo ordinario, integración, excepción, autoridad y reparación antes de comparar productos.
+Los equipos separan flujo, integración, excepción, autoridad y reparación; comparan configurar, integrar, construir, tercerizar, mantener decisión humana y no automatizar. Ninguna opción recibe una prueba más fácil.
 
-### 3. Clínica de opciones, 10 minutos
+### 3. Rúbrica y puerta, 10 minutos
 
-El docente distingue configurar, integrar, construir, tercerizar, mantener trabajo manual y no automatizar.
+El docente muestra cómo fijar pesos que sumen 100 %, evidencia para puntuar y una puerta anterior: una oferta que falla un excluyente no se rescata con descuento ni con promedio.
 
-### 4. Laboratorio comparativo, 20 minutos
+### 4. Apertura y prueba de ofertas, 20 minutos
 
-Cada equipo evalúa cobertura, tiempo, costo, control, seguridad, dependencia y operación con evidencia explícita.
+Se abren Alfa, Beta y Gamma de pp. 24–25. Cada equipo aplica el mismo episodio y los tres mínimos; registra por qué Beta queda excluida. Contrasta los costos conocidos de doce meses sin llamar a eso costo total.
 
-### 5. Demostración adversa, 18 minutos
+### 5. Puntuación con evidencia y cuenta, 18 minutos
 
-Se repite la demo con identidad rectificada, accesibilidad y caída de canal. El equipo registra qué no puede decidir ni reparar el proveedor.
+Sobre las ofertas que pasaron la puerta, calcular el ponderado con la rúbrica previa; cada nota requiere una prueba. Comparar la recomendación con la elección intuitiva inicial y registrar qué dato podría invertirla.
 
-### 6. Prueba de portabilidad, 19 minutos
+### 6. Salida y costos omitidos, 19 minutos
 
-Los equipos exportan reglas y eventos simulados y reconstruyen casos en un entorno alternativo. Identifican significado perdido y cooperación necesaria.
+En un entorno **simulado**, reconstruir una corrección de historial exportado y señalar significado perdido. Añadir dos costos omitidos y una condición de soporte/datos/continuidad a verificar antes de firmar. Un CSV sin secuencia no prueba salida.
 
-### 7. Arquitectura de realización, 20 minutos
+### 7. Recomendación y negociación condicional, 20 minutos
 
-Se combinan opciones por capacidad. Otro equipo verifica obligación no delegable, trabajo humano, salida y condición de reapertura.
+En el expediente HH-19, combinar opciones por capacidad y escribir una recomendación: negociar, pedir evidencia adicional o no comprar. Nombrar alternativa descartada, autoridad del paso siguiente, aceptación y cláusula/prueba de salida. Otro equipo busca un excluyente alterado o un costo que supere el techo.
 
 ### 8. Cierre y puente, 8 minutos
 
-Cada persona transforma la arquitectura en una dependencia metodológica para N20.
+Cada persona deja una condición de reapertura para N20 y una dependencia que N26/N27 tendrán que sostener si el servicio se contrata o integra. No se firma ni se simula una compra efectiva.
 
 ## Evidencias para el portfolio
 
-- elección inicial;
-- mapa de capacidad;
-- matriz comparativa;
-- resultado adverso;
-- prueba de portabilidad;
-- arquitectura y dependencia para N20.
+- una sola versión final del expediente HH-19, con la necesidad y excluyente previos conservados;
+- matriz/cuentas respaldadas por pruebas, incluida la oferta excluida;
+- resultado de salida simulada, costos omitidos y aceptación pendiente;
+- recomendación condicional, autoridad y vínculo a N20/N26/N27.
 
