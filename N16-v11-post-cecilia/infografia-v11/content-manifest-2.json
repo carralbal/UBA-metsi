@@ -1,0 +1,210 @@
+{
+  "title": "N16 · Comunicación y cierre · hoja 2 de 2",
+  "claim": "En este caso ficticio A/P1, Resuelto exige firma, entrega válida de esa decisión y observaciones tratadas; los fallos conservan sus intentos dentro de una reparación por episodio.",
+  "source_sections": [
+    {
+      "id": "s1",
+      "heading": "Contrato semántico de constancias · definiciones y cinco rutas",
+      "summary": "Distingue solicitud, revisión, observación entregada, respuesta, decisión comunicada, baja y fallo de aviso."
+    },
+    {
+      "id": "s2",
+      "heading": "Paquete B §2.3 · modelo conceptual de datos",
+      "summary": "Paquete B §2.3 propone nueve hechos, incluida RESPUESTA con contenido, fecha, titular, canal y clave idempotente; las reglas cruzadas requieren validación."
+    },
+    {
+      "id": "s3",
+      "heading": "Paquete B §2.6 · taller de corrección",
+      "summary": "Un estado actual y un aviso de envío no bastan para reconstruir qué ocurrió ni justificar Resuelto."
+    },
+    {
+      "id": "s4",
+      "heading": "Decisión C-106 · reparación por episodio o por intento",
+      "summary": "Para esta candidata docente privada se adopta A, un episodio por objeto/finalidad con todos los intentos; no es una política real de FCE."
+    },
+    {
+      "id": "s5",
+      "heading": "Contrato didáctico N16 del 28/10/2026, hipótesis P1",
+      "summary": "Resuelto exige firma, entrega válida de la decisión al titular y observaciones activas tratadas; P2 sigue sólo como contraejemplo abierto."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "tramite",
+      "label": "TRÁMITE",
+      "role": "system",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "purpose": "Es la unidad estable desde solicitud identificada hasta cierre comprobable."
+    },
+    {
+      "id": "observacion",
+      "label": "OBSERVACIÓN",
+      "role": "evidence",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "purpose": "Distingue la falta de información que puede requerir acción de la persona."
+    },
+    {
+      "id": "decision",
+      "label": "DECISIÓN",
+      "role": "decision",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "purpose": "Conserva el resultado y la firma sin confundir firma con comunicación."
+    },
+    {
+      "id": "baja",
+      "label": "BAJA",
+      "role": "outcome",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "purpose": "Representa un cierre alternativo, sin inventar una decisión resuelta."
+    },
+    {
+      "id": "aviso",
+      "label": "AVISO",
+      "role": "evidence",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "purpose": "Distingue finalidad y objeto identificado, canal, destinatario, generación y entrega verificada o fallida."
+    },
+    {
+      "id": "reparacion",
+      "label": "REPARACIÓN",
+      "role": "process",
+      "source": [
+        "s1",
+        "s2",
+        "s4",
+        "s5"
+      ],
+      "purpose": "En esta hipótesis ficticia A, un episodio conserva todos los intentos de un mismo objeto/finalidad, responsable, próxima acción y cierre verificable."
+    },
+    {
+      "id": "regla",
+      "label": "REGLA DE CIERRE",
+      "role": "constraint",
+      "source": [
+        "s1",
+        "s2",
+        "s3",
+        "s5"
+      ],
+      "purpose": "Distingue Resuelto, Requiere acción y Baja con evidencia de objeto/entrega, y aplica P1 a la observación activa."
+    }
+  ],
+  "edges": [
+    {
+      "id": "e4",
+      "from": "tramite",
+      "to": "decision",
+      "relation": "evidence",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "meaning": "En este recorte, puede terminar con cero o una decisión."
+    },
+    {
+      "id": "e5",
+      "from": "tramite",
+      "to": "baja",
+      "relation": "evidence",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "meaning": "En este recorte, puede cerrar por baja registrada."
+    },
+    {
+      "id": "e6",
+      "from": "tramite",
+      "to": "aviso",
+      "relation": "evidence",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "meaning": "Un aviso pertenece al mismo trámite y destinatario e identifica exactamente una observación o decisión."
+    },
+    {
+      "id": "e7",
+      "from": "observacion",
+      "to": "aviso",
+      "relation": "dependency",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "meaning": "Un aviso puede comunicar una observación activa."
+    },
+    {
+      "id": "e8",
+      "from": "decision",
+      "to": "aviso",
+      "relation": "dependency",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "meaning": "Un aviso puede comunicar una decisión firmada."
+    },
+    {
+      "id": "e9",
+      "from": "aviso",
+      "to": "reparacion",
+      "relation": "flow",
+      "source": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "meaning": "Un aviso fallido exige trabajo de reparación con responsable; los fallos posteriores del mismo objeto/finalidad integran el episodio activo A."
+    },
+    {
+      "id": "e10",
+      "from": "reparacion",
+      "to": "aviso",
+      "relation": "feedback",
+      "source": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "meaning": "El cierre exige entrega válida de la misma observación o decisión y destinatario; una entrega de otro objeto no sirve."
+    },
+    {
+      "id": "e11",
+      "from": "aviso",
+      "to": "regla",
+      "relation": "evidence",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "meaning": "La entrega verificable es una condición de un cambio de estado dependiente de comunicación."
+    },
+    {
+      "id": "e12",
+      "from": "decision",
+      "to": "regla",
+      "relation": "evidence",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "meaning": "Resuelto requiere además una decisión firmada y, bajo P1, ninguna observación activa sin tratar."
+    }
+  ]
+}

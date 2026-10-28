@@ -1,0 +1,57 @@
+{
+  "status": "PASS_PRIVATE_RELATIONAL_A_P1_LIMITED",
+  "assumptions": [
+    "A: one repair episode, all attempts retained",
+    "P1: active observation blocks resolution"
+  ],
+  "cases": [
+    "C-101",
+    "C-102",
+    "C-103",
+    "C-104",
+    "C-105",
+    "C-106-A",
+    "C-107 serial observations"
+  ],
+  "rejected_invalid_moves": [
+    "active_observation_blocks_resolution_P1",
+    "direct_state_update_without_history",
+    "answered_observation_without_response",
+    "state_change_dated_before_delivery",
+    "initial_state_without_history",
+    "C101_resuelto_sin_decision",
+    "C101_firma_sin_entrega",
+    "C102_respuesta_antes_de_entrega",
+    "C102_reenvio_idempotente_duplica",
+    "C103_fallo_no_habilita_estado",
+    "C103_fallo_no_cierra_reparacion",
+    "C104_baja_sin_registro",
+    "C104_baja_no_es_resuelto",
+    "C105_envio_fallido_no_resuelve",
+    "C106_EPISODIO_dos_fallos_no_habilitan_estado",
+    "C106_episodio_no_duplica_reparacion_activa",
+    "C106_EPISODIO_RP-106-EPISODIO-1_fallo_no_cierra",
+    "C106_EPISODIO_RP-106-EPISODIO-1_cierre_doble",
+    "C107_old_notice_cannot_advance_new_observation",
+    "C107_old_notice_cannot_close_new_repair",
+    "C107_A_otra_observacion_no_vincula",
+    "C107_A_otra_observacion_no_reabre_reparacion",
+    "A_response_requires_visible_delivered_state",
+    "A_rejects_per_attempt_repair",
+    "A_state_waits_for_repair_closure"
+  ],
+  "rejected_count": 25,
+  "c106": {
+    "tramites": 1,
+    "avisos": 3,
+    "reparaciones": 1,
+    "reparaciones_abiertas": 0,
+    "single_episode_hours": 49.0
+  },
+  "limits": [
+    "A/P1 are didactic assumptions, not FCE policy.",
+    "C-107 has a serial state trace and rejects linking a second observation to the first repair; full independent BPMN/ER equivalence remains open.",
+    "SQLite triggers do not establish permissions, immutable history, concurrency, privacy, retention, or real timing.",
+    "BPMN XML structure was checked separately, but no independent modeler import or teacher correction of v11 has happened."
+  ]
+}

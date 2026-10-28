@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1680" width="1200" height="1680" role="img" aria-labelledby="title desc">
+  <title id="title">N16 · Nueve hechos · 2 de 2: comunicación y cierre</title><desc id="desc">Modelo conceptual del caso ficticio con reparación por episodio y política P1: el mismo trámite puede registrar una decisión o una baja. Resolver exige firma, entrega válida de esa decisión al titular y observaciones tratadas. Los intentos fallidos se conservan dentro de un episodio de reparación responsable.</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1 1L10 6L1 11" fill="none" stroke="#454743" stroke-width="2"/></marker>
+    <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#c5c5bf"/></pattern>
+  </defs>
+  <path d="M0 0H1200V1680H0Z" fill="#f4f2ec"/>
+  <path d="M36 36H1164V1644H36Z" fill="none" stroke="#bebfb8" stroke-width="2"/>
+  <path d="M78 80H170V91H78Z" fill="#cefa00"/>
+  <text x="196" y="96" fill="#353733" font-family="Avenir Next,Arial,sans-serif" font-size="21" font-weight="700" letter-spacing="3">METSI · N16 · CASO DIDÁCTICO FICTICIO</text>
+
+
+  <g id="heading">
+    <text x="78" y="187" fill="#20221f" font-family="Didot,Georgia,serif" font-size="77">La firma no basta</text>
+    <text x="78" y="261" fill="#20221f" font-family="Didot,Georgia,serif" font-size="77">para cerrar.</text>
+    <text x="80" y="317" fill="#5d605a" font-family="Baskerville,Georgia,serif" font-size="30">Una comunicación válida exige destino y entrega comprobada.</text>
+    <path d="M78 359H1122" stroke="#aeb0a8" stroke-width="2"/>
+    <text x="80" y="404" fill="#373934" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700" letter-spacing="2">02 / DECISIÓN Y COMUNICACIÓN</text>
+    <text x="1120" y="404" fill="#6b6e67" font-family="Arial,Helvetica,sans-serif" font-size="22" text-anchor="end">HOJA 2 DE 2</text>
+  </g>
+  <g id="routes" fill="none" stroke="#555852" stroke-width="3" marker-end="url(#arrow)">
+    <path d="M1000 472V505H356V544"/>
+    <path d="M1000 472V505H899V544"/>
+    <path d="M356 782V835H600V868"/>
+    <path d="M330 836V868" stroke-dasharray="7 7"/>
+    <path d="M600 1142V1210H360V1248"/>
+    <path d="M600 1142V1210H890V1248"/>
+    <path d="M110 1325H60V1040H193" stroke-dasharray="8 8"/>
+  </g>
+  <g id="continuation">
+    <path d="M80 439H1120V474H80Z" fill="#e9e8e2" stroke="#b7bab2" stroke-width="2"/>
+    <path d="M80 439H105V474H80Z" fill="#cefa00"/>
+    <text x="125" y="465" fill="#373a35" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700">MISMO TRÁMITE · IDENTIDAD E HISTORIA EN HOJA 1</text>
+    <circle cx="1000" cy="474" r="7" fill="#f4f2ec" stroke="#555852" stroke-width="3"/>
+  </g>
+  <g id="decision">
+    <path d="M80 546H633V782H80Z" fill="#fff" stroke="#777a73" stroke-width="2"/>
+    <path d="M80 546H633V567H80Z" fill="#d8dbd4"/>
+    <text x="108" y="622" fill="#222421" font-family="Arial,Helvetica,sans-serif" font-size="38" font-weight="700">DECISIÓN</text>
+    <path d="M108 646H602" stroke="#bec1b9" stroke-width="2"/>
+    <text x="108" y="696" fill="#50534e" font-family="Arial,Helvetica,sans-serif" font-size="27">resultado · firma · id_decisión</text>
+    <text x="108" y="739" fill="#666962" font-family="Arial,Helvetica,sans-serif" font-size="23">0 : 1 en este recorte</text>
+    <circle cx="583" cy="725" r="22" fill="none" stroke="#a9aca4" stroke-width="3"/>
+    <path d="M570 726l8 8 17-20" fill="none" stroke="#555852" stroke-width="3"/>
+    <circle cx="356" cy="782" r="7" fill="#fff" stroke="#555852" stroke-width="3"/>
+  </g>
+  <g id="baja">
+    <path d="M690 546H1120V782H690Z" fill="#e7e7e4" stroke="#999994" stroke-width="2"/>
+    <text x="722" y="622" fill="#242622" font-family="Arial,Helvetica,sans-serif" font-size="38" font-weight="700">BAJA</text>
+    <path d="M722 646H1086" stroke="#adada8" stroke-width="2"/>
+    <text x="722" y="697" fill="#50534e" font-family="Arial,Helvetica,sans-serif" font-size="27">id_baja · fecha · actor</text>
+    <text x="722" y="739" fill="#666962" font-family="Arial,Helvetica,sans-serif" font-size="23">cierre alternativo ≠ Resuelto</text>
+  </g>
+  <g id="observation-reference">
+    <text x="80" y="814" fill="#555852" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700">OBSERVACIÓN · HOJA 1</text>
+  </g>
+  <g id="notice">
+    <path d="M196 868H1118V1142H196Z" fill="#e6e6e3" stroke="#7a7a75" stroke-width="3"/>
+    <path d="M196 868H1118V884H196Z" fill="#cececa"/>
+    <text x="236" y="946" fill="#222421" font-family="Arial,Helvetica,sans-serif" font-size="43" font-weight="700">AVISO</text>
+    <text x="493" y="946" fill="#59625f" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700">DE OBSERVACIÓN O DE DECISIÓN</text>
+    <path d="M236 970H1074" stroke="#a4b3b0" stroke-width="2"/>
+    <text x="236" y="1023" fill="#454b48" font-family="Arial,Helvetica,sans-serif" font-size="27">finalidad + id objeto · canal · destinatario</text>
+    <text x="236" y="1070" fill="#454b48" font-family="Arial,Helvetica,sans-serif" font-size="27">generación · entrega verificada o fallida</text>
+    <text x="236" y="1110" fill="#59625f" font-family="Arial,Helvetica,sans-serif" font-size="22">0 : N por trámite · enviar no es entregar</text>
+    <circle cx="600" cy="1142" r="7" fill="#e6e6e3" stroke="#555852" stroke-width="3"/>
+  </g>
+  <g id="repair">
+    <path d="M80 1250H620V1497H80Z" fill="#e9e9e5" stroke="#989893" stroke-width="2"/>
+    <path d="M80 1250H93V1497H80Z" fill="#cefa00"/>
+    <text x="119" y="1315" fill="#242622" font-family="Arial,Helvetica,sans-serif" font-size="36" font-weight="700">REPARACIÓN</text>
+    <path d="M119 1338H583" stroke="#b7b7b2" stroke-width="2"/>
+    <text x="119" y="1381" fill="#4f514b" font-family="Arial,Helvetica,sans-serif" font-size="24">1 episodio · todos los intentos</text>
+    <text x="119" y="1420" fill="#4f514b" font-family="Arial,Helvetica,sans-serif" font-size="24">responsable · próxima acción</text>
+    <text x="119" y="1461" fill="#6b6256" font-family="Arial,Helvetica,sans-serif" font-size="21">cierre: entrega válida del mismo objeto</text>
+    <text x="185" y="1193" fill="#575a53" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700">SI FALLA</text>
+  </g>
+  <g id="rule">
+    <path d="M676 1250H1120V1497H676Z" fill="#242724" stroke="#242724" stroke-width="2"/>
+    <text x="711" y="1315" fill="#f5f4f0" font-family="Arial,Helvetica,sans-serif" font-size="31" font-weight="700">REGLA DE CIERRE</text>
+    <path d="M711 1338H1083" stroke="#7f8680" stroke-width="2"/>
+    <text x="711" y="1369" fill="#f5f4f0" font-family="Arial,Helvetica,sans-serif" font-size="21">Resuelto: firma + entrega</text>
+    <text x="711" y="1400" fill="#f5f4f0" font-family="Arial,Helvetica,sans-serif" font-size="21">de esa decisión al titular</text>
+    <text x="711" y="1431" fill="#f5f4f0" font-family="Arial,Helvetica,sans-serif" font-size="21">+ observación tratada (P1)</text>
+    <text x="711" y="1462" fill="#d3d7d1" font-family="Arial,Helvetica,sans-serif" font-size="21">Baja ≠ Resuelto</text>
+    <text x="916" y="1193" fill="#575a53" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" text-anchor="middle">SI SE VERIFICA</text>
+  </g>
+  <g id="footer">
+    <path d="M80 1539H1120" stroke="#aeb0a8" stroke-width="2"/>
+    <text x="80" y="1583" fill="#5b5e58" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700">MODELO CONCEPTUAL PARA DISCUSIÓN · NO SON TABLAS FÍSICAS NI UN ER VALIDADO</text>
+  </g>
+</svg>

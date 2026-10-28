@@ -1,0 +1,27 @@
+@import url("private-n16-art-v1.css");
+
+/* The three-page case opening previously left broad empty gray fields.
+   Give the photograph more weight and let the existing source imagery
+   articulate the six voices and the resulting model comparison. */
+body.block-c.premium-magazine.document-n16 #section-03 .hotel-primary-photo .photo-viewport {
+  height: 108mm !important;
+}
+
+body.block-c.premium-magazine.document-n16 #section-03 .hotel-voices-compact::after {
+  content: "";
+  display: block;
+  height: 78mm;
+  margin: 5mm 0 0;
+  background: url("assets/editorial-02.png") center 42% / cover no-repeat;
+  break-inside: avoid;
+}
+
+body.block-c.premium-magazine.document-n16 #section-03 .hotel-continuation::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 104mm;
+  margin: 6mm 0 0;
+  background: url("assets/editorial-03.png") center 50% / cover no-repeat;
+  break-inside: avoid;
+}

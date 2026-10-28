@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1680" width="1200" height="1680" role="img" aria-labelledby="title desc">
+  <title id="title">N16 · Nueve hechos · 1 de 2: identidad y huella</title><desc id="desc">En el caso ficticio, una persona tiene un trámite identificado; el trámite conserva historial de cambios y observaciones, cada una con sus propias respuestas. El estado visible se deriva del historial, no puede mutarse sin dejar una nueva huella.</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1 1L10 6L1 11" fill="none" stroke="#454743" stroke-width="2"/></marker>
+    <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#c5c5bf"/></pattern>
+  </defs>
+  <path d="M0 0H1200V1680H0Z" fill="#f4f2ec"/>
+  <path d="M36 36H1164V1644H36Z" fill="none" stroke="#bebfb8" stroke-width="2"/>
+  <path d="M78 80H170V91H78Z" fill="#cefa00"/>
+  <text x="196" y="96" fill="#353733" font-family="Avenir Next,Arial,sans-serif" font-size="21" font-weight="700" letter-spacing="3">METSI · N16 · CASO DIDÁCTICO FICTICIO</text>
+
+
+  <g id="heading">
+    <text x="78" y="187" fill="#20221f" font-family="Didot,Georgia,serif" font-size="77">No alcanza con saber</text>
+    <text x="78" y="261" fill="#20221f" font-family="Didot,Georgia,serif" font-size="77">cómo quedó.</text>
+    <text x="80" y="317" fill="#5d605a" font-family="Baskerville,Georgia,serif" font-size="30">Para explicar un estado hay que conservar la historia del trámite,</text>
+    <text x="80" y="353" fill="#5d605a" font-family="Baskerville,Georgia,serif" font-size="30">no sólo su última etiqueta.</text>
+    <path d="M78 389H1122" stroke="#aeb0a8" stroke-width="2"/>
+    <text x="80" y="433" fill="#373934" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700" letter-spacing="2">01 / IDENTIDAD Y HUELLA</text>
+    <text x="1120" y="433" fill="#6b6e67" font-family="Arial,Helvetica,sans-serif" font-size="22" text-anchor="end">HOJA 1 DE 2</text>
+  </g>
+  <g id="routes" fill="none" stroke="#575a53" stroke-width="3" marker-end="url(#arrow)">
+    <path d="M287 568H447"/>
+    <path d="M765 738V788H340V839"/>
+    <path d="M765 738V788H894V839"/>
+    <path d="M894 1140V1198"/>
+  </g>
+  <g id="person">
+    <circle cx="205" cy="565" r="82" fill="#e8e5dd" stroke="#686b64" stroke-width="3"/>
+    <path d="M205 515a21 21 0 1 0 0 42a21 21 0 1 0 0-42M162 603c5-29 26-42 43-42s38 13 43 42" fill="none" stroke="#42453f" stroke-width="3"/>
+    <text x="205" y="690" fill="#222421" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="700" text-anchor="middle">PERSONA</text>
+    <text x="205" y="726" fill="#5d605a" font-family="Arial,Helvetica,sans-serif" font-size="23" text-anchor="middle">titular y contacto</text>
+    <text x="367" y="547" fill="#5d605a" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" text-anchor="middle">1 : N</text>
+    <circle cx="287" cy="568" r="8" fill="#f4f2ec" stroke="#555852" stroke-width="3"/>
+  </g>
+  <g id="tramite">
+    <path d="M450 483L486 457H1058L1092 483L1058 509H486Z" fill="#e7e9e5" stroke="#535650" stroke-width="3"/>
+    <path d="M450 483H1092V702L1058 738H486L450 702Z" fill="#fff" stroke="#535650" stroke-width="3"/>
+    <path d="M450 483L486 509V738M1092 483L1058 509V738" fill="none" stroke="#b1b3ac" stroke-width="2"/>
+    <path d="M485 588H1054" stroke="#c2c4bd" stroke-width="2"/>
+    <path d="M485 514H498V561H485Z" fill="#cefa00"/>
+    <text x="518" y="561" fill="#222421" font-family="Arial,Helvetica,sans-serif" font-size="44" font-weight="700">TRÁMITE</text>
+    <text x="515" y="641" fill="#50534e" font-family="Arial,Helvetica,sans-serif" font-size="27">id_trámite · titular · estado derivado</text>
+    <text x="515" y="680" fill="#50534e" font-family="Arial,Helvetica,sans-serif" font-size="27">fecha de envío</text>
+    <circle cx="765" cy="738" r="8" fill="#fff" stroke="#555852" stroke-width="3"/>
+  </g>
+  <g id="change">
+    <path d="M80 842H600V1138H80Z" fill="#e4e6e3" stroke="#8c8f88" stroke-width="2"/>
+    <text x="108" y="898" fill="#282b27" font-family="Arial,Helvetica,sans-serif" font-size="35" font-weight="700">CAMBIO DE ESTADO</text>
+    <path d="M108 923H568" stroke="#a6aaa2" stroke-width="2"/>
+    <text x="108" y="977" fill="#545751" font-family="Arial,Helvetica,sans-serif" font-size="26">anterior → nuevo</text>
+    <text x="108" y="1020" fill="#545751" font-family="Arial,Helvetica,sans-serif" font-size="25">fecha · actor · id_cambio</text>
+    <path d="M138 1080H541" stroke="#686b64" stroke-width="3"/>
+    <circle cx="138" cy="1080" r="10" fill="#fff" stroke="#555852" stroke-width="3"/>
+    <circle cx="340" cy="1080" r="10" fill="#cefa00" stroke="#555852" stroke-width="3"/>
+    <circle cx="541" cy="1080" r="10" fill="#fff" stroke="#555852" stroke-width="3"/>
+    <text x="340" y="1117" fill="#5b5e58" font-family="Arial,Helvetica,sans-serif" font-size="20" text-anchor="middle">huella ordenada</text>
+  </g>
+  <g id="observation">
+    <path d="M657 842H1120V1138H657Z" fill="#fff" stroke="#8c8f88" stroke-width="2"/>
+    <path d="M657 842H1120V864H657Z" fill="#d8dbcF"/>
+    <text x="685" y="920" fill="#282b27" font-family="Arial,Helvetica,sans-serif" font-size="35" font-weight="700">OBSERVACIÓN</text>
+    <path d="M685 943H1090" stroke="#c0c2ba" stroke-width="2"/>
+    <text x="685" y="996" fill="#545751" font-family="Arial,Helvetica,sans-serif" font-size="26">id_observación · estado</text>
+    <text x="685" y="1036" fill="#545751" font-family="Arial,Helvetica,sans-serif" font-size="26">activa o cerrada</text>
+    <text x="685" y="1094" fill="#6b6e67" font-family="Arial,Helvetica,sans-serif" font-size="22">0 : N por trámite</text>
+  </g>
+  <g id="contrast">
+    <path d="M80 1200H599V1458H80Z" fill="#e9e6df" stroke="#babbb4" stroke-width="2"/>
+    <path d="M108 1231H176V1241H108Z" fill="#cefa00"/>
+    <text x="108" y="1295" fill="#282b27" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="700">EL RIESGO</text>
+    <text x="108" y="1343" fill="#4e514b" font-family="Arial,Helvetica,sans-serif" font-size="25">Un estado actual resume.</text>
+    <text x="108" y="1381" fill="#4e514b" font-family="Arial,Helvetica,sans-serif" font-size="25">No demuestra qué pasó</text>
+    <text x="108" y="1419" fill="#4e514b" font-family="Arial,Helvetica,sans-serif" font-size="25">ni quién lo cambió.</text>
+  </g>
+  <g id="response">
+    <path d="M657 1200H1120V1458H657Z" fill="#fff" stroke="#8c8f88" stroke-width="2"/>
+    <text x="685" y="1263" fill="#282b27" font-family="Arial,Helvetica,sans-serif" font-size="35" font-weight="700">RESPUESTA</text>
+    <path d="M685 1286H1090" stroke="#c0c2ba" stroke-width="2"/>
+    <text x="685" y="1333" fill="#545751" font-family="Arial,Helvetica,sans-serif" font-size="24">observación · titular · fecha</text>
+    <text x="685" y="1371" fill="#545751" font-family="Arial,Helvetica,sans-serif" font-size="24">canal · referencia protegida</text>
+    <text x="685" y="1409" fill="#545751" font-family="Arial,Helvetica,sans-serif" font-size="24">clave para evitar duplicados</text>
+  </g>
+  <g id="footer">
+    <path d="M80 1502H1120" stroke="#aeb0a8" stroke-width="2"/>
+    <text x="80" y="1552" fill="#444742" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700">SIGUE EN HOJA 2</text>
+    <text x="80" y="1579" fill="#62655f" font-family="Arial,Helvetica,sans-serif" font-size="23">Decisión, baja, aviso, reparación y regla de cierre.</text>
+    <path d="M1070 1546H1112" stroke="#444742" stroke-width="3" marker-end="url(#arrow)"/>
+  </g>
+</svg>

@@ -1,0 +1,126 @@
+{
+  "title": "N16 · Identidad y huella · hoja 1 de 2",
+  "claim": "El estado visible del caso didáctico se deriva de la historia de un trámite identificado; no se actualiza sin nueva huella.",
+  "source_sections": [
+    {
+      "id": "s1",
+      "heading": "Contrato semántico de constancias · definiciones y cinco rutas",
+      "summary": "Distingue solicitud, revisión, observación entregada, respuesta, decisión comunicada, baja y fallo de aviso."
+    },
+    {
+      "id": "s2",
+      "heading": "Paquete B §2.3 · modelo conceptual de datos",
+      "summary": "Paquete B §2.3 propone nueve hechos, incluida RESPUESTA con contenido, fecha, titular, canal y clave idempotente; las reglas cruzadas requieren validación."
+    },
+    {
+      "id": "s3",
+      "heading": "Paquete B §2.6 · taller de corrección",
+      "summary": "Un estado actual y un aviso de envío no bastan para reconstruir qué ocurrió ni justificar Resuelto."
+    },
+    {
+      "id": "s4",
+      "heading": "Decisión C-106 · reparación por episodio o por intento",
+      "summary": "Este ensayo de enseñanza adopta explícitamente A, una reparación por episodio, como hipótesis ficticia; conserva los intentos y exige mismo objeto para cerrar."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "persona",
+      "label": "PERSONA",
+      "role": "actor",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "purpose": "Identifica a quien presenta el trámite y debe recibir el aviso."
+    },
+    {
+      "id": "tramite",
+      "label": "TRÁMITE",
+      "role": "system",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "purpose": "Es la unidad estable desde solicitud identificada hasta cierre comprobable."
+    },
+    {
+      "id": "cambio",
+      "label": "CAMBIO DE ESTADO",
+      "role": "evidence",
+      "source": [
+        "s2",
+        "s3"
+      ],
+      "purpose": "Conserva estado anterior/nuevo, fecha y actor; permite reconstruir el pasado."
+    },
+    {
+      "id": "observacion",
+      "label": "OBSERVACIÓN",
+      "role": "evidence",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "purpose": "Distingue la falta de información que puede requerir acción de la persona."
+    },
+    {
+      "id": "respuesta",
+      "label": "RESPUESTA",
+      "role": "evidence",
+      "source": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "purpose": "Conserva qué respondió la persona a la observación activa, cuándo y por qué canal; un reintento idéntico no duplica el hecho."
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "persona",
+      "to": "tramite",
+      "relation": "flow",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "meaning": "Una persona presenta uno o más trámites identificados."
+    },
+    {
+      "id": "e2",
+      "from": "tramite",
+      "to": "cambio",
+      "relation": "evidence",
+      "source": [
+        "s2",
+        "s3"
+      ],
+      "meaning": "Cada trámite conserva uno o más cambios de estado."
+    },
+    {
+      "id": "e3",
+      "from": "tramite",
+      "to": "observacion",
+      "relation": "evidence",
+      "source": [
+        "s1",
+        "s2"
+      ],
+      "meaning": "Un trámite puede tener observaciones."
+    },
+    {
+      "id": "e13",
+      "from": "observacion",
+      "to": "respuesta",
+      "relation": "evidence",
+      "source": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "meaning": "Una observación puede recibir cero o más respuestas, cada una asociada al mismo trámite y su titular."
+    }
+  ]
+}
