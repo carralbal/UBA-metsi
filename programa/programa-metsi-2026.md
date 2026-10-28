@@ -36,14 +36,14 @@ La asignatura contribuye así al perfil del Licenciado en Sistemas de Informaci�
 
 ## Propósito general
 
-Formar profesionales capaces de comprender un problema organizacional, justificar qué conviene cambiar, llevar ese cambio a la práctica y evaluar sus consecuencias. Las decisiones deben apoyarse en evidencia, reconocer lo que todavía no se sabe y poder revisarse.
+Formar profesionales capaces de investigar pedidos de solución y detectar oportunidades aun sin encargo, justificar qué conviene cambiar o no iniciar, llevar un cambio a la práctica y evaluar sus consecuencias. Las decisiones deben apoyarse en evidencia, reconocer lo que todavía no se sabe y poder revisarse.
 
 ## Objetivos generales
 
 Se espera que los estudiantes:
 
 1. comprendan el sistema de información como una configuración socio-técnica dinámica;
-2. transformen pedidos y síntomas en problemas investigados y evaluables;
+2. transformen pedidos, síntomas y oportunidades observadas sin encargo en problemas investigados y evaluables;
 3. utilicen modelos como instrumentos selectivos de comprensión, comunicación y decisión;
 4. seleccionen y combinen enfoques metodológicos según incertidumbre, criticidad, regulación, reversibilidad y contexto;
 5. integren descubrimiento, diseño, entrega, adopción, operación y mejora;
@@ -58,11 +58,11 @@ Se espera que los estudiantes:
 Al aprobar la asignatura, el estudiante será capaz de:
 
 1. delimitar y representar un sistema socio-técnico relevante para un propósito de intervención;
-2. diseñar una investigación proporcionada y construir un problem frame basado en evidencia;
-3. seleccionar y relacionar modelos de procesos, información, dominio, interacción o arquitectura según preguntas concretas;
+2. diseñar una investigación proporcionada, reconocer oportunidades proactivas y construir un problem frame basado en evidencia sin preseleccionar la solución;
+3. especificar requisitos y criterios de aceptación, y seleccionar, construir y contrastar modelos de procesos, datos, estados, interacción o arquitectura según preguntas concretas;
 4. comparar y justificar estrategias predictivas, iterativas, incrementales, adaptativas o experimentales;
-5. evaluar alternativas de sourcing y solución considerando ajuste organizacional, riesgos, dependencia y evolución;
-6. diseñar un flujo de outcomes, hipótesis, entregas, validación y decisiones;
+5. evaluar prefactibilidad técnica, operativa y económica, y comparar construcción, configuración, integración y adquisición con criterios previos a las ofertas, ajuste organizacional, costo total, dependencia y evolución;
+6. diseñar un plan proporcionado de alcance, trabajo, secuencia, costos, riesgos y responsables, conectado con outcomes, hipótesis, entregas, validación y decisiones;
 7. representar ecosistemas, contratos, responsabilidades y modos de falla;
 8. proponer estrategias de calidad, pruebas, despliegue, observabilidad y aprendizaje operativo;
 9. evaluar la pertinencia de IA y diseñar controles de autonomía, supervisión, impacto y trazabilidad;
@@ -74,25 +74,25 @@ Al aprobar la asignatura, el estudiante será capaz de:
 
 N01 a N04. Campo académico: Sistemas de información e intervención socio-técnica.
 
-Sistema de información, sistema informático y organización. Propósito, capacidades, servicios y resultados. Actores, afectados, decisiones, procesos, datos, reglas, tecnologías e instituciones. Fronteras analíticas y de responsabilidad. Emergencia, retroalimentación, demoras y efectos no intencionales. Metodología, intervención, evidencia y juicio profesional. Pedido, síntoma, problema y oportunidad.
+Sistema de información, sistema informático y organización. Propósito, capacidades, servicios y resultados. Actores, afectados, decisiones, procesos, datos, reglas, tecnologías e instituciones. Fronteras analíticas y de responsabilidad. Emergencia, retroalimentación, demoras y efectos no intencionales. Metodología, intervención, evidencia y juicio profesional. Dos orígenes de una intervención: pedido de solución y oportunidad detectada sin encargo; síntoma, problema y decisión de investigar o no iniciar.
 
 ### Unidad 2 · Bloque B - Investigar el problema
 
 N05 a N10. Campo académico: Investigación y construcción del problema.
 
-Discovery y reducción de incertidumbre. Stakeholders, usuarios, operadores, decisores y afectados. Poder, incentivos, conflictos y perspectivas. Entrevistas, observación, shadowing, análisis documental y triangulación. Experiencia de usuario y de empleado. Accesibilidad e inclusión. Hechos, interpretaciones, supuestos e hipótesis. Problem framing. Outcomes, restricciones, riesgos y criterios de éxito. Ética de la investigación y tratamiento de información con IA.
+Discovery y reducción de incertidumbre. Stakeholders, usuarios, operadores, decisores y afectados. Poder, incentivos, conflictos y perspectivas. Entrevistas, observación, shadowing, análisis documental y triangulación. Experiencia de usuario y de empleado. Accesibilidad e inclusión. Hechos, interpretaciones, supuestos e hipótesis, también ante señales proactivas. Problem framing. Outcomes, restricciones, riesgos y criterios de éxito. Ética de la investigación y tratamiento de información con IA.
 
 ### Unidad 3 · Bloque C - Modelar para decidir
 
 N11 a N16. Campo académico: Información, procesos y modelado selectivo.
 
-Información, significado, evidencia y acción. Eventos, estados, reglas, decisiones, autoridades y excepciones. Procesos end-to-end, handoffs, colas, retrabajo y trabajo invisible. Calidad, procedencia y responsabilidad sobre datos. Propósito, audiencia, fidelidad y vigencia de los modelos. Modelado colaborativo. Diagramas de contexto, procesos, dominio, interacción y arquitectura. UML, BPMN y C4 en función de problemas concretos. Consistencia, trazabilidad y validación de modelos.
+Información, significado, evidencia y acción. Eventos, estados, reglas, decisiones, autoridades y excepciones. Procesos end-to-end, handoffs, colas, retrabajo y trabajo invisible. Calidad, procedencia y responsabilidad sobre datos. Especificación de requisitos funcionales y no funcionales con ejemplos y criterios de aceptación refutables. Comparación AS-IS/TO-BE del mismo proceso y con medidas comparables. Propósito, audiencia, fidelidad y vigencia de los modelos. Modelado colaborativo. Diagramas de contexto, BPMN, entidad-relación, estados, interacción y arquitectura; selección de UML y C4 según la pregunta. Consistencia, trazabilidad y validación de modelos.
 
 ### Unidad 4 · Bloque D - Decidir cómo intervenir
 
 N17 a N20. Campo académico: Ciclos de vida y estrategia de intervención.
 
-Ciclo de vida como organización del riesgo y del aprendizaje. Enfoques secuenciales, predictivos, iterativos, incrementales, adaptativos y experimentales. Legado crítico, regulación, compliance y documentación. Incertidumbre, criticidad, reversibilidad, costo de cambio y costo de demora. Selección y combinación de prácticas. Construcción, compra, configuración, integración, tercerización, low-code y continuidad manual. Selección y evaluación de paquetes. Riesgo de adopción, gestión del cambio e hitos de decisión.
+Ciclo de vida como organización del riesgo y del aprendizaje. Enfoques secuenciales, predictivos, iterativos, incrementales, adaptativos y experimentales. Legado crítico, regulación, compliance y documentación. Incertidumbre, criticidad, reversibilidad, costo de cambio y costo de demora. Prefactibilidad técnica, operativa y económica y puerta explícita de iniciar, investigar más o no iniciar. Selección y combinación de prácticas. Construcción, compra, configuración, integración, tercerización, low-code y continuidad manual. Adquisición de paquetes: necesidad, criterios excluyentes y ponderados antes de recibir ofertas, comparación de costo total y decisión condicionada. Alcance, EDT, secuencia, presupuesto, riesgos, responsables e hitos de decisión, con profundidad proporcional a la intervención.
 
 ### Unidad 5 · Bloque E - Entregar valor y aprender
 

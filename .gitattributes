@@ -98,6 +98,9 @@ N01-v22-post-cecilia/N01/assets/** -filter -diff -merge -text
 N01-v22-post-cecilia/protected-covers/** -filter -diff -merge -text
 # Fuente editable N10 post-Cecilia: recursos finales como Git normal, sin LFS.
 N10-v12-post-cecilia/N10/assets/** -filter -diff -merge -text
+# Programa propuesto de 9 páginas: las dos rutas públicas pequeñas van en Git normal mientras LFS no tiene cuota.
+site/programa/programa-metsi-2026.pdf -filter -diff -merge -text
+site/covers/programa/programa-metsi-2026.pdf -filter -diff -merge -text
 N10-v12-post-cecilia/N10/diagrams/** -filter -diff -merge -text
 N10-v12-post-cecilia/protected-covers/** -filter -diff -merge -text
 # Fuente editable N08 post-Cecilia: recursos finales como Git normal, sin LFS.

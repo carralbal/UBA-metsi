@@ -189,11 +189,11 @@ def main() -> None:
     shutil.copy2(OUTPUT, public)
     catalog_path = ROOT / "site/course-manifest.json"
     catalog = json.loads(catalog_path.read_text())
-    catalog["program"].update(pages=len(reader.pages), pdf="covers/programa/programa-metsi-2026.pdf?v=alineacion-20260927", sha256=hashlib.sha256(public.read_bytes()).hexdigest())
+    catalog["program"].update(pages=len(reader.pages), pdf="covers/programa/programa-metsi-2026.pdf?v=post-cecilia-20261028", sha256=hashlib.sha256(public.read_bytes()).hexdigest())
     catalog_path.write_text(json.dumps(catalog, ensure_ascii=False, indent=2)+"\n")
     home_path = ROOT / "site/index.html"
     home = home_path.read_text()
-    home = re.sub(r'covers/programa/programa-metsi-2026\.pdf(?:\?v=[^"#]+)?', "covers/programa/programa-metsi-2026.pdf?v=alineacion-20260927", home)
+    home = re.sub(r'covers/programa/programa-metsi-2026\.pdf(?:\?v=[^"#]+)?', "covers/programa/programa-metsi-2026.pdf?v=post-cecilia-20261028", home)
     home_path.write_text(home)
     print(OUTPUT)
 
