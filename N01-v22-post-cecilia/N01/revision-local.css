@@ -1,0 +1,18 @@
+/* Apoyos pedagógicos propios; el sistema tipográfico global se aplica después. */
+.v7-learning-support { margin: 5mm 0; padding: 4mm 5mm; border-left: 1.2mm solid #CFFF00; background: #f3f4ee; column-span: all; break-inside: auto; }
+.v7-learning-support h3 { margin: 0 0 3mm; break-after: avoid; }
+.v7-learning-support p { margin: 0 0 2.5mm; }
+.v7-worked-example { width: 100%; border-collapse: collapse; table-layout: fixed; margin: 3mm 0; }
+.v7-worked-example caption { text-align: left; font-family: Avenir, sans-serif; font-size: 8.2pt; margin-bottom: 2mm; }
+.v7-worked-example th { width: 29%; text-align: left; vertical-align: top; }
+.v7-worked-example td { vertical-align: top; }
+.v7-worked-example th, .v7-worked-example td { padding: 2.4mm; border-bottom: .25mm solid #ced2c8; }
+.v7-worked-example tr { break-inside: avoid; }
+.v7-learning-support a { text-decoration: none !important; }
+
+/* QA visual local: contraste, fragmentación y escala; prosa 11.2pt intacta. */
+body.document-n01 #v7-N01-cover .cover-thesis { top:115mm!important; bottom:auto!important; width:65mm!important; right:18mm!important; }
+body.document-n01 #v7-N01-producto-box, body.document-n01 #v7-N01-producto-box * { color:#171917!important; }
+
+/* Ronda residual: metadato del caso registrado a5.7pt. */
+body.document-n01.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .hotel-voices-compact > header > b { font:700 8.2pt/1.2 Avenir,sans-serif!important; letter-spacing:.08em!important; }
