@@ -2,7 +2,7 @@
 
 ## Estado
 
-Versión digital lista para publicar. Este control no equivale a aprobación académica del equipo docente ni a prueba de imprenta. Completar la sección de publicación sólo después de descargar el archivo servido por Pages y cotejarlo con el local.
+Versión digital publicada y comprobada localmente y en el archivo servido por GitHub Pages. Este control no equivale a aprobación académica del equipo docente ni a prueba de imprenta.
 
 ## Fuente fiel y cambio curricular
 
@@ -20,7 +20,10 @@ Versión digital lista para publicar. Este control no equivale a aprobación aca
 
 ## Publicación comprobada
 
-Pendiente de commit, ejecución exitosa de Pages y cotejo SHA-256 de la descarga pública.
+- Commit de contenido: `7fb650d21ff8271955b2313f1357e930c4309d53` en `main`.
+- GitHub Pages: ejecución `40611056361`, `completed/success`.
+- URL: `https://carralbal.github.io/UBA-metsi/pdf/N08-METSI-lectura-previa-v11-final.pdf?v=n08-post-cecilia-20261027-verified`.
+- PDF servido por Pages y PDF local: SHA-256 idéntico `b871223c07c181978b7dda29b23300db75bcd275de15ea157d815a640f0b9322`.
 
 ## Pendiente
 
