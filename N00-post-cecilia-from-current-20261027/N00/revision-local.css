@@ -1,0 +1,36 @@
+/* Apoyos pedagógicos propios; el sistema tipográfico global se aplica después. */
+.v7-learning-support { margin: 5mm 0; padding: 4mm 5mm; border-left: 1.2mm solid #CFFF00; background: #f3f4ee; column-span: all; break-inside: auto; }
+.v7-learning-support h3 { margin: 0 0 3mm; break-after: avoid; }
+.v7-learning-support p { margin: 0 0 2.5mm; }
+.v7-worked-example { width: 100%; border-collapse: collapse; table-layout: fixed; margin: 3mm 0; }
+.v7-worked-example caption { text-align: left; font-family: Avenir, sans-serif; font-size: 8.2pt; margin-bottom: 2mm; }
+.v7-worked-example th { width: 29%; text-align: left; vertical-align: top; }
+.v7-worked-example td { vertical-align: top; }
+.v7-worked-example th, .v7-worked-example td { padding: 2.4mm; border-bottom: .25mm solid #ced2c8; }
+.v7-worked-example tr { break-inside: avoid; }
+.v7-learning-support a { text-decoration: none !important; }
+
+/* QA visual local: contraste, fragmentación y escala; prosa 11.2pt intacta. */
+body.document-n00 #v7-N00-cover .cover-subtitle, body.document-n00 #v7-N00-cover .cover-credit { color:#171917!important; }
+body.document-n00 #v7-N00-mapa-bloques {height:auto!important;max-height:none!important;overflow:visible!important;}
+body.document-n00 #v7-N00-mapa-bloques figcaption {height:auto!important;max-height:none!important;overflow:visible!important;}
+body.document-n00 #personas {height:auto!important;max-height:none!important;break-inside:auto!important;page-break-inside:auto!important;overflow:visible!important;}
+body.document-n00 #personas .hotel-archetypes-grid {display:block!important;height:auto!important;}
+body.document-n00 #personas .hotel-archetype-card {display:grid!important;grid-template-columns:30mm 1fr!important;gap:3mm!important;min-height:0!important;height:auto!important;margin:0 0 4mm!important;break-inside:avoid-page!important;page-break-inside:avoid!important;}
+body.document-n00 #personas .hotel-archetype-portrait {width:30mm!important;height:46mm!important;}
+body.document-n00 #personas .hotel-archetype-portrait img {width:100%!important;height:100%!important;object-fit:cover!important;}
+body.document-n00 #personas .hotel-archetype-copy {padding:2mm 3mm 2mm 0!important;}
+body.document-n00 #personas .hotel-archetype-copy p, body.document-n00 #personas header p {font-family:Baskerville,serif!important;font-size:11.2pt!important;line-height:1.4!important;letter-spacing:0!important;word-spacing:0!important;margin:0 0 1.5mm!important;}
+body.document-n00 #personas .hotel-archetype-copy>span {font:600 8.2pt/1.2 Avenir,sans-serif!important;letter-spacing:.02em!important;}
+body.document-n00 #personas header {break-after:avoid-page!important;}
+
+
+/* Ronda residual: etiqueta solidaria con título y metadatos auxiliares legibles. */
+body.document-n00 #personas > header { break-inside:avoid-page!important; page-break-inside:avoid!important; break-after:avoid-page!important; page-break-after:avoid!important; }
+body.document-n00 #personas > header > b { display:block!important; font:700 8.2pt/1.2 Avenir,sans-serif!important; letter-spacing:.08em!important; break-after:avoid-page!important; page-break-after:avoid!important; }
+body.document-n00 #personas > header > h2 { break-before:auto!important; page-break-before:auto!important; }
+body.document-n00.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .exercise-writing-space { height:auto!important; min-height:34mm!important; }
+body.document-n00.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .exercise-writing-space > span { font:700 8.2pt/1.2 Avenir,sans-serif!important; }
+body.document-n00.metsi-v7.metsi-v7.metsi-v7.metsi-v7 .exercise-writing-space > small { font:400 8.2pt/1.3 Avenir,sans-serif!important; color:#171917!important; }
+/* N12 physical export scale: keep references within the printable content box. */
+body.document-n00.metsi-v7.metsi-v7.metsi-v7.metsi-v7 #referencias {margin-left:0!important;margin-right:0!important;padding-left:0!important;padding-right:0!important;box-sizing:border-box!important;width:auto!important;}
