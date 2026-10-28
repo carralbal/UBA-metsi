@@ -2,7 +2,7 @@
 
 ## Función del soporte visual
 
-El soporte coordina la simulación y recuerda una sintaxis mínima de BPMN. El modelo se construye después de observar el caso.
+El soporte coordina la simulación y una sintaxis mínima de BPMN. El AS-IS se construye después de observar el caso; el TO-BE usa **la misma unidad y medidas**, sin presentar el pronóstico como resultado. La entrega sigue siendo HH-14.
 
 | Pantalla | Qué se ve | Nota de orador | Señal para avanzar |
 |---:|---|---|---|
@@ -10,11 +10,11 @@ El soporte coordina la simulación y recuerda una sintaxis mínima de BPMN. El m
 | 2 | Reglas de la caminata | Cronometrar trabajo, espera y calendario por separado. | Existe un registro de instancia. |
 | 3 | Handoff completo | Exigir trabajo, información, responsabilidad y aceptación. | La transferencia puede fallar de formas distintas. |
 | 4 | Sintaxis BPMN mínima | Introducir sólo elementos necesarios para el caso. | Los equipos pueden modelar coordinación. |
-| 5 | Modelo ordinario | Preguntar qué evidencia lo diferencia del procedimiento prescripto. | Se distinguen modelo y ejecución. |
+| 5 | AS-IS ordinario/excepcional | Preguntar qué evidencia lo diferencia del procedimiento prescripto. | Hay población, frontera y dos medidas base. |
 | 6 | Colas y prioridad | Hacer visible población en espera y regla de selección. | La cola deja de ser espacio vacío. |
 | 7 | Tormenta de excepciones | Clasificar por frecuencia, mecanismo y reparación. | Alguna excepción se reconoce como variante. |
 | 8 | Compensación y retorno | Evitar finales sin reparación ni regreso al flujo. | El BPMN contiene cierre del caso. |
-| 9 | Experimento end-to-end | Medir outcome, espera, calidad, riesgo y carga. | La mejora no depende sólo del promedio. |
+| 9 | TO-BE y prueba futura | Conservar población, frontera y dos medidas del AS-IS; introducir rival y caso adverso. | Una propuesta no se confunde con mejora observada. |
 | 10 | Puente a N15 | Preguntar qué no responde BPMN. | Surge otra pregunta y audiencia. |
 
 ## Preguntas de sondeo
@@ -26,6 +26,7 @@ El soporte coordina la simulación y recuerda una sintaxis mínima de BPMN. El m
 - ¿La excepción es realmente infrecuente?
 - ¿Qué mensaje necesita confirmación o correlación?
 - ¿Qué outcome podría empeorar aunque una tarea acelere?
+- ¿Estamos midiendo el mismo caso antes y después, o cambió el denominador?
 
 ## Errores esperables
 
@@ -48,6 +49,10 @@ Intervención: preguntar quién pasa primero y quién soporta la espera.
 ### Mejora por tarea
 
 Intervención: medir outcome y tiempo calendario de la instancia completa.
+
+### TO-BE llamado «resultado»
+
+Intervención: distinguir diseño, predicción, dato observado y prueba posterior; no aceptar una cifra de mejora inventada.
 
 ## Decisiones de facilitación
 

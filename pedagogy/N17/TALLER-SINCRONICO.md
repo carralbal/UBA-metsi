@@ -2,7 +2,7 @@
 
 ## Resultado del encuentro
 
-Cada equipo entrega un mapa de lógica de intervención para HH-17 que combina anticipación, aprendizaje y entrega sin convertir PMBOK, Scrum o Kanban en recetas globales.
+Cada equipo entrega **una ficha HH-17**: lógicas de intervención, dependencias y una decisión integrada de prefactibilidad técnica, operativa y económica, con puerta **iniciar / investigar más / no iniciar**. PMBOK, Scrum y Kanban aportan funciones, no veredictos ni recetas globales.
 
 ## Duración base
 
@@ -14,6 +14,7 @@ Ciento veinte minutos.
 - Preparar cartas PMBOK, Scrum y Kanban con funciones y límites.
 - Preparar eventos que cambien incertidumbre, urgencia y reversibilidad.
 - Seleccionar mapas que llamen híbrido a una suma de ceremonias.
+- Tener N17 p. 32: constancias ficticias, 24 × 8 = 192 minutos = 3,2 horas; 32 h × USD 25 = USD 800 y reserva de 8 h = USD 200. Son supuestos de clase, no una estimación institucional. Preparar un cambio de capacidad operativa o técnica que invalide una cuenta correcta.
 
 ## Secuencia
 
@@ -37,13 +38,13 @@ Cada equipo compone una ruta con dependencias, criterios de entrada y salida, ev
 
 Cambia una obligación, una población o el costo de demora. El equipo revisa lógica, cadencia y alcance sin borrar decisiones anteriores.
 
-### 6. Prueba de reversibilidad, 17 minutos
+### 6. Prefactibilidad y reversibilidad, 17 minutos
 
-Otro equipo intenta revertir una decisión técnica y enumera contratos, datos, aprendizaje, confianza y trabajo que no vuelven automáticamente atrás.
+Otro equipo examina una decisión HH-17 con tres columnas: prueba técnica, capacidad operativa y cuenta económica con reserva. Introduce un dato adverso —por ejemplo, falta de historial exportable o menos horas de atención— y comprueba si el plan aún cabe. Enumera también contrato, datos, confianza y trabajo que no revierten con un rollback. No se agregan estimaciones inventadas.
 
 ### 7. Junta de puertas, 19 minutos
 
-Se defienden tres puertas: avanzar, ampliar y detener. Cada una exige evidencia, autoridad, decisión habilitada y riesgo residual.
+Se defiende una puerta **iniciar, investigar más o no iniciar** antes de comprometer solución; otra puerta puede ampliar o detener después. Cada salida exige evidencia técnica, operativa y económica disponible/faltante, autoridad, riesgo residual y condición de reapertura. «No iniciar» es una decisión profesional defendible, no un fracaso del ejercicio.
 
 ### 8. Cierre y puente, 8 minutos
 
@@ -56,5 +57,5 @@ Cada persona identifica qué obligación o capacidad heredada condiciona la estr
 - ensamble de prácticas;
 - revisión por perturbación;
 - prueba de reversibilidad;
-- mapa final y legado para N18.
+- ficha HH-17 con prefactibilidad, decisión de iniciar/no iniciar y legado para N18. Es **una** entrega.
 

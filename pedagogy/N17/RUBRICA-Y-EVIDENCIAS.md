@@ -4,8 +4,8 @@
 
 - `0`: ausente o etiqueta global;
 - `1`: práctica nombrada sin función;
-- `2`: combinación útil con puertas o dependencias incompletas;
-- `3`: situada, coherente, gobernada y revisable.
+- `2`: combinación útil con prefactibilidad, puerta o dependencias incompletas;
+- `3`: situada, factible o detenida con razones, coherente, gobernada y revisable.
 
 ## Rúbrica del mapa de lógicas
 
@@ -15,14 +15,14 @@
 | Distinción | ¿Separa cinco lógicas? | Cada una produce conocimiento o compromiso diferente. |
 | Marcos | ¿PMBOK, Scrum y Kanban cumplen funciones explícitas? | Se usan sin convertirlos en receta total. |
 | Composición | ¿El híbrido tiene dependencias coherentes? | Prácticas y ritmos se conectan causalmente. |
-| Evidencia | ¿Cada tramo tiene entrada y salida? | El avance puede sostenerse o detenerse. |
-| Autoridad | ¿Las puertas tienen decisión legítima? | Se sabe quién amplía, cambia o detiene. |
+| Prefactibilidad | ¿Se examinan técnica, operación y economía juntas? | Hay prueba/limitación por dimensión, cuenta y reserva distinguibles, y un dato que podría invalidar la opción. |
+| Autoridad | ¿La puerta permite iniciar, investigar más o no iniciar? | La salida tiene evidencia, responsable legítimo y condición de reapertura. |
 | Reversibilidad | ¿Incluye efectos no técnicos? | Considera contratos, datos, trabajo y confianza. |
 | Revisión | ¿La estrategia responde al contexto? | Cambia con señal, registro y protección. |
 
 ## Evidencia de aprendizaje
 
-El mapa final debe mostrar una práctica retirada y una lógica revisada por evidencia, dependencia o reversibilidad.
+La **única ficha HH-17** debe mostrar una práctica retirada, una lógica revisada por evidencia/dependencia/reversibilidad y una puerta de prefactibilidad que realmente pueda detener el compromiso. No se califica más alto por elegir siempre iniciar.
 
 ## Conexión acumulativa
 

@@ -2,7 +2,7 @@
 
 ## Resultado del encuentro
 
-Cada equipo entrega un modelo BPMN de HH-14 contrastado con una instancia real, con colas, handoffs, excepciones, compensación y una hipótesis de mejora end-to-end.
+Cada equipo entrega **un solo modelo comparativo HH-14**: AS-IS reconstruido de una instancia didáctica y TO-BE propuesto del **mismo proceso**, con población, frontera, medidas, handoffs, excepciones, reparación y prueba posterior. El TO-BE no se presenta como mejora ya observada.
 
 ## Duración base
 
@@ -14,6 +14,7 @@ Ciento veinte minutos.
 - Preparar fichas de casos ordinarios y excepcionales con tiempos de trabajo y espera.
 - Preparar tokens de capacidad, prioridad, retrabajo y reparación.
 - Disponer de elementos BPMN recortables o un tablero compatible.
+- Tener a mano N14 p. 33: el caso ficticio de constancias muestra cómo conservar la misma unidad al comparar antes y después, sin trasladar sus números al hotel.
 
 ## Secuencia
 
@@ -31,7 +32,7 @@ El docente distingue instancia, variante, pool, lane, evento, actividad, gateway
 
 ### 4. Reconstrucción BPMN del flujo real, 25 minutos
 
-Los equipos modelan el caso ordinario y el excepcional. Deben incluir inicio, outcome, actores, mensajes, decisiones, temporizadores, excepción, reparación y condición de cierre.
+Los equipos modelan el **AS-IS** del caso ordinario y excepcional con inicio, outcome, actores, mensajes, decisiones, temporizadores, reparación y cierre. Anotan dos medidas de línea de base con denominador y fuente, o declaran que faltan; no inventan un resultado.
 
 ### 5. Mercado de colas y prioridades, 17 minutos
 
@@ -43,7 +44,7 @@ El docente introduce ausencia de garantía, habitación bloqueada, canal sin res
 
 ### 7. Experimento de flujo, 17 minutos
 
-Cada equipo cambia una regla, handoff o punto de decisión. Predice outcome, espera, calidad, riesgo y carga desplazada. Otro equipo ejecuta un caso para tensionar la hipótesis.
+Cada equipo dibuja un **TO-BE** del mismo proceso, cambiando una regla, handoff o punto de decisión. Mantiene población, inicio/cierre y dos medidas comparables con el AS-IS; predice efecto y carga desplazada. Otro equipo ejecuta un caso adverso. La prueba futura se especifica; no se finge que ya ocurrió.
 
 ### 8. Cierre y puente, 8 minutos
 
@@ -53,8 +54,8 @@ Cada persona identifica qué pregunta del proceso exige otra representación y p
 
 - definición de promesa y cierre;
 - tiempos de la instancia;
-- BPMN ordinario y excepcional;
+- AS-IS BPMN ordinario/excepcional y TO-BE del mismo proceso;
 - política de cola;
 - clasificación de variantes;
-- experimento y pregunta para N15.
+- medidas comparables, hipótesis rival, prueba futura y pregunta para N15. Todo forma **una sola entrega HH-14**.
 
