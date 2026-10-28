@@ -392,7 +392,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Mostrar los límites y comprobar qué se transfiere",
           "page": 17,
           "title": "Explicar para que otros puedan actuar",
-          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=n35-digital-20261024#page=17"
+          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=n35-editorial-20261028#page=17"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -854,7 +854,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 2 · Revisar lo que sostiene la cadena",
           "page": 16,
           "title": "Que las decisiones encajen",
-          "href": "pdf/publicados/N34-METSI-lectura-previa-v10-final.pdf?v=n34-digital-20261024#page=16"
+          "href": "pdf/publicados/N34-METSI-lectura-previa-v10-final.pdf?v=n34-editorial-20261028#page=16"
         },
         {
           "code": "N26",
@@ -904,14 +904,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Empezar por la decisión, no por las diapositivas",
           "page": 12,
           "title": "Explicar para que otros puedan actuar",
-          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=n35-digital-20261024#page=12"
+          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=n35-editorial-20261028#page=12"
         },
         {
           "code": "N35",
           "section": "Movimiento 3 · Mostrar los límites y comprobar qué se transfiere",
           "page": 17,
           "title": "Explicar para que otros puedan actuar",
-          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=n35-digital-20261024#page=17"
+          "href": "pdf/publicados/N35-METSI-lectura-previa-v10-final.pdf?v=n35-editorial-20261028#page=17"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -929,14 +929,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Volver a la experiencia sin maquillarla",
           "page": 9,
           "title": "¿Qué aprendimos de lo que hicimos?",
-          "href": "pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf?v=n36-digital-20261024#page=9"
+          "href": "pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf?v=n36-editorial-20261028#page=9"
         },
         {
           "code": "N36",
           "section": "Movimiento 2 · Decidir qué conviene corregir",
           "page": 12,
           "title": "¿Qué aprendimos de lo que hicimos?",
-          "href": "pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf?v=n36-digital-20261024#page=12"
+          "href": "pdf/publicados/N36-METSI-lectura-previa-v10-final.pdf?v=n36-editorial-20261028#page=12"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"

@@ -18,7 +18,7 @@ En ambos documentos, p. 3 «Referentes» tenía una franja gris heredada. Se anu
 
 `scripts/normalize_n32_n33_referentes_20261028.py` exige SHA previo y estructura esperada; verificó texto, anotaciones y geometría en **43/43** y **40/40**, streams de todas las otras páginas idénticos y árbol de estructura etiquetada. Las dos p. 3 se renderizaron a 1800 px y se abrieron: fondo `paper` uniforme, rostro completo, otros cinco retratos y pies íntegros. El delta reproducible de fuente está en `pedagogy/source-overrides/referentes-paper-n32-n33.css`; no se editó el checkout histórico con trabajo preexistente. No se creó ni conservó PDF candidato privado.
 
-Se mantiene la ruta pública estable y se cambian las claves de caché a `n32-editorial-20261028` y `n33-editorial-20261028` en portada, atlas, crónicas y manifiesto. **Publicación remota y SHA se documentarán sólo después de Pages.**
+Se mantiene la ruta pública estable y se cambiaron las claves de caché a `n32-editorial-20261028` y `n33-editorial-20261028` en portada, atlas, crónicas y manifiesto. Commit `7cdcb17d219e2f498977df5df458ea51977450ef` subido a `origin/main`; Pages run `40756232094` terminó `completed/success`. `AUDITORIA-REMOTA-SHA-37-N-POST-N32-N33-20261028.json` confirmó **37/37 PDF byte idénticos**, incluidos N32 y N33, entre checkout y Pages. `AUDITORIA-ENLACES-SITIO-37-N-POST-N32-N33-20261028.json` confirmó **37/37 rutas** de la portada. Los PNG efímeros se retiraron tras esa verificación; no quedó candidato PDF privado.
 
 ## Límites
 
