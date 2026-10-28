@@ -38,7 +38,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Pasar de interesados genéricos a relaciones de poder",
           "page": 9,
           "title": "No todos ven el mismo problema",
-          "href": "pdf/N05-METSI-lectura-previa-v11-final.pdf?v=n05-digital-20261023#page=9"
+          "href": "pdf/N05-METSI-lectura-previa-v11-final.pdf?v=n05-editorial-20261028#page=9"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
@@ -56,7 +56,7 @@ window.METSI_ATLAS = {
           "section": "Movimiento 3 · Decidir y dejar abierta la revisión",
           "page": 22,
           "title": "Antes de decidir, ¿qué sabemos?",
-          "href": "pdf/N04-METSI-lectura-previa-v10-final.pdf?v=n04-digital-20261023#page=22"
+          "href": "pdf/N04-METSI-lectura-previa-v10-final.pdf?v=n04-editorial-20261028#page=22"
         },
         {
           "code": "N28",
@@ -124,14 +124,14 @@ window.METSI_ATLAS = {
           "section": "Movimiento 1 · Formular incertidumbres que puedan cambiar una decisión",
           "page": 9,
           "title": "Investigar antes de apostar",
-          "href": "pdf/N06-METSI-lectura-previa-v11-final.pdf?v=n06-digital-20261024#page=9"
+          "href": "pdf/N06-METSI-lectura-previa-v11-final.pdf?v=n06-editorial-20261028#page=9"
         },
         {
           "code": "N06",
           "section": "Movimiento 2 · Diseñar una cartera mínima de evidencia",
           "page": 15,
           "title": "Investigar antes de apostar",
-          "href": "pdf/N06-METSI-lectura-previa-v11-final.pdf?v=n06-digital-20261024#page=15"
+          "href": "pdf/N06-METSI-lectura-previa-v11-final.pdf?v=n06-editorial-20261028#page=15"
         }
       ],
       "referenceLabel": "Dónde empezar · sección y página"
