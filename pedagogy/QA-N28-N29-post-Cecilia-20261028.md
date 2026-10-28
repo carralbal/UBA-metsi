@@ -21,7 +21,7 @@ En la p. 3 de ambos PDF se anuló sólo el relleno gris vertical no semántico, 
 
 Los scripts de normalización tienen guardas de SHA y verifican antes de reemplazar el PDF canónico: número de páginas, geometría y anotaciones de **todas** las páginas; texto idéntico en todas salvo la supresión prevista de la coma en p. 3. La corrección del fondo conserva todo el texto. Se conservaron 38 y 39 páginas. Los deltas para una futura regeneración fiel desde fuente están en `pedagogy/source-overrides/referentes-paper-n28-n29.css` y `referentes-editions-n28-n29.md`.
 
-Se actualizó la clave de caché de N28 y N29 en la portada, el atlas, crónicas y el manifiesto, manteniendo la misma ruta estable del PDF. Falta comprobar la publicación de Pages y la igualdad SHA-256 remota antes de marcar esta tanda como efectivamente publicada.
+Se actualizó la clave de caché de N28 y N29 en la portada, el atlas, crónicas y el manifiesto, manteniendo la misma ruta estable del PDF. Commit `0dcb158c0b1ed164fdccbc90aa2a1d12e25f73e7` en Git `main`; [Pages run 40750994662](https://github.com/carralbal/UBA-metsi/actions/runs/40750994662) terminó `success`. La auditoría `AUDITORIA-REMOTA-SHA-37-N-POST-N28-N29-20261028.json` del workspace confirmó **37/37 PDF byte idénticos** entre repo y Pages, incluyendo N28 SHA `4bd945eb9ccf76ec8c1f7bbf47d725e1b24791df0547a32dc74b98f1df979b3e` y N29 SHA `61343dbe70308840bb334c5e1a84a794e0345be1c9826bda4bfda103af2bf71b`. La auditoría paralela de portada confirmó 37/37 enlaces y las dos claves nuevas aparecen en el HTML remoto. Esto prueba publicación, no aval docente.
 
 ## Límites y siguientes controles
 

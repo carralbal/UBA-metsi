@@ -1,0 +1,13 @@
+/* Apply after the exact recovered N30/N31 stylesheets when regenerating.
+   This records the canonical PDF corrections of 2026-10-28. */
+.premium-magazine .authors-page {
+  background: #FAFAF8 !important;
+}
+
+/* N31's historical revision-local.css zoomed Mario Bunge's 200px portrait
+   2.7x. The same original JPG is already framed correctly in N28. */
+body.metsi-v7.metsi-v7.metsi-v7.metsi-v7.document-n31 #referentes .contributor-mario-bunge .portrait-frame img {
+  object-position: 50% 28% !important;
+  transform: none !important;
+  transform-origin: center !important;
+}

@@ -285,7 +285,7 @@ window.METSI_ATLAS = {
           "section": "Citar una fuente no significa tener razón",
           "page": 21,
           "title": "¿Para qué usar IA y hasta dónde?",
-          "href": "pdf/publicados/N31-METSI-lectura-previa-v10-final.pdf?v=n31-digital-20261024#page=21"
+          "href": "pdf/publicados/N31-METSI-lectura-previa-v10-final.pdf?v=n31-editorial-20261028#page=21"
         },
         {
           "code": "N33",
