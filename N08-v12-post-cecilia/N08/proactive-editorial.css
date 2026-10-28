@@ -1,0 +1,35 @@
+/* N08 private proactivity proof; keep the rest of the recovered magazine unchanged. */
+.n08-proactive-page { page: content; clear: both; column-span: all; break-before: page;
+  break-after: page; height: 264mm; padding: 6mm 0 0; overflow: hidden;
+  color: #202020; background: #fff; }
+.n08-proactive-page .bar { width: 43mm; height: 2.1mm; margin: 0 0 7mm;
+  background: #cfff00; transform: skewX(-25deg); }
+.n08-proactive-page .meta, .n08-proactive-page .label,
+.n08-proactive-page .metric-note { font-family: Avenir, sans-serif; }
+.n08-proactive-page .meta { display: flex; justify-content: space-between;
+  font-size: 7.7pt; font-weight: 600; letter-spacing: .11em; text-transform: uppercase; }
+.n08-proactive-page .private { color: #686865; }
+.n08-proactive-page h1 { font: normal 30pt/1.03 Didot, serif; letter-spacing: -.025em;
+  margin: 7mm 0 3mm; max-width: 160mm; }
+.n08-proactive-page .deck { font: 11.8pt/1.37 Baskerville, serif;
+  margin: 0 0 6mm; max-width: 156mm; color: #333331; }
+.n08-proactive-page .metric-rail { border-top: .38pt solid #999995;
+  border-bottom: .38pt solid #999995; display: grid;
+  grid-template-columns: repeat(3, 1fr); column-gap: 4mm; padding: 3mm 0 3.3mm; }
+.n08-proactive-page .metric { min-width: 0; }
+.n08-proactive-page .metric + .metric { border-left: .3pt solid #bcbcb6; padding-left: 4mm; }
+.n08-proactive-page .metric strong { display: block; font: normal 26pt/.92 Didot, serif; }
+.n08-proactive-page .metric-note { display: block; margin-top: 1.5mm;
+  font-size: 7.8pt; line-height: 1.3; letter-spacing: .015em; }
+.n08-proactive-page .article { display: grid; grid-template-columns: 1fr 1fr;
+  column-gap: 7mm; margin-top: 6mm; }
+.n08-proactive-page .article p { font: 10.45pt/1.43 Baskerville, serif;
+  margin: 0 0 3.2mm; hyphens: auto; text-wrap: pretty; }
+.n08-proactive-page .article strong { font-weight: 700; }
+.n08-proactive-page .label { font-size: 7.4pt; font-weight: 700;
+  letter-spacing: .13em; text-transform: uppercase; margin: 0 0 3mm; color: #575754; }
+.n08-proactive-page .rule { height: .35pt; background: #adada8; margin: 3mm 0 4mm; }
+.n08-proactive-page .transfer { display: grid; grid-template-columns: 27mm 1fr;
+  column-gap: 4mm; border-top: .55pt solid #202020; padding-top: 3.5mm; margin-top: 1.2mm; }
+.n08-proactive-page .transfer .label { margin-top: .7mm; }
+.n08-proactive-page .transfer p { font: 10pt/1.38 Baskerville, serif; margin: 0; }

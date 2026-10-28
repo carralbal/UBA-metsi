@@ -1,0 +1,27 @@
+/* N08 p.17: same photo and same words, with an editorial pause. */
+body.premium-magazine.document-n08 section[data-section="06"] figure.n08-observation-photo {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  min-height: 244mm !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  break-inside: avoid !important;
+}
+body.premium-magazine.document-n08 section[data-section="06"] figure.n08-observation-photo img {
+  width: 100% !important;
+  height: 165mm !important;
+  object-fit: cover !important;
+  object-position: 50% 42% !important;
+  border-radius: 0 !important;
+}
+body.premium-magazine.document-n08 section[data-section="06"] figure.n08-observation-photo figcaption {
+  display: block !important;
+  max-width: 158mm !important;
+  margin: 0 !important;
+  padding-top: 5mm !important;
+  border-top: .4pt solid #777 !important;
+  color: #202020 !important;
+  font: normal 22pt/1.13 Didot, serif !important;
+  letter-spacing: -.015em !important;
+}
