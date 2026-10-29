@@ -42,7 +42,7 @@ producidas en clase y no constituye automáticamente otra tarea asincrónica.
 | N25 | Una unidad didáctica de HH-25 u otro caso no sensible; dos relojes y esperas, cambio de política, beneficio, riesgo y revisión. | Se quitaron seis casos y dos respuestas extras previas. La simulación y comparación de lotes pertenecen al taller. |
 | N26 | Mapa de una promesa con tercero, decisión manual, frontera de confianza y dependencia compartida; respuesta ante falla y límite de uso. | Se quitaron el mapa exhaustivo del ecosistema, la desaparición de proveedor ensayada antes de clase y dos respuestas extras. El taller amplía el mapa elegido. |
 | N27 | Un intercambio con acuerdos de forma, significado, tiempo y acción ante incertidumbre; mensaje duplicado y tardío, estado final e información para atención. | Se quitó el contrato integral previo de API y dos respuestas extras. Las pruebas de compatibilidad se realizan en taller. |
-| N28 | Una afirmación de calidad, escenario, evidencia favorable, observación que la refuta y decisión permitida/no permitida. | Se quitaron tres reclamos completos y dos respuestas extras. El taller profundiza la afirmación elegida. **Defecto confirmado visualmente: el PDF canónico duplica la última frase de la consigna en p. 35. Requiere corrección editorial del PDF y verificación de fuente.** |
+| N28 | Una afirmación de calidad, escenario, evidencia favorable, observación que la refuta y decisión permitida/no permitida. | Se quitaron tres reclamos completos y dos respuestas extras. El taller profundiza la afirmación elegida. La repetición de la última frase en p. 35 se corrigió en el PDF canónico; [recibo editorial](QA-N28-DUPLICACION-PREPARACION-20261028.md). |
 | N29 | Plan de cambio con reversión compatible y corrección hacia adelante usando doce unidades de prueba; árbol, registro antes/después, señal, responsable, recuperación y abandono de rama. | Se quitó la exigencia de repositorio, pull request y cadena de liberación completa antes de clase. La consigna pública ya es extensa: **carga alta por medir**. |
 | N30 | Una promesa, señal de resultado, señal de investigación, actor, primera acción y evidencia posterior de utilidad. | Se quitó el sistema completo de observabilidad y dos respuestas extras previas; SLI/SLO, DORA e incidente se desarrollan en taller. |
 | N31 | Ficha de tarea concreta, IA versus alternativa viable, daño a evitar y caso para limitar o retirar. | Se quitó el expediente integral y dos respuestas extras; modalidad, autonomía y control se deciden en clase. |
@@ -66,6 +66,6 @@ producidas en clase y no constituye automáticamente otra tarea asincrónica.
 - `git diff --check`: sin errores de espacio.
 - No se cambió contenido sustantivo del PDF ni se añadió una preparación a N00.
 - El contraste semántico de consignas de N01–N36 está hecho. La duplicación de
-  N28 p. 35 fue confirmada en el render; falta corregirla. También faltan dependencias finas
+  N28 p. 35 fue confirmada en el render y corregida. Aún faltan dependencias finas
   entre paquetes y ensayar la carga real con docentes/estudiantes. La estructura
   de 120 minutos no prueba que la dinámica quepa en ese tiempo.

@@ -56,7 +56,7 @@ arte digital canónico; un PDF de prueba no lo sustituye.
 | N25 | Conservar | — | Flujo y espera; PDF final reproducido byte por byte. |
 | N26 | Conservar | — | Ecosistema y ITIL 4 citado; no afirma COBIT. |
 | N27 | Conservar | — | Contrato e interfaces entre actores. |
-| N28 | Contenido conservado; corrección editorial pendiente | — | Pruebas del servicio real. En p. 35 se duplica la frase final de preparación; confirmado visualmente el 28/10. |
+| N28 | Contenido conservado; corrección editorial aplicada | — | Pruebas del servicio real. Se quitó la frase final repetida de p. 35; la consigna original permanece. |
 | N29 | Conservar | — | Despliegue y recuperación. |
 | N30 | Conservar | — | Observabilidad; PDF final reproducido byte por byte. |
 | N31 | Conservar | — | Pertinencia de IA y control humano. |
@@ -92,7 +92,6 @@ arte digital canónico; un PDF de prueba no lo sustituye.
 
 ## Por validar con el equipo docente
 
-Corregir la repetición editorial de N28 p. 35 en su fuente fiel y PDF canónico.
 Ensayar la preparación y el taller con docentes antes de dar por cerrada la carga
 asincrónica. Ensayar con reloj los ocho paquetes focales y los puentes N06, N09→N28,
 N17→N20, N19→N26→N27, N21→N30, N29→N30, N34→N36. Confirmar si una clase
