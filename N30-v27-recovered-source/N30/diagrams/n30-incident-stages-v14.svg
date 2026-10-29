@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
+  <title id="title">Cuatro momentos de una prueba integral</title>
+  <desc id="desc">Secuencia de cuatro momentos: detectar, contener, recuperar y reparar.</desc>
+  <style>
+    text { font-family: Inter, Arial, sans-serif; }
+    .small { fill: #f7f6f2; font-size: 26px; font-weight: 400; letter-spacing: .08em; }
+    .title { fill: #f7f6f2; font-size: 34px; font-weight: 700; }
+    .rule { stroke: #a6a6a0; stroke-width: 2; }
+    .tick { stroke: #d1ff00; stroke-width: 5; }
+  </style>
+  <path class="rule" d="M66 137H1134"/>
+  <path class="tick" d="M66 137h48M346 137h48M626 137h48M906 137h48"/>
+  <g transform="translate(66 0)">
+    <text class="small" x="0" y="102">01</text>
+    <text class="title" x="0" y="213">DETECTAR</text>
+  </g>
+  <g transform="translate(346 0)">
+    <text class="small" x="0" y="102">02</text>
+    <text class="title" x="0" y="213">CONTENER</text>
+  </g>
+  <g transform="translate(626 0)">
+    <text class="small" x="0" y="102">03</text>
+    <text class="title" x="0" y="213">RECUPERAR</text>
+  </g>
+  <g transform="translate(906 0)">
+    <text class="small" x="0" y="102">04</text>
+    <text class="title" x="0" y="213">REPARAR</text>
+  </g>
+</svg>
