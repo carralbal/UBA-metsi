@@ -10,7 +10,7 @@ Ciento veinte minutos.
 
 ## Preparación docente
 
-- Preparar cinco apuestas con valores inconmensurables.
+- Preparar cuatro apuestas de partida, como pide la lectura, y una quinta opción para introducir durante el encuentro.
 - Preparar fichas de capacidad y dependencias.
 - Preparar una obligación regulatoria y una urgencia política.
 - Preparar un reloj de costo de demora.
@@ -31,7 +31,7 @@ El docente avanza semanas y revela consecuencias distintas. Los equipos registra
 
 ### 4. Consejo de cartera, 20 minutos
 
-Se eligen dos apuestas y se redactan tres renuncias con afectado, consecuencia, responsable y revisión.
+Se eligen dos de las cuatro apuestas preparadas y se redactan al menos dos renuncias con afectado, consecuencia, responsable y revisión. La quinta opción docente aparece después como perturbación y obliga a reconsiderar la cartera; si queda afuera, se documenta también esa renuncia.
 
 ### 5. Kanban de compromiso, 18 minutos
 

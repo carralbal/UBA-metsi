@@ -31,7 +31,7 @@ Con presupuesto limitado se compran observaciones. Debe justificarse qué incert
 
 ### 4. Fijación pública de umbrales, 18 minutos
 
-Se publican población, línea de base, ventana, umbral y decisión antes de recibir resultados.
+Se publican población, ventana, criterio de decisión y umbral defendible antes de recibir resultados. Si falta una línea de base o no es posible justificar un número, se deja explícita la evidencia pendiente y la decisión que todavía no se puede tomar; no se inventan cifras.
 
 ### 5. Piloto HH-22, 20 minutos
 

@@ -2,28 +2,19 @@
 
 ## Propósito
 
-Llegar con una decisión de prioridad que haga visibles valor, demora, capacidad, obligación y renuncia.
+Llegar con una decisión de prioridad que haga visibles capacidad, obligación, renuncia y revisión.
 
-## Producción requerida
+## Producción requerida por la lectura pública
 
-Construí un expediente HH-24 con cinco apuestas y capacidad para dos. Para cada una registrá:
+Prepará **cuatro opciones** de HH-24 y elegí cuáles recibirán capacidad. Incluí una condición que deba respetarse, **dos renuncias explícitas** y una revisión. Después reducí la capacidad disponible y explicá qué cambiarías. Si faltan datos para cuantificar la cabida, declaralo; un puntaje no es respuesta suficiente. No se exige una quinta apuesta ni dos respuestas adicionales.
 
-- población, outcome y obligación;
-- costo de oportunidad y de demora;
-- dependencia habilitante;
-- clase de servicio, si corresponde;
-- trabajo en curso consumido;
-- decisión de hacer, postergar, proteger o retirar;
-- quién espera, qué consecuencia asume y cuándo se revisa.
+## Para llevar al taller, no como segunda entrega
 
-## Prueba de renuncia
-
-Eliminá toda prioridad que no pueda nombrar qué desplaza. Respondé además dos preguntas de preparación de N24.
+En clase se confrontarán costo de oportunidad, costo de demora, dependencias, políticas de flujo y consecuencias para quienes esperan, sobre las cuatro opciones ya preparadas.
 
 ## Criterios de entrada
 
-- Priorizar implica decir no o todavía no.
-- Las obligaciones limitan comparaciones monetarias.
-- Un puntaje no reemplaza juicio.
-- Kanban expresa políticas y límites de compromiso.
-- Toda renuncia tiene dueño y revisión.
+- Priorizar implica dos renuncias con consecuencia visible.
+- Una obligación protegida limita la comparación de opciones.
+- La reducción de capacidad modifica la decisión o justifica conservarla.
+- La revisión tiene una señal o momento reconocible.

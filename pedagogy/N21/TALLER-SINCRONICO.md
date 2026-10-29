@@ -2,7 +2,7 @@
 
 ## Resultado del encuentro
 
-Cada equipo entrega un mapa de objetos y responsabilidades de HH-21 que distingue temporalidad, valor, operación, ecosistema y retiro.
+Cada equipo desarrolla el mapa de la capacidad que preparó —HH-21 u otra no confidencial— y contrasta las perspectivas de proyecto, producto, servicio y plataforma que resulten aplicables. El mapa distingue temporalidad, valor, operación, ecosistema y retiro.
 
 ## Duración base
 
@@ -23,7 +23,7 @@ El proyecto se declara terminado. Cada equipo separa qué desaparece y qué sigu
 
 ### 2. Mesa de cuatro objetos, 16 minutos
 
-Se distribuyen capacidades de Hotel Horizonte entre proyecto, producto, servicio y plataforma, con una justificación por ubicación.
+Se examina la capacidad preparada desde las cuatro perspectivas; las tarjetas de Hotel Horizonte sirven de contraste, no de segundo caso obligatorio. El equipo justifica cuál perspectiva gobierna cada decisión.
 
 ### 3. Prueba de promesa persistente, 14 minutos
 

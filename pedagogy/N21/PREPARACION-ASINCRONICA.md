@@ -2,27 +2,15 @@
 
 ## Propósito
 
-Llegar con un mapa que distinga qué termina, qué persiste y quién conserva responsabilidad después de una entrega.
+Llegar con un mapa de **una capacidad** que distinga qué termina, qué persiste y quién conserva responsabilidad después de una entrega.
 
-## Producción requerida
+## Producción requerida por la lectura pública
 
-Reconstruí HH-21 en cuatro objetos posibles:
-
-- proyecto, con objetivo, plazo y cierre;
-- producto, con población, propuesta de valor y evolución;
-- servicio, con promesa, operación, reparación y continuidad;
-- plataforma, con capacidades compartidas, consumidores y reglas de ecosistema.
-
-Para cada objeto registrá financiación, horizonte temporal, autoridad, medida de éxito y obligación que sobrevive. Señalá dos conflictos producidos por tratar un objeto como si fuera otro.
-
-## Prueba de persistencia
-
-Suponé que mañana se disuelve el proyecto. Indicá qué promesas, decisiones, datos, soporte y costos siguen existiendo. Respondé además dos preguntas de preparación de N21.
+Armá **un mapa HH-21** sobre una capacidad que puedas describir sin exponer información confidencial, o usá el ingreso del hotel. Mostrá las perspectivas que aplican —proyecto, producto, servicio o plataforma—, elegí la principal para una decisión concreta y justificá las demás. Incluí **una asignación de recursos, una medida y una condición de cierre o retiro**. Después eliminá del escenario al equipo del proyecto y comprobá quién puede seguir decidiendo, atendiendo y reparando. No se exige describir los cuatro objetos con todos sus campos ni responder además dos preguntas del PDF.
 
 ## Criterios de entrada
 
-- Los cuatro objetos no se definen por tecnología.
-- El cierre formal no elimina una obligación operacional.
-- Una plataforma tiene consumidores y reglas, no sólo infraestructura.
-- El ownership incluye autoridad y consecuencias.
-- Toda clasificación puede revisarse con evidencia.
+- Las perspectivas se aplican a la capacidad, no a nombres de aplicaciones.
+- La decisión principal, recursos y medida se pueden reconstruir.
+- El cierre formal no elimina obligaciones que alguien debe financiar y gobernar.
+- La prueba sin equipo de proyecto identifica autoridad y reparación reales.

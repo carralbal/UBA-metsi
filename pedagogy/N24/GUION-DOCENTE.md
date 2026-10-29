@@ -7,10 +7,10 @@ El soporte muestra una cartera finita y las consecuencias de no elegir.
 | Pantalla | Qué se ve | Nota de orador | Señal para avanzar |
 |---:|---|---|---|
 | 1 | Pregunta profesional de N24 | Preguntar qué queda afuera. | La prioridad tiene renuncia. |
-| 2 | Dos espacios, cinco apuestas | Materializar capacidad finita. | Nadie agrega sin desplazar. |
+| 2 | Dos espacios, cuatro apuestas preparadas | Materializar capacidad finita; reservar una quinta opción para la perturbación en clase. | Nadie agrega sin desplazar. |
 | 3 | Expediente de valor | Separar outcome, obligación y preferencia. | No aparece un valor universal. |
 | 4 | Curvas de demora | Mostrar ventanas y consecuencias. | El tiempo afecta distinto. |
-| 5 | Consejo de cartera | Exigir decisión y costo. | Hay dos activas y tres renuncias. |
+| 5 | Consejo de cartera | Exigir decisión y costo. | Hay dos activas y al menos dos renuncias; la quinta opción se introduce después. |
 | 6 | Políticas Kanban | Hacer explícito el compromiso. | Entrada, límite y salida son visibles. |
 | 7 | Obligación sobreviniente | Impedir monetizar una protección. | La cartera se reabre con criterio. |
 | 8 | Audiencia de afectados | Dar voz a quienes esperan. | La renuncia conserva trazabilidad. |

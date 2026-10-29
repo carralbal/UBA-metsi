@@ -2,28 +2,19 @@
 
 ## Propósito
 
-Llegar con una iniciativa expresada como una cadena de resultado, mecanismo, evidencia, decisión y retiro.
+Llegar con una iniciativa expresada como cadena de mecanismo, resultado, protección, evidencia y decisión revisable.
 
-## Producción requerida
+## Producción requerida por la lectura pública
 
-Construí una ficha HH-22 que declare:
+Prepará **una ficha HH-22** sobre una iniciativa que puedas observar sin datos confidenciales, o usá la confirmación del hotel. Incluí una explicación rival y **tres medidas: mecanismo, resultado y protección**. Mostrá criterios previos, una decisión que realmente pueda cambiar y datos que todavía faltan. **No inventes cifras de base ni umbrales** para completar la ficha: si no están fundamentados, explicá qué decisión sigue pendiente. Las preguntas del PDF orientan la preparación, no agregan dos respuestas obligatorias.
 
-- población y línea de base;
-- resultado observable y mecanismo supuesto;
-- hipótesis rival;
-- métrica, umbral y ventana fijados de antemano;
-- salvaguarda y obligación que no puede sacrificarse;
-- evidencia que fortalecería y debilitaría la hipótesis;
-- decisión de ampliar, modificar, detener o retirar.
+## Para llevar al taller, no como segunda entrega
 
-## Prueba de derrota
-
-Escribí el resultado que obligaría al equipo a abandonar su explicación preferida. Si ningún resultado puede hacerlo, reformulá la hipótesis. Respondé además dos preguntas de preparación de N22.
+Llevá una condición que debilitaría tu explicación preferida. En clase se probarán criterio, hipótesis rival y salvaguarda con resultados adversos.
 
 ## Criterios de entrada
 
-- La hipótesis puede perder.
-- El mecanismo no se confunde con la solución.
-- Métrica y umbral preceden al resultado.
-- Una salvaguarda limita el experimento.
-- Aprender cambia una decisión.
+- La hipótesis puede perder apoyo ante otra observación.
+- Mecanismo, resultado y protección tienen medidas distintas.
+- Criterios y vacíos preceden a la decisión; números sin base no se fabrican.
+- Una salvaguarda puede detener una ampliación.
