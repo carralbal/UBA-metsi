@@ -82,7 +82,7 @@ arte digital canónico; un PDF de prueba no lo sustituye.
   los métodos nuevos, pero no cuentan con aprobación institucional.
 - [Auditoría de carga](AUDITORIA-CARGA-37-LECTURAS-20261028.md): 36
   preparaciones, sólo siete lecturas con tiempo numérico entre N01 y N36,
-  y calendario de 46 encuentros aún sin prueba de aula. Cierre curricular
+  y calendario de 46 encuentros posible pero aún sin prueba de aula. Cierre curricular
   digital no equivale a viabilidad de cuatrimestre.
 
 ## Por validar con el equipo docente

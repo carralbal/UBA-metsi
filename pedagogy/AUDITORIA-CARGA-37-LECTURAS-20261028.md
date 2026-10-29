@@ -31,6 +31,34 @@ impedir que «37 publicadas» se confunda con «37 enseñables en un cuatrimestr
   prueba de persistencia y dos respuestas. Su PDF declara 80–100 minutos para
   núcleo más preparación, pero esa cifra no ha sido contrastada con lectores.
 
+## Una prueba de calendario, no el calendario aprobado
+
+| Encuentros de dos horas | Uso posible | N nuevas |
+|---|---|---:|
+| 1–4 | N01–N04 | 4 |
+| 5 | Devolución e integración de A; ninguna lectura nueva | 0 |
+| 6–11 | N05–N10 | 6 |
+| 12 | Recuperación de ritmo y feedback de B | 0 |
+| 13–18 | N11–N16 | 6 |
+| 19–20 | Integración A–C y primer parcial | 0 |
+| 21–24 | N17–N20 | 4 |
+| 25 | Revisión de prefactibilidad/plan, sin nueva entrega | 0 |
+| 26–35 | N21–N30 | 10 |
+| 36 | Integración y devolución E–F | 0 |
+| 37–39 | N31–N33 | 3 |
+| 40 | Segundo parcial | 0 |
+| 41–43 | N34–N36 | 3 |
+| 44–46 | Defensa del portfolio, recuperatorio y contingencia | 0 |
+| **Total** | **36 encuentros con N + 10 sin N nueva** | **36** |
+
+Esta distribución prueba solamente que **hay casilleros** para las 36 N y
+algunas funciones de evaluación/feedback. No prueba que los talleres y la
+preparación quepan, que el orden de parciales sea reglamentario, ni que un
+recuperatorio alcance para todas las instancias. Tampoco resuelve feriados,
+comisión virtual, horas formales ni disponibilidad real del equipo. Si falla
+una prueba cronometrada, el calendario debe reservar más tiempo a costa de
+una actividad, no ocultar la sobrecarga en la lectura de casa.
+
 ## Regla de cierre antes de elevar el programa
 
 1. Con tres personas del equipo que no hayan redactado las N, cronometrar
@@ -39,10 +67,10 @@ impedir que «37 publicadas» se confunda con «37 enseñables en un cuatrimestr
 2. Ensayar un taller de 120 minutos con N14 o N19: apertura, producción,
    perturbación, revisión, devolución y salida. Registrar qué actividad no
    entró y por qué. Hacer una segunda prueba con una N de otro bloque.
-3. Construir un calendario de 46 encuentros que ubique las 36 experiencias,
-   evaluaciones, recuperatorios, feedback, integración y reserva. Resolver con
-   la unidad académica la equivalencia entre 108 horas formales, 92 horas
-   reloj de encuentros y virtualidad.
+3. Contrastar el calendario de prueba de arriba con fechas, evaluaciones,
+   recuperatorios, feedback, integración y reserva reales. Resolver con la
+   unidad académica la equivalencia entre 108 horas formales, 92 horas reloj
+   de encuentros y virtualidad.
 4. Si una preparación o taller excede su ventana, **sustituir o recortar**
    una actividad evaluable existente antes de sumar contenido. Las EXT. no
    pasan a obligatorias por defecto. Conservar un solo producto acumulativo
