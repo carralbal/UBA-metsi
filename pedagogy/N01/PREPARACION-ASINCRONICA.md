@@ -35,4 +35,8 @@ Marcá el campo que te resultó más difícil y explicá en dos o tres líneas p
 
 ## Tiempo orientativo
 
-La lectura mantiene la estimación indicada por N01. La producción de HH-01 requiere aproximadamente veinte a treinta minutos adicionales.
+El índice de N01 no fija una duración numérica. Los veinte a treinta minutos
+para preparar HH-01 son una **hipótesis docente**, no un tiempo validado con
+estudiantes; incluyen el llenado de la ficha, no una segunda entrega. Hay que
+cronometrar lectura de núcleo, dos respuestas y ficha antes de comunicar una
+carga total.

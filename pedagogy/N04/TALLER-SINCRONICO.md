@@ -10,7 +10,8 @@ Ciento veinte minutos.
 
 ## Preparación docente
 
-- Seleccionar expedientes que utilicen la misma cifra para justificar decisiones distintas.
+- Seleccionar respuestas previas que utilicen la misma cifra para sostener
+  afirmaciones o decisiones distintas. El expediente se hará en el taller.
 - Preparar sobres de evidencia con correo directivo, tablero, episodio, log técnico, nota de turno, regla comercial, testimonio y síntesis generada.
 - Identificar dependencias entre fuentes para evitar una falsa triangulación.
 - Preparar tres decisiones posibles: reemplazo, piloto de reconciliación y cambio operativo.

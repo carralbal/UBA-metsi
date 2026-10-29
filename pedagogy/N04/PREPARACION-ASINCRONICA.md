@@ -2,32 +2,37 @@
 
 ## Propósito
 
-Llegar con una afirmación profesional desarmada, sin confundir registro, interpretación, hipótesis y decisión. El trabajo recupera una relación importante del modelo de N03 y reconstruye la evidencia que permitiría sostenerla o revisarla.
+Llegar con **dos registros AED breves** que son las dos respuestas de
+preparación, como indican N04 pp. 4, 29 y 31. La clasificación exhaustiva
+de enunciados y el expediente más completo se construyen en el encuentro;
+no hay un informe adicional antes de clase.
 
-## Producción requerida
+## Producción requerida, según N04 pp. 4, 29 y 31
 
-Elegí una afirmación relevante de HH-04 y construí un expediente de una página con:
+Respondé **dos de las seis preguntas de preparación** del PDF. En **cada
+respuesta**, armá un registro AED breve que haga visibles:
 
-1. afirmación exacta y alcance;
-2. rastro o fuente disponible;
-3. transformación que produjo el dato;
-4. puente inferencial entre rastro y afirmación;
-5. explicación rival;
-6. supuesto todavía no verificado;
-7. decisión que podría autorizarse;
-8. condición que obligaría a revisar.
+1. la afirmación y su estatus;
+2. el rastro, su procedencia y el puente que lo conecta con la afirmación;
+3. una explicación alternativa y un límite de la conclusión;
+4. la decisión proporcionada y la señal que la haría revisar.
 
-Clasificá cada enunciado como observación, afirmación de una fuente, dato, síntoma, interpretación, hipótesis, supuesto, restricción o decisión. Indicá además confiabilidad, validez y utilidad para la decisión sin convertirlas en una única valoración.
-
-## Nota de contraste
-
-En no más de doscientas palabras, respondé una de las seis preguntas de preparación y explicá qué evidencia ausente podría cambiar el alcance de la afirmación. Si utilizás IA para ordenar materiales, anexá la instrucción, identificá la salida como transformación y verificá cada afirmación contra su fuente.
+Estas cuatro líneas organizan los elementos de N04 p. 29 dentro de las dos
+respuestas, **no** generan otros dos documentos. No se pide antes de clase
+una taxonomía completa, una nota extra de doscientas palabras ni un anexo
+de IA. Si usás IA para ordenar notas, verificá contra las fuentes cualquier
+afirmación que vayas a llevar al taller y declará ese uso según la política
+de la materia.
 
 ## Criterios de entrada
 
-- La afirmación es acotada y puede discutirse.
-- El rastro conserva fuente, momento y transformación.
-- El puente inferencial no se presenta como dato.
-- La explicación rival es compatible con parte de la evidencia.
-- La decisión es proporcional a la incertidumbre declarada.
+- Las afirmaciones son acotadas y pueden discutirse.
+- El rastro no se confunde con la conclusión que querés sostener.
+- La explicación rival es compatible con al menos parte de la escena.
+- La condición de revisión nombra una evidencia posible, no sólo una opinión.
+
+## Límite de carga
+
+N04 no publica un tiempo numérico para su ruta. Medir lectura NÚCLEO y los
+dos registros integrados antes de comunicar una estimación total.
 

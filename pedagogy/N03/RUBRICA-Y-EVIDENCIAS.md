@@ -22,7 +22,10 @@
 
 ## Evidencia de aprendizaje
 
-La comparación entre la predicción inicial y la decisión final debe registrar al menos dos revisiones explicadas por evidencia. Una debe referirse al tiempo o a una retroalimentación; la otra, a una frontera o a la distribución de consecuencias.
+La comparación entre la predicción inicial **formulada al abrir el taller** y
+la decisión final debe registrar al menos dos revisiones explicadas por
+evidencia. Una debe referirse al tiempo o a una retroalimentación; la otra,
+a una frontera o a la distribución de consecuencias.
 
 No cuenta como revisión cambiar el dibujo sin indicar qué mecanismo, predicción o decisión quedó afectado.
 

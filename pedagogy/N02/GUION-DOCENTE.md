@@ -7,7 +7,7 @@ El guion hace visibles relaciones y transformaciones del mapa. No presenta una v
 | Pantalla | Qué se ve | Nota de orador | Señal para avanzar |
 |---:|---|---|---|
 | 1 | Pregunta profesional de N02 | Pedir que cada persona nombre qué objeto llamaría sistema en HH-02. | Aparecen objetos de distinta naturaleza. |
-| 2 | Instrucciones de galería | Solicitar observaciones sobre relaciones, exclusiones y flechas. | Cada mapa recibió tres marcas útiles. |
+| 2 | Consigna de frontera rival e intercambio | Cada persona trae un mapa HH-02 y dos respuestas. La frontera rival se marca sobre el mapa en el taller; no pedir otro mapa previo. Solicitar marcas sobre relaciones, exclusiones y flechas. | Cada equipo tiene mapa inicial, frontera rival y al menos una marca útil. |
 | 3 | Presupuesto de la subasta | Explicar que el límite representa costo de análisis, no importancia ontológica. | Los equipos justifican inclusiones y relaciones. |
 | 4 | Tres errores observados | Elegir ejemplos reales de la producción estudiantil. | El grupo puede reformular al menos una flecha. |
 | 5 | Roles de la autopsia | No permitir que un rol narre todo el caso. La parcialidad es parte de la experiencia. | La secuencia incluye esperas, contradicciones y reparación. |
@@ -50,7 +50,7 @@ Intervención: preguntar qué capacidad desaparecería mañana si se prohibiera 
 
 ## Decisiones de facilitación
 
-- Si la galería deriva en preferencias estéticas, volver a qué decisión permite cada mapa.
+- Si el intercambio deriva en preferencias estéticas, volver a qué decisión permite cada frontera.
 - Si la subasta premia mapas pequeños, introducir una consecuencia que la frontera dejó fuera.
 - Si la autopsia se vuelve actuación libre, exigir secuencia, fuente y verbo observable.
 - Si falta tiempo, conservar la optimización local y la revisión por decisión. Reducir la cantidad de defensas públicas.

@@ -22,7 +22,10 @@
 
 ## Evidencia de aprendizaje
 
-El expediente inicial y el registro AED final deben permitir reconstruir al menos tres cambios: uno en el estatus de una afirmación, otro en la procedencia o independencia de la evidencia y otro en el alcance de la decisión.
+Las dos respuestas iniciales y el registro AED final deben permitir
+reconstruir al menos tres cambios: uno en el estatus de una afirmación, otro
+en la procedencia o independencia de la evidencia y otro en el alcance de
+la decisión. No se exige un expediente previo adicional.
 
 Una respuesta más extensa no demuestra mayor calidad si mantiene implícito el salto entre rastro y conclusión.
 

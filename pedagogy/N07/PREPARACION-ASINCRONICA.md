@@ -2,31 +2,20 @@
 
 ## Propósito
 
-Llegar con un protocolo de entrevista que reconstruya episodios y preserve contradicciones, en lugar de pedir requisitos o confirmar una solución preferida.
+Llegar con una entrevista capaz de reconstruir un episodio sin confirmar de antemano una solución.
 
-## Producción requerida
+## Producción requerida por la lectura pública
 
-Tomá la incertidumbre prioritaria de N06 y diseñá un protocolo breve para HH-07 con:
+Respondé dos preguntas de preparación de N07 y prepará **un protocolo HH-07 breve**: apertura que explique propósito y uso, una pregunta por un episodio concreto, dos repreguntas no inductivas, una explicación rival y cómo conservarás la fuente sin exponer datos innecesarios. No se pide un informe o entrevista realizada antes de clase.
 
-- propósito y decisión que la entrevista podría cambiar;
-- criterio de selección de la persona y variación buscada;
-- apertura que explique uso, registro y posibilidad de no responder;
-- una pregunta episódica sobre un caso concreto;
-- dos sondas no inductivas;
-- una pregunta por excepción o caso negativo;
-- una explicación rival;
-- regla de registro que separe cita, reconstrucción e interpretación;
-- cierre y devolución prevista.
+## Para llevar al taller, no como segunda entrega
 
-## Prueba previa
-
-Señalá en el protocolo una pregunta que podría fabricar la respuesta y reescribila. Respondé además dos de las seis preguntas de preparación de N07.
+Tomá la incertidumbre prioritaria de N06 como orientación. En clase se probará y corregirá el protocolo, se decidirá a quién escuchar para buscar variación y se completarán consentimiento, seguridad, registro y devolución a partir de situaciones concretas.
 
 ## Criterios de entrada
 
-- El protocolo no pregunta qué debería tener el nuevo sistema.
-- Las preguntas solicitan episodios, secuencias, decisiones y artefactos.
-- La muestra busca variación y no sólo disponibilidad.
-- La contradicción se conserva con fuente y contexto.
-- El uso de grabación, transcripción o IA tiene consentimiento y verificación.
+- Pregunta por un episodio, no por funciones de un sistema deseado.
+- Las repreguntas abren secuencia, excepción o consecuencia sin sugerir la respuesta.
+- La explicación rival deja una diferencia que pueda investigarse.
+- El registro preserva quién dijo qué y bajo qué condiciones.
 

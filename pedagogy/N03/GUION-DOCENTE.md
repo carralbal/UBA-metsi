@@ -6,7 +6,7 @@ El soporte administra información y tiempo. No revela el ciclo causal antes de 
 
 | Pantalla | Qué se ve | Nota de orador | Señal para avanzar |
 |---:|---|---|---|
-| 1 | Pregunta profesional de N03 | Pedir una decisión inicial sobre el piloto y una consecuencia diferida. | Hay predicciones incompatibles que pueden contrastarse. |
+| 1 | Pregunta profesional de N03 | Pedir que transformen la relación preparada en una decisión inicial sobre el piloto y una consecuencia diferida. | Hay predicciones incompatibles que pueden contrastarse. |
 | 2 | Matriz del muro de predicciones | No corregir todavía. Hacer visibles los supuestos sobre tiempo y frontera. | Todas las decisiones tienen una demora asociada. |
 | 3 | Estado inicial de HH-03 | Explicar reglas, recursos y objetivo observable de la simulación. | Los equipos pueden decidir sin información futura. |
 | 4 | Ronda 1 | Mostrar sólo el resultado inmediato. Registrar el entusiasmo por escalar. | Cada equipo toma una decisión irreversible para la ronda siguiente. |

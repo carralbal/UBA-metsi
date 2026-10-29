@@ -2,7 +2,9 @@
 
 ## Función del soporte visual
 
-El guion revela rastros de manera gradual y conserva su procedencia. No reemplaza el expediente ni muestra una respuesta correcta antes del contraste.
+El guion revela rastros de manera gradual y conserva su procedencia. El
+expediente se construye durante el taller a partir de las respuestas previas;
+no se muestra una respuesta correcta antes del contraste.
 
 | Pantalla | Qué se ve | Nota de orador | Señal para avanzar |
 |---:|---|---|---|

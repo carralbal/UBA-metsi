@@ -10,7 +10,7 @@ Ciento veinte minutos.
 
 ## Preparación docente
 
-- Seleccionar recorridos que terminen en la interfaz y omitan operación o reparación.
+- Seleccionar fichas de transición que terminen en la interfaz y omitan operación o reparación; el recorrido completo se construirá en clase.
 - Preparar estaciones de evidencia sobre percepción, comprensión, interacción, tiempo, canal, confianza y autoridad.
 - Incluir registros reales o plausibles de abandono, asistencia y excepciones.
 - Preparar una propuesta de automatización con una métrica de adopción favorable.

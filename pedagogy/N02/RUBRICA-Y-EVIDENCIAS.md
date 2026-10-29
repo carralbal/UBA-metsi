@@ -22,7 +22,9 @@
 
 ## Evidencia de aprendizaje
 
-La comparación entre las dos fronteras iniciales y el mapa final debe mostrar al menos dos cambios sustantivos. Cada cambio se registra con su origen:
+La comparación entre el mapa HH-02 **traído al taller**, la frontera rival
+marcada al abrirlo y el mapa final debe mostrar al menos dos cambios
+sustantivos. Cada cambio se registra con su origen:
 
 - evidencia del episodio;
 - objeción de otro equipo;

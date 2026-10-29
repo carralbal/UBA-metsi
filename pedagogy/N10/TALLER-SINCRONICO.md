@@ -10,7 +10,7 @@ Ciento veinte minutos.
 
 ## Preparación docente
 
-- Seleccionar pares de encuadres que conduzcan a intervenciones distintas.
+- Seleccionar fichas HH-10 con encuadres diferentes; formar los pares rivales al iniciar el taller, sin exigir dos encuadres previos por estudiante.
 - Preparar un muro con evidencias acumuladas de N01 a N09.
 - Preparar tres mandatos ejecutivos (reemplazar PMS, lanzar IA, reducir espera) y una señal **sin pedido** de oportunidad de mejora; todos deben tener evidencia rival.
 - Preparar una evidencia que contradiga cada encuadre dominante.

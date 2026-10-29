@@ -10,7 +10,8 @@ Ciento veinte minutos.
 
 ## Preparación docente
 
-- Seleccionar predicciones iniciales que discrepen sobre la conveniencia de escalar.
+- Seleccionar relaciones HH-03 y datos de revisión propuestos en las
+  respuestas previas. La predicción inicial se formulará en clase.
 - Preparar fichas de llegadas simples, excepciones, personal disponible, cola, reparaciones, reclamos y presión comercial.
 - Preparar tres sobres de eventos para revelar al final de cada ronda.
 - Disponer de una línea de tiempo y material móvil para construir ciclos causales.
@@ -19,7 +20,10 @@ Ciento veinte minutos.
 
 ### 1. Muro de predicciones, 10 minutos
 
-Cada persona ubica su decisión inicial en una matriz de dos ejes: resultado inmediato y riesgo diferido. Agrega la demora que considera más importante. No se debate todavía.
+Cada persona toma la relación que señaló en la preparación y formula allí
+una predicción revisable. Ubica su decisión inicial en una matriz de dos
+ejes: resultado inmediato y riesgo diferido. Agrega la demora que considera
+más importante. No se debate todavía.
 
 ### 2. Simulación HH-03 en tres rondas, 27 minutos
 
@@ -75,7 +79,7 @@ Cada persona compara su decisión final con la del muro inicial. Identifica una 
 
 ## Evidencias para el portfolio
 
-- horizonte de impacto inicial;
+- predicción inicial formulada en el muro durante el encuentro;
 - registro de las tres rondas;
 - ciclo causal con mecanismos y demoras;
 - acta de revisión de fronteras;

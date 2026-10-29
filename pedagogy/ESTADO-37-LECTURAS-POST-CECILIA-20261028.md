@@ -18,8 +18,10 @@ arte digital canónico; un PDF de prueba no lo sustituye.
   agregar una página duplicaría material. «Conservar» no equivale a aval de
   docentes ni autoridades.
 - **36/36 paquetes de clase pasaron validación estructural**; ocho paquetes
-  focales ya reflejan lo nuevo. No se ensayó aún una clase con reloj ni se
-  sincronizaron sus decks v4.
+  focales ya reflejan lo nuevo. Además, la preparación de **N01–N10** se
+  contrastó con las consignas de sus PDF canónicos para eliminar trabajo previo
+  oculto. Falta el mismo contraste N11–N36. No se ensayó aún una clase con reloj
+  ni se sincronizaron sus decks v4.
 - **No hay PDF privado canónico.** Se usaron archivos temporales para QA y se
   eliminaron. N11 y N21 tienen p. 3 de Referentes más legible; N25 y N30
   cuentan con receta comprobada que reproduce exactamente su PDF final.
@@ -84,10 +86,14 @@ arte digital canónico; un PDF de prueba no lo sustituye.
   preparaciones, sólo siete lecturas con tiempo numérico entre N01 y N36,
   y calendario de 46 encuentros posible pero aún sin prueba de aula. Cierre curricular
   digital no equivale a viabilidad de cuatrimestre.
+- [Alineación de preparación N01–N10](QA-ALINEACION-PREPARACION-N01-N10-20261028.md):
+  cada consigna pública se cruzó con el paquete docente; se quitaron entregas
+  adicionales en la preparación, manteniendo la profundización en clase.
 
 ## Por validar con el equipo docente
 
-Ensayar con reloj los ocho paquetes focales y los puentes N06, N09→N28,
+Completar la alineación de preparación N11–N36 antes de dar por cerrada la carga
+asincrónica. Ensayar con reloj los ocho paquetes focales y los puentes N06, N09→N28,
 N17→N20, N19→N26→N27, N21→N30, N29→N30, N34→N36. Confirmar si una clase
 de 120 minutos funciona y si la carga real cabe en el cuatrimestre. Actualizar
 los decks si se usarán, probar BPMN en un modelador independiente, hacer

@@ -10,7 +10,7 @@ Ciento veinte minutos.
 
 ## Preparación docente
 
-- Seleccionar tableros con preguntas interesantes pero sin decisión asociada.
+- Seleccionar registros HH-06 con preguntas interesantes pero sin decisión asociada; los tableros se construirán en clase.
 - Preparar un catálogo de métodos con costo, demora, cobertura y sesgo.
 - Preparar tarjetas de compromiso: explorar, pilotear, contratar, migrar y escalar.
 - Preparar dos eventos que cambien costo de demora y reversibilidad.

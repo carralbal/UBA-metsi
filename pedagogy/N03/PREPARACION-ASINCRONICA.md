@@ -2,35 +2,36 @@
 
 ## Propósito
 
-Llegar con una predicción revisable sobre los efectos de una mejora local. El trabajo recupera el mapa final de N02 y lo extiende en el tiempo: qué cambia ahora, qué puede regresar después y quién absorbe una consecuencia que el indicador inicial no muestra.
+Volver al mapa final de N02 y preparar **una ficha breve HH-03 integrada en
+dos respuestas**, como indican N03 pp. 4, 29 y 31. El ciclo causal completo
+y la simulación de efectos se elaboran en clase.
 
-## Producción requerida
+## Producción requerida, según N03 pp. 4, 29 y 31
 
-Elegí una intervención acotada sobre HH-03 y prepará un horizonte de impacto con tres momentos:
+Respondé **dos de las seis preguntas de preparación** del PDF. Entre ambas
+respuestas justificá las fronteras de análisis, intervención,
+responsabilidad y tiempo; señalá **una** relación causal todavía hipotética,
+un dato que podría ponerla a prueba, una métrica de equilibrio y una
+condición para revisar el piloto. Indicá cuál relación revisarías primero.
+Todo forma **una sola ficha breve**: no se
+pide un tercer texto.
 
-1. efecto inmediato esperado;
-2. efecto de segundo orden sobre otro actor, cola o capacidad;
-3. efecto de tercer orden que podría reforzar o compensar el cambio inicial.
-
-La entrega debe incluir:
-
-- el fragmento del mapa de N02 que se modifica;
-- una frontera analítica, una de intervención, una de responsabilidad y una temporal;
-- un ciclo causal con relaciones escritas como mecanismos, no como asociaciones vagas;
-- al menos una demora entre decisión y consecuencia;
-- una variable acumulada y su flujo de entrada o salida;
-- una señal temprana que permitiría revisar la intervención;
-- una decisión provisional sobre escalar, sostener, modificar o detener.
-
-## Nota de contraste
-
-En no más de doscientas palabras, explicá qué costo o daño podría quedar fuera del indicador de éxito elegido y qué actor lo volvería visible. Usá una de las seis preguntas de preparación de N03 para cuestionar tu predicción.
+Traé el mapa final de N02 si ya lo tenés. No se exige antes del encuentro
+una predicción de tres órdenes, una variable acumulada, un diagrama causal
+completo ni una nota adicional de doscientas palabras.
 
 ## Criterios de entrada
 
-- La intervención está delimitada y puede observarse.
-- Las flechas expresan mecanismos y dirección del cambio.
-- La demora no se confunde con ausencia de relación.
-- El efecto de segundo orden no repite el efecto inmediato.
-- La decisión incluye una condición explícita de revisión.
+- Las cuatro fronteras están nombradas con una razón breve; no requieren
+  cuatro diagramas.
+- La relación elegida nombra dos elementos y un posible mecanismo, aunque
+  todavía sea tentativo.
+- El dato propuesto podría fortalecer o debilitar la explicación.
+- La métrica de equilibrio y la condición de revisión podrían revelar una
+  consecuencia diferida; el taller pondrá esa idea a prueba.
+
+## Límite de carga
+
+N03 no publica un tiempo numérico para su ruta. Medir lectura NÚCLEO y la
+ficha integrada en dos respuestas antes de comunicar una estimación total.
 

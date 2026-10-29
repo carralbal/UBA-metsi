@@ -10,16 +10,20 @@ Ciento veinte minutos.
 
 ## Preparación docente
 
-- Seleccionar tres pares de fronteras estudiantiles con diferencias significativas.
+- Seleccionar mapas HH-02 y respuestas que muestren explicaciones distintas.
+  Cada estudiante trae **un mapa**; no presuponer dos mapas completos.
 - Preparar tarjetas de actores, artefactos, tiempos, decisiones y prácticas informales.
 - Preparar una pieza de evidencia para cada explicación rival.
 - Disponer de papel grande o tablero digital con espacio para mover elementos.
 
 ## Secuencia
 
-### 1. Galería silenciosa, 12 minutos
+### 1. Una frontera rival para el mapa recibido, 12 minutos
 
-Se exponen los mapas sin explicación de sus autores. Cada persona marca:
+Se exponen los mapas HH-02 sin explicación de sus autores. Cada equipo toma
+uno y, sobre la misma hoja, marca una **frontera rival**: si el original
+privilegia latencia técnica, la rival investiga confiabilidad de la promesa,
+o viceversa. Explica qué relación y qué exclusión cambian. Luego marca:
 
 - una relación que ayuda a comprender el resultado;
 - una exclusión que podría desplazar responsabilidad;
@@ -82,8 +86,8 @@ Cada persona identifica una relación que incorporó por evidencia, una exclusi�
 
 ## Evidencias para el portfolio
 
-- dos fronteras iniciales;
-- anotaciones recibidas en la galería;
+- mapa HH-02 traído como preparación y frontera rival marcada en clase;
+- anotaciones recibidas en el intercambio;
 - mapa revisado;
 - justificación de inclusiones y exclusiones;
 - registro individual de transición hacia N03.
