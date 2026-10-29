@@ -34,9 +34,18 @@ describe esa cadena, pero su estado de publicación/LFS es obsoleto. No
 recompilar N30 desde este HTML y sobrescribir el PDF público sin reconstruir y
 verificar la cadena completa. No se modificó el PDF final en este corte.
 
-## Falta
+## Reproducción exacta del arte digital desde Git
 
-Formalizar un ensamblador autocontenido que tome esta fuente, la portada
-canónica y las operaciones PDF-level ya aprobadas para reproducir el arte
-digital sin depender de un checkout histórico. Hacerlo con archivos temporales
-que se eliminen tras el cotejo, no con nuevas ramas de «copias privadas».
+El commit `a04f8e2ce7849f4d7647a2f1f01a9a1fed354ced` conserva como blob Git
+normal el PDF v28 de 39 páginas, SHA-256
+`a838b7b1f85b77bde2127a9b1fd5d0d219d4f5d6fc8be2b1521564c3f5a0cc22`.
+`scripts/rebuild_n30_from_git_history_20261028.py` lo extrae sólo a un
+directorio temporal, aplica la normalización aprobada de p. 3 con
+`scripts/normalize_n30_n31_referentes_20261028.py` y exige el SHA final del
+PDF canónico. Si coincide, la cadena **PDF v28 → PDF final** es reproducible
+byte por byte sin depender del checkout histórico ni guardar copias privadas.
+
+Esto no convierte el HTML interior v27 en ensamblador autónomo de la v28. La
+fuente semántica y editorial queda preservada, y el arte final queda
+reconstruible desde Git; cerrar además la cadena HTML → v28 exigiría portar el
+ensamblador histórico de portada/etiquetado y contrastar toda su salida.
