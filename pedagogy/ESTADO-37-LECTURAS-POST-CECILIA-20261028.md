@@ -80,6 +80,10 @@ arte digital canónico; un PDF de prueba no lo sustituye.
   PDF final reproducible desde blob normal de Git v28 + normalización p. 3.
 - [Programa propuesto](../programa/programa-metsi-2026.md) y portada: reflejan
   los métodos nuevos, pero no cuentan con aprobación institucional.
+- [Auditoría de carga](AUDITORIA-CARGA-37-LECTURAS-20261028.md): 36
+  preparaciones, sólo siete lecturas con tiempo numérico entre N01 y N36,
+  y calendario de 46 encuentros aún sin prueba de aula. Cierre curricular
+  digital no equivale a viabilidad de cuatrimestre.
 
 ## Por validar con el equipo docente
 
