@@ -1,0 +1,62 @@
+/* N11 private v35: restore the published continuation across pp. 25-26 only. */
+@media print {
+  body.block-c.document-n11 #section-10 .hotel-voices-compact header {
+    margin-bottom: 5mm !important;
+  }
+  body.block-c.document-n11 #section-10 .hotel-voices-grid {
+    margin-right: 6mm !important;
+  }
+  body.block-c.document-n11 #section-10 .hotel-voices-grid article {
+    grid-template-columns: 26mm 1fr !important;
+    min-height: 58mm !important;
+  }
+  body.block-c.document-n11 #section-10 .hotel-voices-grid .hotel-portrait,
+  body.block-c.document-n11 #section-10 .hotel-voices-grid img {
+    width: 26mm !important;
+    height: 39mm !important;
+  }
+  body.block-c.document-n11 #section-10 .hotel-continuation-body {
+    margin-right: 6mm !important;
+  }
+  body.block-c.document-n11 #section-10 .hotel-continuation {
+    min-height: 248mm !important;
+  }
+  body.block-c.document-n11 .n11-case-tail-page {
+    box-sizing: border-box;
+    height: 67mm;
+    padding: 9mm 1mm 0;
+    break-before: page;
+    page-break-before: always;
+    background: #E3E6E4;
+    border-top: 2px solid #171717;
+  }
+  body.block-c.document-n11 .n11-case-tail-page p {
+    width: 51mm;
+    margin: 0;
+    font: 400 10.8pt/1.28 Baskerville, Georgia, serif;
+  }
+  body.block-c.document-n11 #section-11.block-c-movement {
+    display: block !important;
+    min-height: 0 !important;
+    height: auto !important;
+    justify-content: initial !important;
+    margin-top: 5mm !important;
+    padding: 0 !important;
+  }
+  body.block-c.document-n11 #section-11 .section-body,
+  body.block-c.document-n11 #section-11 .section-body p {
+    font: 400 10.8pt/1.32 Baskerville, Georgia, serif !important;
+  }
+  body.block-c.document-n11 #section-11 .section-lead {
+    margin-top: 3mm !important;
+  }
+  body.block-c.document-n11 #section-11 .section-body:not(.section-lead) {
+    columns: auto !important;
+    column-count: auto !important;
+    column-rule: none !important;
+    margin-top: 3mm !important;
+  }
+  body.block-c.document-n11 #section-11 .section-body p {
+    margin: 0 0 5mm !important;
+  }
+}

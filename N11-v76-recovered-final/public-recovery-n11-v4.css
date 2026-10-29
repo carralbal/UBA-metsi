@@ -1,0 +1,54 @@
+/* Private N11 trial: restore the public index route without global scaling. */
+@media print {
+  body.document-n11 .block-c-contents .contents-layout {
+    display: grid !important;
+    grid-template-columns: 56mm minmax(0, 1fr) !important;
+    gap: 6mm !important;
+    height: 218mm !important;
+  }
+  body.document-n11 .block-c-contents .contents-layout figure {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    height: 198mm !important;
+    align-self: start !important;
+    background: transparent !important;
+  }
+  body.document-n11 .contents-photo-viewport,
+  body.document-n11 .contents-photo-viewport > img:not(.editorial-contact-sheet) {
+    width: 56mm !important;
+    height: 184mm !important;
+    object-fit: cover !important;
+  }
+  body.document-n11 .block-c-contents .contents-layout ol {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    columns: 2 !important;
+    column-count: 2 !important;
+    column-gap: 5mm !important;
+    min-width: 0 !important;
+  }
+  body.document-n11 .block-c-contents .contents-layout li {
+    grid-template-columns: 6mm minmax(0, 1fr) 10mm !important;
+    gap: 1mm !important;
+    padding: 1.18mm 0 !important;
+    font-size: 7.1pt !important;
+    line-height: 1.16 !important;
+  }
+  body.document-n11 .block-c-contents .contents-layout li .n11-index-page {
+    justify-self: end;
+    align-self: start;
+    color: #4b4b49;
+    font: normal 6.6pt/1.2 Avenir, sans-serif;
+    white-space: nowrap;
+  }
+  body.document-n11 .block-c-contents .contents-route {
+    border-left: 1.2mm solid #cfff00;
+    padding-left: 3mm;
+    font: 7.5pt/1.25 Avenir, sans-serif;
+  }
+  body.document-n11 .n11-section-track {
+    margin-left: 1.4mm;
+    font: 700 6.7pt/1.1 Avenir, sans-serif;
+    letter-spacing: .07em;
+  }
+}

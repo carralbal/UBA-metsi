@@ -1,0 +1,12 @@
+/* Public N11 pp. 18–21 render movement 2 body in Baskerville 10.8 pt.
+   The old source rendered it at 9.6 pt, compressing four pages into three.
+   Restrict the restoration to this movement so unrelated approved folios stay. */
+body.block-c.document-n11 #section-08.block-c-movement .section-body:not(.section-lead) {
+  font-size: 11.25pt !important;
+  line-height: 1.27 !important;
+}
+body.block-c.document-n11 #section-08.block-c-movement .section-body:not(.section-lead) p,
+body.block-c.document-n11 #section-08.block-c-movement .section-body:not(.section-lead) li {
+  font-size: inherit !important;
+  line-height: inherit !important;
+}

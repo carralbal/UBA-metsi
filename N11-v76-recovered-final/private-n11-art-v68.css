@@ -1,0 +1,27 @@
+/* Private p25–26 spread experiment: keep the exact source-bearing conclusion
+   with the six-role case instead of isolating it above Movement 3. */
+@media print {
+  body.block-c.document-n11 #section-10 .hotel-continuation {
+    min-height: 0 !important;
+    height: auto !important;
+    padding-bottom: 3mm !important;
+  }
+  body.block-c.document-n11 .n11-case-tail-page {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 4mm 3mm 5mm !important;
+    margin: 0 !important;
+    break-before: auto !important;
+    page-break-before: auto !important;
+    break-inside: avoid !important;
+  }
+  body.block-c.document-n11 .n11-case-tail-page p {
+    width: auto !important;
+    max-width: 163mm !important;
+    font: 400 10.8pt/1.25 Baskerville, Georgia, serif !important;
+  }
+  body.block-c.document-n11 #section-11.block-c-movement {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+}

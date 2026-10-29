@@ -1,0 +1,56 @@
+/* N11 special-folio recovery trial. The published PDF is not modified. */
+@media print {
+  body.document-n11 .collection-cover > img[src*="public-cover-locked-v16"] {
+    object-fit: fill !important;
+  }
+  body.document-n11 .n11-cover-accessible-heading {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+  body.document-n11 .n11-special-footer {
+    position: absolute !important;
+    z-index: 20 !important;
+    left: 16mm !important;
+    right: 16mm !important;
+    bottom: 5.3mm !important;
+    height: 8mm !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-end !important;
+    box-sizing: border-box !important;
+    padding-top: 2.2mm !important;
+    border-top: .18mm solid #c1c2bd !important;
+    background: transparent !important;
+    color: #555a55 !important;
+    font: 6.2pt/1.1 Avenir, sans-serif !important;
+  }
+  body.document-n11 .n11-special-footer-ink {
+    color: #ededeb !important;
+    border-color: rgba(255,255,255,.38) !important;
+  }
+  body.document-n11 .block-c-pause .n11-special-footer,
+  body.document-n11 .closing-image .n11-special-footer {
+    bottom: 5.3mm !important;
+  }
+  body.document-n11 .block-c-contents .contents-layout {
+    grid-template-columns: 45mm minmax(0, 1fr) !important;
+    margin-top: 1mm !important;
+  }
+  body.document-n11 .contents-photo-viewport,
+  body.document-n11 .contents-photo-viewport > img:not(.editorial-contact-sheet) {
+    width: 45mm !important;
+    height: 166mm !important;
+  }
+  body.document-n11 .block-c-contents .contents-layout li {
+    font-size: 7.6pt !important;
+    line-height: 1.18 !important;
+    padding: 1.25mm 0 !important;
+  }
+}

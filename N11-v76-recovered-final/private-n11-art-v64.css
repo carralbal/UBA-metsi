@@ -1,0 +1,17 @@
+/* Private pagination experiment: remove inherited artificial grey page-fill.
+   Keep all source blocks and the photo/voices sequence unchanged. */
+@media print {
+  body.block-c.document-n11 #section-12.n11-instrument-private-v11 .n11-photo-pause {
+    min-height: 0 !important;
+    height: auto !important;
+    break-before: page !important;
+    page-break-before: always !important;
+    margin-bottom: 4mm !important;
+  }
+  body.block-c.document-n11 #section-12.n11-instrument-private-v11 .n11-photo-pause .photo-viewport {
+    height: 94mm !important;
+  }
+  body.block-c.document-n11 #section-12.n11-instrument-private-v11 .hotel-continuation {
+    min-height: 0 !important;
+  }
+}

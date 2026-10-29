@@ -1,0 +1,22 @@
+/* N11 private v30: p. 29 only. Undo an old microtype/oversized grey field. */
+@media print {
+  body.block-c.document-n11 #section-12.n11-instrument-private-v11 .hotel-continuation {
+    min-height: 164mm !important;
+  }
+  body.block-c.document-n11 #section-12.n11-instrument-private-v11 .hotel-voices-compact {
+    width: 165mm !important;
+    margin-top: 2.5mm !important;
+  }
+  body.block-c.document-n11 #section-12.n11-instrument-private-v11 .hotel-voices-grid article {
+    grid-template-columns: 26mm 1fr !important;
+    min-height: 39mm !important;
+  }
+  body.block-c.document-n11 #section-12.n11-instrument-private-v11 .hotel-voices-grid .hotel-portrait,
+  body.block-c.document-n11 #section-12.n11-instrument-private-v11 .hotel-voices-grid img {
+    width: 26mm !important;
+    height: 39mm !important;
+  }
+  body.block-c.document-n11 #section-12.n11-instrument-private-v11 .hotel-voices-grid p {
+    font: 400 10.7pt/1.25 Baskerville, Georgia, serif !important;
+  }
+}

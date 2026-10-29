@@ -1,0 +1,9 @@
+/* Private folio-specific rhythm correction for N11 section 13, pp. 31-32. */
+@media print {
+  body.block-c.document-n11 #section-13 .section-body {
+    margin-top: -2mm !important;
+  }
+  body.block-c.document-n11 #section-13 .section-body p {
+    margin-bottom: 2mm !important;
+  }
+}

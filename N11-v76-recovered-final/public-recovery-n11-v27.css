@@ -1,0 +1,8 @@
+/* N11 private v27: p. 13 only. Match the published ink plate's top and height.
+   Keep its text, columns and neighboring content unchanged. */
+@media print {
+  body.document-n11 #section-06 .editorial-field-note.field-claims {
+    margin-top: 0 !important;
+    min-height: 205mm !important;
+  }
+}

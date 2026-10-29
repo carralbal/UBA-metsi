@@ -1,0 +1,23 @@
+/* P. 6 public heading is Didot Bold 14.4 pt on one line; v7 was Avenir
+   Heavy and wrapped. Restore the display role without reducing body size. */
+body.block-c.document-n11 .reading-section[data-section="02"] .section-heading h2 {
+  font-family: Didot, "Bodoni 72", serif !important;
+  font-weight: 700 !important;
+  font-size: 15pt !important;
+  line-height: 1.04 !important;
+}
+
+/* Trial of native page-margin running matter. Applies only to content pages;
+   full-bleed folios need a separate audited solution and are not claimed here. */
+@page content {
+  @bottom-left {
+    content: counter(page, decimal-leading-zero);
+    font: 7.7pt Avenir, Arial, sans-serif;
+    color: #626660;
+  }
+  @bottom-right {
+    content: "Diego Carralbal, 2026  ·  linkedin.com/in/carralbal";
+    font: 7.7pt Avenir, Arial, sans-serif;
+    color: #626660;
+  }
+}

@@ -1,0 +1,8 @@
+/* The v11 263 mm photo panel spilled onto a blank printed folio. Keep the
+   existing photo-pause concept while fitting it within the actual page area. */
+@media print {
+  body.block-c.document-n11 #section-12.n11-instrument-private-v11 .n11-photo-pause {
+    min-height: 245mm !important;
+    height: 245mm !important;
+  }
+}

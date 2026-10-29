@@ -1,0 +1,33 @@
+/* N11 private v17: visual fidelity for the seven special folios. */
+@media print {
+  body.block-c.document-n11 .block-c-contents .contents-layout figure {
+    height: 174mm !important;
+  }
+  body.block-c.document-n11 .block-c-contents .contents-photo-viewport,
+  body.block-c.document-n11 .block-c-contents .contents-photo-viewport > img {
+    width: 45mm !important;
+    height: 166mm !important;
+    object-fit: cover !important;
+  }
+  body.block-c.document-n11 .authors-page .contributor {
+    min-height: 91mm !important;
+  }
+  body.block-c.document-n11 .authors-page .contributor-work cite {
+    font: italic 8.2pt/1.24 Baskerville,Georgia,serif !important;
+  }
+  body.block-c.document-n11 .authors-page .contributor-work small {
+    font: 6.2pt/1.2 Avenir,sans-serif !important;
+  }
+  body.block-c.document-n11 .authors-page .contributor p {
+    font: 7.6pt/1.28 Avenir,sans-serif !important;
+  }
+  body.block-c.document-n11 .n11-special-pause-23 .n11-special-footer-band {
+    position: absolute !important;
+    z-index: 12 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    height: 16mm !important;
+    background: rgba(0,0,0,.72) !important;
+  }
+}

@@ -1,0 +1,9 @@
+/* Public p. 6 places the 10.8 pt opening body at x≈71–517 and y≈122–770 pt.
+   V6 matches type size but starts x≈82/y≈146, orphaning the final paragraph.
+   Recover the public reading surface rather than shrinking the type again. */
+body.block-c.document-n11 .reading-section[data-section="02"] {
+  padding: 0 4mm 0 !important;
+}
+body.block-c.document-n11 .reading-section[data-section="02"] .section-heading {
+  margin-bottom: 0 !important;
+}

@@ -1,0 +1,11 @@
+/* N11 private screen PDF: align full-page artwork to the A4 media box after
+   the established 0.961344 print scale. No crop, image or wording change. */
+@media print {
+  body.block-c.document-n11 .collection-cover,
+  body.block-c.document-n11 .block-c-pause,
+  body.block-c.document-n11 .closing-image,
+  body.block-c.document-n11 #section-01 {
+    transform: scale(1.04) !important;
+    transform-origin: top left !important;
+  }
+}

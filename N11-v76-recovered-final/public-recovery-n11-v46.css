@@ -1,0 +1,35 @@
+/* Private N11 pp. 39-40: separate the photographic bridge from the text folio. */
+@media print {
+  body.block-c.document-n11 .consequences-limits-page {
+    min-height: 263mm !important;
+    break-inside: avoid-page !important;
+  }
+  body.block-c.document-n11 #section-19 {
+    margin-top: 10mm !important;
+  }
+  body.block-c.document-n11 .consequence-photo {
+    box-sizing: border-box !important;
+    display: grid !important;
+    width: 166mm !important;
+    height: 49mm !important;
+    margin: 0 !important;
+    padding: 0 8mm 7mm !important;
+    border-left: 1.2mm solid #c6ff00 !important;
+    background: #f0f1ee !important;
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+  body.block-c.document-n11 .consequence-photo .photo-viewport {
+    height: 37mm !important;
+  }
+  body.block-c.document-n11 #section-20.block-c-handoff {
+    box-sizing: border-box !important;
+    width: 166mm !important;
+    margin-top: 6mm !important;
+    margin-left: 0 !important;
+    padding: 8mm 7mm !important;
+  }
+  body.block-c.document-n11 #section-20 .section-body p {
+    font: 400 11pt/1.38 Baskerville, Georgia, serif !important;
+  }
+}

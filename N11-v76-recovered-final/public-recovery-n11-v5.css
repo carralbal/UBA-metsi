@@ -1,0 +1,25 @@
+/* N11 private v5: restore the public route bar and unbox the track label. */
+@media print {
+  body.document-n11 .block-c-contents p.n11-public-route {
+    border-left: 1.2mm solid #cfff00 !important;
+    padding: 1mm 0 1mm 3mm !important;
+    margin: 3mm 0 4mm !important;
+    font: 7.5pt/1.25 Avenir, sans-serif !important;
+  }
+  body.document-n11 .section-marker b span.n11-plain-track {
+    display: inline !important;
+    width: auto !important;
+    height: auto !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin-left: 1.4mm !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    color: inherit !important;
+    font: inherit !important;
+    letter-spacing: inherit !important;
+    white-space: nowrap !important;
+  }
+}

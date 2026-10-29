@@ -1,0 +1,38 @@
+/* Private N11 pp. 39-40 editorial spread reconstruction. */
+@media print {
+  body.block-c.document-n11 .consequences-limits-page {
+    display: block !important;
+    break-inside: auto !important;
+    min-height: 0 !important;
+  }
+  body.block-c.document-n11 #section-18 .section-lead {
+    columns: auto !important;
+    column-count: 1 !important;
+  }
+  body.block-c.document-n11 #section-18 .section-body,
+  body.block-c.document-n11 #section-18 .section-body p,
+  body.block-c.document-n11 #section-19 .section-body,
+  body.block-c.document-n11 #section-19 .section-body p {
+    font: 400 10.8pt/1.35 Baskerville, Georgia, serif !important;
+  }
+  body.block-c.document-n11 .consequence-photo {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+  body.block-c.document-n11 #section-20.block-c-handoff {
+    display: block !important;
+    min-height: 0 !important;
+    height: auto !important;
+    justify-content: initial !important;
+    margin-top: 5mm !important;
+    padding: 8mm 6mm !important;
+  }
+  body.block-c.document-n11 #section-20 .section-body {
+    columns: 2 !important;
+    column-gap: 8mm !important;
+  }
+  body.block-c.document-n11 #section-20 .section-body p {
+    font: 400 10.8pt/1.35 Baskerville, Georgia, serif !important;
+    margin-bottom: 3mm !important;
+  }
+}

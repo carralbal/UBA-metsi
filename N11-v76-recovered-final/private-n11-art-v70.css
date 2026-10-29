@@ -1,0 +1,31 @@
+/* Private counterexample interstitial: make the four original paragraphs
+   carry the folio, instead of leaving a half-empty generic accent box. */
+@media print {
+  body.block-c.document-n11 #section-16.n11-counterexample-private-v13 {
+    box-sizing: border-box !important;
+    min-height: 240mm !important;
+    padding: 16mm 10mm 14mm !important;
+    background: #f5f5f2 !important;
+  }
+  body.block-c.document-n11 #section-16 .section-heading h2 {
+    max-width: 158mm !important;
+    margin: 8mm 0 0 !important;
+    font: 400 43pt/1.02 Didot, 'Bodoni 72', Baskerville, serif !important;
+    letter-spacing: -.024em !important;
+  }
+  body.block-c.document-n11 #section-16 .section-body {
+    max-width: 150mm !important;
+    margin: 15mm 0 0 !important;
+    display: block !important;
+    columns: auto !important;
+  }
+  body.block-c.document-n11 #section-16 .section-body p {
+    font: 400 14pt/1.27 Baskerville, Georgia, serif !important;
+    margin: 0 0 6mm !important;
+  }
+  body.block-c.document-n11 #section-16 .section-body p:last-child {
+    margin-top: 11mm !important;
+    padding-top: 5mm !important;
+    border-top: .25mm solid #a9aaa5 !important;
+  }
+}

@@ -1,0 +1,58 @@
+/* Private source-fidelity test. Scoped to N11; never loaded by the public site. */
+.document-n11 .n11-public-question {
+  page:fullbleed!important; box-sizing:border-box!important; position:relative!important;
+  width:210mm!important; height:297mm!important; min-height:0!important;
+  margin:0!important; padding:72mm 23mm 20mm!important; border:0!important;
+  background:#1b1b1b!important; color:#f6f6f2!important;
+  break-before:page!important; break-after:page!important; overflow:hidden!important;
+}
+.document-n11 .n11-public-question::before {
+  content:''; position:absolute; top:11mm; left:23mm; width:22mm; height:3mm;
+  background:#cfff00; transform:skewX(-25deg);
+}
+.document-n11 .n11-public-question .section-heading { margin:0 0 11mm!important; }
+.document-n11 .n11-public-question .section-heading h2 { color:#f6f6f2!important; }
+.document-n11 .n11-public-question .section-body { columns:1!important; }
+.document-n11 .n11-public-question .section-body>p { font-size:28pt!important; line-height:1.14!important; max-width:155mm; margin:0 0 8mm!important; }
+.document-n11 .n11-question-product { max-width:155mm; color:#f6f6f2; }
+.document-n11 .n11-question-product h3 { font:400 18pt/1.12 Didot,Georgia,serif!important; margin:0 0 3mm!important; color:#fff!important; }
+.document-n11 .n11-question-product p { font:400 10.5pt/1.38 Georgia,serif!important; margin:0 0 2.7mm!important; color:#f6f6f2!important; }
+.document-n11 .n11-question-product p:first-of-type { font-weight:700; }
+.document-n11 .n11-question-product strong { font-weight:700; }
+.document-n11 .n11-public-worked {
+  page:content; box-sizing:border-box; width:174mm; min-height:255mm;
+  margin:0 auto; padding:4mm 7mm 5mm;
+  background:#f7f7f4; border-top:1.2mm solid #cfff00;
+  break-before:page; break-after:page; break-inside:avoid;
+  color:#191919;
+}
+.document-n11 .n11-public-worked header span { font:8pt/1.2 Avenir,Arial,sans-serif; letter-spacing:.11em; }
+.document-n11 .n11-public-worked h2 { font:400 23pt/1.06 Didot,Georgia,serif; margin:4mm 0; }
+.document-n11 .n11-public-worked h3 { font:400 17pt/1.1 Didot,Georgia,serif; margin:4mm 0 2mm; }
+.document-n11 .n11-public-worked p { font:400 10pt/1.34 Georgia,serif; margin:0 0 2.6mm; }
+.document-n11 .n11-public-worked .n11-worked-return { color:#60605a; }
+.document-n11 .n11-public-worked table { border-collapse:collapse; width:100%; margin:4mm 0; table-layout:fixed; }
+.document-n11 .n11-public-worked th { text-align:left; font:700 7.6pt/1.15 Avenir,Arial,sans-serif; }
+.document-n11 .n11-public-worked td { font:400 9.8pt/1.15 Georgia,serif; }
+.document-n11 .n11-public-worked th,.document-n11 .n11-public-worked td { padding:2.2mm 1mm; border-bottom:.25mm solid #b6b8b1; }
+.document-n11 .n11-public-worked th:first-child,.document-n11 .n11-public-worked td:first-child { font-weight:700; }
+.document-n11 .n11-public-synthesis {
+  page:content; box-sizing:border-box; width:174mm; min-height:255mm;
+  margin:0 auto; padding:4mm 9mm 6mm;
+  background:#f7f7f4; break-before:page; break-after:page; break-inside:avoid;
+  color:#191919;
+}
+.document-n11 .n11-public-synthesis h2 { font:400 28pt/1.08 Didot,Georgia,serif; margin:0 0 9mm; border-top:.3mm solid #b8bbb7; padding-top:3mm; }
+.document-n11 .n11-synthesis-kicker { font:700 8pt/1.2 Avenir,Arial,sans-serif; letter-spacing:.08em; margin:0 0 4mm; }
+.document-n11 .n11-public-synthesis ol { margin:0; padding:0; list-style:none; counter-reset:n11-steps; }
+.document-n11 .n11-public-synthesis li { box-sizing:border-box; position:relative; height:32mm; margin:0 0 4mm; padding:4mm 5mm; background:#e2e5e3; border-left:1.3mm solid #cfff00; }
+.document-n11 .n11-public-synthesis li::before { counter-increment:n11-steps; content:counter(n11-steps); display:inline-grid; place-items:center; float:left; width:5.5mm; height:5.5mm; margin:0 3mm 0 0; border-radius:50%; background:#191919; color:#cfff00; font:700 8pt/1 Avenir,Arial,sans-serif; }
+.document-n11 .n11-public-synthesis li:not(:last-child)::after { content:'↓'; position:absolute; left:48%; bottom:-5.2mm; font:18pt Arial,sans-serif; }
+.document-n11 .n11-public-synthesis h3 { font:700 12pt/1.2 Avenir,Arial,sans-serif; margin:0 0 2mm; }
+.document-n11 .n11-public-synthesis li p { font:400 11pt/1.3 Georgia,serif; margin:0; }
+.document-n11 .n11-synthesis-output { padding:5mm; margin-top:2mm; min-height:31mm; background:#191919; color:#fff; }
+.document-n11 .n11-synthesis-output b { font:700 8pt/1.2 Avenir,Arial,sans-serif; color:#cfff00; }
+.document-n11 .n11-synthesis-output p { font:400 11pt/1.35 Georgia,serif; margin:2mm 0 0; }
+.document-n11 .n11-synthesis-caption { font:400 8pt/1.3 Avenir,Arial,sans-serif; color:#5b5d59; margin:4mm 0 0; }
+.document-n11 .n11-public-prep { margin:5mm 0 0; padding:4mm 5mm; border-left:1.2mm solid #cfff00; background:#f7f7f4; break-inside:avoid; }
+.document-n11 .n11-public-prep p { margin:0; font:400 10.5pt/1.38 Georgia,serif; }

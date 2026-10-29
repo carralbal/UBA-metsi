@@ -1,0 +1,77 @@
+/* N11 private v21: layered cover test against the published folio. */
+@media print {
+  body.document-n11 .collection-cover.n11-cover-reconstructed {
+    background: #333 !important;
+    color: #191919 !important;
+    overflow: hidden !important;
+  }
+  body.document-n11 .collection-cover.n11-cover-reconstructed > img {
+    position: absolute !important;
+    left: -.4mm !important;
+    top: -.4mm !important;
+    width: 210.8mm !important;
+    height: 297.8mm !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: fill !important;
+    filter: none !important;
+    opacity: 1 !important;
+  }
+  body.document-n11 .n11-cover-artwork {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 210mm !important;
+    height: 297mm !important;
+    z-index: 6 !important;
+    font-weight: 400 !important;
+  }
+  body.document-n11 .n11-cover-masthead {
+    position: absolute; top: 12mm; left: 0; right: 0;
+    text-align: center; font: 400 64pt/.9 Didot, 'Bodoni 72', Georgia, serif;
+    letter-spacing: .035em; color: #191919;
+  }
+  body.document-n11 .n11-cover-meta {
+    position: absolute; top: 27mm; white-space: pre-line;
+    font: 400 7pt/1.25 Avenir, Arial, sans-serif; color: #252525;
+  }
+  body.document-n11 .n11-cover-meta-left { left: 15.5mm; }
+  body.document-n11 .n11-cover-meta-right { right: 15.5mm; text-align: right; }
+  body.document-n11 .n11-cover-top-volt,
+  body.document-n11 .n11-cover-bottom-volt {
+    position: absolute; height: 3.5mm; background: #CFFF00;
+    clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+  }
+  body.document-n11 .n11-cover-top-volt {
+    top: 55.8mm; right: 16.1mm; width: 15.2mm;
+  }
+  body.document-n11 .n11-cover-circle {
+    position: absolute; top: 63.7mm; right: 15.7mm;
+    width: 15mm; height: 15mm; box-sizing: border-box;
+    display: grid; place-items: center;
+    border: .27mm solid #252525; border-radius: 50%;
+    font: 400 7pt/1 Avenir, Arial, sans-serif; color: #252525;
+  }
+  body.document-n11 .n11-cover-thesis {
+    position: absolute; top: 78.7mm; right: 16mm; width: 58mm;
+    margin: 0; text-align: right; color: #202020;
+    font: 400 15pt/1.08 Didot, 'Bodoni 72', Georgia, serif;
+  }
+  body.document-n11 .n11-cover-bottom-volt {
+    left: 16mm; bottom: 51.4mm; width: 27mm; height: 2mm;
+  }
+  body.document-n11 .n11-cover-discipline {
+    position: absolute; left: 16mm; right: 16mm; bottom: 44.5mm;
+    font: 400 7.6pt/1.2 Avenir, Arial, sans-serif;
+    letter-spacing: .06em; color: #F5F5F2;
+  }
+  body.document-n11 .n11-cover-display-title {
+    position: absolute; left: 16mm; right: 12mm; bottom: 27mm;
+    white-space: nowrap; color: #fff;
+    font: 400 42pt/1 Didot, 'Bodoni 72', Georgia, serif;
+    letter-spacing: -.015em;
+  }
+  body.document-n11 .n11-cover-deck {
+    position: absolute; left: 16mm; right: 16mm; bottom: 19.4mm;
+    font: 400 10pt/1.25 Avenir, Arial, sans-serif; color: #F6F6F3;
+  }
+}

@@ -32,9 +32,17 @@ folio vectorial del PDF publicado se trasplantó sin cambiar su texto.
 N21: CSS editado en `N21-v11-referentes-neutral/edition.css` y proceso con
 guardas de SHA/texto/MCID en `scripts/render_n21_readable_referents_20261028.mjs`
  y `scripts/replace_n21_referents_page_20261028.py`. N11: fuente fiel v76
-recuperada en el checkout histórico (384/384 bloques), override de estilo
+recuperada y **consolidada en este Git** como `N11-v76-recovered-final/index.html`
+(384/384 bloques), override de estilo
 `pedagogy/source-overrides/referentes-legibles-n11-20261028.css`, y proceso
 con guardas equivalente en los scripts `render_n11...` y `replace_n11...`.
+La consolidación incluye las 48 hojas CSS necesarias, reutiliza 15 recursos
+idénticos ya presentes en `N11-v13-editorial` y añade sólo ocho imágenes
+faltantes (~1,4 MB). La fuente consolidada cargó 384 bloques, seis perfiles y
+cero imágenes faltantes; volvió a renderizar **47 páginas A4**. Su página 3
+y la página 3 del PDF final dan **los mismos píxeles** a 1200 px. Esto verifica
+la fidelidad de esa página; no afirma que un render completo futuro sea byte
+idéntico a todo el PDF ya publicado, porque hubo intervenciones PDF-level.
 Los PDF finales se instalaron en sus rutas públicas estables y las referencias
 del sitio llevan una nueva revisión de caché. Sólo Git normal, no LFS.
 

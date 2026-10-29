@@ -1,0 +1,24 @@
+/* Private, folio-specific restoration of the six-voice case on N11 p. 34. */
+@media print {
+  body.block-c.document-n11 #section-14 .hotel-voices-compact {
+    padding-bottom: 10mm !important;
+  }
+  body.block-c.document-n11 #section-14 .hotel-voices-compact header {
+    margin-bottom: 5mm !important;
+  }
+  body.block-c.document-n11 #section-14 .hotel-voices-grid {
+    margin-right: 6mm !important;
+  }
+  body.block-c.document-n11 #section-14 .hotel-voices-grid article {
+    grid-template-columns: 26mm 1fr !important;
+    min-height: 54.5mm !important;
+  }
+  body.block-c.document-n11 #section-14 .hotel-voices-grid .hotel-portrait,
+  body.block-c.document-n11 #section-14 .hotel-voices-grid img {
+    width: 26mm !important;
+    height: 39mm !important;
+  }
+  body.block-c.document-n11 #section-14 .hotel-continuation-body {
+    margin-right: 6mm !important;
+  }
+}

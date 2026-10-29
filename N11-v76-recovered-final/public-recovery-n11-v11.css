@@ -1,0 +1,48 @@
+/* Private editorial sequence test against published N11 pp. 27–29.
+   Move existing source blocks only: instrument, image pause, six voices. */
+@media print {
+  body.block-c.document-n11 #section-12.n11-instrument-private-v11 .n11-instrument-questions {
+    columns: 2 !important;
+    column-count: 2 !important;
+    column-gap: 8mm !important;
+    column-rule: .2mm solid #c5c7c5 !important;
+    font: 9.75pt/1.34 Baskerville, Georgia, serif !important;
+    margin-top: 3mm !important;
+  }
+  body.block-c.document-n11 #section-12.n11-instrument-private-v11 .n11-instrument-questions p {
+    font: inherit !important;
+    margin: 0 0 2.8mm !important;
+    break-inside: avoid !important;
+  }
+  body.block-c.document-n11 #section-12.n11-instrument-private-v11 .n11-photo-pause {
+    box-sizing: border-box !important;
+    break-before: page !important;
+    page-break-before: always !important;
+    width: auto !important;
+    min-height: 263mm !important;
+    margin: 0 -7mm !important;
+    padding: 0 !important;
+    background: #e3e6e4 !important;
+  }
+  body.block-c.document-n11 #section-12.n11-instrument-private-v11 .n11-photo-pause .photo-viewport {
+    height: 70mm !important;
+  }
+  body.block-c.document-n11 #section-12.n11-instrument-private-v11 .hotel-continuation {
+    min-height: 210mm !important;
+  }
+  body.block-c.document-n11 #section-12.n11-instrument-private-v11 .hotel-voices-compact {
+    margin-top: 0 !important;
+    padding: 4mm 4mm 8mm !important;
+  }
+  body.block-c.document-n11 #section-12.n11-instrument-private-v11 .hotel-voices-grid article {
+    min-height: 45mm !important;
+  }
+  body.block-c.document-n11 #section-12.n11-instrument-private-v11 .hotel-voices-grid .hotel-portrait,
+  body.block-c.document-n11 #section-12.n11-instrument-private-v11 .hotel-voices-grid img {
+    height: 45mm !important;
+  }
+  body.block-c.document-n11 #section-12.n11-instrument-private-v11 .hotel-voices-grid p {
+    font-size: 7.1pt !important;
+    line-height: 1.24 !important;
+  }
+}

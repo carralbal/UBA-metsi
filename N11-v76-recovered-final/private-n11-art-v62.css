@@ -1,0 +1,24 @@
+/* Private art trial only. The approved public cover and body text stay intact. */
+@media print {
+  body.block-c.document-n11 .photo-viewport > img[src^="assets/"] {
+    filter: grayscale(1) contrast(1.04) !important;
+  }
+  body.block-c.document-n11 .hotel-canonical-anchor .photo-viewport > img {
+    filter: grayscale(1) contrast(1.08) !important;
+  }
+  body.block-c.document-n11 .full-bleed-quote > img[src^="assets/"] {
+    filter: grayscale(1) contrast(1.04) !important;
+  }
+  body.block-c.document-n11 .hotel-canonical-anchor .photo-viewport {
+    height: 78mm !important;
+  }
+  body.block-c.document-n11 #section-17 .n11-errors-tail .errors-photo .photo-viewport {
+    height: 82mm !important;
+  }
+  body.block-c.document-n11 .consequence-photo {
+    height: 64mm !important;
+  }
+  body.block-c.document-n11 .consequence-photo .photo-viewport {
+    height: 51mm !important;
+  }
+}

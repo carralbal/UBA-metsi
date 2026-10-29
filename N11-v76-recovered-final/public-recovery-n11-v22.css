@@ -1,0 +1,20 @@
+/* N11 private v22: align the layered cover typography with the public folio. */
+@media print {
+  body.document-n11 .n11-cover-masthead {
+    top: 15.3mm;
+    font-size: 58pt;
+  }
+  body.document-n11 .n11-cover-top-volt {
+    top: 56.3mm;
+  }
+  body.document-n11 .n11-cover-bottom-volt {
+    bottom: 53.2mm;
+  }
+  body.document-n11 .n11-cover-discipline {
+    bottom: 45.5mm;
+  }
+  body.document-n11 .n11-cover-display-title {
+    bottom: 28.3mm;
+    font-size: 36pt;
+  }
+}

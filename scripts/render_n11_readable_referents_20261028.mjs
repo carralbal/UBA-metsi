@@ -3,8 +3,7 @@ import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const source = path.resolve(root, '../UBA-metsi-publication/output/source-recovery-20261020/N11-public-recovery-v1-private-20261022/index-v76-private.html');
-const override = path.join(root, 'pedagogy/source-overrides/referentes-legibles-n11-20261028.css');
+const source = path.join(root, 'N11-v76-recovered-final/index.html');
 const output = process.argv[2];
 if (!output || !path.isAbsolute(output)) throw new Error('Supply absolute temporary PDF path');
 
@@ -16,7 +15,6 @@ try {
   const page = await browser.newPage();
   await page.emulateMedia({ media: 'print' });
   await page.goto(pathToFileURL(source).href, { waitUntil: 'networkidle' });
-  await page.addStyleTag({ path: override });
   await page.evaluate(() => document.fonts.ready);
   const check = await page.evaluate(() => ({
     sourceBlockCount: document.querySelectorAll('[data-source-id]').length,

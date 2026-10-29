@@ -1,0 +1,15 @@
+/* Second private source-fidelity trial. Imports v1 unchanged, then restores
+   two print page boundaries visible in the published N11. No public asset. */
+@import url("public-recovery-n11-v1.css");
+
+@media print {
+  body.document-n11 #section-06 .editorial-field-note.field-claims {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  body.document-n11 #section-08 {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+}

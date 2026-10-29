@@ -1,0 +1,31 @@
+/* Private editorial treatment for N11's source-bearing existence distinction.
+   Reflow the original heading and paragraph; do not add or remove text. */
+@media print {
+  body.block-c.document-n11 #section-06.block-c-movement .section-body:not(.section-lead) .subsection-lead:has(> h3[data-source-id="N11-s06-b007"]) {
+    column-span: all !important;
+    display: block !important;
+    box-sizing: border-box !important;
+    margin: 17mm 0 0 !important;
+    padding: 7mm 0 8mm !important;
+    border-top: .35mm solid #191919 !important;
+    border-bottom: .25mm solid #a9aba7 !important;
+    break-inside: avoid !important;
+  }
+  body.block-c.document-n11 #section-06.block-c-movement .section-body:not(.section-lead) .subsection-lead:has(> h3[data-source-id="N11-s06-b007"]) h3 {
+    margin: 0 0 5mm !important;
+    padding: 0 !important;
+    border: 0 !important;
+    font: 700 9pt/1.2 Avenir, Arial, sans-serif !important;
+    letter-spacing: .13em !important;
+    text-transform: uppercase !important;
+  }
+  body.block-c.document-n11 #section-06.block-c-movement .section-body:not(.section-lead) .subsection-lead:has(> h3[data-source-id="N11-s06-b007"]) p {
+    max-width: 148mm !important;
+    margin: 0 !important;
+    font: 400 34pt/1.07 Didot, 'Bodoni 72', Baskerville, serif !important;
+    letter-spacing: -.015em !important;
+  }
+  body.block-c.document-n11 #section-06.block-c-movement .section-body:not(.section-lead) .subsection-lead:has(> h3[data-source-id="N11-s06-b007"]) strong {
+    font-weight: 400 !important;
+  }
+}
