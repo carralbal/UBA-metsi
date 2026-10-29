@@ -26,6 +26,17 @@ contiene la oración una sola vez; el eco surgió en el PDF ensamblado.
 - Se cambió la clave de caché a `n28-prompt-20261028` en manifiesto, portada,
   atlas y colección de crónicas, sin cambiar la ruta pública estable.
 
+## Publicación comprobada
+
+Commit `6322158906a2889254cfa9eec8baa45b1d629e34` en `origin/main`.
+[GitHub Pages run 40806868878](https://github.com/carralbal/UBA-metsi/actions/runs/40806868878)
+terminó `completed/success` para ese SHA. El PDF servido en
+`https://carralbal.github.io/UBA-metsi/pdf/publicados/N28-METSI-lectura-previa-v10-final.pdf?v=n28-prompt-20261028`
+devolvió SHA-256 `3fae7a187dac8f58d61278849b60e67495b48f0a8b47a2b6d1396a7cf4cf4692`,
+idéntico al canónico. La portada respondió y contiene ocho enlaces con la nueva
+clave de caché. Los 37 archivos del manifiesto siguen siendo PDF válidos, con
+1.435 páginas en total.
+
 El script de corrección conserva la fuente de esta edición como PDF+delta; una
 regeneración integral desde HTML requiere verificar que el ensamblado no vuelva
 a crear un eco duplicado. Esto **no certifica preprensa ni accesibilidad con
