@@ -111,3 +111,5 @@ N08-v12-post-cecilia/protected-covers/** -filter -diff -merge -text
 N11-v76-recovered-final/assets/** -filter -diff -merge -text
 # Recovered N30 source adds only a changed referent portrait; all shared assets stay deduplicated.
 N30-v27-recovered-source/N30/assets/** -filter -diff -merge -text
+# N25's three tiny PDF-level editorial overlays are source assets, not alternate books.
+N25-pdf-source/overlays/*.pdf -filter -diff -merge -text
