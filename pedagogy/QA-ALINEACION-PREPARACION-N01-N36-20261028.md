@@ -1,4 +1,4 @@
-# QA · consignas públicas y preparación docente N01–N25
+# QA · consignas públicas y preparación docente N01–N36
 
 **Corte: 28/10/2026.** Se contrastaron las consignas de preparación de los PDF
 canónicos indicados en `site/course-manifest.json` con los paquetes de
@@ -40,19 +40,32 @@ producidas en clase y no constituye automáticamente otra tarea asincrónica.
 | N23 | Un primer corte con población, recorrido completo, incertidumbre, protección, condición de detención y un contraejemplo. | Se quitaron tres cortes completos, simulación y respuestas extras previas. La secuencia de tres cortes se trabaja en taller. |
 | N24 | Cuatro opciones preparadas, selección según capacidad, una protección, dos renuncias y revisión tras reducción de capacidad. | Se quitó la quinta opción y dos respuestas extras del trabajo previo. La quinta apuesta aparece en clase como perturbación docente, no como carga asincrónica. |
 | N25 | Una unidad didáctica de HH-25 u otro caso no sensible; dos relojes y esperas, cambio de política, beneficio, riesgo y revisión. | Se quitaron seis casos y dos respuestas extras previas. La simulación y comparación de lotes pertenecen al taller. |
+| N26 | Mapa de una promesa con tercero, decisión manual, frontera de confianza y dependencia compartida; respuesta ante falla y límite de uso. | Se quitaron el mapa exhaustivo del ecosistema, la desaparición de proveedor ensayada antes de clase y dos respuestas extras. El taller amplía el mapa elegido. |
+| N27 | Un intercambio con acuerdos de forma, significado, tiempo y acción ante incertidumbre; mensaje duplicado y tardío, estado final e información para atención. | Se quitó el contrato integral previo de API y dos respuestas extras. Las pruebas de compatibilidad se realizan en taller. |
+| N28 | Una afirmación de calidad, escenario, evidencia favorable, observación que la refuta y decisión permitida/no permitida. | Se quitaron tres reclamos completos y dos respuestas extras. El taller profundiza la afirmación elegida. **Defecto confirmado visualmente: el PDF canónico duplica la última frase de la consigna en p. 35. Requiere corrección editorial del PDF y verificación de fuente.** |
+| N29 | Plan de cambio con reversión compatible y corrección hacia adelante usando doce unidades de prueba; árbol, registro antes/después, señal, responsable, recuperación y abandono de rama. | Se quitó la exigencia de repositorio, pull request y cadena de liberación completa antes de clase. La consigna pública ya es extensa: **carga alta por medir**. |
+| N30 | Una promesa, señal de resultado, señal de investigación, actor, primera acción y evidencia posterior de utilidad. | Se quitó el sistema completo de observabilidad y dos respuestas extras previas; SLI/SLO, DORA e incidente se desarrollan en taller. |
+| N31 | Ficha de tarea concreta, IA versus alternativa viable, daño a evitar y caso para limitar o retirar. | Se quitó el expediente integral y dos respuestas extras; modalidad, autonomía y control se deciden en clase. |
+| N32 | Caso ordinario, difícil y variación controlada; acción, alternativa, criterio, resultado de no ampliación, intervención y continuidad. | Se quitó la evaluación completa previa y dos respuestas extras. El taller profundiza los tres casos. |
+| N33 | Registro breve de uso, cambio pequeño relevante, evidencia, decisor, restricción, atención a afectado y retiro posible. | Se quitó el registro de gobierno exhaustivo y dos respuestas extras. La deriva se ensaya en clase. |
+| N34 | Una página de decisión, evidencia, alternativa, alcance, revisión, vínculo débil y prueba. | Se quitó el expediente de todo el portfolio y dos respuestas extras; la cadena se integra en taller. |
+| N35 | Dos explicaciones breves, para decisor de recursos y ejecutor; mismo límite; prueba con otra persona de autorización y excepción, anotando la diferencia de interpretación. | Se quitaron tres piezas, comunicación adicional, tres objeciones y dos respuestas extras previas. N34 ya no exige tres tesis antes de N35. |
+| N36 | Una decisión propia reconstruida en hechos, interpretación y decisión posterior; duda, alternativa, próxima prueba y verificación de IA si la hubo. | Se quitaron tres expedientes completos y dos respuestas extras previas; aprendizaje de doble bucle y transferencia se trabajan en clase. |
 
 ## Verificaciones y límites
 
-- Para N05–N25 se releyó el texto extraído de la sección «Preguntas de
+- Para N05–N36 se releyó el texto extraído de la sección «Preguntas de
   preparación» de **cada PDF de `site/course-manifest.json`**, no de copias
   históricas. N13, N15, N18, N19 y N20 se contrastaron también con el producto de apertura;
   para N01–N04 y N21–N25 se contrastaron apertura y cierre, porque la consigna puede
   estar repartida en varias páginas.
 - `python3 pedagogy/validate_pedagogy.py`: **PASS 36/36**, sin problemas
-  estructurales. N01–N25 conservan ocho actividades, 120 minutos planificados,
+  estructurales. N01–N36 conservan ocho actividades, 120 minutos planificados,
   diez pantallas y ocho criterios de rúbrica por paquete. Esos 120 minutos son
   una suma de diseño, **no una clase ensayada con reloj**.
 - `git diff --check`: sin errores de espacio.
 - No se cambió contenido sustantivo del PDF ni se añadió una preparación a N00.
-- Falta aplicar el mismo contraste semántico a **N26–N36**, revisar las
-  dependencias entre paquetes y ensayar la carga real con docentes/estudiantes.
+- El contraste semántico de consignas de N01–N36 está hecho. La duplicación de
+  N28 p. 35 fue confirmada en el render; falta corregirla. También faltan dependencias finas
+  entre paquetes y ensayar la carga real con docentes/estudiantes. La estructura
+  de 120 minutos no prueba que la dinámica quepa en ese tiempo.

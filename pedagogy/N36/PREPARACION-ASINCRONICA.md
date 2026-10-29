@@ -2,24 +2,15 @@
 
 ## Propósito
 
-Llegar con evidencia de cómo cambió el juicio profesional durante el recorrido y qué sistema permitirá seguir aprendiendo.
+Llegar con una decisión propia reconstruida sin acomodar el resultado a una historia perfecta.
 
 ## Producción requerida
 
-Seleccioná tres decisiones del portfolio, una acertada, una fallida y una sorprendente. Para cada una reconstruí:
-
-- situación, teoría declarada y teoría en uso;
-- evidencia disponible y omitida;
-- decisión, consecuencia y posibilidad de revisión;
-- corrección de bucle simple;
-- supuesto u objetivo revisado en doble bucle;
-- devolución recibida y práctica deliberada siguiente;
-- uso de IA como interlocutora crítica, con verificación humana;
-- transferencia a una situación profesional futura.
+Elegí **una decisión propia** y prepará una reconstrucción breve: hechos conocidos en ese momento, interpretación y decisión posterior. Incluí una duda relevante, una explicación alternativa si corresponde y una próxima comprobación. Si usaste IA, explicá qué aportó y cómo lo verificaste.
 
 ## Prueba de aprendizaje
 
-Escribí qué capacidad nueva puede observar otra persona. Si sólo aparece una intención o lección, todavía no hay evidencia de aprendizaje. Respondé además dos preguntas de preparación de N36.
+La comparación de decisiones, los bucles de aprendizaje y una capacidad observable se trabajan en taller. Las preguntas del PDF orientan la lectura y no agregan dos respuestas obligatorias.
 
 ## Criterios de entrada
 

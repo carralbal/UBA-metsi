@@ -2,21 +2,15 @@
 
 ## Propósito
 
-Llegar con una tesis defendible que pueda transferirse sin copiar una solución ni esconder incertidumbre.
+Llegar con dos explicaciones de la misma intervención y una comprobación de lo que otra persona entendió.
 
 ## Producción requerida
 
-A partir de HH-34 prepará tres piezas sobre la misma decisión:
-
-- versión ejecutiva con consecuencia, opciones y pedido;
-- defensa técnica con afirmación, evidencia, garantía, límites y reparación;
-- transferencia operativa con señales, autoridad, excepciones y práctica.
-
-Agregá una comunicación para personas afectadas y tres objeciones fuertes. En todas las versiones deben permanecer iguales el criterio, la incertidumbre y la condición de revisión.
+Prepará **dos explicaciones breves** de una misma intervención: una para quien decide recursos y otra para quien debe actuar. Conservá en ambas la misma limitación importante. Pedí a otra persona que diga qué entiende que está autorizado y qué haría ante una excepción. Anotá la diferencia entre lo que quisiste comunicar y lo que pudo reconstruir.
 
 ## Prueba de reexplicación
 
-Entregá la pieza a otra persona y pedile que decida en un caso distinto. Registrá qué criterio recupera y qué interpretó como receta. Respondé además dos preguntas de preparación de N35.
+La defensa técnica, las objeciones y la comunicación a personas afectadas se desarrollan en taller a partir de esas dos explicaciones. Las preguntas del PDF no suman dos respuestas obligatorias.
 
 ## Criterios de entrada
 

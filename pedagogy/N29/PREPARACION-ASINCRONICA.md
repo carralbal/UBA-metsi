@@ -2,24 +2,15 @@
 
 ## Propósito
 
-Llegar con una cadena de cambio trazable desde una decisión hasta despliegue, exposición, recuperación y cierre.
+Llegar con un árbol de decisión para un cambio que puede necesitar reversión o corrección hacia adelante.
 
 ## Producción requerida
 
-Reconstruí una liberación HH-29 con:
-
-- issue o decisión de origen;
-- rama y commits en Git;
-- pull request en GitHub con revisión y evidencia;
-- integración continua y artefacto inmutable;
-- configuración e infraestructura versionadas;
-- aprobación basada en riesgo y segregación de funciones;
-- despliegue progresivo, bandera y señales;
-- rollback, rollforward, datos, terceros y cierre operacional.
+Prepará **un plan de cambio** con dos ramas: reversión compatible y corrección hacia adelante. Usá las **doce unidades de prueba** del PDF. Separá estado del sistema y efecto sobre personas; fijá señal de detención, responsable y prueba de recuperación. Llevá el árbol de decisión y el registro antes/después, con el resultado que te haría abandonar cada rama.
 
 ## Prueba de recuperación
 
-Suponé que el código puede volver, pero una migración de datos y una acción de un tercero no. Indicá qué parte del rollback era ficticia y cómo se repara. Respondé además dos preguntas de preparación de N29.
+La cadena Git, revisión, integración y despliegue se examina en el taller sobre este plan; no se exige montar repositorio ni pull request antes del encuentro. Las preguntas del PDF no agregan dos respuestas obligatorias.
 
 ## Criterios de entrada
 

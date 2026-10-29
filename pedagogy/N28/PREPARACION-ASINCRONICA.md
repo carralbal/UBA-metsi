@@ -2,24 +2,15 @@
 
 ## Propósito
 
-Llegar con un argumento de calidad que vincule atributos, escenarios, riesgos, poblaciones y evidencia suficiente.
+Llegar con una afirmación de calidad cuya evidencia y límite puedan discutirse.
 
 ## Producción requerida
 
-Construí tres reclamos HH-28 sobre atributos en tensión. Cada reclamo debe incluir:
-
-- población y situación;
-- estímulo, ambiente y respuesta esperada;
-- daño, severidad y probabilidad;
-- atributo y tensión con otro atributo;
-- evidencia que sostendría o debilitaría el reclamo;
-- oráculo, umbral y cobertura relevante;
-- decisión autorizada y riesgo residual;
-- fecha o condición de revisión.
+Elegí **una afirmación de calidad** sobre el hotel u otro servicio conocido. Escribí un escenario, la evidencia que la sostendría y una observación que obligaría a revisarla. Cerrá con una decisión concreta: qué permitirías hacer con esa evidencia y qué todavía no. No se piden tres reclamos completos antes de clase.
 
 ## Prueba de falsa confianza
 
-Suponé cobertura técnica alta y promedio favorable, pero una población crítica no puede completar la llegada. Explicá por qué la evidencia no alcanza. Respondé además dos preguntas de preparación de N28.
+La prueba de falsa confianza, los atributos en tensión, umbrales y cobertura se desarrollan en clase. Las preguntas del PDF no suman dos respuestas obligatorias.
 
 ## Criterios de entrada
 

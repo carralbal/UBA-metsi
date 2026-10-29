@@ -2,7 +2,7 @@
 
 ## Resultado del encuentro
 
-Cada equipo entrega un sistema HH-30 de observabilidad, objetivos de servicio, respuesta y aprendizaje conectado con DevOps y DORA.
+Cada equipo desarrolla la promesa que preparó en un sistema de observabilidad, objetivos de servicio, respuesta y aprendizaje conectado con DevOps y DORA. HH-30 aporta un incidente común para ponerlo a prueba, sin sumar preparación previa.
 
 ## Duración base
 

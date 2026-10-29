@@ -2,24 +2,15 @@
 
 ## Propósito
 
-Llegar con una cadena de intervención que conecte problema, evidencia, diseño, estrategia, operación y gobierno sin resumir el curso.
+Llegar con un eslabón discutible de una decisión y una prueba capaz de revisarlo.
 
 ## Producción requerida
 
-Seleccioná evidencias del portfolio HH y construí un expediente HH-34 con:
-
-- problema y frontera;
-- actores, episodios y explicaciones rivales;
-- modelos elegidos y contradicciones conservadas;
-- decisiones, supuestos y evidencia asociada;
-- estrategia, capacidad y pruebas;
-- operación, señales, reparación y gobierno;
-- coherencia vertical entre afirmación y evidencia;
-- coherencia horizontal entre decisiones simultáneas.
+Prepará **una página** con una decisión de HH-34 u otro caso trabajado, su evidencia, una explicación alternativa, el alcance permitido y una condición de revisión. Marcá un vínculo débil y proponé una prueba concreta. No hace falta llevar toda la carpeta.
 
 ## Prueba de eslabón ausente
 
-Retirá una evidencia o una decisión central y marcá qué conclusiones dejan de sostenerse. Respondé además dos preguntas de preparación de N34.
+La prueba del eslabón ausente y la cadena completa de intervención se construyen con el portfolio en clase. Las preguntas del PDF no agregan dos respuestas obligatorias.
 
 ## Criterios de entrada
 

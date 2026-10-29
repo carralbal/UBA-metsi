@@ -2,7 +2,7 @@
 
 ## Resultado del encuentro
 
-Cada equipo entrega un expediente HH-32 de evaluación desagregada y una matriz de autonomía y escalamiento.
+Cada equipo profundiza los tres casos que preparó y entrega un expediente de evaluación desagregada y una matriz de autonomía y escalamiento. HH-32 brinda datos de prueba comunes sin exigir un segundo expediente previo.
 
 ## Duración base
 

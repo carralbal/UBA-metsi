@@ -2,7 +2,7 @@
 
 ## Resultado del encuentro
 
-Cada equipo entrega un sistema vivo de gobierno HH-33 capaz de detectar cambio, responder incidentes, reparar y retirar.
+Cada equipo convierte el registro de uso preparado en un sistema vivo de gobierno capaz de detectar cambio, responder incidentes, reparar y retirar. HH-33 aporta una perturbación común, no un segundo registro previo.
 
 ## Duración base
 

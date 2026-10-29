@@ -18,9 +18,9 @@ arte digital canónico; un PDF de prueba no lo sustituye.
   agregar una página duplicaría material. «Conservar» no equivale a aval de
   docentes ni autoridades.
 - **36/36 paquetes de clase pasaron validación estructural**; ocho paquetes
-  focales ya reflejan lo nuevo. Además, la preparación de **N01–N25** se
+  focales ya reflejan lo nuevo. Además, la preparación de **N01–N36** se
   contrastó con las consignas de sus PDF canónicos para eliminar trabajo previo
-  oculto. Falta el mismo contraste N26–N36. No se ensayó aún una clase con reloj
+  oculto. No se ensayó aún una clase con reloj
   ni se sincronizaron sus decks v4.
 - **No hay PDF privado canónico.** Se usaron archivos temporales para QA y se
   eliminaron. N11 y N21 tienen p. 3 de Referentes más legible; N25 y N30
@@ -56,7 +56,7 @@ arte digital canónico; un PDF de prueba no lo sustituye.
 | N25 | Conservar | — | Flujo y espera; PDF final reproducido byte por byte. |
 | N26 | Conservar | — | Ecosistema y ITIL 4 citado; no afirma COBIT. |
 | N27 | Conservar | — | Contrato e interfaces entre actores. |
-| N28 | Conservar | — | Pruebas del servicio real. |
+| N28 | Contenido conservado; corrección editorial pendiente | — | Pruebas del servicio real. En p. 35 se duplica la frase final de preparación; confirmado visualmente el 28/10. |
 | N29 | Conservar | — | Despliegue y recuperación. |
 | N30 | Conservar | — | Observabilidad; PDF final reproducido byte por byte. |
 | N31 | Conservar | — | Pertinencia de IA y control humano. |
@@ -86,13 +86,14 @@ arte digital canónico; un PDF de prueba no lo sustituye.
   preparaciones, sólo siete lecturas con tiempo numérico entre N01 y N36,
   y calendario de 46 encuentros posible pero aún sin prueba de aula. Cierre curricular
   digital no equivale a viabilidad de cuatrimestre.
-- [Alineación de preparación N01–N25](QA-ALINEACION-PREPARACION-N01-N25-20261028.md):
+- [Alineación de preparación N01–N36](QA-ALINEACION-PREPARACION-N01-N36-20261028.md):
   cada consigna pública se cruzó con el paquete docente; se quitaron entregas
   adicionales en la preparación, manteniendo la profundización en clase.
 
 ## Por validar con el equipo docente
 
-Completar la alineación de preparación N26–N36 antes de dar por cerrada la carga
+Corregir la repetición editorial de N28 p. 35 en su fuente fiel y PDF canónico.
+Ensayar la preparación y el taller con docentes antes de dar por cerrada la carga
 asincrónica. Ensayar con reloj los ocho paquetes focales y los puentes N06, N09→N28,
 N17→N20, N19→N26→N27, N21→N30, N29→N30, N34→N36. Confirmar si una clase
 de 120 minutos funciona y si la carga real cabe en el cuatrimestre. Actualizar

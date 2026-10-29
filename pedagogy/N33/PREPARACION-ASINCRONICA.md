@@ -2,24 +2,15 @@
 
 ## Propósito
 
-Llegar con un registro vivo que permita gobernar un sistema de IA después de su aprobación inicial.
+Llegar con un registro de uso y una decisión de control ante un cambio pequeño pero importante.
 
 ## Producción requerida
 
-Construí el registro HH-33 con:
-
-- uso, no usos y frontera sociotécnica;
-- población, decisión y clasificación de riesgo;
-- responsable con autoridad y rendición de cuentas;
-- procedencia de datos, modelo y configuración;
-- proveedor, dependencias y derecho de auditoría;
-- control de cambios y reevaluación;
-- monitoreo de desempeño, desigualdad y deriva;
-- incidente, contestación, reparación, retiro y continuidad.
+Traé **un registro breve de un uso real o ficticio**. Proponé un cambio pequeño con consecuencias importantes; señalá qué evidencia revisar, quién decide y qué restricción sigue vigente mientras tanto. Incluí cómo atender a una persona afectada y cómo retirar la capacidad si no puede sostenerse.
 
 ## Prueba de cambio silencioso
 
-Suponé que el proveedor cambia el modelo sin aviso y que empeora un subgrupo sin afectar la disponibilidad. Indicá cómo se detecta, quién actúa y cómo se repara. Respondé además dos preguntas de preparación de N33.
+El cambio silencioso de proveedor, monitoreo y auditoría se trabajan en clase con el registro. Las preguntas del PDF no suman dos respuestas obligatorias.
 
 ## Criterios de entrada
 

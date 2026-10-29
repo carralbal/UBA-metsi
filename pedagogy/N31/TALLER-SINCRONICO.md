@@ -2,7 +2,7 @@
 
 ## Resultado del encuentro
 
-Cada equipo entrega una decisión HH-31 de pertinencia, modalidad y autonomía de IA con alternativa, límites y salida.
+Cada equipo profundiza la tarea de su ficha y entrega una decisión de pertinencia, modalidad y autonomía de IA con alternativa, límites y salida. HH-31 es un caso común de contraste, no una segunda tarea previa.
 
 ## Duración base
 

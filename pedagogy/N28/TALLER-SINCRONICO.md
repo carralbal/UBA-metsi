@@ -2,7 +2,7 @@
 
 ## Resultado del encuentro
 
-Cada equipo entrega un argumento de calidad HH-28 con reclamos, riesgos, evidencias, tensiones y decisión.
+Cada equipo amplía la afirmación de calidad que preparó y entrega un argumento con riesgos, evidencias, tensiones y decisión. HH-28 sirve de contraste común, no como segundo caso obligatorio previo.
 
 ## Duración base
 

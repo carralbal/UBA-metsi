@@ -2,7 +2,7 @@
 
 ## Resultado del encuentro
 
-Cada equipo entrega un mapa de ecosistema HH-26 con dependencias gobernadas, degradación ensayada y estrategia de salida.
+Cada equipo amplía el mapa de una promesa que preparó y entrega dependencias gobernadas, degradación ensayada y estrategia de salida. HH-26 aporta un escenario común de prueba, no otro caso obligatorio previo.
 
 ## Duración base
 

@@ -2,7 +2,7 @@
 
 ## Resultado del encuentro
 
-Cada equipo entrega un expediente integrado HH-34 cuya cadena puede recorrerse, cuestionarse y probarse de extremo a extremo.
+Cada equipo integra la página de decisión preparada con evidencias del portfolio y entrega un expediente cuya cadena puede recorrerse, cuestionarse y probarse de extremo a extremo. HH-34 ofrece una prueba común, no otro expediente previo.
 
 ## Duración base
 
@@ -47,7 +47,7 @@ Se decide qué cerrar, qué transferir y qué mantener abierto, con responsables
 
 ### 8. Cierre y puente, 8 minutos
 
-Cada equipo prepara tres versiones de su tesis para las audiencias de N35.
+Cada equipo identifica dos audiencias para las explicaciones breves que preparará antes de N35; la defensa ante otras audiencias se desarrollará en ese taller.
 
 ## Evidencias para el portfolio
 
@@ -56,4 +56,4 @@ Cada equipo prepara tres versiones de su tesis para las audiencias de N35.
 - trama horizontal;
 - devoluciones de estaciones;
 - ataque y reparación;
-- acta de cierre y tres tesis.
+- acta de cierre y dos audiencias para N35.

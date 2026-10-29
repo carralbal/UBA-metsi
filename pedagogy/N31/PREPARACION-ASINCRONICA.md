@@ -2,24 +2,15 @@
 
 ## Propósito
 
-Llegar con una decisión fundada sobre si una tarea necesita reglas, predicción, generación, agencia o ninguna IA.
+Llegar con una decisión discutible sobre el uso de IA en una tarea concreta.
 
 ## Producción requerida
 
-Elegí una tarea HH-31 y construí un expediente con:
-
-- propósito, población y consecuencia de decisión;
-- alternativa sin IA y línea de base;
-- incertidumbre que no resuelve una regla estable;
-- valor incremental esperado;
-- salida requerida: clasificación, estimación, texto, acción o recomendación;
-- autonomía, permisos y control humano significativo;
-- procedencia, calibración y límites;
-- condición de no uso y retiro.
+Traé **una ficha de una tarea concreta** del hotel u otro servicio conocido. Compará una opción con IA con una alternativa viable, indicá la consecuencia que querés evitar y describí un caso que te haría limitar o retirar el uso. No hace falta defender automatización total.
 
 ## Prueba de sustracción
 
-Quitá la IA y reemplazala por una regla, búsqueda o mejora de proceso. Si el valor persiste, no justifiques complejidad adicional. Respondé además dos preguntas de preparación de N31.
+La sustracción de IA, la definición de permisos y el control humano se examinan en clase sobre esa tarea. Las preguntas del PDF orientan la lectura y no agregan dos respuestas obligatorias.
 
 ## Criterios de entrada
 
