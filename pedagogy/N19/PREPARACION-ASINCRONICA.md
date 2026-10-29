@@ -2,34 +2,20 @@
 
 ## Propósito
 
-Llegar con una **necesidad y criterios escritos antes de ver ofertas**, sin reducir la decisión a comprar o construir. La secuencia pública de N19 pp. 24–25 es el ejemplo didáctico; no hay compra ni cotizaciones reales.
+Llegar con una **capacidad y criterios escritos antes de ver ofertas**, sin reducir la decisión a comprar o construir. La secuencia pública de N19 pp. 24–25 es didáctica; no hay compra ni cotizaciones reales. N19 p. 37 detalla una ponderación dentro del mismo expediente y debe contarse en la carga de preparación.
 
-## Producción requerida
+## Producción requerida por la lectura pública
 
-Para la **misma capacidad** de HH-19, escribí un episodio ordinario y uno adverso aplicables a configurar, integrar, construir, tercerizar, operar manualmente y no automatizar. Prepará una primera comparación mediante:
+Elegí **una capacidad** de HH-19 y compará **al menos cuatro alternativas**, incluida una que no automatice la decisión. Usá **el mismo episodio ordinario y adverso** para todas. En **un solo expediente breve**, mostrá una condición necesaria, dos supuestos que puedan cambiar la elección y una prueba de salida. Cerrá con recomendación provisional, opción descartada y evidencia que te haría reconsiderarla.
 
-- cobertura de la capacidad y excepciones;
-- tiempo para aprender;
-- costo total de vida;
-- control semántico y operacional;
-- datos, seguridad y cadena de suministro;
-- dependencia, portabilidad y salida;
-- autoridad, trabajo desplazado y reparación;
-- prueba que podría volver preferible cada opción.
-
-Antes de mirar precios o nombres comerciales, escribí **una condición excluyente**, dos supuestos que podrían cambiar la elección y una pregunta de aceptación. No llenes una matriz de puntuaciones sin evidencia: los pesos y las notas se ensayarán en clase sobre las ofertas **ficticias** del PDF. Esto no crea una entrega distinta del expediente HH-19.
-
-## Prueba de salida
-
-Diseñá una prueba de portabilidad anterior a la firma. Respondé además dos preguntas de preparación de N19.
+La continuación de N19 p. 37 pide descartar primero lo que no pasa el excluyente. Para las ofertas restantes, asigná **pesos que sumen 100 %** y una nota respaldada por cada prueba disponible; si faltan datos, marcá la nota como pendiente en vez de inventarla. La recomendación debe ser condicional —negociar, pedir evidencia o no comprar— e indicar dos costos omitidos, autoridad del paso siguiente y cláusula o prueba de salida. Esto **no es una segunda entrega** ni una adjudicación. Las preguntas numeradas del PDF ayudan a pensar, pero no agregan dos respuestas obligatorias.
 
 ## Criterios de entrada
 
-- La capacidad precede al producto.
-- Trabajo manual y no automatizar son opciones legítimas.
-- Precio no sustituye costo total.
-- Tercerizar ejecución no transfiere obligación.
-- Portabilidad se demuestra, no se declara.
-- Los excluyentes se fijan antes de ver ofertas; una opción barata que los incumple queda fuera.
-- Una recomendación para negociar o probar no equivale a adjudicación.
+- La capacidad precede al producto y las alternativas se prueban con episodios iguales.
+- Una opción sin automatización compite con las demás.
+- El excluyente se fija antes de puntuar; los pesos suman 100 %.
+- Una nota sin evidencia queda pendiente, no fabricada.
+- Precio no sustituye costo total; salida y autoridad siguen explícitas.
+- Recomendar negociar, probar o no comprar no equivale a adjudicar.
 

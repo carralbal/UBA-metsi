@@ -2,30 +2,20 @@
 
 ## Propósito
 
-Llegar con una estrategia situada que conecte prácticas, evidencia, hitos, autoridad y retiro.
+Llegar con una decisión próxima, dos hitos y una transición operativa que pueda defenderse.
 
-## Producción requerida
+## Producción requerida por la lectura pública
 
-Transformá la arquitectura de N19 en una secuencia con:
+Prepará **una ficha HH-20** sobre una intervención que conozcas sin exponer información confidencial. Si no tenés acceso suficiente, usá el canal externo del hotel. Mostrá una decisión próxima, **dos hitos**, una condición que impediría avanzar y una contingencia practicable. Cerrá con la evidencia que permitiría transferir la capacidad y el apoyo temporal que retirarías. Si falta un dato, dejalo pendiente; no inventes cifras ni respondas además dos preguntas obligatorias.
 
-- propósito y relación causal de cada práctica;
-- factores situacionales;
-- dependencias entre decisiones;
-- hito con criterio de entrada, salida y detención;
-- evidencia y autoridad de cada puerta;
-- cadencias de aprendizaje, entrega, flujo y gobierno;
-- uso explícito de PMBOK, Scrum, Kanban u otras prácticas;
-- transferencia a operación y retiro de estructuras temporales.
+## Para llevar al taller, no como segunda entrega
 
-## Prueba de poda
-
-Retirá una práctica que no cambie decisiones y explicá por qué la capacidad se conserva. Respondé además dos preguntas de preparación de N20.
+En clase se conectarán prácticas de PMBOK, Scrum, Kanban u otras con funciones y decisiones concretas, y se probarán las puertas y la transferencia sobre la ficha inicial.
 
 ## Criterios de entrada
 
-- Tailoring responde al contexto, no a preferencias.
-- Un hito cambia una decisión y no es sólo fecha.
-- Los criterios se fijan antes de observar resultados.
-- Transferir incluye información, autoridad y recursos.
-- El método también tiene condición de retiro.
+- Los hitos son decisiones verificables, no sólo fechas.
+- La condición de no avanzar puede activarse de verdad.
+- La contingencia permite seguir o detener sin prometer lo que no se sabe.
+- Transferir y retirar apoyo temporal son acciones diferentes.
 

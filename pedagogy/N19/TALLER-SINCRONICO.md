@@ -11,7 +11,7 @@ Ciento veinte minutos.
 ## Preparación docente
 
 - Tener N19 pp. 24–25 y 35–37: necesidad común, tres ofertas **ficticias**, tres excluyentes y pesos definidos antes de abrirlas.
-- Mostrar las ofertas sólo después de que cada equipo fije necesidad, episodio ordinario/adverso y excluyentes. Conservar una copia de esa primera versión para impedir ajuste retrospectivo.
+- Mostrar las ofertas sólo después de conservar la versión previa del expediente con necesidad, episodios, excluyente y pesos; no reescribir retrospectivamente esos criterios. Si faltan notas por falta de evidencia, completarlas sólo al abrir las pruebas ficticias.
 - Preparar una prueba de salida de historial/correcciones y tarjetas de costos omitidos: migración, formación, impuestos, soporte, tratamiento de datos y continuidad.
 - Permitir cálculo manual o planilla accesible; las cuentas son didácticas y no cotizaciones.
 
@@ -19,7 +19,7 @@ Ciento veinte minutos.
 
 ### 1. Necesidad y excluyentes antes de ofertas, 10 minutos
 
-Cada persona escribe la capacidad, un episodio ordinario/adverso y una condición necesaria sin ver proveedor ni precio. La primera versión se conserva para comparar al cierre.
+Cada persona presenta la capacidad, los episodios y la condición necesaria de su expediente previo sin ver proveedor ni precio. Se conserva esa primera versión para comparar al cierre.
 
 ### 2. Alternativas para la misma capacidad, 15 minutos
 
@@ -27,7 +27,7 @@ Los equipos separan flujo, integración, excepción, autoridad y reparación; co
 
 ### 3. Rúbrica y puerta, 10 minutos
 
-El docente muestra cómo fijar pesos que sumen 100 %, evidencia para puntuar y una puerta anterior: una oferta que falla un excluyente no se rescata con descuento ni con promedio.
+El docente revisa los pesos previos —deben sumar 100 %—, la evidencia para puntuar y la puerta anterior: una oferta que falla un excluyente no se rescata con descuento ni con promedio.
 
 ### 4. Apertura y prueba de ofertas, 20 minutos
 
@@ -35,7 +35,7 @@ Se abren Alfa, Beta y Gamma de pp. 24–25. Cada equipo aplica el mismo episodio
 
 ### 5. Puntuación con evidencia y cuenta, 18 minutos
 
-Sobre las ofertas que pasaron la puerta, calcular el ponderado con la rúbrica previa; cada nota requiere una prueba. Comparar la recomendación con la elección intuitiva inicial y registrar qué dato podría invertirla.
+Sobre las ofertas que pasaron la puerta, revisar el ponderado preparado y completar sólo las notas que ahora tienen prueba; una nota sin evidencia sigue pendiente. Comparar la recomendación con la elección intuitiva inicial y registrar qué dato podría invertirla.
 
 ### 6. Salida y costos omitidos, 19 minutos
 

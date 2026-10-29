@@ -13,7 +13,7 @@ Ciento veinte minutos.
 - Preparar decisiones de contrato, regla, interfaz, despliegue y experimento.
 - Preparar cartas PMBOK, Scrum y Kanban con funciones y límites.
 - Preparar eventos que cambien incertidumbre, urgencia y reversibilidad.
-- Seleccionar mapas que llamen híbrido a una suma de ceremonias.
+- Seleccionar fichas HH-17 que llamen híbrido a una suma de ceremonias; el mapa más amplio se construye en clase.
 - Tener N17 p. 32: constancias ficticias, 24 × 8 = 192 minutos = 3,2 horas; 32 h × USD 25 = USD 800 y reserva de 8 h = USD 200. Son supuestos de clase, no una estimación institucional. Preparar un cambio de capacidad operativa o técnica que invalide una cuenta correcta.
 
 ## Secuencia

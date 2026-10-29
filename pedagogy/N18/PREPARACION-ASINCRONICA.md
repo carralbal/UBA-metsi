@@ -4,28 +4,18 @@
 
 Llegar con un elemento heredado investigado como capacidad, restricción, evidencia y riesgo, sin asumir que debe conservarse o eliminarse.
 
-## Producción requerida
+## Producción requerida por la lectura pública
 
-Construí un expediente de obligación y legado para HH-18 con:
+Completá **un expediente HH-18** sobre un elemento conocido, como la consulta previa a una reasignación. Separá hechos, interpretaciones y vacíos. Recomendá conservar, adaptar, migrar o retirar, con fundamento distinto de su edad. Incluí un caso ordinario, una excepción y una ausencia; explicá qué prueba cambiaría la recomendación y cómo sostendrías la capacidad durante la transición. Si alegás una obligación normativa, identificá su fuente y el estado de validación: no la inventes. Las preguntas del PDF orientan el análisis, no agregan dos respuestas obligatorias.
 
-- componente, práctica, dato o documento heredado;
-- capacidad y población que protege;
-- origen reconstruido y fuente disponible;
-- compromiso institucional, obligación normativa o interpretación pendiente;
-- dependencia, deuda y radio de impacto;
-- autoridad competente para interpretar;
-- alternativa de conservación, sustitución o retiro;
-- evidencia de prueba y memoria que debe preservarse.
+## Para llevar al taller, no como segunda entrega
 
-## Prueba arqueológica
-
-Identificá una regla obedecida cuya fuente no aparezca. Separá lo verificado de lo supuesto y respondé dos preguntas de preparación de N18.
+En clase se investigarán dependencias, autoridad, memoria, prueba de migración y condición de retiro sobre el mismo expediente.
 
 ## Criterios de entrada
 
-- Antigüedad no equivale a falta de valor.
-- Testimonio operativo no se presenta como autoridad normativa.
-- Migración conserva significado, no sólo registros.
-- La documentación funciona como interfaz de decisión.
-- Retiro incluye memoria, prueba y reparación.
+- La edad no es la razón suficiente de conservar ni de retirar.
+- El caso ordinario, la excepción y la ausencia prueban funciones distintas.
+- La fuente normativa se verifica o queda pendiente.
+- La transición conserva capacidad y reconoce incertidumbre.
 
