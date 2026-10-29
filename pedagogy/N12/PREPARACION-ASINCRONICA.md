@@ -2,34 +2,19 @@
 
 ## Propósito
 
-Llegar con una transición conocida desarmada en intención, ocurrencia, estado, evidencia y autoridad; poder traducirla a **un requisito funcional, uno no funcional y una aceptación refutable**. N12 pp. 7–8 ofrece el caso Martina/Julián resuelto, no una segunda entrega.
+Llegar con una transición conocida desarmada en intención, ocurrencia, estado, evidencia y autoridad. En el taller se traducirá a **un requisito funcional, uno no funcional y una aceptación refutable**. N12 pp. 7–8 ofrece el caso Martina/Julián resuelto, no una segunda entrega.
 
-## Producción requerida
+## Producción requerida por la lectura pública
 
-Elegí una transición de HH-12 o de un sistema conocido y representá:
+Elegí una transición universitaria, laboral o cotidiana. En **una hoja o esquema breve**, describí qué había antes, qué se pidió, quién podía aceptar, qué se comprobó, qué pasó y cómo se mostró. Agregá un rechazo y una reparación. Señalá dónde podría confundirse la intención con el resultado. Las seis preguntas del PDF orientan la conversación; no se exigen dos respuestas adicionales ni un segundo esquema.
 
-- estado previo y regla vigente;
-- comando e identidad de quien lo emite;
-- autoridad institucional y permiso técnico;
-- aceptación o rechazo;
-- evento relevante y evidencia de ocurrencia;
-- tiempo del negocio, del registro y del conocimiento;
-- estado resultante y proyecciones que lo muestran;
-- invariante, excepción y reparación;
-- confusión posible entre intención y resultado.
+## Para llevar al taller, no como segunda entrega
 
-En el **mismo esquema**, formulá una regla funcional que impida afirmar una aceptación antes de la decisión, una condición no funcional de uso/consulta y una prueba adversa que podría hacer fallar cada una. Si falta la autoridad que fija la regla, marcala como pendiente; no inventes política institucional.
-
-## Prueba de nombre
-
-Reescribí un evento nombrado como cambio de campo para que exprese el hecho relevante. Respondé además dos preguntas de preparación de N12.
+Señalá una regla cuya aceptación debería probarse. En clase se precisarán evento, autoridad, tiempos, RF, RNF y pruebas adversas a partir de esa misma transición. Si no conocés la política institucional, marcala como pendiente.
 
 ## Criterios de entrada
 
-- Un comando no se presenta como hecho consumado.
-- El estado se trata como proyección vigente.
-- La evidencia excede la mera emisión de un mensaje.
-- Permiso y autoridad se distinguen.
-- Rechazo, corrección y reparación forman parte de la transición.
-- Un RF y un RNF se rastrean a pruebas distintas; «solicitud recibida» no acredita aceptación.
+- El pedido y el resultado se distinguen; la vista no promete más de lo comprobado.
+- La aceptación tiene respaldo y autoridad con alcance y vigencia.
+- El rechazo y la reparación tienen responsable y respuesta para la persona afectada.
 

@@ -1,4 +1,4 @@
-# QA · consignas públicas y preparación docente N01–N10
+# QA · consignas públicas y preparación docente N01–N16
 
 **Corte: 28/10/2026.** Se contrastaron las consignas de preparación de los PDF
 canónicos indicados en `site/course-manifest.json` con los paquetes de
@@ -25,18 +25,25 @@ producidas en clase y no constituye automáticamente otra tarea asincrónica.
 | N08 | Dos respuestas y una ficha HH-08 breve de observación, interpretación, pregunta, función y decisión. | Se quitó el blueprint detallado previo; se construye con la escena observada en clase. |
 | N09 | Dos respuestas y una ficha HH-09 de una transición, barrera, carga, rival y evidencia decisiva. | Se quitó el recorrido/blueprint completo previo; se ensambla en clase. |
 | N10 | Dos preguntas y ficha HH-10 breve: hechos, hipótesis, dudas, acción autorizada/prohibida y hallazgo de revisión. | Se quitaron dos encuadres completos previos; el contraste de encuadres se produce en taller. |
+| N11 | Una página sobre una afirmación externa: alcance, medición, población, origen, incertidumbre, uso permitido y uso excesivo. | Se quitó el expediente exhaustivo y las dos respuestas obligatorias; sensibilidad y procedencia profunda se trabajan en clase. |
+| N12 | Una hoja/esquema de una transición elegida con pedido, aceptación, comprobación, resultado mostrado, rechazo y reparación. | RF, RNF, pruebas y tres tiempos pasan al taller; no se exige segunda entrega ni dos respuestas extras. |
+| N13 | Una operación multisistema (HH-13 u otra) con respuesta perdida, repetición, conflicto y vista antigua; ficha y secuencia comprobable. | Se quitó el expediente completo previo, conservando protección, reconciliación y reparación; la simulación HH-13 no es segunda entrega. |
+| N14 | **AS-IS y TO-BE antes de clase** del mismo caso, habitual y aviso fallido, dos medidas comparables y consecuencia de revisión. | Se corrigió el error que posponía el TO-BE. BPMN detallado se desarrolla en clase; constancias es opción válida sin exigir después HH-14. **Carga alta por medir.** |
+| N15 | Tres preguntas, cuatro familias y alternativa no gráfica; cartera mínima, opción descartada, evidencia, omisión, mantenimiento y prueba. | Se quitó la prueba obligatoria con otra persona y dos respuestas extras; la cartera elegida se ensaya en taller. |
+| N16 | Tres vistas vinculadas, caso habitual y difícil, diferencia, evidencia, tratamiento, prueba de cierre y revisión. | Se corrigió la guía que pedía demasiado poco; el taller transforma **el caso elegido**, no obliga a producir otro HH-16. **Carga por medir.** |
 
 ## Verificaciones y límites
 
-- Para N05–N10 se releyó el texto extraído de la sección «Preguntas de
+- Para N05–N16 se releyó el texto extraído de la sección «Preguntas de
   preparación» de **cada PDF de `site/course-manifest.json`**, no de copias
-  históricas. Para N01–N04 se contrastaron además apertura y cierre, porque la
-  consigna puede estar repartida en varias páginas.
+  históricas. N13 y N15 se contrastaron también con el producto de apertura;
+  para N01–N04 se contrastaron apertura y cierre, porque la consigna puede
+  estar repartida en varias páginas.
 - `python3 pedagogy/validate_pedagogy.py`: **PASS 36/36**, sin problemas
-  estructurales. N01–N10 conservan ocho actividades, 120 minutos planificados,
+  estructurales. N01–N16 conservan ocho actividades, 120 minutos planificados,
   diez pantallas y ocho criterios de rúbrica por paquete. Esos 120 minutos son
   una suma de diseño, **no una clase ensayada con reloj**.
 - `git diff --check`: sin errores de espacio.
 - No se cambió contenido sustantivo del PDF ni se añadió una preparación a N00.
-- Falta aplicar el mismo contraste semántico a **N11–N36**, revisar las
+- Falta aplicar el mismo contraste semántico a **N17–N36**, revisar las
   dependencias entre paquetes y ensayar la carga real con docentes/estudiantes.

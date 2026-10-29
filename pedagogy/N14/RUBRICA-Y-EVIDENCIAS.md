@@ -22,7 +22,7 @@
 
 ## Evidencia de aprendizaje
 
-La **única entrega HH-14** debe mostrar AS-IS y TO-BE del mismo proceso, más dos revisiones surgidas de la ejecución didáctica: una sobre handoff/cola/excepción y otra sobre cierre/responsabilidad/reparación. Otro equipo debe poder decir qué resultado todavía falta medir.
+La **única entrega del caso elegido** —HH-14, constancias u otro servicio— debe mostrar AS-IS y TO-BE del mismo proceso, más dos revisiones surgidas de la ejecución didáctica: una sobre handoff/cola/excepción y otra sobre cierre/responsabilidad/reparación. Otro equipo debe poder decir qué resultado todavía falta medir. No se exige una segunda entrega HH-14 a quien trabajó constancias.
 
 ## Conexión acumulativa
 

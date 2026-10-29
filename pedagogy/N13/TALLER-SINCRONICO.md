@@ -2,7 +2,7 @@
 
 ## Resultado del encuentro
 
-Cada equipo entrega un expediente de convergencia para HH-13 que protege la última habitación, conserva estados ambiguos y define idempotencia, consistencia, reconciliación y reparación.
+Cada equipo profundiza **la operación que trajo** en una sola ficha y secuencia de convergencia: efecto protegido, estado ambiguo, idempotencia, consistencia, reconciliación y reparación. HH-13 y la última habitación sirven como simulación común; no se exigen como segunda entrega a quien eligió otro caso.
 
 ## Duración base
 
@@ -53,8 +53,8 @@ Cada persona identifica dónde la transición depende de un handoff, cola o exce
 
 - decisión individual ante timeout;
 - registros locales de la red;
-- solución para la última habitación;
+- prueba de la última habitación como ejercicio de clase;
 - prueba de idempotencia;
 - acta de reconciliación;
-- expediente perturbado y transición hacia N14.
+- ficha y secuencia del caso elegido, perturbadas y conectadas con N14. Los registros de simulación son insumos de aula, no informes adicionales.
 

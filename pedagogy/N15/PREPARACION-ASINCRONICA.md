@@ -2,33 +2,20 @@
 
 ## Propósito
 
-Llegar con una cartera mínima de representaciones elegida por preguntas, audiencias y decisiones, no por disponibilidad de herramientas.
+Llegar con un conjunto pequeño de representaciones elegido por preguntas y decisiones, no por disponibilidad de herramientas.
 
-## Producción requerida
+## Producción requerida por la lectura pública
 
-Tomá HH-15 o una decisión conocida y formulá tres preguntas diferentes. Compará al menos cuatro familias de modelo mediante:
+Elegí la decisión del piloto HH-15 u otra decisión conocida y formulá **tres preguntas** que necesites responder. Compará **al menos cuatro familias de representación y una alternativa no gráfica**. Proponé un conjunto pequeño, **descartá una opción** y explicá quién lo usará, de dónde sale la evidencia, qué omite, cómo se mantendrá y con qué caso probarías su utilidad. Las preguntas del PDF orientan el análisis; no se agregan dos respuestas ni una prueba con otra persona antes de clase.
 
-- pregunta y decisión que puede responder;
-- audiencia y preocupación;
-- alcance, nivel y resolución;
-- situación vigente o propuesta y fecha de validez;
-- semántica y notación necesarias;
-- evidencia de origen;
-- costo de construir, explicar, mantener, gobernar y retirar;
-- prueba que demostraría utilidad;
-- criterio de descarte.
+## Para llevar al taller, no como segunda entrega
 
-Elegí una cartera mínima y justificá qué modelo no producirías.
-
-## Prueba de lectura
-
-Entregá una representación sin explicación a una persona de otra audiencia y registrá qué decisión pudo tomar, qué interpretó de manera distinta y qué información faltó. Respondé además dos preguntas de preparación de N15.
+En clase se pondrá el conjunto a prueba con otra audiencia; allí se podrá descartar, corregir o retirar un modelo. La comparación de alcance, nivel, resolución y costo se profundizará sobre el producto breve.
 
 ## Criterios de entrada
 
-- Cada modelo responde una pregunta explícita.
-- Audiencia no significa simplificación vacía.
-- Alcance, nivel y resolución se distinguen.
-- Vigente y propuesto no se superponen sin código claro.
-- La cartera tiene costo, prueba y retiro posibles.
+- Cada representación responde al menos una de las tres preguntas.
+- La alternativa no gráfica se compara por utilidad, no por ser inferior por defecto.
+- La evidencia, omisiones y mantenimiento quedan visibles.
+- El caso de prueba podría mostrar que el conjunto no alcanza.
 

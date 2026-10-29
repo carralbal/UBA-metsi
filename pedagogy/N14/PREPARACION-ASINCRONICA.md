@@ -2,31 +2,18 @@
 
 ## Propósito
 
-Llegar con **un mismo servicio** seguido de punta a punta, desde la promesa hasta el cierre real, incluyendo esperas, handoffs, colas, excepciones y reparación. La aplicación de constancias N14 p. 33 demuestra AS-IS/TO-BE con la misma unidad y medidas; no reemplaza HH-14 ni crea una segunda entrega.
+Llegar con **un mismo servicio** comparado antes y después desde igual inicio hasta igual cierre. La lectura pública N14 p. 44 sí pide **AS-IS y TO-BE antes del encuentro**; el caso ficticio de constancias es una opción válida, no sólo una demostración auxiliar. El TO-BE es propuesta, no mejora observada.
 
-## Producción requerida
+## Producción requerida por la lectura pública
 
-Elegí HH-14 o un servicio conocido y construí dos recorridos: una instancia ordinaria y una excepcional. Para cada una declará:
+Usá el caso ficticio de constancias o un servicio que conozcas. Dibujá **AS-IS y TO-BE del mismo trámite** con igual inicio, cierre y denominador. Seguí un caso habitual y uno con aviso fallido; separá trabajo, espera y traspasos; señalá qué dato es observado y cuál todavía falta. Definí dos medidas comparables y una consecuencia que obligaría a revisar el cambio. No atribuyas al TO-BE un resultado que aún no se midió.
 
-- promesa, población, evento inicial, outcome y cierre;
-- trabajo, espera y tiempo calendario;
-- handoffs de trabajo, información y responsabilidad;
-- colas visibles e invisibles y regla de prioridad;
-- retrabajo, demanda de falla y reparación;
-- trabajo prescripto, ejecutado y experimentado;
-- evidencia que falta si sólo se observan aplicaciones;
-- hipótesis de intervención y efecto rival.
-
-Representá el núcleo en BPMN con pools o lanes pertinentes, eventos, actividades, gateways, flujos de secuencia y mensajes. Incorporá al menos una excepción y su retorno o compensación.
-
-Conservá un **AS-IS** de ese mismo proceso: población, inicio, cierre y dos medidas observables. El **TO-BE** se construirá en clase con la misma unidad; por ahora no atribuyas a ese diseño una mejora medida. Traé una hipótesis rival: ¿qué tarea podría simplemente trasladarse a otra persona?
+Es **un solo producto comparativo**, no dos entregas adicionales. El PDF no exige antes de clase una notación BPMN completa ni responder seis preguntas por escrito; BPMN, colas, prioridad y reparaciones se desarrollarán y probarán en el taller.
 
 ## Criterios de entrada
 
-- El proceso no se confunde con área ni aplicación.
-- El handoff transfiere responsabilidad, no sólo datos.
-- Toda cola tiene política explícita o inferida.
-- La excepción puede revelar una variante estable.
-- BPMN se usa para coordinación y no como prueba de ejecución real.
-- AS-IS y TO-BE deben poder compararse en la misma población, frontera y medidas.
-- Un proceso propuesto no es un resultado observado.
+- AS-IS y TO-BE comparten población, inicio, cierre y denominador.
+- Hay un caso habitual y otro con aviso fallido en ambos recorridos.
+- Trabajo, espera y traspasos no se confunden.
+- Las dos medidas son comparables y se distingue observado de supuesto.
+- El TO-BE no se presenta como resultado demostrado.

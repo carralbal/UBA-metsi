@@ -25,7 +25,7 @@ Para verlo sin repetir el hotel, probaremos una constancia ficticia. Una solicit
 
 Primero vamos a completar un proceso pequeño y después intentaremos romperlo. Si cambiamos a “Requiere acción” apenas generamos un mensaje, C-103 nos derrota. Si usamos la entrega de un aviso viejo para dar por comunicada una observación nueva, C-107 nos derrota. La corrección debe verse tanto en el camino como en la relación de datos y en la transición de estado.
 
-Recién entonces volveremos a R-73. No copiaremos las reglas de la constancia al hotel. Usaremos el mismo modo de razonar: ubicar la evidencia de acceso, unirla a la reserva correcta, impedir una confirmación prematura y dejar una reparación visible. La entrega sigue siendo una sola ficha HH-16. Si otro equipo no puede reconstruir nuestra decisión sin que se la expliquemos, todavía tenemos trabajo.»
+Recién entonces volveremos al caso que cada equipo preparó. No copiaremos las reglas de la constancia a otro contexto. Usaremos el mismo modo de razonar: ubicar la evidencia necesaria, unirla al objeto correcto, impedir una confirmación prematura y dejar una reparación visible. Si el caso es R-73, la ficha será HH-16. En cualquier opción la entrega sigue siendo una sola. Si otro equipo no puede reconstruir nuestra decisión sin que se la expliquemos, todavía tenemos trabajo.»
 
 ## Intervenciones clave
 

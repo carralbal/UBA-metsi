@@ -2,7 +2,7 @@
 
 ## Resultado del encuentro
 
-Cada equipo entrega **un solo modelo comparativo HH-14**: AS-IS reconstruido de una instancia didáctica y TO-BE propuesto del **mismo proceso**, con población, frontera, medidas, handoffs, excepciones, reparación y prueba posterior. El TO-BE no se presenta como mejora ya observada.
+Cada equipo entrega **un solo modelo comparativo del caso que preparó** —HH-14, constancias ficticias u otro servicio conocido—: AS-IS reconstruido y TO-BE propuesto del **mismo proceso**, con población, frontera, medidas, handoffs, excepciones, reparación y prueba posterior. El TO-BE no se presenta como mejora ya observada; no se obliga a quien preparó constancias a producir además HH-14.
 
 ## Duración base
 
@@ -10,8 +10,8 @@ Ciento veinte minutos.
 
 ## Preparación docente
 
-- Seleccionar recorridos que confundan proceso con lista de tareas.
-- Preparar fichas de casos ordinarios y excepcionales con tiempos de trabajo y espera.
+- Seleccionar comparaciones AS-IS/TO-BE previas que confundan proceso con lista de tareas o no conserven la misma unidad.
+- Preparar fichas de casos ordinarios y excepcionales con tiempos de trabajo y espera para las opciones elegidas; si se usa un caso común, debe servir para revisar el producto previo, no sustituirlo por una segunda entrega.
 - Preparar tokens de capacidad, prioridad, retrabajo y reparación.
 - Disponer de elementos BPMN recortables o un tablero compatible.
 - Tener a mano N14 p. 33: el caso ficticio de constancias muestra cómo conservar la misma unidad al comparar antes y después, sin trasladar sus números al hotel.
@@ -20,11 +20,11 @@ Ciento veinte minutos.
 
 ### 1. Promesa y cierre real, 10 minutos
 
-Cada equipo define cuándo comienza y termina el check-in para Hotel Horizonte. Compara el cierre administrativo con el outcome recibido.
+Cada equipo define cuándo comienza y termina el trámite que preparó. Compara el cierre administrativo con el outcome recibido.
 
 ### 2. Caminata de una instancia, 15 minutos
 
-Una ficha de caso recorre estaciones físicas. En cada transferencia se entrega trabajo, información y responsabilidad. Se cronometran ejecución, espera y calendario.
+Una ficha del caso elegido recorre estaciones del servicio. En cada transferencia se entrega trabajo, información y responsabilidad. Se cronometran ejecución, espera y calendario.
 
 ### 3. Clínica de proceso y BPMN, 10 minutos
 
@@ -32,7 +32,7 @@ El docente distingue instancia, variante, pool, lane, evento, actividad, gateway
 
 ### 4. Reconstrucción BPMN del flujo real, 25 minutos
 
-Los equipos modelan el **AS-IS** del caso ordinario y excepcional con inicio, outcome, actores, mensajes, decisiones, temporizadores, reparación y cierre. Anotan dos medidas de línea de base con denominador y fuente, o declaran que faltan; no inventan un resultado.
+Los equipos contrastan y corrigen el **AS-IS** que trajeron para el caso ordinario y el aviso fallido, y lo modelan en BPMN con inicio, outcome, actores, mensajes, decisiones, temporizadores, reparación y cierre. Anotan dos medidas de línea de base con denominador y fuente, o declaran que faltan; no inventan un resultado.
 
 ### 5. Mercado de colas y prioridades, 17 minutos
 
@@ -40,11 +40,11 @@ Se agregan casos con condiciones diferentes. Cada equipo define disciplina de co
 
 ### 6. Tormenta de excepciones, 18 minutos
 
-El docente introduce ausencia de garantía, habitación bloqueada, canal sin respuesta y necesidad de accesibilidad. El equipo decide qué es excepción y qué debe convertirse en variante estable.
+El docente introduce excepciones del caso elegido: en HH-14 pueden ser garantía, habitación bloqueada, canal sin respuesta y accesibilidad; en constancias, aviso fallido, corrección y ausencia de autorización. El equipo decide qué es excepción y qué debe convertirse en variante estable.
 
 ### 7. Experimento de flujo, 17 minutos
 
-Cada equipo dibuja un **TO-BE** del mismo proceso, cambiando una regla, handoff o punto de decisión. Mantiene población, inicio/cierre y dos medidas comparables con el AS-IS; predice efecto y carga desplazada. Otro equipo ejecuta un caso adverso. La prueba futura se especifica; no se finge que ya ocurrió.
+Cada equipo **revisa el TO-BE que trajo**, cambiando si hace falta una regla, handoff o punto de decisión. Mantiene población, inicio/cierre y dos medidas comparables con el AS-IS; predice efecto y carga desplazada. Otro equipo ejecuta un caso adverso. La prueba futura se especifica; no se finge que ya ocurrió.
 
 ### 8. Cierre y puente, 8 minutos
 
@@ -54,8 +54,8 @@ Cada persona identifica qué pregunta del proceso exige otra representación y p
 
 - definición de promesa y cierre;
 - tiempos de la instancia;
-- AS-IS BPMN ordinario/excepcional y TO-BE del mismo proceso;
+- AS-IS BPMN ordinario/excepcional y TO-BE del mismo proceso elegido;
 - política de cola;
 - clasificación de variantes;
-- medidas comparables, hipótesis rival, prueba futura y pregunta para N15. Todo forma **una sola entrega HH-14**.
+- medidas comparables, hipótesis rival, prueba futura y pregunta para N15. Todo forma **una sola entrega comparativa**, identificada como HH-14 sólo si ése fue el caso elegido.
 

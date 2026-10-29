@@ -2,7 +2,7 @@
 
 ## Función del soporte visual
 
-El soporte coordina la simulación y una sintaxis mínima de BPMN. El AS-IS se construye después de observar el caso; el TO-BE usa **la misma unidad y medidas**, sin presentar el pronóstico como resultado. La entrega sigue siendo HH-14.
+El soporte coordina la simulación y una sintaxis mínima de BPMN. **AS-IS y TO-BE llegan como borradores del caso elegido** y se corrigen después de observarlo; mantienen la misma unidad y medidas, sin presentar el pronóstico como resultado. La entrega sigue siendo única y no obliga a cambiar de constancias a HH-14.
 
 | Pantalla | Qué se ve | Nota de orador | Señal para avanzar |
 |---:|---|---|---|

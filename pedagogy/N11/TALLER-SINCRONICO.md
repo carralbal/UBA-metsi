@@ -2,7 +2,7 @@
 
 ## Resultado del encuentro
 
-Cada equipo entrega un expediente de sostén de una afirmación de HH-11 con procedencia, incertidumbre, sensibilidad y una puerta de decisión proporcional.
+Cada equipo profundiza **la afirmación de materia, trabajo o noticia que trajo** en un expediente con procedencia, incertidumbre, sensibilidad y una puerta de decisión proporcional. El tablero HH-11 es un caso de práctica común, no una segunda entrega.
 
 ## Duración base
 
@@ -19,7 +19,7 @@ Ciento veinte minutos.
 
 ### 1. Veredicto sobre el dato, 10 minutos
 
-Cada persona decide si el noventa y siete por ciento o la tasa de demoras permite actuar. Debe escribir qué afirma exactamente y qué uso autoriza.
+Cada persona decide qué uso autoriza la afirmación que trajo. El noventa y siete por ciento o la tasa de demoras de HH-11 pueden utilizarse como contraste común, sin reemplazar el expediente propio.
 
 ### 2. Mesa de operacionalización, 15 minutos
 
@@ -31,7 +31,7 @@ El docente trabaja con exclusiones reales de las entregas y muestra cómo unidad
 
 ### 4. Autopsia de procedencia, 20 minutos
 
-Cada equipo reconstruye entidad, actividad y agente desde el episodio hasta el tablero. Marca limpieza, agregación, selección, pérdida de granularidad y momento de conocimiento.
+Cada equipo reconstruye entidad, actividad y agente hasta la afirmación elegida; cuando la fuente no permite seguir el rastro, registra el límite. El tablero HH-11 sirve para mostrar qué transformaciones buscar, sin inventarlas en el caso propio.
 
 ### 5. Audiencia de contradicciones, 18 minutos
 

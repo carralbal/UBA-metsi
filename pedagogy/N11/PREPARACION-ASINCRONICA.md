@@ -2,30 +2,20 @@
 
 ## Propósito
 
-Llegar con una afirmación auditable y determinar qué puede sostener realmente el dato utilizado para justificarla.
+Llegar con una afirmación auditable y determinar qué puede sostener realmente el dato utilizado para justificarla, sin inventar información ausente.
 
-## Producción requerida
+## Producción requerida por la lectura pública
 
-Elegí una afirmación relevante del problem frame de N10 o del tablero de HH-11 y completá un expediente con:
+Elegí una afirmación de una materia, un trabajo o una noticia. Reconstruí **en una página** qué pretende decir, cómo se midió, a quién incluye, de dónde salió y qué incertidumbre importa. Cerrá con un uso que aceptarías y otro que excedería la evidencia. Si falta información, registrá ese límite: no lo rellenes con supuestos presentados como datos. Las preguntas 3, 4 o 6 del PDF pueden ayudarte a preparar la página, pero no se exigen dos respuestas adicionales.
 
-- fenómeno y afirmación exacta;
-- constructo y operacionalización;
-- unidad de análisis, población, ventana y granularidad;
-- numerador, denominador y exclusiones;
-- fuente, captura, transformación y responsable;
-- principal incertidumbre y explicación rival;
-- decisión asociada y costo de error;
-- uso permitido, uso que excede la evidencia y condición de revisión.
+## Para llevar al taller, no como segunda entrega
 
-## Prueba de sensibilidad
-
-Modificá de forma plausible una definición, una exclusión o el denominador. Explicá si cambia la decisión y respondé dos preguntas de preparación de N11.
+Elegí una definición o un denominador que, de cambiar, podría alterar la conclusión. En clase se reconstruirá procedencia, transformación, población, costo de error y sensibilidad; no hace falta un expediente exhaustivo previo.
 
 ## Criterios de entrada
 
-- La afirmación precede a la búsqueda de datos.
-- El dato se trata como representación producida bajo reglas.
-- La población visible no se supone completa.
-- Procedencia y transformaciones pueden reconstruirse.
-- La suficiencia se calibra según consecuencia y reversibilidad.
+- La afirmación y el alcance están escritos con precisión.
+- La medición y la población visible no se suponen completas.
+- La procedencia se declara hasta donde puede comprobarse.
+- El uso aceptable y el que excede la evidencia son diferentes.
 

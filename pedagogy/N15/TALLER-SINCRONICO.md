@@ -2,7 +2,7 @@
 
 ## Resultado del encuentro
 
-Cada equipo entrega una cartera mínima de modelos de HH-15, probada con audiencias distintas y justificada por pregunta, decisión, evidencia, resolución y costo total.
+Cada equipo revisa **el conjunto pequeño de representaciones que trajo**, de HH-15 u otra decisión conocida, y lo prueba con audiencias distintas. La justificación final une pregunta, decisión, evidencia, resolución y costo total sin exigir una segunda cartera de otro caso.
 
 ## Duración base
 
